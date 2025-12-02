@@ -4,7 +4,7 @@
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-02 (v0.4.1.1+1 – initial epic definition)  
+**Last updated:** 2025-12-02 (v0.4.1.1+2 – Task 1 complete: Gap analysis of dev-kit Kanban policies and templates)  
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
