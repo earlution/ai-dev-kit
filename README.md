@@ -76,10 +76,13 @@ The dev kit itself is **deliberately tool-agnostic** in runtime dependencies, bu
 
 **Design Philosophy:**
 
-- **Portable** – Copy packages into any project, adapt locally
+- **Portable** – Copy packages into any project, adapt locally (current)
+- **Dependency-Based** – Install as dependencies with auto-updates (coming in Epic 6)
 - **Modular** – Use one framework or combine multiple
 - **Documentation-First** – Every package includes implementation guides
 - **Versioned** – Using `RC.EPIC.STORY.TASK+BUILD` for forensic traceability
+
+**Vision:** Frameworks are transitioning from copy-paste packages to **reusable, auto-updating dependencies**. When frameworks are improved, projects using them can automatically receive updates through Git submodules, CLI tools, or package managers. See [Framework Dependency Architecture](KB/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for details.
 
 **Inspiration & Standards:**
 
@@ -110,7 +113,9 @@ Before using Vibe Dev Kit, you'll need:
 
 ### Installation
 
-Vibe Dev Kit is **not installed as a dependency**. Instead, you **copy the frameworks you need** into your own project. This keeps your project independent and allows you to customize everything.
+**Current Approach (Copy-Paste):** Vibe Dev Kit frameworks can be **copied** into your project. This keeps your project independent and allows you to customize everything.
+
+**Future Approach (Dependencies - Epic 6):** Frameworks will be installable as **dependencies** with automatic updates. See [Framework Dependency Architecture](KB/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for the roadmap.
 
 #### Step 1: Clone This Repository
 
