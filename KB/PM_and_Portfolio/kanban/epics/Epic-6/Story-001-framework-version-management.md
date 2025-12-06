@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.6.1.1+4 – Framework versioning strategy defined)  
-**Version:** v0.6.1.1+4  
+**Last updated:** 2025-12-06 (v0.6.1.1+5 – Framework version tagging strategy created)  
+**Version:** v0.6.1.1+5  
 **Version:** v0.6.1.1+1  
 **Code:** E6S01
 
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 - [ ] **E6:S01:T02 – Create framework release processes** - TODO
 - [ ] **E6:S01:T03 – Establish framework compatibility tracking** - TODO
 - [x] **E6:S01:T04 – Design framework dependency architecture** - COMPLETE ✅
-- [ ] **E6:S01:T05 – Create framework version tagging strategy** - TODO
+- [x] **E6:S01:T05 – Create framework version tagging strategy** - COMPLETE ✅
 - [x] **E6:S01:T06 – Define Branch Context Policy** - COMPLETE ✅
 
 ---
@@ -135,10 +135,16 @@ Establish comprehensive version management processes for framework packages.
 4. Document tag-based versioning process
 5. Create automated tagging scripts
 
+**Status:** ✅ COMPLETE
+
 **Key Deliverables:**
-- Framework version tagging policy
+- Framework version tagging policy: `KB/Architecture/Standards_and_ADRs/framework-tagging-strategy.md`
 - Git tagging workflow documentation
-- Automated tagging scripts
+- Automated tagging scripts:
+  - `scripts/framework-management/tag-framework-release.sh` - Create framework release tags
+  - `scripts/framework-management/list-framework-tags.sh` - List framework tags
+- Tag naming convention: `{framework-name}-v{MAJOR}.{MINOR}.{PATCH}`
+- Integration with Git submodules, CLI tool, and package managers
 
 ---
 

@@ -17,6 +17,29 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.1.1+5] - 06-12-25
+
+🏷️ Strategy: Created framework version tagging strategy with automated scripts
+
+### Added
+
+- Created framework version tagging strategy document
+- Added automated tagging scripts (tag-framework-release.sh, list-framework-tags.sh)
+- Established tag naming convention: `{framework-name}-v{MAJOR}.{MINOR}.{PATCH}`
+- Documented Git tagging workflow and tag-based versioning process
+
+### Changed
+
+- Marked E6:S01:T05 (Create framework version tagging strategy) as COMPLETE
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.1.1+5.md` for full details
+- Tagging strategy enables version pinning and dependency management
+- Scripts simplify tag creation and ensure consistency
+
+---
+
 ## [0.6.1.1+4] - 06-12-25
 
 📋 Strategy: Defined framework versioning strategy using Semantic Versioning
