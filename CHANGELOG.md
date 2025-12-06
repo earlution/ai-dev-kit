@@ -17,6 +17,30 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.2.2+1] - 06-12-25
+
+📋 Migration: Built framework migration guides and tools
+
+### Added
+
+- Created framework migration guides and tools document
+- Created migration guide template for framework MAJOR releases
+- Added migration tools (check-migration-needs.sh, migrate-framework.sh)
+- Defined 5 migration scenarios (MAJOR update, cross-MAJOR, deprecated features, structural changes, API changes)
+
+### Changed
+
+- Marked E6:S02:T02 (Build migration guides and tools) as COMPLETE
+- Version bumped to v0.6.2.2+1 (Story 2, Task 2)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.2.2+1.md` for full details
+- Migration guide template available for framework MAJOR releases
+- Migration tools assist with checking needs and executing migrations
+
+---
+
 ## [0.6.2.1+1] - 06-12-25
 
 📋 Procedures: Created framework update procedures document
