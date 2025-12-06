@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.6.2.2+1 – Migration guides and tools created)  
-**Version:** v0.6.2.2+1  
+**Last updated:** 2025-12-06 (v0.6.2.3+1 – Backward compatibility policies established)  
+**Version:** v0.6.2.3+1  
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
