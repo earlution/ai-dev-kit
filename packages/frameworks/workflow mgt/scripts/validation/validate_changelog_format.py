@@ -135,6 +135,8 @@ def extract_changelog_versions(content: str) -> List[Tuple[str, Tuple[int, int, 
 def validate_changelog_ordering(content: str) -> Tuple[bool, List[str]]:
     """
     Validate that changelog entries are in canonical order (by version number).
+    Supports both ascending (oldest first) and descending (newest first) order.
+    Automatically detects order from first two entries.
     
     Returns:
         (is_valid, errors)
@@ -145,26 +147,56 @@ def validate_changelog_ordering(content: str) -> Tuple[bool, List[str]]:
     if len(versions) < 2:
         return True, []  # Need at least 2 versions to check ordering
     
-    # Check ordering: each version should be >= previous version
+    # Detect order: check if first version is greater than second (descending) or less (ascending)
+    first_components = versions[0][1]
+    second_components = versions[1][1]
+    comparison = compare_versions(first_components, second_components)
+    
+    if comparison == 0:
+        # Duplicate first two versions - error
+        errors.append(
+            f"Duplicate version detected: {versions[0][0]} appears multiple times"
+        )
+        return len(errors) == 0, errors
+    
+    # Determine order: > 0 means descending (newest first), < 0 means ascending (oldest first)
+    is_descending = comparison > 0
+    
+    # Validate ordering based on detected direction
     for i in range(len(versions) - 1):
         current_version_str, current_components = versions[i]
         next_version_str, next_components = versions[i + 1]
         
         comparison = compare_versions(current_components, next_components)
         
-        if comparison > 0:
-            # Current version is greater than next version - ordering violation
-            errors.append(
-                f"Changelog ordering violation: {current_version_str} appears before "
-                f"{next_version_str}, but canonical ordering requires "
-                f"{next_version_str} before {current_version_str} "
-                f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} > {next_components})"
-            )
-        elif comparison == 0:
-            # Duplicate version - also an error
-            errors.append(
-                f"Duplicate version detected: {current_version_str} appears multiple times"
-            )
+        if is_descending:
+            # Descending order: each version should be > next version
+            if comparison <= 0:
+                if comparison == 0:
+                    errors.append(
+                        f"Duplicate version detected: {current_version_str} appears multiple times"
+                    )
+                else:
+                    errors.append(
+                        f"Changelog ordering violation: {current_version_str} appears before "
+                        f"{next_version_str}, but descending canonical ordering requires "
+                        f"{current_version_str} > {next_version_str} "
+                        f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} < {next_components})"
+                    )
+        else:
+            # Ascending order: each version should be < next version
+            if comparison >= 0:
+                if comparison == 0:
+                    errors.append(
+                        f"Duplicate version detected: {current_version_str} appears multiple times"
+                    )
+                else:
+                    errors.append(
+                        f"Changelog ordering violation: {current_version_str} appears before "
+                        f"{next_version_str}, but ascending canonical ordering requires "
+                        f"{next_version_str} > {current_version_str} "
+                        f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} > {next_components})"
+                    )
     
     return len(errors) == 0, errors
 
