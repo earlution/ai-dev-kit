@@ -17,6 +17,35 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.2.6+2] - 06-12-25
+
+🛠️ Framework Management: Branch Context Policy automation implemented
+
+### Added
+
+- Created version sync script (`scripts/framework-management/sync-branch-version.py`)
+- Created Git post-checkout hook (`.git/hooks/post-checkout`) for automatic version sync
+- Created CLI command `vibe-dev-kit sync-version` for manual version sync
+- Created automation documentation (`KB/Architecture/Standards_and_ADRs/branch-context-policy-automation.md`)
+- Integrated sync-version command into CLI tool
+
+### Changed
+
+- Updated CLI main entry point to include sync-version command
+- Updated CLI README with sync-version usage examples
+- Updated Story 002 to mark T06 as complete
+- Version bumped to v0.6.2.6+2 (Story 2, Task 6, Build 2)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.2.6+2.md` for full details
+- Branch Context Policy automation: version syncs automatically on branch switch
+- Manual sync available via `vibe-dev-kit sync-version` command
+- Version reflects last commit during work, highest version on branch switch
+- Story 2 (Framework Update and Migration) is now COMPLETE - all tasks done
+
+---
+
 ## [0.6.2.5+2] - 06-12-25
 
 🛠️ Framework Management: Auto-update mechanisms created

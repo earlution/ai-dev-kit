@@ -85,6 +85,19 @@ vibe-dev-kit remove numbering-versioning
 vibe-dev-kit remove numbering-versioning --keep-files
 ```
 
+### Sync Version (Branch Context Policy)
+
+```bash
+# Sync version file to highest version from current epic branch
+vibe-dev-kit sync-version
+
+# Dry-run (show what would be updated)
+vibe-dev-kit sync-version --dry-run
+
+# Sync to specific epic
+vibe-dev-kit sync-version --epic 6
+```
+
 ## Configuration
 
 The CLI tool uses `.vibe-dev-kit.yaml` configuration file:

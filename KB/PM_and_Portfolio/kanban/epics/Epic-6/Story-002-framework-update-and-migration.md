@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.6.2.5+2 – Auto-update mechanisms created)  
-**Version:** v0.6.2.5+2  
+**Last updated:** 2025-12-06 (v0.6.2.6+2 – Branch Context Policy automation implemented)  
+**Version:** v0.6.2.6+2  
 **Code:** E6S02
 
 ---
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 - [x] **E6:S02:T03 – Establish backward compatibility policies** - COMPLETE ✅
 - [x] **E6:S02:T04 – Build framework update CLI tool** - COMPLETE ✅
 - [x] **E6:S02:T05 – Create auto-update mechanisms** - COMPLETE ✅
-- [ ] **E6:S02:T06 – Implement Branch Context Policy automation** - TODO
+- [x] **E6:S02:T06 – Implement Branch Context Policy automation** - COMPLETE ✅
 
 ---
 
@@ -229,6 +229,8 @@ Implement comprehensive processes for updating and migrating framework packages.
 **Dependencies:** E6:S01:T06  
 **Blocker:** None
 
+**Status:** ✅ COMPLETE
+
 **Approach:**
 1. Design branch switch hook mechanism (Git hooks or CLI tool)
 2. Create script to detect highest version per epic from changelog
@@ -238,20 +240,36 @@ Implement comprehensive processes for updating and migrating framework packages.
 6. Integrate into workflow management framework
 7. Document usage and troubleshooting
 
-**Key Deliverables:**
-- Branch context sync script
-- Git post-checkout hook implementation
-- CLI command for manual version sync
-- Integration into workflow management framework
-- Documentation and usage guide
+**Deliverables:**
+- Version sync script: `scripts/framework-management/sync-branch-version.py`
+- Git post-checkout hook: `.git/hooks/post-checkout`
+- CLI command: `vibe-dev-kit sync-version` (implemented in `cli/commands/sync_version.py`)
+- Automation documentation: `KB/Architecture/Standards_and_ADRs/branch-context-policy-automation.md`
+- Integration into CLI main entry point: `cli/main.py`
+
+**Key Components:**
+- **Version Sync Script:** Detects epic from branch, finds highest version from CHANGELOG, updates version file
+- **Git Post-Checkout Hook:** Automatically syncs version on branch checkout (epic branches only)
+- **CLI Command:** Manual sync command with dry-run support and epic specification
+- **Version Detection Algorithm:** Parses CHANGELOG.md, groups by epic, finds highest using canonical ordering
+- **Integration:** Works with Release Workflow validation, supports both automatic and manual sync
+
+**Features:**
+- Automatic version sync on branch switch (Git hook)
+- Manual version sync command (`vibe-dev-kit sync-version`)
+- Dry-run mode for testing
+- Epic detection from branch name or manual specification
+- Version file update with correct epic context
+- **Does NOT update during active work** - version reflects last commit during work
+- **Updates on branch switch** - version reflects highest version from that epic
 
 **Implementation Details:**
 - Script reads CHANGELOG.md to find highest version per epic
 - Updates `src/fynd_deals/version.py` with correct epic context **only on branch switch**
 - Git post-checkout hook triggers update when switching branches
 - Validates EPIC component matches branch epic number
-- **Does NOT update during active work** - version reflects last commit during work
-- Can be triggered automatically (Git hook on checkout) or manually (CLI)
+- Supports both old format (RC.EPIC.STORY.PATCH) and new format (RC.EPIC.STORY.TASK+BUILD)
+- CLI command integrated into `vibe-dev-kit` tool
 
 ---
 
