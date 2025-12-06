@@ -17,6 +17,33 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.9.1.1+5] - 06-12-25
+
+📚 Book Project: Created Head First style guide and author checklist
+
+### Added
+
+- Created Head First style guide (`docs/head-first-style-guide.md`)
+- Created Head First author checklist (`docs/head-first-author-checklist.md`)
+- Adapted style guide for technical professionals (not absolute beginners)
+- Included active learning element requirements (exercises, puzzles, code examples)
+- Included visual learning requirements (diagrams, illustrations)
+- Emphasized real framework code from dev-kit integration
+
+### Changed
+
+- Updated migration plan to mark style guide and checklist as complete
+- Version bumped to v0.9.1.1+5 (Story 1, Task 1, Build 5)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.1.1+5.md` for full details
+- Style guide targets technical professionals with Git, programming, command line background
+- Author checklist ensures consistency with Head First series requirements
+- Phase 1 migration plan: 2 of 5 items complete (style guide, checklist)
+
+---
+
 ## [0.9.1.1+4] - 06-12-25
 
 📚 Book Project: Head First transition planning and documentation updates
