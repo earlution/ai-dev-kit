@@ -32,7 +32,7 @@ housekeeping_policy: keep
 
 ## Overview
 
-Epic 9 owns the **Book Related Work** for the "Vibe Coding For Dummies" book project. This epic manages book content development, integration with the dev-kit, and publishing support.
+Epic 9 owns the **Book Related Work** for "Head First AI-Assisted Development: Scaling Vibe Coding into Professional Workflows" (working title). This epic manages book content development, integration with the dev-kit, and publishing support. The project has transitioned from "For Dummies" to "Head First" style to better match the technical sophistication of the content.
 
 ---
 
@@ -65,7 +65,7 @@ Epic 9 owns the **Book Related Work** for the "Vibe Coding For Dummies" book pro
 **Last updated:** 2025-12-05
 
 **Goal:**  
-Develop book content, chapters, examples, and exercises for "Vibe Coding For Dummies".
+Develop book content, chapters, examples, and exercises for "Head First AI-Assisted Development: Scaling Vibe Coding into Professional Workflows" (working title).
 
 **Tasks:**
 - [ ] E9:S01:T01 – Create book chapter structure
@@ -131,6 +131,7 @@ Create publishing workflows, tools, and processes for book publication.
 ## References
 
 - `KB/PM_and_Portfolio/kanban/README.md`
-- `docs/vibe-coding-for-dummies-outline-and-sample.md`
-- `docs/for-dummies-style-guide.md`
+- `KB/PM_and_Portfolio/kanban/epics/Epic-9/Story-001-book-content-development/T001-head-first-transition-planning.md` - Head First transition planning
+- `docs/vibe-coding-for-dummies-outline-and-sample.md` - Original outline (to be updated)
+- `docs/for-dummies-style-guide.md` - Original style guide (for reference)
 

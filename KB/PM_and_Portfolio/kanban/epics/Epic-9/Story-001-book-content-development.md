@@ -20,68 +20,89 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E9:S01:T01 – Create book chapter structure** - TODO
-- [ ] **E9:S01:T02 – Develop chapter content** - TODO
-- [ ] **E9:S01:T03 – Build examples and exercises** - TODO
+- [ ] **E9:S01:T01 – Head First transition planning** - IN_PROGRESS
+  - Task: [`T001-head-first-transition-planning.md`](Story-001-book-content-development/T001-head-first-transition-planning.md)
+- [ ] **E9:S01:T02 – Create book chapter structure** - TODO
+- [ ] **E9:S01:T03 – Develop chapter content** - TODO
+- [ ] **E9:S01:T04 – Build examples and exercises** - TODO
 
 ---
 
 ## Overview
 
-This story develops book content, chapters, examples, and exercises for "Vibe Coding For Dummies".
+This story develops book content, chapters, examples, and exercises for "Head First AI-Assisted Development: Scaling Vibe Coding into Professional Workflows" (working title). The project has transitioned from "For Dummies" to "Head First" style to better match the technical sophistication of the content.
 
 ---
 
 ## Goal
 
-Develop comprehensive book content for "Vibe Coding For Dummies".
+Develop comprehensive book content for "Head First AI-Assisted Development: Scaling Vibe Coding into Professional Workflows" (working title).
 
 ---
 
 ## Tasks
 
-### E9:S01:T01 – Create book chapter structure
+### E9:S01:T01 – Head First transition planning
 
-**Input:** Book outline, style guide  
-**Deliverable:** Book chapter structure document  
+**Input:** Style analysis, title options  
+**Deliverable:** Head First transition planning document  
 **Dependencies:** None  
 **Blocker:** None
 
 **Approach:**
-1. Review book outline and style guide
-2. Create chapter structure
-3. Define chapter templates
-4. Document chapter structure
+1. Document title decision and alternatives
+2. Capture reflections on style transition
+3. Outline suggested book structure
+4. Plan implementation considerations
+
+**Task Document:** [`T001-head-first-transition-planning.md`](Story-001-book-content-development/T001-head-first-transition-planning.md)
 
 ---
 
-### E9:S01:T02 – Develop chapter content
+### E9:S01:T02 – Create book chapter structure
 
-**Input:** Chapter structure, book outline  
-**Deliverable:** Chapter content documents  
+**Input:** Head First transition plan, book outline  
+**Deliverable:** Book chapter structure document  
 **Dependencies:** E9:S01:T01  
 **Blocker:** None
 
 **Approach:**
-1. Develop chapter content
-2. Create chapter drafts
+1. Review Head First transition plan
+2. Review book outline and style guide
+3. Create chapter structure aligned with Head First style
+4. Define chapter templates
+5. Document chapter structure
+
+---
+
+### E9:S01:T03 – Develop chapter content
+
+**Input:** Chapter structure, Head First style guide  
+**Deliverable:** Chapter content documents  
+**Dependencies:** E9:S01:T02  
+**Blocker:** None
+
+**Approach:**
+1. Develop chapter content in Head First style
+2. Create chapter drafts with exercises
 3. Review and refine content
 4. Publish chapter content
 
 ---
 
-### E9:S01:T03 – Build examples and exercises
+### E9:S01:T04 – Build examples and exercises
 
 **Input:** Chapter content, dev-kit frameworks  
 **Deliverable:** Book examples and exercises  
-**Dependencies:** E9:S01:T02  
+**Dependencies:** E9:S01:T03  
 **Blocker:** None
 
 **Approach:**
 1. Identify example needs
-2. Create examples and exercises
+2. Create examples and exercises (Head First style)
 3. Link examples to frameworks
-4. Publish examples
+4. Create visual learning materials
+5. Publish examples
 
 ---
 
@@ -102,6 +123,7 @@ Develop comprehensive book content for "Vibe Coding For Dummies".
 ## References
 
 - `KB/PM_and_Portfolio/kanban/epics/Epic-9/Epic-9.md`
-- `docs/vibe-coding-for-dummies-outline-and-sample.md`
-- `docs/for-dummies-style-guide.md`
+- `KB/PM_and_Portfolio/kanban/epics/Epic-9/Story-001-book-content-development/T001-head-first-transition-planning.md` - Head First transition planning
+- `docs/vibe-coding-for-dummies-outline-and-sample.md` - Original outline (to be updated)
+- `docs/for-dummies-style-guide.md` - Original style guide (for reference)
 
