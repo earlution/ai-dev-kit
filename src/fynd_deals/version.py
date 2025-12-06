@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 9      # Epic number (Epic 9: Book Related Work
 VERSION_STORY = 1     # Story number (Story 1: Book Chapter Planning & Structure
 VERSION_TASK = 1      # Task number (Task 1: Research book chapter options
-VERSION_BUILD = 5     # Build number (increments per release within task, bumped by RW)
+VERSION_BUILD = 6     # Build number (increments per release within task, bumped by RW)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

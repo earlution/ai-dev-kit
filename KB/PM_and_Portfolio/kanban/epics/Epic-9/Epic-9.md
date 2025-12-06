@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.9.1.1+5 – Head First style guide and checklist created)  
+**Last updated:** 2025-12-06 (v0.9.1.1+6 – Head First book outline created)  
 **Branch:** `epic/9-book-related-work`  
 **Version Schema:** `0.9.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -132,6 +132,9 @@ Create publishing workflows, tools, and processes for book publication.
 
 - `KB/PM_and_Portfolio/kanban/README.md`
 - `KB/PM_and_Portfolio/kanban/epics/Epic-9/Story-001-book-content-development/T001-head-first-transition-planning.md` - Head First transition planning
-- `docs/vibe-coding-for-dummies-outline-and-sample.md` - Original outline (to be updated)
-- `docs/for-dummies-style-guide.md` - Original style guide (for reference)
+- `docs/head-first-ai-assisted-development-outline.md` - Head First book outline
+- `docs/head-first-style-guide.md` - Head First style guide
+- `docs/head-first-author-checklist.md` - Head First author checklist
+- `docs/vibe-coding-for-dummies-outline-and-sample.md` - Original outline (archived for reference)
+- `docs/for-dummies-style-guide.md` - Original style guide (archived for reference)
 

@@ -12,15 +12,15 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.9.1.1+5 – Head First style guide and checklist created)  
-**Version:** v0.9.1.1+5  
+**Last updated:** 2025-12-06 (v0.9.1.1+6 – Head First book outline created)  
+**Version:** v0.9.1.1+6  
 **Code:** E9S01
 
 ---
 
 ## Task Checklist
 
-- [ ] **E9:S01:T01 – Head First transition planning** - IN_PROGRESS (Phase 1: Style guide and checklist complete)
+- [ ] **E9:S01:T01 – Head First transition planning** - IN_PROGRESS (Phase 1: Style guide, checklist, and outline complete)
   - Task: [`T001-head-first-transition-planning.md`](Story-001-book-content-development/T001-head-first-transition-planning.md)
 - [ ] **E9:S01:T02 – Create book chapter structure** - TODO
 - [ ] **E9:S01:T03 – Develop chapter content** - TODO
@@ -124,6 +124,9 @@ Develop comprehensive book content for "Head First AI-Assisted Development: Scal
 
 - `KB/PM_and_Portfolio/kanban/epics/Epic-9/Epic-9.md`
 - `KB/PM_and_Portfolio/kanban/epics/Epic-9/Story-001-book-content-development/T001-head-first-transition-planning.md` - Head First transition planning
-- `docs/vibe-coding-for-dummies-outline-and-sample.md` - Original outline (to be updated)
-- `docs/for-dummies-style-guide.md` - Original style guide (for reference)
+- `docs/head-first-ai-assisted-development-outline.md` - Head First book outline
+- `docs/head-first-style-guide.md` - Head First style guide
+- `docs/head-first-author-checklist.md` - Head First author checklist
+- `docs/vibe-coding-for-dummies-outline-and-sample.md` - Original outline (archived for reference)
+- `docs/for-dummies-style-guide.md` - Original style guide (archived for reference)
 
