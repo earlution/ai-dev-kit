@@ -71,7 +71,6 @@ Establish a framework for maintaining documentation accuracy and consistency acr
 - [ ] E5:S01:T01 – Define documentation maintenance policies
 - [ ] E5:S01:T02 – Create documentation review cadences
 - [ ] E5:S01:T03 – Establish documentation update triggers
-- [ ] E5:S01:T04 – Create Knowledge Base framework with document creation workflow
 
 **Story:** [`Story-001-documentation-maintenance-framework.md`](Story-001-documentation-maintenance-framework.md)
 

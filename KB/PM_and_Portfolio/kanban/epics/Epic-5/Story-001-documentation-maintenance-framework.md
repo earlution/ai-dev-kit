@@ -23,7 +23,6 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T01 – Define documentation maintenance policies** - TODO
 - [ ] **E5:S01:T02 – Create documentation review cadences** - TODO
 - [ ] **E5:S01:T03 – Establish documentation update triggers** - TODO
-- [ ] **E5:S01:T04 – Create Knowledge Base framework with document creation workflow** - TODO
 
 ---
 
@@ -86,64 +85,11 @@ Establish a comprehensive framework for documentation maintenance that ensures a
 
 ---
 
-### E5:S01:T04 – Create Knowledge Base framework with document creation workflow
-
-**Input:** Existing templates, current document creation patterns  
-**Deliverable:** Knowledge Base framework with template-enforced document creation workflow  
-**Dependencies:** None  
-**Blocker:** None
-
-**Problem Statement:**
-When creating new documents, agents (and humans) tend to look at existing documents of the same type rather than using templates. This leads to document drift as existing documents may have accumulated inconsistencies, outdated patterns, or deviations from the intended structure. Templates should be the Single Source of Truth (SST) for document creation.
-
-**Approach:**
-1. **Audit existing templates:**
-   - Catalog all existing templates across frameworks (Kanban, Debug Path, Doc Lifecycle, etc.)
-   - Identify template locations and naming conventions
-   - Document template coverage gaps
-
-2. **Create Knowledge Base framework structure:**
-   - Define KB framework package structure (if not exists)
-   - Establish template registry/catalog
-   - Create template discovery mechanisms
-
-3. **Design document creation workflow:**
-   - Define workflow steps that enforce template usage
-   - Create validation checks to ensure templates are used
-   - Build workflow documentation and agent guidance
-
-4. **Harden Kanban workflows:**
-   - Update Kanban creation workflows to mandate template usage
-   - Add validation steps to RW or Kanban creation processes
-   - Create agent rules/guidance for template-first document creation
-
-5. **Create template enforcement mechanisms:**
-   - Build validators to check new documents against templates
-   - Create agent guidance/rules that prioritize templates over existing docs
-   - Document anti-pattern: "Don't copy from existing docs, use templates"
-
-**Deliverables:**
-- Knowledge Base framework package (if new) or framework documentation
-- Document creation workflow specification
-- Template registry/catalog
-- Updated Kanban workflows with template enforcement
-- Validator scripts for template compliance
-- Agent guidance/rules for template-first creation
-
-**Success Criteria:**
-- All new documents are created from templates, not copied from existing docs
-- Workflows explicitly require template usage
-- Validators catch template violations
-- Agent guidance clearly prioritizes templates
-
----
-
 ## Dependencies
 
 **Blocks:**
 - E5:S02 (Documentation Quality Assurance)
 - E5:S03 (Documentation Automation)
-- Future document creation work (ensures template usage)
 
 **Blocked By:**
 - None
