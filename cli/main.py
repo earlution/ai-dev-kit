@@ -18,6 +18,7 @@ from cli.commands.check import CheckCommand
 from cli.commands.status import StatusCommand
 from cli.commands.list import ListCommand
 from cli.commands.remove import RemoveCommand
+from cli.commands.sync_version import add_sync_version_parser, sync_version_command
 
 
 def main():
@@ -34,6 +35,7 @@ Examples:
   vibe-dev-kit status
   vibe-dev-kit list
   vibe-dev-kit remove numbering-versioning
+  vibe-dev-kit sync-version
         """
     )
     
@@ -70,6 +72,9 @@ Examples:
     remove_parser.add_argument("framework", help="Framework name to remove")
     remove_parser.add_argument("--keep-files", action="store_true", help="Keep framework files but remove dependency tracking")
     
+    # Sync-version command
+    add_sync_version_parser(subparsers)
+    
     args = parser.parse_args()
     
     if not args.command:
@@ -95,6 +100,8 @@ Examples:
         elif args.command == "remove":
             cmd = RemoveCommand()
             return cmd.execute(args)
+        elif args.command == "sync-version":
+            return sync_version_command(args)
         else:
             parser.print_help()
             return 1
