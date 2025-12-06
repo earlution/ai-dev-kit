@@ -135,6 +135,7 @@ def extract_changelog_versions(content: str) -> List[Tuple[str, Tuple[int, int, 
 def validate_changelog_ordering(content: str) -> Tuple[bool, List[str]]:
     """
     Validate that changelog entries are in canonical order (by version number).
+    Supports both ascending (oldest first) and descending (newest first) order.
     
     Returns:
         (is_valid, errors)
@@ -145,26 +146,40 @@ def validate_changelog_ordering(content: str) -> Tuple[bool, List[str]]:
     if len(versions) < 2:
         return True, []  # Need at least 2 versions to check ordering
     
-    # Check ordering: each version should be >= previous version
+    # Detect order direction from first two versions
+    first_comparison = compare_versions(versions[0][1], versions[1][1])
+    is_descending = first_comparison > 0  # If first > second, it's descending
+    
+    # Check ordering: ensure consistent direction throughout
     for i in range(len(versions) - 1):
         current_version_str, current_components = versions[i]
         next_version_str, next_components = versions[i + 1]
         
         comparison = compare_versions(current_components, next_components)
         
-        if comparison > 0:
-            # Current version is greater than next version - ordering violation
-            errors.append(
-                f"Changelog ordering violation: {current_version_str} appears before "
-                f"{next_version_str}, but canonical ordering requires "
-                f"{next_version_str} before {current_version_str} "
-                f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} > {next_components})"
-            )
-        elif comparison == 0:
-            # Duplicate version - also an error
+        if comparison == 0:
+            # Duplicate version - always an error
             errors.append(
                 f"Duplicate version detected: {current_version_str} appears multiple times"
             )
+        elif is_descending:
+            # Descending order: each version should be > next version
+            if comparison <= 0:
+                errors.append(
+                    f"Changelog ordering violation: {current_version_str} appears before "
+                    f"{next_version_str}, but descending canonical ordering requires "
+                    f"{current_version_str} > {next_version_str} "
+                    f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} <= {next_components})"
+                )
+        else:
+            # Ascending order: each version should be < next version
+            if comparison >= 0:
+                errors.append(
+                    f"Changelog ordering violation: {current_version_str} appears before "
+                    f"{next_version_str}, but ascending canonical ordering requires "
+                    f"{current_version_str} < {next_version_str} "
+                    f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} >= {next_components})"
+                )
     
     return len(errors) == 0, errors
 
@@ -300,7 +315,10 @@ def main():
         print("🚨 CANONICAL ORDERING REQUIREMENT:")
         print("  - Versions MUST be ordered by version number (RC.EPIC.STORY.TASK+BUILD)")
         print("  - Ordering: RC → EPIC → STORY → TASK → BUILD")
-        print("  - Example: 0.2.4.9+3 must appear before 0.3.2.4+1 (Epic 2 < Epic 3)")
+        print("  - Supports both ascending (oldest first) and descending (newest first) order")
+        print("  - Order must be consistent throughout the changelog")
+        print("  - Example ascending: 0.2.4.9+3 before 0.3.2.4+1 (Epic 2 < Epic 3)")
+        print("  - Example descending: 0.3.2.4+1 before 0.2.4.9+3 (newest first)")
         print("  - Ordering is independent of commit timestamp")
         print()
         print("🚨 DO NOT COMMIT - Fix changelog format/ordering first!")
