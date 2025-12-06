@@ -17,6 +17,34 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.3.3+2] - 06-12-25
+
+📊 Framework Management: Framework health dashboards built (Story 3 complete)
+
+### Added
+
+- Created dashboard generator script (`scripts/framework-management/generate-health-dashboard.py`)
+- Created framework health dashboard guide (`KB/Architecture/Standards_and_ADRs/framework-health-dashboard-guide.md`)
+- Implemented markdown-based dashboard with summary statistics and framework reports
+- Added health status indicators and category breakdown tables
+- Added automated dashboard generation workflow
+
+### Changed
+
+- Updated Story 003 to mark T03 as complete and Story 3 as COMPLETE
+- Updated Epic 6 to mark Story 3 as COMPLETE
+- Version bumped to v0.6.3.3+2 (Story 3, Task 3, Build 2)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.3.3+2.md` for full details
+- Story 3 (Framework Health Monitoring) is now COMPLETE - all 3 tasks completed
+- Dashboard provides comprehensive health visualization with summary statistics and individual framework reports
+- Markdown format enables viewing in GitHub, IDEs, and any markdown viewer
+- Automated generation supports CI/CD integration
+
+---
+
 ## [0.6.3.2+2] - 06-12-25
 
 🛠️ Framework Management: Health monitoring tools implemented

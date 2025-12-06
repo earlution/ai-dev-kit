@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 003 – Framework Health Monitoring
 
-**Status:** TODO  
+**Status:** COMPLETE ✅  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.6.3.2+2 – Health monitoring tools implemented)  
-**Version:** v0.6.3.2+2  
+**Last updated:** 2025-12-06 (v0.6.3.3+2 – Framework health dashboards built, Story 3 complete)  
+**Version:** v0.6.3.3+2  
 **Code:** E6S03
 
 ---
@@ -105,11 +105,25 @@ Build comprehensive monitoring and health tracking for framework packages.
 **Dependencies:** E6:S03:T02  
 **Blocker:** None
 
+**Status:** ✅ COMPLETE
+
 **Approach:**
 1. Design health dashboard
 2. Implement dashboard visualization
 3. Create dashboard documentation
 4. Document dashboard usage
+
+**Deliverables:**
+- `scripts/framework-management/generate-health-dashboard.py` - Dashboard generator script
+- `KB/Architecture/Standards_and_ADRs/framework-health-dashboard-guide.md` - Dashboard usage guide
+- Markdown-based dashboard format (viewable in GitHub, IDEs, etc.)
+- Dashboard includes:
+  - Summary section (statistics, distribution)
+  - Individual framework health reports (scores, category breakdowns, details)
+  - Health status legend
+  - Health score calculation formula
+- Automated generation from health metrics JSON
+- Support for single framework or all frameworks
 
 ---
 
