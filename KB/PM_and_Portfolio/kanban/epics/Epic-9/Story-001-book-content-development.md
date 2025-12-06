@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.9.1.1+3 – Changelog reordered to descending order)  
-**Version:** v0.9.1.1+3  
+**Last updated:** 2025-12-06 (v0.9.1.1+4 – Head First transition planning)  
+**Version:** v0.9.1.1+4  
 **Code:** E9S01
 
 ---
