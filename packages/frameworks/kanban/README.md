@@ -138,6 +138,7 @@ structure:
   templates/:
     - EPIC_TEMPLATE.md                   # Epic document template
     - STORY_TEMPLATE.md                  # Story document template
+    - CANONICAL_EPICS_STORIES_TASKS.md  # Reusable Epic/Story/Task patterns (EST)
 
   examples/:
     - Epic-4-Example.md                  # Real Epic (37 stories, 36 complete)
@@ -1403,6 +1404,8 @@ included_docs:
 
   - file: "templates/STORY_TEMPLATE.md"
     purpose: "Story document template"
+  - file: "templates/CANONICAL_EPICS_STORIES_TASKS.md"
+    purpose: "Reusable Epic/Story/Task patterns (EST)"
 
   - file: "examples/Epic-4-Example.md"
     purpose: "Real Epic with 37 stories"

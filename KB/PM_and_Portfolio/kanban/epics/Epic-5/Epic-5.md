@@ -90,6 +90,8 @@ Implement quality assurance processes and tools for documentation validation.
 - [ ] E5:S02:T01 – Create documentation consistency validators
 - [ ] E5:S02:T02 – Implement documentation review workflows
 - [ ] E5:S02:T03 – Build documentation health dashboards
+- [ ] E5:S02:T04 – Fix changelog ordering to ensure consistent descending order (PERPETUAL)
+- [ ] E5:S02:T05 – Add changelog ordering task to Kanban framework canonical EST
 
 **Story:** [`Story-002-documentation-quality-assurance.md`](Story-002-documentation-quality-assurance.md)
 

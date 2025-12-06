@@ -23,6 +23,8 @@ housekeeping_policy: keep
 - [ ] **E5:S02:T01 – Create documentation consistency validators** - TODO
 - [ ] **E5:S02:T02 – Implement documentation review workflows** - TODO
 - [ ] **E5:S02:T03 – Build documentation health dashboards** - TODO
+- [ ] **E5:S02:T04 – Fix changelog ordering to ensure consistent descending order** - TODO (PERPETUAL)
+- [ ] **E5:S02:T05 – Add changelog ordering task to Kanban framework canonical EST** - TODO
 
 ---
 
@@ -82,6 +84,76 @@ Implement comprehensive quality assurance processes and tools for documentation 
 2. Create health monitoring tools
 3. Build dashboard for health visualization
 4. Document health monitoring procedures
+
+---
+
+### E5:S02:T04 – Fix changelog ordering to ensure consistent descending order
+
+**Input:** Current CHANGELOG.md, changelog validator output  
+**Deliverable:** Consistently ordered changelog (descending, most recent first)  
+**Dependencies:** None  
+**Blocker:** None  
+**Type:** PERPETUAL (recurring maintenance task)
+
+**Problem:**
+- CHANGELOG.md has mixed ordering (descending at top, ascending in middle/bottom)
+- Changelog validator detects violations but RW continues
+- RW needs correct version number when committing, which requires proper ordering
+
+**Approach:**
+1. Analyze current changelog structure and identify ordering violations
+2. Reorder all changelog entries to consistent descending order (most recent first)
+3. Verify changelog validator passes after reordering
+4. Document reordering process for future maintenance
+5. Create script/process to maintain descending order going forward
+
+**Key Requirements:**
+- All entries must be in descending canonical order (highest version first)
+- Validator must pass before RW commits
+- Process must be repeatable for future maintenance
+
+**Perpetual Nature:**
+- This task should be checked/re-executed whenever:
+  - Changelog validator reports ordering violations
+  - New entries are added that might disrupt ordering
+  - Before major releases or merges
+
+**Success Criteria:**
+- Changelog validator passes with no ordering violations
+- All entries in descending canonical order (RC.EPIC.STORY.TASK+BUILD)
+- RW can commit with correct version number
+
+---
+
+### E5:S02:T05 – Add changelog ordering task to Kanban framework canonical EST
+
+**Input:** Canonical EST document, changelog ordering task definition  
+**Deliverable:** Canonical EST document with changelog ordering task pattern  
+**Dependencies:** E5:S02:T04 (task definition)  
+**Blocker:** None
+
+**Approach:**
+1. Create `packages/frameworks/kanban/templates/CANONICAL_EPICS_STORIES_TASKS.md` document
+2. Add canonical Epics, Stories, and Tasks sections
+3. Add changelog ordering maintenance task as canonical task pattern
+4. Document task pattern with problem, approach, and success criteria
+5. Include example usage showing how to reference in Stories
+6. Update Kanban framework README to reference canonical EST document
+7. Document how to add new canonical EST patterns in the future
+
+**Key Deliverables:**
+- `packages/frameworks/kanban/templates/CANONICAL_EPICS_STORIES_TASKS.md` - Canonical EST document
+- Canonical Epics section (Documentation Management, Framework Management)
+- Canonical Stories section (Documentation Quality Assurance, Framework Version Management)
+- Changelog ordering task documented as reusable pattern
+- Framework documentation updated
+
+**Success Criteria:**
+- Canonical EST document exists in framework templates
+- Document covers Epics, Stories, and Tasks (all three levels)
+- Changelog ordering task is documented as canonical pattern
+- Other projects can reference and reuse EST patterns
+- Framework README references canonical EST document
 
 ---
 

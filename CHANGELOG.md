@@ -17,6 +17,31 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.1.1+6] - 06-12-25
+
+📋 Framework: Created canonical EST document and perpetual changelog ordering task
+
+### Added
+
+- Created canonical EST (Epics, Stories, Tasks) document in Kanban framework
+- Added perpetual changelog ordering maintenance task as canonical pattern
+- Documented common Epic patterns (Documentation Management, Framework Management)
+- Documented common Story patterns (Documentation Quality Assurance, Framework Version Management)
+
+### Changed
+
+- Added E5:S02:T04 (Fix changelog ordering - PERPETUAL) to Epic 5
+- Added E5:S02:T05 (Add to canonical EST) to Epic 5
+- Updated Kanban framework README to reference canonical EST document
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.1.1+6.md` for full details
+- Canonical EST document enables projects to reference reusable work item patterns
+- Changelog ordering task is now available as perpetual maintenance pattern
+
+---
+
 ## [0.6.1.1+5] - 06-12-25
 
 🏷️ Strategy: Created framework version tagging strategy with automated scripts
