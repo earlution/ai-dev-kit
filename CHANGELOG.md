@@ -17,6 +17,30 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.1.1+7] - 06-12-25
+
+📋 Process: Created framework release processes document
+
+### Added
+
+- Created framework release processes document with 6-step workflow
+- Defined release decision process (PATCH/MINOR/MAJOR/NO_RELEASE)
+- Established release criteria and pre-release gates
+- Documented release procedures (standard, MAJOR with migration, multi-framework)
+
+### Changed
+
+- Marked E6:S01:T02 (Create framework release processes) as COMPLETE
+- Added release automation guidance and best practices
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.1.1+7.md` for full details
+- Release workflow: Decision → Version → Update → Tag → Documentation → Verify
+- Release criteria ensure quality and consistency across framework releases
+
+---
+
 ## [0.6.1.1+6] - 06-12-25
 
 📋 Framework: Created canonical EST document and perpetual changelog ordering task

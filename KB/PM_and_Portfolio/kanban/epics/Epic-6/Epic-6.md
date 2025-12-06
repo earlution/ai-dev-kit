@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.6.1.1+6 – Canonical EST document created)  
-**Version:** v0.6.1.1+6  
+**Last updated:** 2025-12-06 (v0.6.1.1+7 – Framework release processes created)  
+**Version:** v0.6.1.1+7  
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
