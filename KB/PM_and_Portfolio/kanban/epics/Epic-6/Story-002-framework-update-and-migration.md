@@ -25,6 +25,7 @@ housekeeping_policy: keep
 - [ ] **E6:S02:T03 – Establish backward compatibility policies** - TODO
 - [ ] **E6:S02:T04 – Build framework update CLI tool** - TODO
 - [ ] **E6:S02:T05 – Create auto-update mechanisms** - TODO
+- [ ] **E6:S02:T06 – Implement Branch Context Policy automation** - TODO
 
 ---
 
@@ -136,6 +137,37 @@ Implement comprehensive processes for updating and migrating framework packages.
 - Package manager update integration
 - Auto-update policy documentation
 - Update testing workflows
+
+---
+
+### E6:S02:T06 – Implement Branch Context Policy automation
+
+**Input:** Branch Context Policy (E6:S01:T06)  
+**Deliverable:** Automated version file updates on branch switch  
+**Dependencies:** E6:S01:T06  
+**Blocker:** None
+
+**Approach:**
+1. Design branch switch hook mechanism (Git hooks or CLI tool)
+2. Create script to detect highest version per epic from changelog
+3. Implement version file update script
+4. Create Git hook (post-checkout) to auto-update version file
+5. Create CLI command: `vibe-dev-kit sync-version` for manual sync
+6. Integrate into workflow management framework
+7. Document usage and troubleshooting
+
+**Key Deliverables:**
+- Branch context sync script
+- Git post-checkout hook implementation
+- CLI command for manual version sync
+- Integration into workflow management framework
+- Documentation and usage guide
+
+**Implementation Details:**
+- Script reads CHANGELOG.md to find highest version per epic
+- Updates `src/fynd_deals/version.py` with correct epic context
+- Validates version file matches branch context
+- Can be triggered automatically (Git hook) or manually (CLI)
 
 ---
 

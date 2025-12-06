@@ -25,6 +25,7 @@ housekeeping_policy: keep
 - [ ] **E6:S01:T03 – Establish framework compatibility tracking** - TODO
 - [ ] **E6:S01:T04 – Design framework dependency architecture** - TODO
 - [ ] **E6:S01:T05 – Create framework version tagging strategy** - TODO
+- [ ] **E6:S01:T06 – Define Branch Context Policy** - TODO
 
 ---
 
@@ -126,6 +127,37 @@ Establish comprehensive version management processes for framework packages.
 - Framework version tagging policy
 - Git tagging workflow documentation
 - Automated tagging scripts
+
+---
+
+### E6:S01:T06 – Define Branch Context Policy
+
+**Input:** Current version file management, branch switching patterns  
+**Deliverable:** Branch Context Policy document and implementation  
+**Dependencies:** E6:S01:T01  
+**Blocker:** None
+
+**Approach:**
+1. Analyze current version file state across epic branches
+2. Define Branch Context Policy: version file must reflect highest version from that epic
+3. Establish policy rules:
+   - When switching TO a branch: version file must reflect highest version from that epic
+   - When switching FROM a branch: version file should be updated to highest version from that epic
+   - Version file should always reflect the branch's context
+4. Document policy in versioning framework
+5. Create automated tool/script to update version files on branch switch
+6. Integrate into workflow management framework
+
+**Key Deliverables:**
+- Branch Context Policy document
+- Policy integration into versioning framework
+- Automated version file update tool/script
+- Workflow integration (pre-commit hook or branch switch hook)
+
+**Policy Definition:**
+- **Term:** Branch Context Policy (also: Version-Branch Alignment Policy)
+- **Purpose:** Ensure version file always reflects the correct epic context for the active branch
+- **Rule:** Version file must show the numerically highest version from the epic associated with the current branch
 
 ---
 
