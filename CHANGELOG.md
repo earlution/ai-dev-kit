@@ -17,6 +17,32 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.3.1+2] - 06-12-25
+
+📊 Framework Management: Framework health metrics created
+
+### Added
+
+- Created framework health metrics document (`KB/Architecture/Standards_and_ADRs/framework-health-metrics.md`)
+- Defined 7 health metric categories with weighted scoring system
+- Established health score calculation formula and status levels
+- Created health metrics schema (YAML format) for data collection
+- Defined health monitoring workflow and improvement actions
+
+### Changed
+
+- Updated Story 003 to mark T01 as complete
+- Version bumped to v0.6.3.1+2 (Story 3, Task 1, Build 2)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.3.1+2.md` for full details
+- Health metrics cover: Documentation (25%), Maintenance (20%), Version Management (15%), Usability (15%), Integration (10%), Code Quality (10%), Adoption (5%)
+- Health status levels: Excellent (90-100%), Good (70-89%), Fair (50-69%), Poor (<50%)
+- Enables proactive maintenance planning and framework adoption decisions
+
+---
+
 ## [0.6.2.6+2] - 06-12-25
 
 🛠️ Framework Management: Branch Context Policy automation implemented
