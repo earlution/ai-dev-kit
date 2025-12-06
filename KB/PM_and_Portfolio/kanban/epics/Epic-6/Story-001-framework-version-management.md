@@ -156,8 +156,11 @@ Establish comprehensive version management processes for framework packages.
 
 **Policy Definition:**
 - **Term:** Branch Context Policy (also: Version-Branch Alignment Policy)
-- **Purpose:** Ensure version file always reflects the correct epic context for the active branch
-- **Rule:** Version file must show the numerically highest version from the epic associated with the current branch
+- **Purpose:** Ensure version file reflects correct epic context, showing last commit during work and highest version on branch switch
+- **Rule:** 
+  - **During active work:** Version file reflects the **last commit** on the current branch (current work context)
+  - **When switching branches:** Version file is updated to the **highest version** from that epic (shows where epic left off)
+- **Safeguards:** EPIC component must always match branch epic number; RW validates this; no automatic updates during active work
 
 ---
 

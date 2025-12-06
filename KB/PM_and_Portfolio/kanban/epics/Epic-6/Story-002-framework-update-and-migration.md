@@ -165,9 +165,11 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 **Implementation Details:**
 - Script reads CHANGELOG.md to find highest version per epic
-- Updates `src/fynd_deals/version.py` with correct epic context
-- Validates version file matches branch context
-- Can be triggered automatically (Git hook) or manually (CLI)
+- Updates `src/fynd_deals/version.py` with correct epic context **only on branch switch**
+- Git post-checkout hook triggers update when switching branches
+- Validates EPIC component matches branch epic number
+- **Does NOT update during active work** - version reflects last commit during work
+- Can be triggered automatically (Git hook on checkout) or manually (CLI)
 
 ---
 
