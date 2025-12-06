@@ -17,6 +17,32 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.2.4+1] - 06-12-25
+
+🛠️ CLI: Built framework update CLI tool
+
+### Added
+
+- Created `vibe-dev-kit` CLI tool for framework management
+- Implemented 6 CLI commands (install, update, check, status, list, remove)
+- Implemented 3 backend types (Git submodule, Git subtree, Package manager)
+- Created configuration management (`.vibe-dev-kit.yaml`)
+- Added CLI documentation and usage examples
+
+### Changed
+
+- Marked E6:S02:T04 (Build framework update CLI tool) as COMPLETE
+- Version bumped to v0.6.2.4+1 (Story 2, Task 4)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.2.4+1.md` for full details
+- CLI tool provides unified interface for framework dependency management
+- Supports multiple backends: Git submodules, Git subtrees, npm, pip
+- Ready for incremental enhancement (version resolution, migration tools)
+
+---
+
 ## [0.6.2.3+1] - 06-12-25
 
 📋 Policy: Established backward compatibility policies
