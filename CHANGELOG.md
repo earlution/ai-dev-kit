@@ -17,6 +17,30 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.2.1+1] - 06-12-25
+
+📋 Procedures: Created framework update procedures document
+
+### Added
+
+- Created framework update procedures document with update workflows
+- Defined update decision process (when to update, decision criteria)
+- Documented update methods (Git submodules, CLI tool, package managers)
+- Established update testing processes (pre-update, update, post-update)
+
+### Changed
+
+- Marked E6:S02:T01 (Create framework update procedures) as COMPLETE
+- Version bumped to v0.6.2.1+1 (Story 2, Task 1)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.2.1+1.md` for full details
+- Update workflows: Check → Assess → Plan → Execute → Test → Verify → Complete
+- Procedures support PATCH, MINOR, and MAJOR updates with appropriate testing
+
+---
+
 ## [0.6.1.1+8] - 06-12-25
 
 📋 Tracking: Established framework compatibility tracking system
