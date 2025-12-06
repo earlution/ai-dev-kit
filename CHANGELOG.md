@@ -17,6 +17,30 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.1.1+4] - 06-12-25
+
+📋 Strategy: Defined framework versioning strategy using Semantic Versioning
+
+### Added
+
+- Created framework versioning strategy document
+- Established two-layer versioning system (framework SemVer vs. dev-kit RC.EPIC.STORY.TASK+BUILD)
+- Defined version numbering conventions (MAJOR.MINOR.PATCH)
+- Documented Git tagging strategy and compatibility policies
+
+### Changed
+
+- Marked E6:S01:T01 (Define framework versioning strategy) as COMPLETE
+- Marked E6:S01:T04 (Design framework dependency architecture) as COMPLETE
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.1.1+4.md` for full details
+- Framework versions use SemVer (e.g., `2.0.0`) independent of dev-kit versions
+- Enables proper dependency management and compatibility tracking
+
+---
+
 ## [0.6.1.1+3] - 06-12-25
 
 📋 Policy: Clarified Branch Context Policy definition and updated version files
