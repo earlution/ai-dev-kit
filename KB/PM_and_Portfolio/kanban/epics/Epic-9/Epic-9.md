@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.9.1.1+4 – Head First transition planning)  
+**Last updated:** 2025-12-06 (v0.9.1.1+5 – Head First style guide and checklist created)  
 **Branch:** `epic/9-book-related-work`  
 **Version Schema:** `0.9.S.T+B`  
 **Production URL:** [N/A for this repo]
