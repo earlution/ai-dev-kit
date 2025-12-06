@@ -73,9 +73,11 @@ class PackageManagerBackend(BaseBackend):
         
         Args:
             framework: Framework name
-            version: Target version
+            version: Target version (use "latest" for auto-update)
             path: Framework path (not used)
             **kwargs: Additional options
+                - auto: If True, update to latest compatible version
+                - pin: Pinning strategy (exact, minor, major, none)
             
         Returns:
             True if update successful
@@ -83,12 +85,23 @@ class PackageManagerBackend(BaseBackend):
         try:
             package_name = self._get_package_name(framework)
             
-            if self.pm_type == "npm":
-                cmd = ["npm", "update", f"{package_name}@{version}"]
-            elif self.pm_type == "pip":
-                cmd = ["pip", "install", "--upgrade", f"{package_name}=={version}"]
+            # Determine target version
+            if version == "latest" or kwargs.get("auto", False):
+                # Auto-update to latest
+                if self.pm_type == "npm":
+                    cmd = ["npm", "update", package_name]
+                elif self.pm_type == "pip":
+                    cmd = ["pip", "install", "--upgrade", package_name]
+                else:
+                    raise ValueError(f"Unsupported package manager: {self.pm_type}")
             else:
-                raise ValueError(f"Unsupported package manager: {self.pm_type}")
+                # Specific version
+                if self.pm_type == "npm":
+                    cmd = ["npm", "install", f"{package_name}@{version}"]
+                elif self.pm_type == "pip":
+                    cmd = ["pip", "install", "--upgrade", f"{package_name}=={version}"]
+                else:
+                    raise ValueError(f"Unsupported package manager: {self.pm_type}")
             
             subprocess.run(cmd, check=True)
             return True
@@ -107,13 +120,59 @@ class PackageManagerBackend(BaseBackend):
         Returns:
             Dictionary with update information
         """
-        # TODO: Implement version checking via package manager
-        return {
-            "current": current_version,
-            "latest": current_version,  # Placeholder
-            "update_available": False,
-            "backend": f"package-manager-{self.pm_type}"
-        }
+        try:
+            package_name = self._get_package_name(framework)
+            
+            if self.pm_type == "npm":
+                # Check for updates via npm
+                cmd = ["npm", "outdated", package_name, "--json"]
+                result = subprocess.run(cmd, capture_output=True, text=True)
+                
+                if result.returncode == 0 and result.stdout.strip():
+                    import json
+                    outdated = json.loads(result.stdout)
+                    if package_name in outdated:
+                        latest = outdated[package_name].get("latest", current_version)
+                        return {
+                            "current": current_version,
+                            "latest": latest,
+                            "update_available": latest != current_version,
+                            "backend": f"package-manager-{self.pm_type}"
+                        }
+            elif self.pm_type == "pip":
+                # Check for updates via pip
+                cmd = ["pip", "index", "versions", package_name]
+                result = subprocess.run(cmd, capture_output=True, text=True)
+                
+                if result.returncode == 0:
+                    # Parse latest version from output (simplified)
+                    for line in result.stdout.split("\n"):
+                        if "Available versions:" in line or "Latest:" in line:
+                            # Extract version (simplified parsing)
+                            parts = line.split()
+                            if len(parts) > 1:
+                                latest = parts[-1].strip("(),")
+                                return {
+                                    "current": current_version,
+                                    "latest": latest,
+                                    "update_available": latest != current_version,
+                                    "backend": f"package-manager-{self.pm_type}"
+                                }
+            
+            return {
+                "current": current_version,
+                "latest": current_version,
+                "update_available": False,
+                "backend": f"package-manager-{self.pm_type}"
+            }
+        except Exception as e:
+            return {
+                "current": current_version,
+                "latest": current_version,
+                "update_available": False,
+                "backend": f"package-manager-{self.pm_type}",
+                "error": str(e)
+            }
     
     def status(self, framework: str, path: str) -> Dict[str, Any]:
         """Get package status.

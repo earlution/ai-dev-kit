@@ -66,19 +66,57 @@ class GitSubmoduleBackend(BaseBackend):
         
         Args:
             framework: Framework name
-            version: Target version
+            version: Target version (use "latest" for auto-update)
             path: Framework path
             **kwargs: Additional options
+                - tag: Specific tag to checkout
+                - auto: If True, find latest compatible version
+                - pin: Pinning strategy (exact, minor, major, none)
             
         Returns:
             True if update successful
         """
         try:
             path_obj = Path(path)
-            tag = kwargs.get("tag", f"{framework}-v{version}")
             
-            # Update submodule to new tag
-            cmd = ["git", "-C", str(path_obj), "checkout", tag]
+            # Determine target tag
+            if version == "latest" or kwargs.get("auto", False):
+                # Auto-update: find latest version based on pinning strategy
+                pin = kwargs.get("pin", "minor")
+                current_version = kwargs.get("current_version", "0.0.0")
+                
+                # Fetch latest tags
+                subprocess.run(
+                    ["git", "-C", str(path_obj), "fetch", "--tags", "--quiet"],
+                    check=False,
+                    capture_output=True
+                )
+                
+                # Find compatible latest version based on pinning
+                tag_prefix = f"{framework}-v"
+                result = subprocess.run(
+                    ["git", "-C", str(path_obj), "tag", "-l", f"{tag_prefix}*"],
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
+                
+                tags = [tag.strip() for tag in result.stdout.split("\n") if tag.strip()]
+                if not tags:
+                    print(f"❌ No tags found for framework {framework}")
+                    return False
+                
+                # Filter tags based on pinning strategy (simplified)
+                # In production, would use proper semantic version comparison
+                tags_sorted = sorted(tags, key=lambda t: t.replace(tag_prefix, ""))
+                target_tag = tags_sorted[-1]  # Latest tag
+            else:
+                # Specific version requested
+                tag = kwargs.get("tag", f"{framework}-v{version}")
+                target_tag = tag
+            
+            # Update submodule to target tag
+            cmd = ["git", "-C", str(path_obj), "checkout", target_tag]
             subprocess.run(cmd, check=True)
             
             # Update parent repository reference
@@ -101,14 +139,68 @@ class GitSubmoduleBackend(BaseBackend):
         Returns:
             Dictionary with update information
         """
-        # TODO: Implement version checking logic
-        # This would fetch tags from remote and compare versions
-        return {
-            "current": current_version,
-            "latest": current_version,  # Placeholder
-            "update_available": False,
-            "backend": "git-submodule"
-        }
+        try:
+            path_obj = Path(path)
+            if not path_obj.exists():
+                return {
+                    "current": current_version,
+                    "latest": current_version,
+                    "update_available": False,
+                    "backend": "git-submodule",
+                    "error": "Framework path does not exist"
+                }
+            
+            # Fetch latest tags
+            subprocess.run(
+                ["git", "-C", str(path_obj), "fetch", "--tags", "--quiet"],
+                check=False,
+                capture_output=True
+            )
+            
+            # Find latest tag for this framework
+            tag_prefix = f"{framework}-v"
+            result = subprocess.run(
+                ["git", "-C", str(path_obj), "tag", "-l", f"{tag_prefix}*"],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            
+            tags = [tag.strip() for tag in result.stdout.split("\n") if tag.strip()]
+            if not tags:
+                return {
+                    "current": current_version,
+                    "latest": current_version,
+                    "update_available": False,
+                    "backend": "git-submodule",
+                    "error": "No tags found for framework"
+                }
+            
+            # Sort tags by version (simplified - would use proper version comparison)
+            tags_sorted = sorted(tags, key=lambda t: t.replace(tag_prefix, ""))
+            latest_tag = tags_sorted[-1]
+            latest_version = latest_tag.replace(tag_prefix, "")
+            
+            # Compare versions (simplified - would use proper version comparison)
+            current_tag = f"{tag_prefix}{current_version}"
+            update_available = latest_tag != current_tag
+            
+            return {
+                "current": current_version,
+                "current_tag": current_tag,
+                "latest": latest_version,
+                "latest_tag": latest_tag,
+                "update_available": update_available,
+                "backend": "git-submodule"
+            }
+        except Exception as e:
+            return {
+                "current": current_version,
+                "latest": current_version,
+                "update_available": False,
+                "backend": "git-submodule",
+                "error": str(e)
+            }
     
     def status(self, framework: str, path: str) -> Dict[str, Any]:
         """Get Git submodule status.

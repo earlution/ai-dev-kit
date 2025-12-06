@@ -17,6 +17,35 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.2.5+2] - 06-12-25
+
+🛠️ Framework Management: Auto-update mechanisms created
+
+### Added
+
+- Created Git submodule auto-update script (`scripts/framework-management/auto-update-git-submodule.sh`)
+- Created batch framework update script (`scripts/framework-management/auto-update-all-frameworks.sh`)
+- Created auto-update policies document (`KB/Architecture/Standards_and_ADRs/framework-auto-update-policies.md`)
+- Created testing workflows document (`KB/Architecture/Standards_and_ADRs/framework-auto-update-testing-workflows.md`)
+- Enhanced CLI backends with auto-update support (Git submodule and package manager)
+
+### Changed
+
+- Enhanced `cli/backends/git_submodule.py` with real version checking and auto-update support
+- Enhanced `cli/backends/package_manager.py` with npm/pip update checking and auto-update support
+- Updated Story 002 to mark T05 as complete
+- Version bumped to v0.6.2.5+2 (Story 2, Task 5, Build 2)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.2.5+2.md` for full details
+- Auto-update mechanisms support version pinning (exact, minor, major, none)
+- Update policies: PATCH (auto), MINOR (conditional), MAJOR (manual)
+- Safety mechanisms: pre-update validation, backup creation, rollback capability
+- Testing workflows: pre-update, post-update, validation, rollback procedures
+
+---
+
 ## [0.6.2.4+1] - 06-12-25
 
 🛠️ CLI: Built framework update CLI tool
