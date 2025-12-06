@@ -17,6 +17,24 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.1.1+3] - 06-12-25
+
+📋 Policy: Clarified Branch Context Policy definition and updated version files
+
+### Changed
+
+- Clarified Branch Context Policy: version reflects last commit during work, highest version on branch switch
+- Updated policy document with safeguards and examples
+- Updated version files on all epic branches to reflect highest versions from each epic
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.1.1+3.md` for full details
+- Policy now clearly distinguishes work context (last commit) vs. epic state (highest version)
+- Safeguards prevent dangerous version jumping and eliminate processing overhead during work
+
+---
+
 ## [0.6.1.1+2] - 06-12-25
 
 🏗️ Framework Architecture: Designed dependency architecture for auto-updating frameworks

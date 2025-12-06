@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.6.1.1+2 – Branch Context Policy defined)  
+**Last updated:** 2025-12-06 (v0.6.1.1+3 – Branch Context Policy clarified)  
 **Version:** v0.6.1.1+1  
 **Code:** E6S01
 
