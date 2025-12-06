@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-06 (v0.6.2.4+1 – Framework update CLI tool built)  
-**Version:** v0.6.2.4+1  
+**Last updated:** 2025-12-06 (v0.6.2.5+2 – Auto-update mechanisms created)  
+**Version:** v0.6.2.5+2  
 **Code:** E6S02
 
 ---
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [x] **E6:S02:T02 – Build migration guides and tools** - COMPLETE ✅
 - [x] **E6:S02:T03 – Establish backward compatibility policies** - COMPLETE ✅
 - [x] **E6:S02:T04 – Build framework update CLI tool** - COMPLETE ✅
-- [ ] **E6:S02:T05 – Create auto-update mechanisms** - TODO
+- [x] **E6:S02:T05 – Create auto-update mechanisms** - COMPLETE ✅
 - [ ] **E6:S02:T06 – Implement Branch Context Policy automation** - TODO
 
 ---
@@ -186,6 +186,8 @@ Implement comprehensive processes for updating and migrating framework packages.
 **Dependencies:** E6:S01:T04, E6:S02:T04  
 **Blocker:** None
 
+**Status:** ✅ COMPLETE
+
 **Approach:**
 1. Implement Git submodule update automation
 2. Implement package manager update automation (npm, pip)
@@ -194,11 +196,29 @@ Implement comprehensive processes for updating and migrating framework packages.
 5. Create automated update testing workflows
 6. Document auto-update procedures
 
-**Key Deliverables:**
-- Git submodule update scripts
-- Package manager update integration
-- Auto-update policy documentation
-- Update testing workflows
+**Deliverables:**
+- Git submodule auto-update script: `scripts/framework-management/auto-update-git-submodule.sh`
+- All frameworks auto-update script: `scripts/framework-management/auto-update-all-frameworks.sh`
+- Auto-update policies document: `KB/Architecture/Standards_and_ADRs/framework-auto-update-policies.md`
+- Testing workflows document: `KB/Architecture/Standards_and_ADRs/framework-auto-update-testing-workflows.md`
+- Enhanced CLI backends with auto-update support:
+  - `cli/backends/git_submodule.py` - Enhanced `check()` and `update()` methods
+  - `cli/backends/package_manager.py` - Enhanced `check()` and `update()` methods
+
+**Key Components:**
+- **Version Pinning Strategies:** Exact, minor, major, none (latest)
+- **Auto-Update Policies:** PATCH (auto), MINOR (conditional), MAJOR (manual)
+- **Update Scripts:** Git submodule and batch update scripts
+- **Safety Mechanisms:** Pre-update validation, backup creation, rollback capability
+- **Testing Workflows:** Pre-update, post-update, validation, rollback procedures
+- **CI/CD Integration:** GitHub Actions and GitLab CI examples
+
+**Features:**
+- Automatic version checking and update detection
+- Configurable version pinning strategies
+- Safety mechanisms (backup, validation, rollback)
+- Testing workflows for different update types
+- CLI tool enhancements for auto-update support
 
 ---
 
