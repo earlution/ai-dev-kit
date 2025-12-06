@@ -17,6 +17,33 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.3.2+2] - 06-12-25
+
+🛠️ Framework Management: Health monitoring tools implemented
+
+### Added
+
+- Created health monitoring tools (`scripts/framework-management/check-documentation.py`, `check-versioning.py`, `check-maintenance.py`, `collect-health-metrics.py`)
+- Created framework health monitoring guide (`KB/Architecture/Standards_and_ADRs/framework-health-monitoring-guide.md`)
+- Implemented comprehensive health metrics collection with weighted scoring
+- Added health status determination (Excellent/Good/Fair/Poor)
+- Added JSON/YAML output support for integration
+
+### Changed
+
+- Updated Story 003 to mark T02 as complete
+- Version bumped to v0.6.3.2+2 (Story 3, Task 2, Build 2)
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.3.2+2.md` for full details
+- Health monitoring tools enable automated assessment of framework health
+- Tools support individual checks and comprehensive collection
+- Weighted scoring aligns with health metrics definition
+- Health status based on score thresholds (Excellent: 90-100%, Good: 70-89%, Fair: 50-69%, Poor: <50%)
+
+---
+
 ## [0.6.3.1+2] - 06-12-25
 
 📊 Framework Management: Framework health metrics created

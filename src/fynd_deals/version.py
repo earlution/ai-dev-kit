@@ -20,7 +20,7 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance
 VERSION_STORY = 3     # Story number (Story 3: Framework Health Monitoring
-VERSION_TASK = 1      # Task number (Task 1: Create framework health metrics
+VERSION_TASK = 2      # Task number (Task 2: Implement health monitoring tools
 VERSION_BUILD = 2     # Build number (increments per release within task, bumped by RW)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
