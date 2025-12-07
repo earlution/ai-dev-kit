@@ -1190,6 +1190,25 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.7.4.1+2] - 07-12-25
+
+🔄 Examples & Adoption: Reframed dependency tracking approach for adopting projects
+
+### Added
+- **FR-003:** Created Feature Request for dependency tracking in adopting projects
+- **Task T07:** Added comprehensive dependency tracking guide task to Story 4
+
+### Changed
+- **Story 4 Tasks:** Reframed T04, T05, T06 to provide guidance/tooling for adopting projects instead of implementing in ai-dev-kit
+- **Story 4 Goals:** Updated to reflect dependency tracking shift from ai-dev-kit to adopting projects
+
+### Notes
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.7.4.1+2.md` for full details
+- Eliminates ai-dev-kit as middleman for dependency tracking
+- Aligns with "copy, don't reference" framework principle
+
+---
+
 ## [0.2.5.1+1] - 07-12-25
 
 📋 Planning: PIR workflow structure and requirements
