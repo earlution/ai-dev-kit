@@ -1,4 +1,4 @@
-name: FR/BR/UXR Intake from GitHub Issues
+name: FR/BR/UXR/FB Intake from GitHub Issues
 
 on:
   issues:
@@ -11,7 +11,8 @@ jobs:
       contains(github.event.issue.labels.*.name, 'needs-triage') &&
       (contains(github.event.issue.labels.*.name, 'bug') ||
        contains(github.event.issue.labels.*.name, 'enhancement') ||
-       contains(github.event.issue.labels.*.name, 'ux-research'))
+       contains(github.event.issue.labels.*.name, 'ux-research') ||
+       contains(github.event.issue.labels.*.name, 'feedback'))
     
     steps:
       - name: Checkout repository
@@ -36,6 +37,10 @@ jobs:
             echo "type=uxr" >> $GITHUB_OUTPUT
             echo "template=UXR_TEMPLATE.md" >> $GITHUB_OUTPUT
             echo "prefix=UXR" >> $GITHUB_OUTPUT
+          elif echo "$LABELS" | grep -q "feedback"; then
+            echo "type=feedback" >> $GITHUB_OUTPUT
+            echo "template=FB_TEMPLATE.md" >> $GITHUB_OUTPUT
+            echo "prefix=FB" >> $GITHUB_OUTPUT
           fi
 
       - name: Get Next Document Number
@@ -121,7 +126,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `✅ This ${prefix === 'BR' ? 'Bug Report' : prefix === 'FR' ? 'Feature Request' : 'UX Research'} has been automatically converted to a Kanban document.
+              body: `✅ This ${prefix === 'BR' ? 'Bug Report' : prefix === 'FR' ? 'Feature Request' : prefix === 'UXR' ? 'UX Research' : 'Feedback'} has been automatically converted to a Kanban document.
 
 📄 **Document:** \`${docPath}\`
 🔗 **Path:** \`KB/PM_and_Portfolio/kanban/fr-br/${docPath}\`

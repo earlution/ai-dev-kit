@@ -6,17 +6,17 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# GitHub Submission Guide for FR, BR, and UXR
+# GitHub Submission Guide for FR, BR, UXR, and FB
 
-**Purpose:** This guide explains how to submit Feature Requests (FR), Bug Reports (BR), or User Experience Research (UXR) reports via GitHub Issues.
+**Purpose:** This guide explains how to submit Feature Requests (FR), Bug Reports (BR), User Experience Research (UXR) reports, or Feedback (FB) via GitHub Issues.
 
-**Audience:** External contributors, users, automated systems, and UX researchers
+**Audience:** External contributors, users, automated systems, UX researchers, and adopters providing feedback
 
 ---
 
 ## Overview
 
-You can submit Bug Reports, Feature Requests, or UX Research findings directly through GitHub Issues. These submissions are automatically converted to Kanban documents and processed through our intake workflow.
+You can submit Bug Reports, Feature Requests, UX Research findings, or Feedback directly through GitHub Issues. These submissions are automatically converted to Kanban documents and processed through our intake workflow.
 
 **Benefits:**
 - ✅ No repository access required
@@ -153,6 +153,7 @@ When you submit an issue using one of our templates:
    - `bug` → Bug Report (BR)
    - `enhancement` → Feature Request (FR)
    - `ux-research` → User Experience Research (UXR)
+   - `feedback` → Feedback (FB)
 3. **Document Creation:** A new document is created in `KB/PM_and_Portfolio/kanban/fr-br/`
 4. **Template Population:** The document is populated with issue data
 5. **GitHub Link:** The document includes a link back to the GitHub Issue

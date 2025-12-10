@@ -1,0 +1,213 @@
+name: Feedback
+description: Provide feedback on framework components (UAT, adoption, general feedback)
+title: "[Feedback] "
+labels: ["feedback", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for providing feedback! This will be automatically converted to a Feedback (FB) document and processed through our Kanban intake workflow.
+        
+        📖 **Need help?** See our [GitHub Submission Guide](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md) for detailed instructions.
+        
+        **Feedback Types:**
+        - **UAT (User Acceptance Testing):** Testing to verify the component works as advertised
+        - **Adoption Feedback:** Feedback from adopting the component in your project
+        - **Integration Feedback:** Feedback on integrating with other tools/systems
+        - **General Feedback:** General usage feedback and suggestions
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One sentence summary of your feedback
+      placeholder: Brief summary of your feedback
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback Type
+      description: What type of feedback is this?
+      options:
+        - UAT (User Acceptance Testing)
+        - Adoption Feedback
+        - Integration Feedback
+        - General Feedback
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component_tested
+    attributes:
+      label: Component Tested
+      description: Which component are you providing feedback on?
+      options:
+        - Kanban Framework
+        - Release Workflow (RW)
+        - Versioning Framework
+        - Workflow Management Framework
+        - Documentation
+        - Multiple Components
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version_tested
+    attributes:
+      label: Version Tested
+      description: Version number or commit hash of the component tested
+      placeholder: e.g., 2.0.0 or v0.4.7.3+1
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide context about your project and testing setup
+      placeholder: |
+        - Project/Organization name
+        - Project type (new project, migration, etc.)
+        - Team size
+        - Duration of use
+        - Testing scope
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_worked_well
+    attributes:
+      label: What Worked Well
+      description: What aspects worked as expected or exceeded expectations?
+      placeholder: |
+        - Positive aspect 1
+        - Positive aspect 2
+        - Positive aspect 3
+    validations:
+      required: false
+
+  - type: textarea
+    id: issues_encountered
+    attributes:
+      label: Issues Encountered
+      description: What problems or issues were encountered? (If issues are bugs, consider filing a Bug Report instead)
+      placeholder: |
+        - Issue 1: [Description]
+        - Issue 2: [Description]
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions for Improvement
+      description: What improvements or enhancements would be valuable?
+      placeholder: |
+        - Suggestion 1: [Description]
+        - Suggestion 2: [Description]
+    validations:
+      required: false
+
+  - type: dropdown
+    id: overall_assessment
+    attributes:
+      label: Overall Assessment
+      description: Does it work as advertised?
+      options:
+        - Yes, works as advertised
+        - Mostly works, with minor issues
+        - Works but needs improvements
+        - Does not work as advertised
+    validations:
+      required: true
+
+  - type: dropdown
+    id: recommendation
+    attributes:
+      label: Would you recommend it to others?
+      options:
+        - Yes, highly recommend
+        - Yes, with caveats
+        - Maybe, depends on use case
+        - No, not recommended
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific_findings
+    attributes:
+      label: Specific Findings
+      description: Detailed feedback on functionality, usability, performance, documentation, or integration
+      placeholder: |
+        **Functionality:**
+        - Finding 1: [Description]
+        
+        **Usability:**
+        - Finding 1: [Description]
+        
+        **Documentation:**
+        - Finding 1: [Description]
+    validations:
+      required: false
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use Case Details
+      description: How was this component used in your project?
+      placeholder: |
+        - Primary use case
+        - Project type and size
+        - Team size
+        - Duration of use
+    validations:
+      required: false
+
+  - type: textarea
+    id: supporting_evidence
+    attributes:
+      label: Supporting Evidence
+      description: Links to test results, screenshots, reports, or other evidence
+      placeholder: |
+        - Link to test results
+        - Link to screenshots
+        - Link to test reports
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feedback?
+      options:
+        - HIGH
+        - MEDIUM
+        - LOW
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommendations
+    attributes:
+      label: Recommendations
+      description: What actions should be taken based on this feedback?
+      placeholder: |
+        - Recommendation 1: [Description]
+        - Recommendation 2: [Description]
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any additional information that would be helpful
+      placeholder: Additional context, notes, or related information
+    validations:
+      required: false
+

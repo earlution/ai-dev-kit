@@ -29,7 +29,7 @@ You can submit Bug Reports, Feature Requests, or User Experience Research (UXR) 
 
 For more detailed information on submitting reports, see:
 
-- **[GitHub Submission Guide](packages/frameworks/kanban/FR_BR_UXR_GITHUB_SUBMISSION_GUIDE.md)** - Complete guide with examples and best practices
+- **[GitHub Submission Guide](packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md)** - Complete guide with examples and best practices (FR, BR, UXR, FB)
 - **[Bug Report Guide](.github/ISSUE_TEMPLATE/bug_report.yml)** - What to include in bug reports
 - **[Feature Request Guide](.github/ISSUE_TEMPLATE/feature_request.yml)** - How to write effective feature requests
 - **[UX Research Guide](.github/ISSUE_TEMPLATE/ux_research.yml)** - Submitting UX research findings
