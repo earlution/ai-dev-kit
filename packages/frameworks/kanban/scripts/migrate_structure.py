@@ -310,19 +310,77 @@ class KanbanStructureMigrator:
             self._renumber_epic(source_epic_num, target_epic_num)
     
     def _map_tasks_to_canonical_epic(self, user_epic_num: int, canonical_epic_num: int):
-        """Map tasks from user epic to canonical epic."""
-        task_mappings = self.analysis_report.get("task_mappings", [])
-        story_mappings = self.analysis_report.get("story_mappings", [])
+        """Map tasks from user epic to canonical epic using agentic intelligence."""
+        print(f"  🤖 Using agentic intelligence to map tasks from Epic {user_epic_num} to Canonical Epic {canonical_epic_num}...")
         
-        # Update story mappings
-        for story_mapping in story_mappings:
-            if story_mapping["source_epic_number"] == user_epic_num:
-                story_mapping["target_epic_number"] = canonical_epic_num
+        # Use agentic mapper for intelligent task mapping
+        try:
+            mapper = AgenticTaskMapper(
+                self.analysis_report,
+                self.kanban_path,
+                llm_provider=None  # Currently using enhanced content analysis, LLM integration pending
+            )
+            
+            # Get intelligent mappings
+            agentic_mappings = mapper.map_tasks_to_canonical_stories()
+            explanations = mapper.generate_explanations()
+            
+            # Filter mappings for this epic
+            epic_mappings = [m for m in agentic_mappings if m.get("source_epic") == user_epic_num]
+            
+            if epic_mappings:
+                print(f"    ✅ Mapped {len(epic_mappings)} tasks using agentic intelligence")
+                for mapping in epic_mappings[:3]:  # Show first 3
+                    print(f"       {mapping.get('reasoning', 'No reasoning')}")
+                if len(epic_mappings) > 3:
+                    print(f"       ... and {len(epic_mappings) - 3} more mappings")
+                
+                # Update task mappings based on agentic analysis
+                task_mappings = self.analysis_report.get("task_mappings", [])
+                for agentic_mapping in epic_mappings:
+                    # Find corresponding task mapping
+                    for task_mapping in task_mappings:
+                        if (task_mapping.get("source_epic_number") == agentic_mapping.get("source_epic") and
+                            task_mapping.get("source_story_number") == agentic_mapping.get("source_story") and
+                            task_mapping.get("source_task_number") == agentic_mapping.get("source_task")):
+                            # Update with agentic mapping
+                            task_mapping["target_epic_number"] = agentic_mapping.get("target_epic")
+                            task_mapping["target_story_number"] = agentic_mapping.get("target_story")
+                            task_mapping["migration_action"] = "agentic_mapping"
+                            task_mapping["agentic_reasoning"] = agentic_mapping.get("reasoning")
+                            task_mapping["agentic_confidence"] = agentic_mapping.get("confidence", 0.0)
+                            break
+            else:
+                # Fallback to simple epic renumbering if no agentic mappings
+                print(f"    ⚠️  No agentic mappings found - using simple epic renumbering")
+                task_mappings = self.analysis_report.get("task_mappings", [])
+                story_mappings = self.analysis_report.get("story_mappings", [])
+                
+                # Update story mappings
+                for story_mapping in story_mappings:
+                    if story_mapping["source_epic_number"] == user_epic_num:
+                        story_mapping["target_epic_number"] = canonical_epic_num
+                
+                # Update task mappings
+                for task_mapping in task_mappings:
+                    if task_mapping["source_epic_number"] == user_epic_num:
+                        task_mapping["target_epic_number"] = canonical_epic_num
         
-        # Update task mappings
-        for task_mapping in task_mappings:
-            if task_mapping["source_epic_number"] == user_epic_num:
-                task_mapping["target_epic_number"] = canonical_epic_num
+        except Exception as e:
+            print(f"    ⚠️  Agentic mapping failed: {e} - falling back to simple mapping")
+            # Fallback to simple mapping
+            task_mappings = self.analysis_report.get("task_mappings", [])
+            story_mappings = self.analysis_report.get("story_mappings", [])
+            
+            # Update story mappings
+            for story_mapping in story_mappings:
+                if story_mapping["source_epic_number"] == user_epic_num:
+                    story_mapping["target_epic_number"] = canonical_epic_num
+            
+            # Update task mappings
+            for task_mapping in task_mappings:
+                if task_mapping["source_epic_number"] == user_epic_num:
+                    task_mapping["target_epic_number"] = canonical_epic_num
     
     def _migrate_project_epics(self):
         """Migrate project-specific epics to canonical format."""
