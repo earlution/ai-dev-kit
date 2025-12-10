@@ -39,7 +39,7 @@ Create an agentic workflow that:
 
 - [x] **E4:S10:T00 – Story creation and FR-012 intake** ✅ COMPLETE (v0.4.10.0+0)
 - [ ] **E4:S10:T01 – Design agentic FR/BR analysis workflow** - IN PROGRESS (v0.4.10.1+0)
-- [ ] **E4:S10:T02 – Implement intelligent epic/story mapping** - TODO
+- [ ] **E4:S10:T02 – Implement intelligent epic/story mapping** - IN PROGRESS (v0.4.10.2+0)
 - [ ] **E4:S10:T03 – Implement template-based task creation** - TODO
 - [ ] **E4:S10:T04 – Implement task contextualization** - TODO
 - [ ] **E4:S10:T05 – Integrate with FR/BR intake workflow** - TODO
@@ -98,7 +98,7 @@ Create an agentic workflow that:
 
 ### E4:S10:T02 – Implement intelligent epic/story mapping
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** E4:S10:T01  
 **Blocker:** None
@@ -109,14 +109,15 @@ Create an agentic workflow that:
 - Canonical epic structure (Epic 4 Story 6)
 
 **Deliverable:**
-- Implementation of intelligent epic/story mapping
-- Integration with semantic matching system
-- Mapping logic and decision rules
+- FR/BR Content Analyzer ✅ (`packages/frameworks/kanban/scripts/fr_br_analyzer.py`)
+- Epic/Story Mapper ✅ (`packages/frameworks/kanban/scripts/epic_story_mapper.py`)
+- Integration with semantic matching system ✅
+- Mapping logic and decision rules ✅
 
 **Acceptance Criteria:**
-- Epic/story mapping implemented
-- Semantic matching integrated
-- Mapping accuracy validated
+- ✅ Epic/story mapping implemented
+- ✅ Semantic matching integrated
+- ✅ Mapping logic with explanations and reasoning
 
 ---
 
