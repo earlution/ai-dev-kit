@@ -38,9 +38,9 @@ housekeeping_policy: keep
 - [x] **E4:S07 – Migration Support and Installation Modes** - COMPLETE ✅ (v0.4.7.3+1 – All tasks complete)
   - Story: [`Story-007-migration-support-and-installation-modes.md`](Story-007-migration-support-and-installation-modes.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE (Documentation and guides updated)
-- [ ] **E4:S08 – Intelligent Epic Matching and Canonical Structure Adoption** - TODO (v0.4.8.0+0 – Story created for FR-009)
+- [ ] **E4:S08 – Intelligent Epic Matching and Canonical Structure Adoption** - IN PROGRESS (v0.4.8.0+1 – Story created, FR-009, UXR-002, UXR-003 intake complete)
   - Story: [`Story-008-intelligent-epic-matching-canonical-adoption.md`](Story-008-intelligent-epic-matching-canonical-adoption.md)
-  - Tasks: T01-T06 TODO (FR-009: Semantic epic matching, intelligent task mapping, canonical adoption as default, reference updating, migration plan presentation, documentation)
+  - Tasks: T00 ✅ COMPLETE (v0.4.8.0+1), T01-T06 TODO (FR-009: Semantic epic matching, intelligent task mapping, canonical adoption as default, reference updating, migration plan presentation, documentation)
 
 ---
 

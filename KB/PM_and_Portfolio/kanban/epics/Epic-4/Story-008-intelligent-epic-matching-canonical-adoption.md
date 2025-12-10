@@ -25,6 +25,17 @@ Implement intelligent epic matching with semantic analysis and AI-assisted task 
 
 ## Tasks
 
+- [x] **E4:S08:T00 – Story creation and FR-009, UXR-002, UXR-003 intake** ✅ COMPLETE (v0.4.8.0+1)
+  - Created Story 8: Intelligent Epic Matching and Canonical Structure Adoption
+  - Intake FR-009: Intelligent Epic Matching and AI-Assisted Canonical Structure Adoption (GitHub issue #7)
+  - Intake UXR-002: Comprehensive UAT of Migration Utilities (GitHub issue #6)
+  - Intake UXR-003: Intelligent Epic Matching and Canonical Adoption UAT (GitHub issue #8)
+  - Created local Kanban documents for all three submissions
+  - Assigned FR-009 to Epic 4 Story 8
+  - Assigned UXR-002 and UXR-003 to Epic 7 Story 5 for synthesis
+  - Commented on all GitHub issues with internal Kanban links
+  - **Acceptance:** ✅ All intake complete, Story 8 created with 6 implementation tasks
+
 - [ ] **E4:S08:T01 – FR-009: Semantic epic matching implementation**  
   - Implement semantic analysis for epic content (title, description, stories, tasks)
   - Calculate semantic similarity scores (0-100%) between user epics and canonical epics
