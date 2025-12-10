@@ -17,6 +17,26 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.7.3+1] - 10-12-25
+
+🎯 Feature: E2:S07:T03 - Sub-Workflow Execution Engine (COMPLETE)
+
+### Added
+
+- **Workflow Executor Module:** `packages/frameworks/workflow mgt/scripts/workflow_executor.py`
+  - `WorkflowExecutor` class for executing sub-workflows
+  - Support for Python scripts, functions, and external commands
+  - Parameter passing and context management
+  - Error handling with failure type classification
+  - Retry logic with backoff strategies
+  - Checkpoint and rollback foundation
+
+### Changed
+
+- **Story 7:** Updated T03 status to COMPLETE
+
+---
+
 ## [0.2.7.2+1] - 10-12-25
 
 🎯 Feature: E2:S07:T02 - Trigger Registry Implementation (COMPLETE)
