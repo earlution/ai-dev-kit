@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical E/S/T Template System)
-VERSION_TASK = 2      # Task number (Task 2: Create individual epic template files for project-specific canonical epics 8-21 - partial: Epics 8-11 created)
-VERSION_BUILD = 2     # Build number (increments per release within task, bumped by RW)
+VERSION_STORY = 10    # Story number (Story 10: Agentic Kanban Task Creation from FR/BR)
+VERSION_TASK = 0      # Task number (Task 0: Story creation and FR-012, FR-013, FR-014 intake)
+VERSION_BUILD = 1     # Build number (increments per release within task, bumped by RW)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

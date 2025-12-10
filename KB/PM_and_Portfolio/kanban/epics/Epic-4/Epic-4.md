@@ -44,6 +44,9 @@ housekeeping_policy: keep
 - [x] **E4:S09 – Bug Fixes and Agentic Intelligence Implementation** - COMPLETE ✅ (v0.4.9.1+1 – All tasks complete)
   - Story: [`Story-009-bug-fixes-and-agentic-intelligence.md`](Story-009-bug-fixes-and-agentic-intelligence.md)
   - Tasks: T00 ✅ COMPLETE, T01-T04 ✅ COMPLETE (Bug fixes), T05 ✅ COMPLETE (Threshold removal), T06 ✅ COMPLETE (Agentic intelligence foundation), T07 ✅ COMPLETE (UXR synthesis)
+- [ ] **E4:S10 – Agentic Kanban Task Creation from FR/BR** - TODO (v0.4.10.0+0 – Story created for FR-012)
+  - Story: [`Story-010-agentic-kanban-task-creation-from-fr-br.md`](Story-010-agentic-kanban-task-creation-from-fr-br.md)
+  - Tasks: T00-T07 TODO (FR-012: Agentic workflow for automatic task creation from FRs/BRs)
 
 ---
 

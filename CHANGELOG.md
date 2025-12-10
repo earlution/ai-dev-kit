@@ -17,6 +17,39 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.10.0+1] - 10-12-25
+
+🎯 Feature: E4:S10:T00 - Story 10 Creation and FR-012, FR-013, FR-014 Intake
+
+### Added
+
+- **FR-012:** Agentic Kanban Task Creation from FR/BR
+- **FR-013:** Trigger-Aware Release Workflow
+- **FR-014:** New RW Trigger for FR/BR Commits
+- **Epic 4 Story 10:** Agentic Kanban Task Creation from FR/BR (8 tasks)
+- **Epic 2 Story 7:** Trigger-Aware Release Workflow (9 tasks)
+
+### Changed
+
+- **Epic 4:** Added Story 10 to story checklist
+- **Epic 2:** Added Story 7 to story checklist
+
+---
+
+## [0.4.6.9+1] - 10-12-25
+
+🎯 Feature: E4:S06:T02 - Epic Template Files for Project-Specific Epics 8-11 (Partial)
+
+### Added
+
+- **Epic 11 Template:** Epic-11-API-Backend.md (Project-specific)
+
+### Changed
+
+- **Story 6:** Updated T02 status (4/14 epics complete, 10 remaining)
+
+---
+
 ## [0.4.2.6+4] - 10-12-25
 
 🎯 Feature: E4:S02 Complete - FR/BR Intake to Tasks

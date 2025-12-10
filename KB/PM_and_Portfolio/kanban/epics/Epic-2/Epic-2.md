@@ -34,9 +34,9 @@ housekeeping_policy: keep
 - [x] **E2:S06 – Package Uninstall and Recovery** - COMPLETE ✅ (v0.2.6.3+1 – All tasks complete)
   - Story: [`Story-006-package-uninstall-and-recovery.md`](Story-006-package-uninstall-and-recovery.md)
   - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE (Documentation and verification)
-- [ ] **E2:S06 – Package Uninstall and Recovery** - TODO (v0.2.6.0+0 – Story created for FR-008)
-  - Story: [`Story-006-package-uninstall-and-recovery.md`](Story-006-package-uninstall-and-recovery.md)
-  - Tasks: T01-T03 TODO (FR-008 uninstall command, recovery/rollback, docs)
+- [ ] **E2:S07 – Trigger-Aware Release Workflow** - TODO (v0.2.7.0+0 – Story created for FR-013 and FR-014)
+  - Story: [`Story-007-trigger-aware-release-workflow.md`](Story-007-trigger-aware-release-workflow.md)
+  - Tasks: T00-T08 TODO (FR-013: Trigger-aware RW with sub-workflow execution, FR-014: FR/BR commit trigger)
 
 ---
 
