@@ -8,19 +8,19 @@ housekeeping_policy: keep
 
 # Story 007 – Trigger-Aware Release Workflow
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-10 (v0.2.7.0+0 – Story created for FR-013 and FR-014)  
-**Version:** v0.2.7.0+0  
+**Last updated:** 2025-12-10 (v0.2.7.1+0 – T00 complete, T01 complete: Design document created)  
+**Version:** v0.2.7.1+0  
 **Code:** E2S07
 
 ---
 
 ## Overview
 
-Implement a trigger-aware Release Workflow (RW) system that can react to specified triggers, dynamically run sub-workflows, and intelligently process deliverables. This includes implementing the FR/BR commit trigger that automatically triggers the agentic Kanban task creation workflow.
+Implement a trigger-aware Release Workflow (RW) system that can react to specified triggers, dynamically run sub-workflows, and intelligently process deliverables. This includes implementing the FR/BR/UXR commit trigger that automatically triggers the agentic Kanban task creation workflow.
 
 ---
 
@@ -37,8 +37,8 @@ Create a trigger-aware RW system that:
 
 ## Task Checklist
 
-- [ ] **E2:S07:T00 – Story creation and FR-013/FR-014 intake** - TODO
-- [ ] **E2:S07:T01 – Design trigger detection system** - TODO
+- [x] **E2:S07:T00 – Story creation and FR-013/FR-014 intake** ✅ COMPLETE (v0.2.7.0+1)
+- [ ] **E2:S07:T01 – Design trigger detection system** - IN PROGRESS (v0.2.7.1+0)
 - [ ] **E2:S07:T02 – Implement trigger registry** - TODO
 - [ ] **E2:S07:T03 – Implement sub-workflow execution engine** - TODO
 - [ ] **E2:S07:T04 – Implement deliverable processing intelligence** - TODO
@@ -53,23 +53,24 @@ Create a trigger-aware RW system that:
 
 ### E2:S07:T00 – Story creation and FR-013/FR-014 intake
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** FR-013, FR-014  
 **Blocker:** None
 
 **Input:**
 - FR-013: Trigger-Aware Release Workflow
-- FR-014: New RW Trigger for FR/BR Commits
+- FR-014: New RW Trigger for FR/BR/UXR Commits
 
 **Deliverable:**
-- Story document created
-- FR-013 and FR-014 accepted and mapped to this story
+- Story document created ✅
+- FR-013 and FR-014 accepted and mapped to this story ✅
+- All tasks defined ✅
 
 **Acceptance Criteria:**
-- Story document created
-- FR-013 and FR-014 linked to this story
-- All tasks defined
+- ✅ Story document created
+- ✅ FR-013 and FR-014 linked to this story
+- ✅ All tasks defined
 
 ---
 
@@ -107,16 +108,20 @@ Create a trigger-aware RW system that:
 **Input:**
 - Trigger detection design from T01
 - Trigger definitions
+- Pattern registry structure
 
 **Deliverable:**
 - Trigger registry implementation
 - Trigger registration system
 - Trigger condition evaluation
+- Pattern matching engine (supports regex patterns like `FR\d+`, `BR\d+`, `UXR\d+`)
 
 **Acceptance Criteria:**
 - Trigger registry implemented
-- Triggers can be registered
+- Triggers can be registered with patterns
 - Trigger conditions can be evaluated
+- Pattern matching works for FR/BR/UXR (with and without dash)
+- Registry supports multiple trigger types (commit patterns, file patterns, manual)
 
 ---
 
@@ -155,20 +160,25 @@ Create a trigger-aware RW system that:
 - Sub-workflow execution from T03
 - Deliverable types and formats
 - Agentic intelligence foundation
+- Design discussion outcomes (hybrid approach: type registry + agentic analysis)
 
 **Deliverable:**
 - Deliverable processing intelligence
-- Deliverable type detection
-- Action determination logic
+- Deliverable type registry (known types: kanban_tasks, documentation, etc.)
+- Deliverable type detection (registry lookup + agentic fallback)
+- Action determination logic (registry actions + agentic validation)
+- Integration with RW (versioning, changelog, Kanban board updates)
 
 **Acceptance Criteria:**
-- Deliverables can be identified
-- Appropriate actions determined
-- Deliverables integrated into RW
+- Deliverable type registry implemented
+- Known deliverable types can be processed (kanban_tasks, documentation, etc.)
+- Unknown deliverable types handled via agentic analysis
+- Appropriate actions determined for each deliverable type
+- Deliverables integrated into RW (versioning, changelog, Kanban board)
 
 ---
 
-### E2:S07:T05 – Implement FR/BR commit trigger
+### E2:S07:T05 – Implement FR/BR/UXR commit trigger
 
 **Status:** TODO  
 **Priority:** HIGH  
@@ -181,14 +191,16 @@ Create a trigger-aware RW system that:
 - Commit analysis capabilities
 
 **Deliverable:**
-- FR/BR commit trigger implementation
-- Commit pattern detection
+- FR/BR/UXR commit trigger implementation
+- Commit pattern detection (patterns: `FR\d+`, `BR\d+`, `UXR\d+` - supports both with and without dash)
 - Trigger activation logic
 
 **Acceptance Criteria:**
-- FR commits detected
-- BR commits detected
+- FR commits detected (pattern `FR\d+` matches both `FR012` and `FR-012`)
+- BR commits detected (pattern `BR\d+` matches both `BR007` and `BR-007`)
+- UXR commits detected (pattern `UXR\d+` matches both `UXR001` and `UXR-001`)
 - Trigger activates correctly
+- Multiple FRs/BRs/UXRs in single commit handled
 
 ---
 
@@ -200,18 +212,18 @@ Create a trigger-aware RW system that:
 **Blocker:** E4:S10 (Agentic Task Creation workflow)
 
 **Input:**
-- FR/BR commit trigger from T05
+- FR/BR/UXR commit trigger from T05
 - Agentic task creation workflow (Epic 4 Story 10)
-- FR/BR content from commits
+- FR/BR/UXR content from commits
 
 **Deliverable:**
 - Integration with agentic task creation workflow
-- Workflow triggering on FR/BR commits
+- Workflow triggering on FR/BR/UXR commits
 - Task deliverable processing
 
 **Acceptance Criteria:**
-- Workflow triggers on FR/BR commits
-- Tasks created automatically
+- Workflow triggers on FR/BR/UXR commits
+- Tasks created automatically from FR/BR/UXR content
 - Tasks processed as deliverables
 
 ---
@@ -227,16 +239,23 @@ Create a trigger-aware RW system that:
 - Sub-workflow execution from T03
 - Deliverable processing from T04
 - Complex use case requirements
+- Design discussion outcomes (hybrid approach: dependency graph + agentic planning)
 
 **Deliverable:**
 - Workflow chaining implementation
+- Dependency graph for known workflows
+- Agentic planning for complex/novel scenarios
 - Orchestration logic
 - Dependency management
+- Execution plan validation
 
 **Acceptance Criteria:**
 - Workflows can be chained
+- Dependency graph implemented for known workflows
+- Agentic planning works for complex scenarios
 - Orchestration works correctly
-- Dependencies handled
+- Dependencies handled (explicit graph + agentic validation)
+- Execution plans validated before execution
 
 ---
 

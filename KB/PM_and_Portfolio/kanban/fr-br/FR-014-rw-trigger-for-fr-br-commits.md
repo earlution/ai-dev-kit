@@ -19,7 +19,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-New RW trigger. If the RW is being tasked to commit either a BR or a FR, then {new workflow delivered by FR-012} is triggered.
+New RW trigger. If the RW is being tasked to commit either a BR, FR, or UXR, then {new workflow delivered by FR-012} is triggered.
 
 ---
 
@@ -27,14 +27,14 @@ New RW trigger. If the RW is being tasked to commit either a BR or a FR, then {n
 
 ### What is the Feature?
 
-A new Release Workflow (RW) trigger that detects when a commit includes a Bug Report (BR) or Feature Request (FR), and automatically triggers the agentic Kanban task creation workflow (FR-012).
+A new Release Workflow (RW) trigger that detects when a commit includes a Bug Report (BR), Feature Request (FR), or User Experience Research (UXR), and automatically triggers the agentic Kanban task creation workflow (FR-012).
 
 ### What Should Happen vs. What Currently Happens?
 
 **Expected Behavior:**
-- RW detects that commit includes BR or FR (via commit message, file changes, or other indicators)
+- RW detects that commit includes BR, FR, or UXR (via commit message patterns like `FR\d+`, `BR\d+`, `UXR\d+` - supports both with and without dash, e.g., FR012 or FR-012)
 - RW automatically triggers the agentic Kanban task creation workflow (FR-012)
-- Workflow creates Kanban tasks from the BR/FR
+- Workflow creates Kanban tasks from the BR/FR/UXR
 - RW processes the created tasks as deliverables
 - RW continues with normal release process, incorporating the tasks
 
@@ -48,7 +48,8 @@ A new Release Workflow (RW) trigger that detects when a commit includes a Bug Re
 This feature is needed whenever:
 - A commit includes a BR (bug report)
 - A commit includes a FR (feature request)
-- RW is executing and detects FR/BR in the commit
+- A commit includes a UXR (user experience research)
+- RW is executing and detects FR/BR/UXR in the commit
 
 ### Who is Affected?
 
@@ -66,24 +67,31 @@ This feature is needed whenever:
 ## Use Cases
 
 1. **FR Commit Trigger:**
-   - Developer commits code with FR in commit message or files
-   - RW detects FR in commit
+   - Developer commits code with FR in commit message or files (e.g., `FR012` or `FR-012`)
+   - RW detects FR in commit using pattern `FR\d+`
    - RW triggers agentic Kanban task creation workflow (FR-012)
    - Workflow creates Kanban tasks from FR
    - RW processes tasks and continues with release
 
 2. **BR Commit Trigger:**
-   - Developer commits code with BR in commit message or files
-   - RW detects BR in commit
+   - Developer commits code with BR in commit message or files (e.g., `BR007` or `BR-007`)
+   - RW detects BR in commit using pattern `BR\d+`
    - RW triggers agentic Kanban task creation workflow (FR-012)
    - Workflow creates Kanban tasks from BR
    - RW processes tasks and continues with release
 
-3. **Multiple FR/BR Commit:**
-   - Commit includes multiple FRs/BRs
-   - RW detects all FRs/BRs
-   - RW triggers workflow for each FR/BR
-   - Workflow creates tasks for all FRs/BRs
+3. **UXR Commit Trigger:**
+   - Developer commits code with UXR in commit message or files (e.g., `UXR001` or `UXR-001`)
+   - RW detects UXR in commit using pattern `UXR\d+`
+   - RW triggers agentic Kanban task creation workflow (FR-012)
+   - Workflow creates Kanban tasks from UXR
+   - RW processes tasks and continues with release
+
+4. **Multiple FR/BR/UXR Commit:**
+   - Commit includes multiple FRs/BRs/UXRs
+   - RW detects all FRs/BRs/UXRs
+   - RW triggers workflow for each FR/BR/UXR
+   - Workflow creates tasks for all FRs/BRs/UXRs
    - RW processes all tasks and continues with release
 
 ---
@@ -92,16 +100,17 @@ This feature is needed whenever:
 
 ### Functional Requirements
 
-1. **FR/BR Detection:**
-   - Detect FR in commit (commit message, file patterns, etc.)
-   - Detect BR in commit (commit message, file patterns, etc.)
-   - Support multiple detection methods
+1. **FR/BR/UXR Detection:**
+   - Detect FR in commit using pattern `FR\d+` (supports both `FR012` and `FR-012`)
+   - Detect BR in commit using pattern `BR\d+` (supports both `BR007` and `BR-007`)
+   - Detect UXR in commit using pattern `UXR\d+` (supports both `UXR001` and `UXR-001`)
+   - Support multiple detection methods (commit message, file patterns, etc.)
    - Handle edge cases (partial matches, variations, etc.)
 
 2. **Trigger Activation:**
-   - Activate trigger when FR/BR detected
+   - Activate trigger when FR/BR/UXR detected
    - Support trigger conditions and logic
-   - Handle multiple FRs/BRs in single commit
+   - Handle multiple FRs/BRs/UXRs in single commit
 
 3. **Workflow Triggering:**
    - Trigger agentic Kanban task creation workflow (FR-012)
@@ -169,13 +178,14 @@ This feature is needed whenever:
 
 ## Acceptance Criteria
 
-1. ✅ RW can detect FR in commit
-2. ✅ RW can detect BR in commit
-3. ✅ RW triggers agentic Kanban task creation workflow when FR/BR detected
-4. ✅ RW processes created tasks as deliverables
-5. ✅ RW integrates tasks into release process
-6. ✅ RW handles multiple FRs/BRs in single commit
-7. ✅ RW handles detection and workflow errors gracefully
+1. ✅ RW can detect FR in commit (pattern `FR\d+` supports both `FR012` and `FR-012`)
+2. ✅ RW can detect BR in commit (pattern `BR\d+` supports both `BR007` and `BR-007`)
+3. ✅ RW can detect UXR in commit (pattern `UXR\d+` supports both `UXR001` and `UXR-001`)
+4. ✅ RW triggers agentic Kanban task creation workflow when FR/BR/UXR detected
+5. ✅ RW processes created tasks as deliverables
+6. ✅ RW integrates tasks into release process
+7. ✅ RW handles multiple FRs/BRs/UXRs in single commit
+8. ✅ RW handles detection and workflow errors gracefully
 
 ---
 
@@ -186,7 +196,7 @@ This feature depends on:
 - FR-013: Trigger-Aware Release Workflow (the trigger system)
 
 The trigger detection could use:
-- Commit message patterns (e.g., "FR-", "BR-", "[FR]", "[BR]")
+- Commit message patterns (e.g., "FR\d+", "BR\d+", "UXR\d+", "[FR]", "[BR]", "[UXR]") - supports both with and without dash (FR012 or FR-012)
 - File patterns (e.g., files in `fr-br/` directory)
 - Git tags or labels
 - Manual trigger flags
