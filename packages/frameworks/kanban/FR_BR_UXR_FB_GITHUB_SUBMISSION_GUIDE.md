@@ -155,7 +155,7 @@ When you submit an issue using one of our templates:
    - `bug` → Bug Report (BR)
    - `enhancement` → Feature Request (FR)
    - `ux-research` → User Experience Research (UXR)
-   - `feedback` → Feedback (FB)
+   - `feedback` or `uat` → User Acceptance Testing Report (FB)
 3. **Document Creation:** A new document is created in `KB/PM_and_Portfolio/kanban/fr-br/`
 4. **Template Population:** The document is populated with issue data
 5. **GitHub Link:** The document includes a link back to the GitHub Issue
