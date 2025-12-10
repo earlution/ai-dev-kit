@@ -22,7 +22,7 @@ housekeeping_policy: keep
 ## Story Checklist
 
 - [x] **E4:S01 – Dev Kit Kanban Implementation** - COMPLETE ✅ (v0.4.1.1+6)  
-- [ ] **E4:S02 – FR/BR Intake to Tasks** - IN PROGRESS (v0.4.2.6+3 – Task 6 build 3: UAT Report submission lane added)
+- [x] **E4:S02 – FR/BR Intake to Tasks** - COMPLETE ✅ (v0.4.2.6+3 – All tasks complete: FR/BR/UXR/UAT intake workflow fully implemented)
   - Story: [`Story-002-fr-br-intake-to-tasks.md`](Story-002-fr-br-intake-to-tasks.md)
   - Tasks: T01-T06 ✅ COMPLETE (T06 build 3: GitHub submission integration for FR, BR, UXR, and UAT Reports)  
 - [x] **E4:S03 – Kanban + Versioning + RW Integration** - COMPLETE ✅ (v0.4.3.7+1)
