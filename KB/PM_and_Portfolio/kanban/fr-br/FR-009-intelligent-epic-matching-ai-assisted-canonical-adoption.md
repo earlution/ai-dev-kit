@@ -189,6 +189,40 @@ This feature request is based on comprehensive design decision analysis and UAT 
 3. Optimal organization is more valuable than preserving sub-optimal structure
 4. Some renumbering is almost inevitable - better to do it intelligently
 
+### Additional Context from GitHub Comments
+
+**From Issue #7 Comments:**
+
+1. **Match Decision Matrix:**
+   - Different scenarios require different actions based on match type + number conflict
+   - Exact match (90-100%) + number conflict → MERGE (preserve task IDs)
+   - Semantic match (70-89%) + number conflict → MERGE or RENUMBER (depends on choice)
+   - Partial match (40-69%) → USER DECIDES (split, merge, or keep both)
+   - No match (<40%) + number conflict → RENUMBER (task IDs change)
+
+2. **Template Task Installation (Two-Phase Migration):**
+   - **Phase 1:** Migrate user tasks FIRST (preserve IDs)
+   - **Phase 2:** Install template tasks AFTER (bump IDs - templates start after user tasks)
+   - Example: User has E1:S01:T01-T03 → Templates start at E1:S01:T04+
+   - **Status:** NOT YET IMPLEMENTED - Requires follow-up task
+
+3. **Task Splitting Scenarios:**
+   - **Scenario 2:** User epic partially matches multiple canonical epics → Split tasks across epics
+   - Example: "Versioning & Release Workflow" → Split between Epic 2 (Workflow) and Epic 3 (Versioning)
+   - **Status:** PARTIALLY IMPLEMENTED - Currently only maps to "best" match, doesn't split
+
+4. **Edge Cases:**
+   - Multiple canonical matches for one user epic → Present all matches, user chooses
+   - User epic matches multiple canonical (same number) → Recommend split or merge
+   - Canonical epic matches multiple user epics → Present both matches, user chooses
+
+**Implementation Status:**
+- ✅ Core semantic matching implemented
+- ✅ Intelligent task mapping to single canonical epic implemented
+- ⚠️ Task splitting across multiple canonical epics (partial - needs enhancement)
+- ❌ Template task installation (two-phase migration) - NOT YET IMPLEMENTED
+- ⚠️ Match decision matrix logic (basic - needs enhancement for edge cases)
+
 ---
 
 ## References

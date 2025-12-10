@@ -89,12 +89,39 @@ Implement intelligent epic matching with semantic analysis and AI-assisted task 
 
 ---
 
+## Implementation Notes
+
+### Additional Requirements from GitHub Comments
+
+**From Issue #7 Additional Context:**
+
+1. **Template Task Installation (Two-Phase Migration):**
+   - Phase 1: Migrate user tasks first (preserve IDs)
+   - Phase 2: Install template tasks after (bump IDs - templates start after user tasks)
+   - **Status:** NOT YET IMPLEMENTED - Requires new task or follow-up story
+
+2. **Task Splitting Across Multiple Canonical Epics:**
+   - When user epic partially matches multiple canonical epics, split tasks intelligently
+   - Example: "Versioning & Release Workflow" → Split between Epic 2 and Epic 3
+   - **Status:** PARTIALLY IMPLEMENTED - Currently only maps to "best" match
+
+3. **Enhanced Match Decision Logic:**
+   - Match decision matrix with different actions based on match type + number conflict
+   - Edge case handling: multiple matches, same-number conflicts, etc.
+   - **Status:** BASIC IMPLEMENTATION - Core logic works, edge cases need enhancement
+
+**Recommended Follow-Up:**
+- Create new task or story for template task installation (two-phase migration)
+- Enhance task splitting logic for partial matches across multiple canonical epics
+- Implement full match decision matrix with all edge cases
+
 ## References
 
 - FR-009: `KB/PM_and_Portfolio/kanban/fr-br/FR-009-intelligent-epic-matching-ai-assisted-canonical-adoption.md`
 - UXR-002: `KB/PM_and_Portfolio/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities.md`
 - UXR-003: `KB/PM_and_Portfolio/kanban/fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md`
 - Design Decision: `KB/PM_and_Portfolio/kanban/fr-br/DESIGN_DECISION-task-id-preservation-vs-canonical-epic-structure-REFINED.md`
+- GitHub Issue #7: Additional context comments (Match Decision Matrix, Template Task Installation, Detailed Scenarios)
 
 ---
 
