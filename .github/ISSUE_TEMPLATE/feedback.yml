@@ -1,20 +1,24 @@
-name: Feedback
-description: Provide feedback on framework components (UAT, adoption, general feedback)
-title: "[Feedback] "
-labels: ["feedback", "needs-triage"]
+name: User Acceptance Testing (UAT) Report
+description: Submit User Acceptance Testing results with empirical evidence (test results, not opinions)
+title: "[UAT] "
+labels: ["feedback", "uat", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for providing feedback! This will be automatically converted to a Feedback (FB) document and processed through our Kanban intake workflow.
+        Thanks for conducting User Acceptance Testing (UAT)! This will be automatically converted to a UAT Report (FB) document and processed through our Kanban intake workflow.
         
         📖 **Need help?** See our [GitHub Submission Guide](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md) for detailed instructions.
         
-        **Feedback Types:**
-        - **UAT (User Acceptance Testing):** Testing to verify the component works as advertised
-        - **Adoption Feedback:** Feedback from adopting the component in your project
-        - **Integration Feedback:** Feedback on integrating with other tools/systems
-        - **General Feedback:** General usage feedback and suggestions
+        **⚠️ Important:** This template is for **User Acceptance Testing (UAT)** with **empirical evidence** (test results, screenshots, logs). 
+        
+        - ✅ **Use this template for:** Testing to verify components work as advertised/specified, with documented test results
+        - ❌ **Don't use this for:** General opinions, suggestions without testing, or feedback without evidence
+        
+        **For other types of submissions:**
+        - **Bug Reports:** Use the Bug Report template (for specific bugs found during testing)
+        - **Feature Requests:** Use the Feature Request template (for enhancement suggestions)
+        - **UX Research:** Use the UXR template (for formal UX research studies)
 
   - type: textarea
     id: summary
@@ -26,16 +30,16 @@ body:
       required: true
 
   - type: dropdown
-    id: feedback_type
+    id: uat_scope
     attributes:
-      label: Feedback Type
-      description: What type of feedback is this?
+      label: UAT Scope
+      description: What was tested in this UAT?
       options:
-        - UAT (User Acceptance Testing)
-        - Adoption Feedback
-        - Integration Feedback
-        - General Feedback
-        - Other
+        - Functional Testing (does it work as specified?)
+        - Integration Testing (does it integrate as expected?)
+        - Adoption Testing (can it be adopted as documented?)
+        - End-to-End Testing (does the full workflow work?)
+        - Other (specify in context)
     validations:
       required: true
 
@@ -67,90 +71,111 @@ body:
   - type: textarea
     id: context
     attributes:
-      label: Context
-      description: Provide context about your project and testing setup
+      label: UAT Context
+      description: Provide context about your project and UAT setup
       placeholder: |
         - Project/Organization name
         - Project type (new project, migration, etc.)
         - Team size
-        - Duration of use
-        - Testing scope
+        - Testing period (start date to end date)
+        - UAT scope (what was tested)
+        - Acceptance criteria tested (list specific criteria)
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria_results
+    attributes:
+      label: Acceptance Criteria Results
+      description: For each acceptance criterion, document PASS/FAIL/PARTIAL with evidence
+      placeholder: |
+        **Criterion 1: [Description]**
+        - Status: PASS/FAIL/PARTIAL
+        - Evidence: [Test results, screenshots, logs]
+        
+        **Criterion 2: [Description]**
+        - Status: PASS/FAIL/PARTIAL
+        - Evidence: [Test results, screenshots, logs]
     validations:
       required: true
 
   - type: textarea
     id: what_worked_well
     attributes:
-      label: What Worked Well
-      description: What aspects worked as expected or exceeded expectations?
+      label: What Worked as Expected
+      description: What acceptance criteria passed UAT? Include evidence (test results, screenshots, logs)
       placeholder: |
-        - Positive aspect 1
-        - Positive aspect 2
-        - Positive aspect 3
+        - Aspect 1: [Description with evidence]
+        - Aspect 2: [Description with evidence]
     validations:
       required: false
 
   - type: textarea
-    id: issues_encountered
+    id: issues_found
     attributes:
-      label: Issues Encountered
-      description: What problems or issues were encountered? (If issues are bugs, consider filing a Bug Report instead)
+      label: Issues Found (Failures)
+      description: What acceptance criteria failed? Include expected vs actual, evidence, and severity. (If issues are bugs, also file a Bug Report)
       placeholder: |
-        - Issue 1: [Description]
-        - Issue 2: [Description]
+        **Issue 1:** [Criterion that failed]
+        - Expected: [What was expected]
+        - Actual: [What actually happened]
+        - Evidence: [Test results, screenshots, logs]
+        - Severity: CRITICAL/HIGH/MEDIUM/LOW
     validations:
       required: false
 
   - type: textarea
-    id: suggestions
+    id: test_results_summary
     attributes:
-      label: Suggestions for Improvement
-      description: What improvements or enhancements would be valuable?
+      label: Test Results Summary
+      description: Summary of test results (total tested, passed, failed, partial)
       placeholder: |
-        - Suggestion 1: [Description]
-        - Suggestion 2: [Description]
-    validations:
-      required: false
-
-  - type: dropdown
-    id: overall_assessment
-    attributes:
-      label: Overall Assessment
-      description: Does it work as advertised?
-      options:
-        - Yes, works as advertised
-        - Mostly works, with minor issues
-        - Works but needs improvements
-        - Does not work as advertised
+        Total Criteria Tested: [Number]
+        Passed: [Number]
+        Failed: [Number]
+        Partial: [Number]
     validations:
       required: true
 
   - type: dropdown
-    id: recommendation
+    id: overall_assessment
     attributes:
-      label: Would you recommend it to others?
+      label: Overall UAT Assessment
+      description: Based on test results, does it work as advertised/specified?
       options:
-        - Yes, highly recommend
-        - Yes, with caveats
-        - Maybe, depends on use case
-        - No, not recommended
+        - Yes, works as advertised (all criteria passed)
+        - Mostly works (minor issues, non-critical criteria failed)
+        - Partially works (some critical criteria failed)
+        - Does not work as advertised (critical criteria failed)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: uat_recommendation
+    attributes:
+      label: UAT Recommendation
+      description: Based on empirical test results, what is your recommendation?
+      options:
+        - ACCEPT - Ready for use
+        - ACCEPT WITH CAVEATS - Usable but with known issues
+        - REJECT - Does not meet acceptance criteria
     validations:
       required: true
 
   - type: textarea
     id: specific_findings
     attributes:
-      label: Specific Findings
-      description: Detailed feedback on functionality, usability, performance, documentation, or integration
+      label: Specific Test Findings
+      description: Detailed test findings on functionality, usability, performance, documentation, or integration (with evidence)
       placeholder: |
         **Functionality:**
-        - Finding 1: [Description]
+        - Finding 1: [Description with test evidence]
         
         **Usability:**
-        - Finding 1: [Description]
+        - Finding 1: [Description with test evidence]
         
         **Documentation:**
-        - Finding 1: [Description]
+        - Finding 1: [Description with test evidence]
     validations:
       required: false
 
@@ -194,11 +219,11 @@ body:
   - type: textarea
     id: recommendations
     attributes:
-      label: Recommendations
-      description: What actions should be taken based on this feedback?
+      label: Recommendations Based on UAT Results
+      description: What actions should be taken based on these test results? (Evidence-based recommendations only)
       placeholder: |
-        - Recommendation 1: [Description]
-        - Recommendation 2: [Description]
+        - Recommendation 1: [Based on specific test failure/success]
+        - Recommendation 2: [Based on specific test failure/success]
     validations:
       required: false
 

@@ -6,14 +6,14 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Feedback: [Title]
+# User Acceptance Testing (UAT) Report: [Title]
 
-**Type:** Feedback (FB)  
+**Type:** User Acceptance Testing (UAT) / Feedback (FB)  
 **Submitted:** [YYYY-MM-DD]  
 **Submitted By:** [Name/Username/Project]  
 **Priority:** [HIGH/MEDIUM/LOW]  
 **Status:** [PENDING/INTAKE/ACCEPTED/REJECTED/DEFERRED]  
-**Feedback Type:** [UAT/General Feedback/Adoption Feedback/Integration Feedback/Other]
+**UAT Scope:** [Component/Feature/System tested]
 
 ---
 
@@ -23,64 +23,95 @@ housekeeping_policy: keep
 
 ---
 
-## Context
+## UAT Context
 
-**Project/Organization:** [Name of project or organization providing feedback]  
+**Project/Organization:** [Name of project or organization conducting UAT]  
 **Component Tested:** [e.g., Kanban Framework, Release Workflow, Versioning Framework]  
 **Version Tested:** [Version number or commit hash]  
 **Testing Period:** [Start date] to [End date]  
-**Testing Scope:** [Brief description of what was tested]
+**UAT Scope:** [Brief description of what was tested and acceptance criteria]
 
-**Testing Methodology:**
-- [ ] User Acceptance Testing (UAT)
-- [ ] Integration Testing
-- [ ] Adoption Testing
-- [ ] General Usage Feedback
+**UAT Methodology:**
+- [ ] Functional Testing (does it work as specified?)
+- [ ] Integration Testing (does it integrate as expected?)
+- [ ] Adoption Testing (can it be adopted as documented?)
+- [ ] End-to-End Testing (does the full workflow work?)
 - [ ] Other: [specify]
+
+**Acceptance Criteria Tested:**
+[List the specific acceptance criteria or requirements that were tested]
+- Criterion 1: [Description]
+- Criterion 2: [Description]
+- Criterion 3: [Description]
 
 ---
 
-## Feedback Details
+## UAT Results
 
-### What Worked Well
+### Acceptance Criteria Results
 
-[What aspects worked as expected or exceeded expectations?]
+[For each acceptance criterion, document the test result]
 
-- Positive aspect 1
-- Positive aspect 2
-- Positive aspect 3
+**Criterion 1: [Description]**
+- **Status:** [PASS/FAIL/PARTIAL]
+- **Evidence:** [Test results, screenshots, logs, etc.]
+- **Notes:** [Additional observations]
 
-### Issues Encountered
+**Criterion 2: [Description]**
+- **Status:** [PASS/FAIL/PARTIAL]
+- **Evidence:** [Test results, screenshots, logs, etc.]
+- **Notes:** [Additional observations]
 
-[What problems or issues were encountered?]
+**Criterion 3: [Description]**
+- **Status:** [PASS/FAIL/PARTIAL]
+- **Evidence:** [Test results, screenshots, logs, etc.]
+- **Notes:** [Additional observations]
 
-- Issue 1: [Description]
-- Issue 2: [Description]
-- Issue 3: [Description]
+### Test Results Summary
 
-### Suggestions for Improvement
+**Total Criteria Tested:** [Number]  
+**Passed:** [Number]  
+**Failed:** [Number]  
+**Partial:** [Number]
 
-[What improvements or enhancements would be valuable?]
+### What Worked as Expected
 
-- [ ] Suggestion 1: [Description]
-- [ ] Suggestion 2: [Description]
-- [ ] Suggestion 3: [Description]
+[What aspects passed UAT and worked as specified/advertised?]
 
-### Overall Assessment
+- Aspect 1: [Description with evidence]
+- Aspect 2: [Description with evidence]
+- Aspect 3: [Description with evidence]
 
-**Does it work as advertised?**
-- [ ] Yes, works as advertised
-- [ ] Mostly works, with minor issues
-- [ ] Works but needs improvements
-- [ ] Does not work as advertised
+### Issues Found (Failures)
 
-**Would you recommend it to others?**
-- [ ] Yes, highly recommend
-- [ ] Yes, with caveats
-- [ ] Maybe, depends on use case
-- [ ] No, not recommended
+[What acceptance criteria failed or did not work as specified?]
 
-**Rating:** [1-5 stars or other rating system]
+- **Issue 1:** [Criterion that failed]
+  - **Expected:** [What was expected]
+  - **Actual:** [What actually happened]
+  - **Evidence:** [Test results, screenshots, logs]
+  - **Severity:** [CRITICAL/HIGH/MEDIUM/LOW]
+
+- **Issue 2:** [Criterion that failed]
+  - **Expected:** [What was expected]
+  - **Actual:** [What actually happened]
+  - **Evidence:** [Test results, screenshots, logs]
+  - **Severity:** [CRITICAL/HIGH/MEDIUM/LOW]
+
+### Overall UAT Assessment
+
+**Does it work as advertised/specified?**
+- [ ] Yes, works as advertised (all criteria passed)
+- [ ] Mostly works (minor issues, non-critical criteria failed)
+- [ ] Partially works (some critical criteria failed)
+- [ ] Does not work as advertised (critical criteria failed)
+
+**UAT Recommendation:**
+- [ ] ACCEPT - Ready for use
+- [ ] ACCEPT WITH CAVEATS - Usable but with known issues
+- [ ] REJECT - Does not meet acceptance criteria
+
+**Evidence-Based Rating:** [Based on test results, not opinion]
 
 ---
 

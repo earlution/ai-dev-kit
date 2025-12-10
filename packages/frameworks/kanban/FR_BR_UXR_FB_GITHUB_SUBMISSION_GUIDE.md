@@ -6,17 +6,19 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# GitHub Submission Guide for FR, BR, UXR, and FB
+# GitHub Submission Guide for FR, BR, UXR, and UAT Reports
 
-**Purpose:** This guide explains how to submit Feature Requests (FR), Bug Reports (BR), User Experience Research (UXR) reports, or Feedback (FB) via GitHub Issues.
+**Purpose:** This guide explains how to submit Feature Requests (FR), Bug Reports (BR), User Experience Research (UXR) reports, or User Acceptance Testing (UAT) reports via GitHub Issues.
 
-**Audience:** External contributors, users, automated systems, UX researchers, and adopters providing feedback
+**Audience:** External contributors, users, automated systems, UX researchers, and projects conducting UAT
 
 ---
 
 ## Overview
 
-You can submit Bug Reports, Feature Requests, UX Research findings, or Feedback directly through GitHub Issues. These submissions are automatically converted to Kanban documents and processed through our intake workflow.
+You can submit Bug Reports, Feature Requests, UX Research findings, or User Acceptance Testing (UAT) reports directly through GitHub Issues. These submissions are automatically converted to Kanban documents and processed through our intake workflow.
+
+**⚠️ Note on UAT Reports:** UAT reports require **empirical evidence** (test results, screenshots, logs). We do not accept opinion-based feedback without test evidence.
 
 **Benefits:**
 - ✅ No repository access required

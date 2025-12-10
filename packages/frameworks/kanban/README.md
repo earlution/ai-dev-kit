@@ -1504,7 +1504,7 @@ included_docs:
   - file: "guides/portfolio-kanban-alignment-playbook.md"
     purpose: "Alignment guide"
   - file: "FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md"
-    purpose: "Guide for submitting FR, BR, UXR, and FB via GitHub Issues"
+    purpose: "Guide for submitting FR, BR, UXR, and UAT Reports via GitHub Issues (UAT requires empirical evidence)"
 
   - file: "integration/numbering-versioning-integration.md"
     purpose: "Version integration guide"
