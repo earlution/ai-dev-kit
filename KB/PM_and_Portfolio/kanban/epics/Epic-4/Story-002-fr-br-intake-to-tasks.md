@@ -321,19 +321,20 @@ This story operationalizes the FR/BR → Task → Story → Epic rule defined in
 **Blocker:** None
 
 **Problem Statement:**
-External contributors, automated evaluation methods, and UX researchers need a way to submit Bug Reports (BR), Feature Requests (FR), or User Experience Research reports (UXR) via GitHub, rather than requiring manual creation of FR/BR documents in the repository. This will improve accessibility, enable automation, and streamline the intake process.
+External contributors, automated evaluation methods, UX researchers, and projects conducting UAT need a way to submit Bug Reports (BR), Feature Requests (FR), User Experience Research reports (UXR), or User Acceptance Testing (UAT) reports via GitHub, rather than requiring manual creation of FR/BR/UXR/FB documents in the repository. This will improve accessibility, enable automation, and streamline the intake process. UAT reports require empirical evidence (test results, not opinions).
 
 **Approach:**
 1. **Create GitHub Issue Templates:**
    - Bug Report template (aligned with BR_TEMPLATE.md)
    - Feature Request template (aligned with FR_TEMPLATE.md)
    - UXR template (new template for User Experience Research reports)
+   - UAT Report template (FB_TEMPLATE.md - requires empirical evidence)
    - Use GitHub Issue Forms for structured submissions
 
 2. **Implement Conversion Mechanism:**
    - GitHub Action or script to monitor new Issues
    - Parse GitHub Issue content and metadata
-   - Convert to FR/BR/UXR document format
+   - Convert to FR/BR/UXR/FB document format
    - Create document in appropriate location (`KB/PM_and_Portfolio/kanban/fr-br/`)
 
 3. **Integrate with Intake Workflow:**
@@ -353,22 +354,25 @@ External contributors, automated evaluation methods, and UX researchers need a w
    - Provide examples and best practices
 
 **Acceptance Criteria:**
-- [x] GitHub Issue templates created for BR, FR, and UXR ✅
-- [x] GitHub Action or script converts Issues to FR/BR/UXR documents ✅
+- [x] GitHub Issue templates created for BR, FR, UXR, and UAT Reports ✅
+- [x] GitHub Action or script converts Issues to FR/BR/UXR/FB documents ✅
 - [x] Automatic creation of Kanban tasks from GitHub submissions ✅ (via intake workflow)
-- [x] Bidirectional linking between GitHub Issues and FR/BR documents ✅
+- [x] Bidirectional linking between GitHub Issues and FR/BR/UXR/FB documents ✅
 - [x] Integration with existing FR/BR intake workflow ✅
 - [x] Documentation for external contributors ✅
 - [x] Validation and error handling for malformed submissions ✅ (basic validation in workflow)
 - [x] Support for GitHub Issue Forms ✅
+- [x] UAT Report scope tightened to require empirical evidence ✅ (Build 3)
 
 **Files to Create/Update:**
 - `.github/ISSUE_TEMPLATE/bug_report.yml` (GitHub Issue Form)
 - `.github/ISSUE_TEMPLATE/feature_request.yml` (GitHub Issue Form)
 - `.github/ISSUE_TEMPLATE/ux_research.yml` (GitHub Issue Form)
+- `.github/ISSUE_TEMPLATE/feedback.yml` (GitHub Issue Form for UAT Reports)
 - `.github/workflows/fr-br-intake.yml` (GitHub Action for conversion)
 - `packages/frameworks/kanban/templates/UXR_TEMPLATE.md` (UXR template)
-- `packages/frameworks/kanban/FR_BR_UXR_GITHUB_SUBMISSION_GUIDE.md` (documentation)
+- `packages/frameworks/kanban/templates/FB_TEMPLATE.md` (UAT Report template)
+- `packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md` (documentation)
 
 **Related:**
 - FR-004: GitHub submission for FR, BR, and UXR
