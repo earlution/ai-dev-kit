@@ -1,0 +1,103 @@
+---
+lifecycle: evergreen
+ttl_days: null
+created_at: 2025-12-10T17:30:00Z
+expires_at: null
+housekeeping_policy: keep
+---
+
+# Story 9: Bug Fixes and Agentic Intelligence Implementation
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Estimated Effort:** [TBD]  
+**Last updated:** 2025-12-10 (v0.4.9.0+0 – Story created for BR-007, BR-008, FR-010, UXR-004 intake)  
+**Version:** v0.4.9.0+0  
+**Code:** E4S09
+
+---
+
+## Goal
+
+Fix critical bugs in Kanban package installation process and implement actual agentic intelligence for task mapping to replace deterministic word matching approach.
+
+---
+
+## Tasks
+
+- [ ] **E4:S09:T00 – Story creation and BR-007, BR-008, FR-010, UXR-004 intake** TODO (v0.4.9.0+0)
+  - Created Story 9: Bug Fixes and Agentic Intelligence Implementation
+  - Intake BR-007: Multiple Bugs in Kanban Package Installation Process (GitHub issue #9)
+  - Intake BR-008: Arbitrary 80% Threshold Contradicts Agentic Intelligence Claims (GitHub issue #10)
+  - Intake FR-010: Implement Actual Agentic Intelligence for Task Mapping (GitHub issue #11)
+  - Intake UXR-004: Kanban Package Installation UAT (GitHub issue #13)
+  - **Linked Issues:** GitHub #9, #10, #11, #13
+
+- [ ] **E4:S09:T01 – BR-007: Fix missing Tuple import in analyze_structure.py** TODO
+  - Add `Tuple` to imports from `typing` module
+  - Fix line 192: `Optional[Tuple]` should work after import
+  - Test with real-world Kanban structures
+  - **Linked BR:** `BR-007-multiple-bugs-kanban-package-installation.md` (GitHub issue #9)
+  - **Acceptance:** ✅ Criterion 1 of BR-007 satisfied.
+
+- [ ] **E4:S09:T02 – BR-007: Fix semantic matcher regex optional group handling** TODO
+  - Fix `load_canonical_epic_definitions()` in `semantic_matcher.py`
+  - Handle optional regex groups correctly (check if group exists before accessing)
+  - Use `match.lastindex` or named groups to avoid "no such group" error
+  - Test with actual `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` file
+  - **Linked BR:** `BR-007-multiple-bugs-kanban-package-installation.md` (GitHub issue #9)
+  - **Acceptance:** ✅ Criterion 2 of BR-007 satisfied.
+
+- [ ] **E4:S09:T03 – BR-007: Add canonical_adoption mode to migrate_structure.py** TODO
+  - Add `canonical_adoption` to argparse choices in `migrate_structure.py`
+  - Ensure mode consistency across install and migrate scripts
+  - Test canonical_adoption mode end-to-end
+  - **Linked BR:** `BR-007-multiple-bugs-kanban-package-installation.md` (GitHub issue #9)
+  - **Acceptance:** ✅ Criterion 3 of BR-007 satisfied.
+
+- [ ] **E4:S09:T04 – BR-007: Fix analysis recommendation logic** TODO
+  - Fix logic that recommends "fresh" mode when structure is detected
+  - Improve recommendation rationale based on actual detection results
+  - Test with various existing structure scenarios
+  - **Linked BR:** `BR-007-multiple-bugs-kanban-package-installation.md` (GitHub issue #9)
+  - **Acceptance:** ✅ Criterion 4 of BR-007 satisfied.
+
+- [ ] **E4:S09:T05 – BR-008/FR-010: Remove arbitrary 80% threshold** TODO
+  - Remove all threshold-based logic from `migrate_structure.py`
+  - Remove threshold check: `if match["similarity_score"] >= 80:`
+  - Update code to work without threshold-based decisions
+  - **Linked BR:** `BR-008-arbitrary-80-threshold-contradicts-agentic-intelligence.md` (GitHub issue #10)
+  - **Linked FR:** `FR-010-implement-actual-agentic-intelligence-task-mapping.md` (GitHub issue #11)
+  - **Acceptance:** ✅ Criterion 1 of BR-008 and FR-1 of FR-010 satisfied.
+
+- [ ] **E4:S09:T06 – FR-010: Implement actual agentic intelligence for task mapping** TODO
+  - Replace deterministic Jaccard similarity with AI/LLM-based analysis
+  - Implement agent that analyzes task content and understands meaning
+  - Map tasks to appropriate canonical stories based on content understanding
+  - Provide explanations for task placement decisions
+  - Handle edge cases intelligently (tasks that don't fit perfectly)
+  - **Linked FR:** `FR-010-implement-actual-agentic-intelligence-task-mapping.md` (GitHub issue #11)
+  - **Acceptance:** ✅ AC-1..AC-8 of FR-010 satisfied.
+
+- [ ] **E4:S09:T07 – UXR-004: Synthesize UAT findings and update documentation** TODO
+  - Review UXR-004 comprehensive findings
+  - Update documentation to reflect actual capabilities (remove misleading "intelligent" claims if not implemented)
+  - Document agentic intelligence implementation (if T06 complete)
+  - Update scripts/README.md with accurate feature descriptions
+  - **Linked UXR:** `UXR-004-kanban-package-installation-uat.md` (GitHub issue #13)
+  - **Acceptance:** ✅ UXR findings synthesized and documentation updated.
+
+---
+
+## References
+
+- BR-007: `KB/PM_and_Portfolio/kanban/fr-br/BR-007-multiple-bugs-kanban-package-installation.md`
+- BR-008: `KB/PM_and_Portfolio/kanban/fr-br/BR-008-arbitrary-80-threshold-contradicts-agentic-intelligence.md`
+- FR-010: `KB/PM_and_Portfolio/kanban/fr-br/FR-010-implement-actual-agentic-intelligence-task-mapping.md`
+- UXR-004: `KB/PM_and_Portfolio/kanban/fr-br/UXR-004-kanban-package-installation-uat.md`
+- GitHub Issues: #9, #10, #11, #13
+
+---
+
+**Template Usage:** Story follows Kanban framework story template; Tasks trace to BR/FR/UXR for forensic linkage.
+
