@@ -17,6 +17,49 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.8.0+1] - 2025-12-10
+
+📋 Intake: E4:S08:T00 - FR-009, UXR-002, UXR-003 Intake and Story 8 Creation
+
+### Added
+
+- **Epic 4, Story 8: Intelligent Epic Matching and Canonical Structure Adoption**
+  - New story created for implementing semantic epic matching and AI-assisted canonical structure adoption
+  - 6 tasks defined: Semantic epic matching, intelligent task mapping, canonical adoption as default, reference updating, migration plan presentation, documentation
+
+- **FR-009: Intelligent Epic Matching and AI-Assisted Canonical Structure Adoption**
+  - Feature request for semantic epic matching with similarity scores (0-100%)
+  - AI-assisted task migration to appropriate canonical epics/stories
+  - Automatic reference updating in changelogs, docs, and story files
+  - Canonical adoption as recommended default migration mode
+  - Dynamic epic numbering (not hardcoded to Epic 24)
+  - GitHub Issue: [#7](https://github.com/earlution/ai-dev-kit/issues/7)
+
+- **UXR-002: Comprehensive UAT of Migration Utilities**
+  - Real-world migration validation (9 epics, 40 stories, 291 tasks)
+  - Validates migration utilities work as advertised
+  - Recommendations: Improve mode recommendation logic, enhance validation warnings
+  - GitHub Issue: [#6](https://github.com/earlution/ai-dev-kit/issues/6)
+
+- **UXR-003: Intelligent Epic Matching and Canonical Adoption UAT**
+  - Identifies gaps in epic matching intelligence and task migration capabilities
+  - Findings: Current process only detects number conflicts, not semantic matches
+  - Recommendations: Implement semantic matching, intelligent task mapping, canonical adoption as default
+  - GitHub Issue: [#8](https://github.com/earlution/ai-dev-kit/issues/8)
+
+### Changed
+
+- **Epic 7, Story 5: Migration UXR Research**
+  - Added Task 2 (E7:S05:T02): UXR-002 intake and synthesis
+  - Added Task 3 (E7:S05:T03): UXR-003 intake and synthesis
+  - Updated references to include UXR-002 and UXR-003
+
+- **Epic 4: Kanban Framework**
+  - Added Story 8 to story checklist
+  - Updated last updated field
+
+---
+
 ## [0.4.2.6+3] - 2025-12-10
 
 📋 Feature: E4:S02:T06 Build 3 - UAT Report Submission Lane Added

@@ -11,8 +11,8 @@ housekeeping_policy: keep
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-10 (v0.4.8.0+0 – Story created for FR-009)  
-**Version:** v0.4.8.0+0  
+**Last updated:** 2025-12-10 (v0.4.8.0+1 – Story created and FR-009, UXR-002, UXR-003 intake complete)  
+**Version:** v0.4.8.0+1  
 **Code:** E4S08
 
 ---
