@@ -5,6 +5,63 @@ All notable changes to the Kanban System Implementation Package will be document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2025-12-10
+
+**Package Version:** 2.1.0
+**Project Version:** 0.4.8.6+1
+**Bump Type:** MINOR
+
+### Added
+- **Intelligent Epic Matching and Canonical Structure Adoption (E4:S08):**
+  - `packages/frameworks/kanban/scripts/semantic_matcher.py` - Semantic analysis engine for epic content matching
+    - Jaccard similarity calculation for epic content (title, description, purpose, scope)
+    - Match classification (exact match ≥90%, semantic match ≥70%, partial match ≥40%, no match <40%)
+    - Best match detection with similarity scores and rationale
+  - `packages/frameworks/kanban/scripts/reference_updater.py` - Automatic task ID reference updating
+    - Scans changelogs, documentation, and story files for task ID references
+    - Updates references based on migration mappings
+    - Reports updated files and un-updatable references
+  - **Enhanced `analyze_structure.py`:**
+    - Integrated semantic matching for epic analysis
+    - Semantic match detection with scores and match types
+    - Migration plan recommendations based on semantic matches
+    - Recommends `canonical_adoption` mode when strong semantic matches found
+  - **Enhanced `migrate_structure.py`:**
+    - New `canonical_adoption` mode for intelligent canonical structure adoption
+    - Intelligent task mapping to canonical epics/stories based on semantic matches
+    - Automatic reference updating after migration
+    - Dynamic epic numbering (installs canonical epics at next available number)
+  - **Enhanced `install_kanban_framework.py`:**
+    - Added `canonical_adoption` to installation mode choices
+    - Interactive migration plan presentation before execution
+    - Semantic match display with scores and rationale
+    - User confirmation prompt with detailed migration preview
+  - **Updated `scripts/README.md`:**
+    - Documentation for semantic matching capabilities
+    - `canonical_adoption` mode usage guide
+    - Semantic matching examples and match classification guide
+    - Reference updating capabilities documentation
+
+### Changed
+- Migration process now supports intelligent semantic matching (not just number conflicts)
+- Default recommendation changed to `canonical_adoption` when strong semantic matches detected
+- Migration plan presentation enhanced with semantic match details
+
+### Documentation
+- Updated `scripts/README.md` with comprehensive semantic matching documentation
+- Added examples of semantic matching and intelligent migration workflow
+- Documented reference updating capabilities and limitations
+
+**Criteria Reference:** MINOR Version Bump
+- ✅ New feature: Semantic epic matching with similarity scoring
+- ✅ New feature: Intelligent task mapping to canonical structure
+- ✅ New feature: Automatic reference updating
+- ✅ New feature: Canonical adoption mode with interactive plan presentation
+- ✅ Enhancement: Migration process intelligence significantly improved
+- ✅ Backward compatible: Existing migration modes still supported
+
+---
+
 ## [2.0.0] - 2025-12-10
 
 **Package Version:** 2.0.0
