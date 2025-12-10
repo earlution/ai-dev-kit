@@ -40,6 +40,11 @@ Capture and operationalize user experience research for migrating pre-existing K
   - **Linked UXR:** `UXR-003-intelligent-epic-matching-canonical-adoption-uat.md` (GitHub issue #8).  
   - **Acceptance:** Findings synthesized; requirements fed into Epic 4 Story 8 tasks; recommendations documented.
 
+- [ ] **E7:S05:T04 – UXR-004 intake and synthesis**  
+  - Intake UXR-004 comprehensive Kanban package installation UAT findings, extract bug reports and design flaw analysis, summarize recommendations.  
+  - **Linked UXR:** `UXR-004-kanban-package-installation-uat.md` (GitHub issue #13).  
+  - **Acceptance:** Findings synthesized; recommendations fed into Epic 4 Story 9 tasks; bug reports and design flaws documented.
+
 ---
 
 ## References
@@ -47,7 +52,9 @@ Capture and operationalize user experience research for migrating pre-existing K
 - UXR-001: `KB/PM_and_Portfolio/kanban/fr-br/UXR-001-migration-user-experience-research.md`
 - UXR-002: `KB/PM_and_Portfolio/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities.md`
 - UXR-003: `KB/PM_and_Portfolio/kanban/fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md`
+- UXR-004: `KB/PM_and_Portfolio/kanban/fr-br/UXR-004-kanban-package-installation-uat.md`
 - BR-006 / FR-007 (consumers of UXR-001): see Epic 4 Story 7
+- BR-007 / BR-008 / FR-010 (consumers of UXR-004): see Epic 4 Story 9
 - FR-009 (consumer of UXR-002/UXR-003): see Epic 4 Story 8
 
 ---
