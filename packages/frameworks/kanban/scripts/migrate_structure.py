@@ -530,7 +530,7 @@ def main():
     )
     parser.add_argument(
         "--mode",
-        choices=["fresh", "migration", "update", "hybrid", "auto"],
+        choices=["fresh", "migration", "update", "hybrid", "canonical_adoption", "auto"],
         default="auto",
         help="Installation mode (default: auto-detect from analysis report)"
     )

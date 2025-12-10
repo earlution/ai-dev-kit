@@ -20,7 +20,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Set
+from typing import Dict, List, Optional, Set, Tuple
 from datetime import datetime
 
 # Import semantic matcher from same directory
@@ -336,22 +336,31 @@ class KanbanStructureAnalyzer:
             m for m in self.semantic_matches if m["similarity_score"] >= 80
         ]
         
+        # Check if structure was actually detected (not just empty)
+        structure_detected = len(self.epic_mappings) > 0
+        
         # If we have high similarity semantic matches, recommend canonical adoption
         if has_semantic_matches and len(high_similarity_matches) >= len(self.epic_mappings) * 0.5:
             recommended_mode = "canonical_adoption"
+            recommendation_rationale = f"Canonical adoption recommended: {len(high_similarity_matches)} high similarity semantic matches found."
         elif has_conflicts and has_project_epics:
             recommended_mode = "hybrid"
+            recommendation_rationale = "Hybrid mode recommended: Conflicts detected with existing project epics."
         elif has_project_epics:
             recommended_mode = "migration"
+            recommendation_rationale = f"Migration mode recommended: {len(self.epic_mappings)} existing epics detected."
+        elif structure_detected:
+            # Structure detected but all epics are canonical - use update mode
+            recommended_mode = "update"
+            recommendation_rationale = f"Update mode recommended: Existing canonical structure detected ({len(self.epic_mappings)} epics)."
         else:
             recommended_mode = "fresh"
+            recommendation_rationale = "Fresh install recommended: No existing Kanban structure detected."
         
         self.migration_plan = {
             "recommended_mode": recommended_mode,
             "modes_available": ["fresh", "migration", "update", "hybrid", "canonical_adoption"],
-            "recommendation_rationale": self._generate_recommendation_rationale(
-                recommended_mode, has_semantic_matches, high_similarity_matches
-            ),
+            "recommendation_rationale": recommendation_rationale,
             "steps": [
                 {
                     "step": 1,

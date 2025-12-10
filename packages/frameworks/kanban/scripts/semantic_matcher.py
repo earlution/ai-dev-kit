@@ -270,8 +270,16 @@ def load_canonical_epic_definitions(framework_path: Path) -> List[Dict]:
             epic_num = int(match.group(1))
             epic_title = match.group(2).strip()
             epic_purpose = match.group(3).strip()
-            epic_scope = match.group(4).strip() if match.group(4) else ""
-            epic_description = match.group(7).strip() if match.group(7) else ""
+            # Check if optional groups exist before accessing
+            # Check if optional groups exist before accessing (use try/except for safety)
+            try:
+                epic_scope = match.group(4).strip() if match.group(4) else ""
+            except IndexError:
+                epic_scope = ""
+            try:
+                epic_description = match.group(7).strip() if match.group(7) else ""
+            except IndexError:
+                epic_description = ""
             
             # Extract full epic section
             epic_start = match.start()
