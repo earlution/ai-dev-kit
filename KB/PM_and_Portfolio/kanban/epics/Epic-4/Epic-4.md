@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-10 (v0.4.7.3+1 – Story 7 complete: All migration support tasks complete)  
+**Last updated:** 2025-12-10 (v0.4.2.6+3 – Story 2, Task 6 build 3: UAT Report submission lane added)  
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]

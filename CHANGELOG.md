@@ -17,6 +17,48 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.2.6+3] - 2025-12-10
+
+📋 Feature: E4:S02:T06 Build 3 - UAT Report Submission Lane Added
+
+### Added
+
+- **User Acceptance Testing (UAT) Report Template (`FB_TEMPLATE.md`):**
+  - UAT-focused template requiring empirical evidence (test results, screenshots, logs)
+  - Acceptance criteria results tracking (PASS/FAIL/PARTIAL)
+  - Test results summary (total tested, passed, failed, partial)
+  - Issues found tracking with expected vs actual, evidence, severity
+  - UAT recommendation (ACCEPT/ACCEPT WITH CAVEATS/REJECT)
+
+- **GitHub Issue Template (`feedback.yml`):**
+  - Renamed to "User Acceptance Testing (UAT) Report"
+  - UAT scope selection (Functional, Integration, Adoption, End-to-End testing)
+  - Acceptance criteria results with evidence requirements
+  - Test results summary tracking
+  - UAT assessment and recommendation fields
+  - Warnings about requiring empirical evidence (not opinions)
+
+- **Documentation Updates:**
+  - Updated submission guide (`FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md`) to include UAT reports
+  - Clarified UAT requires empirical evidence, not opinion-based feedback
+  - Updated GitHub Action workflow to handle `uat` label
+  - Updated README to reflect UAT focus
+
+### Changed
+
+- **GitHub Submission System:**
+  - Expanded from FR/BR/UXR to FR/BR/UXR/FB (UAT Reports)
+  - Tightened FB scope to UAT only (removed general feedback options)
+  - Added `uat` label support in workflow
+  - Updated all issue template references
+
+- **Epic 4, Story 2, Task 6:** Build 3 complete
+  - UAT Report submission lane added
+  - Scope tightened to require empirical evidence
+  - All templates and documentation updated
+
+---
+
 ## [0.2.6.3+1] - 2025-12-10
 
 📚 Documentation: E2:S06:T03 Complete - Package Uninstall Documentation
