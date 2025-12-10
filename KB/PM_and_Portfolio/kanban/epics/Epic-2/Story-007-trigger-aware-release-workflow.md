@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 007 – Trigger-Aware Release Workflow
 
-**Status:** IN PROGRESS  
+**Status:** IN PROGRESS (T06 blocked by E4:S10)  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-10 (v0.2.7.7+0 – T00/T01/T02/T03/T04/T05/T07 complete: Design, trigger registry, workflow executor, deliverable processor, trigger integration, workflow orchestrator implemented)  
-**Version:** v0.2.7.7+0  
+**Last updated:** 2025-12-10 (v0.2.7.8+0 – T00/T01/T02/T03/T04/T05/T07/T08 complete: Design, trigger registry, workflow executor, deliverable processor, trigger integration, workflow orchestrator, documentation and testing implemented. T06 blocked by E4:S10)  
+**Version:** v0.2.7.8+0  
 **Code:** E2S07
 
 ---
@@ -44,7 +44,7 @@ Create a trigger-aware RW system that:
 - [x] **E2:S07:T04 – Implement deliverable processing intelligence** ✅ COMPLETE (v0.2.7.4+1)
 - [x] **E2:S07:T05 – Implement FR/BR/UXR commit trigger** ✅ COMPLETE (v0.2.7.5+1)
 - [x] **E2:S07:T07 – Add workflow chaining and orchestration** ✅ COMPLETE (v0.2.7.7+1)
-- [ ] **E2:S07:T08 – Documentation and testing** - IN PROGRESS (v0.2.7.8+0)
+- [x] **E2:S07:T08 – Documentation and testing** ✅ COMPLETE (v0.2.7.8+0)
 - [ ] **E2:S07:T02 – Implement trigger registry** - TODO
 - [ ] **E2:S07:T03 – Implement sub-workflow execution engine** - TODO
 - [ ] **E2:S07:T04 – Implement deliverable processing intelligence** - TODO
