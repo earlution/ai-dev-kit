@@ -182,22 +182,20 @@ def present_migration_plan(analysis_report_path: Path):
         print("\n📋 Migration Plan Preview")
         print("=" * 60)
         
-        # Show semantic matches
+        # Show semantic matches (all matches shown, no threshold filtering per BR-008/FR-010)
         if semantic_matches:
-            print("\n🔍 Semantic Matches Found:")
-            high_matches = [m for m in semantic_matches if m["similarity_score"] >= 80]
-            medium_matches = [m for m in semantic_matches if 70 <= m["similarity_score"] < 80]
+            print("\n🔍 Semantic Matches Found (all matches processed, no threshold):")
+            # Display all matches, categorized for information only (not blocking)
+            for match in semantic_matches[:10]:  # Show first 10
+                match_type = match.get("match_type", "unknown")
+                score = match.get("similarity_score", 0)
+                print(f"     Epic {match['user_epic_number']} → Canonical Epic {match['canonical_epic_number']} "
+                      f"({score:.1f}%, {match_type})")
+            if len(semantic_matches) > 10:
+                print(f"     ... and {len(semantic_matches) - 10} more matches")
             
-            if high_matches:
-                print(f"  ✅ {len(high_matches)} high similarity matches (≥80%):")
-                for match in high_matches[:5]:  # Show first 5
-                    print(f"     Epic {match['user_epic_number']} → Canonical Epic {match['canonical_epic_number']} "
-                          f"({match['similarity_score']:.1f}%)")
-                if len(high_matches) > 5:
-                    print(f"     ... and {len(high_matches) - 5} more")
-            
-            if medium_matches:
-                print(f"  ⚠️  {len(medium_matches)} medium similarity matches (70-79%):")
+            if len(semantic_matches) > 0:
+                print(f"  ℹ️  All {len(semantic_matches)} semantic matches will be processed (threshold removed per BR-008/FR-010)")
                 for match in medium_matches[:3]:  # Show first 3
                     print(f"     Epic {match['user_epic_number']} → Canonical Epic {match['canonical_epic_number']} "
                           f"({match['similarity_score']:.1f}%)")

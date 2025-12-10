@@ -235,8 +235,9 @@ class KanbanStructureMigrator:
             if self.mode == "canonical_adoption":
                 # Check if user epic semantically matches this canonical epic
                 semantic_matches = self.analysis_report.get("semantic_matches", [])
+                # Find best matching user epic (no threshold - process all matches)
                 matching_user_epic = next(
-                    (m for m in semantic_matches if m["canonical_epic_number"] == epic_num and m["similarity_score"] >= 80),
+                    (m for m in semantic_matches if m["canonical_epic_number"] == epic_num),
                     None
                 )
                 if matching_user_epic:
@@ -270,25 +271,28 @@ class KanbanStructureMigrator:
         epic_mappings = self.analysis_report.get("epic_mappings", [])
         
         # Map user epics to canonical epics based on semantic matches
+        # NOTE: Threshold removed per BR-008/FR-010. All semantic matches are processed.
+        # Full agentic intelligence (T06) will provide context-aware decision making.
         for match in semantic_matches:
-            if match["similarity_score"] >= 80:  # High similarity threshold
-                user_epic_num = match["user_epic_number"]
-                canonical_epic_num = match["canonical_epic_number"]
+            user_epic_num = match["user_epic_number"]
+            canonical_epic_num = match["canonical_epic_number"]
+            similarity_score = match.get("similarity_score", 0)
+            match_type = match.get("match_type", "unknown")
+            
+            print(f"  📍 Mapping Epic {user_epic_num} → Canonical Epic {canonical_epic_num} "
+                  f"({similarity_score:.1f}% similarity, {match_type})")
+            
+            # Update epic mapping to point to canonical epic
+            epic_mapping = next(
+                (e for e in epic_mappings if e["source_epic_number"] == user_epic_num),
+                None
+            )
+            if epic_mapping:
+                epic_mapping["target_epic_number"] = canonical_epic_num
+                epic_mapping["migration_action"] = "adopt_canonical_structure"
                 
-                print(f"  📍 Mapping Epic {user_epic_num} → Canonical Epic {canonical_epic_num} "
-                      f"({match['similarity_score']:.1f}% similarity)")
-                
-                # Update epic mapping to point to canonical epic
-                epic_mapping = next(
-                    (e for e in epic_mappings if e["source_epic_number"] == user_epic_num),
-                    None
-                )
-                if epic_mapping:
-                    epic_mapping["target_epic_number"] = canonical_epic_num
-                    epic_mapping["migration_action"] = "adopt_canonical_structure"
-                    
-                    # Map stories and tasks from user epic to canonical epic
-                    self._map_tasks_to_canonical_epic(user_epic_num, canonical_epic_num)
+                # Map stories and tasks from user epic to canonical epic
+                self._map_tasks_to_canonical_epic(user_epic_num, canonical_epic_num)
         
         # For epics without high similarity matches, install at next available number
         unmatched_epics = [

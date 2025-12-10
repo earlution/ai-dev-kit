@@ -181,7 +181,7 @@ class KanbanStructureAnalyzer:
                         "similarity_score": similarity_score,
                         "message": f"Epic {epic_num} semantically matches Canonical Epic {canonical_epic_num} "
                                   f"({similarity_score:.1f}% similarity). Consider merging or adopting canonical structure.",
-                        "recommended_action": "adopt_canonical" if similarity_score >= 80 else "review_for_merge"
+                        "recommended_action": "adopt_canonical"  # All semantic matches recommended for adoption (threshold removed per BR-008/FR-010)
                     })
     
     def _determine_epic_migration_action(
@@ -192,8 +192,8 @@ class KanbanStructureAnalyzer:
         semantic_match: Optional[Tuple] = None
     ) -> str:
         """Determine migration action for an epic."""
-        # If semantic match with high similarity, recommend adopting canonical
-        if semantic_match and semantic_match[1] >= 80:
+        # If semantic match exists, recommend adopting canonical (threshold removed per BR-008/FR-010)
+        if semantic_match:
             return "adopt_canonical_structure"
         
         if is_canonical_core:
@@ -332,15 +332,12 @@ class KanbanStructureAnalyzer:
             not e["is_canonical"] for e in self.epic_mappings
         )
         has_semantic_matches = len(self.semantic_matches) > 0
-        high_similarity_matches = [
-            m for m in self.semantic_matches if m["similarity_score"] >= 80
-        ]
         
         # Check if structure was actually detected (not just empty)
         structure_detected = len(self.epic_mappings) > 0
         
-        # If we have high similarity semantic matches, recommend canonical adoption
-        if has_semantic_matches and len(high_similarity_matches) >= len(self.epic_mappings) * 0.5:
+        # If we have semantic matches, recommend canonical adoption (threshold removed per BR-008/FR-010)
+        if has_semantic_matches:
             recommended_mode = "canonical_adoption"
             recommendation_rationale = f"Canonical adoption recommended: {len(high_similarity_matches)} high similarity semantic matches found."
         elif has_conflicts and has_project_epics:
