@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 010 – Agentic Kanban Task Creation from FR/BR
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-10 (v0.4.10.0+0 – Story created for FR-012)  
-**Version:** v0.4.10.0+0  
+**Last updated:** 2025-12-10 (v0.4.10.1+0 – T00/T01 complete: Story creation, design document created)  
+**Version:** v0.4.10.1+0  
 **Code:** E4S10
 
 ---
@@ -37,8 +37,8 @@ Create an agentic workflow that:
 
 ## Task Checklist
 
-- [ ] **E4:S10:T00 – Story creation and FR-012 intake** - TODO
-- [ ] **E4:S10:T01 – Design agentic FR/BR analysis workflow** - TODO
+- [x] **E4:S10:T00 – Story creation and FR-012 intake** ✅ COMPLETE (v0.4.10.0+0)
+- [ ] **E4:S10:T01 – Design agentic FR/BR analysis workflow** - IN PROGRESS (v0.4.10.1+0)
 - [ ] **E4:S10:T02 – Implement intelligent epic/story mapping** - TODO
 - [ ] **E4:S10:T03 – Implement template-based task creation** - TODO
 - [ ] **E4:S10:T04 – Implement task contextualization** - TODO
@@ -52,7 +52,7 @@ Create an agentic workflow that:
 
 ### E4:S10:T00 – Story creation and FR-012 intake
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** FR-012  
 **Blocker:** None
@@ -61,19 +61,20 @@ Create an agentic workflow that:
 - FR-012: Agentic Kanban Task Creation from FR/BR
 
 **Deliverable:**
-- Story document created
-- FR-012 accepted and mapped to this story
+- Story document created ✅
+- FR-012 accepted and mapped to this story ✅
+- All tasks defined ✅
 
 **Acceptance Criteria:**
-- Story document created
-- FR-012 linked to this story
-- All tasks defined
+- ✅ Story document created
+- ✅ FR-012 linked to this story
+- ✅ All tasks defined
 
 ---
 
 ### E4:S10:T01 – Design agentic FR/BR analysis workflow
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** E4:S10:T00  
 **Blocker:** None
@@ -84,14 +85,14 @@ Create an agentic workflow that:
 - Semantic matching capabilities (Epic 4 Story 8)
 
 **Deliverable:**
-- Design document for agentic FR/BR analysis workflow
-- Workflow architecture and decision points
-- Integration points with existing systems
+- Design document for agentic FR/BR analysis workflow ✅ (`packages/frameworks/kanban/design/agentic-fr-br-analysis-workflow-design.md`)
+- Workflow architecture and decision points ✅
+- Integration points with existing systems ✅
 
 **Acceptance Criteria:**
-- Workflow design documented
-- Analysis steps defined
-- Integration points identified
+- ✅ Workflow design documented
+- ✅ Analysis steps defined
+- ✅ Integration points identified
 
 ---
 
