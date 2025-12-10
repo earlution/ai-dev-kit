@@ -20,7 +20,7 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 8     # Story number (Story 8: Intelligent Epic Matching and Canonical Structure Adoption)
-VERSION_TASK = 0      # Task number (Task 0: Story creation and intake of FR-009, UXR-002, UXR-003)
+VERSION_TASK = 6      # Task number (Task 6: Documentation and guides update)
 VERSION_BUILD = 1     # Build number (increments per release within task, bumped by RW)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema

@@ -18,9 +18,14 @@ Arguments:
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Set
 from datetime import datetime
+
+# Import semantic matcher from same directory
+sys.path.insert(0, str(Path(__file__).parent))
+from semantic_matcher import SemanticMatcher, load_canonical_epic_definitions
 
 
 class KanbanStructureAnalyzer:
@@ -31,15 +36,19 @@ class KanbanStructureAnalyzer:
     CANONICAL_ANCILLARY_EPICS = set(range(9, 22))  # Epics 9-21 are ancillary
     CANONICAL_CORE_PLUS_EPICS = {10, 18, 22, 23}  # Core+ recommended epics
     
-    def __init__(self, detection_report: Dict, verbose: bool = False):
+    def __init__(self, detection_report: Dict, verbose: bool = False, framework_path: Optional[Path] = None):
         self.detection_report = detection_report
         self.verbose = verbose
+        self.framework_path = framework_path or Path(__file__).parent.parent
+        self.semantic_matcher = SemanticMatcher()
+        self.canonical_epics = load_canonical_epic_definitions(self.framework_path)
         self.epic_mappings: List[Dict] = []
         self.story_mappings: List[Dict] = []
         self.task_mappings: List[Dict] = []
         self.conflicts: List[Dict] = []
         self.gaps: List[Dict] = []
         self.migration_plan: Dict = {}
+        self.semantic_matches: List[Dict] = []
         
     def analyze(self) -> Dict:
         """Main analysis method. Returns analysis report."""
@@ -64,6 +73,7 @@ class KanbanStructureAnalyzer:
             "task_mappings": self.task_mappings,
             "conflicts": self.conflicts,
             "gaps": self.gaps,
+            "semantic_matches": self.semantic_matches,
             "migration_plan": self.migration_plan,
             "summary": {
                 "epics_to_migrate": len(self.epic_mappings),
@@ -71,26 +81,45 @@ class KanbanStructureAnalyzer:
                 "tasks_to_migrate": len(self.task_mappings),
                 "conflict_count": len(self.conflicts),
                 "gap_count": len(self.gaps),
+                "semantic_match_count": len(self.semantic_matches),
                 "migration_complexity": self._assess_complexity()
             }
         }
     
     def _analyze_epics(self):
-        """Analyze epics and map to canonical format."""
+        """Analyze epics and map to canonical format with semantic matching."""
         detected_epics = self.detection_report.get("epics", [])
+        kanban_path = Path(self.detection_report.get("kanban_path", "."))
         
         for epic in detected_epics:
             epic_num = epic["epic_number"]
             
-            # Determine if this conflicts with canonical epics
+            # Determine if this conflicts with canonical epics (number-based)
             is_canonical_core = epic_num in self.CANONICAL_CORE_EPICS
             is_canonical_ancillary = epic_num in self.CANONICAL_ANCILLARY_EPICS
             is_canonical_core_plus = epic_num in self.CANONICAL_CORE_PLUS_EPICS
             
+            # Extract epic content for semantic matching
+            epic_doc_path = None
+            if epic.get("epic_document"):
+                epic_doc_path = kanban_path / epic["epic_document"]
+            
+            user_epic_content = self.semantic_matcher.extract_text_content(epic_doc_path)
+            
+            # Perform semantic matching against canonical epics
+            semantic_match = None
+            if self.canonical_epics:
+                semantic_match = self.semantic_matcher.find_best_canonical_match(
+                    user_epic_content,
+                    self.canonical_epics
+                )
+            
+            # Build mapping with semantic match information
             mapping = {
                 "source_epic_number": epic_num,
                 "source_directory": epic["directory"],
                 "source_epic_document": epic.get("epic_document"),
+                "source_epic_title": user_epic_content.get("title", ""),
                 "is_canonical": is_canonical_core or is_canonical_ancillary,
                 "is_canonical_core": is_canonical_core,
                 "is_canonical_ancillary": is_canonical_ancillary,
@@ -98,16 +127,38 @@ class KanbanStructureAnalyzer:
                 "stories_count": epic.get("stories_found", 0),
                 "tasks_count": epic.get("tasks_found", 0),
                 "migration_action": self._determine_epic_migration_action(
-                    epic_num, is_canonical_core, is_canonical_ancillary
+                    epic_num, is_canonical_core, is_canonical_ancillary, semantic_match
                 ),
                 "target_epic_number": self._determine_target_epic_number(
                     epic_num, is_canonical_core, is_canonical_ancillary
                 )
             }
             
+            # Add semantic match information
+            if semantic_match:
+                canonical_epic_num, similarity_score, match_details = semantic_match
+                mapping["semantic_match"] = {
+                    "canonical_epic_number": canonical_epic_num,
+                    "similarity_score": similarity_score,
+                    "match_type": match_details["match_type"],
+                    "field_scores": match_details["field_scores"]
+                }
+                
+                # Record semantic match
+                self.semantic_matches.append({
+                    "user_epic_number": epic_num,
+                    "user_epic_title": user_epic_content.get("title", ""),
+                    "canonical_epic_number": canonical_epic_num,
+                    "similarity_score": similarity_score,
+                    "match_type": match_details["match_type"],
+                    "recommendation": self._get_semantic_match_recommendation(
+                        similarity_score, epic_num, canonical_epic_num
+                    )
+                })
+            
             self.epic_mappings.append(mapping)
             
-            # Record conflicts
+            # Record conflicts (number-based and semantic)
             if is_canonical_core:
                 self.conflicts.append({
                     "type": "epic_conflict_core",
@@ -117,20 +168,58 @@ class KanbanStructureAnalyzer:
                               f"Recommendation: Renumber to {mapping['target_epic_number']} or use hybrid mode.",
                     "recommended_action": mapping["migration_action"]
                 })
+            
+            # Add semantic match conflict if high similarity but different numbers
+            if semantic_match and semantic_match[1] >= 70 and not is_canonical_core:
+                canonical_epic_num, similarity_score, match_details = semantic_match
+                if epic_num != canonical_epic_num:
+                    self.conflicts.append({
+                        "type": "semantic_match_conflict",
+                        "severity": "medium",
+                        "epic_number": epic_num,
+                        "canonical_epic_number": canonical_epic_num,
+                        "similarity_score": similarity_score,
+                        "message": f"Epic {epic_num} semantically matches Canonical Epic {canonical_epic_num} "
+                                  f"({similarity_score:.1f}% similarity). Consider merging or adopting canonical structure.",
+                        "recommended_action": "adopt_canonical" if similarity_score >= 80 else "review_for_merge"
+                    })
     
     def _determine_epic_migration_action(
         self, 
         epic_num: int, 
         is_canonical_core: bool, 
-        is_canonical_ancillary: bool
+        is_canonical_ancillary: bool,
+        semantic_match: Optional[Tuple] = None
     ) -> str:
         """Determine migration action for an epic."""
+        # If semantic match with high similarity, recommend adopting canonical
+        if semantic_match and semantic_match[1] >= 80:
+            return "adopt_canonical_structure"
+        
         if is_canonical_core:
             return "preserve_as_project_epic"  # Keep as project-specific, renumber if needed
         elif is_canonical_ancillary:
             return "preserve_as_project_epic"  # Keep as project-specific
         else:
             return "preserve_as_is"  # Project-specific epic, no conflict
+    
+    def _get_semantic_match_recommendation(
+        self,
+        similarity_score: float,
+        user_epic_num: int,
+        canonical_epic_num: int
+    ) -> str:
+        """Get recommendation text for semantic match."""
+        if similarity_score >= 90:
+            return f"Exact match detected. Strongly recommend adopting Canonical Epic {canonical_epic_num}."
+        elif similarity_score >= 80:
+            return f"High semantic match ({similarity_score:.1f}%). Recommend adopting Canonical Epic {canonical_epic_num}."
+        elif similarity_score >= 70:
+            return f"Semantic match ({similarity_score:.1f}%). Consider merging with Canonical Epic {canonical_epic_num}."
+        elif similarity_score >= 40:
+            return f"Partial match ({similarity_score:.1f}%). Review for potential overlap with Canonical Epic {canonical_epic_num}."
+        else:
+            return f"Low similarity ({similarity_score:.1f}%). No strong match with Canonical Epic {canonical_epic_num}."
     
     def _determine_target_epic_number(
         self,
@@ -242,8 +331,15 @@ class KanbanStructureAnalyzer:
         has_project_epics = any(
             not e["is_canonical"] for e in self.epic_mappings
         )
+        has_semantic_matches = len(self.semantic_matches) > 0
+        high_similarity_matches = [
+            m for m in self.semantic_matches if m["similarity_score"] >= 80
+        ]
         
-        if has_conflicts and has_project_epics:
+        # If we have high similarity semantic matches, recommend canonical adoption
+        if has_semantic_matches and len(high_similarity_matches) >= len(self.epic_mappings) * 0.5:
+            recommended_mode = "canonical_adoption"
+        elif has_conflicts and has_project_epics:
             recommended_mode = "hybrid"
         elif has_project_epics:
             recommended_mode = "migration"
@@ -252,7 +348,10 @@ class KanbanStructureAnalyzer:
         
         self.migration_plan = {
             "recommended_mode": recommended_mode,
-            "modes_available": ["fresh", "migration", "update", "hybrid"],
+            "modes_available": ["fresh", "migration", "update", "hybrid", "canonical_adoption"],
+            "recommendation_rationale": self._generate_recommendation_rationale(
+                recommended_mode, has_semantic_matches, high_similarity_matches
+            ),
             "steps": [
                 {
                     "step": 1,
@@ -341,6 +440,35 @@ class KanbanStructureAnalyzer:
             )
         
         return warnings
+    
+    def _generate_recommendation_rationale(
+        self,
+        recommended_mode: str,
+        has_semantic_matches: bool,
+        high_similarity_matches: List[Dict]
+    ) -> str:
+        """Generate rationale for recommended migration mode."""
+        if recommended_mode == "canonical_adoption":
+            return (
+                f"Canonical adoption recommended: {len(high_similarity_matches)} high-similarity semantic matches "
+                f"detected. Adopting canonical structure will provide optimal organization while preserving your work "
+                f"through intelligent task mapping."
+            )
+        elif recommended_mode == "hybrid":
+            return (
+                "Hybrid mode recommended: Conflicts detected between project epics and canonical epics. "
+                "Hybrid mode preserves your project epics while installing canonical framework epics."
+            )
+        elif recommended_mode == "migration":
+            return (
+                "Migration mode recommended: Existing project epics detected. Migration mode will convert "
+                "your structure to canonical format while preserving all work items."
+            )
+        else:
+            return (
+                "Fresh install recommended: No existing Kanban structure detected. Fresh install will "
+                "set up canonical framework structure."
+            )
 
 
 def main():
@@ -379,7 +507,10 @@ def main():
     if args.verbose:
         print(f"Analyzing structure from detection report: {detection_path}")
     
-    analyzer = KanbanStructureAnalyzer(detection_report, verbose=args.verbose)
+    # Determine framework path (parent of scripts directory)
+    framework_path = Path(__file__).parent.parent
+    
+    analyzer = KanbanStructureAnalyzer(detection_report, verbose=args.verbose, framework_path=framework_path)
     analysis_report = analyzer.analyze()
     
     # Write report to file
@@ -400,7 +531,10 @@ def main():
         print(f"Tasks to migrate: {summary['tasks_to_migrate']}")
         print(f"Conflicts: {summary['conflict_count']}")
         print(f"Gaps: {summary['gap_count']}")
+        print(f"Semantic matches: {summary.get('semantic_match_count', 0)}")
         print(f"\nRecommended mode: {plan['recommended_mode']}")
+        if plan.get('recommendation_rationale'):
+            print(f"Rationale: {plan['recommendation_rationale']}")
         print(f"Complexity: {summary['migration_complexity']}")
         
         if plan.get("warnings"):

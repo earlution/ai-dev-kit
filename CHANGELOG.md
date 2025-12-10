@@ -17,6 +17,74 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.8.6+1] - 2025-12-10
+
+🎯 Feature: E4:S08 Complete - Intelligent Epic Matching and Canonical Structure Adoption
+
+### Added
+
+- **Semantic Epic Matching (`semantic_matcher.py`):**
+  - Semantic analysis for epic content (title, description, purpose, scope)
+  - Similarity score calculation (0-100%) using Jaccard similarity on word tokens
+  - Match classification: exact (90-100%), semantic (70-89%), partial (40-69%), no match (<40%)
+  - Best canonical epic match finding based on weighted similarity scores
+  - Loads canonical epic definitions from COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md
+
+- **Intelligent Task Mapping:**
+  - Maps user tasks to canonical epics/stories based on semantic matches (≥80% similarity)
+  - Canonical adoption mode (`canonical_adoption`) for optimal organization
+  - Dynamic epic numbering (not hardcoded to Epic 24)
+  - Intelligent task migration preserving all work items
+
+- **Automatic Reference Updating (`reference_updater.py`):**
+  - Updates task ID references (E{epic}:S{story}:T{task}) in changelogs, docs, and story files
+  - Tracks updated files and un-updatable references
+  - Generates migration reports with reference update summary
+
+- **Migration Plan Presentation:**
+  - Interactive migration plan preview with semantic matches
+  - Shows high/medium similarity matches with recommendations
+  - Displays conflicts, rationale, and mode comparison
+  - Integrated into installation workflow
+
+- **Canonical Adoption Mode:**
+  - New installation mode: `canonical_adoption` (recommended when semantic matches found)
+  - Automatically recommended when ≥50% of epics have ≥80% similarity to canonical epics
+  - Provides optimal organization leveraging proven best practices
+  - AI-assisted intelligent migration with minimal manual effort
+
+### Changed
+
+- **`analyze_structure.py`:**
+  - Added semantic matching against canonical epics
+  - Generates semantic match reports with similarity scores
+  - Recommends `canonical_adoption` mode when high similarity matches found
+  - Includes recommendation rationale in migration plan
+
+- **`migrate_structure.py`:**
+  - Added `canonical_adoption` mode support
+  - Implemented `_adopt_canonical_structure()` for intelligent task mapping
+  - Dynamic epic numbering (finds next available number, not hardcoded)
+  - Integrated automatic reference updating into migration workflow
+
+- **`install_kanban_framework.py`:**
+  - Added `canonical_adoption` to available modes
+  - Added migration plan presentation before mode selection
+  - Updated mode selection to include canonical adoption option
+  - Shows semantic matches and recommendations interactively
+
+- **Documentation (`scripts/README.md`):**
+  - Added semantic matching documentation and examples
+  - Documented canonical_adoption mode and when to use it
+  - Added reference updating capabilities documentation
+  - Updated workflow to include semantic matching and plan presentation
+
+### Epic 4, Story 8:**
+- All 6 tasks complete (T01-T06)
+- Semantic epic matching, intelligent task mapping, canonical adoption, reference updating, migration plan presentation, and documentation all implemented
+
+---
+
 ## [0.4.8.0+1] - 2025-12-10
 
 📋 Intake: E4:S08:T00 - FR-009, UXR-002, UXR-003 Intake and Story 8 Creation

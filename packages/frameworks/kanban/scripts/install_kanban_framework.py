@@ -114,13 +114,26 @@ def select_installation_mode(analysis_report_path: Optional[Path], requested_mod
     print("\n🔧 Step 3: Select installation mode")
     print("=" * 60)
     print("Available modes:")
-    print("  1. fresh      - Clean install (no existing structure)")
-    print("  2. migration  - Migrate existing structure to canonical format")
-    print("  3. update      - Update existing framework installation")
-    print("  4. hybrid      - Preserve project epics, install framework epics")
+    print("  1. fresh              - Clean install (no existing structure)")
+    print("  2. migration          - Migrate existing structure to canonical format")
+    print("  3. update             - Update existing framework installation")
+    print("  4. hybrid             - Preserve project epics, install framework epics")
+    print("  5. canonical_adoption - Adopt canonical structure with intelligent task mapping (RECOMMENDED)")
     
     if recommended_mode:
-        print(f"\n💡 Recommended mode: {recommended_mode} (from analysis)")
+        rationale = None
+        if analysis_report_path and analysis_report_path.exists():
+            import json
+            try:
+                with open(analysis_report_path, 'r', encoding='utf-8') as f:
+                    analysis = json.load(f)
+                rationale = analysis.get("migration_plan", {}).get("recommendation_rationale")
+            except Exception:
+                pass
+        
+        print(f"\n💡 Recommended mode: {recommended_mode}")
+        if rationale:
+            print(f"   Rationale: {rationale}")
     
     if requested_mode == "auto" and recommended_mode:
         response = input(f"\nUse recommended mode '{recommended_mode}'? (Y/n): ").strip().lower()
@@ -128,23 +141,93 @@ def select_installation_mode(analysis_report_path: Optional[Path], requested_mod
             return recommended_mode
     
     while True:
-        choice = input("\nSelect mode (1-4) or mode name: ").strip().lower()
+        choice = input("\nSelect mode (1-5) or mode name: ").strip().lower()
         
         mode_map = {
             '1': 'fresh',
             '2': 'migration',
             '3': 'update',
             '4': 'hybrid',
+            '5': 'canonical_adoption',
             'fresh': 'fresh',
             'migration': 'migration',
             'update': 'update',
-            'hybrid': 'hybrid'
+            'hybrid': 'hybrid',
+            'canonical_adoption': 'canonical_adoption',
+            'canonical': 'canonical_adoption',
+            'adopt': 'canonical_adoption'
         }
         
         if choice in mode_map:
             return mode_map[choice]
         
-        print("❌ Invalid choice. Please enter 1-4 or mode name.")
+        print("❌ Invalid choice. Please enter 1-5 or mode name.")
+
+
+def present_migration_plan(analysis_report_path: Path):
+    """Present migration plan with recommendations and trade-offs."""
+    import json
+    
+    if not analysis_report_path.exists():
+        return
+    
+    try:
+        with open(analysis_report_path, 'r', encoding='utf-8') as f:
+            analysis = json.load(f)
+        
+        plan = analysis.get("migration_plan", {})
+        semantic_matches = analysis.get("semantic_matches", [])
+        conflicts = analysis.get("conflicts", [])
+        
+        print("\n📋 Migration Plan Preview")
+        print("=" * 60)
+        
+        # Show semantic matches
+        if semantic_matches:
+            print("\n🔍 Semantic Matches Found:")
+            high_matches = [m for m in semantic_matches if m["similarity_score"] >= 80]
+            medium_matches = [m for m in semantic_matches if 70 <= m["similarity_score"] < 80]
+            
+            if high_matches:
+                print(f"  ✅ {len(high_matches)} high similarity matches (≥80%):")
+                for match in high_matches[:5]:  # Show first 5
+                    print(f"     Epic {match['user_epic_number']} → Canonical Epic {match['canonical_epic_number']} "
+                          f"({match['similarity_score']:.1f}%)")
+                if len(high_matches) > 5:
+                    print(f"     ... and {len(high_matches) - 5} more")
+            
+            if medium_matches:
+                print(f"  ⚠️  {len(medium_matches)} medium similarity matches (70-79%):")
+                for match in medium_matches[:3]:  # Show first 3
+                    print(f"     Epic {match['user_epic_number']} → Canonical Epic {match['canonical_epic_number']} "
+                          f"({match['similarity_score']:.1f}%)")
+        
+        # Show conflicts
+        if conflicts:
+            high_conflicts = [c for c in conflicts if c.get("severity") == "high"]
+            if high_conflicts:
+                print(f"\n⚠️  {len(high_conflicts)} high-severity conflicts detected")
+        
+        # Show recommendation
+        recommended_mode = plan.get("recommended_mode")
+        rationale = plan.get("recommendation_rationale", "")
+        
+        if recommended_mode:
+            print(f"\n💡 Recommended Mode: {recommended_mode}")
+            if rationale:
+                print(f"   {rationale}")
+        
+        # Show trade-offs
+        print("\n📊 Mode Comparison:")
+        print("  canonical_adoption: Optimal organization, intelligent task mapping, preserves work")
+        print("  hybrid:              Preserves project epics, installs framework epics")
+        print("  migration:           Converts structure, preserves all work items")
+        print("  fresh:               Clean slate, no existing structure")
+        
+        print("\n" + "=" * 60)
+        
+    except Exception as e:
+        print(f"⚠️  Could not load migration plan: {e}")
 
 
 def migrate_structure(
@@ -203,9 +286,9 @@ Examples:
     )
     parser.add_argument(
         "--mode",
-        choices=["fresh", "migration", "update", "hybrid", "auto"],
+        choices=["fresh", "migration", "update", "hybrid", "canonical_adoption", "auto"],
         default="auto",
-        help="Installation mode (default: auto-detect)"
+        help="Installation mode (default: auto-detect, canonical_adoption recommended for semantic matches)"
     )
     parser.add_argument(
         "--kanban-path",
@@ -269,7 +352,10 @@ Examples:
                 analysis_report = existing_analysis
                 print(f"📋 Using existing analysis report: {analysis_report}")
     
-    # Step 3: Select installation mode
+    # Step 3: Present migration plan and select installation mode
+    if analysis_report and analysis_report.exists():
+        present_migration_plan(analysis_report)
+    
     if args.mode == "auto":
         args.mode = select_installation_mode(analysis_report, None)
     

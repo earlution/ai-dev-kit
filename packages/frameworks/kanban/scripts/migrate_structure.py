@@ -21,10 +21,15 @@ Arguments:
 import argparse
 import json
 import shutil
+import sys
 from pathlib import Path
 from typing import Dict, List, Optional
 from datetime import datetime
 import re
+
+# Import reference updater from same directory
+sys.path.insert(0, str(Path(__file__).parent))
+from reference_updater import ReferenceUpdater
 
 
 class KanbanStructureMigrator:
@@ -65,15 +70,17 @@ class KanbanStructureMigrator:
             }
         
         # Step 2: Resolve conflicts (if needed)
-        if self.mode in ["migration", "hybrid"]:
+        if self.mode in ["migration", "hybrid", "canonical_adoption"]:
             self._resolve_conflicts()
         
         # Step 3: Install canonical epics (if needed)
-        if self.mode in ["fresh", "migration", "hybrid"]:
+        if self.mode in ["fresh", "migration", "hybrid", "canonical_adoption"]:
             self._install_canonical_epics()
         
-        # Step 4: Migrate project epics
-        if self.mode in ["migration", "hybrid"]:
+        # Step 4: Migrate project epics (or adopt canonical structure)
+        if self.mode == "canonical_adoption":
+            self._adopt_canonical_structure()
+        elif self.mode in ["migration", "hybrid"]:
             self._migrate_project_epics()
         
         # Step 5: Migrate stories
@@ -82,7 +89,10 @@ class KanbanStructureMigrator:
         # Step 6: Migrate tasks
         self._migrate_tasks()
         
-        # Step 7: Validate migration
+        # Step 7: Update task ID references
+        reference_update_result = self._update_task_references()
+        
+        # Step 8: Validate migration
         validation_result = self._validate_migration()
         
         return {
@@ -91,15 +101,41 @@ class KanbanStructureMigrator:
             "mode": self.mode,
             "backup_path": str(backup_path) if backup_path else None,
             "migration_log": self.migration_log,
+            "reference_updates": reference_update_result,
             "validation": validation_result,
             "summary": {
                 "epics_migrated": len([e for e in self.migration_log if e["type"] == "epic"]),
                 "stories_migrated": len([s for s in self.migration_log if s["type"] == "story"]),
                 "tasks_migrated": len([t for t in self.migration_log if t["type"] == "task"]),
                 "files_created": len([f for f in self.migration_log if f["action"] == "created"]),
-                "files_updated": len([f for f in self.migration_log if f["action"] == "updated"])
+                "files_updated": len([f for f in self.migration_log if f["action"] == "updated"]),
+                "references_updated": reference_update_result.get("references_updated", 0)
             }
         }
+    
+    def _update_task_references(self) -> Dict:
+        """Update task ID references in changelogs, docs, and story files."""
+        print("🔗 Updating task ID references...")
+        
+        task_mappings = self.analysis_report.get("task_mappings", [])
+        if not task_mappings:
+            return {"references_updated": 0, "files_updated": 0}
+        
+        updater = ReferenceUpdater(task_mappings)
+        project_root = self.kanban_path.parent.parent.parent  # Go up from KB/PM_and_Portfolio/kanban
+        
+        if self.dry_run:
+            print("  🔍 [DRY RUN] Would update task ID references...")
+            return {"references_updated": 0, "files_updated": 0, "dry_run": True}
+        
+        result = updater.update_references(project_root)
+        
+        print(f"  ✅ Updated {result['references_updated']} references in {result['files_updated']} files")
+        
+        if result["unupdatable_references"]:
+            print(f"  ⚠️  {len(result['unupdatable_references'])} references could not be updated")
+        
+        return result
     
     def _create_backup(self) -> Optional[Path]:
         """Create backup of existing structure."""
@@ -162,31 +198,50 @@ class KanbanStructureMigrator:
                     "reason": "Conflicts with canonical core epic"
                 })
     
-    def _find_next_available_epic_number(self) -> int:
-        """Find next available epic number starting from 24."""
+    def _find_next_available_epic_number(self, start_from: Optional[int] = None) -> int:
+        """Find next available epic number dynamically (not hardcoded to 24)."""
         existing_epics = set()
         for epic_mapping in self.analysis_report.get("epic_mappings", []):
             existing_epics.add(epic_mapping.get("target_epic_number") or epic_mapping["source_epic_number"])
         
-        # Canonical epics are 1-23, so start from 24
-        for num in range(24, 1000):
+        # Find the highest existing epic number
+        max_epic = max(existing_epics) if existing_epics else 0
+        
+        # Canonical epics go up to 23, so start from max(max_epic + 1, 24)
+        # But if user has epics beyond 23, start from their max + 1
+        start_num = start_from or max(max_epic + 1, 24)
+        
+        for num in range(start_num, 1000):
             if num not in existing_epics:
                 return num
         return 1000  # Fallback
     
     def _install_canonical_epics(self):
-        """Install canonical core epics (1-8)."""
+        """Install canonical core epics (1-8, 10, 18, 22, 23)."""
         if self.mode == "hybrid":
             print("🔧 Hybrid mode: Installing canonical core epics alongside project epics...")
+        elif self.mode == "canonical_adoption":
+            print("🔧 Canonical adoption mode: Installing canonical core epics...")
         else:
             print("🔧 Installing canonical core epics...")
         
-        # In a real implementation, this would copy epic templates from the framework
-        # For now, we'll just log the action
-        canonical_core_epics = list(range(1, 9))
+        # Canonical core epics: 1-8, 10, 18, 22, 23
+        canonical_core_epics = [1, 2, 3, 4, 5, 6, 7, 8, 10, 18, 22, 23]
         
         for epic_num in canonical_core_epics:
             epic_dir = self.kanban_path / "epics" / f"Epic-{epic_num}"
+            
+            # In canonical_adoption mode, check if we should skip based on semantic matches
+            if self.mode == "canonical_adoption":
+                # Check if user epic semantically matches this canonical epic
+                semantic_matches = self.analysis_report.get("semantic_matches", [])
+                matching_user_epic = next(
+                    (m for m in semantic_matches if m["canonical_epic_number"] == epic_num and m["similarity_score"] >= 80),
+                    None
+                )
+                if matching_user_epic:
+                    print(f"  ℹ️  Epic {epic_num} matches user Epic {matching_user_epic['user_epic_number']} "
+                          f"({matching_user_epic['similarity_score']:.1f}% similarity). Will adopt canonical structure.")
             
             if epic_dir.exists() and self.mode != "fresh":
                 print(f"  ⚠️  Epic {epic_num} already exists, skipping...")
@@ -206,6 +261,63 @@ class KanbanStructureMigrator:
                 "path": str(epic_dir.relative_to(self.kanban_path)),
                 "source": "canonical_framework"
             })
+    
+    def _adopt_canonical_structure(self):
+        """Adopt canonical structure by intelligently mapping user epics/tasks to canonical epics."""
+        print("🎯 Adopting canonical structure with intelligent task mapping...")
+        
+        semantic_matches = self.analysis_report.get("semantic_matches", [])
+        epic_mappings = self.analysis_report.get("epic_mappings", [])
+        
+        # Map user epics to canonical epics based on semantic matches
+        for match in semantic_matches:
+            if match["similarity_score"] >= 80:  # High similarity threshold
+                user_epic_num = match["user_epic_number"]
+                canonical_epic_num = match["canonical_epic_number"]
+                
+                print(f"  📍 Mapping Epic {user_epic_num} → Canonical Epic {canonical_epic_num} "
+                      f"({match['similarity_score']:.1f}% similarity)")
+                
+                # Update epic mapping to point to canonical epic
+                epic_mapping = next(
+                    (e for e in epic_mappings if e["source_epic_number"] == user_epic_num),
+                    None
+                )
+                if epic_mapping:
+                    epic_mapping["target_epic_number"] = canonical_epic_num
+                    epic_mapping["migration_action"] = "adopt_canonical_structure"
+                    
+                    # Map stories and tasks from user epic to canonical epic
+                    self._map_tasks_to_canonical_epic(user_epic_num, canonical_epic_num)
+        
+        # For epics without high similarity matches, install at next available number
+        unmatched_epics = [
+            e for e in epic_mappings
+            if e.get("migration_action") != "adopt_canonical_structure"
+            and not e.get("is_canonical")
+        ]
+        
+        for epic_mapping in unmatched_epics:
+            source_epic_num = epic_mapping["source_epic_number"]
+            # Find next available epic number after canonical range
+            target_epic_num = self._find_next_available_epic_number(start_from=24)
+            epic_mapping["target_epic_number"] = target_epic_num
+            self._renumber_epic(source_epic_num, target_epic_num)
+    
+    def _map_tasks_to_canonical_epic(self, user_epic_num: int, canonical_epic_num: int):
+        """Map tasks from user epic to canonical epic."""
+        task_mappings = self.analysis_report.get("task_mappings", [])
+        story_mappings = self.analysis_report.get("story_mappings", [])
+        
+        # Update story mappings
+        for story_mapping in story_mappings:
+            if story_mapping["source_epic_number"] == user_epic_num:
+                story_mapping["target_epic_number"] = canonical_epic_num
+        
+        # Update task mappings
+        for task_mapping in task_mappings:
+            if task_mapping["source_epic_number"] == user_epic_num:
+                task_mapping["target_epic_number"] = canonical_epic_num
     
     def _migrate_project_epics(self):
         """Migrate project-specific epics to canonical format."""
