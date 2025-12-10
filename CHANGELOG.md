@@ -17,6 +17,55 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.6.3+1] - 2025-12-10
+
+📚 Documentation: E2:S06:T03 Complete - Package Uninstall Documentation
+
+### Changed
+
+- **Troubleshooting Guide (`framework-dependency-troubleshooting-guide.md`):**
+  - Added comprehensive uninstall issues section
+  - Documented standard uninstall, recovery mode, and rollback mode
+  - Added solutions for orphaned files and dependency conflicts
+  - Included examples for all uninstall scenarios
+
+- **Update Guide (`framework-dependency-update-guide.md`):**
+  - Added uninstalling frameworks section
+  - Documented uninstall methods (script and manual)
+  - Explained uninstall safety features
+  - Added backup restoration procedures
+
+- **Installation Guide (`framework-dependency-installation-guide.md`):**
+  - Added uninstalling frameworks quick reference
+  - Linked to troubleshooting guide for detailed documentation
+
+- **Epic 2, Story 6:** Task 3 complete, Story 6 complete ✅
+  - All uninstall documentation complete
+  - FR-008 AC-9..AC-10 satisfied
+
+---
+
+## [0.4.7.3+1] - 2025-12-10
+
+📚 Documentation: E4:S07:T03 Complete - Migration Support Documentation
+
+### Changed
+
+- **Kanban Framework README (`packages/frameworks/kanban/README.md`):**
+  - Added comprehensive migration support section
+  - Updated Quick Start with Option 1 (Interactive Installation) and Option 2 (Manual Installation)
+  - Added migration workflow documentation with examples
+  - Updated package contents to include scripts directory and utilities
+  - Added migration support features overview
+
+- **Epic 4, Story 7:** Task 3 complete, Story 7 complete ✅
+  - All migration utilities documented
+  - Installation modes documented with examples
+  - Migration workflow fully documented
+  - BR-006 criteria 9-12 and FR-007 AC-6..AC-8 satisfied
+
+---
+
 ## [0.4.7.2+1] - 2025-12-10
 
 🔄 Feature: E4:S07:T02 Complete - Migration Utilities and Installation Modes

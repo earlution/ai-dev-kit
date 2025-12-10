@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # Story 7: Migration Support and Installation Modes
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Last updated:** 2025-12-10 (v0.4.7.3+1 – Task 3 complete: Documentation and guides updated)  
