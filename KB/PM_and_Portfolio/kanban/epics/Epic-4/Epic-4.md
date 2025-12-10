@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-10 (v0.4.2.6+3 – Story 2, Task 6 build 3: UAT Report submission lane added)  
+**Last updated:** 2025-12-10 (v0.4.8.0+0 – Story 8 created: Intelligent Epic Matching and Canonical Structure Adoption)  
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -38,6 +38,9 @@ housekeeping_policy: keep
 - [x] **E4:S07 – Migration Support and Installation Modes** - COMPLETE ✅ (v0.4.7.3+1 – All tasks complete)
   - Story: [`Story-007-migration-support-and-installation-modes.md`](Story-007-migration-support-and-installation-modes.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE (Documentation and guides updated)
+- [ ] **E4:S08 – Intelligent Epic Matching and Canonical Structure Adoption** - TODO (v0.4.8.0+0 – Story created for FR-009)
+  - Story: [`Story-008-intelligent-epic-matching-canonical-adoption.md`](Story-008-intelligent-epic-matching-canonical-adoption.md)
+  - Tasks: T01-T06 TODO (FR-009: Semantic epic matching, intelligent task mapping, canonical adoption as default, reference updating, migration plan presentation, documentation)
 
 ---
 
