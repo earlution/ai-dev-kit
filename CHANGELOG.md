@@ -17,6 +17,27 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.10.2+1] - 10-12-25
+
+🎯 Feature: E4:S10:T02 - Intelligent Epic/Story Mapping (COMPLETE)
+
+### Added
+
+- **FR/BR Content Analyzer:** `packages/frameworks/kanban/scripts/fr_br_analyzer.py`
+  - Extracts structured content from FR/BR documents
+  - Analyzes requirements, acceptance criteria, dependencies
+
+- **Epic/Story Mapper:** `packages/frameworks/kanban/scripts/epic_story_mapper.py`
+  - Maps FR/BR to canonical epics using semantic matching
+  - Finds existing story matches or recommends new stories
+  - Supports multi-epic FR/BR mapping
+
+### Changed
+
+- **Story 10:** Updated T02 status to COMPLETE
+
+---
+
 ## [0.2.7.8+1] - 10-12-25
 
 🎯 Feature: E2:S07:T08 - Documentation and Testing (COMPLETE)
