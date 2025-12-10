@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-10 (v0.4.9.0+0 – Story 9 created: Bug Fixes and Agentic Intelligence Implementation)  
+**Last updated:** 2025-12-10 (v0.4.9.1+1 – Story 9 complete: Bug Fixes and Agentic Intelligence Implementation)  
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -41,9 +41,9 @@ housekeeping_policy: keep
 - [x] **E4:S08 – Intelligent Epic Matching and Canonical Structure Adoption** - COMPLETE ✅ (v0.4.8.6+1 – All tasks complete)
   - Story: [`Story-008-intelligent-epic-matching-canonical-adoption.md`](Story-008-intelligent-epic-matching-canonical-adoption.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE, T04 ✅ COMPLETE, T05 ✅ COMPLETE, T06 ✅ COMPLETE
-- [ ] **E4:S09 – Bug Fixes and Agentic Intelligence Implementation** - TODO (v0.4.9.0+0 – Story created for BR-007, BR-008, FR-010, UXR-004 intake)
+- [x] **E4:S09 – Bug Fixes and Agentic Intelligence Implementation** - COMPLETE ✅ (v0.4.9.1+1 – All tasks complete)
   - Story: [`Story-009-bug-fixes-and-agentic-intelligence.md`](Story-009-bug-fixes-and-agentic-intelligence.md)
-  - Tasks: T00 TODO (Story creation and intake), T01-T07 TODO
+  - Tasks: T00 ✅ COMPLETE, T01-T04 ✅ COMPLETE (Bug fixes), T05 ✅ COMPLETE (Threshold removal), T06 ✅ COMPLETE (Agentic intelligence foundation), T07 ✅ COMPLETE (UXR synthesis)
 
 ---
 

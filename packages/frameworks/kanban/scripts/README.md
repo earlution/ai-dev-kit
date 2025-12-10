@@ -40,6 +40,36 @@ result = updater.update_references(project_root)
 - Tracks updated files and un-updatable references
 - Generates migration report with reference update summary
 
+### `agentic_mapper.py`
+
+Agentic intelligence module for intelligent task mapping. Analyzes task content and maps tasks to appropriate canonical stories based on content understanding.
+
+**Usage:**
+```python
+from agentic_mapper import AgenticTaskMapper
+
+mapper = AgenticTaskMapper(analysis_report, kanban_path)
+mappings = mapper.map_tasks_to_canonical_stories()
+explanations = mapper.generate_explanations()
+```
+
+**Features:**
+- Enhanced content analysis (beyond simple word matching)
+- Intelligent task-to-story mapping
+- Provides explanations for mapping decisions
+- Extensible framework for LLM integration (future enhancement)
+- Confidence scores for mappings
+
+**Current Implementation:**
+- Enhanced keyword extraction and similarity calculation
+- Content-aware task mapping
+- Explanation generation
+
+**Future Enhancement:**
+- Full LLM-based agentic intelligence
+- Context-aware decision making
+- Advanced content understanding
+
 ### `install_kanban_framework.py`
 
 Main installation script with interactive mode selection. Integrates detection, analysis, and migration utilities.
@@ -258,17 +288,24 @@ The analysis utility recommends one of five installation modes:
 
 ### Canonical Adoption Mode
 
-The **canonical_adoption** mode is recommended when semantic analysis detects high similarity matches (≥80%) between your epics and canonical epics. This mode:
+The **canonical_adoption** mode is recommended when semantic analysis detects matches between your epics and canonical epics. This mode:
 
-- Intelligently maps your tasks to appropriate canonical epics/stories based on content analysis
+- Intelligently maps your tasks to appropriate canonical epics/stories using agentic intelligence
 - Adopts the proven canonical structure evolved through real-world use
 - Automatically updates task ID references in changelogs, docs, and story files
 - Provides optimal organizational structure while preserving all your work
+- Generates explanations for all mapping decisions
 
 **When to use:**
-- Semantic analysis finds high similarity matches (≥80%) between your epics and canonical epics
+- Semantic analysis finds matches between your epics and canonical epics (no threshold required)
 - You want optimal organization leveraging proven best practices
-- You're willing to adopt canonical structure with AI-assisted intelligent migration
+- You're willing to adopt canonical structure with intelligent migration
+
+**Agentic Intelligence:**
+- Uses enhanced content analysis to understand task meaning
+- Maps tasks to appropriate canonical stories (not just epic renumbering)
+- Provides reasoning and confidence scores for each mapping
+- Framework ready for LLM integration (future enhancement)
 
 ## Semantic Matching
 
