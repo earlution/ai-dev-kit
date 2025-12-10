@@ -141,6 +141,8 @@ structure:
     - CANONICAL_STORIES.md               # Reusable canonical story patterns
     - CANONICAL_EPICS.md                 # Canonical epic definitions
     - COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md  # Complete canonical E/S/T structure (Epics 1-23+)
+    - UXR_TEMPLATE.md                    # User Experience Research template
+    - FB_TEMPLATE.md                     # User Acceptance Testing (UAT) Report template (requires empirical evidence)
 
   examples/:
     - Epic-4-Example.md                  # Real Epic (37 stories, 36 complete)
