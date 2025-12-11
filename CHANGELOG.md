@@ -17,6 +17,19 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.6.9+0] - 2025-12-11
+
+✨ Feature: E4:S06:T09 - BR-009 Task Creation
+
+### Added
+
+- **Epic 4 Story 6 Task 9:** BR-009 - Improve installer discoverability and documentation
+  - Task created for GitHub issue #14
+  - Focuses on making installer discoverable and improving documentation
+  - Addresses user confusion about canonical templates vs. ai-dev-kit's actual Kanban
+
+---
+
 ## [0.2.8.0+0] - 2025-12-10
 
 ✨ Feature: E2:S08:T00 - Story Creation and FR-015 Intake

@@ -18,9 +18,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 8    # Story number (Story 8: Harden Release Workflow Reliability)
-VERSION_TASK = 0      # Task number (Task 0: Story creation and FR-015 intake - COMPLETE)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 6    # Story number (Story 6: Comprehensive Canonical E/S/T Template System)
+VERSION_TASK = 9      # Task number (Task 9: BR-009 - Improve installer discoverability and documentation)
 VERSION_BUILD = 0     # Build number (increments per release within task, bumped by RW)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema

@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-10 (v0.4.6.6+2 – Task 6 build 2: GitHub issue #1 commented with BR-005 and task references)  
-**Version:** v0.4.6.6+2  
+**Last updated:** 2025-12-11 (v0.4.6.9+0 – Task 9 created for BR-009)  
+**Version:** v0.4.6.9+0  
 **Code:** E4S06
 
 ---
@@ -46,8 +46,9 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - [ ] **E4:S06:T04 – Create task template files for each typical task** - TODO
 - [ ] **E4:S06:T05 – Create contextualization guide and examples** - TODO
 - [x] **E4:S06:T06 – Update CANONICAL_EPICS.md to reference comprehensive structure (BR-005)** ✅ COMPLETE (v0.4.6.6+1)
-- [ ] **E4:S06:T07 – Integrate with template setup guide and installation workflow** - TODO
+- [ ] **E4:S06:T07 – Integrate with template setup guide and installation workflow** - TODO (BR-009 assigned)
 - [ ] **E4:S06:T08 – Validate structure with test projects (tiny, small, ambitious)** - TODO
+- [ ] **E4:S06:T09 – BR-009: Improve installer discoverability and documentation** - TODO
 
 ---
 
@@ -350,7 +351,8 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 **Status:** TODO  
 **Priority:** HIGH  
 **Dependencies:** E4:S06:T01-T06  
-**Blocker:** BR-004 fix (epic contamination), FR-005 implementation
+**Blocker:** BR-004 fix (epic contamination), FR-005 implementation  
+**Linked BR:** BR-009 (GitHub issue #14) - Installer discoverability and documentation
 
 **Input:**
 - Template files from T01-T04
@@ -382,6 +384,10 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - [ ] Contextualization instructions included
 - [ ] Integration with installer documented (when available)
 - [ ] Installation workflow documented
+- [ ] **BR-009:** Installer prominently featured as primary/only installation method
+- [ ] **BR-009:** README clearly distinguishes canonical templates vs. ai-dev-kit's actual Kanban
+- [ ] **BR-009:** Warning added if users manually copy files (direct to installer)
+- [ ] **BR-009:** Installation documentation includes clear examples of expected results
 
 ---
 
@@ -422,6 +428,51 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 ---
 
+### E4:S06:T09 – BR-009: Improve installer discoverability and documentation
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Dependencies:** E4:S06:T07  
+**Blocker:** None  
+**Linked BR:** BR-009 (GitHub issue #14) - Installer discoverability and documentation
+
+**Input:**
+- BR-009 requirements
+- Current README and installation documentation
+- Installer script (`install_kanban_framework.py`) from E4:S07
+- User feedback from agentic-ide-rules project
+
+**Deliverable:**
+- Updated README that:
+  - Prominently features `install_kanban_framework.py` as the **primary/only** installation method
+  - Clearly distinguishes between:
+    - Canonical epic templates (for reference)
+    - ai-dev-kit's actual Kanban (example only, not for copying)
+  - Includes clear examples of what users should expect after installation
+- Enhanced installation documentation:
+  - Step-by-step guide using the installer
+  - Examples of installation results
+  - Troubleshooting guide
+- Warning mechanism (if possible):
+  - Warning if users manually copy files (direct to installer)
+  - Or clear documentation warning against manual copying
+
+**Approach:**
+1. Update README installation section to emphasize installer
+2. Add clear distinction between canonical templates and ai-dev-kit's actual Kanban
+3. Create installation examples showing expected results
+4. Add warning/documentation about not manually copying files
+5. Update any setup guides to reference installer
+
+**Acceptance Criteria:**
+- [ ] README prominently features installer as primary/only method
+- [ ] README clearly distinguishes canonical templates vs. ai-dev-kit's actual Kanban
+- [ ] Installation documentation includes clear examples of expected results
+- [ ] Warning/documentation added about not manually copying files
+- [ ] All BR-009 acceptance criteria satisfied
+
+---
+
 ## Acceptance Criteria
 
 - [ ] All epic templates created (Epics 1-21)
@@ -447,8 +498,10 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 **Related Work:**
 - **BR-004:** Kanban Installation Includes Project-Specific Epics from Template
+- **BR-009:** Installer Discoverability and Documentation (GitHub issue #14)
 - **FR-005:** Systematic Canonical Epics/Stories/Tasks Template System
 - **E4:S05:** Canonical Epics for Kanban Framework (created initial canonical epics documentation)
+- **E4:S07:** Migration Support and Installation Modes (installer exists but needs better discoverability)
 
 ---
 
@@ -460,6 +513,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - `packages/frameworks/kanban/templates/EPIC_TEMPLATE.md` - Epic template structure
 - `packages/frameworks/kanban/templates/STORY_TEMPLATE.md` - Story template structure
 - `KB/PM_and_Portfolio/kanban/fr-br/BR-004-kanban-installation-includes-project-specific-epics.md` - Related bug report
+- `KB/PM_and_Portfolio/kanban/fr-br/BR-009-installer-discoverability-and-documentation.md` - Related bug report (GitHub issue #14)
 - `KB/PM_and_Portfolio/kanban/fr-br/FR-005-systematic-canonical-epics-stories-tasks-templates.md` - Related feature request
 
 ---
