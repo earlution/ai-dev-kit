@@ -60,14 +60,16 @@ If work doesn't map to a task, the Kanban needs updating.
 
 1. **FR/BR arrives** (issue tracker, support channel, notes, etc.).
 2. **Check for existing Story** that matches the FR/BR scope:
-   - If found → create a **new Task** under that Story.
+   - If found → create a **new Task document** under that Story.
 3. **If no Story exists** for this area:
    - Create a new Story under the **appropriate Epic**.
+   - Then create the **Task document** under that Story.
 4. **If no Epic exists** for this problem domain:
    - Create a new, conceptually broad **Epic** to host the new Story.
-   - Then create the Story under that Epic, and the Task under that Story.
+   - Then create the Story under that Epic.
+   - Then create the **Task document** under that Story.
 
-No FR/BR should exist without a corresponding **Task** anchored to a Story (and, once epics are in use, an Epic). This keeps Kanban, versioning, and release workflow aligned.
+**CRITICAL:** No FR/BR should exist without a corresponding **Task document** anchored to a Story (and, once epics are in use, an Epic). This keeps Kanban, versioning, and release workflow aligned.
 
 ---
 
@@ -122,12 +124,89 @@ Decompose epic scope into releasable slices.
 
 Atomic units inside a story.
 
+**CRITICAL: 3-Tier Structure Requirement**
+
+All work MUST follow the explicit **3-tier structure**: Epic → Story → Task. This structure is **mandatory** and **non-negotiable**.
+
+- **Epic** contains Stories (high-level scope)
+- **Story** contains Tasks (releasable slices)
+- **Task** is the atomic work unit (implementation detail)
+
+**No implicit or inline tasks are permitted.** Every task MUST be explicitly documented at the Task tier.
+
+**Task Document Requirements**
+
+Every Task MUST have a discrete Task document (or clearly delimited section within the Story document using the Task ID as a header). Tasks cannot be implicit, bundled, or introduced inline.
+
+**Task Document Formats:**
+
+1. **Separate File Format (Recommended):**
+   - Location: `kanban/epics/Epic-X/Story-XXX/Task-YYY-description.md` or `kanban/epics/Epic-X/Story-XXX/TYYY-description.md`
+   - Example: `kanban/epics/Epic-4/Story-011/Task-001-update-kanban-policy.md`
+
+2. **Delimited Section Format (Alternative):**
+   - Location: Within the Story document, using Task ID as a clear header
+   - Format: `### E{epic}:S{story}:T{task} – Task Name` followed by task content
+   - Example: `### E4:S11:T01 – Update Kanban Governance Policy`
+
+**Required Task Document Fields:**
+
+Every Task document MUST include the following fields:
+
+- **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
+- **Scope:** Clear description of what the task accomplishes
+- **Acceptance Criteria:** Measurable criteria for task completion
+- **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
+- **Version Anchor:** Version marker when task is complete (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
+- **Completion Date:** Date when task was completed (if applicable)
+- **Related BR/FR Links:** Links to related Bug Reports or Feature Requests
+- **Input:** What is required to start this task
+- **Deliverable:** What is produced by this task
+- **Dependencies:** Other tasks or work items this task depends on
+- **Blocker:** Tasks or work items that block this task
+- **Parallel Development Candidacy:** Whether this task can be worked on in parallel
+
+**Prohibited Patterns:**
+
+The following patterns are **explicitly prohibited**:
+
+- ❌ **Implicit Tasks:** Tasks mentioned in Story text but not explicitly documented
+- ❌ **Inline Tasks:** Tasks embedded in Story descriptions without Task ID
+- ❌ **Bundled Tasks:** Multiple tasks described together without individual Task documents
+- ❌ **Undocumented Tasks:** Tasks referenced in checklists without corresponding Task documents
+
+**Task Numbering and Format:**
+
 - **Numbering (example):** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)
 - **Format:** `E{epic}:S{story}:T{task}` where task is 2-digit (01-99)
 - **Example:** `E20:S07:T10` = Epic 20, Story 7, Task 10
 - **Example:** `E1:S01:T01` = Epic 1, Story 1, Task 1
-- **Documented:** Input / Deliverable / Dependencies / Blocker / Parallel Development Candidacy
 - **Tracked:** Git commits reference task ID (or equivalent in your VCS)
+
+**Validation Requirements:**
+
+The following validations MUST be enforced:
+
+1. **Task Document Presence:** Every task referenced in a Story checklist MUST have a corresponding Task document
+2. **Task ID Alignment:** Task ID in document MUST match Task ID in Story checklist
+3. **Epic/Story/Task Alignment:** Task document MUST be located under the correct Epic and Story
+4. **Required Fields:** Task document MUST contain all required fields listed above
+5. **Version Alignment:** When task is complete, version TASK component MUST match Task number
+
+**FR/BR → Task → Story → Epic Flow (Updated):**
+
+1. **FR/BR arrives** (issue tracker, support channel, notes, etc.)
+2. **Check for existing Story** that matches the FR/BR scope:
+   - If found → create a **new Task document** under that Story
+3. **If no Story exists** for this area:
+   - Create a new Story under the **appropriate Epic**
+   - Then create the **Task document** under that Story
+4. **If no Epic exists** for this problem domain:
+   - Create a new, conceptually broad **Epic** to host the new Story
+   - Then create the Story under that Epic
+   - Then create the **Task document** under that Story
+
+**CRITICAL:** No FR/BR should exist without a corresponding **Task document** anchored to a Story (and, once epics are in use, an Epic). This keeps Kanban, versioning, and release workflow aligned.
 
 ---
 

@@ -113,18 +113,96 @@ Stories are the **primary unit of planning** in this repo.
 
 Tasks are **checklist items** inside a Story and are the **atomic unit of work**.
 
-- All substantive work MUST be represented as a **Task**.
+**CRITICAL: 3-Tier Structure Requirement**
+
+All work MUST follow the explicit **3-tier structure**: Epic → Story → Task. This structure is **mandatory** and **non-negotiable**.
+
+- **Epic** contains Stories (high-level scope)
+- **Story** contains Tasks (releasable slices)
+- **Task** is the atomic work unit (implementation detail)
+
+**No implicit or inline tasks are permitted.** Every task MUST be explicitly documented at the Task tier.
+
+**Task Document Requirements**
+
+Every Task MUST have a discrete Task document (or clearly delimited section within the Story document using the Task ID as a header). Tasks cannot be implicit, bundled, or introduced inline.
+
+**Task Document Formats:**
+
+1. **Separate File Format (Recommended):**
+   - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-X/Story-XXX/Task-YYY-description.md` or `KB/PM_and_Portfolio/kanban/epics/Epic-X/Story-XXX/TYYY-description.md`
+   - Example: `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-011/Task-001-update-kanban-policy.md`
+
+2. **Delimited Section Format (Alternative):**
+   - Location: Within the Story document, using Task ID as a clear header
+   - Format: `### E{epic}:S{story}:T{task} – Task Name` followed by task content
+   - Example: `### E4:S11:T01 – Update Kanban Governance Policy`
+
+**Required Task Document Fields:**
+
+Every Task document MUST include the following fields:
+
+- **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
+- **Scope:** Clear description of what the task accomplishes
+- **Acceptance Criteria:** Measurable criteria for task completion
+- **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
+- **Version Anchor:** Version marker when task is complete (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
+- **Completion Date:** Date when task was completed (if applicable)
+- **Related BR/FR Links:** Links to related Bug Reports or Feature Requests
+- **Input:** What is required to start this task
+- **Deliverable:** What is produced by this task
+- **Dependencies:** Other tasks or work items this task depends on
+- **Blocker:** Tasks or work items that block this task
+- **Parallel Development Candidacy:** Whether this task can be worked on in parallel
+
+**Prohibited Patterns:**
+
+The following patterns are **explicitly prohibited**:
+
+- ❌ **Implicit Tasks:** Tasks mentioned in Story text but not explicitly documented
+- ❌ **Inline Tasks:** Tasks embedded in Story descriptions without Task ID
+- ❌ **Bundled Tasks:** Multiple tasks described together without individual Task documents
+- ❌ **Undocumented Tasks:** Tasks referenced in checklists without corresponding Task documents
+
+**Task Numbering and Format:**
+
+- **Numbering:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)
+- **Format:** `E{epic}:S{story}:T{task}` where task is 2-digit (01-99)
+- **Example:** `E4:S11:T01` = Epic 4, Story 11, Task 1
+- **Example:** `E1:S01:T01` = Epic 1, Story 1, Task 1
+- **Tracked:** Git commits reference task ID
+- **Version Mapping:** The active Task maps to the `TASK` component in the version number (`RC.EPIC.STORY.TASK+BUILD`)
+
+**Size Guidelines:**
+
 - Each Task should be small enough to complete in **1–3 days**.
-- Over time, Tasks can adopt the full `Exx:Sxx:Txx` numbering from the Kanban templates, and the active Task should map to the `TASK` component in the version number (`RC.EPIC.STORY.TASK+BUILD`).
+- Tasks should be atomic and independently completable.
 
-**FR/BR rule (this repo):**
+**Validation Requirements:**
 
-- Every **Feature Request (FR)** and **Bug Report (BR)** MUST:
-  1. Create at least one **Task** under an existing Story, OR
-  2. If no suitable Story exists, create a new Story (see below), then create the Task.
-  3. If no suitable Epic conceptually exists yet for that Story, create or identify a broad, abstract Epic to host it once the epic structure is formalised.
+The following validations MUST be enforced:
 
-This ensures that all work flowing into the dev kit is **Task / FR-driven** and anchored in the Kanban system.
+1. **Task Document Presence:** Every task referenced in a Story checklist MUST have a corresponding Task document
+2. **Task ID Alignment:** Task ID in document MUST match Task ID in Story checklist
+3. **Epic/Story/Task Alignment:** Task document MUST be located under the correct Epic and Story
+4. **Required Fields:** Task document MUST contain all required fields listed above
+5. **Version Alignment:** When task is complete, version TASK component MUST match Task number
+
+**FR/BR Rule (This Repo - Updated):**
+
+Every **Feature Request (FR)** and **Bug Report (BR)** MUST:
+
+1. **Check for existing Story** that matches the FR/BR scope:
+   - If found → create a **new Task document** under that Story
+2. **If no suitable Story exists:**
+   - Create a new Story under the **appropriate Epic**
+   - Then create the **Task document** under that Story
+3. **If no suitable Epic exists:**
+   - Create or identify a broad, abstract Epic to host the new Story
+   - Then create the Story under that Epic
+   - Then create the **Task document** under that Story
+
+**CRITICAL:** No FR/BR should exist without a corresponding **Task document** anchored to a Story (and, once epics are in use, an Epic). This ensures that all work flowing into the dev kit is **Task / FR-driven** and anchored in the Kanban system.
 
 ---
 

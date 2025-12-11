@@ -22,7 +22,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [ ] **E4:S11:T00 – Story Creation and Task Decomposition** ✅ COMPLETE (v0.4.11.0+0)
-- [ ] **E4:S11:T01 – Update Kanban Governance Policy to Mandate 3-Tier Structure**
+- [x] **E4:S11:T01 – Update Kanban Governance Policy to Mandate 3-Tier Structure** ✅ COMPLETE (v0.4.11.1+0)
 - [ ] **E4:S11:T02 – Create Task Document Template and Update Story Template**
 - [ ] **E4:S11:T03 – Update Versioning Policy with Task Doc Requirements (Kanban-related sections)**
 - [ ] **E4:S11:T04 – Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)**
@@ -99,14 +99,16 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 7. Add validation requirements for Task doc presence
 
 **Acceptance Criteria:**
-- [ ] Kanban governance policy explicitly mandates 3-tier structure
-- [ ] Policy requires discrete Task docs (or clearly delimited sections)
-- [ ] Required Task doc fields are documented
-- [ ] Implicit/inline tasks are prohibited
-- [ ] All three policy documents updated consistently
+- [x] Kanban governance policy explicitly mandates 3-tier structure
+- [x] Policy requires discrete Task docs (or clearly delimited sections)
+- [x] Required Task doc fields are documented
+- [x] Implicit/inline tasks are prohibited
+- [x] All three policy documents updated consistently
 
 **Coordination:**
 - E2:S09:T04 depends on this task (RW Step 1 needs policy requirements)
+
+**Status:** ✅ COMPLETE (v0.4.11.1+0)
 
 ---
 

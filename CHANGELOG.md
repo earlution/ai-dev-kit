@@ -17,6 +17,40 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.11.1+1] - 2025-12-11
+
+📋 Policy Update: E4:S11:T01 - Update Kanban Governance Policy to Mandate 3-Tier Structure
+
+### Updated
+
+- **Kanban Governance Policy (Canonical):** Updated to mandate 3-tier structure (Epic → Story → Task)
+  - Added explicit requirement for 3-tier structure
+  - Mandated discrete Task documents (or clearly delimited sections)
+  - Defined required Task document fields (Task ID, Scope, Acceptance Criteria, Status, Version Anchor, Completion Date, Related BR/FR Links, Input, Deliverable, Dependencies, Blocker, Parallel Development Candidacy)
+  - Prohibited implicit/inline tasks
+  - Updated FR/BR → Task → Story → Epic flow to reference Task documents
+  - Added validation requirements for Task doc presence
+
+- **Kanban Governance Policy (Dev-Kit Local):** Updated to match canonical policy
+  - Added 3-tier structure requirement
+  - Added Task document requirements
+  - Updated FR/BR rule to reference Task documents
+
+- **Kanban Governance Policy (Numbering & Versioning Framework):** Updated to match canonical policy
+  - Added 3-tier structure requirement
+  - Added Task document requirements
+  - Added validation requirements
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 1
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
+- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
+
+---
+
 ## [0.4.11.6+0] - 2025-12-11
 
 📋 Doc Init (Abstract Space): E4:S11:T06 - Task Creation
