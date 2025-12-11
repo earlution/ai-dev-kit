@@ -172,6 +172,16 @@ For each step, follow this pattern:
    - Extract the task number from the task identifier: `E{epic}:S{story}:T{task}` (e.g., `E2:S02:T08` → task number is `8`)
    - **CRITICAL:** If no task is marked complete, or you cannot identify which task was just completed, **STOP** and ask the user which task was completed
 
+   **B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY - NEW REQUIREMENT):**
+   - **MANDATORY:** After identifying completed task, locate Task document in one of two formats:
+     1. **Separate File:** `{kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md` or `T{task}-*.md`
+     2. **Delimited Section:** Within Story file, header matching `### E{epic}:S{story}:T{task} –`
+   - **MANDATORY:** Validate Task document contains required fields:
+     - Task ID (matches `E{epic}:S{story}:T{task}`), Scope, Acceptance Criteria, Status, Version Anchor, Input, Deliverable
+   - **MANDATORY:** Verify Task ID alignment with version components
+   - **CRITICAL:** If Task document not found or incomplete, **STOP** and report error with guidance
+   - **DO NOT PROCEED** until Task document exists and is validated
+
    **C. DETERMINE VERSION BUMP (MANDATORY LOGIC):**
    - Compare completed task number to current `VERSION_TASK`:
      - **IF completed task number > current VERSION_TASK:** This is a NEW TASK

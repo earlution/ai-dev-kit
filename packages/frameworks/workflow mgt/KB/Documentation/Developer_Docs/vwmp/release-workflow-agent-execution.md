@@ -473,6 +473,55 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - **CRITICAL:** If no task is marked complete, or you cannot identify which task was just completed, **STOP** and ask the user which task was completed
    - **CRITICAL:** Document the completed task number for comparison
 
+**B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY - NEW REQUIREMENT):**
+2.1. **ANALYZE (Task Document Location):**
+   - **MANDATORY:** After identifying the completed task, you MUST locate and validate the Task document.
+   - **Task Document Formats (per Kanban Governance Policy):**
+     1. **Separate File Format (Preferred):**
+        - Location patterns:
+          - `{kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md`
+          - `{kanban_root}/epics/Epic-{epic}/Story-{story}/T{task}-*.md`
+        - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-*.md` or `T001-*.md`
+     2. **Delimited Section Format (Alternative):**
+        - Location: Within the Story file itself
+        - Pattern: Section header matching `### E{epic}:S{story}:T{task} –` or `### E{epic}:S{story}:T{task} –`
+        - [Example] `### E4:S11:T01 – Update Kanban Governance Policy`
+   - **MANDATORY:** Search for Task document in both formats:
+     1. First, try separate file format (check Story directory for Task files)
+     2. If not found, search Story file for delimited section with Task ID header
+   - **CRITICAL:** If Task document is NOT found in either format, **STOP** and report error:
+     - Error message: `❌ TASK DOCUMENT NOT FOUND: Task E{epic}:S{story}:T{task} does not have a Task document.`
+     - Guidance: `Create Task document at: {kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-description.md OR add delimited section to Story file with header: ### E{epic}:S{story}:T{task} – Task Title`
+     - **DO NOT PROCEED** until Task document exists
+
+2.2. **VALIDATE (Task Document Requirements):**
+   - **MANDATORY:** Validate Task document contains required fields (per Kanban Governance Policy):
+     - ✅ **Task ID:** Must match `E{epic}:S{story}:T{task}` format
+     - ✅ **Scope:** Clear description of what task accomplishes
+     - ✅ **Acceptance Criteria:** Measurable criteria for task completion
+     - ✅ **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
+     - ✅ **Version Anchor:** Forensic marker when task is complete (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
+     - ✅ **Input:** What is required to start this task
+     - ✅ **Deliverable:** What is produced by this task
+   - **MANDATORY:** Verify Task ID alignment:
+     - Task ID in document must match version components: `E{epic}:S{story}:T{task}`
+     - Epic number must match `VERSION_EPIC`
+     - Story number must match `VERSION_STORY`
+     - Task number must match completed task number
+   - **CRITICAL:** If Task document is missing required fields, **STOP** and report error:
+     - Error message: `❌ TASK DOCUMENT INCOMPLETE: Task E{epic}:S{story}:T{task} document is missing required fields.`
+     - Guidance: `Required fields: Task ID, Scope, Acceptance Criteria, Status, Version Anchor, Input, Deliverable. See: packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+     - **DO NOT PROCEED** until Task document is complete
+   - **CRITICAL:** If Task ID alignment fails, **STOP** and report error:
+     - Error message: `❌ TASK ID MISMATCH: Task document Task ID does not match version components.`
+     - Guidance: `Task ID in document: {found_id}, Expected: E{epic}:S{story}:T{task}`
+     - **DO NOT PROCEED** until Task ID is corrected
+
+2.3. **DOCUMENT (Task Document Location):**
+   - Document Task document location (separate file path OR "delimited section in Story file")
+   - Document Task document format (separate file OR delimited section)
+   - Document validation results (required fields present, Task ID aligned)
+
 **C. DETERMINE VERSION BUMP (MANDATORY LOGIC):**
 3. **DETERMINE:**
    - **MANDATORY:** Compare completed task number to current `VERSION_TASK`:

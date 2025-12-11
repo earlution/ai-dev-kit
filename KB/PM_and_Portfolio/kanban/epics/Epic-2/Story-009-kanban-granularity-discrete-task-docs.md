@@ -147,11 +147,23 @@ Sequencing is clear: Kanban work (E4:S11) → RW integration (E2:S09).
 5. Update RW Step 1 procedure documentation
 
 **Acceptance Criteria:**
-- [ ] RW Step 1 requires Task doc presence
-- [ ] Task doc location logic implemented (separate file OR section)
-- [ ] Validation checks Task doc presence and alignment
-- [ ] Error messages guide Task doc creation
-- [ ] RW Step 1 procedure documentation updated
+- [x] RW Step 1 requires Task doc presence ✅
+- [x] Task doc location logic implemented (separate file OR section) ✅
+- [x] Validation checks Task doc presence and alignment ✅
+- [x] Error messages guide Task doc creation ✅
+- [x] RW Step 1 procedure documentation updated ✅
+
+**Status:** ✅ COMPLETE (v0.2.9.2+0)
+
+**Completion Summary:**
+Updated RW Step 1 (B. IDENTIFY COMPLETED TASK) to require Task document presence and validation:
+- ✅ Added B.1 section: LOCATE AND VALIDATE TASK DOCUMENT
+- ✅ Implemented Task doc location logic (separate file OR delimited section)
+- ✅ Added validation for required fields (Task ID, Scope, Acceptance Criteria, Status, Version Anchor, Input, Deliverable)
+- ✅ Added Task ID alignment verification (Epic/Story/Task must match version components)
+- ✅ Added error messages with guidance for missing/incomplete Task docs
+- ✅ Updated both `release-workflow-agent-execution.md` and `cursorrules-rw-trigger-section.md`
+- ✅ Error handling: RW stops if Task doc not found or validation fails
 
 ---
 
