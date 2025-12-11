@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-10 (v0.2.6.0+0 – Story 6 created for FR-008 package uninstall)  
+**Last updated:** 2025-12-10 (v0.2.7.6+1 – Story 7 complete: Trigger-aware Release Workflow fully implemented)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -34,9 +34,9 @@ housekeeping_policy: keep
 - [x] **E2:S06 – Package Uninstall and Recovery** - COMPLETE ✅ (v0.2.6.3+1 – All tasks complete)
   - Story: [`Story-006-package-uninstall-and-recovery.md`](Story-006-package-uninstall-and-recovery.md)
   - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE (Documentation and verification)
-- [ ] **E2:S07 – Trigger-Aware Release Workflow** - TODO (v0.2.7.0+0 – Story created for FR-013 and FR-014)
+- [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.6+1 – All tasks complete: Trigger detection, registry, workflow executor, deliverable processor, trigger integration, agentic task workflow integration, workflow orchestrator, documentation and testing)
   - Story: [`Story-007-trigger-aware-release-workflow.md`](Story-007-trigger-aware-release-workflow.md)
-  - Tasks: T00-T08 TODO (FR-013: Trigger-aware RW with sub-workflow execution, FR-014: FR/BR commit trigger)
+  - Tasks: T00-T08 ✅ COMPLETE (FR-013: Trigger-aware RW with sub-workflow execution, FR-014: FR/BR commit trigger)
 
 ---
 

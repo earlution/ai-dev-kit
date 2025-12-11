@@ -21,6 +21,7 @@ from trigger_registry import detect_triggers, TriggerRegistry
 from trigger_integration import TriggerIntegration
 from workflow_orchestrator import WorkflowOrchestrator
 from deliverable_processor import DeliverableProcessor, Deliverable, DeliverableType
+from agentic_task_workflow_integration import create_tasks_from_commit
 
 
 def test_trigger_detection():
@@ -139,6 +140,38 @@ def test_deliverable_processing():
     print("\n✅ All deliverable processing tests passed!\n")
 
 
+def test_agentic_task_workflow_integration():
+    """Test agentic task workflow integration."""
+    print("=" * 60)
+    print("Test 5: Agentic Task Workflow Integration")
+    print("=" * 60)
+    
+    # Test FR file extraction
+    changed_files = [
+        'KB/PM_and_Portfolio/kanban/fr-br/FR-012-new-feature.md',
+        'src/some_code.py',
+        'KB/PM_and_Portfolio/kanban/fr-br/BR-007-bug-fix.md'
+    ]
+    
+    project_root = Path(__file__).parent.parent.parent.parent
+    
+    # Extract FR/BR files
+    from agentic_task_workflow_integration import _extract_fr_br_files
+    fr_br_files = _extract_fr_br_files(changed_files, project_root)
+    
+    # Should find 2 files (FR-012 and BR-007)
+    assert len(fr_br_files) == 2, f"Expected 2 FR/BR files, got {len(fr_br_files)}"
+    print("✅ FR/BR file extraction working")
+    
+    # Test with no FR/BR files
+    changed_files_no_fr_br = ['src/some_code.py', 'README.md']
+    fr_br_files = _extract_fr_br_files(changed_files_no_fr_br, project_root)
+    assert len(fr_br_files) == 0, f"Expected 0 FR/BR files, got {len(fr_br_files)}"
+    print("✅ No FR/BR files correctly handled")
+    
+    print("\n✅ All agentic task workflow integration tests passed!\n")
+
+
 def run_all_tests():
     """Run all tests."""
     print("\n" + "=" * 60)
@@ -150,6 +183,7 @@ def run_all_tests():
         test_trigger_integration()
         test_workflow_orchestration()
         test_deliverable_processing()
+        test_agentic_task_workflow_integration()
         
         print("=" * 60)
         print("✅ ALL TESTS PASSED!")

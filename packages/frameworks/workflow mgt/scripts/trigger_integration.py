@@ -8,6 +8,7 @@ task creation workflow.
 Epic: Epic 2 (Workflow Management Framework)
 Story: Story 7 (Trigger-Aware Release Workflow)
 Task: Task 5 (Implement FR/BR/UXR commit trigger)
+Task: Task 6 (Integrate with agentic task creation workflow)
 """
 
 import subprocess
@@ -39,13 +40,12 @@ class TriggerIntegration:
     
     def _register_workflows(self) -> None:
         """Register workflows that can be triggered."""
-        # Agentic task creation workflow (to be implemented in E4:S10)
-        # For now, this is a placeholder that will be replaced when E4:S10 is complete
+        # Agentic task creation workflow (E4:S10 - now integrated)
         task_creation_workflow = WorkflowDefinition(
             id='agentic_task_creation',
             name='Agentic Kanban Task Creation',
             description='Creates Kanban tasks from FR/BR/UXR content using agentic intelligence',
-            entry_point='function:agentic_task_creation.create_tasks',  # Placeholder
+            entry_point='function:agentic_task_workflow_integration.create_tasks',
             parameters={},
             timeout=300  # 5 minutes timeout
         )
@@ -111,6 +111,10 @@ class TriggerIntegration:
             # Get workflow ID from trigger
             workflow_id = trigger.workflow
             
+            # Get changed files
+            changed_files = self._get_changed_files()
+            commit_message = self._get_commit_message()
+            
             # Prepare workflow context
             workflow_context = {
                 'trigger': {
@@ -118,8 +122,9 @@ class TriggerIntegration:
                     'name': trigger.name,
                     'matches': [m.matched_text for m in trigger.matches]
                 },
-                'commit_message': self._get_commit_message(),
-                'changed_files': self._get_changed_files(),
+                'commit_message': commit_message,
+                'changed_files': changed_files,
+                'project_root': str(self.project_root),
                 **rw_context
             }
             
