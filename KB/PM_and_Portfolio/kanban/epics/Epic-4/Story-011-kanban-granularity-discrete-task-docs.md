@@ -23,7 +23,7 @@ housekeeping_policy: keep
 
 - [ ] **E4:S11:T00 – Story Creation and Task Decomposition** ✅ COMPLETE (v0.4.11.0+0)
 - [x] **E4:S11:T01 – Update Kanban Governance Policy to Mandate 3-Tier Structure** ✅ COMPLETE (v0.4.11.1+0)
-- [ ] **E4:S11:T02 – Create Task Document Template and Update Story Template**
+- [x] **E4:S11:T02 – Create Task Document Template and Update Story Template** ✅ COMPLETE (v0.4.11.2+2)
 - [ ] **E4:S11:T03 – Update Versioning Policy with Task Doc Requirements (Kanban-related sections)**
 - [ ] **E4:S11:T04 – Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)**
 - [ ] **E4:S11:T05 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.4.11.5+0)
@@ -136,13 +136,15 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 5. Update template documentation
 
 **Acceptance Criteria:**
-- [ ] Task document template created with all required fields
-- [ ] Story template updated to clarify Task doc formats
-- [ ] Examples provided for both formats
-- [ ] Template documentation updated
+- [x] Task document template created with all required fields
+- [x] Story template updated to clarify Task doc formats
+- [x] Examples provided for both formats
+- [x] Template documentation updated
 
 **Coordination:**
 - E2:S09:T04 depends on this task (RW Step 1 needs template structure)
+
+**Status:** ✅ COMPLETE (v0.4.11.2+2)
 
 ---
 
