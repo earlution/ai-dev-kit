@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [ ] **E2:S09:T00 – Story Creation and FR-016 Intake** ✅ COMPLETE (v0.2.9.0+0)
 - [x] **E2:S09:T01 – Coordination and Task Decomposition** ✅ COMPLETE (v0.2.9.1+0)
 - [x] **E2:S09:T02 – Update RW Step 1 to Require Task Doc Presence** ✅ COMPLETE (v0.2.9.2+0)
-- [ ] **E2:S09:T03 – Enhance Validators for Task Doc Presence and Alignment**
+- [x] **E2:S09:T03 – Enhance Validators for Task Doc Presence and Alignment** ✅ COMPLETE (v0.2.9.3+0)
 - [ ] **E2:S09:T04 – Update RW Agent Execution Guide**
 - [ ] **E2:S09:T05 – Documentation and Testing**
 - [ ] **E2:S09:T06 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.2.9.6+0)
