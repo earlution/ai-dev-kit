@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-11 (v0.4.11.6+2 – E4:S11:T06 complete: template optimization, guidelines, compliance audit, migration guide)  
+**Last updated:** 2025-12-11 (v0.4.11.0+0 – E4:S11 story complete: all tasks done)  
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -47,7 +47,7 @@ housekeeping_policy: keep
 - [ ] **E4:S10 – Agentic Kanban Task Creation from FR/BR** - TODO (v0.4.10.0+0 – Story created for FR-012)
   - Story: [`Story-010-agentic-kanban-task-creation-from-fr-br.md`](Story-010-agentic-kanban-task-creation-from-fr-br.md)
   - Tasks: T00-T07 TODO (FR-012: Agentic workflow for automatic task creation from FRs/BRs)
-- [x] **E4:S11 – Kanban Granularity & Discrete Task Docs** - COMPLETE ✅ (v0.4.11.6+2 – All tasks complete: template optimization, delegation guidelines, compliance audit, migration guide)
+- [x] **E4:S11 – Kanban Granularity & Discrete Task Docs** - COMPLETE ✅ (v0.4.11.0+0 – Story complete: all tasks done)
   - Story: [`Story-011-kanban-granularity-discrete-task-docs.md`](Story-011-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.4.11.1+1), T02 ✅ COMPLETE (v0.4.11.2+2), T03 ✅ COMPLETE (v0.4.11.3+1), T04 ✅ COMPLETE (v0.4.11.4+1), T05 ✅ COMPLETE (v0.4.11.5+0), T06 ✅ COMPLETE (v0.4.11.6+2 – All phases: template optimization, guidelines, audit, migration guide)
   - **Coordination:** Coordinates with E2:S09 (RW integration)

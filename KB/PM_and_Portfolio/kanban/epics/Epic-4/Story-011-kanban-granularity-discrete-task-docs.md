@@ -8,9 +8,9 @@ housekeeping_policy: keep
 
 # Epic 4, Story 11: Kanban Granularity & Discrete Task Docs (Kanban Framework)
 
-**Status:** TODO  
+**Status:** COMPLETE ✅  
 **Priority:** HIGH  
-**Last updated:** 2025-12-11 (v0.4.11.0+0 – Story created for FR-016 Kanban-specific work)  
+**Last updated:** 2025-12-11 (v0.4.11.6+2 – All tasks complete: template optimization, delegation guidelines, compliance audit, migration guide)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  

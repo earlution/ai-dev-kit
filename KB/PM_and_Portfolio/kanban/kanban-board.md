@@ -131,9 +131,9 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
   - Story: [`epics/Epic-4/Story-009-bug-fixes-and-agentic-intelligence.md`](epics/Epic-4/Story-009-bug-fixes-and-agentic-intelligence.md)
 - [x] **E4:S10 – Agentic Kanban Task Creation from FR/BR** - COMPLETE ✅ (v0.4.10.7+0)
   - Story: [`epics/Epic-4/Story-010-agentic-kanban-task-creation-from-fr-br.md`](epics/Epic-4/Story-010-agentic-kanban-task-creation-from-fr-br.md)
-- [ ] **E4:S11 – Kanban Granularity & Discrete Task Docs** - IN PROGRESS (v0.4.11.4+1)
+- [x] **E4:S11 – Kanban Granularity & Discrete Task Docs** - COMPLETE ✅ (v0.4.11.0+0)
   - Story: [`epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md`](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.4.11.1+1), T02 ✅ COMPLETE (v0.4.11.2+2), T03 ✅ COMPLETE (v0.4.11.3+1), T04 ✅ COMPLETE (v0.4.11.4+1), T05 ✅ COMPLETE (v0.4.11.5+0), T06 TODO
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.4.11.1+1), T02 ✅ COMPLETE (v0.4.11.2+2), T03 ✅ COMPLETE (v0.4.11.3+1), T04 ✅ COMPLETE (v0.4.11.4+1), T05 ✅ COMPLETE (v0.4.11.5+0), T06 ✅ COMPLETE (v0.4.11.6+2)
 - [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0)
   - Story: [`epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md`](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
   - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
