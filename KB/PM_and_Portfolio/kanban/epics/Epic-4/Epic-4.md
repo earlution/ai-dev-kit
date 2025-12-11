@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-11 (v0.4.11.0+0 – Story 11 created for FR-016 Kanban-specific work)  
+**Last updated:** 2025-12-11 (v0.4.12.0+0 – Story 12 created for FR-021: FR/BR/UXR Repository Stories)  
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -51,6 +51,9 @@ housekeeping_policy: keep
   - Story: [`Story-011-kanban-granularity-discrete-task-docs.md`](Story-011-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00 ✅ COMPLETE, T01-T03 TODO (FR-016: Kanban policy, templates, versioning policy updates)
   - **Coordination:** Coordinates with E2:S09 (RW integration)
+- [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0 – Story created for FR-021)
+  - Story: [`Story-012-fr-br-uxr-repository-stories.md`](Story-012-fr-br-uxr-repository-stories.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
 
 ---
 

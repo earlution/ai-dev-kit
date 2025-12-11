@@ -8,10 +8,10 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board (Quick View)
 
-**Last Updated:** 2025-12-06  
-**Version:** v0.5.2.2+1
+**Last Updated:** 2025-12-11  
+**Version:** v0.4.11.5+0
 
-**Note:** Epics 1-4 are COMPLETE ✅. Epics 5-9 are IN PROGRESS or TODO.
+**Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 8, 9, 21 are IN PROGRESS or TODO.
 
 ---
 
@@ -31,14 +31,14 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
 | Epic | Title                              | Status         | Stories | Progress |
 |------|------------------------------------|----------------|---------|----------|
 | 1    | AI Dev Kit Core                 | COMPLETE ✅     | 3       | 3/3      |
-| 2    | Workflow Management Framework      | COMPLETE ✅     | 4       | 4/4      |
+| 2    | Workflow Management Framework      | IN PROGRESS    | 11      | 7/11     |
 | 3    | Numbering & Versioning Framework   | COMPLETE ✅     | 3       | 3/3      |
-| 4    | Kanban Framework                   | IN PROGRESS    | 6       | 5/6      |
+| 4    | Kanban Framework                   | IN PROGRESS    | 11      | 8/11     |
 | 5    | Documentation Management          | IN PROGRESS    | 3       | 1/3      |
 | 6    | Framework Management               | COMPLETE ✅     | 3       | 3/3      |
-| 7    | Examples and Adoption              | TODO           | 3       | 0/3      |
-| 8    | Tooling and Automation             | TODO           | 3       | 0/3      |
-| 9    | Book Content Development          | IN PROGRESS    | 3       | 0/3      |
+| 7    | Codebase Maintenance and Review    | IN PROGRESS    | 5       | 0/5      |
+| 8    | Tooling & Automation               | TODO           | 3       | 0/3      |
+| 9    | Book Related Work                 | IN PROGRESS    | 3       | 0/3      |
 | 21   | Internationalization and Localization | TODO        | 4       | 0/4      |
 
 **Epic Docs:** 
@@ -51,6 +51,7 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
 - [`epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
 - [`epics/Epic-8/Epic-8.md`](epics/Epic-8/Epic-8.md)
 - [`epics/Epic-9/Epic-9.md`](epics/Epic-9/Epic-9.md)
+- [`epics/Epic-21/Epic-21.md`](epics/Epic-21/Epic-21.md)
 
 ---
 

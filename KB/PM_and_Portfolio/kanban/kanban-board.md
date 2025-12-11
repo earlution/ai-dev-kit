@@ -9,9 +9,9 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2025-12-11  
-**Version:** v0.4.6.9+2
+**Version:** v0.4.11.5+0
 
-**Note:** Epics 1-4 are COMPLETE ✅. Epics 5-9 are IN PROGRESS.
+**Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
 ---
 
@@ -50,10 +50,10 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.2.8.0+0
+**Last Updated:** v0.2.11.0+0
 
 **Stories:**
-- [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.1+5)
+- [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.7+1)
   - Story: [`epics/Epic-2/Story-001-rw-agent-execution-and-docs.md`](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md)
 - [x] **E2:S02 – PDCA Integration into Release Workflow** - COMPLETE ✅ (v0.2.2.8+1)
   - Story: [`epics/Epic-2/Story-002-pdca-integration-into-release-workflow.md`](epics/Epic-2/Story-002-pdca-integration-into-release-workflow.md)
@@ -61,12 +61,23 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
   - Story: [`epics/Epic-2/Story-003-additional-workflows-and-examples.md`](epics/Epic-2/Story-003-additional-workflows-and-examples.md)
 - [x] **E2:S04 – RW Installer & Plug-and-Play Adoption** - COMPLETE ✅ (v0.2.4.9+3)
   - Story: [`epics/Epic-2/Story-004-rw-installer-and-plug-and-play-adoption.md`](epics/Epic-2/Story-004-rw-installer-and-plug-and-play-adoption.md)
+- [ ] **E2:S05 – Post-Implementation Review (PIR) Workflow** - TODO
+  - Story: [`epics/Epic-2/Story-005-post-implementation-review-workflow.md`](epics/Epic-2/Story-005-post-implementation-review-workflow.md)
 - [x] **E2:S06 – Package Uninstall and Recovery** - COMPLETE ✅ (v0.2.6.3+1)
   - Story: [`epics/Epic-2/Story-006-package-uninstall-and-recovery.md`](epics/Epic-2/Story-006-package-uninstall-and-recovery.md)
 - [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.6+1)
   - Story: [`epics/Epic-2/Story-007-trigger-aware-release-workflow.md`](epics/Epic-2/Story-007-trigger-aware-release-workflow.md)
 - [ ] **E2:S08 – Harden Release Workflow Reliability** - TODO (v0.2.8.0+0)
   - Story: [`epics/Epic-2/Story-008-harden-release-workflow-reliability.md`](epics/Epic-2/Story-008-harden-release-workflow-reliability.md)
+- [ ] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - TODO (v0.2.9.6+0)
+  - Story: [`epics/Epic-2/Story-009-kanban-granularity-discrete-task-docs.md`](epics/Epic-2/Story-009-kanban-granularity-discrete-task-docs.md)
+  - Tasks: T00 ✅ COMPLETE, T06 ✅ COMPLETE (v0.2.9.6+0), T01-T05 TODO
+- [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - TODO (v0.2.10.6+1)
+  - Story: [`epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md`](epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md)
+  - Tasks: T00 ✅ COMPLETE, T06 ✅ COMPLETE (v0.2.10.6+1), T01-T05 TODO, T07 TODO
+- [ ] **E2:S11 – Intake Workflow Automation** - TODO (v0.2.11.0+0)
+  - Story: [`epics/Epic-2/Story-011-intake-workflow-automation.md`](epics/Epic-2/Story-011-intake-workflow-automation.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T09 TODO
 
 **Epic Doc:** [`epics/Epic-2/Epic-2.md`](epics/Epic-2/Epic-2.md)
 
@@ -94,12 +105,14 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.4.6.1+0
+**Last Updated:** v0.4.11.5+0
+
+**Note:** Epic 4 document shows "COMPLETE" but has incomplete stories (S06, S10, S11), so Epic status is IN PROGRESS.
 
 **Stories:**
 - [x] **E4:S01 – Dev Kit Kanban Implementation** - COMPLETE ✅ (v0.4.1.1+6)
   - Story: [`epics/Epic-4/Story-001-dev-kit-kanban-implementation.md`](epics/Epic-4/Story-001-dev-kit-kanban-implementation.md)
-- [x] **E4:S02 – FR/BR Intake to Tasks** - COMPLETE ✅ (v0.4.2.5+1)
+- [x] **E4:S02 – FR/BR Intake to Tasks** - COMPLETE ✅ (v0.4.2.6+3)
   - Story: [`epics/Epic-4/Story-002-fr-br-intake-to-tasks.md`](epics/Epic-4/Story-002-fr-br-intake-to-tasks.md)
 - [x] **E4:S03 – Kanban + Versioning + RW Integration** - COMPLETE ✅ (v0.4.3.7+1)
   - Story: [`epics/Epic-4/Story-003-kanban-versioning-rw-integration.md`](epics/Epic-4/Story-003-kanban-versioning-rw-integration.md)
@@ -107,9 +120,20 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
   - Story: [`epics/Epic-4/Story-004-kanban-structure-refactoring.md`](epics/Epic-4/Story-004-kanban-structure-refactoring.md)
 - [x] **E4:S05 – Canonical Epics for Kanban Framework** - COMPLETE ✅ (v0.4.5.1+1)
   - Story: [`epics/Epic-4/Story-005-canonical-epics-for-kanban-framework.md`](epics/Epic-4/Story-005-canonical-epics-for-kanban-framework.md)
-- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.9+2)
+- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.10+1)
   - Story: [`epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T03-T05 TODO, T07-T08 TODO (T09: BR-009 ✅ v0.4.6.9+2, T10: BR-004 ✅ v0.4.6.10+1)
+  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T03-T05 TODO, T07-T08 TODO
+- [x] **E4:S07 – Migration Support and Installation Modes** - COMPLETE ✅ (v0.4.7.3+1)
+  - Story: [`epics/Epic-4/Story-007-migration-support-and-installation-modes.md`](epics/Epic-4/Story-007-migration-support-and-installation-modes.md)
+- [x] **E4:S08 – Intelligent Epic Matching and Canonical Structure Adoption** - COMPLETE ✅ (v0.4.8.6+1)
+  - Story: [`epics/Epic-4/Story-008-intelligent-epic-matching-canonical-adoption.md`](epics/Epic-4/Story-008-intelligent-epic-matching-canonical-adoption.md)
+- [x] **E4:S09 – Bug Fixes and Agentic Intelligence Implementation** - COMPLETE ✅ (v0.4.9.1+1)
+  - Story: [`epics/Epic-4/Story-009-bug-fixes-and-agentic-intelligence.md`](epics/Epic-4/Story-009-bug-fixes-and-agentic-intelligence.md)
+- [x] **E4:S10 – Agentic Kanban Task Creation from FR/BR** - COMPLETE ✅ (v0.4.10.7+0)
+  - Story: [`epics/Epic-4/Story-010-agentic-kanban-task-creation-from-fr-br.md`](epics/Epic-4/Story-010-agentic-kanban-task-creation-from-fr-br.md)
+- [ ] **E4:S11 – Kanban Granularity & Discrete Task Docs** - TODO (v0.4.11.5+0)
+  - Story: [`epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md`](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md)
+  - Tasks: T00 ✅ COMPLETE, T05 ✅ COMPLETE (v0.4.11.5+0), T01-T04 TODO
 
 **Epic Doc:** [`epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)
 
@@ -176,32 +200,34 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 ---
 
-### Epic 7: Examples and Adoption
+### Epic 7: Codebase Maintenance and Review
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last Updated:** [TBD]
+**Status:** IN PROGRESS  
+**Priority:** HIGH  
+**Last Updated:** v0.7.5.0+0
 
 **Stories:**
-- [ ] **E7:S01 – Real-World Adoption Examples** - TODO
-  - Story: [`epics/Epic-7/Story-001-real-world-adoption-examples.md`](epics/Epic-7/Story-001-real-world-adoption-examples.md)
-- [ ] **E7:S02 – Migration Guides** - TODO
-  - Story: [`epics/Epic-7/Story-002-migration-guides.md`](epics/Epic-7/Story-002-migration-guides.md)
-- [ ] **E7:S03 – User Onboarding Materials** - TODO
-  - Story: [`epics/Epic-7/Story-003-user-onboarding-materials.md`](epics/Epic-7/Story-003-user-onboarding-materials.md)
-- [ ] **E7:S04 – README Template Based on Best-README-Template** - TODO
-  - Tasks: T01 TODO, T02 TODO, T03 TODO, T04 TODO, T05 TODO, T06 TODO
-  - Story: [`epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md`](epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md)
+- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.1+1)
+  - Story: [`epics/Epic-7/Story-001-codebase-maintenance-tasks.md`](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
+  - Tasks: T01 PERPETUAL, T02-T04 TODO
+- [ ] **E7:S02 – Code Review Standards and Processes** - TODO
+  - Story: [`epics/Epic-7/Story-002-code-review-standards-and-processes.md`](epics/Epic-7/Story-002-code-review-standards-and-processes.md)
+- [ ] **E7:S03 – Code Quality Metrics and Monitoring** - TODO
+  - Story: [`epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md`](epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md)
+- [ ] **E7:S04 – Maintenance Automation and Tooling** - TODO
+  - Story: [`epics/Epic-7/Story-004-maintenance-automation-and-tooling.md`](epics/Epic-7/Story-004-maintenance-automation-and-tooling.md)
+- [ ] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - TODO (v0.7.5.0+0)
+  - Story: [`epics/Epic-7/Story-005-migration-uxr-research.md`](epics/Epic-7/Story-005-migration-uxr-research.md)
 
 **Epic Doc:** [`epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
 
 ---
 
-### Epic 8: Tooling and Automation
+### Epic 8: Tooling & Automation
 
 **Status:** TODO  
-**Priority:** MEDIUM  
-**Last Updated:** [TBD]
+**Priority:** HIGH  
+**Last Updated:** v0.8.1.1+1
 
 **Stories:**
 - [ ] **E8:S01 – Code Generators** - TODO
@@ -215,16 +241,16 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 ---
 
-### Epic 9: Book Content Development
+### Epic 9: Book Related Work
 
 **Status:** IN PROGRESS  
 **Priority:** MEDIUM  
-**Last Updated:** [TBD]
+**Last Updated:** v0.9.1.1+1
 
 **Stories:**
 - [ ] **E9:S01 – Book Content Development** - IN PROGRESS
   - Story: [`epics/Epic-9/Story-001-book-content-development.md`](epics/Epic-9/Story-001-book-content-development.md)
-- [ ] **E9:S02 – Book Integration with Dev Kit** - TODO
+- [ ] **E9:S02 – Book Integration with Dev-Kit** - TODO
   - Story: [`epics/Epic-9/Story-002-book-integration-with-dev-kit.md`](epics/Epic-9/Story-002-book-integration-with-dev-kit.md)
 - [ ] **E9:S03 – Book Publishing Support** - TODO
   - Story: [`epics/Epic-9/Story-003-book-publishing-support.md`](epics/Epic-9/Story-003-book-publishing-support.md)

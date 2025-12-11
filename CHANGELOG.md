@@ -17,6 +17,40 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.12.0+0] - 2025-12-11
+
+📋 Doc Init (Abstract Space): E4:S12:T00 - Story Creation and FR-021 Intake
+
+### Added
+
+- **Epic 4 Story 12:** FR/BR/UXR Repository Stories (S00 Pattern)
+  - Created Story 12 under Epic 4 for FR-021 implementation
+  - Defined 11 tasks (T00-T10) for implementing repository pattern
+  - T00 (Story Creation and FR-021 Intake) complete
+  - Abstract space `0.4.12.0+0` established for forensic traceability
+
+- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern)
+  - Created FR-021 document with full requirements
+  - Status: ACCEPTED
+  - Assigned to Epic 4, Story 12
+
+### Updated
+
+- **Epic 4:** Added Story 12 to story checklist
+- **FR-021:** Updated intake decision section with Epic/Story/Task assignment
+
+### Related Work
+
+- Epic: 4
+- Story: 12
+- Task: 0
+- FR-021: FR/BR/UXR Repository Stories (S00 Pattern)
+- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (abstract space concept)
+- E2:S11: Intake Workflow Automation (intake workflow integration)
+- E4:S02: FR/BR Intake to Tasks (intake foundation)
+
+---
+
 ## [0.4.11.5+0] - 2025-12-11
 
 📋 Doc Init (Abstract Space): E4:S11:T05 - Task Creation
