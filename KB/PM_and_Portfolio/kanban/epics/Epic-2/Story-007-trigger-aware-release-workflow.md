@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-10 (v0.2.7.9+0 – All tasks complete: Design, trigger registry, workflow executor, deliverable processor, trigger integration, agentic task workflow integration, workflow orchestrator, documentation and testing implemented)  
-**Version:** v0.2.7.9+0  
+**Last updated:** 2025-12-10 (v0.2.7.6+1 – All tasks complete: Design, trigger registry, workflow executor, deliverable processor, trigger integration, agentic task workflow integration, workflow orchestrator, documentation and testing implemented)  
+**Version:** v0.2.7.6+1  
 **Code:** E2S07
 
 ---
