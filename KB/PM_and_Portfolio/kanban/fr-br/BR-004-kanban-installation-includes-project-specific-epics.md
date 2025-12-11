@@ -268,25 +268,23 @@ Ensure that when projects copy the Kanban framework structure, they receive only
 
 ## Intake Decision
 
-**Intake Status:** PENDING  
-**Intake Date:** [TBD]  
-**Intake By:** [TBD]
+**Intake Status:** ACCEPTED  
+**Intake Date:** 2025-12-11  
+**Intake By:** AI Agent (ai-dev-kit)
 
 **Decision Flow Results:**
-- [ ] Story Match Found: [Epic X, Story Y] → Task [T]
-- [ ] New Story Created: [Epic X, Story Y] → Task 1
-- [ ] New Epic Created: [Epic X, Story 1, Task 1]
+- Story Match Found: Epic 4, Story 6, Task 10
 
 **Assigned To:**
-- Epic: [TBD]
-- Story: [TBD]
-- Task: [TBD]
-- Version: `[TBD]`
+- Epic: Epic 4 (Kanban Framework)
+- Story: Story 6 (Comprehensive Canonical E/S/T Template System)
+- Task: Task 10 (BR-004: Fix epic contamination in installer)
+- Version: `v0.4.6.10+0` (T10 not yet started)
 
 **Kanban Links:**
-- Epic: [TBD]
-- Story: [TBD]
-- Task: [TBD]
+- Epic: [`epics/Epic-4/Epic-4.md`](../epics/Epic-4/Epic-4.md)
+- Story: [`epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](../epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+- Task: E4:S06:T10
 
 ---
 
