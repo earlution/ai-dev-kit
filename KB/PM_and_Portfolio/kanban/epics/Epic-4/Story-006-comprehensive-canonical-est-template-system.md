@@ -49,7 +49,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - [ ] **E4:S06:T07 – Integrate with template setup guide and installation workflow** - TODO (BR-009 assigned)
 - [ ] **E4:S06:T08 – Validate structure with test projects (tiny, small, ambitious)** - TODO
 - [ ] **E4:S06:T09 – BR-009: Improve installer discoverability and documentation** - TODO
-- [ ] **E4:S06:T10 – BR-004: Fix epic contamination in installer** - TODO
+- [x] **E4:S06:T10 – BR-004: Fix epic contamination in installer** ✅ COMPLETE (v0.4.6.10+1)
 
 ---
 
