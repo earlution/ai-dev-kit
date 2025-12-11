@@ -8,6 +8,8 @@ housekeeping_policy: keep
 
 # Epic X, Story Y, Task Z: [Task Title]
 
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
 **Status:** [TODO/IN PROGRESS/COMPLETE]  
 **Priority:** [HIGH/MEDIUM/LOW]  
 **Last updated:** [YYYY-MM-DD] (vX.Y.Z.T+B – [summary])  

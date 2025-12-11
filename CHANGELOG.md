@@ -17,6 +17,38 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.11.2+2] - 2025-12-11
+
+📋 Examples Creation: E4:S11:T02 Phase 2 - Task Document Examples
+
+### Added
+
+- **Task Document Examples:** Created examples for both Task document formats
+  - **Separate File Format:** `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md`
+    - Complete example based on E4:S11:T01 (real-world use case)
+    - Demonstrates all required fields from Task template
+    - Shows proper forensic marker usage
+  - **Delimited Section Format:** `packages/frameworks/kanban/examples/Story-Example-With-Delimited-Tasks.md`
+    - Complete Story example with tasks documented as delimited sections
+    - Shows multiple tasks within a single Story document
+    - Demonstrates proper Task ID header format
+
+### Updated
+
+- **Task Template:** Added reference to example file
+- **Story Template:** Added references to both example files
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 2
+- Phase: 2 (Examples created, T02 complete)
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
+- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
+
+---
+
 ## [0.4.11.2+1] - 2025-12-11
 
 📋 Template Creation: E4:S11:T02 Phase 1 - Task and Story Templates

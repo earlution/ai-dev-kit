@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 11    # Story number (Story 11: Kanban Granularity & Discrete Task Docs)
 VERSION_TASK = 2      # Task number (Task 2: Create Task Document Template and Update Story Template)
-VERSION_BUILD = 1     # Build number (E4:S11:T02 Phase 1 - Task and Story templates created)
+VERSION_BUILD = 2     # Build number (E4:S11:T02 Phase 2 - Examples created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

@@ -125,6 +125,10 @@ Regardless of format, every Task MUST include:
 
 **Template:** Use `packages/frameworks/kanban/templates/TASK_TEMPLATE.md` for separate Task files.
 
+**Examples:**
+- **Separate File Format:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md`
+- **Delimited Section Format:** See `packages/frameworks/kanban/examples/Story-Example-With-Delimited-Tasks.md`
+
 ---
 
 ### Example Tasks
