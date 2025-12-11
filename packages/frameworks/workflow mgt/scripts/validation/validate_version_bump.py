@@ -240,6 +240,207 @@ def get_completed_task(story_file: Path, version_task: Optional[int] = None) -> 
     return max(completed_tasks)
 
 
+def locate_task_doc(
+    story_file: Path,
+    epic: int,
+    story: int,
+    task: int,
+    config: Optional[Dict] = None
+) -> Tuple[Optional[Path], Optional[str], str]:
+    """
+    Locate Task document in one of two formats:
+    1. Separate file: {kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md or T{task}-*.md
+    2. Delimited section: Within Story file, header matching ### E{epic}:S{story}:T{task} –
+    
+    Returns:
+        (task_doc_path, task_doc_content, format_type)
+        - task_doc_path: Path to separate file, or None if delimited section
+        - task_doc_content: Content of Task doc (from file or section)
+        - format_type: "separate_file" or "delimited_section" or "not_found"
+    """
+    project_root = Path.cwd()
+    
+    # Format 1: Separate file
+    if config and config.get('use_kanban') and 'kanban_root' in config:
+        kanban_root = Path(config['kanban_root'])
+        story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story:03d}"
+        if not story_dir.exists():
+            story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
+    else:
+        # Fallback patterns
+        story_dir = project_root / f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story:03d}"
+        if not story_dir.exists():
+            story_dir = project_root / f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}"
+    
+    if story_dir.exists():
+        # Try Task-{task}-*.md pattern
+        task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))
+        if not task_files:
+            # Try T{task}-*.md pattern
+            task_files = list(story_dir.glob(f"T{task:03d}-*.md"))
+        if task_files:
+            task_file = task_files[0]
+            return (task_file, task_file.read_text(), "separate_file")
+    
+    # Format 2: Delimited section in Story file
+    if story_file.exists():
+        content = story_file.read_text()
+        # Look for section header: ### E{epic}:S{story}:T{task} – or ### E{epic}:S{story}:T{task} –
+        # Also handle zero-padded task numbers (e.g., T01, T02)
+        patterns = [
+            re.compile(
+                rf'^###\s+E{epic}:S{story}:T{task:02d}\s+–\s+.*$',
+                re.MULTILINE | re.IGNORECASE
+            ),
+            re.compile(
+                rf'^###\s+E{epic}:S{story}:T{task}\s+–\s+.*$',
+                re.MULTILINE | re.IGNORECASE
+            ),
+            # Also check for ### E2:S09:T02 – pattern (with zero padding)
+            re.compile(
+                rf'^###\s+E{epic}:S{story:02d}:T{task:02d}\s+–\s+.*$',
+                re.MULTILINE | re.IGNORECASE
+            ),
+        ]
+        
+        for pattern in patterns:
+            match = pattern.search(content)
+            if match:
+                # Extract section content (from header to next ### or --- separator or end of file)
+                start_pos = match.start()
+                # Find next ### header, --- separator, or end of file
+                remaining = content[start_pos:]
+                # Look for next ### header (not the current one)
+                next_header = re.search(r'^###\s+', remaining[len(match.group(0)):], re.MULTILINE)
+                # Also look for --- separator (often used to separate tasks)
+                next_separator = re.search(r'^---\s*$', remaining[len(match.group(0)):], re.MULTILINE)
+                
+                # Take the earliest of next header, separator, or end
+                end_pos = len(remaining)
+                if next_header:
+                    end_pos = min(end_pos, next_header.start() + len(match.group(0)))
+                if next_separator:
+                    end_pos = min(end_pos, next_separator.start() + len(match.group(0)))
+                
+                section_content = remaining[:end_pos]
+                return (None, section_content, "delimited_section")
+    
+    return (None, None, "not_found")
+
+
+def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int) -> Tuple[bool, list]:
+    """
+    Validate Task document contains required fields.
+    
+    Required fields (per Kanban Governance Policy):
+    - Task ID (must match E{epic}:S{story}:T{task})
+    - Scope
+    - Acceptance Criteria
+    - Status
+    - Version Anchor (when complete)
+    - Input
+    - Deliverable
+    
+    Returns:
+        (is_valid, list_of_errors)
+    """
+    errors = []
+    
+    # Check Task ID (flexible - can be in header or anywhere in content)
+    # Handle both zero-padded and non-zero-padded formats
+    task_id_patterns = [
+        re.compile(rf'E{epic}:S{story:02d}:T{task:02d}', re.IGNORECASE),  # E2:S09:T02
+        re.compile(rf'E{epic}:S{story}:T{task:02d}', re.IGNORECASE),      # E2:S9:T02
+        re.compile(rf'E{epic}:S{story:02d}:T{task}', re.IGNORECASE),      # E2:S09:T2
+        re.compile(rf'E{epic}:S{story}:T{task}', re.IGNORECASE),          # E2:S9:T2
+    ]
+    
+    task_id_found = False
+    for pattern in task_id_patterns:
+        if pattern.search(task_content):
+            task_id_found = True
+            break
+    
+    if not task_id_found:
+        errors.append(f"Task ID not found or incorrect. Expected: E{epic}:S{story}:T{task} (or with zero-padding: E{epic}:S{story:02d}:T{task:02d})")
+    
+    # Check required fields (case-insensitive, flexible patterns)
+    # Note: For delimited sections, fields may use **Field:** format
+    # Scope can be implicit in task title/description, so make it optional if other fields present
+    required_fields = {
+        'acceptance criteria': r'(?i)(?:^##\s+Acceptance\s+Criteria|^\*\*Acceptance\s+Criteria\*\*|^Acceptance\s+Criteria:|Acceptance\s+Criteria:)',
+        'status': r'(?i)(?:^\*\*Status\*\*|^Status:|Status.*COMPLETE|Status.*TODO|Status.*IN PROGRESS|\*\*Status\*\*.*COMPLETE)',
+        'input': r'(?i)(?:^##\s+Input|^\*\*Input\*\*|^Input:|Input:)',
+        'deliverable': r'(?i)(?:^##\s+Deliverable|^\*\*Deliverable\*\*|^Deliverable:|Deliverable:)',
+    }
+    
+    # Optional fields (warn if missing but don't fail)
+    optional_fields = {
+        'scope': r'(?i)(?:^##\s+Scope|^\*\*Scope\*\*|^Scope:|Scope\s+description|Scope:)',
+    }
+    
+    for field_name, pattern in required_fields.items():
+        # Search in entire content (not just line-start patterns)
+        if not re.search(pattern, task_content, re.MULTILINE | re.DOTALL):
+            errors.append(f"Required field missing: {field_name}")
+    
+    # Check optional fields (warn but don't fail)
+    for field_name, pattern in optional_fields.items():
+        if not re.search(pattern, task_content, re.MULTILINE | re.DOTALL):
+            # Scope can be implicit in task title, so only warn if no task description present
+            if not re.search(r'(?i)(?:task|description|title)', task_content[:200], re.IGNORECASE):
+                errors.append(f"Optional field missing (recommended): {field_name}")
+    
+    # Check Version Anchor (if task is complete)
+    if re.search(r'(?i)✅\s+COMPLETE|Status.*COMPLETE', task_content):
+        if not re.search(r'(?i)✅\s+COMPLETE\s+\(v\d+\.\d+\.\d+\.\d+\+\d+\)|Version\s+Anchor', task_content):
+            errors.append("Version Anchor missing (task marked COMPLETE but no version marker found)")
+    
+    is_valid = len(errors) == 0
+    return is_valid, errors
+
+
+def validate_task_doc_alignment(
+    task_content: str,
+    epic: int,
+    story: int,
+    task: int
+) -> Tuple[bool, list]:
+    """
+    Validate Task ID alignment with version components.
+    
+    Handles both zero-padded and non-zero-padded Task ID formats.
+    
+    Returns:
+        (is_valid, list_of_errors)
+    """
+    errors = []
+    
+    # Extract Task ID from content (handle zero-padded formats)
+    task_id_pattern = re.compile(r'E(\d+):S(\d+):T(\d+)', re.IGNORECASE)
+    matches = task_id_pattern.findall(task_content)
+    
+    if not matches:
+        errors.append(f"Task ID not found in Task document. Expected: E{epic}:S{story}:T{task}")
+        return False, errors
+    
+    # Use first match (should be in header/title)
+    found_epic, found_story, found_task = matches[0]
+    found_epic = int(found_epic)
+    found_story = int(found_story)
+    found_task = int(found_task)
+    
+    if found_epic != epic:
+        errors.append(f"Task ID Epic mismatch: Found E{found_epic}, Expected E{epic}")
+    if found_story != story:
+        errors.append(f"Task ID Story mismatch: Found S{found_story}, Expected S{story}")
+    if found_task != task:
+        errors.append(f"Task ID Task mismatch: Found T{found_task}, Expected T{task}")
+    
+    is_valid = len(errors) == 0
+    return is_valid, errors
+
+
 def validate_version_bump(
     version_file: Path,
     story_file: Optional[Path] = None,
@@ -280,6 +481,47 @@ def validate_version_bump(
     
     print(f"Completed task: T{completed_task:02d}")
     print(f"Current VERSION_TASK: {current_task}")
+    
+    # NEW: Validate Task document presence and alignment
+    task_doc_path, task_doc_content, format_type = locate_task_doc(
+        story_file, epic, story, completed_task, config
+    )
+    
+    if format_type == "not_found":
+        errors.append(
+            f"❌ TASK DOCUMENT NOT FOUND: Task E{epic}:S{story}:T{completed_task} does not have a Task document.\n"
+            f"   Create Task document at: {story_file.parent}/Task-{completed_task:03d}-description.md\n"
+            f"   OR add delimited section to Story file with header: ### E{epic}:S{story}:T{completed_task} – Task Title"
+        )
+    else:
+        print(f"Task document found: {format_type}")
+        if task_doc_path:
+            print(f"  Location: {task_doc_path}")
+        else:
+            print(f"  Location: Delimited section in {story_file}")
+        
+        # Validate Task doc fields
+        fields_valid, field_errors = validate_task_doc_fields(
+            task_doc_content, epic, story, completed_task
+        )
+        if not fields_valid:
+            errors.append(f"❌ TASK DOCUMENT INCOMPLETE: Task E{epic}:S{story}:T{completed_task} document is missing required fields:")
+            for field_error in field_errors:
+                errors.append(f"   - {field_error}")
+            errors.append(
+                f"   Required fields: Task ID, Scope, Acceptance Criteria, Status, Version Anchor, Input, Deliverable.\n"
+                f"   See: packages/frameworks/kanban/templates/TASK_TEMPLATE.md"
+            )
+        
+        # Validate Task ID alignment
+        alignment_valid, alignment_errors = validate_task_doc_alignment(
+            task_doc_content, epic, story, completed_task
+        )
+        if not alignment_valid:
+            errors.append(f"❌ TASK ID MISMATCH: Task document Task ID does not match version components:")
+            for alignment_error in alignment_errors:
+                errors.append(f"   - {alignment_error}")
+            errors.append(f"   Expected: E{epic}:S{story}:T{completed_task}")
     
     # Validate version bump logic
     if completed_task > current_task:

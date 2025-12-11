@@ -17,6 +17,43 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.9.3+0] - 2025-12-11
+
+🔧 Validator Enhancement: E2:S09:T03 - Enhance Validators for Task Doc Presence and Alignment
+
+### Summary
+
+Enhanced validators to check Task document presence and alignment. Both `validate_version_bump.py` and `validate_branch_context.py` now validate Task documents according to Kanban policy requirements.
+
+### Changes
+
+**validate_version_bump.py:**
+- ✅ Added `locate_task_doc()` function (separate file OR delimited section)
+- ✅ Added `validate_task_doc_fields()` function (required fields validation)
+- ✅ Added `validate_task_doc_alignment()` function (Task ID alignment verification)
+- ✅ Integrated Task doc validation into version bump validation flow
+- ✅ Error messages provide clear guidance for creating/fixing Task docs
+
+**validate_branch_context.py:**
+- ✅ Added `locate_task_doc_for_version()` function
+- ✅ Added `check_task_doc_presence()` function (warning only, non-blocking)
+- ✅ Integrated Task doc check into branch context validation
+
+### Validation Features
+
+- **Task Doc Location:** Supports both separate file and delimited section formats
+- **Field Validation:** Validates required fields with flexible patterns
+- **Alignment Validation:** Verifies Task ID matches version components
+- **Format Flexibility:** Handles zero-padded and non-zero-padded Task ID formats
+
+### Related Work
+
+- **Story:** E2:S09 - Kanban Granularity & Discrete Task Docs (RW Integration)
+- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - COMPLETE ✅
+- **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
+
 ## [0.2.9.2+0] - 2025-12-11
 
 🔧 RW Step 1 Enhanced: E2:S09:T02 - Update RW Step 1 to Require Task Doc Presence

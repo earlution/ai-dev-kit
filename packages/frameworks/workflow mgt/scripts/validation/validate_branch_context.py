@@ -154,6 +154,77 @@ def parse_version_patch(version: str) -> Optional[int]:
     return None
 
 
+def locate_task_doc_for_version(
+    epic: int,
+    story: int,
+    task: int,
+    config: Optional[Dict] = None
+) -> Tuple[Optional[Path], Optional[str], str]:
+    """
+    Locate Task document for given epic/story/task.
+    
+    Returns:
+        (task_doc_path, task_doc_content, format_type)
+    """
+    project_root = Path.cwd()
+    
+    # Format 1: Separate file
+    if config and config.get('use_kanban') and 'kanban_root' in config:
+        kanban_root = Path(config['kanban_root'])
+        story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story:03d}"
+        if not story_dir.exists():
+            story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
+    else:
+        story_dir = project_root / f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story:03d}"
+        if not story_dir.exists():
+            story_dir = project_root / f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}"
+    
+    if story_dir.exists():
+        task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))
+        if not task_files:
+            task_files = list(story_dir.glob(f"T{task:03d}-*.md"))
+        if task_files:
+            task_file = task_files[0]
+            return (task_file, task_file.read_text(), "separate_file")
+    
+    # Format 2: Delimited section (would need Story file, skip for now in branch context)
+    return (None, None, "not_found")
+
+
+def check_task_doc_presence(version: str, config: Optional[Dict] = None) -> Tuple[bool, list]:
+    """
+    Check if Task document exists for current version.
+    
+    Returns:
+        (is_valid, list_of_warnings)
+    """
+    warnings = []
+    
+    # Parse version components
+    version_epic = parse_version_epic(version)
+    version_story = parse_version_story(version)
+    
+    # Extract task from version (new format: RC.EPIC.STORY.TASK+BUILD)
+    match = re.match(r"^(\d+)\.(\d+)\.(\d+)\.(\d+)\+(\d+)$", version)
+    if not match:
+        return True, []  # Old format or invalid, skip Task doc check
+    
+    version_task = int(match.group(4))
+    
+    if version_epic and version_story:
+        task_doc_path, task_doc_content, format_type = locate_task_doc_for_version(
+            version_epic, version_story, version_task, config
+        )
+        
+        if format_type == "not_found":
+            warnings.append(
+                f"⚠️  Task document not found for version {version} (E{version_epic}:S{version_story}:T{version_task}). "
+                f"This may indicate the Task document hasn't been created yet."
+            )
+    
+    return len(warnings) == 0, warnings
+
+
 def check_changelog(branch, config: Optional[Dict] = None):
     """Check CHANGELOG.md for cross-epic contamination (supports both old and new format)."""
     if config and 'main_changelog' in config:
@@ -254,6 +325,12 @@ def validate_branch_context():
     changelog_ok, changelog_issues = check_changelog(branch, config)
     if not changelog_ok:
         errors.extend(changelog_issues)
+    
+    # NEW: Check Task doc presence (warning only, not blocking)
+    if version:
+        task_doc_ok, task_doc_warnings = check_task_doc_presence(version, config)
+        if not task_doc_ok:
+            warnings.extend(task_doc_warnings)
 
     print()
     if errors:

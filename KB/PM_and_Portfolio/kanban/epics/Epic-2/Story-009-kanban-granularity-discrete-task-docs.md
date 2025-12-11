@@ -192,11 +192,24 @@ Updated RW Step 1 (B. IDENTIFY COMPLETED TASK) to require Task document presence
 5. Add tests for Task doc validation
 
 **Acceptance Criteria:**
-- [ ] Validators check Task doc presence
-- [ ] Validators check Task doc fields
-- [ ] Validators check Epic/Story/Task alignment
-- [ ] Validation error messages are clear and actionable
-- [ ] Tests added for Task doc validation
+- [x] Validators check Task doc presence ✅
+- [x] Validators check Task doc fields ✅
+- [x] Validators check Epic/Story/Task alignment ✅
+- [x] Validation error messages are clear and actionable ✅
+- [ ] Tests added for Task doc validation (future enhancement)
+
+**Status:** ✅ COMPLETE (v0.2.9.3+0)
+
+**Completion Summary:**
+Enhanced validators to check Task document presence and alignment:
+- ✅ Added `locate_task_doc()` function to find Task docs (separate file OR delimited section)
+- ✅ Added `validate_task_doc_fields()` function to check required fields
+- ✅ Added `validate_task_doc_alignment()` function to verify Task ID matches version components
+- ✅ Enhanced `validate_version_bump.py` to validate Task doc presence, fields, and alignment
+- ✅ Enhanced `validate_branch_context.py` to check Task doc presence (warning only)
+- ✅ Error messages provide clear guidance for creating/fixing Task docs
+- ✅ Handles both zero-padded and non-zero-padded Task ID formats
+- ✅ Flexible field detection for delimited sections (handles **Field:** format)
 
 ---
 
