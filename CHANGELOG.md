@@ -17,6 +17,23 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.10.3+1] - 10-12-25
+
+🎯 Feature: E4:S10:T03 - Template-Based Task Creation (COMPLETE)
+
+### Added
+
+- **Task Creator Module:** `packages/frameworks/kanban/scripts/task_creator.py`
+  - Template-based task creation from FR/BR
+  - Template contextualization with FR/BR content
+  - Task file generation with dependency handling
+
+### Changed
+
+- **Story 10:** Updated T03 status to COMPLETE
+
+---
+
 ## [0.4.10.2+1] - 10-12-25
 
 🎯 Feature: E4:S10:T02 - Intelligent Epic/Story Mapping (COMPLETE)
