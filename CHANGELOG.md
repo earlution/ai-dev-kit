@@ -17,6 +17,32 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.9.0+1] - 11-12-25
+
+📋 Planning: E2:S09:T00 - Story Creation and FR-016 Intake
+
+### Added
+
+- **Epic 2 Story 9:** Kanban Granularity & Discrete Task Docs (3-Tier Structure)
+  - Created Story 9 under Epic 2 for FR-016 coordination
+  - Defined 8 tasks (T00-T07) for implementing 3-tier structure enforcement
+  - T00 (Story Creation and FR-016 Intake) complete
+
+- **FR-016:** Kanban Granularity & Discrete Task Docs
+  - Status: ACCEPTED
+  - Assigned to Epic 2, Story 9
+
+- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+  - Status: PENDING
+  - Depends on FR-016
+
+### Notes
+
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.0+1.md` for full details
+- Story 9 will coordinate work across Epic 2 (Workflow Management) and Epic 4 (Kanban Framework)
+
+---
+
 ## [0.4.6.9+2] - 2025-12-11
 
 ✅ Feature: E4:S06:T09 - BR-009 Installer Discoverability Improvements

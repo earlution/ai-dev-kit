@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-10 (v0.2.8.0+0 – Story 8 created for FR-015: Harden Release Workflow Reliability)  
+**Last updated:** 2025-12-11 (v0.2.9.0+0 – Story 9 created for FR-016: Kanban Granularity & Discrete Task Docs)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -40,6 +40,9 @@ housekeeping_policy: keep
 - [ ] **E2:S08 – Harden Release Workflow Reliability** - TODO (v0.2.8.0+0 – Story created for FR-015)
   - Story: [`Story-008-harden-release-workflow-reliability.md`](Story-008-harden-release-workflow-reliability.md)
   - Tasks: T00 ✅ COMPLETE, T01-T07 TODO (FR-015: Harden Kanban docs update step in RW)
+- [ ] **E2:S09 – Kanban Granularity & Discrete Task Docs** - TODO (v0.2.9.0+0 – Story created for FR-016)
+  - Story: [`Story-009-kanban-granularity-discrete-task-docs.md`](Story-009-kanban-granularity-discrete-task-docs.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T07 TODO (FR-016: 3-tier structure and discrete Task docs)
 
 ---
 
