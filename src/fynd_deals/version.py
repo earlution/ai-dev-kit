@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
-VERSION_TASK = 0      # Task number (Task 0: Story Creation and FR-019 Intake - COMPLETE)
-VERSION_BUILD = 0     # Build number (abstract space for E2:S11 - doc-init)
+VERSION_STORY = 10    # Story number (Story 10: Doc-Init Build (+0) for New E/S/T)
+VERSION_TASK = 6      # Task number (Task 6: Update Version Validator for Abstract Space Awareness - FR-020)
+VERSION_BUILD = 0     # Build number (abstract space for E2:S10:T06 - doc-init)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

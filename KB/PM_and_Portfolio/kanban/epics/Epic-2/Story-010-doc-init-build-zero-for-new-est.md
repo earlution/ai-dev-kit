@@ -27,7 +27,8 @@ housekeeping_policy: keep
 - [ ] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries**
 - [ ] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic**
 - [ ] **E2:S10:T05 – Update RW Step 1 Procedure Documentation**
-- [ ] **E2:S10:T06 – Documentation and Testing**
+- [ ] **E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)**
+- [ ] **E2:S10:T07 – Documentation and Testing**
 
 > **Format:** `E2:S10:Txx` (Epic 2, Story 10, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.10.1+1)`)  
@@ -257,6 +258,58 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ---
 
+### E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)
+
+**Input:** Current version validator (`validate_version_bump.py`), FR-020 requirements  
+**Deliverable:** Version validator recognizes `+0` as valid BUILD for abstract spaces  
+**Dependencies:** T02 (doc-init validation), FR-017/FR-018 (abstract space concept)  
+**Blocker:** None  
+**Parallel Development Candidacy:** Safe (depends on T02)
+
+**Approach:**
+1. Review current validator implementation:
+   - `packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py`
+   - Current logic expects BUILD >= 1
+   - No awareness of abstract space (`+0`) concept
+2. Update validator to recognize `+0` as valid:
+   - Accept `+0` as valid BUILD number
+   - Check that `+0` is only used for first-time E/S/T doc commits
+   - Validate that `+0` commits are docs-only (no code changes)
+   - Enforce `+1` or higher for functional changes
+3. Add detection logic:
+   - Detect new E/S/T doc files (first-time commit via git diff)
+   - Check git diff for docs-only requirement
+   - Verify version matches E/S/T being created
+4. Add validation logic:
+   - If BUILD = 0: Must be first-time E/S/T doc commit
+   - If BUILD = 0: Must be docs-only (no code changes)
+   - If BUILD >= 1: Can include functional changes
+5. Update error messages:
+   - Explain why `+0` is invalid (if used incorrectly)
+   - Explain what conditions make `+0` valid
+   - Provide guidance on how to fix invalid usage
+6. Add test cases:
+   - Valid `+0` abstract space builds
+   - Invalid `+0` usage (code changes present)
+   - Invalid `+0` usage (E/S/T doc already exists)
+   - Functional changes requiring `+1` or higher
+7. Update validator documentation
+
+**Acceptance Criteria:**
+- [ ] Validator recognizes `+0` as valid BUILD for abstract spaces
+- [ ] Validator checks that `+0` is only used for first-time E/S/T doc commits
+- [ ] Validator validates that `+0` commits are docs-only (no code changes)
+- [ ] Validator enforces `+1` or higher for functional changes
+- [ ] Validator provides clear error messages for invalid `+0` usage
+- [ ] Validator detects E/S/T doc creation (new file detection)
+- [ ] Validator checks git diff for docs-only requirement
+- [ ] Test cases cover all abstract space scenarios
+- [ ] Documentation updated with abstract space validation logic
+
+---
+
+### E2:S10:T07 – Documentation and Testing
+
 ## Acceptance Criteria
 
 - [ ] **AC1:** RW supports a doc-init path that emits `RC.EPIC.STORY.TASK+0` for new E/S/T docs only
@@ -266,6 +319,8 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 - [ ] **AC5:** Versioning Policy and RW-STEP1 procedure updated to include doc-init logic
 - [ ] **AC6:** Doc-init validation is deterministic (100% confidence)
 - [ ] **AC7:** Clear separation between task introduction (docs) and implementation (code)
+- [ ] **AC8:** Version validator recognizes `+0` as valid BUILD for abstract spaces (FR-020)
+- [ ] **AC9:** Version validator validates abstract space conditions (first-time E/S/T doc, docs-only)
 
 ---
 
@@ -285,6 +340,7 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 - **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) (prerequisite)
 - **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (this story)
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (defines abstract space concept)
+- **FR-020:** Version Validator Abstract Space Awareness (validator enhancement - T06)
 - **E2:S09:** Kanban Granularity & Discrete Task Docs (RW Integration)
 - **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework)
 
@@ -301,6 +357,7 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 - **FR-017:** `KB/PM_and_Portfolio/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md`
 - **FR-016:** `KB/PM_and_Portfolio/kanban/fr-br/FR-016-kanban-granularity-discrete-task-docs.md`
 - **FR-018:** `KB/PM_and_Portfolio/kanban/fr-br/FR-018-abstract-space-zero-numbered-est-docs.md`
+- **FR-020:** `KB/PM_and_Portfolio/kanban/fr-br/FR-020-version-validator-abstract-space-awareness.md`
 - **RW Agent Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **Versioning Policy (Dev-Kit):** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
 - **Versioning Policy (Framework):** `packages/frameworks/numbering & versioning/versioning-policy.md`

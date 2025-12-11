@@ -17,6 +17,40 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.10.6+0] - 2025-12-11
+
+📋 Doc Init (Abstract Space): E2:S10:T06 - Task Creation and FR-020 Intake
+
+### Added
+
+- **Epic 2 Story 10 Task 6:** Update Version Validator for Abstract Space Awareness (FR-020)
+  - Created Task 6 under Story 10 for FR-020 implementation
+  - Defined approach and acceptance criteria for validator enhancement
+  - Abstract space `0.2.10.6+0` established for forensic traceability
+
+- **FR-020:** Version Validator Abstract Space Awareness
+  - Created FR-020 document with full requirements
+  - Status: ACCEPTED
+  - Assigned to Epic 2, Story 10, Task 6
+
+### Updated
+
+- **Story 10:** Added T06 to task checklist, updated acceptance criteria (AC8, AC9)
+- **Epic 2:** Updated Story 10 task count (T01-T07)
+- **Story 10:** Added FR-020 to Related Work section
+
+### Related Work
+
+- Epic: 2
+- Story: 10
+- Task: 6
+- FR-020: Version Validator Abstract Space Awareness
+- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) (abstract space concept)
+- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (abstract space definition)
+- E2:S10:T02: Implement Doc-Init Validation (Docs-Only Check) (related validation)
+
+---
+
 ## [0.2.11.0+0] - 2025-12-11
 
 📋 Doc Init (Abstract Space): E2:S11:T00 - Story Creation and FR-019 Intake

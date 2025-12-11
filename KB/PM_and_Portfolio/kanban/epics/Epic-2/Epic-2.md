@@ -46,7 +46,7 @@ housekeeping_policy: keep
   - **Coordination:** Coordinates with E4:S11 (Kanban policy and templates)
 - [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - TODO (v0.2.10.0+0 – Story created for FR-017)
   - Story: [`Story-010-doc-init-build-zero-for-new-est.md`](Story-010-doc-init-build-zero-for-new-est.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T06 TODO (FR-017: Doc-init build `+0` for new E/S/T)
+  - Tasks: T00 ✅ COMPLETE, T01-T07 TODO (FR-017: Doc-init build `+0` for new E/S/T, FR-020: Validator abstract space awareness)
   - **Dependency:** Blocked by FR-016 (requires discrete Task docs first)
 - [ ] **E2:S11 – Intake Workflow Automation** - TODO (v0.2.11.0+0 – Story created for FR-019)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
