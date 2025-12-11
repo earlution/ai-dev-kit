@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Submitted:** 2025-12-11  
 **Submitted By:** User (from starborn-legacy project)  
 **Priority:** HIGH  
-**Status:** PENDING  
+**Status:** ACCEPTED  
 
 ---
 
@@ -155,9 +155,34 @@ This feature is needed:
 
 **Related Work:**
 - **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) (prerequisite)
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (defines abstract space concept used by doc-init `+0`)
 - Versioning Policy (`docs/VERSIONING_POLICY.md`)
 - RW Step 1 procedure (`docs/RW-STEP1-VERSION-BUMP-PROCEDURE.md`)
 - Release Workflow agent execution guide (`docs/release-workflow-agent-execution.md`)
+
+---
+
+## Intake Decision
+
+**Intake Status:** ACCEPTED  
+**Intake Date:** 2025-12-11  
+**Intake By:** AI Agent (Auto)
+
+**Decision Flow Results:**
+- [x] New Story Created: Epic 2, Story 10 → Task 00 (Story creation)
+
+**Assigned To:**
+- Epic: Epic 2 (Workflow Management Framework)
+- Story: Story 10 (Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T)
+- Task: T00-T06 (Story creation and implementation tasks)
+- Version: `v0.2.10.0+0` (Story creation)
+
+**Kanban Links:**
+- Epic: [`KB/PM_and_Portfolio/kanban/epics/Epic-2/Epic-2.md`](../epics/Epic-2/Epic-2.md)
+- Story: [`KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md`](../epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md)
+- Task: See Story 10 task checklist
+
+**Note:** This story is blocked by FR-016 (requires discrete Task docs first). Implementation should begin after FR-016 completion.
 
 ---
 

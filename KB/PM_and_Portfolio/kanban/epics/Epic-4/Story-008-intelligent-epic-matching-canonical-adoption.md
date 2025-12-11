@@ -123,6 +123,12 @@ Implement intelligent epic matching with semantic analysis and AI-assisted task 
 - Design Decision: `KB/PM_and_Portfolio/kanban/fr-br/DESIGN_DECISION-task-id-preservation-vs-canonical-epic-structure-REFINED.md`
 - GitHub Issue #7: Additional context comments (Match Decision Matrix, Template Task Installation, Detailed Scenarios)
 
+## Related Work
+
+- **FR-009:** Intelligent Epic Matching and AI-Assisted Canonical Structure Adoption (this story)
+- **FR-019:** Intake Workflow Automation (uses semantic matching from this story for decision flow analysis)
+- **E2:S11:** Intake Workflow Automation (leverages semantic matching for Epic/Story/Task placement)
+
 ---
 
 **Template Usage:** Story follows Kanban framework story template; Tasks trace to FR for forensic linkage.

@@ -298,6 +298,8 @@ Create a trigger-aware RW system that:
 - **FR-013:** Trigger-Aware Release Workflow
 - **FR-014:** New RW Trigger for FR/BR Commits
 - **FR-012:** Agentic Kanban Task Creation from FR/BR (sub-workflow)
+- **FR-019:** Intake Workflow Automation (can be triggered by FR/BR commits)
+- **E2:S11:** Intake Workflow Automation (uses trigger-aware RW for execution)
 - **Epic 2:** Workflow Management Framework
 - **Epic 4 Story 10:** Agentic Kanban Task Creation from FR/BR (sub-workflow)
 

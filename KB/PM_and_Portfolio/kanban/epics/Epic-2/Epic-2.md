@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-11 (v0.2.9.0+0 – Story 9 created for FR-016: Kanban Granularity & Discrete Task Docs)  
+**Last updated:** 2025-12-11 (v0.2.11.0+0 – Story 11 created for FR-019: Intake Workflow Automation)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -40,9 +40,17 @@ housekeeping_policy: keep
 - [ ] **E2:S08 – Harden Release Workflow Reliability** - TODO (v0.2.8.0+0 – Story created for FR-015)
   - Story: [`Story-008-harden-release-workflow-reliability.md`](Story-008-harden-release-workflow-reliability.md)
   - Tasks: T00 ✅ COMPLETE, T01-T07 TODO (FR-015: Harden Kanban docs update step in RW)
-- [ ] **E2:S09 – Kanban Granularity & Discrete Task Docs** - TODO (v0.2.9.0+0 – Story created for FR-016)
+- [ ] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - TODO (v0.2.9.0+0 – Story created for FR-016)
   - Story: [`Story-009-kanban-granularity-discrete-task-docs.md`](Story-009-kanban-granularity-discrete-task-docs.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T07 TODO (FR-016: 3-tier structure and discrete Task docs)
+  - Tasks: T00 ✅ COMPLETE, T01-T05 TODO (FR-016: RW Step 1, validators, agent execution guide)
+  - **Coordination:** Coordinates with E4:S11 (Kanban policy and templates)
+- [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - TODO (v0.2.10.0+0 – Story created for FR-017)
+  - Story: [`Story-010-doc-init-build-zero-for-new-est.md`](Story-010-doc-init-build-zero-for-new-est.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T06 TODO (FR-017: Doc-init build `+0` for new E/S/T)
+  - **Dependency:** Blocked by FR-016 (requires discrete Task docs first)
+- [ ] **E2:S11 – Intake Workflow Automation** - TODO (v0.2.11.0+0 – Story created for FR-019)
+  - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T09 TODO (FR-019: Automated intake workflow for FR/BR/UXR); related to FR-018 (abstract space concept used by doc-init)
 
 ---
 

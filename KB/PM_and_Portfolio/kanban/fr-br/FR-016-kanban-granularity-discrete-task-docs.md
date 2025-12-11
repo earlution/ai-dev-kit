@@ -153,10 +153,11 @@ This feature is needed:
 - Clear task lifecycle: define → anchor → implement
 
 **Blocked By:**
-- None (can be implemented independently; FR-017 depends on this)
+- None (can be implemented independently; FR-017 and FR-018 depend on this)
 
 **Related Work:**
 - **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (depends on this FR)
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (depends on this FR)
 - **Versioning Policy:** `docs/VERSIONING_POLICY.md`
 - **RW Step 1 Procedure:** `docs/RW-STEP1-VERSION-BUMP-PROCEDURE.md`
 - **Kanban Policy Docs:** Kanban governance policy documents

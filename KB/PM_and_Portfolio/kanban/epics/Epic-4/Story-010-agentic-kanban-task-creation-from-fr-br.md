@@ -257,6 +257,8 @@ Create an agentic workflow that:
 ## Related Work
 
 - **FR-012:** Agentic Kanban Task Creation from FR/BR
+- **FR-019:** Intake Workflow Automation (orchestrates this workflow for full intake process)
+- **E2:S11:** Intake Workflow Automation (uses this workflow for task creation)
 - **Epic 4 Story 2:** FR/BR Intake to Tasks (intake foundation)
 - **Epic 4 Story 6:** Comprehensive Canonical E/S/T Template System (template foundation)
 - **Epic 4 Story 8:** Intelligent Epic Matching and Canonical Structure Adoption (semantic matching)
