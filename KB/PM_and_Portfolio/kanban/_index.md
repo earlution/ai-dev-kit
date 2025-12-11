@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board (Quick View)
 
 **Last Updated:** 2025-12-11  
-**Version:** v0.4.12.0+0
+**Version:** v0.4.11.4+1
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 8, 9, 21 are IN PROGRESS or TODO.
 

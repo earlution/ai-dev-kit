@@ -54,6 +54,26 @@ housekeeping_policy: keep
 
 ## Tasks
 
+> **CRITICAL: Tier Delegation Principle**
+> 
+> **Story documents MUST delegate Task detail to Task documents.** This Story template should NOT duplicate Task-level implementation details (Approach steps, detailed acceptance criteria, etc.). Instead, Story documents should:
+> - Reference tasks via Task Checklist (above)
+> - Provide brief task summaries or links to Task documents
+> - Delegate all detailed Task information to Task documents
+> 
+> **What belongs in Story:**
+> - ✅ Task Checklist (references only, with status/version markers)
+> - ✅ Brief task summaries (1 sentence per task)
+> - ✅ Links to Task documents (for separate file format)
+> - ✅ Story-level acceptance criteria (not task-level)
+> - ✅ Story-level goals and overview
+> 
+> **What does NOT belong in Story:**
+> - ❌ Detailed task descriptions
+> - ❌ Task implementation details (Approach steps)
+> - ❌ Task-level acceptance criteria (these belong in Task docs)
+> - ❌ Task input/deliverable details (unless brief summary)
+
 **CRITICAL: Task Document Requirements**
 
 Every Task MUST have a discrete Task document. Tasks can be documented in one of two formats:
@@ -141,9 +161,15 @@ Regardless of format, every Task MUST include:
 
 #### Example: Delimited Section Format
 
+> **Note:** Even when using delimited sections within the Story document, the Task content should be self-contained and complete. The Story document serves as a container, but the Task section should contain all Task-level detail (Input, Deliverable, Approach, Acceptance Criteria, etc.).
+
 ### EXX:SYY:T01 – [Task Title]
 
 > **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E1:S01:T01`, not `T01` alone)
+
+**Brief Summary:** [One sentence description of what this task accomplishes]
+
+**Task Document:** This task is documented as a delimited section within this Story document. For detailed Task information (Input, Deliverable, Approach, Acceptance Criteria, Dependencies, etc.), see the Task section below.
 
 **Input:** [What this task requires]  
 **Deliverable:** [What this task produces]  
@@ -155,6 +181,12 @@ Regardless of format, every Task MUST include:
 1. Step one
 2. Step two
 3. Step three
+
+**Acceptance Criteria:**
+- [ ] Criterion one (measurable, testable)
+- [ ] Criterion two (measurable, testable)
+
+> **Note:** When using delimited sections, all Task-level detail lives in the Task section. The Story document provides the container, but does not duplicate Task information elsewhere.
 
 ---
 

@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 11    # Story number (Story 11: Kanban Granularity & Discrete Task Docs)
-VERSION_TASK = 4      # Task number (Task 4: Define Abstract Space for Zero-Numbered E/S/T Docs)
-VERSION_BUILD = 1     # Build number (E4:S11:T04 complete - abstract space definition)
+VERSION_TASK = 6      # Task number (Task 6: Review and Optimize Template Structure for Tier Delegation)
+VERSION_BUILD = 1     # Build number (E4:S11:T06 Phase 1-4 complete - template optimization and delegation guidelines)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

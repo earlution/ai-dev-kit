@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [x] **E4:S11:T03 – Update Versioning Policy with Task Doc Requirements (Kanban-related sections)** ✅ COMPLETE (v0.4.11.3+1)
 - [x] **E4:S11:T04 – Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)** ✅ COMPLETE (v0.4.11.4+1)
 - [ ] **E4:S11:T05 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.4.11.5+0)
-- [ ] **E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation**
+- [ ] **E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation** - IN PROGRESS (v0.4.11.6+1 – Phase 1-4 complete: Epic/Story templates optimized, delegation guidelines created)
 
 > **Format:** `E4:S11:Txx` (Epic 4, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)  
@@ -259,11 +259,20 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 
 ### E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation
 
+**Status:** IN PROGRESS (v0.4.11.6+1 – Phase 1-4 complete)  
 **Input:** Epic, Story, and Task templates (from E4:S06 and E4:S11:T02), current template structure  
 **Deliverable:** Optimized templates with proper tier delegation, delegation guidelines documented  
 **Dependencies:** E4:S11:T02 (Task template created), E4:S06:T01-T04 (Epic/Story/Task templates created)  
 **Blocker:** None  
 **Parallel Development Candidacy:** Safe (depends on templates being created)
+
+**Progress:**
+- ✅ Phase 1: Epic template optimized to delegate Story detail (removed detailed Story sections, added delegation guidance)
+- ✅ Phase 2: Story template optimized to delegate Task detail (added delegation guidance, clarified delimited section format)
+- ✅ Phase 3: Task template reviewed (confirmed as leaf node - no changes needed)
+- ✅ Phase 4: Delegation guidelines document created (`TIER_DELEGATION_GUIDELINES.md`)
+- ⏳ Phase 5: Review existing Epic/Story/Task docs for compliance (TODO)
+- ⏳ Phase 6: Create migration guide for updating existing docs (TODO)
 
 **Approach:**
 1. Review Epic template structure:
@@ -296,14 +305,14 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
    - Document examples of proper vs. improper delegation
 
 **Acceptance Criteria:**
-- [ ] Epic templates delegate Story detail to Story docs (no duplication)
-- [ ] Story templates delegate Task detail to Task docs (no duplication)
-- [ ] Task templates contain all necessary detail (leaf node)
-- [ ] Delegation guidelines documented with examples
-- [ ] All templates updated with proper delegation
-- [ ] Template guidance comments added explaining delegation
-- [ ] Migration guide created for updating existing docs
-- [ ] Examples of proper vs. improper delegation documented
+- [x] Epic templates delegate Story detail to Story docs (no duplication) ✅ Phase 1
+- [x] Story templates delegate Task detail to Task docs (no duplication) ✅ Phase 2
+- [x] Task templates contain all necessary detail (leaf node) ✅ Phase 3
+- [x] Delegation guidelines documented with examples ✅ Phase 4
+- [x] All templates updated with proper delegation ✅ Phase 1-2
+- [x] Template guidance comments added explaining delegation ✅ Phase 1-2
+- [ ] Migration guide created for updating existing docs (included in guidelines doc, needs expansion)
+- [x] Examples of proper vs. improper delegation documented ✅ Phase 4
 
 **Coordination:**
 - This task should be performed after E4:S06:T03-T04 (Story/Task templates created)

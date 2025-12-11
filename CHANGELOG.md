@@ -17,6 +17,48 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.11.6+1] - 2025-12-11
+
+🔧 Template Optimization: E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation (Phase 1-4)
+
+### Added
+
+- **Tier Delegation Guidelines** (`packages/frameworks/kanban/templates/TIER_DELEGATION_GUIDELINES.md`):
+  - Comprehensive guide defining tier delegation principle (Epic → Story → Task)
+  - What belongs at each tier and what should be delegated
+  - Anti-patterns to avoid and best practices
+  - Migration guide for updating existing docs
+  - Examples of proper vs. improper delegation
+
+### Updated
+
+- **Epic Template** (`packages/frameworks/kanban/templates/EPIC_TEMPLATE.md`):
+  - Removed detailed Story sections (Status, Priority, Goals, Tasks, Acceptance Criteria)
+  - Added "CRITICAL: Tier Delegation Principle" section with guidance
+  - Replaced detailed Story sections with brief summaries and links to Story documents
+  - Epic now delegates all Story detail to Story documents
+
+- **Story Template** (`packages/frameworks/kanban/templates/STORY_TEMPLATE.md`):
+  - Added "CRITICAL: Tier Delegation Principle" section with guidance
+  - Clarified delimited section format with delegation notes
+  - Enhanced Task documentation requirements section
+  - Story now delegates all Task detail to Task documents
+
+- **Task Template** (`packages/frameworks/kanban/templates/TASK_TEMPLATE.md`):
+  - Reviewed and confirmed as leaf node (no changes needed - already contains all detail)
+
+- **Kanban Board** (`KB/PM_and_Portfolio/kanban/kanban-board.md`):
+  - Updated E4:S11 status to IN PROGRESS (v0.4.11.4+1)
+  - Updated task completion markers for T01-T04
+
+### Related Work
+
+- **Story:** E4:S11 - Kanban Granularity & Discrete Task Docs
+- **Task:** E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation
+- **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
+
 ## [0.4.11.4+1] - 2025-12-11
 
 📋 Policy Update: E4:S11:T04 - Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)

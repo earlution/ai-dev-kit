@@ -53,33 +53,32 @@ housekeeping_policy: keep
 
 ## Stories
 
+> **CRITICAL: Tier Delegation Principle**
+> 
+> **Epic documents MUST delegate Story detail to Story documents.** This Epic template should NOT duplicate Story-level information (Status, Priority, Goals, Tasks, Acceptance Criteria, etc.). Instead, Epic documents should:
+> - Reference stories via Story Checklist (above)
+> - Provide brief story summaries or links to Story documents
+> - Delegate all detailed Story information to Story documents
+> 
+> **What belongs in Epic:**
+> - ✅ Story Checklist (references only, with status/version markers)
+> - ✅ Brief story summaries (1-2 sentences per story)
+> - ✅ Links to Story documents
+> - ✅ Epic-level dependencies and coordination
+> 
+> **What does NOT belong in Epic:**
+> - ❌ Detailed story descriptions
+> - ❌ Story-level goals, tasks, acceptance criteria
+> - ❌ Task-level details
+> - ❌ Story implementation details
+
 ### Story Y: [Story Title]
 
-**Status:** [TODO/IN PROGRESS/COMPLETE]
-**Priority:** [HIGH/MEDIUM/LOW]
-**Estimated Effort:** [X hours]
-**Last updated:** [YYYY-MM-DD] (vX.Y.Z.T+B – [summary])
+**Brief Summary:** [One sentence description of what this story accomplishes]
 
-**Goal:** [Single sentence description]
+**Story Document:** [`Story-YYY-story-title.md`](Story-YYY-story-title.md) or [`epics/Epic-X/Story-YYY-story-title.md`](epics/Epic-X/Story-YYY-story-title.md)
 
-**Tasks:**
-- [ ] EXX:SYY:T01 – [Task Title] ✅ COMPLETE (vX.Y.Z.T+B)
-- [ ] EXX:SYY:T02 – [Task Title]
-
-> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E1:S01:T01`, not `T01` alone)
-
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.1.3+1)`)  
-> **Consistency:** Task checkboxes in this detailed section must match the Story file's Task Checklist.
-
-**Acceptance Criteria:**
-- Criterion one
-- Criterion two
-
-**Parallel Development Dependencies:**
-- Dependency summary
-- *Parallel Development Candidacy:* [Safe / Blocked] because [reason]
-
-> Full story: `KB/PM_and_Portfolio/stories/overview/Epic X/Story-Y-Title.md`
+> **Note:** For detailed Story information (Status, Priority, Goals, Tasks, Acceptance Criteria, Dependencies, etc.), see the Story document linked above. This Epic document only provides a high-level reference.
 
 ---
 
