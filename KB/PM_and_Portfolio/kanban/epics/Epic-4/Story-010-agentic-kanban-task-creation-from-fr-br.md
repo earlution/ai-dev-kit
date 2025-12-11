@@ -42,7 +42,7 @@ Create an agentic workflow that:
 - [ ] **E4:S10:T02 – Implement intelligent epic/story mapping** - IN PROGRESS (v0.4.10.2+0)
 - [ ] **E4:S10:T03 – Implement template-based task creation** - IN PROGRESS (v0.4.10.3+0)
 - [ ] **E4:S10:T04 – Implement task contextualization** - IN PROGRESS (v0.4.10.4+0)
-- [ ] **E4:S10:T05 – Integrate with FR/BR intake workflow** - TODO
+- [ ] **E4:S10:T05 – Integrate with FR/BR intake workflow** - IN PROGRESS (v0.4.10.5+0)
 - [ ] **E4:S10:T06 – Add agentic intelligence and explanations** - TODO
 - [ ] **E4:S10:T07 – Documentation and testing** - TODO
 
@@ -178,7 +178,7 @@ Create an agentic workflow that:
 
 ### E4:S10:T05 – Integrate with FR/BR intake workflow
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** E4:S10:T04  
 **Blocker:** None
@@ -189,14 +189,17 @@ Create an agentic workflow that:
 - GitHub integration (if applicable)
 
 **Deliverable:**
-- Integration with FR/BR intake workflow
-- Automated task creation on FR/BR submission
-- Workflow orchestration
+- Agentic Task Workflow ✅ (`packages/frameworks/kanban/scripts/agentic_task_workflow.py`)
+- Integration with FR/BR intake workflow ✅
+- Automated task creation on FR/BR submission ✅
+- Workflow orchestration ✅
+- FR/BR document linking with tasks ✅
 
 **Acceptance Criteria:**
-- Integration with intake workflow complete
-- Automated task creation working
-- Workflow orchestration functional
+- ✅ Integration with intake workflow complete
+- ✅ Automated task creation working
+- ✅ Workflow orchestration functional
+- ✅ FR/BR documents linked to created tasks
 
 ---
 
