@@ -21,7 +21,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E9:S04:T00 – Setup: Material Capture Infrastructure** ✅ COMPLETE (v0.9.4.0+1)
-- [x] **E9:S04:T01 – Capture Starborn Legacy Zombie Story Report** ✅ COMPLETE (v0.9.4.1+0)
+- [x] **E9:S04:T01 – Capture Starborn Legacy Zombie Story Report** ✅ COMPLETE (v0.9.4.1+1)
 
 ---
 
@@ -97,13 +97,21 @@ Create a system for capturing and storing unstructured book material (text dumps
 **Blocker:** None  
 **Parallel Development Candidacy:** Safe
 
+**Scope:** Capture the complete Starborn Legacy Zombie Story case study report as unstructured book material. This report documents technical debt patterns and serves as a cautionary tale for AI-assisted development workflows. Material will be stored in task section for later processing into structured book content.
+
+**Acceptance Criteria:**
+- [x] Complete report captured as unstructured material
+- [x] Report stored in task section with full content
+- [x] Metadata included: source project (Starborn Legacy), date (2025-12-11), type (case study report)
+- [x] Material ready for later processing into structured book content
+
 **Approach:**
 1. Capture the complete report as unstructured material
 2. Store in appropriate location for book material capture
 3. Add metadata: source project (Starborn Legacy), date (2025-12-11), type (case study report)
 4. Note: This material will be processed later for use in book content
 
-**Status:** ✅ COMPLETE (v0.9.4.1+0)
+**Status:** ✅ COMPLETE (v0.9.4.1+1)
 
 **Captured Material:**
 

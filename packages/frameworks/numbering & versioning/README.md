@@ -147,6 +147,35 @@ This package is designed to be **portable and customizable** for use in other pr
 
 **Example:** `0.15.1.4+2` = Development, Epic 15, Story 1, Task 4, Build 2
 
+### Task Document Requirements
+
+**🚨 CRITICAL: Task Document Must Exist Before Versioning**
+
+The versioning policy requires that:
+- **Task document MUST exist** before a version can be created for that task
+- **Task ID in document MUST match** version TASK component
+- **Epic/Story/Task alignment MUST be verified** before version bump
+
+**Task Document Formats:**
+- **Separate File:** `Task-{task}-*.md` or `T{task}-*.md` in Story directory
+- **Delimited Section:** Section within Story file using Task ID header (`### E{epic}:S{story}:T{task} –`)
+
+**Required Task Document Fields:**
+- Task ID (`E{epic}:S{story}:T{task}`)
+- Scope
+- Acceptance Criteria
+- Status
+- Version Anchor (forensic marker format)
+- Input
+- Deliverable
+
+**Validation:**
+- Release Workflow Step 2 (B.1) validates Task document presence and alignment
+- Version validators check Task doc → version component alignment
+- Workflow fails if Task document is missing or misaligned
+
+**See:** `kanban-governance-policy.md` - Section 3.3: Tasks for complete Task document requirements.
+
 ## Epic Renumbering Strategy
 
 **Problem:** Having both old (`RC.EPIC.STORY.PATCH`) and new (`RC.EPIC.STORY.TASK+BUILD`) version formats within the same epic creates confusion and version collisions.

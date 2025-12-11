@@ -227,6 +227,94 @@ You don't need to understand the details—just know that each Task gets a uniqu
 
 ---
 
+## Creating Task Documents
+
+**🚨 IMPORTANT: 3-Tier Structure Requirement**
+
+All work MUST follow the explicit **3-tier structure**: Epic → Story → Task. Every task MUST have a discrete Task document.
+
+### What is a Task Document?
+
+A Task document is the explicit documentation for a single task. It contains all the details needed to complete the task, including scope, acceptance criteria, input, and deliverables.
+
+### When Do I Create a Task Document?
+
+**You create a Task document when:**
+- A Task is created in a Story
+- You're starting work on a Task
+- You need to document Task details explicitly
+
+**Task documents are MANDATORY** - Release Workflow requires them before versioning.
+
+### How to Create a Task Document
+
+**Step 1: Choose Format**
+
+You can create Task documents in two formats:
+
+**Format 1: Separate Task File (Recommended for complex tasks)**
+- Create a new file: `Task-{task}-{description}.md` in the Story directory
+- Example: `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
+
+**Format 2: Delimited Section (Recommended for simple tasks)**
+- Add a section to the Story file with Task ID header
+- Format: `### E{epic}:S{story}:T{task} – Task Name`
+- Example: `### E4:S11:T01 – Update Kanban Governance Policy`
+
+**Step 2: Use the Template**
+
+1. Copy the Task template: `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+2. Fill in required fields:
+   - **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
+   - **Scope:** Clear description of what the task accomplishes
+   - **Acceptance Criteria:** Measurable criteria for completion
+   - **Input:** What is required to start this task
+   - **Deliverable:** What is produced by this task
+   - **Status:** TODO, IN PROGRESS, or COMPLETE
+
+**Step 3: Link from Story**
+
+Update the Story Task Checklist to reference the Task document:
+
+**For Separate Files:**
+```markdown
+- [ ] **E4:S11:T01 – Update Kanban Governance Policy** - TODO
+  - Task Doc: [`Task-001-update-kanban-policy.md`](Task-001-update-kanban-policy.md)
+```
+
+**For Delimited Sections:**
+```markdown
+- [ ] **E4:S11:T01 – Update Kanban Governance Policy** - TODO
+  - Task Doc: See section below
+```
+
+### Required Fields
+
+Every Task document MUST include:
+- ✅ Task ID (`E{epic}:S{story}:T{task}`)
+- ✅ Scope
+- ✅ Acceptance Criteria
+- ✅ Status
+- ✅ Input
+- ✅ Deliverable
+
+**See:** `packages/frameworks/kanban/templates/TASK_TEMPLATE.md` for complete template.
+
+### Examples
+
+**Example: Separate Task File**
+- File: `Task-001-update-kanban-policy.md`
+- Contains: Full task documentation with all required fields
+- Referenced in: Story Task Checklist
+
+**Example: Delimited Section**
+- Location: Within Story file
+- Header: `### E4:S11:T01 – Update Kanban Governance Policy`
+- Contains: Full task documentation with all required fields
+- Referenced in: Story Task Checklist
+
+---
+
 ## Troubleshooting
 
 ### "I can't find my request"

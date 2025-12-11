@@ -40,7 +40,9 @@ This package is designed to be **fully modular** with maximum flexibility. You c
 
 **What you get standalone:**
 - Complete Kanban governance policy
-- Epic and Story templates
+- Epic, Story, and Task templates
+- **3-tier structure requirement** (Epic → Story → Task) - **MANDATORY**
+- **Discrete Task document requirement** - Every task must have explicit documentation
 - Work item hierarchy (Epic → Story → Task)
 - Forensic traceability patterns
 - KB (Knowledge Base) documentation structure
@@ -138,11 +140,13 @@ structure:
   templates/:
     - EPIC_TEMPLATE.md                   # Epic document template
     - STORY_TEMPLATE.md                  # Story document template
+    - TASK_TEMPLATE.md                   # Task document template (MANDATORY for all tasks)
     - CANONICAL_STORIES.md               # Reusable canonical story patterns
     - CANONICAL_EPICS.md                 # Canonical epic definitions
     - COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md  # Complete canonical E/S/T structure (Epics 1-23+)
     - UXR_TEMPLATE.md                    # User Experience Research template
     - FB_TEMPLATE.md                     # User Acceptance Testing (UAT) Report template (requires empirical evidence)
+    - TIER_DELEGATION_GUIDELINES.md     # Guidelines for proper tier delegation (Epic → Story → Task)
 
   examples/:
     - Epic-4-Example.md                  # Real Epic (37 stories, 36 complete)
@@ -368,6 +372,16 @@ See [`scripts/README.md`](scripts/README.md) for detailed migration documentatio
 
 ### Work Item Hierarchy
 
+**🚨 CRITICAL: 3-Tier Structure Requirement**
+
+All work MUST follow the explicit **3-tier structure**: Epic → Story → Task. This structure is **mandatory** and **non-negotiable**.
+
+- **Epic** contains Stories (high-level scope)
+- **Story** contains Tasks (releasable slices)
+- **Task** is the atomic work unit (implementation detail)
+
+**No implicit or inline tasks are permitted.** Every task MUST be explicitly documented at the Task tier with a discrete Task document (or clearly delimited section within the Story document).
+
 ```yaml
 hierarchy:
   epic:
@@ -376,6 +390,7 @@ hierarchy:
     contains: "3-15 stories (typical)"
     version_tracking: "Version range (e.g., 0.4.x.x+x)"
     example: "Epic 4: User Workflows & Use Case Modeling"
+    requirement: "Must delegate Story detail to Story documents"
 
   story:
     definition: "User-facing feature or capability"
@@ -383,14 +398,23 @@ hierarchy:
     contains: "1-5 tasks (typical)"
     version_tracking: "Specific version (e.g., v0.4.33.3+1)"
     example: "Story 33: Parent Inclusivity and Accessibility"
+    requirement: "Must delegate Task detail to Task documents"
 
   task:
-    definition: "Concrete implementation unit"
+    definition: "Concrete implementation unit (atomic work)"
     duration: "1-3 days"
-    contains: "Atomic work unit"
+    contains: "Atomic work unit (leaf node - no delegation below)"
     version_tracking: "Specific version (e.g., v0.4.33.1+1)"
     example: "E4:S33:T01: Audit parent templates for WCAG 2.2 AA compliance"
+    requirement: "MUST have discrete Task document (separate file OR delimited section)"
+    required_fields: "Task ID, Scope, Acceptance Criteria, Status, Version Anchor, Input, Deliverable"
 ```
+
+**Task Document Formats:**
+- **Separate File (Recommended):** `Task-{task}-*.md` or `T{task}-*.md` in Story directory
+- **Delimited Section (Alternative):** Section within Story file using Task ID header (`### E{epic}:S{story}:T{task} –`)
+
+**See:** `policies/kanban-governance-policy.md` - Section 3.3: Tasks for complete requirements.
 
 ### Forensic Traceability
 

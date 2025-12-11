@@ -114,17 +114,38 @@ FR/BR Received
 - **Find:** Highest existing Task number (e.g., T01, T02, T03)
 - **Calculate:** Next Task number = Highest + 1 (e.g., T04)
 
-**Step 3a.2: Create Task**
-- **Location:** Story document (`KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-XXX-*.md`)
-- **Actions:**
-  1. Add Task to Task Checklist: `- [ ] EXX:SYY:TXXX – [Task Title]`
-  2. Add Task details in Tasks section:
-     - Input: [What this task requires]
-     - Deliverable: [What this task produces]
-     - Dependencies: [Epic, Story, Task, or external]
-     - Approach: [Step-by-step approach]
+**Step 3a.2: Create Task Document (MANDATORY)**
+- **🚨 CRITICAL:** Task document MUST be created - Release Workflow requires it
+- **Choose Format:**
+  - **Format 1 (Separate File):** `Task-{task}-{description}.md` in Story directory
+  - **Format 2 (Delimited Section):** Section in Story file with Task ID header
+- **Location (Format 1):** `{kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md`
+- **Location (Format 2):** Within Story file, section header: `### E{epic}:S{story}:T{task} – Task Name`
+- **Template:** Use `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+- **Required Fields:**
+  - Task ID: `E{epic}:S{story}:T{task}`
+  - Scope: Clear description of what task accomplishes
+  - Acceptance Criteria: Measurable criteria
+  - Input: What is required to start this task
+  - Deliverable: What is produced by this task
+  - Status: TODO
+  - Dependencies: [Epic, Story, Task, or external]
+  - Approach: [Step-by-step approach]
 
-**Step 3a.3: Assign Version**
+**Step 3a.3: Add Task to Story Checklist**
+- **Location:** Story document (`KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-XXX-*.md`)
+- **Format (Separate File):**
+  ```markdown
+  - [ ] **EXX:SYY:TXXX – [Task Title]** - TODO
+    - Task Doc: [`Task-XXX-task-title.md`](Task-XXX-task-title.md)
+  ```
+- **Format (Delimited Section):**
+  ```markdown
+  - [ ] **EXX:SYY:TXXX – [Task Title]** - TODO
+    - Task Doc: See section below
+  ```
+
+**Step 3a.4: Assign Version**
 - **Format:** `RC.EPIC.STORY.TASK+BUILD`
 - **Values:**
   - RC: 0 (development) or 1+ (release candidate)
@@ -132,8 +153,10 @@ FR/BR Received
   - STORY: Story number
   - TASK: Task number (from Step 3a.1)
   - BUILD: 1 (incremented by RW)
+- **Note:** Version will be assigned when task is completed via Release Workflow
+- **Validation:** Release Workflow Step 2 (B.1) validates Task document exists before versioning
 
-**Step 3a.4: Update Documents**
+**Step 3a.5: Update Documents**
 - **Story Document:**
   - Add Task to Task Checklist
   - Add Task details in Tasks section
@@ -147,7 +170,7 @@ FR/BR Received
   - Update `src/[project]/version.py` (or project-specific)
   - Set VERSION_EPIC, VERSION_STORY, VERSION_TASK, VERSION_BUILD
 
-**Step 3a.5: Update Kanban Board**
+**Step 3a.6: Update Kanban Board**
 - **Files:**
   - `KB/PM_and_Portfolio/kanban/kanban-board.md`
   - `KB/PM_and_Portfolio/kanban/_index.md`
@@ -156,7 +179,7 @@ FR/BR Received
   - Update Story's Task count
   - Ensure consistency with Story document
 
-**Step 3a.6: Complete**
+**Step 3a.7: Complete**
 - **Status:** Task created under existing Story
 - **Next:** Work on Task or proceed to next FR/BR
 
@@ -201,13 +224,37 @@ FR/BR Received
   - Overview: [One sentence description]
   - Tasks: [Will add Task 1]
 
-**Step 4a.3: Create Task**
+**Step 4a.3: Create Task Document (MANDATORY)**
+- **🚨 CRITICAL:** Task document MUST be created - Release Workflow requires it
 - **Task Number:** 1 (first Task in new Story)
-- **Actions:**
-  1. Add Task 1 to Story's Task Checklist
-  2. Add Task details in Story's Tasks section
+- **Choose Format:**
+  - **Format 1 (Separate File):** `Task-001-{description}.md` in Story directory
+  - **Format 2 (Delimited Section):** Section in Story file with Task ID header
+- **Template:** Use `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+- **Required Fields:**
+  - Task ID: `E{epic}:S{story}:T01`
+  - Scope: Clear description based on FR/BR
+  - Acceptance Criteria: Measurable criteria
+  - Input: What is required to start this task
+  - Deliverable: What is produced by this task
+  - Status: TODO
+  - Dependencies: [Epic, Story, Task, or external]
+  - Approach: [Step-by-step approach]
 
-**Step 4a.4: Assign Version**
+**Step 4a.4: Add Task to Story Checklist**
+- **Location:** Story document
+- **Format (Separate File):**
+  ```markdown
+  - [ ] **EXX:SYY:T01 – [Task Title]** - TODO
+    - Task Doc: [`Task-001-task-title.md`](Task-001-task-title.md)
+  ```
+- **Format (Delimited Section):**
+  ```markdown
+  - [ ] **EXX:SYY:T01 – [Task Title]** - TODO
+    - Task Doc: See section below
+  ```
+
+**Step 4a.5: Assign Version**
 - **Format:** `RC.EPIC.STORY.TASK+BUILD`
 - **Values:**
   - EPIC: Epic number
@@ -215,7 +262,7 @@ FR/BR Received
   - TASK: 1
   - BUILD: 1
 
-**Step 4a.5: Update Documents**
+**Step 4a.6: Update Documents**
 - **Epic Document:**
   - Add Story to Epic's Story Checklist
   - Add Story details in Epic's Stories section
@@ -233,7 +280,7 @@ FR/BR Received
   - Update `src/[project]/version.py`
   - Set VERSION_EPIC, VERSION_STORY, VERSION_TASK, VERSION_BUILD
 
-**Step 4a.6: Update Kanban Board**
+**Step 4a.7: Update Kanban Board**
 - **Files:**
   - `KB/PM_and_Portfolio/kanban/kanban-board.md`
   - `KB/PM_and_Portfolio/kanban/_index.md`
@@ -275,13 +322,37 @@ FR/BR Received
   - Goal: [Single sentence based on FR/BR]
   - Overview: [One sentence description]
 
-**Step 4b.4: Create Task**
+**Step 4b.4: Create Task Document (MANDATORY)**
+- **🚨 CRITICAL:** Task document MUST be created - Release Workflow requires it
 - **Task Number:** 1 (first Task in new Story)
-- **Actions:**
-  1. Add Task 1 to Story's Task Checklist
-  2. Add Task details in Story's Tasks section
+- **Choose Format:**
+  - **Format 1 (Separate File):** `Task-001-{description}.md` in Story directory
+  - **Format 2 (Delimited Section):** Section in Story file with Task ID header
+- **Template:** Use `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+- **Required Fields:**
+  - Task ID: `E{epic}:S01:T01`
+  - Scope: Clear description based on FR/BR
+  - Acceptance Criteria: Measurable criteria
+  - Input: What is required to start this task
+  - Deliverable: What is produced by this task
+  - Status: TODO
+  - Dependencies: [Epic, Story, Task, or external]
+  - Approach: [Step-by-step approach]
 
-**Step 4b.5: Assign Version**
+**Step 4b.5: Add Task to Story Checklist**
+- **Location:** Story document
+- **Format (Separate File):**
+  ```markdown
+  - [ ] **EXX:S01:T01 – [Task Title]** - TODO
+    - Task Doc: [`Task-001-task-title.md`](Task-001-task-title.md)
+  ```
+- **Format (Delimited Section):**
+  ```markdown
+  - [ ] **EXX:S01:T01 – [Task Title]** - TODO
+    - Task Doc: See section below
+  ```
+
+**Step 4b.6: Assign Version**
 - **Format:** `RC.EPIC.STORY.TASK+BUILD`
 - **Values:**
   - EPIC: Epic number (from Step 4b.1)
@@ -289,7 +360,7 @@ FR/BR Received
   - TASK: 1
   - BUILD: 1
 
-**Step 4b.6: Update Documents**
+**Step 4b.7: Update Documents**
 - **Epic Document:**
   - Add Story 1 to Epic's Story Checklist
   - Add Story details in Epic's Stories section
@@ -306,7 +377,7 @@ FR/BR Received
   - Update `src/[project]/version.py`
   - Set VERSION_EPIC, VERSION_STORY, VERSION_TASK, VERSION_BUILD
 
-**Step 4b.7: Update Kanban Board**
+**Step 4b.8: Update Kanban Board**
 - **Files:**
   - `KB/PM_and_Portfolio/kanban/kanban-board.md`
   - `KB/PM_and_Portfolio/kanban/_index.md`
@@ -316,7 +387,7 @@ FR/BR Received
   - Update Epic/Story counts
   - Ensure consistency with Epic/Story documents
 
-**Step 4b.8: Complete**
+**Step 4b.9: Complete**
 - **Status:** Epic, Story, and Task created
 - **Next:** Work on Task or proceed to next FR/BR
 
