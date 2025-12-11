@@ -69,9 +69,7 @@ This feature will allow users to authenticate using email and password. It shoul
 - [x] Frontend/UI
 - [x] Database/Schema
 
-## Priority
-
-HIGH
+**Priority:** HIGH
 """
     
     # Write test file
