@@ -217,17 +217,85 @@ class KanbanStructureMigrator:
                 return num
         return 1000  # Fallback
     
+    def _get_project_name(self) -> str:
+        """Detect project name from repository root or kanban path."""
+        # Try to get project name from repository root
+        # Walk up from kanban_path to find repository root (look for .git or project root indicators)
+        current = Path(self.kanban_path).resolve()
+        max_depth = 10  # Prevent infinite loops
+        depth = 0
+        
+        while depth < max_depth and current != current.parent:
+            # Check if this looks like a project root (has .git, setup.py, package.json, etc.)
+            if (current / ".git").exists() or (current / "setup.py").exists() or (current / "package.json").exists():
+                # Use directory name as project name
+                project_name = current.name
+                # Clean up common suffixes
+                project_name = project_name.replace("-dev-kit", "").replace("-kit", "")
+                return project_name
+            current = current.parent
+            depth += 1
+        
+        # Fallback: try to infer from kanban path structure
+        # If kanban_path is like "KB/PM_and_Portfolio/kanban", try to get repo root
+        if "KB" in str(self.kanban_path):
+            # Try to find repo root by going up from KB
+            kb_path = Path(self.kanban_path)
+            while kb_path != kb_path.parent and kb_path.name != "KB":
+                kb_path = kb_path.parent
+            if kb_path.parent != kb_path:
+                return kb_path.parent.name.replace("-dev-kit", "").replace("-kit", "")
+        
+        # Last resort: use a generic name
+        return "Project"
+    
+    def _get_template_path(self) -> Path:
+        """Get path to canonical epic templates directory."""
+        # This script is in packages/frameworks/kanban/scripts/
+        # Templates are in packages/frameworks/kanban/templates/epics/
+        script_dir = Path(__file__).parent
+        template_dir = script_dir.parent / "templates" / "epics"
+        return template_dir
+    
+    def _get_epic_template_file(self, epic_num: int) -> Optional[Path]:
+        """Get path to epic template file for given epic number."""
+        template_dir = self._get_template_path()
+        # Template files are named like "Epic-1-Project-Core.md", "Epic-2-Workflow-Management.md", etc.
+        # Try to find matching template
+        pattern = f"Epic-{epic_num}-*.md"
+        matches = list(template_dir.glob(pattern))
+        if matches:
+            return matches[0]  # Return first match
+        return None
+    
+    def _contextualize_template(self, content: str, project_name: str) -> str:
+        """Replace placeholders in template content with project-specific values."""
+        # Replace {PROJECT_NAME} placeholder
+        content = content.replace("{PROJECT_NAME}", project_name)
+        # Replace {project-slug} with slugified project name
+        project_slug = project_name.lower().replace(" ", "-").replace("_", "-")
+        content = content.replace("{project-slug}", project_slug)
+        return content
+    
     def _install_canonical_epics(self):
-        """Install canonical core epics (1-8, 10, 18, 22, 23)."""
+        """Install canonical core epics (1-8, 10, 18, 22, 23) from templates."""
         if self.mode == "hybrid":
             print("🔧 Hybrid mode: Installing canonical core epics alongside project epics...")
         elif self.mode == "canonical_adoption":
             print("🔧 Canonical adoption mode: Installing canonical core epics...")
         else:
-            print("🔧 Installing canonical core epics...")
+            print("🔧 Installing canonical core epics from templates...")
         
         # Canonical core epics: 1-8, 10, 18, 22, 23
         canonical_core_epics = [1, 2, 3, 4, 5, 6, 7, 8, 10, 18, 22, 23]
+        
+        # Get project name for contextualization
+        project_name = self._get_project_name()
+        template_dir = self._get_template_path()
+        
+        if not template_dir.exists():
+            print(f"  ⚠️  Warning: Template directory not found: {template_dir}")
+            print(f"  ⚠️  Falling back to placeholder epic creation")
         
         for epic_num in canonical_core_epics:
             epic_dir = self.kanban_path / "epics" / f"Epic-{epic_num}"
@@ -249,19 +317,40 @@ class KanbanStructureMigrator:
                 print(f"  ⚠️  Epic {epic_num} already exists, skipping...")
                 continue
             
+            # Try to get template file
+            template_file = self._get_epic_template_file(epic_num)
+            template_used = False
+            
             if not self.dry_run:
                 epic_dir.mkdir(parents=True, exist_ok=True)
-                # In real implementation, copy epic template here
                 epic_doc = epic_dir / f"Epic-{epic_num}.md"
-                if not epic_doc.exists():
-                    epic_doc.write_text(f"# Epic {epic_num}: [Canonical Epic]\n\n*This epic was installed from canonical framework.*\n")
+                
+                # Try to copy from template
+                if template_file and template_file.exists():
+                    # Read template content
+                    template_content = template_file.read_text(encoding='utf-8')
+                    # Contextualize (especially important for Epic 1)
+                    contextualized_content = self._contextualize_template(template_content, project_name)
+                    # Write to epic directory
+                    epic_doc.write_text(contextualized_content, encoding='utf-8')
+                    template_used = True
+                    print(f"  ✅ Epic {epic_num} installed from template: {template_file.name}")
+                else:
+                    # Fallback: create placeholder if template not found
+                    if not epic_doc.exists():
+                        epic_doc.write_text(
+                            f"# Epic {epic_num}: [Canonical Epic]\n\n"
+                            f"*This epic was installed from canonical framework.*\n"
+                            f"*Template file not found: Epic-{epic_num}-*.md*\n"
+                        )
+                        print(f"  ⚠️  Epic {epic_num} created with placeholder (template not found)")
             
             self.migration_log.append({
                 "type": "epic",
                 "action": "installed",
                 "epic_number": epic_num,
                 "path": str(epic_dir.relative_to(self.kanban_path)),
-                "source": "canonical_framework"
+                "source": "canonical_template" if template_used else "canonical_framework"
             })
     
     def _adopt_canonical_structure(self):

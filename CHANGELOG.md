@@ -17,6 +17,23 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.6.10+1] - 2025-12-11
+
+✅ Fix: E4:S06:T10 - BR-004 Epic Contamination Fix
+
+### Fixed
+
+- **Epic 4 Story 6 Task 10:** BR-004 - Fix epic contamination in installer
+  - Updated `migrate_structure.py` to use canonical epic templates instead of ai-dev-kit's actual epics
+  - Installer now copies from `packages/frameworks/kanban/templates/epics/` templates
+  - Added project name detection and contextualization for Epic 1
+  - Only installs canonical core epics (1-8, 10, 18, 22, 23)
+  - Excludes ai-dev-kit project-specific epics (5-9)
+  - Epic 1 now contextualized with project name (replaces `{PROJECT_NAME}` placeholder)
+- **BR-004:** All acceptance criteria satisfied - installer uses templates, not actual epics
+
+---
+
 ## [0.4.6.10+0] - 2025-12-11
 
 ✨ Feature: E4:S06:T10 - BR-004 Task Creation

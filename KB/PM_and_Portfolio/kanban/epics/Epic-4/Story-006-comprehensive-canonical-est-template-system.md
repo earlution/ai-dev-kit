@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-11 (v0.4.6.10+0 – Task 10 created for BR-004)  
-**Version:** v0.4.6.10+0  
+**Last updated:** 2025-12-11 (v0.4.6.10+1 – Task 10 complete: BR-004 epic contamination fixed)  
+**Version:** v0.4.6.10+1  
 **Code:** E4S06
 
 ---
@@ -476,9 +476,9 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 ### E4:S06:T10 – BR-004: Fix epic contamination in installer
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Dependencies:** E4:S06:T01-T02 (epic templates must exist)  
+**Dependencies:** E4:S06:T01-T02 (epic templates must exist) ✅  
 **Blocker:** None  
 **Linked BR:** BR-004 - Kanban Installation Includes Project-Specific Epics from Template
 
@@ -508,11 +508,11 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 4. Update documentation to clarify template usage
 
 **Acceptance Criteria:**
-- [ ] Installer uses canonical epic templates, not ai-dev-kit's actual epics
-- [ ] Fresh installs only receive canonical core epics (1-8, 10, 18, 22, 23)
-- [ ] Epic 1 is contextualized with project name (not "AI Dev Kit Core")
-- [ ] No ai-dev-kit project-specific epics (5-9) are installed
-- [ ] All BR-004 acceptance criteria satisfied
+- [x] Installer uses canonical epic templates, not ai-dev-kit's actual epics ✅
+- [x] Fresh installs only receive canonical core epics (1-8, 10, 18, 22, 23) ✅
+- [x] Epic 1 is contextualized with project name (not "AI Dev Kit Core") ✅
+- [x] No ai-dev-kit project-specific epics (5-9) are installed ✅
+- [x] All BR-004 acceptance criteria satisfied ✅
 
 ---
 
