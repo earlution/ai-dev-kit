@@ -22,7 +22,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [ ] **E2:S09:T00 – Story Creation and FR-016 Intake** ✅ COMPLETE (v0.2.9.0+0)
-- [ ] **E2:S09:T01 – Coordination and Task Decomposition**
+- [x] **E2:S09:T01 – Coordination and Task Decomposition** ✅ COMPLETE (v0.2.9.1+0)
 - [ ] **E2:S09:T02 – Update RW Step 1 to Require Task Doc Presence**
 - [ ] **E2:S09:T03 – Enhance Validators for Task Doc Presence and Alignment**
 - [ ] **E2:S09:T04 – Update RW Agent Execution Guide**
@@ -93,10 +93,27 @@ Coordinate RW-specific integration for **3-tier granularity** (Epic → Story �
 5. Document coordination approach and sequencing
 
 **Acceptance Criteria:**
-- [ ] E4:S11 created with Kanban-specific tasks (T01-T03)
-- [ ] E2:S09 updated with RW-specific tasks (T02-T05)
-- [ ] Dependencies documented and cross-referenced
-- [ ] Sequencing clear: Kanban work → RW integration
+- [x] E4:S11 created with Kanban-specific tasks (T01-T06) ✅ COMPLETE (v0.4.11.0+0)
+- [x] E2:S09 updated with RW-specific tasks (T02-T05) ✅ Verified
+- [x] Dependencies documented and cross-referenced ✅ Verified
+- [x] Sequencing clear: Kanban work → RW integration ✅ E4:S11 complete, E2:S09 can proceed
+
+**Status:** ✅ COMPLETE (v0.2.9.1+0)
+
+**Completion Summary:**
+Coordination between E4:S11 (Kanban Framework) and E2:S09 (RW Integration) is complete. E4:S11 has successfully delivered all Kanban-specific work:
+- ✅ T01: Kanban policy updated with 3-tier structure requirements
+- ✅ T02: Task document template created
+- ✅ T03: Versioning policy updated with Task doc requirements
+- ✅ T04: Abstract space defined for zero-numbered E/S/T docs
+- ✅ T05: Dependency wiring complete
+- ✅ T06: Template optimization and tier delegation guidelines
+
+E2:S09 is now unblocked and can proceed with RW-specific integration tasks (T02-T05). Dependencies are properly documented:
+- E2:S09:T02 depends on E4:S11:T01 (Kanban policy) and E4:S11:T02 (templates) - ✅ Unblocked
+- E2:S09:T03 depends on E4:S11:T01 (Kanban policy) - ✅ Unblocked
+
+Sequencing is clear: Kanban work (E4:S11) → RW integration (E2:S09).
 
 **Related Work:**
 - **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework)
