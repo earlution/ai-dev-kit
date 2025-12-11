@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2025-12-06  
-**Version:** v0.5.2.2+1
+**Last Updated:** 2025-12-10  
+**Version:** v0.2.7.6+1
 
 **Note:** Epics 1-4 are COMPLETE ✅. Epics 5-9 are IN PROGRESS.
 
@@ -50,7 +50,7 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 **Status:** COMPLETE ✅  
 **Priority:** HIGH  
-**Last Updated:** v0.2.4.9+3
+**Last Updated:** v0.2.7.6+1
 
 **Stories:**
 - [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.1+5)
@@ -61,6 +61,10 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
   - Story: [`epics/Epic-2/Story-003-additional-workflows-and-examples.md`](epics/Epic-2/Story-003-additional-workflows-and-examples.md)
 - [x] **E2:S04 – RW Installer & Plug-and-Play Adoption** - COMPLETE ✅ (v0.2.4.9+3)
   - Story: [`epics/Epic-2/Story-004-rw-installer-and-plug-and-play-adoption.md`](epics/Epic-2/Story-004-rw-installer-and-plug-and-play-adoption.md)
+- [x] **E2:S06 – Package Uninstall and Recovery** - COMPLETE ✅ (v0.2.6.3+1)
+  - Story: [`epics/Epic-2/Story-006-package-uninstall-and-recovery.md`](epics/Epic-2/Story-006-package-uninstall-and-recovery.md)
+- [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.6+1)
+  - Story: [`epics/Epic-2/Story-007-trigger-aware-release-workflow.md`](epics/Epic-2/Story-007-trigger-aware-release-workflow.md)
 
 **Epic Doc:** [`epics/Epic-2/Epic-2.md`](epics/Epic-2/Epic-2.md)
 
