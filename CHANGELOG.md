@@ -17,6 +17,24 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.0+0] - 2025-12-10
+
+✨ Feature: E2:S08:T00 - Story Creation and FR-015 Intake
+
+### Added
+
+- **Epic 2 Story 8:** Harden Release Workflow Reliability
+  - Story created for FR-015: Harden Kanban Docs Update in Release Workflow
+  - Task 0 complete: Story creation and FR-015 intake
+  - 7 tasks defined for implementation (T01-T07)
+
+- **FR-015:** Harden Kanban Docs Update in Release Workflow
+  - Feature request created to make Step 7 mandatory and reliable
+  - Requires careful analysis of deterministic vs agentic approaches
+  - Focus on reliability as primary metric
+
+---
+
 ## [0.2.7.6+1] - 2025-12-10
 
 ✨ Feature: E2:S07:T06 - Agentic Task Workflow Integration Complete

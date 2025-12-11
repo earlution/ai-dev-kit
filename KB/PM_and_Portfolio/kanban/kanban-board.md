@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2025-12-10  
-**Version:** v0.2.7.6+1
+**Version:** v0.2.8.0+0
 
 **Note:** Epics 1-4 are COMPLETE ✅. Epics 5-9 are IN PROGRESS.
 
@@ -48,9 +48,9 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 ### Epic 2: Workflow Management Framework
 
-**Status:** COMPLETE ✅  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.2.7.6+1
+**Last Updated:** v0.2.8.0+0
 
 **Stories:**
 - [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.1+5)
@@ -65,6 +65,8 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
   - Story: [`epics/Epic-2/Story-006-package-uninstall-and-recovery.md`](epics/Epic-2/Story-006-package-uninstall-and-recovery.md)
 - [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.6+1)
   - Story: [`epics/Epic-2/Story-007-trigger-aware-release-workflow.md`](epics/Epic-2/Story-007-trigger-aware-release-workflow.md)
+- [ ] **E2:S08 – Harden Release Workflow Reliability** - TODO (v0.2.8.0+0)
+  - Story: [`epics/Epic-2/Story-008-harden-release-workflow-reliability.md`](epics/Epic-2/Story-008-harden-release-workflow-reliability.md)
 
 **Epic Doc:** [`epics/Epic-2/Epic-2.md`](epics/Epic-2/Epic-2.md)
 
