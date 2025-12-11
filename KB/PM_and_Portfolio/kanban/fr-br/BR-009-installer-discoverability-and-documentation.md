@@ -184,7 +184,7 @@ cp -r packages/frameworks/ai-dev-kit/KB/PM_and_Portfolio/kanban/epics/* KB/PM_an
 ## Related Work
 
 **Related BRs:**
-- **BR-004:** Kanban Installation Includes Project-Specific Epics from Template (similar issue, different focus)
+- **BR-004:** Kanban Installation Includes Project-Specific Epics from Template - **BLOCKS THIS BR** (must fix epic contamination first - installer must use canonical templates, not ai-dev-kit's actual epics)
 - **BR-007:** Multiple Bugs in Kanban Package Installation Process (installer bugs)
 
 **Related FRs:**
