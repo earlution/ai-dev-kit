@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-11 (v0.4.6.9+0 – Task 9 created for BR-009)  
-**Version:** v0.4.6.9+0  
+**Last updated:** 2025-12-11 (v0.4.6.9+1 – Task 9 updated: BR-009 now depends on BR-004)  
+**Version:** v0.4.6.9+1  
 **Code:** E4S06
 
 ---
@@ -432,8 +432,8 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Dependencies:** E4:S06:T07  
-**Blocker:** None  
+**Dependencies:** E4:S06:T07, **BR-004 fix** (installer must use canonical templates, not ai-dev-kit's actual epics)  
+**Blocker:** BR-004 (epic contamination must be fixed before improving discoverability)  
 **Linked BR:** BR-009 (GitHub issue #14) - Installer discoverability and documentation
 
 **Input:**

@@ -216,7 +216,7 @@ cp -r packages/frameworks/ai-dev-kit/KB/PM_and_Portfolio/kanban/epics/* KB/PM_an
 - User understanding of canonical vs. project-specific content
 
 **Blocked By:**
-- None
+- **BR-004:** Kanban Installation Includes Project-Specific Epics from Template (must be fixed first - installer must use canonical templates, not ai-dev-kit's actual epics)
 
 **Related Work:**
 - **BR-004:** Kanban Installation Includes Project-Specific Epics from Template

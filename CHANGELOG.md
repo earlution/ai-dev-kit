@@ -17,6 +17,19 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.6.9+1] - 2025-12-11
+
+🔧 Update: E4:S06:T09 - BR-009 Dependency on BR-004
+
+### Changed
+
+- **Epic 4 Story 6 Task 9:** BR-009 dependency updated
+  - Added BR-004 as blocker dependency
+  - BR-009 now explicitly depends on BR-004 fix (epic contamination must be resolved first)
+  - Installer must use canonical templates, not ai-dev-kit's actual epics, before discoverability improvements
+
+---
+
 ## [0.4.6.9+0] - 2025-12-11
 
 ✨ Feature: E4:S06:T09 - BR-009 Task Creation
