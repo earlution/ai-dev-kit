@@ -276,6 +276,85 @@ See: **your own canonical story docs** that define guardrails and versioning rul
 
 ---
 
+### Abstract Spaces for Forensic Traceability
+
+**CRITICAL:** Zero-numbered E/S/T documentation establishes the **abstract space** for forensic traceability, serving as the canonical anchor before any functional work is committed.
+
+**Purpose:**
+- Establish canonical version anchor for E/S/T documentation
+- Begin forensic traceability arc at documentation creation
+- Provide clear SOP for committing initial E/S/T docs
+- Link Kanban documentation lifecycle to versioning schema
+
+#### Zero-Numbered E/S/T Documentation
+
+Abstract spaces use `+0` build number to indicate documentation-only anchor:
+
+**Epic-Level Abstract Space:**
+- Format: `0.{EPIC}.0.0+0`
+- Example: `0.3.0.0+0` = Epic 3's abstract space
+- Purpose: Establishes forensic traceability anchor for Epic 3
+- When: Created when Epic document is first committed
+
+**Story-Level Abstract Space:**
+- Format: `0.{EPIC}.{STORY}.0+0`
+- Example: `0.2.5.0+0` = Epic 2 Story 5's abstract space
+- Purpose: Establishes forensic traceability anchor for Story 5 within Epic 2
+- When: Created when Story document is first committed
+
+**Task-Level Abstract Space:**
+- Format: `0.{EPIC}.{STORY}.{TASK}+0`
+- Example: `0.10.4.6+0` = Epic 10 Story 4 Task 6's abstract space
+- Purpose: Establishes forensic traceability anchor for Task 6 within Story 4 within Epic 10
+- When: Created when Task document is first committed
+
+**Relationship to Functional Work:**
+- Abstract space (`+0`) = Documentation-only anchor (establishes traceability)
+- Functional work (`+1` and beyond) = Actual implementation (builds on anchor)
+- Example progression:
+  - `0.4.11.1+0` = Task document created (abstract space)
+  - `0.4.11.1+1` = First functional change for Task 1
+  - `0.4.11.1+2` = Second functional change for Task 1
+
+**See:** Numbering Policy section "Abstract Space Version Schema" for complementary versioning schema details.
+
+#### SOP for Committing Initial E/S/T Docs
+
+**When to Commit Abstract Space:**
+- **Before any functional work** on the E/S/T
+- **When creating new Epic/Story/Task documentation**
+- **As part of documentation setup phase**
+
+**Where to Commit:**
+- **Epic:** Epic document location (e.g., `kanban/epics/Epic-X/Epic-X.md`)
+- **Story:** Story document location (e.g., `kanban/epics/Epic-X/Story-XXX-*.md`)
+- **Task:** Task document location (e.g., `kanban/epics/Epic-X/Story-XXX/Task-YYY-*.md` OR delimited section within Story)
+
+**How to Commit:**
+1. **Create E/S/T document** with required structure and fields
+2. **Set version to abstract space** (`+0` build):
+   - Epic: `0.{EPIC}.0.0+0`
+   - Story: `0.{EPIC}.{STORY}.0+0`
+   - Task: `0.{EPIC}.{STORY}.{TASK}+0`
+3. **Commit via Release Workflow (RW)** with doc-init path (see FR-017)
+   - RW Step 1 detects docs-only change
+   - RW Step 2 sets version to `+0` (abstract space)
+   - RW Step 3 creates changelog entry with "Doc Init" type
+4. **Alternative:** Manual commit with explicit version annotation
+   - Commit message: `📋 Doc Init (Abstract Space): E{epic}:S{story}:T{task} - [Description]`
+   - Version: Explicitly set to abstract space (`+0`)
+
+**Validation:**
+- Release Workflow validates abstract space version format
+- Validators check that `+0` is only used for docs-only changes
+- Validators ensure abstract space precedes functional work
+
+**Related:**
+- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (implementation)
+- **Numbering Policy:** Abstract Space Version Schema (complementary section)
+
+---
+
 ## Release Workflow
 
 The process that implements both policies (Kanban Governance and Versioning Strategy).

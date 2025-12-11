@@ -17,6 +17,51 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.11.4+1] - 2025-12-11
+
+📋 Policy Update: E4:S11:T04 - Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)
+
+### Updated
+
+- **Kanban Governance Policy (Canonical):** Added "Abstract Spaces for Forensic Traceability" section
+  - Defined zero-numbered E/S/T documentation as abstract space concept
+  - Added Epic-level (`0.{EPIC}.0.0+0`), Story-level (`0.{EPIC}.{STORY}.0+0`), Task-level (`0.{EPIC}.{STORY}.{TASK}+0`) abstract spaces
+  - Added SOP for committing initial E/S/T docs (when, where, how)
+  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
+  - Cross-referenced Numbering Policy
+
+- **Kanban Governance Policy (Dev-Kit Local):** Added "Abstract Spaces for Forensic Traceability" section
+  - Added zero-numbered E/S/T documentation definition
+  - Added abstract space examples for Epic, Story, and Task levels
+  - Added SOP for committing initial E/S/T docs
+  - Cross-referenced Dev-Kit Versioning Policy
+
+- **Framework Versioning Policy:** Added "Abstract Space Version Schema" section
+  - Added Epic-level, Story-level, and Task-level abstract space definitions
+  - Added examples for each level
+  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
+  - Added validation requirements
+  - Cross-referenced Kanban Governance Policy
+
+- **Dev-Kit Versioning Policy:** Added "Abstract Space Version Schema" subsection (6.2)
+  - Added Epic-level, Story-level, and Task-level abstract space definitions
+  - Added examples for each level
+  - Added SOP for committing initial E/S/T docs
+  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
+  - Cross-referenced Kanban Governance Policy
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 4
+- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (this feature)
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure) (prerequisite)
+- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (uses abstract space)
+- E4:S11:T01-T03: Policy and template work (prerequisites)
+
+---
+
 ## [0.4.11.3+1] - 2025-12-11
 
 📋 Policy Update: E4:S11:T03 - Update Versioning Policy with Task Doc Requirements

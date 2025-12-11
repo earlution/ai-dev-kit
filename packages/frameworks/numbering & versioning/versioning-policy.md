@@ -132,6 +132,100 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
 
 ---
 
+## Abstract Space Version Schema
+
+**CRITICAL:** Zero-numbered E/S/T documentation uses `+0` build number to establish the **abstract space** for forensic traceability, serving as the canonical version anchor before any functional work is committed.
+
+**Purpose:**
+- Establish canonical version anchor for E/S/T documentation
+- Begin forensic traceability arc at documentation creation
+- Provide clear versioning schema for abstract spaces
+- Link versioning schema to Kanban documentation lifecycle
+
+### Epic-Level Abstract Spaces
+
+**Format:** `0.{EPIC}.0.0+0`
+
+**Examples:**
+- `0.3.0.0+0` = Epic 3's abstract space
+- `0.10.0.0+0` = Epic 10's abstract space
+- `0.21.0.0+0` = Epic 21's abstract space
+
+**Purpose:**
+- Establishes forensic traceability anchor for Epic
+- Created when Epic document is first committed
+- Precedes all functional work for that Epic
+
+**Usage:**
+- Epic document creation → Commit with `0.{EPIC}.0.0+0`
+- Subsequent functional work starts at `0.{EPIC}.1.1+1` (first Story, first Task, first build)
+
+### Story-Level Abstract Spaces
+
+**Format:** `0.{EPIC}.{STORY}.0+0`
+
+**Examples:**
+- `0.2.5.0+0` = Epic 2 Story 5's abstract space
+- `0.4.11.0+0` = Epic 4 Story 11's abstract space
+- `0.10.3.0+0` = Epic 10 Story 3's abstract space
+
+**Purpose:**
+- Establishes forensic traceability anchor for Story within Epic
+- Created when Story document is first committed
+- Precedes all functional work for that Story
+
+**Usage:**
+- Story document creation → Commit with `0.{EPIC}.{STORY}.0+0`
+- Subsequent functional work starts at `0.{EPIC}.{STORY}.1+1` (first Task, first build)
+
+### Task-Level Abstract Spaces
+
+**Format:** `0.{EPIC}.{STORY}.{TASK}+0`
+
+**Examples:**
+- `0.10.4.6+0` = Epic 10 Story 4 Task 6's abstract space
+- `0.4.11.1+0` = Epic 4 Story 11 Task 1's abstract space
+- `0.2.9.3+0` = Epic 2 Story 9 Task 3's abstract space
+
+**Purpose:**
+- Establishes forensic traceability anchor for Task within Story within Epic
+- Created when Task document is first committed
+- Precedes all functional work for that Task
+
+**Usage:**
+- Task document creation → Commit with `0.{EPIC}.{STORY}.{TASK}+0`
+- Subsequent functional work starts at `0.{EPIC}.{STORY}.{TASK}+1` (first build)
+
+### Relationship Between Abstract Space and Functional Work
+
+**Abstract Space (`+0`):**
+- Documentation-only anchor
+- Establishes forensic traceability
+- No functional changes
+- Created via doc-init path (see FR-017)
+
+**Functional Work (`+1` and beyond):**
+- Actual implementation
+- Builds on abstract space anchor
+- Increments BUILD for each release
+- Example progression:
+  - `0.4.11.1+0` = Task document created (abstract space)
+  - `0.4.11.1+1` = First functional change for Task 1
+  - `0.4.11.1+2` = Second functional change for Task 1
+
+**Validation:**
+- `+0` is only valid for docs-only changes (E/S/T document creation)
+- `+1` and beyond require functional changes
+- Abstract space must precede functional work
+- Release Workflow validates abstract space usage
+
+**Related:**
+- **Kanban Governance Policy:** Abstract Spaces for Forensic Traceability (complementary section)
+- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (implementation)
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (this feature)
+
+---
+
 ## Progression
 
 **Working on Epic 9, Story 21, Task 3:**
