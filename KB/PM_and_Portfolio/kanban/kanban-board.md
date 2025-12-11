@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2025-12-11  
-**Version:** v0.4.6.10+2
+**Version:** v0.4.6.9+2
 
 **Note:** Epics 1-4 are COMPLETE ✅. Epics 5-9 are IN PROGRESS.
 
@@ -107,9 +107,9 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
   - Story: [`epics/Epic-4/Story-004-kanban-structure-refactoring.md`](epics/Epic-4/Story-004-kanban-structure-refactoring.md)
 - [x] **E4:S05 – Canonical Epics for Kanban Framework** - COMPLETE ✅ (v0.4.5.1+1)
   - Story: [`epics/Epic-4/Story-005-canonical-epics-for-kanban-framework.md`](epics/Epic-4/Story-005-canonical-epics-for-kanban-framework.md)
-- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.10+2)
+- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.9+2)
   - Story: [`epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T03-T05 TODO, T07-T08 TODO (T09: BR-009 ✅, T10: BR-004 ✅)
+  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T03-T05 TODO, T07-T08 TODO (T09: BR-009 ✅ v0.4.6.9+2, T10: BR-004 ✅ v0.4.6.10+1)
 
 **Epic Doc:** [`epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)
 

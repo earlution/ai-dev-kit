@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** earlution (agentic-ide-rules project)  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** RESOLVED ✅ (v0.4.6.10+2 via E4:S06:T09)  
+**Status:** RESOLVED ✅ (v0.4.6.9+2 via E4:S06:T09)  
 **GitHub Issue:** #14
 
 ---

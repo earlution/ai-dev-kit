@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-11 (v0.4.6.10+2 – Task 9 complete: BR-009 installer discoverability improvements)  
-**Version:** v0.4.6.10+2  
+**Last updated:** 2025-12-11 (v0.4.6.9+2 – Task 9 complete: BR-009 installer discoverability improvements)  
+**Version:** v0.4.6.9+2  
 **Code:** E4S06
 
 ---
@@ -48,7 +48,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - [x] **E4:S06:T06 – Update CANONICAL_EPICS.md to reference comprehensive structure (BR-005)** ✅ COMPLETE (v0.4.6.6+1)
 - [ ] **E4:S06:T07 – Integrate with template setup guide and installation workflow** - TODO (BR-009 assigned)
 - [ ] **E4:S06:T08 – Validate structure with test projects (tiny, small, ambitious)** - TODO
-- [x] **E4:S06:T09 – BR-009: Improve installer discoverability and documentation** ✅ COMPLETE (v0.4.6.10+2)
+- [x] **E4:S06:T09 – BR-009: Improve installer discoverability and documentation** ✅ COMPLETE (v0.4.6.9+2)
 - [x] **E4:S06:T10 – BR-004: Fix epic contamination in installer** ✅ COMPLETE (v0.4.6.10+1)
 
 ---

@@ -17,7 +17,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.6.10+2] - 2025-12-11
+## [0.4.6.9+2] - 2025-12-11
 
 ✅ Feature: E4:S06:T09 - BR-009 Installer Discoverability Improvements
 
