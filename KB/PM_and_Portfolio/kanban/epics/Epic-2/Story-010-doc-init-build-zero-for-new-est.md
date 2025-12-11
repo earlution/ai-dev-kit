@@ -262,9 +262,27 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 **Input:** Current version validator (`validate_version_bump.py`), FR-020 requirements  
 **Deliverable:** Version validator recognizes `+0` as valid BUILD for abstract spaces  
-**Dependencies:** T02 (doc-init validation), FR-017/FR-018 (abstract space concept)  
-**Blocker:** None  
-**Parallel Development Candidacy:** Safe (depends on T02)
+**Dependencies:** 
+- **T02:** Doc-Init Validation (Docs-Only Check) - provides doc-init validation foundation
+- **T01:** RW Step 1 Doc-Init Path - provides doc-init detection logic
+- **E4:S11:T01-T02:** Kanban policy and Task templates (required for T01)
+- **E2:S09:T02:** RW Step 1 Task doc presence (required for T01)
+- **E4:S11:** Kanban-specific work (policy, templates) - prerequisite for E2:S09
+- **E2:S09:** RW integration work (Task doc presence) - prerequisite for T01
+- **FR-016:** Kanban Granularity & Discrete Task Docs (blocks E4:S11 and E2:S09)
+- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) (abstract space concept)
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (abstract space definition)
+
+**Blocker:** 
+- **FR-016:** Blocks E4:S11 and E2:S09, which are prerequisites for T01, which is prerequisite for T02, which is prerequisite for T06
+- **E4:S11:** Must complete before E2:S09 can proceed
+- **E2:S09:** Must complete before E2:S10:T01 can proceed
+- **E2:S10:T01:** Must complete before E2:S10:T02 can proceed
+- **E2:S10:T02:** Must complete before E2:S10:T06 can proceed
+
+**Parallel Development Candidacy:** Blocked (depends on full dependency chain)
+
+**Note:** This task will require multiple RWs with BUILD bumps for each E/S/T file being updated during implementation.
 
 **Approach:**
 1. Review current validator implementation:
@@ -294,6 +312,14 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
    - Invalid `+0` usage (E/S/T doc already exists)
    - Functional changes requiring `+1` or higher
 7. Update validator documentation
+
+**RW Requirements:**
+- This task will require multiple RWs with BUILD bumps for each E/S/T file being updated:
+  - Validator script updates (`validate_version_bump.py`) - separate RW with BUILD bump
+  - Test file updates (new test cases) - separate RW with BUILD bump
+  - Documentation updates (validator docs) - separate RW with BUILD bump
+  - Each file update should be committed with its own BUILD increment (e.g., `+1`, `+2`, `+3`)
+  - Follow standard RW process for each commit
 
 **Acceptance Criteria:**
 - [ ] Validator recognizes `+0` as valid BUILD for abstract spaces
@@ -333,16 +359,20 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 **Blocked By:**
 - **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) - Requires discrete Task docs to anchor doc-init builds
-- **E4:S11:** Kanban-specific work (policy, templates) must be complete
-- **E2:S09:** RW integration work (Task doc presence) must be complete
+- **E4:S11:** Kanban-specific work (policy, templates) must be complete before E2:S09
+- **E2:S09:** RW integration work (Task doc presence) must be complete before E2:S10:T01
+- **E2:S10:T01:** RW Step 1 doc-init detection must be complete before E2:S10:T02
+- **E2:S10:T02:** Doc-init validation must be complete before E2:S10:T06
 
 **Related Work:**
-- **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) (prerequisite)
+- **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) (prerequisite - blocks this story)
 - **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (this story)
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (defines abstract space concept)
 - **FR-020:** Version Validator Abstract Space Awareness (validator enhancement - T06)
-- **E2:S09:** Kanban Granularity & Discrete Task Docs (RW Integration)
-- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework)
+- **E2:S09:** Kanban Granularity & Discrete Task Docs (RW Integration) (prerequisite for T01)
+- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) (prerequisite for E2:S09)
+- **E2:S10:T01:** RW Step 1 Doc-Init Path (prerequisite for T02)
+- **E2:S10:T02:** Doc-Init Validation (prerequisite for T06)
 
 ---
 

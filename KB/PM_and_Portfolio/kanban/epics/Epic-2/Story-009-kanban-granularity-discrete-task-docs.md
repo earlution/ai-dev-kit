@@ -265,10 +265,13 @@ Coordinate RW-specific integration for **3-tier granularity** (Epic → Story �
 - None (can be implemented independently; FR-017 and FR-018 depend on this)
 
 **Related Work:**
-- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - Kanban-specific work
+- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - Kanban-specific work (prerequisite)
 - **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) (this story + E4:S11)
-- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (depends on FR-016)
+- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (depends on FR-016, enables E2:S10)
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (depends on FR-016)
+- **FR-020:** Version Validator Abstract Space Awareness (depends on E2:S10:T02, which depends on this story)
+- **E2:S10:** Doc-Init Build (+0) for New E/S/T (depends on this story via T01)
+- **E2:S10:T06:** Update Version Validator for Abstract Space Awareness (depends on E2:S10:T02, which depends on this story)
 - **Epic 2:** Workflow Management Framework
 - **Epic 3:** Numbering & Versioning Framework
 - **Epic 4:** Kanban Framework

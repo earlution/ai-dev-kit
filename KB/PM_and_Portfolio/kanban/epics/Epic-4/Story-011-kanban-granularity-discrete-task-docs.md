@@ -237,17 +237,24 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 ## Dependencies
 
 **Blocks:**
-- E2:S09:T04 (RW Step 1 update) - requires policy and templates
-- E2:S09:T05 (Validators) - requires policy requirements
+- E2:S09 (RW Integration) - requires policy and templates
+- E2:S09:T02 (RW Step 1 Task doc presence) - requires policy and templates
+- E2:S09:T03 (Validators) - requires policy requirements
+- E2:S10:T01 (RW Step 1 Doc-Init Path) - requires E2:S09 completion
+- E2:S10:T02 (Doc-Init Validation) - requires T01 completion
+- E2:S10:T06 (Version Validator Abstract Space Awareness) - requires T02 completion
 
 **Blocked By:**
 - None (can proceed independently)
 
 **Related Work:**
-- **E2:S09:** Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
-- **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure)
-- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (depends on FR-016)
+- **E2:S09:** Kanban Granularity & Discrete Task Docs (Workflow Management coordination) (depends on this story)
+- **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) (this story + E2:S09)
+- **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (depends on FR-016, enables E2:S10)
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (T04)
+- **FR-020:** Version Validator Abstract Space Awareness (depends on E2:S10:T02, which depends on E2:S09, which depends on this story)
+- **E2:S10:** Doc-Init Build (+0) for New E/S/T (depends on E2:S09)
+- **E2:S10:T06:** Update Version Validator for Abstract Space Awareness (depends on E2:S10:T02, which depends on E2:S09)
 
 ---
 
