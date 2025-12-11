@@ -17,6 +17,39 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.9.4.1+1] - 11-12-25
+
+📚 Book Material Capture: E9:S04:T01 - Capture Starborn Legacy Zombie Story Report
+
+### Summary
+
+Captured Starborn Legacy Zombie Story case study report as unstructured book material. This report documents the technical debt incurred by E15:S01 (Release Workflow & Versioning Infrastructure) and serves as a cautionary tale and case study for the Head First AI-Assisted Development book.
+
+### Changes
+
+**Material Capture:**
+- ✅ Captured complete case study report from Starborn Legacy project
+- ✅ Report: "The Zombie Story: A Cautionary tale resulting in technical debt"
+- ✅ Type: Case study report for book content
+- ✅ Source: Starborn Legacy project
+- ✅ Date: 2025-12-11
+
+**Report Content:**
+- Documents the "Zombie Story" pattern (story becomes unmanageable and must be retired)
+- Covers versioning mis-numbering issues and technical debt incurred
+- Provides lessons learned and recommendations for ai-dev-kit
+- Serves as case study for AI-assisted development workflows
+
+### Related Work
+
+- **Story:** E9:S04 - Book Material Capture
+- **Epic:** Epic 9 - Book Related Work
+- **Coordinates With:** E9:S01 (Book Content Development) - Material will be processed into structured book content
+- **Source Project:** Starborn Legacy (E15:S01 case study)
+- **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.4.1+1.md)
+
+---
+
 ## [0.9.4.0+1] - 11-12-25
 
 📚 Book Material Capture: E9:S04:T00 - Setup: Material Capture Infrastructure
@@ -37,7 +70,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - ✅ Defined storage and organization approach (sequential task numbering, task checklist as index)
 
 **First Material Capture:**
-- ✅ Captured Starborn Legacy Zombie Story case study report (E9:S04:T01)
+- ✅ Ready for material capture (E9:S04:T01 created)
 
 ### Related Work
 

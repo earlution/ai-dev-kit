@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-11  
-**Last updated:** 2025-12-11 (v0.9.4.0+1 – Task 0 complete: Material capture infrastructure established)  
+**Last updated:** 2025-12-11 (v0.9.4.1+1 – Task 1 complete: Starborn Legacy Zombie Story report captured)  
 **Version:** v0.9.4.0+0  
 **Code:** E9S04
 
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E9:S04:T00 – Setup: Material Capture Infrastructure** ✅ COMPLETE (v0.9.4.0+1)
-- [ ] **E9:S04:T01 – Capture Starborn Legacy Zombie Story Report** - TODO
+- [x] **E9:S04:T01 – Capture Starborn Legacy Zombie Story Report** ✅ COMPLETE (v0.9.4.1+0)
 
 ---
 
@@ -46,6 +46,15 @@ Create a system for capturing and storing unstructured book material (text dumps
 **Dependencies:** None  
 **Blocker:** None  
 **Parallel Development Candidacy:** Safe
+
+**Scope:** Establish the infrastructure for capturing unstructured book material. Define structure, templates, and guidelines that enable quick capture of text dumps, reports, notes, and other unstructured content without requiring structure at capture time.
+
+**Acceptance Criteria:**
+- [x] Material capture structure is defined (tasks serve as storage mechanism)
+- [x] Capture templates and guidelines are documented
+- [x] Storage and organization approach is established
+- [x] Setup deliverables are documented as metadata in this task
+- [x] Infrastructure is ready for material capture tasks (T01+)
 
 **Status:** ✅ COMPLETE (v0.9.4.0+1)
 
@@ -94,7 +103,7 @@ Create a system for capturing and storing unstructured book material (text dumps
 3. Add metadata: source project (Starborn Legacy), date (2025-12-11), type (case study report)
 4. Note: This material will be processed later for use in book content
 
-**Status:** TODO
+**Status:** ✅ COMPLETE (v0.9.4.1+0)
 
 **Captured Material:**
 

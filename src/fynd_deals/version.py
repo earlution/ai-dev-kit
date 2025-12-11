@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 9      # Epic number (Epic 9: Book Related Work)
 VERSION_STORY = 4     # Story number (Story 4: Book Material Capture)
-VERSION_TASK = 0      # Task number (Task 0: Setup: Material Capture Infrastructure)
-VERSION_BUILD = 1     # Build number (E9:S04:T00 complete - Material capture infrastructure established)
+VERSION_TASK = 1      # Task number (Task 1: Capture Starborn Legacy Zombie Story Report)
+VERSION_BUILD = 1     # Build number (E9:S04:T01 complete - Starborn Legacy Zombie Story report captured)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

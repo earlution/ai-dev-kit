@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-11 (v0.9.4.0+1 – Story 4 Task 0 complete: Material capture infrastructure established)  
+**Last updated:** 2025-12-11 (v0.9.4.1+1 – Story 4 Task 1 complete: Starborn Legacy Zombie Story report captured)  
 **Branch:** `epic/9-book-related-work`  
 **Version Schema:** `0.9.S.T+B`  
 **Production URL:** [N/A for this repo]
