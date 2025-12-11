@@ -17,6 +17,39 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.11.3+1] - 2025-12-11
+
+📋 Policy Update: E4:S11:T03 - Update Versioning Policy with Task Doc Requirements
+
+### Updated
+
+- **Dev-Kit Versioning Policy:** Updated Kanban-related sections with Task document requirements
+  - Added Task document prerequisites to Section 4 (Mapping Kanban to Version Components)
+  - Added Task document requirements (presence, alignment, required fields, validation)
+  - Updated Section 6.1 (Task Transitions) to require Task document before versioning
+  - Added Task document → Version TASK component alignment requirements
+  - Added validation requirements for Task doc presence and alignment
+  - Referenced FR-017 for doc-init (`+0`) support
+
+- **Framework Versioning Policy:** Updated with Task document requirements
+  - Added "Task Document Requirements (Kanban Integration)" section
+  - Added Task document prerequisites (presence, alignment, required fields)
+  - Added Task transition rules requiring Task document
+  - Added validation requirements
+  - Referenced Kanban Governance Policy and Task Template
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 3
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
+- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
+- E2:S09:T03: Enhance Validators for Task Doc Presence and Alignment (RW-related updates)
+
+---
+
 ## [0.4.11.2+2] - 2025-12-11
 
 📋 Examples Creation: E4:S11:T02 Phase 2 - Task Document Examples

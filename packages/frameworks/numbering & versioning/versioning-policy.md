@@ -68,12 +68,67 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
 - Set when starting new task
 - Constant for all releases within that task
 - Format: `E{epic}:S{story}:T{task}` (e.g., `E9:S21:T03`) - Task numbers are 2-digit (01-99)
+- **CRITICAL:** Task MUST have a discrete Task document before versioning
+- **CRITICAL:** Task document Task ID MUST align with version TASK component
 
 ### BUILD
 - Build number (increments per release within task)
 - Starts at 1 for first release of task
 - Increments with each subsequent release
 - Resets to 1 when moving to new task
+
+---
+
+## Task Document Requirements (Kanban Integration)
+
+**CRITICAL:** Before any versioning can occur for a Task, the Task MUST have a corresponding Task document.
+
+### Task Document Prerequisites
+
+1. **Task Document Presence:**
+   - Every Task referenced in a Story checklist MUST have a corresponding Task document
+   - Task document can be:
+     - **Separate File:** `kanban/epics/Epic-X/Story-XXX/Task-YYY-description.md`
+     - **Delimited Section:** Within Story document using Task ID header (`### EXX:SYY:TZZ – Task Name`)
+
+2. **Task Document → Version Alignment:**
+   - Task document Task ID MUST align with version TASK component
+   - Example:
+     - Task document: `E4:S11:T01`
+     - Version: `0.4.11.1+B` (TASK = 1)
+     - Alignment: Task ID `T01` matches version TASK component `1`
+
+3. **Required Task Document Fields:**
+   - Task ID (`E{epic}:S{story}:T{task}`)
+   - Scope
+   - Acceptance Criteria
+   - Status
+   - Version Anchor (forensic marker when complete)
+   - Input
+   - Deliverable
+   - Dependencies
+   - Blocker
+   - Related BR/FR Links
+
+4. **Task Transition Rules:**
+   - **MUST:** Create Task document before updating version file
+   - **MUST:** Task document must exist before versioning
+   - **MUST:** Task document Task ID must match version TASK component
+   - **MUST:** Task document must include all required fields
+
+5. **Validation Requirements:**
+   - Release Workflow Step 1 validates Task document presence
+   - Release Workflow Step 1 validates Task document → Version TASK component alignment
+   - Validators check Task document presence and alignment before versioning
+   - If Task document missing or misaligned, versioning workflow stops with error
+
+6. **Doc-Init Support:**
+   - For first-time Task document creation, see FR-017 for doc-init build (`+0`) support
+   - Doc-init builds establish canonical version anchor before functional work
+
+**Related Documentation:**
+- **[Kanban Governance Policy](../../kanban/policies/kanban-governance-policy.md)** - Complete Task document requirements
+- **[Task Template](../../kanban/templates/TASK_TEMPLATE.md)** - Task document template
 
 ---
 

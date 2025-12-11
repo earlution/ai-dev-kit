@@ -21,10 +21,10 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E4:S11:T00 – Story Creation and Task Decomposition** ✅ COMPLETE (v0.4.11.0+0)
+- [x] **E4:S11:T00 – Story Creation and Task Decomposition** ✅ COMPLETE (v0.4.11.0+0)
 - [x] **E4:S11:T01 – Update Kanban Governance Policy to Mandate 3-Tier Structure** ✅ COMPLETE (v0.4.11.1+0)
 - [x] **E4:S11:T02 – Create Task Document Template and Update Story Template** ✅ COMPLETE (v0.4.11.2+2)
-- [ ] **E4:S11:T03 – Update Versioning Policy with Task Doc Requirements (Kanban-related sections)**
+- [x] **E4:S11:T03 – Update Versioning Policy with Task Doc Requirements (Kanban-related sections)** ✅ COMPLETE (v0.4.11.3+1)
 - [ ] **E4:S11:T04 – Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)**
 - [ ] **E4:S11:T05 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.4.11.5+0)
 - [ ] **E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation**
@@ -170,15 +170,17 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 4. Coordinate with E2:S09:T03 for RW-related versioning policy updates
 
 **Acceptance Criteria:**
-- [ ] Versioning policy requires Task doc presence before versioning (Kanban sections)
-- [ ] Task doc → Version TASK component alignment documented
-- [ ] Task transition rules updated
-- [ ] Validation requirements documented
-- [ ] All versioning policy documents updated consistently
+- [x] Versioning policy requires Task doc presence before versioning (Kanban sections)
+- [x] Task doc → Version TASK component alignment documented
+- [x] Task transition rules updated
+- [x] Validation requirements documented
+- [x] All versioning policy documents updated consistently
 
 **Coordination:**
 - E2:S09:T03 handles RW-related versioning policy updates
 - This task focuses on Kanban governance aspects
+
+**Status:** ✅ COMPLETE (v0.4.11.3+1)
 
 ---
 

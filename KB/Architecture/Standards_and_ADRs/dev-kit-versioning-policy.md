@@ -69,7 +69,7 @@ Future epics (5+) can be introduced as needed (for example, “Book Manuscript�
 
 ## 4. Mapping Kanban to Version Components
 
-This repo’s Kanban is defined under:
+This repo's Kanban is defined under:
 
 - `KB/PM_and_Portfolio/kanban/_index.md`
 - `KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-XXX-*.md`
@@ -80,14 +80,48 @@ Mapping rules:
 - **Every Task**:
   - Lives under a Story.
   - Will eventually get a numeric **Task ID** that matches the `TASK` component in the version.
+  - **MUST have a discrete Task document** (or clearly delimited section within Story document).
 - **Every substantive change** that goes through Release Workflow (RW):
   - Targets **one active Task**.
-  - Uses a version where `EPIC`, `STORY`, and `TASK` match that Task’s E/S/T coordinates.
+  - Uses a version where `EPIC`, `STORY`, and `TASK` match that Task's E/S/T coordinates.
   - Increments `BUILD` for successive releases of the same Task.
+
+**CRITICAL: Task Document Requirements**
+
+Before any versioning can occur for a Task, the Task MUST have a corresponding Task document:
+
+1. **Task Document Presence:** Every Task referenced in a Story checklist MUST have a corresponding Task document (separate file OR clearly delimited section within Story document).
+
+2. **Task Document → Version Alignment:** The Task document's Task ID MUST align with the version's TASK component:
+   - Task document: `E4:S11:T01`
+   - Version: `0.4.11.1+B` (TASK = 1)
+   - Alignment: Task ID `T01` matches version TASK component `1`
+
+3. **Task Document Format:** Task documents can be:
+   - **Separate File:** `kanban/epics/Epic-X/Story-XXX/Task-YYY-description.md`
+   - **Delimited Section:** Within Story document using Task ID header (`### EXX:SYY:TZZ – Task Name`)
+
+4. **Required Task Document Fields:** Task documents MUST include:
+   - Task ID (`E{epic}:S{story}:T{task}`)
+   - Scope
+   - Acceptance Criteria
+   - Status
+   - Version Anchor (forensic marker when complete)
+   - Input
+   - Deliverable
+   - Dependencies
+   - Blocker
+   - Related BR/FR Links
+
+5. **Validation Requirements:**
+   - Release Workflow Step 1 validates Task document presence
+   - Release Workflow Step 1 validates Task document → Version TASK component alignment
+   - Validators check Task document presence and alignment before versioning
 
 FR/BR rule (summarised):
 
 - FRs and BRs **must** create Tasks, which are anchored under Stories, which are anchored under Epics.
+- Each Task **must** have a corresponding Task document before versioning.
 
 See: `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md`.
 
@@ -140,22 +174,32 @@ Rules:
 
 **CRITICAL:** When moving to a new Task, the version file (`src/fynd_deals/version.py`) MUST be updated:
 
-1. **Update `VERSION_TASK`:**
+1. **Task Document Prerequisite:**
+   - **MUST:** Create Task document before updating version file
+   - **MUST:** Task document must exist (separate file OR delimited section)
+   - **MUST:** Task document must have correct Task ID format (`E{epic}:S{story}:T{task}`)
+   - **MUST:** Task document must include all required fields (see Section 4)
+
+2. **Update `VERSION_TASK`:**
    - Set `VERSION_TASK` to match the new Task number
    - Example: Moving from Task 1 to Task 2 → `VERSION_TASK = 2`
+   - **CRITICAL:** `VERSION_TASK` MUST match Task ID in Task document
 
-2. **Reset `VERSION_BUILD`:**
+3. **Reset `VERSION_BUILD`:**
    - Set `VERSION_BUILD = 1` (new Task always starts at BUILD 1)
    - Example: Moving from Task 1 to Task 2 → `VERSION_BUILD = 1`
+   - **Note:** For doc-init builds (first-time Task document creation), see FR-017 for `+0` support
 
-3. **When to Update:**
-   - **Option 1:** Update `version.py` when creating the new Task (recommended)
-   - **Option 2:** Update `version.py` during Release Workflow Step 2 (automatic detection)
-   - **CRITICAL:** Must be updated before running Release Workflow for the new Task
+4. **When to Update:**
+   - **Option 1:** Create Task document → Update `version.py` when creating the new Task (recommended)
+   - **Option 2:** Create Task document → Update `version.py` during Release Workflow Step 2 (automatic detection)
+   - **CRITICAL:** Task document MUST exist before updating version file
 
-4. **Validation:**
+5. **Validation:**
+   - Release Workflow Step 1 validates Task document presence
    - Release Workflow Step 1 validates that `VERSION_TASK` matches the active Task number
-   - If mismatch detected, workflow stops with error message
+   - Release Workflow Step 1 validates Task document → Version TASK component alignment
+   - If Task document missing or misaligned, workflow stops with error message
    - Release Workflow Step 2 automatically detects Task transitions and updates `VERSION_TASK` if needed
 
 **Example Task Transition:**
