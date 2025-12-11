@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-05 (v0.9.1.1+1 – Epic 9 created)  
+**Last updated:** 2025-12-11 (v0.9.4.0+1 – Story 4 Task 0 complete: Material capture infrastructure established)  
 **Branch:** `epic/9-book-related-work`  
 **Version Schema:** `0.9.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -27,6 +27,8 @@ housekeeping_policy: keep
   - Story: [`Story-002-book-integration-with-dev-kit.md`](Story-002-book-integration-with-dev-kit.md)
 - [ ] **E9:S03 – Book Publishing Support** - TODO
   - Story: [`Story-003-book-publishing-support.md`](Story-003-book-publishing-support.md)
+- [ ] **E9:S04 – Book Material Capture** - TODO (v0.9.4.0+0 – Story created for unstructured material capture)
+  - Story: [`Story-004-book-material-capture.md`](Story-004-book-material-capture.md)
 
 ---
 
@@ -52,6 +54,11 @@ Epic 9 owns the **Book Related Work** for the "Vibe Coding For Dummies" book pro
    - Create publishing workflows
    - Build publishing tools
    - Establish publishing processes
+
+4. **Capture Book Material**
+   - Capture unstructured material and text dumps
+   - Store raw content and ideas for later processing
+   - Organize captured material for structured content development
 
 ---
 
@@ -111,6 +118,25 @@ Create publishing workflows, tools, and processes for book publication.
 - [ ] E9:S03:T03 – Establish publishing processes
 
 **Story:** [`Story-003-book-publishing-support.md`](Story-003-book-publishing-support.md)
+
+---
+
+### Story 4: Book Material Capture
+
+**Status:** TODO  
+**Priority:** MEDIUM  
+**Estimated Effort:** [TBD]  
+**Last updated:** 2025-12-11
+
+**Goal:**  
+Create a system for capturing and storing unstructured book material (text dumps, raw notes, ideas, etc.) that can later be processed and organized into structured book content.
+
+**Tasks:**
+- [ ] E9:S04:T01 – Establish material capture structure
+- [ ] E9:S04:T02 – Create capture templates and guidelines
+- [ ] E9:S04:T03 – Set up material storage and organization
+
+**Story:** [`Story-004-book-material-capture.md`](Story-004-book-material-capture.md)
 
 ---
 

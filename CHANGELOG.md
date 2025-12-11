@@ -17,6 +17,37 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.9.4.0+1] - 11-12-25
+
+📚 Book Material Capture: E9:S04:T00 - Setup: Material Capture Infrastructure
+
+### Summary
+
+Established material capture infrastructure for unstructured book content. Created Story 4 (Book Material Capture) with setup task that defines the structure, templates, and guidelines for capturing unstructured material like text dumps, reports, and raw notes.
+
+### Changes
+
+**Story Creation:**
+- ✅ Created E9:S04 (Book Material Capture) for capturing unstructured book material
+- ✅ Purpose: Quick capture of ideas, notes, and content before organization into structured chapters
+
+**Infrastructure Setup:**
+- ✅ Established material capture structure (tasks serve as storage mechanism)
+- ✅ Created capture templates and guidelines for different material types
+- ✅ Defined storage and organization approach (sequential task numbering, task checklist as index)
+
+**First Material Capture:**
+- ✅ Captured Starborn Legacy Zombie Story case study report (E9:S04:T01)
+
+### Related Work
+
+- **Story:** E9:S04 - Book Material Capture
+- **Epic:** Epic 9 - Book Related Work
+- **Coordinates With:** E9:S01 (Book Content Development) - Material captured here will be processed into structured content
+- **Detailed Changelog:** [CHANGELOG_v0.9.4.0+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.4.0+1.md)
+
+---
+
 ## [0.2.9.4+1] - 11-12-25
 
 📚 Documentation: E2:S09:T04 - Update RW Agent Execution Guide
