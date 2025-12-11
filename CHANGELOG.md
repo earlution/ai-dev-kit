@@ -17,6 +17,30 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.6.10+2] - 2025-12-11
+
+✅ Feature: E4:S06:T09 - BR-009 Installer Discoverability Improvements
+
+### Changed
+
+- **Epic 4 Story 6 Task 9:** BR-009 - Improve installer discoverability and documentation
+  - README now prominently features installer as primary/only installation method
+  - Clear distinction between canonical templates vs. ai-dev-kit's actual Kanban
+  - Added prominent warnings about NOT manually copying files
+  - Added troubleshooting section for manual copying issues
+  - Included clear examples of expected installation results
+  - Updated post-template setup guide with installer instructions
+  - All BR-009 acceptance criteria satisfied
+- **README.md:** Installation section completely rewritten to emphasize installer
+  - Installer is now the PRIMARY and ONLY supported method
+  - Clear "What NOT to Do" section with warnings
+  - "Understanding Canonical Templates vs. ai-dev-kit's Actual Kanban" section
+  - Example installation output included
+  - Troubleshooting section for manual copying issues
+- **Post-Template Setup Guide:** Updated with installer instructions and warnings
+
+---
+
 ## [0.4.6.10+1] - 2025-12-11
 
 ✅ Fix: E4:S06:T10 - BR-004 Epic Contamination Fix

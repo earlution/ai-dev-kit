@@ -446,10 +446,24 @@ ls src/fynd_deals/version.py
 
 ### Issue: Kanban board shows template epics
 
+**⚠️ IMPORTANT:** Do NOT manually copy epics from `KB/PM_and_Portfolio/kanban/epics/`. These are ai-dev-kit's actual epics, not canonical templates.
+
 **Solution:**
 ```bash
-# Remove template epics
+# Use the interactive installer instead (RECOMMENDED)
+python3 packages/frameworks/kanban/scripts/install_kanban_framework.py --mode fresh
+
+# The installer will:
+# - Install canonical epic templates (not ai-dev-kit's actual epics)
+# - Contextualize Epic 1 with your project name
+# - Only install canonical core epics (1-8, 10, 18, 22, 23)
+# - Exclude ai-dev-kit project-specific epics
+
+# If you already manually copied (WRONG approach), remove them first:
 rm -rf KB/PM_and_Portfolio/kanban/epics/Epic-*
+
+# Then run the installer:
+python3 packages/frameworks/kanban/scripts/install_kanban_framework.py --mode fresh
 
 # Update board views
 # Edit KB/PM_and_Portfolio/kanban/_index.md

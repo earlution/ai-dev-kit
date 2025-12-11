@@ -183,37 +183,114 @@ recommended:
   - Markdown-based documentation system
 ```
 
-### Installation Options
+## 🚨 IMPORTANT: Use the Interactive Installer
 
-#### Option 1: Interactive Installation (Recommended)
+**⚠️ DO NOT manually copy files from `KB/PM_and_Portfolio/kanban/epics/`**
 
-**For projects with existing Kanban structures:**
+The `KB/PM_and_Portfolio/kanban/epics/` directory contains **ai-dev-kit's actual Kanban board** (with project-specific epics like "AI Dev Kit Core"). This is **NOT** what you want to install.
+
+**✅ USE THE INSTALLER INSTEAD:**
+
+The interactive installer (`install_kanban_framework.py`) is the **ONLY** supported installation method. It will:
+- Install **canonical epic templates** (not ai-dev-kit's actual epics)
+- Contextualize Epic 1 with your project name
+- Only install canonical core epics (1-8, 10, 18, 22, 23)
+- Exclude ai-dev-kit project-specific content
+
+### Installation Method
+
+**🎯 PRIMARY METHOD: Interactive Installation (REQUIRED)**
 
 ```bash
 # 1. Copy Kanban framework package to your project
 cp -r packages/frameworks/kanban/* /path/to/your/project/
 
-# 2. Run interactive installation script
+# 2. Run interactive installation script (THIS IS THE ONLY SUPPORTED METHOD)
 cd /path/to/your/project
 python3 scripts/install_kanban_framework.py
 ```
 
-The installer will:
-- Detect existing Kanban structures
-- Analyze and generate migration plan
-- Prompt for installation mode selection
-- Migrate existing structure to canonical format
-- Install canonical core epics
+**What the installer does:**
+- Detects existing Kanban structures (if any)
+- Analyzes and generates migration plan
+- Prompts for installation mode selection
+- **Installs canonical epic templates** from `templates/epics/` (NOT from ai-dev-kit's actual epics)
+- Contextualizes Epic 1 with your project name
+- Only installs canonical core epics (1-8, 10, 18, 22, 23)
+- Excludes ai-dev-kit project-specific epics
 
 **Installation Modes:**
-- **Fresh** - Clean install (no existing structure)
+- **Fresh** - Clean install (no existing structure) - **Recommended for new projects**
 - **Migration** - Migrate existing structure to canonical format
 - **Update** - Update existing framework installation
 - **Hybrid** - Preserve project epics, install framework epics (recommended when conflicts detected)
+- **Canonical Adoption** - Adopt canonical structure with intelligent task mapping (recommended when semantic matches found)
 
-#### Option 2: Manual Installation
+**Expected Results After Installation:**
 
-**For new projects or manual setup:**
+After running the installer, you should see:
+- ✅ Canonical epic templates installed in `KB/PM_and_Portfolio/kanban/epics/Epic-{N}/`
+- ✅ Epic 1 contextualized with your project name (e.g., "MyProject Core", not "AI Dev Kit Core")
+- ✅ Only canonical core epics (1-8, 10, 18, 22, 23) installed
+- ✅ No ai-dev-kit project-specific epics (5-9 from ai-dev-kit)
+- ✅ Empty epic directories ready for you to create stories and tasks
+
+**Example Installation Output:**
+```
+🔍 Step 1: Detecting existing Kanban structure...
+📊 Step 2: Analyzing structure and generating migration plan...
+🔧 Installing canonical core epics from templates...
+  ✅ Epic 1 installed from template: Epic-1-Project-Core.md
+  ✅ Epic 2 installed from template: Epic-2-Workflow-Management.md
+  ✅ Epic 3 installed from template: Epic-3-Versioning.md
+  ...
+✅ Installation complete!
+```
+
+### ⚠️ What NOT to Do
+
+**❌ DO NOT manually copy epics:**
+```bash
+# ❌ WRONG - This copies ai-dev-kit's actual Kanban, not templates!
+cp -r packages/frameworks/ai-dev-kit/KB/PM_and_Portfolio/kanban/epics/* KB/PM_and_Portfolio/kanban/epics/
+```
+
+**Why this is wrong:**
+- You'll get ai-dev-kit's project-specific epics (Epic 1: "AI Dev Kit Core", etc.)
+- You'll get ai-dev-kit's actual stories and tasks with their specific content
+- Epic 1 won't be contextualized with your project name
+- You'll receive project-specific epics (5-9) that are specific to ai-dev-kit
+
+**✅ CORRECT - Use the installer:**
+```bash
+# ✅ CORRECT - Use the interactive installer
+python3 scripts/install_kanban_framework.py
+```
+
+### Understanding Canonical Templates vs. ai-dev-kit's Actual Kanban
+
+**Canonical Epic Templates** (`templates/epics/`):
+- ✅ Generic templates with placeholders (e.g., `{PROJECT_NAME}`)
+- ✅ Designed to be contextualized for your project
+- ✅ These are what the installer uses
+- ✅ Located in: `packages/frameworks/kanban/templates/epics/Epic-{N}-*.md`
+
+**ai-dev-kit's Actual Kanban** (`KB/PM_and_Portfolio/kanban/epics/`):
+- ❌ ai-dev-kit's project-specific epics (e.g., "AI Dev Kit Core")
+- ❌ ai-dev-kit's actual stories and tasks
+- ❌ Example/reference only - **DO NOT COPY**
+- ❌ Located in: `KB/PM_and_Portfolio/kanban/epics/Epic-{N}/`
+
+**The installer automatically:**
+- Copies from `templates/epics/` (canonical templates)
+- Contextualizes placeholders with your project name
+- Does NOT copy from `KB/PM_and_Portfolio/kanban/epics/` (ai-dev-kit's actual Kanban)
+
+### Alternative: Manual Installation (Advanced - Not Recommended)
+
+**⚠️ Only use if you understand the distinction between templates and actual Kanban**
+
+**For advanced users who want manual control:**
 
 ```yaml
 step_1:
@@ -1159,6 +1236,35 @@ after_installation:
 ---
 
 ## 🆘 Troubleshooting
+
+### Issue: I Manually Copied Epics and Got ai-dev-kit's Actual Kanban
+
+**Problem:** You manually copied epics from `KB/PM_and_Portfolio/kanban/epics/` and received ai-dev-kit's project-specific epics instead of canonical templates.
+
+**Symptoms:**
+- Epic 1 is named "AI Dev Kit Core" instead of your project name
+- You have ai-dev-kit's project-specific epics (5-9)
+- Epics contain ai-dev-kit's actual stories and tasks
+
+**Solution:**
+```bash
+# 1. Remove the incorrectly copied epics
+rm -rf KB/PM_and_Portfolio/kanban/epics/Epic-*
+
+# 2. Run the installer (the correct method)
+python3 scripts/install_kanban_framework.py --mode fresh
+
+# The installer will:
+# - Install canonical epic templates (not ai-dev-kit's actual epics)
+# - Contextualize Epic 1 with your project name
+# - Only install canonical core epics (1-8, 10, 18, 22, 23)
+# - Exclude ai-dev-kit project-specific epics
+```
+
+**Prevention:**
+- ✅ Always use `install_kanban_framework.py` - it's the ONLY supported installation method
+- ❌ Never manually copy from `KB/PM_and_Portfolio/kanban/epics/`
+- ✅ The installer automatically uses templates from `templates/epics/`
 
 ### Story Checklist Out of Sync
 

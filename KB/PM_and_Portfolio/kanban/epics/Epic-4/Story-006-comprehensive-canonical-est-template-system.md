@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-11 (v0.4.6.10+1 – Task 10 complete: BR-004 epic contamination fixed)  
-**Version:** v0.4.6.10+1  
+**Last updated:** 2025-12-11 (v0.4.6.10+2 – Task 9 complete: BR-009 installer discoverability improvements)  
+**Version:** v0.4.6.10+2  
 **Code:** E4S06
 
 ---
@@ -431,10 +431,10 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 ### E4:S06:T09 – BR-009: Improve installer discoverability and documentation
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Dependencies:** E4:S06:T07, **BR-004 fix** (installer must use canonical templates, not ai-dev-kit's actual epics)  
-**Blocker:** BR-004 (epic contamination must be fixed before improving discoverability)  
+**Dependencies:** E4:S06:T07, **BR-004 fix** (installer must use canonical templates, not ai-dev-kit's actual epics) ✅  
+**Blocker:** BR-004 (epic contamination must be fixed before improving discoverability) ✅  
 **Linked BR:** BR-009 (GitHub issue #14) - Installer discoverability and documentation
 
 **Input:**
@@ -466,11 +466,11 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 5. Update any setup guides to reference installer
 
 **Acceptance Criteria:**
-- [ ] README prominently features installer as primary/only method
-- [ ] README clearly distinguishes canonical templates vs. ai-dev-kit's actual Kanban
-- [ ] Installation documentation includes clear examples of expected results
-- [ ] Warning/documentation added about not manually copying files
-- [ ] All BR-009 acceptance criteria satisfied
+- [x] README prominently features installer as primary/only method ✅
+- [x] README clearly distinguishes canonical templates vs. ai-dev-kit's actual Kanban ✅
+- [x] Installation documentation includes clear examples of expected results ✅
+- [x] Warning/documentation added about not manually copying files ✅
+- [x] All BR-009 acceptance criteria satisfied ✅
 
 ---
 
