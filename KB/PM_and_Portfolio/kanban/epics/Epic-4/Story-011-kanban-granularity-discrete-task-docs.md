@@ -26,6 +26,7 @@ housekeeping_policy: keep
 - [ ] **E4:S11:T02 – Create Task Document Template and Update Story Template**
 - [ ] **E4:S11:T03 – Update Versioning Policy with Task Doc Requirements (Kanban-related sections)**
 - [ ] **E4:S11:T04 – Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)**
+- [ ] **E4:S11:T05 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.4.11.5+0)
 
 > **Format:** `E4:S11:Txx` (Epic 4, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)  
@@ -220,6 +221,30 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 - Requires coordination with Epic 3 (Numbering & Versioning Framework) for Numbering Policy updates
 - Depends on FR-016 completion (T01-T03)
 - Supports FR-017 implementation (doc-init build `+0`)
+
+---
+
+### E4:S11:T05 – Dependency Wiring Cross-References
+
+**Input:** E2:S10:T06 dependency chain, FR-020 requirements  
+**Deliverable:** Cross-references wired to show E4:S11 blocks E2:S10:T06  
+**Dependencies:** None  
+**Blocker:** None  
+**Parallel Development Candidacy:** Safe (documentation only)
+
+**Approach:**
+1. Update Blocks section to include E2:S10:T06
+2. Update Related Work section to include FR-020 and E2:S10:T06
+3. Document that E4:S11 blocks E2:S10:T06 via dependency chain
+4. Add cross-references to show dependency relationship
+
+**Acceptance Criteria:**
+- [ ] Blocks section updated with E2:S10:T06
+- [ ] Related Work section updated with FR-020 and E2:S10:T06
+- [ ] Dependency relationship documented
+- [ ] Cross-references wired
+
+**Status:** ✅ COMPLETE (v0.4.11.5+0)
 
 ---
 

@@ -27,6 +27,7 @@ housekeeping_policy: keep
 - [ ] **E2:S09:T03 – Enhance Validators for Task Doc Presence and Alignment**
 - [ ] **E2:S09:T04 – Update RW Agent Execution Guide**
 - [ ] **E2:S09:T05 – Documentation and Testing**
+- [ ] **E2:S09:T06 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.2.9.6+0)
 
 > **Coordination:** Kanban-specific work (policy, templates) is handled in **E4:S11**. This story focuses on RW-specific integration.
 
@@ -237,6 +238,28 @@ Coordinate RW-specific integration for **3-tier granularity** (Epic → Story �
 - [ ] Test coverage for RW Step 1 with Task docs
 - [ ] Migration guide for existing projects
 - [ ] All policy documents verified for consistency
+
+---
+
+### E2:S09:T06 – Dependency Wiring Cross-References
+
+**Input:** E2:S10:T06 dependency chain, FR-020 requirements  
+**Deliverable:** Cross-references wired to show E2:S09 blocks E2:S10:T06  
+**Dependencies:** None  
+**Blocker:** None  
+**Parallel Development Candidacy:** Safe (documentation only)
+
+**Approach:**
+1. Update Related Work section to include FR-020 and E2:S10:T06
+2. Document that E2:S09 blocks E2:S10:T06 via dependency chain
+3. Add cross-references to show dependency relationship
+
+**Acceptance Criteria:**
+- [ ] Related Work section updated with FR-020 and E2:S10:T06
+- [ ] Dependency relationship documented
+- [ ] Cross-references wired
+
+**Status:** ✅ COMPLETE (v0.2.9.6+0)
 
 ---
 
