@@ -54,6 +54,42 @@ housekeeping_policy: keep
 
 ## Tasks
 
+**CRITICAL: Task Document Requirements**
+
+Every Task MUST have a discrete Task document. Tasks can be documented in one of two formats:
+
+### Format 1: Separate Task File (Recommended)
+
+**Location:** `kanban/epics/Epic-X/Story-XXX/Task-YYY-description.md` or `kanban/epics/Epic-X/Story-XXX/TYYY-description.md`
+
+**Example:**
+- `kanban/epics/Epic-4/Story-011/Task-001-update-kanban-policy.md`
+- `kanban/epics/Epic-4/Story-011/T001-update-kanban-policy.md`
+
+**When to Use:**
+- Tasks with significant complexity or multiple phases
+- Tasks that may have associated files (diagrams, notes, etc.)
+- Tasks that benefit from standalone documentation
+- Projects requiring maximum traceability
+
+**Task Checklist Reference:**
+- [ ] **EXX:SYY:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
+  - Task Doc: [`Task-001-task-title.md`](Task-001-task-title.md)
+
+### Format 2: Delimited Section Within Story (Alternative)
+
+**Location:** Within this Story document, using Task ID as a clear header
+
+**Format:** `### E{epic}:S{story}:T{task} – Task Name` followed by task content
+
+**When to Use:**
+- Simple, straightforward tasks
+- Tasks with minimal documentation needs
+- Projects with tight documentation requirements
+- Tasks that are tightly coupled to the Story
+
+**Example Structure:**
+```markdown
 ### EXX:SYY:T01 – [Task Title]
 
 > **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E1:S01:T01`, not `T01` alone)
@@ -68,20 +104,53 @@ housekeeping_policy: keep
 1. Step one
 2. Step two
 3. Step three
+```
 
 ---
 
-### EXX:SYY:T02 – [Task Title]
+### Task Documentation Requirements
 
-**Input:** [What this task requires]
-**Deliverable:** [What this task produces]
-**Dependencies:** [Epic, Story, Task, or external]
-**Blocker:** [None, or specific dependency]
+Regardless of format, every Task MUST include:
+
+- **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
+- **Scope:** Clear description of what the task accomplishes
+- **Acceptance Criteria:** Measurable criteria for task completion
+- **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
+- **Version Anchor:** Version marker when task is complete (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
+- **Input:** What is required to start this task
+- **Deliverable:** What is produced by this task
+- **Dependencies:** Other tasks or work items this task depends on
+- **Blocker:** Tasks or work items that block this task
+- **Related BR/FR Links:** Links to related Bug Reports or Feature Requests
+
+**Template:** Use `packages/frameworks/kanban/templates/TASK_TEMPLATE.md` for separate Task files.
+
+---
+
+### Example Tasks
+
+#### Example: Separate Task File Format
+
+**Task Checklist Entry:**
+- [ ] **EXX:SYY:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
+  - Task Doc: [`Task-001-task-title.md`](Task-001-task-title.md)
+
+#### Example: Delimited Section Format
+
+### EXX:SYY:T01 – [Task Title]
+
+> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E1:S01:T01`, not `T01` alone)
+
+**Input:** [What this task requires]  
+**Deliverable:** [What this task produces]  
+**Dependencies:** [Epic, Story, Task, or external]  
+**Blocker:** [None, or specific dependency]  
 **Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 **Approach:**
 1. Step one
 2. Step two
+3. Step three
 
 ---
 
