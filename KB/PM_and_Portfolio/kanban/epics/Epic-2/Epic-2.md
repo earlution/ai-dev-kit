@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-11 (v0.2.11.0+0 – Story 11 created for FR-019: Intake Workflow Automation)  
+**Last updated:** 2025-12-11 (v0.2.9.4+1 – Story 9 Task 4 complete: RW Agent Execution Guide updated with Task doc requirements)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -40,9 +40,9 @@ housekeeping_policy: keep
 - [ ] **E2:S08 – Harden Release Workflow Reliability** - TODO (v0.2.8.0+0 – Story created for FR-015)
   - Story: [`Story-008-harden-release-workflow-reliability.md`](Story-008-harden-release-workflow-reliability.md)
   - Tasks: T00 ✅ COMPLETE, T01-T07 TODO (FR-015: Harden Kanban docs update step in RW)
-- [ ] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - TODO (v0.2.9.0+0 – Story created for FR-016)
+- [ ] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - IN PROGRESS (v0.2.9.4+1 – Task 4 complete: RW Agent Execution Guide updated with Task doc requirements)
   - Story: [`Story-009-kanban-granularity-discrete-task-docs.md`](Story-009-kanban-granularity-discrete-task-docs.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T05 TODO (FR-016: RW Step 1, validators, agent execution guide)
+  - Tasks: T00 ✅ COMPLETE, T01-T03 ✅ COMPLETE, T04 ✅ COMPLETE (v0.2.9.4+1), T05-T06 TODO (FR-016: RW Step 1, validators, agent execution guide)
   - **Coordination:** Coordinates with E4:S11 (Kanban policy and templates)
 - [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - TODO (v0.2.10.0+0 – Story created for FR-017)
   - Story: [`Story-010-doc-init-build-zero-for-new-est.md`](Story-010-doc-init-build-zero-for-new-est.md)

@@ -8,15 +8,22 @@ housekeeping_policy: keep
 
 # Release Workflow: Agent Execution Guide
 
-**Version:** 1.4.0
-**Last Updated:** 2025-12-05
+**Version:** 1.5.0
+**Last Updated:** 2025-12-11
 **Related:** [Example: Confidentia - Epic 4 - User Workflows & Use Case Modeling, Release Workflow] | [Example: ai-dev-kit - Epic 2 - Workflow Management Framework, Release Workflow]
 
 ---
 
 ## 📜 Version History
 
-**Current Version:** 1.4.0 (2025-12-05)
+**Current Version:** 1.5.0 (2025-12-11)
+
+### Version 1.5.0 (2025-12-11) - Task Document Requirements Documentation
+- **Added:** Comprehensive "Task Document Requirements" section documenting 3-tier structure, discrete Task doc requirement, Task doc formats, required fields, validation process, and examples
+- **Added:** Cross-references to Kanban Governance Policy and Versioning Policy
+- **Added:** Examples for both Task document formats (separate file and delimited section)
+- **Added:** Error handling guidance for Task document validation failures
+- **Related:** E2:S09:T04 - Update RW Agent Execution Guide with Task doc requirements
 
 ### Version 1.4.0 (2025-12-05) - Branch Safety Hardening
 - **Added:** Step 1: Branch Safety Check as mandatory blocking step
@@ -599,6 +606,229 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 - **ALWAYS validate before and after** - Catch errors before they propagate
 - **ALWAYS document your decision** - Show your work for traceability
 - See `KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` for error prevention reference
+
+---
+
+## Task Document Requirements
+
+**CRITICAL:** This section documents the mandatory Task document requirements that must be satisfied before Release Workflow can proceed. These requirements are enforced in Step 2 (B.1: Locate and Validate Task Document) and are based on the Kanban Governance Policy and Versioning Policy.
+
+### 3-Tier Structure Requirement
+
+All work MUST follow the explicit **3-tier structure**: Epic → Story → Task. This structure is **mandatory** and **non-negotiable**.
+
+- **Epic** contains Stories (high-level scope)
+- **Story** contains Tasks (releasable slices)
+- **Task** is the atomic work unit (implementation detail)
+
+**No implicit or inline tasks are permitted.** Every task MUST be explicitly documented at the Task tier.
+
+**Policy Reference:**
+- **Kanban Governance Policy:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Section 3.3: Tasks
+- **Kanban Governance Policy (Dev-Kit):** `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md` - Section 3.3: Tasks
+
+### Discrete Task Document Requirement
+
+Every Task MUST have a discrete Task document (or clearly delimited section within the Story document using the Task ID as a header). Tasks cannot be implicit, bundled, or introduced inline.
+
+**Policy Reference:**
+- **Kanban Governance Policy:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Section 3.3: Task Document Requirements
+- **Versioning Policy:** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` - Task doc requirements
+
+### Task Document Formats
+
+Tasks can be documented in one of two formats:
+
+#### Format 1: Separate Task File (Recommended)
+
+**Location Patterns:**
+- `{kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md`
+- `{kanban_root}/epics/Epic-{epic}/Story-{story}/T{task}-*.md`
+
+**Examples:**
+- [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
+- [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/T001-update-kanban-policy.md`
+
+**When to Use:**
+- Tasks with significant complexity or multiple phases
+- Tasks that may have associated files (diagrams, notes, etc.)
+- Tasks that benefit from standalone documentation
+- Projects requiring maximum traceability
+
+**Template:** `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+
+**Example:** `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md`
+
+#### Format 2: Delimited Section Within Story (Alternative)
+
+**Location:** Within the Story document itself
+
+**Format:** Section header matching `### E{epic}:S{story}:T{task} – Task Name` followed by task content
+
+**Example:**
+```markdown
+### E4:S11:T01 – Update Kanban Governance Policy
+
+**Input:** Current Kanban governance policy documents
+**Deliverable:** Updated Kanban governance policy mandating 3-tier structure
+**Status:** ✅ COMPLETE (v0.4.11.1+0)
+...
+```
+
+**When to Use:**
+- Simple, straightforward tasks
+- Tasks with minimal documentation needs
+- Projects with tight documentation requirements
+- Tasks that are tightly coupled to the Story
+
+**Example:** `packages/frameworks/kanban/examples/Story-Example-With-Delimited-Tasks.md`
+
+### Required Task Document Fields
+
+Every Task document MUST include the following fields (regardless of format):
+
+- ✅ **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
+- ✅ **Scope:** Clear description of what the task accomplishes
+- ✅ **Acceptance Criteria:** Measurable criteria for task completion
+- ✅ **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
+- ✅ **Version Anchor:** Forensic marker when task is complete (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
+- ✅ **Input:** What is required to start this task
+- ✅ **Deliverable:** What is produced by this task
+- ✅ **Dependencies:** Other tasks or work items this task depends on
+- ✅ **Related BR/FR Links:** Links to related Bug Reports or Feature Requests (if applicable)
+
+**Template Reference:**
+- **Task Template:** `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+- **Story Template:** `packages/frameworks/kanban/templates/STORY_TEMPLATE.md` (for delimited section format)
+
+### Task Document Validation in Release Workflow
+
+**Step 2 (B.1) Enforcement:**
+
+The Release Workflow enforces Task document requirements in Step 2 (B. IDENTIFY COMPLETED TASK), subsection B.1 (LOCATE AND VALIDATE TASK DOCUMENT):
+
+1. **Location:** Agent MUST locate Task document in either format (separate file OR delimited section)
+2. **Presence:** If Task document is NOT found, workflow STOPS with error
+3. **Fields:** Agent MUST validate all required fields are present
+4. **Alignment:** Agent MUST verify Task ID matches version components (Epic/Story/Task)
+
+**Error Handling:**
+
+If Task document validation fails, the workflow:
+- ❌ **STOPS immediately** (does not proceed to version bump)
+- 📋 **Reports clear error message** with guidance on creating/fixing Task document
+- 🔗 **Provides links** to templates and examples
+- ⚠️ **Marks workflow as BLOCKED** until Task document is created/fixed
+
+**Example Error Messages:**
+
+```
+❌ TASK DOCUMENT NOT FOUND: Task E4:S11:T01 does not have a Task document.
+
+Action Required:
+1. Create Task document at: KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-description.md
+   OR
+2. Add delimited section to Story file with header: ### E4:S11:T01 – Task Title
+
+See: packages/frameworks/kanban/templates/TASK_TEMPLATE.md
+```
+
+```
+❌ TASK DOCUMENT INCOMPLETE: Task E4:S11:T01 document is missing required fields.
+
+Missing Fields: Input, Deliverable
+
+Required fields: Task ID, Scope, Acceptance Criteria, Status, Version Anchor, Input, Deliverable
+See: packages/frameworks/kanban/templates/TASK_TEMPLATE.md
+```
+
+```
+❌ TASK ID MISMATCH: Task document Task ID does not match version components.
+
+Task ID in document: E4:S11:T02
+Expected: E4:S11:T01
+Version components: Epic=4, Story=11, Task=1
+
+Action Required: Update Task document Task ID to match version components.
+```
+
+### Versioning Policy Integration
+
+**Task Document → Version Alignment:**
+
+The Versioning Policy requires that:
+- Task document MUST exist before versioning (enforced in RW Step 2)
+- Task ID in document MUST match version TASK component
+- Epic/Story/Task alignment MUST be verified before version bump
+
+**Policy References:**
+- **Versioning Policy (Dev-Kit):** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` - Task doc requirements
+- **Versioning Policy (Framework):** `packages/frameworks/numbering & versioning/versioning-policy.md` - Kanban-related sections
+
+### Examples
+
+#### Example 1: Separate Task File Format
+
+**Task:** E4:S11:T01 – Update Kanban Governance Policy
+
+**Location:** `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
+
+**Task Checklist Entry (in Story file):**
+```markdown
+- [x] **E4:S11:T01 – Update Kanban Governance Policy** ✅ COMPLETE (v0.4.11.1+0)
+  - Task Doc: [`Task-001-update-kanban-policy.md`](Task-001-update-kanban-policy.md)
+```
+
+**RW Step 2 Behavior:**
+1. Identifies completed task: E4:S11:T01
+2. Locates Task document: `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
+3. Validates required fields: ✅ All present
+4. Verifies Task ID alignment: ✅ E4:S11:T01 matches version components
+5. Proceeds to version bump
+
+#### Example 2: Delimited Section Format
+
+**Task:** E4:S11:T02 – Create Task Document Template
+
+**Location:** Delimited section within Story file: `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Story-011-kanban-granularity-discrete-task-docs.md`
+
+**Task Section in Story file:**
+```markdown
+### E4:S11:T02 – Create Task Document Template and Update Story Template
+
+**Input:** Current Story template
+**Deliverable:** Task document template and updated Story template
+**Status:** ✅ COMPLETE (v0.4.11.2+2)
+...
+```
+
+**RW Step 2 Behavior:**
+1. Identifies completed task: E4:S11:T02
+2. Searches Story file for delimited section: `### E4:S11:T02 –`
+3. Locates Task document: "delimited section in Story file"
+4. Validates required fields: ✅ All present
+5. Verifies Task ID alignment: ✅ E4:S11:T02 matches version components
+6. Proceeds to version bump
+
+### Related Documentation
+
+**Policy Documents:**
+- **Kanban Governance Policy (Canonical):** `packages/frameworks/kanban/policies/kanban-governance-policy.md`
+- **Kanban Governance Policy (Dev-Kit):** `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md`
+- **Versioning Policy (Dev-Kit):** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
+- **Versioning Policy (Framework):** `packages/frameworks/numbering & versioning/versioning-policy.md`
+
+**Templates:**
+- **Task Template:** `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+- **Story Template:** `packages/frameworks/kanban/templates/STORY_TEMPLATE.md`
+
+**Examples:**
+- **Separate File Format:** `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md`
+- **Delimited Section Format:** `packages/frameworks/kanban/examples/Story-Example-With-Delimited-Tasks.md`
+
+**Related Stories:**
+- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - Policy and template work
+- **E2:S09:** Kanban Granularity & Discrete Task Docs (Workflow Management) - RW integration
 
 ---
 
@@ -1899,5 +2129,5 @@ The `.cursorrules` file defines a **case-insensitive "RW" trigger** that mandate
 
 ---
 
-**Last Updated:** 2025-12-05
-**Document Version:** 1.4.0
+**Last Updated:** 2025-12-11
+**Document Version:** 1.5.0

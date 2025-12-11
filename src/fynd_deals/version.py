@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
 VERSION_STORY = 9     # Story number (Story 9: Kanban Granularity & Discrete Task Docs - RW Integration)
-VERSION_TASK = 3      # Task number (Task 3: Enhance Validators for Task Doc Presence and Alignment)
-VERSION_BUILD = 0     # Build number (E2:S09:T03 complete - validators enhanced with Task doc validation)
+VERSION_TASK = 4      # Task number (Task 4: Update RW Agent Execution Guide)
+VERSION_BUILD = 1     # Build number (E2:S09:T04 complete - RW Agent Execution Guide updated with Task doc requirements)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

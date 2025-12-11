@@ -17,6 +17,39 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.9.4+1] - 11-12-25
+
+📚 Documentation: E2:S09:T04 - Update RW Agent Execution Guide
+
+### Summary
+
+Updated Release Workflow Agent Execution Guide with comprehensive Task document requirements documentation. The guide now provides complete documentation for agents executing Release Workflow, ensuring they understand and enforce Task document requirements throughout the workflow.
+
+### Changes
+
+**Release Workflow Agent Execution Guide:**
+- ✅ Added comprehensive "Task Document Requirements" section covering:
+  - 3-tier structure requirement (Epic → Story → Task)
+  - Discrete Task document requirement
+  - Task document formats (separate file and delimited section)
+  - Required Task document fields
+  - Task document validation in Release Workflow (Step 2 B.1)
+  - Error handling guidance with example error messages
+  - Examples for both formats
+- ✅ Cross-referenced Kanban Governance Policy and Versioning Policy
+- ✅ Added links to templates and examples
+- ✅ Updated version history to v1.5.0
+- ✅ Documented integration with RW Step 2 validation
+
+### Related Work
+
+- **Story:** E2:S09 - Kanban Granularity & Discrete Task Docs (RW Integration)
+- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - COMPLETE ✅
+- **FR-016:** Kanban Granularity & Discrete Task Docs
+- **Detailed Changelog:** [CHANGELOG_v0.2.9.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.4+1.md)
+
+---
+
 ## [0.2.9.3+0] - 2025-12-11
 
 🔧 Validator Enhancement: E2:S09:T03 - Enhance Validators for Task Doc Presence and Alignment

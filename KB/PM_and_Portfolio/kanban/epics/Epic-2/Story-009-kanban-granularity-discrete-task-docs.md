@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** 2025-12-11 (v0.2.9.0+0 – Story created for FR-016)  
+**Last updated:** 2025-12-11 (v0.2.9.4+1 – Task 4 complete: RW Agent Execution Guide updated with Task doc requirements)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 - [x] **E2:S09:T01 – Coordination and Task Decomposition** ✅ COMPLETE (v0.2.9.1+0)
 - [x] **E2:S09:T02 – Update RW Step 1 to Require Task Doc Presence** ✅ COMPLETE (v0.2.9.2+0)
 - [x] **E2:S09:T03 – Enhance Validators for Task Doc Presence and Alignment** ✅ COMPLETE (v0.2.9.3+0)
-- [ ] **E2:S09:T04 – Update RW Agent Execution Guide**
+- [x] **E2:S09:T04 – Update RW Agent Execution Guide** ✅ COMPLETE (v0.2.9.4+1)
 - [ ] **E2:S09:T05 – Documentation and Testing**
 - [ ] **E2:S09:T06 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.2.9.6+0)
 
@@ -238,11 +238,30 @@ Enhanced validators to check Task document presence and alignment:
 5. Cross-reference Kanban and Versioning policies
 
 **Acceptance Criteria:**
-- [ ] RW agent execution guide documents Task doc requirements
-- [ ] Task doc location logic documented
-- [ ] Task doc validation requirements documented
-- [ ] Examples provided for both Task doc formats
-- [ ] Cross-references to policies added
+- [x] RW agent execution guide documents Task doc requirements ✅
+- [x] Task doc location logic documented ✅
+- [x] Task doc validation requirements documented ✅
+- [x] Examples provided for both Task doc formats ✅
+- [x] Cross-references to policies added ✅
+
+**Status:** ✅ COMPLETE (v0.2.9.4+1)
+
+**Completion Summary:**
+Updated RW Agent Execution Guide with comprehensive Task document requirements documentation:
+- ✅ Added new "Task Document Requirements" section covering:
+  - 3-tier structure requirement (Epic → Story → Task)
+  - Discrete Task document requirement
+  - Task document formats (separate file and delimited section)
+  - Required Task document fields
+  - Task document validation in Release Workflow (Step 2 B.1)
+  - Error handling guidance with example error messages
+  - Examples for both formats
+- ✅ Cross-referenced Kanban Governance Policy and Versioning Policy
+- ✅ Added links to templates and examples
+- ✅ Updated version history to v1.5.0
+- ✅ Documented integration with RW Step 2 validation
+
+The guide now provides comprehensive documentation for agents executing Release Workflow, ensuring they understand and enforce Task document requirements throughout the workflow.
 
 ---
 
