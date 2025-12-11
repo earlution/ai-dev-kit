@@ -27,6 +27,7 @@ housekeeping_policy: keep
 - [ ] **E4:S11:T03 – Update Versioning Policy with Task Doc Requirements (Kanban-related sections)**
 - [ ] **E4:S11:T04 – Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)**
 - [ ] **E4:S11:T05 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.4.11.5+0)
+- [ ] **E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation**
 
 > **Format:** `E4:S11:Txx` (Epic 4, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)  
@@ -248,6 +249,61 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 
 ---
 
+### E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation
+
+**Input:** Epic, Story, and Task templates (from E4:S06 and E4:S11:T02), current template structure  
+**Deliverable:** Optimized templates with proper tier delegation, delegation guidelines documented  
+**Dependencies:** E4:S11:T02 (Task template created), E4:S06:T01-T04 (Epic/Story/Task templates created)  
+**Blocker:** None  
+**Parallel Development Candidacy:** Safe (depends on templates being created)
+
+**Approach:**
+1. Review Epic template structure:
+   - Identify sections that duplicate Story-level detail
+   - Ensure Epic template delegates Story details to Story docs
+   - Epic should contain: purpose, scope, key characteristics, story checklist (references only)
+   - Epic should NOT contain: detailed story descriptions, task-level details
+2. Review Story template structure:
+   - Identify sections that duplicate Task-level detail
+   - Ensure Story template delegates Task details to Task docs
+   - Story should contain: overview, goals, task checklist (references only), acceptance criteria (story-level)
+   - Story should NOT contain: detailed task descriptions, task implementation details
+3. Review Task template structure:
+   - Ensure Task template contains all necessary detail (no delegation below)
+   - Task should contain: input, deliverable, approach, acceptance criteria, dependencies, blockers
+   - Task is the leaf node - all detail lives here
+4. Create delegation guidelines:
+   - Document what belongs at each tier
+   - Document what should be referenced vs. duplicated
+   - Create anti-pattern examples (what NOT to do)
+   - Create best practice examples
+5. Update all templates:
+   - Remove duplicated detail from Epic templates (delegate to Story)
+   - Remove duplicated detail from Story templates (delegate to Task)
+   - Add clear references/links to lower-tier docs
+   - Add guidance comments in templates explaining delegation
+6. Review existing Epic/Story/Task docs for compliance:
+   - Identify violations of delegation principle
+   - Create migration guide for updating existing docs
+   - Document examples of proper vs. improper delegation
+
+**Acceptance Criteria:**
+- [ ] Epic templates delegate Story detail to Story docs (no duplication)
+- [ ] Story templates delegate Task detail to Task docs (no duplication)
+- [ ] Task templates contain all necessary detail (leaf node)
+- [ ] Delegation guidelines documented with examples
+- [ ] All templates updated with proper delegation
+- [ ] Template guidance comments added explaining delegation
+- [ ] Migration guide created for updating existing docs
+- [ ] Examples of proper vs. improper delegation documented
+
+**Coordination:**
+- This task should be performed after E4:S06:T03-T04 (Story/Task templates created)
+- This task optimizes the templates created in E4:S11:T02 and E4:S06
+- Results inform E4:S06:T05 (Contextualization guide) - delegation is part of contextualization
+
+---
+
 ## Acceptance Criteria
 
 - [ ] **AC1:** Kanban policy updated to mandate 3-tier structure and discrete Task docs
@@ -256,6 +312,7 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 - [ ] **AC4:** Story template updated to clarify Task doc formats
 - [ ] **AC5:** Versioning policy updated with Task doc requirements (Kanban sections)
 - [ ] **AC6:** Abstract space concept defined in Kanban Policy and Numbering Policy (FR-018)
+- [ ] **AC7:** Template structure optimized for proper tier delegation (Epic → Story → Task)
 
 ---
 
@@ -274,6 +331,9 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 
 **Related Work:**
 - **E2:S09:** Kanban Granularity & Discrete Task Docs (Workflow Management coordination) (depends on this story)
+- **E4:S06:** Comprehensive Canonical E/S/T Template System (creates Epic/Story/Task templates that T06 optimizes)
+- **E4:S06:T03:** Create story template files (T06 reviews and optimizes)
+- **E4:S06:T04:** Create task template files (T06 reviews and optimizes)
 - **FR-016:** Kanban Granularity & Discrete Task Docs (3-Tier Structure) (this story + E2:S09)
 - **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (depends on FR-016, enables E2:S10)
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (T04)
@@ -308,5 +368,6 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 - [ ] Create Task document template (T02)
 - [ ] Update versioning policy (T03)
 - [ ] After FR-016 completion: Define abstract space concept (T04 - FR-018)
+- [ ] After E4:S06:T03-T04: Review and optimize template structure for tier delegation (T06)
 - [ ] Coordinate with E2:S09 for RW integration
 
