@@ -474,6 +474,48 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 ---
 
+### E4:S06:T10 – BR-004: Fix epic contamination in installer
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Dependencies:** E4:S06:T01-T02 (epic templates must exist)  
+**Blocker:** None  
+**Linked BR:** BR-004 - Kanban Installation Includes Project-Specific Epics from Template
+
+**Input:**
+- BR-004 requirements
+- Canonical epic templates from T01-T02 (Epics 1-21)
+- Installer script (`install_kanban_framework.py`) from E4:S07
+- Migration script (`migrate_structure.py`) from E4:S07
+- User feedback from earlution/dev-kit project
+
+**Deliverable:**
+- Fixed installer that:
+  - Uses canonical epic templates from `packages/frameworks/kanban/templates/epics/` instead of ai-dev-kit's actual epics
+  - Only installs canonical core epics (1-8, 10, 18, 22, 23) by default
+  - Contextualizes Epic 1 with project name (replaces `{PROJECT_NAME}` placeholder)
+  - Excludes ai-dev-kit project-specific epics (5-9 in ai-dev-kit)
+- Updated migration script to use templates
+- Verification that fresh installs only get canonical templates
+
+**Approach:**
+1. Update `migrate_structure.py` `_install_canonical_epics()` to:
+   - Copy from `packages/frameworks/kanban/templates/epics/Epic-{N}-*.md` templates
+   - NOT copy from `KB/PM_and_Portfolio/kanban/epics/Epic-{N}/` (ai-dev-kit's actual epics)
+   - Contextualize Epic 1 template with project name
+2. Ensure installer only installs canonical core epics (1-8, 10, 18, 22, 23)
+3. Test fresh install to verify no project-specific epics are included
+4. Update documentation to clarify template usage
+
+**Acceptance Criteria:**
+- [ ] Installer uses canonical epic templates, not ai-dev-kit's actual epics
+- [ ] Fresh installs only receive canonical core epics (1-8, 10, 18, 22, 23)
+- [ ] Epic 1 is contextualized with project name (not "AI Dev Kit Core")
+- [ ] No ai-dev-kit project-specific epics (5-9) are installed
+- [ ] All BR-004 acceptance criteria satisfied
+
+---
+
 ## Acceptance Criteria
 
 - [ ] All epic templates created (Epics 1-21)
