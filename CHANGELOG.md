@@ -17,6 +17,36 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.9.2+0] - 2025-12-11
+
+🔧 RW Step 1 Enhanced: E2:S09:T02 - Update RW Step 1 to Require Task Doc Presence
+
+### Summary
+
+Updated RW Step 1 (B. IDENTIFY COMPLETED TASK) to require Task document presence and validation. RW now enforces the Kanban policy requirement that every Task must have a discrete Task document.
+
+### Changes
+
+- ✅ Added B.1 section: LOCATE AND VALIDATE TASK DOCUMENT
+- ✅ Implemented Task doc location logic (separate file OR delimited section)
+- ✅ Added validation for required fields (Task ID, Scope, Acceptance Criteria, Status, Version Anchor, Input, Deliverable)
+- ✅ Added Task ID alignment verification (Epic/Story/Task must match version components)
+- ✅ Added error handling: RW stops if Task doc not found or validation fails
+- ✅ Error messages provide guidance for creating/fixing Task docs
+
+### Documentation Updated
+
+- ✅ `release-workflow-agent-execution.md`: Added B.1 section with detailed Task doc location and validation procedures
+- ✅ `cursorrules-rw-trigger-section.md`: Added B.1 section with Task doc requirements
+
+### Related Work
+
+- **Story:** E2:S09 - Kanban Granularity & Discrete Task Docs (RW Integration)
+- **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - COMPLETE ✅
+- **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
+
 ## [0.2.9.1+0] - 2025-12-11
 
 🔗 Coordination Complete: E2:S09:T01 - Coordination and Task Decomposition
