@@ -279,6 +279,8 @@ Updates the Kanban governance policy to mandate 3-tier structure (Epic → Story
 
 ## Migration Guide
 
+> **See also:** `DELEGATION_COMPLIANCE_AUDIT.md` for detailed audit findings and migration progress tracking.
+
 When updating existing Epic/Story documents to follow tier delegation:
 
 1. **Identify duplicated detail:**
@@ -297,6 +299,8 @@ When updating existing Epic/Story documents to follow tier delegation:
    - Verify all references are correct
    - Ensure links work
    - Check that status matches across tiers
+
+**For detailed migration steps, examples, and compliance audit, see:** `packages/frameworks/kanban/templates/DELEGATION_COMPLIANCE_AUDIT.md`
 
 ---
 
