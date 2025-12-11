@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2025-12-11  
-**Version:** v0.4.11.5+0
+**Version:** v0.4.12.0+0
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
@@ -105,9 +105,9 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.4.11.5+0
+**Last Updated:** v0.4.12.0+0
 
-**Note:** Epic 4 document shows "COMPLETE" but has incomplete stories (S06, S10, S11), so Epic status is IN PROGRESS.
+**Note:** Epic 4 document shows "COMPLETE" but has incomplete stories (S06, S10, S11, S12), so Epic status is IN PROGRESS.
 
 **Stories:**
 - [x] **E4:S01 – Dev Kit Kanban Implementation** - COMPLETE ✅ (v0.4.1.1+6)
@@ -134,6 +134,9 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 - [ ] **E4:S11 – Kanban Granularity & Discrete Task Docs** - TODO (v0.4.11.5+0)
   - Story: [`epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md`](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00 ✅ COMPLETE, T05 ✅ COMPLETE (v0.4.11.5+0), T01-T04 TODO
+- [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0)
+  - Story: [`epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md`](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
 
 **Epic Doc:** [`epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)
 

@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 12    # Story number (Story 12: FR/BR/UXR Repository Stories)
 VERSION_TASK = 0      # Task number (Task 0: Story Creation and FR-021 Intake)
-VERSION_BUILD = 0     # Build number (abstract space for E4:S12 - doc-init)
+VERSION_BUILD = 1     # Build number (Kanban board update for E4:S12)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

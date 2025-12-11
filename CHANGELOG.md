@@ -17,6 +17,17 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.12.0+1] - 2025-12-11
+
+📋 Documentation: E4:S12:T00 - Kanban Board Update
+
+### Updated
+
+- **Kanban Board:** Updated to include Epic 4 Story 12 (FR/BR/UXR Repository Stories)
+- **Kanban Quick View:** Updated Epic 4 story count and progress (12 stories, 8/12 complete)
+
+---
+
 ## [0.4.12.0+0] - 2025-12-11
 
 📋 Doc Init (Abstract Space): E4:S12:T00 - Story Creation and FR-021 Intake
