@@ -73,9 +73,20 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
 
 ### BUILD
 - Build number (increments per release within task)
-- Starts at 1 for first release of task
-- Increments with each subsequent release
-- Resets to 1 when moving to new task
+- **Doc-Init Build (`+0`):** For first-time Task/Story/Epic document creation (docs-only)
+  - Establishes canonical version anchor before functional work
+  - Must be docs-only changes (no code changes)
+  - Subsequent functional work starts at `+1`
+  - Example: `0.2.10.1+0` = Doc-init build for E2:S10:T01 documentation
+- **Normal Builds (`+1` or higher):** For functional work and subsequent releases
+  - Starts at 1 for first functional release of task (or after doc-init)
+  - Increments with each subsequent release (`+2`, `+3`, etc.)
+  - Resets to 1 when moving to new task
+  - Example: `0.2.10.1+1` = First functional build for E2:S10:T01 (after `+0`)
+- **Relationship:** Doc-init (`+0`) → Functional work (`+1`, `+2`, ...)
+  - `+0` establishes the version anchor (documentation-only)
+  - `+1` is the first functional change for that task
+  - `+2`, `+3`, etc. are subsequent functional changes
 
 ---
 
@@ -115,6 +126,15 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
    - **MUST:** Task document must exist before versioning
    - **MUST:** Task document Task ID must match version TASK component
    - **MUST:** Task document must include all required fields
+   - **Doc-Init Path (`+0`):** For first-time Task document creation
+     - Create Task document (docs-only, no code changes)
+     - Set version to `RC.EPIC.STORY.TASK+0` (doc-init build)
+     - Establishes canonical version anchor
+     - Subsequent functional work uses `+1`, `+2`, etc.
+   - **Normal Path (`+1` or higher):** For functional work
+     - Task document must already exist (created in doc-init or previously)
+     - Set version to `RC.EPIC.STORY.TASK+1` (first functional build) or increment BUILD
+     - Can include code changes, feature implementations, bug fixes, etc.
 
 5. **Validation Requirements:**
    - Release Workflow Step 1 validates Task document presence
@@ -123,8 +143,13 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
    - If Task document missing or misaligned, versioning workflow stops with error
 
 6. **Doc-Init Support:**
-   - For first-time Task document creation, see FR-017 for doc-init build (`+0`) support
-   - Doc-init builds establish canonical version anchor before functional work
+   - **Purpose:** Establish canonical version anchor for new E/S/T documentation before functional work
+   - **Build Number:** `+0` (doc-init build)
+   - **Requirements:** Docs-only changes (no code changes allowed)
+   - **Relationship to Functional Work:** Doc-init (`+0`) → First functional build (`+1`) → Subsequent builds (`+2`, `+3`, ...)
+   - **Detection:** Release Workflow Step 2 automatically detects doc-init state (new E/S/T doc, no prior version, docs-only changes)
+   - **Validation:** Validators enforce docs-only requirement for `+0` builds
+   - **Related:** FR-017 (Versioning Policy Hardening — Doc-Init Build), FR-018 (Abstract Space concept)
 
 **Related Documentation:**
 - **[Kanban Governance Policy](../../kanban/policies/kanban-governance-policy.md)** - Complete Task document requirements

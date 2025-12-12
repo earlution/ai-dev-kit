@@ -17,6 +17,35 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.10.4+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T04 - Versioning Policy with Doc-Init Logic
+
+### Summary
+
+**Versioning Policy Update:** Updated versioning policy documents to include comprehensive doc-init logic. Documented `+0` build number for doc-init builds, explained relationship between doc-init (`+0`) and functional work (`+1`), and updated Task transition rules.
+
+### Changes
+
+**Policy Documentation:**
+- ✅ Updated BUILD section in framework and dev-kit versioning policies
+- ✅ Documented doc-init build (`+0`) for first-time Task/Story/Epic document creation
+- ✅ Documented normal builds (`+1` or higher) for functional work
+- ✅ Explained relationship: Doc-init (`+0`) → Functional work (`+1`, `+2`, ...)
+- ✅ Updated Task transition rules to include doc-init path
+- ✅ Expanded Doc-Init Support section with complete documentation
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Feature Request:** FR-018 - Abstract Space for Zero-Numbered E/S/T Docs
+- **Depends On:** E2:S10:T01-T03 (Doc-Init Implementation)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.4+1.md)
+
+---
+
 ## [0.2.10.3+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T03 - CHANGELOG Format for Doc Init Entries

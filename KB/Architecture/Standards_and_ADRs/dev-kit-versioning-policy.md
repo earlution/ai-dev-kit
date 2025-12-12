@@ -163,10 +163,19 @@ For a given Epic, Story, Task:
 Rules:
 
 1. **TASK is stable per Task** – once you start `Task 1`, all its releases share `TASK = 1`.
-2. **BUILD increments** for each release on the same Task.
+2. **BUILD number rules:**
+   - **Doc-Init Build (`+0`):** For first-time Task/Story/Epic document creation (docs-only)
+     - Establishes canonical version anchor before functional work
+     - Must be docs-only changes (no code changes)
+     - Example: `0.2.10.1+0` = Doc-init build for E2:S10:T01 documentation
+   - **Normal Builds (`+1` or higher):** For functional work and subsequent releases
+     - Starts at 1 for first functional release (or after doc-init)
+     - Increments with each subsequent release (`+2`, `+3`, etc.)
+     - Example: `0.2.10.1+1` = First functional build for E2:S10:T01 (after `+0`)
+   - **Relationship:** Doc-init (`+0`) → Functional work (`+1`, `+2`, ...)
 3. **Moving to a new Task**:
    - `TASK` changes.
-   - `BUILD` resets to `1`.
+   - `BUILD` resets to `1` (or `0` if doc-init for new Task document).
 4. **RC increments**:
    - When promoting a dev snapshot to a release candidate for a given Task.
 
@@ -185,10 +194,18 @@ Rules:
    - Example: Moving from Task 1 to Task 2 → `VERSION_TASK = 2`
    - **CRITICAL:** `VERSION_TASK` MUST match Task ID in Task document
 
-3. **Reset `VERSION_BUILD`:**
-   - Set `VERSION_BUILD = 1` (new Task always starts at BUILD 1)
-   - Example: Moving from Task 1 to Task 2 → `VERSION_BUILD = 1`
-   - **Note:** For doc-init builds (first-time Task document creation), see FR-017 for `+0` support
+3. **Set `VERSION_BUILD`:**
+   - **Doc-Init Path (`+0`):** For first-time Task document creation
+     - Set `VERSION_BUILD = 0` (doc-init build)
+     - Must be docs-only changes (no code changes)
+     - Establishes canonical version anchor
+     - Example: Creating E2:S10:T01 Task document → `VERSION_BUILD = 0`
+   - **Normal Path (`+1`):** For functional work (Task document already exists)
+     - Set `VERSION_BUILD = 1` (first functional build)
+     - Can include code changes, feature implementations, bug fixes, etc.
+     - Example: First functional change for E2:S10:T01 → `VERSION_BUILD = 1`
+   - **Subsequent Builds:** Increment BUILD for each release (`+2`, `+3`, etc.)
+   - **Relationship:** Doc-init (`+0`) → First functional build (`+1`) → Subsequent builds (`+2`, `+3`, ...)
 
 4. **When to Update:**
    - **Option 1:** Create Task document → Update `version.py` when creating the new Task (recommended)

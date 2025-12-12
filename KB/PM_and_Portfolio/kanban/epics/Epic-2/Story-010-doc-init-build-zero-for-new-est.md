@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 
-**Status:** IN PROGRESS (v0.2.10.3+1)  
+**Status:** IN PROGRESS (v0.2.10.4+1)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-12 (v0.2.10.3+1 – Task 3 complete: CHANGELOG format updated for doc-init entries)  
+**Last updated:** 2025-12-12 (v0.2.10.4+1 – Task 4 complete: Versioning policy updated with doc-init logic)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.2.10.3+1  
+**Version:** v0.2.10.4+1  
 **Code:** E2S10
 
 ---
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 - [x] **E2:S10:T01 – Update RW Step 2 to Support Doc-Init Path** ✅ COMPLETE (v0.2.10.1+0)
 - [x] **E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)** ✅ COMPLETE (v0.2.10.2+1)
 - [x] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries** ✅ COMPLETE (v0.2.10.3+1)
-- [ ] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic**
+- [x] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic** ✅ COMPLETE (v0.2.10.4+1)
 - [ ] **E2:S10:T05 – Update RW Step 1 Procedure Documentation**
 - [ ] **E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)**
 - [ ] **E2:S10:T07 – Documentation and Testing**
@@ -206,6 +206,8 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ### E2:S10:T04 – Update Versioning Policy with Doc-Init Logic
 
+**Scope:** Update versioning policy documents to include comprehensive doc-init logic. Document `+0` build number for doc-init builds, explain relationship between doc-init (`+0`) and functional work (`+1`), and update Task transition rules to include doc-init path. Ensure consistency across all versioning policy documents.
+
 **Input:** Current versioning policy documents, doc-init requirements  
 **Deliverable:** Updated versioning policy requiring doc-init logic  
 **Dependencies:** E4:S11:T03 (Versioning Policy Task doc requirements), T01 (doc-init detection)  
@@ -226,10 +228,29 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 4. Update all versioning policy documents
 
 **Acceptance Criteria:**
-- [ ] Versioning policy documents doc-init logic
-- [ ] Policy explains `+0` vs `+1` relationship
-- [ ] Task transition rules updated
-- [ ] All versioning policy documents updated consistently
+- [x] ✅ Versioning policy documents doc-init logic
+- [x] ✅ Policy explains `+0` vs `+1` relationship
+- [x] ✅ Task transition rules updated
+- [x] ✅ All versioning policy documents updated consistently
+
+**Status:** ✅ COMPLETE (v0.2.10.4+1)
+
+**Completion Summary:**
+- ✅ Updated BUILD section in `packages/frameworks/numbering & versioning/versioning-policy.md`:
+  - Documented doc-init build (`+0`) for first-time Task/Story/Epic document creation
+  - Documented normal builds (`+1` or higher) for functional work
+  - Explained relationship: Doc-init (`+0`) → Functional work (`+1`, `+2`, ...)
+- ✅ Updated BUILD section in `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`:
+  - Updated BUILD rules to include doc-init (`+0`) and normal builds (`+1` or higher)
+  - Added examples showing doc-init vs functional builds
+- ✅ Updated Task Transition Rules in both policy documents:
+  - Added doc-init path (`+0`) for first-time Task document creation
+  - Added normal path (`+1`) for functional work
+  - Documented relationship between doc-init and functional builds
+- ✅ Updated Doc-Init Support section in framework versioning-policy.md:
+  - Expanded documentation with purpose, requirements, detection, validation
+  - Added references to FR-017 and FR-018
+- ✅ All versioning policy documents now consistently document doc-init logic
 
 ---
 
