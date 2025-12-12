@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 
-**Status:** IN PROGRESS (v0.2.10.2+1)  
+**Status:** IN PROGRESS (v0.2.10.3+1)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-12 (v0.2.10.2+1 – Task 2 complete: Doc-init validation implemented in validators)  
+**Last updated:** 2025-12-12 (v0.2.10.3+1 – Task 3 complete: CHANGELOG format updated for doc-init entries)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.2.10.2+1  
+**Version:** v0.2.10.3+1  
 **Code:** E2S10
 
 ---
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [ ] **E2:S10:T00 – Story Creation and FR-017 Intake** ✅ COMPLETE (v0.2.10.0+0)
 - [x] **E2:S10:T01 – Update RW Step 2 to Support Doc-Init Path** ✅ COMPLETE (v0.2.10.1+0)
 - [x] **E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)** ✅ COMPLETE (v0.2.10.2+1)
-- [ ] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries**
+- [x] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries** ✅ COMPLETE (v0.2.10.3+1)
 - [ ] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic**
 - [ ] **E2:S10:T05 – Update RW Step 1 Procedure Documentation**
 - [ ] **E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)**
@@ -163,6 +163,8 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ### E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries
 
+**Scope:** Update CHANGELOG format documentation to include standardized "Doc Init" format for `+0` builds. Define format for both main changelog (`CHANGELOG.md`) and detailed changelog archive entries. Update versioning policy and implementation guide with doc-init format examples.
+
 **Input:** Current changelog format, doc-init detection logic  
 **Deliverable:** CHANGELOG format documents "Doc Init" entries  
 **Dependencies:** T01 (doc-init detection)  
@@ -183,10 +185,22 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 4. Update changelog templates/examples
 
 **Acceptance Criteria:**
-- [ ] CHANGELOG format includes "Doc Init" entries
-- [ ] Doc-init entries clearly marked in both main and detailed changelogs
-- [ ] Changelog generation logic updated
-- [ ] Examples provided
+- [x] ✅ CHANGELOG format includes "Doc Init" entries
+- [x] ✅ Doc-init entries clearly marked in both main and detailed changelogs
+- [x] ✅ Changelog format documentation updated (versioning policy, implementation guide)
+- [x] ✅ Examples provided in documentation
+
+**Status:** ✅ COMPLETE (v0.2.10.3+1)
+
+**Completion Summary:**
+- ✅ Updated main `CHANGELOG.md` entry for `0.2.10.1+0` to use new format: `📋 Doc Init: E2:S10:T01 - [Description]`
+- ✅ Updated `dev-kit-versioning-policy.md` with doc-init format for both main and detailed changelogs
+- ✅ Updated `IMPLEMENTATION_GUIDE.md` with doc-init format templates and examples
+- ✅ Documented format characteristics:
+  - Main changelog: `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]` for `+0` builds
+  - Detailed changelog: Includes `**Build Type:** Doc-Init (`+0`)` and `**Type:** 📋 Doc Init`
+  - Clear distinction between doc-init (`+0`) and normal builds (`+1` or higher)
+- ✅ Provided complete examples showing both formats
 
 ---
 

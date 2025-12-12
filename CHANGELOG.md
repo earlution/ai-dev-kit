@@ -17,6 +17,32 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.10.3+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T03 - CHANGELOG Format for Doc Init Entries
+
+### Summary
+
+**CHANGELOG Format Update:** Updated CHANGELOG format documentation to include standardized "Doc Init" format for `+0` builds. Defined format for both main changelog and detailed changelog archive entries.
+
+### Changes
+
+**Format Documentation:**
+- ✅ Updated versioning policy with doc-init format for main and detailed changelogs
+- ✅ Updated implementation guide with doc-init format templates
+- ✅ Standardized format: `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]` for `+0` builds
+- ✅ Documented `**Build Type:** Doc-Init (`+0`)` and `**Type:** 📋 Doc Init` fields
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support), E2:S10:T02 (Doc-Init Validation)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.3+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.3+1.md)
+
+---
+
 ## [0.2.10.2+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T02 - Doc-Init Validation (Docs-Only Check)
@@ -47,7 +73,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ## [0.2.10.1+0] - 12-12-25
 
-🔧 Workflow Management: E2:S10:T01 - Doc-Init Build (RW Step 2 Doc-Init Support)
+📋 Doc Init: E2:S10:T01 - RW Step 2 Doc-Init Support
 
 ### Summary
 

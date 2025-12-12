@@ -207,14 +207,32 @@ project-root/
 
 ### 4.2 Define Changelog Format
 
-**Main Changelog Entry:**
+**Main Changelog Entry (Normal Builds):**
 ```markdown
 ### [0.20.11.3+1] - 01-12-25
 🚀 Feature: Brief description
 - See [CHANGELOG_v0.20.11.3+1.md](CHANGELOG_ARCHIVE/CHANGELOG_v0.20.11.3+1.md)
 ```
 
-**Detailed Changelog Template:**
+**Main Changelog Entry (Doc-Init Builds - `+0`):**
+```markdown
+## [0.2.10.1+0] - 12-12-25
+
+📋 Doc Init: E2:S10:T01 - RW Step 2 Doc-Init Support
+
+### Summary
+**Doc-Init Build (`+0`):** [Description of documentation-only changes]
+
+### Doc Init
+**New E/S/T Documentation:**
+- ✅ [List of documentation changes]
+
+### Notes
+- See [CHANGELOG_v0.2.10.1+0.md](CHANGELOG_ARCHIVE/CHANGELOG_v0.2.10.1+0.md) for full details
+- **This is a doc-init build (`+0`).** No functional changes are included.
+```
+
+**Detailed Changelog Template (Normal Builds):**
 ```markdown
 # Changelog v0.20.11.3+1
 
@@ -236,6 +254,45 @@ project-root/
 
 ## Technical Details
 [Implementation notes, files changed, etc.]
+```
+
+**Detailed Changelog Template (Doc-Init Builds - `+0`):**
+```markdown
+# Changelog: v0.2.10.1+0
+
+**Release Date:** 2025-12-12 14:00:00 UTC
+**Epic:** Epic 2 - Workflow Management
+**Story:** Story 10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+**Task:** Task 1 - Update RW Step 2 to Support Doc-Init Path
+**Build Type:** Doc-Init (`+0`)
+**Type:** 📋 Doc Init
+
+## Summary
+
+**Doc-Init Build:** [Description of documentation-only changes]
+
+## Doc Init
+
+**New E/S/T Documentation:**
+- ✅ [List of documentation changes]
+
+**Changes (Docs-Only):**
+- [Detailed documentation changes]
+
+## Related Work
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+
+## Notes
+
+**Doc-Init Build Characteristics:**
+- Build number: `+0` (not `+1`)
+- Changes: Docs-only (no code changes)
+- Purpose: Establish canonical version anchor before functional changes
+- Subsequent builds: Start at `+1` for functional work
+
+**This is a doc-init build (`+0`).** No functional changes are included. The next build for this task will be `+1` when functional work begins.
 ```
 
 ### 4.3 Implement Two-Layer Timestamp System

@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 10    # Story number (Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T)
-VERSION_TASK = 2      # Task number (Task 2: Implement Doc-Init Validation (Docs-Only Check))
-VERSION_BUILD = 1     # Build number (E2:S10:T02 complete - Doc-init validation implemented in validators)
+VERSION_TASK = 3      # Task number (Task 3: Update CHANGELOG Format for Doc Init Entries)
+VERSION_BUILD = 1     # Build number (E2:S10:T03 complete - CHANGELOG format updated for doc-init entries)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

@@ -362,38 +362,100 @@ This repo uses a **two-layer changelog system** aligned with the framework patte
 - See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.1+2.md` for full details
 ```
 
+**Doc-Init Build Format (`+0` builds):**
+```markdown
+## [0.2.10.1+0] - 12-12-25
+
+📋 Doc Init: E2:S10:T01 - RW Step 2 Doc-Init Support
+
+### Summary
+**Doc-Init Build (`+0`):** [Description of documentation-only changes]
+
+### Doc Init
+**New E/S/T Documentation:**
+- ✅ [List of documentation changes]
+
+### Notes
+- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.1+0.md` for full details
+- **This is a doc-init build (`+0`).** No functional changes are included.
+```
+
 **Key Characteristics:**
 - Version: `[RC.EPIC.STORY.TASK+BUILD]`
 - Date: `DD-MM-YY` (short date format for merge-to-main)
+- **Doc-Init builds (`+0`):** Use `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]` format
+- **Normal builds (`+1` or higher):** Use standard emoji prefixes (🚀 Feature, 🐞 Fix, 📚 Documentation, etc.)
 - Link to detailed changelog archive
 - Can be updated if merge date changes
 
 ### Detailed Changelog Archive (`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v{version}.md`)
 
-**Format:**
+**Format (Normal Builds):**
 ```markdown
-# Release v0.3.1.1+2
+# Changelog: v0.3.1.1+2
 
 **Release Date:** 2025-12-02 00:00:00 UTC
-
-**Epic / Story / Task:** Epic 3, Story 1, Task 1
+**Epic:** Epic 3 - [Epic Name]
+**Story:** Story 1 - [Story Name]
+**Task:** Task 1 - [Task Name]
 **Type:** 📚 Documentation
 
 ## Summary
-...
+📚 Documentation: [Brief description of changes]
 
 ## Changes
-...
+- [Detailed change 1]
+- [Detailed change 2]
 
 ## Related Work
-- Epic: 3
-- Story: 1
-- Task: 1
+- **Story:** E3:S01 - [Story Name]
+- **Epic:** Epic 3 - [Epic Name]
+```
+
+**Format (Doc-Init Builds - `+0`):**
+```markdown
+# Changelog: v0.2.10.1+0
+
+**Release Date:** 2025-12-12 14:00:00 UTC
+**Epic:** Epic 2 - Workflow Management
+**Story:** Story 10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+**Task:** Task 1 - Update RW Step 2 to Support Doc-Init Path
+**Build Type:** Doc-Init (`+0`)
+**Type:** 📋 Doc Init
+
+## Summary
+
+**Doc-Init Build:** [Description of documentation-only changes]
+
+## Doc Init
+
+**New E/S/T Documentation:**
+- ✅ [List of documentation changes]
+
+**Changes (Docs-Only):**
+- [Detailed documentation changes]
+
+## Related Work
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+
+## Notes
+
+**Doc-Init Build Characteristics:**
+- Build number: `+0` (not `+1`)
+- Changes: Docs-only (no code changes)
+- Purpose: Establish canonical version anchor before functional changes
+- Subsequent builds: Start at `+1` for functional work
+
+**This is a doc-init build (`+0`).** No functional changes are included. The next build for this task will be `+1` when functional work begins.
 ```
 
 **Key Characteristics:**
 - Full timestamp: `YYYY-MM-DD HH:MM:SS UTC` (immutable)
 - Epic/Story/Task information
+- **Doc-Init builds:** Include `**Build Type:** Doc-Init (`+0`)` and `**Type:** 📋 Doc Init`
+- **Normal builds:** Include standard `**Type:**` field (🚀 Feature, 🐞 Fix, 📚 Documentation, etc.)
 - Detailed change descriptions
 - **IMMUTABLE** once written (never edit `**Release Date:**`)
 
