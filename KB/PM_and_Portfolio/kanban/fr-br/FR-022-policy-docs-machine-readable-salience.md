@@ -12,7 +12,10 @@ housekeeping_policy: keep
 **Submitted:** 2025-12-12  
 **Submitted By:** User  
 **Priority:** MEDIUM  
-**Status:** DRAFT
+**Status:** ACCEPTED  
+**Intake Date:** 2025-12-12  
+**Assigned To:** Epic 5, Story 6, Task 1  
+**Version:** v0.5.6.1+0 (doc-init)
 
 ---
 
@@ -296,15 +299,15 @@ policy_salience:
 ## Assigned To
 
 **Assigned To:**
-- Epic: [TBD - Likely Epic 2 (Workflow Management) or Epic 5 (Documentation)]
-- Story: [TBD]
-- Task: [TBD]
-- Version: [TBD]
+- Epic: Epic 5 (Documentation Management and Maintenance)
+- Story: Story 6 (Policy Documentation Structure)
+- Task: Task 1 (Implement Policy Documents Machine-Readable Salience Section)
+- Version: v0.5.6.1+0 (doc-init)
 
 **Kanban Links:**
-- Epic: [TBD]
-- Story: [TBD]
-- Task: [TBD]
+- Epic: [`KB/PM_and_Portfolio/kanban/epics/Epic-5/Epic-5.md`](../epics/Epic-5/Epic-5.md)
+- Story: [`KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-006-policy-documentation-structure.md`](../epics/Epic-5/Story-006-policy-documentation-structure.md)
+- Task: See Story 6 Task Checklist (T01)
 
 ---
 

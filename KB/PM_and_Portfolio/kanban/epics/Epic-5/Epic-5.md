@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-07 (v0.5.4.8+1 – `.cursorrules` setup documentation added)  
+**Last updated:** 2025-12-12 (v0.5.6.1+0 – Story 6 created: Policy Documentation Structure)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -34,6 +34,9 @@ housekeeping_policy: keep
 - [ ] **E5:S05 – Legacy Repository Incorporation** - IN PROGRESS
   - Story: [`Story-005-legacy-repository-incorporation.md`](Story-005-legacy-repository-incorporation.md)
   - Tasks: T01 ✅, T02-T25 TODO (25 tasks across 4 phases)
+- [ ] **E5:S06 – Policy Documentation Structure** - IN PROGRESS (v0.5.6.1+0 – Story created, Task 1 doc-init)
+  - Story: [`Story-006-policy-documentation-structure.md`](Story-006-policy-documentation-structure.md)
+  - Tasks: T01 TODO (FR-022)
 
 ---
 
