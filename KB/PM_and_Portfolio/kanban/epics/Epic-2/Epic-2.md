@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-11 (v0.2.9.5+1 – Story 9 Task 5 complete: Documentation and testing for RW integration)  
+**Last updated:** 2025-12-11 (v0.2.9.6+1 – Story 9 complete: All tasks finished, RW integration complete)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]

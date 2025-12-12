@@ -312,6 +312,8 @@ The guide now provides comprehensive documentation for agents executing Release 
 **Blocker:** None  
 **Parallel Development Candidacy:** Safe (documentation only)
 
+**Scope:** Wire cross-references in Related Work section to document that E2:S09 blocks E2:S10:T06 via dependency chain. Update Related Work section to include FR-020 and E2:S10:T06, and add cross-references to show the dependency relationship.
+
 **Approach:**
 1. Update Related Work section to include FR-020 and E2:S10:T06
 2. Document that E2:S09 blocks E2:S10:T06 via dependency chain
