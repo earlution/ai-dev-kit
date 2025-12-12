@@ -8,15 +8,26 @@ housekeeping_policy: keep
 
 # Release Workflow: Agent Execution Guide
 
-**Version:** 1.5.0
-**Last Updated:** 2025-12-11
+**Version:** 1.6.0
+**Last Updated:** 2025-12-12
 **Related:** [Example: Confidentia - Epic 4 - User Workflows & Use Case Modeling, Release Workflow] | [Example: ai-dev-kit - Epic 2 - Workflow Management Framework, Release Workflow]
 
 ---
 
 ## 📜 Version History
 
-**Current Version:** 1.5.0 (2025-12-11)
+**Current Version:** 1.6.0 (2025-12-12)
+
+### Version 1.6.0 (2025-12-12) - Doc-Init Build (+0) Support
+- **Added:** Doc-init detection logic in Step 2 (A.1: Detect Doc-Init State)
+- **Added:** Doc-init path that emits `RC.EPIC.STORY.TASK+0` for new E/S/T docs only
+- **Added:** Docs-only verification for doc-init builds
+- **Added:** Integration with Task document presence detection (E2:S09:T02)
+- **Changed:** Step 2 procedure updated from 6-step (A-F) to 7-step (A-G) to include doc-init detection
+- **Changed:** Version bump logic (C) now checks doc-init state before normal version bump
+- **Changed:** Validation logic (D, F) includes doc-init validation
+- **Changed:** Version file update logic (E) includes doc-init path with `+0` build
+- **Related:** E2:S10:T01 - Update RW Step 1 to Support Doc-Init Path (FR-017)
 
 ### Version 1.5.0 (2025-12-11) - Task Document Requirements Documentation
 - **Added:** Comprehensive "Task Document Requirements" section documenting 3-tier structure, discrete Task doc requirement, Task doc formats, required fields, validation process, and examples
@@ -457,7 +468,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 
 **Agent Execution:**
 
-**🚨 MANDATORY: Follow this 6-step procedure (A-F) exactly. Do not skip any step.**
+**🚨 MANDATORY: Follow this 7-step procedure (A-G) exactly. Do not skip any step.**
 
 **A. READ CURRENT VERSION:**
 1. **ANALYZE:**
@@ -469,6 +480,36 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - Understand version schema: `RC.EPIC.STORY.TASK+BUILD`
    - Check current Git branch to determine Epic number (already validated in Step 1)
    - Verify version matches branch schema (already checked in Step 1, but double-check)
+
+**A.1. DETECT DOC-INIT STATE (NEW REQUIREMENT - FR-017):**
+1.1. **ANALYZE (Doc-Init Detection):**
+   - **MANDATORY:** Before proceeding with version bump, detect if this is a "doc-init" state
+   - **Doc-Init Conditions (ALL must be true):**
+     1. **New E/S/T Document Created:**
+        - Detect if a new Epic/Story/Task document was created in this commit
+        - Check git diff for new files matching E/S/T doc patterns:
+          - Epic: `{kanban_root}/epics/Epic-{epic}/Epic-{epic}.md` OR `{kanban_root}/epics/Epic-{epic}.md`
+          - Story: `{kanban_root}/epics/Epic-{epic}/Story-{story}-*.md`
+          - Task: `{kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md` OR delimited section in Story file
+        - **OR** detect if a new Task section was added to an existing Story file (delimited section format)
+     2. **No Prior Version Exists:**
+        - Check git history for prior versions of this E/S/T
+        - Query changelog for prior entries matching `RC.EPIC.STORY.TASK+*`
+        - If no prior version found → doc-init candidate
+     3. **Docs-Only Changes:**
+        - Verify ALL changed files are documentation only:
+          - E/S/T doc files (Epic, Story, Task docs)
+          - README/index updates (if allowed per policy)
+          - Changelog entries (expected for doc-init)
+          - No code files changed (`.py`, `.js`, `.ts`, `.java`, `.go`, `.rs`, etc.)
+          - No test files changed (unless test files are part of Task doc structure)
+        - Use `git diff --name-only` to list all changed files
+        - Filter out documentation patterns, fail if code patterns detected
+   - **Doc-Init Detection Result:**
+     - ✅ **Doc-Init Detected:** If ALL three conditions are true → proceed to doc-init path (emit `+0`)
+     - ❌ **Not Doc-Init:** If any condition is false → proceed to normal version bump path (emit `+1` or increment BUILD)
+   - **CRITICAL:** Doc-init detection MUST happen BEFORE version bump logic
+   - **CRITICAL:** If doc-init detected but non-doc changes found → FAIL validation (see Step 2 validation)
 
 **B. IDENTIFY COMPLETED TASK (MANDATORY):**
 2. **ANALYZE (continued):**
@@ -559,12 +600,29 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 
 **D. VALIDATE BEFORE UPDATING:**
 4. **VALIDATE (before update):**
-   - Verify: New `VERSION_TASK` matches completed task number (always use completed task, not current)
-   - Verify: If new task or out-of-order task, `VERSION_BUILD` = 1; if same task, `VERSION_BUILD` = current + 1
-   - Document decision: "Task {completed_task} completed. Current TASK={current_task}, BUILD={current_build}. Decision: {new_task/out_of_order/same_task} → TASK={new_task}, BUILD={new_build}"
+   - **If Doc-Init Detected:**
+     - Verify: `VERSION_BUILD` = 0 (doc-init must be `+0`)
+     - Verify: All changes are docs-only (re-verify from A.1)
+     - Verify: New E/S/T doc exists (re-verify from A.1)
+     - Verify: No prior version exists (re-verify from A.1)
+     - **CRITICAL:** If non-doc changes detected → FAIL validation (doc-init must be docs-only)
+     - Document decision: "Doc-init detected for Task {completed_task}. New E/S/T doc created, docs-only changes verified, no prior version exists. Decision: doc_init → TASK={new_task}, BUILD=0"
+   - **If Not Doc-Init (Normal Version Bump):**
+     - Verify: New `VERSION_TASK` matches completed task number (always use completed task, not current)
+     - Verify: If new task or out-of-order task, `VERSION_BUILD` = 1; if same task, `VERSION_BUILD` = current + 1
+     - Document decision: "Task {completed_task} completed. Current TASK={current_task}, BUILD={current_build}. Decision: {new_task/out_of_order/same_task} → TASK={new_task}, BUILD={new_build}"
 
 **E. UPDATE VERSION FILE:**
 5. **EXECUTE:**
+   - **If Doc-Init Detected:**
+     - Update `VERSION_TASK` to match completed Task number (from Task document)
+     - Update `VERSION_BUILD` to 0 (doc-init build `+0`)
+     - **Use config path:** Update version file (from config `version_file` or fallback):
+       - [Example: Confidentia] `src/confidentia/version.py` (or from `rw-config.yaml` if present)
+       - [Example: ai-dev-kit] `src/fynd_deals/version.py` (or from `rw-config.yaml` if present)
+       - Use `search_replace` tool to update both `VERSION_TASK` and `VERSION_BUILD`
+     - Update `VERSION_STRING` to reflect new version (e.g., `0.2.10.1+0`)
+     - Update `VERSION_INFO["description"]` if present (e.g., "Doc-init: E2:S10:T01 document created")
    - **If Task Transition (New Task or Out-of-Order Task):**
      - Update `VERSION_TASK` to match completed Task number (always use completed task, not current)
      - Update `VERSION_BUILD` to 1
@@ -586,26 +644,40 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - Re-read version file to confirm update
    - Verify version format is valid: `RC.EPIC.STORY.TASK+BUILD`
    - Check version matches branch schema
-   - **CRITICAL:** Verify `VERSION_TASK` matches completed task number from Story (always use completed task)
-   - **CRITICAL:** If Task transition (new or out-of-order), verify `VERSION_BUILD = 1`
-   - **CRITICAL:** If same Task, verify `VERSION_BUILD` incremented correctly (current + 1)
+   - **If Doc-Init Detected:**
+     - **CRITICAL:** Verify `VERSION_BUILD = 0` (doc-init must be `+0`)
+     - **CRITICAL:** Verify `VERSION_TASK` matches completed task number from Task document
+     - **CRITICAL:** Re-verify all changes are docs-only (final validation before proceeding)
+   - **If Not Doc-Init (Normal Version Bump):**
+     - **CRITICAL:** Verify `VERSION_TASK` matches completed task number from Story (always use completed task)
+     - **CRITICAL:** If Task transition (new or out-of-order), verify `VERSION_BUILD = 1`
+     - **CRITICAL:** If same Task, verify `VERSION_BUILD` incremented correctly (current + 1)
 
+**G. PROCEED:**
 7. **PROCEED:**
    - Document version bump with decision rationale:
+     - **If Doc-Init Detected:**
+       - [Example: ai-dev-kit] "Version bumped: Doc-init detected. Task E2:S10:T01 document created. New E/S/T doc detected, docs-only changes verified, no prior version exists. Decision: doc_init → TASK=1, BUILD=0. New version: 0.2.10.1+0"
+       - **Note:** Doc-init establishes canonical version anchor before functional changes
      - **If Task Transition:**
        - [Example: ai-dev-kit] "Version bumped: Task transition detected. Task E2:S02:T08 completed. Current TASK=3, BUILD=5. Decision: new_task → TASK=8, BUILD=1. New version: 0.2.2.8+1"
      - **If Same Task:**
        - [Example: Confidentia] "Version bumped: Task E4:S03:T02 completed. Current TASK=2, BUILD=8. Decision: new_build → TASK=2, BUILD=9. New version: 0.4.3.2+9"
        - [Example: ai-dev-kit] "Version bumped: Task E2:S01:T01 completed. Current TASK=1, BUILD=2. Decision: new_build → TASK=1, BUILD=3. New version: 0.2.1.1+3"
    - Pass `new_version` to Step 3
+   - **If Doc-Init:** Note that changelog entry should include "Doc Init" section (see Step 3)
    - Move to Step 3
 
 **🚨 CRITICAL REMINDERS:**
 - **NEVER skip reading the Story file** - It's the source of truth for completed tasks
 - **NEVER assume same task** - Always compare completed task number to current VERSION_TASK
+- **ALWAYS check for doc-init state FIRST** - Doc-init detection (A.1) must happen before version bump logic
+- **ALWAYS validate docs-only for doc-init** - Doc-init builds (`+0`) MUST be docs-only (no code changes)
+- **NEVER emit `+0` for functional changes** - Functional changes require `+1` or higher
 - **ALWAYS validate before and after** - Catch errors before they propagate
 - **ALWAYS document your decision** - Show your work for traceability
 - See `KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` for error prevention reference
+- See `KB/PM_and_Portfolio/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md` for doc-init requirements
 
 ---
 

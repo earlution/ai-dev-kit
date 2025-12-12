@@ -17,6 +17,40 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.10.1+0] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T01 - Doc-Init Build (RW Step 2 Doc-Init Support)
+
+### Summary
+
+**Doc-Init Build (`+0`):** Updated Release Workflow Step 2 (Bump Version) to support doc-init detection and `+0` build emission for newly created Epic/Story/Task documentation. This establishes the canonical version anchor before functional changes land.
+
+### Doc Init
+
+**New E/S/T Documentation:**
+- ✅ RW Agent Execution Guide updated with doc-init detection logic
+- ✅ Step 2 procedure enhanced to detect new E/S/T docs
+- ✅ Doc-init path emits `RC.EPIC.STORY.TASK+0` for docs-only changes
+- ✅ Integration with Task document presence detection
+
+**Changes (Docs-Only):**
+- Updated `release-workflow-agent-execution.md` with doc-init detection (A.1)
+- Updated version bump logic (C) to check doc-init state
+- Updated validation logic (D, F) to include doc-init validation
+- Updated version file update logic (E) to support `+0` builds
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Depends On:** E2:S09 (Kanban Granularity & Discrete Task Docs - RW Integration)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.1+0.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.1+0.md)
+
+**Note:** This is a doc-init build (`+0`). No functional changes are included. The next build for this task will be `+1` when functional work begins.
+
+---
+
 ## [0.2.9.6+1] - 11-12-25
 
 🔧 Workflow Management: E2:S09 Complete - Story Completion

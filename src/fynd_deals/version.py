@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
-VERSION_STORY = 9     # Story number (Story 9: Kanban Granularity & Discrete Task Docs - RW Integration)
-VERSION_TASK = 6      # Task number (Task 6: Dependency Wiring Cross-References - Story completion)
-VERSION_BUILD = 1     # Build number (E2:S09 complete - Story marked complete, all tasks finished)
+VERSION_STORY = 10    # Story number (Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T)
+VERSION_TASK = 1      # Task number (Task 1: Update RW Step 2 to Support Doc-Init Path)
+VERSION_BUILD = 0     # Build number (E2:S10:T01 doc-init - RW Step 2 updated with doc-init detection)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

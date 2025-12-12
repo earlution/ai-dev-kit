@@ -8,9 +8,9 @@ housekeeping_policy: keep
 
 # Epic 2, Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 
-**Status:** TODO  
+**Status:** IN PROGRESS (v0.2.10.1+0)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-11 (v0.2.10.0+0 – Story created for FR-017)  
+**Last updated:** 2025-12-12 (v0.2.10.1+0 – Task 1 complete: RW Step 2 updated with doc-init detection)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  
@@ -97,10 +97,12 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 5. Integrate with E2:S09:T02 (Task doc presence detection)
 
 **Acceptance Criteria:**
-- [ ] RW Step 1 detects "new doc-init" state
-- [ ] RW Step 1 emits `+0` for new E/S/T docs only
-- [ ] RW Step 1 verifies changes are docs-only
-- [ ] RW Step 1 logic integrated with Task doc presence detection
+- [x] RW Step 2 detects "new doc-init" state ✅
+- [x] RW Step 2 emits `+0` for new E/S/T docs only ✅
+- [x] RW Step 2 verifies changes are docs-only ✅
+- [x] RW Step 2 logic integrated with Task doc presence detection ✅
+
+**Status:** ✅ COMPLETE
 
 ---
 
