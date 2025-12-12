@@ -22,7 +22,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [ ] **E2:S10:T00 – Story Creation and FR-017 Intake** ✅ COMPLETE (v0.2.10.0+0)
-- [ ] **E2:S10:T01 – Update RW Step 1 to Support Doc-Init Path**
+- [x] **E2:S10:T01 – Update RW Step 2 to Support Doc-Init Path** ✅ COMPLETE (v0.2.10.1+0)
 - [ ] **E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)**
 - [ ] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries**
 - [ ] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic**
@@ -74,13 +74,15 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ---
 
-### E2:S10:T01 – Update RW Step 1 to Support Doc-Init Path
+### E2:S10:T01 – Update RW Step 2 to Support Doc-Init Path
 
-**Input:** Current RW Step 1 procedure, FR-016 discrete Task docs  
-**Deliverable:** RW Step 1 detects "new doc-init" state and emits `+0` for docs-only changes  
-**Dependencies:** E4:S11:T01-T02 (Kanban policy and Task templates), E2:S09:T02 (RW Step 1 Task doc presence)  
-**Blocker:** FR-016 (requires discrete Task docs)  
-**Parallel Development Candidacy:** Blocked (depends on FR-016)
+**Input:** Current RW Step 2 procedure, FR-016 discrete Task docs, FR-017 doc-init requirements  
+**Deliverable:** RW Step 2 detects "new doc-init" state and emits `+0` for docs-only changes  
+**Dependencies:** E4:S11:T01-T02 (Kanban policy and Task templates), E2:S09:T02 (RW Step 2 Task doc presence)  
+**Blocker:** FR-016 (requires discrete Task docs) - UNBLOCKED (E2:S09 complete)  
+**Parallel Development Candidacy:** Safe (documentation only)
+
+**Scope:** Update Release Workflow Step 2 (Bump Version) to detect doc-init state for newly created Epic/Story/Task documentation. Add detection logic to identify new E/S/T docs, verify docs-only changes, check for prior versions, and emit `+0` build number for doc-init builds. Integrate with existing Task document presence detection from E2:S09:T02.
 
 **Approach:**
 1. Review current RW Step 1 procedure:
@@ -102,7 +104,16 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 - [x] RW Step 2 verifies changes are docs-only ✅
 - [x] RW Step 2 logic integrated with Task doc presence detection ✅
 
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE (v0.2.10.1+0)
+
+**Completion Summary:**
+- ✅ RW Agent Execution Guide updated with doc-init detection logic (A.1)
+- ✅ Step 2 procedure enhanced from 6-step (A-F) to 7-step (A-G) to include doc-init detection
+- ✅ Version bump logic (C) updated to check doc-init state before normal version bump
+- ✅ Validation logic (D, F) updated to include doc-init validation
+- ✅ Version file update logic (E) updated to support `+0` builds
+- ✅ Version history updated to v1.6.0
+- ✅ All acceptance criteria met
 
 ---
 
