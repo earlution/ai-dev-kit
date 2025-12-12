@@ -6,9 +6,17 @@ This script validates that version bumping follows the correct logic:
 1. Reads current version from version file
 2. Reads Story file to identify completed task
 3. Validates that version bump follows RW Step 2 logic:
-   - If completed task > current VERSION_TASK: Should be new task (VERSION_TASK = completed, BUILD = 1)
+   - **Abstract Space Awareness (FR-020):** Recognizes `+0` as valid BUILD for doc-init builds (first-time E/S/T doc creation)
+   - If completed task > current VERSION_TASK: Should be new task
+     - Doc-init: VERSION_TASK = completed, BUILD = 0 (abstract space)
+     - Normal: VERSION_TASK = completed, BUILD = 1
    - If completed task == current VERSION_TASK: Should be same task (VERSION_TASK unchanged, BUILD incremented)
-   - If completed task < current VERSION_TASK: Should be out-of-order (VERSION_TASK = completed, BUILD = 1)
+     - Doc-init: Not valid (doc-init is for first-time creation only)
+     - Normal: BUILD >= 1 (incremented)
+   - If completed task < current VERSION_TASK: Should be out-of-order
+     - Doc-init: VERSION_TASK = completed, BUILD = 0 (abstract space)
+     - Normal: VERSION_TASK = completed, BUILD = 1
+4. Validates doc-init builds (`+0`) are docs-only (no code changes)
 
 This script is called by RW Step 8 to validate version bumping logic.
 
@@ -537,9 +545,167 @@ def get_changed_files(project_root: Path = None) -> List[Path]:
     return changed_files
 
 
+def detect_first_time_est_doc(
+    epic: int,
+    story: int,
+    task: int,
+    project_root: Path = None,
+    config: Optional[Dict] = None
+) -> Tuple[bool, list]:
+    """
+    Detect if this is a first-time E/S/T document commit (abstract space).
+    
+    Checks:
+    1. New E/S/T doc file created (via git diff)
+    2. No prior version exists in git history/changelog
+    
+    Args:
+        epic: Epic number
+        story: Story number
+        task: Task number
+        project_root: Project root directory
+        config: Optional config dict
+    
+    Returns:
+        (is_first_time, list_of_warnings)
+    """
+    if project_root is None:
+        project_root = Path.cwd()
+    
+    warnings = []
+    is_first_time = False
+    
+    # Check 1: Detect new E/S/T doc files in git diff
+    changed_files = get_changed_files(project_root)
+    
+    # Patterns for E/S/T doc files (handle both zero-padded and non-zero-padded formats)
+    epic_pattern = re.compile(rf'.*Epic-{epic}(?:/Epic-{epic}\.md|\.md)$')
+    story_patterns = [
+        re.compile(rf'.*Epic-{epic}/Story-{story:03d}.*\.md$'),  # Zero-padded: Story-010
+        re.compile(rf'.*Epic-{epic}/Story-{story}.*\.md$'),      # Non-zero-padded: Story-10
+    ]
+    task_patterns = [
+        re.compile(rf'.*Epic-{epic}/Story-{story:03d}/Task-{task:03d}.*\.md$'),  # Zero-padded
+        re.compile(rf'.*Epic-{epic}/Story-{story}/Task-{task:03d}.*\.md$'),      # Mixed
+        re.compile(rf'.*Epic-{epic}/Story-{story:03d}/Task-{task}.*\.md$'),     # Mixed
+        re.compile(rf'.*Epic-{epic}/Story-{story}/Task-{task}.*\.md$'),          # Non-zero-padded
+    ]
+    
+    new_est_doc_found = False
+    for file_path in changed_files:
+        file_str = str(file_path)
+        # Check if this is a new E/S/T doc file
+        is_est_doc = False
+        if epic_pattern.search(file_str):
+            is_est_doc = True
+        else:
+            for pattern in story_patterns:
+                if pattern.search(file_str):
+                    is_est_doc = True
+                    break
+            if not is_est_doc:
+                for pattern in task_patterns:
+                    if pattern.search(file_str):
+                        is_est_doc = True
+                        break
+        
+        if is_est_doc:
+            # Check if it's a new file (not modified)
+            try:
+                result = subprocess.run(
+                    ["git", "diff", "--name-status", "--", str(file_path)],
+                    cwd=project_root,
+                    capture_output=True,
+                    text=True,
+                    check=False
+                )
+                if result.returncode == 0 and result.stdout.strip().startswith('A'):
+                    # New file (Added)
+                    new_est_doc_found = True
+                    break
+            except Exception:
+                pass
+    
+    # Check 2: Check for delimited section in Story file (for Task docs)
+    # Look for new Task section header being added to Story file
+    delimited_section_found = False
+    if task > 0:  # Task-level detection
+        # Find Story file
+        story_file = find_story_file(config, epic, story)
+        if story_file and story_file.exists():
+            # Check git diff for new Task section header
+            try:
+                result = subprocess.run(
+                    ["git", "diff", "--", str(story_file)],
+                    cwd=project_root,
+                    capture_output=True,
+                    text=True,
+                    check=False
+                )
+                if result.returncode == 0:
+                    # Look for new Task section header being added
+                    task_header_pattern = re.compile(
+                        rf'^\+\s*###\s+E{epic}:S{story}:T{task:02d}\s+–',
+                        re.MULTILINE
+                    )
+                    if task_header_pattern.search(result.stdout):
+                        delimited_section_found = True
+            except Exception:
+                pass
+    
+    # Check 3: Check if prior version exists in git history
+    # Look for version pattern RC.EPIC.STORY.TASK+* in git log or changelog
+    version_pattern = rf'{epic}\.{story}\.{task}\+'
+    prior_version_exists = False
+    
+    # Check git log for version mentions
+    try:
+        result = subprocess.run(
+            ["git", "log", "--all", "--grep", version_pattern, "--oneline"],
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            check=False
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            prior_version_exists = True
+    except Exception:
+        pass
+    
+    # Check changelog for prior version
+    if not prior_version_exists:
+        changelog_file = project_root / "CHANGELOG.md"
+        if changelog_file.exists():
+            changelog_content = changelog_file.read_text()
+            if re.search(version_pattern, changelog_content):
+                prior_version_exists = True
+    
+    # Determine if this is first-time
+    est_doc_created = new_est_doc_found or delimited_section_found
+    
+    if est_doc_created and not prior_version_exists:
+        is_first_time = True
+    elif est_doc_created and prior_version_exists:
+        warnings.append(
+            f"⚠️  New E/S/T doc detected, but prior version exists. "
+            f"This may not be a first-time commit (doc-init)."
+        )
+    elif not est_doc_created and not prior_version_exists:
+        # No E/S/T doc detected, but no prior version exists
+        # This could be a delimited section or edge case - be lenient but warn
+        is_first_time = True
+        warnings.append(
+            f"⚠️  No new E/S/T doc file or section detected, but no prior version exists. "
+            f"Assuming first-time commit (doc-init). If this is incorrect, validation will fail on docs-only check."
+        )
+    
+    return is_first_time, warnings
+
+
 def validate_doc_init_build(
     version_components: Tuple[int, int, int, int, int],
-    project_root: Path = None
+    project_root: Path = None,
+    config: Optional[Dict] = None
 ) -> Tuple[bool, list]:
     """
     Validate that a doc-init build (+0) only contains documentation changes.
@@ -660,14 +826,42 @@ def validate_version_bump(
     rc, epic, story, current_task, current_build = version_components
     print(f"Current version: {rc}.{epic}.{story}.{current_task}+{current_build}")
     
-    # NEW: Validate doc-init build (if BUILD = 0, must be docs-only)
+    # NEW: Validate doc-init build (if BUILD = 0, must be docs-only and first-time E/S/T doc)
     project_root = version_file.parent.parent if version_file else Path.cwd()
-    doc_init_valid, doc_init_errors = validate_doc_init_build(
-        version_components, project_root
-    )
-    if not doc_init_valid:
-        errors.extend(doc_init_errors)
-        # Don't return early - continue with other validations to show all errors
+    
+    # If BUILD = 0, validate abstract space conditions
+    if current_build == 0:
+        # Check if this is a first-time E/S/T doc commit
+        is_first_time, first_time_warnings = detect_first_time_est_doc(
+            epic, story, current_task, project_root, config
+        )
+        if not is_first_time:
+            errors.append(
+                f"❌ ABSTRACT SPACE VALIDATION FAILED: BUILD=0 (abstract space) detected, but this is not a first-time E/S/T document commit.\n"
+                f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
+                f"   Conditions for valid abstract space (`+0`):\n"
+                f"   1. New E/S/T document file created OR new delimited section added to Story file\n"
+                f"   2. No prior version exists for this E/S/T (check git history and changelog)\n"
+                f"   3. All changes are docs-only (no code changes)\n"
+                f"   If the E/S/T document already exists, use BUILD >= 1 for functional changes.\n"
+                f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
+            )
+        if first_time_warnings:
+            for warning in first_time_warnings:
+                print(f"⚠️  {warning}")
+        
+        # Validate docs-only requirement
+        doc_init_valid, doc_init_errors = validate_doc_init_build(
+            version_components, project_root, config
+        )
+        if not doc_init_valid:
+            errors.extend(doc_init_errors)
+    else:
+        # Normal build (BUILD >= 1) - validate that it's not incorrectly using doc-init
+        # This is handled in version bump logic validation below
+        pass
+    
+    # Don't return early - continue with other validations to show all errors
     
     # Find story file if not provided
     if story_file is None:
@@ -729,35 +923,103 @@ def validate_version_bump(
                 errors.append(f"   - {alignment_error}")
             errors.append(f"   Expected: E{epic}:S{story}:T{completed_task}")
     
-    # Validate version bump logic
+    # Validate version bump logic (with abstract space awareness)
+    # Check if this is a doc-init build (BUILD = 0)
+    is_doc_init = (current_build == 0)
+    
     if completed_task > current_task:
-        # New task - should have VERSION_TASK = completed_task, BUILD = 1
+        # New task
         if current_task != completed_task:
             errors.append(
                 f"Version bump error: Completed task T{completed_task:02d} > current VERSION_TASK {current_task}, "
                 f"but VERSION_TASK is {current_task} (should be {completed_task})"
             )
-        if current_build != 1:
-            errors.append(
-                f"Version bump error: New task detected, but BUILD is {current_build} (should be 1)"
-            )
+        # Abstract space awareness: BUILD = 0 is valid for doc-init, BUILD = 1 for normal new task
+        if is_doc_init:
+            # Doc-init build: BUILD = 0 is valid (abstract space)
+            if current_build != 0:
+                errors.append(
+                    f"❌ ABSTRACT SPACE VALIDATION ERROR: Doc-init build detected for new task T{completed_task:02d}, "
+                    f"but BUILD is {current_build} (should be 0 for doc-init/abstract space).\n"
+                    f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
+                    f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
+                )
+        else:
+            # Normal new task: BUILD = 1 is required
+            if current_build != 1:
+                if current_build == 0:
+                    errors.append(
+                        f"❌ ABSTRACT SPACE VALIDATION ERROR: New task T{completed_task:02d} detected, but BUILD is 0.\n"
+                        f"   BUILD=0 (abstract space) is only valid for doc-init builds (first-time E/S/T document creation, docs-only).\n"
+                        f"   For functional changes on a new task, use BUILD=1.\n"
+                        f"   If this is a doc-init build, ensure:\n"
+                        f"   1. This is the first-time commit of the E/S/T document\n"
+                        f"   2. All changes are docs-only (no code changes)\n"
+                        f"   3. Doc-init validation passes (see validate_doc_init_build output above)\n"
+                        f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
+                    )
+                else:
+                    errors.append(
+                        f"Version bump error: New task detected, but BUILD is {current_build} (should be 1 for normal builds, or 0 for doc-init)"
+                    )
     
     elif completed_task == current_task:
-        # Same task - BUILD should be incremented (can't validate exact increment without previous version)
-        print(f"Same task detected - BUILD should be incremented (current BUILD: {current_build})")
-        # Note: We can't validate exact BUILD increment without knowing previous BUILD
+        # Same task
+        if is_doc_init:
+            # Doc-init on same task: This shouldn't happen (doc-init is for first-time creation)
+            errors.append(
+                f"❌ ABSTRACT SPACE VALIDATION ERROR: Doc-init build (BUILD=0) detected for existing task T{completed_task:02d}.\n"
+                f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
+                f"   Since this task already exists, use BUILD >= 1 for subsequent changes.\n"
+                f"   Doc-init builds establish the canonical version anchor before functional work begins.\n"
+                f"   Once the E/S/T document exists, all subsequent changes require BUILD >= 1.\n"
+                f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
+            )
+        else:
+            # Same task, normal build - BUILD should be incremented (can't validate exact increment without previous version)
+            if current_build < 1:
+                errors.append(
+                    f"Version bump error: Same task detected, but BUILD is {current_build} (should be >= 1 for normal builds). "
+                    f"BUILD=0 is only valid for doc-init builds (first-time E/S/T document creation)."
+                )
+            print(f"Same task detected - BUILD should be incremented (current BUILD: {current_build})")
+            # Note: We can't validate exact BUILD increment without knowing previous BUILD
     
     elif completed_task < current_task:
-        # Out-of-order completion - should have VERSION_TASK = completed_task, BUILD = 1
+        # Out-of-order completion
         if current_task != completed_task:
             errors.append(
                 f"Version bump error: Out-of-order completion detected (completed T{completed_task:02d} < current T{current_task}), "
                 f"but VERSION_TASK is {current_task} (should be {completed_task})"
             )
-        if current_build != 1:
-            errors.append(
-                f"Version bump error: Out-of-order completion, but BUILD is {current_build} (should be 1)"
-            )
+        # Abstract space awareness: BUILD = 0 is valid for doc-init, BUILD = 1 for normal out-of-order
+        if is_doc_init:
+            # Doc-init build: BUILD = 0 is valid (abstract space)
+            if current_build != 0:
+                errors.append(
+                    f"❌ ABSTRACT SPACE VALIDATION ERROR: Doc-init build detected for out-of-order task T{completed_task:02d}, "
+                    f"but BUILD is {current_build} (should be 0 for doc-init/abstract space).\n"
+                    f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
+                    f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
+                )
+        else:
+            # Normal out-of-order: BUILD = 1 is required
+            if current_build != 1:
+                if current_build == 0:
+                    errors.append(
+                        f"❌ ABSTRACT SPACE VALIDATION ERROR: Out-of-order task T{completed_task:02d} detected, but BUILD is 0.\n"
+                        f"   BUILD=0 (abstract space) is only valid for doc-init builds (first-time E/S/T document creation, docs-only).\n"
+                        f"   For functional changes on an out-of-order task, use BUILD=1.\n"
+                        f"   If this is a doc-init build, ensure:\n"
+                        f"   1. This is the first-time commit of the E/S/T document\n"
+                        f"   2. All changes are docs-only (no code changes)\n"
+                        f"   3. Doc-init validation passes (see validate_doc_init_build output above)\n"
+                        f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
+                    )
+                else:
+                    errors.append(
+                        f"Version bump error: Out-of-order completion, but BUILD is {current_build} (should be 1 for normal builds, or 0 for doc-init)"
+                    )
     
     if errors:
         return False, errors

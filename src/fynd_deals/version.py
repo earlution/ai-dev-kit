@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 10    # Story number (Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T)
-VERSION_TASK = 5      # Task number (Task 5: Update RW Step 1 Procedure Documentation)
-VERSION_BUILD = 1     # Build number (E2:S10:T05 complete - RW Step 2 procedure documentation updated with doc-init examples)
+VERSION_TASK = 6      # Task number (Task 6: Update Version Validator for Abstract Space Awareness (FR-020))
+VERSION_BUILD = 1     # Build number (E2:S10:T06 complete - Version validator updated with abstract space awareness)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
@@ -33,8 +33,11 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - VERSION_EPIC must match active dev-kit epic (1-4+)
 # - VERSION_STORY must match active story within epic
 # - VERSION_TASK must match active task within story
-# - VERSION_BUILD must be >= 1
+# - VERSION_BUILD must be >= 0 (0 = doc-init/abstract space, 1+ = normal builds)
+# - BUILD = 0 is only valid for first-time E/S/T document creation (docs-only)
+# - BUILD >= 1 is required for functional changes
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py
+# - Abstract space awareness: FR-020 (validator recognizes +0 as valid)
 
 

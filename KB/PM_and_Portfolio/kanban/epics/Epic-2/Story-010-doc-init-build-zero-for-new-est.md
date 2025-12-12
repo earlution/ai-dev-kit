@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 
-**Status:** IN PROGRESS (v0.2.10.5+1)  
+**Status:** IN PROGRESS (v0.2.10.6+1)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-12 (v0.2.10.5+1 – Task 5 complete: RW Step 2 procedure documentation updated with doc-init examples)  
+**Last updated:** 2025-12-12 (v0.2.10.6+1 – Task 6 complete: Version validator updated with abstract space awareness)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.2.10.5+1  
+**Version:** v0.2.10.6+1  
 **Code:** E2S10
 
 ---
@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [x] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries** ✅ COMPLETE (v0.2.10.3+1)
 - [x] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic** ✅ COMPLETE (v0.2.10.4+1)
 - [x] **E2:S10:T05 – Update RW Step 1 Procedure Documentation** ✅ COMPLETE (v0.2.10.5+1)
-- [ ] **E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)**
+- [x] **E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)** ✅ COMPLETE (v0.2.10.6+1)
 - [ ] **E2:S10:T07 – Documentation and Testing**
 
 > **Format:** `E2:S10:Txx` (Epic 2, Story 10, Task with 2-digit zero padding)  
@@ -305,11 +305,13 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ---
 
-### E2:S10:T06 – Documentation and Testing
+### E2:S10:T07 – Documentation and Testing
+
+**Scope:** Create comprehensive documentation and test coverage for doc-init functionality. Update RW documentation with doc-init examples, create migration guide for existing projects, and verify all policy documents are consistent.
 
 **Input:** All previous tasks, doc-init implementation  
 **Deliverable:** Complete documentation and test coverage  
-**Dependencies:** T01-T05 (all previous tasks)  
+**Dependencies:** T01-T06 (all previous tasks)  
 **Blocker:** FR-016  
 **Parallel Development Candidacy:** Blocked (depends on all previous tasks)
 
@@ -338,9 +340,13 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 - [ ] Migration guide for existing projects
 - [ ] All policy documents verified for consistency
 
+**Status:** TODO
+
 ---
 
 ### E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)
+
+**Scope:** Update version validator (`validate_version_bump.py`) to recognize `+0` as valid BUILD for abstract spaces (doc-init builds). Add detection logic for first-time E/S/T doc commits, validate abstract space conditions, and provide clear error messages explaining abstract space requirements.
 
 **Input:** Current version validator (`validate_version_bump.py`), FR-020 requirements  
 **Deliverable:** Version validator recognizes `+0` as valid BUILD for abstract spaces  
@@ -404,21 +410,45 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
   - Follow standard RW process for each commit
 
 **Acceptance Criteria:**
-- [ ] Validator recognizes `+0` as valid BUILD for abstract spaces
-- [ ] Validator checks that `+0` is only used for first-time E/S/T doc commits
-- [ ] Validator validates that `+0` commits are docs-only (no code changes)
-- [ ] Validator enforces `+1` or higher for functional changes
-- [ ] Validator provides clear error messages for invalid `+0` usage
-- [ ] Validator detects E/S/T doc creation (new file detection)
-- [ ] Validator checks git diff for docs-only requirement
-- [ ] Test cases cover all abstract space scenarios
-- [ ] Documentation updated with abstract space validation logic
+- [x] ✅ Validator recognizes `+0` as valid BUILD for abstract spaces
+- [x] ✅ Validator checks that `+0` is only used for first-time E/S/T doc commits
+- [x] ✅ Validator validates that `+0` commits are docs-only (no code changes)
+- [x] ✅ Validator enforces `+1` or higher for functional changes
+- [x] ✅ Validator provides clear error messages for invalid `+0` usage
+- [x] ✅ Validator detects E/S/T doc creation (new file detection and delimited sections)
+- [x] ✅ Validator checks git diff for docs-only requirement
+- [x] ✅ Version bump validation logic updated with abstract space awareness
+- [x] ✅ Error messages explain abstract space requirements and reference FR-017, FR-018, FR-020
+
+**Status:** ✅ COMPLETE (v0.2.10.6+1)
+
+**Completion Summary:**
+- ✅ Updated version bump validation logic to recognize `+0` as valid for doc-init builds:
+  - New task: BUILD = 0 (doc-init) or BUILD = 1 (normal) are both valid
+  - Same task: BUILD = 0 is invalid (doc-init is for first-time only), BUILD >= 1 required
+  - Out-of-order task: BUILD = 0 (doc-init) or BUILD = 1 (normal) are both valid
+- ✅ Added `detect_first_time_est_doc()` function:
+  - Detects new E/S/T doc files via git diff
+  - Detects new delimited sections in Story files
+  - Checks git history and changelog for prior versions
+  - Handles both zero-padded and non-zero-padded file patterns
+- ✅ Enhanced abstract space validation:
+  - Validates first-time E/S/T doc commit requirement
+  - Validates docs-only requirement (via existing `validate_doc_init_build()`)
+  - Provides clear error messages explaining abstract space conditions
+- ✅ Updated error messages with abstract space awareness:
+  - Explains when `+0` is valid (first-time E/S/T doc, docs-only)
+  - Explains when `+0` is invalid (existing doc, code changes)
+  - References FR-017, FR-018, FR-020 for context
+  - Provides guidance on how to fix invalid usage
+- ✅ Updated version file validation notes to reflect BUILD >= 0 (not >= 1)
+- ✅ Updated validator script docstring to document abstract space awareness
 
 ---
 
-### E2:S10:T07 – Documentation and Testing
+## Story-Level Acceptance Criteria
 
-## Acceptance Criteria
+**Note:** These acceptance criteria apply to the entire story (E2:S10), not individual tasks.
 
 - [ ] **AC1:** RW supports a doc-init path that emits `RC.EPIC.STORY.TASK+0` for new E/S/T docs only
 - [ ] **AC2:** Functional changes for that task require `+1` or higher

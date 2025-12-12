@@ -1,66 +1,83 @@
-# Release v0.2.10.6+1
+# Changelog: v0.2.10.6+1
 
-**Release Date:** 2025-12-11 00:00:00 UTC
+**Release Date:** 2025-12-12  
+**Epic:** Epic 2 - Workflow Management  
+**Story:** Story 10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T  
+**Task:** Task 6 - Update Version Validator for Abstract Space Awareness (FR-020)
 
-**Epic / Story / Task:** Epic 2, Story 10, Task 6
-**Type:** 📋 Documentation (Dependency Wiring)
+---
 
 ## Summary
 
-Wired all dependencies, blockers, and cross-references for E2:S10:T06 (Version Validator Abstract Space Awareness). Traced full dependency chain and updated all related E/S/T documents with proper cross-references.
+Updated version validator (`validate_version_bump.py`) to recognize `+0` as valid BUILD for abstract spaces (doc-init builds). Added detection logic for first-time E/S/T doc commits, validated abstract space conditions, and provided clear error messages explaining abstract space requirements.
+
+---
 
 ## Changes
 
-### Updated
-- **E2:S10:T06:** Added complete dependency chain and blocker documentation
-  - Dependencies: T02 → T01 → E4:S11 → E2:S09 → FR-016
-  - Blockers: FR-016 → E4:S11 → E2:S09 → T01 → T02
-  - Added note about multiple RWs required for implementation
-  - Added RW requirements section in Approach
+### Version Validator Updates
 
-- **E2:S10 (Story level):** Updated dependencies and related work
-  - Updated "Blocked By" section with full dependency chain
-  - Updated "Related Work" with all prerequisites and dependent tasks
+**File Modified:**
+- `packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py`
 
-- **FR-020:** Added dependency chain documentation
-  - Updated "Blocked By" with full chain
-  - Updated "Related Work" with all prerequisites
-  - Added note about multiple RWs in Implementation Notes
+**Abstract Space Awareness (FR-020):**
+- ✅ Updated version bump validation logic to recognize `+0` as valid for doc-init builds
+- ✅ Added `detect_first_time_est_doc()` function:
+  - Detects new E/S/T doc files via git diff (handles both zero-padded and non-zero-padded patterns)
+  - Detects new delimited sections in Story files (for Task docs)
+  - Checks git history and changelog for prior versions
+  - Returns first-time status and warnings
+- ✅ Enhanced abstract space validation:
+  - Validates first-time E/S/T doc commit requirement
+  - Validates docs-only requirement (via existing `validate_doc_init_build()`)
+  - Provides clear error messages explaining abstract space conditions
 
-- **E2:S09:** Added cross-references to FR-020 and E2:S10:T06
-  - Updated "Related Work" to show it blocks E2:S10:T06 via dependency chain
+**Version Bump Validation Logic Updates:**
+- ✅ **New Task Scenarios:**
+  - Doc-init: BUILD = 0 is valid (abstract space)
+  - Normal: BUILD = 1 is required
+  - Clear error messages for invalid BUILD values
+- ✅ **Same Task Scenarios:**
+  - Doc-init: BUILD = 0 is invalid (doc-init is for first-time only)
+  - Normal: BUILD >= 1 is required
+  - Error message explains doc-init is only for first-time creation
+- ✅ **Out-of-Order Task Scenarios:**
+  - Doc-init: BUILD = 0 is valid (abstract space)
+  - Normal: BUILD = 1 is required
+  - Clear error messages for invalid BUILD values
 
-- **E4:S11:** Added cross-references to FR-020 and E2:S10:T06
-  - Updated "Blocks" section to include E2:S10:T06
-  - Updated "Related Work" to show dependency chain
+**Error Messages Enhanced:**
+- ✅ All error messages now explain abstract space requirements:
+  - When `+0` is valid (first-time E/S/T doc, docs-only)
+  - When `+0` is invalid (existing doc, code changes)
+  - References to FR-017, FR-018, FR-020 for context
+  - Guidance on how to fix invalid usage
+- ✅ Error messages use clear formatting with `❌ ABSTRACT SPACE VALIDATION ERROR` prefix
+- ✅ Error messages include conditions for valid abstract space builds
 
-## Dependency Chain Traced
+**Documentation Updates:**
+- ✅ Updated validator script docstring to document abstract space awareness
+- ✅ Updated version file validation notes:
+  - Changed from "VERSION_BUILD must be >= 1" to "VERSION_BUILD must be >= 0"
+  - Added note: "0 = doc-init/abstract space, 1+ = normal builds"
+  - Added reference to FR-020
 
-**Full dependency chain for E2:S10:T06:**
-```
-FR-016 → E4:S11 → E2:S09 → E2:S10:T01 → E2:S10:T02 → E2:S10:T06
-```
-
-**Detailed dependencies:**
-1. FR-016 (Kanban Granularity & Discrete Task Docs) - Blocks E4:S11 and E2:S09
-2. E4:S11 (Kanban Framework work) - Must complete before E2:S09
-3. E2:S09 (RW Integration) - Must complete before E2:S10:T01
-4. E2:S10:T01 (RW Step 1 Doc-Init Path) - Must complete before E2:S10:T02
-5. E2:S10:T02 (Doc-Init Validation) - Must complete before E2:S10:T06
-6. E2:S10:T06 (Version Validator Abstract Space Awareness) - Final task
+---
 
 ## Related Work
-- Epic: 2
-- Story: 10
-- Task: 6
-- FR-020: Version Validator Abstract Space Awareness
-- FR-016: Kanban Granularity & Discrete Task Docs (blocks via dependency chain)
-- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) (abstract space concept)
-- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (abstract space definition)
-- E2:S09: Kanban Granularity & Discrete Task Docs (RW Integration) (prerequisite)
-- E4:S11: Kanban Granularity & Discrete Task Docs (Kanban Framework) (prerequisite)
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-020 - Version Validator Abstract Space Awareness
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Feature Request:** FR-018 - Abstract Space for Zero-Numbered E/S/T Docs
+- **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support), E2:S10:T02 (Doc-Init Validation)
+- **Enables:** Proper validation of abstract space builds in Release Workflow
+
+---
 
 ## Notes
 
-All dependencies, blockers, and cross-references are now fully wired and traceable. The dependency chain is documented across all related E/S/T files. Implementation of E2:S10:T06 will require multiple RWs with BUILD bumps for each file update (validator script, test files, documentation).
+This update enables the version validator to properly recognize and validate abstract space builds (`+0`), ensuring they are only used for first-time E/S/T document creation and are docs-only (no code changes). The validator now provides clear error messages explaining abstract space requirements, making it easier for developers to understand when and how to use doc-init builds.
 
+The validator integrates seamlessly with existing doc-init validation (from T02) and provides comprehensive abstract space awareness as required by FR-020.

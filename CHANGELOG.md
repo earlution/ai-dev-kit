@@ -17,6 +17,33 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.10.6+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T06 - Version Validator Abstract Space Awareness (FR-020)
+
+### Summary
+
+**Validator Enhancement:** Updated version validator to recognize `+0` as valid BUILD for abstract spaces (doc-init builds). Added detection logic for first-time E/S/T doc commits and enhanced error messages explaining abstract space requirements.
+
+### Changes
+
+**Version Validator Updates:**
+- ✅ Updated version bump validation logic to recognize `+0` as valid for doc-init builds
+- ✅ Added `detect_first_time_est_doc()` function for first-time E/S/T doc detection
+- ✅ Enhanced abstract space validation with clear error messages
+- ✅ Updated error messages to reference FR-017, FR-018, FR-020
+- ✅ Updated version file validation notes (BUILD >= 0, not >= 1)
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-020 - Version Validator Abstract Space Awareness
+- **Depends On:** E2:S10:T01-T02 (Doc-Init Implementation)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.6+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.6+1.md)
+
+---
+
 ## [0.2.10.5+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T05 - RW Step 2 Procedure Documentation (Doc-Init Examples)
