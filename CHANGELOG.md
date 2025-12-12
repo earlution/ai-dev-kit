@@ -17,6 +17,34 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.10.2+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T02 - Doc-Init Validation (Docs-Only Check)
+
+### Summary
+
+**Doc-Init Validation:** Implemented doc-init validation in both version bump and branch context validators. Validators now detect when BUILD=0 (doc-init build) and verify that all changed files are documentation-only, failing with clear error messages if code files are detected.
+
+### Changes
+
+**Validation Scripts Enhanced:**
+- ✅ Added `is_documentation_file()` function to classify files as docs vs code
+- ✅ Added `get_changed_files()` function to detect git changes
+- ✅ Added `validate_doc_init_build()` function for `+0` build validation
+- ✅ Integrated doc-init validation into `validate_version_bump.py`
+- ✅ Integrated doc-init validation into `validate_branch_context.py`
+- ✅ Validators fail with clear error messages if non-doc files detected in `+0` builds
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.2+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.2+1.md)
+
+---
+
 ## [0.2.10.1+0] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T01 - Doc-Init Build (RW Step 2 Doc-Init Support)

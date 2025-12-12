@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 
-**Status:** IN PROGRESS (v0.2.10.1+0)  
+**Status:** IN PROGRESS (v0.2.10.2+1)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-12 (v0.2.10.1+0 – Task 1 complete: RW Step 2 updated with doc-init detection)  
+**Last updated:** 2025-12-12 (v0.2.10.2+1 – Task 2 complete: Doc-init validation implemented in validators)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.2.10.0+0  
+**Version:** v0.2.10.2+1  
 **Code:** E2S10
 
 ---
@@ -23,7 +23,7 @@ housekeeping_policy: keep
 
 - [ ] **E2:S10:T00 – Story Creation and FR-017 Intake** ✅ COMPLETE (v0.2.10.0+0)
 - [x] **E2:S10:T01 – Update RW Step 2 to Support Doc-Init Path** ✅ COMPLETE (v0.2.10.1+0)
-- [ ] **E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)**
+- [x] **E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)** ✅ COMPLETE (v0.2.10.2+1)
 - [ ] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries**
 - [ ] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic**
 - [ ] **E2:S10:T05 – Update RW Step 1 Procedure Documentation**
@@ -119,6 +119,8 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ### E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)
 
+**Scope:** Add doc-init validation logic to both `validate_version_bump.py` and `validate_branch_context.py` validators. When a version has BUILD=0 (doc-init build), validators must verify that all changed files are documentation-only. Validators should fail with clear error messages if non-documentation files (code files) are detected in a `+0` build.
+
 **Input:** Current validation scripts, doc-init detection logic  
 **Deliverable:** Validators fail if non-doc changes are present in a `+0` run  
 **Dependencies:** T01 (doc-init detection)  
@@ -140,10 +142,22 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 4. Integrate into existing validation flow
 
 **Acceptance Criteria:**
-- [ ] Validators check if version is `+0` (doc-init)
-- [ ] Validators verify all changes are docs-only
-- [ ] Validators fail if non-doc changes present in `+0` run
-- [ ] Clear error messages provided
+- [x] ✅ Validators check if version is `+0` (doc-init)
+- [x] ✅ Validators verify all changes are docs-only
+- [x] ✅ Validators fail if non-doc changes present in `+0` run
+- [x] ✅ Clear error messages provided
+
+**Status:** ✅ COMPLETE (v0.2.10.2+1)
+
+**Completion Summary:**
+- ✅ Added `is_documentation_file()` function to classify files as docs vs code
+- ✅ Added `get_changed_files()` function to detect git changes (staged + unstaged + untracked)
+- ✅ Added `validate_doc_init_build()` function to validate docs-only changes for `+0` builds
+- ✅ Integrated doc-init validation into `validate_version_bump.py` (runs when BUILD=0)
+- ✅ Integrated doc-init validation into `validate_branch_context.py` (runs when BUILD=0)
+- ✅ Validators now detect `+0` builds and verify all changed files are documentation-only
+- ✅ Validators fail with clear error messages if non-doc files are detected in `+0` builds
+- ✅ Tested validators successfully with current doc-init build (v0.2.10.1+0)
 
 ---
 

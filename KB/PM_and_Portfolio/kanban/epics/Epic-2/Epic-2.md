@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-12 (v0.2.10.1+0 – Story 10 Task 1 complete: RW Step 2 updated with doc-init detection)  
+**Last updated:** 2025-12-12 (v0.2.10.2+1 – Story 10 Task 2 complete: Doc-init validation implemented in validators)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -44,10 +44,10 @@ housekeeping_policy: keep
   - Story: [`Story-009-kanban-granularity-discrete-task-docs.md`](Story-009-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00-T06 ✅ COMPLETE (FR-016: RW Step 1, validators, agent execution guide, documentation, dependency wiring)
   - **Coordination:** Coordinates with E4:S11 (Kanban policy and templates)
-- [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - TODO (v0.2.10.0+0 – Story created for FR-017)
+- [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - IN PROGRESS (v0.2.10.2+1 – Story 10 Task 2 complete: Doc-init validation implemented)
   - Story: [`Story-010-doc-init-build-zero-for-new-est.md`](Story-010-doc-init-build-zero-for-new-est.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T07 TODO (FR-017: Doc-init build `+0` for new E/S/T, FR-020: Validator abstract space awareness)
-  - **Dependency:** Blocked by FR-016 (requires discrete Task docs first)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.10.1+0), T02 ✅ COMPLETE (v0.2.10.2+1), T03-T07 TODO (FR-017: Doc-init build `+0` for new E/S/T, FR-020: Validator abstract space awareness)
+  - **Dependency:** Unblocked (FR-016 complete via E2:S09)
 - [ ] **E2:S11 – Intake Workflow Automation** - TODO (v0.2.11.0+0 – Story created for FR-019)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
   - Tasks: T00 ✅ COMPLETE, T01-T09 TODO (FR-019: Automated intake workflow for FR/BR/UXR); related to FR-018 (abstract space concept used by doc-init)

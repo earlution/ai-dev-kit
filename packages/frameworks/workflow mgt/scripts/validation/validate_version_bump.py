@@ -22,9 +22,10 @@ Usage:
 
 import argparse
 import re
+import subprocess
 import sys
 from pathlib import Path
-from typing import Optional, Dict, Tuple
+from typing import Optional, Dict, Tuple, List
 
 try:
     import yaml
@@ -400,6 +401,202 @@ def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int
     return is_valid, errors
 
 
+def is_documentation_file(file_path: Path) -> bool:
+    """
+    Check if a file is considered documentation-only.
+    
+    Documentation files include:
+    - Markdown files (.md)
+    - README files (README.md, README.txt, etc.)
+    - CHANGELOG files (CHANGELOG.md, CHANGELOG.txt, etc.)
+    - Files in KB/ directory
+    - Files in packages/frameworks/*/ directories (framework docs)
+    - Files in docs/ directory
+    - Kanban documentation (Epic, Story, Task docs)
+    - YAML config files (rw-config.yaml, etc.) - considered docs
+    - Text files (.txt)
+    
+    Non-documentation files include:
+    - Python files (.py) - except if in docs/ or KB/
+    - JavaScript/TypeScript files (.js, .ts, .jsx, .tsx)
+    - Other code files (.java, .go, .rs, etc.)
+    - Binary files
+    """
+    file_str = str(file_path)
+    
+    # Always documentation: markdown files
+    if file_path.suffix.lower() == '.md':
+        return True
+    
+    # Always documentation: README and CHANGELOG files
+    file_name_lower = file_path.name.lower()
+    if file_name_lower.startswith('readme') or file_name_lower.startswith('changelog'):
+        return True
+    
+    # Always documentation: KB/ directory
+    if 'KB/' in file_str or file_str.startswith('KB/'):
+        return True
+    
+    # Always documentation: packages/frameworks/*/ directories (framework docs)
+    if 'packages/frameworks/' in file_str:
+        return True
+    
+    # Always documentation: docs/ directory
+    if 'docs/' in file_str or file_str.startswith('docs/'):
+        return True
+    
+    # Always documentation: YAML config files (rw-config.yaml, etc.)
+    if file_path.suffix.lower() in ['.yaml', '.yml']:
+        return True
+    
+    # Always documentation: text files
+    if file_path.suffix.lower() == '.txt':
+        return True
+    
+    # Python files in KB/ or docs/ are documentation
+    if file_path.suffix.lower() == '.py':
+        if 'KB/' in file_str or 'docs/' in file_str or file_str.startswith('KB/') or file_str.startswith('docs/'):
+            return True
+        # Python files elsewhere are code
+        return False
+    
+    # Other code file extensions are not documentation
+    code_extensions = {'.js', '.ts', '.jsx', '.tsx', '.java', '.go', '.rs', '.cpp', '.c', '.h', '.hpp', '.cs', '.rb', '.php', '.swift', '.kt', '.scala', '.clj', '.sh', '.bash', '.zsh'}
+    if file_path.suffix.lower() in code_extensions:
+        return False
+    
+    # Binary or unknown files - default to not documentation
+    # (conservative: if unsure, treat as non-doc)
+    return False
+
+
+def get_changed_files(project_root: Path = None) -> List[Path]:
+    """
+    Get list of changed files from git (staged + unstaged).
+    
+    Returns:
+        List of Path objects for changed files
+    """
+    if project_root is None:
+        project_root = Path.cwd()
+    
+    changed_files = []
+    
+    # Get staged files
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--cached", "--name-only"],
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            check=False
+        )
+        if result.returncode == 0:
+            for line in result.stdout.strip().split('\n'):
+                if line.strip():
+                    changed_files.append(project_root / line.strip())
+    except Exception:
+        pass
+    
+    # Get unstaged files
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--name-only"],
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            check=False
+        )
+        if result.returncode == 0:
+            for line in result.stdout.strip().split('\n'):
+                if line.strip():
+                    file_path = project_root / line.strip()
+                    if file_path not in changed_files:
+                        changed_files.append(file_path)
+    except Exception:
+        pass
+    
+    # Also check for untracked files (new files)
+    try:
+        result = subprocess.run(
+            ["git", "ls-files", "--others", "--exclude-standard"],
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            check=False
+        )
+        if result.returncode == 0:
+            for line in result.stdout.strip().split('\n'):
+                if line.strip():
+                    file_path = project_root / line.strip()
+                    if file_path not in changed_files:
+                        changed_files.append(file_path)
+    except Exception:
+        pass
+    
+    return changed_files
+
+
+def validate_doc_init_build(
+    version_components: Tuple[int, int, int, int, int],
+    project_root: Path = None
+) -> Tuple[bool, list]:
+    """
+    Validate that a doc-init build (+0) only contains documentation changes.
+    
+    Args:
+        version_components: (RC, EPIC, STORY, TASK, BUILD) tuple
+        project_root: Project root directory
+    
+    Returns:
+        (is_valid, list_of_errors)
+    """
+    errors = []
+    rc, epic, story, task, build = version_components
+    
+    # Check if this is a doc-init build (BUILD = 0)
+    if build != 0:
+        # Not a doc-init build, skip validation
+        return True, []
+    
+    print(f"🔍 Doc-init build detected (BUILD=0) - validating docs-only changes...")
+    
+    # Get changed files
+    changed_files = get_changed_files(project_root)
+    
+    if not changed_files:
+        # No changed files - this might be a validation run before changes are staged
+        print("⚠️  No changed files detected. This may be normal if validation runs before staging.")
+        return True, []
+    
+    # Check each changed file
+    non_doc_files = []
+    for file_path in changed_files:
+        # Skip if file doesn't exist (might be deleted)
+        if not file_path.exists():
+            continue
+        
+        if not is_documentation_file(file_path):
+            non_doc_files.append(file_path)
+    
+    if non_doc_files:
+        errors.append(
+            f"❌ DOC-INIT VALIDATION FAILED: Doc-init build (BUILD=0) contains non-documentation changes:\n"
+        )
+        for non_doc_file in non_doc_files:
+            rel_path = str(non_doc_file.relative_to(project_root or Path.cwd()))
+            errors.append(f"   - {rel_path}")
+        errors.append(
+            f"\n   Doc-init builds (+0) must only contain documentation changes.\n"
+            f"   Documentation files include: .md files, README, CHANGELOG, KB/, packages/frameworks/, docs/, .yaml, .txt\n"
+            f"   Code files (.py, .js, .ts, etc.) are not allowed in doc-init builds."
+        )
+        return False, errors
+    
+    print(f"✅ Doc-init validation passed: All {len(changed_files)} changed files are documentation-only.")
+    return True, []
+
+
 def validate_task_doc_alignment(
     task_content: str,
     epic: int,
@@ -462,6 +659,15 @@ def validate_version_bump(
     
     rc, epic, story, current_task, current_build = version_components
     print(f"Current version: {rc}.{epic}.{story}.{current_task}+{current_build}")
+    
+    # NEW: Validate doc-init build (if BUILD = 0, must be docs-only)
+    project_root = version_file.parent.parent if version_file else Path.cwd()
+    doc_init_valid, doc_init_errors = validate_doc_init_build(
+        version_components, project_root
+    )
+    if not doc_init_valid:
+        errors.extend(doc_init_errors)
+        # Don't return early - continue with other validations to show all errors
     
     # Find story file if not provided
     if story_file is None:
