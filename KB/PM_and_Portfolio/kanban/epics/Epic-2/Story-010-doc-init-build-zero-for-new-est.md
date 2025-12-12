@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 
-**Status:** IN PROGRESS (v0.2.10.4+1)  
+**Status:** IN PROGRESS (v0.2.10.5+1)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-12 (v0.2.10.4+1 – Task 4 complete: Versioning policy updated with doc-init logic)  
+**Last updated:** 2025-12-12 (v0.2.10.5+1 – Task 5 complete: RW Step 2 procedure documentation updated with doc-init examples)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.2.10.4+1  
+**Version:** v0.2.10.5+1  
 **Code:** E2S10
 
 ---
@@ -26,7 +26,7 @@ housekeeping_policy: keep
 - [x] **E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)** ✅ COMPLETE (v0.2.10.2+1)
 - [x] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries** ✅ COMPLETE (v0.2.10.3+1)
 - [x] **E2:S10:T04 – Update Versioning Policy with Doc-Init Logic** ✅ COMPLETE (v0.2.10.4+1)
-- [ ] **E2:S10:T05 – Update RW Step 1 Procedure Documentation**
+- [x] **E2:S10:T05 – Update RW Step 1 Procedure Documentation** ✅ COMPLETE (v0.2.10.5+1)
 - [ ] **E2:S10:T06 – Update Version Validator for Abstract Space Awareness (FR-020)**
 - [ ] **E2:S10:T07 – Documentation and Testing**
 
@@ -256,6 +256,8 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ### E2:S10:T05 – Update RW Step 1 Procedure Documentation
 
+**Scope:** Update RW Step 2 procedure documentation (specifically "B. IDENTIFY COMPLETED TASK" section) to include comprehensive doc-init logic, examples, and cross-references. Document doc-init scenarios, explain `+0` build number emission, and provide examples showing doc-init vs normal build paths.
+
 **Input:** Current RW Step 1 documentation, doc-init implementation  
 **Deliverable:** Updated RW Step 1 procedure documentation with doc-init logic  
 **Dependencies:** T01-T04 (all doc-init implementation)  
@@ -278,10 +280,28 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 5. Cross-reference FR-016 and FR-018
 
 **Acceptance Criteria:**
-- [ ] RW Step 1 documentation includes doc-init logic
-- [ ] Doc-init detection process documented
-- [ ] Examples provided
-- [ ] Cross-references to FR-016 and FR-018 added
+- [x] ✅ RW Step 2 documentation includes doc-init logic in "B. IDENTIFY COMPLETED TASK" section
+- [x] ✅ Doc-init scenarios and examples documented
+- [x] ✅ Examples provided showing doc-init vs normal build paths
+- [x] ✅ Cross-references to FR-016 and FR-018 added
+
+**Status:** ✅ COMPLETE (v0.2.10.5+1)
+
+**Completion Summary:**
+- ✅ Updated "B. IDENTIFY COMPLETED TASK" section in Step 2 with doc-init scenarios:
+  - Added doc-init task completion scenarios
+  - Explained relationship between doc-init (`+0`) and functional work (`+1`)
+  - Documented version progression: Doc-init → First functional build → Subsequent builds
+- ✅ Added "B.2. DOC-INIT SCENARIOS AND EXAMPLES" section:
+  - Example 1: Doc-Init Build (First-Time Task Document Creation)
+  - Example 2: Normal Build After Doc-Init (First Functional Change)
+  - Example 3: Normal Build (New Task, No Doc-Init)
+  - Key distinctions between doc-init and normal builds
+- ✅ Enhanced "B.1. LOCATE AND VALIDATE TASK DOCUMENT" section:
+  - Added doc-init documentation notes in section 2.3
+  - Documented doc-init vs normal versioning paths
+- ✅ Added cross-references to FR-016, FR-017, and FR-018 in CRITICAL REMINDERS section
+- ✅ All doc-init logic now comprehensively documented in Step 2 procedure
 
 ---
 

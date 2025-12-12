@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # Release Workflow: Agent Execution Guide
 
-**Version:** 1.6.0
+**Version:** 1.7.0
 **Last Updated:** 2025-12-12
 **Related:** [Example: Confidentia - Epic 4 - User Workflows & Use Case Modeling, Release Workflow] | [Example: ai-dev-kit - Epic 2 - Workflow Management Framework, Release Workflow]
 
@@ -16,7 +16,15 @@ housekeeping_policy: keep
 
 ## 📜 Version History
 
-**Current Version:** 1.6.0 (2025-12-12)
+**Current Version:** 1.7.0 (2025-12-12)
+
+### Version 1.7.0 (2025-12-12) - Doc-Init Examples and Documentation
+- **Added:** Doc-init scenarios and examples to Step 2 "B. IDENTIFY COMPLETED TASK" section
+- **Added:** New "B.2. DOC-INIT SCENARIOS AND EXAMPLES" section with three comprehensive examples
+- **Added:** Doc-init documentation notes in Task document location section (B.1.2.3)
+- **Added:** Cross-references to FR-016, FR-017, and FR-018 in CRITICAL REMINDERS section
+- **Enhanced:** Step 2 procedure documentation with doc-init vs normal build distinctions
+- **Related:** E2:S10:T05 - Update RW Step 1 Procedure Documentation (FR-017)
 
 ### Version 1.6.0 (2025-12-12) - Doc-Init Build (+0) Support
 - **Added:** Doc-init detection logic in Step 2 (A.1: Detect Doc-Init State)
@@ -520,6 +528,18 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - Extract the task number from the task identifier: `E{epic}:S{story}:T{task}` (e.g., `E2:S02:T08` → task number is `8`)
    - **CRITICAL:** If no task is marked complete, or you cannot identify which task was just completed, **STOP** and ask the user which task was completed
    - **CRITICAL:** Document the completed task number for comparison
+   
+   **Doc-Init Scenarios:**
+   - **Doc-Init Task Completion:** If doc-init was detected in A.1, the completed task is the NEW task whose document was just created
+     - Example: Doc-init detected for `E2:S10:T01` → Completed task is `T01`
+     - The Task document was just created (docs-only), establishing the version anchor
+     - Version will be set to `RC.EPIC.STORY.TASK+0` (doc-init build)
+   - **Normal Task Completion:** If doc-init was NOT detected, the completed task follows normal versioning rules
+     - Example: Task `E2:S10:T02` completed with functional changes → Version will be `RC.EPIC.STORY.TASK+1` or increment BUILD
+   - **Relationship:** Doc-init (`+0`) establishes the version anchor; subsequent functional work starts at `+1`
+     - Doc-init: `0.2.10.1+0` = Task document created (docs-only)
+     - First functional build: `0.2.10.1+1` = First functional change for that task
+     - Subsequent builds: `0.2.10.1+2`, `0.2.10.1+3`, etc.
 
 **B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY - NEW REQUIREMENT):**
 2.1. **ANALYZE (Task Document Location):**
@@ -569,6 +589,63 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - Document Task document location (separate file path OR "delimited section in Story file")
    - Document Task document format (separate file OR delimited section)
    - Document validation results (required fields present, Task ID aligned)
+   - **If Doc-Init Detected:** Document that this is a doc-init build (`+0`)
+     - Note: Task document was just created (docs-only)
+     - Note: This establishes the canonical version anchor
+     - Note: Subsequent functional work will start at `+1`
+   - **If Not Doc-Init:** Document normal versioning path
+     - Note: Task document already exists (created previously or in doc-init)
+     - Note: This is a functional build (`+1` or higher)
+
+**B.2. DOC-INIT SCENARIOS AND EXAMPLES:**
+
+**Example 1: Doc-Init Build (First-Time Task Document Creation)**
+- **Scenario:** Creating Task document for `E2:S10:T01` for the first time
+- **Detection (A.1):**
+  - ✅ New Task document created: `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md` (delimited section)
+  - ✅ No prior version exists: No `0.2.10.1+*` in git history or changelog
+  - ✅ Docs-only changes: Only `.md` files changed, no code files
+- **Task Identification (B):**
+  - Completed task: `E2:S10:T01` (Task document just created)
+  - Task document: Found in delimited section within Story file
+  - Task document validation: All required fields present, Task ID aligned
+- **Version Decision (C):**
+  - Doc-init detected → `VERSION_TASK = 1`, `VERSION_BUILD = 0`
+  - New version: `0.2.10.1+0` (doc-init build)
+- **Result:** Version anchor established. Next functional build will be `0.2.10.1+1`
+
+**Example 2: Normal Build After Doc-Init (First Functional Change)**
+- **Scenario:** First functional change for `E2:S10:T01` (after doc-init `+0`)
+- **Detection (A.1):**
+  - ❌ Not doc-init: Task document already exists (created in `+0` build)
+  - ❌ Code changes present: `.py` files modified
+- **Task Identification (B):**
+  - Completed task: `E2:S10:T01` (same task as doc-init)
+  - Task document: Already exists (from doc-init build)
+  - Current version: `0.2.10.1+0` (from doc-init)
+- **Version Decision (C):**
+  - Same task, but first functional build → `VERSION_TASK = 1`, `VERSION_BUILD = 1`
+  - New version: `0.2.10.1+1` (first functional build)
+- **Result:** Functional work begins. Subsequent builds: `+2`, `+3`, etc.
+
+**Example 3: Normal Build (New Task, No Doc-Init)**
+- **Scenario:** Completing `E2:S10:T02` with functional changes (Task document created earlier, not in this commit)
+- **Detection (A.1):**
+  - ❌ Not doc-init: Task document already exists (created previously)
+  - ❌ Code changes present: `.py` files modified
+- **Task Identification (B):**
+  - Completed task: `E2:S10:T02` (new task)
+  - Task document: Already exists (created earlier)
+  - Current version: `0.2.10.1+1` (previous task)
+- **Version Decision (C):**
+  - New task → `VERSION_TASK = 2`, `VERSION_BUILD = 1`
+  - New version: `0.2.10.2+1` (new task, first build)
+- **Result:** New task versioned. Note: If Task document was created in this commit with code changes, it would NOT be doc-init (fails docs-only requirement).
+
+**Key Distinctions:**
+- **Doc-Init (`+0`):** Task document created NOW, docs-only, no prior version → `+0`
+- **Normal Build (`+1` or higher):** Task document already exists OR code changes present → `+1` or increment BUILD
+- **Relationship:** Doc-init establishes anchor; functional work builds on it
 
 **C. DETERMINE VERSION BUMP (MANDATORY LOGIC):**
 3. **DETERMINE:**
@@ -677,7 +754,9 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 - **ALWAYS validate before and after** - Catch errors before they propagate
 - **ALWAYS document your decision** - Show your work for traceability
 - See `KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` for error prevention reference
-- See `KB/PM_and_Portfolio/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md` for doc-init requirements
+- See `KB/PM_and_Portfolio/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md` for doc-init requirements (FR-017)
+- See `KB/PM_and_Portfolio/kanban/fr-br/FR-016-kanban-granularity-discrete-task-docs.md` for Task document requirements (FR-016)
+- See `KB/PM_and_Portfolio/kanban/fr-br/FR-018-abstract-space-for-zero-numbered-est-docs.md` for abstract space concept (FR-018)
 
 ---
 

@@ -17,6 +17,33 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.10.5+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T05 - RW Step 2 Procedure Documentation (Doc-Init Examples)
+
+### Summary
+
+**Documentation Update:** Updated RW Step 2 procedure documentation to include comprehensive doc-init logic, examples, and cross-references. Added doc-init scenarios and examples showing doc-init vs normal build paths.
+
+### Changes
+
+**RW Agent Execution Guide:**
+- ✅ Added doc-init scenarios to "B. IDENTIFY COMPLETED TASK" section
+- ✅ Added new "B.2. DOC-INIT SCENARIOS AND EXAMPLES" section with three comprehensive examples
+- ✅ Enhanced Task document location section with doc-init documentation notes
+- ✅ Added cross-references to FR-016, FR-017, and FR-018
+- ✅ Version updated to 1.7.0
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Depends On:** E2:S10:T01-T04 (All doc-init implementation tasks)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.5+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.5+1.md)
+
+---
+
 ## [0.2.10.4+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T04 - Versioning Policy with Doc-Init Logic

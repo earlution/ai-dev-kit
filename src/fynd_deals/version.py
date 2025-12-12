@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 10    # Story number (Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T)
-VERSION_TASK = 4      # Task number (Task 4: Update Versioning Policy with Doc-Init Logic)
-VERSION_BUILD = 1     # Build number (E2:S10:T04 complete - Versioning policy updated with doc-init logic)
+VERSION_TASK = 5      # Task number (Task 5: Update RW Step 1 Procedure Documentation)
+VERSION_BUILD = 1     # Build number (E2:S10:T05 complete - RW Step 2 procedure documentation updated with doc-init examples)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
