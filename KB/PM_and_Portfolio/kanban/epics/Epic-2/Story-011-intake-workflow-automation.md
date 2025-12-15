@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 11: Intake Workflow Automation
 
-**Status:** IN PROGRESS
+**Status:** ✅ COMPLETE
 **Priority:** HIGH  
-**Last updated:** 2025-12-15 (v0.2.11.7+1 – T07 complete: E2:S11:T07)
+**Last updated:** 2025-12-15 (v0.2.11.8+1 – T08 complete: E2:S11:T08)
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
-**Completed:** [TBD]
-**Version:** v0.2.11.7+1
+**Completed:** 2025-12-15
+**Version:** v0.2.11.8+1
 **Code:** E2S11
 
 ---
@@ -29,7 +29,7 @@ housekeeping_policy: keep
 - [x] **E2:S11:T05 – Implement Dependency and Reference Wiring** ✅ COMPLETE (v0.2.11.5+1)
 - [x] **E2:S11:T06 – Integrate with Release Workflow** ✅ COMPLETE (v0.2.11.6+1)
 - [x] **E2:S11:T07 – Add Trigger-Aware Execution Support** ✅ COMPLETE (v0.2.11.7+1)
-- [ ] **E2:S11:T08 – Create Agent Execution Guide**
+- [x] **E2:S11:T08 – Create Agent Execution Guide** ✅ COMPLETE (v0.2.11.8+1)
 - [ ] **E2:S11:T09 – Documentation and Testing**
 
 > **Format:** `E2:S11:Txx` (Epic 2, Story 11, Task with 2-digit zero padding)  

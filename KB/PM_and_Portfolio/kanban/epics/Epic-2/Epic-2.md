@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-15 (v0.2.11.7+1 – Story 11 Task 7 complete)
+**Last updated:** 2025-12-15 (v0.2.11.8+1 – Story 11 Task 8 complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -48,7 +48,7 @@ housekeeping_policy: keep
   - Story: [`Story-010-doc-init-build-zero-for-new-est.md`](Story-010-doc-init-build-zero-for-new-est.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.10.1+0), T02 ✅ COMPLETE (v0.2.10.2+1), T03 ✅ COMPLETE (v0.2.10.3+1), T04 ✅ COMPLETE (v0.2.10.4+1), T05 ✅ COMPLETE (v0.2.10.5+1), T06 ✅ COMPLETE (v0.2.10.6+1), T07 ✅ COMPLETE (v0.2.10.7+1)
   - **Dependency:** Unblocked (FR-016 complete via E2:S09)
-- [ ] **E2:S11 – Intake Workflow Automation** - IN PROGRESS (v0.2.11.7+1)
+- [x] **E2:S11 – Intake Workflow Automation** - ✅ COMPLETE (v0.2.11.8+1)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03 ✅ COMPLETE (v0.2.11.3+1), T04 ✅ COMPLETE (v0.2.11.4+1), T05 ✅ COMPLETE (v0.2.11.5+1), T06 ✅ COMPLETE (v0.2.11.6+1), T07 ✅ COMPLETE (v0.2.11.7+1), T08-T09 TODO (FR-019: Automated intake workflow for FR/BR/UXR); related to FR-018 (abstract space concept used by doc-init)
 
@@ -92,7 +92,7 @@ It defines how Release Workflow (RW) and other workflows are:
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-15 (v0.2.11.7+1 – Story 11 Task 7 complete)
+**Last updated:** 2025-12-15 (v0.2.11.8+1 – Story 11 Task 8 complete)
 
 **Goal:**  
 Make RW agent execution documentation fully portable, clearly distinguishing dev-kit behaviour from external examples.
