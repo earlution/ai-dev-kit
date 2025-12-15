@@ -17,6 +17,37 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.1+1] - 15-12-25
+
+🔧 Workflow Management: E2:S08:T01 - Analyze atomic steps for deterministic vs agentic approach
+
+### Summary
+
+**Analysis:** Created comprehensive analysis document decomposing RW Step 7 (Auto-update Kanban Docs) into 18 atomic sub-steps and classifying each as deterministic (targeting ≈100% reliability) or agentic (requiring LLM/agent judgement). Provides blueprint for implementing FR-015 across E2:S08:T02–T07.
+
+### Changes
+
+**New Analysis Document:**
+- ✅ Deterministic vs agentic classification for all Step 7 sub-steps
+- ✅ Reliability confidence estimates for deterministic steps
+- ✅ Clear boundary definition between deterministic and agentic responsibilities
+- ✅ Implementation blueprint for E2:S08:T02–T07
+
+**Key Findings:**
+- 18 atomic sub-steps identified across 6 phases
+- Strong deterministic candidates for core pipeline (Steps 1–7, 9–10, 12–15)
+- Agentic hooks delimited for non-canonical cases and recovery guidance
+- Hybrid implementation approach: deterministic core + agentic fallbacks
+
+### Related Work
+
+- **Story:** E2:S08 - Harden Release Workflow Reliability
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-015
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.1+1.md)
+
+---
+
 ## [0.2.10.7+1] - 12-12-25
 
 📚 Workflow Management: E2:S10:T07 - Documentation and Testing (Doc-Init)

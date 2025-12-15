@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 008 – Harden Release Workflow Reliability
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-10 (v0.2.8.0+0 – T00 complete: Story creation and FR-015 intake)  
-**Version:** v0.2.8.0+0  
+**Last updated:** 2025-12-15 (v0.2.8.1+1 – T01 complete: Deterministic vs agentic analysis)  
+**Version:** v0.2.8.1+1  
 **Code:** E2S08
 
 ---
@@ -39,7 +39,7 @@ Improve Release Workflow reliability by:
 ## Task Checklist
 
 - [x] **E2:S08:T00 – Story creation and FR-015 intake** ✅ COMPLETE (v0.2.8.0+0)
-- [ ] **E2:S08:T01 – Analyze atomic steps for deterministic vs agentic approach** - TODO
+- [x] **E2:S08:T01 – Analyze atomic steps for deterministic vs agentic approach** ✅ COMPLETE (v0.2.8.1+1)
 - [ ] **E2:S08:T02 – Create framework-agnostic Kanban update script** - TODO
 - [ ] **E2:S08:T03 – Make Step 7 mandatory and blocking** - TODO
 - [ ] **E2:S08:T04 – Add validation step for Kanban updates** - TODO
@@ -75,10 +75,13 @@ Improve Release Workflow reliability by:
 
 ### E2:S08:T01 – Analyze atomic steps for deterministic vs agentic approach
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE (v0.2.8.1+1)  
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T00  
 **Blocker:** None
+
+**Scope:**
+Analyze RW Step 7 (Auto-update Kanban Docs) to decompose it into atomic sub-steps and classify each as deterministic (targeting ≈100% reliability) or agentic (requiring LLM/agent judgement). Produce a concrete, testable blueprint for implementing FR-015 across E2:S08:T02–T07.
 
 **Input:**
 - FR-015 requirements
@@ -95,11 +98,31 @@ Improve Release Workflow reliability by:
   - Reliability confidence estimates
 
 **Acceptance Criteria:**
-- [ ] All atomic steps identified and documented
-- [ ] Each step classified as deterministic or agentic with rationale
-- [ ] Reliability confidence estimates provided for deterministic steps
-- [ ] Edge cases and ambiguous situations identified for agentic steps
-- [ ] Analysis document complete and reviewable
+- [x] ✅ All atomic steps identified and documented
+- [x] ✅ Each step classified as deterministic or agentic with rationale
+- [x] ✅ Reliability confidence estimates provided for deterministic steps
+- [x] ✅ Edge cases and ambiguous situations identified for agentic steps
+- [x] ✅ Analysis document complete and reviewable
+
+**Completion Summary:**
+
+Created comprehensive analysis document (`packages/frameworks/workflow mgt/KB/Analysis/T01-kanban-docs-update-deterministic-vs-agentic-analysis.md`) decomposing RW Step 7 into 18 atomic sub-steps across 6 phases:
+
+1. **Locate context** (Steps 1-3): Version/E/S/T resolution, path resolution, doc loading
+2. **Extract authoritative state** (Steps 4-6): Parse Story Task Checklist, Story header, compute derived state
+3. **Plan required updates** (Steps 7-8): Derive target state, detect board docs
+4. **Apply updates** (Steps 9-11): Update Story doc, Epic doc, Kanban board
+5. **Validate updates** (Steps 12-14): Consistency checks, policy validation, cross-checks
+6. **Error handling** (Steps 15-18): Detect failures, decide repair vs block, generate guidance
+
+**Key Classifications:**
+- **Deterministic (≈100% reliability target):** Steps 1-7, 9-10 (canonical), 12-15
+- **Agentic:** Fallback path resolution, non-canonical prose updates, repair decisions, recovery guidance
+
+**Implementation Blueprint:**
+- Directly informs E2:S08:T02–T07 implementation approach
+- Defines test matrix (canonical flows, non-canonical flows, hard-fail flows)
+- Establishes validation criteria and error handling patterns
 
 **Key Considerations:**
 - **Reliability is the primary metric** - Use deterministic where close to 100% confidence is achievable

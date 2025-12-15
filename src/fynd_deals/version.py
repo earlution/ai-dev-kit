@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
-VERSION_STORY = 10    # Story number (Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T)
-VERSION_TASK = 7      # Task number (Task 7: Documentation and Testing)
-VERSION_BUILD = 1     # Build number (E2:S10:T07 complete - Doc-init migration guide and comprehensive documentation)
+VERSION_STORY = 8     # Story number (Story 8: Harden Release Workflow Reliability)
+VERSION_TASK = 1      # Task number (Task 1: Analyze atomic steps for deterministic vs agentic approach)
+VERSION_BUILD = 1     # Build number (E2:S08:T01 complete - Deterministic vs agentic analysis for RW Step 7)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
