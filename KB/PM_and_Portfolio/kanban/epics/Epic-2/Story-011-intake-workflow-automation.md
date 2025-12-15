@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 2, Story 11: Intake Workflow Automation
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Last updated:** 2025-12-15 (v0.2.11.8+1 – T08 complete: E2:S11:T08)
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
-**Completed:** 2025-12-15
+**Completed:** [TBD]
 **Version:** v0.2.11.8+1
 **Code:** E2S11
 
@@ -529,10 +529,10 @@ Implemented Trigger-Aware Execution Support for intake workflow:
 4. Add troubleshooting guide
 
 **Acceptance Criteria:**
-- [ ] Agent execution guide created
-- [ ] Execution examples provided
-- [ ] Integration points documented
-- [ ] Troubleshooting guide added
+- [x] Agent execution guide created
+- [x] Execution examples provided
+- [x] Integration points documented
+- [x] Troubleshooting guide added
 
 ---
 
