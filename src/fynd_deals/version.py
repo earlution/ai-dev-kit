@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
-VERSION_STORY = 8     # Story number (Story 8: Harden Release Workflow Reliability)
-VERSION_TASK = 7      # Task number (Task 7: Testing and validation)
-VERSION_BUILD = 1     # Build number (E2:S08:T07 complete - Created comprehensive test suite and validation for Step 7 hardening)
+VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
+VERSION_TASK = 1      # Task number (Task 1: Design Intake Workflow Architecture)
+VERSION_BUILD = 1     # Build number (E2:S11:T01 complete - Designed Intake Workflow architecture and workflow YAML)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

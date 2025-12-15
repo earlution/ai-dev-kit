@@ -177,6 +177,37 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.11.1+1] - 15-12-25
+
+🏗️ Workflow Management: E2:S11:T01 - Design Intake Workflow Architecture
+
+### Summary
+
+**Architecture:** Designed comprehensive architecture for Intake Workflow, an automated workflow that formalizes and automates the process of "intaking" FR/BR/UXR reports into the Kanban system. The design follows established patterns from Release Workflow and integrates seamlessly with existing workflow systems.
+
+### Changes
+
+**Architecture Design:**
+- ✅ 7-step workflow architecture (Load & Parse → Decision Flow → Task Creation → Documentation Update → Dependency Wiring → Version Assignment → Validation)
+- ✅ Deterministic vs agentic boundaries clearly defined
+- ✅ Integration points with RW, Kanban, trigger-aware execution, and semantic matching
+- ✅ Error handling strategy following RW Step 7 hardening patterns
+- ✅ Framework-agnostic config-driven approach
+
+**Workflow YAML:**
+- ✅ Complete workflow YAML definition with 7 steps
+- ✅ Mandatory and blocking steps defined
+- ✅ Config-driven approach for framework-agnostic reuse
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.1+1.md)
+
+---
+
 ## [0.2.8.7+1] - 15-12-25
 
 🧪 Workflow Management: E2:S08:T07 - Testing and validation
