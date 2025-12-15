@@ -68,7 +68,7 @@ TRIGGER_REGISTRY: Dict[str, Dict] = {
             'fr-br/FR-*.md',
             'KB/PM_and_Portfolio/kanban/fr-br/FR-*.md',
         ],
-        'workflow': 'agentic_task_creation',
+        'workflow': 'intake_workflow',  # Use intake workflow (E2:S11) instead of agentic_task_creation
         'confidence': ConfidenceLevel.HIGH,
         'priority': 1,
     },
@@ -85,7 +85,7 @@ TRIGGER_REGISTRY: Dict[str, Dict] = {
             'fr-br/BR-*.md',
             'KB/PM_and_Portfolio/kanban/fr-br/BR-*.md',
         ],
-        'workflow': 'agentic_task_creation',
+        'workflow': 'intake_workflow',  # Use intake workflow (E2:S11) instead of agentic_task_creation
         'confidence': ConfidenceLevel.HIGH,
         'priority': 1,
     },
@@ -102,7 +102,7 @@ TRIGGER_REGISTRY: Dict[str, Dict] = {
             'fr-br/UXR-*.md',
             'KB/PM_and_Portfolio/kanban/fr-br/UXR-*.md',
         ],
-        'workflow': 'agentic_task_creation',
+        'workflow': 'intake_workflow',  # Use intake workflow (E2:S11) instead of agentic_task_creation
         'confidence': ConfidenceLevel.HIGH,
         'priority': 1,
     },

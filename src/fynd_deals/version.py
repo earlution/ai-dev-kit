@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
-VERSION_TASK = 6      # Task number (Task 6: Integrate with Release Workflow)
-VERSION_BUILD = 1     # Build number (E2:S11:T06 complete - Implemented Release Workflow integration for intake workflow versioning, including version marker assignment with doc-init build support)
+VERSION_TASK = 7      # Task number (Task 7: Add Trigger-Aware Execution Support)
+VERSION_BUILD = 1     # Build number (E2:S11:T07 complete - Implemented trigger-aware execution support for intake workflow, registered as trigger handler for FR/BR/UXR commits)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

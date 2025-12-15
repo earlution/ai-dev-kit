@@ -50,6 +50,17 @@ class TriggerIntegration:
             timeout=300  # 5 minutes timeout
         )
         self.workflow_executor.register_workflow(task_creation_workflow)
+        
+        # Intake workflow (E2:S11 - complete intake workflow)
+        intake_workflow = WorkflowDefinition(
+            id='intake_workflow',
+            name='Intake Workflow Automation',
+            description='Complete intake workflow: decision flow, task creation, documentation updates, dependency wiring, version assignment',
+            entry_point='function:intake_workflow_trigger_handler.execute_intake_workflow',
+            parameters={},
+            timeout=600  # 10 minutes timeout (more comprehensive workflow)
+        )
+        self.workflow_executor.register_workflow(intake_workflow)
     
     def check_triggers(
         self,
