@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-15 (v0.2.8.5+1 – T05 complete: Comprehensive error handling and recovery guidance)  
-**Version:** v0.2.8.5+1  
+**Last updated:** 2025-12-15 (v0.2.8.6+1 – T06 complete: Updated RW documentation with Step 7 hardening details)  
+**Version:** v0.2.8.6+1  
 **Code:** E2S08
 
 ---
@@ -44,7 +44,7 @@ Improve Release Workflow reliability by:
 - [x] **E2:S08:T03 – Make Step 7 mandatory and blocking** ✅ COMPLETE (v0.2.8.3+1)
 - [x] **E2:S08:T04 – Add validation step for Kanban updates** ✅ COMPLETE (v0.2.8.4+1)
 - [x] **E2:S08:T05 – Implement error handling and recovery guidance** ✅ COMPLETE (v0.2.8.5+1)
-- [ ] **E2:S08:T06 – Update RW documentation and agent execution guide** - TODO
+- [x] **E2:S08:T06 – Update RW documentation and agent execution guide** ✅ COMPLETE (v0.2.8.6+1)
 - [ ] **E2:S08:T07 – Testing and validation** - TODO
 
 ---
@@ -428,10 +428,13 @@ Enhanced `update_kanban_docs.py` with comprehensive error handling and recovery 
 
 ### E2:S08:T06 – Update RW documentation and agent execution guide
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE (v0.2.8.6+1)  
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T05  
 **Blocker:** None
+
+**Scope:**
+Document the deterministic/agentic split, hooks, and blocked protocol so agents know exactly where judgement is expected vs forbidden. Update Release Workflow reference documentation and agent execution guide with comprehensive Step 7 details.
 
 **Input:**
 - Complete implementation from T01-T05
@@ -445,11 +448,42 @@ Enhanced `update_kanban_docs.py` with comprehensive error handling and recovery 
 - Updated workflow YAML documentation
 
 **Acceptance Criteria:**
-- [ ] Release Workflow reference updated
-- [ ] Agent execution guide includes Step 7 details
-- [ ] Examples provided
-- [ ] Troubleshooting guide included
-- [ ] Documentation is clear and complete
+- [x] ✅ Release Workflow reference updated
+- [x] ✅ Agent execution guide includes Step 7 details
+- [x] ✅ Examples provided
+- [x] ✅ Troubleshooting guide included
+- [x] ✅ Documentation is clear and complete
+
+**Completion Summary:**
+
+Updated Release Workflow agent execution guide (`packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`) with comprehensive Step 7 hardening documentation:
+
+**Step 7 Documentation Updates:**
+- **Mandatory & Blocking:** Documented that Step 7 is mandatory (`required: true`, `mandatory: true`) and blocking (`blocking: true`)
+- **Framework-Agnostic Script:** Documented use of `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
+- **Execution Flow:** Detailed script execution flow (config loading, version extraction, path resolution, updates, validation)
+- **Validation Details:** Documented Steps 12-14 validation (internal consistency, policy compliance, version drift detection)
+- **Error Handling:** Documented 12 error types and recovery playbooks
+- **Override Mechanism:** Documented `--allow-override` flag with warnings
+- **Examples:** Provided 3 examples (successful update, validation failure, dry-run mode)
+
+**Key Documentation Sections:**
+- **CRITICAL REQUIREMENTS:** Mandatory, blocking, framework-agnostic behavior
+- **Agent Execution:** 5-step ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern
+- **Framework Script Details:** Script location, features, execution flow
+- **Validation Checks:** Steps 12-14 validation details
+- **Error Handling:** 12 error types with recovery guidance
+- **Examples:** Real-world examples with expected output
+
+**Version History:**
+- Updated document version to 1.7.0
+- Added changelog entry for Step 7 hardening documentation
+
+**Impact:**
+- Agents now have clear guidance on Step 7 execution
+- Deterministic vs agentic boundaries clearly documented
+- Error handling and recovery procedures documented
+- Examples provide concrete reference for agents
 
 ---
 

@@ -177,6 +177,38 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.6+1] - 15-12-25
+
+📚 Workflow Management: E2:S08:T06 - Update RW documentation and agent execution guide
+
+### Summary
+
+**Documentation:** Updated Release Workflow agent execution guide with comprehensive Step 7 hardening documentation. Documented the deterministic/agentic split, hooks, and blocked protocol so agents know exactly where judgement is expected vs forbidden.
+
+### Changes
+
+**Documentation Updates:**
+- ✅ Step 7 documented as mandatory and blocking
+- ✅ Framework-agnostic script usage clearly documented
+- ✅ Comprehensive validation and error handling procedures documented
+- ✅ Examples provided (successful update, validation failure, dry-run)
+- ✅ Troubleshooting guide included
+
+**Key Features:**
+- Clear execution flow documented
+- Deterministic vs agentic boundaries clearly documented
+- Error handling and recovery procedures documented
+- Examples demonstrate expected behavior
+
+### Related Work
+
+- **Story:** E2:S08 - Harden Release Workflow Reliability
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-015
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.6+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.6+1.md)
+
+---
+
 ## [0.2.10.7+1] - 12-12-25
 
 📚 Workflow Management: E2:S10:T07 - Documentation and Testing (Doc-Init)

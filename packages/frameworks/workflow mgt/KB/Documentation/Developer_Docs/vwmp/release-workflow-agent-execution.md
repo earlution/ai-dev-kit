@@ -26,6 +26,17 @@ housekeeping_policy: keep
 - **Enhanced:** Step 2 procedure documentation with doc-init vs normal build distinctions
 - **Related:** E2:S10:T05 - Update RW Step 1 Procedure Documentation (FR-017)
 
+### Version 1.7.0 (2025-12-15) - Step 7 Hardening (FR-015)
+- **Added:** Comprehensive Step 7 documentation with framework-agnostic script details
+- **Added:** Mandatory and blocking behavior documentation
+- **Added:** Validation details (Steps 12-14 from T01 analysis)
+- **Added:** Error handling and recovery guidance documentation
+- **Added:** Override mechanism documentation
+- **Changed:** Step 7 handler updated to `framework.kanban_update` (framework-agnostic)
+- **Changed:** Step 7 is now mandatory (`required: true`, `mandatory: true`) and blocking (`blocking: true`)
+- **Changed:** Step 7 execution now uses framework script instead of manual updates
+- **Related:** E2:S08:T01-T05 - Harden Release Workflow Reliability (FR-015)
+
 ### Version 1.6.0 (2025-12-12) - Doc-Init Build (+0) Support
 - **Added:** Doc-init detection logic in Step 2 (A.1: Detect Doc-Init State)
 - **Added:** Doc-init path that emits `RC.EPIC.STORY.TASK+0` for new E/S/T docs only
@@ -1325,19 +1336,32 @@ The Versioning Policy requires that:
 
 ### Step 7: Auto-update Kanban Docs
 
+**🚨 MANDATORY BLOCKING STEP - DO NOT BYPASS**
+
 **Step Definition:**
 ```yaml
 - id: step-7
   name: Auto-update Kanban Docs
-  handler: confidentia.kanban_update  # [Example: Confidentia] Use {project}.kanban_update or kanban.update
-  # [Example: ai-dev-kit] handler: ai-dev-kit.kanban_update (if implemented)
+  handler: framework.kanban_update  # Framework-agnostic handler
+  required: true
+  mandatory: true
+  blocking: true
+  automatic: true
   dependencies: [step-2]
   config:
-    epic_doc_pattern: KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md  # [Example: Confidentia]
-    # [Example: ai-dev-kit] epic_doc_pattern: KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md
-    kanban_board: KB/PM_and_Portfolio/epics/overview/_index.md  # [Example: Confidentia]
-    # [Example: ai-dev-kit] kanban_board: KB/PM_and_Portfolio/kanban/kanban-board.md
+    kanban_update_script: packages/frameworks/workflow mgt/scripts/update_kanban_docs.py
+    epic_doc_pattern: KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md
+    kanban_board: KB/PM_and_Portfolio/kanban/kanban-board.md
+    use_rw_config: true
 ```
+
+**CRITICAL REQUIREMENTS:**
+- ✅ **MANDATORY:** This step MUST run and cannot be skipped (`required: true`, `mandatory: true`)
+- ✅ **BLOCKING:** If this step fails, the workflow MUST STOP immediately (`blocking: true`)
+- ✅ **FRAMEWORK-AGNOSTIC:** Uses framework script that works across all projects
+- ✅ **VALIDATION:** Comprehensive validation runs automatically after updates
+- ✅ **ERROR HANDLING:** Recovery guidance provided for all error types
+- ❌ **DO NOT PROCEED:** If Step 7 fails, DO NOT proceed to Step 8 or any subsequent step
 
 **Agent Execution:**
 
@@ -1351,61 +1375,197 @@ The Versioning Policy requires that:
    - Extract Story number from version:
      - [Example: Confidentia] `0.4.3.2+9` → Story 3
      - [Example: ai-dev-kit] `0.2.1.1+3` → Story 1
-   - **Use config paths:** Find Epic doc (from config `kanban_root` and `epic_doc_pattern` if `use_kanban: true`, or fallback):
-     - [Example: Confidentia] `KB/PM_and_Portfolio/epics/overview/Epic 4/Epic-4.md` (or from `rw-config.yaml` if present)
-     - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-2/Epic-2.md` (or from `rw-config.yaml` if present)
-   - **Use config paths:** Find Story doc (from config `kanban_root` and `story_doc_pattern` if `use_kanban: true`, or fallback):
-     - [Example: Confidentia] `KB/PM_and_Portfolio/kanban/Epic 4/Story-3-*.md` (or from `rw-config.yaml` if present)
-     - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-001-*.md` (or from `rw-config.yaml` if present)
-   - Understand "Last updated" field format
+   - Extract Task number from version:
+     - [Example: Confidentia] `0.4.3.2+9` → Task 2
+     - [Example: ai-dev-kit] `0.2.1.1+3` → Task 1
+   - **MANDATORY:** Determine framework script path:
+     - Framework script: `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
+     - Verify script exists (if not found, this is a critical error - workflow must stop)
+   - **Use config paths:** Script automatically loads `rw-config.yaml` if available
+   - Understand script uses deterministic pipeline (Steps 1-7, 9-10, 12-15 from T01 analysis)
 
 2. **DETERMINE:**
-   - **CRITICAL: "ALL Sections" Requirement** - Must update ALL sections referencing the story/task:
-     - Epic doc header "Last updated" field
-     - Epic doc Story Checklist (status and version marker)
-     - Epic doc detailed Story sections (Status, Last updated, Task checkboxes with forensic markers)
-     - Story doc header "Last updated" and "Version" fields
-     - Story doc Task Checklist (with forensic markers)
-     - Story doc detailed Task sections (Status, version markers)
-     - Any other references to the story/task
-   - Format for "Last updated": `**Last updated:** YYYY-MM-DD (v{version} – {summary})`
-   - Format for forensic markers: `✅ COMPLETE (v{version})` (canonical format)
-   - Determine if tasks should be marked complete (if applicable)
-   - **Systematic Process:**
-     1. Read the FULL Epic document file
-     2. Read the authoritative Story document file to get correct state
-     3. Use grep/search to find ALL sections referencing the story/task
-     4. **CRITICAL: Update Story file FIRST, then Epic file to match**
-     5. Update ALL sections to match the updated Story file's state
+   - **MANDATORY ACTION:** Run framework-agnostic Kanban update script
+   - **Command:** `python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
+   - **Expected Behavior:**
+     - Script extracts version components from version file
+     - Script resolves Kanban paths using config + canonical defaults
+     - Script updates Story doc (header, Task Checklist, completion status)
+     - Script updates Epic doc (Story Checklist, header)
+     - Script validates updates (Steps 12-14: comprehensive validation)
+     - Exit code 0 = SUCCESS (all updates applied and validated)
+     - Exit code 1 = FAILURE (validation failed or update error)
+   - **CRITICAL:** If script is missing or cannot be executed, workflow MUST STOP
+   - **Dry-run option:** Use `--dry-run` flag to preview changes without modifying files
 
 3. **EXECUTE:**
-   - **CRITICAL: Update Story file FIRST, then Epic file to match:**
-   - **FIRST: Update the Story file (`Story-{N}-{Name}.md`) task checklist:**
-     - Add forensic marker `(v{version})` to the completed task in the Task Checklist
-     - Example: `✅ COMPLETE (v0.11.5.2+1)`
-     - Update Story doc header "Last updated" and "Version" fields
-     - Update Story doc detailed Task sections with forensic markers
-   - **THEN: Update Epic-{epic}/Epic-{epic}.md to match the updated Story file:**
-     - Update Epic doc header "Last updated" field
-     - Update Epic doc Story Checklist with version marker (format: `- [ ] **E4:S03 – Story Name** - IN PROGRESS (v{version})`)
-     - Update Epic doc detailed Story sections (Status, Last updated, Task checkboxes with forensic markers)
-   - Search for and update any other references to the story/task
+   - **MANDATORY:** Execute framework script:
+     ```bash
+     python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py
+     ```
+   - **Capture exit code:** Store the exit code from script execution
+   - **Capture output:** Store script output for error messages and recovery guidance
+   - **DO NOT MODIFY FILES MANUALLY:** Script handles all updates deterministically
 
 4. **VALIDATE:**
-   - Verify Epic doc header was updated
-   - Verify Epic doc Story Checklist was updated with version marker
-   - Verify Epic doc detailed Story sections were updated
-   - Verify Story doc header was updated
-   - Verify Story doc Task Checklist was updated with forensic markers
-   - Verify Story doc detailed Task sections were updated
-   - Check date format is correct
-   - Verify version numbers are correct
-   - Verify forensic marker format is canonical: `✅ COMPLETE (v{version})`
-   - **Consistency Check:** Verify Epic header matches Story Checklist, Story Checklist matches detailed sections
+   - **Check exit code:**
+     - ✅ **PASS (exit code 0):** Kanban docs updated successfully, validation passed
+     - ❌ **FAIL (exit code 1):** Kanban docs update failed or validation failed
+   - **If script fails:**
+     - **CRITICAL:** Workflow MUST STOP immediately (blocking step)
+     - **Review error messages:** Script provides detailed error messages with file paths
+     - **Review recovery guidance:** Script provides step-by-step recovery instructions for each error type
+     - **Error types:** 12 distinct error types with specific recovery playbooks
+     - **Override mechanism:** `--allow-override` flag available for recoverable errors only (use with caution)
+   - **If script succeeds:**
+     - Verify Story doc was updated (header, Task Checklist, version markers)
+     - Verify Epic doc was updated (Story Checklist, header, version markers)
+     - Verify validation passed (all consistency checks passed)
 
 5. **PROCEED:**
-   - Document: "Updated Kanban docs with version markers"
-   - Move to Step 8 (waits for Steps 2-7 to complete)
+   - **If script succeeds:**
+     - Document: "Updated Kanban docs with version markers (framework script)"
+     - Document: "Validation passed: All Kanban docs updates verified"
+     - Move to Step 8 (waits for Steps 2-7 to complete)
+   - **If script fails:**
+     - **CRITICAL:** Workflow BLOCKED at Step 7
+     - Document: "RW BLOCKED at Step 7: Kanban docs update validation failed"
+     - Provide recovery guidance from script output
+     - **DO NOT PROCEED** to Step 8 or any subsequent step
+     - User must fix errors and retry Release Workflow
+
+**Framework Script Details:**
+
+**Script Location:**
+- `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
+
+**Script Features:**
+- **Framework-agnostic:** Works across all projects using the framework
+- **Config-driven:** Uses `rw-config.yaml` for path resolution (if available)
+- **Deterministic pipeline:** Implements Steps 1-7, 9-10, 12-15 from T01 analysis
+- **Comprehensive validation:** Steps 12-14 validation (internal consistency, policy compliance, version drift detection)
+- **Error handling:** 12 recovery playbooks with actionable guidance
+- **Override mechanism:** `--allow-override` flag for edge cases (use with caution)
+
+**Script Execution Flow:**
+1. **Load config:** Reads `rw-config.yaml` if available (config-driven path resolution)
+2. **Extract version:** Reads version components from version file
+3. **Resolve paths:** Determines Story/Epic doc paths using config + canonical defaults
+4. **Parse Story:** Reads Story doc, parses Task Checklist and header
+5. **Compute state:** Derives completion state and target state for updates
+6. **Update Story:** Applies structured text transforms to Story doc
+7. **Update Epic:** Applies structured text transforms to Epic doc
+8. **Validate:** Comprehensive validation (Steps 12-14) with blocking behavior
+9. **Report:** Provides clear success/failure messages with recovery guidance
+
+**Validation Checks (Steps 12-14):**
+
+**Step 12: Internal Consistency Checks:**
+- Version consistency across header, checklists, and completion summaries
+- Status consistency (COMPLETE stories must have Completed date)
+- Task Checklist entry validation
+- Epic Story Checklist entry validation
+
+**Step 13: Policy & FR Validation:**
+- Required fields present (Status, Last updated, Version)
+- Version string format validation (vRC.EPIC.STORY.TASK+BUILD)
+- Kanban governance policy compliance
+
+**Step 14: Cross-check with Version File:**
+- Version components match between version string and parsed components
+- Detect drift between Kanban docs and version file
+
+**Error Handling:**
+
+**Error Types (12 distinct types):**
+- REQUIRED_DOC_MISSING
+- FILE_READ_ERROR
+- PERMISSION_ERROR
+- VERSION_MISMATCH
+- VERSION_MISSING_IN_LAST_UPDATED
+- STATUS_INCONSISTENCY
+- TASK_CHECKLIST_MISSING
+- TASK_CHECKLIST_VERSION_MISMATCH
+- EPIC_VERSION_MISSING
+- REQUIRED_FIELD_MISSING
+- VERSION_FORMAT_INVALID
+- VERSION_COMPONENT_MISMATCH
+
+**Recovery Guidance:**
+- Each error type has a recovery playbook with step-by-step instructions
+- Recovery guidance includes file paths, expected vs found values, and actionable steps
+- Override mechanism available for recoverable errors only (not recommended)
+
+**Override Mechanism:**
+- `--allow-override` flag allows proceeding despite validation errors
+- Only works for errors marked as overrideable in recovery playbooks
+- Strict warnings and logging when override is used
+- Override not available for critical errors (prevents masking issues)
+
+**Examples:**
+
+**Example 1: Successful Update**
+```bash
+$ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py
+🔍 Updating Kanban docs for v0.2.8.5+1 (E2:S8:T5)
+📄 Story doc: /path/to/Story-008-harden-release-workflow-reliability.md
+✅ Story doc updated: Updated Status: IN PROGRESS, Updated Last updated: 2025-12-15 (v0.2.8.5+1 – T05 complete: Task), Updated Version: v0.2.8.5+1
+✅ Epic doc updated: Updated Epic Last updated: 2025-12-15 (v0.2.8.5+1 – Story 8 Task 5 complete)
+✅ Validation passed: All Kanban docs updates verified
+✅ Kanban docs update complete for v0.2.8.5+1
+```
+
+**Example 2: Validation Failure (RW BLOCKED)**
+```bash
+$ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py
+🔍 Updating Kanban docs for v0.2.8.5+1 (E2:S8:T5)
+📄 Story doc: /path/to/Story-008-harden-release-workflow-reliability.md
+✅ Story doc updated: Updated Status: IN PROGRESS, Updated Last updated: 2025-12-15 (v0.2.8.5+1 – T05 complete: Task), Updated Version: v0.2.8.5+1
+
+❌ VALIDATION FAILED: Kanban docs update validation errors detected
+================================================================================
+❌ VERSION MISMATCH: Story header version mismatch
+   Expected: v0.2.8.5+1
+   Found: v0.2.8.4+1
+   File: /path/to/Story-008-harden-release-workflow-reliability.md
+================================================================================
+
+📋 RECOVERY GUIDANCE:
+================================================================================
+📋 RECOVERY GUIDANCE: Version mismatch between expected and found values
+📄 Affected file: /path/to/Story-008-harden-release-workflow-reliability.md
+
+🔧 Recovery Steps:
+   1. Verify version file has correct version components
+   2. Check if Story doc header was manually edited (should be auto-updated)
+   3. Restore Story doc header from git: `git checkout HEAD -- <story_path>`
+   4. Re-run Release Workflow to auto-update header
+   5. Do not manually edit version markers in Kanban docs
+
+💡 Note: This error may be auto-repairable by restoring from git and re-running RW.
+
+🚫 Override not available: This error must be fixed before proceeding.
+================================================================================
+
+🚫 RW BLOCKED at Step 7: Kanban docs update validation failed
+   Fix the errors above and retry the Release Workflow.
+```
+
+**Example 3: Dry-Run Mode**
+```bash
+$ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-run
+🔍 Updating Kanban docs for v0.2.8.5+1 (E2:S8:T5)
+📄 Story doc: /path/to/Story-008-harden-release-workflow-reliability.md
+✅ Story doc updated: Updated Status: IN PROGRESS, Updated Last updated: 2025-12-15 (v0.2.8.5+1 – T05 complete: Task), Updated Version: v0.2.8.5+1
+✅ Epic doc updated: Updated Epic Last updated: 2025-12-15 (v0.2.8.5+1 – Story 8 Task 5 complete)
+✅ Kanban docs update complete for v0.2.8.5+1
+```
+
+**Related Documentation:**
+- **FR-015:** Harden Kanban Docs Update in Release Workflow
+- **E2:S08:** Harden Release Workflow Reliability
+- **T01 Analysis:** `packages/frameworks/workflow mgt/KB/Analysis/T01-kanban-docs-update-deterministic-vs-agentic-analysis.md`
+- **Script Source:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
 
 ---
 
@@ -2280,5 +2440,5 @@ The `.cursorrules` file defines a **case-insensitive "RW" trigger** that mandate
 
 ---
 
-**Last Updated:** 2025-12-11
-**Document Version:** 1.5.0
+**Last Updated:** 2025-12-15
+**Document Version:** 1.7.0

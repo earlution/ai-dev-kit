@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 8     # Story number (Story 8: Harden Release Workflow Reliability)
-VERSION_TASK = 5      # Task number (Task 5: Implement error handling and recovery guidance)
-VERSION_BUILD = 1     # Build number (E2:S08:T05 complete - Comprehensive error handling and recovery guidance)
+VERSION_TASK = 6      # Task number (Task 6: Update RW documentation and agent execution guide)
+VERSION_BUILD = 1     # Build number (E2:S08:T06 complete - Updated RW documentation with Step 7 hardening details)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
