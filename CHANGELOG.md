@@ -48,6 +48,40 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.2+1] - 15-12-25
+
+🔧 Workflow Management: E2:S08:T02 - Create framework-agnostic Kanban update script
+
+### Summary
+
+**Implementation:** Created framework-agnostic Kanban update script implementing the deterministic pipeline from T01 analysis. Provides high-reliability updates for canonical Kanban documentation structures while supporting agentic hooks for non-canonical cases.
+
+### Changes
+
+**New Script:**
+- ✅ Framework-agnostic Kanban update script (`update_kanban_docs.py`)
+- ✅ Config-driven path resolution with fallback to canonical defaults
+- ✅ Deterministic pipeline for Steps 1-7, 9-10, 12-15
+- ✅ Support for Story, Epic, and Kanban board doc updates
+- ✅ Post-update validation and consistency checks
+- ✅ Dry-run mode for testing
+
+**Key Features:**
+- ~400 lines of production-ready Python code
+- Config-driven design (uses `rw-config.yaml` if available)
+- Robust regex parsing for canonical structures
+- Template-driven updates for headers, checklists, version markers
+- Extension points for agentic hooks
+
+### Related Work
+
+- **Story:** E2:S08 - Harden Release Workflow Reliability
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-015
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.2+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.2+1.md)
+
+---
+
 ## [0.2.10.7+1] - 12-12-25
 
 📚 Workflow Management: E2:S10:T07 - Documentation and Testing (Doc-Init)

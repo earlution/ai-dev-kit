@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 8     # Story number (Story 8: Harden Release Workflow Reliability)
-VERSION_TASK = 1      # Task number (Task 1: Analyze atomic steps for deterministic vs agentic approach)
-VERSION_BUILD = 1     # Build number (E2:S08:T01 complete - Deterministic vs agentic analysis for RW Step 7)
+VERSION_TASK = 2      # Task number (Task 2: Create framework-agnostic Kanban update script)
+VERSION_BUILD = 1     # Build number (E2:S08:T02 complete - Framework-agnostic Kanban update script)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
