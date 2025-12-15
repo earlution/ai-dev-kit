@@ -19,6 +19,7 @@ Usage:
 """
 
 import argparse
+import os
 import re
 import sys
 from datetime import datetime
@@ -29,6 +30,195 @@ try:
     import yaml
 except ImportError:
     yaml = None
+
+
+# Recovery playbooks for common error scenarios (Step 16-17 from T01 analysis)
+RECOVERY_PLAYBOOKS = {
+    'REQUIRED_DOC_MISSING': {
+        'description': 'Required Kanban document is missing',
+        'recovery_steps': [
+            '1. Verify the Story doc path is correct in rw-config.yaml or canonical defaults',
+            '2. Check if the Story doc exists at the expected location',
+            '3. If doc doesn\'t exist, create it using the Story template',
+            '4. Ensure the doc follows the canonical structure (header, Task Checklist, etc.)',
+            '5. Retry the Release Workflow'
+        ],
+        'auto_repairable': False,
+        'override_allowed': False
+    },
+    'FILE_READ_ERROR': {
+        'description': 'Cannot read Kanban document file',
+        'recovery_steps': [
+            '1. Check file permissions (ensure file is readable)',
+            '2. Verify file is not corrupted or locked by another process',
+            '3. Check disk space and filesystem health',
+            '4. If file is corrupted, restore from git history: `git checkout HEAD -- <file_path>`',
+            '5. Retry the Release Workflow'
+        ],
+        'auto_repairable': False,
+        'override_allowed': False
+    },
+    'VERSION_MISMATCH': {
+        'description': 'Version mismatch between expected and found values',
+        'recovery_steps': [
+            '1. Verify version file has correct version components',
+            '2. Check if Story doc header was manually edited (should be auto-updated)',
+            '3. Restore Story doc header from git: `git checkout HEAD -- <story_path>`',
+            '4. Re-run Release Workflow to auto-update header',
+            '5. Do not manually edit version markers in Kanban docs'
+        ],
+        'auto_repairable': True,
+        'override_allowed': False
+    },
+    'VERSION_MISSING_IN_LAST_UPDATED': {
+        'description': 'Version string missing in Last updated field',
+        'recovery_steps': [
+            '1. This indicates the update script did not properly update the Last updated field',
+            '2. Check if Story doc header format matches canonical structure',
+            '3. Restore Story doc from git: `git checkout HEAD -- <story_path>`',
+            '4. Re-run Release Workflow',
+            '5. If issue persists, check script logs for update failures'
+        ],
+        'auto_repairable': True,
+        'override_allowed': False
+    },
+    'STATUS_INCONSISTENCY': {
+        'description': 'Status field inconsistency (e.g., COMPLETE without Completed date)',
+        'recovery_steps': [
+            '1. If Story is marked COMPLETE, ensure Completed date field exists',
+            '2. Add Completed date manually if missing: `**Completed:** YYYY-MM-DD`',
+            '3. Or restore from git and re-run Release Workflow',
+            '4. Ensure status and dates are consistent across header and checklists'
+        ],
+        'auto_repairable': True,
+        'override_allowed': False
+    },
+    'TASK_CHECKLIST_MISSING': {
+        'description': 'Completed task not found in Story Task Checklist',
+        'recovery_steps': [
+            '1. Verify task was actually completed (check git diff)',
+            '2. Ensure Task Checklist entry exists with format: `- [x] **E{epic}:S{story}:T{task} – Description** ✅ COMPLETE (vX.Y.Z.T+B)`',
+            '3. Add Task Checklist entry manually if missing',
+            '4. Ensure task number matches version components',
+            '5. Re-run Release Workflow'
+        ],
+        'auto_repairable': False,
+        'override_allowed': False
+    },
+    'TASK_CHECKLIST_VERSION_MISMATCH': {
+        'description': 'Task Checklist version mismatch',
+        'recovery_steps': [
+            '1. Verify version in Task Checklist entry matches version file',
+            '2. Update Task Checklist entry: `- [x] **E{epic}:S{story}:T{task} – Description** ✅ COMPLETE (v{version})`',
+            '3. Or restore from git and re-run Release Workflow',
+            '4. Do not manually edit version markers'
+        ],
+        'auto_repairable': True,
+        'override_allowed': False
+    },
+    'EPIC_VERSION_MISSING': {
+        'description': 'Version missing in Epic Last updated or Story Checklist',
+        'recovery_steps': [
+            '1. Check Epic doc Last updated field format',
+            '2. Update Epic Last updated: `**Last updated:** YYYY-MM-DD (v{version} – Story {story} Task {task} complete)`',
+            '3. Update Epic Story Checklist entry with version marker',
+            '4. Or restore from git and re-run Release Workflow'
+        ],
+        'auto_repairable': True,
+        'override_allowed': False
+    },
+    'REQUIRED_FIELD_MISSING': {
+        'description': 'Required field missing in Story header',
+        'recovery_steps': [
+            '1. Verify Story doc header has all required fields: Status, Last updated, Version',
+            '2. Add missing fields using canonical format',
+            '3. Reference Story template: `packages/frameworks/kanban/templates/STORY_TEMPLATE.md`',
+            '4. Or restore from git and re-run Release Workflow'
+        ],
+        'auto_repairable': True,
+        'override_allowed': False
+    },
+    'VERSION_FORMAT_INVALID': {
+        'description': 'Version string format is invalid',
+        'recovery_steps': [
+            '1. Verify version format: `vRC.EPIC.STORY.TASK+BUILD` (e.g., v0.2.8.4+1)',
+            '2. Check version file has correct format',
+            '3. Update Story header Version field to match version file',
+            '4. Do not use non-standard version formats'
+        ],
+        'auto_repairable': True,
+        'override_allowed': False
+    },
+    'VERSION_COMPONENT_MISMATCH': {
+        'description': 'Version components don\'t match between version string and parsed components',
+        'recovery_steps': [
+            '1. Verify version file has correct components',
+            '2. Check version string parsing logic',
+            '3. This is a script bug - report issue if it persists',
+            '4. Verify version file format matches expected schema'
+        ],
+        'auto_repairable': False,
+        'override_allowed': False
+    },
+    'PERMISSION_ERROR': {
+        'description': 'Permission error when reading/writing files',
+        'recovery_steps': [
+            '1. Check file permissions: `ls -l <file_path>`',
+            '2. Ensure user has read/write permissions',
+            '3. Fix permissions: `chmod 644 <file_path>` (read) or `chmod 664 <file_path>` (read/write)',
+            '4. Check directory permissions if creating new files',
+            '5. Retry Release Workflow'
+        ],
+        'auto_repairable': False,
+        'override_allowed': False
+    },
+    'MALFORMED_DOC': {
+        'description': 'Kanban document has malformed structure',
+        'recovery_steps': [
+            '1. Verify document follows canonical structure (header, checklists, etc.)',
+            '2. Check for syntax errors in markdown',
+            '3. Validate against Story template: `packages/frameworks/kanban/templates/STORY_TEMPLATE.md`',
+            '4. Restore from git: `git checkout HEAD -- <file_path>`',
+            '5. Re-run Release Workflow'
+        ],
+        'auto_repairable': False,
+        'override_allowed': False
+    }
+}
+
+
+def get_recovery_guidance(error_type: str, file_path: Optional[Path] = None) -> str:
+    """
+    Generate human-readable recovery guidance for an error type (Step 17 from T01 analysis).
+    
+    Returns:
+        Formatted recovery guidance string
+    """
+    playbook = RECOVERY_PLAYBOOKS.get(error_type)
+    if not playbook:
+        return f"⚠️  No recovery playbook available for error type: {error_type}"
+    
+    guidance = f"\n📋 RECOVERY GUIDANCE: {playbook['description']}\n"
+    guidance += "=" * 80 + "\n"
+    
+    if file_path:
+        guidance += f"📄 Affected file: {file_path}\n\n"
+    
+    guidance += "🔧 Recovery Steps:\n"
+    for step in playbook['recovery_steps']:
+        guidance += f"   {step}\n"
+    
+    if playbook['auto_repairable']:
+        guidance += "\n💡 Note: This error may be auto-repairable by restoring from git and re-running RW.\n"
+    
+    if playbook['override_allowed']:
+        guidance += "\n⚠️  Override available: Use --allow-override flag (use with caution).\n"
+    else:
+        guidance += "\n🚫 Override not available: This error must be fixed before proceeding.\n"
+    
+    guidance += "=" * 80 + "\n"
+    
+    return guidance
 
 
 def load_rw_config(config_path: Optional[Path] = None) -> Optional[Dict]:
@@ -441,13 +631,64 @@ def update_epic_doc(
     return True, changes
 
 
+def detect_error_type(error_message: str) -> str:
+    """
+    Detect error type from error message (Step 15 from T01 analysis).
+    
+    Returns:
+        Error type key for recovery playbook lookup
+    """
+    if 'REQUIRED DOC MISSING' in error_message:
+        return 'REQUIRED_DOC_MISSING'
+    elif 'FILE READ ERROR' in error_message:
+        return 'FILE_READ_ERROR'
+    elif 'VERSION MISMATCH' in error_message and 'COMPONENT' not in error_message:
+        return 'VERSION_MISMATCH'
+    elif 'VERSION MISSING IN LAST UPDATED' in error_message:
+        return 'VERSION_MISSING_IN_LAST_UPDATED'
+    elif 'STATUS INCONSISTENCY' in error_message:
+        return 'STATUS_INCONSISTENCY'
+    elif 'TASK CHECKLIST MISSING' in error_message:
+        return 'TASK_CHECKLIST_MISSING'
+    elif 'TASK CHECKLIST VERSION MISMATCH' in error_message:
+        return 'TASK_CHECKLIST_VERSION_MISMATCH'
+    elif 'EPIC VERSION MISSING' in error_message:
+        return 'EPIC_VERSION_MISSING'
+    elif 'REQUIRED FIELD MISSING' in error_message:
+        return 'REQUIRED_FIELD_MISSING'
+    elif 'VERSION FORMAT INVALID' in error_message:
+        return 'VERSION_FORMAT_INVALID'
+    elif 'VERSION COMPONENT MISMATCH' in error_message:
+        return 'VERSION_COMPONENT_MISMATCH'
+    else:
+        return 'UNKNOWN_ERROR'
+
+
+def add_error(
+    errors: List[str],
+    error_details: List[Dict],
+    error_type: str,
+    error_msg: str,
+    file_path: Optional[Path] = None
+) -> None:
+    """
+    Helper function to add error with details tracking.
+    """
+    errors.append(error_msg)
+    error_details.append({
+        'error_type': error_type,
+        'file_path': file_path,
+        'message': error_msg
+    })
+
+
 def validate_updates(
     story_path: Path,
     epic_path: Optional[Path],
     version_string: str,
     version_components: Tuple[int, int, int, int, int],
     task_info: Optional[Dict] = None
-) -> Tuple[bool, List[str], List[str]]:
+) -> Tuple[bool, List[str], List[str], List[Dict]]:
     """
     Comprehensive validation of Kanban docs updates (Steps 12-14 from T01 analysis).
     
@@ -456,52 +697,64 @@ def validate_updates(
     Step 14: Detect drift between Kanban docs and version file / CHANGELOG
     
     Returns:
-        (is_valid, list_of_errors, list_of_warnings)
+        (is_valid, list_of_errors, list_of_warnings, list_of_error_details)
     """
     errors = []
     warnings = []
+    error_details = []  # List of dicts with error_type, file_path, message
     rc, epic, story, task, build = version_components
     
     # ===== Step 12: Internal Consistency Checks =====
     
     # Validate Story doc exists and is readable
     if not story_path or not story_path.exists():
-        errors.append(f"❌ REQUIRED DOC MISSING: Story doc not found: {story_path}")
-        return False, errors, warnings
+        error_msg = f"❌ REQUIRED DOC MISSING: Story doc not found: {story_path}"
+        add_error(errors, error_details, 'REQUIRED_DOC_MISSING', error_msg, story_path)
+        return False, errors, warnings, error_details
+    
+    # Check file permissions
+    if not os.access(story_path, os.R_OK):
+        error_msg = f"❌ PERMISSION ERROR: Cannot read Story doc {story_path} (permission denied)"
+        add_error(errors, error_details, 'PERMISSION_ERROR', error_msg, story_path)
+        return False, errors, warnings, error_details
     
     try:
         story_content = story_path.read_text()
     except Exception as e:
-        errors.append(f"❌ FILE READ ERROR: Cannot read Story doc {story_path}: {e}")
-        return False, errors, warnings
+        error_msg = f"❌ FILE READ ERROR: Cannot read Story doc {story_path}: {e}"
+        add_error(errors, error_details, 'FILE_READ_ERROR', error_msg, story_path)
+        return False, errors, warnings, error_details
     
     story_header = parse_story_header(story_content)
     
     # Check Story header version matches expected version
     if story_header.get('version') != version_string:
-        errors.append(
+        error_msg = (
             f"❌ VERSION MISMATCH: Story header version mismatch\n"
             f"   Expected: {version_string}\n"
             f"   Found: {story_header.get('version')}\n"
             f"   File: {story_path}"
         )
+        add_error(errors, error_details, 'VERSION_MISMATCH', error_msg, story_path)
     
     # Check Story header Last updated contains version
     if version_string not in story_header.get('last_updated', ''):
-        errors.append(
+        error_msg = (
             f"❌ VERSION MISSING IN LAST UPDATED: Story Last updated field missing version\n"
             f"   Expected version: {version_string}\n"
             f"   Found: {story_header.get('last_updated')}\n"
             f"   File: {story_path}"
         )
+        add_error(errors, error_details, 'VERSION_MISSING_IN_LAST_UPDATED', error_msg, story_path)
     
     # Check status consistency (if COMPLETE, should have Completed date)
     if 'COMPLETE' in story_header.get('status', ''):
         if not story_header.get('completed'):
-            errors.append(
+            error_msg = (
                 f"❌ STATUS INCONSISTENCY: Story marked COMPLETE but missing Completed date\n"
                 f"   File: {story_path}"
             )
+            add_error(errors, error_details, 'STATUS_INCONSISTENCY', error_msg, story_path)
     
     # Check Task Checklist entry for completed task
     if task_info:
@@ -516,30 +769,33 @@ def validate_updates(
                 re.IGNORECASE | re.MULTILINE
             )
             if not task_checklist_pattern2.search(story_content):
-                errors.append(
+                error_msg = (
                     f"❌ TASK CHECKLIST MISSING: Completed task E{epic}:S{story}:T{task} not found in Story Task Checklist\n"
                     f"   File: {story_path}"
                 )
+                add_error(errors, error_details, 'TASK_CHECKLIST_MISSING', error_msg, story_path)
             else:
                 # Check version in checklist matches
                 match = task_checklist_pattern2.search(story_content)
                 if match and match.group(1) != version_string:
-                    errors.append(
+                    error_msg = (
                         f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
                         f"   Expected: {version_string}\n"
                         f"   Found in checklist: v{match.group(1)}\n"
                         f"   File: {story_path}"
                     )
+                    add_error(errors, error_details, 'TASK_CHECKLIST_VERSION_MISMATCH', error_msg, story_path)
         else:
             # Check version in checklist matches
             match = task_checklist_pattern.search(story_content)
             if match and match.group(1) != version_string:
-                errors.append(
+                error_msg = (
                     f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
                     f"   Expected: {version_string}\n"
                     f"   Found in checklist: v{match.group(1)}\n"
                     f"   File: {story_path}"
                 )
+                add_error(errors, error_details, 'TASK_CHECKLIST_VERSION_MISMATCH', error_msg, story_path)
     
     # Validate Epic doc consistency (if exists)
     if epic_path and epic_path.exists():
@@ -549,12 +805,13 @@ def validate_updates(
             
             # Check that version appears in Epic Last updated
             if version_string not in epic_header.get('last_updated', ''):
-                errors.append(
+                error_msg = (
                     f"❌ EPIC VERSION MISSING: Epic Last updated field missing version\n"
                     f"   Expected version: {version_string}\n"
                     f"   Found: {epic_header.get('last_updated')}\n"
                     f"   File: {epic_path}"
                 )
+                add_error(errors, error_details, 'EPIC_VERSION_MISSING', error_msg, epic_path)
             
             # Check Epic Story Checklist entry exists and has correct status
             checklist_pattern = re.compile(
@@ -571,12 +828,13 @@ def validate_updates(
                 checklist_line = checklist_match.group(1)
                 # Check version appears in checklist entry
                 if version_string not in checklist_line:
-                    errors.append(
+                    error_msg = (
                         f"❌ EPIC CHECKLIST VERSION MISSING: Epic Story Checklist entry missing version\n"
                         f"   Expected version: {version_string}\n"
                         f"   Checklist line: {checklist_line.strip()}\n"
                         f"   File: {epic_path}"
                     )
+                    add_error(errors, error_details, 'EPIC_VERSION_MISSING', error_msg, epic_path)
         except Exception as e:
             warnings.append(f"⚠️  EPIC DOC READ WARNING: Cannot read Epic doc {epic_path}: {e}")
     elif epic_path:
@@ -588,20 +846,22 @@ def validate_updates(
     required_story_fields = ['status', 'last_updated', 'version']
     for field in required_story_fields:
         if not story_header.get(field):
-            errors.append(
+            error_msg = (
                 f"❌ REQUIRED FIELD MISSING: Story header missing required field: {field}\n"
                 f"   File: {story_path}"
             )
+            add_error(errors, error_details, 'REQUIRED_FIELD_MISSING', error_msg, story_path)
     
     # Validate format of version string in header
     version_in_header = story_header.get('version', '')
     if version_in_header and not re.match(r'^v\d+\.\d+\.\d+\.\d+\+\d+$', version_in_header):
-        errors.append(
+        error_msg = (
             f"❌ VERSION FORMAT INVALID: Story header version format invalid\n"
             f"   Expected format: vRC.EPIC.STORY.TASK+BUILD\n"
             f"   Found: {version_in_header}\n"
             f"   File: {story_path}"
         )
+        add_error(errors, error_details, 'VERSION_FORMAT_INVALID', error_msg, story_path)
     
     # ===== Step 14: Cross-check with version file =====
     # (Version file validation is done separately in validate_version_bump.py,
@@ -612,14 +872,15 @@ def validate_updates(
     if version_match:
         v_rc, v_epic, v_story, v_task, v_build = map(int, version_match.groups())
         if (v_rc, v_epic, v_story, v_task, v_build) != (rc, epic, story, task, build):
-            errors.append(
+            error_msg = (
                 f"❌ VERSION COMPONENT MISMATCH: Version string components don't match\n"
                 f"   Version string: {version_string}\n"
                 f"   Components: RC={rc}, EPIC={epic}, STORY={story}, TASK={task}, BUILD={build}\n"
                 f"   Parsed from string: RC={v_rc}, EPIC={v_epic}, STORY={v_story}, TASK={v_task}, BUILD={v_build}"
             )
+            add_error(errors, error_details, 'VERSION_COMPONENT_MISMATCH', error_msg, story_path)
     
-    return len(errors) == 0, errors, warnings
+    return len(errors) == 0, errors, warnings, error_details
 
 
 def main():
@@ -638,6 +899,11 @@ def main():
         "--dry-run",
         action="store_true",
         help="Show what would be updated without making changes",
+    )
+    parser.add_argument(
+        "--allow-override",
+        action="store_true",
+        help="Allow override for recoverable errors (use with caution - may mask issues)",
     )
     args = parser.parse_args()
     
@@ -713,7 +979,7 @@ def main():
     
     # Validate updates (Steps 12-14: comprehensive validation)
     if not args.dry_run:
-        is_valid, errors, warnings = validate_updates(
+        is_valid, errors, warnings, error_details = validate_updates(
             paths.get('story_doc'),
             paths.get('epic_doc'),
             version_string,
@@ -733,9 +999,34 @@ def main():
             for error in errors:
                 print(error)
             print("=" * 80)
-            print("\n🚫 RW BLOCKED at Step 7: Kanban docs update validation failed")
-            print("   Fix the errors above and retry the Release Workflow.")
-            sys.exit(1)
+            
+            # Generate recovery guidance for each unique error type (Step 17 from T01 analysis)
+            print("\n📋 RECOVERY GUIDANCE:")
+            print("=" * 80)
+            seen_error_types = set()
+            for detail in error_details:
+                error_type = detail.get('error_type', 'UNKNOWN_ERROR')
+                if error_type not in seen_error_types:
+                    seen_error_types.add(error_type)
+                    file_path = detail.get('file_path')
+                    recovery_guidance = get_recovery_guidance(error_type, file_path)
+                    print(recovery_guidance)
+            
+            # Check if override is allowed
+            overrideable_errors = [
+                detail for detail in error_details
+                if RECOVERY_PLAYBOOKS.get(detail.get('error_type', ''), {}).get('override_allowed', False)
+            ]
+            
+            if args.allow_override and overrideable_errors:
+                print("\n⚠️  OVERRIDE ENABLED: Proceeding despite validation errors (use with caution)")
+                print("   Overrideable errors detected. Review errors above and ensure they are acceptable.")
+            else:
+                print("\n🚫 RW BLOCKED at Step 7: Kanban docs update validation failed")
+                print("   Fix the errors above and retry the Release Workflow.")
+                if overrideable_errors and not args.allow_override:
+                    print(f"   Note: {len(overrideable_errors)} error(s) may be overrideable (not recommended).")
+                sys.exit(1)
         
         if is_valid:
             print("✅ Validation passed: All Kanban docs updates verified")

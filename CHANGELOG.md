@@ -145,6 +145,38 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.5+1] - 15-12-25
+
+🔧 Workflow Management: E2:S08:T05 - Implement error handling and recovery guidance
+
+### Summary
+
+**Error Handling:** Enhanced Kanban update script with comprehensive error handling and recovery guidance (Steps 15-18 from T01 analysis). Implemented deterministic error detection, recovery playbook library, and override mechanism for edge cases.
+
+### Changes
+
+**Script Enhancement:**
+- ✅ Recovery playbook library with 12 error types
+- ✅ Error type detection function (Step 15)
+- ✅ Recovery guidance generation (Step 17)
+- ✅ Override mechanism with `--allow-override` flag (Step 18)
+- ✅ Enhanced error tracking with details
+
+**Key Features:**
+- Actionable recovery guidance for each error type
+- Override mechanism for recoverable errors only
+- Clear error messages with expected vs found values
+- Error handling doesn't mask underlying issues
+
+### Related Work
+
+- **Story:** E2:S08 - Harden Release Workflow Reliability
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-015
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.5+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.5+1.md)
+
+---
+
 ## [0.2.10.7+1] - 12-12-25
 
 📚 Workflow Management: E2:S10:T07 - Documentation and Testing (Doc-Init)

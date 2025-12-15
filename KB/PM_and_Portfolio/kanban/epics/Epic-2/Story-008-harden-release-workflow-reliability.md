@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-15 (v0.2.8.4+1 – T04 complete: Comprehensive validation for Kanban docs updates)  
-**Version:** v0.2.8.4+1  
+**Last updated:** 2025-12-15 (v0.2.8.5+1 – T05 complete: Comprehensive error handling and recovery guidance)  
+**Version:** v0.2.8.5+1  
 **Code:** E2S08
 
 ---
@@ -43,7 +43,7 @@ Improve Release Workflow reliability by:
 - [x] **E2:S08:T02 – Create framework-agnostic Kanban update script** ✅ COMPLETE (v0.2.8.2+1)
 - [x] **E2:S08:T03 – Make Step 7 mandatory and blocking** ✅ COMPLETE (v0.2.8.3+1)
 - [x] **E2:S08:T04 – Add validation step for Kanban updates** ✅ COMPLETE (v0.2.8.4+1)
-- [ ] **E2:S08:T05 – Implement error handling and recovery guidance** - TODO
+- [x] **E2:S08:T05 – Implement error handling and recovery guidance** ✅ COMPLETE (v0.2.8.5+1)
 - [ ] **E2:S08:T06 – Update RW documentation and agent execution guide** - TODO
 - [ ] **E2:S08:T07 – Testing and validation** - TODO
 
@@ -343,10 +343,13 @@ Enhanced `update_kanban_docs.py` validation function to implement comprehensive 
 
 ### E2:S08:T05 – Implement error handling and recovery guidance
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE (v0.2.8.5+1)  
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T04  
 **Blocker:** None
+
+**Scope:**
+Encode deterministic detection of error types (Step 15) and create a library of recovery playbooks (Steps 16-17) that provide actionable guidance for each error scenario. Implement override mechanism (Step 18) for edge cases with explicit confirmation.
 
 **Input:**
 - Validation step from T04
@@ -364,11 +367,62 @@ Enhanced `update_kanban_docs.py` validation function to implement comprehensive 
 - Clear error messages with actionable steps
 
 **Acceptance Criteria:**
-- [ ] All common error scenarios handled
-- [ ] Recovery guidance provided for each error
-- [ ] Override mechanism available (with confirmation)
-- [ ] Error messages are clear and actionable
-- [ ] Error handling doesn't mask underlying issues
+- [x] ✅ All common error scenarios handled
+- [x] ✅ Recovery guidance provided for each error
+- [x] ✅ Override mechanism available (with confirmation)
+- [x] ✅ Error messages are clear and actionable
+- [x] ✅ Error handling doesn't mask underlying issues
+
+**Completion Summary:**
+
+Enhanced `update_kanban_docs.py` with comprehensive error handling and recovery guidance (Steps 15-18 from T01 analysis):
+
+**Step 15: Deterministic Error Detection:**
+- `detect_error_type()` function maps error messages to error types
+- 12 distinct error types detected and categorized
+- Error details tracked with file paths and messages
+
+**Step 16-17: Recovery Playbooks:**
+- Library of 12 recovery playbooks (`RECOVERY_PLAYBOOKS` dict)
+- Each playbook includes:
+  - Description of error scenario
+  - Step-by-step recovery instructions
+  - Auto-repairable flag (indicates if error can be auto-fixed)
+  - Override allowed flag (indicates if override is permitted)
+- `get_recovery_guidance()` function generates human-readable recovery guidance
+- Recovery guidance displayed for each unique error type when validation fails
+
+**Step 18: Override Mechanism:**
+- `--allow-override` command-line flag for edge cases
+- Override only works for errors marked as overrideable in playbooks
+- Strict logging and warnings when override is used
+- Override not available for critical errors (prevents masking issues)
+
+**Error Types Covered:**
+- REQUIRED_DOC_MISSING
+- FILE_READ_ERROR
+- PERMISSION_ERROR
+- VERSION_MISMATCH
+- VERSION_MISSING_IN_LAST_UPDATED
+- STATUS_INCONSISTENCY
+- TASK_CHECKLIST_MISSING
+- TASK_CHECKLIST_VERSION_MISMATCH
+- EPIC_VERSION_MISSING
+- REQUIRED_FIELD_MISSING
+- VERSION_FORMAT_INVALID
+- VERSION_COMPONENT_MISMATCH
+
+**Key Features:**
+- **Error tracking:** All errors tracked with type, file path, and message
+- **Recovery guidance:** Actionable, step-by-step recovery instructions
+- **Override mechanism:** Controlled override for recoverable errors only
+- **Clear messages:** Detailed error messages with expected vs found values
+- **Non-masking:** Error handling doesn't hide underlying issues
+
+**Impact:**
+- Users get actionable recovery guidance when RW blocks at Step 7
+- Override mechanism available for edge cases (with caution)
+- Error handling ensures issues are properly diagnosed before proceeding
 
 ---
 
