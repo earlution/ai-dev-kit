@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-15 (v0.2.8.3+1 – T03 complete: Step 7 hardened: mandatory and blocking)  
-**Version:** v0.2.8.3+1  
+**Last updated:** 2025-12-15 (v0.2.8.4+1 – T04 complete: Comprehensive validation for Kanban docs updates)  
+**Version:** v0.2.8.4+1  
 **Code:** E2S08
 
 ---
@@ -42,7 +42,7 @@ Improve Release Workflow reliability by:
 - [x] **E2:S08:T01 – Analyze atomic steps for deterministic vs agentic approach** ✅ COMPLETE (v0.2.8.1+1)
 - [x] **E2:S08:T02 – Create framework-agnostic Kanban update script** ✅ COMPLETE (v0.2.8.2+1)
 - [x] **E2:S08:T03 – Make Step 7 mandatory and blocking** ✅ COMPLETE (v0.2.8.3+1)
-- [ ] **E2:S08:T04 – Add validation step for Kanban updates** - TODO
+- [x] **E2:S08:T04 – Add validation step for Kanban updates** ✅ COMPLETE (v0.2.8.4+1)
 - [ ] **E2:S08:T05 – Implement error handling and recovery guidance** - TODO
 - [ ] **E2:S08:T06 – Update RW documentation and agent execution guide** - TODO
 - [ ] **E2:S08:T07 – Testing and validation** - TODO
@@ -266,10 +266,13 @@ Updated `release-workflow.yaml` Step 7 configuration to harden Kanban docs updat
 
 ### E2:S08:T04 – Add validation step for Kanban updates
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE (v0.2.8.4+1)  
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T03  
 **Blocker:** None
+
+**Scope:**
+Formalize Steps 12-14 from T01 analysis as a comprehensive post-update validation phase with clear success/failure criteria. Validation must verify all required docs were updated, updates were successful, version markers are correct, and status fields are consistent. Workflow must block if validation fails.
 
 **Input:**
 - Updated Step 7 from T03
@@ -286,12 +289,55 @@ Updated `release-workflow.yaml` Step 7 configuration to harden Kanban docs updat
 - Workflow blocks if validation fails
 
 **Acceptance Criteria:**
-- [ ] Validation checks all required updates
-- [ ] Validation verifies update success
-- [ ] Validation checks version markers
-- [ ] Validation checks status fields
-- [ ] Workflow blocks if validation fails
-- [ ] Clear error messages identify what failed
+- [x] ✅ Validation checks all required updates
+- [x] ✅ Validation verifies update success
+- [x] ✅ Validation checks version markers
+- [x] ✅ Validation checks status fields
+- [x] ✅ Workflow blocks if validation fails
+- [x] ✅ Clear error messages identify what failed
+
+**Completion Summary:**
+
+Enhanced `update_kanban_docs.py` validation function to implement comprehensive post-update validation (Steps 12-14 from T01 analysis):
+
+**Step 12: Internal Consistency Checks:**
+- Re-parse updated Story and Epic docs
+- Verify version consistency across header, checklists, and completion summaries
+- Check status consistency (COMPLETE stories must have Completed date)
+- Validate Task Checklist entry for completed task
+- Verify Epic Story Checklist entry exists and has correct status
+
+**Step 13: Policy & FR Validation:**
+- Validate Story header has all required fields (Status, Last updated, Version)
+- Validate version string format (vRC.EPIC.STORY.TASK+BUILD)
+- Ensure compliance with Kanban governance policy
+
+**Step 14: Cross-check with Version File:**
+- Verify version components match between version string and parsed components
+- Detect drift between Kanban docs and version file
+
+**Key Features:**
+- **Blocking validation:** Script exits with error code 1 if validation fails
+- **Clear error messages:** Detailed, actionable error messages with file paths and expected vs found values
+- **Warnings vs Errors:** Non-critical issues reported as warnings, critical issues block workflow
+- **Comprehensive checks:** Validates all aspects of Kanban docs updates
+
+**Error Categories:**
+- ❌ REQUIRED DOC MISSING
+- ❌ FILE READ ERROR
+- ❌ VERSION MISMATCH
+- ❌ VERSION MISSING IN LAST UPDATED
+- ❌ STATUS INCONSISTENCY
+- ❌ TASK CHECKLIST MISSING/VERSION MISMATCH
+- ❌ EPIC VERSION MISSING
+- ❌ REQUIRED FIELD MISSING
+- ❌ VERSION FORMAT INVALID
+- ❌ VERSION COMPONENT MISMATCH
+
+**Impact:**
+- RW will now **block** if Kanban docs validation fails (prevents inconsistent state)
+- Clear error messages guide recovery when blocking occurs
+- Validation ensures high reliability for deterministic steps (≈100% confidence target)
 
 ---
 

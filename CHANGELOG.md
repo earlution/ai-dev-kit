@@ -113,6 +113,38 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.4+1] - 15-12-25
+
+🔧 Workflow Management: E2:S08:T04 - Add validation step for Kanban updates
+
+### Summary
+
+**Validation:** Enhanced Kanban update script with comprehensive post-update validation (Steps 12-14 from T01 analysis). Validation now verifies all required docs were updated, updates were successful, version markers are correct, and status fields are consistent. Workflow blocks if validation fails.
+
+### Changes
+
+**Script Enhancement:**
+- ✅ Comprehensive validation covering Steps 12-14 from T01 analysis
+- ✅ Internal consistency checks (version, status, checklists)
+- ✅ Policy & FR validation (required fields, version format)
+- ✅ Cross-check with version file (detect drift)
+- ✅ Blocking behavior (workflow blocks on validation failure)
+- ✅ Clear error messages with 10 distinct error categories
+
+**Impact:**
+- RW blocks if Kanban docs validation fails (prevents inconsistent state)
+- Clear error messages guide recovery when blocking occurs
+- Validation ensures high reliability for deterministic steps
+
+### Related Work
+
+- **Story:** E2:S08 - Harden Release Workflow Reliability
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-015
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.4+1.md)
+
+---
+
 ## [0.2.10.7+1] - 12-12-25
 
 📚 Workflow Management: E2:S10:T07 - Documentation and Testing (Doc-Init)

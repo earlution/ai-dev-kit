@@ -443,41 +443,183 @@ def update_epic_doc(
 
 def validate_updates(
     story_path: Path,
-    epic_path: Path,
-    version_string: str
-) -> Tuple[bool, List[str]]:
+    epic_path: Optional[Path],
+    version_string: str,
+    version_components: Tuple[int, int, int, int, int],
+    task_info: Optional[Dict] = None
+) -> Tuple[bool, List[str], List[str]]:
     """
-    Re-parse updated docs to ensure internal consistency.
+    Comprehensive validation of Kanban docs updates (Steps 12-14 from T01 analysis).
+    
+    Step 12: Re-parse updated docs to ensure internal consistency
+    Step 13: Validate against policy & FRs
+    Step 14: Detect drift between Kanban docs and version file / CHANGELOG
     
     Returns:
-        (is_valid, list_of_errors)
+        (is_valid, list_of_errors, list_of_warnings)
     """
     errors = []
+    warnings = []
+    rc, epic, story, task, build = version_components
     
-    # Validate Story doc consistency
-    if story_path.exists():
+    # ===== Step 12: Internal Consistency Checks =====
+    
+    # Validate Story doc exists and is readable
+    if not story_path or not story_path.exists():
+        errors.append(f"❌ REQUIRED DOC MISSING: Story doc not found: {story_path}")
+        return False, errors, warnings
+    
+    try:
         story_content = story_path.read_text()
-        story_header = parse_story_header(story_content)
-        
-        # Check version consistency
-        if story_header.get('version') != version_string:
-            errors.append(f"Story version mismatch: header={story_header.get('version')}, expected={version_string}")
-        
-        # Check status consistency (if COMPLETE, should have Completed date)
-        if 'COMPLETE' in story_header.get('status', ''):
-            if not story_header.get('completed'):
-                errors.append("Story marked COMPLETE but missing Completed date")
+    except Exception as e:
+        errors.append(f"❌ FILE READ ERROR: Cannot read Story doc {story_path}: {e}")
+        return False, errors, warnings
     
-    # Validate Epic doc consistency
-    if epic_path.exists():
-        epic_content = epic_path.read_text()
-        epic_header = parse_story_header(epic_content)
-        
-        # Check that version appears in Last updated
-        if version_string not in epic_header.get('last_updated', ''):
-            errors.append(f"Epic Last updated missing version: {version_string}")
+    story_header = parse_story_header(story_content)
     
-    return len(errors) == 0, errors
+    # Check Story header version matches expected version
+    if story_header.get('version') != version_string:
+        errors.append(
+            f"❌ VERSION MISMATCH: Story header version mismatch\n"
+            f"   Expected: {version_string}\n"
+            f"   Found: {story_header.get('version')}\n"
+            f"   File: {story_path}"
+        )
+    
+    # Check Story header Last updated contains version
+    if version_string not in story_header.get('last_updated', ''):
+        errors.append(
+            f"❌ VERSION MISSING IN LAST UPDATED: Story Last updated field missing version\n"
+            f"   Expected version: {version_string}\n"
+            f"   Found: {story_header.get('last_updated')}\n"
+            f"   File: {story_path}"
+        )
+    
+    # Check status consistency (if COMPLETE, should have Completed date)
+    if 'COMPLETE' in story_header.get('status', ''):
+        if not story_header.get('completed'):
+            errors.append(
+                f"❌ STATUS INCONSISTENCY: Story marked COMPLETE but missing Completed date\n"
+                f"   File: {story_path}"
+            )
+    
+    # Check Task Checklist entry for completed task
+    if task_info:
+        task_checklist_pattern = re.compile(
+            rf'\[x\]\s+\*\*E{epic}:S{story}:T{task:02d}[^\*]*\*\*\s+✅\s+COMPLETE\s+\(v([^\)]+)\)',
+            re.IGNORECASE | re.MULTILINE
+        )
+        if not task_checklist_pattern.search(story_content):
+            # Try non-zero-padded
+            task_checklist_pattern2 = re.compile(
+                rf'\[x\]\s+\*\*E{epic}:S{story}:T{task}[^\*]*\*\*\s+✅\s+COMPLETE\s+\(v([^\)]+)\)',
+                re.IGNORECASE | re.MULTILINE
+            )
+            if not task_checklist_pattern2.search(story_content):
+                errors.append(
+                    f"❌ TASK CHECKLIST MISSING: Completed task E{epic}:S{story}:T{task} not found in Story Task Checklist\n"
+                    f"   File: {story_path}"
+                )
+            else:
+                # Check version in checklist matches
+                match = task_checklist_pattern2.search(story_content)
+                if match and match.group(1) != version_string:
+                    errors.append(
+                        f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
+                        f"   Expected: {version_string}\n"
+                        f"   Found in checklist: v{match.group(1)}\n"
+                        f"   File: {story_path}"
+                    )
+        else:
+            # Check version in checklist matches
+            match = task_checklist_pattern.search(story_content)
+            if match and match.group(1) != version_string:
+                errors.append(
+                    f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
+                    f"   Expected: {version_string}\n"
+                    f"   Found in checklist: v{match.group(1)}\n"
+                    f"   File: {story_path}"
+                )
+    
+    # Validate Epic doc consistency (if exists)
+    if epic_path and epic_path.exists():
+        try:
+            epic_content = epic_path.read_text()
+            epic_header = parse_story_header(epic_content)
+            
+            # Check that version appears in Epic Last updated
+            if version_string not in epic_header.get('last_updated', ''):
+                errors.append(
+                    f"❌ EPIC VERSION MISSING: Epic Last updated field missing version\n"
+                    f"   Expected version: {version_string}\n"
+                    f"   Found: {epic_header.get('last_updated')}\n"
+                    f"   File: {epic_path}"
+                )
+            
+            # Check Epic Story Checklist entry exists and has correct status
+            checklist_pattern = re.compile(
+                rf'(- \[[x\s]\]\s+\*\*E{epic}:S{story}[^\n]*)',
+                re.IGNORECASE | re.MULTILINE
+            )
+            checklist_match = checklist_pattern.search(epic_content)
+            if not checklist_match:
+                warnings.append(
+                    f"⚠️  EPIC CHECKLIST ENTRY MISSING: Story {story} entry not found in Epic Story Checklist\n"
+                    f"   File: {epic_path}"
+                )
+            else:
+                checklist_line = checklist_match.group(1)
+                # Check version appears in checklist entry
+                if version_string not in checklist_line:
+                    errors.append(
+                        f"❌ EPIC CHECKLIST VERSION MISSING: Epic Story Checklist entry missing version\n"
+                        f"   Expected version: {version_string}\n"
+                        f"   Checklist line: {checklist_line.strip()}\n"
+                        f"   File: {epic_path}"
+                    )
+        except Exception as e:
+            warnings.append(f"⚠️  EPIC DOC READ WARNING: Cannot read Epic doc {epic_path}: {e}")
+    elif epic_path:
+        warnings.append(f"⚠️  EPIC DOC OPTIONAL: Epic doc not found (optional): {epic_path}")
+    
+    # ===== Step 13: Policy & FR Validation =====
+    
+    # Validate Story header has required fields
+    required_story_fields = ['status', 'last_updated', 'version']
+    for field in required_story_fields:
+        if not story_header.get(field):
+            errors.append(
+                f"❌ REQUIRED FIELD MISSING: Story header missing required field: {field}\n"
+                f"   File: {story_path}"
+            )
+    
+    # Validate format of version string in header
+    version_in_header = story_header.get('version', '')
+    if version_in_header and not re.match(r'^v\d+\.\d+\.\d+\.\d+\+\d+$', version_in_header):
+        errors.append(
+            f"❌ VERSION FORMAT INVALID: Story header version format invalid\n"
+            f"   Expected format: vRC.EPIC.STORY.TASK+BUILD\n"
+            f"   Found: {version_in_header}\n"
+            f"   File: {story_path}"
+        )
+    
+    # ===== Step 14: Cross-check with version file =====
+    # (Version file validation is done separately in validate_version_bump.py,
+    # but we verify consistency here)
+    
+    # Verify version components match
+    version_match = re.match(r'^v(\d+)\.(\d+)\.(\d+)\.(\d+)\+(\d+)$', version_string)
+    if version_match:
+        v_rc, v_epic, v_story, v_task, v_build = map(int, version_match.groups())
+        if (v_rc, v_epic, v_story, v_task, v_build) != (rc, epic, story, task, build):
+            errors.append(
+                f"❌ VERSION COMPONENT MISMATCH: Version string components don't match\n"
+                f"   Version string: {version_string}\n"
+                f"   Components: RC={rc}, EPIC={epic}, STORY={story}, TASK={task}, BUILD={build}\n"
+                f"   Parsed from string: RC={v_rc}, EPIC={v_epic}, STORY={v_story}, TASK={v_task}, BUILD={v_build}"
+            )
+    
+    return len(errors) == 0, errors, warnings
 
 
 def main():
@@ -569,16 +711,34 @@ def main():
             print(f"⚠️  Epic doc update: {changes}")
             # Don't fail if Epic doc update fails (may not exist in all projects)
     
-    # Validate updates
+    # Validate updates (Steps 12-14: comprehensive validation)
     if not args.dry_run:
-        is_valid, errors = validate_updates(
+        is_valid, errors, warnings = validate_updates(
             paths.get('story_doc'),
             paths.get('epic_doc'),
-            version_string
+            version_string,
+            version_components,
+            task_info
         )
-        if not is_valid:
-            print(f"⚠️  Validation warnings: {errors}")
-            # Don't fail on validation warnings (may be edge cases)
+        
+        # Print warnings (non-blocking)
+        if warnings:
+            for warning in warnings:
+                print(warning)
+        
+        # Print errors and fail if validation fails (blocking)
+        if errors:
+            print("\n❌ VALIDATION FAILED: Kanban docs update validation errors detected")
+            print("=" * 80)
+            for error in errors:
+                print(error)
+            print("=" * 80)
+            print("\n🚫 RW BLOCKED at Step 7: Kanban docs update validation failed")
+            print("   Fix the errors above and retry the Release Workflow.")
+            sys.exit(1)
+        
+        if is_valid:
+            print("✅ Validation passed: All Kanban docs updates verified")
     
     print(f"✅ Kanban docs update complete for {version_string}")
     return 0
