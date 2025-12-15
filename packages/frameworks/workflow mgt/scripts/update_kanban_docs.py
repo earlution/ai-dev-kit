@@ -468,16 +468,17 @@ def derive_target_state(
     version_string = f"v{rc}.{epic}.{story}.{task}+{build}"
     
     # Target Story header state
+    # Use all_tasks_complete (actual completion state) not story_complete (current status in doc)
     story_target = {
-        'status': 'IN PROGRESS' if not completion_state['story_complete'] else '✅ COMPLETE',
+        'status': 'IN PROGRESS' if not completion_state['all_tasks_complete'] else '✅ COMPLETE',
         'last_updated': f"{current_date} ({version_string} – T{task:02d} complete: {task_info.get('task_id', 'Task')})",
         'version': version_string,
-        'completed': current_date if completion_state['story_complete'] else None
+        'completed': current_date if completion_state['all_tasks_complete'] else None
     }
     
     # Target Epic Story Checklist entry
     epic_checklist_entry = {
-        'status': '✅ COMPLETE' if completion_state['story_complete'] else 'IN PROGRESS',
+        'status': '✅ COMPLETE' if completion_state['all_tasks_complete'] else 'IN PROGRESS',
         'version': version_string,
         'task_info': f"T{task:02d} complete" if not completion_state['all_tasks_complete'] else "All tasks complete"
     }
