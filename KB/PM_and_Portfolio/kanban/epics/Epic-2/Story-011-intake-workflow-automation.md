@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** ✅ COMPLETE
 **Priority:** HIGH  
-**Last updated:** 2025-12-15 (v0.2.11.1+2 – T01 complete: E2:S11:T01)
+**Last updated:** 2025-12-15 (v0.2.11.2+1 – T02 complete: E2:S11:T02)
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
 **Completed:** 2025-12-15
-**Version:** v0.2.11.1+2
+**Version:** v0.2.11.2+1
 **Code:** E2S11
 
 ---

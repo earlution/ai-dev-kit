@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-15 (v0.2.11.1+2 – Story 11 Task 1 complete)
+**Last updated:** 2025-12-15 (v0.2.11.2+1 – Story 11 Task 2 complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -92,7 +92,7 @@ It defines how Release Workflow (RW) and other workflows are:
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-15 (v0.2.11.1+2 – Story 11 Task 1 complete)
+**Last updated:** 2025-12-15 (v0.2.11.2+1 – Story 11 Task 2 complete)
 
 **Goal:**  
 Make RW agent execution documentation fully portable, clearly distinguishing dev-kit behaviour from external examples.
