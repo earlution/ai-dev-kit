@@ -12,15 +12,15 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** 1 week  
 **Created:** 2025-12-12  
-**Last updated:** 2025-12-12 (v0.5.6.1+0 – Story created, Task 1 doc-init)  
-**Version:** v0.5.6.1+0  
+**Last updated:** 2025-12-12 (v0.5.6.1+1 – Task 1 complete: Policy salience implementation)  
+**Version:** v0.5.6.1+1  
 **Code:** E5S06
 
 ---
 
 ## Task Checklist
 
-- [ ] **E5:S06:T01 – Implement Policy Documents Machine-Readable Salience Section (FR-022)** - TODO (v0.5.6.1+0 – doc-init)
+- [x] **E5:S06:T01 – Implement Policy Documents Machine-Readable Salience Section (FR-022)** ✅ COMPLETE (v0.5.6.1+1)
 
 ---
 

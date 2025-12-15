@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
-VERSION_STORY = 10    # Story number (Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T)
-VERSION_TASK = 6      # Task number (Task 6: Update Version Validator for Abstract Space Awareness (FR-020))
-VERSION_BUILD = 1     # Build number (E2:S10:T06 complete - Version validator updated with abstract space awareness)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
+VERSION_STORY = 6     # Story number (Story 6: Policy Documentation Structure)
+VERSION_TASK = 1      # Task number (Task 1: Implement Policy Documents Machine-Readable Salience Section (FR-022))
+VERSION_BUILD = 1     # Build number (E5:S06:T01 complete - Policy salience schema, template, guides, and updated policies)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

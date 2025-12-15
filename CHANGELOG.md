@@ -17,6 +17,43 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.5.6.1+1] - 12-12-25
+
+📚 Documentation Management: E5:S06:T01 - Policy Documents Machine-Readable Salience Section (FR-022)
+
+### Summary
+
+**Policy Salience Implementation:** Created standardized schema, templates, and guides for Policy Salience sections in policy documents. Updated Documentation Maintenance and Kanban Governance policies with structured salience sections enabling AI agents to quickly parse and understand policy requirements.
+
+### Changes
+
+**New Documentation:**
+- ✅ Policy Salience schema specification with complete field definitions
+- ✅ Policy Salience template for new policy documents
+- ✅ Author guide for creating/maintaining salience sections
+- ✅ Agent parser guide with Python examples and usage patterns
+
+**Policy Updates:**
+- ✅ Documentation Maintenance Policy: Added salience section (4 key rules, decision criteria, triggers, integration points)
+- ✅ Kanban Governance Policy: Added salience section (5 key rules, decision criteria, triggers, integration points)
+
+**Schema Features:**
+- Machine-readable YAML format (human-readable too)
+- Key rules with enforcement and validation hints
+- Decision criteria for policy-driven choices
+- Triggers for event-driven validation
+- Integration points with workflows and tools
+- Related policies linking
+
+### Related Work
+
+- **Story:** E5:S06 - Policy Documentation Structure
+- **Epic:** Epic 5 - Documentation Management and Maintenance
+- **Feature Request:** FR-022 - Policy Documents Machine-Readable Salience Section
+- **Detailed Changelog:** [CHANGELOG_v0.5.6.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.6.1+1.md)
+
+---
+
 ## [0.2.10.6+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T06 - Version Validator Abstract Space Awareness (FR-020)
