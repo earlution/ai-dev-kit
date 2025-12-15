@@ -777,25 +777,29 @@ def validate_updates(
             else:
                 # Check version in checklist matches
                 match = task_checklist_pattern2.search(story_content)
-                if match and match.group(1) != version_string:
-                    error_msg = (
-                        f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
-                        f"   Expected: {version_string}\n"
-                        f"   Found in checklist: v{match.group(1)}\n"
-                        f"   File: {story_path}"
-                    )
-                    add_error(errors, error_details, 'TASK_CHECKLIST_VERSION_MISMATCH', error_msg, story_path)
+                if match:
+                    checklist_version = f"v{match.group(1)}"
+                    if checklist_version != version_string:
+                        error_msg = (
+                            f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
+                            f"   Expected: {version_string}\n"
+                            f"   Found in checklist: {checklist_version}\n"
+                            f"   File: {story_path}"
+                        )
+                        add_error(errors, error_details, 'TASK_CHECKLIST_VERSION_MISMATCH', error_msg, story_path)
         else:
             # Check version in checklist matches
             match = task_checklist_pattern.search(story_content)
-            if match and match.group(1) != version_string:
-                error_msg = (
-                    f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
-                    f"   Expected: {version_string}\n"
-                    f"   Found in checklist: v{match.group(1)}\n"
-                    f"   File: {story_path}"
-                )
-                add_error(errors, error_details, 'TASK_CHECKLIST_VERSION_MISMATCH', error_msg, story_path)
+            if match:
+                checklist_version = f"v{match.group(1)}"
+                if checklist_version != version_string:
+                    error_msg = (
+                        f"❌ TASK CHECKLIST VERSION MISMATCH: Task checklist version mismatch\n"
+                        f"   Expected: {version_string}\n"
+                        f"   Found in checklist: {checklist_version}\n"
+                        f"   File: {story_path}"
+                    )
+                    add_error(errors, error_details, 'TASK_CHECKLIST_VERSION_MISMATCH', error_msg, story_path)
     
     # Validate Epic doc consistency (if exists)
     if epic_path and epic_path.exists():

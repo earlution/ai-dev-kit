@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-15 (v0.2.8.6+1 – Story 8 Task 6 complete: Updated RW documentation with Step 7 hardening details)  
+**Last updated:** 2025-12-15 (v0.2.8.7+1 – Story 8 Task 7 complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -37,9 +37,9 @@ housekeeping_policy: keep
 - [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.6+1 – All tasks complete: Trigger detection, registry, workflow executor, deliverable processor, trigger integration, agentic task workflow integration, workflow orchestrator, documentation and testing)
   - Story: [`Story-007-trigger-aware-release-workflow.md`](Story-007-trigger-aware-release-workflow.md)
   - Tasks: T00-T08 ✅ COMPLETE (FR-013: Trigger-aware RW with sub-workflow execution, FR-014: FR/BR commit trigger)
-- [ ] **E2:S08 – Harden Release Workflow Reliability** - IN PROGRESS (v0.2.8.6+1 – T06 complete: Updated RW documentation with Step 7 hardening details)
+- [ ] **E2:S08 – Harden Release Workflow Reliability** - IN PROGRESS (v0.2.8.7+1 – T07 complete: Created comprehensive test suite and validation for Step 7 hardening)
   - Story: [`Story-008-harden-release-workflow-reliability.md`](Story-008-harden-release-workflow-reliability.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.8.1+1), T02 ✅ COMPLETE (v0.2.8.2+1), T03 ✅ COMPLETE (v0.2.8.3+1), T04 ✅ COMPLETE (v0.2.8.4+1), T05 ✅ COMPLETE (v0.2.8.5+1), T06 ✅ COMPLETE (v0.2.8.6+1), T07 TODO (FR-015: Harden Kanban docs update step in RW)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.8.1+1), T02 ✅ COMPLETE (v0.2.8.2+1), T03 ✅ COMPLETE (v0.2.8.3+1), T04 ✅ COMPLETE (v0.2.8.4+1), T05 ✅ COMPLETE (v0.2.8.5+1), T06 ✅ COMPLETE (v0.2.8.6+1), T07 ✅ COMPLETE (v0.2.8.7+1) (FR-015: Harden Kanban docs update step in RW)
 - [x] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - COMPLETE ✅ (v0.2.9.6+1 – Story complete: All tasks finished, RW integration complete)
   - Story: [`Story-009-kanban-granularity-discrete-task-docs.md`](Story-009-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00-T06 ✅ COMPLETE (FR-016: RW Step 1, validators, agent execution guide, documentation, dependency wiring)
@@ -92,7 +92,7 @@ It defines how Release Workflow (RW) and other workflows are:
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-09 (v0.2.1.7+1 – Task 7 created: Add support for update/maintenance branch patterns in branch validation)  
+**Last updated:** 2025-12-15 (v0.2.8.7+1 – Story 8 Task 7 complete)
 
 **Goal:**  
 Make RW agent execution documentation fully portable, clearly distinguishing dev-kit behaviour from external examples.
