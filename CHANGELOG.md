@@ -177,6 +177,40 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.11.1+2] - 15-12-25
+
+🏗️ Workflow Management: E2:S11:T01 - Updated Intake Workflow Architecture (Build 2)
+
+### Summary
+
+**Architecture Update:** Updated Intake Workflow architecture design with key clarifications: E4:S10 integration strategy, version marker assignment flow, pre-flight checks, workflow invocation methods, and epic creation policy.
+
+### Changes
+
+**Architecture Clarifications:**
+- ✅ Added Step 0: Pre-Flight Checks (optional but recommended)
+- ✅ Clarified E4:S10 integration strategy (avoid duplication, leverage existing components)
+- ✅ Resolved version marker assignment flow (Step 6 assigns, Step 4 records)
+- ✅ Added workflow invocation methods documentation (manual and trigger-aware)
+- ✅ Clarified epic creation policy (default: epic must exist, optional auto-create)
+- ✅ Enhanced Step 5 error handling (strict mode support)
+- ✅ Added status management documentation
+
+**Key Improvements:**
+- E4:S10 integration clearly defined (Step 2-3 leverage E4:S10, avoid reimplementation)
+- Version marker flow resolved (clear separation of assignment vs recording)
+- Pre-flight checks added for better error prevention
+- Workflow invocation methods documented
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+2.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.1+2.md)
+
+---
+
 ## [0.2.11.1+1] - 15-12-25
 
 🏗️ Workflow Management: E2:S11:T01 - Design Intake Workflow Architecture

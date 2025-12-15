@@ -36,6 +36,23 @@ This document designs the architecture for the Intake Workflow, an automated wor
 
 ## Architecture Overview
 
+### Workflow Invocation
+
+The Intake Workflow can be invoked in two ways:
+
+1. **Manual Invocation:**
+   ```bash
+   python intake_workflow.py --fr FR-019.md
+   python intake_workflow.py --br BR-001.md
+   python intake_workflow.py --uxr UXR-001.md
+   ```
+
+2. **Trigger-Aware Execution (via RW):**
+   - RW detects FR/BR commit trigger
+   - RW triggers Intake Workflow as sub-workflow
+   - Intake Workflow processes FR/BR automatically
+   - RW continues with normal release process
+
 ### High-Level Flow
 
 ```
@@ -91,6 +108,46 @@ This document designs the architecture for the Intake Workflow, an automated wor
 ---
 
 ## Workflow Steps
+
+### Step 0: Pre-Flight Checks (Optional but Recommended)
+
+**Type:** `preflight_check`  
+**Handler:** `intake.preflight_check`  
+**Required:** `false`  
+**Mandatory:** `false`  
+**Blocking:** `true`  
+**Dependencies:** `[]`
+
+**Purpose:**
+- Validate FR/BR/UXR document exists and is readable
+- Check if document already intaken (prevent duplicate intake)
+- Validate project structure (epics directory exists, templates available)
+- Check prerequisites (E4:S08, E4:S10 available if configured)
+
+**Deterministic Operations:**
+- File existence checks
+- Duplicate intake detection (check for existing intake status in document)
+- Project structure validation
+- Dependency availability checks
+
+**Agentic Operations:**
+- None (fully deterministic)
+
+**Error Handling:**
+- Document not found → RW BLOCKED
+- Already intaken → RW BLOCKED with message
+- Missing prerequisites → RW BLOCKED with recovery guidance
+
+**Config:**
+```yaml
+preflight:
+  enabled: true
+  check_duplicates: true
+  validate_structure: true
+  check_dependencies: true
+```
+
+---
 
 ### Step 1: Load & Parse FR/BR/UXR Document
 
@@ -160,8 +217,13 @@ document_patterns:
 
 **Error Handling:**
 - Ambiguous placement → Agentic decision required
-- No matching epic → RW BLOCKED (epic must exist or be created first)
+- No matching epic → RW BLOCKED (epic must exist or be created first, unless `auto_create_epic: true`)
 - Multiple matches → Agentic disambiguation
+
+**Epic Creation Policy:**
+- By default, epics must exist before intake (prevents accidental epic creation)
+- If `auto_create_epic: true` in config, workflow can create new epic (requires agentic decision)
+- New epic creation follows canonical epic template structure
 
 **Config:**
 ```yaml
@@ -217,9 +279,13 @@ task_creation:
 ```
 
 **Integration Points:**
-- E4:S10: Agentic Task Creation (task content generation)
-- Kanban templates: Task document structure
-- RW Step 7: Kanban update script (for checklist updates)
+- **E4:S10 (Agentic Task Creation):** Primary integration point
+  - Step 3 delegates task creation to E4:S10's `AgenticTaskWorkflow`
+  - E4:S10 handles: FR/BR analysis, epic/story mapping, task content generation
+  - Intake workflow adds: Intake status, version marker assignment, documentation updates
+  - Avoids duplication: Reuses existing E4:S10 components rather than reimplementing
+- Kanban templates: Task document structure (via E4:S10)
+- RW Step 7: Kanban update script (for checklist updates after task creation)
 
 ---
 
@@ -236,8 +302,8 @@ task_creation:
 - Update FR/BR/UXR document with intake decision
 - Set intake status (ACCEPTED/PENDING/REJECTED/DEFERRED)
 - Record intake date, assigned epic/story/task
-- Add version marker for intake action
-- Create Kanban links
+- Record version marker for assigned task (from Step 6)
+- Create Kanban links to assigned epic/story/task
 
 **Deterministic Operations:**
 - Document frontmatter updates
@@ -289,9 +355,10 @@ version_marker:
 - Ambiguous reference resolution
 
 **Error Handling:**
-- Missing dependencies → Warning (non-blocking)
-- Invalid references → Warning (non-blocking)
-- Circular dependencies → Warning (non-blocking)
+- Missing dependencies → Warning (non-blocking, unless `strict_mode: true`)
+- Invalid references → Warning (non-blocking, unless `strict_mode: true`)
+- Circular dependencies → Warning (non-blocking, always warning)
+- In strict mode: Missing/invalid dependencies → RW BLOCKED
 
 **Config:**
 ```yaml
@@ -319,9 +386,16 @@ validation:
 **Dependencies:** `[step-2, step-3]`
 
 **Purpose:**
-- Assign version marker for intake action
+- Assign version marker for created/assigned task
 - Follow versioning policy (RC.EPIC.STORY.TASK+BUILD)
-- Use doc-init build (+0) for intake actions (FR-020)
+- Use doc-init build (+0) for new Story/Task creation (FR-020)
+- For existing tasks, use next build number (+1, +2, etc.)
+
+**Version Marker Logic:**
+- **New Story/Task:** Assigns `vRC.E.S.T+0` (doc-init build)
+- **Existing Task:** Uses next build number from task document
+- **Version stored:** In Step 4, version marker is recorded in FR/BR document
+- **Step 6 assigns:** Version marker is determined here, then recorded in Step 4
 
 **Deterministic Operations:**
 - Version component extraction from decision flow
@@ -649,10 +723,47 @@ scripts:
 
 ---
 
+## Implementation Notes
+
+### E4:S10 Integration Strategy
+
+**Avoid Duplication:** Step 2-3 leverage E4:S10 rather than reimplementing:
+- **Step 2 (Decision Flow):** Uses E4:S10's `EpicStoryMapper` for semantic matching
+- **Step 3 (Task Creation):** Delegates to E4:S10's `AgenticTaskWorkflow` for task creation
+- **Intake-Specific Additions:** Intake workflow adds:
+  - Intake status management (ACCEPTED/PENDING/REJECTED/DEFERRED)
+  - Version marker assignment (doc-init +0 for new tasks)
+  - FR/BR document updates with intake decision
+  - Dependency wiring and cross-referencing
+
+### Version Marker Assignment Flow
+
+1. **Step 2:** Determines Epic/Story/Task placement
+2. **Step 3:** Creates/updates task (via E4:S10)
+3. **Step 6:** Assigns version marker:
+   - New Story/Task → `vRC.E.S.T+0` (doc-init)
+   - Existing Task → Next build number
+4. **Step 4:** Records version marker in FR/BR document (runs after Step 6 via dependency)
+
+**Note:** Step 4 depends on Step 6, so version marker is assigned before being recorded.
+
+### Status Management
+
+**Status Values:**
+- `ACCEPTED`: FR/BR accepted and assigned to Kanban
+- `PENDING`: Intake pending review/approval
+- `REJECTED`: FR/BR rejected (not assigned)
+- `DEFERRED`: FR/BR deferred to later (not assigned yet)
+
+**Status Transitions:**
+- Initial intake: `ACCEPTED` (default) or `PENDING` (if requires approval)
+- After intake: Status can be updated manually (not automated)
+- Re-intake: Check for existing status, prevent duplicate intake
+
 ## Next Steps
 
 1. **T02:** Implement Decision Flow Analysis component
-2. **T03:** Implement Kanban Task Creation Integration
+2. **T03:** Implement Kanban Task Creation Integration (leverage E4:S10)
 3. **T04:** Implement Intake Documentation Updates
 4. **T05:** Implement Dependency and Reference Wiring
 5. **T06:** Integrate with Release Workflow
