@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** ✅ COMPLETE
 **Priority:** HIGH  
-**Last updated:** 2025-12-15 (v0.2.11.4+1 – T04 complete: E2:S11:T04)
+**Last updated:** 2025-12-15 (v0.2.11.5+1 – T05 complete: E2:S11:T05)
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
 **Completed:** 2025-12-15
-**Version:** v0.2.11.4+1
+**Version:** v0.2.11.5+1
 **Code:** E2S11
 
 ---
@@ -26,7 +26,7 @@ housekeeping_policy: keep
 - [x] **E2:S11:T02 – Implement Decision Flow Analysis** ✅ COMPLETE (v0.2.11.2+1)
 - [x] **E2:S11:T03 – Implement Kanban Task Creation Integration** ✅ COMPLETE (v0.2.11.3+1)
 - [x] **E2:S11:T04 – Implement Intake Documentation Updates** ✅ COMPLETE (v0.2.11.4+1)
-- [ ] **E2:S11:T05 – Implement Dependency and Reference Wiring**
+- [x] **E2:S11:T05 – Implement Dependency and Reference Wiring** ✅ COMPLETE (v0.2.11.5+1)
 - [ ] **E2:S11:T06 – Integrate with Release Workflow**
 - [ ] **E2:S11:T07 – Add Trigger-Aware Execution Support**
 - [ ] **E2:S11:T08 – Create Agent Execution Guide**
@@ -339,11 +339,43 @@ Implemented Intake Documentation Update component that updates FR/BR/UXR documen
 4. Add tests for dependency wiring
 
 **Acceptance Criteria:**
-- [ ] Dependencies extracted from FR/BR/UXR content
-- [ ] Dependencies wired automatically
-- [ ] Cross-references created
-- [ ] Dependency validation implemented
-- [ ] Tests added
+- [x] Dependencies extracted from FR/BR/UXR content
+- [x] Dependencies wired automatically
+- [x] Cross-references created
+- [x] Dependency validation implemented
+- [x] Tests added
+
+**Status:** ✅ COMPLETE
+
+**Completion Summary:**
+
+Implemented Dependency and Reference Wiring component that extracts and wires dependencies from FR/BR/UXR content:
+
+**Component Implementation:**
+- Created `intake_dependency_wiring.py` with `IntakeDependencyWiring` class
+- Extracts dependencies using pattern matching (FR-XXX, BR-XXX, E2:S11, E2:S11:T05, etc.)
+- Categorizes dependencies into Blocked By, Blocks, and Related Work
+- Updates FR/BR/UXR document with dependency wiring
+- Validates dependency existence and detects circular dependencies
+
+**Key Features:**
+- **Dependency Extraction:** Pattern-based extraction from Dependencies section and general content
+- **Dependency Categorization:** Automatically categorizes into Blocked By, Blocks, Related Work
+- **Dependency Validation:** Checks if referenced dependencies exist (FR/BR/UXR files, Epic/Story/Task docs)
+- **Circular Dependency Detection:** Detects circular dependencies (A blocks B and B blocks A)
+- **Document Updates:** Updates or creates Dependencies section in FR/BR/UXR document
+- **Cross-References:** Creates cross-references to created tasks
+- **Strict Mode:** Optional strict mode for blocking on missing/invalid dependencies
+
+**Testing:**
+- Created `test_intake_dependency_wiring.py` with dependency extraction, pattern matching, and circular dependency detection tests
+- All tests passing
+- Successfully extracts and wires dependencies from FR/BR/UXR documents
+
+**Integration:**
+- Uses created tasks from T03 (Task Creation) for cross-referencing
+- Updates FR/BR/UXR documents with dependency wiring
+- Ready for integration with remaining intake workflow steps
 
 ---
 

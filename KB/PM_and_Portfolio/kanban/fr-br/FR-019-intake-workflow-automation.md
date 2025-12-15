@@ -175,24 +175,47 @@ This feature is needed:
 
 ---
 
-## Dependencies
-
-**Blocks:**
-- Automated intake process standardization
-- Reduced manual work and errors in intake
-- Consistent dependency and reference wiring
-
-**Blocked By:**
-- None (can be implemented independently)
-
 **Related Work:**
-- **E2:S11:** Intake Workflow Automation (this story)
-- **E4:S10:** Agentic Kanban Task Creation from FR/BR (task creation integration - used by intake workflow)
-- **E2:S07:** Trigger-Aware Release Workflow (trigger integration - intake workflow can be triggered)
-- **E4:S08:** Intelligent Epic Matching (semantic matching for decision flow - used by intake workflow)
-- **FR-012:** Agentic Kanban Task Creation from FR/BR (complementary - intake workflow orchestrates this)
+- FR-012
+- E2:S11
+- E4:S10
+- E2:S07
+- E4:S08
+- FR-019
+- FR-012
+- E2:S11
+- E4:S10
+- E2:S07
+- E4:S08
+- E2:S1
+- E2:S11:T00
+- E2:S1:T01
+- E2:S1:T02
+- E2:S1:T03
+- E2:S1:T04
+- E2:S1:T05
 
 ---
+
+
+
+## Dependencies
+
+**Related Work:**
+- FR-019
+- FR-012
+- E2:S11
+- E4:S10
+- E2:S07
+- E4:S08
+- E2:S1
+- E2:S11:T00
+- E2:S1:T01
+- E2:S1:T02
+- E2:S1:T03
+- E2:S1:T04
+- E2:S1:T05
+
 
 ## Intake Decision
 

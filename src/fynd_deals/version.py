@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
-VERSION_TASK = 4      # Task number (Task 4: Implement Intake Documentation Updates)
-VERSION_BUILD = 1     # Build number (E2:S11:T04 complete - Implemented Intake Documentation Update component for updating FR/BR/UXR documents with intake decision results)
+VERSION_TASK = 5      # Task number (Task 5: Implement Dependency and Reference Wiring)
+VERSION_BUILD = 1     # Build number (E2:S11:T05 complete - Implemented Dependency and Reference Wiring component for extracting and wiring dependencies from FR/BR/UXR content)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
