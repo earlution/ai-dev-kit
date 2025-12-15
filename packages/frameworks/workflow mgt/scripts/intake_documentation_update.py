@@ -16,7 +16,7 @@ Usage:
 import sys
 import re
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 from dataclasses import dataclass
 from datetime import datetime
 
@@ -161,7 +161,7 @@ class IntakeDocumentationUpdate:
                 explanation="\n".join(explanation_parts)
             )
     
-    def _update_status_field(self, content: str, intake_status: str) -> tuple[str, bool]:
+    def _update_status_field(self, content: str, intake_status: str) -> Tuple[str, bool]:
         """
         Update Status field in document.
         
@@ -208,7 +208,7 @@ class IntakeDocumentationUpdate:
         intake_decision: IntakeDecision,
         created_tasks: List,
         version_marker: Optional[str]
-    ) -> tuple[str, bool]:
+    ) -> Tuple[str, bool]:
         """
         Update or create Intake Decision section.
         
@@ -282,7 +282,7 @@ class IntakeDocumentationUpdate:
                 updated_content = content.rstrip() + "\n\n" + decision_section + "\n"
             return updated_content, True
     
-    def _update_kanban_links(self, content: str, created_tasks: List) -> tuple[str, bool]:
+    def _update_kanban_links(self, content: str, created_tasks: List) -> Tuple[str, bool]:
         """
         Update Kanban links in document.
         
