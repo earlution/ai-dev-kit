@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-15 (v0.2.8.4+1 – Story 8 Task 4 complete: Comprehensive validation for Kanban docs updates)  
+**Last updated:** 2025-12-15 (v0.2.8.5+1 – Story 8 Task 5 complete: Comprehensive error handling and recovery guidance)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
