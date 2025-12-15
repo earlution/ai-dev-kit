@@ -19,6 +19,26 @@ housekeeping_policy: keep
 
 ---
 
+## Intake Decision
+
+**Intake Status:** ACCEPTED  
+**Intake Date:** 2025-12-12  
+**Intake Decision:** Assigned to Epic 5 (Documentation Management), Story 6 (Policy Documentation Structure), Task 1  
+**Version:** v0.5.6.1+0 (doc-init)
+
+**Decision Rationale:**
+- FR-022 addresses policy document structure and agentic workflow support
+- Fits within Epic 5's scope of documentation management
+- Story 6 created specifically for policy documentation structure work
+- Task 1 will implement the policy salience section feature
+
+**Kanban Links:**
+- Epic: [`KB/PM_and_Portfolio/kanban/epics/Epic-5/Epic-5.md`](../epics/Epic-5/Epic-5.md)
+- Story: [`KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-006-policy-documentation-structure.md`](../epics/Epic-5/Story-006-policy-documentation-structure.md)
+- Task: See Story 6 Task Checklist (E5:S06:T01)
+
+---
+
 ## Summary
 
 Add a standardized, machine-readable "Policy Salience" section to all policy documents that captures key rules, enforcement points, decision criteria, and scope in a structured format. This section enables AI agents to quickly parse and understand policy requirements without reading the entire document, while maintaining full human readability.

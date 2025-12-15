@@ -4,6 +4,137 @@ ttl_days: null
 created_at: 2025-12-06T20:30:00Z
 expires_at: null
 housekeeping_policy: keep
+policy_salience:
+  policy_id: doc-maintenance-policy
+  type: governance
+  domain:
+    primary: documentation
+    secondary: ["maintenance", "quality", "consistency"]
+  audience: ["agents", "epic-owners", "framework-owners", "story-owners", "developers"]
+  applies_to:
+    documents:
+      - "KB/**"
+      - "packages/frameworks/**"
+      - "root:README.md"
+      - "root:CHANGELOG.md"
+      - "docs/**"
+    activities:
+      - "release-workflow"
+      - "story-completion"
+      - "framework-release"
+      - "policy-updates"
+    components:
+      - "kanban-docs"
+      - "changelog"
+      - "version-file"
+  excludes:
+    documents:
+      - "third-party-docs/**"
+      - "external-links-only.md"
+    activities:
+      - "code-comments"
+      - "commit-messages"
+  key_rules:
+    - id: DM-R1
+      summary: "Documentation must accurately reflect current implementation, processes, and policies."
+      must_level: MUST
+      when_applies:
+        - "code changes merged to main"
+        - "process/policy changes approved"
+        - "framework updates released"
+      enforcement:
+        owner: ["epic-owners", "framework-owners", "story-owners"]
+        mechanisms:
+          - "story-completion-checklist"
+          - "release-workflow-step: docs-validation"
+          - "quarterly-documentation-review"
+      validation_hints:
+        - "check version numbers and last-updated fields"
+        - "compare documented behavior vs code for changed modules"
+        - "verify examples still work as documented"
+    - id: DM-R2
+      summary: "All documentation must be maintained proactively, not reactively."
+      must_level: MUST
+      when_applies:
+        - "all documentation updates"
+      enforcement:
+        owner: ["documentation-owners"]
+        mechanisms:
+          - "regular-review-cadences"
+          - "update-triggers"
+      validation_hints:
+        - "check last-updated date against review cadence"
+        - "verify update triggers are documented"
+    - id: DM-R3
+      summary: "Related documentation must be consistent and non-contradictory."
+      must_level: MUST
+      when_applies:
+        - "cross-referenced documentation updates"
+        - "policy changes"
+      enforcement:
+        owner: ["architecture-team", "epic-owners"]
+        mechanisms:
+          - "cross-reference-validation"
+          - "consistency-checks"
+      validation_hints:
+        - "check for conflicting information in related docs"
+        - "verify terminology consistency"
+        - "validate version synchronization"
+    - id: DM-R4
+      summary: "Documentation owners MUST ensure accuracy, currency, and quality."
+      must_level: MUST
+      when_applies:
+        - "all documentation maintenance activities"
+      enforcement:
+        owner: ["epic-owners", "framework-owners", "story-owners"]
+        mechanisms:
+          - "ownership-model"
+          - "review-processes"
+      validation_hints:
+        - "verify owner is assigned for each document"
+        - "check owner responsibilities are met"
+  decision_criteria:
+    - id: DM-DC1
+      question: "Does this change affect user-visible behavior, APIs, or processes?"
+      yes_action: "Require documentation update under the relevant Epic/Story."
+      no_action: "Record explicit 'no-doc-change-required' note in Story."
+    - id: DM-DC2
+      question: "Is this documentation outdated or inaccurate?"
+      yes_action: "Update immediately or flag for next review cycle."
+      no_action: "Verify last-updated date is within review cadence."
+  triggers:
+    - id: DM-T1
+      event: "code-merged-to-main"
+      required_checks:
+        - "ensure_related_story_has_doc-update-or-exemption"
+        - "verify_version_numbers_updated"
+    - id: DM-T2
+      event: "story-completed"
+      required_checks:
+        - "verify_documentation_updated"
+        - "check_kanban_docs_synced"
+    - id: DM-T3
+      event: "policy-doc-updated"
+      required_checks:
+        - "re-run_doc-lifecycle_validation"
+        - "check_related_docs_for_updates"
+  integration_points:
+    - id: DM-IP1
+      component: "release-workflow"
+      step: "docs-validation"
+      behavior: "fail release if required docs not updated"
+    - id: DM-IP2
+      component: "doc-lifecycle-validator"
+      behavior: "validate lifecycle metadata and maintenance cadence"
+    - id: DM-IP3
+      component: "kanban-docs-update"
+      step: "step-7"
+      behavior: "auto-update story/epic docs with version markers"
+  related_policies:
+    - "KB/Architecture/Standards_and_ADRs/doc-lifecycle-policy.md"
+    - "KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md"
+    - "packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md"
+    - "packages/frameworks/kanban/policies/kanban-governance-policy.md"
 ---
 
 # Documentation Maintenance Policy

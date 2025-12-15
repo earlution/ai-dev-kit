@@ -4,6 +4,150 @@ ttl_days: null
 created_at: 2025-12-04T12:02:07Z
 expires_at: null
 housekeeping_policy: keep
+policy_salience:
+  policy_id: kanban-governance-policy
+  type: governance
+  domain:
+    primary: kanban
+    secondary: ["project-management", "workflow", "versioning"]
+  audience: ["agents", "developers", "epic-owners", "story-owners", "project-leadership"]
+  applies_to:
+    documents:
+      - "KB/PM_and_Portfolio/kanban/**"
+      - "packages/frameworks/kanban/**"
+    activities:
+      - "fr-br-intake"
+      - "task-creation"
+      - "story-creation"
+      - "epic-creation"
+      - "release-workflow"
+    components:
+      - "kanban-board"
+      - "epic-docs"
+      - "story-docs"
+      - "task-docs"
+      - "version-file"
+  key_rules:
+    - id: KG-R1
+      summary: "All substantive work MUST be task-driven. If work doesn't map to a task, the Kanban needs updating."
+      must_level: MUST
+      when_applies:
+        - "any work being performed"
+        - "fr-br-intake"
+      enforcement:
+        owner: ["story-owners", "epic-owners"]
+        mechanisms:
+          - "release-workflow-validation"
+          - "kanban-board-checks"
+      validation_hints:
+        - "verify task document exists for all work"
+        - "check task is linked to story and epic"
+        - "ensure version matches task"
+    - id: KG-R2
+      summary: "Every Feature Request (FR) and Bug Report (BR) MUST result in at least one Kanban Task."
+      must_level: MUST
+      when_applies:
+        - "fr-br-intake"
+        - "fr-br-committed"
+      enforcement:
+        owner: ["fr-br-intake-workflow"]
+        mechanisms:
+          - "fr-br-intake-validation"
+          - "task-creation-workflow"
+      validation_hints:
+        - "check FR/BR document has assigned task"
+        - "verify task document exists"
+        - "ensure task links back to FR/BR"
+    - id: KG-R3
+      summary: "Tasks must always live under a Story, which must always live under an Epic (once epics are in use)."
+      must_level: MUST
+      when_applies:
+        - "task-creation"
+        - "story-creation"
+        - "epic-creation"
+      enforcement:
+        owner: ["kanban-workflow"]
+        mechanisms:
+          - "task-creation-validation"
+          - "story-creation-validation"
+      validation_hints:
+        - "verify task has parent story"
+        - "verify story has parent epic"
+        - "check epic exists and is active"
+    - id: KG-R4
+      summary: "FR/BR → Task → Story → Epic flow must be followed: check for existing Story first, then Epic, then create new Epic if needed."
+      must_level: MUST
+      when_applies:
+        - "fr-br-intake"
+      enforcement:
+        owner: ["fr-br-intake-workflow"]
+        mechanisms:
+          - "intake-decision-flow"
+          - "semantic-matching"
+      validation_hints:
+        - "check for existing story match before creating new"
+        - "check for existing epic match before creating new"
+        - "verify proper hierarchy created"
+    - id: KG-R5
+      summary: "Version numbers follow RC.EPIC.STORY.TASK+BUILD schema and must align with Kanban structure."
+      must_level: MUST
+      when_applies:
+        - "version-bump"
+        - "release-workflow"
+      enforcement:
+        owner: ["release-workflow"]
+        mechanisms:
+          - "validate_version_bump.py"
+          - "validate_branch_context.py"
+      validation_hints:
+        - "verify version matches epic/story/task"
+        - "check version increment follows rules"
+        - "ensure version file synced with kanban docs"
+  decision_criteria:
+    - id: KG-DC1
+      question: "Does this FR/BR match an existing Story's scope?"
+      yes_action: "Create new Task under existing Story."
+      no_action: "Check for existing Epic match."
+    - id: KG-DC2
+      question: "Does this FR/BR match an existing Epic's problem domain?"
+      yes_action: "Create new Story under existing Epic, then Task."
+      no_action: "Create new Epic, then Story, then Task."
+    - id: KG-DC3
+      question: "Does this work map to an existing Task?"
+      yes_action: "Use existing Task or create new Task if scope differs."
+      no_action: "Create new Task under appropriate Story."
+  triggers:
+    - id: KG-T1
+      event: "fr-br-committed"
+      required_checks:
+        - "verify_task_created"
+        - "verify_task_linked_to_fr-br"
+    - id: KG-T2
+      event: "task-completed"
+      required_checks:
+        - "verify_kanban_docs_updated"
+        - "verify_version_marker_added"
+    - id: KG-T3
+      event: "release-workflow-started"
+      required_checks:
+        - "verify_task_document_exists"
+        - "verify_version_alignment"
+  integration_points:
+    - id: KG-IP1
+      component: "release-workflow"
+      step: "step-2-version-bump"
+      behavior: "validate version matches kanban task structure"
+    - id: KG-IP2
+      component: "release-workflow"
+      step: "step-7-kanban-docs-update"
+      behavior: "auto-update story/epic docs with version markers and task status"
+    - id: KG-IP3
+      component: "fr-br-intake-workflow"
+      behavior: "create tasks from FR/BR with proper hierarchy"
+  related_policies:
+    - "KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md"
+    - "packages/frameworks/numbering & versioning/versioning-policy.md"
+    - "packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md"
 ---
 
 # Kanban Governance Policy
