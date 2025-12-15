@@ -50,7 +50,7 @@ housekeeping_policy: keep
   - **Dependency:** Unblocked (FR-016 complete via E2:S09)
 - [x] **E2:S11 – Intake Workflow Automation** - ✅ COMPLETE (v0.2.11.3+1)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03-T09 TODO (FR-019: Automated intake workflow for FR/BR/UXR); related to FR-018 (abstract space concept used by doc-init)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03 ✅ COMPLETE (v0.2.11.3+1), T04-T09 TODO (FR-019: Automated intake workflow for FR/BR/UXR); related to FR-018 (abstract space concept used by doc-init)
 
 ---
 
