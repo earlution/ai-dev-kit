@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-12 (v0.2.10.6+1 – Story 10 Task 6 complete: Version validator updated with abstract space awareness)  
+**Last updated:** 2025-12-12 (v0.2.10.7+1 – Story 10 Task 7 complete: Documentation and testing)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -44,9 +44,9 @@ housekeeping_policy: keep
   - Story: [`Story-009-kanban-granularity-discrete-task-docs.md`](Story-009-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00-T06 ✅ COMPLETE (FR-016: RW Step 1, validators, agent execution guide, documentation, dependency wiring)
   - **Coordination:** Coordinates with E4:S11 (Kanban policy and templates)
-- [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - IN PROGRESS (v0.2.10.6+1 – Story 10 Task 6 complete: Version validator updated)
+- [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - IN PROGRESS (v0.2.10.7+1 – Story 10 Task 7 complete: Documentation and testing)
   - Story: [`Story-010-doc-init-build-zero-for-new-est.md`](Story-010-doc-init-build-zero-for-new-est.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.10.1+0), T02 ✅ COMPLETE (v0.2.10.2+1), T03 ✅ COMPLETE (v0.2.10.3+1), T04 ✅ COMPLETE (v0.2.10.4+1), T05 ✅ COMPLETE (v0.2.10.5+1), T06 ✅ COMPLETE (v0.2.10.6+1), T07 TODO (FR-017: Doc-init build `+0` for new E/S/T)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.10.1+0), T02 ✅ COMPLETE (v0.2.10.2+1), T03 ✅ COMPLETE (v0.2.10.3+1), T04 ✅ COMPLETE (v0.2.10.4+1), T05 ✅ COMPLETE (v0.2.10.5+1), T06 ✅ COMPLETE (v0.2.10.6+1), T07 ✅ COMPLETE (v0.2.10.7+1)
   - **Dependency:** Unblocked (FR-016 complete via E2:S09)
 - [ ] **E2:S11 – Intake Workflow Automation** - TODO (v0.2.11.0+0 – Story created for FR-019)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
