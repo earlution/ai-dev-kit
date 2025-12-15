@@ -177,6 +177,42 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.11.6+1] - 15-12-25
+
+🔄 Workflow Management: E2:S11:T06 - Integrate with Release Workflow
+
+### Summary
+
+**Implementation:** Implemented Release Workflow integration for intake workflow versioning, including version marker assignment with doc-init build support per FR-020.
+
+### Changes
+
+**New Components:**
+- ✅ `intake_version_assignment.py` - Version assignment component integrating with RW
+- ✅ `test_intake_version_assignment.py` - Test suite (all tests passing)
+
+**Key Features:**
+- Version marker assignment following RC.EPIC.STORY.TASK+BUILD schema
+- Doc-init build (+0) support for new Story/Task creation (FR-020)
+- Next build number determination for existing tasks
+- RW integration using RW's versioning logic and version file structure
+- Comprehensive error handling for invalid decisions and missing files
+
+**Integration:**
+- Integrates with RW versioning logic (no duplication)
+- Uses intake decision from T02 (Decision Flow Analysis)
+- Uses created tasks from T03 (Task Creation)
+- Version marker used by T04 (Documentation Updates)
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019, FR-020
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.6+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.6+1.md)
+
+---
+
 ## [0.2.11.5+1] - 15-12-25
 
 🔗 Workflow Management: E2:S11:T05 - Implement Dependency and Reference Wiring

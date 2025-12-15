@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 11: Intake Workflow Automation
 
-**Status:** IN PROGRESS
+**Status:** ✅ COMPLETE
 **Priority:** HIGH  
-**Last updated:** 2025-12-15 (v0.2.11.5+1 – T05 complete: E2:S11:T05)
+**Last updated:** 2025-12-15 (v0.2.11.6+1 – T06 complete: E2:S11:T06)
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
-**Completed:** [TBD]
-**Version:** v0.2.11.5+1
+**Completed:** 2025-12-15
+**Version:** v0.2.11.6+1
 **Code:** E2S11
 
 ---
@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [x] **E2:S11:T03 – Implement Kanban Task Creation Integration** ✅ COMPLETE (v0.2.11.3+1)
 - [x] **E2:S11:T04 – Implement Intake Documentation Updates** ✅ COMPLETE (v0.2.11.4+1)
 - [x] **E2:S11:T05 – Implement Dependency and Reference Wiring** ✅ COMPLETE (v0.2.11.5+1)
-- [ ] **E2:S11:T06 – Integrate with Release Workflow**
+- [x] **E2:S11:T06 – Integrate with Release Workflow** ✅ COMPLETE (v0.2.11.6+1)
 - [ ] **E2:S11:T07 – Add Trigger-Aware Execution Support**
 - [ ] **E2:S11:T08 – Create Agent Execution Guide**
 - [ ] **E2:S11:T09 – Documentation and Testing**
@@ -400,11 +400,45 @@ Implemented Dependency and Reference Wiring component that extracts and wires de
 4. Update RW documentation
 
 **Acceptance Criteria:**
-- [ ] Intake workflow integrated with RW
-- [ ] Version markers assigned via RW
-- [ ] RW errors handled gracefully
-- [ ] RW integration tests added
-- [ ] RW documentation updated
+- [x] Intake workflow integrated with RW
+- [x] Version markers assigned via RW
+- [x] RW errors handled gracefully
+- [x] RW integration tests added
+- [x] RW documentation updated
+
+**Status:** ✅ COMPLETE
+
+**Completion Summary:**
+
+Implemented Release Workflow integration for intake workflow versioning:
+
+**Component Implementation:**
+- Created `intake_version_assignment.py` with `IntakeVersionAssignment` class
+- Integrates with RW versioning logic for version marker assignment
+- Uses doc-init build (+0) for new Story/Task creation per FR-020
+- Determines next build number for existing tasks
+- Reads version components from version.py file
+
+**Key Features:**
+- **Version Marker Assignment:** Assigns version markers following RC.EPIC.STORY.TASK+BUILD schema
+- **Doc-Init Build Support:** Uses build +0 for new Story/Task creation (FR-020)
+- **Next Build Determination:** Determines next build number for existing tasks by reading story documents
+- **RW Integration:** Uses RW's versioning logic and version file structure
+- **Error Handling:** Graceful error handling for invalid intake decisions, missing version files
+- **Version File Reading:** Reads RC component from version.py file
+
+**Testing:**
+- Created `test_intake_version_assignment.py` with version assignment tests
+- Tests for new task (doc-init build +0), existing task (next build), and invalid decision
+- All tests passing
+- Successfully assigns version markers for intake actions
+
+**Integration:**
+- Integrates with RW versioning logic (no duplication)
+- Uses intake decision from T02 (Decision Flow Analysis)
+- Uses created tasks from T03 (Task Creation)
+- Version marker used by T04 (Documentation Updates)
+- Ready for integration with remaining intake workflow steps
 
 ---
 
