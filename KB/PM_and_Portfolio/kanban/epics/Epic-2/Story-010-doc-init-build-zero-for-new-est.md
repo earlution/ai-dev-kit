@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 2, Story 10: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 
-**Status:** IN PROGRESS (v0.2.10.7+1)  
+**Status:** ✅ COMPLETE (v0.2.10.7+1)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-12 (v0.2.10.7+1 – Task 7 complete: Documentation and testing)  
+**Last updated:** 2025-12-12 (v0.2.10.7+1 – Story complete: Doc-init policy, RW, validators, docs, and migration guide)  
 **Estimated Effort:** 1 week  
 **Started:** [TBD]  
-**Completed:** [TBD]  
+**Completed:** 2025-12-12  
 **Version:** v0.2.10.7+1  
 **Code:** E2S10
 
@@ -474,15 +474,15 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 **Note:** These acceptance criteria apply to the entire story (E2:S10), not individual tasks.
 
-- [ ] **AC1:** RW supports a doc-init path that emits `RC.EPIC.STORY.TASK+0` for new E/S/T docs only
-- [ ] **AC2:** Functional changes for that task require `+1` or higher
-- [ ] **AC3:** RW validators fail if non-doc changes are present in a `+0` run
-- [ ] **AC4:** CHANGELOG format documents "Doc Init" entries
-- [ ] **AC5:** Versioning Policy and RW-STEP1 procedure updated to include doc-init logic
-- [ ] **AC6:** Doc-init validation is deterministic (100% confidence)
-- [ ] **AC7:** Clear separation between task introduction (docs) and implementation (code)
-- [ ] **AC8:** Version validator recognizes `+0` as valid BUILD for abstract spaces (FR-020)
-- [ ] **AC9:** Version validator validates abstract space conditions (first-time E/S/T doc, docs-only)
+- [x] ✅ **AC1:** RW supports a doc-init path that emits `RC.EPIC.STORY.TASK+0` for new E/S/T docs only
+- [x] ✅ **AC2:** Functional changes for that task require `+1` or higher
+- [x] ✅ **AC3:** RW validators fail if non-doc changes are present in a `+0` run
+- [x] ✅ **AC4:** CHANGELOG format documents "Doc Init" entries
+- [x] ✅ **AC5:** Versioning Policy and RW-STEP1 procedure updated to include doc-init logic
+- [x] ✅ **AC6:** Doc-init validation is deterministic (100% confidence)
+- [x] ✅ **AC7:** Clear separation between task introduction (docs) and implementation (code)
+- [x] ✅ **AC8:** Version validator recognizes `+0` as valid BUILD for abstract spaces (FR-020)
+- [x] ✅ **AC9:** Version validator validates abstract space conditions (first-time E/S/T doc, docs-only)
 
 ---
 
@@ -514,7 +514,13 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 
 ## Completion Summary
 
-[To be filled upon completion]
+- ✅ RW Step 2 updated to support doc-init path and emit `+0` builds for new E/S/T docs (T01)
+- ✅ Validators updated to enforce docs-only `+0` builds and fail when code changes are present (T02)
+- ✅ Changelog format updated to document Doc Init entries in main and detailed changelogs (T03)
+- ✅ Versioning policies updated to include doc-init logic and `+0`/`+1` relationship (T04)
+- ✅ RW Agent Execution Guide updated with doc-init scenarios and examples (T05)
+- ✅ Version validator enhanced with abstract space awareness and first-time E/S/T detection (T06)
+- ✅ Doc-Init Migration Guide and testing checklist created for existing projects (T07)
 
 ---
 
