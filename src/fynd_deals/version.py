@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 8     # Story number (Story 8: Harden Release Workflow Reliability)
-VERSION_TASK = 2      # Task number (Task 2: Create framework-agnostic Kanban update script)
-VERSION_BUILD = 1     # Build number (E2:S08:T02 complete - Framework-agnostic Kanban update script)
+VERSION_TASK = 3      # Task number (Task 3: Make Step 7 mandatory and blocking)
+VERSION_BUILD = 1     # Build number (E2:S08:T03 complete - Step 7 hardened: mandatory and blocking)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

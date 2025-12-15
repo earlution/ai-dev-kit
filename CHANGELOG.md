@@ -82,6 +82,37 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.3+1] - 15-12-25
+
+🔧 Workflow Management: E2:S08:T03 - Make Step 7 mandatory and blocking
+
+### Summary
+
+**Hardening:** Updated RW Step 7 configuration to make Kanban docs update mandatory and blocking. The workflow now always updates Kanban docs and blocks if updates fail, preventing inconsistent documentation state.
+
+### Changes
+
+**Workflow Configuration:**
+- ✅ Step 7 is now mandatory (`required: true`, `mandatory: true`)
+- ✅ Step 7 is now blocking (`blocking: true`)
+- ✅ Handler updated to framework-agnostic implementation
+- ✅ Script path updated to use framework script from T02
+- ✅ Config-driven path resolution enabled
+
+**Impact:**
+- Kanban docs are always updated during RW (cannot be skipped)
+- RW blocks if Kanban docs update fails (prevents inconsistent state)
+- Clear error messages guide recovery when blocking occurs
+
+### Related Work
+
+- **Story:** E2:S08 - Harden Release Workflow Reliability
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-015
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.3+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.3+1.md)
+
+---
+
 ## [0.2.10.7+1] - 12-12-25
 
 📚 Workflow Management: E2:S10:T07 - Documentation and Testing (Doc-Init)

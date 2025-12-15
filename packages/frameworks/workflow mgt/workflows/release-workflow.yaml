@@ -95,15 +95,18 @@ steps:
   - id: step-7
     name: Auto-update Kanban Docs
     type: kanban_update
-    handler: confidentia.kanban_update
-    required: false
+    handler: framework.kanban_update
+    required: true
+    mandatory: true
+    blocking: true
     automatic: true
     dependencies:
       - step-2
     config:
-      kanban_update_script: scripts/automation/update_kanban_docs.py
+      kanban_update_script: packages/frameworks/workflow mgt/scripts/update_kanban_docs.py
       epic_doc_pattern: KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md
-      kanban_board: KB/PM_and_Portfolio/epics/overview/_index.md
+      kanban_board: KB/PM_and_Portfolio/kanban/kanban-board.md
+      use_rw_config: true
 
   - id: step-8
     name: Stage Files

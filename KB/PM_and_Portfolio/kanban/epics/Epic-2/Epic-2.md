@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-15 (v0.2.8.1+1 – Story 8 Task 1 complete: Deterministic vs agentic analysis)  
+**Last updated:** 2025-12-15 (v0.2.8.3+1 – Story 8 Task 3 complete: Step 7 hardened: mandatory and blocking)  
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -37,9 +37,9 @@ housekeeping_policy: keep
 - [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.6+1 – All tasks complete: Trigger detection, registry, workflow executor, deliverable processor, trigger integration, agentic task workflow integration, workflow orchestrator, documentation and testing)
   - Story: [`Story-007-trigger-aware-release-workflow.md`](Story-007-trigger-aware-release-workflow.md)
   - Tasks: T00-T08 ✅ COMPLETE (FR-013: Trigger-aware RW with sub-workflow execution, FR-014: FR/BR commit trigger)
-- [ ] **E2:S08 – Harden Release Workflow Reliability** - IN PROGRESS (v0.2.8.2+1 – T02 complete: Framework-agnostic Kanban update script)
+- [ ] **E2:S08 – Harden Release Workflow Reliability** - IN PROGRESS (v0.2.8.3+1 – T03 complete: Step 7 hardened: mandatory and blocking)
   - Story: [`Story-008-harden-release-workflow-reliability.md`](Story-008-harden-release-workflow-reliability.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.8.1+1), T02 ✅ COMPLETE (v0.2.8.2+1), T03-T07 TODO (FR-015: Harden Kanban docs update step in RW)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.8.1+1), T02 ✅ COMPLETE (v0.2.8.2+1), T03 ✅ COMPLETE (v0.2.8.3+1), T04-T07 TODO (FR-015: Harden Kanban docs update step in RW)
 - [x] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - COMPLETE ✅ (v0.2.9.6+1 – Story complete: All tasks finished, RW integration complete)
   - Story: [`Story-009-kanban-granularity-discrete-task-docs.md`](Story-009-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00-T06 ✅ COMPLETE (FR-016: RW Step 1, validators, agent execution guide, documentation, dependency wiring)

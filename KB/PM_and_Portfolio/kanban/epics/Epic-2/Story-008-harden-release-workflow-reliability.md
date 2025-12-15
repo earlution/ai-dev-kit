@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-15 (v0.2.8.2+1 – T02 complete: Framework-agnostic Kanban update script)  
-**Version:** v0.2.8.2+1  
+**Last updated:** 2025-12-15 (v0.2.8.3+1 – T03 complete: Step 7 hardened: mandatory and blocking)  
+**Version:** v0.2.8.3+1  
 **Code:** E2S08
 
 ---
@@ -41,7 +41,7 @@ Improve Release Workflow reliability by:
 - [x] **E2:S08:T00 – Story creation and FR-015 intake** ✅ COMPLETE (v0.2.8.0+0)
 - [x] **E2:S08:T01 – Analyze atomic steps for deterministic vs agentic approach** ✅ COMPLETE (v0.2.8.1+1)
 - [x] **E2:S08:T02 – Create framework-agnostic Kanban update script** ✅ COMPLETE (v0.2.8.2+1)
-- [ ] **E2:S08:T03 – Make Step 7 mandatory and blocking** - TODO
+- [x] **E2:S08:T03 – Make Step 7 mandatory and blocking** ✅ COMPLETE (v0.2.8.3+1)
 - [ ] **E2:S08:T04 – Add validation step for Kanban updates** - TODO
 - [ ] **E2:S08:T05 – Implement error handling and recovery guidance** - TODO
 - [ ] **E2:S08:T06 – Update RW documentation and agent execution guide** - TODO
@@ -213,10 +213,13 @@ Created framework-agnostic Kanban update script (`packages/frameworks/workflow m
 
 ### E2:S08:T03 – Make Step 7 mandatory and blocking
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE (v0.2.8.3+1)  
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T02  
 **Blocker:** None
+
+**Scope:**
+Update RW Step 7 configuration to make it mandatory and blocking, and wire in the framework-agnostic script from T02. Ensure the workflow blocks if Step 7 fails with clear error messages.
 
 **Input:**
 - Kanban update script from T02
@@ -230,11 +233,34 @@ Created framework-agnostic Kanban update script (`packages/frameworks/workflow m
 - Clear error messages when blocking occurs
 
 **Acceptance Criteria:**
-- [ ] Step 7 is mandatory (`required: true`)
-- [ ] Step 7 is blocking (`blocking: true` or equivalent)
-- [ ] Handler uses framework-agnostic implementation
-- [ ] Workflow blocks if Step 7 fails
-- [ ] Clear error messages provided
+- [x] ✅ Step 7 is mandatory (`required: true`)
+- [x] ✅ Step 7 is blocking (`blocking: true` or equivalent)
+- [x] ✅ Handler uses framework-agnostic implementation
+- [x] ✅ Workflow blocks if Step 7 fails
+- [x] ✅ Clear error messages provided
+
+**Completion Summary:**
+
+Updated `release-workflow.yaml` Step 7 configuration to harden Kanban docs update:
+
+**Changes Made:**
+- **`required: false` → `required: true`** - Step 7 is now mandatory
+- **Added `mandatory: true`** - Explicitly marks step as mandatory
+- **Added `blocking: true`** - Workflow will block if Step 7 fails
+- **Handler:** `confidentia.kanban_update` → `framework.kanban_update` - Updated to framework-agnostic handler
+- **Script path:** Updated to use framework script `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
+- **Config:** Added `use_rw_config: true` to enable config-driven path resolution
+
+**Impact:**
+- RW will now **always** update Kanban docs (cannot be skipped)
+- RW will **block** if Kanban docs update fails (prevents inconsistent state)
+- Uses framework-agnostic script (works across all projects)
+- Clear error messages guide recovery when blocking occurs
+
+**Next Steps:**
+- T04: Add formal validation step (enhance script validation)
+- T05: Implement comprehensive error handling
+- T06: Update RW documentation with Step 7 details
 
 ---
 
