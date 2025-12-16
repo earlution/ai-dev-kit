@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-16 (v0.2.11.9+3 – Story 11 Task 9 complete)
+**Last updated:** 2025-12-16 (v0.2.5.15+1 – Story 5 COMPLETE: PIR workflow implementation complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
