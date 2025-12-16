@@ -17,9 +17,50 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.5.9+1] - 16-12-25
+## [0.2.5.10+1] - 16-12-25
 
-📋 Workflow Management: E2:S05:T09 - Integrate PIR with Kanban System
+🔢 Workflow Management: E2:S05:T10 - Integrate PIR with Versioning System
+
+### Summary
+
+**PIR-Versioning Integration:** Created comprehensive versioning integration guide and enhanced PIR workflow Steps 10 and 14 with detailed instructions for using project versioning schema (RC.EPIC.STORY.TASK+BUILD) in PIR reports, enabling traceability through version references.
+
+### Changes
+
+**New Integration Guide:**
+- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-versioning-integration-guide.md`
+- ✅ Documented use of project versioning schema (no separate PIR versioning)
+- ✅ Documented PIR report naming convention with versions
+- ✅ Documented version extraction methods (Epic-level range, Story-level single)
+- ✅ Documented version references in PIR reports
+- ✅ Included implementation patterns and examples
+
+**PIR Agent Execution Guide Updates:**
+- ✅ Enhanced Step 10 with version extraction and naming instructions
+- ✅ Enhanced Step 14 with version-based linking procedures
+- ✅ Added version range extraction for Epic-level PIRs
+- ✅ Added version extraction for Story-level PIRs
+- ✅ Added version reference validation checks
+
+**Integration Features:**
+- PIR reports use project versioning schema (RC.EPIC.STORY.TASK+BUILD)
+- Epic-level PIRs use version range (first to last version)
+- Story-level PIRs use single version (last version in Story)
+- Version-based PIR report naming
+- Version references enable traceability
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 5 - Post-Implementation Review Workflow
+- **Task:** Task 10 - Integrate PIR with versioning system
+- **PIR Execution Guide:** `pir-workflow-agent-execution.md` (Steps 10, 14)
+- **Integration Guide:** `pir-versioning-integration-guide.md`
+- **Versioning Policy:** `KB/Architecture/Standards_and_ADRs/versioning-policy.md`
+
+---
+
+## [0.2.5.9+1] - 16-12-25
 
 ### Summary
 

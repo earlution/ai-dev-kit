@@ -925,10 +925,19 @@ Template: KB/Documentation/Templates/story-pir-template.md
 - Epic-level: `KB/Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md`
 - Story-level: `KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md`
 
-**B.2. Determine Report Content:**
+**B.2. Determine PIR Version:**
+- **Epic-level:** Use last version in Epic (when Epic marked COMPLETE)
+  - Extract version range (first to last version)
+  - Use last version for report naming
+- **Story-level:** Use last version in Story (when Story marked COMPLETE)
+  - Extract version from Story document header
+  - Use this version for report naming
+
+**B.3. Determine Report Content:**
 - Use template as base
 - Populate all sections with findings
-- Include all review data
+- Include version information in header
+- Include version references in Stories/Tasks review
 - Format according to template
 
 #### C. EXECUTE
@@ -937,8 +946,21 @@ Template: KB/Documentation/Templates/story-pir-template.md
 - Epic-level: `KB/Documentation/Templates/epic-pir-template.md`
 - Story-level: `KB/Documentation/Templates/story-pir-template.md`
 
-**C.2. Populate Report:**
+**C.2. Extract Version Information:**
+- **Epic-level:**
+  - Read all Story documents in Epic
+  - Extract versions from Story headers
+  - Determine version range (first to last)
+  - Use last version for report naming
+- **Story-level:**
+  - Read Story document header
+  - Extract version from header
+  - Use this version for report naming
+
+**C.3. Populate Report:**
 - Fill in all template sections
+- Include version in header (version range for Epic, single version for Story)
+- Include version references in Stories/Tasks review sections
 - Include all review findings
 - Add metrics and metadata
 - Format properly
@@ -1258,23 +1280,38 @@ PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
 
 #### B. DETERMINE
 
-**B.1. Determine Linking:**
-- Link PIR to Epic (using Epic version range)
-- Link PIR to Stories (using Story versions)
-- Link PIR to Tasks (using Task versions)
-- Reference project versions in PIR report
+**B.1. Determine Version-Based Linking:**
+- Link PIR to Epic using Epic version range
+- Link PIR to Stories using Story versions
+- Link PIR to Tasks using Task versions
+- Reference project versions (RC.EPIC.STORY.TASK+BUILD) in PIR report
+- Ensure version references enable traceability
+
+**B.2. Determine Version Extraction:**
+- **Epic-level:** Extract version range from all Stories
+- **Story-level:** Extract version from Story document header
+- Use versions for linking and traceability
 
 #### C. EXECUTE
 
-**C.1. Add Links to PIR Report:**
+**C.1. Add Version-Referenced Links to PIR Report:**
 ```markdown
 ## Related Work
 
-- **Epic:** [Epic {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md)
-- **Stories:** {Links to all stories}
-- **Related PIRs:** {Links to related PIR reports}
+- **Epic:** [Epic {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md) (v{version})
+- **Version Range:** {First Version} to {Last Version}
+- **Stories:**
+  - [Story {N1}](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N1}-*.md) (v{version1})
+  - [Story {N2}](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N2}-*.md) (v{version2})
+- **Related PIRs:** {Links to related PIR reports with versions}
 - **Follow-Up Tasks:** {Links to Kanban tasks created}
 ```
+
+**C.2. Include Version References:**
+- Add version range to Epic PIR header
+- Add version to Story PIR header
+- Reference versions in Stories/Tasks review sections
+- Use versions for traceability links
 
 **C.2. Add Links to Work Items:**
 - Epic document → PIR report
@@ -1284,9 +1321,12 @@ PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
 #### D. VALIDATE
 
 **D.1. Validation Checks:**
-- ✅ All work items linked
-- ✅ Version references established
+- ✅ All work items linked using versions
+- ✅ Version references established (RC.EPIC.STORY.TASK+BUILD)
+- ✅ Version format correct
+- ✅ Version range correct (Epic-level)
 - ✅ Bidirectional links complete
+- ✅ Traceability enabled through version references
 
 #### E. PROCEED
 
@@ -1561,6 +1601,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 - [PIR Workflow YAML](../../workflows/pir-workflow.yaml) - Workflow definition
 - [PIR Templates](../../../KB/Documentation/Templates/) - Epic and Story PIR templates
 - [PIR-Kanban Integration Guide](pir-kanban-integration-guide.md) - Kanban integration patterns and examples
+- [PIR-Versioning Integration Guide](pir-versioning-integration-guide.md) - Versioning integration patterns and examples
 - [Release Workflow Agent Execution](release-workflow-agent-execution.md) - RW execution pattern reference
 
 ---
