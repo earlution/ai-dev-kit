@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
 VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
 VERSION_TASK = 9      # Task number (Task 9: Documentation and Testing)
-VERSION_BUILD = 1     # Build number (E2:S11:T09 complete - Updated workflow-mgt documentation with intake workflow references, cross-linked execution guides, and added intake workflow as canonical example)
+VERSION_BUILD = 3     # Build number (E2:S11:T09 expanded analysis framework - comprehensive project analysis framework expanded to include all pattern dimensions beyond Kanban/KB)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

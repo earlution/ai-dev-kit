@@ -14,6 +14,7 @@ The `KB/` directory contains all **knowledge base documentation** for the `ai-de
 
 - `Architecture/` – Technical standards, ADRs, and integration docs
 - `Changelog_and_Release_Notes/` – Changelogs and release notes
+- `Documentation/` – Vision, purpose, and high-level documentation
 - `PM_and_Portfolio/` – Project management, Kanban, and governance
 - `Guides/` – User-facing documentation and how-to guides
 
@@ -31,6 +32,7 @@ Additional documentation currently lives alongside `KB/` at the root:
 
 ## Getting Started
 
+- **🎯 Why AI Dev Kit?** Start with [`KB/Documentation/ai-dev-kit-vision-and-purpose.md`](Documentation/ai-dev-kit-vision-and-purpose.md) — Understand the problem we're solving and the vision
 - **New to the dev-kit?** Start with `KB/Guides/Getting_Started/`
 - **Adopting frameworks?** See `KB/Guides/Framework_Consumption/`
 - **Understanding dev-kit versioning:** See `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
