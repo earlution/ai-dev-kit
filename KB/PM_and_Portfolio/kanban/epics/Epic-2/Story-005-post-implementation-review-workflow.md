@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [x] **E2:S05:T05 – Create PIR agent execution guide** - ✅ COMPLETE (v0.2.5.5+1 – Complete agent execution guide created with step-by-step instructions)
 - [x] **E2:S05:T06 – Create Epic PIR template** - ✅ COMPLETE (v0.2.5.6+1 – Epic PIR template created)
 - [x] **E2:S05:T07 – Create Story PIR template** - ✅ COMPLETE (v0.2.5.7+1 – Story PIR template created)
-- [ ] **E2:S05:T08 – Integrate PIR with Release Workflow (RW)** - TODO
+- [x] **E2:S05:T08 – Integrate PIR with Release Workflow (RW)** - ✅ COMPLETE (v0.2.5.8+1 – RW Step 15 added, workflow YAML and documentation updated)
 - [ ] **E2:S05:T09 – Integrate PIR with Kanban system** - TODO
 - [ ] **E2:S05:T10 – Integrate PIR with versioning system** - TODO
 - [x] **E2:S05:T11 – Create PIR knowledge base structure** - ✅ COMPLETE (v0.2.5.11+1 – KB structure created: KB/Reviews/PIR/ with README)
