@@ -48,9 +48,9 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 
 ### Epic 2: Workflow Management Framework
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE ✅  
 **Priority:** HIGH  
-**Last Updated:** v0.2.11.0+0
+**Last Updated:** v0.2.11.11+1
 
 **Stories:**
 - [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.6+4)
@@ -65,19 +65,16 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
   - Story: [`epics/Epic-2/Story-005-post-implementation-review-workflow.md`](epics/Epic-2/Story-005-post-implementation-review-workflow.md)
 - [x] **E2:S06 – Package Uninstall and Recovery** - COMPLETE ✅ (v0.2.6.3+1)
   - Story: [`epics/Epic-2/Story-006-package-uninstall-and-recovery.md`](epics/Epic-2/Story-006-package-uninstall-and-recovery.md)
-- [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.6+1)
+- [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.8+1)
   - Story: [`epics/Epic-2/Story-007-trigger-aware-release-workflow.md`](epics/Epic-2/Story-007-trigger-aware-release-workflow.md)
-- [ ] **E2:S08 – Harden Release Workflow Reliability** - TODO (v0.2.8.0+0)
+- [x] **E2:S08 – Harden Release Workflow Reliability** - COMPLETE ✅ (v0.2.8.7+1)
   - Story: [`epics/Epic-2/Story-008-harden-release-workflow-reliability.md`](epics/Epic-2/Story-008-harden-release-workflow-reliability.md)
-- [ ] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - TODO (v0.2.9.6+0)
+- [x] **E2:S09 – Kanban Granularity & Discrete Task Docs (RW Integration)** - COMPLETE ✅ (v0.2.9.6+1)
   - Story: [`epics/Epic-2/Story-009-kanban-granularity-discrete-task-docs.md`](epics/Epic-2/Story-009-kanban-granularity-discrete-task-docs.md)
-  - Tasks: T00 ✅ COMPLETE, T06 ✅ COMPLETE (v0.2.9.6+0), T01-T05 TODO
-- [ ] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - TODO (v0.2.10.6+1)
+- [x] **E2:S10 – Versioning Policy Hardening — Doc-Init Build (+0)** - COMPLETE ✅ (v0.2.10.7+1)
   - Story: [`epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md`](epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md)
-  - Tasks: T00 ✅ COMPLETE, T06 ✅ COMPLETE (v0.2.10.6+1), T01-T05 TODO, T07 TODO
-- [ ] **E2:S11 – Intake Workflow Automation** - TODO (v0.2.11.0+0)
+- [x] **E2:S11 – Intake Workflow Automation** - COMPLETE ✅ (v0.2.11.11+1)
   - Story: [`epics/Epic-2/Story-011-intake-workflow-automation.md`](epics/Epic-2/Story-011-intake-workflow-automation.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T09 TODO
 
 **Epic Doc:** [`epics/Epic-2/Epic-2.md`](epics/Epic-2/Epic-2.md)
 
