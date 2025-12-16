@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
-VERSION_TASK = 6      # Task number (Task 6: Fix changelog validator ordering bug - REOPENED)
-VERSION_BUILD = 4     # Build number (E2:S01:T06+4 - Use Cases methodology and KB structure: UC-D-001, UC-D-002, UC-D-003)
+VERSION_STORY = 5     # Story number (Story 5: Post-Implementation Review Workflow)
+VERSION_TASK = 4      # Task number (Task 4: Create PIR workflow YAML definition)
+VERSION_BUILD = 1     # Build number (E2:S05:T04+1 - PIR workflow YAML created with 16 steps)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

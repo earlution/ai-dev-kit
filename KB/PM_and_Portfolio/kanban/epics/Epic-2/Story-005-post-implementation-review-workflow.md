@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 005 – Post-Implementation Review (PIR) Workflow
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-07 (v0.2.5.1+1 – T01 complete: Planning document created with all decisions incorporated, T08 added for RW integration)  
-**Version:** v0.2.5.1+1  
+**Last updated:** 2025-12-16 (v0.2.5.11+1 – T04, T06, T07, T11 complete: Templates, workflow YAML, and KB structure created)  
+**Version:** v0.2.5.11+1  
 **Code:** E2S05
 
 ---
@@ -23,14 +23,14 @@ housekeeping_policy: keep
 - [x] **E2:S05:T01 – Plan PIR workflow structure and requirements** - ✅ COMPLETE (Planning document created, all 8 decisions made and incorporated)
 - [ ] **E2:S05:T02 – Design Epic-level PIR workflow** - TODO
 - [ ] **E2:S05:T03 – Design Story-level PIR workflow** - TODO
-- [ ] **E2:S05:T04 – Create PIR workflow YAML definition** - TODO
+- [x] **E2:S05:T04 – Create PIR workflow YAML definition** - ✅ COMPLETE (v0.2.5.4+1 – Basic workflow YAML created with 16 steps)
 - [ ] **E2:S05:T05 – Create PIR agent execution guide** - TODO
-- [ ] **E2:S05:T06 – Create Epic PIR template** - TODO
-- [ ] **E2:S05:T07 – Create Story PIR template** - TODO
+- [x] **E2:S05:T06 – Create Epic PIR template** - ✅ COMPLETE (v0.2.5.6+1 – Epic PIR template created)
+- [x] **E2:S05:T07 – Create Story PIR template** - ✅ COMPLETE (v0.2.5.7+1 – Story PIR template created)
 - [ ] **E2:S05:T08 – Integrate PIR with Release Workflow (RW)** - TODO
 - [ ] **E2:S05:T09 – Integrate PIR with Kanban system** - TODO
 - [ ] **E2:S05:T10 – Integrate PIR with versioning system** - TODO
-- [ ] **E2:S05:T11 – Create PIR knowledge base structure** - TODO
+- [x] **E2:S05:T11 – Create PIR knowledge base structure** - ✅ COMPLETE (v0.2.5.11+1 – KB structure created: KB/Reviews/PIR/ with README)
 - [ ] **E2:S05:T12 – Test PIR workflow with sample Epic** - TODO
 - [ ] **E2:S05:T13 – Test PIR workflow with sample Story** - TODO
 - [ ] **E2:S05:T14 – Create PIR workflow reference documentation** - TODO
