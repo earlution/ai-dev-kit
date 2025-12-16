@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** User (via been-there project feedback)  
 **Priority:** MEDIUM  
 **Severity:** MEDIUM  
-**Status:** ACCEPTED
+**Status:** REOPENED
 
 ---
 
@@ -93,7 +93,16 @@ The validator was designed to enforce canonical ordering (lowest version first) 
 
 **Affected Projects:**
 - `been-there` (identified the issue)
+- `ai-dev-kit` (bug confirmed still present 2025-12-16)
 - Any project using Keep a Changelog format with the workflow management framework
+
+**Current Validation Errors (2025-12-16):**
+```
+❌ VALIDATION FAILED:
+  Changelog ordering violation: 0.4.6.4+1 appears before 0.4.6.3+1, but canonical ordering requires 0.4.6.3+1 before 0.4.6.4+1
+  Changelog ordering violation: 0.2.11.9+3 appears before 0.2.11.9+2, but canonical ordering requires 0.2.11.9+2 before 0.2.11.9+3
+  [... multiple similar violations for Keep a Changelog format ...]
+```
 
 ---
 
@@ -132,7 +141,8 @@ The validator was designed to enforce canonical ordering (lowest version first) 
 
 **Fix Verification Status:**
 - [ ] Verified (test suite passed / manual test passed)
-- [ ] Attempted Fix (pending verification)
+- [x] Attempted Fix (marked complete but bug still present)
+- [x] Bug Reopened (2025-12-16 - bug persists despite previous fix attempt)
 
 ---
 
@@ -231,6 +241,7 @@ Bug report and task structure established. Ready for implementation work.
 - The validator's canonical ordering check conflicts with Keep a Changelog format (industry standard)
 - The fix should support both formats to maintain compatibility with different project preferences
 - Consider making the validator format-aware or configurable
+- **REOPENED (2025-12-16):** Bug confirmed still present despite E2:S01:T06 being marked complete. Task needs to be re-opened and properly fixed.
 
 ---
 

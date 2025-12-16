@@ -8,9 +8,9 @@ housekeeping_policy: keep
 
 # Epic 2, Story 11: Intake Workflow Automation
 
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-16 (v0.2.11.9+3 – T09 complete: E2:S11:T09)
+**Last updated:** 2025-12-16 (v0.2.11.9+3 – T09 complete: E2:S11:T09)  
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
 **Completed:** 2025-12-16
@@ -31,6 +31,7 @@ housekeeping_policy: keep
 - [x] **E2:S11:T07 – Add Trigger-Aware Execution Support** ✅ COMPLETE (v0.2.11.7+1)
 - [x] **E2:S11:T08 – Create Agent Execution Guide** ✅ COMPLETE (v0.2.11.8+1)
 - [x] **E2:S11:T09 – Documentation and Testing** ✅ COMPLETE (v0.2.11.9+3)
+- [ ] **E2:S11:T10 – Investigate CHANGELOG Entry Removal and Harden Processes** - TODO (v0.2.11.10+0 – Task created)
 
 > **Format:** `E2:S11:Txx` (Epic 2, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.11.1+1)`)  
@@ -45,12 +46,79 @@ Create an automated intake workflow in the workflow management package that form
 
 ## Goals
 
-- [ ] Automate FR/BR/UXR → Kanban task conversion
-- [ ] Standardize intake documentation and wiring
-- [ ] Reduce manual work and errors in intake process
-- [ ] Integrate with existing RW and Kanban systems
-- [ ] Support trigger-aware execution
+- [x] Automate FR/BR/UXR → Kanban task conversion
+- [x] Standardize intake documentation and wiring
+- [x] Reduce manual work and errors in intake process
+- [x] Integrate with existing RW and Kanban systems
+- [x] Support trigger-aware execution
+- [ ] Investigate and prevent accidental CHANGELOG entry removal
 
 ---
 
-... (rest of story content unchanged)
+## Tasks
+
+### E2:S11:T10 – Investigate CHANGELOG Entry Removal and Harden Processes
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Created:** 2025-12-16  
+**Version:** v0.2.11.10+0
+
+**Problem:** In commit `f092c1f` (v0.2.11.9+3), 5,174 lines were accidentally removed from `CHANGELOG.md`, deleting 11 changelog entries (0.2.8.1+1 through 0.2.8.5+1, and 0.2.11.1+1 through 0.2.11.6+1). The commit message did not mention changelog pruning, suggesting this was accidental.
+
+**Investigation Objectives:**
+1. Determine root cause of accidental removal
+2. Identify process gaps that allowed this to happen
+3. Design safeguards to prevent recurrence
+4. Implement validation and protection mechanisms
+
+**Deliverables:**
+- Root cause analysis document
+- Process improvement recommendations
+- CHANGELOG protection mechanisms (validation, pre-commit hooks, etc.)
+- Updated RW documentation with changelog protection guidelines
+
+**Acceptance Criteria:**
+- [ ] Root cause identified and documented
+- [ ] Process gaps documented
+- [ ] Safeguards designed and implemented
+- [ ] RW documentation updated with protection guidelines
+- [ ] Prevention mechanisms validated
+
+---
+
+## Acceptance Criteria
+
+- [x] Intake workflow fully automated
+- [x] FR/BR/UXR → Kanban conversion working
+- [x] Documentation and dependencies automatically updated
+- [x] Integration with RW and trigger-aware execution complete
+- [ ] CHANGELOG protection mechanisms in place
+
+---
+
+## Dependencies
+
+**Depends On:**
+- Epic 2: Workflow Management Framework
+- Epic 4: Kanban Framework
+- Epic 3: Versioning Framework
+
+**Blocks:**
+- Future workflow automation work
+- CHANGELOG integrity (T10)
+
+---
+
+## Related Work
+
+- **Feature Request:** FR-019
+- **Epic:** Epic 2 - Workflow Management
+- **Related Stories:** E2:S08 (RW Hardening), E2:S07 (Trigger-Aware RW)
+
+---
+
+## Notes
+
+- T10 added to investigate and prevent accidental CHANGELOG entry removal
+- All other tasks complete and validated

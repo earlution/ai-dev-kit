@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical EST Template System)
-VERSION_TASK = 4      # Task number (Task 4: Create task template files for each typical task)
-VERSION_BUILD = 1     # Build number (E4:S06:T04 - Task template pattern established: 7 task templates created for Epic 1 Story 1)
+VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
+VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
+VERSION_TASK = 6      # Task number (Task 6: Fix changelog validator ordering bug - REOPENED)
+VERSION_BUILD = 3     # Build number (E2:S01:T06+3 - Task 6 reopened: Changelog validator ordering bug persists)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
