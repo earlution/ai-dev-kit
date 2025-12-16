@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-16 (v0.2.5.12+1 – T12 complete: PIR workflow tested with sample Epic)  
-**Version:** v0.2.5.12+1  
+**Last updated:** 2025-12-16 (v0.2.5.13+1 – T13 complete: Story-level PIR workflow tested)  
+**Version:** v0.2.5.13+1  
 **Code:** E2S05
 
 ---
