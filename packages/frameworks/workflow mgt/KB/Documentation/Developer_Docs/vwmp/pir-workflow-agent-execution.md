@@ -1560,6 +1560,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 - [Story-Level PIR Design](../../Analysis/T03-story-level-pir-workflow-design.md) - Story-level design
 - [PIR Workflow YAML](../../workflows/pir-workflow.yaml) - Workflow definition
 - [PIR Templates](../../../KB/Documentation/Templates/) - Epic and Story PIR templates
+- [PIR-Kanban Integration Guide](pir-kanban-integration-guide.md) - Kanban integration patterns and examples
 - [Release Workflow Agent Execution](release-workflow-agent-execution.md) - RW execution pattern reference
 
 ---
