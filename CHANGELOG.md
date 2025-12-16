@@ -17,6 +17,83 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.6.4+2] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 1 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 6 task templates for Epic 1 Story 2 (Core Infrastructure), bringing total to 13 task templates. Pattern established and validated for scalable template creation across all epics and stories.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design and implement core architecture patterns
+- ✅ T02: Set up configuration management system
+- ✅ T03: Implement logging and error handling infrastructure
+- ✅ T04: Create utility functions and shared libraries
+- ✅ T05: Set up dependency injection or service container
+- ✅ T06: Implement base classes and interfaces
+
+**Progress:**
+- Epic 1 Story 1: 7 task templates ✅ COMPLETE
+- Epic 1 Story 2: 6 task templates ✅ COMPLETE
+- Total: 13 task templates created (~4% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+
+## [0.2.11.11+1] - 16-12-25
+
+🔧 Workflow Management: E2:S11:T11 - Fix CHANGELOG Ordering Violations
+
+### Summary
+
+**CHANGELOG Reordering:** Fixed all ordering violations in CHANGELOG.md. Reordered 186 unique entries to correct Keep a Changelog format (newest first), removed 3 duplicate entries, and updated validator to allow build 0 for doc-init builds.
+
+### Changes
+
+**CHANGELOG Fixes:**
+- ✅ Reordered all 186 entries to correct Keep a Changelog order (newest first)
+- ✅ Removed 3 duplicate entries (0.2.11.9+3, 0.2.11.9+2, 0.2.1.6+4)
+- ✅ Preserved all entry content, links, and references
+- ✅ Preserved [Unreleased] section
+- ✅ Validator now passes with `--format keep_a_changelog`
+
+**Validator Updates:**
+- ✅ Updated build number validation to allow build 0 (valid for doc-init builds per FR-020)
+- ✅ Validator correctly validates Keep a Changelog format
+
+**Ordering Results:**
+- Highest version: 0.9.21.3+2 (first entry)
+- Lowest version: 0.1.1.1+1 (last entry)
+- All entries in descending order (newest first)
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 11 - Intake Workflow Automation
+- **Task:** Task 11 - Fix CHANGELOG Ordering Violations
+- **Related:** E2:S01:T06 (Validator format support - COMPLETE)
+- **Related:** E2:S11:T10 (CHANGELOG protection - COMPLETE)
+- **Related:** E3:S02:T06 (Changelog ordering process - PERPETUAL)
+
+---
+
 ## [0.9.21.3+2] - 02-12-25
 
 📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
@@ -1183,46 +1260,6 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Changed
 
 - **Story 6:** Updated T02 status (4/14 epics complete, 10 remaining)
-
----
-
-## [0.4.6.4+2] - 16-12-25
-
-📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 1 Story 2
-
-### Summary
-
-**Task Template Creation:** Created 6 task templates for Epic 1 Story 2 (Core Infrastructure), bringing total to 13 task templates. Pattern established and validated for scalable template creation across all epics and stories.
-
-### Changes
-
-**Task Templates Created:**
-- ✅ T01: Design and implement core architecture patterns
-- ✅ T02: Set up configuration management system
-- ✅ T03: Implement logging and error handling infrastructure
-- ✅ T04: Create utility functions and shared libraries
-- ✅ T05: Set up dependency injection or service container
-- ✅ T06: Implement base classes and interfaces
-
-**Progress:**
-- Epic 1 Story 1: 7 task templates ✅ COMPLETE
-- Epic 1 Story 2: 6 task templates ✅ COMPLETE
-- Total: 13 task templates created (~4% of ~300+ target)
-
-**Template Quality:**
-- ✅ Consistent structure across all templates
-- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
-- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
-- ✅ Version anchor and forensic markers included
-- ✅ Related work and integration points documented
-
-### Related Work
-
-- **Epic:** Epic 4 - Kanban Framework
-- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
-- **Task:** Task 4 - Create task template files for each typical task
-- **Related:** E4:S06:T03 (Story templates - COMPLETE)
-- **Related:** E4:S06:T05 (Contextualization guide - TODO)
 
 ---
 
@@ -2401,43 +2438,6 @@ Established material capture infrastructure for unstructured book content. Creat
 - Epic 3 owns the `packages/frameworks/numbering & versioning/` package
 - Story 1 tasks focus on establishing dev-kit as canonical SoT for versioning policies
 - See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.1+1.md` for full details
-
----
-
-## [0.2.11.11+1] - 16-12-25
-
-🔧 Workflow Management: E2:S11:T11 - Fix CHANGELOG Ordering Violations
-
-### Summary
-
-**CHANGELOG Reordering:** Fixed all ordering violations in CHANGELOG.md. Reordered 186 unique entries to correct Keep a Changelog format (newest first), removed 3 duplicate entries, and updated validator to allow build 0 for doc-init builds.
-
-### Changes
-
-**CHANGELOG Fixes:**
-- ✅ Reordered all 186 entries to correct Keep a Changelog order (newest first)
-- ✅ Removed 3 duplicate entries (0.2.11.9+3, 0.2.11.9+2, 0.2.1.6+4)
-- ✅ Preserved all entry content, links, and references
-- ✅ Preserved [Unreleased] section
-- ✅ Validator now passes with `--format keep_a_changelog`
-
-**Validator Updates:**
-- ✅ Updated build number validation to allow build 0 (valid for doc-init builds per FR-020)
-- ✅ Validator correctly validates Keep a Changelog format
-
-**Ordering Results:**
-- Highest version: 0.9.21.3+2 (first entry)
-- Lowest version: 0.1.1.1+1 (last entry)
-- All entries in descending order (newest first)
-
-### Related Work
-
-- **Epic:** Epic 2 - Workflow Management Framework
-- **Story:** Story 11 - Intake Workflow Automation
-- **Task:** Task 11 - Fix CHANGELOG Ordering Violations
-- **Related:** E2:S01:T06 (Validator format support - COMPLETE)
-- **Related:** E2:S11:T10 (CHANGELOG protection - COMPLETE)
-- **Related:** E3:S02:T06 (Changelog ordering process - PERPETUAL)
 
 ---
 
