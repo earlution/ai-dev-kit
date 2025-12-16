@@ -8,15 +8,24 @@ housekeeping_policy: keep
 
 # Release Workflow Reference
 
-**Version:** 1.4.0
-**Last Updated:** 2025-12-05
-**Related:** Epic 21, Story 4 - Comprehensive VWMP Documentation
+**Version:** 2.1.0
+**Last Updated:** 2025-12-16
+**Related:** Epic 2, Story 5 - Post-Implementation Review Workflow Integration
 
 ---
 
 ## 📜 Version History
 
-**Current Version:** 1.4.0 (2025-12-05)
+**Current Version:** 2.1.0 (2025-12-16)
+
+### Version 2.1.0 (2025-12-16) - PIR Workflow Integration
+- **Added:** Step 15: Check for PIR Trigger (after Step 14)
+- **Changed:** Updated workflow structure from 14 steps to 15 steps
+- **Changed:** Workflow version updated from 2.0.0 to 2.1.0
+- **Feature:** Auto-trigger PIR workflow when Epic/Story marked COMPLETE
+- **Feature:** Deterministic check for Epic/Story COMPLETE status
+- **Feature:** Story significance evaluation before PIR trigger
+- **Related:** E2:S05:T08 - Integrate PIR with Release Workflow
 
 ### Version 1.4.0 (2025-12-05) - Branch Safety Hardening
 - **Added:** Step 1: Branch Safety Check as mandatory blocking step
@@ -1205,6 +1214,173 @@ After execution, this step outputs:
 
 ---
 
+### Step 15: Check for PIR Trigger
+
+**Handler:** `pir.check_trigger`
+**Category:** Integration
+**Icon:** 🔍
+**Required:** ❌ No (optional but recommended)
+**Blocking:** ❌ No (non-blocking - RW completes even if PIR trigger fails)
+**Default Dependencies:** `step-12` (check after push to remote)
+
+#### Purpose
+
+Automatically triggers Post-Implementation Review (PIR) workflow when Epic or Story is marked COMPLETE. This step performs a deterministic check to detect COMPLETE status and conditionally triggers the PIR workflow.
+
+#### Execution Flow
+
+1. **Read Epic/Story Status:**
+   - Determine current Epic/Story from version (RC.EPIC.STORY.TASK+BUILD)
+   - Read Epic/Story document from Kanban structure
+   - Extract status field
+
+2. **Check COMPLETE Status:**
+   - Verify status is "COMPLETE" or "COMPLETE ✅"
+   - If not COMPLETE, skip PIR trigger
+
+3. **Evaluate Review Level:**
+   - **Epic-level:** If Epic is COMPLETE, always trigger PIR
+   - **Story-level:** If Story is COMPLETE, evaluate significance first
+
+4. **Story Significance Evaluation (Story-level only):**
+   - Apply significance criteria from config
+   - Determine if Story warrants PIR
+   - If not significant, skip PIR trigger
+
+5. **Trigger PIR Workflow:**
+   - Invoke PIR workflow with context (Epic/Story ID, version)
+   - Pass review level (epic/story)
+   - PIR executes as separate workflow (non-blocking)
+
+#### Configuration Parameters
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `epic_pir_always` | boolean | ❌ No | `true` | Always trigger PIR for completed Epics |
+| `story_pir_significance_criteria` | array | ❌ No | `[...]` | Criteria for Story significance evaluation |
+| `pir_workflow_path` | string | ❌ No | `packages/frameworks/workflow mgt/workflows/pir-workflow.yaml` | Path to PIR workflow YAML |
+| `kanban_root` | string | ❌ No | `KB/PM_and_Portfolio/kanban` | Root path to Kanban documents |
+| `epic_doc_pattern` | string | ❌ No | `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md` | Pattern for Epic document paths |
+| `story_doc_pattern` | string | ❌ No | `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md` | Pattern for Story document paths |
+
+#### Deterministic Check Logic
+
+**Epic-Level Check:**
+```python
+# Read Epic document
+epic_doc = read_file(f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md")
+status = extract_status(epic_doc)
+
+# Check COMPLETE status
+if status in ["COMPLETE", "COMPLETE ✅"]:
+    trigger_pir(level="epic", epic=epic, version=version)
+```
+
+**Story-Level Check:**
+```python
+# Read Story document
+story_doc = read_file(f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md")
+status = extract_status(story_doc)
+
+# Check COMPLETE status
+if status in ["COMPLETE", "COMPLETE ✅"]:
+    # Evaluate significance
+    significance = evaluate_significance(story_doc, criteria)
+    if significance in ["High", "Medium"]:  # Configurable
+        trigger_pir(level="story", epic=epic, story=story, version=version)
+```
+
+#### Story Significance Criteria
+
+**High Significance (Mandatory PIR):**
+- Introduces new architectural patterns
+- Affects multiple systems/components
+- Includes significant technical debt/refactoring
+- High business impact/user visibility
+- Complex integration/migration work
+- Duration > threshold (e.g., >2 weeks)
+- Multiple dependencies/blockers
+
+**Medium Significance (Optional PIR):**
+- Introduces new tools/frameworks
+- Documentation/process changes
+- Moderate complexity/scope
+- Cross-team coordination
+
+**Low Significance (No PIR):**
+- Simple bug fixes/minor enhancements
+- Routine maintenance tasks
+- Documentation-only changes
+- Small, isolated features
+
+#### Step Outputs
+
+After execution, this step outputs:
+
+```json
+{
+  "pir_triggered": true,
+  "review_level": "epic",
+  "epic": 2,
+  "story": null,
+  "version": "0.2.11.9+3",
+  "significance": null,
+  "pir_workflow_status": "triggered"
+}
+```
+
+Or for Story-level:
+
+```json
+{
+  "pir_triggered": true,
+  "review_level": "story",
+  "epic": 2,
+  "story": 5,
+  "version": "0.2.5.11+1",
+  "significance": "High",
+  "pir_workflow_status": "triggered"
+}
+```
+
+Or if skipped:
+
+```json
+{
+  "pir_triggered": false,
+  "review_level": "story",
+  "epic": 2,
+  "story": 5,
+  "version": "0.2.5.11+1",
+  "significance": "Low",
+  "skip_reason": "Story not significant enough for PIR"
+}
+```
+
+#### Error Handling
+
+- **Epic/Story document not found:** Log warning, skip PIR trigger
+- **Status field missing:** Log warning, skip PIR trigger
+- **PIR workflow invocation fails:** Log warning, RW continues (non-blocking)
+- **Significance evaluation fails:** Default to Medium Significance, proceed with PIR
+
+#### Integration Points
+
+- **RW Step 12:** Depends on Push to Remote (Step 12) completion
+- **PIR Workflow:** Triggers PIR workflow as separate execution
+- **Kanban Documents:** Reads Epic/Story status from Kanban documents
+- **Version Context:** Uses current version to identify Epic/Story
+
+#### Non-Blocking Behavior
+
+**Critical:** This step is **non-blocking**. If PIR trigger fails:
+- RW workflow completes successfully
+- Warning is logged
+- PIR can be triggered manually later
+- No impact on release process
+
+---
+
 ## 📋 Workflow Parameters
 
 The Release Workflow accepts the following parameters when executing:
@@ -1316,8 +1492,10 @@ Step 1 (Branch Safety Check)
                     └─→ Step 9 (Commit Changes)
                           ├─→ Step 10 (Create Git Tag)
                           └─→ Step 11 (Push to Remote) ← depends on 9,10
-                                └─→ Step 12 (Post-Commit Verification & Reflection)
-                                      └─→ Step 13 (Act on Verification Results)
+                                ├─→ Step 12 (Post-Commit Verification & Reflection)
+                                │     └─→ Step 13 (Act on Verification Results)
+                                │           └─→ Step 14 (Act on Verification Results)
+                                └─→ Step 15 (Check for PIR Trigger) ← depends on 11
 ```
 
 ### Execution Phases
@@ -1333,10 +1511,17 @@ Step 1 (Branch Safety Check)
 - Steps 8, 9, 10, 11 run sequentially
 - Step 11 waits for both Step 9 and Step 10
 
-**Phase 3: PDCA CHECK & ACT** (Steps 12-13, optional but recommended)
+**Phase 3: PDCA CHECK & ACT** (Steps 12-14, optional but recommended)
 - Step 12 runs after Step 11 completes
 - Step 13 runs after Step 12 completes
-- Both steps are optional but recommended for continuous improvement
+- Step 14 runs after Step 13 completes
+- Steps 12-14 are optional but recommended for continuous improvement
+
+**Phase 4: PIR Integration** (Step 15, optional but recommended)
+- Step 15 runs after Step 12 completes (Push to Remote)
+- Checks for Epic/Story COMPLETE status
+- Triggers PIR workflow if applicable
+- Non-blocking (RW completes even if PIR trigger fails)
 
 ### Parallel Execution
 

@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-16 (v0.2.5.5+1 – T05 complete: PIR agent execution guide created)  
-**Version:** v0.2.5.5+1  
+**Last updated:** 2025-12-16 (v0.2.5.8+1 – T08 complete: PIR-RW integration implemented)  
+**Version:** v0.2.5.8+1  
 **Code:** E2S05
 
 ---

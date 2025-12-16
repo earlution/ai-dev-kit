@@ -17,9 +17,48 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.5.5+1] - 16-12-25
+## [0.2.5.8+1] - 16-12-25
 
-📖 Workflow Management: E2:S05:T05 - Create PIR Agent Execution Guide
+🔗 Workflow Management: E2:S05:T08 - Integrate PIR with Release Workflow (RW)
+
+### Summary
+
+**PIR-RW Integration:** Added Step 15 to Release Workflow for automatic PIR trigger when Epic/Story is marked COMPLETE. Includes deterministic check for COMPLETE status, Story significance evaluation, and non-blocking PIR workflow invocation. Updated workflow YAML, reference documentation, and agent execution guide.
+
+### Changes
+
+**RW Workflow Updates:**
+- ✅ Added Step 15: Check for PIR Trigger to `release-workflow.yaml`
+- ✅ Updated workflow version from 2.0.0 to 2.1.0
+- ✅ Step 15 depends on Step 12 (Push to Remote)
+- ✅ Non-blocking step (RW completes even if PIR trigger fails)
+- ✅ Configuration options for Epic/Story PIR triggering
+
+**Documentation Updates:**
+- ✅ Updated `release-workflow-reference.md` with Step 15 documentation
+- ✅ Updated `release-workflow-agent-execution.md` with Step 15 execution guide
+- ✅ Updated version history (1.4.0 → 2.1.0 for reference, 1.7.0 → 1.8.0 for execution guide)
+- ✅ Updated step count references (14 → 15 steps)
+- ✅ Updated dependency graphs and execution flow
+
+**Integration Features:**
+- Epic-level: Always triggers PIR if COMPLETE
+- Story-level: Evaluates significance before triggering
+- Deterministic status check from Kanban documents
+- Non-blocking PIR workflow invocation
+- Error handling with warnings (doesn't block RW)
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 5 - Post-Implementation Review Workflow
+- **Task:** Task 8 - Integrate PIR with Release Workflow
+- **PIR Workflow:** `pir-workflow.yaml`
+- **PIR Execution Guide:** `pir-workflow-agent-execution.md`
+
+---
+
+## [0.2.5.5+1] - 16-12-25
 
 ### Summary
 

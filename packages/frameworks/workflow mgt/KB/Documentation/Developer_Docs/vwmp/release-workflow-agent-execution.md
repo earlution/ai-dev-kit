@@ -8,15 +8,24 @@ housekeeping_policy: keep
 
 # Release Workflow: Agent Execution Guide
 
-**Version:** 1.7.0
-**Last Updated:** 2025-12-12
+**Version:** 1.8.0
+**Last Updated:** 2025-12-16
 **Related:** [Example: Confidentia - Epic 4 - User Workflows & Use Case Modeling, Release Workflow] | [Example: ai-dev-kit - Epic 2 - Workflow Management Framework, Release Workflow]
 
 ---
 
 ## 📜 Version History
 
-**Current Version:** 1.7.0 (2025-12-12)
+**Current Version:** 1.8.0 (2025-12-16)
+
+### Version 1.8.0 (2025-12-16) - PIR Workflow Integration
+- **Added:** Step 15: Check for PIR Trigger (after Step 12)
+- **Changed:** Updated workflow structure from 14 steps to 15 steps
+- **Changed:** Step 15 performs deterministic check for Epic/Story COMPLETE status
+- **Changed:** Step 15 triggers PIR workflow automatically (non-blocking)
+- **Feature:** Auto-trigger PIR when Epic/Story marked COMPLETE
+- **Feature:** Story significance evaluation before PIR trigger
+- **Related:** E2:S05:T08 - Integrate PIR with Release Workflow
 
 ### Version 1.7.0 (2025-12-12) - Doc-Init Examples and Documentation
 - **Added:** Doc-init scenarios and examples to Step 2 "B. IDENTIFY COMPLETED TASK" section
@@ -91,7 +100,7 @@ housekeeping_policy: keep
 
 This document provides a **step-by-step agent execution guide** for the Release Workflow. The Release Workflow serves as the **canonical example** of intelligent agent-driven workflow execution.
 
-**This guide shows exactly how an AI agent should analyze, determine, execute, validate, and proceed through each of the 14 Release Workflow steps (Steps 1-12 are required, Steps 13-14 are optional but recommended for PDCA CHECK and ACT phases).**
+**This guide shows exactly how an AI agent should analyze, determine, execute, validate, and proceed through each of the 15 Release Workflow steps (Steps 1-12 are required, Steps 13-14 are optional but recommended for PDCA CHECK and ACT phases, Step 15 is optional but recommended for PIR integration).**
 
 > **Note on Examples:** This document includes examples from multiple projects:
 > - **[Example: Confidentia/fynd.deals]** - Examples from the original source project
@@ -121,7 +130,7 @@ These principles are part of the RW contract for agents and humans in this proje
 
 **Workflow:** Release Workflow
 **Type:** `release`
-**Steps:** 14 steps organized into 3 phases (Steps 1-12: required, Steps 13-14: optional CHECK and ACT phases)
+**Steps:** 15 steps organized into 4 phases (Steps 1-12: required, Steps 13-14: optional CHECK and ACT phases, Step 15: optional PIR integration)
 **Canonical Example:** Yes - this workflow demonstrates the agent-driven execution pattern
 
 ### Agent Execution Pattern
@@ -147,7 +156,7 @@ For each step, the agent follows this pattern:
 
 **Required Implementation Pattern:**
 
-1. **At Workflow Start (MANDATORY):** Create TODO list with all 14 steps as `pending`
+1. **At Workflow Start (MANDATORY):** Create TODO list with all 15 steps as `pending`
    ```python
    todo_write(merge=False, todos=[
        {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - Analyze work and ensure it aligns with current branch'},
@@ -164,6 +173,7 @@ For each step, the agent follows this pattern:
        {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags'},
        {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification & Reflection - Verify changes and reflect on results (optional but recommended)'},
        {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Update changelog, create follow-ups, document improvements (optional but recommended)'},
+       {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Check for PIR Trigger - Check Epic/Story COMPLETE status and trigger PIR workflow (optional but recommended)'},
    ])
    ```
 
@@ -2297,6 +2307,134 @@ except Exception as e:
 
 ---
 
+### Step 15: Check for PIR Trigger
+
+**Step Definition:**
+```yaml
+- id: step-15
+  name: Check for PIR Trigger
+  handler: pir.check_trigger
+  dependencies: [step-12]
+  config:
+    epic_pir_always: true
+    story_pir_significance_criteria: [...]
+    pir_workflow_path: packages/frameworks/workflow mgt/workflows/pir-workflow.yaml
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Get `new_version` from Step 2:
+     - [Example: ai-dev-kit] `"0.2.11.9+3"`
+   - Extract Epic and Story from version (RC.EPIC.STORY.TASK+BUILD)
+   - Determine Epic/Story document paths from Kanban structure
+   - Understand this step triggers PIR workflow if Epic/Story is COMPLETE
+   - Check if PIR workflow is enabled (config)
+
+2. **DETERMINE:**
+   - **For Epic-Level:**
+     - Read Epic document status
+     - If COMPLETE, trigger Epic PIR workflow
+     - Always trigger if `epic_pir_always: true`
+   - **For Story-Level:**
+     - Read Story document status
+     - If COMPLETE, evaluate significance
+     - If significant, trigger Story PIR workflow
+     - If not significant, skip PIR trigger
+   - **If not COMPLETE:**
+     - Skip PIR trigger
+     - Log status for reference
+
+3. **EXECUTE:**
+   - **Read Epic/Story Document:**
+     ```bash
+     # Epic-level
+     Epic: KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md
+     
+     # Story-level
+     Story: KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md
+     ```
+   
+   - **Extract Status:**
+     - Read status field from document
+     - Check if status is "COMPLETE" or "COMPLETE ✅"
+   
+   - **For Epic-Level (if COMPLETE):**
+     - Trigger Epic PIR workflow
+     - Pass context: Epic number, version range
+     - PIR executes as separate workflow (non-blocking)
+   
+   - **For Story-Level (if COMPLETE):**
+     - Evaluate significance against criteria
+     - If High/Medium Significance: Trigger Story PIR workflow
+     - If Low Significance: Skip PIR trigger, log reason
+     - Pass context: Epic number, Story number, version
+   
+   - **Log Results:**
+     - Document PIR trigger decision
+     - Log Epic/Story, version, significance (if Story)
+     - Log trigger status (triggered/skipped)
+
+4. **VALIDATE:**
+   - Verify Epic/Story document was read successfully
+   - Verify status extraction was correct
+   - Verify PIR trigger decision was made correctly
+   - **Non-blocking:** If PIR trigger fails, log warning and continue
+   - **RW continues:** RW workflow completes successfully regardless of PIR trigger result
+
+5. **PROCEED:**
+   - Document PIR trigger decision
+   - If triggered: Note PIR workflow execution started
+   - If skipped: Note skip reason
+   - **Workflow Complete!** (RW finishes, PIR runs separately)
+
+**Key Points:**
+- This step is **non-blocking** - RW completes even if PIR trigger fails
+- Epic-level: Always triggers PIR if COMPLETE
+- Story-level: Only triggers PIR if significant
+- PIR executes as separate workflow (doesn't block RW)
+- Deterministic check ensures reliable triggering
+
+**Integration with PIR Workflow:**
+- Step 15 triggers PIR workflow automatically
+- PIR workflow executes independently
+- RW workflow completes successfully
+- PIR results are separate from RW results
+
+**Examples:**
+
+**Example 1: Epic COMPLETE - Trigger Epic PIR**
+- Version: `0.2.11.9+3` (Epic 2, Story 11, Task 9)
+- Epic 2 status: COMPLETE ✅
+- Step 15 action: Trigger Epic PIR workflow
+- PIR context: Epic 2, version range `0.2.11.1+1` to `0.2.11.9+3`
+- Result: Epic PIR workflow triggered, RW completes
+
+**Example 2: Story COMPLETE (High Significance) - Trigger Story PIR**
+- Version: `0.2.5.11+1` (Epic 2, Story 5, Task 11)
+- Story 5 status: COMPLETE ✅
+- Significance evaluation: High (introduces new patterns, multiple tasks)
+- Step 15 action: Trigger Story PIR workflow
+- PIR context: Epic 2, Story 5, version `0.2.5.11+1`
+- Result: Story PIR workflow triggered, RW completes
+
+**Example 3: Story COMPLETE (Low Significance) - Skip PIR**
+- Version: `0.2.1.6+4` (Epic 2, Story 1, Task 6)
+- Story 1 status: COMPLETE ✅
+- Significance evaluation: Low (simple bug fix)
+- Step 15 action: Skip PIR trigger
+- Skip reason: "Story not significant enough for PIR"
+- Result: PIR skipped, RW completes
+
+**Example 4: Story Not COMPLETE - Skip PIR**
+- Version: `0.2.5.5+1` (Epic 2, Story 5, Task 5)
+- Story 5 status: IN PROGRESS
+- Step 15 action: Skip PIR trigger
+- Skip reason: "Story not COMPLETE"
+- Result: PIR skipped, RW completes
+
+---
+
 ## ✅ Agent Execution Checklist
 
 **Note:** This markdown checklist serves as a reference. **Agents MUST use Cursor TODOs** (see "🚨 MANDATORY: Progress Tracking with Cursor TODOs" section above) for real-time progress tracking. TODOs are **REQUIRED**, not optional.
@@ -2304,9 +2442,9 @@ except Exception as e:
 When executing Release Workflow as an agent, ensure:
 
 ### Pre-Execution
-- [ ] **MANDATORY:** Created TODO list with all 13 steps (using `todo_write`) - Note: Steps 12-13 are optional but recommended
+- [ ] **MANDATORY:** Created TODO list with all 15 steps (using `todo_write`) - Note: Steps 12-14 are optional but recommended for PDCA, Step 15 is optional but recommended for PIR
 - [ ] Loaded workflow definition from YAML
-- [ ] Parsed all 13 steps and dependencies
+- [ ] Parsed all 15 steps and dependencies
 - [ ] Gathered workflow parameters (summary, change_type, etc.)
 - [ ] Checked current Git branch
 - [ ] Verified workspace context
@@ -2326,6 +2464,7 @@ When executing Release Workflow as an agent, ensure:
 - [ ] **Step 12:** Analyzed remote, pushed branch and tag, validated
 - [ ] **Step 13:** Analyzed changes, prompted for verification, documented reflection, validated (optional but recommended)
 - [ ] **Step 14:** Analyzed verification results, acted on results, updated changelog, created follow-ups, validated (optional but recommended)
+- [ ] **Step 15:** Analyzed Epic/Story status, checked COMPLETE, evaluated significance, triggered PIR if applicable, validated (optional but recommended)
 
 ### Post-Execution
 - [ ] **MANDATORY:** All steps marked as completed in TODO list
@@ -2339,6 +2478,7 @@ When executing Release Workflow as an agent, ensure:
 - [ ] Branch pushed to remote
 - [ ] Verification and reflection documented (if Step 12 executed)
 - [ ] Actions taken and follow-ups created (if Step 13 executed)
+- [ ] PIR trigger checked and executed if applicable (if Step 15 executed)
 - [ ] Execution documented
 
 ---
@@ -2440,5 +2580,5 @@ The `.cursorrules` file defines a **case-insensitive "RW" trigger** that mandate
 
 ---
 
-**Last Updated:** 2025-12-15
-**Document Version:** 1.7.0
+**Last Updated:** 2025-12-16
+**Document Version:** 1.8.0
