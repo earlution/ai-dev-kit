@@ -1122,6 +1122,9 @@ The Versioning Policy requires that:
      - [Example: ai-dev-kit] `"0.2.1.1+3"`
    - Get summary and change type from parameters
    - **Use config path:** Read main changelog (from config `main_changelog` or fallback `CHANGELOG.md`) to find "## Recent Releases" section
+   - **CRITICAL - Entry Preservation:** Read ENTIRE existing CHANGELOG.md content - DO NOT truncate or skip any entries
+   - **CRITICAL - Backup Before Write:** Create backup of CHANGELOG.md: `CHANGELOG.md.backup` (or `CHANGELOG.md.{timestamp}.backup`)
+   - Count existing entries: Extract all `## [version]` headers and count total entries
    - **CRITICAL - Canonical Ordering:** Read ALL existing changelog entries and extract version numbers
    - Parse existing version numbers: Extract `## [version]` headers and parse `RC.EPIC.STORY.TASK+BUILD` format
    - Understand canonical ordering: Versions must be ordered by version number (RC → EPIC → STORY → TASK → BUILD), NOT by insertion time
@@ -1160,6 +1163,11 @@ The Versioning Policy requires that:
    - Add link to detailed changelog file
 
 4. **VALIDATE:**
+   - **CRITICAL - Entry Preservation Validation:**
+     - Re-read entire CHANGELOG.md after write
+     - Count entries: New count should equal old count + 1
+     - Verify ALL existing entries are still present (compare version lists)
+     - If any existing entry is missing: **RESTORE from backup, STOP, report error**
    - Verify entry was inserted correctly
    - Check date format is `DD-MM-YY`
    - Verify link to detailed changelog is correct
@@ -1167,14 +1175,24 @@ The Versioning Policy requires that:
      - Verify entry is in correct canonical order (by version number, NOT by insertion time)
      - Re-read changelog entries and verify all versions are in canonical order
      - Check that new version appears after all smaller versions and before all larger versions
-     - If ordering violation detected: **STOP** and report error
+     - If ordering violation detected: **RESTORE from backup, STOP, report error**
+   - **CRITICAL - Version Continuity Check:**
+     - Verify no version gaps introduced
+     - If gaps detected: **RESTORE from backup, STOP, report error**
    - **CRITICAL - Verification Validation:**
      - If entry includes "Fixed" subsection, verify all listed fixes have verification evidence in detailed changelog
      - If any fix in "Fixed" section lacks verification evidence, **STOP** and require verification
      - Verify "Attempted Fixes" section exists if there are unverified fixes
+   - **CRITICAL - Large Deletion Detection:**
+     - Calculate line count difference: If >100 lines removed, **RESTORE from backup, STOP, report error**
+     - This prevents accidental file overwrites
 
 5. **PROCEED:**
+   - **CRITICAL - Cleanup Backup:**
+     - Only remove backup file if all validations passed
+     - If any validation failed, backup remains for manual recovery
    - Document: "Updated main changelog with summary entry"
+   - Document: "Backup created and validated: All entries preserved"
    - Move to Step 5 (can run in parallel with Steps 5-6)
 
 ---
