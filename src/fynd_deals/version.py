@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
-VERSION_TASK = 10     # Task number (Task 10: Investigate CHANGELOG Entry Removal and Harden Processes)
-VERSION_BUILD = 1     # Build number (E2:S11:T10+1 - CHANGELOG protection safeguards implemented)
+VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
+VERSION_TASK = 6      # Task number (Task 6: Fix changelog validator ordering bug)
+VERSION_BUILD = 4     # Build number (E2:S01:T06+4 - Validator supports both formats with auto-detection)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

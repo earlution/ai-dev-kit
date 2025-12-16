@@ -17,6 +17,43 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.1.6+4] - 16-12-25
+
+🔧 Workflow Management: E2:S01:T06 - Fix Changelog Validator Ordering Bug
+
+### Summary
+
+**Validator Enhancement:** Fixed changelog validator to support both Keep a Changelog format (newest first, industry standard) and Canonical format (lowest first). Validator now auto-detects format and validates accordingly, with Keep a Changelog as the default.
+
+### Changes
+
+**Validator Updates:**
+- ✅ Added format detection: Auto-detects Keep a Changelog vs Canonical format
+- ✅ Support for both formats: Validates ordering based on detected format
+- ✅ Default to Keep a Changelog: Industry standard format (newest first)
+- ✅ Clear error messages: Indicates which format is expected
+- ✅ `--format` flag: Optional explicit format specification (keep_a_changelog/canonical/auto)
+
+**Format Support:**
+- **Keep a Changelog (default):** Newest first - higher versions appear before lower versions
+- **Canonical:** Lowest first - versions ordered by RC.EPIC.STORY.TASK+BUILD comparison
+- **Auto-detection:** Compares first two versions to determine format
+
+**Bug Fix:**
+- ✅ Fixed validator incorrectly enforcing canonical ordering on Keep a Changelog format
+- ✅ Validator now correctly validates Keep a Changelog format (newest first)
+- ✅ Maintains backward compatibility with canonical format
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 1 - RW Agent Execution & Docs
+- **Task:** Task 6 - Fix changelog validator ordering bug
+- **Bug Report:** BR-002 (REOPENED, now fixed)
+- **Related:** E2:S11:T10 (CHANGELOG protection - complementary work)
+
+---
+
 ## [0.2.11.10+1] - 16-12-25
 
 🔒 Workflow Management: E2:S11:T10 - CHANGELOG Entry Removal Investigation and Hardening

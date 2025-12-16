@@ -37,7 +37,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 - [x] **E2:S01:T03 – Align `.cursorrules` RW trigger section with dev-kit policy** ✅ COMPLETE (v0.2.1.1+5)
 - [x] **E2:S01:T04 – Update RW changelog step to require verification before marking fixes as "fixed"** ✅ COMPLETE (v0.2.1.1+2)
 - [x] **E2:S01:T05 – Harden RW branch safety checks to stop execution on wrong branch** ✅ COMPLETE (v0.2.1.5+1)
-- [ ] **E2:S01:T06 – Fix changelog validator ordering bug** 🔄 REOPENED (v0.2.1.6+2 → v0.2.1.6+3 – Bug persists, re-opening with new context)
+- [x] **E2:S01:T06 – Fix changelog validator ordering bug** ✅ COMPLETE (v0.2.1.6+4 – Validator now supports both Keep a Changelog and Canonical formats with auto-detection)
 - [x] **E2:S01:T07 – Add support for update/maintenance branch patterns in branch validation** ✅ COMPLETE (v0.2.1.7+1)
 
 ---

@@ -132,9 +132,52 @@ def extract_changelog_versions(content: str) -> List[Tuple[str, Tuple[int, int, 
     return versions
 
 
-def validate_changelog_ordering(content: str) -> Tuple[bool, List[str]]:
+def detect_changelog_format(content: str) -> str:
     """
-    Validate that changelog entries are in canonical order (by version number).
+    Detect changelog format: 'keep_a_changelog' (newest first) or 'canonical' (lowest first).
+    
+    Detection logic:
+    - If first version > second version: Keep a Changelog format (newest first)
+    - If first version < second version: Canonical format (lowest first)
+    - Default: Keep a Changelog format (industry standard)
+    
+    Returns:
+        'keep_a_changelog' or 'canonical'
+    """
+    versions = extract_changelog_versions(content)
+    
+    if len(versions) < 2:
+        # Default to Keep a Changelog format (industry standard)
+        return 'keep_a_changelog'
+    
+    # Compare first two versions to detect format
+    first_version_str, first_components = versions[0]
+    second_version_str, second_components = versions[1]
+    
+    comparison = compare_versions(first_components, second_components)
+    
+    if comparison > 0:
+        # First version > second version: Keep a Changelog format (newest first)
+        return 'keep_a_changelog'
+    elif comparison < 0:
+        # First version < second version: Canonical format (lowest first)
+        return 'canonical'
+    else:
+        # Equal versions (shouldn't happen, but default to Keep a Changelog)
+        return 'keep_a_changelog'
+
+
+def validate_changelog_ordering(content: str, format_type: str = None) -> Tuple[bool, List[str]]:
+    """
+    Validate that changelog entries are in correct order based on format.
+    
+    Supports two formats:
+    - 'keep_a_changelog': Newest first (industry standard, default)
+    - 'canonical': Lowest first (by version number)
+    
+    Args:
+        content: Changelog content
+        format_type: 'keep_a_changelog' or 'canonical' (auto-detected if None)
     
     Returns:
         (is_valid, errors)
@@ -145,26 +188,47 @@ def validate_changelog_ordering(content: str) -> Tuple[bool, List[str]]:
     if len(versions) < 2:
         return True, []  # Need at least 2 versions to check ordering
     
-    # Check ordering: each version should be >= previous version
+    # Auto-detect format if not specified
+    if format_type is None:
+        format_type = detect_changelog_format(content)
+    
+    # Validate ordering based on detected format
     for i in range(len(versions) - 1):
         current_version_str, current_components = versions[i]
         next_version_str, next_components = versions[i + 1]
         
         comparison = compare_versions(current_components, next_components)
         
-        if comparison > 0:
-            # Current version is greater than next version - ordering violation
-            errors.append(
-                f"Changelog ordering violation: {current_version_str} appears before "
-                f"{next_version_str}, but canonical ordering requires "
-                f"{next_version_str} before {current_version_str} "
-                f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} > {next_components})"
-            )
-        elif comparison == 0:
-            # Duplicate version - also an error
+        if comparison == 0:
+            # Duplicate version - always an error
             errors.append(
                 f"Duplicate version detected: {current_version_str} appears multiple times"
             )
+            continue
+        
+        if format_type == 'keep_a_changelog':
+            # Keep a Changelog format: newest first (decreasing order)
+            # Each version should be >= next version
+            if comparison < 0:
+                # Current version < next version - ordering violation (should be newest first)
+                errors.append(
+                    f"Changelog ordering violation (Keep a Changelog format): "
+                    f"{current_version_str} appears before {next_version_str}, "
+                    f"but Keep a Changelog format requires newest first "
+                    f"({next_version_str} should appear before {current_version_str})"
+                )
+        else:  # format_type == 'canonical'
+            # Canonical format: lowest first (increasing order)
+            # Each version should be <= next version
+            if comparison > 0:
+                # Current version > next version - ordering violation (should be lowest first)
+                errors.append(
+                    f"Changelog ordering violation (Canonical format): "
+                    f"{current_version_str} appears before {next_version_str}, "
+                    f"but canonical ordering requires lowest first "
+                    f"({next_version_str} should appear before {current_version_str} "
+                    f"(RC.EPIC.STORY.TASK+BUILD comparison: {current_components} > {next_components}))"
+                )
     
     return len(errors) == 0, errors
 
@@ -192,9 +256,16 @@ def get_changelog_path(config: Optional[Dict] = None) -> Path:
     return Path("CHANGELOG.md")
 
 
-def validate_changelog_file(filepath: Path) -> Tuple[bool, List[str], List[str]]:
+def validate_changelog_file(filepath: Path, format_type: str = None) -> Tuple[bool, List[str], List[str]]:
     """
-    Validate CHANGELOG.md format and canonical ordering.
+    Validate CHANGELOG.md format and ordering.
+
+    Supports both Keep a Changelog format (newest first) and Canonical format (lowest first).
+    Format is auto-detected if not specified.
+
+    Args:
+        filepath: Path to CHANGELOG.md
+        format_type: 'keep_a_changelog' or 'canonical' (auto-detected if None)
 
     Returns:
         (is_valid, errors, warnings)
@@ -206,8 +277,16 @@ def validate_changelog_file(filepath: Path) -> Tuple[bool, List[str], List[str]]
     errors = []
     warnings = []
     
-    # Validate canonical ordering (CRITICAL)
-    ordering_valid, ordering_errors = validate_changelog_ordering(content)
+    # Auto-detect format if not specified
+    if format_type is None:
+        format_type = detect_changelog_format(content)
+        warnings.append(
+            f"Detected changelog format: {format_type} "
+            f"({'newest first' if format_type == 'keep_a_changelog' else 'lowest first'})"
+        )
+    
+    # Validate ordering based on detected/specified format
+    ordering_valid, ordering_errors = validate_changelog_ordering(content, format_type)
     if not ordering_valid:
         errors.extend(ordering_errors)
 
@@ -270,6 +349,12 @@ def main():
         action="store_true",
         help="Exit with error code on validation failure (for pre-commit hooks)",
     )
+    parser.add_argument(
+        "--format",
+        choices=['keep_a_changelog', 'canonical', 'auto'],
+        default='auto',
+        help="Changelog format: 'keep_a_changelog' (newest first), 'canonical' (lowest first), or 'auto' (detect, default)",
+    )
     args = parser.parse_args()
 
     print("🔍 Validating changelog format...")
@@ -283,7 +368,10 @@ def main():
         print("ℹ️  CHANGELOG.md not found - skipping validation")
         return 0
 
-    is_valid, errors, warnings = validate_changelog_file(changelog_file)
+    # Determine format type
+    format_type = None if args.format == 'auto' else args.format
+    
+    is_valid, errors, warnings = validate_changelog_file(changelog_file, format_type)
 
     if errors:
         print("❌ VALIDATION FAILED:")
@@ -297,11 +385,21 @@ def main():
         print("    - Old: ## [0.9.21.17] - 2025-12-01")
         print("    - New: ## [0.15.1.4+2] - 02-12-25")
         print()
-        print("🚨 CANONICAL ORDERING REQUIREMENT:")
-        print("  - Versions MUST be ordered by version number (RC.EPIC.STORY.TASK+BUILD)")
-        print("  - Ordering: RC → EPIC → STORY → TASK → BUILD")
-        print("  - Example: 0.2.4.9+3 must appear before 0.3.2.4+1 (Epic 2 < Epic 3)")
-        print("  - Ordering is independent of commit timestamp")
+        # Detect format for error message
+        detected_format = detect_changelog_format(changelog_file.read_text())
+        
+        if detected_format == 'keep_a_changelog':
+            print("🚨 KEEP A CHANGELOG FORMAT REQUIREMENT (Newest First):")
+            print("  - Versions MUST be ordered newest first (Keep a Changelog standard)")
+            print("  - Higher version numbers appear before lower version numbers")
+            print("  - Example: 0.2.11.10+1 must appear before 0.2.5.15+1 (newer before older)")
+            print("  - This is the industry standard format")
+        else:
+            print("🚨 CANONICAL ORDERING REQUIREMENT (Lowest First):")
+            print("  - Versions MUST be ordered by version number (RC.EPIC.STORY.TASK+BUILD)")
+            print("  - Ordering: RC → EPIC → STORY → TASK → BUILD")
+            print("  - Example: 0.2.4.9+3 must appear before 0.3.2.4+1 (Epic 2 < Epic 3)")
+            print("  - Ordering is independent of commit timestamp")
         print()
         print("🚨 DO NOT COMMIT - Fix changelog format/ordering first!")
         return 1
