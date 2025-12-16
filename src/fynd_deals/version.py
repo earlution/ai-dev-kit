@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
-VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
-VERSION_TASK = 9      # Task number (Task 9: Documentation and Testing)
-VERSION_BUILD = 3     # Build number (E2:S11:T09 expanded analysis framework - comprehensive project analysis framework expanded to include all pattern dimensions beyond Kanban/KB)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical EST Template System)
+VERSION_TASK = 4      # Task number (Task 4: Create task template files for each typical task)
+VERSION_BUILD = 1     # Build number (E4:S06:T04 - Task template pattern established: 7 task templates created for Epic 1 Story 1)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-07 (v0.1.4.1+3 – Comprehensive README created)  
+**Last updated:** 2025-12-16 (v0.1.5.0+0 – Story 5 created: Comprehensive Project Analysis for Canonical Patterns)  
 **Branch:** `epic/1-ai-dev-kit-core`  
 **Version Schema:** `0.1.S.T+B` (dev-kit RC.EPIC.STORY.TASK+BUILD)  
 **Production URL:** [N/A for this repo]
@@ -30,6 +30,9 @@ housekeeping_policy: keep
   - Story: [`Story-003-core-kb-structure-for-dev-kit.md`](Story-003-core-kb-structure-for-dev-kit.md)  
 - [ ] **E1:S04 – Repository Branding and Renaming** - TODO
   - Story: [`Story-004-repository-branding-and-renaming.md`](Story-004-repository-branding-and-renaming.md)
+- [ ] **E1:S05 – Comprehensive Project Analysis for Canonical Patterns** - TODO (v0.1.5.0+0 – Story created)
+  - Story: [`Story-005-comprehensive-project-analysis-for-canonical-patterns.md`](Story-005-comprehensive-project-analysis-for-canonical-patterns.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T06 TODO (Comprehensive analysis of ~21 projects across 10 dimensions)
 
 ---
 

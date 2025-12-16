@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-11 (v0.4.11.0+0 – E4:S11 story complete: all tasks done)  
+**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -32,9 +32,9 @@ housekeeping_policy: keep
   - Story: [`Story-004-kanban-structure-refactoring.md`](Story-004-kanban-structure-refactoring.md)
 - [x] **E4:S05 – Canonical Epics for Kanban Framework** - COMPLETE ✅ (v0.4.5.1+1)
   - Story: [`Story-005-canonical-epics-for-kanban-framework.md`](Story-005-canonical-epics-for-kanban-framework.md)
-- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.9+2 – Task 9 complete: BR-009 installer discoverability improvements; Task 10 complete: BR-004 epic contamination fix)
+- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.3+1 – T03 in progress: Epic 1-7 story templates complete - 20 templates created)
   - Story: [`Story-006-comprehensive-canonical-est-template-system.md`](Story-006-comprehensive-canonical-est-template-system.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T03-T05 TODO, T07-T08 TODO (T09: BR-009 ✅ v0.4.6.9+2, T10: BR-004 ✅ v0.4.6.10+1)
+  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T03 ⏳ IN PROGRESS (v0.4.6.3+1 – Epic 1-7 complete), T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T04-T05 TODO, T07-T08 TODO
 - [x] **E4:S07 – Migration Support and Installation Modes** - COMPLETE ✅ (v0.4.7.3+1 – All tasks complete)
   - Story: [`Story-007-migration-support-and-installation-modes.md`](Story-007-migration-support-and-installation-modes.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE (Documentation and guides updated)
@@ -96,7 +96,7 @@ It ensures that:
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-02 (v0.4.3.7+1 – Story 3 COMPLETE: All Tasks done)  
+**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
 
 **Goal:**  
 Fully align the dev-kit Kanban board, stories, and governance policy with the Kanban framework package. Establish `ai-dev-kit` as the canonical SoT for Kanban policies, templates, and governance.
@@ -117,7 +117,7 @@ Fully align the dev-kit Kanban board, stories, and governance policy with the Ka
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-02 (v0.4.2.5+1 – Task 5 complete: Create intake workflow guide for agents/users - Story 2 COMPLETE)
+**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
 
 **Goal:**  
 Design and implement a clear, actionable flow for converting incoming Feature Requests (FRs) and Bug Reports (BRs) into Kanban Tasks. This story ensures that all work entering the dev-kit is properly structured, tracked, and aligned with the Kanban → Versioning → Release Workflow system.
@@ -139,7 +139,7 @@ Design and implement a clear, actionable flow for converting incoming Feature Re
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-02 (v0.4.3.7+1 – Story 3 COMPLETE: All Tasks done)
+**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
 
 **Goal:**  
 Ensure seamless integration between Kanban, Versioning, and Release Workflow (RW) systems within the dev-kit. This story validates that the three frameworks work together cohesively, providing end-to-end traceability from Feature Requests/Bug Reports through Kanban Tasks to versioned releases.
