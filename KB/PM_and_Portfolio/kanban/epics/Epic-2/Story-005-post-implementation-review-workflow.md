@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-16 (v0.2.5.11+1 – T04, T06, T07, T11 complete: Templates, workflow YAML, and KB structure created)  
-**Version:** v0.2.5.11+1  
+**Last updated:** 2025-12-16 (v0.2.5.3+1 – T02, T03 complete: Epic and Story-level PIR workflow designs created)  
+**Version:** v0.2.5.3+1  
 **Code:** E2S05
 
 ---
@@ -21,8 +21,8 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E2:S05:T01 – Plan PIR workflow structure and requirements** - ✅ COMPLETE (Planning document created, all 8 decisions made and incorporated)
-- [ ] **E2:S05:T02 – Design Epic-level PIR workflow** - TODO
-- [ ] **E2:S05:T03 – Design Story-level PIR workflow** - TODO
+- [x] **E2:S05:T02 – Design Epic-level PIR workflow** - ✅ COMPLETE (v0.2.5.2+1 – Epic-level PIR workflow design document created)
+- [x] **E2:S05:T03 – Design Story-level PIR workflow** - ✅ COMPLETE (v0.2.5.3+1 – Story-level PIR workflow design document created)
 - [x] **E2:S05:T04 – Create PIR workflow YAML definition** - ✅ COMPLETE (v0.2.5.4+1 – Basic workflow YAML created with 16 steps)
 - [ ] **E2:S05:T05 – Create PIR agent execution guide** - TODO
 - [x] **E2:S05:T06 – Create Epic PIR template** - ✅ COMPLETE (v0.2.5.6+1 – Epic PIR template created)
