@@ -17,8 +17,6 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-
-
 ## [0.9.21.3+2] - 02-12-25
 
 📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
@@ -34,45 +32,6 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - This version referenced **Confidentia Epic 9** and predates dev-kit-specific epics.  
 - Starting with `v0.1.1.1+1`, all releases use **dev-kit-specific Epic numbers**.
 - See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.21.3+2.md` for full details.
-
-
-
-## [0.2.11.11+1] - 16-12-25
-
-🔧 Workflow Management: E2:S11:T11 - Fix CHANGELOG Ordering Violations
-
-### Summary
-
-**CHANGELOG Reordering:** Fixed all ordering violations in CHANGELOG.md. Reordered 186 unique entries to correct Keep a Changelog format (newest first), removed 3 duplicate entries, and updated validator to allow build 0 for doc-init builds.
-
-### Changes
-
-**CHANGELOG Fixes:**
-- ✅ Reordered all 186 entries to correct Keep a Changelog order (newest first)
-- ✅ Removed 3 duplicate entries (0.2.11.9+3, 0.2.11.9+2, 0.2.1.6+4)
-- ✅ Preserved all entry content, links, and references
-- ✅ Preserved [Unreleased] section
-- ✅ Validator now passes with `--format keep_a_changelog`
-
-**Validator Updates:**
-- ✅ Updated build number validation to allow build 0 (valid for doc-init builds per FR-020)
-- ✅ Validator correctly validates Keep a Changelog format
-
-**Ordering Results:**
-- Highest version: 0.9.21.3+2 (first entry)
-- Lowest version: 0.1.1.1+1 (last entry)
-- All entries in descending order (newest first)
-
-### Related Work
-
-- **Epic:** Epic 2 - Workflow Management Framework
-- **Story:** Story 11 - Intake Workflow Automation
-- **Task:** Task 11 - Fix CHANGELOG Ordering Violations
-- **Related:** E2:S01:T06 (Validator format support - COMPLETE)
-- **Related:** E2:S11:T10 (CHANGELOG protection - COMPLETE)
-- **Related:** E3:S02:T06 (Changelog ordering process - PERPETUAL)
-
----
 
 ## [0.9.4.1+1] - 11-12-25
 
@@ -2402,6 +2361,43 @@ Established material capture infrastructure for unstructured book content. Creat
 - Epic 3 owns the `packages/frameworks/numbering & versioning/` package
 - Story 1 tasks focus on establishing dev-kit as canonical SoT for versioning policies
 - See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.1+1.md` for full details
+
+---
+
+## [0.2.11.11+1] - 16-12-25
+
+🔧 Workflow Management: E2:S11:T11 - Fix CHANGELOG Ordering Violations
+
+### Summary
+
+**CHANGELOG Reordering:** Fixed all ordering violations in CHANGELOG.md. Reordered 186 unique entries to correct Keep a Changelog format (newest first), removed 3 duplicate entries, and updated validator to allow build 0 for doc-init builds.
+
+### Changes
+
+**CHANGELOG Fixes:**
+- ✅ Reordered all 186 entries to correct Keep a Changelog order (newest first)
+- ✅ Removed 3 duplicate entries (0.2.11.9+3, 0.2.11.9+2, 0.2.1.6+4)
+- ✅ Preserved all entry content, links, and references
+- ✅ Preserved [Unreleased] section
+- ✅ Validator now passes with `--format keep_a_changelog`
+
+**Validator Updates:**
+- ✅ Updated build number validation to allow build 0 (valid for doc-init builds per FR-020)
+- ✅ Validator correctly validates Keep a Changelog format
+
+**Ordering Results:**
+- Highest version: 0.9.21.3+2 (first entry)
+- Lowest version: 0.1.1.1+1 (last entry)
+- All entries in descending order (newest first)
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 11 - Intake Workflow Automation
+- **Task:** Task 11 - Fix CHANGELOG Ordering Violations
+- **Related:** E2:S01:T06 (Validator format support - COMPLETE)
+- **Related:** E2:S11:T10 (CHANGELOG protection - COMPLETE)
+- **Related:** E3:S02:T06 (Changelog ordering process - PERPETUAL)
 
 ---
 
