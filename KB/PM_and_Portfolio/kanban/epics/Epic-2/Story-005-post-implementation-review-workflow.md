@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-16 (v0.2.5.8+1 – T08 complete: PIR-RW integration implemented)  
-**Version:** v0.2.5.8+1  
+**Last updated:** 2025-12-16 (v0.2.5.9+1 – T09 complete: PIR-Kanban integration implemented)  
+**Version:** v0.2.5.9+1  
 **Code:** E2S05
 
 ---
@@ -28,7 +28,7 @@ housekeeping_policy: keep
 - [x] **E2:S05:T06 – Create Epic PIR template** - ✅ COMPLETE (v0.2.5.6+1 – Epic PIR template created)
 - [x] **E2:S05:T07 – Create Story PIR template** - ✅ COMPLETE (v0.2.5.7+1 – Story PIR template created)
 - [x] **E2:S05:T08 – Integrate PIR with Release Workflow (RW)** - ✅ COMPLETE (v0.2.5.8+1 – RW Step 15 added, workflow YAML and documentation updated)
-- [ ] **E2:S05:T09 – Integrate PIR with Kanban system** - TODO
+- [x] **E2:S05:T09 – Integrate PIR with Kanban system** - ✅ COMPLETE (v0.2.5.9+1 – Kanban integration guide created, Step 12 enhanced with detailed instructions)
 - [ ] **E2:S05:T10 – Integrate PIR with versioning system** - TODO
 - [x] **E2:S05:T11 – Create PIR knowledge base structure** - ✅ COMPLETE (v0.2.5.11+1 – KB structure created: KB/Reviews/PIR/ with README)
 - [ ] **E2:S05:T12 – Test PIR workflow with sample Epic** - TODO

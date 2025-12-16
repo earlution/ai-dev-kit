@@ -1054,57 +1054,123 @@ KB/Reviews/PIR/Story-{N}/
 **A.1. Understand Step Requirements:**
 - Update Epic/Story document with PIR summary
 - Link Epic/Story document to PIR report (bidirectional)
-- Update status if needed
-- Add PIR completion marker
+- Extract executive summary and key findings from PIR report
+- Add PIR status tracking section
+- Ensure bidirectional traceability
+
+**A.2. Gather Context:**
+- Read PIR report from Step 10
+- Read Epic/Story document
+- Extract executive summary from PIR report
+- Extract key findings from PIR report
+- Determine PIR report path and version
+
+**A.3. Integration Requirements:**
+- PIR summary section format (see PIR-Kanban Integration Guide)
+- Bidirectional linking pattern
+- Document structure preservation
+- Status tracking
 
 #### B. DETERMINE
 
-**B.1. Determine Updates:**
+**B.1. Determine PIR Summary Content:**
+- Extract executive summary from PIR report
+- Extract key findings (3-5 most important)
+- Determine PIR status (Complete/Pending/Skipped)
+- Get PIR date and version
+
+**B.2. Determine Document Updates:**
 - Add PIR summary section to Epic/Story document
+- Insert after main content, before "Related Work" section
 - Add link to PIR report
-- Update status (if needed)
-- Add PIR completion marker
+- Update PIR report with link back to Epic/Story document
+
+**B.3. Determine Link Format:**
+- Epic-level: `[PIR-Epic-{N}-v{version}.md](../../Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md)`
+- Story-level: `[PIR-Story-{N}-v{version}.md](../../Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md)`
 
 #### C. EXECUTE
 
-**C.1. Update Epic/Story Document:**
+**C.1. Read PIR Report:**
+```bash
+# Epic-level
+PIR Report: KB/Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md
+
+# Story-level
+PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
+```
+
+**C.2. Extract PIR Summary:**
+- Read "Executive Summary" section from PIR report
+- Extract first paragraph as summary
+- Read "Key Findings" or "Lessons Learned" section
+- Select 3-5 most important findings
+
+**C.3. Update Epic/Story Document:**
 ```markdown
 ## Post-Implementation Review
 
 **PIR Status:** Complete  
-**PIR Date:** {Date}  
+**PIR Date:** {YYYY-MM-DD}  
 **PIR Version:** {Version}  
 **PIR Report:** [PIR-Epic-{N}-v{version}.md](../../Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md)
 
 ### Summary
-{One paragraph summary of PIR findings}
+{Executive summary paragraph from PIR report}
 
 ### Key Findings
-- {Finding 1}
-- {Finding 2}
+- {Key finding 1}
+- {Key finding 2}
+- {Key finding 3}
 ```
 
-**C.2. Add Bidirectional Link:**
-- Epic/Story document → PIR report
-- PIR report → Epic/Story document
+**C.4. Insert PIR Summary Section:**
+- Find insertion point in Epic/Story document
+- Insert after main content, before "Related Work" section
+- Preserve document structure and formatting
+- Ensure proper markdown formatting
+
+**C.5. Update PIR Report with Bidirectional Link:**
+- Read PIR report
+- Add/update "Related Work" section
+- Add link to Epic/Story document:
+  - Epic: `[Epic {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md)`
+  - Story: `[Story {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-{name}.md)`
+- Save updated PIR report
 
 #### D. VALIDATE
 
 **D.1. Validation Checks:**
-- ✅ Epic/Story document updated
-- ✅ PIR summary added
-- ✅ Bidirectional links established
-- ✅ Status updated
+- ✅ Epic/Story document updated with PIR summary
+- ✅ PIR summary section properly formatted
+- ✅ PIR status, date, version, and report link present
+- ✅ Executive summary and key findings included
+- ✅ Bidirectional links established (Epic/Story ↔ PIR report)
+- ✅ Document structure preserved
+- ✅ No duplicate sections
+
+**D.2. Error Handling:**
+- If Epic/Story document not found: **BLOCK** workflow, report error
+- If PIR report not found: **BLOCK** workflow, report error
+- If insertion point unclear: Use end of document, log warning
+- If link format invalid: **BLOCK** workflow, report error
 
 #### E. PROCEED
 
 **E.1. Document Step Completion:**
 - Kanban documentation updated: ✅
 - PIR summary added: ✅
-- Links established: ✅
+- Executive summary: ✅
+- Key findings: {Count}
+- Bidirectional links established: ✅
 
 **E.2. Move to Next Step:**
 - Proceed to Step 13 (Auto-Create Follow-Up Tasks)
+
+**Integration Notes:**
+- See [PIR-Kanban Integration Guide](pir-kanban-integration-guide.md) for detailed patterns
+- Follow bidirectional wiring principle for traceability
+- Preserve document structure when inserting PIR summary
 
 ---
 
