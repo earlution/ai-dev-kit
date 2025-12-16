@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical Epics/Stories/Tasks Template System)
 VERSION_TASK = 4      # Task number (Task 4: Create task template files for each typical task)
-VERSION_BUILD = 23    # Build number (E4:S06:T04+23 - 113 task templates created: Epic 1 complete, Epic 2 complete, Epic 3 complete, Epic 4 complete, Epic 5 complete, Epic 6 complete, Epic 7 complete, Epic 8 COMPLETE (all 3 stories))
+VERSION_BUILD = 24    # Build number (E4:S06:T04+24 - 121 task templates created: Epic 1 complete, Epic 2 complete, Epic 3 complete, Epic 4 complete, Epic 5 complete, Epic 6 complete, Epic 7 complete, Epic 8 complete, Epic 9 Story 1 complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
