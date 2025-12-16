@@ -91,6 +91,34 @@ for trigger in triggers:
     print(f"Trigger: {trigger.id} - {trigger.name}")
 ```
 
+### Intake Workflow Integration
+
+The **Intake Workflow** (E2:S11) is a complete workflow that automatically executes when FR/BR/UXR commits are detected:
+
+**Automatic Execution:**
+- When RW detects FR/BR/UXR commits (via commit messages or file paths), the intake workflow automatically executes
+- The intake workflow runs as a sub-workflow of RW, integrating with versioning and documentation updates
+
+**Example:**
+```python
+# Commit message: "Add FR-019: Intake Workflow Automation"
+# Changed files: ["KB/PM_and_Portfolio/kanban/fr-br/FR-019.md"]
+# → RW detects trigger → Intake workflow executes automatically
+```
+
+**Intake Workflow Steps:**
+1. Load & Parse FR/BR/UXR Document
+2. Decision Flow Analysis (determines Epic/Story/Task assignment)
+3. Create/Update Kanban Tasks (using E4:S10 agentic task creation)
+4. Update FR/BR/UXR Documentation (with intake decision and version markers)
+5. Wire Dependencies (extract and wire Blocked By, Blocks, Related Work)
+6. Assign Version Marker (using canonical RC.EPIC.STORY.TASK+BUILD schema)
+7. Validate & Report Results
+
+**Documentation:**
+- See `KB/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` for complete agent execution guide
+- See `workflows/intake-workflow.yaml` for workflow definition
+
 ### Workflow Chaining
 
 Chain multiple workflows together:

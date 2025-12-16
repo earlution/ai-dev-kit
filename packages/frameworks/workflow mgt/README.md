@@ -27,13 +27,15 @@ This package contains all essential files needed to implement the Release Workfl
 - `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` - Step-by-step guide for executing the 13-step Release Workflow
 - `KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md` - Complete workflow reference
 - `KB/Documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md` - Detailed implementation guide
+- `KB/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Step-by-step guide for executing the 7-step Intake Workflow (FR/BR/UXR automation)
 
 ### Versioning Policy Documents
 - `KB/Architecture/Standards_and_ADRs/versioning-policy.md` - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
 - `KB/Architecture/Standards_and_ADRs/versioning-strategy.md` - Complete versioning strategy with forensic traceability
 
-### Workflow Definition
+### Workflow Definitions
 - `workflows/release-workflow.yaml` - YAML definition of the Release Workflow structure
+- `workflows/intake-workflow.yaml` - YAML definition of the Intake Workflow structure (FR/BR/UXR automation)
 
 ### Validation Scripts
 - `scripts/validation/validate_branch_context.py` - Validates branch/version/epic alignment (supports multi-digit epics)
@@ -366,6 +368,67 @@ This ensures the workflow adapts to your project's specific context and handles 
 - NEVER commit directly to `main` during development
 - ONLY merge to `main` when ready to deploy
 - Prevents unnecessary auto-deployments during development
+
+---
+
+## 📥 Intake Workflow
+
+### Overview
+
+The **Intake Workflow** automates the process of converting Feature Requests (FRs), Bug Reports (BRs), and User Experience Research (UXR) documents into structured Kanban tasks. It integrates with the Release Workflow's trigger-aware system to automatically execute when FR/BR/UXR commits are detected.
+
+### Key Features
+
+- **Automated Decision Flow:** Analyzes FR/BR/UXR content to determine appropriate Epic/Story/Task assignment
+- **Intelligent Task Creation:** Leverages E4:S10 (Agentic Kanban Task Creation) for automated task generation
+- **Documentation Updates:** Automatically updates source FR/BR/UXR documents with intake decisions and version markers
+- **Dependency Wiring:** Extracts and wires dependencies (Blocked By, Blocks, Related Work) from content
+- **Version Assignment:** Assigns canonical version markers following RC.EPIC.STORY.TASK+BUILD schema
+- **Trigger Integration:** Automatically executes when FR/BR/UXR commits are detected by RW
+
+### The 7 Steps
+
+**Phase 1: Analysis & Decision (Steps 1-2)**
+1. **Load & Parse FR/BR/UXR Document** - Load and validate the intake document
+2. **Decision Flow Analysis** - Analyze content to determine Epic/Story/Task assignment using semantic matching
+
+**Phase 2: Task Creation & Documentation (Steps 3-4)**
+3. **Create/Update Kanban Tasks** - Generate Kanban tasks using agentic task creation framework
+4. **Update FR/BR/UXR Documentation** - Update source document with intake decision, status, and Kanban links
+
+**Phase 3: Integration & Validation (Steps 5-7)**
+5. **Wire Dependencies** - Extract and wire dependencies (Blocked By, Blocks, Related Work)
+6. **Assign Version Marker** - Assign canonical version marker to created/updated Kanban items
+7. **Validate & Report Results** - Validate all steps completed successfully and generate intake report
+
+### Trigger-Aware Execution
+
+The Intake Workflow integrates with the Trigger-Aware Release Workflow (E2:S07):
+
+- **Automatic Detection:** When RW detects FR/BR/UXR commits, the intake workflow automatically executes
+- **Sub-Workflow Execution:** Intake workflow runs as a sub-workflow of RW
+- **Version Integration:** Uses RW's versioning logic for consistent version assignment
+- **Documentation Integration:** Updates Kanban documents using RW's documentation update mechanisms
+
+**Example:**
+```bash
+# Commit message: "Add FR-019: Intake Workflow Automation"
+# Changed files: ["KB/PM_and_Portfolio/kanban/fr-br/FR-019.md"]
+# → RW detects trigger → Intake workflow executes automatically
+```
+
+### Documentation
+
+- **Agent Execution Guide:** `KB/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Complete step-by-step guide for AI agents
+- **Workflow Definition:** `workflows/intake-workflow.yaml` - YAML definition of the Intake Workflow structure
+- **Trigger Integration:** See `docs/trigger-aware-rw-documentation.md` for trigger system details
+
+### Integration Points
+
+- **E4:S08 (Semantic Matching):** Used for intelligent content mapping in decision flow
+- **E4:S10 (Agentic Task Creation):** Used for automated Kanban task generation
+- **E2:S07 (Trigger-Aware RW):** Enables automatic execution on FR/BR/UXR commits
+- **Release Workflow:** Shares versioning and documentation update mechanisms
 
 ---
 

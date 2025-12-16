@@ -199,8 +199,6 @@ This feature is needed:
 
 
 
-## Dependencies
-
 **Related Work:**
 - FR-019
 - FR-012
@@ -215,7 +213,19 @@ This feature is needed:
 - E2:S1:T03
 - E2:S1:T04
 - E2:S1:T05
-
+- FR-019
+- FR-012
+- E2:S11
+- E4:S10
+- E2:S07
+- E4:S08
+- E2:S1
+- E2:S11:T00
+- E2:S1:T01
+- E2:S1:T02
+- E2:S1:T03
+- E2:S1:T04
+- E2:S1:T05
 
 ## Intake Decision
 

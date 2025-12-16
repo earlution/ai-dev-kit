@@ -236,12 +236,17 @@ For **all agent-managed workflows**, agents **MUST** use `todo_write` to create 
 - ⚠️ Single-step workflows (may still benefit from TODOs for consistency)
 - ⚠️ Deterministic script execution (not agent-managed)
 
-**Canonical Example:**
-See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md) for a complete example using TODOs for all 10 steps. The Release Workflow demonstrates the **REQUIRED** TODO implementation pattern for agent-managed workflows.
+**Canonical Examples:**
+- **[Release Workflow Agent Execution Guide](release-workflow-agent-execution.md)** - Complete example using TODOs for all 13 steps
+- **[Intake Workflow Agent Execution Guide](intake-workflow-agent-execution.md)** - Complete example using TODOs for all 7 steps
+
+Both workflows demonstrate the **REQUIRED** TODO implementation pattern for agent-managed workflows.
 
 ---
 
-## 🎓 Canonical Example: Release Workflow
+## 🎓 Canonical Examples
+
+### Release Workflow
 
 The **Release Workflow** serves as the canonical example of agent-driven execution. See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md) for detailed step-by-step agent execution patterns.
 
@@ -346,6 +351,7 @@ run_terminal_cmd("python scripts/automation/release_workflow.py --auto-go")
 **Workflow Documentation:**
 - **[Release Workflow Agent Execution Guide](release-workflow-agent-execution.md)** - Detailed agent execution patterns for Release Workflow
 - **[Release Workflow Reference](release-workflow-reference.md)** - Complete workflow reference
+- **[Intake Workflow Agent Execution Guide](intake-workflow-agent-execution.md)** - Step-by-step guide for Intake Workflow (FR/BR/UXR automation)
 - **[VWMP Best Practices](best-practices.md)** - Workflow design best practices
 
 **Cursor Rules Integration:**
