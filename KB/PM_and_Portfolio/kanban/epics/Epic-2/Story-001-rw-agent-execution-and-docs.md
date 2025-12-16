@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
 **Last updated:** 2025-12-16 (v0.2.1.6+3 – Task 6 reopened: Changelog validator ordering bug persists)  
-**Version:** v0.2.1.8+1  
+**Version:** v0.2.1.6+3  
 **Code:** E2S01
 
 ---
@@ -292,6 +292,91 @@ All subsequent steps have been cancelled.
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 1 hardening)
 - `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md` (branch safety emphasis)
 - Agent execution patterns (mandatory validation)
+
+---
+
+### E2:S01:T06 – Fix changelog validator ordering bug 🔄 REOPENED
+
+**Input:**  
+- **Bug Report:** [BR-002: Changelog Validator Ordering Bug](../../fr-br/BR-002-changelog-validator-ordering-bug.md) (REOPENED)
+- Current `validate_changelog_format.py` implementation
+- Validation errors from CHANGELOG.md restoration (2025-12-16)
+
+**Deliverable:**  
+- Fixed `validate_changelog_format.py` that supports both Keep a Changelog format (newest first) and canonical ordering (lowest first)
+- Configuration option to select format (via config file or command-line flag)
+- Updated documentation explaining both supported formats
+- Test cases verifying both formats work correctly
+
+**Dependencies:** None  
+**Blocker:** None
+
+**Status:** 🔄 **REOPENED** (2025-12-16) - Previous attempt (v0.2.1.6+2) marked complete but bug persists
+
+**Previous Attempt (v0.2.1.6+2):**
+- Task was marked complete but bug still present
+- Validator still only accepts canonical ordering
+- Need to review what was actually implemented and fix properly
+
+**Problem Statement:**
+The `validate_changelog_format.py` validator checks for canonical ordering (version numbers ordered from lowest to highest), but Keep a Changelog format requires entries to be ordered from newest to oldest (highest version first). This creates a conflict where correctly formatted changelogs fail validation.
+
+**Current Validation Errors (2025-12-16):**
+```
+❌ VALIDATION FAILED:
+  Changelog ordering violation: 0.4.6.4+1 appears before 0.4.6.3+1, but canonical ordering requires 0.4.6.3+1 before 0.4.6.4+1
+  Changelog ordering violation: 0.2.11.9+3 appears before 0.2.11.9+2, but canonical ordering requires 0.2.11.9+2 before 0.2.11.9+3
+  [... multiple similar violations for Keep a Changelog format ...]
+```
+
+**Approach:**
+1. **Review previous implementation:**
+   - Review what was actually implemented in v0.2.1.6+2
+   - Understand why bug persists despite task being marked complete
+   - Document findings
+
+2. **Design format support:**
+   - Support both Keep a Changelog format (newest first) and canonical ordering (lowest first)
+   - Add configuration option (via `rw-config.yaml` or command-line flag)
+   - Default to Keep a Changelog format (industry standard)
+
+3. **Implement fix:**
+   - Update `validate_changelog_ordering()` function to detect format
+   - Add format detection logic (check if entries are newest-first or lowest-first)
+   - Add configuration support for explicit format selection
+   - Update error messages to indicate which format is expected
+
+4. **Add tests:**
+   - Test cases for Keep a Changelog format (newest first)
+   - Test cases for canonical ordering (lowest first)
+   - Test cases for format detection
+   - Test cases for configuration override
+
+5. **Update documentation:**
+   - Document both supported formats
+   - Explain how to configure format preference
+   - Update RW documentation if needed
+
+**Acceptance Criteria:**
+- [ ] Validator supports both Keep a Changelog format (newest first) and canonical ordering (lowest first)
+- [ ] Validator can detect format automatically or be configured explicitly
+- [ ] Validator provides clear error messages indicating which format is expected
+- [ ] Documentation updated to explain both supported formats
+- [ ] Default behavior aligns with Keep a Changelog format (industry standard)
+- [ ] Test cases verify both formats work correctly
+- [ ] Fix verified with actual CHANGELOG.md (Keep a Changelog format)
+
+**Files to Update:**
+- `packages/frameworks/workflow mgt/scripts/validation/validate_changelog_format.py` - Add format support
+- `packages/frameworks/workflow mgt/config/rw-config-schema.md` - Add format configuration option
+- Documentation explaining both formats
+
+**Related:**
+- **Bug Report:** [BR-002: Changelog Validator Ordering Bug](../../fr-br/BR-002-changelog-validator-ordering-bug.md) (REOPENED)
+- **Documentation:** 
+  - [REOPENING_BR_AND_TASKS_GUIDE.md](../../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Guide for reopening BRs/tasks
+  - [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Principle for bidirectional linking (this task demonstrates the pattern)
+- Previous attempt: E2:S01:T06 (v0.2.1.6+2) - marked complete but bug persists
 
 ---
 

@@ -17,6 +17,47 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.1.6+4] - 16-12-25
+
+📚 Knowledge Base: Use Cases Methodology and Structure
+
+### Summary
+
+**Use Cases KB Section:** Created comprehensive Use Cases methodology and structure, distinguishing between canonical (design-phase) and discovered (implementation-phase) use cases. Established naming convention (UC-XXX for canonical, UC-D-XXX for discovered), created templates, indexes, and initial discovered use cases documenting patterns from recent work.
+
+### Changes
+
+**New KB Section:**
+- ✅ Created `KB/Use_Cases/` directory structure
+- ✅ Created `USE_CASE_METHODOLOGY.md` - Complete methodology guide
+- ✅ Created canonical and discovered use case templates
+- ✅ Created indexes for both use case types
+
+**Naming Convention:**
+- ✅ Canonical: `UC-XXX-[title].md` (UC implies canonical)
+- ✅ Discovered: `UC-D-XXX-[title].md` (maintains UC- prefix pattern)
+
+**Discovered Use Cases Created:**
+- ✅ UC-D-001: Re-opening BRs/Tasks Instead of Creating New
+- ✅ UC-D-002: Bidirectional Wiring Between BR/FR, Tasks, and Documentation (promoted to UC-050)
+- ✅ UC-D-003: Pattern Discovery Workflow (Work → Pattern → Documentation → Wiring)
+
+**Documentation Updates:**
+- ✅ Updated `KB/README.md` to include Use Cases section
+- ✅ Updated `BIDIRECTIONAL_WIRING_PRINCIPLE.md` with use case references
+- ✅ Updated `REOPENING_BR_AND_TASKS_GUIDE.md` with use case references
+- ✅ All references updated to new naming convention
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 1 - RW Agent Execution & Docs
+- **Task:** Task 6 - Fix changelog validator ordering bug (REOPENED)
+- **Related Use Cases:** UC-D-001, UC-D-002, UC-D-003
+- **Related Documentation:** BIDIRECTIONAL_WIRING_PRINCIPLE.md, REOPENING_BR_AND_TASKS_GUIDE.md
+
+---
+
 ## [0.4.6.4+1] - 16-12-25
 
 📦 Kanban Framework: E4:S06:T04 - Create Task Template Files (Pattern Established)

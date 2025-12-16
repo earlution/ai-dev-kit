@@ -226,26 +226,31 @@ When re-opening a task:
 
 ## Example: BR-002 Re-opening
 
-See `KB/PM_and_Portfolio/kanban/fr-br/BR-002-changelog-validator-ordering-bug.md` for a complete example of:
+See [`BR-002-changelog-validator-ordering-bug.md`](BR-002-changelog-validator-ordering-bug.md) for a complete example of:
 - Status change to REOPENED
 - Updated context and evidence
 - Fix attempt history with reopening
 - Updated affected projects
+- **Bidirectional linking:** BR links to Task, Task links back to BR
 
 ---
 
 ## Example: Task Re-opening
 
-See `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md` Task T06 for an example of:
+See [`KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md`](../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md) Task T06 for an example of:
 - Task checklist update with reopening status
 - Task section with reopening context
 - Previous attempt documentation
 - Current validation errors
+- **Bidirectional linking:** Task links to BR, BR links back to Task
 
 ---
 
 ## Related Documentation
 
+- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Principle for bidirectional linking between BR/FR, Tasks, and documentation
+- [USE_CASE_METHODOLOGY.md](../Use_Cases/USE_CASE_METHODOLOGY.md) - Use case methodology (includes discovered use cases)
+- [UC-D-001: Re-opening BRs/Tasks](../Use_Cases/Discovered/UC-D-001-reopening-br-tasks.md) - Discovered use case for this pattern
 - `BR_TEMPLATE.md` - Bug Report template
 - `KB/PM_and_Portfolio/kanban/fr-br/BR-002-changelog-validator-ordering-bug.md` - Example reopened BR
 - `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md` - Example reopened task

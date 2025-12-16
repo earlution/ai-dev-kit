@@ -231,7 +231,7 @@ Bug report and task structure established. Ready for implementation work.
 **Kanban Links:**
 - Epic: [`KB/PM_and_Portfolio/kanban/epics/Epic-2/Epic-2.md`](../epics/Epic-2/Epic-2.md)
 - Story: [`KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md`](../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md)
-- Task: E2:S01:T06 (to be added to Story 1)
+- Task: [E2:S01:T06 - Fix changelog validator ordering bug](../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug--reopened) (🔄 REOPENED)
 
 ---
 
@@ -251,6 +251,8 @@ Bug report and task structure established. Ready for implementation work.
 - [Keep a Changelog](https://keepachangelog.com/) - Industry standard changelog format
 - `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` - Dev-kit canonical ordering policy
 - `KB/PM_and_Portfolio/kanban/epics/Epic-3/Story-002-versioning-cookbook-and-examples.md` - Related changelog ordering work (Task 6)
+- [REOPENING_BR_AND_TASKS_GUIDE.md](REOPENING_BR_AND_TASKS_GUIDE.md) - Guide for reopening BRs/tasks (this BR is an example)
+- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Principle for bidirectional linking (this BR demonstrates the pattern)
 
 ---
 

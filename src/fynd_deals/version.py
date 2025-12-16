@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
 VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
 VERSION_TASK = 6      # Task number (Task 6: Fix changelog validator ordering bug - REOPENED)
-VERSION_BUILD = 3     # Build number (E2:S01:T06+3 - Task 6 reopened: Changelog validator ordering bug persists)
+VERSION_BUILD = 4     # Build number (E2:S01:T06+4 - Use Cases methodology and KB structure: UC-D-001, UC-D-002, UC-D-003)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

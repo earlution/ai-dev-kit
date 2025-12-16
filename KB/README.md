@@ -17,6 +17,7 @@ The `KB/` directory contains all **knowledge base documentation** for the `ai-de
 - `Documentation/` – Vision, purpose, and high-level documentation
 - `PM_and_Portfolio/` – Project management, Kanban, and governance
 - `Guides/` – User-facing documentation and how-to guides
+- `Use_Cases/` – Canonical (design-phase) and discovered (implementation-phase) use cases
 
 Additional documentation currently lives alongside `KB/` at the root:
 
@@ -29,6 +30,7 @@ Additional documentation currently lives alongside `KB/` at the root:
 - **Changelogs:** `KB/Changelog_and_Release_Notes/`
 - **PM & Portfolio / Kanban:** `KB/PM_and_Portfolio/kanban/`
 - **Guides:** `KB/Guides/`
+- **Use Cases:** `KB/Use_Cases/`
 
 ## Getting Started
 
@@ -38,4 +40,5 @@ Additional documentation currently lives alongside `KB/` at the root:
 - **Understanding dev-kit versioning:** See `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
 - **Understanding Kanban governance:** See `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md`
 - **Project-level Kanban:** See `KB/PM_and_Portfolio/kanban/_index.md`
+- **Use Cases:** See `KB/Use_Cases/README.md` for canonical and discovered use cases
 
