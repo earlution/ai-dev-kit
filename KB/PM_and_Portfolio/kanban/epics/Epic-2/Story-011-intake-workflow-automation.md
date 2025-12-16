@@ -32,6 +32,7 @@ housekeeping_policy: keep
 - [x] **E2:S11:T08 – Create Agent Execution Guide** ✅ COMPLETE (v0.2.11.8+1)
 - [x] **E2:S11:T09 – Documentation and Testing** ✅ COMPLETE (v0.2.11.9+3)
 - [x] **E2:S11:T10 – Investigate CHANGELOG Entry Removal and Harden Processes** - ✅ COMPLETE (v0.2.11.10+1 – Root cause identified, safeguards implemented)
+- [ ] **E2:S11:T11 – Fix CHANGELOG Ordering Violations** - TODO (v0.2.11.11+0 – Task created: Fix actual CHANGELOG.md ordering violations identified by validator)
 
 > **Format:** `E2:S11:Txx` (Epic 2, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.11.1+1)`)  
@@ -51,7 +52,8 @@ Create an automated intake workflow in the workflow management package that form
 - [x] Reduce manual work and errors in intake process
 - [x] Integrate with existing RW and Kanban systems
 - [x] Support trigger-aware execution
-- [ ] Investigate and prevent accidental CHANGELOG entry removal
+- [x] Investigate and prevent accidental CHANGELOG entry removal
+- [ ] Fix CHANGELOG ordering violations (separate from validator fix)
 
 ---
 
@@ -59,10 +61,11 @@ Create an automated intake workflow in the workflow management package that form
 
 ### E2:S11:T10 – Investigate CHANGELOG Entry Removal and Harden Processes
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Created:** 2025-12-16  
-**Version:** v0.2.11.10+0
+**Completed:** 2025-12-16  
+**Version:** v0.2.11.10+1
 
 **Problem:** In commit `f092c1f` (v0.2.11.9+3), 5,174 lines were accidentally removed from `CHANGELOG.md`, deleting 11 changelog entries (0.2.8.1+1 through 0.2.8.5+1, and 0.2.11.1+1 through 0.2.11.6+1). The commit message did not mention changelog pruning, suggesting this was accidental.
 
@@ -73,17 +76,56 @@ Create an automated intake workflow in the workflow management package that form
 4. Implement validation and protection mechanisms
 
 **Deliverables:**
-- Root cause analysis document
-- Process improvement recommendations
-- CHANGELOG protection mechanisms (validation, pre-commit hooks, etc.)
-- Updated RW documentation with changelog protection guidelines
+- ✅ Root cause analysis document
+- ✅ Process improvement recommendations
+- ✅ CHANGELOG protection mechanisms (validation, pre-commit hooks, etc.)
+- ✅ Updated RW documentation with changelog protection guidelines
 
 **Acceptance Criteria:**
-- [ ] Root cause identified and documented
-- [ ] Process gaps documented
-- [ ] Safeguards designed and implemented
-- [ ] RW documentation updated with protection guidelines
-- [ ] Prevention mechanisms validated
+- [x] Root cause identified and documented
+- [x] Process gaps documented
+- [x] Safeguards designed and implemented
+- [x] RW documentation updated with protection guidelines
+- [x] Prevention mechanisms validated
+
+**Task Document:** [`Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md`](Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md)
+
+---
+
+### E2:S11:T11 – Fix CHANGELOG Ordering Violations
+
+**Status:** TODO  
+**Priority:** MEDIUM  
+**Created:** 2025-12-16  
+**Version:** v0.2.11.11+0
+
+**Problem:** The enhanced validator (E2:S01:T06) now correctly detects Keep a Changelog format and identifies ~100+ ordering violations in CHANGELOG.md. While the validator is fixed, the CHANGELOG content itself needs to be corrected.
+
+**Scope:**
+- Fix all ordering violations in CHANGELOG.md
+- Ensure all entries are in correct Keep a Changelog order (newest first)
+- Preserve all entry content, links, and references
+- Document process improvements to prevent future violations
+
+**Deliverables:**
+- CHANGELOG.md with all entries in correct order
+- Validation passes with `--format keep_a_changelog`
+- Documentation of corrections made
+- Process improvements documented
+
+**Acceptance Criteria:**
+- [ ] All CHANGELOG entries are in correct Keep a Changelog order (newest first)
+- [ ] Validator passes with `--format keep_a_changelog` (no ordering violations)
+- [ ] No entries are lost or duplicated during reordering
+- [ ] All version references remain correct
+- [ ] All links to detailed changelogs remain valid
+
+**Task Document:** [`Task-011-Fix-CHANGELOG-Ordering-Violations.md`](Task-011-Fix-CHANGELOG-Ordering-Violations.md)
+
+**Related:**
+- E2:S01:T06 - Validator format support (COMPLETE)
+- E2:S11:T10 - CHANGELOG protection (COMPLETE)
+- E3:S02:T06 - Changelog ordering process (PERPETUAL)
 
 ---
 
