@@ -17,9 +17,46 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.5.13+1] - 16-12-25
+## [0.2.5.14+1] - 16-12-25
 
-✅ Workflow Management: E2:S05:T13 - Test PIR Workflow with Sample Story
+📚 Workflow Management: E2:S05:T14 - Create PIR Workflow Reference Documentation
+
+### Summary
+
+**PIR Workflow Reference:** Created comprehensive PIR workflow reference documentation following the Release Workflow reference pattern. Documents all 16 workflow steps, configuration options, integration points, examples, and troubleshooting guidance.
+
+### Changes
+
+**New Reference Documentation:**
+- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-reference.md`
+- ✅ Documented all 16 workflow steps with detailed descriptions
+- ✅ Documented configuration options and parameters
+- ✅ Documented integration points (RW, Kanban, Versioning, KB)
+- ✅ Included examples for Epic-level and Story-level reviews
+- ✅ Added troubleshooting guide
+- ✅ Documented execution flow and dependency graph
+
+**Reference Features:**
+- Complete step-by-step documentation for all 16 steps
+- Configuration parameters and options
+- Integration points documentation
+- Examples for Epic-level, Story-level (significant), and Story-level (not significant)
+- Troubleshooting guide
+- Dependency graph and execution phases
+- Policy requirements mapping
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 5 - Post-Implementation Review Workflow
+- **Task:** Task 14 - Create PIR workflow reference documentation
+- **PIR Execution Guide:** `pir-workflow-agent-execution.md`
+- **PIR Workflow YAML:** `pir-workflow.yaml`
+- **Integration Guides:** `pir-kanban-integration-guide.md`, `pir-versioning-integration-guide.md`
+
+---
+
+## [0.2.5.13+1] - 16-12-25
 
 ### Summary
 

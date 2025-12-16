@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-16 (v0.2.5.13+1 – T13 complete: Story-level PIR workflow tested)  
-**Version:** v0.2.5.13+1  
+**Last updated:** 2025-12-16 (v0.2.5.14+1 – T14 complete: PIR workflow reference created)  
+**Version:** v0.2.5.14+1  
 **Code:** E2S05
 
 ---
@@ -33,7 +33,7 @@ housekeeping_policy: keep
 - [x] **E2:S05:T11 – Create PIR knowledge base structure** - ✅ COMPLETE (v0.2.5.11+1 – KB structure created: KB/Reviews/PIR/ with README)
 - [x] **E2:S05:T12 – Test PIR workflow with sample Epic** - ✅ COMPLETE (v0.2.5.12+1 – PIR workflow tested end-to-end with Epic 2, all 16 steps executed successfully, integrations validated)
 - [x] **E2:S05:T13 – Test PIR workflow with sample Story** - ✅ COMPLETE (v0.2.5.13+1 – Story-level PIR workflow tested end-to-end with Story 2, significance evaluation validated, all 16 steps executed successfully)
-- [ ] **E2:S05:T14 – Create PIR workflow reference documentation** - TODO
+- [x] **E2:S05:T14 – Create PIR workflow reference documentation** - ✅ COMPLETE (v0.2.5.14+1 – Comprehensive PIR workflow reference created following RW pattern)
 - [ ] **E2:S05:T15 – Create PIR usage guide and examples** - TODO
 
 ---
