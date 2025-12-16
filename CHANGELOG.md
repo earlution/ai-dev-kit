@@ -17,9 +17,52 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.5.14+1] - 16-12-25
+## [0.2.5.15+1] - 16-12-25
 
-📚 Workflow Management: E2:S05:T14 - Create PIR Workflow Reference Documentation
+📖 Workflow Management: E2:S05:T15 - Create PIR Usage Guide and Examples
+
+### Summary
+
+**PIR Usage Guide:** Created user-friendly PIR workflow usage guide with step-by-step examples, common scenarios, best practices, troubleshooting tips, and FAQ. Provides practical guidance for using the PIR workflow effectively.
+
+### Changes
+
+**New Usage Guide:**
+- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-usage-guide.md`
+- ✅ Quick start guide for Epic and Story-level PIRs
+- ✅ Common scenarios with step-by-step examples
+- ✅ Best practices for timing, preparation, execution, documentation, and follow-up
+- ✅ Configuration examples (basic and advanced)
+- ✅ Troubleshooting guide with solutions
+- ✅ Integration examples (RW, Kanban, Versioning)
+- ✅ Tips and tricks for effective PIR execution
+- ✅ Frequently asked questions (FAQ)
+
+**Usage Guide Features:**
+- User-friendly language and structure
+- Practical examples for Epic and Story-level reviews
+- Best practices and recommendations
+- Troubleshooting solutions
+- Configuration guidance
+- Integration examples
+- Learning path for new and advanced users
+
+**Story Completion:**
+- ✅ Story 5 marked COMPLETE (all 15 tasks complete)
+- ✅ All PIR workflow components delivered
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 5 - Post-Implementation Review Workflow
+- **Task:** Task 15 - Create PIR usage guide and examples
+- **PIR Reference:** `pir-workflow-reference.md`
+- **PIR Execution Guide:** `pir-workflow-agent-execution.md`
+- **Example Reports:** `KB/Reviews/PIR/Epic-2/PIR-Epic-2-TEST-*.md`, `KB/Reviews/PIR/Story-2/PIR-Story-2-TEST-*.md`
+
+---
+
+## [0.2.5.14+1] - 16-12-25
 
 ### Summary
 

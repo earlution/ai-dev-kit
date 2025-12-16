@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 005 – Post-Implementation Review (PIR) Workflow
 
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-16 (v0.2.5.14+1 – T14 complete: PIR workflow reference created)  
-**Version:** v0.2.5.14+1  
+**Last updated:** 2025-12-16 (v0.2.5.15+1 – T15 complete: PIR usage guide created, Story 5 COMPLETE)  
+**Version:** v0.2.5.15+1  
 **Code:** E2S05
 
 ---
@@ -34,7 +34,7 @@ housekeeping_policy: keep
 - [x] **E2:S05:T12 – Test PIR workflow with sample Epic** - ✅ COMPLETE (v0.2.5.12+1 – PIR workflow tested end-to-end with Epic 2, all 16 steps executed successfully, integrations validated)
 - [x] **E2:S05:T13 – Test PIR workflow with sample Story** - ✅ COMPLETE (v0.2.5.13+1 – Story-level PIR workflow tested end-to-end with Story 2, significance evaluation validated, all 16 steps executed successfully)
 - [x] **E2:S05:T14 – Create PIR workflow reference documentation** - ✅ COMPLETE (v0.2.5.14+1 – Comprehensive PIR workflow reference created following RW pattern)
-- [ ] **E2:S05:T15 – Create PIR usage guide and examples** - TODO
+- [x] **E2:S05:T15 – Create PIR usage guide and examples** - ✅ COMPLETE (v0.2.5.15+1 – User-friendly PIR usage guide created with examples, best practices, and troubleshooting)
 
 ---
 

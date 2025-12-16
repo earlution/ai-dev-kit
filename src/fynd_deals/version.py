@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
 VERSION_STORY = 5     # Story number (Story 5: Post-Implementation Review Workflow)
-VERSION_TASK = 14     # Task number (Task 14: Create PIR workflow reference documentation)
-VERSION_BUILD = 1     # Build number (E2:S05:T14+1 - Comprehensive PIR workflow reference created)
+VERSION_TASK = 15     # Task number (Task 15: Create PIR usage guide and examples)
+VERSION_BUILD = 1     # Build number (E2:S05:T15+1 - PIR usage guide created, Story 5 COMPLETE)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
