@@ -32,7 +32,7 @@ housekeeping_policy: keep
 - [x] **E2:S11:T08 – Create Agent Execution Guide** ✅ COMPLETE (v0.2.11.8+1)
 - [x] **E2:S11:T09 – Documentation and Testing** ✅ COMPLETE (v0.2.11.9+3)
 - [x] **E2:S11:T10 – Investigate CHANGELOG Entry Removal and Harden Processes** - ✅ COMPLETE (v0.2.11.10+1 – Root cause identified, safeguards implemented)
-- [ ] **E2:S11:T11 – Fix CHANGELOG Ordering Violations** - TODO (v0.2.11.11+0 – Task created: Fix actual CHANGELOG.md ordering violations identified by validator)
+- [x] **E2:S11:T11 – Fix CHANGELOG Ordering Violations** - ✅ COMPLETE (v0.2.11.11+1 – All ordering violations fixed, duplicates removed, validator passes)
 
 > **Format:** `E2:S11:Txx` (Epic 2, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.11.1+1)`)  

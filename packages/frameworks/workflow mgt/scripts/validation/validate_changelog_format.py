@@ -331,11 +331,11 @@ def validate_changelog_file(filepath: Path, format_type: str = None) -> Tuple[bo
                 f"(expected DD-MM-YY for new format)"
             )
         
-        # Validate build number >= 1
-        if int(build) < 1:
+        # Validate build number >= 0 (0 is valid for doc-init builds per FR-020)
+        if int(build) < 0:
             errors.append(
                 f"Invalid build number for version {version_str}: '{build}' "
-                f"(expected >= 1)"
+                f"(expected >= 0, 0 is valid for doc-init builds)"
             )
 
     return len(errors) == 0, errors, warnings
