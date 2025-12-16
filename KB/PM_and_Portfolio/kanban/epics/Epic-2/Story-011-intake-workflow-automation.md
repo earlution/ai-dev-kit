@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 2, Story 11: Intake Workflow Automation
 
-**Status:** ✅ COMPLETE  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2025-12-16 (v0.2.11.9+3 – T09 complete: E2:S11:T09)  
+**Last updated:** 2025-12-16 (v0.2.11.11+0 – T11 created: CHANGELOG ordering fixes)  
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
-**Completed:** 2025-12-16
-**Version:** v0.2.11.9+3
+**Completed:** [TBD]
+**Version:** v0.2.11.11+0
 **Code:** E2S11
 
 ---
