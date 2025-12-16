@@ -33,9 +33,9 @@ housekeeping_policy: keep
 - [x] **E2:S04 – RW Step 8 Hardening** - COMPLETE ✅ (v0.2.4.9+3 – All tasks complete: validation improvements, error handling, and docs)
   - Story: [`Story-004-rw-step-8-hardening.md`](Story-004-rw-step-8-hardening.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE, T007 ✅ COMPLETE, T008 ✅ COMPLETE, T009 ✅ COMPLETE
-- [x] **E2:S05 – RW Step 9 Hardening** - COMPLETE ✅ (v0.2.5.6+1 – All tasks complete: commit language, guardrails, and docs)
-  - Story: [`Story-005-rw-step-9-hardening.md`](Story-005-rw-step-9-hardening.md)
-  - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE
+- [x] **E2:S05 – Post-Implementation Review (PIR) Workflow** - COMPLETE ✅ (v0.2.5.15+1 – All tasks complete: PIR workflow implementation, templates, integration, testing, and documentation)
+  - Story: [`Story-005-post-implementation-review-workflow.md`](Story-005-post-implementation-review-workflow.md)
+  - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE, T04 ✅ COMPLETE, T05 ✅ COMPLETE, T06 ✅ COMPLETE, T07 ✅ COMPLETE, T08 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T11 ✅ COMPLETE, T12 ✅ COMPLETE, T13 ✅ COMPLETE, T14 ✅ COMPLETE, T15 ✅ COMPLETE
 - [x] **E2:S06 – RW Step 10 Hardening** - COMPLETE ✅ (v0.2.6.3+1 – All tasks complete: tagging behaviour, guardrails, and docs)
   - Story: [`Story-006-rw-step-10-hardening.md`](Story-006-rw-step-10-hardening.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE
