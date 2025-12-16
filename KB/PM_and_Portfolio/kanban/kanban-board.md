@@ -53,7 +53,7 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 **Last Updated:** v0.2.11.0+0
 
 **Stories:**
-- [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.7+1)
+- [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.6+4)
   - Story: [`epics/Epic-2/Story-001-rw-agent-execution-and-docs.md`](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md)
 - [x] **E2:S02 – PDCA Integration into Release Workflow** - COMPLETE ✅ (v0.2.2.8+1)
   - Story: [`epics/Epic-2/Story-002-pdca-integration-into-release-workflow.md`](epics/Epic-2/Story-002-pdca-integration-into-release-workflow.md)

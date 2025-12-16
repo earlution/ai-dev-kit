@@ -8,12 +8,13 @@ housekeeping_policy: keep
 
 # Story 001 – RW Agent Execution & Docs
 
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-16 (v0.2.1.6+3 – Task 6 reopened: Changelog validator ordering bug persists)  
-**Version:** v0.2.1.6+3  
+**Completed:** 2025-12-16  
+**Last updated:** 2025-12-16 (v0.2.1.6+4 – All tasks complete: Validator format support implemented)  
+**Version:** v0.2.1.6+4  
 **Code:** E2S01
 
 ---
