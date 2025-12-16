@@ -17,9 +17,44 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.5.3+1] - 16-12-25
+## [0.2.5.5+1] - 16-12-25
 
-📐 Workflow Management: E2:S05:T03 - Design Story-Level PIR Workflow
+📖 Workflow Management: E2:S05:T05 - Create PIR Agent Execution Guide
+
+### Summary
+
+**PIR Agent Execution Guide:** Created comprehensive step-by-step agent execution guide for Post-Implementation Review workflow following the Release Workflow pattern. Documents all 16 steps with ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern for both Epic-level and Story-level reviews.
+
+### Changes
+
+**New Execution Guide:**
+- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-agent-execution.md`
+- ✅ Documented all 16 workflow steps with detailed execution instructions
+- ✅ Included examples for Epic-level and Story-level reviews
+- ✅ Documented integration points (RW, Kanban, Versioning, KB)
+- ✅ Included troubleshooting and edge cases
+- ✅ Follows RW execution guide structure and pattern
+
+**Guide Features:**
+- Step-by-step execution instructions for all 16 steps
+- ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern for each step
+- Examples for Epic-level, Story-level (significant), and Story-level (not significant) scenarios
+- Integration points documentation
+- Troubleshooting guide
+- Progress tracking with TODOs (mandatory)
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 5 - Post-Implementation Review Workflow
+- **Task:** Task 5 - Create PIR agent execution guide
+- **Designs:** `T02-epic-level-pir-workflow-design.md`, `T03-story-level-pir-workflow-design.md`
+- **Workflow:** `pir-workflow.yaml`
+- **Reference:** `release-workflow-agent-execution.md`
+
+---
+
+## [0.2.5.3+1] - 16-12-25
 
 ### Summary
 
