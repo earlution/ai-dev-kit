@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2025-12-18  
-**Version:** v0.4.13.1+1
+**Last Updated:** 2025-12-17  
+**Version:** v0.4.13.6+2
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
@@ -40,9 +40,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Critical in-progress tasks that must be completed.*
 
-- **E4:S13:T01** – Design and implement MoSCoW prioritized task view in Kanban board  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T01-kanban-board-moscow-prioritized-task-view.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
-
 - **E6:S06:T07** – Implement framework hardening recommendations  
   *Last updated: 2025-12-18* | [Task Doc](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T07-implement-framework-hardening-recommendations.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
@@ -52,15 +49,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 - **E4:S06:T04** – Create task template files for each typical task  
   *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-
-- **E4:S13:T02** – Update Kanban governance policy  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
-
-- **E4:S13:T03** – Update Kanban board template  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T03-update-kanban-board-template.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
-
-- **E4:S13:T04** – Assess system impacts  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T04-assess-system-impacts.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
 
 - **E5:S02:T03** – Build documentation health dashboards  
   *Last updated: 2025-12-06* | [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
@@ -89,12 +77,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 - **E4:S06:T08** – Validate structure with test projects (tiny, small, ambitious)  
   *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-
-- **E4:S13:T05** – Update Kanban package (after user verification)  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T05-update-kanban-package.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
-
-- **E4:S13:T06** – Update other affected packages (after user verification)  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T06-update-other-affected-packages.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
 
 - **E7:S01:T02** – Code review standards and processes  
   *Last updated: Unknown* | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
@@ -189,9 +171,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.4.11.4+1
+**Last Updated:** v0.4.13.6+2
 
-**Note:** Epic 4 document shows "COMPLETE" but has incomplete stories (S06, S10, S11, S12), so Epic status is IN PROGRESS.
+**Note:** Epic 4 has incomplete stories (S06, S10, S12), so Epic status is IN PROGRESS.
 
 **Stories:**
 - [x] **E4:S01 – Dev Kit Kanban Implementation** - COMPLETE ✅ (v0.4.1.1+6)
@@ -221,6 +203,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0)
   - Story: [`epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md`](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
   - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
+- [x] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - COMPLETE ✅ (v0.4.13.6+2)
+  - Story: [`epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md`](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+  - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05 ✅ COMPLETE (v0.4.13.5+1), T06 ✅ COMPLETE (v0.4.13.6+1)
 
 **Epic Doc:** [`epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)
 
