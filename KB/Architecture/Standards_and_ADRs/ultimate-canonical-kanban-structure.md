@@ -532,33 +532,23 @@ This document **defines the ultimate canonical Kanban structure** for ADK framew
 
 ---
 
-## Questions for Clarification
+## Design Decisions (Based on User Feedback)
 
-1. **Epic 1 Scope:** Should Epic 1 include only pre-design phase work, or should it also include initial project setup that happens before design? Currently includes both.
+All questions have been answered and decisions incorporated into the canonical structure:
 
-2. **Epic 2 (Kanban):** Kanban is now its own epic (E2) as requested. Confirmed.
-
-3. **Epic 3 (FR/BR/UXR):** Is consolidating FR, BR, and UXR into one epic acceptable, or should they remain separate? Currently consolidated.
-
-4. **Epic 4 (Architecture):** Should Epic 4 include both initial architecture design AND architecture refactoring, or should refactoring be a separate story/epic? Currently both are in E4.
-
-5. **Epic 7 (Implementation):** Should codebase maintenance (old E8) be stories under E7 (Implementation), or should it be a separate epic? Currently stories under E7.
-
-6. **Epic 8 (Documentation):** Documentation is E8. Confirmed.
-
-7. **Epic 9 (CI/CD):** CI/CD is E9. Confirmed.
-
-8. **Epic 10 (Security):** Should Security include both project security (Dependabot) and context-specific security, or should they be separate? Currently combined. Dependabot management story added (Story 004).
-
-9. **Old E10 (Data Management):** Should Data Management be E5 (before Testing) or E6 (after Architecture)? Currently E5.
-
-10. **Old E18 (Documentation):** Already moved to E8. Confirmed.
-
-11. **Old E22 (Architecture Refactoring):** Split between E4 (architecture refactoring) and E7 (implementation refactoring). Is this correct?
-
-12. **Old E23 (CI/CD):** Moved to E9. Confirmed.
-
-13. **Remaining Epics:** What should happen to old E9 (User Management), E11 (API), E12 (Frontend), E14 (Deployment), E16 (Performance), E17 (Integration), E19 (Analytics), E20 (Mobile), E21 (Internationalization)? Should they be renumbered starting at E11?
+1. **Epic 1 Scope:** ✅ Confirmed - Includes both pre-design phase work and initial project setup
+2. **Epic 2 (Kanban):** ✅ Confirmed - Kanban is its own separate epic
+3. **Epic 3 (FR/BR/UXR):** ✅ Confirmed - Consolidated into single epic
+4. **Epic 4 (Architecture):** ✅ Confirmed - Includes both initial design and refactoring. Future refactoring work can create new E4 stories as needed
+5. **Epic 7 (Implementation):** ✅ Confirmed - Codebase maintenance stays in E7
+6. **Epic 8 (Documentation):** ✅ Confirmed
+7. **Epic 9 (CI/CD):** ✅ Confirmed
+8. **Epic 10 (Security):** ✅ Confirmed - Combined project security (Dependabot) and context-specific security
+9. **Data Management Placement:** ✅ Confirmed - E5 (before Testing). Rationale: Architecture (E4) defines system structure → Data Management (E5) implements persistence → Testing (E6) can be designed based on both architecture and data layer
+10. **Old E18 (Documentation):** ✅ Confirmed - Moved to E8
+11. **Old E22 (Architecture Refactoring):** ✅ Confirmed - Split between E4 (architecture refactoring) and E7 (implementation refactoring)
+12. **Old E23 (CI/CD):** ✅ Confirmed - Moved to E9
+13. **Remaining Epics:** ✅ Confirmed - Renumbered starting at E11 (User Management, API, Frontend, Deployment, Performance, Integration, Analytics, Mobile, Internationalization)
 
 ---
 
