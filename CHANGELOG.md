@@ -17,6 +17,38 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.7+1] - 18-12-25
+
+✅ Complete: T07 - Implement framework hardening recommendations - Task created
+
+### Added
+
+- **E6:S06:T07 – Implement framework hardening recommendations:**
+  - Task document created: `T07-implement-framework-hardening-recommendations.md`
+  - Task addresses critical and high-priority hardening actions from T01 analysis:
+    - **CRITICAL:** Epic 9 mismatch fix (root cause of Epic mashup)
+    - **CRITICAL:** Installer validation (prevent Epic mashup, validate Epic numbering)
+    - **HIGH:** Source repository frameworks (`.cursorrules`, `rw-config.yaml`, canonical version path)
+    - **HIGH:** Installation instructions improvement (Epic mashup prevention)
+
+### Changed
+
+- **Story-006 Document:**
+  - Task T07 added to checklist
+  - Full task section added with approach, acceptance criteria, and deliverables
+  - Last updated: 2025-12-18 (v0.6.6.7+0)
+
+- **Epic-6 Document:**
+  - Story checklist updated to include T07
+  - Last updated: 2025-12-18 (v0.6.6.7+0)
+
+- **Version File:**
+  - Version updated to `0.6.6.7+1` (E6:S06:T07, Build 1)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+1.md)
+
+---
+
 ## [0.6.6.1+1] - 18-12-25
 
 ✅ Complete: T01 - Comprehensive ADK implementation analysis across all projects - All 6 synthesis reports created

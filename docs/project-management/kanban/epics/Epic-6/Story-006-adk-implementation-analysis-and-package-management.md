@@ -28,6 +28,8 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T05 – Implement feedback mechanism** - TODO
 - [x] **E6:S06:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.6.6+20 – All deliverables verified complete: 7 meta-analyses, executive summary, all 4 canonical framework designs)
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
+- [ ] **E6:S06:T07 – Implement framework hardening recommendations** - TODO
+  - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
 
 ---
 
@@ -796,6 +798,113 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
+### E6:S06:T07 – Implement framework hardening recommendations
+
+**Status:** TODO  
+**Priority:** CRITICAL  
+**Dependencies:** E6:S06:T01 (requires hardening recommendations from analysis)  
+**Estimated Effort:** LARGE
+
+**Input:**
+- `docs/knowledge/analysis/adk-hardening-recommendations.md` - Comprehensive hardening recommendations from T01
+- `docs/knowledge/analysis/adk-implementation-analysis-report.md` - Overall analysis findings
+- `docs/knowledge/analysis/adk-mashup-issues.md` - Epic mashup issue details
+- `docs/knowledge/analysis/adk-drift-analysis.md` - Framework drift analysis
+- Current ai-dev-kit source structure
+
+**Deliverable:** Implementation of critical and high-priority hardening recommendations:
+- **CRITICAL:** Epic 9 mismatch fixed (renamed to Epic 24+)
+- **CRITICAL:** Installer validation added (prevents Epic mashup)
+- **HIGH:** Source repository frameworks added (`.cursorrules`, `rw-config.yaml`)
+- **HIGH:** Installation instructions improved (Epic mashup prevention)
+
+**Approach:**
+
+1. **Fix Epic 9 Mismatch (CRITICAL):**
+   - Rename Epic 9 "Book Related Work" to Epic 24+ (project-specific range)
+   - Update all Epic 9 references:
+     - Epic document: `Epic-9.md` → `Epic-24.md` (or appropriate number)
+     - Story documents: Update all Story references
+     - Task documents: Update all Task references
+     - Kanban board: Update Epic 9 entry
+     - Cross-references in documentation
+   - Document Epic 24+ as project-specific range (not canonical)
+   - Update installation instructions to clarify project-specific epics start at Epic 24+
+
+2. **Add Installer Validation (CRITICAL):**
+   - Add Epic numbering validation to installer scripts:
+     - Check for Epic 9 "Book Related Work" in non-book projects
+     - Validate Epic 1-23 are canonical, Epic 24+ are project-specific
+     - Warn if copying ai-dev-kit's actual Kanban
+     - Prevent installation if Epic conflicts detected
+   - Add validation for canonical vs project-specific epic conflicts
+   - Add validation for version file path
+   - Add validation for KB structure
+
+3. **Add Source Repository Frameworks (HIGH):**
+   - Create `.cursorrules` file in project root:
+     - Include comprehensive 12-step RW trigger section
+     - Include PVW trigger section (optional)
+     - Include document lifecycle management section
+     - Include Git workflow restrictions section
+     - Serve as reference implementation
+   - Create `rw-config.yaml` in project root:
+     - Configure for ai-dev-kit project structure
+     - Use canonical paths
+     - Serve as reference implementation
+   - Migrate version file path:
+     - Move `src/fynd_deals/version.py` to `src/ai_dev_kit/version.py`
+     - Update all references
+     - Update workflows and scripts
+
+4. **Improve Installation Instructions (HIGH):**
+   - Clearly distinguish templates from actual Kanban:
+     - Document canonical templates location
+     - Document ai-dev-kit's actual Kanban location
+     - Explain difference clearly
+     - Warn against copying actual Kanban
+   - Document Epic mashup prevention:
+     - Explain Epic mashup issue
+     - Document prevention steps
+     - Provide examples of correct installation
+     - Provide examples of incorrect installation (what to avoid)
+   - Provide clear installation examples:
+     - Step-by-step installation guide
+     - Example projects (tiny, small, ambitious)
+     - Common mistakes and how to avoid them
+
+**Acceptance Criteria:**
+- [ ] Epic 9 in ai-dev-kit source renamed to Epic 24+
+- [ ] All Epic 9 references updated
+- [ ] No Epic 9 "Book Related Work" in source
+- [ ] Installer validates Epic numbering
+- [ ] Installer prevents Epic mashup
+- [ ] Installer warns about copying actual Kanban
+- [ ] `.cursorrules` file exists in project root
+- [ ] `rw-config.yaml` exists in project root
+- [ ] Version file at canonical path (`src/ai_dev_kit/version.py`)
+- [ ] Installation instructions clearly distinguish templates from actual Kanban
+- [ ] Epic mashup prevention documented
+- [ ] Clear installation examples provided
+- [ ] Source serves as reference implementation
+
+**Files to Create/Modify:**
+- Epic 9 → Epic 24+ (rename and update all references)
+- Installer scripts (add validation)
+- `.cursorrules` (create in project root)
+- `rw-config.yaml` (create in project root)
+- `src/ai_dev_kit/version.py` (migrate from `src/fynd_deals/version.py`)
+- Installation documentation (improve instructions)
+
+**Related Work:**
+- **Related Task:** E6:S06:T01 - Comprehensive ADK implementation analysis (provides hardening recommendations)
+- **Related Documents:**
+  - `docs/knowledge/analysis/adk-hardening-recommendations.md`
+  - `docs/knowledge/analysis/adk-mashup-issues.md`
+  - `docs/knowledge/analysis/adk-drift-analysis.md`
+
+---
+
 ## Dependencies
 
 **Blocks:**
@@ -823,7 +932,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2025-12-16  
-**Version:** 1.0.0  
-**Status:** Story Created
+**Last Updated:** 2025-12-18 (v0.6.6.7+1 – T07 created: Framework hardening implementation task)  
+**Version:** v0.6.6.7+1  
+**Status:** IN PROGRESS
 
