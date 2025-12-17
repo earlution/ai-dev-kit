@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 4, Story 13, Task 2: Update Kanban Governance Policy
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.0+0 – Task created)  
-**Started:** [TBD]  
-**Completed:** [TBD]  
-**Version:** v0.4.13.0+0  
+**Last updated:** 2025-12-18 (v0.4.13.2+1 – T02 COMPLETE: Kanban governance policy updated with MoSCoW prioritized task view)  
+**Started:** 2025-12-18  
+**Completed:** 2025-12-18  
+**Version:** v0.4.13.2+1  
 **Code:** E4S13T02
 
 ---
@@ -184,7 +184,31 @@ Update the Kanban governance policy documents to document the new board structur
 
 ## Completion Summary
 
-[To be filled when task is complete]
+**Task Completed:** 2025-12-18 (v0.4.13.2+1)
+
+**Deliverables:**
+1. ✅ Updated canonical Kanban governance policy (`packages/frameworks/kanban/policies/kanban-governance-policy.md`)
+   - Added comprehensive Board Structure section documenting MoSCoW prioritized task view
+   - Documented MoSCoW priority levels (Must Have, Should Have, Could Have, Won't Have)
+   - Documented chronological ordering rules (most recently updated first)
+   - Documented parent-child relationship (Board → Story → Task)
+   - Included task entry format examples
+   - Updated board structure to reflect new layout
+
+2. ✅ Updated local Kanban governance policy (`docs/project-management/rituals/policy/kanban-governance-policy.md`)
+   - Added MoSCoW Prioritized Task View section (2.2.1)
+   - Added Story Checklist section (2.2.2)
+   - Updated board structure documentation
+   - Referenced canonical policy for framework-level details
+   - Updated last updated date
+
+**Policy Updates:**
+- Both policies now document the new board structure with MoSCoW prioritized task view
+- MoSCoW priority levels clearly defined
+- Chronological ordering rules documented
+- Parent-child relationship clearly explained
+- Task entry format standardized
+- Both policies are consistent and accurate
 
 ---
 

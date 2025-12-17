@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.4+3 – T04 COMPLETE: Packaged RW updated to v2.1.2 with BR-010 fix documentation)  
+**Last updated:** 2025-12-18 (v0.4.13.3+1 – T03 COMPLETE: Kanban board template created with MoSCoW prioritized task view)  
 **Estimated Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.4.13.4+3  
+**Version:** v0.4.13.3+1  
 **Code:** E4S13
 
 ---
@@ -23,9 +23,9 @@ housekeeping_policy: keep
 
 - [x] **E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board** ✅ COMPLETE (v0.4.13.1+1)
   - Task: [`T01-kanban-board-moscow-prioritized-task-view.md`](T01-kanban-board-moscow-prioritized-task-view.md)
-- [ ] **E4:S13:T02 – Update Kanban governance policy** - TODO (v0.4.13.0+0)
+- [x] **E4:S13:T02 – Update Kanban governance policy** ✅ COMPLETE (v0.4.13.2+1)
   - Task: [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
-- [ ] **E4:S13:T03 – Update Kanban board template** - TODO (v0.4.13.0+0)
+- [x] **E4:S13:T03 – Update Kanban board template** ✅ COMPLETE (v0.4.13.3+1)
   - Task: [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
 - [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+3)
   - Task: [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)

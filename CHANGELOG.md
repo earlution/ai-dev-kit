@@ -41,6 +41,37 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.13.3+1] - 18-12-25
+
+✅ Complete: T03 - Kanban board template created with MoSCoW prioritized task view
+
+### Added
+
+- **Kanban Board Template:**
+  - Created `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`
+  - Template includes complete MoSCoW prioritized task view structure
+  - Template includes comprehensive usage instructions
+  - Template references updated Kanban governance policy
+
+### Changed
+
+- **Kanban Governance Policy (T02, also completed):**
+  - Updated canonical policy with MoSCoW prioritized task view documentation
+  - Updated local policy with new board structure
+  - Both policies now consistent and accurate
+
+- **Task Documents:**
+  - T02 marked as COMPLETE (v0.4.13.2+1)
+  - T03 marked as COMPLETE (v0.4.13.3+1)
+  - Story checklist updated with completion markers
+
+- **Version File:**
+  - Version updated to `0.4.13.3+1` (E4:S13:T03, first build - out-of-order completion)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.3+1.md)
+
+---
+
 ## [0.4.13.4+2] - 18-12-25
 
 ✅ Complete: T04 - BR-010 created, KB documents anchored to canonical source

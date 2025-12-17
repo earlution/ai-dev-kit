@@ -219,7 +219,80 @@ If work doesn't map to a task, the Kanban needs updating.
 
 ## Board Structure
 
-Five columns, left to right:
+The Kanban board provides a comprehensive view of all work items organized hierarchically and prioritized for visibility.
+
+### Board Layout
+
+The board serves as the **parent document** to Story documents, similar to how Story documents are parents of Task documents:
+
+- **Board → Story:** The board links to and tracks all Story documents
+- **Story → Task:** Story documents link to and track all Task documents
+- This creates a clear hierarchy: **Board (parent) → Story (child) → Task (grandchild)**
+
+### MoSCoW Prioritized Task View
+
+**Purpose:** The board includes a **MoSCoW Prioritized In-Progress Tasks** section that shows all in-progress tasks (status: IN PROGRESS or TODO) organized by priority and ordered chronologically.
+
+**MoSCoW Priority Levels:**
+
+1. **Must Have (M) – Critical Tasks**
+   - Critical in-progress tasks that must be completed
+   - Highest priority items requiring immediate attention
+   - Tasks that block other work or are on critical path
+
+2. **Should Have (S) – Important Tasks**
+   - Important in-progress tasks that should be completed
+   - High-value items that contribute significantly to goals
+   - Tasks that are important but not blocking
+
+3. **Could Have (C) – Nice-to-Have Tasks**
+   - Nice-to-have in-progress tasks that could be completed
+   - Lower priority items that add value but are not essential
+   - Tasks that can be deferred if needed
+
+4. **Won't Have (W) – Deferred Tasks**
+   - Tasks that are deferred or not being actively worked on
+   - Items explicitly marked as out of scope for current cycle
+   - Tasks that may be revisited in future iterations
+
+**Chronological Ordering:**
+
+- Tasks within each MoSCoW section are ordered **chronologically** (most recently updated first)
+- This ensures the most active work is visible at the top of each section
+- Ordering is based on the task document's `Last updated` field
+
+**Task Entry Format:**
+
+Each task entry in the MoSCoW sections includes:
+- **Task ID:** `E{epic}:S{story}:T{task}` format (e.g., `E4:S13:T02`)
+- **Task Description:** Brief description of the task
+- **Last Updated:** Date when task was last updated
+- **Links:** Links to Task document and parent Story document
+
+**Example Format:**
+```markdown
+- **E4:S13:T02** – Update Kanban governance policy  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+```
+
+### Story Checklist
+
+After the MoSCoW sections, the board includes a **Story Checklist** section that lists all stories in a compact format (one line per story):
+
+- **Format:** One line per story with status indicator
+- **Purpose:** Provides quick overview of all stories and their completion status
+- **Forensic Markers:** Includes version markers for completed stories (e.g., `✅ COMPLETE (v0.4.13.1+1)`)
+
+**Example Format:**
+```markdown
+- [x] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - IN PROGRESS (v0.4.13.4+3 – T04 COMPLETE: Packaged RW updated)
+  - Story: [`Story-013-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view.md)
+  - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T04 ✅ COMPLETE (v0.4.13.4+3), T02-T03 TODO, T05-T06 TODO
+```
+
+### Traditional Column Structure (Optional)
+
+Projects may also use a traditional column-based board structure with five columns, left to right:
 
 1. **Backlog** – Groomed but unscheduled
 2. **Ready** – Fully specified, awaiting prioritisation
@@ -231,6 +304,8 @@ Five columns, left to right:
 - Move strictly left → right (no skipping)
 - WIP limits per swimlane
 - Every card links to KB doc and branch/tag
+
+**Note:** The MoSCoW prioritized task view can be used alongside or instead of the traditional column structure, depending on project needs.
 
 ---
 
