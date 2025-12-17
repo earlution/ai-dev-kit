@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.7+3] - 17-12-25
+
+📚 Framework Hardening: Installation instructions improved (Phase 4)
+
+### Changed
+
+- **Installation Documentation (HIGH):**
+  - Enhanced `packages/frameworks/kanban/README.md` with comprehensive Epic mashup prevention section
+  - Added detailed step-by-step installation guide (fresh install, migration)
+  - Added installation examples (tiny project, existing project with conflicts)
+  - Added common mistakes section with prevention strategies
+  - Documented validation integration and how installer prevents Epic mashup
+  - Explained what validation catches and how to fix issues
+
+### Added
+
+- **Epic Mashup Prevention Documentation:**
+  - Comprehensive Epic mashup issue explanation with root cause
+  - Prevention steps clearly documented
+  - Examples of correct vs incorrect installation
+  - Validation output examples
+  - Best practices to avoid Epic mashup
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+3.md)
+
+---
+
 ## [0.6.6.7+2] - 17-12-25
 
 🔧 Framework Hardening: Installer validation implemented (Phase 2)

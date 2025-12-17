@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-17 (v0.6.6.7+2 – T07 IN PROGRESS: Phase 2 installer validation complete)  
+**Last updated:** 2025-12-17 (v0.6.6.7+3 – T07 IN PROGRESS: Phase 4 installation instructions improved, Phase 1-2-4 complete)  
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -32,9 +32,9 @@ housekeeping_policy: keep
   - Tasks: T01 ✅, T02 ✅
 - [ ] **E6:S05 – Feature Requests** - TODO
   - Story: [`Story-005-feature-requests.md`](Story-005-feature-requests.md)
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.7+2)
+- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.7+3)
   - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T06 ✅ COMPLETE (v0.6.6.6+20), T07 IN PROGRESS (v0.6.6.7+2 – Phase 2: Installer validation)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T06 ✅ COMPLETE (v0.6.6.6+20), T07 IN PROGRESS (v0.6.6.7+3 – Phase 1✅, Phase 2✅, Phase 3 partial, Phase 4✅)
 
 ---
 

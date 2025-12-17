@@ -263,13 +263,21 @@ cp -r packages/frameworks/ai-dev-kit/docs/project-management/kanban/epics/* docs
 - You'll get ai-dev-kit's project-specific epics (Epic 1: "AI Dev Kit Core", etc.)
 - You'll get ai-dev-kit's actual stories and tasks with their specific content
 - Epic 1 won't be contextualized with your project name
-- You'll receive project-specific epics (5-9) that are specific to ai-dev-kit
+- You'll receive project-specific epics (like Epic 24 "Book Related Work") that are specific to ai-dev-kit
+- **CRITICAL: Epic Mashup Risk** - You may get Epic 9 "Book Related Work" instead of canonical Epic 9 "User Management and Authentication"
 
 **✅ CORRECT - Use the installer:**
 ```bash
 # ✅ CORRECT - Use the interactive installer
 python3 scripts/install_kanban_framework.py
 ```
+
+The installer will:
+- ✅ Install from canonical templates (`templates/epics/`)
+- ✅ Validate Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific)
+- ✅ Prevent Epic mashup by detecting conflicts
+- ✅ Warn if it detects copying of ai-dev-kit's actual Kanban
+- ✅ Provide clear error messages if issues are detected
 
 ### Understanding Canonical Templates vs. ai-dev-kit's Actual Kanban
 
@@ -278,17 +286,86 @@ python3 scripts/install_kanban_framework.py
 - ✅ Designed to be contextualized for your project
 - ✅ These are what the installer uses
 - ✅ Located in: `packages/frameworks/kanban/templates/epics/Epic-{N}-*.md`
+- ✅ Epic 1-23 are canonical (standard framework epics)
+- ✅ Epic 9 is "User Management and Authentication" (canonical)
 
 **ai-dev-kit's Actual Kanban** (`docs/project-management/kanban/epics/`):
 - ❌ ai-dev-kit's project-specific epics (e.g., "AI Dev Kit Core")
 - ❌ ai-dev-kit's actual stories and tasks
+- ❌ Contains Epic 24 "Book Related Work" (project-specific, not canonical)
 - ❌ Example/reference only - **DO NOT COPY**
 - ❌ Located in: `docs/project-management/kanban/epics/Epic-{N}/`
+- ⚠️ **Epic Mashup Risk**: Contains project-specific content in Epic 24+ range
 
 **The installer automatically:**
 - Copies from `templates/epics/` (canonical templates)
 - Contextualizes placeholders with your project name
 - Does NOT copy from `docs/project-management/kanban/epics/` (ai-dev-kit's actual Kanban)
+- Validates Epic numbering to prevent Epic mashup
+- Detects and warns about copying ai-dev-kit's actual Kanban
+
+### 🚨 Epic Mashup Prevention
+
+**What is Epic Mashup?**
+
+Epic mashup occurs when a project incorrectly gets canonical Epic content mixed with project-specific content, causing confusion about which epics are canonical vs project-specific.
+
+**Common Epic Mashup Scenarios:**
+
+1. **Epic 9 Mismatch (CRITICAL):**
+   - ❌ **WRONG**: Epic 9 contains "Book Related Work" (project-specific content from ai-dev-kit)
+   - ✅ **CORRECT**: Epic 9 is "User Management and Authentication" (canonical)
+   - **Root Cause**: Copying ai-dev-kit's actual Kanban instead of using templates
+   - **Impact**: Affects 30% of client projects - causes confusion and incorrect epic structure
+
+2. **Project-Specific Epics in Canonical Range:**
+   - ❌ **WRONG**: Epic 9-23 contain project-specific content
+   - ✅ **CORRECT**: Epic 1-23 are canonical, Epic 24+ are project-specific
+
+**How the Installer Prevents Epic Mashup:**
+
+The installer includes validation that:
+- ✅ Validates Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific)
+- ✅ Detects Epic 9 "Book Related Work" in canonical range → ERROR
+- ✅ Warns if Epic 24 "Book Related Work" detected (suggests copying ai-dev-kit's Kanban)
+- ✅ Blocks installation if Epic conflicts detected (unless `--force` used)
+- ✅ Provides clear error messages explaining the issue and how to fix it
+
+**Installation Validation:**
+
+The installer runs validation automatically:
+- **Pre-installation validation** (Step 3.5) - Before migration to catch issues early
+- **Post-installation validation** (Step 5) - After migration to confirm success
+
+To run validation manually:
+```bash
+python3 scripts/validate_installation.py --kanban-path docs/project-management/kanban
+```
+
+**What Happens if Epic Mashup is Detected:**
+
+The installer will:
+1. Report errors with clear explanations
+2. Block installation (unless `--force` used)
+3. Provide guidance on how to fix the issue
+4. Show which epics are causing conflicts
+
+Example error output:
+```
+❌ ERRORS (must be fixed before installation):
+  ❌ CRITICAL: Epic 9 contains 'Book Related Work' but canonical Epic 9 is 
+    'User Management and Authentication'. This is the root cause of Epic mashup. 
+    Rename Epic 9 to Epic 24+ (project-specific range).
+```
+
+**Best Practices to Avoid Epic Mashup:**
+
+1. ✅ **Always use the installer** - Don't manually copy epics
+2. ✅ **Use canonical templates** - Installer uses `templates/epics/`, not `docs/.../epics/`
+3. ✅ **Follow Epic numbering** - Epic 1-23 canonical, Epic 24+ project-specific
+4. ✅ **Run validation** - Use `validate_installation.py` to check your structure
+5. ✅ **Review Epic content** - Ensure Epic 1-23 match canonical templates
+6. ❌ **Never copy ai-dev-kit's actual Kanban** - Use templates instead
 
 ### Alternative: Manual Installation (Advanced - Not Recommended)
 

@@ -10,10 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** CRITICAL  
-**Last updated:** 2025-12-17 (v0.6.6.7+2 – Phase 2: Installer validation complete)  
+**Last updated:** 2025-12-17 (v0.6.6.7+3 – Phase 4: Installation instructions improved)  
 **Started:** 2025-12-18  
 **Completed:** [TBD]  
-**Version:** v0.6.6.7+2  
+**Version:** v0.6.6.7+3
+
+**Progress:** Phase 1 ✅, Phase 2 ✅, Phase 3 (partial - rw-config.yaml ✅), Phase 4 ✅  
 **Code:** E6S06T07
 
 ---
@@ -112,10 +114,10 @@ Implement all critical and high-priority hardening actions:
 - [ ] `rw-config.yaml` exists in project root with correct configuration
 - [ ] Version file migrated to `src/ai_dev_kit/version.py`
 - [ ] All references to version file updated (workflows, scripts, documentation)
-- [ ] Installation instructions clearly distinguish templates from actual Kanban
-- [ ] Epic mashup prevention documented in installation instructions
-- [ ] Clear installation examples provided (step-by-step guide, example projects)
-- [ ] Common mistakes documented with prevention strategies
+- [x] Installation instructions clearly distinguish templates from actual Kanban ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
+- [x] Epic mashup prevention documented in installation instructions ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
+- [x] Clear installation examples provided (step-by-step guide, example projects) ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
+- [x] Common mistakes documented with prevention strategies ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
 - [ ] Source serves as reference implementation (demonstrates own frameworks)
 
 ---
