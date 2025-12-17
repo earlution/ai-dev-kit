@@ -6,533 +6,446 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Meta-Analysis Executive Summary: Cross-Project ADK Implementation Findings
+# Meta-Analysis Executive Summary: Proposed Canonical Framework Designs
 
-**Purpose:** Synthesize all meta-analyses into comprehensive executive summary presenting all findings (good and bad)  
+**Purpose:** Decision-focused executive summary presenting proposed "ultimate" canonical structures for all framework dimensions  
 **Analysis Date:** 2025-12-17  
 **Status:** COMPLETE  
-**Version:** 1.0.0  
+**Version:** 2.0.0  
 **Part of:** E6:S06:T06 – Cross-project meta-analysis and canonical framework design
 
-**Data Sources:**
-- 10 project analysis reports (9 client implementations + ai-dev-kit source)
-- 7 meta-analysis documents (pattern frequency, convergence/divergence, canonical vs legacy, 4 structure-specific)
-- 4 granular structure analyses (task-level Kanban, KB/documentation, workflows, cursorrules)
+**Note:** This is an **executive summary** focused on decisions and proposed canonical structures. For detailed tactical analysis, see the supporting meta-analysis documents referenced below.
 
 ---
 
 ## Executive Summary
 
-This document synthesizes findings from **comprehensive analysis of 10 projects** (9 client implementations + ai-dev-kit source repository) across **4 framework dimensions** (Kanban, KB/documentation, workflows, cursorrules). The analysis reveals both **strong convergence** on core ADK patterns and **critical issues** requiring immediate attention.
+This document synthesizes findings from **comprehensive analysis of 10 projects** (9 client implementations + ai-dev-kit source) to propose **"ultimate" canonical structures** for all ADK framework dimensions. These proposals inform concrete decisions about framework standardization and hardening.
 
-### Key Metrics
+### Key Decisions Required
 
-- **Projects Analyzed:** 10 (9 client implementations + 1 source repository)
-- **Framework Dimensions:** 4 (Kanban, KB/documentation, workflows, cursorrules)
-- **Perfect Convergence:** 1 pattern (`KB/` directory naming - 100%)
-- **Strong Convergence:** 3 patterns (task naming 60%, E/S/T hierarchy 100%, story checklists 90%)
-- **Critical Issues:** 3 (Epic mashup 30%, Epic 9 mismatch in source, missing cursorrules in source)
-- **Completion Status:** 7/14 meta-analysis deliverables complete (50%)
+1. **Adopt proposed canonical Kanban E/S/T structure** (based on 60% convergence on task naming)
+2. **Adopt proposed canonical KB/documentation structure** (based on 100% convergence on `KB/` naming, 40% on 5-pillar)
+3. **Adopt proposed canonical workflow structure** (based on 50% convergence on RW triggers)
+4. **Adopt proposed canonical cursorrules structure** (based on 90% convergence on file naming)
+5. **Fix Epic 9 mismatch in ai-dev-kit source** (CRITICAL - root cause of Epic mashup)
+6. **Address source repository gaps** (missing cursorrules, legacy version path)
 
 ### Critical Discovery
 
-**Epic 9 Mismatch in ai-dev-kit Source is Root Cause of Epic Mashup**
-
-- **Issue:** ai-dev-kit's Epic 9 "Book Related Work" conflicts with canonical Epic 9 "User Management and Authentication"
-- **Impact:** 30% of client projects (been-there, dev-toolkit, agentic-ide-rules) have Epic mashup
-- **Root Cause:** Projects copying ai-dev-kit's actual Kanban structure instead of using canonical templates
-- **Severity:** CRITICAL - Affects framework adoption quality
+**Epic 9 Mismatch:** ai-dev-kit's Epic 9 "Book Related Work" conflicts with canonical Epic 9 "User Management and Authentication", causing Epic mashup in 30% of client projects.
 
 ---
 
-## 1. Critical Findings
+## 1. Proposed Ultimate Canonical Kanban Structure
 
-### 1.1 Epic Mashup Issue (CRITICAL)
+### 1.1 Epic Structure
 
-**Problem:** 30% of client projects have inappropriate epics (e.g., "Book Related Work" in non-book projects)
+**Naming:**
+- **Canonical:** `Epic-{N}` (hyphen, e.g., `Epic-1`, `Epic-9`)
+- **Legacy Support:** `Epic {N}` (space), `E{N}` (abbreviated)
+- **Rationale:** 40% convergence on hyphen format, but support legacy formats for migration
 
-**Root Cause:** Epic 9 mismatch in ai-dev-kit source repository
-- ai-dev-kit's actual Epic 9: "Book Related Work" (project-specific)
-- Canonical template Epic 9: "User Management and Authentication"
-- When projects copy ai-dev-kit's actual Kanban, they get wrong Epic 9
+**Numbering:**
+- **Canonical Range:** Epics 1-23 (framework + project-specific canonical patterns)
+- **Project-Specific Range:** Epics 24+ (for project-specific work)
+- **CRITICAL:** Fix Epic 9 mismatch in ai-dev-kit source (rename "Book Related Work" to Epic 24+)
 
-**Affected Projects:** been-there, dev-toolkit, agentic-ide-rules
+**Directory Structure:**
+- **Canonical:** `KB/PM_and_Portfolio/kanban/epics/Epic-{N}/`
+- **File:** `Epic-{N}.md` (epic overview document)
 
-**Impact:**
-- Confusion about which epics are canonical vs project-specific
-- Clutters Kanban boards with irrelevant epics
-- Makes it unclear what actual project work is
-- Undermines framework adoption quality
+**Prevention:**
+- Installer validation to prevent Epic mashup
+- Clear separation between canonical templates and ai-dev-kit's actual Kanban
+- **CRITICAL:** Fix Epic 9 mismatch in source
 
-**Prevention Strategy:**
-1. **CRITICAL:** Fix Epic 9 mismatch in ai-dev-kit source (rename to Epic 24+ or document as project-specific)
-2. Add installer validation to prevent Epic mashup
-3. Clearly distinguish canonical templates from ai-dev-kit's actual Kanban
-4. Improve installation instructions
+### 1.2 Story Structure
 
-### 1.2 Source Repository Gaps (HIGH)
+**Naming:**
+- **Canonical:** `Story-{NNN}-{description}` (3-digit padding, e.g., `Story-001-project-setup.md`)
+- **Legacy Support:** `Story {N}` (space), `S{N}` (abbreviated)
+- **Rationale:** 30% convergence on canonical format, but support legacy for migration
+
+**Directory Structure:**
+- **Canonical:** `KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{NNN}-{description}/`
+- **File:** `Story-{NNN}-{description}.md` (story document)
+
+**Checklist:**
+- **Required:** Story checklist in Epic document (`Epic-{N}.md`)
+- **Format:** Markdown checklist with version markers: `- [x] **E{N}:S{NNN} – Description** - COMPLETE ✅ (v0.N.NNN.T+B)`
+
+### 1.3 Task Structure
+
+**Naming:**
+- **Canonical:** `E{epic}:S{story}:T{task}` (full context, required, e.g., `E6:S06:T01`)
+- **Padding:** 2-digit (`T01`, `T02`) canonical, 3-digit (`T001`) legacy support
+- **Rationale:** 60% convergence on full-context format, strong convergence indicator
+
+**Organization:**
+- **Small Tasks:** Embedded in Story document (most common, 60% of projects)
+- **Large Tasks:** Separate files in `Story-{NNN}/T{task}-{description}.md`
+- **Always:** Task checklist in Story document
+
+**Structure:**
+- **Required Fields:** Task ID (`E{epic}:S{story}:T{task}`), Status, Input, Deliverable, Acceptance Criteria
+- **Optional Fields:** Dependencies, Blocker, Approach, Files, Progress Notes, Version
+
+**File Naming (for separate files):**
+- **Canonical:** `T{task}-{description}.md` (e.g., `T01-project-setup.md`)
+
+### 1.4 Proposed Canonical E/S/T Template System
+
+**Epic Templates:**
+- 21 canonical epic templates (Epics 1-21)
+- Project-specific epics start at Epic 24+
+- Epic 1: `{PROJECT_NAME} Core` (generic placeholder, not "AI Dev Kit Core")
+
+**Story Templates:**
+- 62+ story templates organized by epic
+- Standard story patterns for each epic
+
+**Task Templates:**
+- 193+ task templates organized by epic/story
+- Standard task patterns for each story
+
+**Reference Implementation:** ai-dev-kit source has comprehensive template system (21 epics, 62+ stories, 193+ tasks)
+
+---
+
+## 2. Proposed Ultimate Canonical KB/Documentation Structure
+
+### 2.1 Root Directory
+
+**Naming:**
+- **Canonical:** `KB/` (uppercase, abbreviation)
+- **Rationale:** 100% convergence (10/10 projects) - perfect convergence
+- **Legacy Support:** `knowledge/` (pre-ADK), `KB/` + `docs/` (hybrid during migration)
+
+### 2.2 Directory Organization
+
+**Canonical Structure: 5-Pillar Organization**
+- **Architecture/** - Technical standards, ADRs, integration docs
+- **Changelog_and_Release_Notes/** - Release documentation, changelog archive
+- **PM_and_Portfolio/** - Project management, Kanban, governance
+- **Guides/** - User-facing documentation, how-to guides
+- **Documentation/** - Developer documentation, vision, purpose (optional)
+
+**Rationale:** 40% convergence on 5-pillar structure, ai-dev-kit source demonstrates perfect implementation
+
+**Reference Implementation:** ai-dev-kit source repository demonstrates perfect 5-pillar canonical structure
+
+**Legacy Support:**
+- Multi-pillar (15+) for enterprise projects
+- Hybrid (`KB/` + `docs/`) during migration
+- Pre-ADK `knowledge/` structure
+
+### 2.3 Document Structure
+
+**Frontmatter:**
+- **Required:** YAML frontmatter with lifecycle metadata
+- **Rationale:** 90% adoption (9/10 projects)
+
+**Lifecycle Metadata:**
+- **Required Fields:** `lifecycle`, `created_at`
+- **Optional Fields:** `ttl_days`, `expires_at`, `housekeeping_policy`
+- **Rationale:** 60% adoption, promote to 100%
+
+**Document Types:**
+- Standard types: ADR, Policy, Guide, Template, Analysis, Changelog
+- Custom types: Support project-specific document types
+
+### 2.4 Navigation
+
+**Index Files:**
+- **Canonical:** `README.md` (standard markdown)
+- **Obsidian Support:** `_index.md` (for Obsidian projects)
+- **Rationale:** Support both formats (78% use README.md, 22% use _index.md)
+
+**Structure:**
+- Root `KB/README.md` for top-level navigation
+- Section `README.md` files for each pillar
+- Directory-level `README.md` files for major subdirectories
+
+### 2.5 Cross-Referencing
+
+**Format:**
+- **Canonical:** Standard markdown links `[Link Text](path/to/file.md)`
+- **Obsidian Support:** Obsidian links `[[Link Text]]` (for Obsidian projects)
+- **Rationale:** Support both formats (78% use markdown, 22% use Obsidian)
+
+---
+
+## 3. Proposed Ultimate Canonical Workflow Structure
+
+### 3.1 File Structure
+
+**Naming:**
+- **Canonical:** `{workflow-name}-workflow.yaml` (e.g., `release-workflow.yaml`)
+- **Location:** `packages/frameworks/workflow mgt/workflows/` (framework) or `workflows/` (project root)
+- **Legacy Support:** `{name}.yaml`, script-based workflows (`.py`/`.sh`)
+
+**Rationale:** 30% convergence on canonical format, but support legacy for migration
+
+### 3.2 Release Workflow (RW)
+
+**Step Count:**
+- **Canonical:** 12 steps (comprehensive RW)
+- **Legacy Support:** 10-step, 11-step, 13-step variants
+
+**Step Structure:**
+1. **Step 1: Branch Safety Check** (mandatory, blocking) - CRITICAL
+2. **Steps 2-12:** Standard RW steps (version bump, changelog, commit, tag, push, etc.)
+
+**Reference Implementation:** ai-dev-kit source has comprehensive 12-step workflow YAML definitions
+
+### 3.3 Configuration
+
+**Config File:**
+- **Canonical:** `rw-config.yaml` (config-driven approach)
+- **Location:** Project root
+- **Required Config:** Version file path, changelog paths, scripts path
+- **Optional Config:** Kanban integration, custom patterns
+
+**Rationale:** 30% adoption, but config-driven approach is best practice
+
+**Legacy Support:** Hardcoded paths in `.cursorrules` during migration
+
+### 3.4 Execution
+
+**Pattern:**
+- **Canonical:** Agent-driven (ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED)
+- **Progress Tracking:** Cursor TODOs (required)
+- **Atomicity:** Complete all steps or abort (required)
+
+**Rationale:** Agent-driven execution provides intelligent execution and user visibility
+
+**Legacy Support:** Script-based, manual execution during migration
+
+### 3.5 Validation
+
+**Required Validators:**
+- Branch context validation (`validate_branch_context.py --strict`)
+- Changelog format validation (`validate_changelog_format.py`)
+
+**Rationale:** Validation prevents invalid releases and maintains quality
+
+**Legacy Support:** Optional validation during migration
+
+---
+
+## 4. Proposed Ultimate Canonical Cursorrules Structure
+
+### 4.1 File Structure
+
+**Naming:**
+- **Canonical:** `.cursorrules` (project root)
+- **Rationale:** 90% convergence (9/10 projects, ai-dev-kit source missing)
+
+**CRITICAL:** ai-dev-kit source should add `.cursorrules` file to demonstrate own framework
+
+### 4.2 Section Organization
+
+**Canonical Order (Workflow-First):**
+1. **RW Trigger Section** (Release Workflow trigger)
+2. **PVW Trigger Section** (Package Version Workflow trigger, optional)
+3. **Document Lifecycle Management Section** (optional but recommended)
+4. **Git Workflow Restrictions Section** (optional but recommended)
+5. **Project-Specific Rules Section** (custom rules)
+
+**Rationale:** Workflow-first organization prioritizes framework usage
+
+### 4.3 RW Trigger Section
+
+**Canonical: Comprehensive 12-Step RW Trigger**
+- All 12 steps defined with detailed descriptions
+- Mandatory branch safety check (Step 1)
+- Progress tracking with Cursor TODOs
+- Config-driven approach (loads `rw-config.yaml`)
+
+**Rationale:** 20% adoption, but comprehensive trigger is best practice
+
+**Reference Implementation:** agentic-ide-rules demonstrates comprehensive 12-step RW trigger
+
+**Legacy Support:** Standard 11-step, minimal RW trigger during migration
+
+### 4.4 Document Lifecycle Management
+
+**Canonical: Lifecycle Metadata Rules**
+- Document lifecycle management based on frontmatter metadata
+- Automated expiration and housekeeping
+- Policy salience parsing
+
+**Rationale:** 30% adoption, but lifecycle management is recommended
+
+**Legacy Support:** Projects without lifecycle management
+
+### 4.5 Git Workflow Restrictions
+
+**Canonical: Strict Git Restrictions**
+- Commits only via RW
+- Push only via RW
+- Branch isolation enforced
+- Pre-commit validation
+
+**Rationale:** 30% adoption, but git restrictions enforce workflow
+
+**Legacy Support:** Projects without git restrictions
+
+---
+
+## 5. Critical Issues Requiring Immediate Action
+
+### 5.1 Epic 9 Mismatch (CRITICAL)
+
+**Problem:** ai-dev-kit's Epic 9 "Book Related Work" conflicts with canonical Epic 9 "User Management and Authentication"
+
+**Impact:** 30% of client projects (been-there, dev-toolkit, agentic-ide-rules) have Epic mashup
+
+**Root Cause:** Projects copying ai-dev-kit's actual Kanban structure instead of using canonical templates
+
+**Required Action:**
+1. **CRITICAL:** Rename ai-dev-kit's Epic 9 "Book Related Work" to Epic 24+ (project-specific range)
+2. **OR:** Clearly document that Epic 9 in ai-dev-kit is project-specific, not canonical
+3. Update all Epic 9 references in ai-dev-kit source
+4. Add installer validation to prevent Epic mashup
+
+### 5.2 Source Repository Gaps (HIGH)
 
 **Problem:** ai-dev-kit source repository doesn't use its own frameworks
 
-**Gaps Identified:**
+**Gaps:**
 1. **Missing `.cursorrules` file** - Should demonstrate own cursorrules framework
 2. **Missing `rw-config.yaml` in project root** - Only example exists, not actual config
 3. **Legacy version file path** - `src/fynd_deals/version.py` instead of `src/ai_dev_kit/version.py`
 
-**Impact:**
-- Cannot demonstrate RW trigger to client projects
-- Source repository doesn't serve as reference implementation
-- Client projects can't see how to properly use frameworks
+**Impact:** Cannot demonstrate frameworks to client projects, source doesn't serve as reference implementation
 
-**Recommendation:** ai-dev-kit should use its own frameworks to demonstrate best practices
-
-### 1.3 Low Adoption of Config-Driven Approach (MODERATE)
-
-**Problem:** Only 30% of projects use `rw-config.yaml` (config-driven approach)
-
-**Impact:**
-- Hardcoded paths in `.cursorrules` files
-- Difficult to maintain and update
-- Inconsistent configuration patterns
-
-**Recommendation:** Promote config-driven approach, provide better examples
+**Required Action:**
+1. Add `.cursorrules` file with comprehensive RW trigger section
+2. Add `rw-config.yaml` to project root
+3. Migrate version file path to canonical location
 
 ---
 
-## 2. Good Practices (What Works Well)
+## 6. Key Decisions Summary
 
-### 2.1 Perfect Convergence Patterns
+### 6.1 Decisions to Adopt Proposed Canonical Structures
 
-**`KB/` Directory Naming:**
-- **Frequency:** 100% (10/10 projects)
-- **Status:** ✅ Perfect convergence
-- **Rationale:** Clear abbreviation, standard convention, universal adoption
-- **Recommendation:** Maintain as canonical, no changes needed
+| Framework Dimension | Proposed Canonical Structure | Convergence Basis | Decision Required |
+|---------------------|------------------------------|-------------------|-------------------|
+| **Kanban E/S/T** | `Epic-{N}/Story-{NNN}/E{N}:S{NNN}:T{NN}` | 60% task naming, 100% hierarchy | ✅ **ADOPT** |
+| **KB/Documentation** | 5-pillar `KB/` structure | 100% naming, 40% organization | ✅ **ADOPT** |
+| **Workflows** | 12-step RW, `rw-config.yaml` | 50% RW trigger, 30% config | ✅ **ADOPT** |
+| **Cursorrules** | Comprehensive 12-step RW trigger | 90% file naming, 20% comprehensive | ✅ **ADOPT** |
 
-### 2.2 Strong Convergence Patterns
+### 6.2 Decisions on Legacy Support
 
-**Task Naming (`E{epic}:S{story}:T{task}`):**
-- **Frequency:** 60% (6/10 projects)
-- **Status:** ✅ Strong convergence
-- **Rationale:** Full context requirement prevents ambiguity
-- **Recommendation:** Enforce as canonical, promote adoption
+| Pattern | Canonical | Legacy Support | Rationale |
+|---------|-----------|----------------|-----------|
+| Epic naming | `Epic-{N}` | `Epic {N}`, `E{N}` | 22% use space, 30% use abbreviated |
+| Story naming | `Story-{NNN}` | `Story {N}`, `S{N}` | 20% use space, 30% use abbreviated |
+| Task padding | 2-digit (`T01`) | 3-digit (`T001`) | 30% use 3-digit |
+| KB organization | 5-pillar | Multi-pillar, hybrid | 10% multi-pillar, 40% hybrid |
+| Workflow config | `rw-config.yaml` | Hardcoded paths | 50% don't use config |
 
-**Epic/Story/Task Hierarchy:**
-- **Frequency:** 100% (10/10 projects)
-- **Status:** ✅ Perfect convergence
-- **Rationale:** Universal adoption of hierarchical structure
-- **Recommendation:** Maintain as canonical
+**Decision:** Support legacy patterns during migration, but promote canonical as standard
 
-**Story Checklist Pattern:**
-- **Frequency:** 90% (9/10 projects)
-- **Status:** ✅ Strong convergence
-- **Rationale:** Clear progress tracking, version markers
-- **Recommendation:** Promote to 100% adoption
+### 6.3 Critical Fix Decisions
 
-### 2.3 Reference Implementations
-
-**ai-dev-kit Source Repository:**
-- ✅ **Perfect KB Structure:** Demonstrates canonical 5-pillar structure perfectly
-- ✅ **Comprehensive Workflow YAML:** Has excellent workflow definitions
-- ✅ **Comprehensive Template System:** 21 epic templates, 62+ story templates, 193+ task templates
-- ✅ **Framework Package Organization:** Excellent structure and documentation
-
-**Client Projects:**
-- ✅ **been-there, dev-toolkit:** Good config-driven approach, proper RW trigger
-- ✅ **agentic-ide-rules:** Comprehensive 12-step RW trigger implementation
-- ✅ **confidentia:** Good lifecycle metadata adoption
+| Issue | Severity | Required Action | Priority |
+|-------|----------|-----------------|----------|
+| Epic 9 mismatch | CRITICAL | Rename to Epic 24+ or document as project-specific | **IMMEDIATE** |
+| Missing cursorrules | HIGH | Add `.cursorrules` file to ai-dev-kit source | **HIGH** |
+| Missing rw-config | HIGH | Add `rw-config.yaml` to ai-dev-kit project root | **HIGH** |
+| Legacy version path | MEDIUM | Migrate to `src/ai_dev_kit/version.py` | **MEDIUM** |
 
 ---
 
-## 3. Bad Practices (What Causes Issues)
+## 7. Framework Hardening Priorities
 
-### 3.1 Critical Bad Practices
+### 7.1 Immediate Actions (CRITICAL)
 
-**Epic Mashup (Copying ai-dev-kit's Actual Kanban):**
-- **Frequency:** 30% (3/10 projects)
-- **Severity:** CRITICAL
-- **Root Cause:** Epic 9 mismatch in ai-dev-kit source + unclear installation instructions
-- **Impact:** Projects have inappropriate epics, confusion about canonical structure
-- **Prevention:** Fix Epic 9 in source, add installer validation, improve instructions
-
-**Source Repository Not Using Own Frameworks:**
-- **Frequency:** ai-dev-kit source (1/1 source repository)
-- **Severity:** HIGH
-- **Root Cause:** ai-dev-kit doesn't have `.cursorrules` file, uses legacy version path
-- **Impact:** Cannot demonstrate frameworks to client projects
-- **Prevention:** Add `.cursorrules` file, migrate version path, add `rw-config.yaml`
-
-### 3.2 Moderate Bad Practices
-
-**Hardcoded Paths (Not Using Config):**
-- **Frequency:** 50% (5/10 projects don't use `rw-config.yaml`)
-- **Severity:** MODERATE
-- **Root Cause:** Low adoption of config-driven approach (30%)
-- **Impact:** Difficult to maintain, inconsistent patterns
-- **Prevention:** Promote config-driven approach, provide better examples
-
-**Missing RW Trigger:**
-- **Frequency:** 40% (4/10 projects have no explicit RW trigger)
-- **Severity:** MODERATE
-- **Root Cause:** Low adoption, unclear instructions
-- **Impact:** Manual workflow execution, inconsistent patterns
-- **Prevention:** Promote RW trigger adoption, improve documentation
-
-**Missing Lifecycle Metadata:**
-- **Frequency:** 33% (3/10 projects missing lifecycle metadata)
-- **Severity:** MODERATE
-- **Root Cause:** Low adoption (67% have it, but should be 100%)
-- **Impact:** Manual document management, no automated lifecycle
-- **Prevention:** Promote lifecycle metadata, make it required
-
-**Missing Version Files:**
-- **Frequency:** 40% (4/10 projects have no explicit version file)
-- **Severity:** MODERATE
-- **Root Cause:** Low adoption, unclear requirements
-- **Impact:** No version tracking, inconsistent versioning
-- **Prevention:** Promote version file adoption, provide templates
-
----
-
-## 4. Convergence Patterns (What Projects Converge On)
-
-### 4.1 Perfect Convergence (100%)
-
-| Pattern | Frequency | Status | Recommendation |
-|---------|-----------|--------|----------------|
-| `KB/` directory naming | 10/10 (100%) | ✅ Perfect | Maintain as canonical |
-| Epic/Story/Task hierarchy | 10/10 (100%) | ✅ Perfect | Maintain as canonical |
-
-### 4.2 Strong Convergence (≥60%)
-
-| Pattern | Frequency | Status | Recommendation |
-|---------|-----------|--------|----------------|
-| Task naming (`E{epic}:S{story}:T{task}`) | 6/10 (60%) | ✅ Strong | Enforce as canonical |
-| Story checklist pattern | 9/10 (90%) | ✅ Strong | Promote to 100% |
-| Document frontmatter | 9/10 (90%) | ✅ Strong | Promote to 100% |
-
-### 4.3 Moderate Convergence (33-59%)
-
-| Pattern | Frequency | Status | Recommendation |
-|---------|-----------|--------|----------------|
-| Version schema (`RC.EPIC.STORY.TASK+BUILD`) | 5/10 (50%) | ⚠️ Moderate | Promote adoption |
-| 5-pillar KB organization | 4/10 (40%) | ⚠️ Moderate | Promote as canonical |
-| RW trigger adoption | 6/10 (60%) | ⚠️ Moderate | Promote adoption |
-| Lifecycle metadata | 6/10 (60%) | ⚠️ Moderate | Promote to 100% |
-
-**Key Insight:** Core patterns show strong convergence, but adoption of advanced features (config-driven, lifecycle metadata) needs promotion.
-
----
-
-## 5. Divergence Patterns (What Causes Drift)
-
-### 5.1 Critical Divergence
-
-**Epic Mashup:**
-- **Divergence Rate:** 30% (3/10 projects)
-- **Root Cause:** Epic 9 mismatch in ai-dev-kit source + unclear installation instructions
-- **Impact:** CRITICAL - Affects framework adoption quality
-- **Prevention:** Fix Epic 9 in source, add installer validation
-
-### 5.2 Moderate Divergence
-
-**Epic Naming Formats:**
-- **Divergence:** `Epic-{N}` (40%) vs `Epic {N}` (20%) vs `E{N}` (30%)
-- **Root Cause:** Legacy formats, different project preferences
-- **Impact:** MODERATE - Causes confusion but manageable
-- **Prevention:** Support all formats, promote canonical
-
-**Task Padding:**
-- **Divergence:** 2-digit (30%) vs 3-digit (30%) vs mixed (30%)
-- **Root Cause:** No clear canonical preference
-- **Impact:** MODERATE - Causes minor confusion
-- **Prevention:** Canonicalize 2-digit, support 3-digit
-
-**Story Naming Formats:**
-- **Divergence:** `Story-{NNN}-{desc}` (30%) vs `Story {N}` (20%) vs `S{N}` (30%)
-- **Root Cause:** Legacy formats, different project preferences
-- **Impact:** MODERATE - Causes confusion but manageable
-- **Prevention:** Support all formats, promote canonical
-
-**KB Organization Patterns:**
-- **Divergence:** 5-pillar (40%) vs multi-pillar (10%) vs hybrid (40%)
-- **Root Cause:** Different project needs, legacy structures
-- **Impact:** MODERATE - Flexible organization is acceptable
-- **Prevention:** Promote 5-pillar as canonical, support alternatives
-
-**Workflow Configuration:**
-- **Divergence:** Config-driven (30%) vs hardcoded (20%) vs no config (50%)
-- **Root Cause:** Low adoption of config-driven approach
-- **Impact:** MODERATE - Causes maintenance issues
-- **Prevention:** Promote config-driven approach
-
----
-
-## 6. Root Causes
-
-### 6.1 Epic Mashup Root Cause
-
-**Primary Root Cause:** Epic 9 mismatch in ai-dev-kit source repository
-
-**Chain of Causation:**
-1. ai-dev-kit uses Epic 9 for project-specific work ("Book Related Work")
-2. Canonical templates define Epic 9 as "User Management and Authentication"
-3. No clear separation between ai-dev-kit's actual Kanban and canonical templates
-4. Projects copy ai-dev-kit's actual Kanban structure instead of using templates
-5. Result: Projects get Epic 9 "Book Related Work" instead of canonical Epic 9
-
-**Contributing Factors:**
-- Unclear installation instructions
-- Installer validation not preventing Epic mashup (fixed in v0.4.6.10+1 but Epic 9 mismatch remains)
-- No clear distinction between canonical templates and ai-dev-kit's actual Kanban
-
-### 6.2 Low Adoption Root Causes
-
-**Config-Driven Approach (30% adoption):**
-- **Root Cause:** Unclear benefits, lack of examples, complex setup
-- **Prevention:** Better documentation, simpler examples, clearer benefits
-
-**RW Trigger Adoption (60% adoption):**
-- **Root Cause:** Unclear instructions, complex setup, manual execution works
-- **Prevention:** Better documentation, simpler setup, clearer benefits
-
-**Lifecycle Metadata (60% adoption):**
-- **Root Cause:** Unclear benefits, optional feature, manual management works
-- **Prevention:** Make required, demonstrate benefits, provide templates
-
----
-
-## 7. Cross-Cutting Insights
-
-### 7.1 Impact of ai-dev-kit Source Gaps on Client Projects
-
-**Epic 9 Mismatch:**
-- Directly causes Epic mashup in 30% of client projects
-- Undermines framework adoption quality
-- Creates confusion about canonical structure
-
-**Missing `.cursorrules` File:**
-- Cannot demonstrate RW trigger to client projects
-- Client projects can't see proper implementation
-- Reduces framework adoption confidence
-
-**Legacy Version Path:**
-- Doesn't demonstrate canonical structure
-- Confuses client projects about correct path
-- Reduces framework adoption confidence
-
-### 7.2 Importance of Source Repository as Reference Implementation
-
-**Current State:**
-- ✅ Perfect KB structure (exemplary reference)
-- ✅ Comprehensive workflow YAML (good reference)
-- ✅ Comprehensive template system (excellent reference)
-- ❌ Missing cursorrules (cannot demonstrate)
-- ❌ Legacy version path (doesn't demonstrate canonical)
-- ❌ Epic 9 mismatch (causes confusion)
-
-**Required State:**
-- ✅ Perfect KB structure (maintain)
-- ✅ Comprehensive workflow YAML (maintain)
-- ✅ Comprehensive template system (maintain)
-- ✅ Add `.cursorrules` file (demonstrate own framework)
-- ✅ Migrate version path (demonstrate canonical)
-- ✅ Fix Epic 9 mismatch (prevent confusion)
-
-### 7.3 Need for Source Repository to Use Own Frameworks
-
-**Principle:** Source repository should demonstrate best practices by using its own frameworks
-
-**Current Gap:** ai-dev-kit doesn't use its own cursorrules framework
-
-**Impact:** Cannot demonstrate to client projects how to properly use frameworks
-
-**Recommendation:** ai-dev-kit should use its own frameworks to serve as reference implementation
-
----
-
-## 8. Recommendations
-
-### 8.1 Immediate Actions (CRITICAL)
-
-1. **Fix Epic 9 Mismatch in ai-dev-kit Source**
-   - **Action:** Rename ai-dev-kit's Epic 9 "Book Related Work" to Epic 24+ (project-specific range)
-   - **OR:** Clearly document that Epic 9 in ai-dev-kit is project-specific, not canonical
-   - **Priority:** CRITICAL
-   - **Impact:** Prevents Epic mashup in future client projects
-   - **Effort:** Medium (requires updating all Epic 9 references)
-
-2. **Add `.cursorrules` File to ai-dev-kit**
-   - **Action:** Create `.cursorrules` file with comprehensive RW trigger section
-   - **Priority:** HIGH
-   - **Impact:** Demonstrates own cursorrules framework to client projects
-   - **Effort:** Low (use template, customize for ai-dev-kit)
-
-3. **Add `rw-config.yaml` to ai-dev-kit Project Root**
-   - **Action:** Create `rw-config.yaml` in project root (use example as template)
-   - **Priority:** HIGH
-   - **Impact:** Demonstrates config-driven approach to client projects
-   - **Effort:** Low (copy example, update paths)
-
-### 8.2 Short-Term Actions (HIGH)
-
-4. **Migrate Version File Path**
-   - **Action:** Migrate `src/fynd_deals/version.py` to `src/ai_dev_kit/version.py`
-   - **Priority:** MEDIUM
-   - **Impact:** Demonstrates canonical structure
-   - **Effort:** Medium (update all references, update RW config)
-
-5. **Add Installer Validation**
-   - **Action:** Enhance installer to validate canonical epics, prevent Epic mashup
-   - **Priority:** HIGH
-   - **Impact:** Prevents Epic mashup in future installations
-   - **Effort:** Medium (add validation logic)
-
-6. **Improve Installation Instructions**
-   - **Action:** Clearly document distinction between canonical templates and ai-dev-kit's actual Kanban
-   - **Priority:** HIGH
-   - **Impact:** Prevents Epic mashup, improves adoption quality
-   - **Effort:** Low (update documentation)
-
-### 8.3 Long-Term Actions (MEDIUM)
-
-7. **Promote Config-Driven Approach**
-   - **Action:** Better documentation, simpler examples, clearer benefits
-   - **Priority:** MEDIUM
-   - **Impact:** Increases adoption from 30% to target 80%+
-   - **Effort:** Medium (documentation, examples)
-
-8. **Promote RW Trigger Adoption**
-   - **Action:** Better documentation, simpler setup, clearer benefits
-   - **Priority:** MEDIUM
-   - **Impact:** Increases adoption from 60% to target 90%+
-   - **Effort:** Medium (documentation, examples)
-
-9. **Promote Lifecycle Metadata**
-   - **Action:** Make required, demonstrate benefits, provide templates
-   - **Priority:** MEDIUM
-   - **Impact:** Increases adoption from 60% to target 100%
-   - **Effort:** Low (documentation, templates)
-
----
-
-## 9. Framework Hardening Priorities
-
-### 9.1 Critical Priorities (Must Fix)
-
-1. **Epic Mashup Prevention**
-   - Fix Epic 9 mismatch in source
+1. **Fix Epic 9 Mismatch**
+   - Rename ai-dev-kit's Epic 9 to Epic 24+
+   - Update all references
    - Add installer validation
-   - Improve installation instructions
-   - **Impact:** Prevents 30% of projects from having Epic mashup
 
-2. **Source Repository Gaps**
+2. **Add Source Repository Frameworks**
    - Add `.cursorrules` file
    - Add `rw-config.yaml` to project root
    - Migrate version file path
-   - **Impact:** Source repository serves as proper reference implementation
 
-### 9.2 High Priorities (Should Fix)
+### 7.2 Short-Term Actions (HIGH)
 
-3. **Config-Driven Approach Promotion**
+3. **Improve Installation Instructions**
+   - Clearly distinguish canonical templates from ai-dev-kit's actual Kanban
+   - Document Epic mashup prevention
+   - Provide clear installation examples
+
+4. **Promote Config-Driven Approach**
    - Better documentation
    - Simpler examples
    - Clearer benefits
-   - **Impact:** Increases adoption from 30% to 80%+
 
-4. **RW Trigger Adoption Promotion**
-   - Better documentation
-   - Simpler setup
-   - Clearer benefits
-   - **Impact:** Increases adoption from 60% to 90%+
+### 7.3 Long-Term Actions (MEDIUM)
 
-### 9.3 Medium Priorities (Nice to Have)
-
-5. **Lifecycle Metadata Promotion**
+5. **Promote Lifecycle Metadata**
    - Make required
    - Demonstrate benefits
    - Provide templates
-   - **Impact:** Increases adoption from 60% to 100%
 
-6. **Naming Format Flexibility**
-   - Support `Epic {N}` (space) format
-   - Support `E{N}` (abbreviated) format
-   - Support `S{N}` (abbreviated) format
-   - **Impact:** Reduces divergence, improves adoption
+6. **Support Legacy Patterns**
+   - Document migration paths
+   - Provide conversion tools
+   - Support during transition
 
 ---
 
-## 10. Summary: Key Takeaways
+## 8. Supporting Documentation
 
-### 10.1 What's Working Well
-
-✅ **Perfect Convergence:**
-- `KB/` directory naming (100%)
-- Epic/Story/Task hierarchy (100%)
-
-✅ **Strong Convergence:**
-- Task naming `E{epic}:S{story}:T{task}` (60%)
-- Story checklist pattern (90%)
-- Document frontmatter (90%)
-
-✅ **Reference Implementations:**
-- ai-dev-kit perfect KB structure
-- ai-dev-kit comprehensive workflow YAML
-- ai-dev-kit comprehensive template system
-
-### 10.2 What Needs Immediate Attention
-
-❌ **CRITICAL Issues:**
-- Epic 9 mismatch in ai-dev-kit source (root cause of Epic mashup)
-- Epic mashup affecting 30% of client projects
-- Missing `.cursorrules` file in ai-dev-kit source
-
-⚠️ **HIGH Priority Issues:**
-- Low adoption of config-driven approach (30%)
-- Missing `rw-config.yaml` in ai-dev-kit project root
-- Legacy version file path in ai-dev-kit
-
-### 10.3 Action Items
-
-**Immediate (CRITICAL):**
-1. Fix Epic 9 mismatch in ai-dev-kit source
-2. Add `.cursorrules` file to ai-dev-kit
-3. Add `rw-config.yaml` to ai-dev-kit project root
-
-**Short-Term (HIGH):**
-4. Migrate version file path
-5. Add installer validation
-6. Improve installation instructions
-
-**Long-Term (MEDIUM):**
-7. Promote config-driven approach
-8. Promote RW trigger adoption
-9. Promote lifecycle metadata
-
----
-
-## 11. Next Steps
-
-This executive summary informs:
-- **Framework Hardening Plan** - Prioritized action items
-- **Source Repository Improvements** - Fix Epic 9, add cursorrules, migrate version path
-- **Installation Improvements** - Better instructions, installer validation
-- **Documentation Improvements** - Promote config-driven, RW trigger, lifecycle metadata
-- **Ultimate Canonical Framework Designs** - Informed by convergence/divergence patterns
-
-**See Also:**
-- `meta-analysis-pattern-frequency-tables.md` - Pattern frequency data
+**Detailed Tactical Analysis:**
+- `meta-analysis-pattern-frequency-tables.md` - Pattern frequency data and convergence rates
 - `meta-analysis-convergence-divergence-maps.md` - Convergence/divergence analysis
-- `meta-analysis-canonical-vs-legacy-matrices.md` - Canonical vs legacy comparison
-- `meta-analysis-kanban-structure.md` - Kanban structure meta-analysis
-- `meta-analysis-documentation-knowledge-structure.md` - KB/documentation structure meta-analysis
-- `meta-analysis-workflows.md` - Workflows meta-analysis
-- `meta-analysis-cursorrules-use-misuse.md` - Cursorrules use/mis-use meta-analysis
+- `meta-analysis-canonical-vs-legacy-matrices.md` - Canonical vs legacy comparison matrices
+- `meta-analysis-kanban-structure.md` - Detailed Kanban structure analysis and recommendations
+- `meta-analysis-documentation-knowledge-structure.md` - Detailed KB/documentation structure analysis
+- `meta-analysis-workflows.md` - Detailed workflow structure analysis and recommendations
+- `meta-analysis-cursorrules-use-misuse.md` - Detailed cursorrules use/mis-use analysis
+
+**Project Analysis Reports:**
 - `projects/ai-dev-kit-adk-analysis.md` - ai-dev-kit source repository analysis
+- `projects/been-there-adk-analysis.md` - been-there project analysis
+- `projects/dev-toolkit-adk-analysis.md` - dev-toolkit project analysis
+- (7 additional project reports)
+
+---
+
+## 9. Next Steps
+
+1. **Review and Approve Proposed Canonical Structures**
+   - Kanban E/S/T structure
+   - KB/documentation structure
+   - Workflow structure
+   - Cursorrules structure
+
+2. **Implement Critical Fixes**
+   - Fix Epic 9 mismatch in ai-dev-kit source
+   - Add source repository frameworks (cursorrules, rw-config)
+
+3. **Create Ultimate Canonical Framework Design Documents**
+   - `ultimate-canonical-kanban-structure.md`
+   - `ultimate-canonical-kb-structure.md`
+   - `ultimate-canonical-workflow-structure.md`
+   - `ultimate-canonical-cursorrules-structure.md`
+
+4. **Begin Framework Hardening**
+   - Implement installer validation
+   - Improve installation instructions
+   - Promote canonical structures
 
 ---
 
 **Last Updated:** 2025-12-17  
-**Version:** 1.0.0  
+**Version:** 2.0.0  
 **Status:** COMPLETE
-
