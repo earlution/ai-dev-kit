@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.6+16 – Applied kebab-case to all directories: OSS standard compliance)  
+**Last updated:** 2025-12-18 (v0.6.6.6+17 – Enhanced workflow structure with agentic intelligence: task-driven validation, knowledge base updates)  
 **Version:** v0.6.6.6+1  
 **Code:** E6S06
 

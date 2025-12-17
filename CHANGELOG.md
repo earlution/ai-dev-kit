@@ -17,6 +17,43 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+17] - 18-12-25
+
+🤖 Enhanced: Workflow structure with agentic intelligence - task-driven validation and knowledge base updates
+
+### Changed
+
+- **Workflow Structure (13-Step with Agentic Intelligence)**
+  - **Step 2: Task-Driven Validation (NEW - MANDATORY BLOCKING)**
+    - Agent validates work is task-driven before proceeding
+    - Checks for Task document existence
+    - Blocks workflow if no task found
+    - Provides clear feedback to user
+  
+  - **Step 8: Enhanced Kanban Docs Update**
+    - Now includes Task document updates (decomposed Kanban structure)
+    - Added `task_doc_pattern` to rw-config.yaml
+    - Updates Epic, Story, and Task documents with version markers
+  
+  - **Step 9: Update Knowledge Base (NEW - AGENTIC)**
+    - Analyzes changes and identifies knowledge base docs to update
+    - Evaluates documentation gaps
+    - Can author new knowledge base articles
+    - Flags gaps for user review if agent cannot author
+
+- **Execution Pattern**
+  - Enhanced: ANALYZE → DETERMINE → EVALUATE → DECIDE → EXECUTE → VALIDATE → PROCEED
+  - Added `agentic: true` flag to YAML structure
+  - Intelligent decision-making throughout workflow
+
+- **Configuration**
+  - Added `task_doc_pattern` to rw-config.yaml specification
+  - Added `knowledge_base_root` to rw-config.yaml specification
+
+**Full changelog:** [`docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md`](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md)
+
+---
+
 ## [0.6.6.6+16] - 18-12-25
 
 📁 Standardized: Applied kebab-case to all directories (OSS standard compliance)
