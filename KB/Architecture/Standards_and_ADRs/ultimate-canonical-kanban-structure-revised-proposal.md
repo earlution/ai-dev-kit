@@ -191,13 +191,78 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 **Canonical Stories:**
 
-- **Story 001: Initial Architecture Design**
-  - T01: Define system architecture
-  - T02: Design core architecture patterns
-  - T03: Create architecture decision records (ADRs)
-  - T04: Document system design
-  - T05: Define integration points
-  - T06: Create architecture diagrams
+- **Story 001: Comprehensive Architecture Design and Specification**
+  - T01: Requirements Engineering
+    - Elicit and document functional requirements
+    - Elicit and document non-functional requirements
+    - Prioritize requirements (MoSCow: must-have, should-have, could-have)
+    - Create requirements traceability matrix
+  - T02: Use Case Modelling
+    - Identify actors and stakeholders
+    - Define use cases for all major system interactions
+    - Create use case diagrams (UML)
+    - Document use case specifications (preconditions, postconditions, main flow, alternate flows, exceptions)
+    - Validate use cases with stakeholders
+  - T03: Domain Analysis and Noun-Verb Analysis
+    - Perform noun-verb analysis of requirements and ADRs
+    - Identify domain entities (nouns) and operations (verbs)
+    - Create domain model (entity-relationship model)
+    - Identify domain boundaries and bounded contexts
+    - Document domain vocabulary and glossary
+  - T04: Top-Down High-Level System View
+    - Create system context diagram
+    - Define system boundaries and external interfaces
+    - Identify major subsystems and components
+    - Create high-level system architecture diagram
+    - Document system-level responsibilities and interactions
+  - T05: Data Flow Diagrams (DFDs)
+    - Create Level 0 (Context) DFD
+    - Create Level 1 DFD (major processes)
+    - Create Level 2+ DFDs (detailed processes as needed)
+    - Document data flows, data stores, and processes
+    - Validate data flows with stakeholders
+  - T06: UML Design Models
+    - Create class diagrams (domain model, design model)
+    - Create sequence diagrams for key interactions
+    - Create state diagrams for stateful components
+    - Create component diagrams (system structure)
+    - Create deployment diagrams (if applicable)
+    - Create activity diagrams for complex workflows
+  - T07: Object and Interface Specifications
+    - Define object responsibilities using SOLID principles
+      - Single Responsibility Principle (SRP)
+      - Open/Closed Principle (OCP)
+      - Liskov Substitution Principle (LSP)
+      - Interface Segregation Principle (ISP)
+      - Dependency Inversion Principle (DIP)
+    - Specify contracts and interfaces for all components
+    - Define preconditions, postconditions, and invariants
+    - Document interface contracts (input/output specifications)
+    - Create interface documentation (API contracts)
+  - T08: Architecture Patterns and Design Decisions
+    - Select and document architecture patterns (e.g., MVC, Repository, Factory, Strategy)
+    - Create architecture decision records (ADRs)
+    - Document design rationale and trade-offs
+    - Define design constraints and assumptions
+    - Document architectural principles and guidelines
+  - T09: Integration Points and System Boundaries
+    - Define integration points between subsystems
+    - Specify external system interfaces
+    - Document integration protocols and data formats
+    - Define system boundaries and responsibilities
+    - Create integration architecture diagrams
+  - T10: Design Validation and Review
+    - Review design against requirements (traceability)
+    - Validate SOLID principles application
+    - Conduct design review with stakeholders
+    - Validate design completeness and consistency
+    - Document design review findings and updates
+  - T11: Design Documentation and Deliverables
+    - Create comprehensive design specification document
+    - Document design assumptions and constraints
+    - Create design glossary and terminology
+    - Generate design artifacts index
+    - Ensure design is implementation-ready (any competent programmer can implement from this)
 
 - **Story 002: Architecture Refactoring** (from old E22, architecture-focused)
   - T01: Identify architecture improvement opportunities
