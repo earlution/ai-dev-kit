@@ -10,11 +10,13 @@ housekeeping_policy: keep
 
 **Purpose:** Definitive specification for the canonical workflow structure  
 **Status:** COMPLETE  
-**Version:** 1.0.0  
+**Version:** 1.1.0  
 **Part of:** E6:S06:T06 – Cross-project meta-analysis and canonical framework design  
 **Supersedes:** All previous workflow structure specifications
 
 **Based on:** Comprehensive meta-analysis of 10 projects (9 client implementations + ai-dev-kit source)
+
+**Canonical Workflows:** 7 workflows documented (RW, Intake, PVW, PIR, Migration, Refactor, Testing)
 
 ---
 
@@ -27,18 +29,41 @@ This document **defines the ultimate canonical workflow structure** for ADK fram
 ```
 {project-root}/
 ├── workflows/                       # Project workflows (canonical)
-│   └── release-workflow.yaml
-├── rw-config.yaml                   # Workflow configuration (canonical)
+│   ├── release-workflow.yaml
+│   ├── intake-workflow.yaml
+│   ├── package-version-workflow.yaml
+│   ├── pir-workflow.yaml
+│   ├── migration-workflow.yaml
+│   ├── refactor-workflow.yaml
+│   └── testing-workflow.yaml
+├── rw-config.yaml                   # Release Workflow configuration (canonical)
+├── intake-config.yaml               # Intake Workflow configuration (optional)
 └── packages/frameworks/workflow mgt/workflows/  # Framework workflows
-    └── release-workflow.yaml
+    ├── release-workflow.yaml
+    ├── intake-workflow.yaml
+    ├── package-version-workflow.yaml
+    ├── pir-workflow.yaml
+    ├── migration-workflow.yaml
+    ├── refactor-workflow.yaml
+    └── testing-workflow.yaml
 ```
+
+**Canonical Workflows:**
+1. **Release Workflow (RW)** - 13-step release process with agentic intelligence
+2. **Intake Workflow** - 7-step FR/BR/UXR intake into Kanban
+3. **Package Version Workflow (PVW)** - Package version bumping
+4. **Post-Implementation Review (PIR) Workflow** - PIR review process
+5. **Migration Workflow** - Data/structure migration
+6. **Refactor Workflow** - Code refactoring automation
+7. **Testing Workflow** - Test execution and validation
 
 **Key Specifications:**
 - **Workflow File:** `{workflow-name}-workflow.yaml`
 - **Release Workflow:** 13-step RW with mandatory branch safety check and agentic intelligence
-- **Configuration:** `rw-config.yaml` in project root
-- **Execution:** Agent-driven with intelligent decision-making (ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED)
-- **Agentic Intelligence:** Task-driven validation, knowledge gap analysis, documentation generation
+- **Intake Workflow:** 7-step automated FR/BR/UXR intake with semantic matching
+- **Configuration:** Workflow-specific config files (e.g., `rw-config.yaml`, `intake-config.yaml`)
+- **Execution:** Agent-driven with intelligent decision-making (ANALYZE → DETERMINE → EVALUATE → DECIDE → EXECUTE → VALIDATE → PROCEED)
+- **Agentic Intelligence:** Task-driven validation, knowledge gap analysis, documentation generation, semantic matching
 - **Progress Tracking:** Cursor TODO tracking
 
 ---
@@ -406,26 +431,194 @@ workflow:
 
 ---
 
-## 7. Complete Structure Example
+## 7. Canonical Workflows Inventory
+
+### 7.1 Release Workflow (RW)
+
+**Purpose:** Automated release process with version bumping, changelog generation, and Git operations  
+**Type:** `release`  
+**Steps:** 13 steps (with agentic intelligence)  
+**Trigger:** User types "RW" or "Release Workflow"  
+**Config:** `rw-config.yaml`
+
+**Key Features:**
+- Task-driven validation (MANDATORY BLOCKING)
+- Knowledge base gap analysis
+- Decomposed Kanban structure support (Epic/Story/Task)
+
+**See Section 2 for complete specification.**
+
+---
+
+### 7.2 Intake Workflow
+
+**Purpose:** Automated FR/BR/UXR intake into Kanban system  
+**Type:** `intake`  
+**Steps:** 7 steps  
+**Trigger:** User types "Intake" or FR/BR/UXR commit detected  
+**Config:** `intake-config.yaml` (optional, can use defaults)
+
+**Canonical 7-Step Intake Workflow:**
+
+1. **Load & Parse FR/BR/UXR Document** - Load and parse FR/BR/UXR document
+2. **Decision Flow Analysis (AGENTIC)** - Analyze and determine Epic/Story/Task assignment
+3. **Create/Update Kanban Tasks** - Create or update Kanban tasks
+4. **Update FR/BR/UXR Documentation** - Update intake documentation with status
+5. **Wire Dependencies** - Wire dependencies and references
+6. **Assign Version Marker** - Assign version marker (doc-init build +0)
+7. **Validate & Commit** - Validate intake and commit changes
+
+**Agentic Intelligence:**
+- **Step 2:** Semantic matching for Epic/Story assignment (uses E4:S08 intelligent epic matching)
+- **Step 3:** Agentic task creation (uses E4:S10 agentic task creation)
+- **Step 5:** Intelligent dependency wiring
+
+**Configuration:**
+```yaml
+fr_br_dir: docs/project-management/kanban/fr-br
+kanban_dir: docs/project-management/kanban/epics
+version_file: src/{project}/version.py
+semantic_matching:
+  enabled: true
+  threshold: 0.7
+  use_e4s08: true
+task_creation:
+  use_e4s10: true
+  template_path: packages/frameworks/kanban/templates
+```
+
+---
+
+### 7.3 Package Version Workflow (PVW)
+
+**Purpose:** Intelligent package version bumping  
+**Type:** `package_version`  
+**Steps:** 6 steps  
+**Trigger:** User types "PVW" or triggered by RW Step 2.5  
+**Config:** Package-specific config
+
+**Canonical 6-Step PVW:**
+
+1. **Detect Changed Packages** - Analyze git diff to identify changed packages
+2. **Analyze Package Changes** - Read package files, identify what changed
+3. **Determine Version Bumps (AGENTIC)** - Analyze changes against criteria, determine bump type intelligently
+4. **Execute Version Updates** - Update README, create changelog, document justification
+5. **Validate Updates** - Run validation scripts as tools, verify format/consistency
+6. **Document & Proceed** - Document changes, pass to RW Step 3
+
+**Agentic Intelligence:**
+- **Step 3:** Intelligent version bump determination (not deterministic)
+- Uses version bump criteria as guidance, not hard rules
+- Documents reasoning and justification
+
+---
+
+### 7.4 Post-Implementation Review (PIR) Workflow
+
+**Purpose:** Automated PIR review process  
+**Type:** `pir`  
+**Steps:** Variable (Epic-level and Story-level PIRs)  
+**Trigger:** User types "PIR" or completion milestone  
+**Config:** PIR-specific config
+
+**PIR Types:**
+- **Epic-Level PIR:** Review entire epic completion
+- **Story-Level PIR:** Review story completion
+
+**Common Steps:**
+1. **Load Epic/Story Context** - Load Epic or Story document
+2. **Analyze Completion Status** - Analyze task completion and deliverables
+3. **Generate PIR Report** - Generate PIR report using template
+4. **Review & Validate** - Review findings and validate
+5. **Update Documentation** - Update Epic/Story with PIR findings
+6. **Archive PIR** - Archive PIR to knowledge base
+
+---
+
+### 7.5 Migration Workflow
+
+**Purpose:** Data/structure migration automation  
+**Type:** `migration`  
+**Steps:** Variable (migration-specific)  
+**Trigger:** User types "Migration" or migration milestone  
+**Config:** Migration-specific config
+
+**Common Steps:**
+1. **Analyze Source State** - Analyze current state
+2. **Plan Migration Strategy** - Plan migration approach
+3. **Execute Migration Steps** - Execute migration
+4. **Validate Migration** - Validate migration results
+5. **Rollback Plan** - Prepare rollback if needed
+
+---
+
+### 7.6 Refactor Workflow
+
+**Purpose:** Code refactoring automation  
+**Type:** `refactor`  
+**Steps:** Variable (refactor-specific)  
+**Trigger:** User types "Refactor" or refactor milestone  
+**Config:** Refactor-specific config
+
+**Common Steps:**
+1. **Analyze Current Code** - Analyze code to refactor
+2. **Plan Refactoring** - Plan refactoring approach
+3. **Execute Refactoring** - Execute refactoring changes
+4. **Validate Changes** - Validate refactored code
+5. **Update Documentation** - Update documentation
+
+---
+
+### 7.7 Testing Workflow
+
+**Purpose:** Test execution and validation  
+**Type:** `testing`  
+**Steps:** Variable (test-specific)  
+**Trigger:** User types "Test" or test milestone  
+**Config:** Test-specific config
+
+**Common Steps:**
+1. **Analyze Test Requirements** - Analyze what to test
+2. **Prepare Test Environment** - Set up test environment
+3. **Execute Tests** - Run test suite
+4. **Validate Results** - Validate test results
+5. **Report Findings** - Generate test report
+
+---
+
+## 8. Complete Structure Example
 
 **CANONICAL STRUCTURE:**
 
 ```
 {project-root}/
-├── workflows/
-│   └── release-workflow.yaml
-├── rw-config.yaml
+├── workflows/                       # Project workflows (canonical)
+│   ├── release-workflow.yaml
+│   ├── intake-workflow.yaml
+│   ├── package-version-workflow.yaml
+│   ├── pir-workflow.yaml
+│   ├── migration-workflow.yaml
+│   ├── refactor-workflow.yaml
+│   └── testing-workflow.yaml
+├── rw-config.yaml                   # Release Workflow config
+├── intake-config.yaml               # Intake Workflow config (optional)
 ├── packages/frameworks/workflow mgt/
-│   └── workflows/
-│       └── release-workflow.yaml
+│   └── workflows/                  # Framework workflows
+│       ├── release-workflow.yaml
+│       ├── intake-workflow.yaml
+│       ├── package-version-workflow.yaml
+│       ├── pir-workflow.yaml
+│       ├── migration-workflow.yaml
+│       ├── refactor-workflow.yaml
+│       └── testing-workflow.yaml
 └── ...
 ```
 
 ---
 
-## 8. Validation Rules
+## 9. Validation Rules
 
-### 8.1 Workflow File Validation
+### 9.1 Workflow File Validation
 
 **Required:**
 - Workflow file naming: `{workflow-name}-workflow.yaml`
@@ -433,7 +626,7 @@ workflow:
 - YAML structure is valid
 - Step definitions are complete
 
-### 8.2 Execution Validation
+### 9.2 Execution Validation
 
 **Required:**
 - Branch safety check passes (Step 1)
@@ -445,23 +638,31 @@ workflow:
 
 ---
 
-## 9. Implementation
+## 10. Implementation
 
-### 9.1 Installation
+### 10.1 Installation
 
 **CANONICAL METHOD:** Create workflow files and config following this specification
 
 **Installation Steps:**
 1. Create `workflows/` directory in project root
-2. Create `release-workflow.yaml` following canonical format
-3. Create `rw-config.yaml` in project root
+2. Install canonical workflows:
+   - `release-workflow.yaml` (required)
+   - `intake-workflow.yaml` (recommended)
+   - `package-version-workflow.yaml` (if using packages)
+   - Other workflows as needed
+3. Create workflow config files:
+   - `rw-config.yaml` (required for RW)
+   - `intake-config.yaml` (optional, can use defaults)
 4. Configure workflow handlers and scripts
 
 ### 9.2 Execution
 
 **CANONICAL METHOD:** Agent-driven execution via `.cursorrules` RW trigger
 
-**Execution Process:**
+**Execution Process (All Workflows):**
+
+**Release Workflow (RW):**
 1. User types "RW" or "Release Workflow"
 2. Agent analyzes current state and context
 3. Agent validates branch safety (Step 1)
@@ -472,13 +673,59 @@ workflow:
 8. Agent validates results
 9. Agent proceeds to next step or aborts
 
+**Intake Workflow:**
+1. User types "Intake" or FR/BR/UXR commit detected
+2. Agent loads and parses FR/BR/UXR document
+3. **Agent performs decision flow analysis (Step 2)** - Semantic matching for Epic/Story
+4. Agent creates/updates Kanban tasks
+5. Agent updates FR/BR/UXR documentation
+6. Agent wires dependencies
+7. Agent assigns version marker
+8. Agent validates and commits
+
+**Package Version Workflow (PVW):**
+1. User types "PVW" or triggered by RW
+2. Agent detects changed packages
+3. Agent analyzes package changes
+4. **Agent determines version bumps intelligently (Step 3)** - Not deterministic
+5. Agent executes version updates
+6. Agent validates and documents
+
+**Other Workflows:**
+- Follow similar agent-driven execution pattern
+- Use ANALYZE → DETERMINE → EVALUATE → DECIDE → EXECUTE → VALIDATE → PROCEED
+
 **Agentic Intelligence Highlights:**
-- **Step 2:** Must validate work is task-driven before proceeding
-- **Step 9:** Evaluates documentation gaps and can author new knowledge base articles
+- **RW Step 2:** Must validate work is task-driven before proceeding
+- **RW Step 9:** Evaluates documentation gaps and can author new knowledge base articles
+- **Intake Step 2:** Semantic matching for Epic/Story assignment
+- **Intake Step 3:** Agentic task creation
+- **PVW Step 3:** Intelligent version bump determination
 - **Throughout:** Intelligent decision-making based on context and analysis
 
 ---
 
+---
+
+## 11. Workflow Summary Table
+
+| Workflow | Type | Steps | Agentic Steps | Config File | Trigger |
+|----------|------|-------|---------------|-------------|---------|
+| **Release Workflow (RW)** | `release` | 13 | Step 2, Step 9 | `rw-config.yaml` | "RW" or "Release Workflow" |
+| **Intake Workflow** | `intake` | 7 | Step 2, Step 3 | `intake-config.yaml` (optional) | "Intake" or FR/BR/UXR commit |
+| **Package Version Workflow (PVW)** | `package_version` | 6 | Step 3 | Package config | "PVW" or RW Step 2.5 |
+| **PIR Workflow** | `pir` | Variable | Step 2 | PIR config | "PIR" or milestone |
+| **Migration Workflow** | `migration` | Variable | Step 2 | Migration config | "Migration" or milestone |
+| **Refactor Workflow** | `refactor` | Variable | Step 2 | Refactor config | "Refactor" or milestone |
+| **Testing Workflow** | `testing` | Variable | Step 1 | Test config | "Test" or milestone |
+
+**Legend:**
+- **Agentic Steps:** Steps requiring agentic intelligence (not deterministic)
+- **Config File:** Configuration file for workflow (required or optional)
+- **Trigger:** How workflow is invoked
+
+---
+
 **Last Updated:** 2025-12-18  
-**Version:** 1.0.0  
+**Version:** 1.1.0  
 **Status:** COMPLETE

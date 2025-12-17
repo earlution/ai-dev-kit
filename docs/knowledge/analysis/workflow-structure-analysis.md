@@ -792,10 +792,15 @@ steps:
 
 ### 11.4 Workflow Execution
 
-**Recommended: Agent-Driven Execution**
-- **Pattern:** ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED
+**Recommended: Agent-Driven Execution with Intelligence**
+- **Pattern:** ANALYZE → DETERMINE → EVALUATE → DECIDE → EXECUTE → VALIDATE → PROCEED
+- **Agentic Intelligence:** Task-driven validation, knowledge gap analysis, documentation generation
 - **Progress Tracking:** Cursor TODOs for all steps
 - **Atomicity:** Complete all steps or explicitly abort
+- **Intelligent Steps:**
+  - Task-driven validation (blocks if no task)
+  - Knowledge base gap analysis and article authoring
+  - Context-aware decision-making throughout
 
 ### 11.5 Release Workflow Steps
 

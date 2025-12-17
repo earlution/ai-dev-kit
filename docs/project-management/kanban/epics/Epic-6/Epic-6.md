@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-18 (v0.6.6.6+17 – Enhanced workflow structure with agentic intelligence: task-driven validation, knowledge base updates)  
+**Last updated:** 2025-12-18 (v0.6.6.6+18 – Complete canonical workflows inventory: added Intake, PVW, PIR, Migration, Refactor, Testing workflows)  
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]

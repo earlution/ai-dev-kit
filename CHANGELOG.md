@@ -17,6 +17,48 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+18] - 18-12-25
+
+📋 Enhanced: Complete canonical workflows inventory - added Intake, PVW, PIR, Migration, Refactor, Testing workflows
+
+### Changed
+
+- **Ultimate Canonical Workflow Structure**
+  - **Section 7: Canonical Workflows Inventory (NEW)**
+    - Added complete specification for all 7 canonical workflows
+    - Release Workflow (RW) - 13 steps (already documented)
+    - Intake Workflow - 7 steps (FR/BR/UXR intake) - NEW
+    - Package Version Workflow (PVW) - 6 steps - NEW
+    - PIR Workflow - Variable steps (Epic/Story reviews) - NEW
+    - Migration Workflow - Variable steps - NEW
+    - Refactor Workflow - Variable steps - NEW
+    - Testing Workflow - Variable steps - NEW
+  - **Section 11: Workflow Summary Table (NEW)**
+    - Quick reference table for all 7 workflows
+    - Agentic steps highlighted
+    - Config files and triggers documented
+  - Each workflow now includes:
+    - Purpose and type
+    - Step-by-step specification
+    - Agentic intelligence points
+    - Configuration requirements
+    - Trigger mechanisms
+
+### Added
+
+- Complete canonical workflows inventory (7 workflows total)
+- Intake Workflow specification (7-step FR/BR/UXR intake)
+- Package Version Workflow (PVW) specification (6-step intelligent versioning)
+- PIR Workflow specification (Epic/Story review process)
+- Migration Workflow specification
+- Refactor Workflow specification
+- Testing Workflow specification
+- Workflow summary table for quick reference
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+18.md)
+
+---
+
 ## [0.6.6.6+17] - 18-12-25
 
 🤖 Enhanced: Workflow structure with agentic intelligence - task-driven validation and knowledge base updates
