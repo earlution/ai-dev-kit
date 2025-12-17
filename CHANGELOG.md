@@ -17,6 +17,31 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+15] - 18-12-25
+
+📋 Split: Use Cases split by type - Canonical→Architecture, Discovered→knowledge
+
+### Changed
+
+- **Use Cases Structure**
+  - **Canonical Use Cases** (design-phase) → moved to `docs/Architecture/Use_Cases/Canonical/`
+  - **Discovered Use Cases** (implementation-phase) → remain in `docs/knowledge/Use_Cases/Discovered/`
+  - Rationale: Canonical use cases are part of architecture/design, discovered use cases are project knowledge
+
+- **Documentation**
+  - Created `docs/Architecture/Use_Cases/README.md` for canonical use cases
+  - Updated `docs/knowledge/USE_CASE_METHODOLOGY.md` with new paths
+  - Updated canonical structure documentation to reflect split
+
+### Moved
+
+- `docs/knowledge/Use_Cases/Canonical/` → `docs/Architecture/Use_Cases/Canonical/`
+- `docs/knowledge/Use_Cases/Templates/CANONICAL_USE_CASE_TEMPLATE.md` → `docs/Architecture/Use_Cases/CANONICAL_USE_CASE_TEMPLATE.md`
+
+**Full changelog:** [`docs/knowledge/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+15.md`](docs/knowledge/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+15.md)
+
+---
+
 ## [0.6.6.6+14] - 18-12-25
 
 🏗️ Restructured: Major directory restructuring - KB→docs, added knowledge/ subdirectory

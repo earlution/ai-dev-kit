@@ -35,7 +35,7 @@ docs/
 │   ├── Articles/                    # Project-specific articles and blog posts
 │   ├── Analysis/                     # Analysis reports
 │   ├── Reviews/                      # Reviews (PIR, etc.)
-│   └── Use_Cases/                    # Use cases
+│   └── Use_Cases/                    # Discovered use cases (implementation-phase)
 └── [other documentation files]      # Additional project documentation
 ```
 
@@ -95,7 +95,8 @@ docs/
     ├── Articles/                    # Project-specific articles and blog posts
     ├── Analysis/                     # Analysis reports
     ├── Reviews/                      # Reviews (PIR, etc.)
-    └── Use_Cases/                    # Use cases
+    └── Use_Cases/                    # Discovered use cases (implementation-phase)
+        └── Discovered/                # Patterns discovered during work
 ```
 
 ### 2.2 Pillar Descriptions
@@ -105,6 +106,7 @@ docs/
 - Integration documentation
 - System design documents
 - Technical specifications
+- **Use_Cases/Canonical/** - Design-phase use cases (planned before implementation)
 
 **2. Changelog_and_Release_Notes/**
 - Release documentation
@@ -136,7 +138,7 @@ docs/
 - Articles and blog posts
 - Analysis reports
 - Reviews (PIR, etc.)
-- Use cases
+- **Use_Cases/Discovered/** - Discovered use cases (implementation-phase patterns)
 - Learning resources
 
 ### 2.3 Complete Structure Example
@@ -151,6 +153,9 @@ docs/
 │   │   ├── README.md
 │   │   ├── ultimate-canonical-kanban-structure.md
 │   │   └── ultimate-canonical-kb-structure.md
+│   ├── Use_Cases/                    # Design-phase use cases
+│   │   ├── Canonical/                 # Canonical use cases (planned before implementation)
+│   │   └── CANONICAL_USE_CASE_TEMPLATE.md
 │   └── Integration/
 │       └── README.md
 ├── Changelog_and_Release_Notes/
@@ -175,6 +180,8 @@ docs/
 │   ├── Analysis/
 │   ├── Reviews/
 │   └── Use_Cases/
+│       ├── Discovered/                # Discovered use cases (implementation-phase)
+│       └── Templates/                 # Templates for discovered use cases
 └── [other documentation files]
 ```
 

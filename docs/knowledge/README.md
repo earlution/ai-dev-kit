@@ -1,43 +1,130 @@
 ---
 lifecycle: evergreen
 ttl_days: null
-created_at: 2025-12-04T12:01:54Z
+created_at: 2025-12-16T14:30:00Z
 expires_at: null
 housekeeping_policy: keep
 ---
 
-# Knowledge Base
+# Use Cases Knowledge Base
 
-The `docs/` directory contains all **knowledge base documentation** for the `ai-dev-kit` repository. This is the canonical knowledge base structure, located under the standard `docs/` documentation directory.
+**Purpose:** Central repository for all use cases, organized by type (Canonical vs Discovered) and domain.
 
-## Structure
+**Audience:** Project maintainers, designers, developers, framework users
 
-- `Architecture/` – Technical standards, ADRs, and integration docs
-- `Changelog_and_Release_Notes/` – Changelogs and release notes
-- `Documentation/` – Vision, purpose, and high-level documentation
-- `Project_Management/` – Project management, Kanban, and governance
-- `Guides/` – User-facing documentation and how-to guides
-- `Use_Cases/` – Canonical (design-phase) and discovered (implementation-phase) use cases
+---
 
-Additional documentation lives in the `docs/` directory alongside `docs/`:
+## Overview
 
-- Other project documentation files
+This section contains all use cases for the ai-dev-kit framework and related patterns. Use cases are organized into two categories:
 
-## Navigation
+1. **Canonical Use Cases:** Planned, designed use cases from the design phase
+2. **Discovered Use Cases:** Patterns and practices discovered during actual work
 
-- **Architecture:** `docs/Architecture/`
-- **Changelogs:** `docs/Changelog_and_Release_Notes/`
-- **Project Management / Kanban:** `docs/Project_Management/kanban/`
-- **Guides:** `docs/Guides/`
-- **Use Cases:** `docs/Use_Cases/`
+---
 
-## Getting Started
+## Quick Navigation
 
-- **🎯 Why AI Dev Kit?** Start with [`docs/Documentation/ai-dev-kit-vision-and-purpose.md`](Documentation/ai-dev-kit-vision-and-purpose.md) — Understand the problem we're solving and the vision
-- **New to the dev-kit?** Start with `docs/Guides/Getting_Started/`
-- **Adopting frameworks?** See `docs/Guides/Framework_Consumption/`
-- **Understanding dev-kit versioning:** See `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
-- **Understanding Kanban governance:** See `docs/Project_Management/rituals/policy/kanban-governance-policy.md`
-- **Project-level Kanban:** See `docs/Project_Management/kanban/_index.md`
-- **Use Cases:** See `docs/Use_Cases/README.md` for canonical and discovered use cases
+- **[Methodology](USE_CASE_METHODOLOGY.md)** - How to organize and manage use cases
+- **[Canonical Use Cases](Canonical/)** - Design-phase use cases
+- **[Discovered Use Cases](Discovered/)** - Implementation-phase use cases
+- **[Templates](Templates/)** - Use case templates
 
+---
+
+## Use Case Types
+
+### Canonical Use Cases
+
+**Location:** [`Canonical/`](Canonical/)
+
+**Definition:** Use cases identified and documented during the design/planning phase, before implementation.
+
+**Characteristics:**
+- Planned and intentional
+- Part of original design/architecture
+- Documented before implementation
+- Stable and well-defined
+
+**Examples:**
+- Framework adoption patterns
+- Workflow execution patterns
+- Versioning patterns
+- Kanban organization patterns
+
+---
+
+### Discovered Use Cases
+
+**Location:** [`Discovered/`](Discovered/)
+
+**Definition:** Use cases, patterns, or practices discovered during actual work, implementation, or problem-solving.
+
+**Characteristics:**
+- Emergent from real work
+- Discovered during implementation
+- May reveal gaps in original design
+- Can inform future canonical design
+
+**Examples:**
+- Re-opening BRs/tasks pattern
+- Bidirectional wiring principle
+- Pattern discovery workflow
+
+---
+
+## Use Case Indexes
+
+### Canonical Use Cases Index
+
+See [`Canonical/README.md`](Canonical/README.md) for complete index of canonical use cases.
+
+### Discovered Use Cases Index
+
+See [`Discovered/README.md`](Discovered/README.md) for complete index of discovered use cases.
+
+---
+
+## How to Use This Section
+
+### Finding Use Cases
+
+1. **By Type:**
+   - Canonical: Check `Canonical/` directory
+   - Discovered: Check `Discovered/` directory
+
+2. **By Domain:**
+   - Check indexes in each directory
+   - Use domain tags in use case documents
+
+3. **By Status:**
+   - Active: Check active use cases in indexes
+   - Deprecated: Check deprecated use cases
+   - Promoted: Check promoted discovered use cases
+
+### Creating Use Cases
+
+1. **Canonical Use Case:**
+   - Use `Templates/CANONICAL_USE_CASE_TEMPLATE.md`
+   - Create in `Canonical/` directory
+   - Follow naming convention: `UC-XXX-[title].md` (UC implies canonical)
+   - Update `Canonical/README.md` index
+
+2. **Discovered Use Case:**
+   - Use `Templates/DISCOVERED_USE_CASE_TEMPLATE.md`
+   - Create in `Discovered/` directory
+   - Follow naming convention: `UC-D-XXX-[title].md`
+   - Wire to related BR/FR, Tasks, documentation
+   - Update `Discovered/README.md` index
+
+---
+
+## Related Documentation
+
+- [USE_CASE_METHODOLOGY.md](USE_CASE_METHODOLOGY.md) - Complete methodology guide
+- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Example discovered use case
+- [REOPENING_BR_AND_TASKS_GUIDE.md](../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Example discovered use case
+
+---
+
+_This section is part of the Knowledge Base. See `docs/README.md` for complete KB structure._

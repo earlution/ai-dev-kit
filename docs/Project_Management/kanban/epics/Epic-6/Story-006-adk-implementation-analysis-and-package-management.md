@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.6+14 – Restructured docs directory: KB→docs, added knowledge/ subdirectory, clarified User_Guides vs Developer_Documentation)  
+**Last updated:** 2025-12-18 (v0.6.6.6+15 – Split Use Cases: Canonical→Architecture, Discovered→knowledge)  
 **Version:** v0.6.6.6+1  
 **Code:** E6S06
 
