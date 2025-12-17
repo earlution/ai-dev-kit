@@ -2,9 +2,14 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-v0.4.13.3%2B1-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Status](https://img.shields.io/badge/status-active-success.svg)
+<!-- Badges use BYOB (Bring Your Own Badge) for private repo support -->
+<!-- Update these URLs after setting up public badge repo (see .github/workflows/update-badges.yml) -->
+![Version](https://byob.yarr.is/earlution/ai-dev-kit-badges/version)
+![License](https://byob.yarr.is/earlution/ai-dev-kit-badges/license)
+![Status](https://byob.yarr.is/earlution/ai-dev-kit-badges/status)
+![Tests](https://byob.yarr.is/earlution/ai-dev-kit-badges/tests)
+![Coverage](https://byob.yarr.is/earlution/ai-dev-kit-badges/coverage)
+![Code Quality](https://byob.yarr.is/earlution/ai-dev-kit-badges/code-quality)
 
 **A comprehensive toolkit for AI-assisted development workflows**
 

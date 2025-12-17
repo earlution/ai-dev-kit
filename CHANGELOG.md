@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.6.1+1] - 2025-12-18
+
+### Added
+- BYOB badge system for private repository support (version, license, status, tests, coverage, code quality)
+- GitHub Actions workflow for automatic badge updates
+- Badge setup documentation guide
+
+### Modified
+- README badge URLs updated to use BYOB format
+- Added test status, coverage, and code quality badges to README
+
 The format is inspired by **Keep a Changelog** ([`https://github.com/olivierlacan/keep-a-changelog`](https://github.com/olivierlacan/keep-a-changelog))  
 and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme described in the dev-kit versioning policy.
 
