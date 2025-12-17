@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 13     # Story number (Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View)
 VERSION_TASK = 6      # Task number (Task 6: Update other affected packages)
-VERSION_BUILD = 4     # Build number (E4:S13:T06+4 - Corrected E4:S10 status from COMPLETE to IN PROGRESS in kanban docs)
+VERSION_BUILD = 5     # Build number (E4:S13:T06+5 - UKW workflow implementation: Update Kanban Workflow with agentic intelligence)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

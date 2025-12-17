@@ -28,6 +28,7 @@ This package contains all essential files needed to implement the Release Workfl
 - `docs/documentation/Developer_Docs/vwmp/release-workflow-reference.md` - Complete workflow reference
 - `docs/documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md` - Detailed implementation guide
 - `docs/documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Step-by-step guide for executing the 7-step Intake Workflow (FR/BR/UXR automation)
+- `docs/documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md` - Step-by-step guide for executing the 8-step Update Kanban Workflow (UKW - kanban sync)
 
 ### Versioning Policy Documents
 - `docs/architecture/standards-and-adrs/versioning-policy.md` - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
@@ -36,6 +37,7 @@ This package contains all essential files needed to implement the Release Workfl
 ### Workflow Definitions
 - `workflows/release-workflow.yaml` - YAML definition of the Release Workflow structure
 - `workflows/intake-workflow.yaml` - YAML definition of the Intake Workflow structure (FR/BR/UXR automation)
+- `workflows/update-kanban-workflow.yaml` - YAML definition of the Update Kanban Workflow structure (UKW - kanban sync)
 
 ### Optional GitHub Actions Workflows (Private Repos)
 - `templates/github-actions/update-badges-byob.yml` - BYOB badge workflow template for private repositories
@@ -50,8 +52,9 @@ This package contains all essential files needed to implement the Release Workfl
 - `docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
 - `docs/architecture/standards-and-adrs/versioning-error-reference-guide.md` - Versioning-specific error reference (WF-002)
 
-### Cursor Rules Section
-- `cursorrules-rw-trigger-section.md` - Section to add to your `.cursorrules` file (includes "ALL sections" requirement, atomicity, blocked protocol)
+### Cursor Rules Sections
+- `cursorrules-rw-trigger-section.md` - Section to add to your `.cursorrules` file for RW trigger (includes "ALL sections" requirement, atomicity, blocked protocol)
+- `cursorrules-ukw-trigger-section.md` - Section to add to your `.cursorrules` file for UKW trigger (Update Kanban Workflow)
 
 ---
 

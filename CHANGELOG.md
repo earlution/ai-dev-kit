@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.4.13.6+5] - 17-12-25
+
+🎉 Feature: Update Kanban Workflow (UKW) - Agent-driven kanban synchronization workflow
+
+### Added
+
+- **Update Kanban Workflow (UKW):**
+  - Created `update-kanban-workflow.yaml` - 8-step bottom-up workflow
+  - Created `cursorrules-ukw-trigger-section.md` - Trigger documentation
+  - Created `update-kanban-workflow-agent-execution.md` - Agent execution guide
+  - Trigger: "UKW" or "ukw" (case-insensitive)
+  - Bottom-up approach: Tasks → Stories → Epics → Board
+  - Requires agentic intelligence for synthesis, prioritization, and narrative updates
+- **Feature Request:**
+  - Created `FR-023-update-kanban-workflow-ukw.md` - UKW feature request document
+- **Documentation:**
+  - Updated workflow management package README with UKW references
+
+### Changed
+
+- **Workflow Management Package:**
+  - Added UKW workflow to available workflows
+  - Enhanced documentation with intelligence requirements
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+5.md)
+
+---
+
 ## [0.9.21.3+2] - 02-12-25
 
 📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
