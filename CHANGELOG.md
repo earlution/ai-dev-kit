@@ -17,6 +17,41 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+12] - 18-12-25
+
+🔒 Security: Added Dependabot management story to Epic 10
+
+### Added
+
+- **Dependabot Management Story (E10S04)**
+  - Added Story 004: Dependabot Management to Epic 10 (Security)
+  - 8 comprehensive tasks for managing Dependabot issues:
+    - Review Dependabot pull requests
+    - Assess dependency update impact
+    - Test dependency updates in development environment
+    - Merge approved Dependabot updates
+    - Address breaking changes from dependency updates
+    - Update documentation for dependency changes
+    - Monitor and track Dependabot issue resolution
+    - Document Dependabot management process
+
+### Fixed
+
+- **Questions Section Restored**
+  - Restored questions for clarification section to canonical structure document
+  - Updated question 8 to note Dependabot story addition
+  - All 13 questions now visible for user feedback
+
+### Removed
+
+- **Document Cleanup**
+  - Removed `ultimate-canonical-kanban-structure-revised-proposal.md` to prevent doc bloat
+  - All updates now go directly to main canonical structure document
+
+**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+12.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+12.md)
+
+---
+
 ## [0.6.6.6+11] - 18-12-25
 
 📐 Design: Expanded Epic 4 Story 1 to comprehensive architecture design specification

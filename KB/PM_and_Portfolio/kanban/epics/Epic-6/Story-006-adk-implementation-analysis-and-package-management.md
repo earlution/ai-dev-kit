@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.6+11 – Expanded Epic 4 Story 1 to comprehensive architecture design specification)  
+**Last updated:** 2025-12-18 (v0.6.6.6+12 – Added Dependabot management story to E10 and restored questions section)  
 **Version:** v0.6.6.6+1  
 **Code:** E6S06
 
