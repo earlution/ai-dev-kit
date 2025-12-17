@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-12 (v0.5.6.1+1 – Story 6 Task 1 complete: Policy salience implementation)  
+**Last updated:** 2025-12-18 (v0.5.7.1+1 – Story 7 created, building-persistent-knowledge.md guide added)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -37,6 +37,8 @@ housekeeping_policy: keep
 - [ ] **E5:S06 – Policy Documentation Structure** - IN PROGRESS (v0.5.6.1+1 – Task 1 complete: Policy salience implementation)
   - Story: [`Story-006-policy-documentation-structure.md`](Story-006-policy-documentation-structure.md)
   - Tasks: T01 ✅ COMPLETE (FR-022)
+- [ ] **E5:S07 – Persistent Knowledge Base Investigation** - TODO
+  - Story: [`Story-007-persistent-knowledge-base-investigation.md`](Story-007-persistent-knowledge-base-investigation.md)
 
 ---
 
@@ -122,6 +124,23 @@ Automate documentation maintenance tasks to reduce manual effort and improve con
 - [ ] E5:S03:T03 – Build documentation change detection and notification
 
 **Story:** [`Story-003-documentation-automation.md`](Story-003-documentation-automation.md)
+
+---
+
+### Story 7: Persistent Knowledge Base Investigation
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Estimated Effort:** [TBD]  
+**Last updated:** 2025-12-18
+
+**Goal:**  
+Investigate the ramifications of the persistent knowledge base concept, including integration points, workflow impacts, tooling requirements, and agent capabilities.
+
+**Tasks:**
+- [ ] E5:S07:T01 – Investigate persistent knowledge base concept and ramifications
+
+**Story:** [`Story-007-persistent-knowledge-base-investigation.md`](Story-007-persistent-knowledge-base-investigation.md)
 
 ---
 

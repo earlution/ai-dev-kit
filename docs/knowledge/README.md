@@ -130,6 +130,7 @@ docs/knowledge/
 
 **Key Guides:**
 - [Package Maintenance and Release](guides/package-maintenance-and-release.md) - Comprehensive guide to package maintenance, versioning, and release processes
+- [Building Persistent Knowledge in Cursor](guides/building-persistent-knowledge.md) - Foundational guide on building and managing persistent knowledge bases in Cursor using agentic knowledge management
 
 ### Changelog and Release Notes (`changelog-and-release-notes/`)
 

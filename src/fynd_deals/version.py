@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 11    # Story number (Story 11: Kanban Granularity & Discrete Task Docs)
-VERSION_TASK = 7      # Task number (Task 7: Migrate Embedded Tasks to Discrete Task Documents)
-VERSION_BUILD = 2     # Build number (E4:S11:T07+2 - KB structure cleanup: removed project-specific guides from canonical structure)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
+VERSION_STORY = 7     # Story number (Story 7: Persistent Knowledge Base Investigation)
+VERSION_TASK = 1      # Task number (Task 1: Investigate persistent knowledge base concept and ramifications)
+VERSION_BUILD = 1     # Build number (E5:S07:T01+1 - Story 7 created, building-persistent-knowledge.md guide added)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

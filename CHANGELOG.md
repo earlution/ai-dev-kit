@@ -17,6 +17,38 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.5.7.1+1] - 18-12-25
+
+📚 Added: Epic 5 Story 7 - Persistent Knowledge Base Investigation
+
+### Added
+
+- **Epic 5 Story 7 – Persistent Knowledge Base Investigation**
+  - Created Story 007 for investigating persistent knowledge base concept ramifications
+  - Task 1: Investigate persistent knowledge base concept and ramifications
+  - Story includes comprehensive investigation scope covering integration points, workflow impacts, tooling requirements, and agent capabilities
+
+- **Foundational Knowledge Base Guide**
+  - Added `docs/knowledge/guides/building-persistent-knowledge.md`
+  - Guide explains how to build persistent knowledge bases in Cursor
+  - Includes agentic knowledge management workflows (search, scrape, curate, update, cull)
+  - Includes SoP for taxonomical standards for structuring knowledge
+  - References GitHub repo: https://github.com/philippe-page/cursor-knowledge
+
+### Changed
+
+- **Epic 5 Documentation**
+  - Updated Epic 5 with Story 7 entry in Story Checklist
+  - Added Story 7 summary section
+
+- **Guides README**
+  - Updated to include building-persistent-knowledge.md guide
+  - Added description and use cases for the new guide
+
+**See detailed changelog:** [`docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.7.1+1.md`](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.7.1+1.md)
+
+---
+
 ## [0.4.11.7+2] - 18-12-25
 
 🧹 Changed: KB structure cleanup - removed project-specific guides from canonical structure
