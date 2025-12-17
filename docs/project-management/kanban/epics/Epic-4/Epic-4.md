@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-18 (v0.4.13.4+1 – T04 COMPLETE: RW doc-init detection bug fixed, system impacts assessed)
+**Last updated:** 2025-12-18 (v0.4.13.4+2 – T04 COMPLETE: BR-010 created, KB documents anchored to canonical source)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -54,9 +54,9 @@ housekeeping_policy: keep
 - [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0 – Story created for FR-021)
   - Story: [`Story-012-fr-br-uxr-repository-stories.md`](Story-012-fr-br-uxr-repository-stories.md)
   - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
-- [ ] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - IN PROGRESS (v0.4.13.4+1 – T04 COMPLETE: RW doc-init detection bug fixed, system impacts assessed)
+- [ ] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - IN PROGRESS (v0.4.13.4+2 – T04 COMPLETE: BR-010 created, KB documents anchored to canonical source)
   - Story: [`Story-013-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view.md)
-  - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T04 ✅ COMPLETE (v0.4.13.4+1), T02-T03 TODO, T05-T06 TODO (after user verification)
+  - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T04 ✅ COMPLETE (v0.4.13.4+2), T02-T03 TODO, T05-T06 TODO (after user verification)
 
 ---
 

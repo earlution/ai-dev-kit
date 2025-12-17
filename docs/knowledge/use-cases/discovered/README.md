@@ -48,6 +48,16 @@ Discovered use cases are patterns, practices, or scenarios discovered during act
   - **Location:** [UC-D-003-pattern-discovery-workflow.md](UC-D-003-pattern-discovery-workflow.md)
   - **Related:** BIDIRECTIONAL_WIRING_PRINCIPLE.md, REOPENING_BR_AND_TASKS_GUIDE.md
 
+### Workflow Patterns
+
+- **UC-D-004:** Story + Task Docs Batch Creation
+  - **Status:** Active
+  - **Discovered:** 2025-12-18
+  - **Discovered In:** E4:S13:T04 – Assess system impacts (RW doc-init detection bug)
+  - **Location:** [UC-D-004-story-task-docs-batch-creation.md](UC-D-004-story-task-docs-batch-creation.md)
+  - **Related:** [Abstract Anti-Pattern: Use Case Exposed Design Flaw](../../analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md), E4:S13:T04
+  - **Pattern Type:** Abstract Anti-Pattern (Use Case Exposed Design Flaw)
+
 ---
 
 ## Use Cases by Discovery Date
@@ -58,6 +68,10 @@ Discovered use cases are patterns, practices, or scenarios discovered during act
 - UC-D-002: Bidirectional Wiring Between BR/FR, Tasks, and Documentation
 - UC-D-003: Pattern Discovery Workflow
 
+### 2025-12-18
+
+- UC-D-004: Story + Task Docs Batch Creation (Abstract Anti-Pattern)
+
 ---
 
 ## Use Cases by Promotion Status
@@ -66,6 +80,7 @@ Discovered use cases are patterns, practices, or scenarios discovered during act
 
 - UC-D-001: Re-opening BRs/Tasks Instead of Creating New
 - UC-D-003: Pattern Discovery Workflow
+- UC-D-004: Story + Task Docs Batch Creation (Abstract Anti-Pattern)
 
 ### Promoted to Canonical
 
@@ -82,6 +97,7 @@ Discovered use cases are patterns, practices, or scenarios discovered during act
 - UC-D-001: Re-opening BRs/Tasks Instead of Creating New
 - UC-D-002: Bidirectional Wiring (Promoted)
 - UC-D-003: Pattern Discovery Workflow
+- UC-D-004: Story + Task Docs Batch Creation (Abstract Anti-Pattern)
 
 ### Deprecated
 

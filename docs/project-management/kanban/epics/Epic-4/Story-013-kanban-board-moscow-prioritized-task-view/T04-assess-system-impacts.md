@@ -249,7 +249,9 @@ The `detect_first_time_est_doc` function in `validate_version_bump.py` had flawe
 
 **Related BR/FR Links:**
 - User request for enhanced Kanban board functionality
-- **NEW:** RW doc-init detection bug (use case discovered during T01)
+- **BR-010:** RW doc-init detection bug (Story + Task docs batch creation) - [BR-010-rw-doc-init-detection-bug-story-task-docs-batch-creation.md](../../../fr-br/BR-010-rw-doc-init-detection-bug-story-task-docs-batch-creation.md)
+- **UC-D-004:** Story + Task Docs Batch Creation (discovered use case) - [UC-D-004-story-task-docs-batch-creation.md](../../../../knowledge/use-cases/discovered/UC-D-004-story-task-docs-batch-creation.md)
+- **Abstract Anti-Pattern:** Use Case Exposed Design Flaw - [abstract-anti-patterns-use-case-exposed-design-flaw.md](../../../../knowledge/analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md)
 
 **Related Tasks:**
 - E4:S13:T01 – Design and implement MoSCoW prioritized task view

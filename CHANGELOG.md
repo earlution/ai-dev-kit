@@ -17,6 +17,47 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.13.4+2] - 18-12-25
+
+✅ Complete: T04 - BR-010 created, KB documents anchored to canonical source
+
+### Added
+
+- **BR-010:** Bug Report for RW doc-init detection bug
+  - Complete bug documentation with fix attempt history
+  - Status: FIXED (v0.4.13.4+1)
+  - Properly linked to related work
+
+- **UC-D-004:** Discovered Use Case - Story + Task Docs Batch Creation
+  - Valid workflow documentation
+  - Anchored to BR-010 as canonical source
+
+- **Abstract Anti-Pattern:** Use Case Exposed Design Flaw
+  - Pattern definition and taxonomy
+  - Concrete example from BR-010
+  - Anchored to BR-010 as canonical source
+
+### Changed
+
+- **Document Anchoring:**
+  - KB documents now properly anchor to BR-010
+  - Canonical source hierarchy established
+  - Bidirectional links maintained
+
+- **T04 Task Document:**
+  - Added BR-010 to Related BR/FR Links
+  - Added UC-D-004 and Abstract Anti-Pattern links
+
+- **Discovered Use Cases README:**
+  - Added UC-D-004 to index
+
+- **Version File:**
+  - Version updated to `0.4.13.4+2` (E4:S13:T04, second build)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+2.md)
+
+---
+
 ## [0.4.13.4+1] - 18-12-25
 
 ✅ Complete: T04 - Assess system impacts - RW doc-init detection bug fixed

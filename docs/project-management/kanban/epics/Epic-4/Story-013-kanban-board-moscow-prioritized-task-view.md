@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.4+1 – T04 COMPLETE: RW doc-init detection bug fixed, system impacts assessed)  
+**Last updated:** 2025-12-18 (v0.4.13.4+2 – T04 COMPLETE: BR-010 created, KB documents anchored to canonical source)  
 **Estimated Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.4.13.4+1  
+**Version:** v0.4.13.4+2  
 **Code:** E4S13
 
 ---
@@ -27,7 +27,7 @@ housekeeping_policy: keep
   - Task: [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
 - [ ] **E4:S13:T03 – Update Kanban board template** - TODO (v0.4.13.0+0)
   - Task: [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
-- [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+1)
+- [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+2)
   - Task: [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
 - [ ] **E4:S13:T05 – Update Kanban package** - TODO (v0.4.13.0+0)
   - Task: [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
@@ -133,7 +133,7 @@ Enhance the Kanban board to be more useful by:
 **Blocker:** None  
 **Parallel Development Candidacy:** Blocked (depends on T01)
 
-**Status:** ✅ COMPLETE (v0.4.13.4+1)
+**Status:** ✅ COMPLETE (v0.4.13.4+2)
 
 **Task Document:** [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
 
