@@ -17,6 +17,21 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+7] - 17-12-25
+
+📚 Documentation: Playbooks documentation completed
+
+### Added
+
+- **Playbooks Documentation** - Complete documentation added to IGTM MCP
+  - 7 documentation files covering system overview, workflow execution, state execution, job processing, signals, frontend editor, and examples
+  - Follows IGTM MCP format with progressive disclosure
+  - Comprehensive coverage of all 3 applications (web, playbooks, webhooks-service)
+
+**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+7.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+7.md)
+
+---
+
 ## [0.6.6.6+6] - 17-12-25
 
 📊 Analysis: Good/bad practice catalog and pattern/anti-pattern identification completed
