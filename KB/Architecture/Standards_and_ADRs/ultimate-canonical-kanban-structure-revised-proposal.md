@@ -1,0 +1,485 @@
+---
+lifecycle: evergreen
+ttl_days: null
+created_at: 2025-12-18T03:00:00Z
+expires_at: null
+housekeeping_policy: keep
+---
+
+# Ultimate Canonical Kanban Structure - Revised Proposal
+
+**Purpose:** Revised proposal for canonical Kanban E/S/T structure based on user feedback  
+**Status:** PROPOSAL  
+**Version:** 2.0.0-draft  
+**Part of:** E6:S06:T06 – Cross-project meta-analysis and canonical framework design  
+**Supersedes:** v1.0.0 (pending approval)
+
+**Based on:** User feedback on v1.0.0 structure
+
+---
+
+## Executive Summary
+
+This document proposes a **revised canonical Kanban structure** that reorganizes epics into clearer phases:
+
+1. **Pre-Design Phase (E1):** Project foundation, workflow management, versioning, Kanban setup
+2. **Design Phase (E2-E8):** Architecture, data, testing, implementation, documentation
+3. **Ancillary Epics (E9+):** CI/CD, security, and project-specific epics
+
+**Key Changes:**
+- E1 becomes pre-design phase (includes old E2/E3 stories)
+- E2 becomes Kanban Framework (renumbered from old E4)
+- E3 consolidates FR/BR/UXR (old E5/E6/E7)
+- E4-E8 become design phase epics (Architecture, Data, Testing, Implementation, Documentation)
+- Old E8 (Codebase Maintenance) → stories under E7
+- Old E22 (Architecture Refactoring) → split between E4 and E7
+- Old E23 (CI/CD) → becomes E9
+- Old E13 (Testing) → covered by E6
+- Old E15 (Security) → enhanced with project security (Dependabot, etc.)
+
+---
+
+## Revised Epic Structure
+
+### Pre-Design Phase
+
+#### Epic 1: Project Foundation and Setup (Pre-Design Phase)
+
+**Purpose:** Pre-design phase foundation work.  
+**Scope:** Project setup, workflow management, versioning, Kanban setup.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: Project Foundation and Setup**
+  - T01: Define project structure and directory layout
+  - T02: Set up version control and repository configuration
+  - T03: Configure development environment and tooling
+  - T04: Create initial project documentation (README, CONTRIBUTING, LICENSE)
+  - T05: Set up build system and dependency management
+  - T06: Configure code quality tools (linters, formatters)
+  - T07: Establish coding standards and conventions
+
+- **Story 002: Workflow Management Framework** (from old E2)
+  - T01: Document existing workflow patterns
+  - T02: Define standard workflow templates
+  - T03: Create workflow execution guidelines
+  - T04: Document workflow integration points
+  - T05: Identify automatable workflows
+  - T06: Implement workflow automation scripts
+  - T07: Create workflow execution tools
+  - T08: Document automation usage
+
+- **Story 003: Versioning Framework** (from old E3)
+  - T01: Define versioning schema (e.g., RC.EPIC.STORY.TASK+BUILD)
+  - T02: Document versioning policy
+  - T03: Create version file structure
+  - T04: Set up version tracking tools
+  - T05: Integrate versioning with release workflow
+  - T06: Create version bump automation
+  - T07: Set up changelog generation
+  - T08: Document version management process
+
+- **Story 004: Kanban Framework Setup** (from old E4)
+  - T01: Create Kanban board structure
+  - T02: Define epic/story/task hierarchy
+  - T03: Set up Kanban policies and governance
+  - T04: Configure Kanban tooling
+  - T05: Design FR/BR intake workflow
+  - T06: Create FR/BR templates
+  - T07: Implement intake automation
+  - T08: Document intake process
+
+---
+
+### Design Phase
+
+#### Epic 2: Architecture Design
+
+**Purpose:** System architecture design and refactoring.  
+**Scope:** Architecture design, patterns, refactoring, technical decisions.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: Initial Architecture Design**
+  - T01: Define system architecture
+  - T02: Design core architecture patterns
+  - T03: Create architecture decision records (ADRs)
+  - T04: Document system design
+  - T05: Define integration points
+  - T06: Create architecture diagrams
+
+- **Story 002: Architecture Refactoring** (from old E22, architecture-focused)
+  - T01: Identify architecture improvement opportunities
+  - T02: Design refactoring approach
+  - T03: Implement architecture refactoring
+  - T04: Validate refactored architecture
+  - T05: Update architecture documentation
+  - T06: Document refactoring learnings
+
+**Note:** Architecture refactoring stories are in E2. Implementation refactoring stories are in E7.
+
+---
+
+#### Epic 3: FR/BR/UXR Management
+
+**Purpose:** Feature Request, Bug Report, and User Experience Research management.  
+**Scope:** FR/BR intake, processing, UXR, prioritization.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: FR Intake and Processing** (from old E5)
+  - T01: Design FR intake workflow
+  - T02: Create FR processing automation
+  - T03: Integrate FR intake with Kanban
+  - T04: Document FR intake process
+  - T05: Design FR prioritization framework
+  - T06: Create FR planning templates
+  - T07: Integrate prioritization with Kanban board
+  - T08: Document prioritization process
+  - T09: Document FR implementation patterns
+  - T10: Create implementation templates
+  - T11: Define testing requirements for FRs
+  - T12: Document FR completion criteria
+
+- **Story 002: BR Intake and Processing** (from old E6)
+  - T01: Design BR intake and triage workflow
+  - T02: Create BR triage automation
+  - T03: Integrate BR intake with Kanban
+  - T04: Document BR intake and triage process
+  - T05: Design BR prioritization framework
+  - T06: Create BR assignment templates
+  - T07: Integrate prioritization with Kanban board
+  - T08: Document prioritization and assignment process
+  - T09: Document bug fix patterns
+  - T10: Create bug fix templates
+  - T11: Define testing requirements for bug fixes
+  - T12: Document bug fix completion criteria
+
+- **Story 003: User Experience Research (UXR)** (from old E7)
+  - T01: Define research objectives and questions
+  - T02: Recruit research participants
+  - T03: Conduct user interviews
+  - T04: Conduct user surveys/questionnaires
+  - T05: Analyze research data and synthesize findings
+  - T06: Create user personas
+  - T07: Document research findings and insights
+  - T08: Design usability test scenarios
+  - T09: Recruit test participants
+  - T10: Conduct usability testing sessions
+  - T11: Analyze usability test results
+  - T12: Identify usability issues and pain points
+  - T13: Create usability test reports
+  - T14: Document usability recommendations
+  - T15: Design user feedback collection methods
+  - T16: Set up feedback collection channels
+  - T17: Implement feedback collection tools
+  - T18: Create feedback analysis workflow
+  - T19: Analyze feedback patterns and trends
+  - T20: Convert feedback into actionable insights
+  - T21: Document feedback analysis process
+  - T22: Create user journey maps
+  - T23: Identify touchpoints and interactions
+  - T24: Identify pain points and opportunities
+  - T25: Design improved user flows
+  - T26: Create experience prototypes
+  - T27: Validate experience designs with users
+  - T28: Document user journey insights
+  - T29: Synthesize research findings across studies
+  - T30: Create UX insights reports
+  - T31: Develop UX recommendations and action items
+  - T32: Prioritize UX improvements
+  - T33: Communicate insights to product and engineering teams
+  - T34: Track implementation of UX recommendations
+  - T35: Document UX insights and learnings
+
+---
+
+#### Epic 4: Data Management and Database
+
+**Purpose:** Data management, database design, and data operations.  
+**Scope:** Database schema, migrations, data access layer, data validation, data integrity.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: Database Schema Design**
+  - T01: Design database schema
+  - T02: Create entity-relationship diagrams
+  - T03: Implement database migrations
+  - T04: Set up database indexes
+  - T05: Define database constraints
+  - T06: Create seed data scripts
+
+- **Story 002: Data Access Layer**
+  - T01: Design data access architecture
+  - T02: Implement repository pattern
+  - T03: Create query builders/ORMs
+  - T04: Implement data validation
+  - T05: Add transaction management
+  - T06: Create data access utilities
+
+- **Story 003: Data Migration and Seeding**
+  - T01: Create migration framework
+  - T02: Implement migration scripts
+  - T03: Create seed data system
+  - T04: Add migration rollback capability
+  - T05: Document migration process
+
+---
+
+#### Epic 5: Testing and Quality Assurance
+
+**Purpose:** Testing infrastructure, test coverage, and quality assurance processes (TDD approach).  
+**Scope:** Unit tests, integration tests, E2E tests, test automation, quality metrics.  
+**Status:** Core Framework Epic (always installed)
+
+**Rationale:** Once we have architecture (E2), we can design tests using TDD approach.
+
+**Canonical Stories:**
+
+- **Story 001: Testing Infrastructure Setup**
+  - T01: Choose and set up testing framework
+  - T02: Configure test runners
+  - T03: Set up test data management
+  - T04: Create test utilities and helpers
+  - T05: Configure test coverage reporting
+
+- **Story 002: Test Design and Implementation** (TDD approach)
+  - T01: Design test scenarios based on architecture
+  - T02: Write unit tests for core functionality
+  - T03: Write integration tests
+  - T04: Write end-to-end tests
+  - T05: Add test fixtures and mocks
+  - T06: Implement test data factories
+
+- **Story 003: Test Automation and CI/CD Integration**
+  - T01: Set up automated test execution
+  - T02: Integrate tests with CI/CD pipeline
+  - T03: Add test reporting and notifications
+  - T04: Set up test coverage thresholds
+  - T05: Document testing process
+
+**Note:** This replaces old E13 (Testing and Quality Assurance).
+
+---
+
+#### Epic 6: Implementation
+
+**Purpose:** Feature implementation, codebase maintenance, and refactoring.  
+**Scope:** Feature implementation, code quality, maintenance, implementation refactoring.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: Feature Implementation**
+  - T01: Implement features based on architecture (E2) and tests (E5)
+  - T02: Follow TDD approach (tests first, then implementation)
+  - T03: Implement business logic
+  - T04: Integrate with data layer (E4)
+  - T05: Implement API endpoints (if applicable)
+  - T06: Implement UI components (if applicable)
+  - T07: Add error handling
+  - T08: Add logging
+
+- **Story 002: Codebase Maintenance** (from old E8)
+  - T01: Set up IDE issue tracking
+  - T02: Create maintenance task workflow
+  - T03: Define maintenance priorities
+  - T04: Document maintenance process
+  - T05: Address IDE-flagged issues (errors, warnings, info)
+  - T06: Define code review standards
+  - T07: Create code review checklist
+  - T08: Set up code review automation
+  - T09: Document code review process
+  - T10: Set up code quality metrics
+  - T11: Create quality monitoring dashboards
+  - T12: Define quality thresholds
+  - T13: Document quality improvement process
+
+- **Story 003: Implementation Refactoring** (from old E22, implementation-focused)
+  - T01: Identify implementation improvement opportunities
+  - T02: Design refactoring approach
+  - T03: Implement code refactoring
+  - T04: Validate refactored code
+  - T05: Update implementation documentation
+  - T06: Document refactoring learnings
+
+- **Story 004: Post-Implementation Review (PIR)**
+  - T01: Conduct post-implementation review
+  - T02: Document implementation outcomes
+  - T03: Identify lessons learned
+  - T04: Document best practices
+  - T05: Update implementation patterns
+  - T06: Share learnings with team
+
+**Note:** 
+- Architecture refactoring is in E2 (Story 002)
+- Implementation refactoring is in E6 (Story 003)
+- Old E8 (Codebase Maintenance) stories are now in E6 (Story 002)
+
+---
+
+#### Epic 7: Documentation
+
+**Purpose:** Project documentation, user guides, and developer documentation.  
+**Scope:** API documentation, user manuals, developer guides, architecture documentation.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: Developer Documentation**
+  - T01: Create architecture documentation
+  - T02: Document code structure and patterns
+  - T03: Create setup and installation guides
+  - T04: Document development workflow
+  - T05: Create contribution guidelines
+  - T06: Add code examples and tutorials
+
+- **Story 002: User Documentation**
+  - T01: Create user manual/guide
+  - T02: Document features and functionality
+  - T03: Create FAQ section
+  - T04: Add troubleshooting guides
+  - T05: Create video tutorials (optional)
+  - T06: Add in-app help/tooltips
+
+- **Story 003: API Documentation**
+  - T01: Generate API documentation (OpenAPI/Swagger)
+  - T02: Document API endpoints
+  - T03: Add API usage examples
+  - T04: Create API integration guides
+  - T05: Document API versioning
+
+---
+
+### Ancillary Epics
+
+#### Epic 8: Process Automation and CI/CD
+
+**Purpose:** Establish automated, robust development workflows.  
+**Scope:** CI/CD pipelines, pre-commit hooks, automated rule enforcement, testing infrastructure, quality gates.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: CI/CD Pipeline Setup**
+  - T01: Configure build/test pipelines
+  - T02: Add artifact publishing
+  - T03: Add quality gate enforcement
+  - T04: Document pipeline operations
+
+- **Story 002: Automated Rule Enforcement (Pre-commit Hooks)**
+  - T01: Add formatters/linters to hooks
+  - T02: Add changelog/version checks
+  - T03: Add policy checks (commit msg, branch rules)
+  - T04: Document hook usage
+
+- **Story 003: Testing Infrastructure**
+  - T01: Define coverage thresholds
+  - T02: Add test fixtures and factories
+  - T03: Parallelize tests
+  - T04: Add flaky-test detection
+
+- **Story 004: Quality Gates and Branch Protection**
+  - T01: Define protected files and rules
+  - T02: Require status checks and reviews
+  - T03: Enforce changelog/version checks
+  - T04: Monitor gate effectiveness
+
+- **Story 005: Automated Dependency Management**
+  - T01: Add dependency scanning
+  - T02: Automate upgrade PRs
+  - T03: Add vulnerability monitoring
+  - T04: Document upgrade playbooks
+
+**Note:** This is old E23 (Process Automation and CI/CD), renumbered to E8.
+
+---
+
+#### Epic 9: Security
+
+**Purpose:** Security measures, vulnerability management, and security best practices.  
+**Scope:** Security audits, vulnerability scanning, security policies, encryption, secure coding, project security (Dependabot, etc.).  
+**Status:** Ancillary Epic (project-specific, canonical pattern)
+
+**Canonical Stories:**
+
+- **Story 001: Security Infrastructure**
+  - T01: Conduct security audit
+  - T02: Implement encryption (data at rest/transit)
+  - T03: Set up security headers
+  - T04: Configure HTTPS/SSL
+  - T05: Implement secure session management
+  - T06: Add security middleware
+
+- **Story 002: Vulnerability Management**
+  - T01: Set up vulnerability scanning
+  - T02: Implement dependency security checks
+  - T03: Set up Dependabot (or equivalent)
+  - T04: Create security update process
+  - T05: Document security incident response
+  - T06: Add security testing
+
+- **Story 003: Security Best Practices**
+  - T01: Create security policy document
+  - T02: Implement secure coding guidelines
+  - T03: Add security code review checklist
+  - T04: Conduct security training
+  - T05: Document security procedures
+
+**Note:** Enhanced from old E15 to include project security (Dependabot, etc.) in addition to context-specific security.
+
+---
+
+## Questions for Clarification
+
+1. **Epic 1 Scope:** Should Epic 1 include only pre-design phase work, or should it also include initial project setup that happens before design? Currently includes both.
+
+2. **Epic 2 (Architecture):** Should Epic 2 include both initial architecture design AND architecture refactoring, or should refactoring be a separate story/epic? Currently both are in E2.
+
+3. **Epic 3 (FR/BR/UXR):** Is consolidating FR, BR, and UXR into one epic acceptable, or should they remain separate? Currently consolidated.
+
+4. **Epic 6 (Implementation):** Should codebase maintenance (old E8) be stories under E7 (Implementation), or should it be a separate epic? Currently stories under E6.
+
+5. **Epic 7 (Documentation):** Should documentation be E7 or E8? Currently E7, with CI/CD as E8.
+
+6. **Epic 8 (CI/CD):** Should CI/CD be E8 or E9? Currently E8, with Security as E9.
+
+7. **Epic 9 (Security):** Should Security include both project security (Dependabot) and context-specific security, or should they be separate? Currently combined.
+
+8. **Old E10 (Data Management):** Should Data Management be E4 (before Testing) or E5 (after Architecture)? Currently E4.
+
+9. **Old E18 (Documentation):** Already moved to E7. Confirmed.
+
+10. **Old E22 (Architecture Refactoring):** Split between E2 (architecture refactoring) and E6 (implementation refactoring). Is this correct?
+
+11. **Old E23 (CI/CD):** Moved to E8. Confirmed.
+
+12. **Remaining Epics:** What should happen to old E9 (User Management), E11 (API), E12 (Frontend), E14 (Deployment), E16 (Performance), E17 (Integration), E19 (Analytics), E20 (Mobile), E21 (Internationalization)? Should they be renumbered starting at E10?
+
+---
+
+## Proposed Epic Numbering Summary
+
+| New Epic | Old Epic | Name | Status |
+|----------|----------|------|--------|
+| E1 | E1 + E2 + E3 + E4 | Project Foundation (Pre-Design) | Core |
+| E2 | New + E22 (arch) | Architecture Design | Core |
+| E3 | E5 + E6 + E7 | FR/BR/UXR Management | Core |
+| E4 | E10 | Data Management and Database | Core |
+| E5 | E13 | Testing and Quality Assurance | Core |
+| E6 | E7 + E8 + E22 (impl) | Implementation | Core |
+| E7 | E18 | Documentation | Core |
+| E8 | E23 | Process Automation and CI/CD | Core |
+| E9 | E15 (enhanced) | Security | Ancillary |
+| E10+ | E9, E11, E12, E14, E16, E17, E19, E20, E21 | Project-Specific Epics | Ancillary |
+
+---
+
+**Last Updated:** 2025-12-18  
+**Version:** 2.0.0-draft  
+**Status:** PROPOSAL - Awaiting user feedback
+

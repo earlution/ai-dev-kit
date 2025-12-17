@@ -17,6 +17,25 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+9] - 18-12-25
+
+📋 Proposal: Revised canonical Kanban structure proposal created
+
+### Added
+
+- **Revised Canonical Kanban Structure Proposal**
+  - Reorganized epics into clearer phases (pre-design, design, ancillary)
+  - E1 consolidates pre-design work (old E1+E2+E3+E4)
+  - E2 becomes Architecture Design (new + architecture refactoring)
+  - E3 consolidates FR/BR/UXR (old E5+E6+E7)
+  - E4-E8 become design phase epics (Data, Testing, Implementation, Documentation, CI/CD)
+  - E9 becomes Security (enhanced with Dependabot/project security)
+  - Includes questions for clarification on epic numbering and scope
+
+**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+9.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+9.md)
+
+---
+
 ## [0.6.6.6+8] - 18-12-25
 
 📚 Documentation: Ultimate canonical Kanban structure completed with full E/S/T inventory
