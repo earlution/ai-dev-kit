@@ -151,7 +151,7 @@ This document designs the Story-level Post-Implementation Review (PIR) workflow,
 **Purpose:** Collect all materials needed for Story review
 
 **Materials to Gather:**
-- Story document (`KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-{name}.md`)
+- Story document (`docs/project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md`)
 - All Task documents within Story
 - Changelog entries for Story version
 - Related BR/FR documents
@@ -327,7 +327,7 @@ This document designs the Story-level Post-Implementation Review (PIR) workflow,
 - Metrics
 
 **Report Location:**
-- `KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md`
+- `docs/Reviews/pir/Story-{N}/PIR-Story-{N}-v{version}.md`
 
 **Deliverables:**
 - Complete Story PIR report
@@ -530,7 +530,7 @@ The Story PIR report follows the template structure:
 ### Knowledge Base Integration
 
 **Storage:**
-- PIR reports stored in `KB/Reviews/PIR/Story-{N}/`
+- PIR reports stored in `docs/Reviews/pir/Story-{N}/`
 - Indexed for searchability
 - Cross-referenced with related PIRs
 - Linked to Story and Tasks
@@ -556,7 +556,7 @@ The Story PIR report follows the template structure:
 ## Related Documentation
 
 - [PIR Workflow Planning](PIR-workflow-planning.md) - Complete planning document
-- [Story PIR Template](../../../KB/Documentation/Templates/story-pir-template.md) - Story PIR template
+- [Story PIR Template](../../../docs/documentation/templates/story-pir-template.md) - Story PIR template
 - [PIR Workflow YAML](../../workflows/pir-workflow.yaml) - Workflow definition
 - [Epic-Level PIR Design](T02-epic-level-pir-workflow-design.md) - Epic-level design
 - [Release Workflow Reference](../Documentation/Developer_Docs/vwmp/release-workflow-reference.md) - RW integration reference

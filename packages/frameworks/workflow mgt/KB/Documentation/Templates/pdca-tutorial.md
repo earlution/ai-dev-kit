@@ -207,7 +207,7 @@ Epic: 2 | Story: 2 | Task: 1
 
 ## References
 
-- **Templates:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/`
+- **Templates:** `packages/frameworks/workflow mgt/docs/documentation/templates/`
 - **Best Practices:** `pdca-best-practices.md`
 - **End-to-End Example:** `pdca-end-to-end-example.md`
 - **Quick Reference:** `pdca-quick-reference.md`

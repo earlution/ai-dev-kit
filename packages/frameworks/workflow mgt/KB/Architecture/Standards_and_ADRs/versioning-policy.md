@@ -134,7 +134,7 @@ Each version entry in `CHANGELOG.md`:
 🔧 Category: Brief description
 - Detailed change description
 - Additional changes
-- See [CHANGELOG_v0.20.11.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.20.11.4+1.md)
+- See [CHANGELOG_v0.20.11.4+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.20.11.4+1.md)
 ```
 
 **Note:** Version numbers with `+` must be properly escaped or quoted in markdown links.
@@ -145,13 +145,13 @@ Each version entry in `CHANGELOG.md`:
 
 **Core Policy Documents:**
 - **[Versioning Strategy](versioning-strategy.md)** - Complete versioning strategy with forensic traceability system, canonical ordering, and immutability rules
-- **[Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md)** - Work item structure (Epic → Story → Task) and how they map to version schema
+- **[Kanban Governance Policy](../../project-management/rituals/policy/kanban-governance-policy.md)** - Work item structure (Epic → Story → Task) and how they map to version schema
 - **[Release Workflow Reference](../../Documentation/Developer_Docs/vwmp/release-workflow-reference.md)** - Automated implementation of versioning schema
 - **[Cursor Rules](../../../../.cursorrules)** - Fundamental system rules that enforce versioning requirements ⭐
 
 **Implementation:**
 - **CHANGELOG:** `CHANGELOG.md` - Main summary changelog
-- **Changelog Archive:** `KB/Changelog_and_Release_Notes/Changelog_Archive/` - Detailed changelog files
+- **Changelog Archive:** `docs/changelog-and-release-notes/changelog-archive/` - Detailed changelog files
 - **Branch Context Validator:** `scripts/validation/validate_branch_context.py`
 - **Changelog Format Validator:** `scripts/validation/validate_changelog_format.py`
 

@@ -90,7 +90,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - Epic 2 (Workflow Management) - May use workflows for automation
 - *Parallel Development Candidacy:* Safe (can develop independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-001-fr-intake-and-processing-workflow.md`
+> Full story: `docs/project-management/kanban/epics/Epic-5/Story-001-fr-intake-and-processing-workflow.md`
 
 ---
 
@@ -119,7 +119,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - Epic 4 (Kanban Framework) - Uses Kanban board for prioritization
 - *Parallel Development Candidacy:* Safe (can develop independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-002-fr-prioritization-and-planning.md`
+> Full story: `docs/project-management/kanban/epics/Epic-5/Story-002-fr-prioritization-and-planning.md`
 
 ---
 
@@ -149,7 +149,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - Epic 3 (Versioning) - Uses versioning for tracking
 - *Parallel Development Candidacy:* Safe (can develop independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-003-fr-implementation-patterns-and-best-practices.md`
+> Full story: `docs/project-management/kanban/epics/Epic-5/Story-003-fr-implementation-patterns-and-best-practices.md`
 
 ---
 
@@ -179,7 +179,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - Epic 3 (Versioning) - Uses versioning for progress tracking
 - *Parallel Development Candidacy:* Safe (can develop independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-004-fr-tracking-and-reporting.md`
+> Full story: `docs/project-management/kanban/epics/Epic-5/Story-004-fr-tracking-and-reporting.md`
 
 ---
 
@@ -209,7 +209,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - Epic 4 (Kanban Framework) - Integrates with Kanban processes
 - *Parallel Development Candidacy:* Safe (can develop independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-005-fr-automation-and-tooling.md`
+> Full story: `docs/project-management/kanban/epics/Epic-5/Story-005-fr-automation-and-tooling.md`
 
 ---
 
@@ -246,7 +246,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - `packages/frameworks/kanban/templates/CANONICAL_EPICS.md` - Canonical epic definitions
 - `packages/frameworks/kanban/templates/FR_TEMPLATE.md` - Feature Request template
 - `packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md` - FR/BR intake process guide
-- `KB/PM_and_Portfolio/kanban/epics/Epic-4/Epic-4.md` - Kanban Framework epic
+- `docs/project-management/kanban/epics/Epic-4/Epic-4.md` - Kanban Framework epic
 
 ---
 

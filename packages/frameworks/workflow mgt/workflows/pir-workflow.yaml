@@ -15,8 +15,8 @@ config:
   reviewer_assignment: both  # auto | manual | both
   require_approval: false
   create_follow_ups: true
-  knowledge_base_path: KB/Reviews/PIR
-  template_path: KB/Documentation/Templates
+  knowledge_base_path: docs/Reviews/PIR
+  template_path: docs/documentation/Templates
 
 steps:
   - id: step-1

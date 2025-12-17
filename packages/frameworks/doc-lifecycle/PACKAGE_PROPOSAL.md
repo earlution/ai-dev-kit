@@ -2,7 +2,7 @@
 
 **Status:** Proposal  
 **Date:** 2025-12-04  
-**Related:** [Document Lifecycle Metadata Spec](../../../KB/Architecture/Standards_and_ADRs/doc-lifecycle-metadata-spec.md) | [Document Lifecycle Policy](../../../KB/Architecture/Standards_and_ADRs/doc-lifecycle-policy.md)
+**Related:** [Document Lifecycle Metadata Spec](../../../docs/architecture/standards-and-adrs/doc-lifecycle-metadata-spec.md) | [Document Lifecycle Policy](../../../docs/architecture/standards-and-adrs/doc-lifecycle-policy.md)
 
 ---
 

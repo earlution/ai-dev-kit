@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Related Work:** Epic 20, Story 11
 **References:**
 - [Versioning Policy (Schema)](versioning-policy.md) - Schema definition
-- [Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md) - Work item structure and task-level versioning
+- [Kanban Governance Policy](../../project-management/rituals/policy/kanban-governance-policy.md) - Work item structure and task-level versioning
 - [Release Workflow Reference](../../Documentation/Developer_Docs/vwmp/release-workflow-reference.md) - Implementation of versioning strategy
 - [Cursor Rules](../../../../.cursorrules) - Fundamental system rules
 
@@ -94,7 +94,7 @@ The strategy uses **two distinct timestamp layers** with **different purposes**:
 ```markdown
 ### [0.20.11.14+3] - 26-11-25
 🧰 Tooling: E20:S11:T14: Mark task complete with version number
-- See [CHANGELOG_v0.20.11.14+3.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.20.11.14+3.md)
+- See [CHANGELOG_v0.20.11.14+3.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.20.11.14+3.md)
 ```
 
 ### Layer 2: Detailed Changelog Archive (`CHANGELOG_vX.Y.Z.md`)
@@ -176,7 +176,7 @@ Version: 0.20.11.14+3
 
 **Mapping:** One detailed changelog file per version
 
-**File Location:** `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v{version}.md`
+**File Location:** `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md`
 
 **Traceability Path:**
 - Version number → File path (deterministic)
@@ -187,7 +187,7 @@ Version: 0.20.11.14+3
 ```
 Version: 0.20.11.14+3
   ↓
-File: KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.20.11.14+3.md
+File: docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.20.11.14+3.md
   ↓
 Contains: **Release Date:** 2025-11-26 15:42:58 UTC
 ```
@@ -221,9 +221,9 @@ Contains: **Release Date:** 2025-11-26 15:42:58 UTC
 ```
 Version: 0.20.11.14+3
   ↓
-Epic 20 document: KB/PM_and_Portfolio/epics/overview/Epic 20/Epic-20.md
+Epic 20 document: docs/project-management/epics/overview/Epic 20/Epic-20.md
   ↓
-Story 11 document: KB/PM_and_Portfolio/stories/overview/Epic 20/Story-11-*.md
+Story 11 document: docs/project-management/stories/overview/Epic 20/Story-11-*.md
   ↓
 Task 14 markers: Version references, commit hashes, workflow runs
 ```
@@ -429,13 +429,13 @@ That document defines:
 
 **Core Policy Documents:**
 - **[Versioning Policy (Schema)](versioning-policy.md)** - Schema definition (RC.EPIC.STORY.TASK+BUILD)
-- **[Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md)** - Work item structure, task-level versioning requirements, and release workflow integration
+- **[Kanban Governance Policy](../../project-management/rituals/policy/kanban-governance-policy.md)** - Work item structure, task-level versioning requirements, and release workflow integration
 - **[Release Workflow Reference](../../Documentation/Developer_Docs/vwmp/release-workflow-reference.md)** - Automated implementation of versioning strategy
 - **[Cursor Rules](../../../../.cursorrules)** - Fundamental system rules that underpin all policies ⭐
 
 **Implementation:**
 - **CHANGELOG.md** - Main summary changelog (short date format)
-- **Changelog Archive** - `KB/Changelog_and_Release_Notes/Changelog_Archive/` (full timestamp format)
+- **Changelog Archive** - `docs/changelog-and-release-notes/changelog-archive/` (full timestamp format)
 - **Branch Context Validator** - `scripts/validation/validate_branch_context.py`
 - **Changelog Format Validator** - `scripts/validation/validate_changelog_format.py`
 

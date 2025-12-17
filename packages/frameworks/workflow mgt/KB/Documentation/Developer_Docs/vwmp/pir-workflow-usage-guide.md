@@ -69,7 +69,7 @@ This guide provides practical, user-friendly instructions for using the Post-Imp
 1. RW Step 15 detects Epic 2 is COMPLETE
 2. PIR workflow automatically triggered
 3. All 16 steps execute (Step 2 skipped for Epic-level)
-4. PIR report generated: `KB/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`
+4. PIR report generated: `docs/Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`
 5. Epic document updated with PIR summary
 6. Follow-up tasks created if needed
 
@@ -84,7 +84,7 @@ This guide provides practical, user-friendly instructions for using the Post-Imp
 2. Significance evaluation: High (introduces new patterns, multiple tasks)
 3. PIR workflow triggered
 4. All 16 steps execute (including Step 2 significance evaluation)
-5. PIR report generated: `KB/Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md`
+5. PIR report generated: `docs/Reviews/pir/Story-5/PIR-Story-5-v0.2.5.11+1.md`
 6. Story document updated with PIR summary
 7. Follow-up tasks created if needed
 
@@ -111,7 +111,7 @@ This guide provides practical, user-friendly instructions for using the Post-Imp
 **Step 1: Identify Review Scope**
 ```bash
 # Read Epic document
-Epic: KB/PM_and_Portfolio/kanban/epics/Epic-2/Epic-2.md
+Epic: docs/project-management/kanban/epics/Epic-2/Epic-2.md
 Status: COMPLETE ✅
 Review Level: Epic
 ```
@@ -199,7 +199,7 @@ Related documents: ✅ (3 BR/FR documents)
 **Step 10: Create PIR Report**
 ```bash
 # Report created
-Location: KB/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md
+Location: docs/Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md
 Version Range: v0.2.1.1+1 to v0.2.11.9+3
 ```
 
@@ -218,7 +218,7 @@ Cross-references created: ✅
 **PIR Status:** Complete  
 **PIR Date:** 2025-12-16  
 **PIR Version:** v0.2.11.9+3  
-**PIR Report:** [PIR-Epic-2-v0.2.11.9+3.md](../../Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
+**PIR Report:** [PIR-Epic-2-v0.2.11.9+3.md](../../Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
 
 ### Summary
 Epic 2 successfully delivered the Workflow Management Framework...
@@ -233,14 +233,14 @@ Epic 2 successfully delivered the Workflow Management Framework...
 ```markdown
 - [ ] **Action 1:** Create automated tests for PIR workflow
   - Priority: Medium
-  - PIR Reference: [PIR Report](../../Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
+  - PIR Reference: [PIR Report](../../Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
 ```
 
 **Step 14: Link PIR to Work Items**
 ```markdown
 ## Related Work
 
-- **Epic:** [Epic 2 Documentation](../../PM_and_Portfolio/kanban/epics/Epic-2/Epic-2.md) (v0.2.11.9+3)
+- **Epic:** [Epic 2 Documentation](../../project-management/kanban/epics/Epic-2/Epic-2.md) (v0.2.11.9+3)
 - **Stories:** [Links to all stories with versions]
 - **Version Range:** v0.2.1.1+1 to v0.2.11.9+3
 ```
@@ -255,7 +255,7 @@ Epic 2 successfully delivered the Workflow Management Framework...
 
 **Step 1: Identify Review Scope**
 ```bash
-Story: KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-5-*.md
+Story: docs/project-management/kanban/epics/Epic-2/Story-5-*.md
 Status: COMPLETE ✅
 Review Level: Story
 ```
@@ -339,8 +339,8 @@ config:
   review_level: both
   auto_trigger: true
   epic_pir_always: true
-  knowledge_base_path: KB/Reviews/PIR
-  template_path: KB/Documentation/Templates
+  knowledge_base_path: docs/Reviews/PIR
+  template_path: docs/documentation/Templates
 ```
 
 ### Advanced Configuration
@@ -435,7 +435,7 @@ config:
 
 ### Example PIR Report: Epic-Level
 
-See: `KB/Reviews/PIR/Epic-2/PIR-Epic-2-TEST-v0.2.5.10+1.md`
+See: `docs/Reviews/pir/Epic-2/PIR-Epic-2-TEST-v0.2.5.10+1.md`
 
 **Key Features:**
 - Version range (first to last version)
@@ -445,7 +445,7 @@ See: `KB/Reviews/PIR/Epic-2/PIR-Epic-2-TEST-v0.2.5.10+1.md`
 
 ### Example PIR Report: Story-Level
 
-See: `KB/Reviews/PIR/Story-2/PIR-Story-2-TEST-v0.2.2.8+1.md`
+See: `docs/Reviews/pir/Story-2/PIR-Story-2-TEST-v0.2.2.8+1.md`
 
 **Key Features:**
 - Single version reference
@@ -480,7 +480,7 @@ add_pir_section_to_epic(
     epic=2,
     summary=executive_summary,
     findings=key_findings,
-    pir_report_path="KB/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md"
+    pir_report_path="docs/Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md"
 )
 ```
 
@@ -505,7 +505,7 @@ report_name = f"PIR-Epic-{epic}-v{last_version}.md"
 - [PIR Workflow Agent Execution Guide](pir-workflow-agent-execution.md) - Step-by-step execution guide
 - [PIR-Kanban Integration Guide](pir-kanban-integration-guide.md) - Kanban integration patterns
 - [PIR-Versioning Integration Guide](pir-versioning-integration-guide.md) - Versioning integration patterns
-- [PIR Templates](../../../KB/Documentation/Templates/) - Epic and Story PIR templates
+- [PIR Templates](../../../docs/documentation/templates/) - Epic and Story PIR templates
 - [Release Workflow Reference](release-workflow-reference.md) - RW reference (for integration context)
 
 ---
@@ -515,8 +515,8 @@ report_name = f"PIR-Epic-{epic}-v{last_version}.md"
 ### Tip 1: Use Templates
 
 Always use PIR templates to ensure consistency:
-- Epic template: `KB/Documentation/Templates/epic-pir-template.md`
-- Story template: `KB/Documentation/Templates/story-pir-template.md`
+- Epic template: `docs/documentation/templates/epic-pir-template.md`
+- Story template: `docs/documentation/templates/story-pir-template.md`
 
 ### Tip 2: Capture Patterns Early
 
@@ -573,7 +573,7 @@ When creating follow-up tasks:
 
 ### Q7: How do I access PIR reports?
 
-**A:** PIR reports are stored in `KB/Reviews/PIR/Epic-{N}/` or `KB/Reviews/PIR/Story-{N}/` and linked from Epic/Story documents.
+**A:** PIR reports are stored in `docs/Reviews/pir/Epic-{N}/` or `docs/Reviews/pir/Story-{N}/` and linked from Epic/Story documents.
 
 ---
 

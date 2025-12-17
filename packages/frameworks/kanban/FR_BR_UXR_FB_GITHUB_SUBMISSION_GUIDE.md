@@ -48,7 +48,7 @@ You can submit Bug Reports, Feature Requests, UX Research findings, or User Acce
 
 **What Happens Next:**
 - Issue is automatically converted to a BR document
-- BR document is created in `KB/PM_and_Portfolio/kanban/fr-br/`
+- BR document is created in `docs/project-management/kanban/fr-br/`
 - Issue is commented with document link
 - BR is processed through intake workflow
 - Kanban task is created and linked back to the issue
@@ -69,7 +69,7 @@ You can submit Bug Reports, Feature Requests, UX Research findings, or User Acce
 
 **What Happens Next:**
 - Issue is automatically converted to an FR document
-- FR document is created in `KB/PM_and_Portfolio/kanban/fr-br/`
+- FR document is created in `docs/project-management/kanban/fr-br/`
 - Issue is commented with document link
 - FR is processed through intake workflow
 - Kanban task is created and linked back to the issue
@@ -89,7 +89,7 @@ You can submit Bug Reports, Feature Requests, UX Research findings, or User Acce
 
 **What Happens Next:**
 - Issue is automatically converted to a UXR document
-- UXR document is created in `KB/PM_and_Portfolio/kanban/fr-br/`
+- UXR document is created in `docs/project-management/kanban/fr-br/`
 - Issue is commented with document link
 - UXR is processed through intake workflow
 - Kanban task is created and linked back to the issue
@@ -156,7 +156,7 @@ When you submit an issue using one of our templates:
    - `enhancement` → Feature Request (FR)
    - `ux-research` → User Experience Research (UXR)
    - `feedback` or `uat` → User Acceptance Testing Report (FB)
-3. **Document Creation:** A new document is created in `KB/PM_and_Portfolio/kanban/fr-br/`
+3. **Document Creation:** A new document is created in `docs/project-management/kanban/fr-br/`
 4. **Template Population:** The document is populated with issue data
 5. **GitHub Link:** The document includes a link back to the GitHub Issue
 6. **Issue Comment:** A comment is added to the issue with the document link
@@ -222,7 +222,7 @@ If your issue isn't automatically converted:
 
 If you can't find your document:
 
-1. **Check Path:** Documents are in `KB/PM_and_Portfolio/kanban/fr-br/`
+1. **Check Path:** Documents are in `docs/project-management/kanban/fr-br/`
 2. **Check Naming:** Documents follow the pattern `{TYPE}-{NUMBER}-{slug}.md`
 3. **Check Issue Comment:** The issue comment includes the document path
 

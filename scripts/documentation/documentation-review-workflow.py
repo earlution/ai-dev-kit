@@ -254,8 +254,8 @@ def main():
     parser.add_argument(
         '--path',
         type=str,
-        default='KB/',
-        help='Path to documentation directory (default: KB/)'
+        default='docs/',
+        help='Path to documentation directory (default: docs/)'
     )
     parser.add_argument(
         '--assign',

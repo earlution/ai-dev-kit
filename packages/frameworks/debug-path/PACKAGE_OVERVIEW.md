@@ -174,7 +174,7 @@ Each debug path uses 7 documents:
 ### File Paths
 
 Customize templates with your project's:
-- Debug paths directory (e.g., `KB/debug-paths/`)
+- Debug paths directory (e.g., `docs/debug-paths/`)
 - Test command (e.g., `pytest`, `npm test`, `flutter test`)
 - Source file paths
 - Test file paths

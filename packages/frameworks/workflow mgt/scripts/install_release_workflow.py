@@ -173,7 +173,7 @@ def collect_config_interactive(project_root: Path, mode: Optional[str] = None) -
         print("\n📊 Kanban Integration:")
         kanban_root = prompt_question(
             "Kanban root directory",
-            default="KB/PM_and_Portfolio/kanban"
+            default="docs/project-management/kanban"
         )
         config['kanban_root'] = kanban_root
         
@@ -255,11 +255,11 @@ def generate_cursorrules_section(config: Dict) -> str:
         'src/{project}/version.py': version_file,
         'src/fynd_deals/version.py': version_file,
         '{project}': project_name,
-        '{kanban_path}': config.get('kanban_root', 'KB/PM_and_Portfolio/kanban'),
+        '{kanban_path}': config.get('kanban_root', 'docs/project-management/kanban'),
         '{changelog_archive_path}': config['changelog_dir'],
         '{scripts_path}': config['scripts_path'],
-        'KB/PM_and_Portfolio/kanban': config.get('kanban_root', 'KB/PM_and_Portfolio/kanban'),
-        'KB/Changelog_and_Release_Notes/Changelog_Archive': config['changelog_dir'],
+        'docs/project-management/kanban': config.get('kanban_root', 'docs/project-management/kanban'),
+        'docs/changelog-and-release-notes/changelog-archive': config['changelog_dir'],
     }
     
     result = template

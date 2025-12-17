@@ -80,7 +80,7 @@ The PIR workflow consists of 5 phases:
 1. **Phase 1: Preparation** (Steps 1-4) - Identify scope, gather materials, prepare checklist
 2. **Phase 2: Analysis** (Steps 5-8) - Review work items, analyze goals, review technical
 3. **Phase 3: Reflection** (Steps 9) - Identify lessons learned, patterns, anti-patterns
-4. **Phase 4: Documentation** (Steps 10-13) - Create report, update KB/Kanban, create tasks
+4. **Phase 4: Documentation** (Steps 10-13) - Create report, update docs/Kanban, create tasks
 5. **Phase 5: Integration** (Steps 14-16) - Link work items, archive materials, optional approval
 
 ---
@@ -132,10 +132,10 @@ The PIR workflow consists of 5 phases:
 **C.1. Read Epic/Story Document:**
 ```bash
 # Epic-level example
-Epic document: KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md
+Epic document: docs/project-management/kanban/epics/Epic-{N}/Epic-{N}.md
 
 # Story-level example
-Story document: KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-{name}.md
+Story document: docs/project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md
 ```
 
 **C.2. Verify Status:**
@@ -323,26 +323,26 @@ Story document: KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-{name}.md
 **C.1. Read Epic/Story Document:**
 ```bash
 # Epic-level
-Epic: KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md
+Epic: docs/project-management/kanban/epics/Epic-{N}/Epic-{N}.md
 
 # Story-level
-Story: KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-{name}.md
+Story: docs/project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md
 ```
 
 **C.2. Read Story/Task Documents:**
 ```bash
 # For Epic-level: Read all Stories
-Stories: KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Story-*.md
+Stories: docs/project-management/kanban/epics/Epic-{N}/Story-*.md
 
 # For Story-level: Read all Tasks
-Tasks: KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-*/Task-*.md
+Tasks: docs/project-management/kanban/epics/Epic-{N}/Story-{N}-*/Task-*.md
 ```
 
 **C.3. Read Changelog Entries:**
 ```bash
 # Read changelog entries for version range
 CHANGELOG.md (main changelog)
-KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v{version}.md
+docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md
 ```
 
 **C.4. Read Related Documents:**
@@ -393,8 +393,8 @@ KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v{version}.md
 - Prepare for review execution
 
 **A.2. Identify Template:**
-- Epic-level: `KB/Documentation/Templates/epic-pir-template.md`
-- Story-level: `KB/Documentation/Templates/story-pir-template.md`
+- Epic-level: `docs/documentation/templates/epic-pir-template.md`
+- Story-level: `docs/documentation/templates/story-pir-template.md`
 
 #### B. DETERMINE
 
@@ -418,10 +418,10 @@ KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v{version}.md
 **C.1. Load Template:**
 ```bash
 # Epic-level
-Template: KB/Documentation/Templates/epic-pir-template.md
+Template: docs/documentation/templates/epic-pir-template.md
 
 # Story-level
-Template: KB/Documentation/Templates/story-pir-template.md
+Template: docs/documentation/templates/story-pir-template.md
 ```
 
 **C.2. Populate Template:**
@@ -922,8 +922,8 @@ Template: KB/Documentation/Templates/story-pir-template.md
 #### B. DETERMINE
 
 **B.1. Determine Report Location:**
-- Epic-level: `KB/Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md`
-- Story-level: `KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md`
+- Epic-level: `docs/Reviews/pir/Epic-{N}/PIR-Epic-{N}-v{version}.md`
+- Story-level: `docs/Reviews/pir/Story-{N}/PIR-Story-{N}-v{version}.md`
 
 **B.2. Determine PIR Version:**
 - **Epic-level:** Use last version in Epic (when Epic marked COMPLETE)
@@ -943,8 +943,8 @@ Template: KB/Documentation/Templates/story-pir-template.md
 #### C. EXECUTE
 
 **C.1. Load Template:**
-- Epic-level: `KB/Documentation/Templates/epic-pir-template.md`
-- Story-level: `KB/Documentation/Templates/story-pir-template.md`
+- Epic-level: `docs/documentation/templates/epic-pir-template.md`
+- Story-level: `docs/documentation/templates/story-pir-template.md`
 
 **C.2. Extract Version Information:**
 - **Epic-level:**
@@ -968,10 +968,10 @@ Template: KB/Documentation/Templates/story-pir-template.md
 **C.3. Save Report:**
 ```bash
 # Epic-level
-KB/Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md
+docs/Reviews/pir/Epic-{N}/PIR-Epic-{N}-v{version}.md
 
 # Story-level
-KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
+docs/Reviews/pir/Story-{N}/PIR-Story-{N}-v{version}.md
 ```
 
 #### D. VALIDATE
@@ -1027,10 +1027,10 @@ KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
 **C.1. Ensure Directory Structure:**
 ```bash
 # Epic-level
-KB/Reviews/PIR/Epic-{N}/
+docs/Reviews/pir/Epic-{N}/
 
 # Story-level
-KB/Reviews/PIR/Story-{N}/
+docs/Reviews/pir/Story-{N}/
 ```
 
 **C.2. Update PIR Index:**
@@ -1108,18 +1108,18 @@ KB/Reviews/PIR/Story-{N}/
 - Update PIR report with link back to Epic/Story document
 
 **B.3. Determine Link Format:**
-- Epic-level: `[PIR-Epic-{N}-v{version}.md](../../Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md)`
-- Story-level: `[PIR-Story-{N}-v{version}.md](../../Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md)`
+- Epic-level: `[PIR-Epic-{N}-v{version}.md](../../Reviews/pir/Epic-{N}/PIR-Epic-{N}-v{version}.md)`
+- Story-level: `[PIR-Story-{N}-v{version}.md](../../Reviews/pir/Story-{N}/PIR-Story-{N}-v{version}.md)`
 
 #### C. EXECUTE
 
 **C.1. Read PIR Report:**
 ```bash
 # Epic-level
-PIR Report: KB/Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md
+PIR Report: docs/Reviews/pir/Epic-{N}/PIR-Epic-{N}-v{version}.md
 
 # Story-level
-PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
+PIR Report: docs/Reviews/pir/Story-{N}/PIR-Story-{N}-v{version}.md
 ```
 
 **C.2. Extract PIR Summary:**
@@ -1135,7 +1135,7 @@ PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
 **PIR Status:** Complete  
 **PIR Date:** {YYYY-MM-DD}  
 **PIR Version:** {Version}  
-**PIR Report:** [PIR-Epic-{N}-v{version}.md](../../Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md)
+**PIR Report:** [PIR-Epic-{N}-v{version}.md](../../Reviews/pir/Epic-{N}/PIR-Epic-{N}-v{version}.md)
 
 ### Summary
 {Executive summary paragraph from PIR report}
@@ -1156,8 +1156,8 @@ PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
 - Read PIR report
 - Add/update "Related Work" section
 - Add link to Epic/Story document:
-  - Epic: `[Epic {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md)`
-  - Story: `[Story {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-{name}.md)`
+  - Epic: `[Epic {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Epic-{N}.md)`
+  - Story: `[Story {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md)`
 - Save updated PIR report
 
 #### D. VALIDATE
@@ -1236,7 +1236,7 @@ PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
   - **Priority:** {High/Medium/Low}
   - **Owner:** {Assigned to}
   - **Related Work:** {Link to related Epic/Story/Task}
-  - **PIR Reference:** [PIR Report](../../Reviews/PIR/...)
+  - **PIR Reference:** [PIR Report](../../Reviews/pir/...)
 ```
 
 **C.2. Add Tasks to Kanban:**
@@ -1298,11 +1298,11 @@ PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
 ```markdown
 ## Related Work
 
-- **Epic:** [Epic {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md) (v{version})
+- **Epic:** [Epic {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Epic-{N}.md) (v{version})
 - **Version Range:** {First Version} to {Last Version}
 - **Stories:**
-  - [Story {N1}](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N1}-*.md) (v{version1})
-  - [Story {N2}](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N2}-*.md) (v{version2})
+  - [Story {N1}](../../project-management/kanban/epics/Epic-{N}/Story-{N1}-*.md) (v{version1})
+  - [Story {N2}](../../project-management/kanban/epics/Epic-{N}/Story-{N2}-*.md) (v{version2})
 - **Related PIRs:** {Links to related PIR reports with versions}
 - **Follow-Up Tasks:** {Links to Kanban tasks created}
 ```
@@ -1367,8 +1367,8 @@ PIR Report: KB/Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md
 
 **C.1. Create Archive Structure:**
 ```bash
-KB/Reviews/PIR/Archive/Epic-{N}/v{version}/
-KB/Reviews/PIR/Archive/Story-{N}/v{version}/
+docs/Reviews/pir/Archive/Epic-{N}/v{version}/
+docs/Reviews/pir/Archive/Story-{N}/v{version}/
 ```
 
 **C.2. Archive Materials:**
@@ -1489,7 +1489,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 7. Step 7: Review technical implementation
 8. Step 8: Assess documentation quality
 9. Step 9: Identify lessons learned
-10. Step 10: Create PIR report (`KB/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`)
+10. Step 10: Create PIR report (`docs/Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`)
 11. Step 11: Update KB with PIR report
 12. Step 12: Update Epic 2 document with PIR summary
 13. Step 13: Create follow-up tasks from findings
@@ -1511,7 +1511,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 7. Step 7: Review technical implementation
 8. Step 8: Assess documentation quality
 9. Step 9: Identify lessons learned
-10. Step 10: Create PIR report (`KB/Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md`)
+10. Step 10: Create PIR report (`docs/Reviews/pir/Story-5/PIR-Story-5-v0.2.5.11+1.md`)
 11. Step 11: Update KB with PIR report
 12. Step 12: Update Story 5 document with PIR summary
 13. Step 13: Create follow-up tasks from findings
@@ -1560,7 +1560,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 ### Knowledge Base Integration
 
 **Storage:**
-- PIR reports stored in `KB/Reviews/PIR/`
+- PIR reports stored in `docs/Reviews/pir/`
 - Indexed for searchability
 - Cross-referenced with related PIRs
 - Linked to Epic/Story and Tasks
@@ -1580,7 +1580,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 - **Check:** Verify Epic/Story status before triggering
 
 **Issue 3: Template Missing**
-- **Solution:** Ensure templates exist in `KB/Documentation/Templates/`
+- **Solution:** Ensure templates exist in `docs/documentation/templates/`
 - **Check:** Template file names and locations
 
 **Issue 4: Significance Evaluation Unclear**
@@ -1589,7 +1589,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 
 **Issue 5: KB Directory Missing**
 - **Solution:** Create directory structure if needed
-- **Check:** `KB/Reviews/PIR/` structure
+- **Check:** `docs/Reviews/pir/` structure
 
 ---
 
@@ -1599,7 +1599,7 @@ KB/Reviews/PIR/Archive/Story-{N}/v{version}/
 - [Epic-Level PIR Design](../../Analysis/T02-epic-level-pir-workflow-design.md) - Epic-level design
 - [Story-Level PIR Design](../../Analysis/T03-story-level-pir-workflow-design.md) - Story-level design
 - [PIR Workflow YAML](../../workflows/pir-workflow.yaml) - Workflow definition
-- [PIR Templates](../../../KB/Documentation/Templates/) - Epic and Story PIR templates
+- [PIR Templates](../../../docs/documentation/templates/) - Epic and Story PIR templates
 - [PIR-Kanban Integration Guide](pir-kanban-integration-guide.md) - Kanban integration patterns and examples
 - [PIR-Versioning Integration Guide](pir-versioning-integration-guide.md) - Versioning integration patterns and examples
 - [Release Workflow Agent Execution](release-workflow-agent-execution.md) - RW execution pattern reference

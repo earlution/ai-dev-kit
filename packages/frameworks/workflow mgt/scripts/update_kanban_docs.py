@@ -295,7 +295,7 @@ def resolve_kanban_paths(
         kanban_root = Path(config['kanban_root'])
     else:
         # Default fallback patterns
-        kanban_root = project_root / "KB/PM_and_Portfolio/kanban"
+        kanban_root = project_root / "docs/project-management/kanban"
     
     # Resolve Story doc path
     if config and config.get('use_kanban') and 'story_doc_pattern' in config:
@@ -324,8 +324,8 @@ def resolve_kanban_paths(
     else:
         # Default fallback patterns
         epic_patterns = [
-            project_root / f"KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md",
-            project_root / f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md",
+            project_root / f"docs/project-management/epics/overview/Epic {epic}/Epic-{epic}.md",
+            project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Epic-{epic}.md",
         ]
         epic_doc = None
         for pattern in epic_patterns:
@@ -345,7 +345,7 @@ def resolve_kanban_paths(
         # Default fallback
         board_patterns = [
             kanban_root / "kanban-board.md",
-            project_root / "KB/PM_and_Portfolio/kanban/kanban-board.md",
+            project_root / "docs/project-management/kanban/kanban-board.md",
         ]
         for pattern in board_patterns:
             if pattern.exists():

@@ -89,7 +89,7 @@ This epic encompasses testing infrastructure, test coverage, and quality assuran
 - None
 - *Parallel Development Candidacy:* Safe (can be done independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-13/Story-001-testing-infrastructure-setup.md`
+> Full story: `docs/project-management/kanban/epics/Epic-13/Story-001-testing-infrastructure-setup.md`
 
 ---
 
@@ -125,7 +125,7 @@ This epic encompasses testing infrastructure, test coverage, and quality assuran
 - Depends on Story 1 (Testing Infrastructure Setup)
 - *Parallel Development Candidacy:* Blocked (requires Story 1 infrastructure)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-13/Story-002-test-implementation.md`
+> Full story: `docs/project-management/kanban/epics/Epic-13/Story-002-test-implementation.md`
 
 ---
 
@@ -163,7 +163,7 @@ This epic encompasses testing infrastructure, test coverage, and quality assuran
 - Coordinates with Epic 23 (Process Automation & CI/CD) for CI/CD pipeline
 - *Parallel Development Candidacy:* Blocked (requires Story 2 tests)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-13/Story-003-test-automation-and-cicd-integration.md`
+> Full story: `docs/project-management/kanban/epics/Epic-13/Story-003-test-automation-and-cicd-integration.md`
 
 ---
 

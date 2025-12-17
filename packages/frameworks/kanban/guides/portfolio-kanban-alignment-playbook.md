@@ -18,12 +18,12 @@ story_code: E19S8
 # Portfolio Kanban Alignment Playbook
 
 ## Purpose
-Operationalise Story E19S8 by giving PMO and Documentation Guild contributors a single reference for auditing, updating, and syncing the portfolio Kanban board (`KB/PM_and_Portfolio/rituals/overview/kanban-board.md`) with Trello automation. Use this guide whenever the board structure changes or during quarterly governance reviews.
+Operationalise Story E19S8 by giving PMO and Documentation Guild contributors a single reference for auditing, updating, and syncing the portfolio Kanban board (`docs/project-management/rituals/overview/kanban-board.md`) with Trello automation. Use this guide whenever the board structure changes or during quarterly governance reviews.
 
 ## Scope & Constraints
 - Covers Confidentia’s markdown-first Kanban ritual plus the Trello mirror driven by `scripts/sync_epic19_to_trello.py`.
 - Applies to *all* epics referenced on the board, regardless of owning epic number.
-- Assumes the KB taxonomy described in `KB/Governance_and_Process/decision-records/kb-taxonomy-architecture.md`.
+- Assumes the KB taxonomy described in `docs/Governance_and_Process/decision-records/kb-taxonomy-architecture.md`.
 - Out of scope: delivery-specific task boards, engineering sprint boards, or ad-hoc Trello lists.
 - **Dependencies:** Relies on Story E19S6 governance assets and the Epic 18 MCP/Trello automation channel remaining available.
 
@@ -79,11 +79,11 @@ Each task also includes a `**Blocker:**` field that identifies what specifically
 | --- | --- | --- | --- |
 | 1.1 | Export current Trello column → card data (CSV or JSON) | PMO | Trello export attachment |
 | 1.2 | Compare cards vs. `kanban-board.md` entries | Documentation Guild | Audit log entry |
-| 1.3 | Validate each epic link resolves to `KB/PM_and_Portfolio/epics/overview/...` | Documentation Guild | `make docs-lint` output |
+| 1.3 | Validate each epic link resolves to `docs/project-management/epics/overview/...` | Documentation Guild | `make docs-lint` output |
 | 1.4 | Record discrepancies (missing link, stale status, absent version) | PMO | Story E19S8 task notes |
 | 1.5 | File follow-up subtasks in Story E19S8 | PMO | Markdown checklist updated |
 
-Store the audit log near the bottom of `kanban-board.md` (new section) or attach a CSV under `KB/PM_and_Portfolio/rituals/reference/` if large.
+Store the audit log near the bottom of `kanban-board.md` (new section) or attach a CSV under `docs/project-management/rituals/reference/` if large.
 
 ### 2. Schema Update Steps
 1. Confirm column lineup (e.g., `Backlog`, `To Do`, `In Progress`, `Done`).
@@ -119,7 +119,7 @@ Store the audit log near the bottom of `kanban-board.md` (new section) or attach
 
 ## Deliverables Per Cycle
 - Updated `kanban-board.md` with schema + WIP definitions.
-- Audit log output stored in repo (`KB/PM_and_Portfolio/rituals/reference/kanban-audit-YYYYMMDD.md` or CSV).
+- Audit log output stored in repo (`docs/project-management/rituals/reference/kanban-audit-YYYYMMDD.md` or CSV).
 - Passing lint run showing board/story metadata parity.
 - Trello sync confirmation plus JSON payload committed.
 
@@ -129,10 +129,10 @@ Store the audit log near the bottom of `kanban-board.md` (new section) or attach
 - **Schema disputes:** convene PMO sync, capture decisions inside this playbook and story doc.
 
 ## References
-- `KB/PM_and_Portfolio/rituals/overview/kanban-board.md`
-- `KB/PM_and_Portfolio/stories/overview/Epic 19/Story-8-Portfolio-Kanban-Alignment.md`
+- `docs/project-management/rituals/overview/kanban-board.md`
+- `docs/project-management/stories/overview/Epic 19/Story-8-Portfolio-Kanban-Alignment.md`
 - `scripts/sync_epic19_to_trello.py`
-- `KB/Governance_and_Process/decision-records/kb-taxonomy-architecture.md`
+- `docs/Governance_and_Process/decision-records/kb-taxonomy-architecture.md`
 
 ---
 _Authored for Story E19S8 (v0.4.3.40)._

@@ -77,7 +77,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Contextualization system with placeholders
   - Chronological ordering finalized (Core: 1→2→3→4→5→6→7→8→10→18→22→23, Ancillary: 9→11→12→13→14→15→16→17→19→20→21→24*)
 - **Design Documentation:** Comprehensive canonical structure design document
-  - `KB/Documentation/Engineering_and_Platform/comprehensive-canonical-est-structure-design.md`
+  - `docs/documentation/engineering-and-platform/comprehensive-canonical-est-structure-design.md`
   - Rationale for Epic 7 (UXR) as canonical
   - Epic ordering rationale and chronological adoption sequence
   - Implementation requirements

@@ -6,7 +6,7 @@ Validates all internal and external links in documentation files.
 
 Usage:
     python3 validate-documentation-links.py [--path <path>] [--external] [--fix]
-    python3 validate-documentation-links.py --path KB/
+    python3 validate-documentation-links.py --path docs/
     python3 validate-documentation-links.py --external
 """
 
@@ -284,8 +284,8 @@ def main():
     parser.add_argument(
         '--path',
         type=str,
-        default='KB/',
-        help='Path to documentation directory or file (default: KB/)'
+        default='docs/',
+        help='Path to documentation directory or file (default: docs/)'
     )
     parser.add_argument(
         '--external',

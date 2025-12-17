@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Source Project:** fynd.deals (Epic 15, Story 1)  
 **Key Enhancements:** "ALL sections" requirement, atomicity, blocked protocol, epic branch workflow
 
-**📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../KB/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
+**📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 
 ---
 
@@ -23,15 +23,15 @@ housekeeping_policy: keep
 This package contains all essential files needed to implement the Release Workflow (RW) trigger in your project. The RW trigger enables AI assistants to execute a complete 13-step release process (version bump, changelog generation, Git operations, PDCA verification and action) using intelligent agent-driven execution.
 
 ### Core Methodology Documents
-- `KB/Documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md` - General methodology for agent-driven workflow execution
-- `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` - Step-by-step guide for executing the 13-step Release Workflow
-- `KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md` - Complete workflow reference
-- `KB/Documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md` - Detailed implementation guide
-- `KB/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Step-by-step guide for executing the 7-step Intake Workflow (FR/BR/UXR automation)
+- `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md` - General methodology for agent-driven workflow execution
+- `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` - Step-by-step guide for executing the 13-step Release Workflow
+- `docs/documentation/Developer_Docs/vwmp/release-workflow-reference.md` - Complete workflow reference
+- `docs/documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md` - Detailed implementation guide
+- `docs/documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Step-by-step guide for executing the 7-step Intake Workflow (FR/BR/UXR automation)
 
 ### Versioning Policy Documents
-- `KB/Architecture/Standards_and_ADRs/versioning-policy.md` - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
-- `KB/Architecture/Standards_and_ADRs/versioning-strategy.md` - Complete versioning strategy with forensic traceability
+- `docs/architecture/standards-and-adrs/versioning-policy.md` - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
+- `docs/architecture/standards-and-adrs/versioning-strategy.md` - Complete versioning strategy with forensic traceability
 
 ### Workflow Definitions
 - `workflows/release-workflow.yaml` - YAML definition of the Release Workflow structure
@@ -43,8 +43,8 @@ This package contains all essential files needed to implement the Release Workfl
 - `scripts/validation/validate_version_bump.py` - Validates version bump logic (new task, same task, out-of-order)
 
 ### Reference Documents
-- `KB/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
-- `KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` - Versioning-specific error reference (WF-002)
+- `docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
+- `docs/architecture/standards-and-adrs/versioning-error-reference-guide.md` - Versioning-specific error reference (WF-002)
 
 ### Cursor Rules Section
 - `cursorrules-rw-trigger-section.md` - Section to add to your `.cursorrules` file (includes "ALL sections" requirement, atomicity, blocked protocol)
@@ -140,7 +140,7 @@ Projects must **copy** this package into their repository, not link to it.
 - Full three-way integration
 - Automated Kanban updates with version markers
 
-See `KB/PM_and_Portfolio/kanban/epics/Epic-1/Story-002-package-and-repo-architecture/T004-consumption-patterns.md` for detailed step-by-step guides for each scenario.
+See `docs/project-management/kanban/epics/Epic-1/Story-002-package-and-repo-architecture/T004-consumption-patterns.md` for detailed step-by-step guides for each scenario.
 
 ---
 
@@ -196,7 +196,7 @@ python scripts/install_release_workflow.py --mode c --dry-run
 
 ### 📖 Detailed Guides
 
-- **Quickstart Guide:** [`KB/Documentation/Developer_Docs/vwmp/rw-installer-quickstart-guide.md`](KB/Documentation/Developer_Docs/vwmp/rw-installer-quickstart-guide.md) - Complete examples for greenfield and brownfield projects
+- **Quickstart Guide:** [`docs/documentation/Developer_Docs/vwmp/rw-installer-quickstart-guide.md`](docs/documentation/Developer_Docs/vwmp/rw-installer-quickstart-guide.md) - Complete examples for greenfield and brownfield projects
 - **Installer CLI Docs:** [`scripts/README-rw-installer.md`](scripts/README-rw-installer.md) - Full installer documentation
 - **Config Schema:** [`config/rw-config-schema.md`](config/rw-config-schema.md) - Complete config reference
 
@@ -216,7 +216,7 @@ cp -r temp/workflow\ mgt/* /path/to/your/project/
 ```
 
 Or manually copy:
-- `KB/` → Your documentation directory
+- `docs/` → Your documentation directory
 - `workflows/` → Your workflows directory (or create it)
 - `scripts/validation/` → Your scripts directory (or create it)
 
@@ -242,10 +242,10 @@ Or manually copy:
    - Replace: Your Kanban doc structure (if using Kanban)
 
 5. **Documentation References:**
-   - Update all `KB/Documentation/Developer_Docs/vwmp/` references to match your doc structure
+   - Update all `docs/documentation/Developer_Docs/vwmp/` references to match your doc structure
 
 **Files to Update:**
-- All `.md` files in `KB/Documentation/Developer_Docs/vwmp/`
+- All `.md` files in `docs/documentation/Developer_Docs/vwmp/`
 - `workflows/release-workflow.yaml`
 - `scripts/validation/validate_branch_context.py`
 - `scripts/validation/validate_changelog_format.py`
@@ -262,9 +262,9 @@ Or manually copy:
 
 The default schema is `RC.EPIC.STORY.TASK+BUILD` (e.g., `0.15.1.4+2`). If you need a different schema:
 
-1. Update `KB/Architecture/Standards_and_ADRs/versioning-policy.md` with your schema
+1. Update `docs/architecture/standards-and-adrs/versioning-policy.md` with your schema
 2. Update `scripts/validation/validate_branch_context.py` to parse your schema
-3. Update `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 1 to handle your schema
+3. Update `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 1 to handle your schema
 4. Update the version schema section in your `.cursorrules`
 
 ### Step 5: Customize Branch Mapping (if needed)
@@ -413,13 +413,13 @@ The Intake Workflow integrates with the Trigger-Aware Release Workflow (E2:S07):
 **Example:**
 ```bash
 # Commit message: "Add FR-019: Intake Workflow Automation"
-# Changed files: ["KB/PM_and_Portfolio/kanban/fr-br/FR-019.md"]
+# Changed files: ["docs/project-management/kanban/fr-br/FR-019.md"]
 # → RW detects trigger → Intake workflow executes automatically
 ```
 
 ### Documentation
 
-- **Agent Execution Guide:** `KB/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Complete step-by-step guide for AI agents
+- **Agent Execution Guide:** `docs/documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Complete step-by-step guide for AI agents
 - **Workflow Definition:** `workflows/intake-workflow.yaml` - YAML definition of the Intake Workflow structure
 - **Trigger Integration:** See `docs/trigger-aware-rw-documentation.md` for trigger system details
 
@@ -533,7 +533,7 @@ After implementation, verify:
 The included documentation follows this structure:
 
 ```
-KB/
+docs/
 ├── Documentation/
 │   └── Developer_Docs/
 │       └── vwmp/
@@ -542,7 +542,7 @@ KB/
 │           ├── release-workflow-reference.md
 │           └── portable-workflow-implementation-guide.md
 └── Architecture/
-    └── Standards_and_ADRs/
+    └── standards-and-adrs/
         ├── versioning-policy.md
         └── versioning-strategy.md
 ```
@@ -638,7 +638,7 @@ The `RC.EPIC.STORY.TASK+BUILD` schema provides:
 
 1. **Start Small:** Test the workflow on a feature branch before using in production
 2. **Version Schema:** The default schema is designed to be universal - only customize if necessary
-3. **File Structure:** You don't need the exact `KB/` structure - adjust to match your project
+3. **File Structure:** You don't need the exact `docs/` structure - adjust to match your project
 4. **Validation:** The validators are the most project-specific - customize these carefully
 5. **Documentation:** Keep documentation updated as you customize the workflow
 6. **"ALL Sections":** Always follow the systematic process for Step 4 to prevent inconsistencies
@@ -649,7 +649,7 @@ The `RC.EPIC.STORY.TASK+BUILD` schema provides:
 ## 📞 Support
 
 For questions or issues:
-1. Review `KB/Documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md` for detailed customization instructions
+1. Review `docs/documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md` for detailed customization instructions
 2. Check the step-by-step execution guide for specific step issues
 3. Review the versioning policy documents for schema questions
 4. Check `.cursorrules` for the complete RW trigger section with all requirements

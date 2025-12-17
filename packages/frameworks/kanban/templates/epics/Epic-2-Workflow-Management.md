@@ -85,7 +85,7 @@ This epic encompasses workflow management and automation framework, including wo
 - None
 - *Parallel Development Candidacy:* Safe (can be done independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-001-workflow-definitions-and-patterns.md`
+> Full story: `docs/project-management/kanban/epics/Epic-2/Story-001-workflow-definitions-and-patterns.md`
 
 ---
 
@@ -119,7 +119,7 @@ This epic encompasses workflow management and automation framework, including wo
 - Depends on Story 1 (Workflow Definitions and Patterns)
 - *Parallel Development Candidacy:* Blocked (requires Story 1 definitions)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-002-workflow-automation.md`
+> Full story: `docs/project-management/kanban/epics/Epic-2/Story-002-workflow-automation.md`
 
 ---
 

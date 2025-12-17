@@ -68,7 +68,7 @@ main_changelog = config['main_changelog'] if config and 'main_changelog' in conf
 changelog_dir = config['changelog_dir'] if config and 'changelog_dir' in config else 'docs/changelogs'
 scripts_path = config['scripts_path'] if config and 'scripts_path' in config else 'scripts/validation'
 readme_file = config['readme_file'] if config and 'readme_file' in config else 'README.md'
-kanban_root = config.get('kanban_root', 'KB/PM_and_Portfolio/kanban') if config and config.get('use_kanban') else None
+kanban_root = config.get('kanban_root', 'docs/project-management/kanban') if config and config.get('use_kanban') else None
 ```
 
 **Backward Compatibility:**
@@ -167,7 +167,7 @@ For each step, follow this pattern:
    **B. IDENTIFY COMPLETED TASK (MANDATORY):**
    - **Load config first:** If `rw-config.yaml` exists and `use_kanban: true`, read `kanban_root` and `story_doc_pattern` from config. Otherwise, use `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` as fallback.
    - Read the Story file using config values or fallback pattern
-   - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
+   - [Example: ai-dev-kit] `docs/project-management/kanban/epics/Epic-{epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
    - Find the MOST RECENTLY COMPLETED task in the Task Checklist (marked `✅ COMPLETE`)
    - Extract the task number from the task identifier: `E{epic}:S{story}:T{task}` (e.g., `E2:S02:T08` → task number is `8`)
    - **CRITICAL:** If no task is marked complete, or you cannot identify which task was just completed, **STOP** and ask the user which task was completed
@@ -224,13 +224,13 @@ For each step, follow this pattern:
    - **MUST** validate TASK number matches completed task before updating
    - **MUST** validate TASK number matches completed task after updating
    - **MUST** document decision: "Task {N} completed. Current TASK={X}, BUILD={Y}. Decision: {new_task/new_build} → TASK={Z}, BUILD={W}"
-   - See `KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` for error prevention reference
-   - See `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 2 for complete procedure
+   - See `docs/architecture/standards-and-adrs/versioning-error-reference-guide.md` for error prevention reference
+   - See `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 2 for complete procedure
 3. **Create Detailed Changelog** - Create detailed changelog in changelog archive directory. **Use config:** If `rw-config.yaml` exists, read `changelog_dir` from config. Otherwise, use `{changelog_archive_path}/CHANGELOG_v{version}.md` as fallback. Full timestamp (`YYYY-MM-DD HH:MM:SS UTC`). **CRITICAL:** Timestamp is IMMUTABLE once written - never edit the `**Release Date:**` field.
-   - [Example: ai-dev-kit] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v{version}.md` (or from `rw-config.yaml` if present)
+   - [Example: ai-dev-kit] `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md` (or from `rw-config.yaml` if present)
 4. **Update Main Changelog** - Add new entry at top: `## [version] - DD-MM-YY` (short date format for merge-to-main) with release description and link to detailed changelog. **Use config:** If `rw-config.yaml` exists, read `main_changelog` from config. Otherwise, use `CHANGELOG.md` as fallback. Follow [Keep a Changelog](https://github.com/olivierlacan/keep-a-changelog) format. **Note:** Main changelog date can be updated if merge date changes, but detailed changelog timestamp is immutable.
 5. **Update README** - Update version badge and latest release callout if present (optional). **Use config:** If `rw-config.yaml` exists, read `readme_file` from config. Otherwise, use `README.md` as fallback.
-6. **Update BR/FR Docs** - Update Bug Reports and Feature Requests with fix attempt information. **Use config:** If `rw-config.yaml` exists, read `fr_br_root` from config. Otherwise, use `KB/PM_and_Portfolio/kanban/fr-br` as fallback. **Purpose:** Document flaws, attempted fixes, and verification status so that if a bug isn't squashed, the next build can be informed by previous attempts.
+6. **Update BR/FR Docs** - Update Bug Reports and Feature Requests with fix attempt information. **Use config:** If `rw-config.yaml` exists, read `fr_br_root` from config. Otherwise, use `docs/project-management/kanban/fr-br` as fallback. **Purpose:** Document flaws, attempted fixes, and verification status so that if a bug isn't squashed, the next build can be informed by previous attempts.
    - **For Bug Reports (BR):**
      - Search for BR files linked to the completed task (via Story file, Epic file, or BR "Intake Decision" section)
      - If BR is linked, add new entry to "Fix Attempt History" section:
@@ -246,7 +246,7 @@ For each step, follow this pattern:
        - Add implementation date: `**Implementation Date:** {date}`
        - Add verification status: `**Verification Status:** {Verified/Attempted Fix (pending verification)}`
    - **If no BR/FR linked:** Skip this step (no BR/FR to update)
-   - **See:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 6 for complete procedure
+   - **See:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 6 for complete procedure
 7. **Auto-update Kanban Docs** - Update epic documentation and story documentation with version markers. **Use config:** If `rw-config.yaml` exists and `use_kanban: true`, read `kanban_root`, `epic_doc_pattern`, and `story_doc_pattern` from config. Otherwise, use `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md` and `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` as fallback. **CRITICAL: Check Story file existence, create from template if missing, then update:**
    - **MANDATORY: Check Story file existence:**
      - Read Epic file Story Checklist to verify Story is referenced
@@ -291,7 +291,7 @@ For each step, follow this pattern:
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
     - Example: `run_terminal_cmd(command="git push origin {branch} --tags", required_permissions=['network'])`
     - This enables network access in Cursor's sandbox environment
-    - See: `KB/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md`
+    - See: `docs/architecture/standards-and-adrs/agent-network-access-and-git-push-limitations.md`
 
 **Key Principles:**
 - ✅ **Intelligent Analysis:** Understand each step's requirements before executing
@@ -315,13 +315,13 @@ For each step, follow this pattern:
   - [Example: ai-dev-kit] `src/fynd_deals/version.py` (legacy path, acceptable for now)
 - Changelog: `CHANGELOG.md`
 - Changelog Archive: `{changelog_archive_path}/CHANGELOG_v{version}.md`
-  - [Example: ai-dev-kit] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v{version}.md`
+  - [Example: ai-dev-kit] `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md`
 - Kanban Board: `{kanban_path}/kanban-board.md` or `{kanban_path}/_index.md` (customize path)
-  - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/_index.md` or `KB/PM_and_Portfolio/kanban/kanban-board.md`
+  - [Example: ai-dev-kit] `docs/project-management/kanban/_index.md` or `docs/project-management/kanban/kanban-board.md`
 - Epic Docs: `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md` (customize path)
-  - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md`
+  - [Example: ai-dev-kit] `docs/project-management/kanban/epics/Epic-{epic}/Epic-{epic}.md`
 - Story Docs: `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` (customize path)
-  - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md`
+  - [Example: ai-dev-kit] `docs/project-management/kanban/epics/Epic-{epic}/Story-{story}-*.md`
 - Validators: `{scripts_path}/validation/validate_branch_context.py`, `{scripts_path}/validation/validate_changelog_format.py`
   - [Example: ai-dev-kit] `packages/frameworks/workflow mgt/scripts/validation/validate_branch_context.py`, `packages/frameworks/workflow mgt/scripts/validation/validate_changelog_format.py`
 
@@ -336,7 +336,7 @@ For each step, follow this pattern:
 - **Epic Ranges:**
   - [Example: ai-dev-kit] Epic 1-4+ (Epic 1: AI Dev Kit Core, Epic 2: Workflow Management Framework, Epic 3: Numbering & Versioning Framework, Epic 4: Kanban Framework)
   - No legacy range in dev-kit - starts from Epic 1 with full schema
-- **Reference:** See `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` (or your project's versioning policy) for complete schema definition
+- **Reference:** See `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (or your project's versioning policy) for complete schema definition
 
 **Branch Mapping (Customize for Your Project):**
 - `main` - **PRODUCTION BRANCH** - Only merge when ready to deploy. Auto-deploys trigger on every push!
@@ -361,14 +361,14 @@ For each step, follow this pattern:
   - [Example: ai-dev-kit] Epic 4 (Kanban Framework), Story 1, Task 1: `0.4.1.1+1`
 
 **Reference Documentation:**
-- Versioning Policy: `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` (or your project's equivalent)
-  - [Example: ai-dev-kit] `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` (canonical SoT for dev-kit)
+- Versioning Policy: `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (or your project's equivalent)
+  - [Example: ai-dev-kit] `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (canonical SoT for dev-kit)
 - Versioning Strategy: `packages/frameworks/numbering & versioning/versioning-strategy.md` (framework reference)
-- Release Workflow Guide: `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-- Kanban Governance: `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md` (or your project's equivalent)
-  - [Example: ai-dev-kit] `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md` (references framework as SoT)
-- **Workflow Flaws Reference:** `KB/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
-- **Versioning Error Reference:** `KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` - Versioning-specific error reference (WF-002)
+- Release Workflow Guide: `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- Kanban Governance: `docs/project-management/rituals/policy/kanban-governance-policy.md` (or your project's equivalent)
+  - [Example: ai-dev-kit] `docs/project-management/rituals/policy/kanban-governance-policy.md` (references framework as SoT)
+- **Workflow Flaws Reference:** `docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
+- **Versioning Error Reference:** `docs/architecture/standards-and-adrs/versioning-error-reference-guide.md` - Versioning-specific error reference (WF-002)
 
 ---
 
@@ -452,7 +452,7 @@ For each step, follow this pattern:
 - ✅ **MUST** use TODOs as checkpoints to prevent agentic drift
 
 **Agent Execution Guide:**
-- See `KB/Documentation/Developer_Docs/vwmp/package-version-workflow-agent-execution.md` for detailed step-by-step guide
+- See `docs/documentation/Developer_Docs/vwmp/package-version-workflow-agent-execution.md` for detailed step-by-step guide
 - Follow ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern for each step
 - Use validation scripts as tools: `scripts/validation/package/validate_package_version_format.py`, `validate_package_version_increment.py`, `validate_package_version_consistency.py`, `get_package_changes.py`
 
@@ -477,11 +477,11 @@ After copying this section to your `.cursorrules`, you MUST:
 2. **Update version file location** (currently shows `src/{project}/version.py` as template)
    - [Example: ai-dev-kit] `src/fynd_deals/version.py` (legacy path, acceptable for now)
 3. **Update Kanban paths** (currently shows `{kanban_path}/...` as templates)
-   - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md`
+   - [Example: ai-dev-kit] `docs/project-management/kanban/epics/Epic-{epic}/Epic-{epic}.md`
 4. **Update validator script paths** (currently shows `{scripts_path}/...` as templates)
    - [Example: ai-dev-kit] `packages/frameworks/workflow mgt/scripts/validation/...`
 5. **Reference your project's versioning policy** instead of dev-kit policy
-   - [Example: ai-dev-kit] Uses `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` as canonical SoT
+   - [Example: ai-dev-kit] Uses `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` as canonical SoT
 6. **Customize branch naming** if your project uses different conventions (e.g., `feature/epic-{n}` instead of `epic/{n}`)
 7. **Customize epic ranges** if your project uses different epic numbering (e.g., legacy range 1-9, new range 10+)
    - [Example: ai-dev-kit] Epic 1-4+ (no legacy range, starts from Epic 1 with full schema)
@@ -489,7 +489,7 @@ After copying this section to your `.cursorrules`, you MUST:
 **For ai-dev-kit Usage:**
 When using this section in the ai-dev-kit repository itself:
 - Version file: `src/fynd_deals/version.py`
-- Changelog Archive: `KB/Changelog_and_Release_Notes/Changelog_Archive/`
-- Kanban: `KB/PM_and_Portfolio/kanban/`
+- Changelog Archive: `docs/changelog-and-release-notes/changelog-archive/`
+- Kanban: `docs/project-management/kanban/`
 - Validators: `packages/frameworks/workflow mgt/scripts/validation/`
-- Versioning Policy: `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` (canonical SoT)
+- Versioning Policy: `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (canonical SoT)

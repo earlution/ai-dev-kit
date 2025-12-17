@@ -87,7 +87,7 @@ This epic encompasses Bug Report implementation and management, including Bug Re
 - Depends on Epic 4 Story 2 (FR/BR Intake Process)
 - *Parallel Development Candidacy:* Blocked (requires Epic 4 intake foundation)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-6/Story-001-br-intake-and-triage-workflow.md`
+> Full story: `docs/project-management/kanban/epics/Epic-6/Story-001-br-intake-and-triage-workflow.md`
 
 ---
 
@@ -121,7 +121,7 @@ This epic encompasses Bug Report implementation and management, including Bug Re
 - Depends on Story 1 (BR Intake and Triage Workflow)
 - *Parallel Development Candidacy:* Blocked (requires Story 1 intake workflow)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-6/Story-002-br-prioritization-and-assignment.md`
+> Full story: `docs/project-management/kanban/epics/Epic-6/Story-002-br-prioritization-and-assignment.md`
 
 ---
 
@@ -155,7 +155,7 @@ This epic encompasses Bug Report implementation and management, including Bug Re
 - Depends on Story 2 (BR Prioritization and Assignment)
 - *Parallel Development Candidacy:* Blocked (requires Story 2 prioritization)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-6/Story-003-br-fix-patterns.md`
+> Full story: `docs/project-management/kanban/epics/Epic-6/Story-003-br-fix-patterns.md`
 
 ---
 

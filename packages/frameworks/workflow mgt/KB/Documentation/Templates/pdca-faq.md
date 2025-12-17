@@ -198,7 +198,7 @@ housekeeping_policy: keep
 ### Q: Where are the templates?
 
 **A:** Templates are in:
-- `packages/frameworks/workflow mgt/KB/Documentation/Templates/`
+- `packages/frameworks/workflow mgt/docs/documentation/templates/`
 - `plan-phase-template.md`
 - `do-phase-template.md`
 - `check-phase-template.md`
@@ -244,8 +244,8 @@ housekeeping_policy: keep
 
 ## References
 
-- **PDCA Integration Plan:** `KB/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **Templates:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/`
+- **PDCA Integration Plan:** `docs/architecture/standards-and-adrs/rw-pdca-integration-plan.md`
+- **Templates:** `packages/frameworks/workflow mgt/docs/documentation/templates/`
 - **Best Practices:** `pdca-best-practices.md`
 - **Tutorial:** `pdca-tutorial.md`
 - **Quick Reference:** `pdca-quick-reference.md`

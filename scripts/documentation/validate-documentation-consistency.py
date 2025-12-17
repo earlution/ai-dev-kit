@@ -6,7 +6,7 @@ Validates consistency across related documentation files.
 
 Usage:
     python3 validate-documentation-consistency.py [--path <path>] [--check <check_type>]
-    python3 validate-documentation-consistency.py --path KB/ --check version
+    python3 validate-documentation-consistency.py --path docs/ --check version
 """
 
 import os
@@ -278,8 +278,8 @@ def main():
     parser.add_argument(
         '--path',
         type=str,
-        default='KB/',
-        help='Path to documentation directory or file (default: KB/)'
+        default='docs/',
+        help='Path to documentation directory or file (default: docs/)'
     )
     parser.add_argument(
         '--check',

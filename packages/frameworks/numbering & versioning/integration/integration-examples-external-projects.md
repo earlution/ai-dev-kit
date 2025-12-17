@@ -58,7 +58,7 @@ ai-dev-kit install numbering-versioning@2.0.0
 ai-dev-kit install workflow-mgt@2.0.0
 ```
 
-See [Framework Dependency Architecture](../../../../KB/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for details.
+See [Framework Dependency Architecture](../../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details.
 
 ### Step 2: Create Project Structure
 
@@ -949,7 +949,7 @@ created_at: {date}
 - **Kanban Framework:** `../kanban/README.md`
 - **Versioning Framework:** `../../README.md`
 - **Workflow Framework:** `../workflow mgt/README.md`
-- **Workflow Flaws Reference:** `../../KB/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
+- **Workflow Flaws Reference:** `../../docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
 
 ---
 

@@ -24,7 +24,7 @@ This document lists all files needed to implement the Release Workflow (RW) trig
 
 ### 1. Core Methodology Documents
 
-**Location:** `KB/Documentation/Developer_Docs/vwmp/`
+**Location:** `docs/documentation/Developer_Docs/vwmp/`
 
 These define the **reusable methodology** and are project-agnostic:
 
@@ -47,7 +47,7 @@ These define the **reusable methodology** and are project-agnostic:
 
 ### 2. Versioning Policy Documents
 
-**Location:** `KB/Architecture/Standards_and_ADRs/`
+**Location:** `docs/architecture/standards-and-adrs/`
 
 These define the **versioning schema and strategy**:
 
@@ -78,9 +78,9 @@ These define the **versioning schema and strategy**:
 
 **Customization Required:**
 - Update file paths in references:
-  - `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-  - `KB/Documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
-  - `KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`
+  - `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+  - `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
+  - `docs/documentation/Developer_Docs/vwmp/release-workflow-reference.md`
 - Update version file path: `src/confidentia/version.py` → `src/yourproject/version.py`
 - Update changelog paths if different
 - Update branch mapping if using different branch naming conventions
@@ -147,7 +147,7 @@ These define the **versioning schema and strategy**:
    - Replace: `src/yourproject/version.py` (or your actual path)
 
 2. **Changelog Directory:**
-   - Search: `KB/Changelog_and_Release_Notes/Changelog_Archive`
+   - Search: `docs/changelog-and-release-notes/changelog-archive`
    - Replace: Your changelog directory path
 
 3. **Main Changelog:**
@@ -155,11 +155,11 @@ These define the **versioning schema and strategy**:
    - Replace: Your main changelog file path
 
 4. **Kanban Documentation:**
-   - Search: `KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md`
+   - Search: `docs/project-management/epics/overview/Epic {epic}/Epic-{epic}.md`
    - Replace: Your Kanban doc structure
 
 5. **Documentation References:**
-   - Update all `KB/Documentation/Developer_Docs/vwmp/` references to match your doc structure
+   - Update all `docs/documentation/Developer_Docs/vwmp/` references to match your doc structure
 
 ### Version Schema Customization
 
@@ -183,18 +183,18 @@ If using different branch naming:
 **For a minimal implementation, copy these files:**
 
 ### Required Files:
-1. `KB/Documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
-2. `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-3. `KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`
-4. `KB/Architecture/Standards_and_ADRs/versioning-policy.md`
-5. `KB/Architecture/Standards_and_ADRs/versioning-strategy.md`
+1. `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
+2. `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+3. `docs/documentation/Developer_Docs/vwmp/release-workflow-reference.md`
+4. `docs/architecture/standards-and-adrs/versioning-policy.md`
+5. `docs/architecture/standards-and-adrs/versioning-strategy.md`
 6. `workflows/release-workflow.yaml`
 7. `scripts/validation/validate_branch_context.py`
 8. `scripts/validation/validate_changelog_format.py`
 9. `.cursorrules` (RW trigger section only)
 
 ### Optional Files (if using Kanban):
-10. `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md` (for context)
+10. `docs/project-management/rituals/policy/kanban-governance-policy.md` (for context)
 
 ---
 
@@ -234,9 +234,9 @@ If using different branch naming:
 
 **These provide context but aren't strictly required:**
 
-- `KB/Documentation/Developer_Docs/vwmp/release-workflow-usage.md` - Usage guide (VWMP-specific)
-- `KB/Documentation/Developer_Docs/vwmp/best-practices.md` - Best practices
-- `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md` - Kanban policy (if using Kanban)
+- `docs/documentation/Developer_Docs/vwmp/release-workflow-usage.md` - Usage guide (VWMP-specific)
+- `docs/documentation/Developer_Docs/vwmp/best-practices.md` - Best practices
+- `docs/project-management/rituals/policy/kanban-governance-policy.md` - Kanban policy (if using Kanban)
 
 ---
 
@@ -271,7 +271,7 @@ All documents reference each other. After copying, ensure:
 
 1. **Start Minimal:** Copy only the required files first, test, then add optional components
 2. **Version Schema:** The `RC.EPIC.STORY.TASK+BUILD` schema is designed to be universal, but you can customize if needed
-3. **File Structure:** You don't need the exact `KB/` structure - adjust paths to match your project
+3. **File Structure:** You don't need the exact `docs/` structure - adjust paths to match your project
 4. **Validation:** The validators are the most project-specific - customize these carefully
 5. **Testing:** Test the RW trigger on a feature branch before using in production
 

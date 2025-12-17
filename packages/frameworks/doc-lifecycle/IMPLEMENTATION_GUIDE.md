@@ -177,7 +177,7 @@ Until the automated workflow is implemented, perform manual housekeeping:
 
 ### Process
 
-1. **Scan:** Walk `KB/**` and parse front-matter
+1. **Scan:** Walk `docs/**` and parse front-matter
 2. **Filter:** Find documents where:
    - `lifecycle in {timeboxed, transient}` **AND**
    - `expires_at <= now()`
@@ -189,8 +189,8 @@ Until the automated workflow is implemented, perform manual housekeeping:
    - If `housekeeping_policy: delete` and no references → Delete
    - If `housekeeping_policy: archive` → Archive
 5. **Execute:**
-   - **Delete:** Remove from KB (or move to `KB/_graveyard/`)
-   - **Archive:** Move to `KB/Archive/{original_path}`
+   - **Delete:** Remove from KB (or move to `docs/_graveyard/`)
+   - **Archive:** Move to `docs/Archive/{original_path}`
 6. **Log:** Create changelog entry documenting housekeeping actions
 
 ### Frequency
@@ -219,11 +219,11 @@ Generate reports of expired documents and proposed actions:
 Expired Documents Report (2025-12-04)
 
 Timeboxed (expired):
-- KB/Analysis/T01-rw-adoption-friction-analysis.md (expired: 2025-12-01)
-- KB/Planning/E2-S04-T05-renumbering-plan.md (expired: 2025-11-20)
+- docs/Analysis/T01-rw-adoption-friction-analysis.md (expired: 2025-12-01)
+- docs/Planning/E2-S04-T05-renumbering-plan.md (expired: 2025-11-20)
 
 Transient (expired):
-- KB/Planning/E2-S04-T03-implementation-sequence.md (expired: 2025-11-30)
+- docs/Planning/E2-S04-T03-implementation-sequence.md (expired: 2025-11-30)
 
 Actions:
 - Archive: 2 documents
