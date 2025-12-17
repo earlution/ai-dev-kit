@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 4, Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.3+1 – T03 COMPLETE: Kanban board template created with MoSCoW prioritized task view)  
+**Last updated:** 2025-12-17 (v0.4.13.6+1 – T06 complete: E4:S13:T06)
 **Estimated Effort:** [TBD]  
-**Started:** [TBD]  
-**Completed:** [TBD]  
-**Version:** v0.4.13.3+1  
+**Started:** 2025-12-18  
+**Completed:** 2025-12-17
+**Version:** v0.4.13.6+1
 **Code:** E4S13
 
 ---
@@ -29,9 +29,9 @@ housekeeping_policy: keep
   - Task: [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
 - [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+3)
   - Task: [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
-- [ ] **E4:S13:T05 – Update Kanban package** - TODO (v0.4.13.0+0)
+- [x] **E4:S13:T05 – Update Kanban package** ✅ COMPLETE (v0.4.13.5+1)
   - Task: [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
-- [ ] **E4:S13:T06 – Update other affected packages** - TODO (v0.4.13.0+0)
+- [x] **E4:S13:T06 – Update other affected packages** ✅ COMPLETE (v0.4.13.6+1)
   - Task: [`T06-update-other-affected-packages.md`](T06-update-other-affected-packages.md)
 
 > **Format:** `E4:S13:Txx` (Epic 4, Story 13, Task with 2-digit zero padding)  
@@ -73,7 +73,7 @@ Enhance the Kanban board to be more useful by:
 **Blocker:** None  
 **Parallel Development Candidacy:** Safe (documentation and structure changes)
 
-**Status:** TODO (v0.4.13.0+0)
+**Status:** ✅ COMPLETE
 
 **Task Document:** [`T01-kanban-board-moscow-prioritized-task-view.md`](T01-kanban-board-moscow-prioritized-task-view.md)
 
@@ -93,7 +93,7 @@ Enhance the Kanban board to be more useful by:
 **Blocker:** None  
 **Parallel Development Candidacy:** Blocked (depends on T01)
 
-**Status:** TODO (v0.4.13.0+0)
+**Status:** ✅ COMPLETE
 
 **Task Document:** [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
 
@@ -113,7 +113,7 @@ Enhance the Kanban board to be more useful by:
 **Blocker:** None  
 **Parallel Development Candidacy:** Blocked (depends on T01 and T02)
 
-**Status:** TODO (v0.4.13.0+0)
+**Status:** ✅ COMPLETE
 
 **Task Document:** [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
 
@@ -133,7 +133,7 @@ Enhance the Kanban board to be more useful by:
 **Blocker:** None  
 **Parallel Development Candidacy:** Blocked (depends on T01)
 
-**Status:** ✅ COMPLETE (v0.4.13.4+2)
+**Status:** ✅ COMPLETE
 
 **Task Document:** [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
 
@@ -154,7 +154,7 @@ Enhance the Kanban board to be more useful by:
 **Blocker:** None  
 **Parallel Development Candidacy:** Blocked (depends on all previous tasks and user verification)
 
-**Status:** TODO (v0.4.13.0+0)
+**Status:** ✅ COMPLETE
 
 **Task Document:** [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
 
@@ -175,7 +175,7 @@ Enhance the Kanban board to be more useful by:
 **Blocker:** None  
 **Parallel Development Candidacy:** Blocked (depends on all previous tasks and user verification)
 
-**Status:** TODO (v0.4.13.0+0)
+**Status:** ✅ COMPLETE
 
 **Task Document:** [`T06-update-other-affected-packages.md`](T06-update-other-affected-packages.md)
 
@@ -244,7 +244,23 @@ The implementation must:
 
 ## Completion Summary
 
-[To be filled when story is complete]
+**Story Status:** ✅ COMPLETE (v0.4.13.6+1)
+
+**All Tasks Complete:**
+- ✅ T01: Enhanced Kanban board with MoSCoW prioritized task view
+- ✅ T02: Updated Kanban governance policy (canonical and local)
+- ✅ T03: Created Kanban board template with MoSCoW structure
+- ✅ T04: Assessed system impacts and fixed RW doc-init detection bug
+- ✅ T05: Verified Kanban package updated (template and policy in place)
+- ✅ T06: Verified all affected packages updated (RW package v2.1.2)
+
+**Deliverables:**
+- Enhanced Kanban board with MoSCoW prioritized task view
+- Updated Kanban governance policy documents
+- Kanban board template in framework package
+- System impact assessment document
+- RW doc-init detection bug fix (v2.1.2)
+- All package updates verified and complete
 
 ---
 

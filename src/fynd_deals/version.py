@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 1      # Epic number (Epic 1: AI Dev Kit Core)
-VERSION_STORY = 6     # Story number (Story 6: Repository CI/CD Setup)
-VERSION_TASK = 1      # Task number (Task 1: Set up BYOB badges for private repository)
-VERSION_BUILD = 1     # Build number (E1:S06:T01+1 - T01 IN PROGRESS: BYOB badge setup with test, coverage, and code quality badges)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 13     # Story number (Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View)
+VERSION_TASK = 6      # Task number (Task 6: Update other affected packages)
+VERSION_BUILD = 1     # Build number (E4:S13:T06+1 - T06 COMPLETE: All affected packages verified and confirmed updated)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

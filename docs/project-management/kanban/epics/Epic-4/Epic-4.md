@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-18 (v0.4.13.3+1 – T03 COMPLETE: Kanban board template created with MoSCoW prioritized task view)
+**Last updated:** 2025-12-17 (v0.4.13.6+1 – Story 13 Task 6 complete)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -54,7 +54,7 @@ housekeeping_policy: keep
 - [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0 – Story created for FR-021)
   - Story: [`Story-012-fr-br-uxr-repository-stories.md`](Story-012-fr-br-uxr-repository-stories.md)
   - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
-- [ ] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - IN PROGRESS (v0.4.13.3+1 – T03 COMPLETE: Kanban board template created with MoSCoW prioritized task view)
+- [x] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - ✅ COMPLETE (v0.4.13.6+1)
   - Story: [`Story-013-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05-T06 TODO (after user verification)
 
@@ -99,7 +99,7 @@ It ensures that:
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
+**Last updated:** 2025-12-17 (v0.4.13.6+1 – Story 13 Task 6 complete)
 
 **Goal:**  
 Fully align the dev-kit Kanban board, stories, and governance policy with the Kanban framework package. Establish `ai-dev-kit` as the canonical SoT for Kanban policies, templates, and governance.
@@ -120,7 +120,7 @@ Fully align the dev-kit Kanban board, stories, and governance policy with the Ka
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
+**Last updated:** 2025-12-17 (v0.4.13.6+1 – Story 13 Task 6 complete)
 
 **Goal:**  
 Design and implement a clear, actionable flow for converting incoming Feature Requests (FRs) and Bug Reports (BRs) into Kanban Tasks. This story ensures that all work entering the dev-kit is properly structured, tracked, and aligned with the Kanban → Versioning → Release Workflow system.
@@ -142,7 +142,7 @@ Design and implement a clear, actionable flow for converting incoming Feature Re
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
+**Last updated:** 2025-12-17 (v0.4.13.6+1 – Story 13 Task 6 complete)
 
 **Goal:**  
 Ensure seamless integration between Kanban, Versioning, and Release Workflow (RW) systems within the dev-kit. This story validates that the three frameworks work together cohesively, providing end-to-end traceability from Feature Requests/Bug Reports through Kanban Tasks to versioned releases.
