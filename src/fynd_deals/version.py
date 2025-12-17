@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 7      # Task number (Task 7: Implement framework hardening recommendations)
-VERSION_BUILD = 1     # Build number (E6:S06:T07+1 - T07 created: Framework hardening implementation task)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 13     # Story number (Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View)
+VERSION_TASK = 0      # Task number (Story creation - doc-init)
+VERSION_BUILD = 0     # Build number (E4:S13:0+0 - Story 13 created: Kanban board MoSCoW prioritized task view with 6 task documents)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

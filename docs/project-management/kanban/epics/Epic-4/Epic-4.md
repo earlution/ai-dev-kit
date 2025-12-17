@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-17 (v0.4.6.4+42 – Story 6 Task 4 build 42: Workflow and cursorrules structure analyses completed)
+**Last updated:** 2025-12-18 (v0.4.13.0+0 – Story 13 created: Kanban board MoSCoW prioritized task view with 6 task documents)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -54,6 +54,9 @@ housekeeping_policy: keep
 - [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0 – Story created for FR-021)
   - Story: [`Story-012-fr-br-uxr-repository-stories.md`](Story-012-fr-br-uxr-repository-stories.md)
   - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
+- [ ] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - TODO (v0.4.13.0+0 – Story created)
+  - Story: [`Story-013-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view.md)
+  - Tasks: T01-T06 TODO (v0.4.13.0+0 – Kanban board MoSCoW prioritized task view: implementation, policy, template, impact assessment, package updates)
 
 ---
 

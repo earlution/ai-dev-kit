@@ -17,6 +17,36 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.13.0+0] - 18-12-25
+
+✅ Complete: S13 - Kanban Board Enhancement - MoSCoW Prioritized Task View - Story created (doc-init)
+
+### Added
+
+- **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View:**
+  - Story document created: `Story-013-kanban-board-moscow-prioritized-task-view.md`
+  - Story version: v0.4.13.0+0 (doc-init)
+  - 6 task documents created:
+    - **T01:** Design and implement MoSCoW prioritized task view in Kanban board
+    - **T02:** Update Kanban governance policy
+    - **T03:** Update Kanban board template
+    - **T04:** Assess system impacts
+    - **T05:** Update Kanban package (after user verification)
+    - **T06:** Update other affected packages (after user verification)
+
+### Changed
+
+- **Epic-4 Document:**
+  - Story 13 added to checklist
+  - Last updated: 2025-12-18 (v0.4.13.0+0)
+
+- **Version File:**
+  - Version updated to `0.4.13.0+0` (E4:S13, doc-init build)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.0+0.md)
+
+---
+
 ## [0.6.6.7+1] - 18-12-25
 
 ✅ Complete: T07 - Implement framework hardening recommendations - Task created
