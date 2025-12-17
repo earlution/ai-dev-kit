@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Story 001 – RW Agent Execution & Docs
 
-**Status:** ✅ COMPLETE  
+**Status:** ✅ COMPLETE
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Completed:** 2025-12-16  
-**Last updated:** 2025-12-16 (v0.2.1.6+4 – All tasks complete: Validator format support implemented)  
-**Version:** v0.2.1.6+4  
+**Completed:** 2025-12-17
+**Last updated:** 2025-12-17 (v0.2.1.1+1 – T01 complete: Task)
+**Version:** v0.2.1.1+1
 **Code:** E2S01
 
 ---
@@ -52,7 +52,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 **Dependencies:** None  
 **Blocker:** None
 
-**Status:** ✅ **COMPLETE** - Comprehensive audit report created
+**Status:** ✅ COMPLETE
 
 **Approach:**
 1. ✅ Reviewed `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
@@ -90,7 +90,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 **Dependencies:** E2:S01:T01  
 **Blocker:** None
 
-**Status:** ✅ **COMPLETE** - All examples tagged and dev-kit examples added
+**Status:** ✅ COMPLETE
 
 **Approach:**
 1. ✅ Tagged all Confidentia/fynd.deals examples with `[Example: Confidentia]` or `[Example: Confidentia/fynd.deals]` labels
@@ -125,7 +125,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 **Dependencies:** E2:S01:T02  
 **Blocker:** None
 
-**Status:** ✅ **COMPLETE** - Cursorrules RW trigger section aligned with dev-kit policy
+**Status:** ✅ COMPLETE
 
 **Approach:**
 1. ✅ Reviewed `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md`
@@ -312,7 +312,7 @@ All subsequent steps have been cancelled.
 **Dependencies:** None  
 **Blocker:** None
 
-**Status:** 🔄 **REOPENED** (2025-12-16) - Previous attempt (v0.2.1.6+2) marked complete but bug persists
+**Status:** ✅ COMPLETE
 
 **Previous Attempt (v0.2.1.6+2):**
 - Task was marked complete but bug still present

@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.3] - 2025-12-18
+
+**Package Version:** 2.1.3
+**Project Version:** 0.2.1.1+1
+**Bump Type:** MINOR
+
+### Added
+
+- **Optional BYOB Badge Workflow for Private Repos**
+  - Added `templates/github-actions/update-badges-byob.yml` - GitHub Actions workflow template for dynamic badge generation using BYOB
+  - Added `templates/github-actions/README.md` - Documentation for optional GitHub Actions workflows
+  - Supports version, license, status, tests, coverage, and code quality badges
+  - Designed for private repositories that cannot use standard Shields.io badges
+  - Includes comprehensive setup instructions and customization guidance
+
+### Changed
+
+- Updated README to include optional GitHub Actions workflow templates section
+- Updated package version to 2.1.3
+
+**Criteria Reference:** MINOR Version Bump
+- ✅ New feature: Optional BYOB badge workflow for private repos
+- ✅ Backward compatible: Optional feature, doesn't affect existing functionality
+- ✅ Adds value for users with private repositories
+
+**Related:**
+- Epic 1, Story 6: Repository CI/CD Setup
+- BYOB Repository: https://github.com/RubbaBoy/BYOB
+
+---
+
 ## [2.1.2] - 2025-12-18
 
 **Package Version:** 2.1.2
