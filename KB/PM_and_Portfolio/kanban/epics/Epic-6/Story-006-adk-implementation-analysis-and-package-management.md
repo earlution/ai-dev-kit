@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.6+9 – Revised canonical Kanban structure proposal created)  
+**Last updated:** 2025-12-18 (v0.6.6.6+10 – Fixed Epic 3 FR/BR/UXR placement in revised proposal)  
 **Version:** v0.6.6.6+1  
 **Code:** E6S06
 

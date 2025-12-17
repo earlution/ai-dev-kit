@@ -17,6 +17,22 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+10] - 18-12-25
+
+🔧 Fix: Epic 3 FR/BR/UXR placement corrected in revised proposal
+
+### Fixed
+
+- **Epic 3 Placement Correction**
+  - Epic 3 correctly set to FR/BR/UXR Management (consolidated from old E5/E6/E7)
+  - Architecture Design moved to Epic 4 (was incorrectly at Epic 3)
+  - All epic number references updated throughout document
+  - Summary table corrected to reflect proper epic numbering
+
+**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+10.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+10.md)
+
+---
+
 ## [0.6.6.6+9] - 18-12-25
 
 📋 Proposal: Revised canonical Kanban structure proposal created

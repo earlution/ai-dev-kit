@@ -43,11 +43,13 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 ### Pre-Design Phase
 
-#### Epic 1: Project Foundation and Setup (Pre-Design Phase)
+#### Epic 1: Project Foundation and Setup
 
 **Purpose:** Pre-design phase foundation work.  
-**Scope:** Project setup, workflow management, versioning, Kanban setup.  
+**Scope:** Project setup, workflow management, versioning.  
 **Status:** Core Framework Epic (always installed)
+
+**Note:** Kanban Framework is now Epic 2 (separate epic as requested).
 
 **Canonical Stories:**
 
@@ -80,45 +82,29 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
   - T07: Set up changelog generation
   - T08: Document version management process
 
-- **Story 004: Kanban Framework Setup** (from old E4)
-  - T01: Create Kanban board structure
-  - T02: Define epic/story/task hierarchy
-  - T03: Set up Kanban policies and governance
-  - T04: Configure Kanban tooling
-  - T05: Design FR/BR intake workflow
-  - T06: Create FR/BR templates
-  - T07: Implement intake automation
-  - T08: Document intake process
-
 ---
 
 ### Design Phase
 
-#### Epic 2: Architecture Design
+#### Epic 2: Kanban Framework
 
-**Purpose:** System architecture design and refactoring.  
-**Scope:** Architecture design, patterns, refactoring, technical decisions.  
+**Purpose:** Kanban system implementation and governance.  
+**Scope:** Kanban policies, templates, intake processes, and Kanban-related tooling.  
 **Status:** Core Framework Epic (always installed)
 
 **Canonical Stories:**
 
-- **Story 001: Initial Architecture Design**
-  - T01: Define system architecture
-  - T02: Design core architecture patterns
-  - T03: Create architecture decision records (ADRs)
-  - T04: Document system design
-  - T05: Define integration points
-  - T06: Create architecture diagrams
+- **Story 001: Kanban Board Setup**
+  - T01: Create Kanban board structure
+  - T02: Define epic/story/task hierarchy
+  - T03: Set up Kanban policies and governance
+  - T04: Configure Kanban tooling
 
-- **Story 002: Architecture Refactoring** (from old E22, architecture-focused)
-  - T01: Identify architecture improvement opportunities
-  - T02: Design refactoring approach
-  - T03: Implement architecture refactoring
-  - T04: Validate refactored architecture
-  - T05: Update architecture documentation
-  - T06: Document refactoring learnings
-
-**Note:** Architecture refactoring stories are in E2. Implementation refactoring stories are in E7.
+- **Story 002: FR/BR Intake Process**
+  - T01: Design FR/BR intake workflow
+  - T02: Create FR/BR templates
+  - T03: Implement intake automation
+  - T04: Document intake process
 
 ---
 
@@ -197,7 +183,35 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 ---
 
-#### Epic 4: Data Management and Database
+#### Epic 4: Architecture Design
+
+**Purpose:** System architecture design and refactoring.  
+**Scope:** Architecture design, patterns, refactoring, technical decisions.  
+**Status:** Core Framework Epic (always installed)
+
+**Canonical Stories:**
+
+- **Story 001: Initial Architecture Design**
+  - T01: Define system architecture
+  - T02: Design core architecture patterns
+  - T03: Create architecture decision records (ADRs)
+  - T04: Document system design
+  - T05: Define integration points
+  - T06: Create architecture diagrams
+
+- **Story 002: Architecture Refactoring** (from old E22, architecture-focused)
+  - T01: Identify architecture improvement opportunities
+  - T02: Design refactoring approach
+  - T03: Implement architecture refactoring
+  - T04: Validate refactored architecture
+  - T05: Update architecture documentation
+  - T06: Document refactoring learnings
+
+**Note:** Architecture refactoring stories are in E4. Implementation refactoring stories are in E7.
+
+---
+
+#### Epic 5: Data Management and Database
 
 **Purpose:** Data management, database design, and data operations.  
 **Scope:** Database schema, migrations, data access layer, data validation, data integrity.  
@@ -230,13 +244,13 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 ---
 
-#### Epic 5: Testing and Quality Assurance
+#### Epic 6: Testing and Quality Assurance
 
 **Purpose:** Testing infrastructure, test coverage, and quality assurance processes (TDD approach).  
 **Scope:** Unit tests, integration tests, E2E tests, test automation, quality metrics.  
 **Status:** Core Framework Epic (always installed)
 
-**Rationale:** Once we have architecture (E2), we can design tests using TDD approach.
+**Rationale:** Once we have architecture (E4), we can design tests using TDD approach.
 
 **Canonical Stories:**
 
@@ -266,7 +280,7 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 ---
 
-#### Epic 6: Implementation
+#### Epic 7: Implementation
 
 **Purpose:** Feature implementation, codebase maintenance, and refactoring.  
 **Scope:** Feature implementation, code quality, maintenance, implementation refactoring.  
@@ -275,10 +289,10 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 **Canonical Stories:**
 
 - **Story 001: Feature Implementation**
-  - T01: Implement features based on architecture (E2) and tests (E5)
+  - T01: Implement features based on architecture (E4) and tests (E6)
   - T02: Follow TDD approach (tests first, then implementation)
   - T03: Implement business logic
-  - T04: Integrate with data layer (E4)
+  - T04: Integrate with data layer (E5)
   - T05: Implement API endpoints (if applicable)
   - T06: Implement UI components (if applicable)
   - T07: Add error handling
@@ -316,13 +330,13 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
   - T06: Share learnings with team
 
 **Note:** 
-- Architecture refactoring is in E2 (Story 002)
-- Implementation refactoring is in E6 (Story 003)
-- Old E8 (Codebase Maintenance) stories are now in E6 (Story 002)
+- Architecture refactoring is in E4 (Story 002)
+- Implementation refactoring is in E7 (Story 003)
+- Old E8 (Codebase Maintenance) stories are now in E7 (Story 002)
 
 ---
 
-#### Epic 7: Documentation
+#### Epic 8: Documentation
 
 **Purpose:** Project documentation, user guides, and developer documentation.  
 **Scope:** API documentation, user manuals, developer guides, architecture documentation.  
@@ -357,7 +371,7 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 ### Ancillary Epics
 
-#### Epic 8: Process Automation and CI/CD
+#### Epic 9: Process Automation and CI/CD
 
 **Purpose:** Establish automated, robust development workflows.  
 **Scope:** CI/CD pipelines, pre-commit hooks, automated rule enforcement, testing infrastructure, quality gates.  
@@ -395,11 +409,11 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
   - T03: Add vulnerability monitoring
   - T04: Document upgrade playbooks
 
-**Note:** This is old E23 (Process Automation and CI/CD), renumbered to E8.
+**Note:** This is old E23 (Process Automation and CI/CD), renumbered to E9.
 
 ---
 
-#### Epic 9: Security
+#### Epic 10: Security
 
 **Purpose:** Security measures, vulnerability management, and security best practices.  
 **Scope:** Security audits, vulnerability scanning, security policies, encryption, secure coding, project security (Dependabot, etc.).  
@@ -430,7 +444,7 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
   - T04: Conduct security training
   - T05: Document security procedures
 
-**Note:** Enhanced from old E15 to include project security (Dependabot, etc.) in addition to context-specific security.
+**Note:** Enhanced from old E15 to include project security (Dependabot, etc.) in addition to context-specific security. Renumbered to E10.
 
 ---
 
@@ -438,27 +452,29 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 1. **Epic 1 Scope:** Should Epic 1 include only pre-design phase work, or should it also include initial project setup that happens before design? Currently includes both.
 
-2. **Epic 2 (Architecture):** Should Epic 2 include both initial architecture design AND architecture refactoring, or should refactoring be a separate story/epic? Currently both are in E2.
+2. **Epic 2 (Kanban):** Kanban is now its own epic (E2) as requested. Confirmed.
 
 3. **Epic 3 (FR/BR/UXR):** Is consolidating FR, BR, and UXR into one epic acceptable, or should they remain separate? Currently consolidated.
 
-4. **Epic 6 (Implementation):** Should codebase maintenance (old E8) be stories under E7 (Implementation), or should it be a separate epic? Currently stories under E6.
+4. **Epic 4 (Architecture):** Should Epic 4 include both initial architecture design AND architecture refactoring, or should refactoring be a separate story/epic? Currently both are in E4.
 
-5. **Epic 7 (Documentation):** Should documentation be E7 or E8? Currently E7, with CI/CD as E8.
+5. **Epic 7 (Implementation):** Should codebase maintenance (old E8) be stories under E7 (Implementation), or should it be a separate epic? Currently stories under E7.
 
-6. **Epic 8 (CI/CD):** Should CI/CD be E8 or E9? Currently E8, with Security as E9.
+6. **Epic 8 (Documentation):** Documentation is E8. Confirmed.
 
-7. **Epic 9 (Security):** Should Security include both project security (Dependabot) and context-specific security, or should they be separate? Currently combined.
+7. **Epic 9 (CI/CD):** CI/CD is E9. Confirmed.
 
-8. **Old E10 (Data Management):** Should Data Management be E4 (before Testing) or E5 (after Architecture)? Currently E4.
+8. **Epic 10 (Security):** Should Security include both project security (Dependabot) and context-specific security, or should they be separate? Currently combined.
 
-9. **Old E18 (Documentation):** Already moved to E7. Confirmed.
+9. **Old E10 (Data Management):** Should Data Management be E5 (before Testing) or E6 (after Architecture)? Currently E5.
 
-10. **Old E22 (Architecture Refactoring):** Split between E2 (architecture refactoring) and E6 (implementation refactoring). Is this correct?
+10. **Old E18 (Documentation):** Already moved to E8. Confirmed.
 
-11. **Old E23 (CI/CD):** Moved to E8. Confirmed.
+11. **Old E22 (Architecture Refactoring):** Split between E4 (architecture refactoring) and E7 (implementation refactoring). Is this correct?
 
-12. **Remaining Epics:** What should happen to old E9 (User Management), E11 (API), E12 (Frontend), E14 (Deployment), E16 (Performance), E17 (Integration), E19 (Analytics), E20 (Mobile), E21 (Internationalization)? Should they be renumbered starting at E10?
+12. **Old E23 (CI/CD):** Moved to E9. Confirmed.
+
+13. **Remaining Epics:** What should happen to old E9 (User Management), E11 (API), E12 (Frontend), E14 (Deployment), E16 (Performance), E17 (Integration), E19 (Analytics), E20 (Mobile), E21 (Internationalization)? Should they be renumbered starting at E11?
 
 ---
 
@@ -466,16 +482,17 @@ This document proposes a **revised canonical Kanban structure** that reorganizes
 
 | New Epic | Old Epic | Name | Status |
 |----------|----------|------|--------|
-| E1 | E1 + E2 + E3 + E4 | Project Foundation (Pre-Design) | Core |
-| E2 | New + E22 (arch) | Architecture Design | Core |
+| E1 | E1 + E2 + E3 | Project Foundation (Pre-Design) | Core |
+| E2 | E4 | Kanban Framework | Core |
 | E3 | E5 + E6 + E7 | FR/BR/UXR Management | Core |
-| E4 | E10 | Data Management and Database | Core |
-| E5 | E13 | Testing and Quality Assurance | Core |
-| E6 | E7 + E8 + E22 (impl) | Implementation | Core |
-| E7 | E18 | Documentation | Core |
-| E8 | E23 | Process Automation and CI/CD | Core |
-| E9 | E15 (enhanced) | Security | Ancillary |
-| E10+ | E9, E11, E12, E14, E16, E17, E19, E20, E21 | Project-Specific Epics | Ancillary |
+| E4 | New + E22 (arch) | Architecture Design | Core |
+| E5 | E10 | Data Management and Database | Core |
+| E6 | E13 | Testing and Quality Assurance | Core |
+| E7 | E7 + E8 + E22 (impl) | Implementation | Core |
+| E8 | E18 | Documentation | Core |
+| E9 | E23 | Process Automation and CI/CD | Core |
+| E10 | E15 (enhanced) | Security | Ancillary |
+| E11+ | E9, E11, E12, E14, E16, E17, E19, E20, E21 | Project-Specific Epics | Ancillary |
 
 ---
 
