@@ -45,7 +45,7 @@ Both are valuable and should be documented, but they serve different purposes an
 - Versioning patterns (Canonical ordering, Doc-init builds)
 - Kanban organization patterns (3-tier structure, discrete task docs)
 
-**Location:** `docs/Architecture/Use_Cases/Canonical/`
+**Location:** `docs/architecture/use-cases/canonical/`
 
 **Naming Convention:** `UC-XXX-[descriptive-title].md` (UC implies canonical)
 
@@ -77,7 +77,7 @@ status: active|deprecated|superseded
 - Pattern discovery during work → documentation → wiring
 - Workaround patterns that became best practices
 
-**Location:** `docs/knowledge/Use_Cases/Discovered/`
+**Location:** `docs/knowledge/use-cases/discovered/`
 
 **Naming Convention:** `UC-D-XXX-[descriptive-title].md`
 
@@ -391,7 +391,7 @@ status: active
 ## Directory Structure
 
 ```
-docs/Use_Cases/
+docs/use-cases/
 ├── README.md                          # Use case index and navigation
 ├── USE_CASE_METHODOLOGY.md            # This document
 ├── Canonical/
@@ -579,8 +579,8 @@ docs/Use_Cases/
 ```markdown
 ## Related Use Cases
 
-- **Canonical:** [UC-XXX](../../Use_Cases/Canonical/UC-XXX.md)
-- **Discovered:** [UC-D-XXX](../../Use_Cases/Discovered/UC-D-XXX.md)
+- **Canonical:** [UC-XXX](../../use-cases/canonical/UC-XXX.md)
+- **Discovered:** [UC-D-XXX](../../use-cases/discovered/UC-D-XXX.md)
 ```
 
 ---

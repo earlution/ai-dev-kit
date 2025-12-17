@@ -84,7 +84,7 @@ This document provides comprehensive guidance on customizing workflows for diffe
 # Original (dev-kit)
 config:
   version_file: src/fynd_deals/version.py
-  changelog_dir: docs/Changelog_and_Release_Notes/Changelog_Archive
+  changelog_dir: docs/changelog-and-release-notes/changelog-archive
 
 # Customized (your project)
 config:
@@ -781,10 +781,10 @@ steps:
 
 ### Example Execution Guides
 
-- **Release Workflow Guide:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-- **Refactor Workflow Guide:** `docs/Documentation/Developer_Docs/vwmp/refactor-workflow-agent-execution.md`
-- **Migration Workflow Guide:** `docs/Documentation/Developer_Docs/vwmp/migration-workflow-agent-execution.md`
-- **Testing Workflow Guide:** `docs/Documentation/Developer_Docs/vwmp/testing-workflow-agent-execution.md`
+- **Release Workflow Guide:** `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **Refactor Workflow Guide:** `docs/documentation/Developer_Docs/vwmp/refactor-workflow-agent-execution.md`
+- **Migration Workflow Guide:** `docs/documentation/Developer_Docs/vwmp/migration-workflow-agent-execution.md`
+- **Testing Workflow Guide:** `docs/documentation/Developer_Docs/vwmp/testing-workflow-agent-execution.md`
 
 ---
 
@@ -822,7 +822,7 @@ python scripts/validation/validate_changelog_format.py
 ## 📖 Related Documentation
 
 - **Agent-Driven Execution:** `agent-driven-workflow-execution.md`
-- **Workflow Taxonomy:** `docs/Project_Management/kanban/epics/Epic-2/Story-003-additional-workflows-and-examples/T01-workflow-taxonomy.md`
+- **Workflow Taxonomy:** `docs/project-management/kanban/epics/Epic-2/Story-003-additional-workflows-and-examples/T01-workflow-taxonomy.md`
 - **Portable Implementation Guide:** `portable-workflow-implementation-guide.md`
 - **Workflow Template Generator:** `scripts/README-workflow-generator.md`
 

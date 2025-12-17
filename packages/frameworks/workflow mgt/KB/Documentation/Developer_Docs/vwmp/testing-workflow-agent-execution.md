@@ -753,10 +753,10 @@ When all 15 steps are complete:
 
 ## References
 
-- **Agent-Driven Execution:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
-- **Release Workflow:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-- **Refactor Workflow:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/refactor-workflow-agent-execution.md`
-- **Migration Workflow:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/migration-workflow-agent-execution.md`
+- **Agent-Driven Execution:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
+- **Release Workflow:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **Refactor Workflow:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/refactor-workflow-agent-execution.md`
+- **Migration Workflow:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/migration-workflow-agent-execution.md`
 - **Workflow YAML:** `packages/frameworks/workflow mgt/workflows/testing-workflow.yaml`
 
 ---

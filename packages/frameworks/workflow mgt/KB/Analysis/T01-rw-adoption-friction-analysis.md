@@ -57,11 +57,11 @@ This analysis identifies **all manual integration touchpoints** required when ad
 1. **`.cursorrules` RW trigger section (Steps 3, 4):**
    - Main changelog: `CHANGELOG.md` (usually root, but can vary)
    - Archive directory: `{changelog_archive_path}/CHANGELOG_v{version}.md`
-   - Example: `docs/Changelog_and_Release_Notes/Changelog_Archive/`
+   - Example: `docs/changelog-and-release-notes/changelog-archive/`
    - **Manual action:** Replace template/example paths
 
 2. **`workflows/release-workflow.yaml` (config block):**
-   - `changelog_dir: docs/Changelog_and_Release_Notes/Changelog_Archive`
+   - `changelog_dir: docs/changelog-and-release-notes/changelog-archive`
    - `main_changelog: CHANGELOG.md`
    - **Manual action:** Update both paths
 
@@ -81,12 +81,12 @@ This analysis identifies **all manual integration touchpoints** required when ad
    - Story file pattern: `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md`
    - Epic doc pattern: `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md`
    - Kanban board: `{kanban_path}/_index.md` or `{kanban_path}/kanban-board.md`
-   - Example: `docs/Project_Management/kanban/...`
+   - Example: `docs/project-management/kanban/...`
    - **Manual action:** Replace template/example paths
 
 2. **`workflows/release-workflow.yaml` (Step 5 config):**
-   - `epic_doc_pattern: docs/Project_Management/epics/overview/Epic {epic}/Epic-{epic}.md`
-   - `kanban_board: docs/Project_Management/epics/overview/_index.md`
+   - `epic_doc_pattern: docs/project-management/epics/overview/Epic {epic}/Epic-{epic}.md`
+   - `kanban_board: docs/project-management/epics/overview/_index.md`
    - **Manual action:** Update paths (if using Kanban integration)
 
 3. **RW execution documentation:**
@@ -159,8 +159,8 @@ These values **vary per project** and must be provided via config:
 
 - ✅ **Version file path** (`src/{project}/version.py` or equivalent)
 - ✅ **Main changelog path** (`CHANGELOG.md` or equivalent)
-- ✅ **Changelog archive directory** (`docs/Changelog_and_Release_Notes/Changelog_Archive/` or equivalent)
-- ✅ **Kanban root path** (`docs/Project_Management/kanban/` or equivalent) – if using Kanban
+- ✅ **Changelog archive directory** (`docs/changelog-and-release-notes/changelog-archive/` or equivalent)
+- ✅ **Kanban root path** (`docs/project-management/kanban/` or equivalent) – if using Kanban
 - ✅ **Validation scripts path** (`scripts/validation/` or equivalent)
 - ✅ **README path** (`README.md` or equivalent) – usually root, but configurable
 - ✅ **Project name** (for examples/comments) – optional but helpful
@@ -198,7 +198,7 @@ readme_file: README.md                          # Path to README (usually root)
 ```yaml
 # Kanban integration (optional - only if using Kanban)
 use_kanban: true                                 # Enable Kanban integration
-kanban_root: docs/Project_Management/kanban         # Root path for Kanban docs
+kanban_root: docs/project-management/kanban         # Root path for Kanban docs
 epic_doc_pattern: epics/Epic-{epic}/Epic-{epic}.md         # Pattern for epic docs (relative to kanban_root)
 story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md  # Pattern for story docs
 kanban_board: _index.md                         # Main Kanban board file (relative to kanban_root)
@@ -238,11 +238,11 @@ versioning_schema: RC.EPIC.STORY.TASK+BUILD
 ```yaml
 version_file: src/myproject/version.py
 main_changelog: CHANGELOG.md
-changelog_dir: docs/Changelog_and_Release_Notes/Changelog_Archive
+changelog_dir: docs/changelog-and-release-notes/changelog-archive
 scripts_path: tools/workflow_mgt/scripts
 readme_file: README.md
 use_kanban: true
-kanban_root: docs/Project_Management/kanban
+kanban_root: docs/project-management/kanban
 epic_doc_pattern: epics/Epic-{epic}.md
 story_doc_pattern: epics/Epic-{epic}/stories/Story-{story}-*.md
 kanban_board: _index.md
@@ -345,7 +345,7 @@ project_name: myproject
 
 - **RW Trigger Section:** `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md`
 - **RW Workflow YAML:** `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`
-- **RW Execution Guide:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **RW Execution Guide:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **Validation Scripts:** `packages/frameworks/workflow mgt/scripts/validation/`
 
 ---

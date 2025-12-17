@@ -348,7 +348,7 @@ else:
 
 - **Installer CLI:** `scripts/install_release_workflow.py`
 - **Installer Docs:** `scripts/README-rw-installer.md`
-- **Quickstart Guide:** `docs/Documentation/Developer_Docs/vwmp/rw-installer-quickstart-guide.md`
+- **Quickstart Guide:** `docs/documentation/Developer_Docs/vwmp/rw-installer-quickstart-guide.md`
 - **Config Schema:** `config/rw-config-schema.md`
 
 ---

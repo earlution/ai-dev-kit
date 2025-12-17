@@ -133,7 +133,7 @@ changelog_dir: docs/changelogs
 scripts_path: tools/workflow_mgt/scripts
 readme_file: README.md
 use_kanban: true
-kanban_root: docs/Project_Management/kanban
+kanban_root: docs/project-management/kanban
 # ... etc
 ```
 
@@ -185,5 +185,5 @@ Copy `workflows/release-workflow.yaml` to your project, or create it from a temp
 
 - **Schema Specification:** `config/rw-config-schema.md`
 - **Example Configs:** `config/examples/`
-- **RW Execution Guide:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **RW Execution Guide:** `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 

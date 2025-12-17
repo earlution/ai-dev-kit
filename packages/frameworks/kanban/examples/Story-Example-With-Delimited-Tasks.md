@@ -127,7 +127,7 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 
 **Approach:**
 1. Review current versioning policy documents:
-   - `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` (dev-kit local)
+   - `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (dev-kit local)
    - `packages/frameworks/numbering & versioning/versioning-policy.md` (framework)
    - `packages/frameworks/numbering & versioning/versioning-strategy.md` (framework)
 2. Update Kanban-related sections:
@@ -187,9 +187,9 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 
 ## References
 
-- **E2:S09:** `docs/Project_Management/kanban/epics/Epic-2/Story-009-kanban-granularity-discrete-task-docs.md`
-- **FR-016:** `docs/Project_Management/kanban/fr-br/FR-016-kanban-granularity-discrete-task-docs.md`
-- **FR-017:** `docs/Project_Management/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md`
+- **E2:S09:** `docs/project-management/kanban/epics/Epic-2/Story-009-kanban-granularity-discrete-task-docs.md`
+- **FR-016:** `docs/project-management/kanban/fr-br/FR-016-kanban-granularity-discrete-task-docs.md`
+- **FR-017:** `docs/project-management/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md`
 - **Kanban Governance Policy (Canonical):** `packages/frameworks/kanban/policies/kanban-governance-policy.md`
 - **Task Template:** `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
 - **Story Template:** `packages/frameworks/kanban/templates/STORY_TEMPLATE.md`

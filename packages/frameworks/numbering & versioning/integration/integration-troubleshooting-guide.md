@@ -866,9 +866,9 @@ grep -A 5 "\[0.1.1.1+1\]" CHANGELOG.md
 - **Integration Guide:** `kanban-workflow-integration.md`
 - **Patterns & Best Practices:** `integration-patterns-and-best-practices.md`
 - **Examples:** `integration-examples-external-projects.md`
-- **Versioning Cookbook:** `../../docs/Architecture/Standards_and_ADRs/dev-kit-versioning-cookbook.md`
-- **Versioning Error Reference:** `../../docs/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md`
-- **Workflow Flaws Reference:** `../../docs/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all RW flaws
+- **Versioning Cookbook:** `../../docs/architecture/standards-and-adrs/dev-kit-versioning-cookbook.md`
+- **Versioning Error Reference:** `../../docs/architecture/standards-and-adrs/versioning-error-reference-guide.md`
+- **Workflow Flaws Reference:** `../../docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md` - Comprehensive reference for all RW flaws
 
 ---
 

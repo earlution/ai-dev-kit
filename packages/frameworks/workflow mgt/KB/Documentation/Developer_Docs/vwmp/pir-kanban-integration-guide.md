@@ -33,7 +33,7 @@ This guide documents the integration between the Post-Implementation Review (PIR
 **PIR Status:** Complete  
 **PIR Date:** 2025-12-16  
 **PIR Version:** v0.2.11.9+3  
-**PIR Report:** [PIR-Epic-2-v0.2.11.9+3.md](../../Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
+**PIR Report:** [PIR-Epic-2-v0.2.11.9+3.md](../../Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
 
 ### Summary
 [One paragraph summary of PIR findings]
@@ -51,7 +51,7 @@ This guide documents the integration between the Post-Implementation Review (PIR
 **PIR Status:** Complete  
 **PIR Date:** 2025-12-16  
 **PIR Version:** v0.2.5.11+1  
-**PIR Report:** [PIR-Story-5-v0.2.5.11+1.md](../../Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md)
+**PIR Report:** [PIR-Story-5-v0.2.5.11+1.md](../../Reviews/pir/Story-5/PIR-Story-5-v0.2.5.11+1.md)
 
 ### Summary
 [One paragraph summary of PIR findings]
@@ -65,13 +65,13 @@ This guide documents the integration between the Post-Implementation Review (PIR
 
 **Epic/Story Document → PIR Report:**
 - Epic/Story document contains link to PIR report
-- Link format: `[PIR-Epic-{N}-v{version}.md](../../Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md)`
-- Link format: `[PIR-Story-{N}-v{version}.md](../../Reviews/PIR/Story-{N}/PIR-Story-{N}-v{version}.md)`
+- Link format: `[PIR-Epic-{N}-v{version}.md](../../Reviews/pir/Epic-{N}/PIR-Epic-{N}-v{version}.md)`
+- Link format: `[PIR-Story-{N}-v{version}.md](../../Reviews/pir/Story-{N}/PIR-Story-{N}-v{version}.md)`
 
 **PIR Report → Epic/Story Document:**
 - PIR report contains link back to Epic/Story document
-- Link format: `[Epic {N} Documentation](../../Project_Management/kanban/epics/Epic-{N}/Epic-{N}.md)`
-- Link format: `[Story {N} Documentation](../../Project_Management/kanban/epics/Epic-{N}/Story-{N}-{name}.md)`
+- Link format: `[Epic {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Epic-{N}.md)`
+- Link format: `[Story {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md)`
 
 ### 3. PIR Summary Section
 
@@ -97,7 +97,7 @@ This guide documents the integration between the Post-Implementation Review (PIR
   - **Priority:** {High/Medium/Low}
   - **Owner:** {Assigned to}
   - **Related Work:** {Link to related Epic/Story/Task}
-  - **PIR Reference:** [PIR Report](../../Reviews/PIR/...)
+  - **PIR Reference:** [PIR Report](../../Reviews/pir/...)
 ```
 
 **Task Location:**
@@ -113,13 +113,13 @@ This guide documents the integration between the Post-Implementation Review (PIR
 
 **For Epic-Level:**
 ```python
-pir_report_path = f"docs/Reviews/PIR/Epic-{epic}/PIR-Epic-{epic}-v{version}.md"
+pir_report_path = f"docs/Reviews/pir/Epic-{epic}/PIR-Epic-{epic}-v{version}.md"
 pir_report = read_file(pir_report_path)
 ```
 
 **For Story-Level:**
 ```python
-pir_report_path = f"docs/Reviews/PIR/Story-{story}/PIR-Story-{story}-v{version}.md"
+pir_report_path = f"docs/Reviews/pir/Story-{story}/PIR-Story-{story}-v{version}.md"
 pir_report = read_file(pir_report_path)
 ```
 
@@ -140,7 +140,7 @@ pir_section = f"""
 **PIR Status:** Complete  
 **PIR Date:** {review_date}  
 **PIR Version:** {version}  
-**PIR Report:** [PIR-Epic-{epic}-v{version}.md](../../Reviews/PIR/Epic-{epic}/PIR-Epic-{epic}-v{version}.md)
+**PIR Report:** [PIR-Epic-{epic}-v{version}.md](../../Reviews/pir/Epic-{epic}/PIR-Epic-{epic}-v{version}.md)
 
 ### Summary
 {executive_summary}
@@ -212,7 +212,7 @@ python packages/frameworks/workflow mgt/scripts/update_pir_kanban.py \
 
 **Epic:** Epic 2 - Workflow Management Framework  
 **Version:** v0.2.11.9+3  
-**PIR Report:** `docs/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`
+**PIR Report:** `docs/Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`
 
 **Epic Document Update:**
 ```markdown
@@ -221,7 +221,7 @@ python packages/frameworks/workflow mgt/scripts/update_pir_kanban.py \
 **PIR Status:** Complete  
 **PIR Date:** 2025-12-16  
 **PIR Version:** v0.2.11.9+3  
-**PIR Report:** [PIR-Epic-2-v0.2.11.9+3.md](../../Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
+**PIR Report:** [PIR-Epic-2-v0.2.11.9+3.md](../../Reviews/pir/Epic-2/PIR-Epic-2-v0.2.11.9+3.md)
 
 ### Summary
 Epic 2 successfully delivered the Workflow Management Framework with comprehensive workflow definitions, agent execution guides, and integration patterns. All 11 Stories were completed successfully, with high-quality documentation and reusable templates.
@@ -237,7 +237,7 @@ Epic 2 successfully delivered the Workflow Management Framework with comprehensi
 
 **Story:** Story 5 - Post-Implementation Review Workflow  
 **Version:** v0.2.5.11+1  
-**PIR Report:** `docs/Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md`
+**PIR Report:** `docs/Reviews/pir/Story-5/PIR-Story-5-v0.2.5.11+1.md`
 
 **Story Document Update:**
 ```markdown
@@ -246,7 +246,7 @@ Epic 2 successfully delivered the Workflow Management Framework with comprehensi
 **PIR Status:** Complete  
 **PIR Date:** 2025-12-16  
 **PIR Version:** v0.2.5.11+1  
-**PIR Report:** [PIR-Story-5-v0.2.5.11+1.md](../../Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md)
+**PIR Report:** [PIR-Story-5-v0.2.5.11+1.md](../../Reviews/pir/Story-5/PIR-Story-5-v0.2.5.11+1.md)
 
 ### Summary
 Story 5 successfully delivered the Post-Implementation Review workflow with comprehensive templates, execution guides, and integration with RW and Kanban systems. All 15 tasks were completed successfully.
@@ -268,7 +268,7 @@ Story 5 successfully delivered the Post-Implementation Review workflow with comp
   - **Priority:** Medium
   - **Owner:** TBD
   - **Related Work:** [Story 5](../../Story-005-post-implementation-review-workflow.md)
-  - **PIR Reference:** [PIR-Story-5-v0.2.5.11+1.md](../../Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md)
+  - **PIR Reference:** [PIR-Story-5-v0.2.5.11+1.md](../../Reviews/pir/Story-5/PIR-Story-5-v0.2.5.11+1.md)
 ```
 
 ---
@@ -303,8 +303,8 @@ Story 5 successfully delivered the Post-Implementation Review workflow with comp
 
 - [PIR Workflow Agent Execution Guide](pir-workflow-agent-execution.md) - Step 12 documentation
 - [PIR Workflow Planning](../../Analysis/PIR-workflow-planning.md) - Integration requirements
-- [Kanban Governance Policy](../../../Project_Management/rituals/policy/kanban-governance-policy.md) - Kanban structure
-- [Bidirectional Wiring Principle](../../../Project_Management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Linking patterns
+- [Kanban Governance Policy](../../../project-management/rituals/policy/kanban-governance-policy.md) - Kanban structure
+- [Bidirectional Wiring Principle](../../../project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Linking patterns
 
 ---
 

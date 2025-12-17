@@ -3,7 +3,7 @@
 
 version_file: src/fynd_deals/version.py
 main_changelog: CHANGELOG.md
-changelog_dir: docs/Changelog_and_Release_Notes/Changelog_Archive
+changelog_dir: docs/changelog-and-release-notes/changelog-archive
 scripts_path: packages/frameworks/workflow mgt/scripts
 readme_file: README.md
 
@@ -11,7 +11,7 @@ readme_file: README.md
 use_kanban: true
 
 # Kanban paths (relative to kanban_root)
-kanban_root: docs/Project_Management/kanban
+kanban_root: docs/project-management/kanban
 epic_doc_pattern: epics/Epic-{epic}/Epic-{epic}.md
 story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 kanban_board: _index.md

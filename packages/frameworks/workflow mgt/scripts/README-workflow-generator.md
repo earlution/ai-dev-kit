@@ -278,9 +278,9 @@ After generating a workflow:
 
 ## References
 
-- **Agent-Driven Execution:** `docs/Documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
-- **Release Workflow:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-- **Workflow Taxonomy:** `docs/Project_Management/kanban/epics/Epic-2/Story-003-additional-workflows-and-examples/T01-workflow-taxonomy.md`
+- **Agent-Driven Execution:** `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md`
+- **Release Workflow:** `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **Workflow Taxonomy:** `docs/project-management/kanban/epics/Epic-2/Story-003-additional-workflows-and-examples/T01-workflow-taxonomy.md`
 - **Existing Workflows:** `workflows/`
 
 ---

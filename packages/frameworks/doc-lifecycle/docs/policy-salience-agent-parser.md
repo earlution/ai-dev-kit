@@ -315,7 +315,7 @@ class PolicySalienceParser:
 
 # Usage example
 if __name__ == '__main__':
-    policy_file = Path('docs/Architecture/Standards_and_ADRs/documentation-maintenance-policy.md')
+    policy_file = Path('docs/architecture/standards-and-adrs/documentation-maintenance-policy.md')
     parser = PolicySalienceParser(policy_file)
     
     # Get policy info
@@ -324,7 +324,7 @@ if __name__ == '__main__':
     
     # Check relevance
     context = {
-        'document': 'docs/Project_Management/kanban/epics/Epic-5/Story-006.md',
+        'document': 'docs/project-management/kanban/epics/Epic-5/Story-006.md',
         'activity': 'story-completion'
     }
     print(f"Relevant: {parser.is_relevant(context)}")
@@ -438,7 +438,7 @@ def check_integration(policy_salience: Dict, workflow: str, step: str) -> List[s
 
 ## References
 
-- **Schema Specification:** `docs/Architecture/Standards_and_ADRs/policy-salience-schema.md`
+- **Schema Specification:** `docs/architecture/standards-and-adrs/policy-salience-schema.md`
 - **Template:** `packages/frameworks/doc-lifecycle/templates/POLICY_SALIENCE_TEMPLATE.md`
 - **Author Guide:** `packages/frameworks/doc-lifecycle/docs/policy-salience-guide.md`
 - **FR-022:** Policy Documents Machine-Readable Salience Section

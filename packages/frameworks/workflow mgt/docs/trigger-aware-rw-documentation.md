@@ -84,7 +84,7 @@ integration = TriggerIntegration()
 # Check triggers with custom commit message
 triggers = integration.check_triggers(
     commit_message='v0.1.0+1 - FR012: New feature',
-    changed_files=['docs/Project_Management/kanban/fr-br/FR-012-new-feature.md']
+    changed_files=['docs/project-management/kanban/fr-br/FR-012-new-feature.md']
 )
 
 for trigger in triggers:
@@ -102,7 +102,7 @@ The **Intake Workflow** (E2:S11) is a complete workflow that automatically execu
 **Example:**
 ```python
 # Commit message: "Add FR-019: Intake Workflow Automation"
-# Changed files: ["docs/Project_Management/kanban/fr-br/FR-019.md"]
+# Changed files: ["docs/project-management/kanban/fr-br/FR-019.md"]
 # → RW detects trigger → Intake workflow executes automatically
 ```
 
@@ -116,7 +116,7 @@ The **Intake Workflow** (E2:S11) is a complete workflow that automatically execu
 7. Validate & Report Results
 
 **Documentation:**
-- See `docs/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` for complete agent execution guide
+- See `docs/documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` for complete agent execution guide
 - See `workflows/intake-workflow.yaml` for workflow definition
 
 ### Workflow Chaining

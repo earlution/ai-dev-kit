@@ -75,7 +75,7 @@ Five columns, left to right:
 
 Governing artifact for a feature set or maintenance theme.
 
-- **Location:** `docs/epics/Epic-XX.md` or `docs/Project_Management/epics/overview/Epic XX/Epic-XX.md` *(customize path)*
+- **Location:** `docs/epics/Epic-XX.md` or `docs/project-management/epics/overview/Epic XX/Epic-XX.md` *(customize path)*
 - **Branch:** `epic/<number>-<slug>`
 - **Version:** `RC.EPIC.STORY.TASK+BUILD` (where EPIC = epic number)
 - **Template:** `EPIC_TEMPLATE.md` *(in this package)* or `docs/templates/EPIC_TEMPLATE.md` *(customize path)*
@@ -84,7 +84,7 @@ Governing artifact for a feature set or maintenance theme.
 
 Decompose epic scope into releasable slices.
 
-- **Location:** `docs/stories/Story-N-Title.md` or `docs/Project_Management/stories/overview/Epic XX/Story-N-Title.md` *(customize path)*
+- **Location:** `docs/stories/Story-N-Title.md` or `docs/project-management/stories/overview/Epic XX/Story-N-Title.md` *(customize path)*
 - **Numbering:** `E<epic>S<story>` (e.g., `E20S7`)
 - **Template:** `STORY_TEMPLATE.md` *(in this package)* or `docs/templates/STORY_TEMPLATE.md` *(customize path)*
 

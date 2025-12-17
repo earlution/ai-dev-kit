@@ -4,8 +4,8 @@ type: intake
 description: Automated intake workflow for FR/BR/UXR reports into Kanban system
 
 config:
-  fr_br_dir: docs/Project_Management/kanban/fr-br
-  kanban_dir: docs/Project_Management/kanban/epics
+  fr_br_dir: docs/project-management/kanban/fr-br
+  kanban_dir: docs/project-management/kanban/epics
   version_file: src/fynd_deals/version.py
   semantic_matching:
     enabled: true

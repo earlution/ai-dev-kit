@@ -149,7 +149,7 @@ Following the established agent-driven execution pattern, the PIR workflow will 
 - `require_approval`: `true` | `false` (default: `false` - **support but not default**, configurable per project/organization)
 - `create_follow_ups`: `true` | `false` (default: `true` - **auto-create Kanban tasks** from PIR findings)
 - `knowledge_base_path`: Path to KB for storing PIR reports (default: `docs/Reviews/PIR`) - **impacts KB package design**
-- `template_path`: Path to PIR templates (default: `docs/Documentation/Templates`)
+- `template_path`: Path to PIR templates (default: `docs/documentation/Templates`)
 - `versioning_strategy`: `project_version` | `separate` | `none` (default: `project_version` - **use project versioning schema, no separate PIR versioning** - PIR reports are project artifacts, not packages)
 
 ---
@@ -212,7 +212,7 @@ Following the established agent-driven execution pattern, the PIR workflow will 
 - Support KB package development (impacts KB package thinking)
 
 **Approach:**
-- Store PIR reports in KB structure: `docs/Reviews/PIR/Epic-{N}/` or `docs/Reviews/PIR/Story-{N}/`
+- Store PIR reports in KB structure: `docs/Reviews/pir/Epic-{N}/` or `docs/Reviews/pir/Story-{N}/`
 - Link PIR reports to work items (bidirectional links)
 - Create searchable index of PIR findings (future KB package feature)
 - Enable cross-referencing of similar reviews
@@ -355,7 +355,7 @@ config:
   require_approval: false
   create_follow_ups: true
   knowledge_base_path: docs/Reviews/PIR
-  template_path: docs/Documentation/Templates
+  template_path: docs/documentation/Templates
 
 steps:
   - id: step-1
@@ -366,7 +366,7 @@ steps:
     dependencies: []
     config:
       review_level: ${config.review_level}
-      kanban_path: docs/Project_Management/kanban
+      kanban_path: docs/project-management/kanban
 
   - id: step-2
     name: Gather Review Materials

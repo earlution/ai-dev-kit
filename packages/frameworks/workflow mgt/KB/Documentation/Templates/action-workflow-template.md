@@ -327,8 +327,8 @@ Verify fix from T002 after production deployment.
 
 ## References
 
-- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **RW Step 12:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 12)
-- **RW Step 13:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 13)
-- **Verification Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/verification-workflow-template.md`
+- **PDCA Integration Plan:** `docs/architecture/standards-and-adrs/rw-pdca-integration-plan.md`
+- **RW Step 12:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 12)
+- **RW Step 13:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 13)
+- **Verification Template:** `packages/frameworks/workflow mgt/docs/documentation/templates/verification-workflow-template.md`
 

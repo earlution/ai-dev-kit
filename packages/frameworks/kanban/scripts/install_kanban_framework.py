@@ -12,7 +12,7 @@ Usage:
 
 Arguments:
     --mode MODE               Installation mode: fresh, migration, update, hybrid, auto
-    --kanban-path PATH        Path to Kanban directory (default: docs/Project_Management/kanban)
+    --kanban-path PATH        Path to Kanban directory (default: docs/project-management/kanban)
     --dry-run                 Preview changes without modifying files
     --force                   Skip confirmation prompts
 """
@@ -291,8 +291,8 @@ Examples:
     parser.add_argument(
         "--kanban-path",
         type=str,
-        default="docs/Project_Management/kanban",
-        help="Path to Kanban directory (default: docs/Project_Management/kanban)"
+        default="docs/project-management/kanban",
+        help="Path to Kanban directory (default: docs/project-management/kanban)"
     )
     parser.add_argument(
         "--dry-run",

@@ -16,7 +16,7 @@ config:
   require_approval: false
   create_follow_ups: true
   knowledge_base_path: docs/Reviews/PIR
-  template_path: docs/Documentation/Templates
+  template_path: docs/documentation/Templates
 
 steps:
   - id: step-1

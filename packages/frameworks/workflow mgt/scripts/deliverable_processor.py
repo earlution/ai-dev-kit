@@ -81,7 +81,7 @@ DELIVERABLE_REGISTRY: Dict[str, Dict] = {
             }
         ],
         'integration_points': [
-            'docs/Project_Management/kanban/',
+            'docs/project-management/kanban/',
             'CHANGELOG.md',
             'src/*/version.py'
         ]
@@ -104,7 +104,7 @@ DELIVERABLE_REGISTRY: Dict[str, Dict] = {
             }
         ],
         'integration_points': [
-            'docs/Documentation/',
+            'docs/documentation/',
             'CHANGELOG.md'
         ]
     },

@@ -73,7 +73,7 @@ def execute_intake_workflow(
         }
     """
     project_root = Path(project_root) if project_root else Path.cwd()
-    kanban_path = Path(kanban_path) if kanban_path else project_root / "docs/Project_Management/kanban"
+    kanban_path = Path(kanban_path) if kanban_path else project_root / "docs/project-management/kanban"
     framework_path = Path(framework_path) if framework_path else project_root / "packages/frameworks/kanban"
     config = config or {}
     

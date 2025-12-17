@@ -152,8 +152,8 @@ def find_story_file(config: Optional[Dict] = None, epic: int = None, story: int 
     
     # Fallback: Search for Story files
     fallback_patterns = [
-        "docs/Project_Management/kanban/epics/Epic-*/Story-*.md",
-        "docs/Project_Management/kanban/epics/Epic-*/stories/Story-*.md",  # Legacy support
+        "docs/project-management/kanban/epics/Epic-*/Story-*.md",
+        "docs/project-management/kanban/epics/Epic-*/stories/Story-*.md",  # Legacy support
     ]
     
     for pattern in fallback_patterns:
@@ -277,9 +277,9 @@ def locate_task_doc(
             story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
     else:
         # Fallback patterns
-        story_dir = project_root / f"docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story:03d}"
+        story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story:03d}"
         if not story_dir.exists():
-            story_dir = project_root / f"docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story}"
+            story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story}"
     
     if story_dir.exists():
         # Try Task-{task}-*.md pattern

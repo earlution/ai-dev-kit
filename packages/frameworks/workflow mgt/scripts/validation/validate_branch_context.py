@@ -175,9 +175,9 @@ def locate_task_doc_for_version(
         if not story_dir.exists():
             story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
     else:
-        story_dir = project_root / f"docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story:03d}"
+        story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story:03d}"
         if not story_dir.exists():
-            story_dir = project_root / f"docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story}"
+            story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story}"
     
     if story_dir.exists():
         task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))

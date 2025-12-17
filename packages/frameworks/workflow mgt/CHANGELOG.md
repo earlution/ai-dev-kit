@@ -41,7 +41,7 @@ Added Package Version Workflow (PVW) - a complete new workflow for intelligent a
 
 **Changes:**
 - Added `workflows/package-version-workflow.yaml` - PVW workflow definition
-- Added `docs/Documentation/Developer_Docs/vwmp/package-version-workflow-agent-execution.md` - Complete agent execution guide
+- Added `docs/documentation/Developer_Docs/vwmp/package-version-workflow-agent-execution.md` - Complete agent execution guide
 - Added `scripts/validation/package/` - Validation scripts as tools (format, increment, consistency, change analysis)
 - Updated `workflows/release-workflow.yaml` - Integrated PVW as Step 2.5
 - Updated `cursorrules-rw-trigger-section.md` - Added PVW trigger section with comprehensive TODO tracking

@@ -340,9 +340,9 @@ PLAN → DO → CHECK → ACT
 
 ## References
 
-- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **PLAN Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/plan-phase-template.md`
-- **DO Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/do-phase-template.md`
-- **CHECK Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/check-phase-template.md`
-- **ACT Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/action-workflow-template.md`
+- **PDCA Integration Plan:** `docs/architecture/standards-and-adrs/rw-pdca-integration-plan.md`
+- **PLAN Phase Template:** `packages/frameworks/workflow mgt/docs/documentation/templates/plan-phase-template.md`
+- **DO Phase Template:** `packages/frameworks/workflow mgt/docs/documentation/templates/do-phase-template.md`
+- **CHECK Phase Template:** `packages/frameworks/workflow mgt/docs/documentation/templates/check-phase-template.md`
+- **ACT Phase Template:** `packages/frameworks/workflow mgt/docs/documentation/templates/action-workflow-template.md`
 

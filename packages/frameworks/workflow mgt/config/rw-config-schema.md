@@ -44,7 +44,7 @@ These keys are only required if using specific features:
 | Key | Type | Required When | Description | Example |
 |-----|------|---------------|-------------|---------|
 | `use_kanban` | boolean | Mode C (Full Stack) | Enable Kanban integration | `true` |
-| `kanban_root` | string | `use_kanban: true` | Root path for Kanban docs | `docs/Project_Management/kanban` |
+| `kanban_root` | string | `use_kanban: true` | Root path for Kanban docs | `docs/project-management/kanban` |
 | `epic_doc_pattern` | string | `use_kanban: true` | Pattern for epic docs (relative to `kanban_root`) | `epics/Epic-{epic}/Epic-{epic}.md` |
 | `story_doc_pattern` | string | `use_kanban: true` | Pattern for story docs (relative to `kanban_root`) | `epics/Epic-{epic}/Story-{story}-*.md` |
 | `kanban_board` | string | `use_kanban: true` | Main Kanban board file (relative to `kanban_root`) | `_index.md` |
@@ -128,11 +128,11 @@ project_name: myproject
 ```yaml
 version_file: src/myproject/version.py
 main_changelog: CHANGELOG.md
-changelog_dir: docs/Changelog_and_Release_Notes/Changelog_Archive
+changelog_dir: docs/changelog-and-release-notes/changelog-archive
 scripts_path: tools/workflow_mgt/scripts
 readme_file: README.md
 use_kanban: true
-kanban_root: docs/Project_Management/kanban
+kanban_root: docs/project-management/kanban
 epic_doc_pattern: epics/Epic-{epic}/Epic-{epic}.md
 story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 kanban_board: _index.md

@@ -105,7 +105,7 @@ If your project uses package managers (npm, pub.dev, PyPI, etc.) that require **
 - **Internal Development:** Use `RC.EPIC.STORY.TASK+BUILD` (source of truth)
 - **Package Managers:** Use `MAJOR.MINOR.PATCH` (derived from internal version)
 
-**See:** `docs/Architecture/Standards_and_ADRs/dual-versioning-package-managers.md` for complete guidance on:
+**See:** `docs/architecture/standards-and-adrs/dual-versioning-package-managers.md` for complete guidance on:
 - Mapping strategies (how to convert internal version to SemVer)
 - Implementation patterns (sync scripts, build-time generation)
 - Best practices and validation

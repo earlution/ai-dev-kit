@@ -362,8 +362,8 @@ run_terminal_cmd("python scripts/automation/release_workflow.py --auto-go")
 - **Execution Pattern:** `.cursorrules` explicitly requires agent-driven execution (ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED) rather than blind script execution
 
 **Platform Documentation:**
-- **[VWMP Platform Architecture](../../Architecture/Standards_and_ADRs/E21-vwmp-platform-architecture.md)** - Platform architecture
-- **[VWMP Plugin Architecture](../../Architecture/Standards_and_ADRs/E21-vwmp-plugin-architecture.md)** - Plugin system
+- **[VWMP Platform Architecture](../../Architecture/standards-and-adrs/E21-vwmp-platform-architecture.md)** - Platform architecture
+- **[VWMP Plugin Architecture](../../Architecture/standards-and-adrs/E21-vwmp-plugin-architecture.md)** - Plugin system
 
 ---
 

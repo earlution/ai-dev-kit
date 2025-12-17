@@ -48,7 +48,7 @@ If you'd like to contribute code:
 
 ## Questions?
 
-- **Documentation:** See [docs/Documentation](docs/Documentation) for comprehensive guides
+- **Documentation:** See [docs/documentation](docs/documentation) for comprehensive guides
 - **Issues:** Check existing [GitHub Issues](https://github.com/earlution/ai-dev-kit/issues) or create a new one
 - **Discussions:** Use GitHub Discussions for questions and community discussions
 

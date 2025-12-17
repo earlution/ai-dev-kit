@@ -66,7 +66,7 @@ TRIGGER_REGISTRY: Dict[str, Dict] = {
         ],
         'file_patterns': [
             'fr-br/FR-*.md',
-            'docs/Project_Management/kanban/fr-br/FR-*.md',
+            'docs/project-management/kanban/fr-br/FR-*.md',
         ],
         'workflow': 'intake_workflow',  # Use intake workflow (E2:S11) instead of agentic_task_creation
         'confidence': ConfidenceLevel.HIGH,
@@ -83,7 +83,7 @@ TRIGGER_REGISTRY: Dict[str, Dict] = {
         ],
         'file_patterns': [
             'fr-br/BR-*.md',
-            'docs/Project_Management/kanban/fr-br/BR-*.md',
+            'docs/project-management/kanban/fr-br/BR-*.md',
         ],
         'workflow': 'intake_workflow',  # Use intake workflow (E2:S11) instead of agentic_task_creation
         'confidence': ConfidenceLevel.HIGH,
@@ -100,7 +100,7 @@ TRIGGER_REGISTRY: Dict[str, Dict] = {
         ],
         'file_patterns': [
             'fr-br/UXR-*.md',
-            'docs/Project_Management/kanban/fr-br/UXR-*.md',
+            'docs/project-management/kanban/fr-br/UXR-*.md',
         ],
         'workflow': 'intake_workflow',  # Use intake workflow (E2:S11) instead of agentic_task_creation
         'confidence': ConfidenceLevel.HIGH,

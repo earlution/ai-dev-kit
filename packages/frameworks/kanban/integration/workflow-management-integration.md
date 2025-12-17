@@ -142,17 +142,17 @@ action: "Configure Kanban document paths"
 
 paths_to_configure:
   epic_docs:
-    pattern: "docs/Project_Management/epics/overview/Epic {epic}/Epic-{epic}.md"
-    example: "docs/Project_Management/epics/overview/Epic 4/Epic-4.md"
+    pattern: "docs/project-management/epics/overview/Epic {epic}/Epic-{epic}.md"
+    example: "docs/project-management/epics/overview/Epic 4/Epic-4.md"
 
   story_docs:
-    pattern: "docs/Project_Management/kanban/epics/Epic-{epic}/Story-{N}-{Name}.md"
-    example: "docs/Project_Management/kanban/epics/Epic-4/Story-33-Parent-Inclusivity-and-Accessibility.md"
+    pattern: "docs/project-management/kanban/epics/Epic-{epic}/Story-{N}-{Name}.md"
+    example: "docs/project-management/kanban/epics/Epic-4/Story-33-Parent-Inclusivity-and-Accessibility.md"
 
 files_to_update:
   - ".cursorrules (RW trigger section, Step 4 description)"
-  - "docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md"
-  - "docs/Documentation/Developer_Docs/vwmp/release-workflow-reference.md"
+  - "docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md"
+  - "docs/documentation/Developer_Docs/vwmp/release-workflow-reference.md"
 ```
 
 ### Step 3: Test RW Kanban Updates
@@ -370,8 +370,8 @@ integration_guides:
   workflow: "integration/workflow-management-integration.md"
 
 reference_documentation:
-  workflow_flaws: "../../docs/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md"
-  versioning_errors: "../../docs/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md"
+  workflow_flaws: "../../docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md"
+  versioning_errors: "../../docs/architecture/standards-and-adrs/versioning-error-reference-guide.md"
 
 related_packages:
   numbering_versioning: "temp/numbering & versioning/"

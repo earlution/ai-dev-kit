@@ -211,7 +211,7 @@ class IntakeVersionAssignment:
         for the given task, then returns next build number.
         """
         # Try to read from story document
-        kanban_path = Path('docs/Project_Management/kanban')
+        kanban_path = Path('docs/project-management/kanban')
         story_pattern = f"Epic-{epic_num}/Story-{str(story_num).zfill(3)}-*.md"
         story_files = list(kanban_path.glob(f"epics/{story_pattern}"))
         

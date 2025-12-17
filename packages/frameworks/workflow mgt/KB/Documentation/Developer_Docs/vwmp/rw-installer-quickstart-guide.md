@@ -64,7 +64,7 @@ changelog_dir: docs/changelogs
 scripts_path: tools/workflow_mgt/scripts
 readme_file: README.md
 use_kanban: true
-kanban_root: docs/Project_Management/kanban
+kanban_root: docs/project-management/kanban
 epic_doc_pattern: epics/Epic-{epic}.md
 story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 kanban_board: _index.md
@@ -151,7 +151,7 @@ Path to README.md [README.md]: README.md
 Select mode [B]: C
 
 📊 Kanban Integration:
-Kanban root directory [docs/Project_Management/kanban]: docs/kanban
+Kanban root directory [docs/project-management/kanban]: docs/kanban
 Epic document pattern (use {epic} placeholder) [epics/Epic-{epic}/Epic-{epic}.md]: epics/Epic-{epic}/Epic-{epic}.md
 Story document pattern (use {epic} and {story} placeholders) [epics/Epic-{epic}/Story-{story}-*.md]: epics/Epic-{epic}/Story-{story}-*.md
 Main Kanban board file [_index.md]: kanban.md
@@ -408,7 +408,7 @@ After installation, verify:
 
 ## 📚 Next Steps
 
-1. **Read RW Execution Guide:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+1. **Read RW Execution Guide:** `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 2. **Review Config Schema:** `config/rw-config-schema.md`
 3. **Test on Feature Branch:** Always test RW on a feature/epic branch first
 4. **Set Up Pre-commit Hooks:** Add validators to pre-commit hooks (optional)
@@ -420,8 +420,8 @@ After installation, verify:
 - **Installer CLI:** `scripts/README-rw-installer.md`
 - **Config Schema:** `config/rw-config-schema.md`
 - **Example Configs:** `config/examples/`
-- **RW Execution Guide:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-- **Portable Implementation Guide:** `docs/Documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md`
+- **RW Execution Guide:** `docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **Portable Implementation Guide:** `docs/documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md`
 
 ---
 

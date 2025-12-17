@@ -224,14 +224,14 @@ policy_salience:
 ## Examples
 
 See complete examples in:
-- `docs/Architecture/Standards_and_ADRs/documentation-maintenance-policy.md`
+- `docs/architecture/standards-and-adrs/documentation-maintenance-policy.md`
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md`
 
 ---
 
 ## References
 
-- **Schema Specification:** `docs/Architecture/Standards_and_ADRs/policy-salience-schema.md`
+- **Schema Specification:** `docs/architecture/standards-and-adrs/policy-salience-schema.md`
 - **Template:** `packages/frameworks/doc-lifecycle/templates/POLICY_SALIENCE_TEMPLATE.md`
 - **FR-022:** Policy Documents Machine-Readable Salience Section
 

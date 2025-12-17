@@ -38,7 +38,7 @@ This story tracks all bug reports and bug fixes related to the system, framework
 - `FR_BR_INTAKE_GUIDE.md` - Intake process guide
 
 **Example Location:**
-- `docs/Project_Management/kanban/epics/Epic-6/Story-004-bug-reports.md`
+- `docs/project-management/kanban/epics/Epic-6/Story-004-bug-reports.md`
 
 ---
 
@@ -64,7 +64,7 @@ This story tracks all feature requests and feature implementations related to th
 - `FR_BR_INTAKE_GUIDE.md` - Intake process guide
 
 **Example Location:**
-- `docs/Project_Management/kanban/epics/Epic-6/Story-005-feature-requests.md`
+- `docs/project-management/kanban/epics/Epic-6/Story-005-feature-requests.md`
 
 ---
 

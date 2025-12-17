@@ -240,9 +240,9 @@ Before committing a policy with salience section, verify:
 
 ## References
 
-- **Schema Specification:** `docs/Architecture/Standards_and_ADRs/policy-salience-schema.md`
+- **Schema Specification:** `docs/architecture/standards-and-adrs/policy-salience-schema.md`
 - **Example Policies:**
-  - `docs/Architecture/Standards_and_ADRs/documentation-maintenance-policy.md`
+  - `docs/architecture/standards-and-adrs/documentation-maintenance-policy.md`
   - `packages/frameworks/kanban/policies/kanban-governance-policy.md`
 - **FR-022:** Policy Documents Machine-Readable Salience Section
 
