@@ -312,6 +312,7 @@ housekeeping_policy: keep | archive | delete
 
 ### 7.2 Directory Organization
 - **Standard:** 5-pillar structure (Architecture, Changelog, PM, Guides, Documentation)
+  - **Reference Implementation:** ai-dev-kit source repository demonstrates perfect 5-pillar canonical structure
 - **Enterprise:** Multi-pillar extension (15+ pillars)
 - **Legacy:** Hybrid structure (`KB/` + `docs/`)
 

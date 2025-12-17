@@ -353,9 +353,11 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 
 ### 6.2 Release Workflow
 - **Step Count:** 12 steps (canonical) + 2 optional steps
+  - **Reference Implementation:** ai-dev-kit source has comprehensive 12-step workflow YAML definitions
 - **Step 1:** Branch Safety Check (mandatory, blocking) - CRITICAL
 - **Steps 2-12:** Standard RW steps
 - **Legacy Support:** 10-step/11-step/13-step variants
+- **Note:** ai-dev-kit source demonstrates workflow YAML structure but lacks `.cursorrules` file (should be added)
 
 ### 6.3 Configuration
 - **Config File:** `rw-config.yaml` (config-driven approach)

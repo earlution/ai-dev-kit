@@ -344,6 +344,7 @@ This document provides **comprehensive meta-analysis** of Kanban structures acro
 **Prevention:**
 - Installer validation to prevent Epic mashup
 - Clear distinction between canonical templates and ai-dev-kit's actual Kanban
+- **CRITICAL:** Fix Epic 9 mismatch in ai-dev-kit source (rename Epic 9 "Book Related Work" to Epic 24+ or document as project-specific)
 
 ### 7.3 Story Structure
 
