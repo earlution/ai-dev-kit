@@ -10,24 +10,24 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.0+0 – Story created: Kanban board MoSCoW prioritized task view with 6 task documents)  
+**Last updated:** 2025-12-18 (v0.4.13.4+1 – T04 COMPLETE: RW doc-init detection bug fixed, system impacts assessed)  
 **Estimated Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.4.13.0+0  
+**Version:** v0.4.13.4+1  
 **Code:** E4S13
 
 ---
 
 ## Task Checklist
 
-- [ ] **E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board** - TODO (v0.4.13.0+0)
+- [x] **E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board** ✅ COMPLETE (v0.4.13.1+1)
   - Task: [`T01-kanban-board-moscow-prioritized-task-view.md`](T01-kanban-board-moscow-prioritized-task-view.md)
 - [ ] **E4:S13:T02 – Update Kanban governance policy** - TODO (v0.4.13.0+0)
   - Task: [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
 - [ ] **E4:S13:T03 – Update Kanban board template** - TODO (v0.4.13.0+0)
   - Task: [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
-- [ ] **E4:S13:T04 – Assess system impacts** - TODO (v0.4.13.0+0)
+- [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+1)
   - Task: [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
 - [ ] **E4:S13:T05 – Update Kanban package** - TODO (v0.4.13.0+0)
   - Task: [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
@@ -128,12 +128,12 @@ Enhance the Kanban board to be more useful by:
 ### E4:S13:T04 – Assess system impacts
 
 **Input:** Enhanced Kanban board structure (T01)  
-**Deliverable:** System impact assessment document  
+**Deliverable:** System impact assessment document, RW doc-init detection bug fix  
 **Dependencies:** T01  
 **Blocker:** None  
 **Parallel Development Candidacy:** Blocked (depends on T01)
 
-**Status:** TODO (v0.4.13.0+0)
+**Status:** ✅ COMPLETE (v0.4.13.4+1)
 
 **Task Document:** [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
 
@@ -142,6 +142,7 @@ Enhance the Kanban board to be more useful by:
 2. Analyze impact for each system (RW, validators, installers, etc.)
 3. Document required updates for each affected system
 4. Create impact assessment document
+5. **NEW:** Identified and fixed RW doc-init detection bug (story + task docs created together scenario)
 
 ---
 

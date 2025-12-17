@@ -680,10 +680,35 @@ def detect_first_time_est_doc(
             if re.search(version_pattern, changelog_content):
                 prior_version_exists = True
     
+    # CRITICAL FIX: Check if task document already exists (even if not created in this commit)
+    # If task doc exists, it's NOT doc-init, regardless of prior version history
+    # This fixes the bug where story + all task docs created together in story's abstract space
+    # causes first implementation work to incorrectly get BUILD=0 instead of BUILD=1
+    task_doc_exists = False
+    if task > 0:  # Task-level detection
+        story_file = find_story_file(config, epic, story)
+        if story_file:
+            task_doc_path, task_doc_content, format_type = locate_task_doc(
+                story_file, epic, story, task, config
+            )
+            if format_type != "not_found":
+                task_doc_exists = True
+    
     # Determine if this is first-time
     est_doc_created = new_est_doc_found or delimited_section_found
     
-    if est_doc_created and not prior_version_exists:
+    # CRITICAL: If task document already exists, it's NOT doc-init
+    # This handles the case where story + task docs created together in story's abstract space
+    # When first implementation work is done, task doc exists but wasn't created in this commit
+    # Without this check, function incorrectly returns is_first_time=True, causing BUILD=0
+    if task_doc_exists and not est_doc_created:
+        # Task doc exists but wasn't created in this commit → NOT doc-init
+        is_first_time = False
+        warnings.append(
+            f"⚠️  Task document already exists (not created in this commit). "
+            f"This is NOT a doc-init build. Task doc exists, so BUILD should be >= 1."
+        )
+    elif est_doc_created and not prior_version_exists:
         is_first_time = True
     elif est_doc_created and prior_version_exists:
         warnings.append(
@@ -693,11 +718,21 @@ def detect_first_time_est_doc(
     elif not est_doc_created and not prior_version_exists:
         # No E/S/T doc detected, but no prior version exists
         # This could be a delimited section or edge case - be lenient but warn
-        is_first_time = True
-        warnings.append(
-            f"⚠️  No new E/S/T doc file or section detected, but no prior version exists. "
-            f"Assuming first-time commit (doc-init). If this is incorrect, validation will fail on docs-only check."
-        )
+        # BUT: Only if task doc doesn't exist (if it exists, we already handled it above)
+        if not task_doc_exists:
+            is_first_time = True
+            warnings.append(
+                f"⚠️  No new E/S/T doc file or section detected, but no prior version exists. "
+                f"Assuming first-time commit (doc-init). If this is incorrect, validation will fail on docs-only check."
+            )
+        else:
+            # Task doc exists but wasn't detected as created in this commit
+            # This shouldn't happen, but handle it gracefully
+            is_first_time = False
+            warnings.append(
+                f"⚠️  Task document exists but wasn't detected as created in this commit. "
+                f"This is NOT a doc-init build. BUILD should be >= 1."
+            )
     
     return is_first_time, warnings
 

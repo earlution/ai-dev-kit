@@ -17,6 +17,41 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.13.4+1] - 18-12-25
+
+✅ Complete: T04 - Assess system impacts - RW doc-init detection bug fixed
+
+### Fixed
+
+- **RW Doc-Init Detection Bug:**
+  - Fixed `detect_first_time_est_doc` function to correctly detect when task document already exists
+  - Prevents incorrect BUILD=0 when story + task docs created together in story's abstract space
+  - Ensures first implementation work correctly gets BUILD=1 instead of BUILD=0
+
+### Added
+
+- **System Impact Assessment:**
+  - Documented all systems that interact with Kanban (RW, validators, installers)
+  - Identified and fixed critical RW doc-init detection bug
+  - Documented future work required for other systems
+
+- **Documentation:**
+  - Added Example 4 to RW execution guide (bug scenario and fix)
+  - Updated T04 task document with bug analysis and fix
+
+### Changed
+
+- **RW Validation Script:**
+  - Updated `detect_first_time_est_doc` function logic
+  - Added task document existence check before determining doc-init
+
+- **Version File:**
+  - Version updated to `0.4.13.4+1` (E4:S13:T04, first build)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+1.md)
+
+---
+
 ## [0.4.13.0+0] - 18-12-25
 
 ✅ Complete: S13 - Kanban Board Enhancement - MoSCoW Prioritized Task View - Story created (doc-init)
@@ -43,7 +78,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - **Version File:**
   - Version updated to `0.4.13.0+0` (E4:S13, doc-init build)
 
-**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.0+0.md)
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.0+0.md)
 
 ---
 

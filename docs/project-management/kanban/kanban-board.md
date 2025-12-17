@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2025-12-11  
-**Version:** v0.4.12.0+0
+**Last Updated:** 2025-12-18  
+**Version:** v0.4.13.1+1
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
@@ -23,6 +23,93 @@ This board tracks all work on the `ai-dev-kit` repository and the **Head First A
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
 - Board views: `_index.md` (quick view) and this file (detailed view)
+
+**Parent-Child Relationship:**
+This Kanban board serves as the **parent document** to Story documents, similar to how Story documents are parents of Task documents:
+- **Board → Story:** This board links to and tracks all Story documents
+- **Story → Task:** Story documents link to and track all Task documents
+- This creates a clear hierarchy: Board (parent) → Story (child) → Task (grandchild)
+
+---
+
+## MoSCoW Prioritized In-Progress Tasks
+
+This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCoW priority and ordered chronologically (most recently updated first).
+
+### Must Have (M) - Critical Tasks
+
+*Critical in-progress tasks that must be completed.*
+
+- **E4:S13:T01** – Design and implement MoSCoW prioritized task view in Kanban board  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T01-kanban-board-moscow-prioritized-task-view.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+
+- **E6:S06:T07** – Implement framework hardening recommendations  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T07-implement-framework-hardening-recommendations.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+
+### Should Have (S) - Important Tasks
+
+*Important in-progress tasks that should be completed.*
+
+- **E4:S06:T04** – Create task template files for each typical task  
+  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+
+- **E4:S13:T02** – Update Kanban governance policy  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+
+- **E4:S13:T03** – Update Kanban board template  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T03-update-kanban-board-template.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+
+- **E4:S13:T04** – Assess system impacts  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T04-assess-system-impacts.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+
+- **E5:S02:T03** – Build documentation health dashboards  
+  *Last updated: 2025-12-06* | [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
+
+- **E6:S06:T02** – Investigate proper package management (single package file, hash verification)  
+  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+
+- **E6:S06:T03** – Design pre-release feedback mechanism  
+  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+
+- **E6:S06:T04** – Create package management implementation plan  
+  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+
+- **E6:S06:T05** – Implement feedback mechanism  
+  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+
+### Could Have (C) - Nice-to-Have Tasks
+
+*Nice-to-have in-progress tasks that could be completed.*
+
+- **E4:S06:T05** – Create contextualization guide and examples  
+  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+
+- **E4:S06:T07** – Integrate with template setup guide and installation workflow  
+  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+
+- **E4:S06:T08** – Validate structure with test projects (tiny, small, ambitious)  
+  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+
+- **E4:S13:T05** – Update Kanban package (after user verification)  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T05-update-kanban-package.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+
+- **E4:S13:T06** – Update other affected packages (after user verification)  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T06-update-other-affected-packages.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+
+- **E7:S01:T02** – Code review standards and processes  
+  *Last updated: Unknown* | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
+
+- **E7:S01:T03** – Code quality metrics and monitoring  
+  *Last updated: Unknown* | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
+
+- **E7:S01:T04** – Maintenance automation and tooling  
+  *Last updated: Unknown* | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
+
+### Won't Have (W) - Deferred Tasks
+
+*Tasks that are deferred or not being done at this time.*
+
+*No deferred tasks at this time.*
 
 ---
 

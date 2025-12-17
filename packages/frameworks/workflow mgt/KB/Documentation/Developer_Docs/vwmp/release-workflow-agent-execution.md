@@ -663,10 +663,27 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
   - New version: `0.2.10.2+1` (new task, first build)
 - **Result:** New task versioned. Note: If Task document was created in this commit with code changes, it would NOT be doc-init (fails docs-only requirement).
 
+**Example 4: Normal Build (Story + Task Docs Created Together - Bug Fix)**
+- **Scenario:** Story + all task docs created together in story's abstract space (v0.E.S.0+0). When first task implementation work is done, RW runs.
+- **Detection (A.1):**
+  - ❌ Not doc-init: Task document already exists (created in story's abstract space commit, not in this commit)
+  - ❌ Code changes present: `.py` files modified
+  - ✅ **CRITICAL FIX:** Function checks if task document already exists (even if not created in this commit)
+  - ✅ If task doc exists → NOT doc-init → BUILD=1 (not 0)
+- **Task Identification (B):**
+  - Completed task: `E4:S13:T01` (first task from story)
+  - Task document: Already exists (created in story's abstract space)
+  - Current version: `0.4.13.0+0` (from story creation)
+- **Version Decision (C):**
+  - New task, but task doc exists → `VERSION_TASK = 1`, `VERSION_BUILD = 1` (NOT 0)
+  - New version: `0.4.13.1+1` (first functional build, NOT doc-init)
+- **Result:** First functional work correctly gets BUILD=1. Bug fixed: Previously would incorrectly get BUILD=0 because no task-level S.T+0 commit existed.
+
 **Key Distinctions:**
-- **Doc-Init (`+0`):** Task document created NOW, docs-only, no prior version → `+0`
+- **Doc-Init (`+0`):** Task document created NOW (in this commit), docs-only, no prior version → `+0`
 - **Normal Build (`+1` or higher):** Task document already exists OR code changes present → `+1` or increment BUILD
 - **Relationship:** Doc-init establishes anchor; functional work builds on it
+- **CRITICAL FIX:** If task document already exists (even if not created in this commit), it's NOT doc-init. This fixes the bug where story + task docs created together causes first implementation work to incorrectly get BUILD=0.
 
 **C. DETERMINE VERSION BUMP (MANDATORY LOGIC):**
 3. **DETERMINE:**
