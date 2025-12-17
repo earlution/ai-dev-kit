@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-16 (v0.4.6.3+1 – Story 6 Task 3 complete)
+**Last updated:** 2025-12-17 (v0.4.6.4+42 – Story 6 Task 4 build 42: Workflow and cursorrules structure analyses completed)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -32,9 +32,9 @@ housekeeping_policy: keep
   - Story: [`Story-004-kanban-structure-refactoring.md`](Story-004-kanban-structure-refactoring.md)
 - [x] **E4:S05 – Canonical Epics for Kanban Framework** - COMPLETE ✅ (v0.4.5.1+1)
   - Story: [`Story-005-canonical-epics-for-kanban-framework.md`](Story-005-canonical-epics-for-kanban-framework.md)
-- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.3+1 – T03 in progress: Epic 1-7 story templates complete - 20 templates created)
+- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.4+42 – T04 build 42: Workflow and cursorrules structure analyses completed)
   - Story: [`Story-006-comprehensive-canonical-est-template-system.md`](Story-006-comprehensive-canonical-est-template-system.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T03 ⏳ IN PROGRESS (v0.4.6.3+1 – Epic 1-7 complete), T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T04-T05 TODO, T07-T08 TODO
+  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T03 ✅ COMPLETE, T04 ⏳ IN PROGRESS (v0.4.6.4+42 – Workflow and cursorrules structure analyses completed), T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T05 TODO, T07-T08 TODO
 - [x] **E4:S07 – Migration Support and Installation Modes** - COMPLETE ✅ (v0.4.7.3+1 – All tasks complete)
   - Story: [`Story-007-migration-support-and-installation-modes.md`](Story-007-migration-support-and-installation-modes.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE (Documentation and guides updated)

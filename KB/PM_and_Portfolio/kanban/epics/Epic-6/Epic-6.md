@@ -32,6 +32,9 @@ housekeeping_policy: keep
   - Tasks: T01 ✅, T02 ✅
 - [ ] **E6:S05 – Feature Requests** - TODO
   - Story: [`Story-005-feature-requests.md`](Story-005-feature-requests.md)
+- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - TODO
+  - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T05 TODO
 
 ---
 
