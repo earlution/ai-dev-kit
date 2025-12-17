@@ -157,7 +157,7 @@ When the Doc Housekeeping Workflow is implemented, configure it to run periodica
 **Trigger:** Periodic (weekly/monthly) or manual execution
 
 **Steps:**
-1. Scan `KB/**` and parse front-matter
+1. Scan `docs/**` and parse front-matter
 2. Find expired documents (`expires_at <= now()`)
 3. Analyze references (protect referenced docs)
 4. Determine action (archive or delete)
@@ -289,7 +289,7 @@ because it documents completed work and is referenced in Story completion.
 - **Document Lifecycle Policy:** [`../policies/doc-lifecycle-policy.md`](../policies/doc-lifecycle-policy.md)
 - **Document Lifecycle Metadata Spec:** [`../policies/doc-lifecycle-metadata-spec.md`](../policies/doc-lifecycle-metadata-spec.md)
 - **Workflow Management Package:** [`../../workflow%20mgt/README.md`](../../workflow%20mgt/README.md)
-- **Release Workflow Agent Execution:** [`../../workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`](../../workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md)
+- **Release Workflow Agent Execution:** [`../../workflow%20mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`](../../workflow%20mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md)
 
 ---
 

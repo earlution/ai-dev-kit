@@ -142,10 +142,10 @@ pir_report_name = f"PIR-Story-{story}-v{pir_version}.md"
 ```markdown
 ## Related Work
 
-- **Epic:** [Epic {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md) (v{version})
+- **Epic:** [Epic {N} Documentation](../../Project_Management/kanban/epics/Epic-{N}/Epic-{N}.md) (v{version})
 - **Stories:**
-  - [Story {N1}](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N1}-*.md) (v{version1})
-  - [Story {N2}](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N2}-*.md) (v{version2})
+  - [Story {N1}](../../Project_Management/kanban/epics/Epic-{N}/Story-{N1}-*.md) (v{version1})
+  - [Story {N2}](../../Project_Management/kanban/epics/Epic-{N}/Story-{N2}-*.md) (v{version2})
 - **Version Range:** {First Version} to {Last Version}
 ```
 

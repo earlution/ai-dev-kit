@@ -20,9 +20,9 @@ package:
   license: "See source project"
 ```
 
-**📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../KB/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
+**📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 
-> **Note:** All references to specific projects (for example, *Confidentia*, *Epic 4*, or concrete paths like `KB/PM_and_Portfolio/epics/overview/Epic 4/Epic-4.md`) are **examples only**.  
+> **Note:** All references to specific projects (for example, *Confidentia*, *Epic 4*, or concrete paths like `docs/Project_Management/epics/overview/Epic 4/Epic-4.md`) are **examples only**.  
 > When you install this package, you should:
 > - Replace project names with your own.
 > - Replace file paths with your own KB structure.
@@ -189,9 +189,9 @@ recommended:
 
 ## 🚨 IMPORTANT: Use the Interactive Installer
 
-**⚠️ DO NOT manually copy files from `KB/PM_and_Portfolio/kanban/epics/`**
+**⚠️ DO NOT manually copy files from `docs/Project_Management/kanban/epics/`**
 
-The `KB/PM_and_Portfolio/kanban/epics/` directory contains **ai-dev-kit's actual Kanban board** (with project-specific epics like "AI Dev Kit Core"). This is **NOT** what you want to install.
+The `docs/Project_Management/kanban/epics/` directory contains **ai-dev-kit's actual Kanban board** (with project-specific epics like "AI Dev Kit Core"). This is **NOT** what you want to install.
 
 **✅ USE THE INSTALLER INSTEAD:**
 
@@ -233,7 +233,7 @@ python3 scripts/install_kanban_framework.py
 **Expected Results After Installation:**
 
 After running the installer, you should see:
-- ✅ Canonical epic templates installed in `KB/PM_and_Portfolio/kanban/epics/Epic-{N}/`
+- ✅ Canonical epic templates installed in `docs/Project_Management/kanban/epics/Epic-{N}/`
 - ✅ Epic 1 contextualized with your project name (e.g., "MyProject Core", not "AI Dev Kit Core")
 - ✅ Only canonical core epics (1-8, 10, 18, 22, 23) installed
 - ✅ No ai-dev-kit project-specific epics (5-9 from ai-dev-kit)
@@ -256,7 +256,7 @@ After running the installer, you should see:
 **❌ DO NOT manually copy epics:**
 ```bash
 # ❌ WRONG - This copies ai-dev-kit's actual Kanban, not templates!
-cp -r packages/frameworks/ai-dev-kit/KB/PM_and_Portfolio/kanban/epics/* KB/PM_and_Portfolio/kanban/epics/
+cp -r packages/frameworks/ai-dev-kit/docs/Project_Management/kanban/epics/* docs/Project_Management/kanban/epics/
 ```
 
 **Why this is wrong:**
@@ -279,16 +279,16 @@ python3 scripts/install_kanban_framework.py
 - ✅ These are what the installer uses
 - ✅ Located in: `packages/frameworks/kanban/templates/epics/Epic-{N}-*.md`
 
-**ai-dev-kit's Actual Kanban** (`KB/PM_and_Portfolio/kanban/epics/`):
+**ai-dev-kit's Actual Kanban** (`docs/Project_Management/kanban/epics/`):
 - ❌ ai-dev-kit's project-specific epics (e.g., "AI Dev Kit Core")
 - ❌ ai-dev-kit's actual stories and tasks
 - ❌ Example/reference only - **DO NOT COPY**
-- ❌ Located in: `KB/PM_and_Portfolio/kanban/epics/Epic-{N}/`
+- ❌ Located in: `docs/Project_Management/kanban/epics/Epic-{N}/`
 
 **The installer automatically:**
 - Copies from `templates/epics/` (canonical templates)
 - Contextualizes placeholders with your project name
-- Does NOT copy from `KB/PM_and_Portfolio/kanban/epics/` (ai-dev-kit's actual Kanban)
+- Does NOT copy from `docs/Project_Management/kanban/epics/` (ai-dev-kit's actual Kanban)
 
 ### Alternative: Manual Installation (Advanced - Not Recommended)
 
@@ -342,7 +342,7 @@ If you have an existing Kanban structure (from another system or older framework
 
 1. **Detect existing structure:**
    ```bash
-   python3 scripts/detect_existing_structure.py --kanban-path KB/PM_and_Portfolio/kanban
+   python3 scripts/detect_existing_structure.py --kanban-path docs/Project_Management/kanban
    ```
 
 2. **Analyze structure:**
@@ -590,8 +590,8 @@ tasks:
 
 ```yaml
 project_root/
-  KB/:                                    # Knowledge Base root
-    PM_and_Portfolio/:                    # Project Management
+  docs/:                                    # Knowledge Base root
+    Project_Management/:                    # Project Management
       epics/:
         overview/:                        # Epic documents
           Epic 1/:
@@ -625,7 +625,7 @@ project_root/
 flat_structure:
   description: "All Epics and Stories in single directory"
   structure: |
-    KB/kanban/
+    docs/kanban/
       Epic-1-Name.md
       Epic-2-Name.md
       Story-1-Name.md
@@ -639,7 +639,7 @@ flat_structure:
 hierarchical_structure:
   description: "Epics contain Stories (nested)"
   structure: |
-    KB/epics/
+    docs/epics/
       Epic-1-Name/
         Epic-1.md
         Story-1-Name.md
@@ -657,7 +657,7 @@ hierarchical_structure:
 hybrid_structure:
   description: "Epics in one directory, Stories in another (Confidentia approach)"
   structure: |
-    KB/PM_and_Portfolio/
+    docs/Project_Management/
       epics/overview/Epic 1/Epic-1.md
       kanban/Epic 1/Story-1-Name.md
   pros:
@@ -673,25 +673,25 @@ hybrid_structure:
 ```yaml
 document_types:
   epic_overview:
-    location: "KB/PM_and_Portfolio/epics/overview/Epic {N}/"
+    location: "docs/Project_Management/epics/overview/Epic {N}/"
     purpose: "High-level Epic overview with Story Checklist"
     audience: "Product owners, stakeholders, developers"
     update_frequency: "Every release (via RW Step 4)"
 
   story_detail:
-    location: "KB/PM_and_Portfolio/kanban/Epic {N}/"
+    location: "docs/Project_Management/kanban/Epic {N}/"
     purpose: "Detailed story with tasks and acceptance criteria"
     audience: "Developers, QA, product owners"
     update_frequency: "Throughout story lifecycle"
 
   policy:
-    location: "KB/PM_and_Portfolio/rituals/policy/"
+    location: "docs/Project_Management/rituals/policy/"
     purpose: "Governance rules and standards"
     audience: "All team members"
     update_frequency: "Rarely (only when rules change)"
 
   guides:
-    location: "KB/PM_and_Portfolio/rituals/how-to/"
+    location: "docs/Project_Management/rituals/how-to/"
     purpose: "Practical how-to guides"
     audience: "Team members learning the system"
     update_frequency: "As needed (process improvements)"
@@ -876,8 +876,8 @@ step_2:
 step_3:
   action: "Configure RW Step 4 file paths"
   paths_to_configure:
-    epic_docs: "KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md"
-    story_docs: "KB/PM_and_Portfolio/kanban/Epic {epic}/Story-{N}-{Name}.md"
+    epic_docs: "docs/Project_Management/epics/overview/Epic {epic}/Epic-{epic}.md"
+    story_docs: "docs/Project_Management/kanban/Epic {epic}/Story-{N}-{Name}.md"
 
 step_4:
   action: "Test RW execution"
@@ -1263,7 +1263,7 @@ after_installation:
 
 ### Issue: I Manually Copied Epics and Got ai-dev-kit's Actual Kanban
 
-**Problem:** You manually copied epics from `KB/PM_and_Portfolio/kanban/epics/` and received ai-dev-kit's project-specific epics instead of canonical templates.
+**Problem:** You manually copied epics from `docs/Project_Management/kanban/epics/` and received ai-dev-kit's project-specific epics instead of canonical templates.
 
 **Symptoms:**
 - Epic 1 is named "AI Dev Kit Core" instead of your project name
@@ -1273,7 +1273,7 @@ after_installation:
 **Solution:**
 ```bash
 # 1. Remove the incorrectly copied epics
-rm -rf KB/PM_and_Portfolio/kanban/epics/Epic-*
+rm -rf docs/Project_Management/kanban/epics/Epic-*
 
 # 2. Run the installer (the correct method)
 python3 scripts/install_kanban_framework.py --mode fresh
@@ -1287,7 +1287,7 @@ python3 scripts/install_kanban_framework.py --mode fresh
 
 **Prevention:**
 - ✅ Always use `install_kanban_framework.py` - it's the ONLY supported installation method
-- ❌ Never manually copy from `KB/PM_and_Portfolio/kanban/epics/`
+- ❌ Never manually copy from `docs/Project_Management/kanban/epics/`
 - ✅ The installer automatically uses templates from `templates/epics/`
 
 ### Story Checklist Out of Sync
@@ -1386,7 +1386,7 @@ guides/portfolio-kanban-alignment-playbook.md
 
 **✅ CAN Customize:**
 - **File paths:** Update all path references to match your KB structure
-  - Example: `KB/PM_and_Portfolio/kanban/epics/Epic-X/Epic-X.md` → `docs/projects/epics/Epic-X/Epic-X.md`
+  - Example: `docs/Project_Management/kanban/epics/Epic-X/Epic-X.md` → `docs/projects/epics/Epic-X/Epic-X.md`
 - **Project names:** Replace "Confidentia", "ai-dev-kit", etc. with your project name
 - **Terminology:** Adjust work item names (Epic/Story/Task vs Theme/Epic/Story)
 - **Epic ranges:** Define your own Epic numbering strategy
@@ -1480,7 +1480,7 @@ update_workflow:
 **Based on:** ai-dev-kit `packages/frameworks/kanban/policies/kanban-governance-policy.md`  
 **Last Synced:** 2025-12-02  
 **Customizations:** 
-  - Epic paths: `docs/projects/epics/` (vs `KB/PM_and_Portfolio/kanban/epics/`)
+  - Epic paths: `docs/projects/epics/` (vs `docs/Project_Management/kanban/epics/`)
   - Epic numbering: Starts at Epic 1 (no legacy range)
   - Branch convention: `feature/epic-X` (vs `epic/X-slug`)
 
@@ -1547,7 +1547,7 @@ update_workflow:
    ```
 
 2. **Customize `kanban-governance-policy.md`:**
-   - Change paths: `KB/PM_and_Portfolio/kanban/` → `docs/kanban/`
+   - Change paths: `docs/Project_Management/kanban/` → `docs/kanban/`
    - Change Epic paths: `epics/Epic-X/Epic-X.md` → `epics/Epic-X/Epic-X.md` (if same structure)
    - Change branch convention: `epic/X-slug` → `feature/epic-X`
    - Change examples: Use `E1:S1:T1` instead of `E20:S11:T15`
@@ -1579,7 +1579,7 @@ update_workflow:
    **Based on:** ai-dev-kit `packages/frameworks/kanban/policies/kanban-governance-policy.md`  
    **Last Synced:** 2025-12-02  
    **Customizations:**
-     - Paths: `docs/kanban/` (vs `KB/PM_and_Portfolio/kanban/`)
+     - Paths: `docs/kanban/` (vs `docs/Project_Management/kanban/`)
      - Branch: `feature/epic-X` (vs `epic/X-slug`)
      - Epic numbering: Starts at Epic 1
    ```

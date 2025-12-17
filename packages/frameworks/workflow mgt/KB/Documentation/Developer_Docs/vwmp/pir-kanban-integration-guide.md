@@ -70,8 +70,8 @@ This guide documents the integration between the Post-Implementation Review (PIR
 
 **PIR Report → Epic/Story Document:**
 - PIR report contains link back to Epic/Story document
-- Link format: `[Epic {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md)`
-- Link format: `[Story {N} Documentation](../../PM_and_Portfolio/kanban/epics/Epic-{N}/Story-{N}-{name}.md)`
+- Link format: `[Epic {N} Documentation](../../Project_Management/kanban/epics/Epic-{N}/Epic-{N}.md)`
+- Link format: `[Story {N} Documentation](../../Project_Management/kanban/epics/Epic-{N}/Story-{N}-{name}.md)`
 
 ### 3. PIR Summary Section
 
@@ -113,13 +113,13 @@ This guide documents the integration between the Post-Implementation Review (PIR
 
 **For Epic-Level:**
 ```python
-pir_report_path = f"KB/Reviews/PIR/Epic-{epic}/PIR-Epic-{epic}-v{version}.md"
+pir_report_path = f"docs/Reviews/PIR/Epic-{epic}/PIR-Epic-{epic}-v{version}.md"
 pir_report = read_file(pir_report_path)
 ```
 
 **For Story-Level:**
 ```python
-pir_report_path = f"KB/Reviews/PIR/Story-{story}/PIR-Story-{story}-v{version}.md"
+pir_report_path = f"docs/Reviews/PIR/Story-{story}/PIR-Story-{story}-v{version}.md"
 pir_report = read_file(pir_report_path)
 ```
 
@@ -212,7 +212,7 @@ python packages/frameworks/workflow mgt/scripts/update_pir_kanban.py \
 
 **Epic:** Epic 2 - Workflow Management Framework  
 **Version:** v0.2.11.9+3  
-**PIR Report:** `KB/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`
+**PIR Report:** `docs/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`
 
 **Epic Document Update:**
 ```markdown
@@ -237,7 +237,7 @@ Epic 2 successfully delivered the Workflow Management Framework with comprehensi
 
 **Story:** Story 5 - Post-Implementation Review Workflow  
 **Version:** v0.2.5.11+1  
-**PIR Report:** `KB/Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md`
+**PIR Report:** `docs/Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md`
 
 **Story Document Update:**
 ```markdown
@@ -303,8 +303,8 @@ Story 5 successfully delivered the Post-Implementation Review workflow with comp
 
 - [PIR Workflow Agent Execution Guide](pir-workflow-agent-execution.md) - Step 12 documentation
 - [PIR Workflow Planning](../../Analysis/PIR-workflow-planning.md) - Integration requirements
-- [Kanban Governance Policy](../../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md) - Kanban structure
-- [Bidirectional Wiring Principle](../../../PM_and_Portfolio/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Linking patterns
+- [Kanban Governance Policy](../../../Project_Management/rituals/policy/kanban-governance-policy.md) - Kanban structure
+- [Bidirectional Wiring Principle](../../../Project_Management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Linking patterns
 
 ---
 

@@ -167,7 +167,7 @@ When debug path investigation leads to fix:
 - Fixed test failures in [component]
   - **Root Cause:** [From debug path]
   - **Solution:** [From debug path]
-  - **Debug Path:** `KB/debug-paths/DP-001-test-failure/DP-001-index.md`
+  - **Debug Path:** `docs/debug-paths/DP-001-test-failure/DP-001-index.md`
 ```
 
 ---

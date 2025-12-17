@@ -26,9 +26,9 @@ def test_extract_fr_br_files():
     
     project_root = Path(".")
     changed_files = [
-        "KB/PM_and_Portfolio/kanban/fr-br/FR-019-intake-workflow-automation.md",
+        "docs/Project_Management/kanban/fr-br/FR-019-intake-workflow-automation.md",
         "src/fynd_deals/version.py",
-        "KB/PM_and_Portfolio/kanban/fr-br/BR-005-example.md",
+        "docs/Project_Management/kanban/fr-br/BR-005-example.md",
         "README.md"
     ]
     

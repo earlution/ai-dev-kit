@@ -573,9 +573,9 @@ changelog: "0.4.33.5+1 before 0.4.33.6+1"
 - **Integration Guide:** `kanban-workflow-integration.md`
 - **Kanban ↔ Versioning:** `../kanban/integration/numbering-versioning-integration.md`
 - **Kanban ↔ Workflow:** `../kanban/integration/workflow-management-integration.md`
-- **Versioning Cookbook:** `../../KB/Architecture/Standards_and_ADRs/dev-kit-versioning-cookbook.md`
-- **Versioning Quick Reference:** `../../KB/Architecture/Standards_and_ADRs/versioning-quick-reference.md`
-- **Workflow Flaws Reference:** `../../KB/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
+- **Versioning Cookbook:** `../../docs/Architecture/Standards_and_ADRs/dev-kit-versioning-cookbook.md`
+- **Versioning Quick Reference:** `../../docs/Architecture/Standards_and_ADRs/versioning-quick-reference.md`
+- **Workflow Flaws Reference:** `../../docs/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
 
 ---
 

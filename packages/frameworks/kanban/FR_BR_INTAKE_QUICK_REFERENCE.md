@@ -50,10 +50,10 @@ FR/BR → Search Story
 
 ## File Locations
 
-- **FR/BR:** `KB/PM_and_Portfolio/kanban/fr-br/FR-XXX-[title].md` or `BR-XXX-[title].md`
-- **Epic:** `KB/PM_and_Portfolio/kanban/epics/Epic-X.md`
-- **Story:** `KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-XXX-[title].md`
-- **Board:** `KB/PM_and_Portfolio/kanban/kanban-board.md`
+- **FR/BR:** `docs/Project_Management/kanban/fr-br/FR-XXX-[title].md` or `BR-XXX-[title].md`
+- **Epic:** `docs/Project_Management/kanban/epics/Epic-X.md`
+- **Story:** `docs/Project_Management/kanban/epics/Epic-X/stories/Story-XXX-[title].md`
+- **Board:** `docs/Project_Management/kanban/kanban-board.md`
 
 ---
 

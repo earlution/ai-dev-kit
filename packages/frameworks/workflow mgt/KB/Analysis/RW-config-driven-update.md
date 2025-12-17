@@ -46,7 +46,7 @@ The Release Workflow (RW) documentation has been updated to reflect the **config
 
 ### 2. RW Execution Guide
 
-**File:** `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+**File:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 
 **Updates:**
 - Added **"Config Loading (Before Step 1)"** section with complete pattern
@@ -112,7 +112,7 @@ main_changelog = config['main_changelog'] if config and 'main_changelog' in conf
 - **RW Installer:** `scripts/install_release_workflow.py`
 - **Config Schema:** `config/rw-config-schema.md`
 - **Cursorrules Section:** `cursorrules-rw-trigger-section.md`
-- **Execution Guide:** `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **Execution Guide:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 
 ---
 

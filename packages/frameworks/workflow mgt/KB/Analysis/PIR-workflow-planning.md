@@ -148,8 +148,8 @@ Following the established agent-driven execution pattern, the PIR workflow will 
 - `reviewer_assignment`: `auto` | `manual` | `both` (default: `both` - **support both solo and team-based development**)
 - `require_approval`: `true` | `false` (default: `false` - **support but not default**, configurable per project/organization)
 - `create_follow_ups`: `true` | `false` (default: `true` - **auto-create Kanban tasks** from PIR findings)
-- `knowledge_base_path`: Path to KB for storing PIR reports (default: `KB/Reviews/PIR`) - **impacts KB package design**
-- `template_path`: Path to PIR templates (default: `KB/Documentation/Templates`)
+- `knowledge_base_path`: Path to KB for storing PIR reports (default: `docs/Reviews/PIR`) - **impacts KB package design**
+- `template_path`: Path to PIR templates (default: `docs/Documentation/Templates`)
 - `versioning_strategy`: `project_version` | `separate` | `none` (default: `project_version` - **use project versioning schema, no separate PIR versioning** - PIR reports are project artifacts, not packages)
 
 ---
@@ -212,7 +212,7 @@ Following the established agent-driven execution pattern, the PIR workflow will 
 - Support KB package development (impacts KB package thinking)
 
 **Approach:**
-- Store PIR reports in KB structure: `KB/Reviews/PIR/Epic-{N}/` or `KB/Reviews/PIR/Story-{N}/`
+- Store PIR reports in KB structure: `docs/Reviews/PIR/Epic-{N}/` or `docs/Reviews/PIR/Story-{N}/`
 - Link PIR reports to work items (bidirectional links)
 - Create searchable index of PIR findings (future KB package feature)
 - Enable cross-referencing of similar reviews
@@ -354,8 +354,8 @@ config:
   auto_trigger: true
   require_approval: false
   create_follow_ups: true
-  knowledge_base_path: KB/Reviews/PIR
-  template_path: KB/Documentation/Templates
+  knowledge_base_path: docs/Reviews/PIR
+  template_path: docs/Documentation/Templates
 
 steps:
   - id: step-1
@@ -366,7 +366,7 @@ steps:
     dependencies: []
     config:
       review_level: ${config.review_level}
-      kanban_path: KB/PM_and_Portfolio/kanban
+      kanban_path: docs/Project_Management/kanban
 
   - id: step-2
     name: Gather Review Materials

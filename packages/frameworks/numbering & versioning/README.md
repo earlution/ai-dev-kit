@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Last Updated:** 2025-12-06  
 **Version:** 2.0.0 (includes Epic renumbering strategy, epic branch workflow)
 
-**📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../KB/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
+**📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/Architecture/Standards_and_ADRs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 
 ---
 
@@ -203,15 +203,15 @@ The versioning policy requires that:
 ## Related Documentation
 
 These policies are part of a larger system of interconnected documents:
-- **[Versioning Quick Reference](../../../KB/Architecture/Standards_and_ADRs/versioning-quick-reference.md)** - 1-2 page summary for quick lookup ⚡ *(Dev-kit specific)*
-- **[Dual-Versioning Guide](../../../KB/Architecture/Standards_and_ADRs/dual-versioning-package-managers.md)** - Managing `RC.EPIC.STORY.TASK+BUILD` + SemVer for package managers ⚠️ *(Dev-kit specific)*
+- **[Versioning Quick Reference](../../../docs/Architecture/Standards_and_ADRs/versioning-quick-reference.md)** - 1-2 page summary for quick lookup ⚡ *(Dev-kit specific)*
+- **[Dual-Versioning Guide](../../../docs/Architecture/Standards_and_ADRs/dual-versioning-package-managers.md)** - Managing `RC.EPIC.STORY.TASK+BUILD` + SemVer for package managers ⚠️ *(Dev-kit specific)*
 - **Cursor Rules** (`.cursorrules`) - Fundamental system rules that enforce versioning requirements *(Project-specific)*
 - **Release Workflow Reference** - Automated implementation of versioning schema *(see workflow mgt package)*
 - **Release Workflow Agent Execution Guide** - Step-by-step agent execution patterns *(see workflow mgt package)*
 
 **Note:** Some references point to project-specific files. When implementing in other projects, see `IMPLEMENTATION_GUIDE.md` for customization instructions.
 
-**⚠️ Package Manager Compatibility:** If your project uses package managers (npm, pub.dev, PyPI, etc.) that require Semantic Versioning (`MAJOR.MINOR.PATCH`), see the [Dual-Versioning Guide](../../../KB/Architecture/Standards_and_ADRs/dual-versioning-package-managers.md) for mapping strategies and implementation patterns.
+**⚠️ Package Manager Compatibility:** If your project uses package managers (npm, pub.dev, PyPI, etc.) that require Semantic Versioning (`MAJOR.MINOR.PATCH`), see the [Dual-Versioning Guide](../../../docs/Architecture/Standards_and_ADRs/dual-versioning-package-managers.md) for mapping strategies and implementation patterns.
 
 ## Usage
 

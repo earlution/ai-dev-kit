@@ -191,7 +191,7 @@ rw_step_2_logic:
 - RW Step 2 must read Story file to identify completed task
 - Version bump logic must handle task transitions correctly
 
-**Reference:** See `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` for detailed RW Step 2 logic.
+**Reference:** See `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` for detailed RW Step 2 logic.
 
 ---
 
@@ -486,13 +486,13 @@ validation_scripts:
 
 ### Reference Documentation
 
-- **Workflow Flaws Reference:** `../../KB/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
-- **Versioning Error Reference:** `../../KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` - Versioning-specific error reference
+- **Workflow Flaws Reference:** `../../docs/Architecture/Standards_and_ADRs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
+- **Versioning Error Reference:** `../../docs/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` - Versioning-specific error reference
 
 ### Dev-Kit Specific (Reference Only)
 
-- **Dev-Kit Integration Guide:** `KB/Architecture/Standards_and_ADRs/dev-kit-kanban-versioning-rw-integration.md`
-- **Dev-Kit Validation:** `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-003-kanban-versioning-rw-integration.md`
+- **Dev-Kit Integration Guide:** `docs/Architecture/Standards_and_ADRs/dev-kit-kanban-versioning-rw-integration.md`
+- **Dev-Kit Validation:** `docs/Project_Management/kanban/epics/Epic-4/Story-003-kanban-versioning-rw-integration.md`
 
 ---
 

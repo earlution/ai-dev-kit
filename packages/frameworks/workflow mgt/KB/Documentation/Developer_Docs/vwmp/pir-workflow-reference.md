@@ -25,10 +25,10 @@ housekeeping_policy: keep
 - **Related:** E2:S05 - Post-Implementation Review Workflow
 
 **Policy References:**
-- **[Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md)** - Work item structure and task-level versioning requirements
+- **[Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md)** - Work item structure and task-level versioning requirements
 - **[Versioning Strategy](../../Architecture/Standards_and_ADRs/versioning-strategy.md)** - Forensic traceability and canonical ordering principles
 - **[Versioning Policy (Schema)](../../Architecture/Standards_and_ADRs/versioning-policy.md)** - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
-- **[Bidirectional Wiring Principle](../../PM_and_Portfolio/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md)** - Linking patterns for traceability
+- **[Bidirectional Wiring Principle](../../Project_Management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md)** - Linking patterns for traceability
 
 ---
 
@@ -44,7 +44,7 @@ The PIR workflow enables **continuous improvement** through structured reflectio
 
 ### How This Workflow Implements Policy Requirements
 
-**From [Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md):**
+**From [Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md):**
 - ✅ **Work item traceability:** Step 14 links PIR to Epic/Story/Tasks using version references
 - ✅ **Documentation sync:** Step 12 updates Kanban documentation with PIR summaries
 - ✅ **Task creation:** Step 13 auto-creates follow-up Kanban tasks from PIR findings
@@ -59,7 +59,7 @@ The PIR workflow enables **continuous improvement** through structured reflectio
 - ✅ **Version range (Epic):** Epic-level PIRs reference version range (first to last)
 - ✅ **Single version (Story):** Story-level PIRs reference single version (last in Story)
 
-**From [Bidirectional Wiring Principle](../../PM_and_Portfolio/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md):**
+**From [Bidirectional Wiring Principle](../../Project_Management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md):**
 - ✅ **Bidirectional links:** Step 12, 14 establish bidirectional links (Epic/Story ↔ PIR report)
 - ✅ **Traceability:** Complete traceability through version references and links
 
@@ -136,7 +136,7 @@ The PIR workflow consists of **16 steps** organized into 5 phases. The workflow 
 
 ### Phase 4: Documentation
 
-**Purpose:** Create report, update KB/Kanban, create tasks
+**Purpose:** Create report, update docs/Kanban, create tasks
 
 - **Step 10:** Create PIR Report
   - Generates comprehensive PIR report using template
@@ -208,8 +208,8 @@ config:
   reviewer_assignment: both  # auto | manual | both
   require_approval: false
   create_follow_ups: true
-  knowledge_base_path: KB/Reviews/PIR
-  template_path: KB/Documentation/Templates
+  knowledge_base_path: docs/Reviews/PIR
+  template_path: docs/Documentation/Templates
 ```
 
 ### Configuration Parameters
@@ -223,8 +223,8 @@ config:
 | `reviewer_assignment` | `auto \| manual \| both` | `both` | Reviewer assignment method |
 | `require_approval` | `boolean` | `false` | Require approval before completion |
 | `create_follow_ups` | `boolean` | `true` | Auto-create follow-up tasks |
-| `knowledge_base_path` | `string` | `KB/Reviews/PIR` | Path to KB for PIR reports |
-| `template_path` | `string` | `KB/Documentation/Templates` | Path to PIR templates |
+| `knowledge_base_path` | `string` | `docs/Reviews/PIR` | Path to KB for PIR reports |
+| `template_path` | `string` | `docs/Documentation/Templates` | Path to PIR templates |
 
 ---
 
@@ -671,7 +671,7 @@ Generates comprehensive PIR report using template, populates all sections with r
 ```json
 {
   "pir_report_created": true,
-  "report_path": "KB/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md",
+  "report_path": "docs/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md",
   "version": "v0.2.11.9+3"
 }
 ```
@@ -1030,7 +1030,7 @@ Step 1 (Identify Review Scope)
 ### Knowledge Base Integration
 
 **Storage:**
-- PIR reports stored in `KB/Reviews/PIR/` (Step 11)
+- PIR reports stored in `docs/Reviews/PIR/` (Step 11)
 - Indexed for searchability
 - Cross-referenced with related PIRs
 - Linked to Epic/Story and Tasks
@@ -1053,7 +1053,7 @@ Step 1 (Identify Review Scope)
 7. Step 7: Review technical implementation
 8. Step 8: Assess documentation quality
 9. Step 9: Identify lessons learned
-10. Step 10: Create PIR report (`KB/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`)
+10. Step 10: Create PIR report (`docs/Reviews/PIR/Epic-2/PIR-Epic-2-v0.2.11.9+3.md`)
 11. Step 11: Update KB with PIR report
 12. Step 12: Update Epic 2 document with PIR summary
 13. Step 13: Create follow-up tasks from findings
@@ -1077,7 +1077,7 @@ Step 1 (Identify Review Scope)
 7. Step 7: Review technical implementation
 8. Step 8: Assess documentation quality
 9. Step 9: Identify lessons learned
-10. Step 10: Create PIR report (`KB/Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md`)
+10. Step 10: Create PIR report (`docs/Reviews/PIR/Story-5/PIR-Story-5-v0.2.5.11+1.md`)
 11. Step 11: Update KB with PIR report
 12. Step 12: Update Story 5 document with PIR summary
 13. Step 13: Create follow-up tasks from findings
@@ -1114,7 +1114,7 @@ Step 1 (Identify Review Scope)
 - **Check:** Verify Epic/Story status before triggering
 
 **Issue 3: Template Missing**
-- **Solution:** Ensure templates exist in `KB/Documentation/Templates/`
+- **Solution:** Ensure templates exist in `docs/Documentation/Templates/`
 - **Check:** Template file names and locations
 
 **Issue 4: Significance Evaluation Unclear**
@@ -1123,7 +1123,7 @@ Step 1 (Identify Review Scope)
 
 **Issue 5: KB Directory Missing**
 - **Solution:** Create directory structure if needed
-- **Check:** `KB/Reviews/PIR/` structure
+- **Check:** `docs/Reviews/PIR/` structure
 
 **Issue 6: Version Extraction Fails**
 - **Solution:** Verify Epic/Story document has version in header
@@ -1140,7 +1140,7 @@ Step 1 (Identify Review Scope)
 - [PIR Workflow Agent Execution Guide](pir-workflow-agent-execution.md) - Step-by-step execution guide
 - [PIR-Kanban Integration Guide](pir-kanban-integration-guide.md) - Kanban integration patterns
 - [PIR-Versioning Integration Guide](pir-versioning-integration-guide.md) - Versioning integration patterns
-- [PIR Templates](../../../KB/Documentation/Templates/) - Epic and Story PIR templates
+- [PIR Templates](../../../docs/Documentation/Templates/) - Epic and Story PIR templates
 - [Release Workflow Reference](release-workflow-reference.md) - RW reference (for integration context)
 
 ---

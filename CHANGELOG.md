@@ -17,6 +17,34 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.6+14] - 18-12-25
+
+🏗️ Restructured: Major directory restructuring - KB→docs, added knowledge/ subdirectory
+
+### Changed
+
+- **Directory Structure**
+  - Renamed `KB/` → `docs/` (standard documentation directory)
+  - Renamed `PM_and_Portfolio/` → `Project_Management/` (single project focus)
+  - Added `docs/knowledge/` subdirectory for knowledge base content
+  - Moved Analysis, Reviews, Use_Cases to `docs/knowledge/`
+
+- **Canonical Structure Documentation**
+  - Updated structure documentation to reflect new layout
+  - Clarified distinction between user-facing and developer-facing documentation
+  - Documented `knowledge/` directory purpose (articles, blog posts, analysis, reviews, use cases)
+  - Proposed self-documenting names: `User_Guides/` and `Developer_Documentation/`
+
+### Moved
+
+- All files from `KB/` to `docs/` level
+- Analysis, Reviews, Use_Cases to `docs/knowledge/`
+- Updated 627+ path references throughout codebase
+
+**Full changelog:** [`docs/knowledge/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+14.md`](docs/knowledge/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+14.md)
+
+---
+
 ## [0.6.6.6+13] - 18-12-25
 
 ✅ Finalized: Incorporated user feedback and finalized canonical Kanban structure
@@ -35,7 +63,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Structure finalized and ready for implementation
   - Clear rationale provided for all decisions, including Data Management placement (E5 before Testing)
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+13.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+13.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+13.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+13.md)
 
 ---
 
@@ -70,7 +98,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Removed `ultimate-canonical-kanban-structure-revised-proposal.md` to prevent doc bloat
   - All updates now go directly to main canonical structure document
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+12.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+12.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+12.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+12.md)
 
 ---
 
@@ -98,7 +126,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Goal: Any competent programmer should be able to implement from E4S01 output
   - All tasks follow SOLID software engineering principles
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+11.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+11.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+11.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+11.md)
 
 ---
 
@@ -114,7 +142,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - All epic number references updated throughout document
   - Summary table corrected to reflect proper epic numbering
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+10.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+10.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+10.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+10.md)
 
 ---
 
@@ -133,7 +161,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - E9 becomes Security (enhanced with Dependabot/project security)
   - Includes questions for clarification on epic numbering and scope
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+9.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+9.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+9.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+9.md)
 
 ---
 
@@ -154,7 +182,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Document structure templates
   - Validation rules and implementation guidance
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+8.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+8.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+8.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+8.md)
 
 ---
 
@@ -169,7 +197,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Follows IGTM MCP format with progressive disclosure
   - Comprehensive coverage of all 3 applications (web, playbooks, webhooks-service)
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+7.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+7.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+7.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+7.md)
 
 ---
 
@@ -180,7 +208,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 ### Added
 
 - **Good/Bad Practice Catalog** - Comprehensive catalog of good and bad practices
-  - Organized by framework dimension (Kanban, KB/documentation, workflows, cursorrules)
+  - Organized by framework dimension (Kanban, docs/documentation, workflows, cursorrules)
   - Includes frequency data, impact assessment, and examples
   - Identifies perfect convergence practices (KB directory naming 100%, E/S/T hierarchy 100%)
   - Documents critical bad practices (Epic mashup 30%, Epic 9 mismatch in source, missing cursorrules in source)
@@ -191,7 +219,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Provides root cause analysis for Epic mashup (Epic 9 mismatch in ai-dev-kit source)
   - Includes prevention strategies and recommendations
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+6.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+6.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+6.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+6.md)
 
 ---
 
@@ -203,14 +231,14 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 - **Meta-Analysis Executive Summary** - Major rewrite to decision-focused format
   - Added proposed "ultimate" canonical Kanban E/S/T structure
-  - Added proposed "ultimate" canonical KB/documentation structure
+  - Added proposed "ultimate" canonical docs/documentation structure
   - Added proposed "ultimate" canonical workflow structure
   - Added proposed "ultimate" canonical cursorrules structure
   - Added key decisions summary tables
   - Removed excessive tactical detail (moved to supporting docs)
   - Focus shifted to decision-oriented, executive-friendly format
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+5.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+5.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+5.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+5.md)
 
 ---
 
@@ -228,7 +256,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Provides actionable recommendations prioritized by severity
   - Executive-friendly format with key takeaways and next steps
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+4.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+4.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+4.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+4.md)
 
 ---
 
@@ -251,7 +279,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Present all findings (good and bad) in unified format
   - Include cross-cutting insights about ai-dev-kit source gaps
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+3.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+3.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+3.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+3.md)
 
 ---
 
@@ -275,7 +303,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - **Meta-Analysis Scope** - Expanded from 9 to 10 projects
 - **Epic Mashup Root Cause** - Documented Epic 9 mismatch in ai-dev-kit source
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+2.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+2.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+2.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+2.md)
 
 ---
 
@@ -297,7 +325,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - **Story Status** - Updated `E6:S06` status to IN PROGRESS
 - **Task Checklist** - Updated T01 acceptance criteria to reflect completed work
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+1.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+1.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+1.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.6.6+1.md)
 
 ---
 
@@ -307,13 +335,13 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ### Added
 
-- **Workflow Structure Analysis** (`KB/Analysis/workflow-structure-analysis.md`)
+- **Workflow Structure Analysis** (`docs/Analysis/workflow-structure-analysis.md`)
   - Comprehensive workflow structure analysis across all projects
   - Workflow file naming, YAML structure, step patterns, configuration patterns
   - Workflow execution, integration, customization, validation patterns
   - "Ultimate" canonical workflow structure recommendations
 
-- **Cursorrules Structure Analysis** (`KB/Analysis/cursorrules-structure-analysis.md`)
+- **Cursorrules Structure Analysis** (`docs/Analysis/cursorrules-structure-analysis.md`)
   - Comprehensive `.cursorrules` structure analysis across all projects
   - Cursorrules naming, structure, trigger patterns, rule patterns
   - Document lifecycle, git restrictions, project-specific rules
@@ -327,7 +355,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 ### Notes
 
 - Part of comprehensive ADK implementation analysis initiative (E6:S06)
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.6.4+42.md` for full details.
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.6.4+42.md` for full details.
 
 ---
 
@@ -345,7 +373,7 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 - This version referenced **Confidentia Epic 9** and predates dev-kit-specific epics.  
 - Starting with `v0.1.1.1+1`, all releases use **dev-kit-specific Epic numbers**.
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.21.3+2.md` for full details.
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.21.3+2.md` for full details.
 
 ## [0.9.4.1+1] - 11-12-25
 
@@ -376,7 +404,7 @@ Captured Starborn Legacy Zombie Story case study report as unstructured book mat
 - **Epic:** Epic 9 - Book Related Work
 - **Coordinates With:** E9:S01 (Book Content Development) - Material will be processed into structured book content
 - **Source Project:** Starborn Legacy (E15:S01 case study)
-- **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.4.1+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.4.1+1.md)
 
 ---
 
@@ -407,7 +435,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E9:S04 - Book Material Capture
 - **Epic:** Epic 9 - Book Related Work
 - **Coordinates With:** E9:S01 (Book Content Development) - Material captured here will be processed into structured content
-- **Detailed Changelog:** [CHANGELOG_v0.9.4.0+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.4.0+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.9.4.0+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.9.4.0+1.md)
 
 ---
 
@@ -419,7 +447,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Canonical Stories Document:** Created `CANONICAL_STORIES.md` documenting reusable story patterns (Bug Reports, Feature Requests)
 - **Framework Documentation:** Added canonical stories reference to Kanban framework README
 
-**Details:** [CHANGELOG_v0.6.4.2+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.4.2+1.md)
+**Details:** [CHANGELOG_v0.6.4.2+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.4.2+1.md)
 
 ---
 
@@ -436,7 +464,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Bug Reports Story:** Created Story 4 in Epic 6 to track framework-related bug reports
 - **Feature Requests Story:** Created Story 5 in Epic 6 to track framework-related feature requests
 
-**Details:** [CHANGELOG_v0.6.4.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.4.1+1.md)
+**Details:** [CHANGELOG_v0.6.4.1+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.4.1+1.md)
 
 ---
 
@@ -459,7 +487,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.1.1+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.6.1.1+2.md` for full details
 - Architecture supports Git submodules (Phase 1), CLI tool (Phase 2), and package managers (Phase 3)
 - Frameworks transitioning from copy-paste to auto-updating dependencies
 
@@ -498,7 +526,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E5:S06 - Policy Documentation Structure
 - **Epic:** Epic 5 - Documentation Management and Maintenance
 - **Feature Request:** FR-022 - Policy Documents Machine-Readable Salience Section
-- **Detailed Changelog:** [CHANGELOG_v0.5.6.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.6.1+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.5.6.1+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.6.1+1.md)
 
 ---
 
@@ -507,13 +535,13 @@ Established material capture infrastructure for unstructured book content. Creat
 📚 Documentation: Legacy repository incorporation analysis and planning
 
 ### Added
-- **Legacy Repository Analysis** (`KB/Architecture/Standards_and_ADRs/legacy-repo-analysis.md`):
+- **Legacy Repository Analysis** (`docs/Architecture/Standards_and_ADRs/legacy-repo-analysis.md`):
   - Comprehensive analysis of ai-architect-kit and paradigm repositories
   - Component-by-component evaluation
   - Incorporation plan with 3 phases (High, Medium, Low priority)
   - Source material references and recommendations
   - Missing components analysis
-- **Story 5: Legacy Repository Incorporation** (`KB/PM_and_Portfolio/kanban/epics/Epic-5/Story-005-legacy-repository-incorporation.md`):
+- **Story 5: Legacy Repository Incorporation** (`docs/Project_Management/kanban/epics/Epic-5/Story-005-legacy-repository-incorporation.md`):
   - Complete story with 25 tasks across 4 phases
   - Phase 0: Planning and Preparation (T01-T04)
   - Phase 1: High Priority Components (T05-T09) - Architectural principles, AI collaboration, template script
@@ -523,7 +551,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Each task includes problem statement, approach, deliverables, success criteria, and dependencies
 
 ### Changed
-- **Epic 5 Documentation** (`KB/PM_and_Portfolio/kanban/epics/Epic-5/Epic-5.md`):
+- **Epic 5 Documentation** (`docs/Project_Management/kanban/epics/Epic-5/Epic-5.md`):
   - Added Story 5 to story checklist
   - Updated last updated timestamp
 
@@ -548,7 +576,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Troubleshooting Guide:** Added "Issue: RW Trigger Not Working" section with solutions
 - **FAQ:** Added "How do I enable the 'RW' trigger in Cursor?" entry
 
-**Details:** [CHANGELOG_v0.5.4.8+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.4.8+1.md)
+**Details:** [CHANGELOG_v0.5.4.8+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.4.8+1.md)
 
 ---
 
@@ -671,7 +699,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Added
 
-- Created framework dependency installation guide (`KB/Documentation/User_Docs/framework-dependency-installation-guide.md`)
+- Created framework dependency installation guide (`docs/Documentation/User_Docs/framework-dependency-installation-guide.md`)
 - Comprehensive installation instructions for all three dependency methods (Git submodules, CLI tool, package managers)
 - Post-installation setup procedures
 - Verification steps and troubleshooting section
@@ -685,7 +713,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.4.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.4.5+1.md` for full details
 - Installation guide is designed to be simple, accessible, and technically accurate
 - Ready for testing by setting up a new project using ai-dev-kit as template
 - First deliverable in comprehensive Epic 6 user documentation series
@@ -714,7 +742,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.2.1+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.2.1+2.md` for full details
 - Validators enable automated detection of documentation issues
 - Link validator checks internal and external links
 - Consistency validator checks version, cross-reference, and terminology consistency
@@ -761,7 +789,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Added
 
-- Created documentation update triggers document (`KB/Architecture/Standards_and_ADRs/documentation-update-triggers.md`)
+- Created documentation update triggers document (`docs/Architecture/Standards_and_ADRs/documentation-update-triggers.md`)
 - Defined automatic triggers (Code Changes, Framework Changes, Policy Changes)
 - Defined manual triggers (Regular Reviews, User Feedback, Quality Assurance)
 - Documented update procedures for each trigger type
@@ -778,7 +806,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.1.4+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.5.1.4+2.md` for full details
 - Story 1 (Documentation Maintenance Framework) is now COMPLETE - all 4 tasks completed
 - Update triggers ensure documentation stays current with codebase and processes
 - Automatic triggers enable proactive updates
@@ -1458,7 +1486,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.6+2.md` for full details.
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.6+2.md` for full details.
 
 ---
 
@@ -3328,7 +3356,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E4:S06 - Comprehensive Canonical EST Template System
 - **Epic:** Epic 4 - Kanban Framework
 - **Feature Request:** FR-005
-- **Detailed Changelog:** [CHANGELOG_v0.4.6.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.6.4+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.4.6.4+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.6.4+1.md)
 
 ---
 
@@ -3360,7 +3388,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E4:S06 - Comprehensive Canonical EST Template System
 - **Epic:** Epic 4 - Kanban Framework
 - **Feature Request:** FR-005
-- **Detailed Changelog:** [CHANGELOG_v0.4.6.3+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.6.3+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.4.6.3+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.6.3+1.md)
 
 ---
 
@@ -3387,7 +3415,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **README:** Added reference to CANONICAL_EPICS.md in package contents
 
 ### Notes
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.5.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.5.1+1.md` for full details
 - Canonical epics provide standard organizational structure for projects using Kanban framework
 - New project-specific epics should start at Epic 7
 
@@ -3395,18 +3423,18 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ## [0.4.4.1+2] - 05-12-25
 
-📚 Documentation: Documentation maintenance - Update all Kanban and KB/ docs to reflect completion
+📚 Documentation: Documentation maintenance - Update all Kanban and docs/ docs to reflect completion
 
 ### Changed
 
-- Updated `KB/PM_and_Portfolio/kanban/kanban-board.md`: Epic 1 & 2 marked COMPLETE
-- Updated `KB/PM_and_Portfolio/kanban/_index.md`: All epics shown as COMPLETE, structure updated
-- Updated `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-cookbook.md`: Examples updated
-- Updated `KB/Architecture/Standards_and_ADRs/dev-kit-kanban-versioning-rw-integration.md`: Examples updated
+- Updated `docs/Project_Management/kanban/kanban-board.md`: Epic 1 & 2 marked COMPLETE
+- Updated `docs/Project_Management/kanban/_index.md`: All epics shown as COMPLETE, structure updated
+- Updated `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-cookbook.md`: Examples updated
+- Updated `docs/Architecture/Standards_and_ADRs/dev-kit-kanban-versioning-rw-integration.md`: Examples updated
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.4.1+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.4.1+2.md` for full details
 - Corrects documentation inconsistencies where board views showed incomplete status
 - All 4 Epics now correctly shown as COMPLETE ✅ across all documentation
 
@@ -3426,7 +3454,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.4.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.4.1+1.md` for full details
 - All Epic and Story files now consolidated in their respective Epic directories
 - Improved navigability and reduced directory depth
 
@@ -3451,7 +3479,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.7+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.7+1.md` for full details
 - All 3 critical gaps from T004 validation addressed
 - RW → Kanban integration now fully compliant with "ALL sections" requirement
 
@@ -3471,7 +3499,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.6+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.6+1.md` for full details
 - Examples and edge cases document complements integration guide (T005)
 - All Tasks in Story 3 are now complete
 
@@ -3491,7 +3519,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.5+1.md` for full details
 - Integration guide serves as canonical reference for dev-kit integration
 - All three integration points documented with dev-kit specific examples
 
@@ -3509,7 +3537,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.4+1.md` for full details
 - Validation confirms partial RW → Kanban integration with good foundation
 - Gaps identified: Epic Story Checklist updates, forensic marker format consistency, "ALL sections" requirement
 - Overall status: ⚠️ PARTIAL - Integration is functional but not fully compliant with "ALL sections" requirement
@@ -3529,7 +3557,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.3+1.md` for full details
 - Validation confirms strong integration with well-implemented integration points
 - Minor gaps identified primarily relate to documentation and validation comprehensiveness
 - Overall status: ✅ GOOD - Integration is functional with minor documentation gaps
@@ -3568,7 +3596,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+2.md` for full details
 - Root cause analysis and documentation updates summary provide complete understanding of issue and resolution
 - All 8 documentation files updated to prevent recurrence
 - Multiple layers of protection now in place: validation, automatic detection, explicit requirements
@@ -3592,7 +3620,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+1.md` for full details
 - Validation report identifies critical inconsistency requiring immediate attention
 - Root cause: VERSION_TASK not automatically updated when moving to new Tasks
 - Recommendations provided for immediate fixes, process improvements, and long-term solutions
@@ -3612,7 +3640,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.1+1.md` for full details
 - Story 3: Kanban + Versioning + RW Integration started
 - Review identified step numbering discrepancy (framework docs reference Step 4, but RW uses Step 6)
 - Path references need updating for dev-kit's consolidated `kanban/` structure
@@ -3645,7 +3673,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.5+1.md` for full details
 - Story 2: FR/BR Intake to Tasks is now COMPLETE (all 5 tasks finished)
 - Guides provide audience-specific instructions: agent guide for programmatic execution, user guide for human users
 - Quick reference provides decision flow, version format, templates, and validation checklist
@@ -3671,7 +3699,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.4+1.md` for full details
 - Guide provides complete intake process from FR/BR receipt to Task creation
 - Examples demonstrate decision flow, version assignment, and Kanban integration
 - Will be used in T005 to create agent/user-friendly guides
@@ -3692,7 +3720,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.3+1.md` for full details
 - Templates align with EPIC_TEMPLATE and STORY_TEMPLATE structure
 - Templates support decision flow from T002 and will be used in T004 examples
 
@@ -3716,7 +3744,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.2+1.md` for full details
 - Decision flow provides foundation for templates and guides in next tasks
 - Flow designed for both AI agents (systematic) and human users (intuitive)
 
@@ -3736,7 +3764,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.2.1+1.md` for full details
 - Analysis identifies critical gaps: FR/BR templates, decision flow, process guide
 - Clear path forward: Templates → Decision Flow → Documentation → Guides
 
@@ -3758,7 +3786,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Notes
 
 - Framework README: `packages/frameworks/kanban/README.md`
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+6.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+6.md` for full details
 - **Story 1 for Epic 4 is now COMPLETE** - all 5 tasks completed
 
 ---
@@ -3782,7 +3810,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Notes
 
 - Templates: `packages/frameworks/kanban/templates/EPIC_TEMPLATE.md` and `STORY_TEMPLATE.md`
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+5.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+5.md` for full details
 
 ---
 
@@ -3807,7 +3835,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Notes
 
 - Framework policy: `packages/frameworks/kanban/policies/kanban-governance-policy.md` (now comprehensive canonical SoT)
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+4.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+4.md` for full details
 
 ---
 
@@ -3823,8 +3851,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- Findings document: `KB/PM_and_Portfolio/kanban/epics/Epic-4/stories/Story-001-dev-kit-kanban-implementation/T002-fynd-deals-epic15-kanban-findings.md`
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+3.md` for full details
+- Findings document: `docs/Project_Management/kanban/epics/Epic-4/stories/Story-001-dev-kit-kanban-implementation/T002-fynd-deals-epic15-kanban-findings.md`
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+3.md` for full details
 
 ---
 
@@ -3840,8 +3868,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- Gap analysis: `KB/PM_and_Portfolio/kanban/epics/Epic-4/stories/Story-001-dev-kit-kanban-implementation/T001-gap-analysis-report.md`
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+2.md` for full details
+- Gap analysis: `docs/Project_Management/kanban/epics/Epic-4/stories/Story-001-dev-kit-kanban-implementation/T001-gap-analysis-report.md`
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+2.md` for full details
 
 ---
 
@@ -3851,7 +3879,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Added
 
-- Created **Epic 4: Kanban Framework** (`KB/PM_and_Portfolio/kanban/epics/Epic-4.md`)
+- Created **Epic 4: Kanban Framework** (`docs/Project_Management/kanban/epics/Epic-4.md`)
 - Created **Story 1: Dev Kit Kanban Implementation** with 5 initial tasks
 - Updated Kanban board views with Epic 4 Story 1 references
 
@@ -3859,7 +3887,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - Epic 4 owns the `packages/frameworks/kanban/` package
 - Story 1 tasks focus on establishing dev-kit as canonical SoT for Kanban policies and templates
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.1.1+1.md` for full details
 
 ---
 
@@ -3874,7 +3902,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Updated kanban-board.md: Epic 3 and all 3 stories marked as COMPLETE ✅
   - Epic 3: Numbering & Versioning Framework is now complete with all stories finished
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+2.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+2.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+2.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+2.md)
 
 ---
 
@@ -3913,7 +3941,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Previous builds couldn't learn from previous fix attempts
   - New Step 6 ensures each build is informed by previous attempts
 
-**Full changelog:** [`KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+1.md`](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+1.md)
+**Full changelog:** [`docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+1.md`](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.6+1.md)
 
 ---
 
@@ -3931,7 +3959,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.5+1.md` for full details
 - Guide located at: `packages/frameworks/numbering & versioning/integration/integration-troubleshooting-guide.md`
 - Includes decision trees, debugging strategies, and edge case handling
 - Framework-level documentation (portable, template-ready)
@@ -3952,7 +3980,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.4+1.md` for full details
 - Guide located at: `packages/frameworks/numbering & versioning/integration/integration-examples-external-projects.md`
 - Includes greenfield, migration, parallel development, and testing examples
 - Framework-level documentation (portable, template-ready)
@@ -3974,7 +4002,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.3+1.md` for full details
 - Guide located at: `packages/frameworks/numbering & versioning/integration/integration-patterns-and-best-practices.md`
 - Includes decision trees, anti-patterns, and versioning strategies
 - Framework-level documentation (portable, template-ready)
@@ -3996,7 +4024,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.2+1.md` for full details
 - Guide located at: `packages/frameworks/numbering & versioning/integration/kanban-workflow-integration.md`
 - Framework-level documentation (portable, template-ready)
 - Distinct from dev-kit implementation validation (E4:S03)
@@ -4015,7 +4043,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.3.1+1.md` for full details
 - Story focuses on framework-level integration documentation (portable, template-ready)
 - Distinct from E4:S03 (dev-kit specific validation)
 - Tasks defined for external project integration patterns
@@ -4038,7 +4066,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Version:** Bumped to 0.3.2.10+1
 
 ### Notes
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.10+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.10+1.md` for full details
 - Release Workflow YAML already includes PVW as step-2.5
 - Agent execution guide needs to be updated to document step-2.5 execution
 
@@ -4065,7 +4093,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic 3:** Added T09 to task checklist
 
 ### Notes
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.9+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.9+1.md` for full details
 - PVW follows proven agentic execution pattern from Release Workflow
 - Emphasizes intelligent analysis, validation as tools, criteria as guidance
 - Comprehensive TODO tracking prevents agentic drift during execution
@@ -4081,7 +4109,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task Scope:** Investigate current package versioning state, analyze dual-versioning strategy applicability, propose solution
 
 ### Notes
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.8+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.8+1.md` for full details
 - Task addresses concerns about SemVer continuity and mapping strategy appropriateness for package management
 - Will investigate Workflow Management package versioning pattern (1.0, 1.1, 1.2) mentioned by user
 
@@ -4092,7 +4120,7 @@ Established material capture infrastructure for unstructured book content. Creat
 📚 Documentation: Dual-versioning guide for package manager compatibility
 
 ### Added
-- **Dual-Versioning Guide** (`KB/Architecture/Standards_and_ADRs/dual-versioning-package-managers.md`):
+- **Dual-Versioning Guide** (`docs/Architecture/Standards_and_ADRs/dual-versioning-package-managers.md`):
   - Comprehensive guide for managing `RC.EPIC.STORY.TASK+BUILD` + SemVer (`MAJOR.MINOR.PATCH`)
   - Problem statement: Package managers require SemVer while internal development uses RC.EPIC.STORY.TASK+BUILD
   - Five mapping strategies:
@@ -4114,13 +4142,13 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Framework README** (`packages/frameworks/numbering & versioning/README.md`):
   - Added dual-versioning section to Related Documentation
   - Added package manager compatibility warning
-- **Dev-Kit Versioning Policy** (`KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`):
+- **Dev-Kit Versioning Policy** (`docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`):
   - Added reference to dual-versioning guide in Related Documentation section
-- **Epic 3 Documentation** (`KB/PM_and_Portfolio/kanban/epics/Epic-3/Epic-3.md`):
+- **Epic 3 Documentation** (`docs/Project_Management/kanban/epics/Epic-3/Epic-3.md`):
   - Updated Story 2 status to IN PROGRESS
   - Added T07 to task checklist
   - Updated last updated timestamp
-- **Story 2 Documentation** (`KB/PM_and_Portfolio/kanban/epics/Epic-3/Story-002-versioning-cookbook-and-examples.md`):
+- **Story 2 Documentation** (`docs/Project_Management/kanban/epics/Epic-3/Story-002-versioning-cookbook-and-examples.md`):
   - Added T07: Create dual-versioning guide for package manager compatibility
   - Updated status to IN PROGRESS
   - Updated last updated timestamp
@@ -4145,7 +4173,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.6+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.6+2.md` for full details
 - Changelog ordering is an ongoing maintenance concern requiring continuous attention
 - Task remains active to track future ordering violations and ensure process continues to work correctly
 
@@ -4166,8 +4194,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.6+1.md` for full details
-- Investigation report: `KB/Architecture/Standards_and_ADRs/changelog-ordering-investigation-report.md`
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.6+1.md` for full details
+- Investigation report: `docs/Architecture/Standards_and_ADRs/changelog-ordering-investigation-report.md`
 - All Epic 2 entries now correctly appear before Epic 3 entries
 - Validator confirms canonical ordering is correct
 
@@ -4188,7 +4216,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.5+3.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.5+3.md` for full details
 - Validation script prevents versioning errors by enforcing RW Step 2 logic
 - RW Step 8 now runs version bump validator in strict mode
 
@@ -4207,7 +4235,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.5+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.5+2.md` for full details
 - RW Step 2 now correctly handles tasks completed out of sequential order
 - Documentation updated to reflect out-of-order completion as valid scenario
 
@@ -4226,7 +4254,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.5+1.md` for full details
 - Quick reference linked from cookbook, dev-kit versioning policy, and framework README
 - Covers version schema, common scenarios, critical rules, and anti-patterns
 - **Note:** This task was completed after Task 6, demonstrating out-of-order task completion (see edge case documentation)
@@ -4254,7 +4282,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.4+1.md` for full details
 - Each entry includes symptom, root cause, corrective pattern, and preventive guidance
 - References to related documentation (error reference guide, root cause analysis)
 - Versioning cookbook now complete with all major scenarios including edge cases
@@ -4280,7 +4308,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.3+1.md` for full details
 - Examples demonstrate end-to-end integration of Kanban, Versioning, and RW
 - Examples align with existing integration documentation
 - Foundation for T004 (edge cases and anti-patterns)
@@ -4305,7 +4333,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.2+1.md` for full details
 - Cookbook is project-agnostic and safe to copy into other projects
 - Foundation for T003 (cross-framework examples) and T004 (edge cases)
 
@@ -4325,7 +4353,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.2.1+1.md` for full details
 - Scenarios validated against framework policy, dev-kit policy, and integration docs
 - Foundation for T002 cookbook document with worked examples
 
@@ -4347,7 +4375,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - Cursorrules template is now fully abstract and reusable across projects
 - All examples teach the pattern rather than listing stale instances
 - References canonical policy documents instead of duplicating schema details
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.6+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.6+1.md` for full details
 
 ---
 
@@ -4372,7 +4400,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - Projects MUST copy framework files (not reference them) for independence and customization
 - Framework remains canonical SoT while projects adapt for their context
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.5+1.md` for full details
 
 ---
 
@@ -4390,7 +4418,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - Version file now includes docstring explaining schema and dev-kit versioning approach
 - CHANGELOG format verified to match framework (DD-MM-YY date format, archive structure)
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.4+1.md` for full details
 
 ---
 
@@ -4419,7 +4447,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - All 6 critical gaps from gap analysis (T001) have been addressed
 - Policy now fully aligned with framework while maintaining dev-kit-specific context
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.3+1.md` for full details
 
 ---
 
@@ -4439,8 +4467,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- Findings document: `KB/PM_and_Portfolio/kanban/epics/Epic-3/stories/Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md`
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.2+1.md` for full details
+- Findings document: `docs/Project_Management/kanban/epics/Epic-3/stories/Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md`
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.2+1.md` for full details
 
 ---
 
@@ -4460,8 +4488,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Notes
 
-- Gap analysis: `KB/PM_and_Portfolio/kanban/epics/Epic-3/stories/Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md`
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.1+2.md` for full details
+- Gap analysis: `docs/Project_Management/kanban/epics/Epic-3/stories/Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md`
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.1+2.md` for full details
 
 ---
 
@@ -4471,7 +4499,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ### Added
 
-- Created **Epic 3: Numbering & Versioning Framework** (`KB/PM_and_Portfolio/kanban/epics/Epic-3.md`)
+- Created **Epic 3: Numbering & Versioning Framework** (`docs/Project_Management/kanban/epics/Epic-3.md`)
 - Created **Story 1: Dev Kit Alignment with Versioning Framework** with 5 initial tasks
 - Updated Kanban board views with Epic 3 Story 1 references
 
@@ -4479,7 +4507,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - Epic 3 owns the `packages/frameworks/numbering & versioning/` package
 - Story 1 tasks focus on establishing dev-kit as canonical SoT for versioning policies
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.3.1.1+1.md` for full details
 
 ---
 
@@ -4569,7 +4597,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Changes
 
 **Framework Expansion:**
-- ✅ Updated `KB/Analysis/comprehensive-project-analysis-framework.md` — Expanded from 4 to 10 analysis dimensions
+- ✅ Updated `docs/Analysis/comprehensive-project-analysis-framework.md` — Expanded from 4 to 10 analysis dimensions
 - ✅ Added: Versioning Patterns, Project Structure Patterns, Documentation Patterns, Configuration Patterns, Testing Patterns, Tooling & Automation Patterns
 - ✅ Updated Phase 2 (Pattern Extraction) to extract patterns across all dimensions
 - ✅ Updated Phase 5 (Canonical Structure Design) to design canonical structures for all dimensions
@@ -4594,7 +4622,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+3.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.9+3.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+3.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.9+3.md)
 
 ---
 
@@ -4609,11 +4637,11 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Changes
 
 **New Documentation:**
-- ✅ `KB/Documentation/ai-dev-kit-vision-and-purpose.md` — Vision, problem statement, book context, adoption paths, and success criteria
+- ✅ `docs/Documentation/ai-dev-kit-vision-and-purpose.md` — Vision, problem statement, book context, adoption paths, and success criteria
 
 **README Updates:**
 - ✅ Root `README.md` — Added **"Why AI Dev Kit?"** section and link to the vision document
-- ✅ `KB/README.md` — Updated structure and Getting Started to point at the vision document first
+- ✅ `docs/README.md` — Updated structure and Getting Started to point at the vision document first
 
 ### Testing
 
@@ -4625,7 +4653,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+2.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.9+2.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+2.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.9+2.md)
 
 ---
 
@@ -4662,7 +4690,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.9+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.9+1.md)
 
 ---
 
@@ -4701,7 +4729,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.8+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.8+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.8+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.8+1.md)
 
 ---
 
@@ -4742,7 +4770,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019, FR-014
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.7+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.7+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.7+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.7+1.md)
 
 ---
 
@@ -4778,7 +4806,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019, FR-020
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.6+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.6+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.6+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.6+1.md)
 
 ---
 
@@ -4814,7 +4842,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.5+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.5+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.5+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.5+1.md)
 
 ---
 
@@ -4851,7 +4879,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.4+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.4+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.4+1.md)
 
 ---
 
@@ -4886,7 +4914,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.3+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.3+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.3+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.3+1.md)
 
 ---
 
@@ -4921,7 +4949,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.2+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.2+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.2+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.2+1.md)
 
 ---
 
@@ -4955,7 +4983,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+2.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.1+2.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+2.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.1+2.md)
 
 ---
 
@@ -4986,7 +5014,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S11 - Intake Workflow Automation
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
-- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.1+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.11.1+1.md)
 
 ---
 
@@ -5018,7 +5046,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Requests:** FR-017, FR-018, FR-020
-- **Detailed Changelog:** [CHANGELOG_v0.2.10.7+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.7+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.7+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.7+1.md)
 
 ---
 
@@ -5045,7 +5073,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-020 - Version Validator Abstract Space Awareness
 - **Depends On:** E2:S10:T01-T02 (Doc-Init Implementation)
-- **Detailed Changelog:** [CHANGELOG_v0.2.10.6+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.6+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.6+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.6+1.md)
 
 ---
 
@@ -5072,7 +5100,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Depends On:** E2:S10:T01-T04 (All doc-init implementation tasks)
-- **Detailed Changelog:** [CHANGELOG_v0.2.10.5+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.5+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.5+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.5+1.md)
 
 ---
 
@@ -5101,7 +5129,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Feature Request:** FR-018 - Abstract Space for Zero-Numbered E/S/T Docs
 - **Depends On:** E2:S10:T01-T03 (Doc-Init Implementation)
-- **Detailed Changelog:** [CHANGELOG_v0.2.10.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.4+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.4+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.4+1.md)
 
 ---
 
@@ -5127,7 +5155,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support), E2:S10:T02 (Doc-Init Validation)
-- **Detailed Changelog:** [CHANGELOG_v0.2.10.3+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.3+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.3+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.3+1.md)
 
 ---
 
@@ -5155,7 +5183,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support)
-- **Detailed Changelog:** [CHANGELOG_v0.2.10.2+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.2+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.2+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.2+1.md)
 
 ---
 
@@ -5187,7 +5215,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Depends On:** E2:S09 (Kanban Granularity & Discrete Task Docs - RW Integration)
-- **Detailed Changelog:** [CHANGELOG_v0.2.10.1+0.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.1+0.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.1+0.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.10.1+0.md)
 
 **Note:** This is a doc-init build (`+0`). No functional changes are included. The next build for this task will be `+1` when functional work begins.
 
@@ -5221,7 +5249,7 @@ Completed E2:S09 by verifying T06 completion status and marking story as COMPLET
 - **Epic:** Epic 2 - Workflow Management
 - **Blocks:** E2:S10 (Doc-Init Build +0) - E2:S09 must be complete before E2:S10 can proceed
 - **Enables:** FR-017 (Versioning Policy Hardening), FR-020 (Version Validator Abstract Space Awareness)
-- **Detailed Changelog:** [CHANGELOG_v0.2.9.6+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.6+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.9.6+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.6+1.md)
 
 ---
 
@@ -5251,7 +5279,7 @@ Completed comprehensive documentation and migration guide for 3-tier structure w
 - **Story:** E2:S09 - Kanban Granularity & Discrete Task Docs - RW Integration
 - **Epic:** Epic 2 - Workflow Management
 - **Related Stories:** E4:S11 (Kanban Granularity & Discrete Task Docs)
-- **Detailed Changelog:** [CHANGELOG_v0.2.9.5+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.5+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.9.5+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.5+1.md)
 
 ---
 
@@ -5284,7 +5312,7 @@ Updated Release Workflow Agent Execution Guide with comprehensive Task document 
 - **Story:** E2:S09 - Kanban Granularity & Discrete Task Docs (RW Integration)
 - **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - COMPLETE ✅
 - **FR-016:** Kanban Granularity & Discrete Task Docs
-- **Detailed Changelog:** [CHANGELOG_v0.2.9.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.4+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.9.4+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.4+1.md)
 
 ---
 
@@ -5476,7 +5504,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Task Template** (`packages/frameworks/kanban/templates/TASK_TEMPLATE.md`):
   - Reviewed and confirmed as leaf node (no changes needed - already contains all detail)
 
-- **Kanban Board** (`KB/PM_and_Portfolio/kanban/kanban-board.md`):
+- **Kanban Board** (`docs/Project_Management/kanban/kanban-board.md`):
   - Updated E4:S11 status to IN PROGRESS (v0.4.11.4+1)
   - Updated task completion markers for T01-T04
 
@@ -5907,7 +5935,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.0+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.9.0+1.md` for full details
 - Story 9 will coordinate work across Epic 2 (Workflow Management) and Epic 4 (Kanban Framework)
 
 ---
@@ -6068,7 +6096,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E2:S08 - Harden Release Workflow Reliability
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
-- **Detailed Changelog:** [CHANGELOG_v0.2.8.7+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.7+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.7+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.7+1.md)
 
 ---
 
@@ -6100,7 +6128,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E2:S08 - Harden Release Workflow Reliability
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
-- **Detailed Changelog:** [CHANGELOG_v0.2.8.6+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.6+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.6+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.6+1.md)
 
 ---
 
@@ -6132,7 +6160,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E2:S08 - Harden Release Workflow Reliability
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
-- **Detailed Changelog:** [CHANGELOG_v0.2.8.5+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.5+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.5+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.5+1.md)
 
 ---
 
@@ -6164,7 +6192,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E2:S08 - Harden Release Workflow Reliability
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
-- **Detailed Changelog:** [CHANGELOG_v0.2.8.4+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.4+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.4+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.4+1.md)
 
 ---
 
@@ -6195,7 +6223,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E2:S08 - Harden Release Workflow Reliability
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
-- **Detailed Changelog:** [CHANGELOG_v0.2.8.3+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.3+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.3+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.3+1.md)
 
 ---
 
@@ -6229,7 +6257,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E2:S08 - Harden Release Workflow Reliability
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
-- **Detailed Changelog:** [CHANGELOG_v0.2.8.2+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.2+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.2+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.2+1.md)
 
 ---
 
@@ -6260,7 +6288,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E2:S08 - Harden Release Workflow Reliability
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
-- **Detailed Changelog:** [CHANGELOG_v0.2.8.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.1+1.md)
+- **Detailed Changelog:** [CHANGELOG_v0.2.8.1+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.8.1+1.md)
 
 ---
 
@@ -6391,7 +6419,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Usage Guide:**
-- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-usage-guide.md`
+- ✅ Created `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/pir-workflow-usage-guide.md`
 - ✅ Quick start guide for Epic and Story-level PIRs
 - ✅ Common scenarios with step-by-step examples
 - ✅ Best practices for timing, preparation, execution, documentation, and follow-up
@@ -6421,7 +6449,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Task:** Task 15 - Create PIR usage guide and examples
 - **PIR Reference:** `pir-workflow-reference.md`
 - **PIR Execution Guide:** `pir-workflow-agent-execution.md`
-- **Example Reports:** `KB/Reviews/PIR/Epic-2/PIR-Epic-2-TEST-*.md`, `KB/Reviews/PIR/Story-2/PIR-Story-2-TEST-*.md`
+- **Example Reports:** `docs/Reviews/PIR/Epic-2/PIR-Epic-2-TEST-*.md`, `docs/Reviews/PIR/Story-2/PIR-Story-2-TEST-*.md`
 
 ---
 
@@ -6434,7 +6462,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Reference Documentation:**
-- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-reference.md`
+- ✅ Created `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/pir-workflow-reference.md`
 - ✅ Documented all 16 workflow steps with detailed descriptions
 - ✅ Documented configuration options and parameters
 - ✅ Documented integration points (RW, Kanban, Versioning, KB)
@@ -6507,7 +6535,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 13 - Test PIR workflow with sample Story
 - **Test Subject:** Story 2 - PDCA Integration into Release Workflow (v0.2.2.8+1)
-- **Test Report:** `KB/Reviews/PIR/Story-2/PIR-STORY-TEST-EXECUTION-REPORT.md`
+- **Test Report:** `docs/Reviews/PIR/Story-2/PIR-STORY-TEST-EXECUTION-REPORT.md`
 
 ---
 
@@ -6548,7 +6576,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 12 - Test PIR workflow with sample Epic
 - **Test Subject:** Epic 2 (partial - Stories 1, 2, 5)
-- **Test Report:** `KB/Reviews/PIR/Epic-2/PIR-TEST-EXECUTION-REPORT.md`
+- **Test Report:** `docs/Reviews/PIR/Epic-2/PIR-TEST-EXECUTION-REPORT.md`
 
 ---
 
@@ -6561,8 +6589,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New KB Structure:**
-- ✅ Created `KB/Reviews/PIR/` directory structure
-- ✅ Created `KB/Reviews/PIR/README.md` with comprehensive documentation
+- ✅ Created `docs/Reviews/PIR/` directory structure
+- ✅ Created `docs/Reviews/PIR/README.md` with comprehensive documentation
 - ✅ Defined directory structure for Epic and Story PIR reports
 - ✅ Established naming conventions (PIR-Epic-{N}-v{version}.md, PIR-Story-{N}-v{version}.md)
 - ✅ Documented PIR workflow integration points
@@ -6580,8 +6608,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management Framework
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 11 - Create PIR knowledge base structure
-- **Planning:** `packages/frameworks/workflow mgt/KB/Analysis/PIR-workflow-planning.md`
-- **Templates:** `KB/Documentation/Templates/epic-pir-template.md`, `KB/Documentation/Templates/story-pir-template.md`
+- **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
+- **Templates:** `docs/Documentation/Templates/epic-pir-template.md`, `docs/Documentation/Templates/story-pir-template.md`
 
 ---
 
@@ -6594,7 +6622,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Integration Guide:**
-- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-versioning-integration-guide.md`
+- ✅ Created `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/pir-versioning-integration-guide.md`
 - ✅ Documented use of project versioning schema (no separate PIR versioning)
 - ✅ Documented PIR report naming convention with versions
 - ✅ Documented version extraction methods (Epic-level range, Story-level single)
@@ -6622,7 +6650,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Task:** Task 10 - Integrate PIR with versioning system
 - **PIR Execution Guide:** `pir-workflow-agent-execution.md` (Steps 10, 14)
 - **Integration Guide:** `pir-versioning-integration-guide.md`
-- **Versioning Policy:** `KB/Architecture/Standards_and_ADRs/versioning-policy.md`
+- **Versioning Policy:** `docs/Architecture/Standards_and_ADRs/versioning-policy.md`
 
 ---
 
@@ -6635,7 +6663,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Integration Guide:**
-- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-kanban-integration-guide.md`
+- ✅ Created `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/pir-kanban-integration-guide.md`
 - ✅ Documented PIR status tracking in Kanban documents
 - ✅ Documented bidirectional linking patterns
 - ✅ Documented PIR summary section structure
@@ -6714,7 +6742,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Template:**
-- ✅ Created `KB/Documentation/Templates/story-pir-template.md`
+- ✅ Created `docs/Documentation/Templates/story-pir-template.md`
 - ✅ Comprehensive template with all PIR sections
 - ✅ Includes frontmatter with lifecycle metadata
 - ✅ Structured sections for goals, tasks, technical assessment
@@ -6736,7 +6764,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management Framework
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 7 - Create Story PIR template
-- **Planning:** `packages/frameworks/workflow mgt/KB/Analysis/PIR-workflow-planning.md`
+- **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
 
 ---
 
@@ -6749,7 +6777,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Template:**
-- ✅ Created `KB/Documentation/Templates/epic-pir-template.md`
+- ✅ Created `docs/Documentation/Templates/epic-pir-template.md`
 - ✅ Comprehensive template with all PIR sections
 - ✅ Includes frontmatter with lifecycle metadata
 - ✅ Structured sections for goals, stories, technical assessment
@@ -6771,7 +6799,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management Framework
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 6 - Create Epic PIR template
-- **Planning:** `packages/frameworks/workflow mgt/KB/Analysis/PIR-workflow-planning.md`
+- **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
 
 ---
 
@@ -6784,7 +6812,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Execution Guide:**
-- ✅ Created `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-agent-execution.md`
+- ✅ Created `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/pir-workflow-agent-execution.md`
 - ✅ Documented all 16 workflow steps with detailed execution instructions
 - ✅ Included examples for Epic-level and Story-level reviews
 - ✅ Documented integration points (RW, Kanban, Versioning, KB)
@@ -6838,7 +6866,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management Framework
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 4 - Create PIR workflow YAML definition
-- **Planning:** `packages/frameworks/workflow mgt/KB/Analysis/PIR-workflow-planning.md`
+- **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
 
 ---
 
@@ -6851,7 +6879,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Design Document:**
-- ✅ Created `packages/frameworks/workflow mgt/KB/Analysis/T03-story-level-pir-workflow-design.md`
+- ✅ Created `packages/frameworks/workflow mgt/docs/Analysis/T03-story-level-pir-workflow-design.md`
 - ✅ Defined significance evaluation criteria and process
 - ✅ Defined 5 phases with 15 steps (includes significance evaluation)
 - ✅ Comprehensive review scope and objectives
@@ -6864,7 +6892,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Preparation phase (evaluate significance, identify Story, gather materials, prepare checklist)
 - Analysis phase (review Tasks, analyze goals, review technical)
 - Reflection phase (lessons learned, patterns, anti-patterns)
-- Documentation phase (create report, update KB/Kanban, create tasks)
+- Documentation phase (create report, update docs/Kanban, create tasks)
 - Integration phase (link work items, archive materials)
 
 ### Related Work
@@ -6872,8 +6900,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management Framework
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 3 - Design Story-level PIR workflow
-- **Planning:** `packages/frameworks/workflow mgt/KB/Analysis/PIR-workflow-planning.md`
-- **Template:** `KB/Documentation/Templates/story-pir-template.md`
+- **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
+- **Template:** `docs/Documentation/Templates/story-pir-template.md`
 
 ---
 
@@ -6886,7 +6914,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changes
 
 **New Design Document:**
-- ✅ Created `packages/frameworks/workflow mgt/KB/Analysis/T02-epic-level-pir-workflow-design.md`
+- ✅ Created `packages/frameworks/workflow mgt/docs/Analysis/T02-epic-level-pir-workflow-design.md`
 - ✅ Defined 5 phases with 14 steps
 - ✅ Comprehensive review scope and objectives
 - ✅ Review criteria and quality metrics
@@ -6897,7 +6925,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Preparation phase (identify Epic, gather materials, prepare checklist)
 - Analysis phase (review Stories, analyze goals, review technical)
 - Reflection phase (lessons learned, patterns, anti-patterns)
-- Documentation phase (create report, update KB/Kanban, create tasks)
+- Documentation phase (create report, update docs/Kanban, create tasks)
 - Integration phase (link work items, archive materials)
 
 ### Related Work
@@ -6905,8 +6933,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management Framework
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 2 - Design Epic-level PIR workflow
-- **Planning:** `packages/frameworks/workflow mgt/KB/Analysis/PIR-workflow-planning.md`
-- **Template:** `KB/Documentation/Templates/epic-pir-template.md`
+- **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
+- **Template:** `docs/Documentation/Templates/epic-pir-template.md`
 
 ---
 
@@ -6924,7 +6952,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story 5 Document:** Updated with T01 completion status
 - **Epic 2 Document:** Updated to reflect Story 5 planning completion
 
-**Details:** [CHANGELOG_v0.2.5.1+1.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.5.1+1.md)
+**Details:** [CHANGELOG_v0.2.5.1+1.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.5.1+1.md)
 
 ---
 
@@ -6945,7 +6973,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.9+3.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.9+3.md` for full details
 - All task references now use consistent `Exx:Sxx:Txx` format (e.g., `E1:S01:T01`, `E2:S04:T09`)
 - Never use standalone `T01` or `T001` - always include full Epic/Story/Task context
 - Templates ensure consistency for all future work
@@ -6966,7 +6994,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.9+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.9+2.md` for full details
 - README now properly introduces project to prospective users
 - Follows industry-standard Best-README-Template structure
 - Accessible to both technical and non-technical users
@@ -6985,7 +7013,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.9+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.9+1.md` for full details
 
 ---
 
@@ -6999,7 +7027,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.8+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.8+2.md` for full details
 - Document now includes comprehensive investigation narrative
 - Test cases demonstrate solution effectiveness
 - Metrics show clear impact (0% → 100% workflow completion)
@@ -7021,7 +7049,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.8+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.8+1.md` for full details
 - Agents executing RW will now handle push failures gracefully
 - Workflow doesn't fail due to network restrictions
 - Users receive clear instructions when manual push is required
@@ -7039,7 +7067,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.7+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.7+1.md` for full details
 - Lifecycle metadata enables automated housekeeping via Doc Housekeeping Workflow (future)
 - Evergreen documents (standards, Kanban, templates) are never deleted
 - Timeboxed documents (analysis) are archived after 90 days
@@ -7058,7 +7086,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.6+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.6+1.md` for full details
 - DRW (Debug Round Workflow) provides checklist-driven debugging for test failures, regressions, and production bugs
 - Package is standalone (no dependencies) but can integrate with Kanban and Workflow Management
 - Ideal for simple projects or as complement to Kanban for structured debugging
@@ -7076,7 +7104,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.5+3.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.5+3.md` for full details
 - Documents can be classified as evergreen (permanent), timeboxed (archive), or transient (delete)
 - TTL-based expiration enables automated housekeeping to prevent documentation bloat
 - Foundation for future Doc Housekeeping Workflow package
@@ -7098,7 +7126,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.5+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.5+2.md` for full details
 - RW now fully aligned with installer philosophy: single source of truth (rw-config.yaml)
 - All steps consistently reference config values with backward-compatible fallback patterns
 
@@ -7118,7 +7146,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.5+1.md` for full details
 - Identified 6 usability issues (2 high, 3 medium, 1 low priority) - all documented with recommendations
 - Installer is functional and usable, identified improvements are enhancements not blockers
 
@@ -7139,7 +7167,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.4+1.md` for full details
 - Quickstart guide provides copy-paste ready examples for Python and Node.js projects
 - README now clearly recommends installer over manual setup
 
@@ -7161,7 +7189,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.3+1.md` for full details
 - Installer reduces RW adoption from 13-17 manual edits to 1 (answering installer questions)
 - Validation scripts support both config-driven (new) and legacy (backward compatible) modes
 
@@ -7182,7 +7210,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.2+1.md` for full details
 - Schema defines 5 required keys + 6 optional keys, maps cleanly to RW YAML and `.cursorrules` needs
 - Example configs serve as templates for installer CLI (T03)
 
@@ -7202,7 +7230,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.1+3.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.1+3.md` for full details
 - Analysis provides concrete foundation for T02 (config schema design) and T03 (installer CLI)
 
 ---
@@ -7221,7 +7249,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.1+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.1+2.md` for full details
 - Workflow hardening guide is ready to copy into other repos for consistent RW behavior
 
 ---
@@ -7236,7 +7264,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.4.1+1.md` for full details
 - No code or workflow logic changes yet; this release captures analysis and planning work for the RW installer
 
 ---
@@ -7253,7 +7281,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.6+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.6+2.md` for full details
 - No code or workflow logic changes, documentation-only release
 
 ---
@@ -7268,7 +7296,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.6+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.6+1.md` for full details
 - Guide enables users to adapt workflows to their specific projects and use cases
 
 ---
@@ -7285,7 +7313,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.5+1.md` for full details
 - Generator enables rapid creation of new workflows following agent-driven execution pattern
 
 ---
@@ -7304,7 +7332,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.4+1.md` for full details
 - Testing Workflow demonstrates agent-driven execution for testing workflows
 
 ---
@@ -7324,7 +7352,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.3+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.3+2.md` for full details
 - This improvement prevents versioning errors where BUILD is incremented instead of TASK
 
 ---
@@ -7342,7 +7370,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.3+1.md` for full details
 - Migration Workflow demonstrates agent-driven execution for migration workflows
 
 ---
@@ -7359,7 +7387,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.2+1.md` for full details
 - Refactor Workflow demonstrates agent-driven execution for code quality workflows
 
 ---
@@ -7377,7 +7405,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.1+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.1+2.md` for full details
 - Taxonomy serves as foundation for workflow examples
 
 ---
@@ -7393,7 +7421,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.3.1+1.md` for full details
 - Story 3 will provide workflow examples beyond Release Workflow
 - All workflows will follow agent-driven execution pattern
 
@@ -7411,7 +7439,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.8+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.8+2.md` for full details
 - All 8 tasks (T01-T08) completed successfully
 - PDCA integration fully implemented
 
@@ -7433,7 +7461,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.8+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.8+1.md` for full details
 - Existing task files remain unchanged (backward compatible)
 - New task files should use Txx format
 
@@ -7445,7 +7473,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Added
 
-- Migration guide: `KB/Architecture/Standards_and_ADRs/task-naming-migration-guide.md`
+- Migration guide: `docs/Architecture/Standards_and_ADRs/task-naming-migration-guide.md`
 
 ### Changed
 
@@ -7456,7 +7484,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.7+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.7+2.md` for full details
 - Format change: `Exx:Sxx:Txxx` → `Exx:Sxx:Txx`
 - Example: `E20:S07:T010` → `E20:S07:T10`
 - Existing tasks remain backward compatible
@@ -7480,7 +7508,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.7+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.7+1.md` for full details
 - Policy change: `Exx:Sxx:Txxx` → `Exx:Sxx:Txx`
 - Example: `E20:S07:T010` → `E20:S07:T10`
 - Existing tasks remain backward compatible
@@ -7505,7 +7533,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.6+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.6+1.md` for full details
 - Steps 12-13 are optional but recommended
 - Backward compatibility maintained
 
@@ -7527,7 +7555,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.5+1.md` for full details
 - PLAN and ACT phase templates already existed and were verified
 - All templates are project-agnostic
 - Examples cover multiple scenarios
@@ -7554,7 +7582,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.4+1.md` for full details
 - DO phase ensures commit messages match changelog verification status
 - Language patterns prevent overly confident claims for unverified fixes
 
@@ -7580,7 +7608,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.3+1.md` for full details
 - PLAN section is optional for backward compatibility
 - PLAN phase integrates with CHECK (Step 12) and ACT (Step 13) phases
 
@@ -7604,7 +7632,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.2+1.md` for full details
 - Step 13 implements ACT phase of PDCA cycle
 - Step 13 completes the Document-Commit-Reflect pattern
 - Steps 12-13 together complete PDCA cycle integration
@@ -7630,7 +7658,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.1+1.md` for full details
 - Step 12 implements CHECK phase of PDCA cycle
 - Step 12 is optional but recommended for continuous improvement
 - Foundation for Step 13 (ACT phase) implementation
@@ -7654,7 +7682,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.0+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.0+1.md` for full details
 - Story 2 establishes foundation for PDCA cycle integration into Release Workflow
 - All 6 tasks created with detailed approaches and acceptance criteria
 
@@ -7715,7 +7743,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic 2/Story 1 Docs:** Updated with Task 6 and version markers
 
 ### Notes
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.6+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.6+1.md` for full details
 - Bug was identified by been-there project during framework sync
 - Fix will support both formats to maintain compatibility
 
@@ -7741,7 +7769,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+5.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+5.md` for full details
 - Cursorrules section now fully aligned with dev-kit versioning policy
 - Template remains ready for other projects while including dev-kit examples
 
@@ -7765,7 +7793,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+4.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+4.md` for full details
 - Examples tagged: version file paths, handler names, version numbers, branch names, Kanban paths
 
 ---
@@ -7782,8 +7810,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+3.md` for full details
-- Audit report: `KB/PM_and_Portfolio/kanban/epics/Epic-2/stories/Story-001-rw-agent-execution-and-docs/T001-audit-report.md`
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+3.md` for full details
+- Audit report: `docs/Project_Management/kanban/epics/Epic-2/stories/Story-001-rw-agent-execution-and-docs/T001-audit-report.md`
 - Findings will be addressed in T002 and T003
 
 ---
@@ -7807,7 +7835,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+2.md` for full details
 - Verification methods: Test suite execution or manual testing
 - Unverified fixes must be logged as "Attempted Fix (Pending Verification)"
 
@@ -7899,7 +7927,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 - Created comprehensive scalable KB pattern documentation (T006)
 - Defined canonical KB pattern with core sections (always present) and optional sections (scale-dependent)
-- Documented full menu of possible KB sections: Architecture, PM & Portfolio, Changelog, Guides, Engineering, Operations, Testing, Product, Enablement, Data
+- Documented full menu of possible KB sections: Architecture, Project Management, Changelog, Guides, Engineering, Operations, Testing, Product, Enablement, Data
 - Mapped example project KB structure to canonical pattern
 - Defined dev-kit's minimal subset instantiation (Architecture, PM, Changelog, Guides)
 - Created adoption guidance for new and existing projects
@@ -7908,7 +7936,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.6+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.6+1.md` for full details
 - Pattern supports projects from small frameworks (dev-kit) to large codebases (100K+ LOC)
 - Maintains 3-level default depth while providing comprehensive section menu
 
@@ -7925,7 +7953,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.5+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.5+2.md` for full details
 - Story 3 establishes solid KB foundation for ai-dev-kit
 - All deliverables completed: analysis, principles, migration guide, implementation, documentation, scalable pattern
 
@@ -7951,7 +7979,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.5+1.md` for full details
 - KB structure overview serves as primary reference for understanding and navigating KB
 
 ---
@@ -7962,11 +7990,11 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Added
 
-- Created `KB/Guides/` directory structure
-- Added `KB/Guides/README.md` with overview and navigation
-- Created `KB/Guides/Getting_Started/` directory with README
-- Created `KB/Guides/Framework_Consumption/` directory with README
-- Updated `KB/README.md` to include Guides section
+- Created `docs/Guides/` directory structure
+- Added `docs/Guides/README.md` with overview and navigation
+- Created `docs/Guides/Getting_Started/` directory with README
+- Created `docs/Guides/Framework_Consumption/` directory with README
+- Updated `docs/README.md` to include Guides section
 
 ### Changed
 
@@ -7974,7 +8002,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.4+1.md` for full details
 - Phase 2 of migration plan implemented (low risk - adds new structure only)
 - Guides structure ready for content
 
@@ -7987,7 +8015,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Added
 
 - Created comprehensive KB structure principles document
-- Documented separation of concerns (Architecture, PM & Portfolio, Changelog, Guides)
+- Documented separation of concerns (Architecture, Project Management, Changelog, Guides)
 - Defined naming conventions (directories, files, changelogs, special files)
 - Established file organization rules (directory structure, file placement, content organization)
 - Documented cross-referencing patterns (internal, external, reference format)
@@ -7997,7 +8025,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.2+1.md` for full details
 - Principles document provides foundation for consistent KB organization
 - Foundation for migration guide (T003) and implementation (T004)
 
@@ -8018,7 +8046,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.3.1+1.md` for full details
 - Foundation for establishing solid KB structure for dev-kit
 - Story 3: Core KB Structure for Dev Kit is now IN PROGRESS
 
@@ -8039,7 +8067,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.5+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.5+1.md` for full details
 - All three packages now have clear modularity documentation
 - Story 2: Package & Repo Architecture is now COMPLETE
 
@@ -8060,7 +8088,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.4+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.4+1.md` for full details
 - Decision tree and package selection matrix included
 - Practical examples with project structure templates
 - Foundation for README updates (T005)
@@ -8082,7 +8110,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.3+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.3+1.md` for full details
 - No hard dependencies between packages, all dependencies are optional
 - All packages can be used standalone (9-10/10 independence scores)
 - Foundation for consumption patterns (T004) and README updates (T005)
@@ -8103,7 +8131,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.2+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.2+1.md` for full details
 - Core principles: Standalone First, Copy Don't Reference, Soft Dependencies, Clear Boundaries
 - Foundation for dependency matrix (T003) and consumption patterns (T004)
 
@@ -8122,7 +8150,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.1+1.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.2.1+1.md` for full details
 - Analysis shows all packages are highly independent (9-10/10 scores)
 - Dependencies are mostly soft/optional, allowing flexible consumption
 
@@ -8141,7 +8169,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Notes
 
 - All existing content preserved; only structure and presentation improved
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.1.1+2.md` for full details
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.1.1+2.md` for full details
 
 ---
 
@@ -8158,7 +8186,7 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ### Notes
 
-- See `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.1.1+1.md` for full details.
+- See `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.1.1.1+1.md` for full details.
 
 ---
 

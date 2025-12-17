@@ -120,7 +120,7 @@ The Debug Path Framework provides a **checklist-driven, multi-phase protocol** f
 ### Future (Planned)
 
 13. **`workflows/debug-path-workflow.yaml`** — Agent-driven Debug Path Workflow
-14. **`KB/Documentation/Developer_Docs/vwmp/debug-path-workflow-agent-execution.md`** — Workflow execution guide
+14. **`docs/Documentation/Developer_Docs/vwmp/debug-path-workflow-agent-execution.md`** — Workflow execution guide
 
 ---
 

@@ -89,7 +89,7 @@ This epic encompasses deployment, infrastructure, and DevOps practices, includin
 - Coordinates with Epic 23 (Process Automation & CI/CD) for CI/CD pipeline
 - *Parallel Development Candidacy:* Safe (can coordinate with Epic 23)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-14/Story-001-deployment-pipeline-setup.md`
+> Full story: `docs/Project_Management/kanban/epics/Epic-14/Story-001-deployment-pipeline-setup.md`
 
 ---
 
@@ -126,7 +126,7 @@ This epic encompasses deployment, infrastructure, and DevOps practices, includin
 - Coordinates with Epic 10 (Data Management) for database hosting
 - *Parallel Development Candidacy:* Blocked (requires Story 1 deployment)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-14/Story-002-infrastructure-setup.md`
+> Full story: `docs/Project_Management/kanban/epics/Epic-14/Story-002-infrastructure-setup.md`
 
 ---
 
@@ -164,7 +164,7 @@ This epic encompasses deployment, infrastructure, and DevOps practices, includin
 - Coordinates with Epic 19 (Analytics) for monitoring dashboards
 - *Parallel Development Candidacy:* Blocked (requires Story 2 infrastructure)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-14/Story-003-monitoring-and-logging.md`
+> Full story: `docs/Project_Management/kanban/epics/Epic-14/Story-003-monitoring-and-logging.md`
 
 ---
 

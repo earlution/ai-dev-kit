@@ -85,7 +85,7 @@ This document designs the Epic-level Post-Implementation Review (PIR) workflow, 
 **Purpose:** Collect all materials needed for comprehensive review
 
 **Materials to Gather:**
-- Epic document (`KB/PM_and_Portfolio/kanban/epics/Epic-{N}/Epic-{N}.md`)
+- Epic document (`docs/Project_Management/kanban/epics/Epic-{N}/Epic-{N}.md`)
 - All Story documents within Epic
 - All Task documents within Stories
 - Changelog entries for Epic version range
@@ -262,7 +262,7 @@ This document designs the Epic-level Post-Implementation Review (PIR) workflow, 
 - Metrics
 
 **Report Location:**
-- `KB/Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md`
+- `docs/Reviews/PIR/Epic-{N}/PIR-Epic-{N}-v{version}.md`
 
 **Deliverables:**
 - Complete Epic PIR report
@@ -464,7 +464,7 @@ The Epic PIR report follows the template structure:
 ### Knowledge Base Integration
 
 **Storage:**
-- PIR reports stored in `KB/Reviews/PIR/Epic-{N}/`
+- PIR reports stored in `docs/Reviews/PIR/Epic-{N}/`
 - Indexed for searchability
 - Cross-referenced with related PIRs
 - Linked to Epic and Stories
@@ -489,7 +489,7 @@ The Epic PIR report follows the template structure:
 ## Related Documentation
 
 - [PIR Workflow Planning](PIR-workflow-planning.md) - Complete planning document
-- [Epic PIR Template](../../../KB/Documentation/Templates/epic-pir-template.md) - Epic PIR template
+- [Epic PIR Template](../../../docs/Documentation/Templates/epic-pir-template.md) - Epic PIR template
 - [PIR Workflow YAML](../../workflows/pir-workflow.yaml) - Workflow definition
 - [Release Workflow Reference](../Documentation/Developer_Docs/vwmp/release-workflow-reference.md) - RW integration reference
 

@@ -13,7 +13,7 @@ Schema: RC.EPIC.STORY.TASK+BUILD
 Version ordering is canonical (by version number, not timestamp).
 This enables parallel epic development and accurate changelog ordering.
 
-See: KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md
+See: docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md
 Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
 VERSION_TASK = 6      # Task number (Task 6: Cross-project meta-analysis and canonical framework design)
-VERSION_BUILD = 13    # Build number (E6:S06:T06+13 - Incorporated user feedback on questions and finalized canonical structure)
+VERSION_BUILD = 14    # Build number (E6:S06:T06+14 - Restructured docs directory: KB→docs, added knowledge/ subdirectory, clarified User_Guides vs Developer_Documentation)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

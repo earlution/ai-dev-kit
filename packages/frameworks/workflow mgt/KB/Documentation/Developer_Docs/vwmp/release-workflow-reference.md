@@ -58,7 +58,7 @@ housekeeping_policy: keep
 - **Related:** Initial framework extraction from fynd.deals Epic 15, Story 1
 
 **Policy References:**
-- **[Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md)** - Work item structure and task-level versioning requirements
+- **[Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md)** - Work item structure and task-level versioning requirements
 - **[Versioning Strategy](../../Architecture/Standards_and_ADRs/versioning-strategy.md)** - Forensic traceability and canonical ordering principles
 - **[Versioning Policy (Schema)](../../Architecture/Standards_and_ADRs/versioning-policy.md)** - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
 - **[Cursor Rules](../../../../.cursorrules)** - Fundamental system rules ⭐
@@ -79,7 +79,7 @@ The Release Workflow explains each step, its parameters, configuration options, 
 
 ### How This Workflow Implements Policy Requirements
 
-**From [Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md):**
+**From [Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md):**
 - ✅ **Task-level versioning:** Step 1 validates version TASK matches active Kanban task
 - ✅ **Forensic markers:** Step 5 updates Epic/Story docs with version numbers (forensic markers)
 - ✅ **Work item traceability:** Step 5 maintains links between versions, tasks, and Kanban board entries
@@ -122,7 +122,7 @@ The Release Workflow consists of **14 steps** organized into 3 phases. Each step
 
 - **Step 2:** Bump Version
   - Enforces `RC.EPIC.STORY.TASK+BUILD` schema from [Versioning Policy](../../Architecture/Standards_and_ADRs/versioning-policy.md)
-  - Validates task-level versioning alignment per [Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md)
+  - Validates task-level versioning alignment per [Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md)
   - **Depends on:** Step 1 (Branch Safety Check) must pass first
 
 - **Step 3:** Create Detailed Changelog
@@ -141,7 +141,7 @@ The Release Workflow consists of **14 steps** organized into 3 phases. Each step
   - Maintains fix attempt history for knowledge transfer between builds
 
 - **Step 7:** Auto-update Kanban Docs
-  - Implements [Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md) requirement for forensic markers
+  - Implements [Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md) requirement for forensic markers
   - Updates Epic/Story documentation with version numbers and task completion status
   - Maintains traceability grid (version ↔ epic/story/task ↔ changelogs ↔ kanban markers)
 
@@ -198,7 +198,7 @@ These variables are defined at the workflow level and can be referenced in any s
 ```yaml
 config:
   version_file: src/confidentia/version.py
-  changelog_dir: KB/Changelog_and_Release_Notes/Changelog_Archive
+  changelog_dir: docs/Changelog_and_Release_Notes/Changelog_Archive
   main_changelog: CHANGELOG.md
 ```
 
@@ -358,7 +358,7 @@ Creates a detailed changelog file with full timestamp, release summary, and deta
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
-| `changelog_dir` | string | ❌ No | `KB/Changelog_and_Release_Notes/Changelog_Archive` | Directory where detailed changelog files are stored |
+| `changelog_dir` | string | ❌ No | `docs/Changelog_and_Release_Notes/Changelog_Archive` | Directory where detailed changelog files are stored |
 | `format` | enum | ❌ No | `full_timestamp` | Timestamp format for release date |
 
 #### `format` Options
@@ -415,7 +415,7 @@ After execution, this step outputs:
 
 ```json
 {
-  "changelog_file": "KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.21.0.2.md",
+  "changelog_file": "docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.21.0.2.md",
   "version": "0.21.0.2"
 }
 ```
@@ -479,7 +479,7 @@ The step adds an entry to CHANGELOG.md like this:
 ```markdown
 ### [0.21.0.2] - 21-11-25
 🐞 Fix: VWMP designer renders Release Workflow
-- See [CHANGELOG_v0.21.0.2.md](KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.21.0.2.md)
+- See [CHANGELOG_v0.21.0.2.md](docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.21.0.2.md)
 ```
 
 #### Data Sources
@@ -607,15 +607,15 @@ Automatically updates Kanban documentation (Epic and Story markdown files) with 
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
-| `epic_doc_pattern` | string | ❌ No | `KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md` | Pattern for locating Epic documentation files |
-| `kanban_board` | string | ❌ No | `KB/PM_and_Portfolio/epics/overview/_index.md` | Path to main Kanban board index file |
+| `epic_doc_pattern` | string | ❌ No | `docs/Project_Management/epics/overview/Epic {epic}/Epic-{epic}.md` | Pattern for locating Epic documentation files |
+| `kanban_board` | string | ❌ No | `docs/Project_Management/epics/overview/_index.md` | Path to main Kanban board index file |
 
 #### Configuration Example
 
 ```yaml
 config:
-  epic_doc_pattern: KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md
-  kanban_board: KB/PM_and_Portfolio/epics/overview/_index.md
+  epic_doc_pattern: docs/Project_Management/epics/overview/Epic {epic}/Epic-{epic}.md
+  kanban_board: docs/Project_Management/epics/overview/_index.md
 ```
 
 #### Pattern Variables
@@ -626,8 +626,8 @@ The `epic_doc_pattern` supports variable substitution:
 **Example:**
 - Branch: `epic/21-workflow-platform`
 - Epic extracted: `21`
-- Pattern: `KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md`
-- Resolved: `KB/PM_and_Portfolio/epics/overview/Epic 21/Epic-21.md`
+- Pattern: `docs/Project_Management/epics/overview/Epic {epic}/Epic-{epic}.md`
+- Resolved: `docs/Project_Management/epics/overview/Epic 21/Epic-21.md`
 
 #### What Gets Updated
 
@@ -657,7 +657,7 @@ After execution, this step outputs:
 
 ```json
 {
-  "epic_doc": "KB/PM_and_Portfolio/epics/overview/Epic 21/Epic-21.md",
+  "epic_doc": "docs/Project_Management/epics/overview/Epic 21/Epic-21.md",
   "tasks_updated": 1,
   "version": "0.21.0.2"
 }
@@ -1259,16 +1259,16 @@ Automatically triggers Post-Implementation Review (PIR) workflow when Epic or St
 | `epic_pir_always` | boolean | ❌ No | `true` | Always trigger PIR for completed Epics |
 | `story_pir_significance_criteria` | array | ❌ No | `[...]` | Criteria for Story significance evaluation |
 | `pir_workflow_path` | string | ❌ No | `packages/frameworks/workflow mgt/workflows/pir-workflow.yaml` | Path to PIR workflow YAML |
-| `kanban_root` | string | ❌ No | `KB/PM_and_Portfolio/kanban` | Root path to Kanban documents |
-| `epic_doc_pattern` | string | ❌ No | `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md` | Pattern for Epic document paths |
-| `story_doc_pattern` | string | ❌ No | `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md` | Pattern for Story document paths |
+| `kanban_root` | string | ❌ No | `docs/Project_Management/kanban` | Root path to Kanban documents |
+| `epic_doc_pattern` | string | ❌ No | `docs/Project_Management/kanban/epics/Epic-{epic}/Epic-{epic}.md` | Pattern for Epic document paths |
+| `story_doc_pattern` | string | ❌ No | `docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story}-*.md` | Pattern for Story document paths |
 
 #### Deterministic Check Logic
 
 **Epic-Level Check:**
 ```python
 # Read Epic document
-epic_doc = read_file(f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md")
+epic_doc = read_file(f"docs/Project_Management/kanban/epics/Epic-{epic}/Epic-{epic}.md")
 status = extract_status(epic_doc)
 
 # Check COMPLETE status
@@ -1279,7 +1279,7 @@ if status in ["COMPLETE", "COMPLETE ✅"]:
 **Story-Level Check:**
 ```python
 # Read Story document
-story_doc = read_file(f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md")
+story_doc = read_file(f"docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story}-*.md")
 status = extract_status(story_doc)
 
 # Check COMPLETE status
@@ -1534,7 +1534,7 @@ Steps that can run in parallel (after dependencies are met):
 ## 📚 Related Documentation
 
 **Policy Documents (This workflow implements these policies):**
-- **[Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md)** - Work item structure, task-level versioning, and release workflow requirements
+- **[Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md)** - Work item structure, task-level versioning, and release workflow requirements
 - **[Versioning Strategy](../../Architecture/Standards_and_ADRs/versioning-strategy.md)** - Forensic traceability, canonical ordering, and timestamp requirements
 - **[Versioning Policy (Schema)](../../Architecture/Standards_and_ADRs/versioning-policy.md)** - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
 - **[Cursor Rules](../../../../.cursorrules)** - Fundamental system rules that enforce all policies ⭐

@@ -258,8 +258,8 @@ Release v0.2.2.4+1: Updated stuff
 
 ## References
 
-- **PDCA Integration Plan:** `KB/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **Changelog Language Analysis:** `KB/Architecture/Standards_and_ADRs/rw-changelog-commit-language-analysis.md`
-- **RW Step 9:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 9)
-- **Execution Template:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/execution-documentation-template.md`
+- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
+- **Changelog Language Analysis:** `docs/Architecture/Standards_and_ADRs/rw-changelog-commit-language-analysis.md`
+- **RW Step 9:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 9)
+- **Execution Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/execution-documentation-template.md`
 

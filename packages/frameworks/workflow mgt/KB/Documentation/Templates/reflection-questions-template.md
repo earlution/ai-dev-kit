@@ -204,7 +204,7 @@ Changes: {summary}
 
 ## References
 
-- **PDCA Integration Plan:** `KB/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **RW Step 12:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 12)
-- **RW Step 13:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 13)
+- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
+- **RW Step 12:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 12)
+- **RW Step 13:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 13)
 

@@ -201,8 +201,8 @@ PLAN → DO → CHECK → ACT
 
 ## References
 
-- **PDCA Integration Plan:** `KB/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
+- **RW Execution Guide:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 
 ---
 

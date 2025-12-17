@@ -330,7 +330,7 @@ The CHECK phase evaluates results against objectives defined in the PLAN phase. 
 
 ## References
 
-- **PDCA Integration Plan:** `KB/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **Reflection Questions Template:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/reflection-questions-template.md`
-- **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
+- **Reflection Questions Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/reflection-questions-template.md`
+- **RW Execution Guide:** `packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 

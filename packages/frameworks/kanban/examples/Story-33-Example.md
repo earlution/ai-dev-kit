@@ -76,7 +76,7 @@ Story 33 ensures that all parent-facing features (Stories 25-32) are fully acces
 **Completed:**
 - [x] Set up Django i18n framework (LocaleMiddleware, i18n context processor, LANGUAGES setting)
 - [x] Added Spanish (es), Polish (pl), Welsh (cy) to supported languages
-- [x] Created comprehensive implementation plan: `KB/Documentation/Developer_Docs/i18n/parent-portal-i18n-implementation-plan.md`
+- [x] Created comprehensive implementation plan: `docs/Documentation/Developer_Docs/i18n/parent-portal-i18n-implementation-plan.md`
 
 **Deferred to Future Implementation:**
 - [ ] Mark all user-facing strings in parent templates for translation (13 templates)
@@ -98,7 +98,7 @@ Full i18n implementation requires significant effort (13-19 hours) and professio
 **Status:** ✅ PROTOCOL COMPLETE (v0.4.33.3+1) - Testing execution deferred
 
 **Completed:**
-- [x] Created comprehensive parent user testing protocol: `KB/Documentation/Developer_Docs/accessibility/parent-user-testing-protocol.md`
+- [x] Created comprehensive parent user testing protocol: `docs/Documentation/Developer_Docs/accessibility/parent-user-testing-protocol.md`
 - [x] Defined 7 test scenarios covering all parent workflows
 - [x] Specified recruitment requirements (9 participants, 3 categories)
 - [x] Documented data collection methods and issue categorization

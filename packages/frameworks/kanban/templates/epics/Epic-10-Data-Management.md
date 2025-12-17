@@ -91,7 +91,7 @@ This epic encompasses data management, database design, and data operations, inc
 - None
 - *Parallel Development Candidacy:* Safe (can be done independently)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-10/Story-001-database-schema-design.md`
+> Full story: `docs/Project_Management/kanban/epics/Epic-10/Story-001-database-schema-design.md`
 
 ---
 
@@ -129,7 +129,7 @@ This epic encompasses data management, database design, and data operations, inc
 - Depends on Story 1 (Database Schema Design)
 - *Parallel Development Candidacy:* Blocked (requires database schema)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-10/Story-002-data-access-layer.md`
+> Full story: `docs/Project_Management/kanban/epics/Epic-10/Story-002-data-access-layer.md`
 
 ---
 
@@ -165,7 +165,7 @@ This epic encompasses data management, database design, and data operations, inc
 - Depends on Story 1 (Database Schema Design)
 - *Parallel Development Candidacy:* Blocked (requires database schema)
 
-> Full story: `KB/PM_and_Portfolio/kanban/epics/Epic-10/Story-003-data-migration-and-seeding.md`
+> Full story: `docs/Project_Management/kanban/epics/Epic-10/Story-003-data-migration-and-seeding.md`
 
 ---
 

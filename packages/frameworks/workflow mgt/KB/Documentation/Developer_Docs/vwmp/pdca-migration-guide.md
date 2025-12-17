@@ -152,7 +152,7 @@ steps:
 - `Templates/pdca-best-practices.md` (if not exists)
 - `Templates/pdca-quick-reference.md` (if not exists)
 
-**Location:** `KB/Documentation/Templates/`
+**Location:** `docs/Documentation/Templates/`
 
 ### Step 6: Update Cursor Rules
 
@@ -311,12 +311,12 @@ You don't need to adopt all PDCA features at once. You can adopt gradually:
 
 ## References
 
-- **PDCA Integration Plan:** `KB/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **PDCA Templates:** `KB/Documentation/Templates/`
-- **PDCA Best Practices:** `KB/Documentation/Templates/pdca-best-practices.md`
-- **PDCA Quick Reference:** `KB/Documentation/Templates/pdca-quick-reference.md`
-- **Release Workflow Reference:** `KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`
-- **Release Workflow Agent Execution:** `KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
+- **PDCA Templates:** `docs/Documentation/Templates/`
+- **PDCA Best Practices:** `docs/Documentation/Templates/pdca-best-practices.md`
+- **PDCA Quick Reference:** `docs/Documentation/Templates/pdca-quick-reference.md`
+- **Release Workflow Reference:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`
+- **Release Workflow Agent Execution:** `docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 
 ---
 

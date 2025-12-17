@@ -41,13 +41,13 @@ When a test failure or bug is discovered:
 
 1. Create debug path using templates:
    ```
-   KB/debug-paths/DP-001-test-failure/DP-001.md
-   KB/debug-paths/DP-001-test-failure/DP-001-process.md
-   KB/debug-paths/DP-001-test-failure/DP-001-analysis.md
-   KB/debug-paths/DP-001-test-failure/DP-001-strategy.md
-   KB/debug-paths/DP-001-test-failure/DP-001-tests.md
-   KB/debug-paths/DP-001-test-failure/DP-001-history.md
-   KB/debug-paths/DP-001-test-failure/DP-001-index.md
+   docs/debug-paths/DP-001-test-failure/DP-001.md
+   docs/debug-paths/DP-001-test-failure/DP-001-process.md
+   docs/debug-paths/DP-001-test-failure/DP-001-analysis.md
+   docs/debug-paths/DP-001-test-failure/DP-001-strategy.md
+   docs/debug-paths/DP-001-test-failure/DP-001-tests.md
+   docs/debug-paths/DP-001-test-failure/DP-001-history.md
+   docs/debug-paths/DP-001-test-failure/DP-001-index.md
    ```
 
 2. Fill in context snapshot (problem statement, expected vs actual)
@@ -62,7 +62,7 @@ In the debug path main document, add:
 
 ```markdown
 ## References
-- Kanban Story: `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-004-*.md`
+- Kanban Story: `docs/Project_Management/kanban/epics/Epic-2/Story-004-*.md`
 - Epic: Epic 2 - Workflow Management Framework
 - Story: Story 4 - RW Installer & Plug-and-Play Adoption
 - Task: T05 - Fix test failures
@@ -73,7 +73,7 @@ In the Kanban Story document, add:
 ```markdown
 ## Related Debug Paths
 - **DP-001:** Test failure investigation
-  - Index: `KB/debug-paths/DP-001-test-failure/DP-001-index.md`
+  - Index: `docs/debug-paths/DP-001-test-failure/DP-001-index.md`
   - Status: In Progress
 ```
 
@@ -101,7 +101,7 @@ As debug path progresses, update Story:
 - [x] **E2:S04:T05 – Fix test failures** ✅ COMPLETE (v0.2.4.5+3)
   - Root cause: [Summary from debug path]
   - Solution: [Summary from debug path]
-  - Debug Path: `KB/debug-paths/DP-001-test-failure/DP-001-index.md`
+  - Debug Path: `docs/debug-paths/DP-001-test-failure/DP-001-index.md`
 ```
 
 ---

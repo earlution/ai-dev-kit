@@ -13,7 +13,7 @@ policy_salience:
   audience: ["agents", "developers", "epic-owners", "story-owners", "project-leadership"]
   applies_to:
     documents:
-      - "KB/PM_and_Portfolio/kanban/**"
+      - "docs/Project_Management/kanban/**"
       - "packages/frameworks/kanban/**"
     activities:
       - "fr-br-intake"
@@ -145,9 +145,9 @@ policy_salience:
       component: "fr-br-intake-workflow"
       behavior: "create tasks from FR/BR with proper hierarchy"
   related_policies:
-    - "KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md"
+    - "docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md"
     - "packages/frameworks/numbering & versioning/versioning-policy.md"
-    - "packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md"
+    - "packages/frameworks/workflow mgt/docs/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md"
 ---
 
 # Kanban Governance Policy
@@ -241,13 +241,13 @@ Five columns, left to right:
 Governing artifact for a feature set or maintenance theme.
 
 - **Location (example patterns):**
-  - **Separate directories:** `KB/PM_and_Portfolio/epics/overview/Epic XX/Epic-XX.md`  
-  - **Consolidated Kanban:** `KB/PM_and_Portfolio/kanban/epics/Epic-XX.md` (all Kanban docs in one place)
+  - **Separate directories:** `docs/Project_Management/epics/overview/Epic XX/Epic-XX.md`  
+  - **Consolidated Kanban:** `docs/Project_Management/kanban/epics/Epic-XX.md` (all Kanban docs in one place)
   - Replace with your KB path for epic overview docs.
 - **Branch (example convention):** `epic/<number>-<slug>`  
   - Adjust to your branching strategy if different.
 - **Version (when using RC.EPIC.STORY.TASK+BUILD):** `RC.EPIC.STORY.TASK+BUILD` (where EPIC = epic number)
-- **Template (example):** `KB/PM_and_Portfolio/epics/templates/EPIC_TEMPLATE.md` or `KB/PM_and_Portfolio/kanban/epics/templates/EPIC_TEMPLATE.md`
+- **Template (example):** `docs/Project_Management/epics/templates/EPIC_TEMPLATE.md` or `docs/Project_Management/kanban/epics/templates/EPIC_TEMPLATE.md`
 
 **Consolidated Structure Pattern:**
 If using a single `kanban/` directory, Epics live at `kanban/epics/Epic-X.md` with Stories under `kanban/epics/Epic-X/stories/`. This keeps all Kanban docs discoverable in one location.
@@ -257,10 +257,10 @@ If using a single `kanban/` directory, Epics live at `kanban/epics/Epic-X.md` wi
 Decompose epic scope into releasable slices.
 
 - **Location (example patterns):**
-  - **Separate directories:** `KB/PM_and_Portfolio/stories/overview/Epic XX/Story-N-Title.md`
-  - **Consolidated Kanban:** `KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-N-Title.md`
+  - **Separate directories:** `docs/Project_Management/stories/overview/Epic XX/Story-N-Title.md`
+  - **Consolidated Kanban:** `docs/Project_Management/kanban/epics/Epic-X/stories/Story-N-Title.md`
 - **Numbering (example):** `E<epic>S<story>` (e.g., `E20S7`)
-- **Template (example):** `KB/PM_and_Portfolio/stories/templates/STORY_TEMPLATE.md` or `KB/PM_and_Portfolio/kanban/epics/templates/STORY_TEMPLATE.md`
+- **Template (example):** `docs/Project_Management/stories/templates/STORY_TEMPLATE.md` or `docs/Project_Management/kanban/epics/templates/STORY_TEMPLATE.md`
 
 **Story Directories:** In consolidated structures, Stories live in `Epic-X/stories/` directories, allowing for associated files (diagrams, notes, etc.) alongside the Story document.
 
@@ -369,8 +369,8 @@ The following validations MUST be enforced:
 **Example:** `0.20.11.15+1` = Development, Epic 20, Story 11, Task 15, Build 1
 
 **Related Documentation (examples):**
-- **Versioning Policy (Schema)** – Complete schema definition (e.g., `KB/Architecture/Standards_and_ADRs/versioning-policy.md`)
-- **Versioning Strategy** – Forensic traceability and canonical ordering principles (e.g., `KB/Architecture/Standards_and_ADRs/versioning-strategy.md`)
+- **Versioning Policy (Schema)** – Complete schema definition (e.g., `docs/Architecture/Standards_and_ADRs/versioning-policy.md`)
+- **Versioning Strategy** – Forensic traceability and canonical ordering principles (e.g., `docs/Architecture/Standards_and_ADRs/versioning-strategy.md`)
 
 ### Task-Level Requirements
 
@@ -416,7 +416,7 @@ The following validations MUST be enforced:
   - Correct: `0.4.3.2+1` for first release of Task 2
 
 See: **your own canonical story docs** that define guardrails and versioning rules.  
-(*Original example:* `KB/PM_and_Portfolio/stories/overview/Epic 20/Story-11-GUARDRAILS-PLAN.md` in the Confidentia project.)
+(*Original example:* `docs/Project_Management/stories/overview/Epic 20/Story-11-GUARDRAILS-PLAN.md` in the Confidentia project.)
 
 ---
 
@@ -503,7 +503,7 @@ Abstract spaces use `+0` build number to indicate documentation-only anchor:
 
 The process that implements both policies (Kanban Governance and Versioning Strategy).
 
-**Reference (example):** `KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`
+**Reference (example):** `docs/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`
 
 **Documents (example set):**
 1. Version File (e.g., `src/yourproject/version.py`)
@@ -932,8 +932,8 @@ TODO tracking is **MANDATORY** (not optional) for Release Workflow and other age
 ## Templates & References
 
 **Templates:**
-- Epic: `KB/PM_and_Portfolio/epics/templates/EPIC_TEMPLATE.md`
-- Story: `KB/PM_and_Portfolio/stories/templates/STORY_TEMPLATE.md`
+- Epic: `docs/Project_Management/epics/templates/EPIC_TEMPLATE.md`
+- Story: `docs/Project_Management/stories/templates/STORY_TEMPLATE.md`
 
 **Release Workflow:**
 - Script: `scripts/automation/release_workflow.py`
@@ -945,10 +945,10 @@ TODO tracking is **MANDATORY** (not optional) for Release Workflow and other age
 - Changelog Format: `scripts/validation/validate_changelog_format.py`
 
 **Policy Documents (examples):**
-- **Versioning Strategy** – Complete versioning strategy with forensic traceability system (e.g., `KB/Architecture/Standards_and_ADRs/versioning-strategy.md`)
-- **Versioning Policy (Schema)** – Versioning schema definition (e.g., `KB/Architecture/Standards_and_ADRs/versioning-policy.md`)
-- **Release Workflow Reference** – Release Workflow documentation (e.g., `KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`)
-- **Kanban Board Overview** – Board structure (e.g., `KB/PM_and_Portfolio/rituals/overview/kanban-board.md`)
+- **Versioning Strategy** – Complete versioning strategy with forensic traceability system (e.g., `docs/Architecture/Standards_and_ADRs/versioning-strategy.md`)
+- **Versioning Policy (Schema)** – Versioning schema definition (e.g., `docs/Architecture/Standards_and_ADRs/versioning-policy.md`)
+- **Release Workflow Reference** – Release Workflow documentation (e.g., `docs/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`)
+- **Kanban Board Overview** – Board structure (e.g., `docs/Project_Management/rituals/overview/kanban-board.md`)
 - **System Architecture / Template Philosophy** – Supporting governance docs (paths will vary by project)
 
 **Foundation:**

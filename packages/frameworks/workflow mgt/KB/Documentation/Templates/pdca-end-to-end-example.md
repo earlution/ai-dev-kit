@@ -347,10 +347,10 @@ Epic: 2 | Story: 2 | Task: 5
 
 ## References
 
-- **PDCA Integration Plan:** `KB/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
-- **PLAN Phase Template:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/plan-phase-template.md`
-- **DO Phase Template:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/do-phase-template.md`
-- **CHECK Phase Template:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/check-phase-template.md`
-- **ACT Phase Template:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/action-workflow-template.md`
-- **Best Practices Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/pdca-best-practices.md`
+- **PDCA Integration Plan:** `docs/Architecture/Standards_and_ADRs/rw-pdca-integration-plan.md`
+- **PLAN Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/plan-phase-template.md`
+- **DO Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/do-phase-template.md`
+- **CHECK Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/check-phase-template.md`
+- **ACT Phase Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/action-workflow-template.md`
+- **Best Practices Guide:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/pdca-best-practices.md`
 

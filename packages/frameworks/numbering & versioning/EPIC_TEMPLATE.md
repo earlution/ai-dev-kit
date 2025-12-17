@@ -68,7 +68,7 @@ housekeeping_policy: keep
 - Dependency summary
 - *Parallel Development Candidacy:* [Safe / Blocked] because [reason]
 
-> Full story: `docs/stories/Epic-X/Story-Y-Title.md` or `KB/PM_and_Portfolio/stories/overview/Epic X/Story-Y-Title.md` *(customize path)*
+> Full story: `docs/stories/Epic-X/Story-Y-Title.md` or `docs/Project_Management/stories/overview/Epic X/Story-Y-Title.md` *(customize path)*
 
 ---
 

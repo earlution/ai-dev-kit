@@ -65,8 +65,8 @@ def create_test_project(base_dir: Path, epic: int = 2, story: int = 8, task: int
     project = {
         'root': base_dir,
         'version_file': base_dir / 'src' / 'fynd_deals' / 'version.py',
-        'story_doc': base_dir / 'KB' / 'PM_and_Portfolio' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Story-{story:03d}-test.md',
-        'epic_doc': base_dir / 'KB' / 'PM_and_Portfolio' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Epic-{epic}.md',
+        'story_doc': base_dir / 'KB' / 'Project_Management' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Story-{story:03d}-test.md',
+        'epic_doc': base_dir / 'KB' / 'Project_Management' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Epic-{epic}.md',
     }
     
     # Create directories

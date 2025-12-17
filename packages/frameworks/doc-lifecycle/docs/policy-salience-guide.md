@@ -74,7 +74,7 @@ Extract the 3-7 most critical rules that:
 ### Step 3: Define Scope
 
 Identify:
-- **Documents:** What files/patterns are covered? (e.g., `KB/**`, `packages/frameworks/**`)
+- **Documents:** What files/patterns are covered? (e.g., `docs/**`, `packages/frameworks/**`)
 - **Activities:** What workflows/processes? (e.g., `release-workflow`, `story-completion`)
 - **Components:** What system parts? (e.g., `kanban-board`, `version-file`)
 
@@ -224,14 +224,14 @@ policy_salience:
 ## Examples
 
 See complete examples in:
-- `KB/Architecture/Standards_and_ADRs/documentation-maintenance-policy.md`
+- `docs/Architecture/Standards_and_ADRs/documentation-maintenance-policy.md`
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md`
 
 ---
 
 ## References
 
-- **Schema Specification:** `KB/Architecture/Standards_and_ADRs/policy-salience-schema.md`
+- **Schema Specification:** `docs/Architecture/Standards_and_ADRs/policy-salience-schema.md`
 - **Template:** `packages/frameworks/doc-lifecycle/templates/POLICY_SALIENCE_TEMPLATE.md`
 - **FR-022:** Policy Documents Machine-Readable Salience Section
 

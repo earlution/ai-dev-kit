@@ -112,7 +112,7 @@ This document provides a **step-by-step agent execution guide** for the Release 
 
 ## 🔒 RW Hardening Principles (Summary)
 
-This Release Workflow follows the shared *Workflow Hardening Guide for Agent‑Driven Release Processes* (`KB/Architecture/Standards_and_ADRs/workflow-hardening-guide.md`). In practice, this means:
+This Release Workflow follows the shared *Workflow Hardening Guide for Agent‑Driven Release Processes* (`docs/Architecture/Standards_and_ADRs/workflow-hardening-guide.md`). In practice, this means:
 
 - **Atomic RW per invocation:** One RW run attempts all steps for a single version or clearly stops in a `RW BLOCKED at Step X` state.
 - **Minimal, predictable tools:** RW uses a small, stable set of tools (file read/write, git/validators, TODO tracking) and avoids experimental or irrelevant tools during execution.
@@ -543,8 +543,8 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 **B. IDENTIFY COMPLETED TASK (MANDATORY):**
 2. **ANALYZE (continued):**
    - **MANDATORY:** Read the Story file to identify completed task. **Use config paths:** If `rw-config.yaml` exists and `use_kanban: true`, use `kanban_root` and `story_doc_pattern` from config. Otherwise, use fallback patterns:
-     - [Example: Confidentia] `KB/PM_and_Portfolio/epics/overview/Epic {epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
-     - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
+     - [Example: Confidentia] `docs/Project_Management/epics/overview/Epic {epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
+     - [Example: ai-dev-kit] `docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
    - Find the MOST RECENTLY COMPLETED task in the Task Checklist (marked `✅ COMPLETE`)
    - Extract the task number from the task identifier: `E{epic}:S{story}:T{task}` (e.g., `E2:S02:T08` → task number is `8`)
    - **CRITICAL:** If no task is marked complete, or you cannot identify which task was just completed, **STOP** and ask the user which task was completed
@@ -570,7 +570,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
         - Location patterns:
           - `{kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md`
           - `{kanban_root}/epics/Epic-{epic}/Story-{story}/T{task}-*.md`
-        - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-*.md` or `T001-*.md`
+        - [Example: ai-dev-kit] `docs/Project_Management/kanban/epics/Epic-4/Story-11/Task-001-*.md` or `T001-*.md`
      2. **Delimited Section Format (Alternative):**
         - Location: Within the Story file itself
         - Pattern: Section header matching `### E{epic}:S{story}:T{task} –` or `### E{epic}:S{story}:T{task} –`
@@ -623,7 +623,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 **Example 1: Doc-Init Build (First-Time Task Document Creation)**
 - **Scenario:** Creating Task document for `E2:S10:T01` for the first time
 - **Detection (A.1):**
-  - ✅ New Task document created: `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md` (delimited section)
+  - ✅ New Task document created: `docs/Project_Management/kanban/epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md` (delimited section)
   - ✅ No prior version exists: No `0.2.10.1+*` in git history or changelog
   - ✅ Docs-only changes: Only `.md` files changed, no code files
 - **Task Identification (B):**
@@ -774,10 +774,10 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 - **NEVER emit `+0` for functional changes** - Functional changes require `+1` or higher
 - **ALWAYS validate before and after** - Catch errors before they propagate
 - **ALWAYS document your decision** - Show your work for traceability
-- See `KB/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` for error prevention reference
-- See `KB/PM_and_Portfolio/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md` for doc-init requirements (FR-017)
-- See `KB/PM_and_Portfolio/kanban/fr-br/FR-016-kanban-granularity-discrete-task-docs.md` for Task document requirements (FR-016)
-- See `KB/PM_and_Portfolio/kanban/fr-br/FR-018-abstract-space-for-zero-numbered-est-docs.md` for abstract space concept (FR-018)
+- See `docs/Architecture/Standards_and_ADRs/versioning-error-reference-guide.md` for error prevention reference
+- See `docs/Project_Management/kanban/fr-br/FR-017-versioning-policy-hardening-doc-init-build.md` for doc-init requirements (FR-017)
+- See `docs/Project_Management/kanban/fr-br/FR-016-kanban-granularity-discrete-task-docs.md` for Task document requirements (FR-016)
+- See `docs/Project_Management/kanban/fr-br/FR-018-abstract-space-for-zero-numbered-est-docs.md` for abstract space concept (FR-018)
 
 ---
 
@@ -797,7 +797,7 @@ All work MUST follow the explicit **3-tier structure**: Epic → Story → Task.
 
 **Policy Reference:**
 - **Kanban Governance Policy:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Section 3.3: Tasks
-- **Kanban Governance Policy (Dev-Kit):** `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md` - Section 3.3: Tasks
+- **Kanban Governance Policy (Dev-Kit):** `docs/Project_Management/rituals/policy/kanban-governance-policy.md` - Section 3.3: Tasks
 
 ### Discrete Task Document Requirement
 
@@ -805,7 +805,7 @@ Every Task MUST have a discrete Task document (or clearly delimited section with
 
 **Policy Reference:**
 - **Kanban Governance Policy:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Section 3.3: Task Document Requirements
-- **Versioning Policy:** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` - Task doc requirements
+- **Versioning Policy:** `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` - Task doc requirements
 
 ### Task Document Formats
 
@@ -818,8 +818,8 @@ Tasks can be documented in one of two formats:
 - `{kanban_root}/epics/Epic-{epic}/Story-{story}/T{task}-*.md`
 
 **Examples:**
-- [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
-- [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/T001-update-kanban-policy.md`
+- [Example: ai-dev-kit] `docs/Project_Management/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
+- [Example: ai-dev-kit] `docs/Project_Management/kanban/epics/Epic-4/Story-11/T001-update-kanban-policy.md`
 
 **When to Use:**
 - Tasks with significant complexity or multiple phases
@@ -898,7 +898,7 @@ If Task document validation fails, the workflow:
 ❌ TASK DOCUMENT NOT FOUND: Task E4:S11:T01 does not have a Task document.
 
 Action Required:
-1. Create Task document at: KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-description.md
+1. Create Task document at: docs/Project_Management/kanban/epics/Epic-4/Story-11/Task-001-description.md
    OR
 2. Add delimited section to Story file with header: ### E4:S11:T01 – Task Title
 
@@ -934,7 +934,7 @@ The Versioning Policy requires that:
 - Epic/Story/Task alignment MUST be verified before version bump
 
 **Policy References:**
-- **Versioning Policy (Dev-Kit):** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` - Task doc requirements
+- **Versioning Policy (Dev-Kit):** `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` - Task doc requirements
 - **Versioning Policy (Framework):** `packages/frameworks/numbering & versioning/versioning-policy.md` - Kanban-related sections
 
 ### Examples
@@ -943,7 +943,7 @@ The Versioning Policy requires that:
 
 **Task:** E4:S11:T01 – Update Kanban Governance Policy
 
-**Location:** `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
+**Location:** `docs/Project_Management/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
 
 **Task Checklist Entry (in Story file):**
 ```markdown
@@ -953,7 +953,7 @@ The Versioning Policy requires that:
 
 **RW Step 2 Behavior:**
 1. Identifies completed task: E4:S11:T01
-2. Locates Task document: `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
+2. Locates Task document: `docs/Project_Management/kanban/epics/Epic-4/Story-11/Task-001-update-kanban-policy.md`
 3. Validates required fields: ✅ All present
 4. Verifies Task ID alignment: ✅ E4:S11:T01 matches version components
 5. Proceeds to version bump
@@ -962,7 +962,7 @@ The Versioning Policy requires that:
 
 **Task:** E4:S11:T02 – Create Task Document Template
 
-**Location:** Delimited section within Story file: `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-11/Story-011-kanban-granularity-discrete-task-docs.md`
+**Location:** Delimited section within Story file: `docs/Project_Management/kanban/epics/Epic-4/Story-11/Story-011-kanban-granularity-discrete-task-docs.md`
 
 **Task Section in Story file:**
 ```markdown
@@ -986,8 +986,8 @@ The Versioning Policy requires that:
 
 **Policy Documents:**
 - **Kanban Governance Policy (Canonical):** `packages/frameworks/kanban/policies/kanban-governance-policy.md`
-- **Kanban Governance Policy (Dev-Kit):** `KB/PM_and_Portfolio/rituals/policy/kanban-governance-policy.md`
-- **Versioning Policy (Dev-Kit):** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
+- **Kanban Governance Policy (Dev-Kit):** `docs/Project_Management/rituals/policy/kanban-governance-policy.md`
+- **Versioning Policy (Dev-Kit):** `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
 - **Versioning Policy (Framework):** `packages/frameworks/numbering & versioning/versioning-policy.md`
 
 **Templates:**
@@ -1013,7 +1013,7 @@ The Versioning Policy requires that:
   handler: release.changelog_create
   dependencies: [step-2]
   config:
-    changelog_dir: KB/Changelog_and_Release_Notes/Changelog_Archive
+    changelog_dir: docs/Changelog_and_Release_Notes/Changelog_Archive
     format: full_timestamp
 ```
 
@@ -1040,8 +1040,8 @@ The Versioning Policy requires that:
      - [Example: Confidentia] `0.4.3.2+9` → Story 3
      - [Example: ai-dev-kit] `0.2.1.1+3` → Story 1
    - **Use config path:** Create changelog file path (from config `changelog_dir` or fallback):
-     - [Example: Confidentia] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+9.md` (or from `rw-config.yaml` if present)
-     - [Example: ai-dev-kit] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+3.md` (or from `rw-config.yaml` if present)
+     - [Example: Confidentia] `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+9.md` (or from `rw-config.yaml` if present)
+     - [Example: ai-dev-kit] `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.1.1+3.md` (or from `rw-config.yaml` if present)
    - Review previous changelog format for consistency
 
 3. **EXECUTE:**
@@ -1251,7 +1251,7 @@ The Versioning Policy requires that:
   handler: release.br_fr_update
   dependencies: [step-2]
   config:
-    fr_br_root: KB/PM_and_Portfolio/kanban/fr-br  # Default location for FR/BR files
+    fr_br_root: docs/Project_Management/kanban/fr-br  # Default location for FR/BR files
     br_pattern: BR-*.md
     fr_pattern: FR-*.md
 ```
@@ -1266,7 +1266,7 @@ The Versioning Policy requires that:
    - Get release summary from workflow parameters
    - Extract Epic/Story/Task from completed task identifier
    - **Use config paths:** Find FR/BR root directory (from config `fr_br_root` or fallback):
-     - [Example: ai-dev-kit] `KB/PM_and_Portfolio/kanban/fr-br` (or from `rw-config.yaml` if present)
+     - [Example: ai-dev-kit] `docs/Project_Management/kanban/fr-br` (or from `rw-config.yaml` if present)
    - Understand BR/FR linking pattern:
      - BRs/FRs are linked to Tasks via "Intake Decision" section
      - Search for BR/FR files that reference the completed task
@@ -1378,8 +1378,8 @@ The Versioning Policy requires that:
   dependencies: [step-2]
   config:
     kanban_update_script: packages/frameworks/workflow mgt/scripts/update_kanban_docs.py
-    epic_doc_pattern: KB/PM_and_Portfolio/epics/overview/Epic {epic}/Epic-{epic}.md
-    kanban_board: KB/PM_and_Portfolio/kanban/kanban-board.md
+    epic_doc_pattern: docs/Project_Management/epics/overview/Epic {epic}/Epic-{epic}.md
+    kanban_board: docs/Project_Management/kanban/kanban-board.md
     use_rw_config: true
 ```
 
@@ -1592,7 +1592,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 **Related Documentation:**
 - **FR-015:** Harden Kanban Docs Update in Release Workflow
 - **E2:S08:** Harden Release Workflow Reliability
-- **T01 Analysis:** `packages/frameworks/workflow mgt/KB/Analysis/T01-kanban-docs-update-deterministic-vs-agentic-analysis.md`
+- **T01 Analysis:** `packages/frameworks/workflow mgt/docs/Analysis/T01-kanban-docs-update-deterministic-vs-agentic-analysis.md`
 - **Script Source:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
 
 ---
@@ -1813,9 +1813,9 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 - ✅ Appropriate language for documentation
 
 **See Also:**
-- **Commit Message Language Guidelines:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/commit-message-language-guidelines.md`
-- **Execution Documentation Template:** `packages/frameworks/workflow mgt/KB/Documentation/Templates/execution-documentation-template.md`
-- **Changelog Language Analysis:** `KB/Architecture/Standards_and_ADRs/rw-changelog-commit-language-analysis.md`
+- **Commit Message Language Guidelines:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/commit-message-language-guidelines.md`
+- **Execution Documentation Template:** `packages/frameworks/workflow mgt/docs/Documentation/Templates/execution-documentation-template.md`
+- **Changelog Language Analysis:** `docs/Architecture/Standards_and_ADRs/rw-changelog-commit-language-analysis.md`
 
 ---
 
@@ -1899,7 +1899,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - Understand remote: `origin`
    - **CRITICAL:** Must use `required_permissions: ['network']` for git push commands
    - This enables network access in Cursor's sandbox environment
-   - See: `KB/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md`
+   - See: `docs/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md`
 
 2. **DETERMINE:**
    - Push branch:
@@ -1968,7 +1968,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
        git push origin main --tags
        ```
        
-       See: KB/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md
+       See: docs/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md
        ```
      - Mark workflow as "complete pending push"
      - Move to Step 12 (if enabled) - workflow is still considered successful
@@ -2003,13 +2003,13 @@ except Exception as e:
     print("⚠️  Push failed unexpectedly")
     print("\n📋 Manual Push Required:")
     print(f"   git push origin {branch_name} --tags")
-    print("\n   See: KB/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md")
+    print("\n   See: docs/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md")
     # Don't fail the workflow - mark as complete pending push
     return "complete_pending_push"
 ```
 
 **Related Documentation:**
-- **Network Access Limitations:** `KB/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md` - Complete guide on this issue and solutions
+- **Network Access Limitations:** `docs/Architecture/Standards_and_ADRs/agent-network-access-and-git-push-limitations.md` - Complete guide on this issue and solutions
 
 ---
 
@@ -2034,8 +2034,8 @@ except Exception as e:
      - [Example: Confidentia] `"0.4.3.2+9"`
      - [Example: ai-dev-kit] `"0.2.2.1+1"`
    - Read detailed changelog from Step 3:
-     - [Example: Confidentia] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+9.md`
-     - [Example: ai-dev-kit] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.1+1.md`
+     - [Example: Confidentia] `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+9.md`
+     - [Example: ai-dev-kit] `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.1+1.md`
    - Understand this is the **CHECK phase** of PDCA cycle
    - Check if release includes bug fixes or changes requiring verification
    - Review changelog for "Attempted Fixes" entries
@@ -2195,8 +2195,8 @@ except Exception as e:
      - [Example: Confidentia] `"0.4.3.2+9"`
      - [Example: ai-dev-kit] `"0.2.2.2+1"`
    - Read detailed changelog from Step 3:
-     - [Example: Confidentia] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+9.md`
-     - [Example: ai-dev-kit] `KB/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.2+1.md`
+     - [Example: Confidentia] `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.4.3.2+9.md`
+     - [Example: ai-dev-kit] `docs/Changelog_and_Release_Notes/Changelog_Archive/CHANGELOG_v0.2.2.2+1.md`
    - Understand this is the **ACT phase** of PDCA cycle
    - Check if Step 12 was executed (optional step)
    - Review changelog for "Attempted Fixes" entries
@@ -2367,10 +2367,10 @@ except Exception as e:
    - **Read Epic/Story Document:**
      ```bash
      # Epic-level
-     Epic: KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Epic-{epic}.md
+     Epic: docs/Project_Management/kanban/epics/Epic-{epic}/Epic-{epic}.md
      
      # Story-level
-     Story: KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}-*.md
+     Story: docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story}-*.md
      ```
    
    - **Extract Status:**
@@ -2556,7 +2556,7 @@ run_terminal_cmd("python scripts/automation/release_workflow.py --auto-go")
 - **[Release Workflow Usage](release-workflow-usage.md)** - How to use the workflow
 
 **Policy Documentation:**
-- **[Kanban Governance Policy](../../PM_and_Portfolio/rituals/policy/kanban-governance-policy.md)** - Work item structure
+- **[Kanban Governance Policy](../../Project_Management/rituals/policy/kanban-governance-policy.md)** - Work item structure
 - **[Versioning Strategy](../../Architecture/Standards_and_ADRs/versioning-strategy.md)** - Versioning requirements
 - **[Versioning Policy](../../Architecture/Standards_and_ADRs/versioning-policy.md)** - Version schema
 

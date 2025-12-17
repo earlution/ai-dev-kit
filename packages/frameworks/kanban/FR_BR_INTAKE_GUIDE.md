@@ -77,11 +77,11 @@ FR/BR Arrives
 
 **For Feature Requests:**
 - Use `FR_TEMPLATE.md`
-- Location: `KB/PM_and_Portfolio/kanban/fr-br/FR-XXX-[title].md` (or project-specific location)
+- Location: `docs/Project_Management/kanban/fr-br/FR-XXX-[title].md` (or project-specific location)
 
 **For Bug Reports:**
 - Use `BR_TEMPLATE.md`
-- Location: `KB/PM_and_Portfolio/kanban/fr-br/BR-XXX-[title].md` (or project-specific location)
+- Location: `docs/Project_Management/kanban/fr-br/BR-XXX-[title].md` (or project-specific location)
 
 **Required Information:**
 - Summary (one sentence)
@@ -115,9 +115,9 @@ FR/BR Arrives
 4. **Epic Alignment:** Story's Epic aligns with FR/BR's problem domain
 
 **Search Locations:**
-- Kanban Board (`KB/PM_and_Portfolio/kanban/kanban-board.md`)
-- Epic documents (`KB/PM_and_Portfolio/kanban/epics/Epic-X.md`)
-- Story documents (`KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-XXX-*.md`)
+- Kanban Board (`docs/Project_Management/kanban/kanban-board.md`)
+- Epic documents (`docs/Project_Management/kanban/epics/Epic-X.md`)
+- Story documents (`docs/Project_Management/kanban/epics/Epic-X/stories/Story-XXX-*.md`)
 
 **Decision:** If Story matches **ALL** criteria → Proceed to Step 4a. Otherwise → Proceed to Step 4b.
 
@@ -160,8 +160,8 @@ FR/BR Arrives
 3. **Scope Check:** Epic's scope is broad enough to encompass FR/BR
 
 **Search Locations:**
-- Kanban Board (`KB/PM_and_Portfolio/kanban/kanban-board.md`)
-- Epic documents (`KB/PM_and_Portfolio/kanban/epics/Epic-X.md`)
+- Kanban Board (`docs/Project_Management/kanban/kanban-board.md`)
+- Epic documents (`docs/Project_Management/kanban/epics/Epic-X.md`)
 
 **Decision:** If Epic matches **ALL** criteria → Proceed to Step 5a. Otherwise → Proceed to Step 5b.
 
@@ -174,7 +174,7 @@ FR/BR Arrives
 **Process:**
 1. **Create Story:**
    - Use `STORY_TEMPLATE.md`
-   - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-XXX-[title].md`
+   - Location: `docs/Project_Management/kanban/epics/Epic-X/stories/Story-XXX-[title].md`
    - Set Story number to next available number in Epic
    - Set Status: TODO or IN PROGRESS
    - Define Story goal/scope based on FR/BR
@@ -214,7 +214,7 @@ FR/BR Arrives
 **Process:**
 1. **Create Epic:**
    - Use `EPIC_TEMPLATE.md`
-   - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-X.md`
+   - Location: `docs/Project_Management/kanban/epics/Epic-X.md`
    - Set Epic number to next available number
    - **CRITICAL:** Epic must be **broad and abstract** in concept
    - Define Epic's problem domain and scope
@@ -222,7 +222,7 @@ FR/BR Arrives
 
 2. **Create Story:**
    - Use `STORY_TEMPLATE.md`
-   - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-X/stories/Story-001-[title].md`
+   - Location: `docs/Project_Management/kanban/epics/Epic-X/stories/Story-001-[title].md`
    - Set Story number to 1
    - Set Status: TODO or IN PROGRESS
    - Define Story goal/scope based on FR/BR
@@ -288,13 +288,13 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 ### Step 7: Update Kanban Board
 
 **Actions:**
-1. Update `KB/PM_and_Portfolio/kanban/kanban-board.md`:
+1. Update `docs/Project_Management/kanban/kanban-board.md`:
    - Add new Epic (if created)
    - Add new Story (if created)
    - Update Story status (if Task added)
    - Update Epic status (if Story added)
 
-2. Update `KB/PM_and_Portfolio/kanban/_index.md`:
+2. Update `docs/Project_Management/kanban/_index.md`:
    - Update Epic/Story counts
    - Update status summaries
 
@@ -345,7 +345,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 - **Decision:** Story matches ✅
 
 **Step 3: Create Task**
-- Open Story document: `KB/PM_and_Portfolio/kanban/epics/Epic-3/Story-002-ui-theme-and-styling.md`
+- Open Story document: `docs/Project_Management/kanban/epics/Epic-3/Story-002-ui-theme-and-styling.md`
 - Check existing Tasks: T01, T02, T03
 - Create Task 4: "Add dark mode toggle to settings page"
 - Assign version: `0.3.2.4+1`
@@ -392,7 +392,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 
 **Step 4: Create Story and Task**
 - Create Story 3: "User Profile Management"
-  - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-003-user-profile-management.md`
+  - Location: `docs/Project_Management/kanban/epics/Epic-2/Story-003-user-profile-management.md`
   - Status: TODO
   - Goal: "Implement user profile management features including profile picture upload"
 - Create Task 1: "Add user profile picture upload"
@@ -442,13 +442,13 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 
 **Step 4: Create Epic, Story, and Task**
 - Create Epic 8: "Real-Time Collaboration"
-  - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-7/Epic-7.md`
+  - Location: `docs/Project_Management/kanban/epics/Epic-7/Epic-7.md`
   - Status: TODO
   - **CRITICAL:** Epic is broad and abstract: "Framework for real-time collaboration features"
   - Problem Domain: Real-Time Collaboration
   - **Note:** Epic 8 because canonical epics are 1-7 (see `CANONICAL_EPICS.md`)
 - Create Story 1: "Real-Time Collaboration Foundation"
-  - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-7/Story-001-real-time-collaboration-foundation.md`
+  - Location: `docs/Project_Management/kanban/epics/Epic-7/Story-001-real-time-collaboration-foundation.md`
   - Status: TODO
   - Goal: "Establish foundation for real-time collaboration features"
 - Create Task 1: "Add real-time collaboration features"
@@ -487,7 +487,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 - **Decision:** Story matches ✅
 
 **Step 3: Create Task**
-- Open Story document: `KB/PM_and_Portfolio/kanban/epics/Epic-3/Story-002-ui-theme-and-styling.md`
+- Open Story document: `docs/Project_Management/kanban/epics/Epic-3/Story-002-ui-theme-and-styling.md`
 - Check existing Tasks: T01, T02, T03, T04 (from Example 1)
 - Create Task 5: "Fix dark mode toggle persistence"
 - Assign version: `0.3.2.5+1`
@@ -538,7 +538,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 
 **Step 4: Create Story and Task**
 - Create Story 3 (or Story 4 if Story 3 exists): "User Profile Management"
-  - Location: `KB/PM_and_Portfolio/kanban/epics/Epic-2/Story-003-user-profile-management.md`
+  - Location: `docs/Project_Management/kanban/epics/Epic-2/Story-003-user-profile-management.md`
   - Status: TODO
   - Goal: "Implement and maintain user profile management features"
 - Create Task 1: "Fix profile picture upload file size limit"
@@ -701,7 +701,7 @@ FR/BR → Search Story
 - **Decision Flow Design:** `T002-decision-flow-design.md`
 - **Intake Analysis:** `T001-intake-analysis-report.md`
 - **Kanban Governance:** `packages/frameworks/kanban/policies/kanban-governance-policy.md`
-- **Versioning Policy:** `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
+- **Versioning Policy:** `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md`
 
 ---
 
@@ -721,10 +721,10 @@ After completing intake:
 - `packages/frameworks/kanban/templates/BR_TEMPLATE.md` (Bug Report template)
 - `packages/frameworks/kanban/templates/EPIC_TEMPLATE.md` (Epic template)
 - `packages/frameworks/kanban/templates/STORY_TEMPLATE.md` (Story template)
-- `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-002-fr-br-intake-to-tasks/T002-decision-flow-design.md` (Decision flow design)
-- `KB/PM_and_Portfolio/kanban/epics/Epic-4/Story-002-fr-br-intake-to-tasks/T001-intake-analysis-report.md` (Intake analysis)
+- `docs/Project_Management/kanban/epics/Epic-4/Story-002-fr-br-intake-to-tasks/T002-decision-flow-design.md` (Decision flow design)
+- `docs/Project_Management/kanban/epics/Epic-4/Story-002-fr-br-intake-to-tasks/T001-intake-analysis-report.md` (Intake analysis)
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md` (Kanban governance)
-- `KB/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` (Versioning policy)
+- `docs/Architecture/Standards_and_ADRs/dev-kit-versioning-policy.md` (Versioning policy)
 
 ---
 

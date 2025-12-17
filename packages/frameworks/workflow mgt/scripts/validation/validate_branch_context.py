@@ -175,9 +175,9 @@ def locate_task_doc_for_version(
         if not story_dir.exists():
             story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
     else:
-        story_dir = project_root / f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story:03d}"
+        story_dir = project_root / f"docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story:03d}"
         if not story_dir.exists():
-            story_dir = project_root / f"KB/PM_and_Portfolio/kanban/epics/Epic-{epic}/Story-{story}"
+            story_dir = project_root / f"docs/Project_Management/kanban/epics/Epic-{epic}/Story-{story}"
     
     if story_dir.exists():
         task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))
@@ -199,7 +199,7 @@ def is_documentation_file(file_path: Path) -> bool:
     - Markdown files (.md)
     - README files (README.md, README.txt, etc.)
     - CHANGELOG files (CHANGELOG.md, CHANGELOG.txt, etc.)
-    - Files in KB/ directory
+    - Files in docs/ directory
     - Files in packages/frameworks/*/ directories (framework docs)
     - Files in docs/ directory
     - Kanban documentation (Epic, Story, Task docs)
@@ -207,7 +207,7 @@ def is_documentation_file(file_path: Path) -> bool:
     - Text files (.txt)
     
     Non-documentation files include:
-    - Python files (.py) - except if in docs/ or KB/
+    - Python files (.py) - except if in docs/ or docs/
     - JavaScript/TypeScript files (.js, .ts, .jsx, .tsx)
     - Other code files (.java, .go, .rs, etc.)
     - Binary files
@@ -223,8 +223,8 @@ def is_documentation_file(file_path: Path) -> bool:
     if file_name_lower.startswith('readme') or file_name_lower.startswith('changelog'):
         return True
     
-    # Always documentation: KB/ directory
-    if 'KB/' in file_str or file_str.startswith('KB/'):
+    # Always documentation: docs/ directory
+    if 'docs/' in file_str or file_str.startswith('docs/'):
         return True
     
     # Always documentation: packages/frameworks/*/ directories (framework docs)
@@ -243,9 +243,9 @@ def is_documentation_file(file_path: Path) -> bool:
     if file_path.suffix.lower() == '.txt':
         return True
     
-    # Python files in KB/ or docs/ are documentation
+    # Python files in docs/ or docs/ are documentation
     if file_path.suffix.lower() == '.py':
-        if 'KB/' in file_str or 'docs/' in file_str or file_str.startswith('KB/') or file_str.startswith('docs/'):
+        if 'docs/' in file_str or 'docs/' in file_str or file_str.startswith('docs/') or file_str.startswith('docs/'):
             return True
         # Python files elsewhere are code
         return False
@@ -385,7 +385,7 @@ def validate_doc_init_build(version: str, config: Optional[Dict] = None) -> Tupl
             errors.append(f"   - {rel_path}")
         errors.append(
             f"\n   Doc-init builds (+0) must only contain documentation changes.\n"
-            f"   Documentation files include: .md files, README, CHANGELOG, KB/, packages/frameworks/, docs/, .yaml, .txt\n"
+            f"   Documentation files include: .md files, README, CHANGELOG, docs/, packages/frameworks/, docs/, .yaml, .txt\n"
             f"   Code files (.py, .js, .ts, etc.) are not allowed in doc-init builds."
         )
         return False, errors
