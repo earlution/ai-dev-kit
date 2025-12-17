@@ -12,9 +12,9 @@ housekeeping_policy: keep
 
 **Location in `.cursorrules`:** Add this section in the "Version Control and Release Process" section (or equivalent).
 
-**Last Updated:** 2025-12-08  
+**Last Updated:** 2025-12-18  
 **Source Project:** Originally fynd.deals (Epic 15, Story 1), now maintained in ai-dev-kit as canonical SoT  
-**Version:** 2.3.0 (added PVW trigger section)
+**Version:** 2.3.1 (BR-010 fix: doc-init detection bug resolved)
 
 ---
 

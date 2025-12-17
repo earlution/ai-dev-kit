@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.2] - 2025-12-18
+
+**Package Version:** 2.1.2
+**Project Version:** 0.4.13.4+2
+**Bump Type:** PATCH
+
+### Fixed
+
+- **BR-010:** Fixed RW doc-init detection bug (Story + Task docs batch creation scenario)
+  - **Bug:** RW incorrectly set BUILD=0 instead of BUILD=1 when Story + all Task docs created together in story's abstract space (v0.E.S.0+0), then first implementation work begins
+  - **Root Cause:** `detect_first_time_est_doc` function didn't check if task document already exists (even if not created in current commit)
+  - **Fix:** Added task document existence check before determining doc-init state
+  - **Impact:** Ensures correct versioning (BUILD=1) for batch creation workflow
+  - **Use Case:** Valid workflow (Story + Task docs batch creation) now correctly supported
+
+### Changed
+
+- Updated `validate_version_bump.py` to check task document existence before determining doc-init
+- Updated RW execution guide with Example 4 (Story + Task docs batch creation scenario)
+- Enhanced doc-init detection logic to handle batch creation workflows
+
+**Criteria Reference:** PATCH Version Bump
+- ✅ Bug fix: Resolves BR-010 (incorrect BUILD=0 for batch creation workflow)
+- ✅ Backward compatible: No breaking changes
+- ✅ Improves versioning accuracy for valid batch creation workflows
+
+**Related:**
+- Bug Report: BR-010 – RW Doc-Init Detection Bug
+- Use Case: UC-D-004 – Story + Task Docs Batch Creation
+- Abstract Anti-Pattern: Use Case Exposed Design Flaw
+
+---
+
 ## [2.1.1] - 2025-12-09
 
 **Package Version:** 2.1.1
