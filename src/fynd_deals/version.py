@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
 VERSION_TASK = 6      # Task number (Task 6: Cross-project meta-analysis and canonical framework design)
-VERSION_BUILD = 18    # Build number (E6:S06:T06+18 - Complete canonical workflows inventory: added Intake, PVW, PIR, Migration, Refactor, Testing workflows)
+VERSION_BUILD = 19    # Build number (E6:S06:T06+19 - Created discrete Task document for T06 per FR-016: 3-tier Kanban structure compliance)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

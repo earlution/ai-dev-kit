@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.6+18 – Complete canonical workflows inventory: added Intake, PVW, PIR, Migration, Refactor, Testing workflows)  
+**Last updated:** 2025-12-18 (v0.6.6.6+19 – Created discrete Task document for T06 per FR-016: 3-tier Kanban structure compliance)  
 **Version:** v0.6.6.6+1  
 **Code:** E6S06
 
@@ -26,7 +26,8 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T03 – Design pre-release feedback mechanism** - TODO
 - [ ] **E6:S06:T04 – Create package management implementation plan** - TODO
 - [ ] **E6:S06:T05 – Implement feedback mechanism** - TODO
-- [x] **E6:S06:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.6.6+8 – Ultimate canonical Kanban structure completed with full E/S/T inventory: 14/14 deliverables complete)
+- [ ] **E6:S06:T06 – Cross-project meta-analysis and canonical framework design** - IN PROGRESS (v0.6.6.6+18 – Complete canonical workflows inventory: all 7 workflows documented; discrete Task document created per FR-016)
+  - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 
 ---
 
