@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-17 (v0.6.6.6+5 – Executive summary rewritten: Decision-focused with proposed canonical structures)  
+**Last updated:** 2025-12-17 (v0.6.6.6+6 – Good/bad practice catalog and pattern/anti-pattern identification completed: 10/14 deliverables complete)  
 **Version:** v0.6.6.6+1  
 **Code:** E6S06
 
