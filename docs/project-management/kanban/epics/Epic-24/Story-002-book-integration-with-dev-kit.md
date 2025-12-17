@@ -13,16 +13,16 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
 **Last updated:** 2025-12-05  
-**Version:** v0.9.2.1+1  
+**Version:** v0.24.2.1+1  
 **Code:** E9S02
 
 ---
 
 ## Task Checklist
 
-- [ ] **E9:S02:T01 – Link book content to frameworks** - TODO
-- [ ] **E9:S02:T02 – Create book-specific examples** - TODO
-- [ ] **E9:S02:T03 – Establish integration patterns** - TODO
+- [ ] **E24:S02:T01 – Link book content to frameworks** - TODO
+- [ ] **E24:S02:T02 – Create book-specific examples** - TODO
+- [ ] **E24:S02:T03 – Establish integration patterns** - TODO
 
 ---
 
@@ -40,11 +40,11 @@ Integrate book content with dev-kit frameworks and create book-specific examples
 
 ## Tasks
 
-### E9:S02:T01 – Link book content to frameworks
+### E24:S02:T01 – Link book content to frameworks
 
 **Input:** Book content, framework packages  
 **Deliverable:** Book-framework integration documentation  
-**Dependencies:** E9:S01 (Book Content Development)  
+**Dependencies:** E24:S01 (Book Content Development)  
 **Blocker:** None
 
 **Approach:**
@@ -55,11 +55,11 @@ Integrate book content with dev-kit frameworks and create book-specific examples
 
 ---
 
-### E9:S02:T02 – Create book-specific examples
+### E24:S02:T02 – Create book-specific examples
 
 **Input:** Book content, framework examples  
 **Deliverable:** Book-specific example implementations  
-**Dependencies:** E9:S01 (Book Content Development)  
+**Dependencies:** E24:S01 (Book Content Development)  
 **Blocker:** None
 
 **Approach:**
@@ -70,11 +70,11 @@ Integrate book content with dev-kit frameworks and create book-specific examples
 
 ---
 
-### E9:S02:T03 – Establish integration patterns
+### E24:S02:T03 – Establish integration patterns
 
 **Input:** Integration documentation, examples  
 **Deliverable:** Integration pattern library  
-**Dependencies:** E9:S02:T01, E9:S02:T02  
+**Dependencies:** E24:S02:T01, E24:S02:T02  
 **Blocker:** None
 
 **Approach:**
@@ -91,7 +91,7 @@ Integrate book content with dev-kit frameworks and create book-specific examples
 - None
 
 **Blocked By:**
-- E9:S01 (Book Content Development)
+- E24:S01 (Book Content Development)
 
 **Coordinates With:**
 - Epic 5 (Documentation Management)
@@ -101,6 +101,6 @@ Integrate book content with dev-kit frameworks and create book-specific examples
 
 ## References
 
-- `docs/project-management/kanban/epics/Epic-9/Epic-9.md`
-- `docs/project-management/kanban/epics/Epic-9/Story-001-book-content-development.md`
+- `docs/project-management/kanban/epics/Epic-24/Epic-24.md`
+- `docs/project-management/kanban/epics/Epic-24/Story-001-book-content-development.md`
 

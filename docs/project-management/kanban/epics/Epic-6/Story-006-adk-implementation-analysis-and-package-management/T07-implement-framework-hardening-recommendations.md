@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 6, Story 6, Task 7: Implement Framework Hardening Recommendations
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** CRITICAL  
-**Last updated:** 2025-12-18 (v0.6.6.7+0 – Task created)  
-**Started:** [TBD]  
+**Last updated:** 2025-12-17 (v0.6.6.7+1 – Phase 1: Epic 9→Epic 24 rename complete, Phase 3: rw-config.yaml created)  
+**Started:** 2025-12-18  
 **Completed:** [TBD]  
-**Version:** v0.6.6.7+0  
+**Version:** v0.6.6.7+1  
 **Code:** E6S06T07
 
 ---
@@ -53,7 +53,7 @@ Implement all critical and high-priority hardening actions:
 - `docs/knowledge/analysis/adk-drift-analysis.md` - Framework drift analysis
 - `docs/knowledge/analysis/adk-learning-synthesis.md` - What ADK can learn (implement, harden, avoid, do differently)
 - Current ai-dev-kit source structure:
-  - `docs/project-management/kanban/epics/Epic-9/` - Epic 9 "Book Related Work" (to be renamed)
+  - `docs/project-management/kanban/epics/Epic-24/` - Epic 24 "Book Related Work" (renamed from Epic 9)
   - `src/fynd_deals/version.py` - Legacy version file path (to be migrated)
   - Installer scripts in `packages/frameworks/kanban/scripts/`
   - Installation documentation

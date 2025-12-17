@@ -12,18 +12,18 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-10 (v0.9.1.1+2 – Added Kanban chapter alignment task)  
-**Version:** v0.9.1.1+2  
+**Last updated:** 2025-12-10 (v0.24.1.1+2 – Added Kanban chapter alignment task)  
+**Version:** v0.24.1.1+2  
 **Code:** E9S01
 
 ---
 
 ## Task Checklist
 
-- [ ] **E9:S01:T01 – Create book chapter structure** - TODO
-- [ ] **E9:S01:T02 – Develop chapter content** - TODO
-- [ ] **E9:S01:T03 – Build examples and exercises** - TODO
-- [ ] **E9:S01:T04 – Align PM/Kanban chapter with ai-dev-kit canonical epics** - TODO
+- [ ] **E24:S01:T01 – Create book chapter structure** - TODO
+- [ ] **E24:S01:T02 – Develop chapter content** - TODO
+- [ ] **E24:S01:T03 – Build examples and exercises** - TODO
+- [ ] **E24:S01:T04 – Align PM/Kanban chapter with ai-dev-kit canonical epics** - TODO
 
 ---
 
@@ -41,7 +41,7 @@ Develop comprehensive book content for "Vibe Coding For Dummies".
 
 ## Tasks
 
-### E9:S01:T01 – Create book chapter structure
+### E24:S01:T01 – Create book chapter structure
 
 **Input:** Book outline, style guide  
 **Deliverable:** Book chapter structure document  
@@ -56,11 +56,11 @@ Develop comprehensive book content for "Vibe Coding For Dummies".
 
 ---
 
-### E9:S01:T02 – Develop chapter content
+### E24:S01:T02 – Develop chapter content
 
 **Input:** Chapter structure, book outline  
 **Deliverable:** Chapter content documents  
-**Dependencies:** E9:S01:T01  
+**Dependencies:** E24:S01:T01  
 **Blocker:** None
 
 **Approach:**
@@ -71,11 +71,11 @@ Develop comprehensive book content for "Vibe Coding For Dummies".
 
 ---
 
-### E9:S01:T03 – Build examples and exercises
+### E24:S01:T03 – Build examples and exercises
 
 **Input:** Chapter content, dev-kit frameworks  
 **Deliverable:** Book examples and exercises  
-**Dependencies:** E9:S01:T02  
+**Dependencies:** E24:S01:T02  
 **Blocker:** None
 
 **Approach:**
@@ -86,11 +86,11 @@ Develop comprehensive book content for "Vibe Coding For Dummies".
 
 ---
 
-### E9:S01:T04 – Align PM/Kanban chapter with ai-dev-kit canonical epics
+### E24:S01:T04 – Align PM/Kanban chapter with ai-dev-kit canonical epics
 
 **Input:** Latest `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` (core epics now 1-7, 8, 10, 18, 22, 23 and ordered chronologically); Kanban package docs.  
 **Deliverable:** PM/Kanban chapter draft that mirrors the ai-dev-kit Kanban package: sections per epic in the canonical order, each describing the need, responsibility/scope, and (where helpful) the first few stories.  
-**Dependencies:** E9:S01:T01 (chapter structure)  
+**Dependencies:** E24:S01:T01 (chapter structure)  
 **Blocker:** None
 
 **Approach:**
@@ -104,7 +104,7 @@ Develop comprehensive book content for "Vibe Coding For Dummies".
 ## Dependencies
 
 **Blocks:**
-- E9:S02 (Book Integration with Dev-Kit)
+- E24:S02 (Book Integration with Dev-Kit)
 
 **Blocked By:**
 - None
@@ -117,7 +117,7 @@ Develop comprehensive book content for "Vibe Coding For Dummies".
 
 ## References
 
-- `docs/project-management/kanban/epics/Epic-9/Epic-9.md`
+- `docs/project-management/kanban/epics/Epic-24/Epic-24.md`
 - `docs/vibe-coding-for-dummies-outline-and-sample.md`
 - `docs/for-dummies-style-guide.md`
 

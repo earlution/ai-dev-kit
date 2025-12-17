@@ -12,16 +12,16 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-11  
-**Last updated:** 2025-12-11 (v0.9.4.1+1 – Task 1 complete: Starborn Legacy Zombie Story report captured)  
-**Version:** v0.9.4.0+0  
+**Last updated:** 2025-12-11 (v0.24.4.1+1 – Task 1 complete: Starborn Legacy Zombie Story report captured)  
+**Version:** v0.24.4.0+0  
 **Code:** E9S04
 
 ---
 
 ## Task Checklist
 
-- [x] **E9:S04:T00 – Setup: Material Capture Infrastructure** ✅ COMPLETE (v0.9.4.0+1)
-- [x] **E9:S04:T01 – Capture Starborn Legacy Zombie Story Report** ✅ COMPLETE (v0.9.4.1+1)
+- [x] **E24:S04:T00 – Setup: Material Capture Infrastructure** ✅ COMPLETE (v0.24.4.0+1)
+- [x] **E24:S04:T01 – Capture Starborn Legacy Zombie Story Report** ✅ COMPLETE (v0.24.4.1+1)
 
 ---
 
@@ -39,7 +39,7 @@ Create a system for capturing and storing unstructured book material (text dumps
 
 ## Tasks
 
-### E9:S04:T00 – Setup: Material Capture Infrastructure
+### E24:S04:T00 – Setup: Material Capture Infrastructure
 
 **Input:** Story requirements, book material capture needs  
 **Deliverable:** Material capture structure, templates, and guidelines established  
@@ -56,12 +56,12 @@ Create a system for capturing and storing unstructured book material (text dumps
 - [x] Setup deliverables are documented as metadata in this task
 - [x] Infrastructure is ready for material capture tasks (T01+)
 
-**Status:** ✅ COMPLETE (v0.9.4.0+1)
+**Status:** ✅ COMPLETE (v0.24.4.0+1)
 
 **Setup Deliverables (Metadata):**
 
 **1. Material Capture Structure:**
-- **Location:** Tasks within this Story (E9:S04) serve as the storage mechanism
+- **Location:** Tasks within this Story (E24:S04) serve as the storage mechanism
 - **Format:** Unstructured material captured directly in task sections
 - **Naming:** Tasks numbered sequentially (T01, T02, T03...) as material is captured
 - **Metadata:** Each captured material includes: source project, date, type, purpose
@@ -82,14 +82,14 @@ Create a system for capturing and storing unstructured book material (text dumps
 **3. Storage and Organization:**
 - **Storage:** Tasks themselves are the storage (no separate storage system needed)
 - **Organization:** Sequential task numbering provides chronological organization
-- **Processing:** Material captured here feeds into E9:S01 (Book Content Development) for structured processing
+- **Processing:** Material captured here feeds into E24:S01 (Book Content Development) for structured processing
 - **Indexing:** Task checklist serves as index of captured material
 
 **Rationale:** This abstract setup task establishes the infrastructure. All actual material capture happens in subsequent tasks (T01+), which serve as both the work items and the storage mechanism. This keeps setup separate from content, and allows unlimited material capture tasks without setup tasks cluttering the sequence.
 
 ---
 
-### E9:S04:T01 – Capture Starborn Legacy Zombie Story Report
+### E24:S04:T01 – Capture Starborn Legacy Zombie Story Report
 
 **Input:** Starborn Legacy project report: "The Zombie Story: A Cautionary tale resulting in technical debt"  
 **Deliverable:** Captured report stored in material capture location  
@@ -111,7 +111,7 @@ Create a system for capturing and storing unstructured book material (text dumps
 3. Add metadata: source project (Starborn Legacy), date (2025-12-11), type (case study report)
 4. Note: This material will be processed later for use in book content
 
-**Status:** ✅ COMPLETE (v0.9.4.1+1)
+**Status:** ✅ COMPLETE (v0.24.4.1+1)
 
 **Captured Material:**
 
@@ -299,13 +299,13 @@ When mistakes, misses, and false positives compound, they create emergent anti-p
 
 **Problem:** Tasks T001-T006 were released with incorrect Epic/Story numbers:
 
-- **T001:** Released as `v0.9.32+98` (Epic 9, Story 32) → Should be `v0.15.1.1+1` (Epic 15, Story 1, Task 1)
+- **T001:** Released as `v0.24.32+98` (Epic 9, Story 32) → Should be `v0.15.1.1+1` (Epic 15, Story 1, Task 1)
 
-- **T002:** Released as `v0.9.32.1+100` → Should be `v0.15.1.2+1`
+- **T002:** Released as `v0.24.32.1+100` → Should be `v0.15.1.2+1`
 
-- **T003:** Released as `v0.9.32.1+101` → Should be `v0.15.1.3+1`
+- **T003:** Released as `v0.24.32.1+101` → Should be `v0.15.1.3+1`
 
-- **T006:** Released as `v0.9.32.1+102` → Should be `v0.15.1.6+1`
+- **T006:** Released as `v0.24.32.1+102` → Should be `v0.15.1.6+1`
 
 **Impact:**
 
@@ -339,7 +339,7 @@ When mistakes, misses, and false positives compound, they create emergent anti-p
 
 ### Issue 3: E9S32T1 Build Number Explosion
 
-**Problem:** Epic 9 Story 32 Task 1 (`v0.9.32.1+X`) accumulated 102+ build bumps, indicating:
+**Problem:** Epic 9 Story 32 Task 1 (`v0.24.32.1+X`) accumulated 102+ build bumps, indicating:
 
 - Multiple distinct tasks incorrectly versioned under the same task number
 
@@ -785,13 +785,13 @@ When mistakes, misses, and false positives compound, they create emergent anti-p
 ## Dependencies
 
 **Blocks:**
-- E9:S01 (Book Content Development) - Captured material feeds into structured content development
+- E24:S01 (Book Content Development) - Captured material feeds into structured content development
 
 **Blocked By:**
 - None
 
 **Coordinates With:**
-- E9:S01 (Book Content Development) - Material captured here is processed into structured content
+- E24:S01 (Book Content Development) - Material captured here is processed into structured content
 - Epic 5 (Documentation Management) - Material capture may use documentation management patterns
 
 ---
@@ -808,5 +808,5 @@ When mistakes, misses, and false positives compound, they create emergent anti-p
 
 ## References
 
-- `docs/project-management/kanban/epics/Epic-9/Epic-9.md`
-- `docs/project-management/kanban/epics/Epic-9/Story-001-book-content-development.md`
+- `docs/project-management/kanban/epics/Epic-24/Epic-24.md`
+- `docs/project-management/kanban/epics/Epic-24/Story-001-book-content-development.md`

@@ -314,21 +314,23 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ---
 
-### Epic 9: Book Related Work
+### Epic 24: Book Related Work (Project-Specific)
 
 **Status:** IN PROGRESS  
 **Priority:** MEDIUM  
-**Last Updated:** v0.9.1.1+1
+**Last Updated:** 2025-12-18 (Epic renamed from Epic 9 to Epic 24 - project-specific range)
+
+**Note:** This is a **project-specific epic** (Epic 24+). Canonical Epic 9 is "User Management and Authentication" (see templates).
 
 **Stories:**
-- [ ] **E9:S01 – Book Content Development** - IN PROGRESS
-  - Story: [`epics/Epic-9/Story-001-book-content-development.md`](epics/Epic-9/Story-001-book-content-development.md)
-- [ ] **E9:S02 – Book Integration with Dev-Kit** - TODO
-  - Story: [`epics/Epic-9/Story-002-book-integration-with-dev-kit.md`](epics/Epic-9/Story-002-book-integration-with-dev-kit.md)
-- [ ] **E9:S03 – Book Publishing Support** - TODO
-  - Story: [`epics/Epic-9/Story-003-book-publishing-support.md`](epics/Epic-9/Story-003-book-publishing-support.md)
+- [ ] **E24:S01 – Book Content Development** - IN PROGRESS
+  - Story: [`epics/Epic-24/Story-001-book-content-development.md`](epics/Epic-24/Story-001-book-content-development.md)
+- [ ] **E24:S02 – Book Integration with Dev-Kit** - TODO
+  - Story: [`epics/Epic-24/Story-002-book-integration-with-dev-kit.md`](epics/Epic-24/Story-002-book-integration-with-dev-kit.md)
+- [ ] **E24:S03 – Book Publishing Support** - TODO
+  - Story: [`epics/Epic-24/Story-003-book-publishing-support.md`](epics/Epic-24/Story-003-book-publishing-support.md)
 
-**Epic Doc:** [`epics/Epic-9/Epic-9.md`](epics/Epic-9/Epic-9.md)
+**Epic Doc:** [`epics/Epic-24/Epic-24.md`](epics/Epic-24/Epic-24.md)
 
 ---
 

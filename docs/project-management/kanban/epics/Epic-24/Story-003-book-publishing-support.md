@@ -13,16 +13,16 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
 **Last updated:** 2025-12-05  
-**Version:** v0.9.3.1+1  
+**Version:** v0.24.3.1+1  
 **Code:** E9S03
 
 ---
 
 ## Task Checklist
 
-- [ ] **E9:S03:T01 – Create publishing workflows** - TODO
-- [ ] **E9:S03:T02 – Build publishing tools** - TODO
-- [ ] **E9:S03:T03 – Establish publishing processes** - TODO
+- [ ] **E24:S03:T01 – Create publishing workflows** - TODO
+- [ ] **E24:S03:T02 – Build publishing tools** - TODO
+- [ ] **E24:S03:T03 – Establish publishing processes** - TODO
 
 ---
 
@@ -40,11 +40,11 @@ Create comprehensive publishing support for book publication.
 
 ## Tasks
 
-### E9:S03:T01 – Create publishing workflows
+### E24:S03:T01 – Create publishing workflows
 
 **Input:** Publishing requirements, book content  
 **Deliverable:** Publishing workflow documentation  
-**Dependencies:** E9:S01 (Book Content Development)  
+**Dependencies:** E24:S01 (Book Content Development)  
 **Blocker:** None
 
 **Approach:**
@@ -55,11 +55,11 @@ Create comprehensive publishing support for book publication.
 
 ---
 
-### E9:S03:T02 – Build publishing tools
+### E24:S03:T02 – Build publishing tools
 
 **Input:** Publishing workflows  
 **Deliverable:** Publishing tool implementations  
-**Dependencies:** E9:S03:T01  
+**Dependencies:** E24:S03:T01  
 **Blocker:** None
 
 **Approach:**
@@ -70,11 +70,11 @@ Create comprehensive publishing support for book publication.
 
 ---
 
-### E9:S03:T03 – Establish publishing processes
+### E24:S03:T03 – Establish publishing processes
 
 **Input:** Publishing workflows, tools  
 **Deliverable:** Publishing process documentation  
-**Dependencies:** E9:S03:T02  
+**Dependencies:** E24:S03:T02  
 **Blocker:** None
 
 **Approach:**
@@ -91,7 +91,7 @@ Create comprehensive publishing support for book publication.
 - None
 
 **Blocked By:**
-- E9:S01 (Book Content Development)
+- E24:S01 (Book Content Development)
 
 **Coordinates With:**
 - Epic 5 (Documentation Management)
@@ -101,7 +101,7 @@ Create comprehensive publishing support for book publication.
 
 ## References
 
-- `docs/project-management/kanban/epics/Epic-9/Epic-9.md`
-- `docs/project-management/kanban/epics/Epic-9/Story-001-book-content-development.md`
-- `docs/project-management/kanban/epics/Epic-9/Story-002-book-integration-with-dev-kit.md`
+- `docs/project-management/kanban/epics/Epic-24/Epic-24.md`
+- `docs/project-management/kanban/epics/Epic-24/Story-001-book-content-development.md`
+- `docs/project-management/kanban/epics/Epic-24/Story-002-book-integration-with-dev-kit.md`
 

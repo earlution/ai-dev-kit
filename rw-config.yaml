@@ -1,0 +1,31 @@
+# RW Config: ai-dev-kit
+# This is the actual config for the ai-dev-kit repository
+# Part of: E6:S06:T07 - Framework Hardening (Phase 3)
+
+version_file: src/fynd_deals/version.py
+main_changelog: CHANGELOG.md
+changelog_dir: docs/changelog-and-release-notes/changelog-archive
+scripts_path: packages/frameworks/workflow mgt/scripts
+readme_file: README.md
+
+# Enable Kanban integration
+use_kanban: true
+
+# Kanban paths (relative to kanban_root)
+kanban_root: docs/project-management/kanban
+epic_doc_pattern: epics/Epic-{epic}/Epic-{epic}.md
+story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
+task_doc_pattern: epics/Epic-{epic}/Story-{story}/T{task}-*.md
+kanban_board: kanban-board.md
+fr_br_root: docs/project-management/kanban/fr-br
+
+# Use dev-kit versioning schema
+versioning_schema: RC.EPIC.STORY.TASK+BUILD
+
+# Project name
+project_name: ai-dev-kit
+
+# Epic ranges
+canonical_epic_range: "1-23"
+project_specific_epic_range: "24+"
+

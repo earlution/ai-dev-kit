@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 13     # Story number (Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View)
-VERSION_TASK = 6      # Task number (Task 6: Update other affected packages)
-VERSION_BUILD = 5     # Build number (E4:S13:T06+5 - UKW workflow implementation: Update Kanban Workflow with agentic intelligence)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
+VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
+VERSION_TASK = 7      # Task number (Task 7: Implement framework hardening recommendations)
+VERSION_BUILD = 1     # Build number (E6:S06:T07+1 - Phase 1: Epic 9 renamed to Epic 24, Phase 3: rw-config.yaml created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

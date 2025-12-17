@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Last Updated:** 2025-12-17  
 **Version:** v0.4.13.6+2
 
-**Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 8, 9, 21 are IN PROGRESS or TODO.
+**Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 8, 21, 24 are IN PROGRESS or TODO. Epic 24+ is project-specific range (not canonical).
 
 ---
 
@@ -38,7 +38,7 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
 | 6    | Framework Management               | COMPLETE ✅     | 3       | 3/3      |
 | 7    | Codebase Maintenance and Review    | IN PROGRESS    | 5       | 0/5      |
 | 8    | Tooling & Automation               | TODO           | 3       | 0/3      |
-| 9    | Book Related Work                 | IN PROGRESS    | 3       | 0/3      |
+| 24   | Book Related Work (Project-Specific) | IN PROGRESS    | 3       | 0/3      |
 | 21   | Internationalization and Localization | TODO        | 4       | 0/4      |
 
 **Epic Docs:** 
@@ -50,7 +50,7 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
 - [`epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
 - [`epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
 - [`epics/Epic-8/Epic-8.md`](epics/Epic-8/Epic-8.md)
-- [`epics/Epic-9/Epic-9.md`](epics/Epic-9/Epic-9.md)
+- [`epics/Epic-24/Epic-24.md`](epics/Epic-24/Epic-24.md) (Project-Specific)
 - [`epics/Epic-21/Epic-21.md`](epics/Epic-21/Epic-21.md)
 
 ---
