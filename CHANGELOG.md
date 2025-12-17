@@ -17,6 +17,30 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.13.4+3] - 18-12-25
+
+✅ Complete: T04 - Packaged RW updated to v2.1.2 with BR-010 fix documentation
+
+### Changed
+
+- **Packaged Release Workflow Framework:**
+  - Updated Workflow Management package from v2.1.1 to v2.1.2
+  - Added BR-010 fix documentation to package CHANGELOG
+  - Updated package README version and last updated date
+  - Updated cursorrules section version to 2.3.1
+
+- **Package Documentation:**
+  - Package CHANGELOG now documents BR-010 fix (doc-init detection bug)
+  - Package README reflects new version (2.1.2) and BR-010 fix in key enhancements
+  - Cursorrules section updated (version 2.3.1, last updated 2025-12-18)
+
+- **Version File:**
+  - Version updated to `0.4.13.4+3` (E4:S13:T04, third build)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+3.md)
+
+---
+
 ## [0.4.13.4+2] - 18-12-25
 
 ✅ Complete: T04 - BR-010 created, KB documents anchored to canonical source

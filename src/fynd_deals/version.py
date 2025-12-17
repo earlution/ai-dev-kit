@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 13     # Story number (Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View)
-VERSION_TASK = 4      # Task number (Task 4: Assess system impacts - BR-010 created, KB docs anchored)
-VERSION_BUILD = 2     # Build number (E4:S13:T04+2 - BR-010 created, KB documents anchored to BR-010 as canonical source)
+VERSION_TASK = 4      # Task number (Task 4: Assess system impacts - Packaged RW updated with BR-010 fix)
+VERSION_BUILD = 3     # Build number (E4:S13:T04+3 - Packaged RW updated to v2.1.2 with BR-010 fix documentation)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

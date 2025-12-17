@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.4+2 – T04 COMPLETE: BR-010 created, KB documents anchored to canonical source)  
+**Last updated:** 2025-12-18 (v0.4.13.4+3 – T04 COMPLETE: Packaged RW updated to v2.1.2 with BR-010 fix documentation)  
 **Estimated Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.4.13.4+2  
+**Version:** v0.4.13.4+3  
 **Code:** E4S13
 
 ---
@@ -27,7 +27,7 @@ housekeeping_policy: keep
   - Task: [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
 - [ ] **E4:S13:T03 – Update Kanban board template** - TODO (v0.4.13.0+0)
   - Task: [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
-- [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+2)
+- [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+3)
   - Task: [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
 - [ ] **E4:S13:T05 – Update Kanban package** - TODO (v0.4.13.0+0)
   - Task: [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
