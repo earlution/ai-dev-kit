@@ -10,10 +10,10 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** CRITICAL  
-**Last updated:** 2025-12-17 (v0.6.6.7+1 – Phase 1: Epic 9→Epic 24 rename complete, Phase 3: rw-config.yaml created)  
+**Last updated:** 2025-12-17 (v0.6.6.7+2 – Phase 2: Installer validation complete)  
 **Started:** 2025-12-18  
 **Completed:** [TBD]  
-**Version:** v0.6.6.7+1  
+**Version:** v0.6.6.7+2  
 **Code:** E6S06T07
 
 ---
@@ -98,16 +98,16 @@ Implement all critical and high-priority hardening actions:
 
 ## Acceptance Criteria
 
-- [ ] Epic 9 in ai-dev-kit source renamed to Epic 24+ (or appropriate project-specific number)
-- [ ] All Epic 9 references updated (Epic doc, Stories, Tasks, Kanban board, cross-references)
-- [ ] No Epic 9 "Book Related Work" references remain in source
-- [ ] Epic 24+ documented as project-specific range (not canonical)
-- [ ] Installer validates Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific)
-- [ ] Installer prevents Epic mashup (detects and blocks Epic 9 "Book Related Work" in non-book projects)
-- [ ] Installer warns if copying ai-dev-kit's actual Kanban
-- [ ] Installer validates canonical vs project-specific epic conflicts
-- [ ] Installer validates version file path
-- [ ] Installer validates KB structure
+- [x] Epic 9 in ai-dev-kit source renamed to Epic 24+ (or appropriate project-specific number) ✅ COMPLETE (v0.6.6.7+1)
+- [x] All Epic 9 references updated (Epic doc, Stories, Tasks, Kanban board, cross-references) ✅ COMPLETE (v0.6.6.7+1)
+- [x] No Epic 9 "Book Related Work" references remain in source ✅ COMPLETE (v0.6.6.7+1)
+- [x] Epic 24+ documented as project-specific range (not canonical) ✅ COMPLETE (v0.6.6.7+1)
+- [x] Installer validates Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific) ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
+- [x] Installer prevents Epic mashup (detects and blocks Epic 9 "Book Related Work" in non-book projects) ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
+- [x] Installer warns if copying ai-dev-kit's actual Kanban ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
+- [x] Installer validates canonical vs project-specific epic conflicts ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
+- [x] Installer validates version file path ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
+- [x] Installer validates KB structure ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
 - [ ] `.cursorrules` file exists in project root with comprehensive RW trigger
 - [ ] `rw-config.yaml` exists in project root with correct configuration
 - [ ] Version file migrated to `src/ai_dev_kit/version.py`

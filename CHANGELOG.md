@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.7+2] - 17-12-25
+
+🔧 Framework Hardening: Installer validation implemented (Phase 2)
+
+### Added
+
+- **Installer Validation (CRITICAL):**
+  - Created `validate_installation.py` validation module
+  - Epic numbering validation (Epic 1-23 canonical, Epic 24+ project-specific)
+  - Epic mashup prevention (detects Epic 9 "Book Related Work" in canonical range)
+  - Canonical vs project-specific epic conflict detection
+  - Version file path validation
+  - KB structure validation
+  - Warnings about copying ai-dev-kit's actual Kanban
+
+### Changed
+
+- **Installer Script:**
+  - Integrated validation into `install_kanban_framework.py`
+  - Pre-installation validation (Step 3.5) before migration
+  - Post-installation validation (Step 5) after migration
+  - Error blocking with `--force` override option
+  - Clear error and warning messages with actionable guidance
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+2.md)
+
+---
+
 ## [0.6.6.7+1] - 17-12-25
 
 🔧 Framework Hardening: Epic 9 → Epic 24 rename and rw-config.yaml creation

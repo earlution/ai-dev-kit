@@ -23,6 +23,21 @@ import sys
 from pathlib import Path
 from typing import Optional
 
+# Import validation module
+try:
+    from validate_installation import InstallationValidator
+except ImportError:
+    # Fallback if running from different directory
+    import importlib.util
+    validate_path = Path(__file__).parent / "validate_installation.py"
+    if validate_path.exists():
+        spec = importlib.util.spec_from_file_location("validate_installation", validate_path)
+        validate_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(validate_module)
+        InstallationValidator = validate_module.InstallationValidator
+    else:
+        InstallationValidator = None
+
 
 def run_command(cmd: list, cwd: Optional[Path] = None) -> tuple[int, str, str]:
     """Run a command and return exit code, stdout, stderr."""
@@ -228,6 +243,45 @@ def present_migration_plan(analysis_report_path: Path):
         print(f"⚠️  Could not load migration plan: {e}")
 
 
+def validate_installation(kanban_path: Path, project_root: Path, force: bool = False) -> bool:
+    """Run installation validation. Returns True if valid, False if errors found."""
+    if InstallationValidator is None:
+        print("⚠️  Warning: Validation module not available. Skipping validation.")
+        return True
+    
+    print("\n🔍 Step 3.5: Validating installation...")
+    print("=" * 60)
+    
+    validator = InstallationValidator(kanban_path, project_root)
+    is_valid, errors, warnings = validator.validate_all()
+    
+    if warnings:
+        print("\n⚠️  WARNINGS (should be reviewed):")
+        for warning in warnings:
+            print(f"  {warning}")
+    
+    if errors:
+        print("\n❌ ERRORS (must be fixed before installation):")
+        for error in errors:
+            print(f"  {error}")
+        
+        if not force:
+            print("\n🚨 Validation failed. Fix errors above or use --force to proceed anyway.")
+            response = input("\nProceed despite errors? (yes/no): ").strip().lower()
+            if response not in ['yes', 'y']:
+                print("Installation cancelled.")
+                return False
+        else:
+            print("\n⚠️  --force flag set: Proceeding despite validation errors.")
+    
+    if is_valid and not warnings:
+        print("\n✅ Validation passed - no issues found")
+    elif is_valid:
+        print("\n✅ Validation passed with warnings")
+    
+    return True
+
+
 def migrate_structure(
     analysis_report: Path,
     kanban_path: Path,
@@ -357,6 +411,10 @@ Examples:
     if args.mode == "auto":
         args.mode = select_installation_mode(analysis_report, None)
     
+    # Step 3.5: Validate installation (before migration)
+    if not validate_installation(kanban_path, project_root, force=args.force):
+        return 1
+    
     # Step 4: Migrate/Install
     if args.mode == "fresh":
         print("\n🆕 Fresh install mode: Installing canonical epics...")
@@ -378,6 +436,12 @@ Examples:
         
         if not success:
             return 1
+        
+        # Step 5: Post-installation validation
+        if not dry_run:
+            print("\n🔍 Step 5: Post-installation validation...")
+            if not validate_installation(kanban_path, project_root, force=args.force):
+                print("⚠️  Post-installation validation found issues. Please review warnings/errors above.")
     
     print("\n" + "=" * 60)
     print("✅ Installation complete!")
