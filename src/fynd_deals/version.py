@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
-VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
-VERSION_TASK = 1      # Task number (Task 1: Add optional BYOB badge workflow for private repos)
-VERSION_BUILD = 1     # Build number (E2:S01:T01+1 - T01 COMPLETE: Optional BYOB badge workflow added to workflow mgt package)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 13     # Story number (Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View)
+VERSION_TASK = 6      # Task number (Task 6: Update other affected packages)
+VERSION_BUILD = 2     # Build number (E4:S13:T06+2 - Story 13 final verification and completion)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
