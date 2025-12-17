@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical Epics/Stories/Tasks Template System)
-VERSION_TASK = 4      # Task number (Task 4: Create task template files for each typical task)
-VERSION_BUILD = 42    # Build number (E4:S06:T04+42 - Workflow and cursorrules structure analyses completed)
+VERSION_STORY = 11    # Story number (Story 11: Kanban Granularity & Discrete Task Docs)
+VERSION_TASK = 7      # Task number (Task 7: Migrate Embedded Tasks to Discrete Task Documents)
+VERSION_BUILD = 0     # Build number (E4:S11:T07+0 - Migration plan created: task document and comprehensive migration plan)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

@@ -17,6 +17,42 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.11.7+0] - 18-12-25
+
+📋 Added: Migration plan for embedded tasks to discrete Task documents (doc-init)
+
+### Added
+
+- **Task Document for T07**
+  - Created `T07-migrate-embedded-tasks-to-discrete-documents.md`
+  - Follows canonical Task document template structure
+  - Includes all required fields per FR-016
+  - Defines migration approach (4 phases)
+
+- **Migration Plan Document**
+  - Created `migration-plan-embedded-to-discrete-tasks.md`
+  - Comprehensive migration strategy
+  - Current state: 784 embedded tasks, 43 discrete Task documents
+  - Strategy: Hybrid approach (automated extraction + manual review)
+  - Timeline: 6-8 weeks (phased rollout)
+  - Phases: Preparation → Pilot → Phased Rollout → Validation
+
+### Changed
+
+- **Story Document Updated**
+  - Added T07 to task checklist
+  - Updated last updated timestamp
+  - Updated estimated effort (1 week + 6-8 weeks for migration)
+
+### Branch Hygiene
+
+- ✅ Switched to `epic/4-kanban-framework` branch for Epic 4 work
+- ✅ Branch context validated (Epic 4 work on Epic 4 branch)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.11.7+0.md)
+
+---
+
 ## [0.4.6.4+42] - 17-12-25
 
 📊 Analysis: Workflow and cursorrules structure analyses completed

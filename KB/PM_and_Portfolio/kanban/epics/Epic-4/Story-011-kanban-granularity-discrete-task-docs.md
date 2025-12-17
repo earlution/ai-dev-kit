@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** COMPLETE ✅  
 **Priority:** HIGH  
-**Last updated:** 2025-12-11 (v0.4.11.6+2 – All tasks complete: template optimization, delegation guidelines, compliance audit, migration guide)  
-**Estimated Effort:** 1 week  
+**Last updated:** 2025-12-18 (v0.4.11.7+0 – T07 added: Migration plan for embedded tasks to discrete Task documents)  
+**Estimated Effort:** 1 week (T01-T06) + 6-8 weeks (T07 migration)  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.4.11.0+0  
+**Version:** v0.4.11.7+0  
 **Code:** E4S11
 
 ---
@@ -28,6 +28,8 @@ housekeeping_policy: keep
 - [x] **E4:S11:T04 – Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)** ✅ COMPLETE (v0.4.11.4+1)
 - [ ] **E4:S11:T05 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.4.11.5+0)
 - [x] **E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation** ✅ COMPLETE (v0.4.11.6+2 – All phases complete: templates optimized, guidelines created, compliance audit complete, migration guide created)
+- [ ] **E4:S11:T07 – Migrate Embedded Tasks to Discrete Task Documents** - TODO (v0.4.11.7+0 – Migration plan and implementation)
+  - Task: [`T07-migrate-embedded-tasks-to-discrete-documents.md`](T07-migrate-embedded-tasks-to-discrete-documents.md)
 
 > **Format:** `E4:S11:Txx` (Epic 4, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)  
