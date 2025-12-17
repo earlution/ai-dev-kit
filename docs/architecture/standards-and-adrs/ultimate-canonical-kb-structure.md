@@ -606,6 +606,8 @@ docs/
 └── project-management/        # Kanban, governance
 ```
 
+**Note:** Project-specific knowledge (e.g., `guides/` for project-specific guides) may exist in `docs/knowledge/` but is not part of the canonical structure. The canonical structure defines the core categories that should be present in all ADK projects.
+
 ### 12.3 Agentic Capabilities
 
 - **Search** - Query external sources

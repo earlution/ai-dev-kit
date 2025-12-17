@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 11    # Story number (Story 11: Kanban Granularity & Discrete Task Docs)
 VERSION_TASK = 7      # Task number (Task 7: Migrate Embedded Tasks to Discrete Task Documents)
-VERSION_BUILD = 1     # Build number (E4:S11:T07+1 - Ultimate canonical KB structure with persistent knowledge base concept)
+VERSION_BUILD = 2     # Build number (E4:S11:T07+2 - KB structure cleanup: removed project-specific guides from canonical structure)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

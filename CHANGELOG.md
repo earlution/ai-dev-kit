@@ -17,6 +17,77 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.4.11.7+2] - 18-12-25
+
+🧹 Changed: KB structure cleanup - removed project-specific guides from canonical structure
+
+### Changed
+
+- **Ultimate Canonical KB Structure**
+  - Removed `guides/` category from canonical KB structure
+  - Canonical structure now includes only core framework categories:
+    - `analysis/` - Analysis documents, retrospectives
+    - `reviews/` - Post-implementation reviews
+    - `use-cases/` - Discovered use cases
+    - `changelog-and-release-notes/` - Release documentation
+  - Added note clarifying that project-specific knowledge may exist but isn't canonical
+
+- **Guides Documentation**
+  - Updated `docs/knowledge/guides/README.md` to clarify it's project-specific
+  - Noted that guides category is not part of canonical framework structure
+
+### Clarification
+
+**Canonical vs Project-Specific:**
+- **Canonical Structure:** Defines core framework categories that should be adopted by all ADK projects
+- **Project-Specific Knowledge:** Additional categories (like `guides/`) that are specific to this project
+- The `guides/` category remains in this project's KB as useful project-specific knowledge, but is not part of the canonical framework specification
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.11.7+2.md)
+
+---
+
+## [0.4.11.7+1] - 18-12-25
+
+📚 Added: Ultimate canonical KB structure with persistent knowledge base concept
+
+### Added
+
+- **Ultimate Canonical KB Structure Document** (v2.0.0)
+  - `docs/architecture/standards-and-adrs/ultimate-canonical-kb-structure.md`
+  - Incorporates "Building Persistent Knowledge in Cursor" concept
+  - Defines persistent knowledge vs. ephemeral information
+  - Specifies agentic knowledge management capabilities
+  - Documents Cursor integration (indexing, vectorization)
+  - Includes taxonomical standards (SOP)
+  - Defines agent workflows (acquisition, update, curation)
+  - Documents knowledge base categories with agentic support
+
+- **Knowledge Base README**
+  - `docs/knowledge/README.md`
+  - Knowledge base navigation hub
+  - Category descriptions (analysis, reviews, use-cases, changelog)
+  - Agentic management overview
+  - Navigation and contribution guidelines
+
+### Changed
+
+- **README.md**
+  - Fixed broken links: `KB/Documentation` → `docs/documentation`
+  - Updated Vision and Purpose document link
+
+### Key Concepts
+
+- **Persistent Knowledge Base** - Knowledge persists across sessions, accumulates over time
+- **Agentic Management** - Agents can search, scrape, curate, update, and cull knowledge
+- **Cursor Integration** - Local files indexed by Cursor for intelligent querying
+- **Curated Asset** - Knowledge base built over time, tailored to recurring needs
+- **Taxonomical Standards** - Clear structure, naming (kebab-case), and versioning
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.11.7+1.md)
+
+---
+
 ## [0.4.11.7+0] - 18-12-25
 
 📋 Added: Migration plan for embedded tasks to discrete Task documents (doc-init)

@@ -47,6 +47,9 @@ docs/knowledge/
 │   │   └── *.md                       # Individual discovered use cases
 │   └── templates/                     # Use case templates
 │       └── DISCOVERED_USE_CASE_TEMPLATE.md
+├── guides/                            # Reference guides and process documentation
+│   ├── README.md                      # Guides section overview
+│   └── package-maintenance-and-release.md  # Package maintenance guide
 └── changelog-and-release-notes/       # Release documentation
     ├── README.md                      # Changelog section overview
     └── changelog-archive/              # Detailed changelogs per release
@@ -107,6 +110,27 @@ docs/knowledge/
 
 **Note:** Canonical (design-phase) use cases belong in `docs/architecture/use-cases/canonical/`, not in `docs/knowledge/use-cases/`.
 
+### Guides (`guides/`)
+
+**Purpose:** Reference guides and process documentation for recurring tasks and workflows
+
+**Content Types:**
+- Process guides (how to perform recurring tasks)
+- Workflow documentation (step-by-step procedures)
+- Best practices documentation
+- Reference documentation (quick lookup)
+
+**Lifecycle:** `evergreen` (default)
+
+**Agentic Support:**
+- Agents can reference guides when performing tasks
+- Agents can update guides when processes change
+- Agents can create new guides when gaps are identified
+- Agents can link guides to related documentation
+
+**Key Guides:**
+- [Package Maintenance and Release](guides/package-maintenance-and-release.md) - Comprehensive guide to package maintenance, versioning, and release processes
+
 ### Changelog and Release Notes (`changelog-and-release-notes/`)
 
 **Purpose:** Release documentation
@@ -166,14 +190,14 @@ Agent links to related docs → Knowledge discoverable
 
 ### Finding Knowledge
 
-1. **By Category** - Browse by category (`analysis/`, `reviews/`, `use-cases/`)
+1. **By Category** - Browse by category (`analysis/`, `reviews/`, `use-cases/`, `guides/`)
 2. **By Search** - Use Cursor's search to find relevant knowledge files
 3. **By Links** - Follow "Related" sections in documents
 4. **By README** - Check category READMEs for key documents
 
 ### Contributing Knowledge
 
-1. **Determine Category** - Choose appropriate category (`analysis/`, `reviews/`, `use-cases/`)
+1. **Determine Category** - Choose appropriate category (`analysis/`, `reviews/`, `use-cases/`, `guides/`)
 2. **Follow Structure** - Use canonical document structure (see [Ultimate Canonical KB Structure](../architecture/standards-and-adrs/ultimate-canonical-kb-structure.md))
 3. **Add Frontmatter** - Include required lifecycle metadata
 4. **Link Related** - Add links to related documents
@@ -213,6 +237,7 @@ See [Ultimate Canonical KB Structure](../architecture/standards-and-adrs/ultimat
 - [Ultimate Canonical KB Structure](../architecture/standards-and-adrs/ultimate-canonical-kb-structure.md) - Complete specification
 - [Ultimate Canonical Workflow Structure](../architecture/standards-and-adrs/ultimate-canonical-workflow-structure.md) - RW Step 9 integration
 - [Ultimate Canonical Kanban Structure](../architecture/standards-and-adrs/ultimate-canonical-kanban-structure.md) - Kanban integration
+- [Package Maintenance and Release Guide](guides/package-maintenance-and-release.md) - Package maintenance guide
 
 ---
 _Last updated: 2025-12-18T00:00:00Z_
