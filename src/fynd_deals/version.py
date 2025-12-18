@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
 VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 9      # Task number (Task 9: Review and Prioritize Package Management Investigation Findings)
-VERSION_BUILD = 1     # Build number (E6:S06:T09+1 - Prioritization review complete)
+VERSION_TASK = 10     # Task number (Task 4: Create Package Management Implementation Plan)
+VERSION_BUILD = 1     # Build number (E6:S06:T04+1 - Implementation plan complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
