@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.8+1] - 18-12-25
+
+📋 Framework Management: Perpetual UKW task created (T08)
+
+### Added
+
+- **E6:S06:T08 - Update Kanban Workflow (UKW) - Perpetual Task:**
+  - Created perpetual task for UKW release attribution
+  - All UKW-triggered RWs now properly attributed to T08
+  - Addresses versioning attribution flaw from v0.6.6.7+6
+  - Build warning suppression enabled (high BUILD numbers expected)
+
+### Changed
+
+- **RW Logic (.cursorrules):**
+  - Added UKW context detection in Step 2 (Bump Version)
+  - Auto-attribution to T08 when UKW context detected
+  - Perpetual task flag checking for build warning suppression
+  - UKW releases use version pattern: `v0.6.6.8+{N}` where N = UKW run count
+
+### Fixed
+
+- **Versioning Attribution:**
+  - Fixed incorrect attribution of UKW work to arbitrary tasks
+  - UKW work now has dedicated perpetual task (T08)
+  - Semantic correctness restored (BUILD = UKW run count, not feature iteration)
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+1.md)
+
+---
+
 ## [0.6.6.7+6] - 18-12-25
 
 🔄 Framework Hardening: UKW - T07 marked complete, kanban docs synchronized

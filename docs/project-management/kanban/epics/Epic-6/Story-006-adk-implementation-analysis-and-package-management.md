@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.7+6 – UKW: T07 marked complete, kanban docs synchronized)  
-**Version:** v0.6.6.7+6  
+**Last updated:** 2025-12-18 (v0.6.6.8+1 – T08 created: Perpetual UKW task)  
+**Version:** v0.6.6.8+1  
 **Code:** E6S06
 
 ---
@@ -30,6 +30,9 @@ housekeeping_policy: keep
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 - [x] **E6:S06:T07 – Implement framework hardening recommendations** - ✅ COMPLETE (v0.6.6.7+6 – All phases complete: Epic 9→Epic 24, installer validation, rw-config.yaml, .cursorrules, installation instructions)
   - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
+- [ ] **E6:S06:T08 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.6.8+1 – Task created, RW logic updated)
+  - Task: [`T08-update-kanban-workflow-ukw.md`](T08-update-kanban-workflow-ukw.md)
+  - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T08. BUILD number = UKW run count.
 
 ---
 

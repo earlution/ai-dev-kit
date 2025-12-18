@@ -120,11 +120,25 @@ For each step, follow this pattern:
    - **DO NOT PROCEED:** If Step 1 fails, DO NOT attempt Step 2 or any subsequent step
 
 2. **Bump Version** - **MANDATORY STEP-BY-STEP PROCESS (DO NOT SKIP ANY STEP):**
+   - **A. CHECK UKW CONTEXT (BEFORE READING VERSION):** **CRITICAL:** Check if this RW was triggered immediately after UKW:
+     - **IF UKW was just executed:** This is UKW work → Skip to UKW Attribution Logic (see below)
+     - **IF NOT UKW context:** Proceed with normal task identification
+   - **A.1. UKW ATTRIBUTION LOGIC (IF UKW CONTEXT DETECTED):**
+     - **UKW Context:** User ran "UKW" then "RW" → This is kanban synchronization work
+     - **Auto-Attribute to T08:** UKW releases always use E6:S06:T08 (perpetual UKW task)
+     - **Version Pattern:** Use current `VERSION_EPIC=6`, `VERSION_STORY=6`, `VERSION_TASK=8`, increment `VERSION_BUILD`
+     - **Build Warning Suppression:** T08 is perpetual task, high BUILD numbers are expected and valid
+     - **Skip Normal Task Identification:** Do not read Story file for task identification
+     - **Example:** If current is `v0.6.6.8+3`, UKW release becomes `v0.6.6.8+4`
+     - **Document:** "UKW context detected. Attributing to T08 (perpetual UKW task). BUILD increment: +{N}"
    - **A. READ CURRENT VERSION:** Load config first, read version file to get current `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK`, `VERSION_BUILD`
-   - **B. IDENTIFY COMPLETED TASK (MANDATORY):** Load config first, read Story file, find MOST RECENTLY COMPLETED task in Task Checklist
+   - **B. IDENTIFY COMPLETED TASK (MANDATORY - ONLY IF NOT UKW):** Load config first, read Story file, find MOST RECENTLY COMPLETED task in Task Checklist
    - **B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY):** Locate Task document, validate required fields, verify Task ID alignment
+   - **B.2. CHECK PERPETUAL TASK FLAG:** Read task document for `perpetual_task: true` or `Task Type: Perpetual Maintenance`:
+     - **IF perpetual task:** Note for build warning suppression (high BUILD numbers expected and valid)
+     - **IF not perpetual:** Normal task handling applies
    - **C. DETERMINE VERSION BUMP (MANDATORY LOGIC):** Compare completed task number to current `VERSION_TASK` (new task vs same task vs out-of-order)
-   - **D. VALIDATE BEFORE UPDATING:** Verify new `VERSION_TASK` matches completed task number
+   - **D. VALIDATE BEFORE UPDATING:** Verify new `VERSION_TASK` matches completed task number (unless UKW context)
    - **E. UPDATE VERSION FILE:** Use config path, update `VERSION_TASK` and `VERSION_BUILD`
    - **F. VALIDATE AFTER UPDATING:** Re-read version file, verify new version matches decision
    - See `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 2 for complete procedure
