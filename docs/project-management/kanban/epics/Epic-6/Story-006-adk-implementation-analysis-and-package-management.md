@@ -28,7 +28,7 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T05 – Implement feedback mechanism** - TODO
 - [x] **E6:S06:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.6.6+20 – All deliverables verified complete: 7 meta-analyses, executive summary, all 4 canonical framework designs)
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
-- [ ] **E6:S06:T07 – Implement framework hardening recommendations** - IN PROGRESS (v0.6.6.7+3 – Phase 4: Installation instructions improved)
+- [ ] **E6:S06:T07 – Implement framework hardening recommendations** - IN PROGRESS (v0.6.6.7+5 – Acceptance criteria updated)
   - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
 
 ---

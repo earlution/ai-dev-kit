@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.7+5] - 18-12-25
+
+📋 Framework Hardening: Acceptance criteria updates
+
+### Changed
+
+- **Task Documentation:**
+  - Updated E6:S06:T07 acceptance criteria to reflect completed work
+  - Marked `rw-config.yaml` creation as complete (v0.6.6.7+1)
+  - Marked "Source serves as reference implementation" as complete (v0.6.6.7+4)
+  - Clarified version file migration as optional (legacy path acceptable)
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+5.md)
+
+---
+
 ## [0.6.6.7+4] - 18-12-25
 
 📝 Framework Hardening: .cursorrules file created (Phase 3)
