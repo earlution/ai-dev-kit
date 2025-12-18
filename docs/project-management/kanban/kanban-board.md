@@ -52,9 +52,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - **E5:S02:T03** – Build documentation health dashboards  
   *Last updated: 2025-12-06* | [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
 
-- **E6:S06:T02** – Investigate proper package management (single package file, hash verification)  
-  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-
 - **E6:S06:T03** – Design pre-release feedback mechanism  
   *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
@@ -271,9 +268,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Story: [`epics/Epic-6/Story-004-bug-reports.md`](epics/Epic-6/Story-004-bug-reports.md)
 - [ ] **E6:S05 – Feature Requests** - TODO
   - Story: [`epics/Epic-6/Story-005-feature-requests.md`](epics/Epic-6/Story-005-feature-requests.md)
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.7+5)
+- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.9+1)
   - Story: [`epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md`](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-  - Tasks: T00 ✅, T01 ✅, T06 ✅, T07 ✅ COMPLETE (v0.6.6.7+5), T02-T05 TODO (package management and feedback mechanism)
+  - Tasks: T00 ✅, T01 ✅, T02 ✅ COMPLETE (v0.6.6.9+1), T06 ✅, T07 ✅, T08 IN PROGRESS (Perpetual), T03-T05 TODO (feedback mechanism)
 
 **Epic Doc:** [`epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
 
