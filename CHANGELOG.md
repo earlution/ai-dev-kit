@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.7+4] - 18-12-25
+
+📝 Framework Hardening: .cursorrules file created (Phase 3)
+
+### Added
+
+- **Source Repository Frameworks (HIGH):**
+  - Created comprehensive `.cursorrules` file in project root
+  - Release Workflow (RW) trigger section with 12-step process
+  - Update Kanban Workflow (UKW) trigger section with 8-step bottom-up approach
+  - Package Version Workflow (PVW) trigger section
+  - Document lifecycle management section
+  - Git workflow restrictions section
+  - Version schema section with ADK schema documentation
+  - Branch mapping section with epic branch workflow rules
+  - Project-specific rules section for AI Dev Kit
+  - Config-driven approach with rw-config.yaml support
+  - Complete reference implementation for ADK frameworks
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+4.md)
+
+---
+
 ## [0.6.6.7+3] - 17-12-25
 
 📚 Framework Hardening: Installation instructions improved (Phase 4)
