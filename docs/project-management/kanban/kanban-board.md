@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2025-12-17  
-**Version:** v0.4.13.6+2
+**Last Updated:** 2025-12-18  
+**Version:** v0.6.6.7+6
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
@@ -40,8 +40,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Critical in-progress tasks that must be completed.*
 
-- **E6:S06:T07** – Implement framework hardening recommendations  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T07-implement-framework-hardening-recommendations.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+*No critical tasks in progress at this time.*
 
 ### Should Have (S) - Important Tasks
 
@@ -259,7 +258,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.6.3.3+2
+**Last Updated:** v0.6.6.7+6
 
 **Stories:**
 - [x] **E6:S01 – Framework Version Management** - COMPLETE ✅
@@ -268,6 +267,13 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Story: [`epics/Epic-6/Story-002-framework-update-and-migration.md`](epics/Epic-6/Story-002-framework-update-and-migration.md)
 - [x] **E6:S03 – Framework Health Monitoring** - COMPLETE ✅
   - Story: [`epics/Epic-6/Story-003-framework-health-monitoring.md`](epics/Epic-6/Story-003-framework-health-monitoring.md)
+- [ ] **E6:S04 – Bug Reports** - IN PROGRESS
+  - Story: [`epics/Epic-6/Story-004-bug-reports.md`](epics/Epic-6/Story-004-bug-reports.md)
+- [ ] **E6:S05 – Feature Requests** - TODO
+  - Story: [`epics/Epic-6/Story-005-feature-requests.md`](epics/Epic-6/Story-005-feature-requests.md)
+- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.7+5)
+  - Story: [`epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md`](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+  - Tasks: T00 ✅, T01 ✅, T06 ✅, T07 ✅ COMPLETE (v0.6.6.7+5), T02-T05 TODO (package management and feedback mechanism)
 
 **Epic Doc:** [`epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
 
