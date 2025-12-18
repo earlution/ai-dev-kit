@@ -125,12 +125,16 @@ For each step, follow this pattern:
      - **IF NOT UKW context:** Proceed with normal task identification
    - **A.1. UKW ATTRIBUTION LOGIC (IF UKW CONTEXT DETECTED):**
      - **UKW Context:** User ran "UKW" then "RW" → This is kanban synchronization work
-     - **Auto-Attribute to T08:** UKW releases always use E6:S06:T08 (perpetual UKW task)
-     - **Version Pattern:** Use current `VERSION_EPIC=6`, `VERSION_STORY=6`, `VERSION_TASK=8`, increment `VERSION_BUILD`
-     - **Build Warning Suppression:** T08 is perpetual task, high BUILD numbers are expected and valid
-     - **Skip Normal Task Identification:** Do not read Story file for task identification
-     - **Example:** If current is `v0.6.6.8+3`, UKW release becomes `v0.6.6.8+4`
-     - **Document:** "UKW context detected. Attributing to T08 (perpetual UKW task). BUILD increment: +{N}"
+     - **Dynamic Task Discovery:** Search for task document with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+     - **Task ID is Project-Specific:** Perpetual UKW task ID varies by project:
+       - ai-dev-kit: E6:S06:T08 (example)
+       - Other projects: May be E4:S03:T05, E2:S01:T10, etc. (depends on project structure)
+     - **Auto-Attribute to Perpetual Task:** Use discovered perpetual task's Epic/Story/Task numbers, increment `VERSION_BUILD`
+     - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
+     - **Skip Normal Task Identification:** Do not read Story file for normal task identification when UKW context detected
+     - **Example (ai-dev-kit):** If current is `v0.6.6.8+3`, UKW release becomes `v0.6.6.8+4`
+     - **Example (other project):** If perpetual task is E4:S03:T05 and current is `v0.4.3.5+2`, UKW release becomes `v0.4.3.5+3`
+     - **Document:** "UKW context detected. Found perpetual UKW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
    - **A. READ CURRENT VERSION:** Load config first, read version file to get current `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK`, `VERSION_BUILD`
    - **B. IDENTIFY COMPLETED TASK (MANDATORY - ONLY IF NOT UKW):** Load config first, read Story file, find MOST RECENTLY COMPLETED task in Task Checklist
    - **B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY):** Locate Task document, validate required fields, verify Task ID alignment
@@ -254,7 +258,7 @@ For each step, follow this pattern:
 5. **Follow** the step-by-step guide below using **BOTTOM-UP APPROACH**
 6. **Execute all steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern with **intelligent reasoning at each step**
 7. **Document** each step's analysis, reasoning, decisions, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 8 steps
+8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 9 steps
 
 **Default Paths (ai-dev-kit):**
 - `kanban_root`: `docs/project-management/kanban`
@@ -270,14 +274,45 @@ For each step, follow this pattern:
 
 **The 8 Steps (Bottom-Up Approach):**
 
-1. **Analyze Recent Activity** - Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers
-2. **Update Task Documents** - Update task document status fields, dates, forensic markers based on recent activity
-3. **Update Story Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize task data into tactical overviews, infer story status, update task checklists
-4. **Update Epic Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize story data into strategic overviews, infer epic status, update story checklists
-5. **Update Kanban Board** - **🧠 INTELLIGENCE REQUIRED:** Update MoSCoW priority list (LAST), update epic status sections, update board metadata
-6. **Validate Consistency** - Cross-reference status across all kanban documents, verify version consistency, check link integrity
-7. **Stage Files** - Run `git add` for all kanban files
-8. **Document Changes** - Create summary of updated documents, list key status changes
+1. **Identify Perpetual UKW Task (Wiring Step)** - **MANDATORY FIRST STEP:** Discover and wire UKW to the project's perpetual UKW task:
+   - Search all task documents for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
+   - Identify the task dedicated to UKW releases (may be named "Update Kanban Workflow (UKW)" or similar)
+   - Note the task's Epic/Story/Task ID (e.g., E6:S06:T08 in ai-dev-kit, E4:S03:T05 in another project)
+   - This establishes the wiring between UKW and the perpetual task for this project instance
+   - Store task ID for RW attribution later (when user runs "RW" after "UKW")
+2. **Analyze Recent Activity** - Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers
+3. **Update Task Documents** - Update task document status fields, dates, forensic markers based on recent activity
+4. **Update Story Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize task data into tactical overviews, infer story status, update task checklists
+5. **Update Epic Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize story data into strategic overviews, infer epic status, update story checklists
+6. **Update Kanban Board** - **🧠 INTELLIGENCE REQUIRED:** Update MoSCoW priority list (LAST), update epic status sections, update board metadata
+7. **Validate Consistency** - Cross-reference status across all kanban documents, verify version consistency, check link integrity
+8. **Stage Files** - Run `git add` for all kanban files
+9. **Document Changes** - Create summary of updated documents, list key status changes
+
+**🔄 UKW → RW Integration:**
+
+**Important:** After completing UKW, the user typically runs RW to commit the kanban documentation updates. When RW is triggered immediately after UKW:
+
+- **UKW Context Detection:** RW Step 2 will detect UKW context (user ran "UKW" then "RW")
+- **Perpetual Task Wiring:** UKW Step 1 establishes wiring to the project's perpetual UKW task (discovers task ID via `perpetual_task: true` flag)
+- **RW Uses Wired Task:** RW uses the perpetual task ID that UKW discovered in Step 1:
+  - **Wiring Established:** UKW Step 1 found the perpetual task (e.g., E6:S06:T08 in ai-dev-kit, E4:S03:T05 in another project)
+  - **RW Uses Wired ID:** RW Step 2 (UKW context) uses the task ID from UKW's wiring step
+  - **Same Task, Different ID per Project:** Each project instance has its own perpetual UKW task with its own E/S/T ID
+- **Version Pattern:** UKW releases use the wired perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
+- **Build Warning Suppression:** Perpetual tasks have `perpetual_task: true` flag, so high BUILD numbers are expected and valid (no warnings)
+
+**Wiring Example (ai-dev-kit):**
+- UKW Step 1 discovers: E6:S06:T08 is the perpetual UKW task
+- UKW wires itself to E6:S06:T08
+- When RW runs after UKW, it uses the wired task ID (E6:S06:T08)
+- Version: `v0.6.6.8+{N}`
+
+**Wiring Example (other project):**
+- UKW Step 1 discovers: E4:S03:T05 is the perpetual UKW task
+- UKW wires itself to E4:S03:T05
+- When RW runs after UKW, it uses the wired task ID (E4:S03:T05)
+- Version: `v0.4.3.5+{N}`
 
 **🔑 Key Principles:**
 

@@ -35,7 +35,7 @@ housekeeping_policy: keep
 5. **Follow** the step-by-step guide below using **BOTTOM-UP APPROACH**
 6. **Execute all steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern with **intelligent reasoning at each step**
 7. **Document** each step's analysis, reasoning, decisions, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 8 steps
+8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 9 steps
 
 **🔧 Config-Driven Approach (Preferred):**
 
@@ -56,7 +56,7 @@ If `rw-config.yaml` exists in project root and `use_kanban: true`, **MUST** load
 
 **🚨 MANDATORY: Progress Tracking with Cursor TODOs**
 
-**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for all 8 UKW steps:
+**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for all 9 UKW steps:
 
 1. **At Workflow Start:** Create TODO list with all 8 steps as `pending`
 2. **Before Each Step:** Mark step as `in_progress`
@@ -96,7 +96,7 @@ For each step, follow this pattern:
      - Document findings
      - Move to Step 2
 
-2. **Update Task Documents** - **BOTTOM-UP STEP 1:**
+3. **Update Task Documents** - **BOTTOM-UP STEP 1:**
    - **ANALYZE:**
      - For each task document in kanban structure:
        - Read current task status
@@ -120,7 +120,7 @@ For each step, follow this pattern:
      - Document updated tasks
      - Move to Step 3
 
-3. **Update Story Documents** - **BOTTOM-UP STEP 2:**
+4. **Update Story Documents** - **BOTTOM-UP STEP 2:**
    - **ANALYZE (🧠 INTELLIGENCE REQUIRED):**
      - For each story document:
        - Read all task documents in story
@@ -153,7 +153,7 @@ For each step, follow this pattern:
      - Document updated stories
      - Move to Step 4
 
-4. **Update Epic Documents** - **BOTTOM-UP STEP 3:**
+5. **Update Epic Documents** - **BOTTOM-UP STEP 3:**
    - **ANALYZE (🧠 INTELLIGENCE REQUIRED):**
      - For each epic document:
        - Read all story documents in epic
@@ -185,7 +185,7 @@ For each step, follow this pattern:
      - Document updated epics
      - Move to Step 5
 
-5. **Update Kanban Board** - **BOTTOM-UP STEP 4 (FINAL):**
+6. **Update Kanban Board** - **BOTTOM-UP STEP 4 (FINAL):**
    - **ANALYZE (🧠 INTELLIGENCE REQUIRED):**
      - Read current kanban board
      - Compare with updated Epic/Story/Task documents
@@ -221,7 +221,7 @@ For each step, follow this pattern:
      - Document board updates and prioritization rationale
      - Move to Step 6
 
-6. **Validate Consistency** - **MANDATORY VALIDATION STEP:**
+7. **Validate Consistency** - **MANDATORY VALIDATION STEP:**
    - **ANALYZE:**
      - Compare status across all kanban documents
      - Check version consistency
@@ -241,7 +241,7 @@ For each step, follow this pattern:
      - Document validation results
      - Move to Step 7
 
-7. **Stage Files** - **GIT OPERATION:**
+8. **Stage Files** - **GIT OPERATION:**
    - **ANALYZE:**
      - Identify all modified kanban files
    - **DETERMINE:**
@@ -254,7 +254,7 @@ For each step, follow this pattern:
      - Document staged files
      - Move to Step 8
 
-8. **Document Changes** - **FINAL STEP:**
+9. **Document Changes** - **FINAL STEP:**
    - **ANALYZE:**
      - Review all changes made
    - **DETERMINE:**
@@ -267,6 +267,41 @@ For each step, follow this pattern:
    - **PROCEED:**
      - Present summary to user
      - Workflow complete
+     - **Note:** After UKW, user typically runs RW to commit kanban documentation updates. RW will detect UKW context and auto-attribute to perpetual UKW task.
+
+**🔄 UKW → RW Integration (Wiring):**
+
+**Important:** After completing UKW, the user typically runs RW to commit the kanban documentation updates. The relationship between UKW and the perpetual task is established through wiring:
+
+- **Wiring Established in UKW Step 1:** UKW discovers and wires itself to the project's perpetual UKW task
+  - UKW Step 1 searches for task with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+  - UKW extracts the task's Epic/Story/Task ID (e.g., E6:S06:T08, E4:S03:T05, etc.)
+  - **Wiring:** UKW establishes relationship to this task ID for this project instance
+- **RW Uses Wired Task:** When RW runs after UKW:
+  - **UKW Context Detection:** RW Step 2 detects UKW context (user ran "UKW" then "RW")
+  - **Uses Wired Task ID:** RW uses the perpetual task ID that UKW wired in Step 1
+  - **Same Relationship, Different ID per Project:** Each project instance wires UKW to its own perpetual task (different E/S/T ID)
+- **Version Pattern:** UKW releases use the wired perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
+- **Build Warning Suppression:** Perpetual tasks have `perpetual_task: true` flag, so high BUILD numbers are expected and valid (no warnings)
+
+**Wiring Example (ai-dev-kit):**
+1. UKW Step 1: Searches tasks → Finds E6:S06:T08 with `perpetual_task: true`
+2. UKW wires itself to E6:S06:T08
+3. User runs "RW" → RW detects UKW context
+4. RW uses wired task ID (E6:S06:T08) → Version: `v0.6.6.8+{N}`
+
+**Wiring Example (other project):**
+1. UKW Step 1: Searches tasks → Finds E4:S03:T05 with `perpetual_task: true`
+2. UKW wires itself to E4:S03:T05
+3. User runs "RW" → RW detects UKW context
+4. RW uses wired task ID (E4:S03:T05) → Version: `v0.4.3.5+{N}`
+
+**Perpetual Task Pattern:**
+- Projects should create a perpetual UKW task for UKW release attribution
+- **Wiring Required:** Task must have `perpetual_task: true` or `Task Type: Perpetual Maintenance` in task document (UKW uses this to wire)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (wired in UKW Step 1)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as UKW runs (expected and valid)
 
 **🔑 Key Principles:**
 

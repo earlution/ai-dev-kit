@@ -1,0 +1,103 @@
+---
+lifecycle: evergreen
+ttl_days: null
+created_at: 2025-12-18T00:00:00Z
+expires_at: null
+housekeeping_policy: keep
+---
+
+# Story 014 – Kanban Framework Maintenance
+
+**Status:** IN PROGRESS  
+**Priority:** HIGH  
+**Estimated Effort:** [TBD]  
+**Created:** 2025-12-18  
+**Last updated:** 2025-12-18 (v0.4.14.0+0 – Story created)  
+**Version:** v0.4.14.0+0  
+**Code:** E4S14
+
+---
+
+## Task Checklist
+
+- [ ] **E4:S14:T01 – Update packaged RW to handle UKW context and perpetual tasks** - TODO
+  - Task: [`T01-update-packaged-rw-ukw-perpetual-tasks.md`](Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
+
+---
+
+## Overview
+
+This story tracks ongoing maintenance and updates to the Kanban Framework package. Maintenance tasks include framework updates, bug fixes, documentation improvements, and integration with other frameworks (e.g., RW integration with UKW and perpetual task support).
+
+---
+
+## Goal
+
+Ensure the Kanban Framework package remains current, well-maintained, and properly integrated with other ADK frameworks. Address maintenance issues, update documentation, and implement framework improvements as needed.
+
+---
+
+## Tasks
+
+### E4:S14:T01 – Update packaged RW to handle UKW context and perpetual tasks
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Dependencies:** None  
+**Estimated Effort:** Medium  
+**Version:** v0.4.14.1+0
+
+**Input:** 
+- Packaged RW framework (`packages/frameworks/workflow mgt/`)
+- UKW context detection logic (from `.cursorrules`)
+- Perpetual task pattern (from E6:S06:T08)
+
+**Deliverable:** Updated packaged RW with UKW context detection and perpetual task support
+
+**Approach:**
+1. Update packaged RW Step 2 (Bump Version) to detect UKW context
+2. Add auto-attribution logic for UKW releases (to perpetual task)
+3. Add perpetual task flag checking for build warning suppression
+4. Update RW execution guide documentation
+5. Update RW YAML workflow definition if needed
+6. Test UKW context detection and perpetual task handling
+
+**Acceptance Criteria:**
+- [ ] Packaged RW Step 2 detects UKW context (user ran "UKW" then "RW")
+- [ ] UKW releases auto-attributed to perpetual task (E6:S06:T08 pattern)
+- [ ] Perpetual task flag (`perpetual_task: true`) checked in RW Step 2
+- [ ] Build warning suppression works for perpetual tasks
+- [ ] RW execution guide updated with UKW attribution pattern
+- [ ] RW workflow YAML updated if needed
+- [ ] Documentation reflects perpetual task pattern
+
+---
+
+## Dependencies
+
+**Blocks:**
+- None
+
+**Blocked By:**
+- None
+
+**Coordinates With:**
+- Epic 6, Story 6, Task 8 (UKW perpetual task - source of pattern)
+- Epic 2 (Workflow Management Framework - RW package owner)
+
+---
+
+## References
+
+- **RW Package:** `packages/frameworks/workflow mgt/`
+- **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- **RW Workflow YAML:** `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`
+- **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md`
+- **UKW Analysis:** `docs/analysis/ukw-versioning-reasoning-analysis.md`
+
+---
+
+**Last Updated:** 2025-12-18 (v0.4.14.0+0 – Story created)  
+**Version:** v0.4.14.0+0  
+**Status:** IN PROGRESS
+

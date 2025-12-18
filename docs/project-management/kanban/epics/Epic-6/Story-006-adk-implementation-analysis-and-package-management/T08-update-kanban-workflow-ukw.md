@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.6.6.8+0 – Task created)  
+**Last updated:** 2025-12-18 (v0.6.6.8+2 – RW/UKW wiring documentation complete)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.6.8+0
+**Version:** v0.6.6.8+2
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** Task created - awaiting first UKW-triggered RW  
+**Progress:** RW/UKW wiring documentation complete - both local and packaged frameworks updated  
 **Code:** E6S06T08
 
 ---
@@ -94,10 +94,10 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 ## Acceptance Criteria
 
 - [x] Perpetual task document created ✅ COMPLETE (v0.6.6.8+0)
-- [ ] RW logic updated to detect UKW context and auto-attribute to T08
-- [ ] RW logic updated to suppress build number warnings for perpetual tasks
-- [ ] Documentation updated (RW guide, versioning policy)
-- [ ] First UKW-triggered RW uses T08 (v0.6.6.8+1)
+- [x] RW logic updated to detect UKW context and auto-attribute to T08 ✅ COMPLETE (v0.6.6.8+1)
+- [x] RW logic updated to suppress build number warnings for perpetual tasks ✅ COMPLETE (v0.6.6.8+1)
+- [x] Documentation updated (RW guide, versioning policy) ✅ COMPLETE (v0.6.6.8+2 - both local and packaged)
+- [x] First UKW-triggered RW uses T08 (v0.6.6.8+1) ✅ COMPLETE
 
 ---
 
@@ -120,7 +120,7 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 
 ---
 
-**Last Updated:** 2025-12-18 (v0.6.6.8+0 – Task created)  
-**Version:** v0.6.6.8+0  
+**Last Updated:** 2025-12-18 (v0.6.6.8+2 – RW/UKW wiring documentation complete)  
+**Version:** v0.6.6.8+2  
 **Status:** IN PROGRESS (Perpetual)
 

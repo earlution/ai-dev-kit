@@ -497,9 +497,59 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 
 **Agent Execution:**
 
-**🚨 MANDATORY: Follow this 7-step procedure (A-G) exactly. Do not skip any step.**
+**🚨 MANDATORY: Follow this 8-step procedure (A-H) exactly. Do not skip any step.**
 
-**A. READ CURRENT VERSION:**
+**A. CHECK UKW CONTEXT (BEFORE READING VERSION):**
+1. **ANALYZE:**
+   - **CRITICAL:** Check if this RW was triggered immediately after UKW execution
+   - **UKW Context Detection:** User ran "UKW" then "RW" → This is kanban synchronization work
+   - **Context Indicators:**
+     - Recent UKW execution (user ran UKW command)
+     - Git status shows kanban doc changes (epic/story/task docs modified)
+     - No specific task completion identified in recent commits
+   - **Decision Point:**
+     - ✅ **IF UKW context detected:** Skip to UKW Attribution Logic (A.1)
+     - ❌ **IF NOT UKW context:** Proceed with normal version bump path (A.2)
+
+**A.1. UKW ATTRIBUTION LOGIC (IF UKW CONTEXT DETECTED):**
+1.1. **ANALYZE:**
+   - **Dynamic Task Discovery:** Search for task document with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+   - **Load config:** Use `kanban_root` and `task_doc_pattern` from config or fallback
+   - **Search Pattern:** Iterate through all task documents looking for perpetual task flag
+   - **Task ID Extraction:** Extract Epic/Story/Task ID from discovered perpetual task document
+   - **Task ID is Project-Specific:** Perpetual UKW task ID varies by project:
+     - ai-dev-kit: E6:S06:T08 (example)
+     - Other projects: May be E4:S03:T05, E2:S01:T10, etc. (depends on project structure)
+
+1.2. **DETERMINE:**
+   - **Wiring Established:** UKW Step 1 already wired itself to the perpetual task (when user ran UKW)
+   - **RW Uses Wired Task:** RW uses the perpetual task ID that UKW discovered and wired
+   - **Version Decision:**
+     - Use discovered perpetual task's Epic/Story/Task numbers
+     - Keep `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK` from perpetual task
+     - Increment `VERSION_BUILD` by 1 (same task, new build)
+
+1.3. **EXECUTE:**
+   - Search all task documents using pattern: `{kanban_root}/{task_doc_pattern}`
+   - Read task documents looking for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
+   - When found, extract task's Epic/Story/Task ID (e.g., E6:S06:T08, E4:S03:T05)
+   - Read current version file to get current `VERSION_BUILD`
+   - Calculate new version: `v{VERSION_RC}.{PERPETUAL_EPIC}.{PERPETUAL_STORY}.{PERPETUAL_TASK}+{VERSION_BUILD+1}`
+
+1.4. **VALIDATE:**
+   - Perpetual UKW task found
+   - Task ID extracted correctly
+   - Current BUILD number retrieved
+   - New BUILD = current BUILD + 1
+
+1.5. **PROCEED:**
+   - **Skip normal task identification:** Do not read Story file for task identification
+   - **Skip normal version bump logic:** Do not compare task numbers (this is perpetual task)
+   - **Document:** "UKW context detected. Found perpetual UKW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
+   - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
+   - Move directly to Step 2.E (UPDATE VERSION FILE) or Step 3 (Create Detailed Changelog)
+
+**A.2. READ CURRENT VERSION (ONLY IF NOT UKW CONTEXT):**
 1. **ANALYZE:**
    - **Use config path:** Read current version from version file (from config `version_file` or fallback):
      - [Example: Confidentia] `src/confidentia/version.py` (or from `rw-config.yaml` if present)
@@ -540,7 +590,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - **CRITICAL:** Doc-init detection MUST happen BEFORE version bump logic
    - **CRITICAL:** If doc-init detected but non-doc changes found → FAIL validation (see Step 2 validation)
 
-**B. IDENTIFY COMPLETED TASK (MANDATORY):**
+**B. IDENTIFY COMPLETED TASK (MANDATORY - ONLY IF NOT UKW CONTEXT):**
 2. **ANALYZE (continued):**
    - **MANDATORY:** Read the Story file to identify completed task. **Use config paths:** If `rw-config.yaml` exists and `use_kanban: true`, use `kanban_root` and `story_doc_pattern` from config. Otherwise, use fallback patterns:
      - [Example: Confidentia] `docs/project-management/epics/overview/Epic {epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
@@ -562,7 +612,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
      - First functional build: `0.2.10.1+1` = First functional change for that task
      - Subsequent builds: `0.2.10.1+2`, `0.2.10.1+3`, etc.
 
-**B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY - NEW REQUIREMENT):**
+**B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY):**
 2.1. **ANALYZE (Task Document Location):**
    - **MANDATORY:** After identifying the completed task, you MUST locate and validate the Task document.
    - **Task Document Formats (per Kanban Governance Policy):**
@@ -618,7 +668,24 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
      - Note: Task document already exists (created previously or in doc-init)
      - Note: This is a functional build (`+1` or higher)
 
-**B.2. DOC-INIT SCENARIOS AND EXAMPLES:**
+**B.2. CHECK PERPETUAL TASK FLAG (IF NOT UKW CONTEXT):**
+   - **ANALYZE:**
+     - Read task document for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
+     - Check if this is a perpetual maintenance task
+   - **DETERMINE:**
+     - **IF perpetual task:** Note for build warning suppression (high BUILD numbers expected and valid)
+     - **IF not perpetual:** Normal task handling applies
+   - **EXECUTE:**
+     - Search task document metadata/frontmatter for perpetual task flag
+     - Check task document content for "Perpetual Maintenance" type designation
+   - **VALIDATE:**
+     - Flag detected correctly
+     - Build warning suppression noted if perpetual
+   - **PROCEED:**
+     - Document perpetual task status
+     - Move to Step 2.C (DETERMINE VERSION BUMP)
+
+**B.3. DOC-INIT SCENARIOS AND EXAMPLES:**
 
 **Example 1: Doc-Init Build (First-Time Task Document Creation)**
 - **Scenario:** Creating Task document for `E2:S10:T01` for the first time
@@ -685,7 +752,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 - **Relationship:** Doc-init establishes anchor; functional work builds on it
 - **CRITICAL FIX:** If task document already exists (even if not created in this commit), it's NOT doc-init. This fixes the bug where story + task docs created together causes first implementation work to incorrectly get BUILD=0.
 
-**C. DETERMINE VERSION BUMP (MANDATORY LOGIC):**
+**C. DETERMINE VERSION BUMP (MANDATORY LOGIC - ONLY IF NOT UKW CONTEXT):**
 3. **DETERMINE:**
    - **MANDATORY:** Compare completed task number to current `VERSION_TASK`:
      - **IF completed task number > current VERSION_TASK:** This is a NEW TASK (forward progression)
@@ -2562,6 +2629,42 @@ run_terminal_cmd("python scripts/automation/release_workflow.py --auto-go")
 - Agent waits for Step 2 to complete before Step 3
 - Agent waits for Step 8 to complete before Step 9
 - Agent respects dependency order
+
+---
+
+## 🔄 UKW → RW Integration (Wiring)
+
+**Important:** After completing UKW, users typically run RW to commit the kanban documentation updates. The relationship between UKW and the perpetual task is established through wiring:
+
+- **Wiring Established in UKW Step 1:** UKW discovers and wires itself to the project's perpetual UKW task
+  - UKW Step 1 searches for task with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+  - UKW extracts the task's Epic/Story/Task ID (e.g., E6:S06:T08, E4:S03:T05, etc.)
+  - **Wiring:** UKW establishes relationship to this task ID for this project instance
+- **RW Uses Wired Task:** When RW runs after UKW:
+  - **UKW Context Detection:** RW Step 2 detects UKW context (user ran "UKW" then "RW")
+  - **Uses Wired Task ID:** RW uses the perpetual task ID that UKW wired in Step 1
+  - **Same Relationship, Different ID per Project:** Each project instance wires UKW to its own perpetual task (different E/S/T ID)
+- **Version Pattern:** UKW releases use the wired perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
+- **Build Warning Suppression:** Perpetual tasks have `perpetual_task: true` flag, so high BUILD numbers are expected and valid (no warnings)
+
+**Wiring Example (ai-dev-kit):**
+- UKW Step 1: Searches tasks → Finds E6:S06:T08 with `perpetual_task: true`
+- UKW wires itself to E6:S06:T08
+- When RW runs after UKW, it uses the wired task ID (E6:S06:T08)
+- Version: `v0.6.6.8+{N}`
+
+**Wiring Example (other project):**
+- UKW Step 1: Searches tasks → Finds E4:S03:T05 with `perpetual_task: true`
+- UKW wires itself to E4:S03:T05
+- When RW runs after UKW, it uses the wired task ID (E4:S03:T05)
+- Version: `v0.4.3.5+{N}`
+
+**Perpetual Task Pattern:**
+- Projects should create a perpetual UKW task for UKW release attribution
+- **Wiring Required:** Task must have `perpetual_task: true` or `Task Type: Perpetual Maintenance` in task document (UKW uses this to wire)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (wired in UKW Step 1)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as UKW runs (expected and valid)
 
 ---
 

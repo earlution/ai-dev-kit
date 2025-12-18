@@ -55,11 +55,89 @@ This workflow **requires significant agentic intelligence** at every step. This 
 - **UKW:** Comprehensive sync regardless of release status
 - Both workflows should be used together for complete kanban accuracy
 
+**🔄 UKW → RW Integration (Wiring):**
+
+After completing UKW, users typically run RW to commit the kanban documentation updates. The relationship between UKW and the perpetual task is established through wiring:
+
+- **Wiring Established in UKW Step 1:** UKW discovers and wires itself to the project's perpetual UKW task
+  - UKW Step 1 searches for task with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+  - UKW extracts the task's Epic/Story/Task ID (e.g., E6:S06:T08, E4:S03:T05, etc.)
+  - **Wiring:** UKW establishes relationship to this task ID for this project instance
+- **RW Uses Wired Task:** When RW runs after UKW:
+  - **UKW Context Detection:** RW Step 2 detects UKW context (user ran "UKW" then "RW")
+  - **Uses Wired Task ID:** RW uses the perpetual task ID that UKW wired in Step 1
+  - **Same Relationship, Different ID per Project:** Each project instance wires UKW to its own perpetual task (different E/S/T ID)
+- **Version Pattern:** UKW releases use the wired perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
+- **Build Warning Suppression:** Perpetual tasks have `perpetual_task: true` flag, so high BUILD numbers are expected and valid
+
+**Wiring Example (ai-dev-kit):**
+- UKW Step 1: Searches tasks → Finds E6:S06:T08 with `perpetual_task: true`
+- UKW wires itself to E6:S06:T08
+- When RW runs after UKW, it uses the wired task ID (E6:S06:T08)
+- Version: `v0.6.6.8+{N}`
+
+**Wiring Example (other project):**
+- UKW Step 1: Searches tasks → Finds E4:S03:T05 with `perpetual_task: true`
+- UKW wires itself to E4:S03:T05
+- When RW runs after UKW, it uses the wired task ID (E4:S03:T05)
+- Version: `v0.4.3.5+{N}`
+
+**Perpetual Task Pattern:**
+- Projects should create a perpetual UKW task for UKW release attribution
+- **Wiring Required:** Task must have `perpetual_task: true` or `Task Type: Perpetual Maintenance` in task document (UKW uses this to wire)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (wired in UKW Step 1)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as UKW runs (expected and valid)
+
 ---
 
 ## 📋 Workflow Steps
 
-### Step 1: Analyze Recent Activity
+### Step 1: Identify Perpetual UKW Task (Wiring Step)
+
+**Purpose:** Discover and wire UKW to the project's perpetual UKW task. This establishes the relationship between the UKW workflow instance and the task that will receive UKW release attributions.
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Load config: Read `rw-config.yaml` if exists and `use_kanban: true`
+   - Determine task document pattern from config or defaults
+   - Understand that each project instance has its own perpetual UKW task with its own E/S/T ID
+   - Need to find the task that has the perpetual UKW responsibility
+
+2. **DETERMINE:**
+   - Search strategy: Iterate through all task documents looking for perpetual task flag
+   - Criteria: Task document must have `perpetual_task: true` or `Task Type: Perpetual Maintenance`
+   - May also check task name/description for "UKW" or "Update Kanban Workflow"
+   - Extract Epic/Story/Task ID from discovered task document
+
+3. **EXECUTE:**
+   - Search all task documents using pattern: `{kanban_root}/{task_doc_pattern}`
+   - Read each task document looking for:
+     - `perpetual_task: true` in frontmatter or metadata
+     - `Task Type: Perpetual Maintenance` in document
+     - Task name/description mentioning "UKW" or "Update Kanban Workflow"
+   - When found, extract task's Epic/Story/Task ID from document path or Task ID field
+   - **Establish Wiring:** Store task ID as the perpetual UKW task for this project instance
+   - Document wiring: "UKW wired to perpetual task E{X}:S{Y}:T{Z}"
+
+4. **VALIDATE:**
+   - Perpetual UKW task found
+   - Task ID extracted correctly
+   - Wiring established and documented
+
+5. **PROCEED:**
+   - Document discovered perpetual task ID
+   - Store task ID for RW attribution (when user runs RW after UKW)
+   - Move to Step 2
+
+**Output:** Perpetual UKW task ID (e.g., E6:S06:T08, E4:S03:T05) - this is the task that RW will use when UKW context is detected.
+
+**Important:** The task ID discovered here is project-specific. Each project instance wires UKW to its own perpetual task. The wiring is established each time UKW runs, ensuring UKW is always aware of which task to use for release attribution.
+
+---
+
+### Step 2: Analyze Recent Activity
 
 **Purpose:** Identify recent changes that may affect kanban status
 
@@ -111,7 +189,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 ---
 
-### Step 2: Update Task Documents
+### Step 3: Update Task Documents
 
 **Purpose:** Update all task documents to reflect current state
 
@@ -161,7 +239,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 ---
 
-### Step 3: Update Story Documents
+### Step 4: Update Story Documents
 
 **Purpose:** Synthesize task data intelligently and update story documents
 
@@ -233,7 +311,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 ---
 
-### Step 4: Update Epic Documents
+### Step 5: Update Epic Documents
 
 **Purpose:** Synthesize story data intelligently and update epic documents
 
@@ -302,7 +380,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 ---
 
-### Step 5: Update Kanban Board
+### Step 6: Update Kanban Board
 
 **Purpose:** Update the main kanban board, with MoSCoW list LAST (requires intelligent prioritization)
 
@@ -389,7 +467,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 ---
 
-### Step 6: Validate Consistency
+### Step 7: Validate Consistency
 
 **Purpose:** Ensure all kanban documents are consistent
 
@@ -433,7 +511,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 ---
 
-### Step 7: Stage Files
+### Step 8: Stage Files
 
 **Purpose:** Stage all modified kanban files for commit
 
@@ -460,7 +538,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 ---
 
-### Step 8: Document Changes
+### Step 9: Document Changes
 
 **Purpose:** Create summary of all changes made
 
@@ -490,6 +568,7 @@ This workflow **requires significant agentic intelligence** at every step. This 
 5. **PROCEED:**
    - Present summary to user
    - Workflow complete
+   - **Note:** After UKW, user typically runs RW to commit kanban documentation updates. RW will detect UKW context and auto-attribute to perpetual UKW task (see "UKW → RW Integration" section above).
 
 ---
 

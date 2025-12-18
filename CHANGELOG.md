@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.8+2] - 18-12-25
+
+📋 Framework Management: RW/UKW wiring documentation complete (T08)
+
+### Added
+
+- **UKW → RW Integration Documentation:**
+  - Comprehensive wiring documentation section in packaged RW execution guide
+  - Perpetual task discovery pattern documentation in UKW Step 1
+  - UKW context detection and attribution documentation in RW Step 2
+  - Project-specific perpetual task ID clarification with examples
+
+### Changed
+
+- **Packaged RW Documentation:**
+  - Updated `cursorrules-rw-trigger-section.md` with UKW context detection (Step 2.A)
+  - Updated RW execution guide with complete UKW attribution logic (Step 2.A.1)
+  - Added perpetual task flag checking (Step 2.B.2)
+  - Added UKW → RW Integration section with wiring examples
+
+- **RW Execution Guide:**
+  - Updated procedure from 7-step to 8-step (A-H) to include UKW context check
+  - Added comprehensive UKW → RW Integration section
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+2.md)
+
+---
+
 ## [0.6.6.8+1] - 18-12-25
 
 📋 Framework Management: Perpetual UKW task created (T08)

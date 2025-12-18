@@ -169,6 +169,15 @@ This epic encompasses the core foundational work for the {PROJECT_NAME} project,
 - T03: Implement intake automation
 - T04: Document intake process
 
+#### Story 3: Framework Maintenance
+**Purpose:** Track ongoing maintenance and updates to the Kanban Framework package.
+
+**Typical Tasks:**
+- T01: Update packaged RW to handle UKW context and perpetual tasks
+- T02: Framework bug fixes and improvements
+- T03: Documentation updates and improvements
+- T04: Framework integration improvements
+
 ---
 
 ### Epic 5: FR Implementation
