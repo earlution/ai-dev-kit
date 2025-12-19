@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.10+11 – T04: Phase 3 distribution planning complete - build scripts and guide)  
-**Version:** v0.6.6.10+11  
+**Last updated:** 2025-12-18 (v0.6.6.10+12 – T04: Package build quick start guide and alternative build script)  
+**Version:** v0.6.6.10+12  
 **Code:** E6S06
 
 ---
