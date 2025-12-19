@@ -8,11 +8,11 @@ housekeeping_policy: keep
 
 # Release Workflow (RW) Implementation Package
 
-**Version:** 2.1.3  
+**Version:** 2.1.4  
 **Last Updated:** 2025-12-18  
 **Purpose:** Complete package for implementing the Release Workflow (RW) trigger and agent-driven workflow execution pattern in your project  
 **Source Project:** fynd.deals (Epic 15, Story 1)  
-**Key Enhancements:** "ALL sections" requirement, atomicity, blocked protocol, epic branch workflow, doc-init detection bug fix (BR-010), optional BYOB badge workflow for private repos
+**Key Enhancements:** "ALL sections" requirement, atomicity, blocked protocol, epic branch workflow, doc-init detection bug fix (BR-010), optional BYOB badge workflow for private repos, RW Step 5 mandatory README version update
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 

@@ -26,7 +26,7 @@ REPO = "earlution/ai-dev-kit"
 # Framework packages: (package_file, tag)
 PACKAGES = [
     ("kanban-v2.1.0.tar.gz", "kanban-v2.1.0"),
-    ("workflow-mgt-v2.1.3.tar.gz", "workflow-mgt-v2.1.3"),
+    ("workflow-mgt-v2.1.4.tar.gz", "workflow-mgt-v2.1.4"),
     ("numbering-versioning-v2.0.0.tar.gz", "numbering-versioning-v2.0.0"),
     ("doc-lifecycle-v1.0.0.tar.gz", "doc-lifecycle-v1.0.0"),
     ("debug-path-v1.0.0.tar.gz", "debug-path-v1.0.0"),

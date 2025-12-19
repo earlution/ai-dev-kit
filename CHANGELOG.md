@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.10+16] - 18-12-25
+
+📦 Package Management: Workflow Mgt Package v2.1.4 - RW Step 5 Mandatory Update
+
+### Changed
+
+- **Workflow Management Package:**
+  - Version bumped: `2.1.3` → `2.1.4` (PATCH)
+  - Includes updated RW documentation requiring Step 5 to be mandatory
+  - Step 5 must update project version text in README
+  - Updated all build and upload scripts to use v2.1.4
+
+**Package Ready:** Rebuild and upload to GitHub Releases
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+16.md)
+
+---
+
+## [0.6.6.10+15] - 18-12-25
+
+🔧 Package Management: README Badge Fix & RW Step 5 Mandatory Update
+
+### Changed
+
+- **README Badges:**
+  - Fixed broken BYOB badges by replacing with static Shields.io badges
+  - Removed non-functional badges (version, tests, coverage, code quality)
+  - Added working badges: License, Status, Python version
+  - Version displayed in text format (updated automatically by RW)
+
+- **Release Workflow:**
+  - Step 5 (Update README) marked as MANDATORY
+  - Must update project version text in README (not just badges)
+  - Updated all RW documentation (local and packaged) to reflect requirement
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+15.md)
+
+---
+
 ## [0.6.6.10+14] - 18-12-25
 
 📖 Package Management: Installation Entry Point Documentation

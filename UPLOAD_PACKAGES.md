@@ -16,7 +16,7 @@
    
    # Create tags for each framework
    git tag -a kanban-v2.1.0 -m "Release kanban framework v2.1.0"
-   git tag -a workflow-mgt-v2.1.3 -m "Release workflow mgt framework v2.1.3"
+   git tag -a workflow-mgt-v2.1.4 -m "Release workflow mgt framework v2.1.3"
    git tag -a numbering-versioning-v2.0.0 -m "Release numbering & versioning framework v2.0.0"
    git tag -a doc-lifecycle-v1.0.0 -m "Release doc-lifecycle framework v1.0.0"
    git tag -a debug-path-v1.0.0 -m "Release debug-path framework v1.0.0"
@@ -75,9 +75,9 @@ python3 "$UPLOAD_SCRIPT" \
 
 # Upload workflow mgt package
 python3 "$UPLOAD_SCRIPT" \
-    "$PACKAGES_DIR/workflow-mgt-v2.1.3.tar.gz" \
-    --hash-file "$PACKAGES_DIR/workflow-mgt-v2.1.3.tar.gz.sha256" \
-    --tag workflow-mgt-v2.1.3 \
+    "$PACKAGES_DIR/workflow-mgt-v2.1.4.tar.gz" \
+    --hash-file "$PACKAGES_DIR/workflow-mgt-v2.1.4.tar.gz.sha256" \
+    --tag workflow-mgt-v2.1.4 \
     --token $GITHUB_TOKEN \
     --repo $REPO \
     --verbose
@@ -132,7 +132,7 @@ fi
 # Array of packages: (package_file, tag)
 declare -a PACKAGES=(
     "kanban-v2.1.0.tar.gz:kanban-v2.1.0"
-    "workflow-mgt-v2.1.3.tar.gz:workflow-mgt-v2.1.3"
+    "workflow-mgt-v2.1.4.tar.gz:workflow-mgt-v2.1.4"
     "numbering-versioning-v2.0.0.tar.gz:numbering-versioning-v2.0.0"
     "doc-lifecycle-v1.0.0.tar.gz:doc-lifecycle-v1.0.0"
     "debug-path-v1.0.0.tar.gz:debug-path-v1.0.0"

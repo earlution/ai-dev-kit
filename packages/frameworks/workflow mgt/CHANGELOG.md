@@ -7,6 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.4] - 2025-12-18
+
+**Package Version:** 2.1.4
+**Project Version:** 0.6.6.10+15
+**Bump Type:** PATCH
+
+### Changed
+
+- **RW Step 5 (Update README):**
+  - Step 5 marked as **MANDATORY** (was optional)
+  - **MUST** update project version text in README (e.g., `**Version:** v{version}`)
+  - Badge and latest release updates remain optional (if present)
+  - Updated all RW documentation to reflect requirement
+  - Updated workflow YAML: `required: false` → `required: true`
+  - Added `update_version_text: true` config parameter
+
+### Fixed
+
+- **Documentation Clarification:**
+  - Clarified that Step 5 must update project version in README
+  - Added detailed version text update instructions in agent execution guide
+  - Updated reference documentation with mandatory requirement
+
+**Criteria Reference:** PATCH Version Bump
+- ✅ Clarification: Makes explicit that README version should always be updated
+- ✅ Enhancement: Enforces best practice (README should reflect current version)
+- ✅ Backward compatible: Projects will now correctly update README version
+- ✅ Documentation updates: Improved clarity in workflow instructions
+
+**Related:**
+- Project Version: v0.6.6.10+15
+- Epic 6, Story 6, Task 4: Package Management Implementation Plan
+
+---
+
 ## [2.1.3] - 2025-12-18
 
 **Package Version:** 2.1.3

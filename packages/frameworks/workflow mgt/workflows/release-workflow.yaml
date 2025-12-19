@@ -72,14 +72,15 @@ steps:
     name: Update README
     type: readme_update
     handler: release.readme_update
-    required: false
+    required: true
     enabled: true
     dependencies:
       - step-2
     config:
       readme_file: README.md
-      update_badge: true
-      update_latest_release: true
+      update_version_text: true  # MANDATORY: Update project version in README
+      update_badge: true         # Optional: Update version badge if present
+      update_latest_release: true # Optional: Update latest release callout if present
 
   - id: step-6
     name: Update BR/FR Docs

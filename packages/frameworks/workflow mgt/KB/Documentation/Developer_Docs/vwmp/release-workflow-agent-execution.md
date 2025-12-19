@@ -1291,6 +1291,7 @@ The Versioning Policy requires that:
   dependencies: [step-2]
   config:
     readme_file: README.md
+    update_version_text: true
     update_badge: true
     update_latest_release: true
 ```
@@ -1300,28 +1301,34 @@ The Versioning Policy requires that:
 1. **ANALYZE:**
    - Get `new_version` from Step 2:
      - [Example: Confidentia] `"0.4.3.2+9"`
-     - [Example: ai-dev-kit] `"0.2.1.1+3"`
+     - [Example: ai-dev-kit] `"0.6.6.10+14"`
    - Get summary and change type from parameters
-   - **Use config path:** Read README file (from config `readme_file` or fallback `README.md`) to find version badge and latest release callout
-   - Understand badge format: `[![Version](...badge/version-{version}-blue)...]`
-   - Understand latest release format: `**🎉 Latest Release: v{version}** - {summary}`
+   - **Use config path:** Read README file (from config `readme_file` or fallback `README.md`)
+   - **MANDATORY:** Find and identify version text pattern in README:
+     - Common formats: `**Version:** v{version}`, `Version: {version}`, `version: {version}`
+     - May be in header section, near badges, or in About section
+   - **Optional:** Find version badge format: `[![Version](...badge/version-{version}-blue)...]`
+   - **Optional:** Find latest release format: `**🎉 Latest Release: v{version}** - {summary}`
 
 2. **DETERMINE:**
-   - Update version badge: Replace version in badge URL
-   - Update latest release: Replace version and summary
+   - **MANDATORY:** Update version text - Replace version number in version text field
+   - **Optional:** Update version badge - Replace version in badge URL (if present)
+   - **Optional:** Update latest release - Replace version and summary (if present)
    - Find exact patterns in README to replace
 
 3. **EXECUTE:**
-   - Update version badge using `search_replace`
-   - Update latest release callout using `search_replace`
+   - **MANDATORY:** Update version text using `search_replace` (e.g., `**Version:** v{old_version}` → `**Version:** v{new_version}`)
+   - **Optional:** Update version badge using `search_replace` (if present)
+   - **Optional:** Update latest release callout using `search_replace` (if present)
 
 4. **VALIDATE:**
-   - Verify badge URL contains new version
-   - Verify latest release callout has new version and summary
+   - **MANDATORY:** Verify version text contains new version number
+   - **Optional:** Verify badge URL contains new version (if badge exists)
+   - **Optional:** Verify latest release callout has new version and summary (if present)
    - Check README is still valid Markdown
 
 5. **PROCEED:**
-   - Document: "Updated README version badge and latest release"
+   - Document: "Updated README project version, badge, and latest release"
    - Move to Step 6 (can run in parallel with Steps 4-6)
 
 ---

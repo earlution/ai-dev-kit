@@ -46,7 +46,7 @@ REPO = "earlution/ai-dev-kit"
 
 FRAMEWORKS = [
     ("kanban", "2.1.0", "kanban"),
-    ("workflow mgt", "2.1.3", "workflow-mgt"),
+    ("workflow mgt", "2.1.4", "workflow-mgt"),
     ("numbering & versioning", "2.0.0", "numbering-versioning"),
     ("doc-lifecycle", "1.0.0", "doc-lifecycle"),
     ("debug-path", "1.0.0", "debug-path"),

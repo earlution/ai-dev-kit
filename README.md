@@ -2,16 +2,14 @@
 
 <div align="center">
 
-<!-- Badges use BYOB (Bring Your Own Badge) for private repo support -->
-<!-- Update these URLs after setting up public badge repo (see .github/workflows/update-badges.yml) -->
-![Version](https://byob.yarr.is/earlution/ai-dev-kit-badges/version)
-![License](https://byob.yarr.is/earlution/ai-dev-kit-badges/license)
-![Status](https://byob.yarr.is/earlution/ai-dev-kit-badges/status)
-![Tests](https://byob.yarr.is/earlution/ai-dev-kit-badges/tests)
-![Coverage](https://byob.yarr.is/earlution/ai-dev-kit-badges/coverage)
-![Code Quality](https://byob.yarr.is/earlution/ai-dev-kit-badges/code-quality)
+<!-- Badges: Version is shown in text below, other badges use static Shields.io -->
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 
 **A comprehensive toolkit for AI-assisted development workflows**
+
+**Version:** `v0.6.6.10+16` | **Last Updated:** 2025-12-18
 
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
@@ -19,8 +17,70 @@
 
 ---
 
+## 🚀 Quick Start / Bootstrap
+
+**Not sure where to start? Choose your path:**
+
+### 🎯 I want to use AI Dev Kit frameworks in my project
+
+**→ Start here:** [`INSTALL_IN_YOUR_PROJECT.md`](INSTALL_IN_YOUR_PROJECT.md)
+
+- **New project?** Install frameworks as dependencies (recommended)
+- **Existing project?** Migrate from copy-paste to package management
+- **Just exploring?** Browse frameworks and documentation first
+
+**Quick Install (GitHub Releases):**
+```bash
+python3 install_package_from_release.py kanban 2.1.0 \
+    --repo earlution/ai-dev-kit \
+    --install-dir packages/frameworks
+```
+
+### 📚 I want to understand what AI Dev Kit is
+
+**→ Start here:** [About The Project](#about-the-project)
+
+- Read the problem statement and vision
+- Explore available frameworks
+- Review design principles
+- Check out the roadmap
+
+**Key Documents:**
+- [Vision and Purpose](docs/documentation/ai-dev-kit-vision-and-purpose.md)
+- [Frameworks Overview](#frameworks)
+
+### 🔧 I want to contribute or develop
+
+**→ Start here:** [Contributing](#contributing) and [Roadmap](#roadmap)
+
+- Review contributing guidelines
+- Check open issues and feature requests
+- Explore the codebase structure
+- Join discussions
+
+**Developer Resources:**
+- [Architecture Documentation](docs/architecture)
+- [Framework Development Guides](packages/frameworks)
+- [Workflow Documentation](packages/frameworks/workflow mgt/docs)
+
+### 🔍 I'm looking for a specific framework
+
+**→ Jump to:** [Frameworks](#frameworks)
+
+**Available Frameworks:**
+- **Workflow Management** (`v2.1.3`) - Release Workflow, UKW, PVW automation
+- **Kanban** (`v2.1.0`) - Project management and task tracking
+- **Numbering & Versioning** (`v2.0.0`) - Version schema and policies
+- **Document Lifecycle** (`v1.0.0`) - Documentation management
+- **Debug Path** (`v1.0.0`) - Debugging utilities
+
+Each framework includes installation guides, usage examples, and documentation.
+
+---
+
 ## 📋 Table of Contents
 
+- [Quick Start / Bootstrap](#-quick-start--bootstrap)
 - [About The Project](#about-the-project)
   - [Features](#features)
   - [Built With](#built-with)

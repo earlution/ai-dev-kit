@@ -90,7 +90,7 @@ ai-dev-kit install kanban@2.1.0
 
 | Framework | Version | Installation Guide |
 |-----------|---------|-------------------|
-| **Workflow Management** | 2.1.3 | [`workflow mgt/README.md`](packages/frameworks/workflow mgt/README.md) |
+| **Workflow Management** | 2.1.4 | [`workflow mgt/README.md`](packages/frameworks/workflow mgt/README.md) |
 | **Kanban** | 2.1.0 | [`kanban/README.md`](packages/frameworks/kanban/README.md) |
 | **Numbering & Versioning** | 2.0.0 | [`numbering & versioning/README.md`](packages/frameworks/numbering & versioning/README.md) |
 | **Document Lifecycle** | 1.0.0 | [`doc-lifecycle/README.md`](packages/frameworks/doc-lifecycle/README.md) |

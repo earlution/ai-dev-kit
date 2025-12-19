@@ -35,7 +35,7 @@ cd /Users/rms/Documents/projects/ai-dev-kit
 
 # Create tags
 git tag -a kanban-v2.1.0 -m "Release kanban framework v2.1.0"
-git tag -a workflow-mgt-v2.1.3 -m "Release workflow mgt framework v2.1.3"
+git tag -a workflow-mgt-v2.1.4 -m "Release workflow mgt framework v2.1.3"
 git tag -a numbering-versioning-v2.0.0 -m "Release numbering & versioning framework v2.0.0"
 git tag -a doc-lifecycle-v1.0.0 -m "Release doc-lifecycle framework v1.0.0"
 git tag -a debug-path-v1.0.0 -m "Release debug-path framework v1.0.0"
@@ -122,7 +122,7 @@ python3 "packages/frameworks/workflow mgt/scripts/build_packages_direct.py"
 
 # 2. Create Git tags
 git tag -a kanban-v2.1.0 -m "Release kanban v2.1.0"
-git tag -a workflow-mgt-v2.1.3 -m "Release workflow mgt v2.1.3"
+git tag -a workflow-mgt-v2.1.4 -m "Release workflow mgt v2.1.3"
 git tag -a numbering-versioning-v2.0.0 -m "Release numbering & versioning v2.0.0"
 git tag -a doc-lifecycle-v1.0.0 -m "Release doc-lifecycle v1.0.0"
 git tag -a debug-path-v1.0.0 -m "Release debug-path v1.0.0"

@@ -24,7 +24,7 @@ python3 "packages/frameworks/workflow mgt/scripts/build_package.py" \
 
 # Build workflow mgt
 python3 "packages/frameworks/workflow mgt/scripts/build_package.py" \
-    "workflow mgt" 2.1.3 \
+    "workflow mgt" 2.1.4 \
     --output-dir packages/frameworks/dist/packages \
     --frameworks-root packages/frameworks \
     --verbose
@@ -72,8 +72,8 @@ After successful build, you should see:
 packages/frameworks/dist/packages/
 ├── kanban-v2.1.0.tar.gz
 ├── kanban-v2.1.0.tar.gz.sha256
-├── workflow-mgt-v2.1.3.tar.gz
-├── workflow-mgt-v2.1.3.tar.gz.sha256
+├── workflow-mgt-v2.1.4.tar.gz
+├── workflow-mgt-v2.1.4.tar.gz.sha256
 ├── numbering-versioning-v2.0.0.tar.gz
 ├── numbering-versioning-v2.0.0.tar.gz.sha256
 ├── doc-lifecycle-v1.0.0.tar.gz
