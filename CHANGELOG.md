@@ -3,6 +3,59 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.10+14] - 18-12-25
+
+📖 Package Management: Installation Entry Point Documentation
+
+### Added
+
+- **Installation Entry Point:**
+  - `INSTALL_IN_YOUR_PROJECT.md` - Clear entry point for agents and developers
+  - Quick links to all installation documentation
+  - Agent-specific step-by-step instructions
+  - Installation checklist and verification
+
+- **README Update:**
+  - Added link to installation guide for improved discoverability
+
+**Purpose:** Ensure agents and developers can easily find and follow installation instructions when projects reference the ai-dev-kit repository.
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+14.md)
+
+---
+
+## [0.6.6.10+13] - 18-12-25
+
+🚀 Package Management: Master Build-and-Upload Script
+
+### Added
+
+- **Master Orchestration Script:**
+  - `build_and_upload_all.py` - Complete workflow automation
+  - Builds all packages → Creates Git tags → Pushes tags → Uploads to GitHub Releases
+  - One-command solution for entire distribution process
+
+- **Additional Scripts:**
+  - `upload_all_packages.py` - Batch upload script
+  - `build_packages_direct.py` - Direct Python builder
+  - `UPLOAD_COMMANDS.sh` - Bash upload workflow
+  - `BUILD_NOW.sh` - Quick build script
+
+- **Documentation:**
+  - `BUILD_AND_UPLOAD.md` - Complete end-to-end guide
+  - `UPLOAD_PACKAGES.md` - Upload instructions
+  - `BUILD_PACKAGES_COMMANDS.md` - Command reference
+
+**Usage:**
+```bash
+python3 "packages/frameworks/workflow mgt/scripts/build_and_upload_all.py" \
+    --token $GITHUB_TOKEN --verbose
+```
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+13.md)
+
+---
+
 ## [0.6.6.10+12] - 18-12-25
 
 📦 Package Management: Package Build Quick Start Guide

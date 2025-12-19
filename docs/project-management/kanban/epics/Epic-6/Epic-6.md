@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-       **Last updated:** 2025-12-18 (v0.6.6.10+12 – T04: Package build quick start guide and alternative build script)
+       **Last updated:** 2025-12-18 (v0.6.6.10+14 – T04: Installation entry point documentation for agent discoverability)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -32,9 +32,9 @@ housekeeping_policy: keep
   - Tasks: T01 ✅, T02 ✅
 - [ ] **E6:S05 – Feature Requests** - TODO
   - Story: [`Story-005-feature-requests.md`](Story-005-feature-requests.md)
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.10+12)
+- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.10+14)
   - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T02 ✅ COMPLETE (v0.6.6.9+1), T06 ✅ COMPLETE (v0.6.6.6+20), T07 ✅ COMPLETE (v0.6.6.7+6), T08 IN PROGRESS (Perpetual - v0.6.6.8+2), T09 ✅ COMPLETE (v0.6.6.9+1), T04 ✅ COMPLETE (v0.6.6.10+12 - Package build quick start guide), T03, T05 TODO (feedback mechanism)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T02 ✅ COMPLETE (v0.6.6.9+1), T06 ✅ COMPLETE (v0.6.6.6+20), T07 ✅ COMPLETE (v0.6.6.7+6), T08 IN PROGRESS (Perpetual - v0.6.6.8+2), T09 ✅ COMPLETE (v0.6.6.9+1), T04 ✅ COMPLETE (v0.6.6.10+14 - Installation entry point documentation), T03, T05 TODO (feedback mechanism)
 
 ---
 
