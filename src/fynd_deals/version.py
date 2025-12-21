@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
 VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
 VERSION_TASK = 10     # Task number (Task 4: Create Package Management Implementation Plan)
-VERSION_BUILD = 17    # Build number (E6:S06:T04+17 - FR-024: IDE/Linter check before commit feature request created)
+VERSION_BUILD = 18    # Build number (E6:S06:T10+18 - Changelog ordering fixes)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

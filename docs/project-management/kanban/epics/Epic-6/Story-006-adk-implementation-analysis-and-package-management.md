@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.10+17 – T04: FR-024 IDE/Linter check before commit feature request created)  
-**Version:** v0.6.6.10+17  
+**Last updated:** 2025-12-21 (v0.6.6.10+18 – Changelog ordering fixes)  
+**Version:** v0.6.6.10+18  
 **Code:** E6S06
 
 ---

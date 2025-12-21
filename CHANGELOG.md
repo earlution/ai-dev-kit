@@ -405,28 +405,6 @@ Complete package management system ready for production use:
 
 ---
 
-## [0.6.6.9+0] - 18-12-25
-
-📋 Task Creation: T09 - Review and Prioritize Package Management Investigation (doc-init)
-
-### Added
-
-- **Task Document (E6:S06:T09):** Created task to review, validate, and prioritize T02 investigation findings before T04 implementation plan
-
-### Changed
-
-- **Story Document (E6:S06):** Added T09 to task checklist
-- **Kanban Board:** Added T09 to "Should Have" section
-- **Epic 6 Document:** Updated task list and T04 dependencies
-
-**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.9+0.md)
-
----
-
-## [0.6.6.9+1] - 18-12-25
-
-📦 Package Management: Investigation complete (T02)
-
 ### Added
 
 - **Package Management Investigation Report:**
@@ -550,6 +528,24 @@ Complete package management system ready for production use:
 
 ---
 
+## [0.9.21.3+2] - 02-12-25
+
+📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
+
+### Changed
+
+- Added **Branch Safety Check** as Step 1 in the Release Workflow agent guide  
+- Updated RW and `.cursorrules` docs for an 11-step workflow with branch safety  
+- Clarified modularity and package dependencies in workflow and numbering/versioning packages
+
+### Notes
+
+- This version referenced **Confidentia Epic 9** and predates dev-kit-specific epics.  
+- Starting with `v0.1.1.1+1`, all releases use **dev-kit-specific Epic numbers**.
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.21.3+2.md` for full details.
+
+---
+
 ## [0.6.6.7+4] - 18-12-25
 
 📝 Framework Hardening: .cursorrules file created (Phase 3)
@@ -573,30 +569,19 @@ Complete package management system ready for production use:
 
 ---
 
-## [0.6.6.7+3] - 17-12-25
-
-📚 Framework Hardening: Installation instructions improved (Phase 4)
+📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
 
 ### Changed
 
-- **Installation Documentation (HIGH):**
-  - Enhanced `packages/frameworks/kanban/README.md` with comprehensive Epic mashup prevention section
-  - Added detailed step-by-step installation guide (fresh install, migration)
-  - Added installation examples (tiny project, existing project with conflicts)
-  - Added common mistakes section with prevention strategies
-  - Documented validation integration and how installer prevents Epic mashup
-  - Explained what validation catches and how to fix issues
+- Added **Branch Safety Check** as Step 1 in the Release Workflow agent guide  
+- Updated RW and `.cursorrules` docs for an 11-step workflow with branch safety  
+- Clarified modularity and package dependencies in workflow and numbering/versioning packages
 
-### Added
+### Notes
 
-- **Epic Mashup Prevention Documentation:**
-  - Comprehensive Epic mashup issue explanation with root cause
-  - Prevention steps clearly documented
-  - Examples of correct vs incorrect installation
-  - Validation output examples
-  - Best practices to avoid Epic mashup
-
-**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+3.md)
+- This version referenced **Confidentia Epic 9** and predates dev-kit-specific epics.  
+- Starting with `v0.1.1.1+1`, all releases use **dev-kit-specific Epic numbers**.
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.21.3+2.md` for full details.
 
 ---
 
@@ -656,6 +641,37 @@ Complete package management system ready for production use:
 
 ---
 
+📚 Book Material Capture: E9:S04:T01 - Capture Starborn Legacy Zombie Story Report
+
+### Summary
+
+Captured Starborn Legacy Zombie Story case study report as unstructured book material. This report documents the technical debt incurred by E15:S01 (Release Workflow & Versioning Infrastructure) and serves as a cautionary tale and case study for the Head First AI-Assisted Development book.
+
+### Changes
+
+**Material Capture:**
+- ✅ Captured complete case study report from Starborn Legacy project
+- ✅ Report: "The Zombie Story: A Cautionary tale resulting in technical debt"
+- ✅ Type: Case study report for book content
+- ✅ Source: Starborn Legacy project
+- ✅ Date: 2025-12-11
+
+**Report Content:**
+- Documents the "Zombie Story" pattern (story becomes unmanageable and must be retired)
+- Covers versioning mis-numbering issues and technical debt incurred
+- Provides lessons learned and recommendations for ai-dev-kit
+- Serves as case study for AI-assisted development workflows
+
+### Related Work
+
+- **Story:** E9:S04 - Book Material Capture
+- **Epic:** Epic 9 - Book Related Work
+- **Coordinates With:** E9:S01 (Book Content Development) - Material will be processed into structured book content
+- **Source Project:** Starborn Legacy (E15:S01 case study)
+- **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.4.1+1.md)
+
+---
+
 ## [0.4.13.6+5] - 17-12-25
 
 🎉 Feature: Update Kanban Workflow (UKW) - Agent-driven kanban synchronization workflow
@@ -683,24 +699,6 @@ Complete package management system ready for production use:
 **Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+5.md)
 
 ---
-
-## [0.9.21.3+2] - 02-12-25
-
-📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
-
-### Changed
-
-- Added **Branch Safety Check** as Step 1 in the Release Workflow agent guide  
-- Updated RW and `.cursorrules` docs for an 11-step workflow with branch safety  
-- Clarified modularity and package dependencies in workflow and numbering/versioning packages
-
-### Notes
-
-- This version referenced **Confidentia Epic 9** and predates dev-kit-specific epics.  
-- Starting with `v0.1.1.1+1`, all releases use **dev-kit-specific Epic numbers**.
-- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.21.3+2.md` for full details.
-
-
 
 ## [0.9.4.1+1] - 11-12-25
 
@@ -735,7 +733,64 @@ Captured Starborn Legacy Zombie Story case study report as unstructured book mat
 
 ---
 
+## [0.4.13.6+5] - 17-12-25
 
+🎉 Feature: Update Kanban Workflow (UKW) - Agent-driven kanban synchronization workflow
+
+### Added
+
+- **Update Kanban Workflow (UKW):**
+  - Created `update-kanban-workflow.yaml` - 8-step bottom-up workflow
+  - Created `cursorrules-ukw-trigger-section.md` - Trigger documentation
+  - Created `update-kanban-workflow-agent-execution.md` - Agent execution guide
+  - Trigger: "UKW" or "ukw" (case-insensitive)
+  - Bottom-up approach: Tasks → Stories → Epics → Board
+  - Requires agentic intelligence for synthesis, prioritization, and narrative updates
+- **Feature Request:**
+  - Created `FR-023-update-kanban-workflow-ukw.md` - UKW feature request document
+- **Documentation:**
+  - Updated workflow management package README with UKW references
+
+### Changed
+
+- **Workflow Management Package:**
+  - Added UKW workflow to available workflows
+  - Enhanced documentation with intelligence requirements
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+5.md)
+
+---
+
+📚 Book Material Capture: E9:S04:T01 - Capture Starborn Legacy Zombie Story Report
+
+### Summary
+
+Captured Starborn Legacy Zombie Story case study report as unstructured book material. This report documents the technical debt incurred by E15:S01 (Release Workflow & Versioning Infrastructure) and serves as a cautionary tale and case study for the Head First AI-Assisted Development book.
+
+### Changes
+
+**Material Capture:**
+- ✅ Captured complete case study report from Starborn Legacy project
+- ✅ Report: "The Zombie Story: A Cautionary tale resulting in technical debt"
+- ✅ Type: Case study report for book content
+- ✅ Source: Starborn Legacy project
+- ✅ Date: 2025-12-11
+
+**Report Content:**
+- Documents the "Zombie Story" pattern (story becomes unmanageable and must be retired)
+- Covers versioning mis-numbering issues and technical debt incurred
+- Provides lessons learned and recommendations for ai-dev-kit
+- Serves as case study for AI-assisted development workflows
+
+### Related Work
+
+- **Story:** E9:S04 - Book Material Capture
+- **Epic:** Epic 9 - Book Related Work
+- **Coordinates With:** E9:S01 (Book Content Development) - Material will be processed into structured book content
+- **Source Project:** Starborn Legacy (E15:S01 case study)
+- **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.4.1+1.md)
+
+---
 
 ## [0.9.4.0+1] - 11-12-25
 

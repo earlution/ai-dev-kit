@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-       **Last updated:** 2025-12-18 (v0.6.6.10+17 – T04: FR-024 IDE/Linter check before commit feature request created)
+       **Last updated:** 2025-12-21 (v0.6.6.10+18 – Changelog ordering fixes)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
