@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
 VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 13     # Task number (Task 13: Canonical CMW Perpetual Task)
-VERSION_BUILD = 2     # Build number (E6:S06:T13+2 - T13 implementation complete: All phases done, CMW perpetual task pattern canonicalized)
+VERSION_TASK = 14     # Task number (Task 14: Add CMW to Workflow Management Package Documentation)
+VERSION_BUILD = 0     # Build number (E6:S06:T14+0 - Doc-init: FR-027 and T14 created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

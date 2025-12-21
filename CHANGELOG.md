@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.14+0] - 21-12-25
+
+📋 Doc Init: E6:S06:T14 - Add CMW to Workflow Management Package Documentation
+
+### Doc Init
+
+- **Feature Request Created:** FR-027 - Add CMW to Workflow Management Package Documentation
+- **Task Created:** E6:S06:T14 - Add CMW to Workflow Management Package Documentation
+- **Scope:** Add CMW to workflow management package README to ensure proper documentation and discoverability
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.14+0.md)
+
+---
+
 ## [0.6.6.13+2] - 21-12-25
 
 ✅ T13 Implementation Complete: CMW perpetual task pattern canonicalized

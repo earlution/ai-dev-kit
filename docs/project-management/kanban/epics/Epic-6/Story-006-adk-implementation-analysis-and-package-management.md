@@ -45,6 +45,9 @@ housekeeping_policy: keep
 - [x] **E6:S06:T13 – Canonical CMW Perpetual Task** - ✅ COMPLETE (v0.6.6.13+2 – All phases complete: CMW perpetual task pattern canonicalized)
   - Task: [`T13-canonical-cmw-perpetual-task.md`](T13-canonical-cmw-perpetual-task.md)
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
+- [ ] **E6:S06:T14 – Add CMW to Workflow Management Package Documentation** - TODO (v0.6.6.14+0 – Task created)
+  - Task: [`T14-add-cmw-to-workflow-management-package-documentation.md`](T14-add-cmw-to-workflow-management-package-documentation.md)
+  - **Feature Request:** [FR-027](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)
 
 ---
 
