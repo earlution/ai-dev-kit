@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.15+1] - 21-12-25
+
+✅ T15 Implementation Complete: Cursor IDE Performance Considerations Awareness
+
+### Added
+
+- **Awareness Documentation:**
+  - `docs/architecture/standards-and-adrs/cursor-ide-performance-considerations.md` created
+  - Comprehensive documentation covering root causes, best practices, monitoring, and framework guidance
+  - References external investigation (Confidentia project - Epic 20, Story 5, Task 16)
+
+### Changed
+
+- **Framework Documentation:**
+  - `packages/frameworks/numbering & versioning/IMPLEMENTATION_GUIDE.md` updated
+  - Pre-commit hook examples changed from `pass_filenames: false` to `pass_filenames: true`
+  - Performance note added explaining recommendation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.15+1.md)
+
+---
+
 ## [0.6.6.15+0] - 21-12-25
 
 📋 Doc Init: E6:S06:T15 - Cursor IDE Performance Considerations Awareness

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Submitted:** 2025-12-21  
 **Submitted By:** User  
 **Priority:** MEDIUM  
-**Status:** ACCEPTED (v0.6.6.15+0 - T15 doc-init)
+**Status:** IMPLEMENTED (v0.6.6.15+1 - T15 implementation complete)
 
 ---
 
