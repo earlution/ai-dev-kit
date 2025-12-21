@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-21 (v0.6.6.10+19 – FR-025: Changelog Management and Archival Workflow)  
-**Version:** v0.6.6.10+19  
+**Last updated:** 2025-12-21 (v0.6.6.11+0 – T11: Changelog Management and Archival Workflow task created)  
+**Version:** v0.6.6.11+0  
 **Code:** E6S06
 
 ---
@@ -35,6 +35,9 @@ housekeeping_policy: keep
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T08. BUILD number = UKW run count.
 - [x] **E6:S06:T09 – Review and Prioritize Package Management Investigation Findings** - ✅ COMPLETE (v0.6.6.9+1 – Prioritization review complete: findings reviewed, recommendations validated and prioritized, roadmap created)
   - Task: [`T09-review-and-prioritize-package-management-investigation.md`](T09-review-and-prioritize-package-management-investigation.md)
+- [ ] **E6:S06:T11 – Changelog Management and Archival Workflow** - TODO (v0.6.6.11+0 – Doc-Init: Task created from FR-025)
+  - Task: [`T11-changelog-management-and-archival-workflow.md`](T11-changelog-management-and-archival-workflow.md)
+  - **Feature Request:** [FR-025](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
 
 ---
 

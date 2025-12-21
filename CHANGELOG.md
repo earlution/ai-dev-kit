@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.11+0] - 21-12-25
+
+📝 Doc-Init: Task T11 created for FR-025 - Changelog Management and Archival Workflow
+
+### Doc-Init
+
+- **E6:S06:T11 – Changelog Management and Archival Workflow**
+  - Task document created for FR-025 implementation
+  - Status: TODO | Priority: HIGH
+  - Purpose: Implement automated changelog management and archival workflow
+  - Addresses: Unmanageable changelog (~9,500 lines) problem
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+0.md)
+
+---
+
 ## [0.6.6.10+19] - 21-12-25
 
 📝 Feature Request: FR-025 - Changelog Management and Archival Workflow
