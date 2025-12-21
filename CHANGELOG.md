@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.11+2] - 21-12-25
+
+🔧 Phase 3 Complete: CMW scripts implementation - All analysis, archival, validation, and orchestration scripts created
+
+### Added
+
+- **CMW Scripts Implementation:**
+  - `changelog_utils.py` - Common utilities (version parsing, entry extraction, date parsing, config loading)
+  - `analyze_changelog_state.py` - Changelog state analysis (metrics, format detection, duplicate detection)
+  - `remove_duplicates.py` - Duplicate entry removal with dry-run support
+  - `identify_archival_entries.py` - Archival candidate identification based on policy
+  - `archive_entries.py` - Entry archival execution (moves entries to archive file)
+  - `cmw.py` - Main orchestration script (executes all 8 CMW workflow steps)
+- **Script Features:** Config-driven, dry-run support, error handling, ready for cron automation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+2.md)
+
+---
+
 ## [0.6.6.11+1] - 21-12-25
 
 📝 T11 Implementation Progress: Policy docs, workflow definition, cron automation setup

@@ -10,10 +10,10 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2025-12-21 (v0.6.6.11+1 – Policy docs, workflow definition, cron automation)  
+**Last updated:** 2025-12-21 (v0.6.6.11+2 – Phase 3 complete: CMW scripts implementation)  
 **Started:** 2025-12-21  
 **Completed:** N/A  
-**Version:** v0.6.6.11+1
+**Version:** v0.6.6.11+2
 
 **Feature Request:** [FR-025](../fr-br/FR-025-changelog-management-and-archival-workflow.md)  
 **Code:** E6S06T11
