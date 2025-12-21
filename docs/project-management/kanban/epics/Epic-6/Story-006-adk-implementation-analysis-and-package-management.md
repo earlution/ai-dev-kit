@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-18 (v0.6.6.10+16 – T04: Workflow mgt package v2.1.4 with RW Step 5 mandatory update)  
-**Version:** v0.6.6.10+16  
+**Last updated:** 2025-12-18 (v0.6.6.10+17 – T04: FR-024 IDE/Linter check before commit feature request created)  
+**Version:** v0.6.6.10+17  
 **Code:** E6S06
 
 ---
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [x] **E6:S06:T01 – Comprehensive ADK implementation analysis across all projects** ✅ COMPLETE (10 project reports + 4 granular analyses + 6 synthesis reports completed)
 - [x] **E6:S06:T02 – Investigate proper package management (single package file, hash verification)** - ✅ COMPLETE (v0.6.6.9+1 – Investigation complete: package management approaches evaluated, tar.gz design, SHA-256 hash verification, security considerations, design specs created)
 - [ ] **E6:S06:T03 – Design pre-release feedback mechanism** - TODO
-- [x] **E6:S06:T04 – Create package management implementation plan** - ✅ COMPLETE (v0.6.6.10+16 – Workflow mgt package v2.1.4 with RW Step 5 mandatory update)
+- [x] **E6:S06:T04 – Create package management implementation plan** - ✅ COMPLETE (v0.6.6.10+17 – FR-024 IDE/Linter check before commit feature request created)
 - [ ] **E6:S06:T05 – Implement feedback mechanism** - TODO
 - [x] **E6:S06:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.6.6+20 – All deliverables verified complete: 7 meta-analyses, executive summary, all 4 canonical framework designs)
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)

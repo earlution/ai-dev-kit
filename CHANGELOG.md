@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.6.10+17] - 18-12-25
+
+📝 Feature Request: FR-024 - IDE/Linter Check Before Commit in Release Workflow
+
+### Added
+
+- **FR-024:** IDE/Linter Check Before Commit in Release Workflow
+  - Feature request for new validation step (Step 9.5) to check IDE-flagged problems before commit
+  - Priority handling: Errors (block) → Warnings (flag) → Info (display)
+  - Integration with IDE diagnostics API and project-specific linter tools
+  - Configurable strict mode, auto-fix, and linter tool selection
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+17.md)
+
+---
+
 ## [0.6.6.10+16] - 18-12-25
 
 📦 Package Management: Workflow Mgt Package v2.1.4 - RW Step 5 Mandatory Update
