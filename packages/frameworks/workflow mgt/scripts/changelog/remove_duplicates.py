@@ -11,7 +11,7 @@ Usage:
 import argparse
 import sys
 from pathlib import Path
-from typing import Dict, List, Set
+from typing import Dict, List, Set, Tuple
 
 # Add scripts directory to path
 scripts_path = Path(__file__).parent.parent
