@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.13+1] - 21-12-25
+
+Version marker updates: Story 6 and Epic 6 version markers updated to reflect v0.6.6.13+0
+
+### Changed
+
+- **Documentation:** Updated Story 6 and Epic 6 version markers to v0.6.6.13+0
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.13+1.md)
+
+---
+
 ## [0.6.6.13+0] - 21-12-25
 
 📋 Doc Init: E6:S06:T13 - Canonical CMW Perpetual Task

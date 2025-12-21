@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-21 (v0.6.6.11+4 – T11: Phase 6 complete - Initial archival, ALL PHASES COMPLETE)  
-**Version:** v0.6.6.11+4  
+**Last updated:** 2025-12-21 (v0.6.6.13+0 – T13: Doc-init - Task created)  
+**Version:** v0.6.6.13+0  
 **Code:** E6S06
 
 ---
