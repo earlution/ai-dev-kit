@@ -48,6 +48,9 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T14 – Add CMW to Workflow Management Package Documentation** - TODO (v0.6.6.14+0 – Task created)
   - Task: [`T14-add-cmw-to-workflow-management-package-documentation.md`](T14-add-cmw-to-workflow-management-package-documentation.md)
   - **Feature Request:** [FR-027](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)
+- [ ] **E6:S06:T15 – Cursor IDE Performance Considerations Awareness** - TODO (v0.6.6.15+0 – Task created)
+  - Task: [`T15-cursor-ide-performance-considerations-awareness.md`](T15-cursor-ide-performance-considerations-awareness.md)
+  - **Feature Request:** [FR-028](../../fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)
 
 ---
 
