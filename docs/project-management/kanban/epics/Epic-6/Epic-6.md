@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-       **Last updated:** 2025-12-21 (v0.6.6.14+0 – T14: Doc-init - FR-027 and T14 created)
+       **Last updated:** 2025-12-21 (v0.6.6.15+0 – T15: Doc-init - FR-028 and T15 created)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -32,9 +32,9 @@ housekeeping_policy: keep
   - Tasks: T01 ✅, T02 ✅
 - [ ] **E6:S05 – Feature Requests** - TODO
   - Story: [`Story-005-feature-requests.md`](Story-005-feature-requests.md)
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.14+0)
+- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.15+0)
   - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T02 ✅ COMPLETE (v0.6.6.9+1), T06 ✅ COMPLETE (v0.6.6.6+20), T07 ✅ COMPLETE (v0.6.6.7+6), T08 IN PROGRESS (Perpetual - v0.6.6.8+2), T09 ✅ COMPLETE (v0.6.6.9+1), T04 ✅ COMPLETE (v0.6.6.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.6.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T12 IN PROGRESS (Perpetual - v0.6.6.12+0 - CMW maintenance), T13 ✅ COMPLETE (v0.6.6.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 TODO (v0.6.6.14+0 - Doc-init: FR-027 and T14 created), T03, T05 TODO (feedback mechanism)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T02 ✅ COMPLETE (v0.6.6.9+1), T06 ✅ COMPLETE (v0.6.6.6+20), T07 ✅ COMPLETE (v0.6.6.7+6), T08 IN PROGRESS (Perpetual - v0.6.6.8+2), T09 ✅ COMPLETE (v0.6.6.9+1), T04 ✅ COMPLETE (v0.6.6.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.6.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T12 IN PROGRESS (Perpetual - v0.6.6.12+0 - CMW maintenance), T13 ✅ COMPLETE (v0.6.6.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 TODO (v0.6.6.14+0 - Doc-init: FR-027 and T14 created), T15 TODO (v0.6.6.15+0 - Doc-init: FR-028 and T15 created), T03, T05 TODO (feedback mechanism)
 
 ---
 

@@ -377,14 +377,17 @@ repos:
         name: Validate Branch Context
         entry: python scripts/validation/validate_branch_context.py
         language: system
-        pass_filenames: false
+        pass_filenames: true  # ✅ Process only changed files (performance best practice)
 
       - id: validate-changelog-format
         name: Validate Changelog Format
         entry: python scripts/validation/validate_changelog_format.py
         language: system
-        pass_filenames: false
+        pass_filenames: true  # ✅ Process only changed files (performance best practice)
+        files: ^docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v.*\.md$
 ```
+
+**⚠️ Performance Note:** Using `pass_filenames: true` is recommended to avoid processing all files on every commit. This prevents IDE performance issues and crashes in projects with large file counts. See `docs/architecture/standards-and-adrs/cursor-ide-performance-considerations.md` for details.
 
 ---
 

@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.15+0] - 21-12-25
+
+📋 Doc Init: E6:S06:T15 - Cursor IDE Performance Considerations Awareness
+
+### Doc Init
+
+- **Feature Request Created:** FR-028 - Cursor IDE Performance Considerations Awareness
+- **Task Created:** E6:S06:T15 - Cursor IDE Performance Considerations Awareness
+- **Scope:** Create awareness documentation and update framework guidance for Cursor IDE performance considerations based on real-world investigation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.15+0.md)
+
+---
+
 ## [0.6.6.14+0] - 21-12-25
 
 📋 Doc Init: E6:S06:T14 - Add CMW to Workflow Management Package Documentation
