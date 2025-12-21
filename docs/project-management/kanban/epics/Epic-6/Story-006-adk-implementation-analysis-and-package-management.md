@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-21 (v0.6.6.13+0 – T13: Doc-init - Task created)  
-**Version:** v0.6.6.13+0  
+**Last updated:** 2025-12-21 (v0.6.6.13+2 – T13: Implementation complete - CMW perpetual task pattern canonicalized)  
+**Version:** v0.6.6.13+2  
 **Code:** E6S06
 
 ---
@@ -42,7 +42,7 @@ housekeeping_policy: keep
   - Task: [`T12-changelog-maintenance-workflow-cmw.md`](T12-changelog-maintenance-workflow-cmw.md)
   - **Note:** This is a perpetual maintenance task. All CMW-triggered RWs are attributed to T12. BUILD number = CMW run count.
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
-- [ ] **E6:S06:T13 – Canonical CMW Perpetual Task** - TODO (v0.6.6.13+0 – Doc-init: Task created)
+- [x] **E6:S06:T13 – Canonical CMW Perpetual Task** - ✅ COMPLETE (v0.6.6.13+2 – All phases complete: CMW perpetual task pattern canonicalized)
   - Task: [`T13-canonical-cmw-perpetual-task.md`](T13-canonical-cmw-perpetual-task.md)
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
 

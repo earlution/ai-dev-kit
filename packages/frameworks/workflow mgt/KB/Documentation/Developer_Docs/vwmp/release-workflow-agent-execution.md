@@ -550,7 +550,57 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
    - Move directly to Step 2.E (UPDATE VERSION FILE) or Step 3 (Create Detailed Changelog)
 
-**A.2. READ CURRENT VERSION (ONLY IF NOT UKW CONTEXT):**
+**A.1.5. CHECK CMW CONTEXT (AFTER UKW CHECK, BEFORE READING VERSION):**
+1.5.1. **ANALYZE:**
+   - **CRITICAL:** Check if this RW was triggered immediately after CMW execution (only if UKW context NOT detected)
+   - **CMW Context Detection:** User ran "CMW" then "RW" → This is changelog maintenance work
+   - **Context Indicators:**
+     - Recent CMW execution (user ran CMW command manually)
+     - Git status shows changelog changes (`CHANGELOG.md`, `CHANGELOG_ARCHIVE.md` modified)
+     - No specific task completion identified in recent commits
+     - Note: CMW can also run automatically via RW Step 9.5, but that doesn't trigger separate RW context
+   - **Decision Point:**
+     - ✅ **IF CMW context detected:** Skip to CMW Attribution Logic (A.1.5.1)
+     - ❌ **IF NOT CMW context:** Proceed with normal version bump path (A.2)
+
+**A.1.5.1. CMW ATTRIBUTION LOGIC (IF CMW CONTEXT DETECTED):**
+1.5.1.1. **ANALYZE:**
+   - **Dynamic Task Discovery:** Search for task document with `Task Type: Perpetual Maintenance` flag (for CMW)
+   - **Load config:** Use `kanban_root` and `task_doc_pattern` from config or fallback
+   - **Search Pattern:** Iterate through all task documents looking for perpetual task flag
+   - **CMW Identification:** Look for task name/description containing "CMW" or "Changelog Maintenance Workflow"
+   - **Task ID Extraction:** Extract Epic/Story/Task ID from discovered CMW perpetual task document
+   - **Task ID is Project-Specific:** Perpetual CMW task ID varies by project:
+     - ai-dev-kit: E6:S06:T12 (example)
+     - Other projects: May be E4:S03:T06, E2:S01:T11, etc. (depends on project structure)
+
+1.5.1.2. **DETERMINE:**
+   - **Version Decision:**
+     - Use discovered perpetual task's Epic/Story/Task numbers
+     - Keep `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK` from perpetual task
+     - Increment `VERSION_BUILD` by 1 (same task, new build)
+
+1.5.1.3. **EXECUTE:**
+   - Search all task documents using pattern: `{kanban_root}/{task_doc_pattern}`
+   - Read task documents looking for `Task Type: Perpetual Maintenance` and CMW-related names
+   - When found, extract task's Epic/Story/Task ID (e.g., E6:S06:T12, E4:S03:T06)
+   - Read current version file to get current `VERSION_BUILD`
+   - Calculate new version: `v{VERSION_RC}.{PERPETUAL_EPIC}.{PERPETUAL_STORY}.{PERPETUAL_TASK}+{VERSION_BUILD+1}`
+
+1.5.1.4. **VALIDATE:**
+   - Perpetual CMW task found
+   - Task ID extracted correctly
+   - Current BUILD number retrieved
+   - New BUILD = current BUILD + 1
+
+1.5.1.5. **PROCEED:**
+   - **Skip normal task identification:** Do not read Story file for task identification
+   - **Skip normal version bump logic:** Do not compare task numbers (this is perpetual task)
+   - **Document:** "CMW context detected. Found perpetual CMW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
+   - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
+   - Move directly to Step 2.E (UPDATE VERSION FILE) or Step 3 (Create Detailed Changelog)
+
+**A.2. READ CURRENT VERSION (ONLY IF NOT UKW OR CMW CONTEXT):**
 1. **ANALYZE:**
    - **Use config path:** Read current version from version file (from config `version_file` or fallback):
      - [Example: Confidentia] `src/confidentia/version.py` (or from `rw-config.yaml` if present)
@@ -2757,12 +2807,22 @@ run_terminal_cmd("python scripts/automation/release_workflow.py --auto-go")
 - When RW runs after UKW, it uses the wired task ID (E4:S03:T05)
 - Version: `v0.4.3.5+{N}`
 
-**Perpetual Task Pattern:**
+**Perpetual Task Pattern (UKW):**
 - Projects should create a perpetual UKW task for UKW release attribution
 - **Wiring Required:** Task must have `perpetual_task: true` or `Task Type: Perpetual Maintenance` in task document (UKW uses this to wire)
 - **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (wired in UKW Step 1)
 - Task status: IN PROGRESS (Perpetual - never completes)
 - BUILD number accumulates naturally as UKW runs (expected and valid)
+
+**Perpetual Task Pattern (CMW):**
+- Projects should create a perpetual CMW task for CMW maintenance release attribution
+- **Wiring Required:** Task must have `Task Type: Perpetual Maintenance` in task document (RW uses this to discover CMW perpetual task)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (discovered via flag search)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as CMW runs (expected and valid)
+- **CMW Context Detection:** RW Step 2 detects CMW context (user ran "CMW" then "RW")
+- **Version Pattern:** CMW releases use the perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = CMW run count
+- **See:** Epic 2 Story 1 T05 (CMW Perpetual Task Pattern template) for detailed pattern documentation
 
 ---
 

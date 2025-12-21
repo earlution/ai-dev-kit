@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 6, Story 6, Task 13: Canonical CMW Perpetual Task
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-21 (v0.6.6.13+0 – Task created)  
-**Started:** N/A  
-**Completed:** N/A  
-**Version:** v0.6.6.13+0
+**Last updated:** 2025-12-21 (v0.6.6.13+2 – Implementation complete)  
+**Started:** 2025-12-21  
+**Completed:** 2025-12-21  
+**Version:** v0.6.6.13+2
 
 **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)  
 **Code:** E6S06T13
@@ -97,13 +97,13 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 
 ## Acceptance Criteria
 
-- [ ] Framework templates updated to include CMW perpetual task pattern
-- [ ] Task template created/updated for CMW perpetual task (similar to UKW T08 pattern)
-- [ ] `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` includes CMW perpetual task in Epic 6, Story 6
-- [ ] RW execution guide updated with CMW context detection and attribution logic
-- [ ] RW Step 2 logic updated to detect CMW context and auto-attribute to T12
-- [ ] Versioning policy documentation updated to mention CMW perpetual task pattern
-- [ ] `.cursorrules` RW trigger section updated with CMW context detection
+- [x] Framework templates updated to include CMW perpetual task pattern ✅
+- [x] Task template created/updated for CMW perpetual task (similar to UKW T08 pattern) ✅
+- [x] `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` includes CMW perpetual task pattern in Epic 2, Story 1 ✅
+- [x] RW execution guide updated with CMW context detection and attribution logic ✅
+- [x] RW Step 2 logic updated to detect CMW context and auto-attribute to T12 ✅
+- [x] Versioning policy documentation updated to mention CMW perpetual task pattern ✅
+- [x] `.cursorrules` RW trigger section updated with CMW context detection ✅
 - [ ] First CMW-triggered RW uses T12 correctly
 - [ ] Pattern documented for adoption across projects
 

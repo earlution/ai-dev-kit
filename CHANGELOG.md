@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.13+2] - 21-12-25
+
+✅ T13 Implementation Complete: CMW perpetual task pattern canonicalized
+
+### Changed
+
+- **Framework Templates:**
+  - CMW perpetual task template created (`Epic-2/Story-1/T05-CMW-Perpetual-Task-Pattern.md`)
+  - Comprehensive canonical structure updated with CMW pattern documentation
+- **Framework Documentation:**
+  - RW execution guide updated with CMW context detection and attribution logic
+  - Versioning policy updated with perpetual task section (6.1.1)
+- **RW Logic:**
+  - `.cursorrules` updated with CMW context detection in RW Step 2
+  - CMW attribution logic added (follows UKW pattern)
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.13+2.md)
+
+---
+
 ## [0.6.6.13+1] - 21-12-25
 
 Version marker updates: Story 6 and Epic 6 version markers updated to reflect v0.6.6.13+0

@@ -103,6 +103,7 @@ This epic encompasses the core foundational work for the {PROJECT_NAME} project,
 - T02: Define standard workflow templates
 - T03: Create workflow execution guidelines
 - T04: Document workflow integration points
+- T05: Create CMW perpetual task pattern (for Changelog Management Workflow maintenance)
 
 #### Story 2: Workflow Automation
 **Purpose:** Automate common workflows and processes.
@@ -112,6 +113,15 @@ This epic encompasses the core foundational work for the {PROJECT_NAME} project,
 - T02: Implement workflow automation scripts
 - T03: Create workflow execution tools
 - T04: Document automation usage
+
+**Note on Perpetual Tasks:**
+Workflows that run periodically (e.g., UKW - Update Kanban Workflow, CMW - Changelog Management Workflow) should use perpetual task patterns for proper version attribution. Perpetual tasks:
+- Status: IN PROGRESS (never changes to COMPLETE)
+- Task Type: Perpetual Maintenance
+- Build Warning Suppression: Enabled
+- BUILD number = workflow run count (not feature iteration)
+- Enable RW context detection (e.g., "UKW" then "RW", "CMW" then "RW")
+- See Epic 4 Story 3 for UKW perpetual task pattern, Epic 2 Story 1 T05 for CMW perpetual task pattern
 
 ---
 
@@ -177,6 +187,12 @@ This epic encompasses the core foundational work for the {PROJECT_NAME} project,
 - T02: Framework bug fixes and improvements
 - T03: Documentation updates and improvements
 - T04: Framework integration improvements
+
+**Note on Perpetual Task Patterns:**
+Perpetual tasks are used for ongoing maintenance workflows (e.g., UKW, CMW). See:
+- **UKW Perpetual Task:** Epic 4 Story 3 T01 (Update Packaged RW to Handle UKW Context)
+- **CMW Perpetual Task:** Epic 2 Story 1 T05 (CMW Perpetual Task Pattern)
+- **General Pattern:** Tasks with `Task Type: Perpetual Maintenance` enable proper version attribution for maintenance workflows
 
 ---
 

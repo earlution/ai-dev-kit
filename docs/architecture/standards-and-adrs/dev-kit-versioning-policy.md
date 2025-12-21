@@ -251,6 +251,46 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 ---
 
+### 6.1.1 Perpetual Tasks (Maintenance Workflows)
+
+**CRITICAL:** Some tasks represent ongoing maintenance/synchronization work that never "completes" (e.g., UKW - Update Kanban Workflow, CMW - Changelog Management Workflow). These are **perpetual tasks** with special versioning semantics.
+
+**Perpetual Task Characteristics:**
+- **Status:** Always IN PROGRESS (never changes to COMPLETE)
+- **Task Type:** Perpetual Maintenance (marked in task document with `Task Type: Perpetual Maintenance`)
+- **Purpose:** Ongoing maintenance/synchronization workflows
+- **Build Number Semantics:** BUILD number = workflow run count (not feature iteration)
+- **Build Warning Suppression:** High BUILD numbers are expected and valid (no warnings)
+
+**Version Pattern:**
+- Perpetual tasks use normal version format: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}`
+- BUILD number accumulates naturally as the workflow runs
+- Example: UKW runs → `v0.6.6.8+1`, `v0.6.6.8+2`, `v0.6.6.8+3`, etc.
+- Example: CMW runs → `v0.6.6.12+1`, `v0.6.6.12+2`, `v0.6.6.12+3`, etc.
+
+**Perpetual Task Examples:**
+- **UKW (Update Kanban Workflow):** Epic 6, Story 6, Task 8 (E6:S06:T08) - Kanban documentation synchronization
+- **CMW (Changelog Management Workflow):** Epic 6, Story 6, Task 12 (E6:S06:T12) - Changelog maintenance and archival
+
+**RW Context Detection:**
+- RW Step 2 detects perpetual task context (e.g., user ran "UKW" then "RW", or "CMW" then "RW")
+- RW automatically attributes releases to the perpetual task (discovered via `Task Type: Perpetual Maintenance` flag)
+- BUILD number increments for each workflow run (same task, increment BUILD)
+- Build warnings are suppressed (high BUILD numbers are expected and valid)
+
+**Task ID Variability:**
+- Each project instance has its own perpetual task with its own E/S/T ID
+- ai-dev-kit: UKW = E6:S06:T08, CMW = E6:S06:T12
+- Other projects: May use different IDs (e.g., E4:S03:T05, E2:S01:T11)
+- Pattern discovery: Search for `Task Type: Perpetual Maintenance` flag in task documents
+
+**Related Documentation:**
+- **UKW Pattern:** Epic 4 Story 3 T01 (Update Packaged RW to Handle UKW Context)
+- **CMW Pattern:** Epic 2 Story 1 T05 (CMW Perpetual Task Pattern)
+- **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 2)
+
+---
+
 ### 6.2 Abstract Space Version Schema
 
 **CRITICAL:** Zero-numbered E/S/T documentation uses `+0` build number to establish the **abstract space** for forensic traceability, serving as the canonical version anchor before any functional work is committed.
