@@ -136,7 +136,24 @@ steps:
       validators:
         - scripts/validation/validate_branch_context.py
         - scripts/validation/validate_changelog_format.py
+        - scripts/changelog/check_changelog_size.py
       strict_mode: true
+
+  - id: step-9.5
+    name: Changelog Management Workflow (CMW)
+    type: changelog_management
+    handler: changelog.cmw
+    required: false
+    enabled: true
+    blocking: false
+    dependencies:
+      - step-9
+    config:
+      cmw_script: packages/frameworks/workflow mgt/scripts/changelog/cmw.py
+      trigger_condition: size_threshold_exceeded
+      auto_trigger: true
+      dry_run: false
+      use_rw_config: true
 
   - id: step-10
     name: Commit Changes
@@ -145,6 +162,7 @@ steps:
     required: true
     dependencies:
       - step-9
+      - step-9.5
     config:
       message_template: "{version} - {summary}"
 

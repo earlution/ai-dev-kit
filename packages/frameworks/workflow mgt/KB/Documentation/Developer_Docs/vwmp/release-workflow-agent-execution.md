@@ -167,8 +167,9 @@ For each step, the agent follows this pattern:
        {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Document flaws and fix attempts in Bug Reports and Feature Requests'},
        {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
        {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
-       {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
-       {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
+      {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context, changelog format, and changelog size validators'},
+      {'id': 'rw-step-9.5', 'status': 'pending', 'content': 'Step 9.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
+      {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
        {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
        {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags'},
        {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification & Reflection - Verify changes and reflect on results (optional but recommended)'},
@@ -1740,10 +1741,11 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
   # [Example: ai-dev-kit] handler: ai-dev-kit.run_validators (if implemented)
   dependencies: [step-8]
   config:
-    validators:
-      - scripts/validation/validate_branch_context.py  # Use {validation_scripts_path}/validate_branch_context.py
-      - scripts/validation/validate_changelog_format.py  # Use {validation_scripts_path}/validate_changelog_format.py
-      - scripts/validation/validate_version_bump.py  # Use {validation_scripts_path}/validate_version_bump.py
+      validators:
+        - scripts/validation/validate_branch_context.py  # Use {validation_scripts_path}/validate_branch_context.py
+        - scripts/validation/validate_changelog_format.py  # Use {validation_scripts_path}/validate_changelog_format.py
+        - scripts/validation/validate_version_bump.py  # Use {validation_scripts_path}/validate_version_bump.py
+        - scripts/changelog/check_changelog_size.py  # Check if changelog exceeds size threshold
     strict_mode: true
 ```
 
@@ -1754,36 +1756,124 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
      - `validate_branch_context.py` - Checks branch/version/epic alignment
      - `validate_changelog_format.py` - Checks changelog format (including canonical ordering)
      - `validate_version_bump.py` - Checks version bump logic (task transitions, out-of-order completion)
+     - `check_changelog_size.py` - Checks if changelog exceeds size threshold (triggers CMW in Step 9.5)
    - Understand strict mode: Failures block workflow
    - Check validators exist and are executable
    - **CRITICAL - Changelog Ordering:** `validate_changelog_format.py` now validates canonical ordering
    - **CRITICAL - Version Bump Logic:** `validate_version_bump.py` validates RW Step 2 logic is followed correctly
+   - **CRITICAL - Changelog Size:** `check_changelog_size.py` checks if changelog exceeds threshold (non-blocking, triggers CMW)
 
 2. **DETERMINE:**
    - Run each validator with `--strict` flag
    - Collect output from each validator
    - Determine if validators passed or failed
+   - **Note:** `check_changelog_size.py` exit code 1 = threshold exceeded (non-blocking, triggers Step 9.5)
 
 3. **EXECUTE:**
    - **Use config path:** Run validators (from config `scripts_path` or fallback `scripts/validation/`):
      - `python {scripts_path}/validation/validate_branch_context.py --strict` (script automatically reads `rw-config.yaml` if available)
      - `python {scripts_path}/validation/validate_changelog_format.py --strict` (script automatically reads `rw-config.yaml` if available)
      - `python {scripts_path}/validation/validate_version_bump.py --strict` (script automatically reads `rw-config.yaml` if available)
+     - `python {scripts_path}/changelog/check_changelog_size.py` (script automatically reads `rw-config.yaml` if available)
    - Capture exit codes and output
+   - **Note:** `check_changelog_size.py` exit code 1 is expected if threshold exceeded (non-blocking)
 
 4. **VALIDATE:**
    - Check exit codes: 0 = success, non-zero = failure
-   - If any validator fails in strict mode, workflow must abort
+   - **Exception:** `check_changelog_size.py` exit code 1 is non-blocking (triggers Step 9.5)
+   - If any blocking validator fails in strict mode, workflow must abort
    - Analyze error messages if validators fail
    - **CRITICAL:** `validate_version_bump.py` validates:
      - Completed task vs. current VERSION_TASK comparison
      - New task detection (VERSION_TASK = completed, BUILD = 1)
      - Same task detection (VERSION_TASK unchanged, BUILD incremented)
      - Out-of-order completion (VERSION_TASK = completed, BUILD = 1)
+   - **Changelog Size Check:** If `check_changelog_size.py` returns exit code 1, note that Step 9.5 will be triggered
 
 5. **PROCEED:**
-   - If validators pass: Document "Validators passed: branch context ✓, changelog format ✓, changelog ordering ✓, version bump logic ✓", move to Step 9
+   - If validators pass: Document "Validators passed: branch context ✓, changelog format ✓, changelog ordering ✓, version bump logic ✓"
+   - If changelog size exceeds threshold: Document "Changelog size check: threshold exceeded, Step 9.5 will trigger CMW"
    - If validators fail: Abort workflow, report errors, do not proceed
+   - Move to Step 9.5 (or Step 10 if Step 9.5 not needed)
+
+---
+
+### Step 9.5: Changelog Management Workflow (CMW)
+
+**Step Definition:**
+```yaml
+- id: step-9.5
+  name: Changelog Management Workflow (CMW)
+  handler: changelog.cmw
+  required: false
+  enabled: true
+  blocking: false
+  dependencies: [step-9]
+  config:
+    cmw_script: packages/frameworks/workflow mgt/scripts/changelog/cmw.py
+    trigger_condition: size_threshold_exceeded
+    auto_trigger: true
+    dry_run: false
+    use_rw_config: true
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Check if Step 9's `check_changelog_size.py` indicated threshold exceeded (exit code 1)
+   - Understand CMW script location: `packages/frameworks/workflow mgt/scripts/changelog/cmw.py`
+   - Understand trigger condition: `size_threshold_exceeded` (from Step 9)
+   - Understand auto_trigger: If threshold exceeded, automatically run CMW
+   - Understand dry_run: Set to `false` for actual execution (use `true` for testing)
+   - Check CMW script exists and is executable
+   - **CRITICAL:** CMW is deterministic (rule-based, no agentic intelligence required)
+   - **CRITICAL:** CMW will archive entries, remove duplicates, fix ordering
+
+2. **DETERMINE:**
+   - If Step 9 indicated threshold exceeded: Run CMW
+   - If Step 9 indicated threshold not exceeded: Skip Step 9.5
+   - Determine CMW execution mode: `--no-git` (CMW will stage files, but RW Step 8 already staged)
+   - **Note:** CMW may stage additional files (archive file), which is OK
+
+3. **EXECUTE:**
+   - **If threshold exceeded:**
+     - Run CMW script: `python packages/frameworks/workflow mgt/scripts/changelog/cmw.py --no-git`
+     - CMW will:
+       - Analyze changelog state
+       - Validate format and ordering
+       - Remove duplicates
+       - Identify entries for archival
+       - Archive entries to `CHANGELOG_ARCHIVE.md`
+       - Validate remaining changelog
+       - Report summary
+   - **If threshold not exceeded:**
+     - Skip CMW execution
+     - Document: "Changelog size OK, CMW not needed"
+
+4. **VALIDATE:**
+   - If CMW ran: Check exit code (0 = success, non-zero = failure)
+   - Verify changelog size reduced (if archival occurred)
+   - Verify archive file created/updated (if archival occurred)
+   - Verify changelog format still valid after CMW
+   - **Note:** CMW failures are non-blocking (workflow continues, but warning issued)
+
+5. **PROCEED:**
+   - If CMW ran successfully: Document "CMW executed: archived {N} entries, removed {M} duplicates"
+   - If CMW skipped: Document "CMW skipped: changelog size OK"
+   - If CMW failed: Document "CMW execution failed (non-blocking): {error}", continue workflow
+   - Move to Step 10
+
+**Key Points:**
+- Step 9.5 is **optional** (required: false) and **non-blocking** (blocking: false)
+- CMW is **deterministic** (rule-based, no agentic intelligence required)
+- CMW runs automatically if changelog size exceeds threshold
+- CMW failures are non-blocking (workflow continues)
+- CMW may stage additional files (archive file), which is OK
+
+**See Also:**
+- **CMW Scripts:** `packages/frameworks/workflow mgt/scripts/changelog/`
+- **CMW Workflow Definition:** `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
+- **Changelog Archival Policy:** `docs/architecture/standards-and-adrs/changelog-archival-policy.md`
 
 ---
 
@@ -1794,7 +1884,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 - id: step-10
   name: Commit Changes
   handler: git.commit
-  dependencies: [step-8]
+  dependencies: [step-9, step-9.5]
   config:
     message_template: "{version} - {summary}"
 ```
@@ -2567,7 +2657,8 @@ When executing Release Workflow as an agent, ensure:
 - [ ] **Step 6:** Analyzed BR/FR docs, updated fix attempt history, validated
 - [ ] **Step 7:** Analyzed Kanban docs, updated Epic/Story docs, validated
 - [ ] **Step 8:** Analyzed modified files, staged all files, validated
-- [ ] **Step 9:** Analyzed validators, ran both validators, validated results
+- [ ] **Step 9:** Analyzed validators, ran all validators (including changelog size check), validated results
+- [ ] **Step 9.5:** Checked if CMW needed, executed CMW if threshold exceeded, validated results (optional)
 - [ ] **Step 10:** Analyzed template, built message, created commit, validated
 - [ ] **Step 11:** Analyzed tag format, created annotated tag, validated
 - [ ] **Step 12:** Analyzed remote, pushed branch and tag, validated

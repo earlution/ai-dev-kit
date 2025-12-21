@@ -22,7 +22,7 @@
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
 6. **Execute all remaining steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
 7. **Document** each step's analysis, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 12 steps (see below)
+8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 12 steps (plus optional Step 9.5) (see below)
 
 **🔧 Config-Driven Approach (Preferred):**
 
@@ -66,7 +66,7 @@ kanban_root = config.get('kanban_root', 'docs/project-management/kanban') if con
 
 **🚨 MANDATORY: Progress Tracking with Cursor TODOs**
 
-**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for all 12 Release Workflow steps:
+**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for all 12 Release Workflow steps (plus optional Step 9.5):
 
 1. **At Workflow Start:** Create TODO list with all 12 steps as `pending`
 2. **Before Each Step:** Mark step as `in_progress`
@@ -159,7 +159,9 @@ For each step, follow this pattern:
 
 8. **Stage Files** - Run `git add -A` to stage all modified files
 
-9. **Run Validators** - Execute validation scripts. Use config path. Run `validate_branch_context.py`, `validate_changelog_format.py`, and `validate_version_bump.py` (all scripts automatically read from `rw-config.yaml` if available).
+9. **Run Validators** - Execute validation scripts. Use config path. Run `validate_branch_context.py`, `validate_changelog_format.py`, `validate_version_bump.py`, and `check_changelog_size.py` (all scripts automatically read from `rw-config.yaml` if available). **Note:** `check_changelog_size.py` exit code 1 (threshold exceeded) is non-blocking and triggers Step 9.5.
+
+9.5. **Changelog Management Workflow (CMW)** - **OPTIONAL, NON-BLOCKING:** If Step 9's `check_changelog_size.py` indicated threshold exceeded (exit code 1), automatically run CMW to archive entries, remove duplicates, and fix ordering. CMW is deterministic (rule-based, no agentic intelligence required). If threshold not exceeded, skip this step. CMW failures are non-blocking (workflow continues).
 
 10. **Commit Changes** - Create commit with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
 
@@ -173,7 +175,7 @@ For each step, follow this pattern:
 - ✅ **Context-Aware:** Use branch context, version schema, and project state to make decisions
 - ✅ **Validation:** Verify each step succeeded before proceeding
 - ✅ **Documentation:** Document decisions and actions at each step
-- ✅ **Progress Tracking:** MUST use Cursor TODOs to track all 12 steps
+- ✅ **Progress Tracking:** MUST use Cursor TODOs to track all 12 steps (plus optional Step 9.5)
 - ✅ **Branch Safety First:** Step 1 validates branch alignment before any modifications
 - ✅ **Canonical Ordering:** Version numbers (not timestamps) determine changelog ordering
 - ✅ **Forensic Traceability:** Maintain complete traceability grid (version ↔ epic/story/task ↔ changelogs ↔ kanban ↔ git)

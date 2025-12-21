@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.11+3] - 21-12-25
+
+🔗 Phase 4 Complete: CMW integrated with Release Workflow - Step 9.5 added for automatic changelog maintenance
+
+### Added
+
+- **RW Step 9.5: Changelog Management Workflow (CMW)**
+  - New optional, non-blocking step in Release Workflow
+  - Automatically triggers if changelog size exceeds threshold
+  - Executes CMW to archive entries, remove duplicates, fix ordering
+- **Changelog Size Check Script:** `check_changelog_size.py` - Checks if changelog exceeds size threshold, integrated into RW Step 9
+- **Workflow Updates:** RW workflow YAML and documentation updated with Step 9.5
+
+### Changed
+
+- **RW Step 9:** Enhanced to include changelog size check validator
+- **RW Step 10 Dependencies:** Updated to depend on both Step 9 and Step 9.5
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+3.md)
+
+---
+
 ## [0.6.6.11+2] - 21-12-25
 
 🔧 Phase 3 Complete: CMW scripts implementation - All analysis, archival, validation, and orchestration scripts created
