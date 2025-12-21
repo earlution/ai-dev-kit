@@ -143,7 +143,7 @@ A comprehensive changelog management and archival workflow that includes:
 - Changelog management is automated and sustainable
 - `CHANGELOG.md` remains manageable in size (e.g., max 500-1000 lines)
 - Old entries automatically archived to `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md`
-- Archival policy defined and enforced (e.g., entries older than 12 months, or main changelog exceeding 1000 lines)
+- Archival policy defined and enforced (e.g., entries older than 2 months, or main changelog exceeding 1000 lines)
 - Validation prevents ordering violations and duplicates before commit
 - Changelog Management Workflow (CMW) runs periodically or on-demand to maintain changelog health
 - Historical entries remain accessible in archive for reference
@@ -163,7 +163,7 @@ This feature is needed:
 - **Immediately:** Current changelog is unmanageable and requires immediate archival
 - **Ongoing:** Regular maintenance workflow to prevent future bloat
 - **During RW:** Integration with Release Workflow to validate new entries
-- **Periodically:** Scheduled reviews and archival runs (e.g., monthly or quarterly)
+- **Periodically:** Scheduled reviews and archival runs (default: weekly via cron, can be adjusted to biweekly or daily)
 
 ---
 
@@ -171,9 +171,13 @@ This feature is needed:
 
 ### 1. Changelog Management Workflow (CMW)
 
-Create a new workflow similar to UKW (Update Kanban Workflow) but focused on changelog maintenance:
+Create a deterministic workflow for changelog maintenance (unlike UKW, no agentic intelligence required):
 
-- **Trigger:** "CMW" or "cmw" (case-insensitive), or scheduled (e.g., monthly)
+- **Trigger:** 
+  - **Automated:** Scheduled execution via cron (recommended - **weekly** by default, can be adjusted to biweekly or daily if needed)
+  - **Automated:** RW Step 9.5 triggers when changelog exceeds threshold
+  - **Manual:** "CMW" or "cmw" command (for testing/debugging)
+- **Type:** Deterministic (rule-based, script-driven, no agentic intelligence needed)
 - **Steps:**
   1. Analyze current changelog state (size, ordering, duplicates)
   2. Validate changelog format and ordering
@@ -188,9 +192,9 @@ Create a new workflow similar to UKW (Update Kanban Workflow) but focused on cha
 
 Define clear criteria for archival:
 - **Size-based:** Archive when `CHANGELOG.md` exceeds N lines (e.g., 1000 lines)
-- **Time-based:** Archive entries older than X months (e.g., 12 months)
+- **Time-based:** Archive entries older than X months (e.g., 2 months)
 - **Version-based:** Keep only last N major versions in main changelog (e.g., last 50 releases)
-- **Hybrid:** Combination of criteria (e.g., archive entries older than 6 months OR when main changelog exceeds 1000 lines)
+- **Hybrid:** Combination of criteria (e.g., archive entries older than 2 months OR when main changelog exceeds 1000 lines)
 
 **Archive Structure:**
 - Main changelog: `CHANGELOG.md` (recent entries, manageable size)
@@ -209,8 +213,9 @@ Enhance RW to include changelog validation:
 Create comprehensive documentation:
 - `docs/architecture/standards-and-adrs/changelog-management-policy.md` - Changelog management policy
 - `docs/architecture/standards-and-adrs/changelog-archival-policy.md` - Archival policy and criteria
-- `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/changelog-management-workflow-agent-execution.md` - CMW execution guide
+- `packages/frameworks/workflow mgt/scripts/changelog/README.md` - CMW script documentation (deterministic scripts, no agent execution guide needed)
 - `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml` - CMW workflow definition
+- Cron automation setup documentation (scheduled execution configuration)
 
 ---
 
@@ -218,11 +223,11 @@ Create comprehensive documentation:
 
 1. **Immediate Archival:**
    - User runs CMW to archive old entries from current 9,500-line changelog
-   - CMW moves entries older than 12 months to archive
+   - CMW moves entries older than 2 months to archive
    - Main changelog reduced to manageable size (~500-1000 lines)
 
 2. **Ongoing Maintenance:**
-   - CMW runs monthly to validate and maintain changelog
+   - CMW runs weekly (via cron) to validate and maintain changelog
    - Detects and removes duplicates
    - Validates ordering compliance
    - Archives entries meeting archival criteria

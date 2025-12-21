@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 6, Story 6, Task 11: Changelog Management and Archival Workflow
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2025-12-21 (v0.6.6.11+0 – Doc-Init: Task document created)  
-**Started:** N/A  
+**Last updated:** 2025-12-21 (v0.6.6.11+1 – Policy docs, workflow definition, cron automation)  
+**Started:** 2025-12-21  
 **Completed:** N/A  
-**Version:** v0.6.6.11+0 (doc-init)
+**Version:** v0.6.6.11+1
 
 **Feature Request:** [FR-025](../fr-br/FR-025-changelog-management-and-archival-workflow.md)  
 **Code:** E6S06T11
@@ -71,9 +71,13 @@ Implement automated changelog management workflow (CMW) with:
 
 1. **Changelog Management Workflow (CMW):**
    - Workflow definition: `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
-   - Trigger: "CMW" or "cmw" (case-insensitive), or scheduled (e.g., monthly)
-   - Agent execution guide: `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/changelog-management-workflow-agent-execution.md`
-   - Cursor rules trigger section: `packages/frameworks/workflow mgt/cursorrules-cmw-trigger-section.md`
+   - **Type:** Deterministic (rule-based, script-driven)
+   - **Triggers:**
+     - Scheduled execution via cron (recommended - **weekly** by default, can be adjusted to biweekly or daily if needed)
+     - RW Step 9.5 (automatic when threshold exceeded)
+     - Manual: "CMW" or "cmw" command (for testing/debugging)
+   - **Execution:** Script-based (no agent execution guide needed - deterministic operations)
+   - Cursor rules trigger section: `packages/frameworks/workflow mgt/cursorrules-cmw-trigger-section.md` (optional, for manual trigger)
 
 2. **CMW Functionality:**
    - Analyze current changelog state (size, ordering, duplicates)
@@ -87,11 +91,11 @@ Implement automated changelog management workflow (CMW) with:
 
 3. **Archival Policy:**
    - Policy document: `docs/architecture/standards-and-adrs/changelog-archival-policy.md`
-   - Define archival criteria:
-     - **Size-based:** Archive when `CHANGELOG.md` exceeds N lines (e.g., 1000 lines)
-     - **Time-based:** Archive entries older than X months (e.g., 12 months)
-     - **Version-based:** Keep only last N major versions in main changelog (e.g., last 50 releases)
-     - **Hybrid:** Combination of criteria (e.g., archive entries older than 6 months OR when main changelog exceeds 1000 lines)
+  - Define archival criteria:
+    - **Size-based:** Archive when `CHANGELOG.md` exceeds N lines (e.g., 1000 lines)
+    - **Time-based:** Archive entries older than X months (e.g., 2 months)
+    - **Version-based:** Keep only last N major versions in main changelog (e.g., last 50 releases)
+    - **Hybrid:** Combination of criteria (e.g., archive entries older than 2 months OR when main changelog exceeds 1000 lines)
    - Archive structure:
      - Main changelog: `CHANGELOG.md` (recent entries, manageable size)
      - Archive: `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md` (historical entries)
@@ -106,7 +110,7 @@ Implement automated changelog management workflow (CMW) with:
 5. **SOPs and Documentation:**
    - Changelog management policy: `docs/architecture/standards-and-adrs/changelog-management-policy.md`
    - Changelog archival policy: `docs/architecture/standards-and-adrs/changelog-archival-policy.md`
-   - CMW execution guide: `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/changelog-management-workflow-agent-execution.md`
+   - CMW script documentation: `packages/frameworks/workflow mgt/scripts/changelog/README.md` (deterministic scripts, no agent execution guide needed)
    - CMW workflow definition: `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
    - Training materials (if needed)
 
@@ -126,8 +130,8 @@ Implement automated changelog management workflow (CMW) with:
 4. Define archive structure and format
 
 ### Phase 2: Design CMW Workflow
-1. Analyze UKW workflow pattern for reference
-2. Design CMW workflow steps:
+1. Design CMW as **deterministic workflow** (unlike UKW - no agentic intelligence required)
+2. Design CMW workflow steps (deterministic/script-based):
    - Step 1: Analyze changelog state
    - Step 2: Validate format and ordering
    - Step 3: Detect duplicates
@@ -136,9 +140,10 @@ Implement automated changelog management workflow (CMW) with:
    - Step 6: Validate remaining changelog
    - Step 7: Stage and commit changes
    - Step 8: Report summary
-3. Create workflow YAML definition
-4. Create agent execution guide
-5. Create cursor rules trigger section
+3. Create workflow YAML definition (deterministic/script-based)
+4. Create CMW orchestration script (Python script, no agent execution guide needed)
+5. Create cursor rules trigger section (optional, for manual trigger)
+6. Configure cron automation (scheduled execution)
 
 ### Phase 3: Implement CMW Scripts
 1. Create CMW analysis script (detect size, ordering, duplicates)
@@ -173,7 +178,7 @@ Implement automated changelog management workflow (CMW) with:
 
 - [ ] Archival policy defined and documented (size-based, time-based, or hybrid)
 - [ ] CMW workflow YAML definition created
-- [ ] CMW agent execution guide created
+- [ ] CMW script documentation created (deterministic scripts, no agent execution guide needed)
 - [ ] CMW cursor rules trigger section created
 - [ ] CMW analysis script implemented (detect size, ordering, duplicates)
 - [ ] CMW archival script implemented (move entries to archive)
@@ -255,10 +260,12 @@ Implement automated changelog management workflow (CMW) with:
 - Blocks efficient development workflow
 
 **Implementation Considerations:**
-- CMW should follow UKW pattern (agent-driven, intelligent analysis)
+- **CMW is deterministic** - unlike UKW, no agentic intelligence required (all operations are rule-based)
+- CMW should be script-driven and suitable for cron automation
 - Archival should preserve full context and maintain searchability
 - Integration with RW should be seamless and non-blocking
 - Policy should be configurable per project (via rw-config.yaml)
+- **Cron automation recommended** - scheduled execution ensures consistent maintenance without manual intervention
 
 ---
 

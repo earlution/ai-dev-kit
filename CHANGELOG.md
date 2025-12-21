@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.11+1] - 21-12-25
+
+📝 T11 Implementation Progress: Policy docs, workflow definition, cron automation setup
+
+### Added
+
+- **Policy Documents:**
+  - Changelog Archival Policy with hybrid criteria (2-month retention default)
+  - Changelog Management Policy with format and validation requirements
+- **CMW Workflow Definition:** Deterministic workflow YAML (8 steps, rule-based)
+- **Cron Automation:** Weekly execution setup (default, adjustable to biweekly/daily)
+- **Documentation:** CMW scripts README and cron example script
+
+### Changed
+
+- **Retention Period:** Updated from 12 months to **2 months** in main changelog
+- **Workflow Type:** Changed to deterministic (rule-based, no agentic intelligence)
+- **Execution Model:** Cron automation (weekly) as recommended approach
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+1.md)
+
+---
+
 ## [0.6.6.11+0] - 21-12-25
 
 📝 Doc-Init: Task T11 created for FR-025 - Changelog Management and Archival Workflow
