@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-21 (v0.6.6.10+18 – Changelog ordering fixes)  
-**Version:** v0.6.6.10+18  
+**Last updated:** 2025-12-21 (v0.6.6.10+19 – FR-025: Changelog Management and Archival Workflow)  
+**Version:** v0.6.6.10+19  
 **Code:** E6S06
 
 ---

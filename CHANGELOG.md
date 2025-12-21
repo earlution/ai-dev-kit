@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.6.6.10+19] - 21-12-25
+
+📝 Feature Request: FR-025 - Changelog Management and Archival Workflow
+
+### Added
+
+- **FR-025:** Changelog Management and Archival Workflow
+  - Feature request for automated changelog management and archival solution
+  - Documents problem: Current changelog (~9,500 lines) is unsustainable
+  - Proposes CMW (Changelog Management Workflow) with archival policy
+  - Includes industry research on best practices and SOPs for changelog management
+  - Priority: HIGH
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+19.md)
+
+---
+
+## [0.6.6.10+18] - 21-12-25
+
+🔧 Maintenance: Changelog ordering fixes
+
+### Fixed
+
+- **Changelog Ordering:**
+  - Removed duplicate version entries
+  - Fixed ordering violations to comply with "Keep a Changelog" standard (newest first)
+  - Epic 9 entries now correctly appear before Epic 6/4 entries
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+18.md)
+
+---
 
 ## [0.6.6.10+17] - 18-12-25
 
@@ -528,8 +562,6 @@ Complete package management system ready for production use:
 
 ---
 
-## [0.9.21.3+2] - 02-12-25
-
 📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
 
 ### Changed
@@ -612,36 +644,6 @@ Complete package management system ready for production use:
 **Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+2.md)
 
 ---
-
-## [0.6.6.7+1] - 17-12-25
-
-🔧 Framework Hardening: Epic 9 → Epic 24 rename and rw-config.yaml creation
-
-### Changed
-
-- **Epic Structure (CRITICAL):**
-  - Renamed Epic 9 "Book Related Work" to Epic 24 (project-specific epic)
-  - Updated all Epic 9 references throughout kanban documentation
-  - Epic 24+ now documented as project-specific range (not canonical)
-  - Resolves root cause of Epic mashup issue affecting 30% of client projects
-- **Epic 9 Canonical:**
-  - Canonical Epic 9 is "User Management and Authentication" (see templates)
-  - Projects should use Epic 9 for User Management, not Book Related Work
-
-### Added
-
-- **Source Repository Frameworks (HIGH):**
-  - Created `rw-config.yaml` in project root
-  - Configured for ai-dev-kit project structure
-  - Enabled Kanban integration
-  - Documented epic ranges (canonical: 1-23, project-specific: 24+)
-  - Foundation for complete reference implementation
-
-**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+1.md)
-
----
-
-📚 Book Material Capture: E9:S04:T01 - Capture Starborn Legacy Zombie Story Report
 
 ### Summary
 
@@ -733,31 +735,31 @@ Captured Starborn Legacy Zombie Story case study report as unstructured book mat
 
 ---
 
-## [0.4.13.6+5] - 17-12-25
+## [0.6.6.7+1] - 17-12-25
 
-🎉 Feature: Update Kanban Workflow (UKW) - Agent-driven kanban synchronization workflow
-
-### Added
-
-- **Update Kanban Workflow (UKW):**
-  - Created `update-kanban-workflow.yaml` - 8-step bottom-up workflow
-  - Created `cursorrules-ukw-trigger-section.md` - Trigger documentation
-  - Created `update-kanban-workflow-agent-execution.md` - Agent execution guide
-  - Trigger: "UKW" or "ukw" (case-insensitive)
-  - Bottom-up approach: Tasks → Stories → Epics → Board
-  - Requires agentic intelligence for synthesis, prioritization, and narrative updates
-- **Feature Request:**
-  - Created `FR-023-update-kanban-workflow-ukw.md` - UKW feature request document
-- **Documentation:**
-  - Updated workflow management package README with UKW references
+🔧 Framework Hardening: Epic 9 → Epic 24 rename and rw-config.yaml creation
 
 ### Changed
 
-- **Workflow Management Package:**
-  - Added UKW workflow to available workflows
-  - Enhanced documentation with intelligence requirements
+- **Epic Structure (CRITICAL):**
+  - Renamed Epic 9 "Book Related Work" to Epic 24 (project-specific epic)
+  - Updated all Epic 9 references throughout kanban documentation
+  - Epic 24+ now documented as project-specific range (not canonical)
+  - Resolves root cause of Epic mashup issue affecting 30% of client projects
+- **Epic 9 Canonical:**
+  - Canonical Epic 9 is "User Management and Authentication" (see templates)
+  - Projects should use Epic 9 for User Management, not Book Related Work
 
-**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+5.md)
+### Added
+
+- **Source Repository Frameworks (HIGH):**
+  - Created `rw-config.yaml` in project root
+  - Configured for ai-dev-kit project structure
+  - Enabled Kanban integration
+  - Documented epic ranges (canonical: 1-23, project-specific: 24+)
+  - Foundation for complete reference implementation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+1.md)
 
 ---
 
@@ -791,12 +793,6 @@ Captured Starborn Legacy Zombie Story case study report as unstructured book mat
 - **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.4.1+1.md)
 
 ---
-
-## [0.9.4.0+1] - 11-12-25
-
-📚 Book Material Capture: E9:S04:T00 - Setup: Material Capture Infrastructure
-
-### Summary
 
 Established material capture infrastructure for unstructured book content. Created Story 4 (Book Material Capture) with setup task that defines the structure, templates, and guidelines for capturing unstructured material like text dumps, reports, and raw notes.
 
