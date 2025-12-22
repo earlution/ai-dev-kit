@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-22 (v0.4.6.4+43 – T04 COMPLETE: All 378 task templates generated, validated, and sanitized)
-**Version:** v0.4.6.4+43
+**Last updated:** 2025-12-22 (v0.4.6.5+1 – T05 COMPLETE: Contextualization guide and examples created)
+**Version:** v0.4.6.5+1
 **Code:** E4S06
 
 ---
@@ -44,7 +44,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - [x] **E4:S06:T02 – Create individual epic template files for project-specific canonical epics (8-21)** ✅ COMPLETE (v0.4.6.10+1 – All 14 epic templates created: Epics 8-21)
 - [x] **E4:S06:T03 – Create story template files for each typical story** ✅ COMPLETE (v0.4.6.3+1 – All 62 story templates created for Epic 1-21)
 - [x] **E4:S06:T04 – Create task template files for each typical task** ✅ COMPLETE (v0.4.6.4+43 – All 378 canonical task templates generated, validated, sanitized, and duplicates cleaned up)
-- [ ] **E4:S06:T05 – Create contextualization guide and examples** - TODO
+- [x] **E4:S06:T05 – Create contextualization guide and examples** - ✅ COMPLETE (v0.4.6.5+1)
 - [x] **E4:S06:T06 – Update CANONICAL_EPICS.md to reference comprehensive structure (BR-005)** ✅ COMPLETE (v0.4.6.6+1)
 - [ ] **E4:S06:T07 – Integrate with template setup guide and installation workflow** - TODO (BR-009 assigned)
 - [ ] **E4:S06:T08 – Validate structure with test projects (tiny, small, ambitious)** - TODO
@@ -247,7 +247,7 @@ All 378 canonical task templates have been successfully generated, validated, an
 
 ### E4:S06:T05 – Create contextualization guide and examples
 
-**Status:** IN PROGRESS
+**Status:** ✅ COMPLETE (v0.4.6.5+1)
 **Priority:** HIGH  
 **Dependencies:** E4:S06:T01, E4:S06:T02  
 **Blocker:** None
@@ -257,16 +257,16 @@ All 378 canonical task templates have been successfully generated, validated, an
 - Comprehensive structure document
 
 **Deliverable:**
-- `templates/CONTEXTUALIZATION_GUIDE.md` - Complete contextualization guide
-- Examples directory with contextualized templates:
-  - `examples/contextualized/tiny-project/` - Epics 1-7 only
-  - `examples/contextualized/small-project/` - Epics 1-7 + 2-3 project epics
-  - `examples/contextualized/ambitious-project/` - Full structure
-- Guide includes:
-  - Placeholder replacement instructions
-  - Customization guidelines
-  - Scalability guidance
-  - Examples for different project types
+- ✅ `templates/CONTEXTUALIZATION_GUIDE.md` - Complete contextualization guide
+- ✅ Examples directory with contextualized templates:
+  - ✅ `examples/contextualized/tiny-project/` - Core Epics only (1-7, 8, 10, 18, 22, 23)
+  - ✅ `examples/contextualized/small-project/` - Core Epics + Epic 11 (API), Epic 12 (UI)
+  - ✅ `examples/contextualized/ambitious-project/` - Core Epics + Epics 9, 11-17, 19-21
+- ✅ Guide includes:
+  - ✅ Placeholder replacement instructions
+  - ✅ Customization guidelines
+  - ✅ Scalability guidance
+  - ✅ Examples for different project types
 
 **Approach:**
 1. Document placeholder system (`{PROJECT_NAME}`, `{DOMAIN}`, etc.)
@@ -275,12 +275,33 @@ All 378 canonical task templates have been successfully generated, validated, an
 4. Document customization best practices
 5. Add troubleshooting section
 
+**Deliverables:**
+- ✅ `packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md` - Comprehensive guide
+  - Placeholder system documentation
+  - Step-by-step contextualization process (4 phases)
+  - Scalability guidance (tiny, small, medium, ambitious)
+  - Customization guidelines (Epic, Story, Task levels)
+  - Troubleshooting section
+  - Integration with installer
+- ✅ `packages/frameworks/kanban/templates/examples/contextualized/tiny-project/` - Tiny project example
+  - PersonalBlog example
+  - Core Epics only
+  - Minimal customization
+- ✅ `packages/frameworks/kanban/templates/examples/contextualized/small-project/` - Small project example
+  - SaaSMVP example
+  - Core Epics + Epic 11 (API), Epic 12 (UI)
+  - Moderate customization
+- ✅ `packages/frameworks/kanban/templates/examples/contextualized/ambitious-project/` - Ambitious project example
+  - EnterprisePlatform example
+  - Core Epics + Epics 9, 11-17, 19-21
+  - Full customization
+
 **Acceptance Criteria:**
-- [ ] Contextualization guide created
-- [ ] At least 3 example projects (tiny, small, ambitious)
-- [ ] Guide includes placeholder replacement instructions
-- [ ] Guide includes customization guidelines
-- [ ] Guide includes scalability guidance
+- [x] Contextualization guide created
+- [x] At least 3 example projects (tiny, small, ambitious)
+- [x] Guide includes placeholder replacement instructions
+- [x] Guide includes customization guidelines
+- [x] Guide includes scalability guidance
 
 ---
 
