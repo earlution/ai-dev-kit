@@ -130,7 +130,7 @@ These principles are part of the RW contract for agents and humans in this proje
 
 **Workflow:** Release Workflow
 **Type:** `release`
-**Steps:** 15 steps organized into 4 phases (Steps 1-12: required, Steps 13-14: optional CHECK and ACT phases, Step 15: optional PIR integration)
+**Steps:** 16 steps organized into 4 phases (Steps 1-13: required, Steps 14-15: optional CHECK and ACT phases, Step 16: optional PIR integration)
 **Canonical Example:** Yes - this workflow demonstrates the agent-driven execution pattern
 
 ### Agent Execution Pattern
@@ -166,15 +166,16 @@ For each step, the agent follows this pattern:
        {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
        {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Document flaws and fix attempts in Bug Reports and Feature Requests'},
        {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-       {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
-      {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context, changelog format, and changelog size validators'},
-      {'id': 'rw-step-9.5', 'status': 'pending', 'content': 'Step 9.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
-      {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
-       {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
-       {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags'},
-       {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification & Reflection - Verify changes and reflect on results (optional but recommended)'},
-       {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Update changelog, create follow-ups, document improvements (optional but recommended)'},
-       {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Check for PIR Trigger - Check Epic/Story COMPLETE status and trigger PIR workflow (optional but recommended)'},
+      {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
+      {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+      {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Run Validators - Execute branch context, changelog format, and changelog size validators'},
+      {'id': 'rw-step-10.5', 'status': 'pending', 'content': 'Step 10.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
+      {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Commit Changes - Create git commit with versioned message'},
+      {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Create Git Tag - Create annotated tag'},
+      {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Push to Remote - Push branch and tags'},
+      {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Post-Commit Verification & Reflection - Verify changes and reflect on results (optional but recommended)'},
+      {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Act on Verification Results - Update changelog, create follow-ups, document improvements (optional but recommended)'},
+      {'id': 'rw-step-16', 'status': 'pending', 'content': 'Step 16: Check for PIR Trigger - Check Epic/Story COMPLETE status and trigger PIR workflow (optional but recommended)'},
    ])
    ```
 
@@ -1781,15 +1782,77 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 ---
 
-### Step 9: Run Validators
+### Step 9: Check for and Address IDE-Flagged Problems
 
 **Step Definition:**
 ```yaml
 - id: step-9
+  name: Check for and Address IDE-Flagged Problems
+  handler: ide.lint_check
+  dependencies: [step-8]
+  config:
+    check_order: [errors, warnings, infos]
+    blocking: true  # Errors block workflow, warnings/infos are non-blocking but should be addressed
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Understand IDE-flagged problems: Errors, warnings, and informational messages from the IDE/linter
+   - Understand check order: Check errors first, then warnings, then infos
+   - Understand blocking behavior: Errors block workflow, warnings/infos should be addressed but are non-blocking
+   - Identify files modified in Steps 2-7:
+     - Version file
+     - Detailed changelog
+     - Main changelog
+     - README
+     - Kanban docs
+     - Any other modified files
+
+2. **DETERMINE:**
+   - Check for IDE-flagged problems in modified files
+   - Address problems in order: errors first, then warnings, then infos
+   - Determine if problems are blocking (errors) or non-blocking (warnings/infos)
+
+3. **EXECUTE:**
+   - **Check for errors:**
+     - Use `read_lints` tool to check for linter errors in modified files
+     - If errors found: Address each error before proceeding
+   - **Check for warnings:**
+     - Review linter warnings
+     - Address warnings if possible (non-blocking, but should be fixed)
+   - **Check for infos:**
+     - Review informational messages
+     - Address infos if relevant (non-blocking, but good practice to address)
+
+4. **VALIDATE:**
+   - Verify no blocking errors remain
+   - Document any warnings/infos that were not addressed (with justification)
+   - Ensure all critical errors are resolved before proceeding
+
+5. **PROCEED:**
+   - If no errors: Document "IDE check passed: no errors, {N} warnings, {M} infos"
+   - If errors addressed: Document "IDE check: resolved {N} errors, {W} warnings, {I} infos"
+   - If errors remain: Abort workflow, report errors, do not proceed
+   - Move to Step 10
+
+**Key Points:**
+- Step 9 is **mandatory** (required: true) and **blocking** (blocking: true) for errors
+- Errors **MUST** be resolved before proceeding to Step 10
+- Warnings and infos are non-blocking but should be addressed when possible
+- Check order: errors → warnings → infos
+
+---
+
+### Step 10: Run Validators
+
+**Step Definition:**
+```yaml
+- id: step-10
   name: Run Validators
   handler: confidentia.run_validators  # [Example: Confidentia] Use {project}.run_validators or validation.run_validators
   # [Example: ai-dev-kit] handler: ai-dev-kit.run_validators (if implemented)
-  dependencies: [step-8]
+  dependencies: [step-9]
   config:
       validators:
         - scripts/validation/validate_branch_context.py  # Use {validation_scripts_path}/validate_branch_context.py
@@ -1842,23 +1905,23 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 5. **PROCEED:**
    - If validators pass: Document "Validators passed: branch context ✓, changelog format ✓, changelog ordering ✓, version bump logic ✓"
-   - If changelog size exceeds threshold: Document "Changelog size check: threshold exceeded, Step 9.5 will trigger CMW"
+   - If changelog size exceeds threshold: Document "Changelog size check: threshold exceeded, Step 10.5 will trigger CMW"
    - If validators fail: Abort workflow, report errors, do not proceed
-   - Move to Step 9.5 (or Step 10 if Step 9.5 not needed)
+   - Move to Step 10.5 (or Step 11 if Step 10.5 not needed)
 
 ---
 
-### Step 9.5: Changelog Management Workflow (CMW)
+### Step 10.5: Changelog Management Workflow (CMW)
 
 **Step Definition:**
 ```yaml
-- id: step-9.5
+- id: step-10.5
   name: Changelog Management Workflow (CMW)
   handler: changelog.cmw
   required: false
   enabled: true
   blocking: false
-  dependencies: [step-9]
+  dependencies: [step-10]
   config:
     cmw_script: packages/frameworks/workflow mgt/scripts/changelog/cmw.py
     trigger_condition: size_threshold_exceeded
@@ -1870,9 +1933,9 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 **Agent Execution:**
 
 1. **ANALYZE:**
-   - Check if Step 9's `check_changelog_size.py` indicated threshold exceeded (exit code 1)
+   - Check if Step 10's `check_changelog_size.py` indicated threshold exceeded (exit code 1)
    - Understand CMW script location: `packages/frameworks/workflow mgt/scripts/changelog/cmw.py`
-   - Understand trigger condition: `size_threshold_exceeded` (from Step 9)
+   - Understand trigger condition: `size_threshold_exceeded` (from Step 10)
    - Understand auto_trigger: If threshold exceeded, automatically run CMW
    - Understand dry_run: Set to `false` for actual execution (use `true` for testing)
    - Check CMW script exists and is executable
@@ -1880,8 +1943,8 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - **CRITICAL:** CMW will archive entries, remove duplicates, fix ordering
 
 2. **DETERMINE:**
-   - If Step 9 indicated threshold exceeded: Run CMW
-   - If Step 9 indicated threshold not exceeded: Skip Step 9.5
+   - If Step 10 indicated threshold exceeded: Run CMW
+   - If Step 10 indicated threshold not exceeded: Skip Step 10.5
    - Determine CMW execution mode: `--no-git` (CMW will stage files, but RW Step 8 already staged)
    - **Note:** CMW may stage additional files (archive file), which is OK
 
@@ -1911,10 +1974,10 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - If CMW ran successfully: Document "CMW executed: archived {N} entries, removed {M} duplicates"
    - If CMW skipped: Document "CMW skipped: changelog size OK"
    - If CMW failed: Document "CMW execution failed (non-blocking): {error}", continue workflow
-   - Move to Step 10
+   - Move to Step 11
 
 **Key Points:**
-- Step 9.5 is **optional** (required: false) and **non-blocking** (blocking: false)
+- Step 10.5 is **optional** (required: false) and **non-blocking** (blocking: false)
 - CMW is **deterministic** (rule-based, no agentic intelligence required)
 - CMW runs automatically if changelog size exceeds threshold
 - CMW failures are non-blocking (workflow continues)
@@ -1927,14 +1990,14 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 ---
 
-### Step 10: Commit Changes
+### Step 11: Commit Changes
 
 **Step Definition:**
 ```yaml
-- id: step-10
+- id: step-11
   name: Commit Changes
   handler: git.commit
-  dependencies: [step-9, step-9.5]
+  dependencies: [step-10, step-10.5]
   config:
     message_template: "{version} - {summary}"
 ```
@@ -2050,14 +2113,14 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 ---
 
-### Step 11: Create Git Tag
+### Step 12: Create Git Tag
 
 **Step Definition:**
 ```yaml
-- id: step-11
+- id: step-12
   name: Create Git Tag
   handler: git.create_tag
-  dependencies: [step-9]
+  dependencies: [step-11]
   config:
     tag_template: v{version}
     message_template: "Release {tag}: {summary}"
@@ -2101,18 +2164,18 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - Document tag creation:
      - [Example: Confidentia] "Created annotated tag v0.4.3.2+9"
      - [Example: ai-dev-kit] "Created annotated tag v0.2.1.1+3"
-   - Move to Step 11 (waits for Step 9 to complete)
+   - Move to Step 12 (waits for Step 11 to complete)
 
 ---
 
-### Step 12: Push to Remote
+### Step 13: Push to Remote
 
 **Step Definition:**
 ```yaml
-- id: step-12
+- id: step-13
   name: Push to Remote
   handler: git.push
-  dependencies: [step-9, step-10]
+  dependencies: [step-11, step-12]
   config:
     push_tags: true
     remote: origin
@@ -2124,7 +2187,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - Get current branch name:
      - [Example: Confidentia] `epic/4` (already validated in Step 1)
      - [Example: ai-dev-kit] `epic/2` or `main` (already validated in Step 1)
-   - Get tag name from Step 11:
+   - Get tag name from Step 12:
      - [Example: Confidentia] `v0.4.3.2+9`
      - [Example: ai-dev-kit] `v0.2.1.1+3`
    - Understand remote: `origin`
@@ -2186,7 +2249,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 5. **PROCEED:**
    - **If push succeeded:**
      - Document: "Pushed branch and tag to origin"
-     - Move to Step 12 (if enabled)
+     - Move to Step 13 (if enabled)
    - **If push failed:**
      - Document: "Push failed due to network restrictions - manual push required"
      - Provide user instructions:
@@ -2202,7 +2265,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
        See: docs/architecture/standards-and-adrs/agent-network-access-and-git-push-limitations.md
        ```
      - Mark workflow as "complete pending push"
-     - Move to Step 12 (if enabled) - workflow is still considered successful
+     - Move to Step 13 (if enabled) - workflow is still considered successful
 
 **Error Handling:**
 
@@ -2244,11 +2307,11 @@ except Exception as e:
 
 ---
 
-### Step 13: Post-Commit Verification & Reflection
+### Step 14: Post-Commit Verification & Reflection
 
 **Step Definition:**
 ```yaml
-- id: step-13
+- id: step-14
   name: Post-Commit Verification & Reflection
   handler: release.verification_reflection
   dependencies: [step-10]
@@ -2401,11 +2464,11 @@ except Exception as e:
 
 ---
 
-### Step 14: Act on Verification Results
+### Step 15: Act on Verification Results
 
 **Step Definition:**
 ```yaml
-- id: step-14
+- id: step-15
   name: Act on Verification Results
   handler: release.act_on_results
   dependencies: [step-12]
@@ -2418,7 +2481,7 @@ except Exception as e:
 **Agent Execution:**
 
 1. **ANALYZE:**
-   - Get verification status from Step 13:
+   - Get verification status from Step 14:
      - Verified / Unverified / Deferred
      - Verification evidence (if verified)
      - Reflection results (if available)
@@ -2503,8 +2566,8 @@ except Exception as e:
 - Captures process improvements
 - Completes the Document-Commit-Reflect pattern
 
-**Integration with Step 13:**
-- Step 14 depends on Step 13 (CHECK phase)
+**Integration with Step 14:**
+- Step 15 depends on Step 14 (CHECK phase)
 - Uses verification status from Step 13
 - Acts on reflection results from Step 12
 - Completes the PDCA cycle
@@ -2556,11 +2619,11 @@ except Exception as e:
 
 ---
 
-### Step 15: Check for PIR Trigger
+### Step 16: Check for PIR Trigger
 
 **Step Definition:**
 ```yaml
-- id: step-15
+- id: step-16
   name: Check for PIR Trigger
   handler: pir.check_trigger
   dependencies: [step-12]
@@ -2707,14 +2770,15 @@ When executing Release Workflow as an agent, ensure:
 - [ ] **Step 6:** Analyzed BR/FR docs, updated fix attempt history, validated
 - [ ] **Step 7:** Analyzed Kanban docs, updated Epic/Story docs, validated
 - [ ] **Step 8:** Analyzed modified files, staged all files, validated
-- [ ] **Step 9:** Analyzed validators, ran all validators (including changelog size check), validated results
-- [ ] **Step 9.5:** Checked if CMW needed, executed CMW if threshold exceeded, validated results (optional)
-- [ ] **Step 10:** Analyzed template, built message, created commit, validated
-- [ ] **Step 11:** Analyzed tag format, created annotated tag, validated
-- [ ] **Step 12:** Analyzed remote, pushed branch and tag, validated
-- [ ] **Step 13:** Analyzed changes, prompted for verification, documented reflection, validated (optional but recommended)
-- [ ] **Step 14:** Analyzed verification results, acted on results, updated changelog, created follow-ups, validated (optional but recommended)
-- [ ] **Step 15:** Analyzed Epic/Story status, checked COMPLETE, evaluated significance, triggered PIR if applicable, validated (optional but recommended)
+- [ ] **Step 9:** Checked for IDE-flagged problems (errors, warnings, infos), addressed in order, validated
+- [ ] **Step 10:** Analyzed validators, ran all validators (including changelog size check), validated results
+- [ ] **Step 10.5:** Checked if CMW needed, executed CMW if threshold exceeded, validated results (optional)
+- [ ] **Step 11:** Analyzed template, built message, created commit, validated
+- [ ] **Step 12:** Analyzed tag format, created annotated tag, validated
+- [ ] **Step 13:** Analyzed remote, pushed branch and tag, validated
+- [ ] **Step 14:** Analyzed changes, prompted for verification, documented reflection, validated (optional but recommended)
+- [ ] **Step 15:** Analyzed verification results, acted on results, updated changelog, created follow-ups, validated (optional but recommended)
+- [ ] **Step 16:** Analyzed Epic/Story status, checked COMPLETE, evaluated significance, triggered PIR if applicable, validated (optional but recommended)
 
 ### Post-Execution
 - [ ] **MANDATORY:** All steps marked as completed in TODO list

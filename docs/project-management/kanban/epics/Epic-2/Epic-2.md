@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-17 (v0.2.1.1+1 – Story 1 Task 1 complete)
+**Last updated:** 2025-12-22 (v0.2.1.8+1 – Story 1: T08 COMPLETE - Step 9 added for IDE problem checking)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]

@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1.8+1] - 22-12-25
+
+### Added
+- Step 9: Check for and Address IDE-Flagged Problems (NEW STEP in Release Workflow)
+- IDE problem checking before validators (errors block, warnings/infos non-blocking)
+- Integration with IDE diagnostics API (`read_lints` tool)
+- Step 9 documentation with full execution pattern
+
+### Changed
+- Renumbered Release Workflow steps (old Step 9 → Step 10, Step 9.5 → Step 10.5, etc.)
+- Updated all step dependencies and references in RW documentation
+- Updated TODO list examples to include Step 9
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.8+1.md)
+
 ## [0.4.6.5+1] - 22-12-25
 
 ### Added
