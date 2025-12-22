@@ -19,6 +19,12 @@ from cli.backends.selector import (
     list_available_backends,
 )
 
+# Import backend implementations
+from cli.backends.git_submodule import GitSubmoduleBackend
+
+# Register backends
+register_backend("git-submodule", GitSubmoduleBackend)
+
 __all__ = [
     "BackendBase",
     "BackendRegistry",
@@ -28,5 +34,6 @@ __all__ = [
     "detect_project_type",
     "select_backend",
     "list_available_backends",
+    "GitSubmoduleBackend",
 ]
 
