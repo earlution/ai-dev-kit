@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.15.5+1] - 22-12-25
+
+📚 Documentation Complete: E4:S15:T05 - Generator Integration and Hybrid Strategy Documentation
+
+### Added
+
+- **Generator Integration:**
+  - Generator script documented in `packages/frameworks/kanban/scripts/README.md`
+  - Comprehensive usage guide with CLI options and examples
+  - Guidance for framework maintainers and adopting projects
+
+- **Hybrid Strategy Documentation:**
+  - Hybrid template system section added to `packages/frameworks/kanban/README.md`
+  - Explanation of hybrid approach (concrete templates + procedural generator)
+  - Benefits and trade-offs documented
+  - Usage guidance for maintainers and clients
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.5+1.md)
+
+---
+
 ## [0.4.15.3+1] - 22-12-25
 
 🔧 Generator Implementation: E4:S15:T03 - Task Template Generator Design and Implementation

@@ -193,6 +193,66 @@ python3 analyze_structure.py \
 - Summary printed to stdout including recommended installation mode, semantic matches, and complexity assessment
 - Semantic matching analysis showing similarity scores between user epics and canonical epics
 
+### `generate_task_templates.py`
+
+Procedural task template generator for creating task templates from the canonical E/S/T structure document. Part of the hybrid template system that combines high-quality concrete templates with procedural generation capabilities.
+
+**Usage:**
+```bash
+python3 generate_task_templates.py [OPTIONS]
+```
+
+**Arguments:**
+- `--structure-file PATH` - Path to structure document (default: `templates/COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`)
+- `--template-file PATH` - Path to task template structure (default: `templates/TASK_TEMPLATE.md`)
+- `--output-dir PATH` - Output directory for generated templates (default: `templates/tasks/`)
+- `--epic N` - Generate templates for specific epic only
+- `--story N` - Generate templates for specific story only (requires `--epic`)
+- `--overwrite` - Allow overwriting existing files
+- `--dry-run` - Show what would be generated without creating files
+- `--validate` - Validate generated templates against concrete templates
+- `--verbose` - Verbose output
+
+**Examples:**
+```bash
+# Generate all missing task templates
+python3 generate_task_templates.py
+
+# Generate templates for Epic 1 only
+python3 generate_task_templates.py --epic 1
+
+# Generate templates for Epic 1, Story 1 only
+python3 generate_task_templates.py --epic 1 --story 1
+
+# Dry run (show what would be generated)
+python3 generate_task_templates.py --dry-run
+
+# Overwrite existing templates
+python3 generate_task_templates.py --overwrite
+
+# Validate generated templates
+python3 generate_task_templates.py --validate
+```
+
+**Features:**
+- Parses canonical structure document to extract Epic/Story/Task hierarchy
+- Generates task template files matching `TASK_TEMPLATE.md` structure
+- Populates template sections (Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies)
+- Preserves contextualization placeholders (`{PROJECT_NAME}`, `{PROJECT_TYPE}`, etc.)
+- Default behavior skips existing files (requires `--overwrite` to regenerate)
+- Validation routine compares generated templates against concrete templates
+
+**When to Use:**
+- **Framework Maintainers:** Regenerate templates after structural changes to `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
+- **Adopting Projects:** Generate missing task templates or regenerate after structure updates
+- **Maintenance:** Validate that generated templates match concrete templates
+
+**Related:**
+- ADR: `docs/architecture/standards-and-adrs/task-template-system-hybrid-adr.md`
+- Design: `docs/architecture/standards-and-adrs/task-template-generator-design.md`
+- FR-029: Procedural Task Template Generation (Hybrid Strategy)
+- E4:S15: Procedural Task Template Generation and Hybrid Strategy
+
 ## Workflow
 
 ### Recommended: Use Installation Script

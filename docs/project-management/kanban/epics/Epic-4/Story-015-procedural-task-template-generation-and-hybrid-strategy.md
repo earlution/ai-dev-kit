@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium-Large  
 **Created:** 2025-12-22  
-**Last updated:** 2025-12-22 (v0.4.15.3+1 – T02 and T03 complete: Generator design and implementation)  
-**Version:** v0.4.15.3+1  
+**Last updated:** 2025-12-22 (v0.4.15.4+1 – T04 and T05 complete: Generator integrated and documented)  
+**Version:** v0.4.15.4+1  
 **Code:** E4S15
 
 ---
@@ -47,8 +47,8 @@ Deliver a robust, documented hybrid template system where:
 - [ ] **E4:S15:T01 – Finalize and validate concrete task template coverage**
 - [x] **E4:S15:T02 – Design procedural task template generator** ✅ COMPLETE (v0.4.15.3+1)
 - [x] **E4:S15:T03 – Implement generator and validate against concrete templates** ✅ COMPLETE (v0.4.15.3+1)
-- [ ] **E4:S15:T04 – Integrate generator into Kanban framework package**
-- [ ] **E4:S15:T05 – Document hybrid strategy and usage for maintainers and clients**
+- [x] **E4:S15:T04 – Integrate generator into Kanban framework package** ✅ COMPLETE (v0.4.15.4+1)
+- [x] **E4:S15:T05 – Document hybrid strategy and usage for maintainers and clients** ✅ COMPLETE (v0.4.15.4+1)
 
 ---
 
@@ -135,9 +135,10 @@ Deliver a robust, documented hybrid template system where:
 
 ### E4:S15:T04 – Integrate generator into Kanban framework package
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** MEDIUM  
 **Dependencies:** E4:S15:T03  
+**Version:** v0.4.15.4+1
 
 **Input:**
 - Working generator and validation routine
@@ -149,20 +150,21 @@ Deliver a robust, documented hybrid template system where:
 - Basic guidance for maintainers on when/how to run it.
 
 **Acceptance Criteria:**
-- [ ] Generator script lives in a stable, documented location.
-- [ ] Maintainers know how to:
-  - [ ] Run a dry-run.
-  - [ ] Generate missing templates.
-  - [ ] Regenerate templates (with explicit overwrite option).
-- [ ] Validation routine can be included in maintenance or CI checks (optional but preferred).
+- [x] Generator script lives in a stable, documented location. ✅
+- [x] Maintainers know how to:
+  - [x] Run a dry-run. ✅
+  - [x] Generate missing templates. ✅
+  - [x] Regenerate templates (with explicit overwrite option). ✅
+- [x] Validation routine can be included in maintenance or CI checks (optional but preferred). ✅
 
 ---
 
 ### E4:S15:T05 – Document hybrid strategy and usage
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** MEDIUM  
 **Dependencies:** E4:S15:T03, E4:S15:T04  
+**Version:** v0.4.15.4+1
 
 **Input:**
 - ADR: `task-template-system-hybrid-adr.md`
@@ -178,11 +180,11 @@ Deliver a robust, documented hybrid template system where:
     - Run the generator in their own repo.
 
 **Acceptance Criteria:**
-- [ ] Documentation clearly explains:
-  - [ ] What the hybrid strategy is.
-  - [ ] How to use the generator as a maintainer.
-  - [ ] How to use or generate templates as a client.
-- [ ] References to ADR and FR-029 are included for traceability.
+- [x] Documentation clearly explains:
+  - [x] What the hybrid strategy is. ✅
+  - [x] How to use the generator as a maintainer. ✅
+  - [x] How to use or generate templates as a client. ✅
+- [x] References to ADR and FR-029 are included for traceability. ✅
 
 ---
 

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-22 (v0.4.15.3+1 – Story 15: T02 and T03 complete - Generator design and implementation)
+**Last updated:** 2025-12-22 (v0.4.15.5+1 – Story 15: T04 and T05 complete - Generator integrated and documented)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -60,9 +60,9 @@ housekeeping_policy: keep
 - [ ] **E4:S14 – Kanban Framework Maintenance** - IN PROGRESS (v0.4.14.0+0 – Story created)
   - Story: [`Story-014-kanban-framework-maintenance.md`](Story-014-kanban-framework-maintenance.md)
   - Tasks: T01 TODO (Update packaged RW to handle UKW context and perpetual tasks)
-- [ ] **E4:S15 – Procedural Task Template Generation and Hybrid Strategy** - IN PROGRESS (v0.4.15.3+1 – T02 and T03 complete: Generator design and implementation)
+- [ ] **E4:S15 – Procedural Task Template Generation and Hybrid Strategy** - IN PROGRESS (v0.4.15.5+1 – T02-T05 complete: Generator design, implementation, integration, and documentation)
   - Story: [`Story-015-procedural-task-template-generation-and-hybrid-strategy.md`](Story-015-procedural-task-template-generation-and-hybrid-strategy.md)
-  - Tasks: T01 TODO, T02 ✅ COMPLETE (v0.4.15.3+1), T03 ✅ COMPLETE (v0.4.15.3+1), T04-T05 TODO
+  - Tasks: T01 TODO, T02 ✅ COMPLETE (v0.4.15.3+1), T03 ✅ COMPLETE (v0.4.15.3+1), T04 ✅ COMPLETE (v0.4.15.5+1), T05 ✅ COMPLETE (v0.4.15.5+1)
 
 ---
 

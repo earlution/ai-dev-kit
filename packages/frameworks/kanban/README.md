@@ -164,6 +164,7 @@ structure:
     - analyze_structure.py                    # Analysis utility for migration planning
     - migrate_structure.py                    # Migration utility for canonical format conversion
     - install_kanban_framework.py             # Integrated installation script with mode selection
+    - generate_task_templates.py              # Procedural task template generator (hybrid system)
     - README.md                               # Scripts documentation and usage guide
 
   README.md                              # This file
@@ -278,6 +279,79 @@ The installer will:
 - ✅ Prevent Epic mashup by detecting conflicts
 - ✅ Warn if it detects copying of ai-dev-kit's actual Kanban
 - ✅ Provide clear error messages if issues are detected
+
+## 🔄 Hybrid Task Template System
+
+The Kanban framework uses a **hybrid task template system** that combines high-quality concrete templates with procedural generation capabilities.
+
+### What is the Hybrid System?
+
+The hybrid system provides:
+- **Concrete Templates:** Pre-generated, high-quality task templates for all canonical tasks
+- **Procedural Generator:** Script that can regenerate templates from the canonical structure document
+- **Best of Both Worlds:** Immediate availability of complete templates + easy maintenance
+
+### Why Hybrid?
+
+**Benefits:**
+- **Storage Efficiency:** Generator reduces storage from ~1.6MB to ~60KB (source + generator)
+- **Maintenance Efficiency:** Structural changes can be propagated in minutes instead of hours
+- **Quality:** Concrete templates provide high-quality, contextual content
+- **Flexibility:** Generator enables on-demand template generation for new tasks
+
+**Trade-offs:**
+- Initial investment in creating concrete templates
+- Generator may produce more generic content than hand-crafted templates
+- Requires validation to ensure generator output matches concrete templates
+
+### Using the Generator
+
+**For Framework Maintainers:**
+
+```bash
+# Generate all missing task templates
+python3 scripts/generate_task_templates.py
+
+# Regenerate templates after structure changes (with overwrite)
+python3 scripts/generate_task_templates.py --overwrite
+
+# Dry run to preview changes
+python3 scripts/generate_task_templates.py --dry-run
+
+# Validate generated templates
+python3 scripts/generate_task_templates.py --validate
+```
+
+**For Adopting Projects:**
+
+You have two options:
+
+1. **Use Pre-Generated Templates (Recommended):**
+   - Templates are included in the framework package
+   - Ready to use immediately
+   - No generation required
+
+2. **Generate Templates Locally:**
+   ```bash
+   # Generate templates from canonical structure
+   python3 scripts/generate_task_templates.py \
+     --structure-file templates/COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md \
+     --output-dir templates/tasks/
+   ```
+
+**When to Regenerate:**
+- After updating `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
+- When adding new canonical tasks
+- After structural changes to `TASK_TEMPLATE.md`
+- To validate template consistency
+
+**Related Documentation:**
+- ADR: `docs/architecture/standards-and-adrs/task-template-system-hybrid-adr.md`
+- Design: `docs/architecture/standards-and-adrs/task-template-generator-design.md`
+- FR-029: Procedural Task Template Generation (Hybrid Strategy)
+- Script Documentation: `scripts/README.md` (see `generate_task_templates.py`)
+
+---
 
 ### Understanding Canonical Templates vs. ai-dev-kit's Actual Kanban
 
