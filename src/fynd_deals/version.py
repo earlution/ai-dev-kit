@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 7     # Story number (Story 7: ai-dev-kit CLI Tool)
-VERSION_TASK = 3      # Task number (Task 3: Status and checking commands (check, status, list))
-VERSION_BUILD = 1     # Build number (E6:S07:T03+1 - Status and checking commands complete)
+VERSION_TASK = 4      # Task number (Task 4: Backend abstraction layer design)
+VERSION_BUILD = 1     # Build number (E6:S07:T04+1 - Backend abstraction layer design complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
