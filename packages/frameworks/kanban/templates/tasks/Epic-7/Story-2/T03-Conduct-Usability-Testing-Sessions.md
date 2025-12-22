@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 2, Task 3: Conduct Usability Testing Sessions
+# Epic 7, Story 2, Task 3: Conduct usability testing sessions
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S2:T3`)
+**Format:** `E7:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S02:T03`
 
@@ -28,91 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Conduct usability testing sessions for the {PROJECT_NAME} project. Execute usability testing sessions with participants using the designed test scenarios to observe user interactions and identify usability issues.
+Conduct usability testing sessions for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Usability test scenarios (from E7:S2:T01)
-- Test participants (from E7:S2:T02)
-- Test environment and setup
-- Testing methodology and protocols
-- Testing tools and equipment
-- ai-dev-kit UXR usability testing practices (if adopting)
+- Requirements and specifications
+- conduct usability testing sessions requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Conducted usability testing sessions
-- Session recordings/videos
-- Session notes and observations
-- Session data collection
-- Session summary documentation
+- conduct usability testing sessions completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Usability testing sessions conducted
-- [ ] Session recordings/videos captured
-- [ ] Session notes and observations taken
-- [ ] Session data collected systematically
-- [ ] Sessions follow test scenarios
-- [ ] Sessions yield meaningful observations
-- [ ] Session summary documentation created
-- [ ] Session data ready for analysis
+- [ ] Conduct usability testing sessions completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review usability test scenarios
-2. Review recruited test participants
-3. Set up test environment and equipment
-4. Prepare testing protocols and procedures
-5. Schedule testing sessions
-6. Conduct usability testing sessions
-7. Record and capture session data
-8. Take notes and observations during sessions
-9. Collect session data systematically
-10. Create session summary documentation
-11. Review and refine testing process
+1. Analyze requirements for conduct usability testing sessions
+2. Design approach and plan
+3. Implement conduct usability testing sessions
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S2:T01: Design usability test scenarios (sessions use scenarios)
-- E7:S2:T02: Recruit test participants (sessions require participants)
+- E7:S2:T02
 
 **Blocks:**
-- E7:S2:T04: Analyze usability test results (analysis uses session data)
-- E7:S2:T05: Identify usability issues and pain points (identification uses session observations)
+- E7:S2:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S2:T01: Design usability test scenarios (sessions use scenarios)
-- E7:S2:T02: Recruit test participants (sessions require participants)
-- E7:S2:T04: Analyze usability test results (analysis uses session data)
-- E7:S2:T05: Identify usability issues and pain points (identification uses session observations)
+- [E07:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S2: Usability Testing and Validation (this story)
-- E7:S1: User Research and Discovery (testing may inform future research)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -121,3 +108,27 @@ Conduct usability testing sessions for the {PROJECT_NAME} project. Execute usabi
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 12, Story 1, Task 2: Configure Build Tools
+# Epic 12, Story 1, Task 2: Configure build tools
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.12.1.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.12.1.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.12.1.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E12:S1:T2`)
+**Format:** `E12:S1:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E12:S01:T02`
 
@@ -28,83 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Configure build tools for the {PROJECT_NAME} project. Set up and configure build tools (Webpack, Vite, Parcel, etc.) for the UI framework to support development, bundling, and production builds.
+Configure build tools for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- UI framework (from E12:S1:T01)
-- Build tool preferences
-- Build requirements
-- Performance requirements
-- Integration requirements
-- ai-dev-kit build tool patterns (if adopting)
+- Requirements and specifications
+- configure build tools requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Build tools configured
-- Development build configuration
-- Production build configuration
-- Build scripts set up
-- Build tool documentation
+- configure build tools completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Build tools configured
-- [ ] Development build configuration complete
-- [ ] Production build configuration complete
-- [ ] Build scripts set up and functional
-- [ ] Build tools support framework requirements
-- [ ] Build tool configuration documented
+- [ ] Configure build tools completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review UI framework setup
-2. Review build tool requirements
-3. Select build tools
-4. Configure development build
-5. Configure production build
-6. Set up build scripts
-7. Test build configurations
-8. Document build tool configuration
+1. Analyze requirements for configure build tools
+2. Design approach and plan
+3. Implement configure build tools
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E12:S1:T01: Choose and set up UI framework (build tools configure framework)
+- E12:S1:T01
 
 **Blocks:**
-- E12:S1:T03: Set up component library structure (component structure uses build tools)
-- E12:S2: Core UI Components (components use build tools)
+- E12:S1:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E12:S1:T01: Choose and set up UI framework (build tools configure framework)
-- E12:S1:T03: Set up component library structure (component structure uses build tools)
+- [E12:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E12:S1: UI Framework Setup (this story)
-- E23:S1: Process Automation and CI/CD (build tools may integrate with CI/CD)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.12.1.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -113,3 +108,27 @@ Configure build tools for the {PROJECT_NAME} project. Set up and configure build
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

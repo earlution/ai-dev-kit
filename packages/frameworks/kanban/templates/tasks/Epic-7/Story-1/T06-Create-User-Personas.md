@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 1, Task 6: Create User Personas
+# Epic 7, Story 1, Task 6: Create user personas
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.7.1.6+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.1.6+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.1.6+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S1:T6`)
+**Format:** `E7:S1:T6` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S01:T06`
 
@@ -28,84 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create user personas for the {PROJECT_NAME} project. Develop representative user personas based on research findings to guide design decisions and ensure user-centered development.
+Create user personas for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Research findings (from E7:S1:T05)
-- Research data (from E7:S1:T03, T04)
-- Persona creation methodology
-- ai-dev-kit UXR persona practices (if adopting)
-- Team preferences and conventions
+- Requirements and specifications
+- create user personas requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- User personas created
-- Persona profiles documented
-- Persona characteristics defined
-- Persona documentation
+- create user personas completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] User personas created based on research findings
-- [ ] Persona profiles documented
-- [ ] Persona characteristics clearly defined
-- [ ] Personas represent distinct user segments
-- [ ] Personas are actionable and useful
-- [ ] Persona documentation complete
-- [ ] Personas support design and development decisions
-- [ ] Personas are maintained and updated
+- [ ] Create user personas completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review research findings and data
-2. Identify user segments and patterns
-3. Define persona characteristics and attributes
-4. Create persona profiles
-5. Document persona details (demographics, goals, pain points, behaviors)
-6. Create persona visualizations (if applicable)
-7. Validate personas with stakeholders
-8. Document personas
-9. Review and refine personas
+1. Analyze requirements for create user personas
+2. Design approach and plan
+3. Implement create user personas
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S1:T05: Analyze research data and synthesize findings (personas use research findings)
+- E7:S1:T05
 
 **Blocks:**
-- E7:S1:T07: Document research findings and insights (documentation includes personas)
-- E7:S4: User Journey Mapping and Experience Design (journey maps may use personas)
+- E7:S1:T07
 
-**Parallel Development Candidacy:** Blocked (depends on T05)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S1:T05: Analyze research data and synthesize findings (personas use research findings)
-- E7:S1:T07: Document research findings and insights (documentation includes personas)
+- [E07:S01:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S1: User Research and Discovery (this story)
-- E7:S4: User Journey Mapping and Experience Design (journey maps may use personas)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.6+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -114,3 +108,27 @@ Create user personas for the {PROJECT_NAME} project. Develop representative user
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

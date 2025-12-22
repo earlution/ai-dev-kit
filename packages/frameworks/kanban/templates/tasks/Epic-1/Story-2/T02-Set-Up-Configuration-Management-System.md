@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 2, Task 2: Set Up Configuration Management System
+# Epic 1, Story 2, Task 2: Set up configuration management system
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.2.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.2.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.2.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S2:T2`)
+**Format:** `E1:S2:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S02:T02`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up a configuration management system for the {PROJECT_NAME} project. Establish a centralized, environment-aware configuration system that supports development, staging, and production environments while maintaining security best practices.
+Set up configuration management system for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Architecture patterns (from E1:S2:T01)
-- Environment requirements (development, staging, production)
-- Configuration preferences (file-based, environment variables, etc.)
-- Security requirements for sensitive configuration
-- Team preferences and conventions (if applicable)
-- ai-dev-kit configuration patterns (if adopting)
+- Requirements and specifications
+- set up configuration management system requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Configuration management system implemented
-- Configuration files for different environments
-- Configuration loading and validation logic
-- Configuration documentation
-- Environment variable management (if applicable)
-- Secrets management approach (if applicable)
+- set up configuration management system completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Configuration management system implemented
-- [ ] Configuration files created for all environments (dev, staging, prod)
-- [ ] Configuration loading and validation logic implemented
-- [ ] Environment variable support (if applicable)
-- [ ] Secrets management approach defined and implemented
-- [ ] Configuration documentation created
-- [ ] Configuration system follows security best practices
-- [ ] Configuration system is environment-aware
+- [ ] Set up configuration management system completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Design configuration structure and hierarchy
-2. Choose configuration format (JSON, YAML, TOML, etc.)
-3. Implement configuration loading mechanism
-4. Add configuration validation
-5. Set up environment-specific configuration files
-6. Implement environment variable support (if applicable)
-7. Define secrets management approach
-8. Create configuration documentation
-9. Test configuration system across environments
+1. Analyze requirements for set up configuration management system
+2. Design approach and plan
+3. Implement set up configuration management system
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2:T01: Design and implement core architecture patterns (benefits from architecture patterns)
+- E1:S2:T01
 
 **Blocks:**
-- E1:S2:T03: Implement logging and error handling infrastructure (may need configuration)
-- E1:S2:T04: Create utility functions and shared libraries (may need configuration)
-- E1:S2:T05: Set up dependency injection or service container (may need configuration)
+- E1:S2:T03
 
-**Parallel Development Candidacy:** Safe (can proceed after T01, but other tasks may benefit from configuration)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S2:T01: Design and implement core architecture patterns (configuration uses architecture patterns)
-- E1:S2:T05: Set up dependency injection or service container (configuration may be injected)
+- [E01:S02:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S2: Core Infrastructure (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.2.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Set up a configuration management system for the {PROJECT_NAME} project. Establi
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 2, Task 5: Set Up Dependency Injection or Service Container
+# Epic 1, Story 2, Task 5: Set up dependency injection or service container
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.1.2.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.2.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.2.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S2:T5`)
+**Format:** `E1:S2:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S02:T05`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up dependency injection (DI) or service container system for the {PROJECT_NAME} project. Establish a dependency injection framework that supports loose coupling, testability, and maintainability throughout the project.
+Set up dependency injection or service container for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Architecture patterns (from E1:S2:T01)
-- Configuration system (from E1:S2:T02)
-- DI framework/library preferences
-- Service registration requirements
-- Team preferences and conventions (if applicable)
-- ai-dev-kit DI patterns (if adopting)
+- Requirements and specifications
+- set up dependency injection or service container requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Dependency injection framework set up
-- Service container implementation
-- Service registration configuration
-- DI documentation and usage guidelines
-- Example service registrations
-- DI integration with architecture patterns
+- set up dependency injection or service container completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Dependency injection framework chosen and set up
-- [ ] Service container implemented
-- [ ] Service registration mechanism configured
-- [ ] Service lifecycle management implemented (singleton, transient, scoped)
-- [ ] DI documentation created with usage guidelines
-- [ ] Example service registrations provided
-- [ ] DI integrated with architecture patterns
-- [ ] DI supports testability and loose coupling
+- [ ] Set up dependency injection or service container completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Choose DI framework/library suitable for {PROJECT_TYPE}
-2. Design service registration structure
-3. Implement service container
-4. Configure service registration mechanism
-5. Implement service lifecycle management
-6. Integrate DI with architecture patterns
-7. Create DI documentation and usage guidelines
-8. Provide example service registrations
-9. Test DI system with sample services
+1. Analyze requirements for set up dependency injection or service container
+2. Design approach and plan
+3. Implement set up dependency injection or service container
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2:T01: Design and implement core architecture patterns (DI uses architecture patterns)
-- E1:S2:T02: Set up configuration management system (DI may use configuration)
+- E1:S2:T04
 
 **Blocks:**
-- E1:S2:T06: Implement base classes and interfaces (may use DI)
-- E1:S3: Initial Feature Set (features may use DI)
+- E1:S2:T06
 
-**Parallel Development Candidacy:** Safe (can proceed after T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S2:T01: Design and implement core architecture patterns (DI uses architecture patterns)
-- E1:S2:T02: Set up configuration management system (DI may use configuration)
-- E1:S2:T06: Implement base classes and interfaces (may use DI)
+- [E01:S02:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S2: Core Infrastructure (this story)
-- E1:S3: Initial Feature Set (features may use DI)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.2.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Set up dependency injection (DI) or service container system for the {PROJECT_NA
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 2, Task 5: Identify Usability Issues and Pain Points
+# Epic 7, Story 2, Task 5: Identify usability issues and pain points
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.2.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.2.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.2.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S2:T5`)
+**Format:** `E7:S2:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S02:T05`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Identify usability issues and pain points for the {PROJECT_NAME} project. Analyze test results to identify specific usability problems, user pain points, and areas requiring improvement.
+Identify usability issues and pain points for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Usability test results analysis (from E7:S2:T04)
-- Testing session observations (from E7:S2:T03)
-- Usability issue classification framework
-- Severity assessment criteria
-- ai-dev-kit UXR issue identification practices (if adopting)
+- Requirements and specifications
+- identify usability issues and pain points requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Usability issues identified
-- Pain points documented
-- Issue severity assessment
-- Issue classification
-- Issue documentation
+- identify usability issues and pain points completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Usability issues identified and documented
-- [ ] Pain points documented
-- [ ] Issue severity assessed
-- [ ] Issues classified appropriately
-- [ ] Issues are specific and actionable
-- [ ] Issue documentation complete
-- [ ] Issues support report creation
-- [ ] Issues support recommendation development
+- [ ] Identify usability issues and pain points completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review usability test results analysis
-2. Review testing session observations
-3. Identify usability issues from test data
-4. Document user pain points
-5. Assess issue severity
-6. Classify issues by type/category
-7. Prioritize issues by severity and impact
-8. Document identified issues
-9. Review and refine issue identification
+1. Analyze requirements for identify usability issues and pain points
+2. Design approach and plan
+3. Implement identify usability issues and pain points
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S2:T03: Conduct usability testing sessions (identification uses session observations)
-- E7:S2:T04: Analyze usability test results (identification uses analysis)
+- E7:S2:T04
 
 **Blocks:**
-- E7:S2:T06: Create usability test reports (reports include identified issues)
-- E7:S2:T07: Document usability recommendations (recommendations address issues)
+- E7:S2:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T03 and T04)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S2:T03: Conduct usability testing sessions (identification uses session observations)
-- E7:S2:T04: Analyze usability test results (identification uses analysis)
-- E7:S2:T06: Create usability test reports (reports include identified issues)
-- E7:S2:T07: Document usability recommendations (recommendations address issues)
+- [E07:S02:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S2: Usability Testing and Validation (this story)
-- E6:S1: BR Intake and Triage Workflow (usability issues may become Bug Reports)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.2.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Identify usability issues and pain points for the {PROJECT_NAME} project. Analyz
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

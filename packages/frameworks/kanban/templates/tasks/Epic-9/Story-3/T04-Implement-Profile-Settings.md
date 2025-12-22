@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 3, Task 4: Implement Profile Settings
+# Epic 9, Story 3, Task 4: Implement profile settings
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.9.3.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.3.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.3.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S3:T4`)
+**Format:** `E9:S3:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S03:T04`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement profile settings for the {PROJECT_NAME} project. Build functionality that allows users to configure profile settings such as preferences, notification settings, privacy settings, and other user-configurable options.
+Implement profile settings for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- User profile data model (from E9:S3:T01)
-- Profile CRUD operations (from E9:S3:T02)
-- Profile settings requirements
-- Settings categories and options
-- Validation requirements
-- ai-dev-kit settings patterns (if adopting)
+- Requirements and specifications
+- implement profile settings requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Profile settings implemented
-- Settings management functionality
-- Settings categories defined
-- Settings validation
-- Settings API endpoints
-- Settings persistence
+- implement profile settings completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Profile settings implemented
-- [ ] Settings management functionality created
-- [ ] Settings categories defined
-- [ ] Settings validation implemented
-- [ ] Settings API endpoints created
-- [ ] Settings persistence implemented
-- [ ] Settings are secure and validated
-- [ ] Profile settings are tested and functional
+- [ ] Implement profile settings completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review user profile data model and CRUD operations
-2. Review profile settings requirements
-3. Identify settings categories and options
-4. Design settings data structure
-5. Implement settings management functionality
-6. Implement settings validation
-7. Create settings API endpoints
-8. Implement settings persistence
-9. Test profile settings functionality
-10. Review and refine implementation
+1. Analyze requirements for implement profile settings
+2. Design approach and plan
+3. Implement implement profile settings
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S3:T01: Design user profile data model (settings use data model)
-- E9:S3:T02: Implement profile CRUD operations (settings use update operations)
+- E9:S3:T03
 
 **Blocks:**
-- E9:S3:T06: Create profile viewing/editing UI (UI includes settings)
+- E9:S3:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S3:T01: Design user profile data model (settings use data model)
-- E9:S3:T02: Implement profile CRUD operations (settings use update operations)
-- E9:S3:T06: Create profile viewing/editing UI (UI includes settings)
+- [E09:S03:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S3: User Profile Management (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Implement profile settings for the {PROJECT_NAME} project. Build functionality t
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

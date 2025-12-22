@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 3, Story 2, Task 1: Integrate Versioning with Release Workflow
+# Epic 3, Story 2, Task 1: Integrate versioning with release workflow
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.3.2.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.3.2.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.3.2.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E3:S2:T1`)
+**Format:** `E3:S2:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E03:S02:T01`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Integrate versioning with release workflow for the {PROJECT_NAME} project. Ensure that versioning is automatically managed as part of the release process, maintaining consistency and reducing manual errors.
+Integrate versioning with release workflow for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Versioning policy (from E3:S1:T01)
-- Versioning schema (from E3:S1:T02)
-- Release workflow definition
-- Release automation requirements
-- ai-dev-kit release workflow integration (if adopting)
-- CI/CD pipeline configuration (if applicable)
+- Requirements and specifications
+- integrate versioning with release workflow requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Versioning integrated with release workflow
-- Automated version bumping in release process
-- Version validation in release workflow
-- Release workflow documentation updated
-- Integration tests (if applicable)
+- integrate versioning with release workflow completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Versioning integrated with release workflow
-- [ ] Automated version bumping implemented
-- [ ] Version validation added to release process
-- [ ] Release workflow documentation updated
-- [ ] Integration tests created (if applicable)
-- [ ] Version consistency maintained across releases
-- [ ] Release process handles versioning correctly
-- [ ] Integration is reliable and maintainable
+- [ ] Integrate versioning with release workflow completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review versioning policy and schema
-2. Analyze release workflow requirements
-3. Design versioning integration points
-4. Implement automated version bumping
-5. Add version validation to release process
-6. Update release workflow documentation
-7. Create integration tests (if applicable)
-8. Review and refine integration
+1. Analyze requirements for integrate versioning with release workflow
+2. Design approach and plan
+3. Implement integrate versioning with release workflow
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E3:S1:T01: Define versioning policy (integration uses policy)
-- E3:S1:T02: Design versioning schema (integration uses schema)
-- Release workflow definition (integration modifies workflow)
+- None
 
 **Blocks:**
-- E3:S2:T02: Create version bump automation (may be part of this task or separate)
-- E3:S2:T03: Set up changelog generation (changelog uses versioning)
-- E3:S2:T04: Document version management process (process includes integration)
+- E3:S2:T02
 
-**Parallel Development Candidacy:** Blocked (depends on E3:S1 tasks)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E3:S2:T02: Create version bump automation (automation supports integration)
-- E3:S2:T03: Set up changelog generation (changelog uses versioning)
-- E3:S2:T04: Document version management process (process includes integration)
+- [E03:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E3:S2: Version Management Integration (this story)
-- E3:S1: Versioning Policy and Schema (integration uses policy and schema)
-- E2:S1: Workflow Definitions and Patterns (release workflow is a workflow)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.3.2.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Integrate versioning with release workflow for the {PROJECT_NAME} project. Ensur
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

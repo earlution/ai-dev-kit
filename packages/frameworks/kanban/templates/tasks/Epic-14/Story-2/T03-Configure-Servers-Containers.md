@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 14, Story 2, Task 3: Configure Servers/Containers
+# Epic 14, Story 2, Task 3: Configure servers/containers
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.14.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.14.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.14.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E14:S2:T3`)
+**Format:** `E14:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E14:S02:T03`
 
@@ -28,82 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Configure servers/containers for the {PROJECT_NAME} project. Set up and configure server instances or container orchestration (Docker, Kubernetes, etc.) to host and run the application in deployment environments.
+Configure servers/containers for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Infrastructure setup (from E14:S2:T01)
-- Deployment environments (from E14:S1:T02)
-- Server/container requirements
-- Scalability requirements
-- Configuration requirements
-- ai-dev-kit server/container patterns (if adopting)
+- Requirements and specifications
+- configure servers/containers requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Servers/containers configured
-- Server instances configured
-- Container orchestration configured (if applicable)
-- Configuration management set up
-- Servers/containers ready for deployment
+- configure servers/containers completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Servers/containers configured
-- [ ] Server instances configured
-- [ ] Container orchestration configured (if applicable)
-- [ ] Configuration management set up
-- [ ] Servers/containers support deployment requirements
-- [ ] Servers/containers are scalable
+- [ ] Configure servers/containers completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review infrastructure setup and deployment environments
-2. Review server/container requirements
-3. Design server/container configuration
-4. Configure server instances
-5. Configure container orchestration (if applicable)
-6. Set up configuration management
-7. Test server/container configuration
-8. Document server/container configuration
+1. Analyze requirements for configure servers/containers
+2. Design approach and plan
+3. Implement configure servers/containers
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E14:S2:T01: Set up infrastructure (servers/containers use infrastructure)
-- Deployment environments (from E14:S1:T02 - optional, beneficial)
+- E14:S2:T02
 
 **Blocks:**
-- None (servers/containers support deployment)
+- E14:S2:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E14:S2:T01: Set up infrastructure (servers/containers use infrastructure)
+- [E14:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E14:S2: Infrastructure Setup (this story)
-- E14:S1: Deployment Pipeline Setup (servers/containers support deployment)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.14.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -112,3 +108,27 @@ Configure servers/containers for the {PROJECT_NAME} project. Set up and configur
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

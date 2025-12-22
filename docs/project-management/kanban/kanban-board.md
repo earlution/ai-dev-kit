@@ -46,9 +46,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
-- **E4:S06:T04** – Create task template files for each typical task  
-  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-
 - **E5:S02:T03** – Build documentation health dashboards  
   *Last updated: 2025-12-06* | [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
 

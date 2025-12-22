@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 2, Task 3: Implement Logging and Error Handling Infrastructure
+# Epic 1, Story 2, Task 3: Implement logging and error handling infrastructure
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S2:T3`)
+**Format:** `E1:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S02:T03`
 
@@ -28,93 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement comprehensive logging and error handling infrastructure for the {PROJECT_NAME} project. Establish centralized logging, structured error handling, and error reporting mechanisms that support debugging, monitoring, and production operations.
+Implement logging and error handling infrastructure for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Architecture patterns (from E1:S2:T01)
-- Configuration system (from E1:S2:T02)
-- Logging library preferences
-- Error handling requirements
-- Monitoring and alerting needs
-- Team preferences and conventions (if applicable)
-- ai-dev-kit logging patterns (if adopting)
+- Requirements and specifications
+- implement logging and error handling infrastructure requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Logging infrastructure implemented
-- Error handling framework implemented
-- Logging configuration and levels
-- Error types and exception hierarchy
-- Error reporting and monitoring integration
-- Logging and error handling documentation
-- Example usage patterns
+- implement logging and error handling infrastructure completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Logging infrastructure implemented with appropriate library
-- [ ] Logging levels configured (DEBUG, INFO, WARN, ERROR, etc.)
-- [ ] Structured logging format implemented
-- [ ] Error handling framework implemented
-- [ ] Error types and exception hierarchy defined
-- [ ] Error reporting mechanism implemented
-- [ ] Monitoring integration (if applicable)
-- [ ] Logging and error handling documentation created
-- [ ] Example usage patterns provided
+- [ ] Implement logging and error handling infrastructure completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Choose logging library suitable for {PROJECT_TYPE}
-2. Design logging structure and format
-3. Implement logging infrastructure
-4. Configure logging levels and outputs
-5. Design error handling framework
-6. Implement error types and exception hierarchy
-7. Implement error reporting mechanism
-8. Integrate with monitoring (if applicable)
-9. Create logging and error handling documentation
-10. Provide example usage patterns
+1. Analyze requirements for implement logging and error handling infrastructure
+2. Design approach and plan
+3. Implement implement logging and error handling infrastructure
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2:T01: Design and implement core architecture patterns (benefits from architecture patterns)
-- E1:S2:T02: Set up configuration management system (logging may need configuration)
+- E1:S2:T02
 
 **Blocks:**
-- E1:S2:T04: Create utility functions and shared libraries (may use logging/error handling)
-- E1:S3: Initial Feature Set (features will use logging/error handling)
+- E1:S2:T04
 
-**Parallel Development Candidacy:** Safe (can proceed after T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S2:T01: Design and implement core architecture patterns (logging uses architecture patterns)
-- E1:S2:T02: Set up configuration management system (logging uses configuration)
-- E1:S2:T04: Create utility functions and shared libraries (may use logging/error handling)
+- [E01:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S2: Core Infrastructure (this story)
-- E1:S3: Initial Feature Set (features will use logging/error handling)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -123,3 +108,27 @@ Implement comprehensive logging and error handling infrastructure for the {PROJE
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

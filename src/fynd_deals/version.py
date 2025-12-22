@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 15    # Story number (Story 15: Procedural Task Template Generation and Hybrid Strategy)
-VERSION_TASK = 5      # Task number (Task 5: Document hybrid strategy and usage for maintainers and clients)
-VERSION_BUILD = 2     # Build number (E4:S15:T05+2 - Agentic template generator and integration complete)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
+VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
+VERSION_TASK = 8      # Task number (Task 8: Update Kanban Workflow (UKW) - Perpetual Task)
+VERSION_BUILD = 3     # Build number (E6:S06:T08+3 - UKW: Kanban documentation synchronization)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-17 (v0.4.6.4+42 – T04 build 42: Workflow and cursorrules structure analyses completed)
-**Version:** v0.4.6.4+42
+**Last updated:** 2025-12-22 (v0.4.6.4+43 – T04 COMPLETE: All 378 task templates generated, validated, and sanitized)
+**Version:** v0.4.6.4+43
 **Code:** E4S06
 
 ---
@@ -43,7 +43,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - [x] **E4:S06:T01 – Create individual epic template files for canonical epics (1-7)** ✅ COMPLETE (v0.4.6.7+1)
 - [x] **E4:S06:T02 – Create individual epic template files for project-specific canonical epics (8-21)** ✅ COMPLETE (v0.4.6.10+1 – All 14 epic templates created: Epics 8-21)
 - [x] **E4:S06:T03 – Create story template files for each typical story** ✅ COMPLETE (v0.4.6.3+1 – All 62 story templates created for Epic 1-21)
-- [ ] **E4:S06:T04 – Create task template files for each typical task** - IN PROGRESS (v0.4.6.4+42 – Workflow and cursorrules structure analyses completed: 193 task templates created - Epic 1 complete, Epic 2 complete, Epic 3 complete, Epic 4 complete, Epic 5 complete, Epic 6 complete, Epic 7 complete, Epic 8 complete, Epic 9 complete, Epic 10 complete, Epic 11 complete, Epic 12 complete, Epic 13 complete, Epic 14 COMPLETE (all 3 stories))
+- [x] **E4:S06:T04 – Create task template files for each typical task** ✅ COMPLETE (v0.4.6.4+43 – All 378 canonical task templates generated, validated, sanitized, and duplicates cleaned up)
 - [ ] **E4:S06:T05 – Create contextualization guide and examples** - TODO
 - [x] **E4:S06:T06 – Update CANONICAL_EPICS.md to reference comprehensive structure (BR-005)** ✅ COMPLETE (v0.4.6.6+1)
 - [ ] **E4:S06:T07 – Integrate with template setup guide and installation workflow** - TODO (BR-009 assigned)
@@ -198,44 +198,50 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 ### E4:S06:T04 – Create task template files for each typical task
 
-**Status:** IN PROGRESS
+**Status:** ✅ COMPLETE  
 **Priority:** MEDIUM  
 **Dependencies:** E4:S06:T03  
-**Blocker:** None
+**Blocker:** None  
+**Version:** v0.4.6.4+43
 
 **Input:**
 - `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` - Task definitions
-- Task template structure (if exists, or create from story templates)
+- Task template structure (TASK_TEMPLATE.md)
+- Procedural generator (generate_task_templates.py)
+- Agentic generator (agentic_template_generator.py)
 
 **Deliverable:**
-- Task template files for each typical task per story
-- Organized in `templates/tasks/` directory structure:
-  - `templates/tasks/Epic-1/Story-1/T01-Project-Structure.md`
-  - `templates/tasks/Epic-1/Story-1/T02-Version-Control.md`
-  - ... (for all stories and their typical tasks)
-- Each task template includes:
+- ✅ Task template files for all 378 canonical tasks
+- ✅ Organized in `templates/tasks/Epic-X/Story-Y/` directory structure
+- ✅ All templates include:
   - Input and deliverable
   - Approach/methodology
   - Acceptance criteria
   - Dependencies
   - Placeholders for contextualization
+- ✅ Filename sanitization implemented (handles special characters)
+- ✅ Duplicates cleaned up
+- ✅ Validation complete
 
 **Approach:**
-1. Extract task definitions from comprehensive structure
-2. Create task template structure (or use existing)
-3. Create directory structure: `templates/tasks/Epic-X/Story-Y/`
-4. Populate with canonical task content
-5. Add placeholders for contextualization
-6. Include dependencies and integration points
+1. ✅ Extracted task definitions from comprehensive structure
+2. ✅ Used procedural generator to create all templates
+3. ✅ Enhanced with agentic generator for richer content
+4. ✅ Fixed filename sanitization issues
+5. ✅ Cleaned up duplicates and invalid directories
+6. ✅ Validated all 378 templates exist and are correctly formatted
 
 **Acceptance Criteria:**
-- [ ] Task templates created for all typical tasks (~300+ tasks)
-- [ ] Templates organized by epic/story in directory structure
-- [ ] Templates use placeholders for contextualization
-- [ ] Templates include acceptance criteria
-- [ ] Templates follow consistent structure
+- [x] Task templates created for all typical tasks (378 tasks) ✅
+- [x] Templates organized by epic/story in directory structure ✅
+- [x] Templates use placeholders for contextualization ✅
+- [x] Templates include acceptance criteria ✅
+- [x] Templates follow consistent structure ✅
+- [x] Filenames sanitized and filesystem-safe ✅
+- [x] All duplicates removed ✅
 
-**Note:** This is a large task. Consider creating templates for high-priority epics first, then expanding.
+**Completion Summary:**
+All 378 canonical task templates have been successfully generated, validated, and sanitized. The hybrid approach (concrete + procedural generation) is now complete, enabling efficient maintenance and distribution of task templates.
 
 ---
 

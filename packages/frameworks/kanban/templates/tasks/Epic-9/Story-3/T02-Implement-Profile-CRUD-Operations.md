@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 3, Task 2: Implement Profile CRUD Operations
+# Epic 9, Story 3, Task 2: Implement profile CRUD operations
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.3.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.3.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.3.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S3:T2`)
+**Format:** `E9:S3:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S03:T02`
 
@@ -28,92 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement profile CRUD operations for the {PROJECT_NAME} project. Build Create, Read, Update, and Delete operations for user profiles, including data validation, authorization checks, and error handling.
+Implement profile CRUD operations for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- User profile data model (from E9:S3:T01)
-- User authentication system (from E9:S1)
-- User authorization system (from E9:S2)
-- CRUD requirements
-- Validation requirements
-- ai-dev-kit CRUD patterns (if adopting)
+- Requirements and specifications
+- implement profile crud operations requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Profile CRUD operations implemented
-- Create profile functionality
-- Read profile functionality
-- Update profile functionality
-- Delete profile functionality
-- CRUD API endpoints
+- implement profile crud operations completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Profile CRUD operations implemented
-- [ ] Create profile functionality implemented
-- [ ] Read profile functionality implemented
-- [ ] Update profile functionality implemented
-- [ ] Delete profile functionality implemented
-- [ ] CRUD operations include validation
-- [ ] CRUD operations include authorization checks
-- [ ] CRUD API endpoints created
-- [ ] CRUD operations are tested and functional
+- [ ] Implement profile CRUD operations completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review user profile data model
-2. Review authentication and authorization systems
-3. Design CRUD operation interfaces
-4. Implement create profile functionality
-5. Implement read profile functionality
-6. Implement update profile functionality
-7. Implement delete profile functionality
-8. Add validation and authorization checks
-9. Create CRUD API endpoints
-10. Test CRUD operations
-11. Review and refine implementation
+1. Analyze requirements for implement profile crud operations
+2. Design approach and plan
+3. Implement implement profile crud operations
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S3:T01: Design user profile data model (CRUD operations use data model)
+- E9:S3:T01
 
 **Blocks:**
-- E9:S3:T03: Add profile picture upload (upload may use update operations)
-- E9:S3:T04: Implement profile settings (settings use update operations)
-- E9:S3:T06: Create profile viewing/editing UI (UI uses CRUD operations)
+- E9:S3:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S3:T01: Design user profile data model (CRUD operations use data model)
-- E9:S3:T03: Add profile picture upload (upload may use update operations)
-- E9:S3:T04: Implement profile settings (settings use update operations)
-- E9:S3:T06: Create profile viewing/editing UI (UI uses CRUD operations)
+- [E09:S03:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S3: User Profile Management (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -122,3 +108,27 @@ Implement profile CRUD operations for the {PROJECT_NAME} project. Build Create, 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

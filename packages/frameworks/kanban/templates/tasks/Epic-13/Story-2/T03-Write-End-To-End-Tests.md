@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 13, Story 2, Task 3: Write End-To-End Tests
+# Epic 13, Story 2, Task 3: Write end-to-end tests
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.13.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.13.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.13.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E13:S2:T3`)
+**Format:** `E13:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E13:S02:T03`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Write end-to-end tests for the {PROJECT_NAME} project. Create end-to-end tests that test complete user workflows and system functionality from start to finish, validating the entire system works as expected.
+Write end-to-end tests for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Testing infrastructure (from E13:S1)
-- Unit tests (from E13:S2:T01)
-- Integration tests (from E13:S2:T02)
-- End-to-end testing requirements
-- User workflow definitions
-- E2E testing tool preferences
-- ai-dev-kit E2E testing patterns (if adopting)
+- Requirements and specifications
+- write end-to-end tests requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- End-to-end tests written
-- Tests for user workflows
-- Tests for critical paths
-- E2E test data and fixtures
-- End-to-end test suite
+- write end-to-end tests completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] End-to-end tests written
-- [ ] Tests cover user workflows
-- [ ] Tests cover critical paths
-- [ ] E2E test data and fixtures created
-- [ ] End-to-end tests validate complete system behavior
-- [ ] E2E test suite is functional
+- [ ] Write end-to-end tests completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review testing infrastructure and existing tests
-2. Review user workflow definitions
-3. Identify critical paths and workflows to test
-4. Design end-to-end test structure
-5. Write end-to-end tests for user workflows
-6. Write end-to-end tests for critical paths
-7. Create E2E test data and fixtures
-8. Run and validate end-to-end tests
-9. Review and refine end-to-end tests
+1. Analyze requirements for write end-to-end tests
+2. Design approach and plan
+3. Implement write end-to-end tests
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Testing infrastructure (from E13:S1)
-- E13:S2:T01: Write unit tests (E2E tests complement unit tests)
-- E13:S2:T02: Write integration tests (E2E tests complement integration tests)
+- E13:S2:T02
 
 **Blocks:**
-- None (E2E tests are highest-level tests)
+- E13:S2:T04
 
-**Parallel Development Candidacy:** Safe (can proceed independently after testing infrastructure)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E13:S2:T01: Write unit tests (E2E tests complement unit tests)
-- E13:S2:T02: Write integration tests (E2E tests complement integration tests)
+- [E13:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E13:S2: Test Implementation (this story)
-- E13:S1: Testing Infrastructure Setup (E2E tests use testing infrastructure)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.13.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Write end-to-end tests for the {PROJECT_NAME} project. Create end-to-end tests t
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

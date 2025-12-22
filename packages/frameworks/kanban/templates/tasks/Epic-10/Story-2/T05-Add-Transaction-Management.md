@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 2, Task 5: Add Transaction Management
+# Epic 10, Story 2, Task 5: Add transaction management
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.10.2.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.2.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.2.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S2:T5`)
+**Format:** `E10:S2:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S02:T05`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Add transaction management for the {PROJECT_NAME} project. Implement transaction handling that ensures atomicity, consistency, isolation, and durability (ACID) properties for database operations, including transaction boundaries and rollback mechanisms.
+Add transaction management for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Data access architecture (from E10:S2:T01)
-- Repository pattern (from E10:S2:T02)
-- Query builders/ORMs (from E10:S2:T03)
-- Transaction requirements
-- Database transaction capabilities
-- ai-dev-kit transaction patterns (if adopting)
+- Requirements and specifications
+- add transaction management requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Transaction management implemented
-- Transaction boundaries defined
-- Transaction commit/rollback mechanisms
-- Transaction isolation levels configured
-- Transaction integration with data access
+- add transaction management completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Transaction management implemented
-- [ ] Transaction boundaries defined
-- [ ] Transaction commit/rollback mechanisms implemented
-- [ ] Transaction isolation levels configured
-- [ ] Transaction management integrates with data access layer
-- [ ] Transaction management ensures ACID properties
-- [ ] Transaction management is tested and functional
+- [ ] Add transaction management completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review data access architecture and implementations
-2. Review transaction requirements
-3. Design transaction management strategy
-4. Implement transaction boundaries
-5. Implement transaction commit/rollback mechanisms
-6. Configure transaction isolation levels
-7. Integrate transaction management with data access layer
-8. Test transaction management
-9. Review and refine transaction implementation
+1. Analyze requirements for add transaction management
+2. Design approach and plan
+3. Implement add transaction management
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S2:T01: Design data access architecture (transaction management implements architecture)
-- E10:S2:T02: Implement repository pattern (transaction management supports repositories)
-- E10:S2:T03: Create query builders/ORMs (transaction management may use ORM features)
+- E10:S2:T04
 
 **Blocks:**
-- None (transaction management enhances existing features)
+- E10:S2:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S2:T01: Design data access architecture (transaction management implements architecture)
-- E10:S2:T02: Implement repository pattern (transaction management supports repositories)
-- E10:S2:T03: Create query builders/ORMs (transaction management may use ORM features)
+- [E10:S02:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S2: Data Access Layer (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.2.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Add transaction management for the {PROJECT_NAME} project. Implement transaction
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

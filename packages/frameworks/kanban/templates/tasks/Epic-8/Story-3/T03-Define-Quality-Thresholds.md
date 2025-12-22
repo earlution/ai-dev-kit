@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 3, Task 3: Define Quality Thresholds
+# Epic 8, Story 3, Task 3: Define quality thresholds
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.8.3.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.3.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.3.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S3:T3`)
+**Format:** `E8:S3:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S03:T03`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Define quality thresholds for the {PROJECT_NAME} project. Establish acceptable quality levels and thresholds for code quality metrics to guide quality improvement efforts and maintain code quality standards.
+Define quality thresholds for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Code quality metrics (from E8:S3:T01)
-- Quality monitoring dashboards (from E8:S3:T02)
-- Quality requirements and standards
-- Project quality goals
-- Threshold definition framework
-- ai-dev-kit quality threshold practices (if adopting)
+- Requirements and specifications
+- define quality thresholds requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Quality thresholds defined
-- Threshold documentation
-- Threshold criteria established
-- Threshold enforcement mechanism
-- Threshold framework
+- define quality thresholds completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Quality thresholds defined for key metrics
-- [ ] Thresholds align with quality requirements
-- [ ] Threshold documentation created
-- [ ] Threshold criteria clearly established
-- [ ] Threshold enforcement mechanism defined
-- [ ] Threshold framework supports quality goals
-- [ ] Thresholds are actionable and measurable
-- [ ] Threshold framework complete
+- [ ] Define quality thresholds completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review code quality metrics
-2. Review quality requirements and standards
-3. Define quality goals and objectives
-4. Establish quality thresholds for each metric
-5. Define threshold criteria and rationale
-6. Create threshold enforcement mechanism
-7. Document quality thresholds
-8. Review and refine thresholds
+1. Analyze requirements for define quality thresholds
+2. Design approach and plan
+3. Implement define quality thresholds
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E8:S3:T01: Set up code quality metrics (thresholds apply to metrics)
-- E8:S3:T02: Create quality monitoring dashboards (thresholds may be visualized in dashboards)
+- E8:S3:T02
 
 **Blocks:**
-- E8:S3:T04: Document quality improvement process (process uses thresholds)
+- E8:S3:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S3:T01: Set up code quality metrics (thresholds apply to metrics)
-- E8:S3:T02: Create quality monitoring dashboards (thresholds may be visualized in dashboards)
-- E8:S3:T04: Document quality improvement process (process uses thresholds)
+- [E08:S03:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S3: Code Quality Metrics and Monitoring (this story)
-- E8:S1: Codebase Maintenance Tasks (thresholds may trigger maintenance work)
-- E8:S2: Code Review Standards and Processes (thresholds may inform review focus)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.3.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Define quality thresholds for the {PROJECT_NAME} project. Establish acceptable q
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

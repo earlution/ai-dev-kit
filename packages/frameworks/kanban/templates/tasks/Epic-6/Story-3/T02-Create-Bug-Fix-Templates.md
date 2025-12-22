@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 3, Task 2: Create Bug Fix Templates
+# Epic 6, Story 3, Task 2: Create bug fix templates
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.3.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.3.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.3.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S3:T2`)
+**Format:** `E6:S3:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S03:T02`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create bug fix templates for the {PROJECT_NAME} project. Develop reusable templates that standardize the structure and approach for fixing bugs.
+Create bug fix templates for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Bug fix patterns (from E6:S3:T01)
-- Bug fix requirements
-- Template structure preferences
-- ai-dev-kit bug fix templates (if adopting)
-- Team preferences and conventions
+- Requirements and specifications
+- create bug fix templates requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Bug fix templates created
-- Template structure defined
-- Template fields configured
-- Template documentation
-- Template examples
+- create bug fix templates completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Bug fix templates created
-- [ ] Templates follow bug fix patterns
-- [ ] Template structure defined and consistent
-- [ ] Template fields configured appropriately
-- [ ] Template documentation created
-- [ ] Template examples provided
-- [ ] Templates support efficient bug fixing
-- [ ] Templates are reusable and maintainable
+- [ ] Create bug fix templates completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review bug fix patterns
-2. Identify template requirements
-3. Design template structure
-4. Define template fields and requirements
-5. Create bug fix templates
-6. Configure template fields
-7. Write template documentation
-8. Create template examples
-9. Review and refine templates
+1. Analyze requirements for create bug fix templates
+2. Design approach and plan
+3. Implement create bug fix templates
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E6:S3:T01: Document bug fix patterns (templates use patterns)
+- E6:S3:T01
 
 **Blocks:**
-- E6:S3:T03: Define testing requirements for bug fixes (testing may use templates)
-- E6:S3:T04: Document bug fix completion criteria (criteria may reference templates)
+- E6:S3:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S3:T01: Document bug fix patterns (templates use patterns)
-- E6:S3:T03: Define testing requirements for bug fixes (testing may use templates)
-- E6:S3:T04: Document bug fix completion criteria (criteria may reference templates)
+- [E06:S03:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S3: Bug Fix Patterns and Best Practices (this story)
-- E6:S1: BR Intake and Triage Workflow (templates used in bug fixing)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.3.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Create bug fix templates for the {PROJECT_NAME} project. Develop reusable templa
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

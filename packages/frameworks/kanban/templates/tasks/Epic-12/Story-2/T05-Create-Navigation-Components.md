@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 12, Story 2, Task 5: Create Navigation Components
+# Epic 12, Story 2, Task 5: Create navigation components
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.12.2.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.12.2.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.12.2.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E12:S2:T5`)
+**Format:** `E12:S2:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E12:S02:T05`
 
@@ -28,94 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create navigation components for the {PROJECT_NAME} project. Build components that handle navigation, including navigation bars, menus, breadcrumbs, tabs, and pagination components.
+Create navigation components for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Component architecture (from E12:S2:T01)
-- Base components (from E12:S2:T02)
-- Layout components (from E12:S2:T03)
-- Routing (from E12:S1:T05)
-- Navigation requirements
-- Design specifications
-- ai-dev-kit navigation component patterns (if adopting)
+- Requirements and specifications
+- create navigation components requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Navigation components created
-- Navigation bar component
-- Menu components
-- Breadcrumb component
-- Tab components
-- Pagination component
-- Other navigation components
+- create navigation components completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Navigation components created
-- [ ] Navigation bar component implemented
-- [ ] Menu components implemented
-- [ ] Breadcrumb component implemented
-- [ ] Tab components implemented
-- [ ] Pagination component implemented
-- [ ] Navigation components integrate with routing
-- [ ] Components are reusable and well-documented
+- [ ] Create navigation components completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review component architecture, base components, and layout components
-2. Review routing setup and navigation requirements
-3. Design navigation component APIs and props
-4. Implement navigation bar component
-5. Implement menu components
-6. Implement breadcrumb component
-7. Implement tab and pagination components
-8. Integrate navigation components with routing
-9. Test navigation components
-10. Review and refine components
+1. Analyze requirements for create navigation components
+2. Design approach and plan
+3. Implement create navigation components
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E12:S2:T01: Design component architecture (navigation components implement architecture)
-- E12:S2:T02: Implement base components (navigation components may use base components)
-- E12:S2:T03: Create layout components (navigation components may use layout components)
-- E12:S1:T05: Set up routing (navigation components use routing)
+- E12:S2:T04
 
 **Blocks:**
-- E12:S3: User Interface Implementation (UI implementation uses navigation components)
+- E12:S2:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03, E12:S1:T05)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E12:S2:T01: Design component architecture (navigation components implement architecture)
-- E12:S2:T02: Implement base components (navigation components may use base components)
-- E12:S2:T03: Create layout components (navigation components may use layout components)
+- [E12:S02:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E12:S2: Core UI Components (this story)
-- E12:S1: UI Framework Setup (navigation components use routing)
-- E12:S3: User Interface Implementation (UI implementation uses navigation components)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.12.2.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -124,3 +108,27 @@ Create navigation components for the {PROJECT_NAME} project. Build components th
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

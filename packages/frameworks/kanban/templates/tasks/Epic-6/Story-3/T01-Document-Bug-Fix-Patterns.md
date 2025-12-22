@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 3, Task 1: Document Bug Fix Patterns
+# Epic 6, Story 3, Task 1: Document bug fix patterns
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.3.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.3.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.3.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S3:T1`)
+**Format:** `E6:S3:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S03:T01`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document bug fix patterns for the {PROJECT_NAME} project. Identify, analyze, and document consistent patterns for fixing bugs to ensure quality, maintainability, and consistency in bug resolution.
+Document bug fix patterns for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Bug Report requirements
-- Existing bug fix examples (if any)
-- Best practices and debugging techniques
-- Team preferences and conventions
-- ai-dev-kit bug fix patterns (if adopting)
-- Project architecture and constraints
+- Requirements and specifications
+- document bug fix patterns requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Bug fix patterns documented
-- Pattern catalog created
-- Pattern examples provided
-- Pattern usage guidelines
-- Pattern documentation
+- document bug fix patterns completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Bug fix patterns identified and documented
-- [ ] Pattern catalog created
-- [ ] Pattern examples provided
-- [ ] Pattern usage guidelines created
-- [ ] Patterns support consistent bug fixing
-- [ ] Patterns are clear and maintainable
-- [ ] Pattern documentation complete
-- [ ] Patterns enable quality bug fixes
+- [ ] Document bug fix patterns completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Analyze Bug Report requirements
-2. Review existing bug fix examples (if any)
-3. Research best practices and debugging techniques
-4. Identify common bug fix patterns
-5. Document each pattern with description and examples
-6. Create pattern catalog
-7. Develop pattern usage guidelines
-8. Review and refine patterns
+1. Analyze requirements for document bug fix patterns
+2. Design approach and plan
+3. Implement document bug fix patterns
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Bug Report requirements
-- Project architecture and constraints
+- None
 
 **Blocks:**
-- E6:S3:T02: Create bug fix templates (templates use patterns)
-- E6:S3:T03: Define testing requirements for bug fixes (testing aligns with patterns)
-- E6:S3:T04: Document bug fix completion criteria (criteria reference patterns)
+- E6:S3:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S3:T02: Create bug fix templates (templates use patterns)
-- E6:S3:T03: Define testing requirements for bug fixes (testing aligns with patterns)
-- E6:S3:T04: Document bug fix completion criteria (criteria reference patterns)
+- [E06:S03:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S3: Bug Fix Patterns and Best Practices (this story)
-- E6:S1: BR Intake and Triage Workflow (patterns used in bug fixing)
-- E6:S2: BR Prioritization and Assignment (prioritization considers patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.3.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Document bug fix patterns for the {PROJECT_NAME} project. Identify, analyze, and
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

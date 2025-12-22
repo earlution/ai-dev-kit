@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 1, Task 2: Set Up Version Control and Repository Configuration
+# Epic 1, Story 1, Task 2: Set up version control and repository configuration
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.1.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.1.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.1.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S1:T2`)
+**Format:** `E1:S1:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S01:T02`
 
@@ -28,84 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up version control system (Git) and configure repository settings for the {PROJECT_NAME} project. Establish Git workflow, branch strategy, and repository configuration files.
+Set up version control and repository configuration for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project structure (from T01)
-- Git hosting platform choice (GitHub, GitLab, etc.)
-- Branch strategy preferences
-- Team workflow preferences (if applicable)
-- ai-dev-kit Git configuration templates (if adopting)
+- Requirements and specifications
+- set up version control and repository configuration requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Git repository initialized
-- `.gitignore` file configured
-- Repository configuration files (`.gitattributes`, etc.)
-- Branch strategy documented
-- Git workflow documented
-- Remote repository configured (if applicable)
+- set up version control and repository configuration completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Git repository initialized
-- [ ] `.gitignore` file created and configured for {PROJECT_TYPE}
-- [ ] Repository configuration files set up
-- [ ] Branch strategy defined and documented
-- [ ] Git workflow documented
-- [ ] Remote repository configured (if applicable)
-- [ ] Initial commit made (if applicable)
+- [ ] Set up version control and repository configuration completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Initialize Git repository (`git init`)
-2. Create and configure `.gitignore` file for {PROJECT_TYPE}
-3. Set up `.gitattributes` (if needed)
-4. Configure Git user settings (if not global)
-5. Define and document branch strategy
-6. Document Git workflow
-7. Configure remote repository (if applicable)
-8. Make initial commit (if applicable)
+1. Analyze requirements for set up version control and repository configuration
+2. Design approach and plan
+3. Implement set up version control and repository configuration
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- T01: Define project structure and directory layout (benefits from structure)
+- E1:S1:T01
 
 **Blocks:**
-- T03: Configure development environment and tooling (benefits from version control)
-- T04: Create initial project documentation (benefits from repository setup)
+- E1:S1:T03
 
-**Parallel Development Candidacy:** Safe (can proceed independently once structure is defined)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E01:S01:T01: Define project structure and directory layout
-- E01:S01:T03: Configure development environment and tooling
-- E01:S01:T04: Create initial project documentation
+- [E01:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E01:S01: Project Foundation and Setup
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.1.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,10 +111,7 @@ Set up version control system (Git) and configure repository settings for the {P
 
 ## Notes
 
-- Use comprehensive `.gitignore` templates for {PROJECT_TYPE}
-- Consider team workflow preferences
-- Document branch strategy clearly
-- Set up branch protection rules (if applicable)
+[Additional notes, context, or considerations for this task.]
 
 ---
 
@@ -132,15 +123,12 @@ Set up version control system (Git) and configure repository settings for the {P
 
 ## References
 
-- Git best practices
-- `.gitignore` templates for {PROJECT_TYPE}
-- Branch strategy patterns
-- Git workflow documentation
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
 
 ---
 
 ## Next Actions
 
-- [ ] Initialize Git repository
-- [ ] Configure `.gitignore` and repository files
-- [ ] Document branch strategy and workflow
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 3, Task 1: Design User Feedback Collection Methods
+# Epic 7, Story 3, Task 1: Design user feedback collection methods
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.3.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.3.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.3.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S3:T1`)
+**Format:** `E7:S3:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S03:T01`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design user feedback collection methods for the {PROJECT_NAME} project. Establish appropriate methods and approaches for collecting user feedback to ensure comprehensive and actionable user input.
+Design user feedback collection methods for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Product features and functionality
-- User personas (from E7:S1:T06, if available)
-- User research findings (from E7:S1, if available)
-- Feedback collection requirements
-- Feedback objectives and goals
-- ai-dev-kit UXR feedback collection practices (if adopting)
+- Requirements and specifications
+- design user feedback collection methods requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- User feedback collection methods designed
-- Feedback method documentation
-- Feedback collection strategy
-- Method selection criteria
-- Feedback collection plan outline
+- design user feedback collection methods completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] User feedback collection methods designed and documented
-- [ ] Methods align with feedback objectives
-- [ ] Methods are appropriate for target users
-- [ ] Feedback collection strategy established
-- [ ] Method selection criteria defined
-- [ ] Feedback collection plan outline created
-- [ ] Methods are actionable and implementable
-- [ ] Method documentation complete
+- [ ] Design user feedback collection methods completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review product features and functionality
-2. Review user personas and research findings (if available)
-3. Define feedback collection objectives
-4. Identify appropriate feedback collection methods
-5. Design feedback collection methods
-6. Establish feedback collection strategy
-7. Define method selection criteria
-8. Create feedback collection plan outline
-9. Document feedback collection methods
-10. Review and refine methods
+1. Analyze requirements for design user feedback collection methods
+2. Design approach and plan
+3. Implement design user feedback collection methods
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Product features and functionality
-- User personas (from E7:S1:T06, if available - optional)
+- None
 
 **Blocks:**
-- E7:S3:T02: Set up feedback collection channels (channels implement methods)
-- E7:S3:T03: Implement feedback collection tools (tools implement methods)
+- E7:S3:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, benefits from user personas)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S3:T02: Set up feedback collection channels (channels implement methods)
-- E7:S3:T03: Implement feedback collection tools (tools implement methods)
-- E7:S3:T04: Create feedback analysis workflow (workflow processes collected feedback)
+- [E07:S03:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S3: User Feedback Collection and Analysis (this story)
-- E7:S1: User Research and Discovery (may inform feedback methods)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.3.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Design user feedback collection methods for the {PROJECT_NAME} project. Establis
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

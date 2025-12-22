@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 1, Task 4: Conduct User Surveys/Questionnaires
+# Epic 7, Story 1, Task 4: Conduct user surveys/questionnaires
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.1.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.1.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.1.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S1:T4`)
+**Format:** `E7:S1:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S01:T04`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Conduct user surveys/questionnaires for the {PROJECT_NAME} project. Design, distribute, and collect user surveys to gather quantitative and qualitative data about user needs, behaviors, and preferences.
+Conduct user surveys/questionnaires for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Research objectives and questions (from E7:S1:T01)
-- Research participants (from E7:S1:T02)
-- Survey methodology and best practices
-- Survey questions and structure
-- Survey platform/tools
-- ai-dev-kit UXR survey practices (if adopting)
+- Requirements and specifications
+- conduct user surveys/questionnaires requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Survey questionnaire designed
-- Survey distributed
-- Survey responses collected
-- Survey response data
-- Survey summary documentation
+- conduct user surveys/questionnaires completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Survey questionnaire designed
-- [ ] Survey distributed to participants
-- [ ] Survey responses collected
-- [ ] Survey response data organized
-- [ ] Surveys address research questions
-- [ ] Survey summary documentation created
-- [ ] Surveys yield meaningful data
-- [ ] Survey data ready for analysis
+- [ ] Conduct user surveys/questionnaires completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review research objectives and questions
-2. Review recruited participants
-3. Design survey questionnaire structure
-4. Formulate survey questions
-5. Select survey platform/tools
-6. Create and test survey questionnaire
-7. Distribute survey to participants
-8. Collect survey responses
-9. Organize survey response data
-10. Create survey summary documentation
-11. Review and refine survey process
+1. Analyze requirements for conduct user surveys/questionnaires
+2. Design approach and plan
+3. Implement conduct user surveys/questionnaires
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S1:T01: Define research objectives and questions (surveys address research questions)
-- E7:S1:T02: Recruit research participants (surveys require participants)
+- E7:S1:T03
 
 **Blocks:**
-- E7:S1:T05: Analyze research data and synthesize findings (analysis uses survey data)
+- E7:S1:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02, but can run parallel with T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S1:T01: Define research objectives and questions (surveys address research questions)
-- E7:S1:T02: Recruit research participants (surveys require participants)
-- E7:S1:T03: Conduct user interviews (complements surveys)
-- E7:S1:T05: Analyze research data and synthesize findings (analysis uses survey data)
+- [E07:S01:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S1: User Research and Discovery (this story)
-- E7:S3: User Feedback Collection and Analysis (surveys may inform feedback collection)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Conduct user surveys/questionnaires for the {PROJECT_NAME} project. Design, dist
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

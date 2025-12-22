@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 1, Task 5: Define Database Constraints
+# Epic 10, Story 1, Task 5: Define database constraints
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.10.1.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.1.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.1.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S1:T5`)
+**Format:** `E10:S1:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S01:T05`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Define database constraints for the {PROJECT_NAME} project. Establish constraints such as primary keys, foreign keys, unique constraints, check constraints, and not-null constraints to enforce data integrity and business rules.
+Define database constraints for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Database schema design (from E10:S1:T01)
-- Database migrations (from E10:S1:T03)
-- Data integrity requirements
-- Business rule requirements
-- Constraint requirements
-- Database system capabilities
-- ai-dev-kit constraint practices (if adopting)
+- Requirements and specifications
+- define database constraints requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Database constraints defined
-- Primary key constraints
-- Foreign key constraints
-- Unique constraints
-- Check constraints
-- Not-null constraints
-- Constraint documentation
+- define database constraints completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Database constraints defined
-- [ ] Primary key constraints established
-- [ ] Foreign key constraints established
-- [ ] Unique constraints defined
-- [ ] Check constraints defined
-- [ ] Not-null constraints defined
-- [ ] Constraints enforce data integrity
-- [ ] Constraint documentation created
+- [ ] Define database constraints completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review database schema design and migrations
-2. Review data integrity and business rule requirements
-3. Identify constraint requirements
-4. Define primary key constraints
-5. Define foreign key constraints
-6. Define unique constraints
-7. Define check constraints
-8. Define not-null constraints
-9. Document constraints
-10. Review and refine constraints
+1. Analyze requirements for define database constraints
+2. Design approach and plan
+3. Implement define database constraints
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S1:T01: Design database schema (constraints enforce schema rules)
-- E10:S1:T03: Implement database migrations (constraints may be added via migrations)
+- E10:S1:T04
 
 **Blocks:**
-- None (data integrity task)
+- E10:S1:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S1:T01: Design database schema (constraints enforce schema rules)
-- E10:S1:T03: Implement database migrations (constraints may be added via migrations)
+- [E10:S01:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S1: Database Schema Design (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.1.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Define database constraints for the {PROJECT_NAME} project. Establish constraint
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

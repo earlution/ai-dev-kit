@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 2, Task 4: Analyze Usability Test Results
+# Epic 7, Story 2, Task 4: Analyze usability test results
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S2:T4`)
+**Format:** `E7:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S02:T04`
 
@@ -28,92 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Analyze usability test results for the {PROJECT_NAME} project. Process, analyze, and synthesize data from usability testing sessions to extract meaningful insights about usability performance and user interactions.
+Analyze usability test results for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Usability test scenarios (from E7:S2:T01)
-- Testing session data (from E7:S2:T03)
-- Session recordings/videos
-- Session notes and observations
-- Analysis methodology and tools
-- ai-dev-kit UXR analysis practices (if adopting)
+- Requirements and specifications
+- analyze usability test results requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Usability test results analyzed
-- Analysis findings documented
-- Performance metrics identified
-- Analysis documentation
-- Findings summary
+- analyze usability test results completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Usability test results analyzed systematically
-- [ ] Analysis findings documented
-- [ ] Performance metrics identified and calculated
-- [ ] Patterns and trends identified
-- [ ] Analysis documentation created
-- [ ] Findings summary created
-- [ ] Analysis supports issue identification
-- [ ] Analysis supports report creation
+- [ ] Analyze usability test results completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review usability test scenarios
-2. Organize testing session data
-3. Review session recordings/videos
-4. Review session notes and observations
-5. Analyze quantitative data (task completion, time, errors)
-6. Analyze qualitative data (observations, comments)
-7. Identify patterns and trends
-8. Calculate performance metrics
-9. Synthesize findings
-10. Create analysis documentation
-11. Create findings summary
-12. Review and refine analysis
+1. Analyze requirements for analyze usability test results
+2. Design approach and plan
+3. Implement analyze usability test results
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S2:T01: Design usability test scenarios (analysis references scenarios)
-- E7:S2:T03: Conduct usability testing sessions (analysis uses session data)
+- E7:S2:T03
 
 **Blocks:**
-- E7:S2:T05: Identify usability issues and pain points (identification uses analysis)
-- E7:S2:T06: Create usability test reports (reports use analysis)
+- E7:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S2:T01: Design usability test scenarios (analysis references scenarios)
-- E7:S2:T03: Conduct usability testing sessions (analysis uses session data)
-- E7:S2:T05: Identify usability issues and pain points (identification uses analysis)
-- E7:S2:T06: Create usability test reports (reports use analysis)
+- [E07:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S2: Usability Testing and Validation (this story)
-- E7:S5: UX Insights and Recommendations (insights may use test analysis)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -122,3 +108,27 @@ Analyze usability test results for the {PROJECT_NAME} project. Process, analyze,
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

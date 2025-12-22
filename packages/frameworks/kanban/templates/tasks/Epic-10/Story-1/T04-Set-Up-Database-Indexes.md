@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 1, Task 4: Set Up Database Indexes
+# Epic 10, Story 1, Task 4: Set up database indexes
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.10.1.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.1.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.1.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S1:T4`)
+**Format:** `E10:S1:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S01:T04`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up database indexes for the {PROJECT_NAME} project. Create indexes on database tables to optimize query performance, including primary keys, foreign keys, and additional indexes based on query patterns.
+Set up database indexes for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Database schema design (from E10:S1:T01)
-- Database migrations (from E10:S1:T03)
-- Query patterns and performance requirements
-- Index requirements and guidelines
-- Database system capabilities
-- ai-dev-kit indexing practices (if adopting)
+- Requirements and specifications
+- set up database indexes requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Database indexes set up
-- Index definitions
-- Primary key indexes
-- Foreign key indexes
-- Additional performance indexes
-- Index documentation
+- set up database indexes completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Database indexes set up
-- [ ] Primary key indexes defined
-- [ ] Foreign key indexes defined
-- [ ] Additional performance indexes created
-- [ ] Indexes optimize query performance
-- [ ] Index definitions documented
-- [ ] Indexes are tested and validated
-- [ ] Index setup complete
+- [ ] Set up database indexes completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review database schema design and migrations
-2. Analyze query patterns and performance requirements
-3. Identify tables and columns requiring indexes
-4. Design index strategy
-5. Create primary key indexes
-6. Create foreign key indexes
-7. Create additional performance indexes
-8. Document index definitions
-9. Test index performance
-10. Review and refine indexes
+1. Analyze requirements for set up database indexes
+2. Design approach and plan
+3. Implement set up database indexes
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S1:T01: Design database schema (indexes optimize schema)
-- E10:S1:T03: Implement database migrations (indexes may be added via migrations)
+- E10:S1:T03
 
 **Blocks:**
-- None (optimization task)
+- E10:S1:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S1:T01: Design database schema (indexes optimize schema)
-- E10:S1:T03: Implement database migrations (indexes may be added via migrations)
-- E16:S2: Performance Optimization (indexes support performance optimization)
+- [E10:S01:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S1: Database Schema Design (this story)
-- E16:S1: Performance Analysis (indexes may be analyzed for performance)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.1.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Set up database indexes for the {PROJECT_NAME} project. Create indexes on databa
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

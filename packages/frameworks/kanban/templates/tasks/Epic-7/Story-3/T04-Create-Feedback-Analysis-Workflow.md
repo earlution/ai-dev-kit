@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 3, Task 4: Create Feedback Analysis Workflow
+# Epic 7, Story 3, Task 4: Create feedback analysis workflow
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.3.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.3.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.3.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S3:T4`)
+**Format:** `E7:S3:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S03:T04`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create feedback analysis workflow for the {PROJECT_NAME} project. Establish systematic processes for processing, categorizing, and analyzing collected user feedback to enable consistent and effective feedback analysis.
+Create feedback analysis workflow for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Feedback collection channels (from E7:S3:T02)
-- Feedback collection tools (from E7:S3:T03)
-- Feedback analysis requirements
-- Analysis methodology and approaches
-- Workflow requirements and specifications
-- ai-dev-kit UXR analysis workflow practices (if adopting)
+- Requirements and specifications
+- create feedback analysis workflow requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Feedback analysis workflow created
-- Workflow process defined
-- Feedback categorization system
-- Analysis procedures documented
-- Workflow documentation
+- create feedback analysis workflow completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Feedback analysis workflow created and documented
-- [ ] Workflow process clearly defined
-- [ ] Feedback categorization system established
-- [ ] Analysis procedures documented
-- [ ] Workflow supports systematic feedback processing
-- [ ] Workflow is actionable and implementable
-- [ ] Workflow documentation complete
-- [ ] Workflow supports pattern analysis
+- [ ] Create feedback analysis workflow completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review feedback collection channels and tools
-2. Review feedback analysis requirements
-3. Define feedback analysis workflow process
-4. Establish feedback categorization system
-5. Define analysis procedures
-6. Document workflow steps and procedures
-7. Create workflow documentation
-8. Review and refine workflow
+1. Analyze requirements for create feedback analysis workflow
+2. Design approach and plan
+3. Implement create feedback analysis workflow
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S3:T02: Set up feedback collection channels (workflow processes channel feedback)
-- E7:S3:T03: Implement feedback collection tools (workflow processes tool-collected feedback)
+- E7:S3:T03
 
 **Blocks:**
-- E7:S3:T05: Analyze feedback patterns and trends (analysis uses workflow)
-- E7:S3:T06: Convert feedback into actionable insights (insights use workflow-processed feedback)
+- E7:S3:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T02 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S3:T02: Set up feedback collection channels (workflow processes channel feedback)
-- E7:S3:T03: Implement feedback collection tools (workflow processes tool-collected feedback)
-- E7:S3:T05: Analyze feedback patterns and trends (analysis uses workflow)
-- E7:S3:T07: Document feedback analysis process (documentation references workflow)
+- [E07:S03:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S3: User Feedback Collection and Analysis (this story)
-- E4:S10: Agentic Kanban Task Creation from FR/BR (workflow may inform task creation)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.3.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Create feedback analysis workflow for the {PROJECT_NAME} project. Establish syst
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

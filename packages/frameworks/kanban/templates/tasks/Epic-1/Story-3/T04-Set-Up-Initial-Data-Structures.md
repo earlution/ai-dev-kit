@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 3, Task 4: Set Up Initial Data Structures
+# Epic 1, Story 3, Task 4: Set up initial data structures
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.1.3.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.3.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.3.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S3:T4`)
+**Format:** `E1:S3:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S03:T04`
 
@@ -28,92 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up initial data structures for the {PROJECT_NAME} project. Establish data storage, persistence mechanisms, and data access patterns that support the project's data requirements.
+Set up initial data structures for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project data requirements
-- Domain models and entities (from E1:S3:T02)
-- Architecture patterns (from E1:S2:T01)
-- Configuration system (from E1:S2:T02)
-- Data storage preferences (database, file system, etc.)
-- Data access requirements
-- Team preferences and conventions (if applicable)
+- Requirements and specifications
+- set up initial data structures requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Initial data structures set up
-- Data persistence mechanism implemented
-- Data access layer implemented
-- Data migration scripts (if applicable)
-- Data structure documentation
-- Data access tests (if applicable)
+- set up initial data structures completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Initial data structures designed and implemented
-- [ ] Data persistence mechanism configured and operational
-- [ ] Data access layer implemented following architecture patterns
-- [ ] Data structures support domain models and entities
-- [ ] Data migration scripts created (if applicable)
-- [ ] Data structure documentation created
-- [ ] Data access tests created (if applicable)
-- [ ] Data structures support MVP features
+- [ ] Set up initial data structures completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Analyze data requirements and storage needs
-2. Choose data storage solution (database, file system, etc.)
-3. Design data structures and schema
-4. Set up data persistence mechanism
-5. Implement data access layer using architecture patterns
-6. Create data migration scripts (if applicable)
-7. Integrate data structures with domain models
-8. Write data access tests (if applicable)
-9. Create data structure documentation
-10. Review and refine data structures
+1. Analyze requirements for set up initial data structures
+2. Design approach and plan
+3. Implement set up initial data structures
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2:T01: Design and implement core architecture patterns (data structures use architecture patterns)
-- E1:S2:T02: Set up configuration management system (data structures may use configuration)
-- E1:S3:T02: Create core domain models and entities (data structures support domain models)
+- E1:S3:T03
 
 **Blocks:**
-- E1:S3:T01: Implement minimum viable product (MVP) features (MVP may use data structures)
-- E1:S3:T03: Implement basic business logic (business logic may use data structures)
+- E1:S3:T05
 
-**Parallel Development Candidacy:** Safe (can proceed after E1:S2:T01, T02 and E1:S3:T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S3:T01: Implement minimum viable product (MVP) features (MVP may use data structures)
-- E1:S3:T02: Create core domain models and entities (data structures support domain models)
-- E1:S3:T03: Implement basic business logic (business logic may use data structures)
+- [E01:S03:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S3: Initial Feature Set (this story)
-- E1:S2: Core Infrastructure (data structures use infrastructure)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.3.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -122,3 +108,27 @@ Set up initial data structures for the {PROJECT_NAME} project. Establish data st
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

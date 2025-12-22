@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 3, Story 2, Task 4: Document Version Management Process
+# Epic 3, Story 2, Task 4: Document version management process
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.3.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.3.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.3.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E3:S2:T4`)
+**Format:** `E3:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E03:S02:T04`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document version management process for the {PROJECT_NAME} project. Create comprehensive documentation that explains how versioning is managed throughout the project lifecycle, including release workflows, version bumping, and changelog generation.
+Document version management process for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Versioning policy (from E3:S1:T01)
-- Versioning schema (from E3:S1:T02)
-- Version management integration (from E3:S2:T01)
-- Version bump automation (from E3:S2:T02)
-- Changelog generation (from E3:S2:T03)
-- Documentation requirements
+- Requirements and specifications
+- document version management process requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Version management process documentation
-- Process workflow documentation
-- Usage guide for version management
-- Troubleshooting guide
-- Best practices documentation
+- document version management process completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Version management process documented
-- [ ] Process workflow documented
-- [ ] Usage guide created
-- [ ] Troubleshooting guide created
-- [ ] Best practices documented
-- [ ] Documentation is clear and accessible
-- [ ] Documentation covers all version management aspects
-- [ ] Documentation supports effective version management
+- [ ] Document version management process completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all version management components
-2. Identify documentation needs
-3. Create version management process documentation
-4. Document process workflow
-5. Create usage guide
-6. Create troubleshooting guide
-7. Document best practices
-8. Review and refine documentation
+1. Analyze requirements for document version management process
+2. Design approach and plan
+3. Implement document version management process
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E3:S2:T01: Integrate versioning with release workflow (documentation covers integration)
-- E3:S2:T02: Create version bump automation (documentation covers automation)
-- E3:S2:T03: Set up changelog generation (documentation covers changelog)
-- E3:S1:T01: Define versioning policy (documentation references policy)
-- E3:S1:T02: Design versioning schema (documentation references schema)
+- E3:S2:T03
 
 **Blocks:**
-- None (documentation task)
+- E3:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on all E3:S2 tasks)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E3:S2:T01: Integrate versioning with release workflow (documentation covers integration)
-- E3:S2:T02: Create version bump automation (documentation covers automation)
-- E3:S2:T03: Set up changelog generation (documentation covers changelog)
+- [E03:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E3:S2: Version Management Integration (this story)
-- E3:S1: Versioning Policy and Schema (documentation references policy and schema)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.3.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Document version management process for the {PROJECT_NAME} project. Create compr
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

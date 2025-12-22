@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 2, Task 5: Add Permission Checking Utilities
+# Epic 9, Story 2, Task 5: Add permission checking utilities
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.9.2.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.2.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.2.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S2:T5`)
+**Format:** `E9:S2:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S02:T05`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Add permission checking utilities for the {PROJECT_NAME} project. Create utility functions and helpers that enable application code to check user permissions, roles, and access rights in a convenient and consistent manner.
+Add permission checking utilities for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- RBAC implementation (from E9:S2:T02)
-- Permission system (from E9:S2:T03)
-- Access control middleware (from E9:S2:T04)
-- Utility function requirements
-- Code integration needs
-- ai-dev-kit permission utility patterns (if adopting)
+- Requirements and specifications
+- add permission checking utilities requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Permission checking utilities created
-- Utility functions for permission checks
-- Utility functions for role checks
-- Utility function documentation
-- Utility integration examples
+- add permission checking utilities completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Permission checking utilities created
-- [ ] Utility functions for permission checks implemented
-- [ ] Utility functions for role checks implemented
-- [ ] Utilities integrate with RBAC and permission system
-- [ ] Utilities are convenient and easy to use
-- [ ] Utility function documentation created
-- [ ] Utility integration examples provided
-- [ ] Utilities are tested and functional
+- [ ] Add permission checking utilities completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review RBAC, permission system, and middleware
-2. Identify utility function requirements
-3. Design permission checking utilities
-4. Implement permission checking utility functions
-5. Implement role checking utility functions
-6. Create utility function documentation
-7. Create utility integration examples
-8. Test utility functions
-9. Review and refine utilities
+1. Analyze requirements for add permission checking utilities
+2. Design approach and plan
+3. Implement add permission checking utilities
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S2:T02: Implement role-based access control (RBAC) (utilities use RBAC)
-- E9:S2:T03: Create permission system (utilities use permission system)
-- E9:S2:T04: Implement access control middleware (utilities may use middleware patterns)
+- E9:S2:T04
 
 **Blocks:**
-- None (utility functions support other features)
+- E9:S2:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T02, T03, T04)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S2:T02: Implement role-based access control (RBAC) (utilities use RBAC)
-- E9:S2:T03: Create permission system (utilities use permission system)
-- E9:S2:T04: Implement access control middleware (utilities may use middleware patterns)
+- [E09:S02:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S2: User Authorization and Permissions (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.2.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Add permission checking utilities for the {PROJECT_NAME} project. Create utility
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

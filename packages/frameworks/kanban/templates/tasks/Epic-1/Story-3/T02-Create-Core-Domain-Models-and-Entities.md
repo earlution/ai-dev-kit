@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 3, Task 2: Create Core Domain Models and Entities
+# Epic 1, Story 3, Task 2: Create core domain models and entities
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.3.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.3.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.3.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S3:T2`)
+**Format:** `E1:S3:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S03:T02`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create core domain models and entities for the {PROJECT_NAME} project. Establish the fundamental data structures and domain objects that represent the core business concepts and entities in the system.
+Create core domain models and entities for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project requirements and domain analysis
-- Architecture patterns (from E1:S2:T01)
-- Base classes and interfaces (from E1:S2:T06)
-- Domain knowledge and business requirements
-- MVP features (from E1:S3:T01, if available)
-- Data modeling requirements
+- Requirements and specifications
+- create core domain models and entities requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Core domain models defined
-- Entity classes implemented
-- Domain model documentation
-- Entity relationships documented
-- Domain model validation (if applicable)
-- Domain model tests (if applicable)
+- create core domain models and entities completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Core domain models identified and defined
-- [ ] Entity classes implemented following architecture patterns
-- [ ] Domain models represent core business concepts accurately
-- [ ] Entity relationships defined and documented
-- [ ] Domain models use base classes and interfaces (if applicable)
-- [ ] Domain model validation implemented (if applicable)
-- [ ] Domain model documentation created
-- [ ] Domain model tests created (if applicable)
-- [ ] Domain models support MVP features
+- [ ] Create core domain models and entities completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Analyze project requirements and identify core domain concepts
-2. Design domain model structure and relationships
-3. Define entity classes and their properties
-4. Implement entity classes using base classes and interfaces
-5. Define entity relationships and associations
-6. Implement domain model validation (if applicable)
-7. Create domain model documentation
-8. Write domain model tests (if applicable)
-9. Review and refine domain models
+1. Analyze requirements for create core domain models and entities
+2. Design approach and plan
+3. Implement create core domain models and entities
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2:T01: Design and implement core architecture patterns (domain models use architecture patterns)
-- E1:S2:T06: Implement base classes and interfaces (domain models use base classes)
+- E1:S3:T01
 
 **Blocks:**
-- E1:S3:T03: Implement basic business logic (business logic uses domain models)
-- E1:S3:T04: Set up initial data structures (data structures may use domain models)
+- E1:S3:T03
 
-**Parallel Development Candidacy:** Safe (can proceed after T01 from E1:S2, may be done in parallel with E1:S3:T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S3:T01: Implement minimum viable product (MVP) features (MVP uses domain models)
-- E1:S3:T03: Implement basic business logic (business logic uses domain models)
-- E1:S3:T04: Set up initial data structures (data structures may use domain models)
+- [E01:S03:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S3: Initial Feature Set (this story)
-- E1:S2: Core Infrastructure (domain models use infrastructure)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.3.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Create core domain models and entities for the {PROJECT_NAME} project. Establish
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 1, Task 1: Document Existing Workflow Patterns
+# Epic 2, Story 1, Task 1: Document existing workflow patterns
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.2.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.2.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.2.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E2:S1:T1`)
+**Format:** `E2:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E02:S01:T01`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document existing workflow patterns in the {PROJECT_NAME} project. Identify, analyze, and document current workflow patterns, processes, and practices to establish a foundation for workflow standardization and automation.
+Document existing workflow patterns for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project structure and codebase
-- Existing workflow documentation (if any)
-- Team knowledge of current processes
-- Workflow-related code and scripts
-- Process documentation (if available)
-- ai-dev-kit workflow patterns (if adopting)
+- Requirements and specifications
+- document existing workflow patterns requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Documented existing workflow patterns
-- Workflow pattern inventory
-- Workflow pattern analysis
-- Workflow pattern documentation
-- Identified workflow improvement opportunities
-- Workflow pattern examples
+- document existing workflow patterns completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Existing workflow patterns identified and cataloged
-- [ ] Workflow patterns documented with descriptions
-- [ ] Workflow pattern inventory created
-- [ ] Workflow pattern analysis completed
-- [ ] Workflow improvement opportunities identified
-- [ ] Workflow pattern examples documented
-- [ ] Workflow pattern documentation is clear and accessible
-- [ ] Workflow patterns support standardization efforts
+- [ ] Document existing workflow patterns completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Identify existing workflow patterns in codebase and processes
-2. Interview team members about current workflows (if applicable)
-3. Analyze workflow-related code and scripts
-4. Catalog workflow patterns with descriptions
-5. Document workflow patterns with examples
-6. Analyze workflow patterns for improvement opportunities
-7. Create workflow pattern inventory
-8. Review and refine workflow pattern documentation
+1. Analyze requirements for document existing workflow patterns
+2. Design approach and plan
+3. Implement document existing workflow patterns
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Project structure and codebase access
-- Team knowledge and input (if applicable)
+- None
 
 **Blocks:**
-- E2:S1:T02: Define standard workflow templates (requires documented patterns)
-- E2:S1:T03: Create workflow execution guidelines (benefits from documented patterns)
-- E2:S1:T04: Document workflow integration points (benefits from documented patterns)
+- E2:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E2:S1:T02: Define standard workflow templates (uses documented patterns)
-- E2:S1:T03: Create workflow execution guidelines (uses documented patterns)
-- E2:S1:T04: Document workflow integration points (uses documented patterns)
+- [E02:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E2:S1: Workflow Definitions and Patterns (this story)
-- E2:S2: Workflow Automation (may use documented patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Document existing workflow patterns in the {PROJECT_NAME} project. Identify, ana
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

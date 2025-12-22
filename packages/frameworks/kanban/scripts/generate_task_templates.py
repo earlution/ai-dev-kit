@@ -143,6 +143,31 @@ class TaskTemplateGenerator:
         
         return True
     
+    def sanitize_filename(self, text: str) -> str:
+        """Sanitize text for use in filename - removes/replaces problematic characters."""
+        # Replace problematic characters with safe alternatives
+        text = text.replace('/', '-')
+        text = text.replace('\\', '-')
+        text = text.replace('(', '')
+        text = text.replace(')', '')
+        text = text.replace('[', '')
+        text = text.replace(']', '')
+        text = text.replace('{', '')
+        text = text.replace('}', '')
+        text = text.replace(':', '-')
+        text = text.replace(';', '-')
+        text = text.replace(',', '')
+        text = text.replace('.', '')
+        text = text.replace('?', '')
+        text = text.replace('!', '')
+        text = text.replace("'", '')
+        text = text.replace('"', '')
+        # Replace multiple spaces/hyphens with single hyphen
+        text = re.sub(r'[-\s]+', '-', text)
+        # Remove leading/trailing hyphens
+        text = text.strip('-')
+        return text
+    
     def kebab_case(self, text: str) -> str:
         """Convert text to kebab-case for filename."""
         # Remove special characters, convert to lowercase, replace spaces with hyphens
@@ -152,15 +177,18 @@ class TaskTemplateGenerator:
     
     def title_case(self, text: str) -> str:
         """Convert text to Title Case for filename."""
-        # Capitalize first letter of each word
-        words = text.split()
-        return ' '.join(word.capitalize() for word in words)
+        # First sanitize to remove problematic characters
+        text = self.sanitize_filename(text)
+        # Split by hyphens and capitalize each word
+        words = text.split('-')
+        return '-'.join(word.capitalize() for word in words if word)
     
     def get_task_file_path(self, epic: int, story: int, task_num: int, task_desc: str) -> Path:
         """Generate file path for task template."""
-        kebab_desc = self.kebab_case(task_desc)
-        title_desc = self.title_case(task_desc)
-        filename = f"T{task_num:02d}-{title_desc.replace(' ', '-')}.md"
+        # Sanitize and create filename-safe version
+        sanitized_desc = self.sanitize_filename(task_desc)
+        title_desc = self.title_case(sanitized_desc)
+        filename = f"T{task_num:02d}-{title_desc}.md"
         return self.output_dir / f"Epic-{epic}" / f"Story-{story}" / filename
     
     def generate_task_content(

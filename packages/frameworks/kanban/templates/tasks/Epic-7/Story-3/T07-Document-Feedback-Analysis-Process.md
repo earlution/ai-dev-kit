@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 3, Task 7: Document Feedback Analysis Process
+# Epic 7, Story 3, Task 7: Document feedback analysis process
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.7.3.7+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.3.7+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.3.7+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S3:T7`)
+**Format:** `E7:S3:T7` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S03:T07`
 
@@ -28,96 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document feedback analysis process for the {PROJECT_NAME} project. Create comprehensive documentation that captures the feedback collection and analysis processes, methods, and outcomes for team reference and process improvement.
+Document feedback analysis process for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Feedback collection methods (from E7:S3:T01)
-- Feedback collection channels (from E7:S3:T02)
-- Feedback collection tools (from E7:S3:T03)
-- Feedback analysis workflow (from E7:S3:T04)
-- Pattern and trend analysis (from E7:S3:T05)
-- Actionable insights (from E7:S3:T06)
-- Documentation requirements
-- ai-dev-kit UXR documentation practices (if adopting)
+- Requirements and specifications
+- document feedback analysis process requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Feedback analysis process documented
-- Process documentation created
-- Methods and procedures documented
-- Outcomes and findings documented
-- Process documentation
+- document feedback analysis process completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Feedback analysis process documented comprehensively
-- [ ] Process documentation created
-- [ ] Collection methods and procedures documented
-- [ ] Analysis workflow documented
-- [ ] Outcomes and findings documented
-- [ ] Documentation is accessible and clear
-- [ ] Documentation supports process improvement
-- [ ] Process documentation complete
+- [ ] Document feedback analysis process completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all feedback collection and analysis components
-2. Organize documentation structure
-3. Document feedback collection methods
-4. Document feedback collection channels and tools
-5. Document feedback analysis workflow
-6. Document pattern and trend analysis procedures
-7. Document actionable insights
-8. Document outcomes and findings
-9. Review and refine documentation
+1. Analyze requirements for document feedback analysis process
+2. Design approach and plan
+3. Implement document feedback analysis process
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S3:T01: Design user feedback collection methods (documentation references methods)
-- E7:S3:T02: Set up feedback collection channels (documentation references channels)
-- E7:S3:T03: Implement feedback collection tools (documentation references tools)
-- E7:S3:T04: Create feedback analysis workflow (documentation references workflow)
-- E7:S3:T05: Analyze feedback patterns and trends (documentation references analysis)
-- E7:S3:T06: Convert feedback into actionable insights (documentation includes insights)
+- E7:S3:T06
 
 **Blocks:**
-- None (documentation task)
+- E7:S3:T08
 
-**Parallel Development Candidacy:** Blocked (depends on all previous tasks)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S3:T01: Design user feedback collection methods (documentation references methods)
-- E7:S3:T02: Set up feedback collection channels (documentation references channels)
-- E7:S3:T03: Implement feedback collection tools (documentation references tools)
-- E7:S3:T04: Create feedback analysis workflow (documentation references workflow)
-- E7:S3:T05: Analyze feedback patterns and trends (documentation references analysis)
-- E7:S3:T06: Convert feedback into actionable insights (documentation includes insights)
+- [E07:S03:T07: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S3: User Feedback Collection and Analysis (this story)
-- E5:S04: Framework Documentation Management (process documentation may be framework documentation)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.3.7+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -126,3 +108,27 @@ Document feedback analysis process for the {PROJECT_NAME} project. Create compre
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

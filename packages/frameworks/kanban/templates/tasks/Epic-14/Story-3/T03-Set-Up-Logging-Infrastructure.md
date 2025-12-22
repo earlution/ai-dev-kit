@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 14, Story 3, Task 3: Set Up Logging Infrastructure
+# Epic 14, Story 3, Task 3: Set up logging infrastructure
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.14.3.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.14.3.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.14.3.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E14:S3:T3`)
+**Format:** `E14:S3:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E14:S03:T03`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up logging infrastructure for the {PROJECT_NAME} project. Configure logging systems that capture, aggregate, store, and search application logs across deployment environments, supporting debugging, auditing, and compliance requirements.
+Set up logging infrastructure for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Infrastructure setup (from E14:S2)
-- Deployment environments (from E14:S1:T02)
-- Logging requirements
-- Logging tool preferences
-- Log retention requirements
-- Compliance requirements
-- ai-dev-kit logging patterns (if adopting)
+- Requirements and specifications
+- set up logging infrastructure requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Logging infrastructure set up
-- Logging tools configured
-- Log capture configured
-- Log aggregation configured
-- Log storage configured
-- Log search and querying configured
+- set up logging infrastructure completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Logging infrastructure set up
-- [ ] Logging tools configured
-- [ ] Log capture configured
-- [ ] Log aggregation configured
-- [ ] Log storage configured
-- [ ] Log search and querying configured
-- [ ] Logging infrastructure is functional
+- [ ] Set up logging infrastructure completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review infrastructure setup and deployment environments
-2. Review logging requirements
-3. Select logging tools
-4. Configure logging tools
-5. Set up log capture
-6. Configure log aggregation
-7. Configure log storage
-8. Configure log search and querying
-9. Test logging infrastructure
-10. Document logging infrastructure configuration
+1. Analyze requirements for set up logging infrastructure
+2. Design approach and plan
+3. Implement set up logging infrastructure
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Infrastructure setup (from E14:S2)
-- Deployment environments (from E14:S1:T02 - optional, beneficial)
+- E14:S3:T02
 
 **Blocks:**
-- E14:S3:T05: Create monitoring dashboards (dashboards may display logging data)
+- E14:S3:T04
 
-**Parallel Development Candidacy:** Safe (can proceed independently after infrastructure)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E14:S3:T01: Set up application monitoring (logging complements monitoring)
-- E14:S3:T02: Configure error tracking (logging complements error tracking)
-- E14:S3:T05: Create monitoring dashboards (dashboards may display logging data)
+- [E14:S03:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E14:S3: Monitoring and Logging (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.14.3.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Set up logging infrastructure for the {PROJECT_NAME} project. Configure logging 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.8+3] - 22-12-25
+
+### Changed
+- UKW: Kanban documentation synchronization
+- E4:S06:T04 marked COMPLETE (all 378 task templates generated, validated, and sanitized)
+- E4:S15:T01 marked COMPLETE (task template coverage finalized)
+
+### Fixed
+- Filename sanitization in task template generator (handles special characters)
+- Removed 84 duplicate task template files
+- Cleaned up invalid directories created due to filename issues
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+3.md)
+
 ## [0.4.15.5+2] - 22-12-25
 
 🤖 Agentic Enhancement: E4:S15:T05+2 - Agentic Template Generator and Integration

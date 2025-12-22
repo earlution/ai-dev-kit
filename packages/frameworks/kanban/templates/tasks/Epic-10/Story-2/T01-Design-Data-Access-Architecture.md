@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 2, Task 1: Design Data Access Architecture
+# Epic 10, Story 2, Task 1: Design data access architecture
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.10.2.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.2.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.2.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S2:T1`)
+**Format:** `E10:S2:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S02:T01`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design data access architecture for the {PROJECT_NAME} project. Establish the architectural foundation for data access, including data access patterns, repository design, ORM/query builder integration, and data access layer organization.
+Design data access architecture for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Database schema (from E10:S1)
-- Data access requirements
-- Application architecture
-- ORM/query builder preferences
-- Performance requirements
-- Integration requirements
-- ai-dev-kit data access architecture (if adopting)
+- Requirements and specifications
+- design data access architecture requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Data access architecture designed
-- Architecture documentation
-- Data access pattern definitions
-- Repository pattern design
-- ORM/query builder integration strategy
-- Architecture specifications
+- design data access architecture completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Data access architecture designed and documented
-- [ ] Architecture supports data access requirements
-- [ ] Data access patterns defined
-- [ ] Repository pattern designed
-- [ ] ORM/query builder integration strategy defined
-- [ ] Architecture documentation complete
-- [ ] Architecture supports scalability and maintainability
+- [ ] Design data access architecture completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review database schema
-2. Review data access requirements
-3. Identify data access patterns needed
-4. Design data access architecture
-5. Design repository pattern structure
-6. Define ORM/query builder integration strategy
-7. Document data access architecture
-8. Review and refine architecture
+1. Analyze requirements for design data access architecture
+2. Design approach and plan
+3. Implement design data access architecture
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Database schema (from E10:S1 - optional, beneficial)
+- None
 
 **Blocks:**
-- E10:S2:T02: Implement repository pattern (repository pattern implements architecture)
-- E10:S2:T03: Create query builders/ORMs (query builders/ORMs implement architecture)
-- E10:S2:T04: Implement data validation (data validation implements architecture)
+- E10:S2:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, benefits from database schema)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S2:T02: Implement repository pattern (repository pattern implements architecture)
-- E10:S2:T03: Create query builders/ORMs (query builders/ORMs implement architecture)
-- E10:S2:T04: Implement data validation (data validation implements architecture)
-- E10:S2:T05: Add transaction management (transaction management implements architecture)
+- [E10:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S2: Data Access Layer (this story)
-- E10:S1: Database Schema Design (data access layer uses schema)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.2.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Design data access architecture for the {PROJECT_NAME} project. Establish the ar
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

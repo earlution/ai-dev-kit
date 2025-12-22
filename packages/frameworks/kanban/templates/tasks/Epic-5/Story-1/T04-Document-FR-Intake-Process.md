@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 1, Task 4: Document FR Intake Process
+# Epic 5, Story 1, Task 4: Document FR intake process
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.5.1.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.5.1.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.5.1.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E5:S1:T4`)
+**Format:** `E5:S1:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E05:S01:T04`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document FR (Feature Request) intake process for the {PROJECT_NAME} project. Create comprehensive documentation that explains how FRs are received, processed, and converted into tasks.
+Document FR intake process for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- FR intake workflow (from E5:S1:T01)
-- FR processing automation (from E5:S1:T02)
-- FR-Kanban integration (from E5:S1:T03)
-- Documentation requirements
+- Requirements and specifications
+- document fr intake process requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- FR intake process documentation
-- Process workflow guide
-- Automation usage guide
-- Integration usage guide
-- Troubleshooting guide
-- Best practices documentation
+- document fr intake process completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] FR intake process documentation created
-- [ ] Process workflow guide created
-- [ ] Automation usage guide created
-- [ ] Integration usage guide created
-- [ ] Troubleshooting guide created
-- [ ] Best practices documented
-- [ ] Documentation is clear and accessible
-- [ ] Documentation supports effective FR intake
+- [ ] Document FR intake process completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all FR intake components
-2. Identify documentation needs
-3. Create FR intake process documentation
-4. Create process workflow guide
-5. Create automation usage guide
-6. Create integration usage guide
-7. Create troubleshooting guide
-8. Document best practices
-9. Review and refine documentation
+1. Analyze requirements for document fr intake process
+2. Design approach and plan
+3. Implement document fr intake process
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E5:S1:T01: Design FR intake workflow (documentation covers workflow)
-- E5:S1:T02: Create FR processing automation (documentation covers automation)
-- E5:S1:T03: Integrate FR intake with Kanban (documentation covers integration)
+- E5:S1:T03
 
 **Blocks:**
-- None (documentation task)
+- E5:S1:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E5:S1:T01: Design FR intake workflow (documentation covers workflow)
-- E5:S1:T02: Create FR processing automation (documentation covers automation)
-- E5:S1:T03: Integrate FR intake with Kanban (documentation covers integration)
+- [E05:S01:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E5:S1: FR Intake and Processing Workflow (this story)
-- E4:S1: Kanban Board Setup (documentation may reference Kanban setup)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.5.1.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Document FR (Feature Request) intake process for the {PROJECT_NAME} project. Cre
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 3, Task 6: Convert Feedback Into Actionable Insights
+# Epic 7, Story 3, Task 6: Convert feedback into actionable insights
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.3.6+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.3.6+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.3.6+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S3:T6`)
+**Format:** `E7:S3:T6` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S03:T06`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Convert feedback into actionable insights for the {PROJECT_NAME} project. Synthesize feedback patterns, trends, and analysis findings into actionable insights that guide product improvements and decision-making.
+Convert feedback into actionable insights for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Feedback patterns (from E7:S3:T05)
-- Feedback trends (from E7:S3:T05)
-- Feedback analysis findings
-- Product context and priorities
-- Insight development framework
-- ai-dev-kit UXR insight practices (if adopting)
+- Requirements and specifications
+- convert feedback into actionable insights requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Actionable insights developed
-- Insight documentation
-- Insight prioritization
-- Insight implementation recommendations
-- Insights summary
+- convert feedback into actionable insights completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Actionable insights developed from feedback
-- [ ] Insights are specific and actionable
-- [ ] Insight documentation created
-- [ ] Insights prioritized by impact and feasibility
-- [ ] Insight implementation recommendations provided
-- [ ] Insights support product improvements
-- [ ] Insights summary created
-- [ ] Insights are communicated effectively
+- [ ] Convert feedback into actionable insights completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review feedback patterns and trends
-2. Review feedback analysis findings
-3. Synthesize feedback into insights
-4. Develop actionable insights
-5. Prioritize insights by impact and feasibility
-6. Create insight implementation recommendations
-7. Document insights
-8. Create insights summary
-9. Review and refine insights
+1. Analyze requirements for convert feedback into actionable insights
+2. Design approach and plan
+3. Implement convert feedback into actionable insights
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S3:T04: Create feedback analysis workflow (insights use workflow-processed feedback)
-- E7:S3:T05: Analyze feedback patterns and trends (insights use pattern/trend analysis)
+- E7:S3:T05
 
 **Blocks:**
-- E7:S3:T07: Document feedback analysis process (documentation includes insights)
-- E7:S5: UX Insights and Recommendations (insights inform recommendations)
+- E7:S3:T07
 
-**Parallel Development Candidacy:** Blocked (depends on T04 and T05)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S3:T04: Create feedback analysis workflow (insights use workflow-processed feedback)
-- E7:S3:T05: Analyze feedback patterns and trends (insights use pattern/trend analysis)
-- E7:S3:T07: Document feedback analysis process (documentation includes insights)
+- [E07:S03:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S3: User Feedback Collection and Analysis (this story)
-- E7:S5: UX Insights and Recommendations (insights inform recommendations)
-- E5:S1: FR Intake and Processing Workflow (insights may become Feature Requests)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.3.6+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Convert feedback into actionable insights for the {PROJECT_NAME} project. Synthe
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

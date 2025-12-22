@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 3, Task 3: Implement Feedback Collection Tools
+# Epic 7, Story 3, Task 3: Implement feedback collection tools
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.3.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.3.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.3.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S3:T3`)
+**Format:** `E7:S3:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S03:T03`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement feedback collection tools for the {PROJECT_NAME} project. Develop or integrate tools that enable users to provide feedback through established channels and facilitate feedback collection.
+Implement feedback collection tools for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Feedback collection methods (from E7:S3:T01)
-- Feedback collection channels (from E7:S3:T02)
-- Tool requirements and specifications
-- Technical infrastructure and capabilities
-- Integration requirements
-- ai-dev-kit UXR tool implementation practices (if adopting)
+- Requirements and specifications
+- implement feedback collection tools requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Feedback collection tools implemented
-- In-app feedback tools
-- Survey tools integrated
-- Support integration tools (if applicable)
-- Tool implementation documentation
-- Tools tested and validated
+- implement feedback collection tools completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Feedback collection tools implemented
-- [ ] In-app feedback tools functional
-- [ ] Survey tools integrated and functional
-- [ ] Support integration tools implemented (if applicable)
-- [ ] Tools integrate with feedback collection channels
-- [ ] Tools align with feedback collection methods
-- [ ] Tool implementation documented
-- [ ] Tools tested and validated
+- [ ] Implement feedback collection tools completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review feedback collection methods and channels
-2. Review tool requirements and specifications
-3. Identify required feedback collection tools
-4. Implement in-app feedback tools
-5. Integrate survey tools
-6. Implement support integration tools (if applicable)
-7. Integrate tools with feedback channels
-8. Test tool functionality
-9. Document tool implementation
-10. Review and refine tool implementation
+1. Analyze requirements for implement feedback collection tools
+2. Design approach and plan
+3. Implement implement feedback collection tools
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S3:T01: Design user feedback collection methods (tools implement methods)
-- E7:S3:T02: Set up feedback collection channels (tools integrate with channels)
+- E7:S3:T02
 
 **Blocks:**
-- E7:S3:T04: Create feedback analysis workflow (workflow processes tool-collected feedback)
-- E7:S3:T05: Analyze feedback patterns and trends (analysis uses tool-collected feedback)
+- E7:S3:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S3:T01: Design user feedback collection methods (tools implement methods)
-- E7:S3:T02: Set up feedback collection channels (tools integrate with channels)
-- E7:S3:T04: Create feedback analysis workflow (workflow processes tool-collected feedback)
+- [E07:S03:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S3: User Feedback Collection and Analysis (this story)
-- E8:S01: Code Generators (feedback tools may use generators)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.3.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Implement feedback collection tools for the {PROJECT_NAME} project. Develop or i
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

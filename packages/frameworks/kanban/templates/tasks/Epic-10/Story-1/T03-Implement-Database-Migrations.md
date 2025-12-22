@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 1, Task 3: Implement Database Migrations
+# Epic 10, Story 1, Task 3: Implement database migrations
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.10.1.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.1.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.1.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S1:T3`)
+**Format:** `E10:S1:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S01:T03`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement database migrations for the {PROJECT_NAME} project. Create migration scripts that implement the database schema, enabling version-controlled, repeatable database setup and schema changes.
+Implement database migrations for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Database schema design (from E10:S1:T01)
-- Migration framework and tools
-- Database system and capabilities
-- Migration requirements
-- Version control requirements
-- ai-dev-kit migration patterns (if adopting)
+- Requirements and specifications
+- implement database migrations requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Database migrations implemented
-- Migration scripts created
-- Initial schema migration
-- Migration framework configured
-- Migration documentation
+- implement database migrations completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Database migrations implemented
-- [ ] Migration scripts created
-- [ ] Initial schema migration created
-- [ ] Migration framework configured
-- [ ] Migrations are version-controlled
-- [ ] Migrations are repeatable and testable
-- [ ] Migration documentation created
-- [ ] Migrations are functional
+- [ ] Implement database migrations completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review database schema design
-2. Select migration framework and tools
-3. Configure migration framework
-4. Create initial schema migration
-5. Implement migration scripts
-6. Test migrations
-7. Document migration process
-8. Review and refine migrations
+1. Analyze requirements for implement database migrations
+2. Design approach and plan
+3. Implement implement database migrations
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S1:T01: Design database schema (migrations implement schema)
+- E10:S1:T02
 
 **Blocks:**
-- E10:S1:T04: Set up database indexes (indexes may be added via migrations)
-- E10:S1:T05: Define database constraints (constraints may be added via migrations)
-- E10:S1:T06: Create seed data scripts (seed scripts run after migrations)
-- E10:S2: Data Access Layer (data access layer uses migrated schema)
+- E10:S1:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S1:T01: Design database schema (migrations implement schema)
-- E10:S1:T04: Set up database indexes (indexes may be added via migrations)
-- E10:S1:T05: Define database constraints (constraints may be added via migrations)
-- E10:S1:T06: Create seed data scripts (seed scripts run after migrations)
+- [E10:S01:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S1: Database Schema Design (this story)
-- E10:S2: Data Access Layer (data access layer uses migrated schema)
-- E10:S3: Data Migration and Seeding (migrations are part of migration process)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.1.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Implement database migrations for the {PROJECT_NAME} project. Create migration s
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

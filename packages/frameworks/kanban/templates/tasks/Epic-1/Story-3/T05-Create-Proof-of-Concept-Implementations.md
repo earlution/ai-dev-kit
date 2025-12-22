@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 3, Task 5: Create Proof-of-Concept Implementations
+# Epic 1, Story 3, Task 5: Create proof-of-concept implementations
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.1.3.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.3.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.3.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S3:T5`)
+**Format:** `E1:S3:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S03:T05`
 
@@ -28,93 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create proof-of-concept implementations for the {PROJECT_NAME} project. Develop working prototypes that demonstrate key concepts, validate technical approaches, and provide learning opportunities for the project team.
+Create proof-of-concept implementations for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project requirements and technical challenges
-- MVP features (from E1:S3:T01)
-- Domain models and entities (from E1:S3:T02)
-- Business logic (from E1:S3:T03)
-- Data structures (from E1:S3:T04)
-- Architecture patterns (from E1:S2:T01)
-- Technical risks or unknowns to validate
+- Requirements and specifications
+- create proof-of-concept implementations requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Proof-of-concept implementations created
-- Technical approaches validated
-- Proof-of-concept documentation
-- Lessons learned documented
-- Proof-of-concept demonstrations
-- Recommendations for production implementation
+- create proof-of-concept implementations completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Proof-of-concept implementations created for key technical challenges
-- [ ] Technical approaches validated through proof-of-concept
-- [ ] Proof-of-concept implementations demonstrate feasibility
-- [ ] Proof-of-concept documentation created
-- [ ] Lessons learned documented
-- [ ] Proof-of-concept demonstrations prepared
-- [ ] Recommendations for production implementation provided
-- [ ] Proof-of-concept informs production design decisions
+- [ ] Create proof-of-concept implementations completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Identify technical challenges or unknowns requiring validation
-2. Design proof-of-concept implementations
-3. Implement proof-of-concept prototypes
-4. Test and validate proof-of-concept implementations
-5. Document proof-of-concept results and findings
-6. Document lessons learned
-7. Create proof-of-concept demonstrations
-8. Provide recommendations for production implementation
-9. Review and refine proof-of-concept findings
+1. Analyze requirements for create proof-of-concept implementations
+2. Design approach and plan
+3. Implement create proof-of-concept implementations
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2: Core Infrastructure (proof-of-concept may use infrastructure)
-- E1:S3:T01: Implement minimum viable product (MVP) features (proof-of-concept may build on MVP)
-- E1:S3:T02: Create core domain models and entities (proof-of-concept may use domain models)
-- E1:S3:T03: Implement basic business logic (proof-of-concept may use business logic)
-- E1:S3:T04: Set up initial data structures (proof-of-concept may use data structures)
+- E1:S3:T04
 
 **Blocks:**
-- Future production implementations (proof-of-concept informs production design)
+- E1:S3:T06
 
-**Parallel Development Candidacy:** Safe (can proceed after E1:S3:T01-T04, or in parallel with some tasks)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S3:T01: Implement minimum viable product (MVP) features (proof-of-concept may build on MVP)
-- E1:S3:T02: Create core domain models and entities (proof-of-concept may use domain models)
-- E1:S3:T03: Implement basic business logic (proof-of-concept may use business logic)
-- E1:S3:T04: Set up initial data structures (proof-of-concept may use data structures)
+- [E01:S03:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S3: Initial Feature Set (this story)
-- E1:S2: Core Infrastructure (proof-of-concept may use infrastructure)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.3.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -123,3 +108,27 @@ Create proof-of-concept implementations for the {PROJECT_NAME} project. Develop 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

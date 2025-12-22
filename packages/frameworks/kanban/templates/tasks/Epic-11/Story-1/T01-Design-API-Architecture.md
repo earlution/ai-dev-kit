@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 11, Story 1, Task 1: Design API Architecture
+# Epic 11, Story 1, Task 1: Design API architecture
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.11.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.11.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.11.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E11:S1:T1`)
+**Format:** `E11:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E11:S01:T01`
 
@@ -28,92 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design API architecture for the {PROJECT_NAME} project. Establish the architectural foundation for the API, including API patterns, resource design, endpoint structure, request/response formats, and integration with application services.
+Design API architecture for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Application requirements
-- API requirements
-- Integration requirements
-- API design standards and best practices
-- Security requirements
-- Performance requirements
-- ai-dev-kit API architecture (if adopting)
+- Requirements and specifications
+- design api architecture requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- API architecture designed
-- Architecture documentation
-- API patterns defined
-- Resource design
-- Endpoint structure defined
-- Request/response format specifications
-- Architecture specifications
+- design api architecture completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] API architecture designed and documented
-- [ ] Architecture supports API requirements
-- [ ] API patterns defined
-- [ ] Resource design established
-- [ ] Endpoint structure defined
-- [ ] Request/response formats specified
-- [ ] Architecture documentation complete
-- [ ] Architecture supports scalability and maintainability
+- [ ] Design API architecture completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review application and API requirements
-2. Review integration requirements
-3. Identify API patterns needed
-4. Design API architecture
-5. Design resource structure
-6. Define endpoint structure
-7. Define request/response formats
-8. Document API architecture
-9. Review and refine architecture
+1. Analyze requirements for design api architecture
+2. Design approach and plan
+3. Implement design api architecture
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Application requirements
-- API requirements
+- None
 
 **Blocks:**
-- E11:S1:T02: Define API endpoints (endpoints implement architecture)
-- E11:S2: API Implementation (implementation uses architecture)
+- E11:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, foundational task)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E11:S1:T02: Define API endpoints (endpoints implement architecture)
-- E11:S1:T03: Design request/response models (models implement architecture)
-- E11:S2: API Implementation (implementation uses architecture)
+- [E11:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E11:S1: API Design and Architecture (this story)
-- E11:S2: API Implementation (implementation uses architecture)
-- E11:S3: API Documentation and Testing (documentation describes architecture)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.11.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -122,3 +108,27 @@ Design API architecture for the {PROJECT_NAME} project. Establish the architectu
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -594,11 +594,91 @@ housekeeping_policy: keep
         stories: Dict,
         template: str
     ) -> str:
-        """Procedural fallback for Epic generation."""
+        """Procedural fallback for Epic generation with rich content."""
         content = template
+        
+        # Replace basic placeholders
         content = content.replace("Epic X", f"Epic {epic_num}")
         content = content.replace("[Title]", epic_name)
         content = content.replace("EXX", f"E{epic_num:02d}")
+        
+        # Generate Overview from epic name and purpose
+        # Clean epic name - preserve {PROJECT_NAME} placeholder but normalize
+        epic_name_clean = epic_name.replace("{project_name}", "{PROJECT_NAME}")
+        epic_name_lower = epic_name_clean.lower().replace("{project_name}", "{PROJECT_NAME}")
+        overview = f"This epic encompasses {epic_name_lower} for the {{PROJECT_NAME}} project. "
+        overview += f"It provides the foundational structure and capabilities needed to support "
+        overview += f"the project's core objectives and enables other epics to build upon this foundation."
+        
+        content = re.sub(
+            r'\[One paragraph\. The epic\'s purpose, scope, and motivation\.\]',
+            overview,
+            content
+        )
+        
+        # Generate Goals (3-5 goals based on epic purpose)
+        # Preserve {PROJECT_NAME} placeholder while lowercasing rest
+        epic_name_clean = epic_name.replace("{project_name}", "{PROJECT_NAME}")
+        epic_name_for_goals = epic_name_clean.replace("{PROJECT_NAME}", "{PROJECT_NAME_PLACEHOLDER}")
+        epic_name_lower = epic_name_for_goals.lower().replace("{project_name_placeholder}", "{PROJECT_NAME}")
+        goals = [
+            f"Establish {epic_name_lower} infrastructure and foundational components",
+            f"Define and implement core {epic_name_lower} patterns and standards",
+            f"Create reusable {epic_name_lower} components and utilities",
+            f"Document {epic_name_lower} architecture and best practices",
+            f"Enable integration with other project epics and systems"
+        ]
+        goals_text = "\n".join([f"{i+1}. {goal}" for i, goal in enumerate(goals[:5])])
+        
+        content = re.sub(
+            r'1\. Goal headline with brief description\n2\. Goal headline with brief description\n3\. Goal headline with brief description',
+            goals_text,
+            content
+        )
+        
+        # Generate Story Checklist entries
+        story_checklist = []
+        for story_num, story_data in sorted(stories.items()):
+            story_name = story_data.get('name', f'Story {story_num}')
+            story_checklist.append(f"- [ ] **E{epic_num:02d}:S{story_num:02d} – {story_name}** - TODO")
+        
+        if story_checklist:
+            # Find and replace Story Checklist section
+            checklist_pattern = r'(- \[ \] \*\*EXX:S\d+.*?\n)+'
+            if re.search(checklist_pattern, content):
+                content = re.sub(
+                    checklist_pattern,
+                    '\n'.join(story_checklist) + '\n',
+                    content
+                )
+            else:
+                # Try alternative pattern
+                content = re.sub(
+                    r'- \[ \] \*\*EXX:S01.*?\n- \[ \] \*\*EXX:S02.*?\n- \[ \] \*\*EXX:S03.*?\n',
+                    '\n'.join(story_checklist) + '\n',
+                    content
+                )
+        
+        # Generate Story summaries
+        story_summaries = []
+        for story_num, story_data in sorted(stories.items()):
+            story_name = story_data.get('name', f'Story {story_num}')
+            summary_text = f"{story_name.lower()} for the {{PROJECT_NAME}} project, establishing the necessary components and processes to support the epic's objectives."
+            summary = f"### Story {story_num}: {story_name}\n\n**Brief Summary:** {summary_text}\n\n**Story Document:** [`Story-{story_num:03d}-{self._slugify(story_name)}.md`](Story-{story_num:03d}-{self._slugify(story_name)}.md)\n"
+            story_summaries.append(summary)
+        
+        # Add story summaries if Stories section exists
+        if "## Stories" in content and story_summaries:
+            stories_section_pattern = r'(## Stories.*?)(### Story Y:.*?---)'
+            if re.search(stories_section_pattern, content, re.DOTALL):
+                stories_content = '\n'.join(story_summaries) + '\n---\n'
+                content = re.sub(
+                    stories_section_pattern,
+                    r'\1' + stories_content,
+                    content,
+                    flags=re.DOTALL
+                )
+        
         return content
     
     def _generate_story_content_procedural(
@@ -609,12 +689,85 @@ housekeeping_policy: keep
         tasks: Dict,
         template: str
     ) -> str:
-        """Procedural fallback for Story generation."""
+        """Procedural fallback for Story generation with rich content."""
         content = template
+        
+        # Replace basic placeholders
         content = content.replace("Epic X, Story Y", f"Epic {epic_num}, Story {story_num}")
         content = content.replace("[Title]", story_name)
         content = content.replace("EXX", f"E{epic_num:02d}")
         content = content.replace("SYY", f"S{story_num:02d}")
+        content = content.replace("EXXSYY", f"E{epic_num:02d}S{story_num:02d}")
+        
+        # Generate Overview
+        overview = f"Establish {story_name.lower()} for the {{PROJECT_NAME}} project, "
+        overview += f"providing the necessary components and capabilities to support "
+        overview += f"the epic's objectives."
+        
+        content = re.sub(
+            r'\[One sentence\. What this story accomplishes\.\]',
+            overview,
+            content
+        )
+        
+        # Generate Goals (3-5 goals)
+        goals = [
+            f"Complete {story_name.lower()} implementation",
+            f"Ensure {story_name.lower()} meets quality standards",
+            f"Document {story_name.lower()} for maintainability",
+            f"Integrate {story_name.lower()} with existing systems"
+        ]
+        goals_text = "\n".join([f"- [ ] {goal}" for goal in goals[:5]])
+        
+        content = re.sub(
+            r'- \[ \] Goal one\n- \[ \] Goal two\n- \[ \] Goal three',
+            goals_text,
+            content
+        )
+        
+        # Generate Task Checklist
+        task_checklist = []
+        for task_num, task_data in sorted(tasks.items()):
+            task_desc = task_data.get('description', f'Task {task_num}')
+            task_checklist.append(f"- [ ] **E{epic_num:02d}:S{story_num:02d}:T{task_num:02d} – {task_desc}**")
+        
+        if task_checklist:
+            # Replace Task Checklist
+            checklist_pattern = r'(- \[ \] \*\*EXX:SYY:T\d+.*?\n)+'
+            if re.search(checklist_pattern, content):
+                content = re.sub(
+                    checklist_pattern,
+                    '\n'.join(task_checklist) + '\n',
+                    content
+                )
+            else:
+                # Try alternative pattern
+                content = re.sub(
+                    r'- \[ \] \*\*EXX:SYY:T01.*?\n- \[ \] \*\*EXX:SYY:T02.*?\n- \[ \] \*\*EXX:SYY:T03.*?\n',
+                    '\n'.join(task_checklist) + '\n',
+                    content
+                )
+        
+        # Generate task summaries in Tasks section
+        task_summaries = []
+        for task_num, task_data in sorted(tasks.items()):
+            task_desc = task_data.get('description', f'Task {task_num}')
+            task_summary = f"**E{epic_num:02d}:S{story_num:02d}:T{task_num:02d} – {task_desc}**\n\n**Brief Summary:** {task_desc.lower()} for the {{PROJECT_NAME}} project.\n"
+            task_summaries.append(task_summary)
+        
+        # Replace task summary placeholders in example sections
+        # This is in the template example, so we'll replace it with actual task summaries
+        for task_num, task_data in sorted(tasks.items()):
+            task_desc = task_data.get('description', f'Task {task_num}')
+            task_summary_text = f"{task_desc.lower()} for the {{PROJECT_NAME}} project."
+            # Replace in example section
+            content = re.sub(
+                r'\*\*Brief Summary:\*\* \[One sentence description of what this task accomplishes\]',
+                f"**Brief Summary:** {task_summary_text}",
+                content,
+                count=1  # Only replace first occurrence (the example)
+            )
+        
         return content
     
     def _generate_task_content_procedural(
@@ -625,13 +778,88 @@ housekeeping_policy: keep
         task_desc: str,
         template: str
     ) -> str:
-        """Procedural fallback for Task generation."""
+        """Procedural fallback for Task generation with rich content."""
         content = template
+        
+        # Replace basic placeholders
         content = content.replace("Epic X, Story Y, Task Z", f"Epic {epic_num}, Story {story_num}, Task {task_num}")
         content = content.replace("[Task Title]", task_desc)
         content = content.replace("EXX", f"E{epic_num:02d}")
         content = content.replace("SYY", f"S{story_num:02d}")
         content = content.replace("TZZ", f"T{task_num:02d}")
+        content = content.replace("EXXSYYTZZ", f"E{epic_num:02d}S{story_num:02d}T{task_num:02d}")
+        
+        # Generate Scope
+        scope = f"{task_desc} for the {{PROJECT_NAME}} project. "
+        scope += f"This task establishes the necessary components and processes to support "
+        scope += f"the story's objectives and enables subsequent work."
+        
+        content = re.sub(
+            r'\[Clear description of what this task accomplishes\. What problem does it solve\? What value does it deliver\?\]',
+            scope,
+            content
+        )
+        
+        # Generate Input
+        input_content = f"- Project requirements and specifications\n- {task_desc.lower()} requirements\n- {{PROJECT_NAME}} project context and constraints\n- Related documentation and reference materials"
+        
+        content = re.sub(
+            r'\[What is required to start this task\? Dependencies, prerequisites, inputs from other tasks or external sources\.\]',
+            input_content,
+            content
+        )
+        
+        # Generate Deliverable
+        deliverable = f"- {task_desc.lower()} completed and verified\n- Documentation and artifacts created\n- Integration with existing systems verified\n- Quality checks and validation completed"
+        
+        content = re.sub(
+            r'\[What is produced by this task\? Specific artifacts, documents, code, or outcomes\.\]',
+            deliverable,
+            content
+        )
+        
+        # Generate Acceptance Criteria (3-5 criteria)
+        criteria = [
+            f"{task_desc} completed successfully",
+            f"Documentation and artifacts created and reviewed",
+            f"Integration with existing systems verified",
+            f"Quality standards met and validated",
+            f"Stakeholder approval obtained (if required)"
+        ]
+        criteria_text = "\n".join([f"- [ ] {c} (measurable, testable)" for c in criteria[:5]])
+        
+        content = re.sub(
+            r'- \[ \] Criterion one \(measurable, testable\)\n- \[ \] Criterion two \(measurable, testable\)\n- \[ \] Criterion three \(measurable, testable\)',
+            criteria_text,
+            content
+        )
+        
+        # Generate Approach (5-7 steps)
+        approach_steps = [
+            f"Review requirements and specifications for {task_desc.lower()}",
+            f"Design and plan the implementation approach",
+            f"Implement {task_desc.lower()} components",
+            f"Test and validate the implementation",
+            f"Document the implementation and usage",
+            f"Review and refine based on feedback",
+            f"Finalize and prepare for integration"
+        ]
+        approach_text = "\n".join([f"{i+1}. {step}" for i, step in enumerate(approach_steps[:7])])
+        
+        content = re.sub(
+            r'1\. Step one\n2\. Step two\n3\. Step three',
+            approach_text,
+            content
+        )
+        
+        # Update created_at timestamp
+        current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+        content = re.sub(
+            r'created_at: YYYY-MM-DDTHH:MM:SSZ',
+            f'created_at: {current_time}',
+            content
+        )
+        
         return content
     
     def _slugify(self, text: str) -> str:

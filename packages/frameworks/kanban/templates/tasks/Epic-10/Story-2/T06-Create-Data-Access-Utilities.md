@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 2, Task 6: Create Data Access Utilities
+# Epic 10, Story 2, Task 6: Create data access utilities
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.10.2.6+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.2.6+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.2.6+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S2:T6`)
+**Format:** `E10:S2:T6` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S02:T06`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create data access utilities for the {PROJECT_NAME} project. Develop utility functions and helpers that support common data access operations, query building, data transformation, and other data access layer functionality.
+Create data access utilities for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Repository pattern (from E10:S2:T02)
-- Query builders/ORMs (from E10:S2:T03)
-- Data validation (from E10:S2:T04)
-- Transaction management (from E10:S2:T05)
-- Utility function requirements
-- ai-dev-kit data access utility patterns (if adopting)
+- Requirements and specifications
+- create data access utilities requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Data access utilities created
-- Query building utilities
-- Data transformation utilities
-- Utility functions for common operations
-- Utility documentation
+- create data access utilities completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Data access utilities created
-- [ ] Query building utilities implemented
-- [ ] Data transformation utilities implemented
-- [ ] Utility functions for common operations created
-- [ ] Utilities integrate with data access layer
-- [ ] Utilities are convenient and reusable
-- [ ] Utility documentation created
-- [ ] Data access utilities are tested and functional
+- [ ] Create data access utilities completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review data access layer implementations
-2. Identify utility function requirements
-3. Design data access utilities
-4. Implement query building utilities
-5. Implement data transformation utilities
-6. Create utility functions for common operations
-7. Document utilities
-8. Test utility functions
-9. Review and refine utilities
+1. Analyze requirements for create data access utilities
+2. Design approach and plan
+3. Implement create data access utilities
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S2:T02: Implement repository pattern (utilities may use repository pattern)
-- E10:S2:T03: Create query builders/ORMs (utilities may use query builders/ORMs)
+- E10:S2:T05
 
 **Blocks:**
-- None (utility functions support other features)
+- E10:S2:T07
 
-**Parallel Development Candidacy:** Blocked (depends on T02 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S2:T02: Implement repository pattern (utilities may use repository pattern)
-- E10:S2:T03: Create query builders/ORMs (utilities may use query builders/ORMs)
-- E10:S2:T04: Implement data validation (utilities may support validation)
-- E10:S2:T05: Add transaction management (utilities may support transactions)
+- [E10:S02:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S2: Data Access Layer (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.2.6+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Create data access utilities for the {PROJECT_NAME} project. Develop utility fun
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

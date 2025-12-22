@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 3, Story 2, Task 3: Set Up Changelog Generation
+# Epic 3, Story 2, Task 3: Set up changelog generation
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.3.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.3.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.3.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E3:S2:T3`)
+**Format:** `E3:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E03:S02:T03`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up changelog generation for the {PROJECT_NAME} project. Create automated tools and processes that generate changelog entries based on version information and project changes.
+Set up changelog generation for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Versioning policy (from E3:S1:T01)
-- Versioning schema (from E3:S1:T02)
-- Changelog format requirements
-- Changelog generation requirements
-- ai-dev-kit changelog generation (if adopting)
-- Git history and commit messages (if applicable)
+- Requirements and specifications
+- set up changelog generation requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Changelog generation automation
-- Changelog format configuration
-- Changelog generation documentation
-- Changelog generation examples
-- Changelog validation (if applicable)
+- set up changelog generation completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Changelog generation automation created
-- [ ] Changelog format configured
-- [ ] Changelog generation follows versioning policy
-- [ ] Changelog generation documentation created
-- [ ] Changelog generation examples provided
-- [ ] Changelog validation implemented (if applicable)
-- [ ] Automation is reliable and maintainable
-- [ ] Changelog entries are accurate and complete
+- [ ] Set up changelog generation completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review versioning policy and schema
-2. Define changelog format requirements
-3. Design changelog generation structure
-4. Implement changelog generation automation
-5. Configure changelog format
-6. Add changelog validation (if applicable)
-7. Write changelog generation documentation
-8. Create changelog generation examples
-9. Test and validate automation
-10. Review and refine automation
+1. Analyze requirements for set up changelog generation
+2. Design approach and plan
+3. Implement set up changelog generation
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E3:S1:T01: Define versioning policy (changelog uses versioning policy)
-- E3:S1:T02: Design versioning schema (changelog uses versioning schema)
-- E3:S2:T02: Create version bump automation (changelog may use bumped versions)
+- E3:S2:T02
 
 **Blocks:**
-- E3:S2:T04: Document version management process (process includes changelog generation)
+- E3:S2:T04
 
-**Parallel Development Candidacy:** Blocked (depends on E3:S1 tasks and ideally T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E3:S2:T01: Integrate versioning with release workflow (workflow may use changelog)
-- E3:S2:T02: Create version bump automation (changelog may use bumped versions)
-- E3:S2:T04: Document version management process (process includes changelog generation)
+- [E03:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E3:S2: Version Management Integration (this story)
-- E3:S1: Versioning Policy and Schema (changelog uses policy and schema)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.3.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Set up changelog generation for the {PROJECT_NAME} project. Create automated too
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

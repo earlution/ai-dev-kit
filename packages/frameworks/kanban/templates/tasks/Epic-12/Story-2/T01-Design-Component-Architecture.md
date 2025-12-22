@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 12, Story 2, Task 1: Design Component Architecture
+# Epic 12, Story 2, Task 1: Design component architecture
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.12.2.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.12.2.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.12.2.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E12:S2:T1`)
+**Format:** `E12:S2:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E12:S02:T01`
 
@@ -28,91 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design component architecture for the {PROJECT_NAME} project. Establish the architectural foundation for UI components, including component patterns, composition strategies, state management, and component organization.
+Design component architecture for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- UI framework (from E12:S1:T01)
-- Component library structure (from E12:S1:T03)
-- Styling system (from E12:S1:T04)
-- Component requirements
-- Design system requirements
-- ai-dev-kit component architecture (if adopting)
+- Requirements and specifications
+- design component architecture requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Component architecture designed
-- Architecture documentation
-- Component patterns defined
-- Composition strategies defined
-- State management approach defined
-- Component organization structure
+- design component architecture completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Component architecture designed and documented
-- [ ] Architecture supports component requirements
-- [ ] Component patterns defined
-- [ ] Composition strategies defined
-- [ ] State management approach defined
-- [ ] Component organization structure established
-- [ ] Architecture documentation complete
-- [ ] Architecture supports scalability and maintainability
+- [ ] Design component architecture completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review UI framework, component library structure, and styling system
-2. Review component and design system requirements
-3. Identify component patterns needed
-4. Design component architecture
-5. Define component patterns
-6. Define composition strategies
-7. Define state management approach
-8. Document component architecture
-9. Review and refine architecture
+1. Analyze requirements for design component architecture
+2. Design approach and plan
+3. Implement design component architecture
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- UI framework (from E12:S1:T01)
-- Component library structure (from E12:S1:T03)
-- Styling system (from E12:S1:T04 - optional, beneficial)
+- None
 
 **Blocks:**
-- E12:S2:T02: Implement base components (base components implement architecture)
-- E12:S2:T03: Create layout components (layout components implement architecture)
-- E12:S2:T04: Build form components (form components implement architecture)
+- E12:S2:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, foundational task)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E12:S2:T02: Implement base components (base components implement architecture)
-- E12:S2:T03: Create layout components (layout components implement architecture)
-- E12:S2:T04: Build form components (form components implement architecture)
+- [E12:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E12:S2: Core UI Components (this story)
-- E12:S1: UI Framework Setup (component architecture uses framework setup)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.12.2.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -121,3 +108,27 @@ Design component architecture for the {PROJECT_NAME} project. Establish the arch
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

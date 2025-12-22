@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 2, Task 6: Implement Base Classes and Interfaces
+# Epic 1, Story 2, Task 6: Implement base classes and interfaces
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.1.2.6+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.2.6+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.2.6+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S2:T6`)
+**Format:** `E1:S2:T6` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S02:T06`
 
@@ -28,93 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement base classes and interfaces for the {PROJECT_NAME} project. Establish foundational base classes and interfaces that provide common functionality and ensure consistency across the project's implementation.
+Implement base classes and interfaces for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Architecture patterns (from E1:S2:T01)
-- Configuration system (from E1:S2:T02)
-- Logging and error handling (from E1:S2:T03)
-- Dependency injection (from E1:S2:T05)
-- Base class and interface requirements
-- Team preferences and conventions (if applicable)
-- ai-dev-kit base class patterns (if adopting)
+- Requirements and specifications
+- implement base classes and interfaces requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Base classes implemented
-- Interfaces defined and implemented
-- Base class documentation
-- Interface documentation
-- Example implementations using base classes
-- Base class and interface usage guidelines
+- implement base classes and interfaces completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Base classes implemented for common functionality
-- [ ] Interfaces defined for key abstractions
-- [ ] Base classes provide common functionality (logging, error handling, etc.)
-- [ ] Interfaces enforce contracts and abstractions
-- [ ] Base class documentation created
-- [ ] Interface documentation created
-- [ ] Example implementations provided
-- [ ] Base classes and interfaces follow architecture patterns
-- [ ] Base classes and interfaces support project consistency
+- [ ] Implement base classes and interfaces completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Identify base class and interface needs
-2. Design base class hierarchy
-3. Design interface contracts
-4. Implement base classes with common functionality
-5. Implement interfaces for key abstractions
-6. Integrate base classes with logging, error handling, DI
-7. Create base class and interface documentation
-8. Provide example implementations
-9. Review and refine base classes and interfaces
+1. Analyze requirements for implement base classes and interfaces
+2. Design approach and plan
+3. Implement implement base classes and interfaces
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2:T01: Design and implement core architecture patterns (base classes use architecture patterns)
-- E1:S2:T02: Set up configuration management system (base classes may use configuration)
-- E1:S2:T03: Implement logging and error handling infrastructure (base classes may use logging)
-- E1:S2:T05: Set up dependency injection or service container (base classes may use DI)
+- E1:S2:T05
 
 **Blocks:**
-- E1:S3: Initial Feature Set (features will use base classes and interfaces)
+- E1:S2:T07
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03, T05)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S2:T01: Design and implement core architecture patterns (base classes use architecture patterns)
-- E1:S2:T02: Set up configuration management system (base classes may use configuration)
-- E1:S2:T03: Implement logging and error handling infrastructure (base classes may use logging)
-- E1:S2:T05: Set up dependency injection or service container (base classes may use DI)
+- [E01:S02:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S2: Core Infrastructure (this story)
-- E1:S3: Initial Feature Set (features will use base classes and interfaces)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.2.6+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -123,3 +108,27 @@ Implement base classes and interfaces for the {PROJECT_NAME} project. Establish 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

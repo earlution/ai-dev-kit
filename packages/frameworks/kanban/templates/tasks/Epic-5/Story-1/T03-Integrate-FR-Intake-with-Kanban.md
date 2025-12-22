@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 1, Task 3: Integrate FR Intake with Kanban
+# Epic 5, Story 1, Task 3: Integrate FR intake with Kanban
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.5.1.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.5.1.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.5.1.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E5:S1:T3`)
+**Format:** `E5:S1:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E05:S01:T03`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Integrate FR (Feature Request) intake with Kanban for the {PROJECT_NAME} project. Ensure that FRs flow seamlessly into the Kanban board and are properly tracked through the workflow.
+Integrate FR intake with Kanban for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- FR intake workflow (from E5:S1:T01)
-- FR processing automation (from E5:S1:T02)
-- Kanban board structure (from E4:S1)
-- Kanban workflow configuration (from E4:S2)
-- Integration requirements
+- Requirements and specifications
+- integrate fr intake with kanban requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- FR-Kanban integration implemented
-- Integration configuration
-- Integration documentation
-- Integration tests (if applicable)
-- Integration examples
+- integrate fr intake with kanban completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] FR intake integrated with Kanban board
-- [ ] FRs automatically create Kanban cards
-- [ ] FRs flow through Kanban workflow correctly
-- [ ] Integration configuration documented
-- [ ] Integration tests created (if applicable)
-- [ ] Integration is reliable and maintainable
-- [ ] Integration supports efficient FR processing
-- [ ] Integration examples provided
+- [ ] Integrate FR intake with Kanban completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review FR intake workflow and automation
-2. Review Kanban board structure and workflow
-3. Design FR-Kanban integration points
-4. Implement FR to Kanban card creation
-5. Configure workflow transitions
-6. Create integration configuration
-7. Write integration documentation
-8. Create integration tests (if applicable)
-9. Review and refine integration
+1. Analyze requirements for integrate fr intake with kanban
+2. Design approach and plan
+3. Implement integrate fr intake with kanban
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E5:S1:T01: Design FR intake workflow (integration uses workflow)
-- E5:S1:T02: Create FR processing automation (integration uses automation)
-- E4:S1: Kanban Board Setup (integration uses Kanban board)
-- E4:S2: Kanban Workflow Configuration (integration uses workflow configuration)
+- E5:S1:T02
 
 **Blocks:**
-- E5:S1:T04: Document FR intake process (documentation covers integration)
+- E5:S1:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, and E4 tasks)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E5:S1:T01: Design FR intake workflow (integration uses workflow)
-- E5:S1:T02: Create FR processing automation (integration uses automation)
-- E5:S1:T04: Document FR intake process (documentation covers integration)
+- [E05:S01:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E5:S1: FR Intake and Processing Workflow (this story)
-- E4:S1: Kanban Board Setup (integration uses Kanban board)
-- E4:S2: Kanban Workflow Configuration (integration uses workflow configuration)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.5.1.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Integrate FR (Feature Request) intake with Kanban for the {PROJECT_NAME} project
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

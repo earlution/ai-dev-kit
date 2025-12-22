@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 2, Task 3: Create Query Builders/ORMs
+# Epic 10, Story 2, Task 3: Create query builders/ORMs
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.10.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S2:T3`)
+**Format:** `E10:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S02:T03`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create query builders/ORMs for the {PROJECT_NAME} project. Implement or integrate query builders and object-relational mapping (ORM) tools that facilitate database queries, entity mapping, and data manipulation.
+Create query builders/ORMs for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Data access architecture (from E10:S2:T01)
-- Repository pattern implementation (from E10:S2:T02)
-- Database schema (from E10:S1)
-- ORM/query builder preferences
-- Query requirements
-- ai-dev-kit ORM patterns (if adopting)
+- Requirements and specifications
+- create query builders/orms requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Query builders/ORMs created or integrated
-- Query builder implementation
-- ORM configuration
-- Entity mapping setup
-- Query utilities
+- create query builders/orms completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Query builders/ORMs created or integrated
-- [ ] Query builder implementation functional
-- [ ] ORM configured and functional
-- [ ] Entity mapping setup complete
-- [ ] Query utilities created
-- [ ] Query builders/ORMs integrate with repositories
-- [ ] Query builders/ORMs are tested and functional
+- [ ] Create query builders/ORMs completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review data access architecture and repository pattern
-2. Review database schema
-3. Select or implement ORM/query builder
-4. Configure ORM/query builder
-5. Set up entity mapping
-6. Implement query builder utilities
-7. Integrate with repository pattern
-8. Test query builders/ORMs
-9. Review and refine implementation
+1. Analyze requirements for create query builders/orms
+2. Design approach and plan
+3. Implement create query builders/orms
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S2:T01: Design data access architecture (query builders/ORMs implement architecture)
-- E10:S2:T02: Implement repository pattern (query builders/ORMs are used by repositories)
+- E10:S2:T02
 
 **Blocks:**
-- E10:S2:T04: Implement data validation (data validation may use ORM features)
-- E10:S2:T05: Add transaction management (transaction management may use ORM features)
+- E10:S2:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S2:T01: Design data access architecture (query builders/ORMs implement architecture)
-- E10:S2:T02: Implement repository pattern (query builders/ORMs are used by repositories)
-- E10:S2:T04: Implement data validation (data validation may use ORM features)
+- [E10:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S2: Data Access Layer (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Create query builders/ORMs for the {PROJECT_NAME} project. Implement or integrat
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

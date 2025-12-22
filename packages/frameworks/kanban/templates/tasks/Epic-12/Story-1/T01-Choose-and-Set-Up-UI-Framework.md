@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 12, Story 1, Task 1: Choose and Set Up UI Framework
+# Epic 12, Story 1, Task 1: Choose and set up UI framework
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.12.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.12.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.12.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E12:S1:T1`)
+**Format:** `E12:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E12:S01:T01`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Choose and set up UI framework for the {PROJECT_NAME} project. Select an appropriate UI framework (React, Vue, Angular, etc.) based on project requirements and set up the framework with initial configuration.
+Choose and set up UI framework for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project requirements
-- UI framework preferences
-- Team expertise
-- Performance requirements
-- Integration requirements
-- ai-dev-kit UI framework patterns (if adopting)
+- Requirements and specifications
+- choose and set up ui framework requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- UI framework chosen
-- UI framework set up
-- Initial framework configuration
-- Framework documentation
-- Setup verification
+- choose and set up ui framework completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] UI framework chosen based on requirements
-- [ ] UI framework set up and installed
-- [ ] Initial framework configuration complete
-- [ ] Framework documentation reviewed
-- [ ] Setup verified and functional
-- [ ] Framework supports project requirements
+- [ ] Choose and set up UI framework completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review project requirements and constraints
-2. Evaluate UI framework options
-3. Select appropriate UI framework
-4. Set up framework project structure
-5. Install framework dependencies
-6. Configure initial framework settings
-7. Verify framework setup
-8. Document framework choice and setup
+1. Analyze requirements for choose and set up ui framework
+2. Design approach and plan
+3. Implement choose and set up ui framework
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Project requirements
-- Framework selection criteria
+- None
 
 **Blocks:**
-- E12:S1:T02: Configure build tools (build tools configure framework)
-- E12:S1:T03: Set up component library structure (component structure uses framework)
-- E12:S1:T04: Configure styling system (styling system integrates with framework)
+- E12:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, foundational task)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E12:S1:T02: Configure build tools (build tools configure framework)
-- E12:S1:T03: Set up component library structure (component structure uses framework)
-- E12:S1:T04: Configure styling system (styling system integrates with framework)
+- [E12:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E12:S1: UI Framework Setup (this story)
-- E12:S2: Core UI Components (components use framework)
-- E12:S3: User Interface Implementation (UI implementation uses framework)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.12.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Choose and set up UI framework for the {PROJECT_NAME} project. Select an appropr
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

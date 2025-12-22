@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 3, Task 1: Implement Minimum Viable Product (MVP) Features
+# Epic 1, Story 3, Task 1: Implement minimum viable product (MVP) features
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.3.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.3.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.3.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S3:T1`)
+**Format:** `E1:S3:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S03:T01`
 
@@ -28,97 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement minimum viable product (MVP) features for the {PROJECT_NAME} project. Deliver core functionality that demonstrates project viability and provides value to users, establishing the foundation for future feature development.
+Implement minimum viable product (MVP) features for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project requirements and scope
-- Core infrastructure (from E1:S2)
-- Architecture patterns (from E1:S2:T01)
-- Configuration system (from E1:S2:T02)
-- Logging and error handling (from E1:S2:T03)
-- Base classes and interfaces (from E1:S2:T06)
-- MVP feature requirements
-- User stories or use cases (if available)
+- Requirements and specifications
+- implement minimum viable product (mvp) features requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- MVP features implemented
-- Core functionality working end-to-end
-- MVP feature documentation
-- Basic user interface or API (if applicable)
-- MVP feature tests (if applicable)
-- MVP demonstration or proof of concept
+- implement minimum viable product (mvp) features completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] MVP features identified and prioritized
-- [ ] MVP features implemented with core functionality
-- [ ] MVP features work end-to-end (user can complete primary workflows)
-- [ ] MVP features integrated with core infrastructure
-- [ ] MVP feature documentation created
-- [ ] Basic user interface or API functional (if applicable)
-- [ ] MVP features demonstrate project viability
-- [ ] MVP features provide value to users
+- [ ] Implement minimum viable product (MVP) features completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Identify MVP feature set based on project requirements
-2. Prioritize MVP features (must-have vs. nice-to-have)
-3. Design MVP feature architecture and integration points
-4. Implement MVP features using core infrastructure
-5. Integrate MVP features with logging, error handling, configuration
-6. Create basic user interface or API for MVP features (if applicable)
-7. Test MVP features end-to-end
-8. Create MVP feature documentation
-9. Demonstrate MVP functionality
+1. Analyze requirements for implement minimum viable product (mvp) features
+2. Design approach and plan
+3. Implement implement minimum viable product (mvp) features
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2: Core Infrastructure (requires infrastructure components)
-- E1:S2:T01: Design and implement core architecture patterns (MVP uses architecture patterns)
-- E1:S2:T02: Set up configuration management system (MVP may use configuration)
-- E1:S2:T03: Implement logging and error handling infrastructure (MVP uses logging/error handling)
-- E1:S2:T06: Implement base classes and interfaces (MVP uses base classes)
+- None
 
 **Blocks:**
-- E1:S3:T02: Create core domain models and entities (may be done in parallel or after MVP)
-- E1:S3:T03: Implement basic business logic (may be done in parallel or after MVP)
-- E1:S3:T04: Set up initial data structures (may be done in parallel or after MVP)
-- E1:S3:T05: Create proof-of-concept implementations (may be done in parallel or after MVP)
+- E1:S3:T02
 
-**Parallel Development Candidacy:** Blocked (depends on core infrastructure from E1:S2)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S3:T02: Create core domain models and entities (MVP may use domain models)
-- E1:S3:T03: Implement basic business logic (MVP uses business logic)
-- E1:S3:T04: Set up initial data structures (MVP may use data structures)
-- E1:S3:T05: Create proof-of-concept implementations (MVP is proof of concept)
+- [E01:S03:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S3: Initial Feature Set (this story)
-- E1:S2: Core Infrastructure (MVP depends on infrastructure)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.3.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -127,3 +108,27 @@ Implement minimum viable product (MVP) features for the {PROJECT_NAME} project. 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

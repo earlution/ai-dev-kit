@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 2, Task 3: Set Up Code Review Automation
+# Epic 8, Story 2, Task 3: Set up code review automation
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.8.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S2:T3`)
+**Format:** `E8:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S02:T03`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up code review automation for the {PROJECT_NAME} project. Implement automated tools and processes that enforce code review standards and support the code review workflow.
+Set up code review automation for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Code review standards (from E8:S2:T01)
-- Code review checklist (from E8:S2:T02)
-- Automation tool requirements
-- CI/CD integration requirements
-- Automation capabilities and tools
-- ai-dev-kit code review automation practices (if adopting)
+- Requirements and specifications
+- set up code review automation requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Code review automation set up
-- Automated checks configured
-- Automation tools integrated
-- Automation documentation
-- Automation validation and testing
+- set up code review automation completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Code review automation set up and configured
-- [ ] Automated checks enforce review standards
-- [ ] Automation tools integrated with workflow
-- [ ] Automation integrates with CI/CD (if applicable)
-- [ ] Automation documentation created
-- [ ] Automation tested and validated
-- [ ] Automation supports review process
-- [ ] Automation is maintainable and configurable
+- [ ] Set up code review automation completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review code review standards and checklist
-2. Identify automation requirements
-3. Select automation tools and capabilities
-4. Configure automated checks
-5. Integrate automation with workflow
-6. Integrate automation with CI/CD (if applicable)
-7. Test automation functionality
-8. Document automation setup and usage
-9. Review and refine automation
+1. Analyze requirements for set up code review automation
+2. Design approach and plan
+3. Implement set up code review automation
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E8:S2:T01: Define code review standards (automation enforces standards)
-- E8:S2:T02: Create code review checklist (automation may use checklist)
+- E8:S2:T02
 
 **Blocks:**
-- E8:S2:T04: Document code review process (process includes automation)
+- E8:S2:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S2:T01: Define code review standards (automation enforces standards)
-- E8:S2:T02: Create code review checklist (automation may use checklist)
-- E8:S2:T04: Document code review process (process includes automation)
+- [E08:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S2: Code Review Standards and Processes (this story)
-- E14:S1: Deployment Pipeline Setup (automation may integrate with deployment pipeline)
-- E13:S3: Test Automation and CI/CD Integration (automation may integrate with CI/CD)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Set up code review automation for the {PROJECT_NAME} project. Implement automate
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

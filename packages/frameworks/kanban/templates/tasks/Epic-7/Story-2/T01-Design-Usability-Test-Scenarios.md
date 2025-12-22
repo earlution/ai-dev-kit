@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 2, Task 1: Design Usability Test Scenarios
+# Epic 7, Story 2, Task 1: Design usability test scenarios
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.2.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.2.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.2.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S2:T1`)
+**Format:** `E7:S2:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S02:T01`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design usability test scenarios for the {PROJECT_NAME} project. Create test scenarios that represent real-world user tasks and interactions to validate product usability and identify usability issues.
+Design usability test scenarios for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Product features and functionality
-- User personas (from E7:S1:T06, if available)
-- User research findings (from E7:S1, if available)
-- Test objectives and goals
-- Usability testing methodology
-- ai-dev-kit UXR usability test practices (if adopting)
+- Requirements and specifications
+- design usability test scenarios requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Usability test scenarios designed
-- Test scenario documentation
-- Test tasks defined
-- Test scenario structure
-- Test scenario validation criteria
+- design usability test scenarios completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Usability test scenarios designed and documented
-- [ ] Test scenarios represent real-world user tasks
-- [ ] Test tasks clearly defined
-- [ ] Test scenario structure established
-- [ ] Test scenarios cover key product features
-- [ ] Test scenario validation criteria created
-- [ ] Test scenarios are actionable and testable
-- [ ] Test scenario documentation complete
+- [ ] Design usability test scenarios completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review product features and functionality
-2. Review user personas and research findings (if available)
-3. Identify key user tasks and interactions
-4. Design usability test scenarios
-5. Define test tasks for each scenario
-6. Establish test scenario structure
-7. Create test scenario validation criteria
-8. Document test scenarios
-9. Review and refine test scenarios
+1. Analyze requirements for design usability test scenarios
+2. Design approach and plan
+3. Implement design usability test scenarios
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Product features and functionality
-- User personas (from E7:S1:T06, if available - optional)
+- None
 
 **Blocks:**
-- E7:S2:T02: Recruit test participants (participants needed for scenarios)
-- E7:S2:T03: Conduct usability testing sessions (sessions use scenarios)
+- E7:S2:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, benefits from user personas)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S2:T02: Recruit test participants (participants needed for scenarios)
-- E7:S2:T03: Conduct usability testing sessions (sessions use scenarios)
-- E7:S2:T04: Analyze usability test results (analysis uses scenario-based test data)
+- [E07:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S2: Usability Testing and Validation (this story)
-- E7:S1: User Research and Discovery (may inform test scenarios)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.2.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Design usability test scenarios for the {PROJECT_NAME} project. Create test scen
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two
