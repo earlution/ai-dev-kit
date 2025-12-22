@@ -9,7 +9,7 @@
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-**Version:** `v0.4.6.8+2` | **Last Updated:** 2025-12-22
+**Version:** `v0.4.6.8+3` | **Last Updated:** 2025-12-22
 
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
@@ -29,12 +29,21 @@
 - **Existing project?** Migrate from copy-paste to package management
 - **Just exploring?** Browse frameworks and documentation first
 
-**Quick Install (GitHub Releases):**
+**Quick Install (Git Submodule - Recommended for Existing Projects):**
 ```bash
-python3 install_package_from_release.py kanban 2.1.0 \
-    --repo earlution/ai-dev-kit \
-    --install-dir packages/frameworks
+# 1. Add ai-dev-kit as submodule
+git submodule add https://github.com/earlution/ai-dev-kit.git .ai-dev-kit
+
+# 2. Copy frameworks
+cp -r .ai-dev-kit/packages/frameworks/workflow\ mgt/* ./
+cp -r .ai-dev-kit/packages/frameworks/kanban/* ./
+
+# 3. Run installers (REQUIRED)
+python scripts/install_release_workflow.py --mode c
+python3 scripts/install_kanban_framework.py --mode fresh
 ```
+
+**📖 Complete Guide:** See [`INSTALL_IN_YOUR_PROJECT.md`](INSTALL_IN_YOUR_PROJECT.md) for detailed instructions and all installation methods.
 
 ### 📚 I want to understand what AI Dev Kit is
 

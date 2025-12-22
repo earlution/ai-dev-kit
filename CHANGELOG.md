@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.6.8+3] - 22-12-25
+
+### Changed
+- Installation workflow clarity improvements in README and INSTALL_IN_YOUR_PROJECT.md
+  - README Quick Start now shows complete Git Submodule workflow (submodule → copy → installers)
+  - INSTALL_IN_YOUR_PROJECT.md Method 2 enhanced with complete 4-step workflow including installers
+  - Installer step clearly marked as REQUIRED with warnings
+  - Workflow is now overt and obvious for users rolling out to other projects
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.6.8+3.md)
+
 ## [0.4.6.8+2] - 22-12-25
 
 ### Added

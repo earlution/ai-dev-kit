@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-22 (v0.4.6.8+2 – Story 6: ✅ COMPLETE - Rollout checklist created, packaged RW updated)
+**Last updated:** 2025-12-22 (v0.4.6.8+3 – Story 6: ✅ COMPLETE - Installation workflow clarity improvements)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]

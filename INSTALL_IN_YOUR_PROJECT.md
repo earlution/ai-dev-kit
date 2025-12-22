@@ -49,23 +49,34 @@ python3 install_package_from_release.py kanban 2.1.0 \
 
 ### Method 2: Git Submodule (Available Now)
 
-Add ai-dev-kit as a Git submodule:
+Add ai-dev-kit as a Git submodule, copy frameworks, then run installers:
 
 ```bash
-# Add ai-dev-kit as submodule
+# Step 1: Add ai-dev-kit as submodule
 git submodule add https://github.com/earlution/ai-dev-kit.git .ai-dev-kit
 
-# Checkout specific version
+# Step 2: Checkout specific version
 cd .ai-dev-kit
 git checkout v0.6.6.10+13  # Or latest tag
 cd ..
 
-# Copy frameworks to your project
-cp -r .ai-dev-kit/packages/frameworks/workflow\ mgt/ ./frameworks/workflow-mgmt
+# Step 3: Copy frameworks to your project
+cp -r .ai-dev-kit/packages/frameworks/workflow\ mgt/* ./
+cp -r .ai-dev-kit/packages/frameworks/kanban/* ./
+
+# Step 4: Run framework installers (REQUIRED - don't skip!)
+# Install Release Workflow
+python scripts/install_release_workflow.py --mode c
+
+# Install Kanban board
+python3 scripts/install_kanban_framework.py --mode fresh
 ```
+
+**⚠️ IMPORTANT:** The installers are **REQUIRED** - they configure frameworks for your project. Don't skip Step 4!
 
 **Documentation:**
 - [`framework-dependency-installation-guide.md`](docs/documentation/user-docs/framework-dependency-installation-guide.md#method-1-git-submodules-phase-1---available-now)
+- [`EXISTING_PROJECT_ROLLOUT_CHECKLIST.md`](docs/documentation/user-docs/EXISTING_PROJECT_ROLLOUT_CHECKLIST.md) - Complete rollout checklist
 
 ### Method 3: CLI Tool (Coming Soon)
 
