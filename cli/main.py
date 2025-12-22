@@ -12,9 +12,24 @@ from typing import Dict, Type
 from cli.commands import BaseCommand
 from cli.utils import print_error
 
+# Import commands
+from cli.commands.init import InitCommand
+from cli.commands.install import InstallCommand
+from cli.commands.update import UpdateCommand
+from cli.commands.check import CheckCommand
+from cli.commands.status import StatusCommand
+from cli.commands.list import ListCommand
 
-# Command registry - will be populated as commands are implemented
-_COMMANDS: Dict[str, Type[BaseCommand]] = {}
+
+# Command registry
+_COMMANDS: Dict[str, Type[BaseCommand]] = {
+    "init": InitCommand,
+    "install": InstallCommand,
+    "update": UpdateCommand,
+    "check": CheckCommand,
+    "status": StatusCommand,
+    "list": ListCommand,
+}
 
 
 def register_command(name: str, command_class: Type[BaseCommand]) -> None:
@@ -55,9 +70,14 @@ def create_parser() -> argparse.ArgumentParser:
         metavar="COMMAND",
     )
     
-    # Register commands (will be implemented in subsequent tasks)
-    # For now, we'll create placeholder subparsers
-    # Commands will be registered in T02-T03
+    # Register commands
+    for name, command_class in _COMMANDS.items():
+        subparser = subparsers.add_parser(
+            name,
+            help=command_class.get_description(),
+            description=command_class.get_description(),
+        )
+        command_class.add_arguments(subparser)
     
     return parser
 

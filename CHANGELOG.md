@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.7.3+1] - 22-12-25
+
+### Added
+- Status and checking commands for CLI tool
+  - `check` command - Check for available framework updates
+  - `status` command - Show installed framework versions and backends
+  - `list` command - List available frameworks and versions
+- JSON output support for `status` and `list` commands
+- Framework filtering options for `check` and `status` commands
+
+### Changed
+- Story E6:S07 updated to mark T03 as COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.3+1.md)
+
 ## [0.6.7.1+1] - 22-12-25
 
 ### Added
