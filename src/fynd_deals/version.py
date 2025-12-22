@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical EST Template System)
-VERSION_TASK = 8      # Task number (Task 8: Validate structure with test projects)
-VERSION_BUILD = 4     # Build number (E4:S06:T08+4 - FR-030 CLI tool Feature Request created)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 7     # Story number (Story 7: ai-dev-kit CLI Tool)
+VERSION_TASK = 0      # Task number (Task 0: Story creation and FR-030 intake)
+VERSION_BUILD = 0     # Build number (E6:S07:T00+0 - Story created, FR-030 intake complete, 14 tasks defined)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

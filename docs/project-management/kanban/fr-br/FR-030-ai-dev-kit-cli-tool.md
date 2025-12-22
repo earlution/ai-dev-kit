@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** ACCEPTED  
 **GitHub Issue:** [TBD]  
-**Version:** v0.4.6.8+4
+**Version:** v0.6.7.0+0
 
 ---
 
@@ -275,18 +275,18 @@ ai-dev-kit list --versions
 **Intake By:** AI Agent (ai-dev-kit)
 
 **Decision Flow Results:**
-- Story Match Found: Epic 6, Story 2, Task 4 (E6:S02:T04)
+- Story Match Found: Epic 6, Story 7 (E6:S07) - New Story created for CLI tool
 
 **Assigned To:**
 - Epic: Epic 6 (Framework Management and Maintenance)
-- Story: Story 2 (Framework Update and Migration)
-- Task: Task 4 (Build framework update CLI tool) - E6:S02:T04
-- Version: TBD (implementation pending)
+- Story: Story 7 (ai-dev-kit CLI Tool) - E6:S07
+- Tasks: T00 ✅ COMPLETE, T01-T13 TODO (14 tasks total covering architecture, commands, backends, config, migration, testing, packaging)
+- Version: v0.6.7.0+0 (Story created)
 
 **Kanban Links:**
 - Epic: [`epics/Epic-6/Epic-6.md`](../../epics/Epic-6/Epic-6.md)
-- Story: [`epics/Epic-6/Story-002-framework-update-and-migration.md`](../../epics/Epic-6/Story-002-framework-update-and-migration.md)
-- Task: E6:S02:T04 (Build framework update CLI tool)
+- Story: [`epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`](../../epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md)
+- Tasks: E6:S07:T00-T13 (14 tasks covering complete CLI tool implementation)
 
 ---
 

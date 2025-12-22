@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.7.0+0] - 22-12-25
+
+### Added
+- Story E6:S07: ai-dev-kit CLI Tool (`docs/project-management/kanban/epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`)
+  - Comprehensive Story with 14-task breakdown for CLI tool implementation
+  - Tasks organized into 4 phases: Foundation, Backend Implementations, Advanced Features, Polish & Distribution
+  - Complete implementation roadmap aligned with FR-030 requirements
+
+### Changed
+- FR-030 updated to reference Story E6:S07 instead of single task E6:S02:T04
+- Epic 6 documentation updated to include Story 7 in checklist
+- Kanban board updated to include Story 7 entry
+- E6:S02:T04 updated to note it's been superseded by E6:S07
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.0+0.md)
+
 ## [0.4.6.8+4] - 22-12-25
 
 ### Added

@@ -89,6 +89,9 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 ### E6:S02:T04 – Build framework update CLI tool
 
+**Status:** SUPERSEDED  
+**Note:** This task has been expanded into a full Story: **E6:S07 – ai-dev-kit CLI Tool**. See [`Story-007-ai-dev-kit-cli-tool.md`](Story-007-ai-dev-kit-cli-tool.md) for complete implementation plan.
+
 **Input:** Framework dependency architecture, update procedures  
 **Deliverable:** `ai-dev-kit` CLI tool for framework management  
 **Dependencies:** E6:S01:T04, E6:S02:T01  
@@ -113,6 +116,10 @@ Implement comprehensive processes for updating and migrating framework packages.
 - `ai-dev-kit update <framework>` - Update framework to latest version
 - `ai-dev-kit check` - Check for framework updates
 - `ai-dev-kit status` - Show installed framework versions
+
+**Related Work:**
+- **E6:S07:** ai-dev-kit CLI Tool (full Story with 14 tasks)
+- **FR-030:** ai-dev-kit CLI Tool Feature Request
 
 ---
 
