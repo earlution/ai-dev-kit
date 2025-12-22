@@ -26,17 +26,40 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 ## Quick Navigation
 
 - **[Methodology](USE_CASE_METHODOLOGY.md)** - How to organize and manage use cases
-- **[Canonical Use Cases](Canonical/)** - Design-phase use cases
-- **[Discovered Use Cases](Discovered/)** - Implementation-phase use cases
-- **[Templates](Templates/)** - Use case templates
+- **[Canonical Use Cases](use-cases/canonical/)** - Design-phase use cases
+- **[Discovered Use Cases](use-cases/discovered/)** - Implementation-phase use cases
+- **[Templates](use-cases/templates/)** - Use case templates
+- **[Articles](articles/)** - Blog posts and in-depth articles
+- **[Analysis](analysis/)** - Analysis documents and reports
+- **[Guides](guides/)** - How-to guides and tutorials
+- **[Reviews](reviews/)** - Post-implementation reviews (PIRs)
 
 ---
 
-## Use Case Types
+## Knowledge Base Categories
+
+### Articles
+
+**Location:** [`articles/`](articles/)
+
+**Definition:** In-depth blog posts, articles, and comprehensive write-ups on framework topics, patterns, and lessons learned.
+
+**Examples:**
+- Hybrid task template system: Building better templates
+- Framework adoption stories
+- Technical deep-dives
+- Lessons learned and best practices
+
+**Recent Articles:**
+- [Building Better Templates: How We Solved the 300-Template Problem with a Hybrid Approach](articles/hybrid-task-template-system-building-better-templates.md)
+
+---
+
+### Use Case Types
 
 ### Canonical Use Cases
 
-**Location:** [`Canonical/`](Canonical/)
+**Location:** [`use-cases/canonical/`](use-cases/canonical/)
 
 **Definition:** Use cases identified and documented during the design/planning phase, before implementation.
 
@@ -56,7 +79,7 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 
 ### Discovered Use Cases
 
-**Location:** [`Discovered/`](Discovered/)
+**Location:** [`use-cases/discovered/`](use-cases/discovered/)
 
 **Definition:** Use cases, patterns, or practices discovered during actual work, implementation, or problem-solving.
 
@@ -77,11 +100,11 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 
 ### Canonical Use Cases Index
 
-See [`Canonical/README.md`](Canonical/README.md) for complete index of canonical use cases.
+See [`use-cases/canonical/README.md`](use-cases/canonical/README.md) for complete index of canonical use cases.
 
 ### Discovered Use Cases Index
 
-See [`Discovered/README.md`](Discovered/README.md) for complete index of discovered use cases.
+See [`use-cases/discovered/README.md`](use-cases/discovered/README.md) for complete index of discovered use cases.
 
 ---
 
@@ -90,8 +113,12 @@ See [`Discovered/README.md`](Discovered/README.md) for complete index of discove
 ### Finding Use Cases
 
 1. **By Type:**
-   - Canonical: Check `Canonical/` directory
-   - Discovered: Check `Discovered/` directory
+   - Articles: Check `articles/` directory
+   - Canonical Use Cases: Check `use-cases/canonical/` directory
+   - Discovered Use Cases: Check `use-cases/discovered/` directory
+   - Analysis: Check `analysis/` directory
+   - Guides: Check `guides/` directory
+   - Reviews: Check `reviews/` directory
 
 2. **By Domain:**
    - Check indexes in each directory
@@ -104,18 +131,24 @@ See [`Discovered/README.md`](Discovered/README.md) for complete index of discove
 
 ### Creating Use Cases
 
-1. **Canonical Use Case:**
-   - Use `Templates/CANONICAL_USE_CASE_TEMPLATE.md`
-   - Create in `Canonical/` directory
-   - Follow naming convention: `UC-XXX-[title].md` (UC implies canonical)
-   - Update `Canonical/README.md` index
+1. **Article:**
+   - Create in `articles/` directory
+   - Follow naming convention: `[topic]-[descriptive-title].md`
+   - Include lifecycle metadata (evergreen recommended)
+   - Link from relevant documentation
 
-2. **Discovered Use Case:**
-   - Use `Templates/DISCOVERED_USE_CASE_TEMPLATE.md`
-   - Create in `Discovered/` directory
+2. **Canonical Use Case:**
+   - Use `use-cases/templates/CANONICAL_USE_CASE_TEMPLATE.md`
+   - Create in `use-cases/canonical/` directory
+   - Follow naming convention: `UC-XXX-[title].md` (UC implies canonical)
+   - Update `use-cases/canonical/README.md` index
+
+3. **Discovered Use Case:**
+   - Use `use-cases/templates/DISCOVERED_USE_CASE_TEMPLATE.md`
+   - Create in `use-cases/discovered/` directory
    - Follow naming convention: `UC-D-XXX-[title].md`
    - Wire to related BR/FR, Tasks, documentation
-   - Update `Discovered/README.md` index
+   - Update `use-cases/discovered/README.md` index
 
 ---
 

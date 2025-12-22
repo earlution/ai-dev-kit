@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 15    # Story number (Story 15: Procedural Task Template Generation and Hybrid Strategy)
 VERSION_TASK = 5      # Task number (Task 5: Document hybrid strategy and usage for maintainers and clients)
-VERSION_BUILD = 1     # Build number (E4:S15:T05+1 - Generator integrated and hybrid strategy documented)
+VERSION_BUILD = 2     # Build number (E4:S15:T05+2 - Agentic template generator and integration complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

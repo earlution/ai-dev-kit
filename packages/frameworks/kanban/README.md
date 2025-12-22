@@ -309,8 +309,11 @@ The hybrid system provides:
 **For Framework Maintainers:**
 
 ```bash
-# Generate all missing task templates
+# Generate all missing task templates (procedural)
 python3 scripts/generate_task_templates.py
+
+# Generate with agentic intelligence (richer content)
+python3 scripts/generate_task_templates.py --agentic --agentic-provider openai
 
 # Regenerate templates after structure changes (with overwrite)
 python3 scripts/generate_task_templates.py --overwrite
@@ -321,6 +324,27 @@ python3 scripts/generate_task_templates.py --dry-run
 # Validate generated templates
 python3 scripts/generate_task_templates.py --validate
 ```
+
+**Agentic Generation (Optional):**
+
+The generator can optionally use AI/LLM to generate richer, more contextual templates:
+
+```bash
+# Generate with OpenAI
+python3 scripts/generate_task_templates.py --agentic --agentic-provider openai --agentic-model gpt-4
+
+# Generate with Anthropic
+python3 scripts/generate_task_templates.py --agentic --agentic-provider anthropic --agentic-model claude-3-opus
+
+# Generate Epic/Story/Task templates with agentic intelligence
+python3 scripts/agentic_template_generator.py --type all --provider openai
+```
+
+**Benefits of Agentic Generation:**
+- **Richer Content:** AI generates contextual, detailed content
+- **Better Quality:** More nuanced and specific than procedural generation
+- **Context-Aware:** Uses Epic/Story/Task hierarchy for better understanding
+- **Fallback:** Automatically falls back to procedural if LLM unavailable
 
 **For Adopting Projects:**
 
@@ -348,8 +372,9 @@ You have two options:
 **Related Documentation:**
 - ADR: `docs/architecture/standards-and-adrs/task-template-system-hybrid-adr.md`
 - Design: `docs/architecture/standards-and-adrs/task-template-generator-design.md`
+- Agentic Design: `docs/architecture/standards-and-adrs/agentic-template-generator-design.md`
 - FR-029: Procedural Task Template Generation (Hybrid Strategy)
-- Script Documentation: `scripts/README.md` (see `generate_task_templates.py`)
+- Script Documentation: `scripts/README.md` (see `generate_task_templates.py` and `agentic_template_generator.py`)
 
 ---
 

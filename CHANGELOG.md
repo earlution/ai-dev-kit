@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.15.5+2] - 22-12-25
+
+🤖 Agentic Enhancement: E4:S15:T05+2 - Agentic Template Generator and Integration
+
+### Added
+
+- **Agentic Template Generator:**
+  - `packages/frameworks/kanban/scripts/agentic_template_generator.py` created
+  - AI/LLM-powered template generation for Epic/Story/Task templates
+  - Supports OpenAI, Anthropic, and local models
+  - Procedural fallback when LLM unavailable
+
+- **Process Integration:**
+  - Task template generator enhanced with optional agentic support
+  - Task creator enhanced with optional agentic support
+  - Agentic task workflow enhanced with environment variable support
+
+- **Documentation:**
+  - Agentic generator design document created
+  - Template generation integration guide created
+  - Blog post on hybrid template system published
+  - Knowledge base articles section added
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.5+2.md)
+
+---
+
 ## [0.4.15.5+1] - 22-12-25
 
 📚 Documentation Complete: E4:S15:T05 - Generator Integration and Hybrid Strategy Documentation

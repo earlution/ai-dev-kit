@@ -3,6 +3,7 @@
 Task Template Generator
 
 Generates task template files from the canonical E/S/T structure document.
+Can optionally use agentic generator for richer content.
 
 Part of: E4:S15:T03 - Implement generator and validate against concrete templates
 
@@ -14,6 +15,7 @@ Examples:
     python generate_task_templates.py --epic 1
     python generate_task_templates.py --dry-run
     python generate_task_templates.py --validate
+    python generate_task_templates.py --agentic --provider openai
 """
 
 import argparse
@@ -34,7 +36,10 @@ class TaskTemplateGenerator:
         template_file: Path,
         output_dir: Path,
         overwrite: bool = False,
-        dry_run: bool = False
+        dry_run: bool = False,
+        use_agentic: bool = False,
+        agentic_provider: Optional[str] = None,
+        agentic_config: Optional[Dict] = None
     ):
         """
         Initialize generator.
@@ -45,17 +50,51 @@ class TaskTemplateGenerator:
             output_dir: Output directory for generated templates
             overwrite: Allow overwriting existing files
             dry_run: Show what would be generated without creating files
+            use_agentic: Use agentic generator for richer content
+            agentic_provider: LLM provider for agentic generation (openai, anthropic, etc.)
+            agentic_config: Additional agentic configuration
         """
         self.structure_file = structure_file
         self.template_file = template_file
         self.output_dir = output_dir
         self.overwrite = overwrite
         self.dry_run = dry_run
+        self.use_agentic = use_agentic
+        self.agentic_provider = agentic_provider
+        self.agentic_config = agentic_config or {}
         
         self.tasks = []  # List of (epic, story, task_num, task_desc) tuples
         self.generated_files = []
         self.skipped_files = []
         self.errors = []
+        
+        # Initialize agentic generator if requested
+        self.agentic_generator = None
+        if self.use_agentic:
+            try:
+                from agentic_template_generator import AgenticTemplateGenerator, LLMConfig
+                template_dir = template_file.parent
+                llm_config = LLMConfig(
+                    provider=agentic_provider or "none",
+                    **self.agentic_config
+                )
+                self.agentic_generator = AgenticTemplateGenerator(
+                    structure_file=structure_file,
+                    template_dir=template_dir,
+                    output_dir=output_dir,
+                    llm_config=llm_config,
+                    overwrite=overwrite,
+                    dry_run=dry_run
+                )
+                if not self.agentic_generator.parse_structure():
+                    print("⚠️  Warning: Failed to initialize agentic generator, falling back to procedural")
+                    self.agentic_generator = None
+            except ImportError:
+                print("⚠️  Warning: Agentic generator not available, falling back to procedural")
+                self.use_agentic = False
+            except Exception as e:
+                print(f"⚠️  Warning: Agentic generator initialization failed: {e}, falling back to procedural")
+                self.use_agentic = False
     
     def parse_structure(self) -> bool:
         """
@@ -267,8 +306,24 @@ class TaskTemplateGenerator:
                 self.skipped_files.append(file_path)
                 continue
             
-            # Generate content
-            content = self.generate_task_content(epic, story, task_num, task_desc)
+            # Generate content (use agentic if available, otherwise procedural)
+            if self.use_agentic and self.agentic_generator:
+                try:
+                    result = self.agentic_generator.generate_task_template(epic, story, task_num)
+                    if result.success and result.generated_content:
+                        content = result.generated_content
+                        print(f"🤖 Generated with agentic intelligence: {file_path}")
+                    else:
+                        # Fallback to procedural
+                        content = self.generate_task_content(epic, story, task_num, task_desc)
+                        if result.errors:
+                            print(f"⚠️  Agentic generation failed, using procedural: {', '.join(result.errors)}")
+                except Exception as e:
+                    # Fallback to procedural
+                    content = self.generate_task_content(epic, story, task_num, task_desc)
+                    print(f"⚠️  Agentic generation error, using procedural: {e}")
+            else:
+                content = self.generate_task_content(epic, story, task_num, task_desc)
             
             if self.dry_run:
                 print(f"[DRY RUN] Would generate: {file_path}")
@@ -372,6 +427,26 @@ def main():
         help='Validate generated templates against concrete templates'
     )
     parser.add_argument(
+        '--agentic',
+        action='store_true',
+        help='Use agentic generator for richer content (requires LLM provider)'
+    )
+    parser.add_argument(
+        '--agentic-provider',
+        choices=['openai', 'anthropic', 'local', 'none'],
+        default='none',
+        help='LLM provider for agentic generation (default: none)'
+    )
+    parser.add_argument(
+        '--agentic-model',
+        default='gpt-4',
+        help='LLM model name for agentic generation (default: gpt-4)'
+    )
+    parser.add_argument(
+        '--agentic-api-key',
+        help='API key for agentic generation (or set OPENAI_API_KEY/ANTHROPIC_API_KEY env var)'
+    )
+    parser.add_argument(
         '--verbose',
         action='store_true',
         help='Verbose output'
@@ -389,7 +464,13 @@ def main():
         template_file=args.template_file,
         output_dir=args.output_dir,
         overwrite=args.overwrite,
-        dry_run=args.dry_run
+        dry_run=args.dry_run,
+        use_agentic=args.agentic,
+        agentic_provider=args.agentic_provider if args.agentic else None,
+        agentic_config={
+            "model": args.agentic_model,
+            "api_key": args.agentic_api_key
+        } if args.agentic else None
     )
     
     # Generate templates

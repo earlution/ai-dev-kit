@@ -58,7 +58,16 @@ class AgenticTaskWorkflow:
         # Initialize components
         self.analyzer = FRBRAnalyzer()
         self.mapper = EpicStoryMapper(kanban_path, framework_path)
-        self.creator = TaskCreator(kanban_path, framework_path)
+        
+        # Initialize task creator with optional agentic support
+        use_agentic = os.getenv("USE_AGENTIC_TASK_CREATION", "false").lower() == "true"
+        agentic_provider = os.getenv("AGENTIC_PROVIDER", None)
+        self.creator = TaskCreator(
+            kanban_path,
+            framework_path,
+            use_agentic=use_agentic,
+            agentic_provider=agentic_provider
+        )
         self.agentic_mapper = None  # Will be initialized when needed
     
     def process_fr_br(
