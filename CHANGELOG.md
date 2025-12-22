@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.15.3+1] - 22-12-25
+
+🔧 Generator Implementation: E4:S15:T03 - Task Template Generator Design and Implementation
+
+### Added
+
+- **Generator Design Document:**
+  - `docs/architecture/standards-and-adrs/task-template-generator-design.md` created
+  - Comprehensive design for procedural task template generator
+  - Documents parsing strategy, mapping rules, CLI interface, and validation routine
+
+- **Generator Script:**
+  - `packages/frameworks/kanban/scripts/generate_task_templates.py` created
+  - Python script for generating task templates from canonical structure document
+  - Supports dry-run, overwrite protection, epic/story filtering, and validation
+  - CLI interface with comprehensive options
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.3+1.md)
+
+---
+
 ## [0.4.15.0+1] - 22-12-25
 
 📋 Story Creation: E4:S15 - Procedural Task Template Generation and Hybrid Strategy

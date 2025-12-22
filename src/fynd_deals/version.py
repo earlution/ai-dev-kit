@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 15    # Story number (Story 15: Procedural Task Template Generation and Hybrid Strategy)
-VERSION_TASK = 0      # Task number (Task 0: Story creation - ADR, FR, and Story documents created)
-VERSION_BUILD = 1     # Build number (E4:S15:T00+1 - Story created: ADR, FR-029, and Story E4:S15 documents created)
+VERSION_TASK = 3      # Task number (Task 3: Implement generator and validate against concrete templates)
+VERSION_BUILD = 1     # Build number (E4:S15:T03+1 - Generator design and implementation complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

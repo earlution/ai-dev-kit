@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 015 – Procedural Task Template Generation and Hybrid Strategy
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Medium-Large  
 **Created:** 2025-12-22  
-**Last updated:** 2025-12-22 (v0.4.15.0+1 – Story creation released: ADR, FR-029, and Story documents created)  
-**Version:** v0.4.15.0+1  
+**Last updated:** 2025-12-22 (v0.4.15.3+1 – T02 and T03 complete: Generator design and implementation)  
+**Version:** v0.4.15.3+1  
 **Code:** E4S15
 
 ---
@@ -45,8 +45,8 @@ Deliver a robust, documented hybrid template system where:
 ## Task Checklist
 
 - [ ] **E4:S15:T01 – Finalize and validate concrete task template coverage**
-- [ ] **E4:S15:T02 – Design procedural task template generator**
-- [ ] **E4:S15:T03 – Implement generator and validate against concrete templates**
+- [x] **E4:S15:T02 – Design procedural task template generator** ✅ COMPLETE (v0.4.15.3+1)
+- [x] **E4:S15:T03 – Implement generator and validate against concrete templates** ✅ COMPLETE (v0.4.15.3+1)
 - [ ] **E4:S15:T04 – Integrate generator into Kanban framework package**
 - [ ] **E4:S15:T05 – Document hybrid strategy and usage for maintainers and clients**
 
@@ -78,9 +78,10 @@ Deliver a robust, documented hybrid template system where:
 
 ### E4:S15:T02 – Design procedural task template generator
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** E4:S15:T01  
+**Version:** v0.4.15.3+1  
 
 **Input:**
 - ADR: `task-template-system-hybrid-adr.md`
@@ -96,17 +97,18 @@ Deliver a robust, documented hybrid template system where:
   - Safety/overwrite behavior and CLI interface (if any).
 
 **Acceptance Criteria:**
-- [ ] Generator responsibilities, inputs, and outputs clearly defined.
-- [ ] Mapping rules from canonical structure → files documented.
-- [ ] Safety and overwrite behavior specified.
+- [x] Generator responsibilities, inputs, and outputs clearly defined. ✅
+- [x] Mapping rules from canonical structure → files documented. ✅
+- [x] Safety and overwrite behavior specified. ✅
 
 ---
 
 ### E4:S15:T03 – Implement generator and validate against concrete templates
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** E4:S15:T02  
+**Version:** v0.4.15.3+1  
 
 **Input:**
 - Generator design from T02
@@ -122,12 +124,12 @@ Deliver a robust, documented hybrid template system where:
     - Core structural sections (frontmatter, main headings).
 
 **Acceptance Criteria:**
-- [ ] Generator can create all canonical task templates in a clean environment.
-- [ ] Generator output matches the existing concrete templates for:
-  - [ ] Task coverage.
-  - [ ] File paths and names.
-  - [ ] Core structural sections.
-- [ ] Validation routine exists and can be run as part of maintenance checks.
+- [x] Generator can create all canonical task templates in a clean environment. ✅
+- [x] Generator output matches the existing concrete templates for:
+  - [x] Task coverage. ✅
+  - [x] File paths and names. ✅
+  - [x] Core structural sections. ✅
+- [x] Validation routine exists and can be run as part of maintenance checks. ✅
 
 ---
 
