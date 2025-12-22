@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical EST Template System)
 VERSION_TASK = 8      # Task number (Task 8: Validate structure with test projects)
-VERSION_BUILD = 3     # Build number (E4:S06:T08+3 - Installation workflow clarity improvements in README and INSTALL_IN_YOUR_PROJECT)
+VERSION_BUILD = 4     # Build number (E4:S06:T08+4 - FR-030 CLI tool Feature Request created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

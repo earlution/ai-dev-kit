@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.6.8+4] - 22-12-25
+
+### Added
+- FR-030: ai-dev-kit CLI Tool Feature Request (`docs/project-management/kanban/fr-br/FR-030-ai-dev-kit-cli-tool.md`)
+  - Comprehensive Feature Request document for unified CLI tool
+  - Documents CLI tool functionality, requirements, and acceptance criteria
+  - Links to existing implementation task E6:S02:T04
+  - References architecture and design documentation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.6.8+4.md)
+
 ## [0.4.6.8+3] - 22-12-25
 
 ### Changed

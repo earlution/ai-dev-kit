@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2025-12-22 (v0.4.6.8+3 – T08+3 COMPLETE: Installation workflow clarity improvements)
-**Version:** v0.4.6.8+3
+**Last updated:** 2025-12-22 (v0.4.6.8+4 – T08+4 COMPLETE: FR-030 CLI tool Feature Request created)
+**Version:** v0.4.6.8+4
 **Code:** E4S06
 
 ---
