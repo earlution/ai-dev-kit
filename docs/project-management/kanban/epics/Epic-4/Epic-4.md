@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-18 (v0.4.14.0+0 – Story 14 created: Kanban Framework Maintenance)
+**Last updated:** 2025-12-22 (v0.4.15.0+1 – Story 15 created: Procedural Task Template Generation and Hybrid Strategy)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -60,6 +60,9 @@ housekeeping_policy: keep
 - [ ] **E4:S14 – Kanban Framework Maintenance** - IN PROGRESS (v0.4.14.0+0 – Story created)
   - Story: [`Story-014-kanban-framework-maintenance.md`](Story-014-kanban-framework-maintenance.md)
   - Tasks: T01 TODO (Update packaged RW to handle UKW context and perpetual tasks)
+- [ ] **E4:S15 – Procedural Task Template Generation and Hybrid Strategy** - TODO (v0.4.15.0+1 – Story created: ADR, FR-029, and Story documents created)
+  - Story: [`Story-015-procedural-task-template-generation-and-hybrid-strategy.md`](Story-015-procedural-task-template-generation-and-hybrid-strategy.md)
+  - Tasks: T01-T05 TODO (Hybrid template system: complete concrete templates, implement procedural generator)
 
 ---
 
