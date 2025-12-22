@@ -5,7 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.7.0+0] - 22-12-25
+## [0.6.7.1+1] - 22-12-25
+
+### Added
+- CLI tool base structure (`cli/` directory)
+  - Entry point with command routing (`cli/main.py`)
+  - Command infrastructure with base class (`cli/commands/__init__.py`)
+  - Configuration management (`cli/config.py`)
+  - Utility modules (`cli/utils.py`)
+  - Backend protocol interface (`cli/backends/__init__.py`)
+- Project setup files (`setup.py`, `requirements.txt`)
+- CLI tool documentation (`cli/README.md`)
+
+### Changed
+- Story E6:S07 updated to mark T01 as COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.1+1.md)
+
+## [0.6.7.0+1] - 22-12-25
 
 ### Added
 - Story E6:S07: ai-dev-kit CLI Tool (`docs/project-management/kanban/epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`)
@@ -19,7 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Kanban board updated to include Story 7 entry
 - E6:S02:T04 updated to note it's been superseded by E6:S07
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.0+0.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.0+1.md)
 
 ## [0.4.6.8+4] - 22-12-25
 
