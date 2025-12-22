@@ -7,6 +7,57 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.0] - 2025-12-22
+
+**Package Version:** 2.2.0
+**Project Version:** 0.2.1.8+1
+**Bump Type:** MINOR
+
+### Added
+
+- **RW Step 9: Check for and Address IDE-Flagged Problems** (NEW STEP)
+  - Checks for IDE-flagged problems (errors, warnings, infos) in order
+  - Errors block workflow (mandatory, blocking)
+  - Warnings are non-blocking but should be addressed
+  - Info messages are non-blocking but good practice to address
+  - Uses `read_lints` tool to check modified files
+  - Positioned between Step 8 (Stage Files) and Step 10 (Run Validators)
+  - Implements FR-024: IDE/Linter Check Before Commit
+
+### Changed
+
+- **Step Renumbering:**
+  - Old Step 9 (Run Validators) → **New Step 10**
+  - Old Step 9.5 (CMW) → **New Step 10.5**
+  - Old Step 10 (Commit Changes) → **New Step 11**
+  - Old Step 11 (Create Git Tag) → **New Step 12**
+  - Old Step 12 (Push to Remote) → **New Step 13**
+  - Old Step 13 (Post-Commit Verification) → **New Step 14**
+  - Old Step 14 (Act on Verification Results) → **New Step 15**
+  - Old Step 15 (Check for PIR Trigger) → **New Step 16**
+
+- **Workflow YAML:**
+  - Added Step 9 configuration (IDE problem checking)
+  - Updated all step dependencies to reflect new numbering
+  - Updated workflow version to 2.2.0
+
+- **Documentation:**
+  - Updated README.md with new step numbering
+  - Updated agent execution guide with Step 9 documentation
+  - Updated cursorrules with Step 9 in TODO list
+
+**Criteria Reference:** MINOR Version Bump
+- ✅ New feature: Step 9 adds IDE problem checking capability
+- ✅ Backward compatible: Existing workflows continue to work
+- ✅ Documentation updates: All RW docs updated with new step
+
+**Related:**
+- Project Version: v0.2.1.8+1
+- Epic 2, Story 1, Task 8: Add Step 9 - IDE problem checking to Release Workflow
+- Feature Request: FR-024 (IDE/Linter Check Before Commit)
+
+---
+
 ## [2.1.4] - 2025-12-18
 
 **Package Version:** 2.1.4

@@ -594,6 +594,74 @@ When you type "RW" or "rw" in Cursor, the AI assistant will:
 
 ---
 
+### Setup Kanban Board (Kanban Framework)
+
+**⚠️ IMPORTANT:** If you installed the Kanban framework, you need to set up your Kanban board using the **interactive installer**. Do NOT manually copy epics from ai-dev-kit's actual Kanban board.
+
+**🚨 CRITICAL: Use the Installer (REQUIRED)**
+
+The Kanban installer is the **ONLY** supported method for setting up your Kanban board. It installs canonical epic templates (not ai-dev-kit's actual epics).
+
+**Option A: Use the Kanban Installer (Recommended)**
+
+```bash
+# Navigate to your project root
+cd /path/to/your/project
+
+# Run the Kanban installer
+python3 frameworks/kanban/scripts/install_kanban_framework.py --mode fresh
+
+# The installer will:
+# - Install canonical epic templates from templates/epics/ (NOT from ai-dev-kit's actual epics)
+# - Contextualize Epic 1 with your project name
+# - Only install canonical core epics (1-8, 10, 18, 22, 23)
+# - Exclude ai-dev-kit project-specific epics
+```
+
+**What You Get After Installation:**
+- ✅ Canonical epic templates installed in `docs/project-management/kanban/epics/Epic-{N}/`
+- ✅ Epic 1 contextualized with your project name (e.g., "MyProject Core", not "AI Dev Kit Core")
+- ✅ Only canonical core epics (1-8, 10, 18, 22, 23) installed
+- ✅ No ai-dev-kit project-specific epics
+- ✅ Empty epic directories ready for you to create stories and tasks
+
+**Option B: Advanced Customization (Optional)**
+
+If you want to customize templates beyond the installer's automatic contextualization:
+
+```bash
+# Review the contextualization guide
+cat frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md
+
+# The guide explains:
+# - Placeholder replacement ({PROJECT_NAME}, {DOMAIN}, etc.)
+# - Scalability guidance (tiny, small, medium, ambitious projects)
+# - Customization guidelines (Epic, Story, Task levels)
+# - Examples for different project types
+```
+
+**Related Documentation:**
+- **Contextualization Guide:** `frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md` - Complete guide for customizing templates
+- **Contextualization Examples:** `frameworks/kanban/templates/examples/contextualized/` - Examples for tiny, small, and ambitious projects
+- **Kanban Installer:** `frameworks/kanban/scripts/install_kanban_framework.py` - Interactive installer script
+- **Post-Template Setup Guide:** See [Post-Template Setup Guide](framework-dependency-post-template-setup-guide.md) Step 4 for detailed Kanban setup instructions
+
+**⚠️ What NOT to Do:**
+
+```bash
+# ❌ WRONG - This copies ai-dev-kit's actual Kanban, not templates!
+cp -r /path/to/ai-dev-kit/docs/project-management/kanban/epics/* docs/project-management/kanban/epics/
+```
+
+**Why this is wrong:**
+- You'll get ai-dev-kit's project-specific epics (Epic 1: "AI Dev Kit Core", etc.)
+- You'll get ai-dev-kit's actual stories and tasks with their specific content
+- Epic 1 won't be contextualized with your project name
+- You'll receive project-specific epics (like Epic 24 "Book Related Work") that are specific to ai-dev-kit
+- **CRITICAL: Epic Mashup Risk** - You may get Epic 9 "Book Related Work" instead of canonical Epic 9 "User Management and Authentication"
+
+---
+
 ## Post-Installation Setup (Other Frameworks)
 
 After installing frameworks, you need to configure them for your project:

@@ -52,14 +52,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Nice-to-have in-progress tasks that could be completed.*
 
-- **E4:S06:T05** – Create contextualization guide and examples  
-  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-
-- **E4:S06:T07** – Integrate with template setup guide and installation workflow  
-  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-
-- **E4:S06:T08** – Validate structure with test projects (tiny, small, ambitious)  
-  *Last updated: 2025-12-17* | [Story](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+*No nice-to-have tasks in progress at this time.*
 
 - **E7:S01:T02** – Code review standards and processes  
   *Last updated: Unknown* | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
@@ -169,9 +162,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Story: [`epics/Epic-4/Story-004-kanban-structure-refactoring.md`](epics/Epic-4/Story-004-kanban-structure-refactoring.md)
 - [x] **E4:S05 – Canonical Epics for Kanban Framework** - COMPLETE ✅ (v0.4.5.1+1)
   - Story: [`epics/Epic-4/Story-005-canonical-epics-for-kanban-framework.md`](epics/Epic-4/Story-005-canonical-epics-for-kanban-framework.md)
-- [ ] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - IN PROGRESS (v0.4.6.10+1)
+- [x] **E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System** - ✅ COMPLETE (v0.4.6.8+1 – All tasks complete)
   - Story: [`epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T06 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T03-T05 TODO, T07-T08 TODO
+  - Tasks: T00 ✅ COMPLETE, T01-T02 ✅ COMPLETE, T03 ✅ COMPLETE, T04 ✅ COMPLETE, T05 ✅ COMPLETE, T06 ✅ COMPLETE, T07 ✅ COMPLETE, T08 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE
 - [x] **E4:S07 – Migration Support and Installation Modes** - COMPLETE ✅ (v0.4.7.3+1)
   - Story: [`epics/Epic-4/Story-007-migration-support-and-installation-modes.md`](epics/Epic-4/Story-007-migration-support-and-installation-modes.md)
 - [x] **E4:S08 – Intelligent Epic Matching and Canonical Structure Adoption** - COMPLETE ✅ (v0.4.8.6+1)

@@ -1,7 +1,7 @@
 name: Release Workflow
-version: 2.1.0
+version: 2.2.0
 type: release
-description: Automated release workflow with PDCA integration (version bump, changelog, commit, tag, push, verification, action, PIR trigger)
+description: Automated release workflow with PDCA integration (version bump, changelog, commit, tag, push, verification, action, PIR trigger). Includes Step 9: IDE problem checking.
 
 config:
   version_file: src/confidentia/version.py
@@ -126,20 +126,35 @@ steps:
         - "*"
 
   - id: step-9
+    name: Check for and Address IDE-Flagged Problems
+    type: ide_linter_check
+    handler: ide.lint_check
+    required: true
+    mandatory: true
+    blocking: true
+    dependencies:
+      - step-8
+    config:
+      check_order: [errors, warnings, infos]
+      blocking: true  # Errors block workflow, warnings/infos are non-blocking but should be addressed
+      use_read_lints: true  # Use IDE diagnostics API (e.g., read_lints tool in Cursor)
+
+  - id: step-10
     name: Run Validators
     type: validation
     handler: confidentia.run_validators
     required: true
     dependencies:
-      - step-8
+      - step-9
     config:
       validators:
         - scripts/validation/validate_branch_context.py
         - scripts/validation/validate_changelog_format.py
+        - scripts/validation/validate_version_bump.py
         - scripts/changelog/check_changelog_size.py
       strict_mode: true
 
-  - id: step-9.5
+  - id: step-10.5
     name: Changelog Management Workflow (CMW)
     type: changelog_management
     handler: changelog.cmw
@@ -147,7 +162,7 @@ steps:
     enabled: true
     blocking: false
     dependencies:
-      - step-9
+      - step-10
     config:
       cmw_script: packages/frameworks/workflow mgt/scripts/changelog/cmw.py
       trigger_condition: size_threshold_exceeded
@@ -155,70 +170,70 @@ steps:
       dry_run: false
       use_rw_config: true
 
-  - id: step-10
+  - id: step-11
     name: Commit Changes
     type: git_commit
     handler: git.commit
     required: true
     dependencies:
-      - step-9
-      - step-9.5
+      - step-10
+      - step-10.5
     config:
       message_template: "{version} - {summary}"
 
-  - id: step-11
+  - id: step-12
     name: Create Git Tag
     type: git_tag
     handler: git.create_tag
     required: false
     enabled: true
     dependencies:
-      - step-10
+      - step-11
     config:
       tag_template: v{version}
       message_template: "Release {tag}: {summary}"
       annotated: true
 
-  - id: step-12
+  - id: step-13
     name: Push to Remote
     type: git_push
     handler: git.push
     required: false
     enabled: true
     dependencies:
-      - step-10
       - step-11
+      - step-12
     config:
       push_tags: true
       remote: origin
 
-  - id: step-13
+  - id: step-14
     name: Post-Commit Verification & Reflection
     type: verification_reflection
     handler: release.verification_reflection
     required: false
     enabled: true
     dependencies:
-      - step-12
+      - step-13
     config:
       verification_prompt: true
       reflection_questions: true
       changelog_update: true
 
-  - id: step-14
+  - id: step-15
     name: Act on Verification Results
     type: act_on_results
     handler: release.act_on_results
     required: false
     enabled: true
     dependencies:
-      - step-13
+      - step-14
     config:
       changelog_update: true
       follow_up_tasks: true
       process_improvement: true
 
-  - id: step-15
+  - id: step-16
     name: Check for PIR Trigger
     type: pir_trigger_check
     handler: pir.check_trigger
@@ -226,7 +241,7 @@ steps:
     enabled: true
     blocking: false
     dependencies:
-      - step-12
+      - step-13
     config:
       epic_pir_always: true
       story_pir_significance_criteria:

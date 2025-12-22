@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
-VERSION_TASK = 8      # Task number (Task 8: Add Step 9 - IDE problem checking to Release Workflow)
-VERSION_BUILD = 1     # Build number (E2:S01:T08+1 - Step 9 added: IDE problem checking implemented)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical EST Template System)
+VERSION_TASK = 8      # Task number (Task 8: Validate structure with test projects)
+VERSION_BUILD = 2     # Build number (E4:S06:T08+2 - Rollout checklist created, packaged RW updated to reflect Step 9)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

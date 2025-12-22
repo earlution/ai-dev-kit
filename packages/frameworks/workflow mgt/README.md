@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # Release Workflow (RW) Implementation Package
 
-**Version:** 2.1.4  
-**Last Updated:** 2025-12-18  
+**Version:** 2.2.0  
+**Last Updated:** 2025-12-22  
 **Purpose:** Complete package for implementing the Release Workflow (RW) trigger and agent-driven workflow execution pattern in your project  
 **Source Project:** fynd.deals (Epic 15, Story 1)  
 **Key Enhancements:** "ALL sections" requirement, atomicity, blocked protocol, epic branch workflow, doc-init detection bug fix (BR-010), optional BYOB badge workflow for private repos, RW Step 5 mandatory README version update
@@ -300,12 +300,14 @@ If using different branch naming conventions:
    - Step 5: README updated (if applicable)
    - Step 6: Kanban docs auto-updated
    - Step 7: Files staged
-   - Step 8: Validators run
-   - Step 9: Commit created
-   - Step 10: Tag created
-   - Step 11: Branch and tag pushed (or manual instructions provided)
-   - Step 12: Post-Commit Verification & Reflection (optional but recommended)
-   - Step 13: Act on Verification Results (optional but recommended)
+   - Step 8: IDE problem checking (errors, warnings, infos)
+   - Step 9: Validators run
+   - Step 9.5: Changelog Management Workflow (CMW) if needed (optional)
+   - Step 10: Commit created
+   - Step 11: Tag created
+   - Step 12: Branch and tag pushed (or manual instructions provided)
+   - Step 13: Post-Commit Verification & Reflection (optional but recommended)
+   - Step 14: Act on Verification Results (optional but recommended)
 
 ---
 
@@ -317,12 +319,12 @@ When a user types "RW" or "rw" (case-insensitive) in their AI assistant:
 
 1. **AI Assistant Recognizes Trigger:** The `.cursorrules` file instructs the AI to execute the Release Workflow
 2. **Intelligent Execution:** The AI follows the step-by-step guide, analyzing each step before executing
-3. **Progress Tracking:** The AI creates and maintains a TODO list tracking all 13 steps
+3. **Progress Tracking:** The AI creates and maintains a TODO list tracking all 13 steps (plus optional Step 9.5, 13-15)
 4. **Validation:** Each step is validated before proceeding to the next
 5. **Documentation:** All actions are documented with analysis and results
 6. **Atomicity:** The workflow either completes all 13 steps or stops with a clear "RW BLOCKED" message
 
-### The 13 Steps
+### The 13 Steps (Plus Optional Steps)
 
 **Phase 1: Version & Documentation Updates (Steps 1-6)**
 1. **Branch Safety Check** - Verify work aligns with branch context
@@ -332,12 +334,14 @@ When a user types "RW" or "rw" (case-insensitive) in their AI assistant:
 5. **Update README** - Update version references if present (optional)
 6. **Auto-update Kanban Docs** - Update **ALL sections** (header, checklist, detailed story sections) to match authoritative Story file
 
-**Phase 2: Git Operations & Validation (Steps 7-11)**
+**Phase 2: Git Operations & Validation (Steps 7-12)**
 7. **Stage Files** - Stage all modified files
-8. **Run Validators** - Execute branch context and changelog format validators (must be on epic branch, not main)
-9. **Commit Changes** - Create git commit with versioned message
-10. **Create Git Tag** - Create annotated tag
-11. **Push to Remote** - Push epic branch and tags to remote repository (DO NOT push to main unless ready to deploy)
+8. **Check for IDE-Flagged Problems** - Check errors (blocking), warnings/infos (non-blocking) in order
+9. **Run Validators** - Execute branch context, changelog format, version bump, and changelog size validators
+9.5. **Changelog Management Workflow (CMW)** - Optional: Archive entries if changelog exceeds threshold
+10. **Commit Changes** - Create git commit with versioned message
+11. **Create Git Tag** - Create annotated tag
+12. **Push to Remote** - Push epic branch and tags to remote repository (DO NOT push to main unless ready to deploy)
 
 **Phase 3: PDCA CHECK & ACT (Steps 12-13, optional but recommended)**
 12. **Post-Commit Verification & Reflection** - Verify changes worked as expected, evaluate against objectives, reflect on results
