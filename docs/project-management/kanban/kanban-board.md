@@ -46,16 +46,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
-- **E5:S02:T03** – Build documentation health dashboards  
-  *Last updated: 2025-12-06* | [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
-
-- **E6:S06:T03** – Design pre-release feedback mechanism  
-  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-
-  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-
-- **E6:S06:T05** – Implement feedback mechanism  
-  *Last updated: 2025-12-16* | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+*No tasks in this section at this time.*
 
 ### Could Have (C) - Nice-to-Have Tasks
 

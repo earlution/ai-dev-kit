@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.3+1] - 22-12-25
+
+### Added
+- Pre-release feedback mechanism design (comprehensive design document)
+- User-facing feedback guide (framework consumption guide)
+- Feedback template (structured template for systematic collection)
+- Feedback categories: Installation experience, Post-installation state, Framework usability, Issues encountered
+- Feedback collection mechanism design (CLI command, GitHub issues, direct contact)
+- Feedback storage and analysis process design
+- Integration with Kanban (FR/BR intake workflow)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.3+1.md)
+
 ## [0.6.6.8+3] - 22-12-25
 
 ### Changed
