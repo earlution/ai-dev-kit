@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 2     # Story number (Story 2: Framework Update and Migration)
-VERSION_TASK = 3      # Task number (Task 3: Establish backward compatibility policies)
-VERSION_BUILD = 1     # Build number (E6:S02:T03+1 - Framework backward compatibility policy document created)
+VERSION_STORY = 3     # Story number (Story 3: Framework Health Monitoring)
+VERSION_TASK = 2      # Task number (Task 2: Implement health monitoring tools)
+VERSION_BUILD = 1     # Build number (E6:S03:T02+1 - Framework health monitoring tools implemented)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

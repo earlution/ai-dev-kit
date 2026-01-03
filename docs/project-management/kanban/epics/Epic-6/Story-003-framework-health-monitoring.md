@@ -8,20 +8,20 @@ housekeeping_policy: keep
 
 # Story 003 – Framework Health Monitoring
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-05  
-**Version:** v0.6.3.1+1  
+**Last updated:** 2026-01-03 (v0.6.3.2+1 – T02 complete: Framework health monitoring tools implemented)  
+**Version:** v0.6.3.2+1  
 **Code:** E6S03
 
 ---
 
 ## Task Checklist
 
-- [ ] **E6:S03:T01 – Create framework health metrics** - TODO
-- [ ] **E6:S03:T02 – Implement health monitoring tools** - TODO
+- [x] **E6:S03:T01 – Create framework health metrics** - ✅ COMPLETE (v0.6.3.1+1 – Framework health metrics document created)
+- [x] **E6:S03:T02 – Implement health monitoring tools** - ✅ COMPLETE (v0.6.3.2+1 – Framework health monitoring tools implemented: monitoring script, collector modules, workflow, and procedures)
 - [ ] **E6:S03:T03 – Build framework health dashboards** - TODO
 
 ---
