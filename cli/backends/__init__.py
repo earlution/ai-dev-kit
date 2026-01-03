@@ -22,10 +22,13 @@ from cli.backends.selector import (
 # Import backend implementations
 from cli.backends.git_submodule import GitSubmoduleBackend
 from cli.backends.git_subtree import GitSubtreeBackend
+from cli.backends.package_manager import NpmBackend, PipBackend
 
 # Register backends
 register_backend("git-submodule", GitSubmoduleBackend)
 register_backend("git-subtree", GitSubtreeBackend)
+register_backend("npm", NpmBackend)
+register_backend("pip", PipBackend)
 
 __all__ = [
     "BackendBase",
@@ -38,5 +41,7 @@ __all__ = [
     "list_available_backends",
     "GitSubmoduleBackend",
     "GitSubtreeBackend",
+    "NpmBackend",
+    "PipBackend",
 ]
 
