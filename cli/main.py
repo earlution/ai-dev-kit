@@ -10,7 +10,7 @@ import argparse
 from typing import Dict, Type
 
 from cli.commands import BaseCommand
-from cli.utils import print_error
+from cli.utils import print_error, handle_error
 
 # Import commands
 from cli.commands.init import InitCommand
@@ -111,15 +111,9 @@ def main() -> int:
     try:
         command = command_class(args)
         return command.execute()
-    except KeyboardInterrupt:
-        print_error("\nOperation cancelled by user")
-        return 130
     except Exception as e:
-        print_error(f"Unexpected error: {str(e)}")
-        if args.debug if hasattr(args, 'debug') else False:
-            import traceback
-            traceback.print_exc()
-        return 1
+        debug = getattr(args, 'debug', False)
+        return handle_error(e, debug)
 
 
 if __name__ == "__main__":

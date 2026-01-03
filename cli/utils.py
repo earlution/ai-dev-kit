@@ -3,8 +3,11 @@ Utility functions for the ai-dev-kit CLI tool.
 """
 
 import sys
+import traceback
 from pathlib import Path
 from typing import Optional
+
+from cli.exceptions import AIDevKitError
 
 
 def get_project_root() -> Optional[Path]:
@@ -42,4 +45,28 @@ def print_warning(message: str) -> None:
 def print_info(message: str) -> None:
     """Print an info message to stdout."""
     print(f"ℹ️  {message}")
+
+
+def handle_error(error: Exception, debug: bool = False) -> int:
+    """
+    Handle an error and return appropriate exit code.
+    
+    Args:
+        error: Exception to handle
+        debug: If True, print full traceback
+    
+    Returns:
+        Exit code (0 for success, non-zero for failure)
+    """
+    if isinstance(error, AIDevKitError):
+        print_error(str(error))
+        return 1
+    elif isinstance(error, KeyboardInterrupt):
+        print_error("\nOperation cancelled by user")
+        return 130
+    else:
+        print_error(f"Unexpected error: {str(error)}")
+        if debug:
+            traceback.print_exc()
+        return 1
 
