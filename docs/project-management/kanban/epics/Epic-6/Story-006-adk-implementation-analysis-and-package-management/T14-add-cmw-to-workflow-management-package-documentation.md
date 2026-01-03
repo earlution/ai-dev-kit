@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 6, Story 6, Task 14: Add CMW to Workflow Management Package Documentation
 
-**Status:** TODO  
+**Status:** COMPLETE ✅  
 **Priority:** MEDIUM  
-**Last updated:** 2025-12-21 (v0.6.6.14+0 – Task created)  
-**Started:** N/A  
-**Completed:** N/A  
-**Version:** v0.6.6.14+0
+**Last updated:** 2026-01-03 (v0.6.6.14+1 – CMW documentation added to package README)  
+**Started:** 2026-01-03  
+**Completed:** 2026-01-03  
+**Version:** v0.6.6.14+1
 
 **Feature Request:** [FR-027](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)  
 **Code:** E6S06T14
@@ -133,16 +133,16 @@ Add Changelog Management Workflow (CMW) to the workflow management package docum
 
 ## Acceptance Criteria
 
-- [ ] Package README updated to include CMW in "What's Included" section
-- [ ] CMW workflow definition listed in "Workflow Definitions" section
-- [ ] CMW scripts documented in appropriate section
-- [ ] CMW features and capabilities described (validation, archival, integration)
-- [ ] CMW integration with RW Step 9.5 documented
-- [ ] CMW manual trigger documented ("CMW" command)
-- [ ] CMW cron automation documented
-- [ ] CMW documentation consistent with other workflow documentation style
-- [ ] Package distribution verified to include CMW files
-- [ ] All CMW references and links are correct
+- [x] Package README updated to include CMW in "What's Included" section ✅
+- [x] CMW workflow definition listed in "Workflow Definitions" section ✅
+- [x] CMW scripts documented in appropriate section ✅
+- [x] CMW features and capabilities described (validation, archival, integration) ✅
+- [x] CMW integration with RW Step 9.5 documented ✅
+- [x] CMW manual trigger documented ("CMW" command) ✅
+- [x] CMW cron automation documented ✅
+- [x] CMW documentation consistent with other workflow documentation style ✅
+- [x] Package distribution verified to include CMW files ✅
+- [x] All CMW references and links are correct ✅
 
 ---
 
@@ -198,7 +198,7 @@ Add Changelog Management Workflow (CMW) to the workflow management package docum
 
 ---
 
-**Last Updated:** 2025-12-21 (v0.6.6.14+0 – Task created)  
-**Version:** v0.6.6.14+0  
-**Status:** TODO
+**Last Updated:** 2026-01-03 (v0.6.6.14+1 – CMW documentation added to package README, all acceptance criteria met)  
+**Version:** v0.6.6.14+1  
+**Status:** COMPLETE ✅
 

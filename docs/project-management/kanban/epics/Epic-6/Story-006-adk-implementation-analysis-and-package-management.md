@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2025-12-22 (v0.6.6.3+1 – T03: Feedback mechanism design complete)  
-**Version:** v0.6.6.13+2  
+**Last updated:** 2026-01-03 (v0.6.6.14+1 – T14: CMW documentation added to package README)  
+**Version:** v0.6.6.14+1  
 **Code:** E6S06
 
 ---
@@ -45,7 +45,7 @@ housekeeping_policy: keep
 - [x] **E6:S06:T13 – Canonical CMW Perpetual Task** - ✅ COMPLETE (v0.6.6.13+2 – All phases complete: CMW perpetual task pattern canonicalized)
   - Task: [`T13-canonical-cmw-perpetual-task.md`](T13-canonical-cmw-perpetual-task.md)
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
-- [ ] **E6:S06:T14 – Add CMW to Workflow Management Package Documentation** - TODO (v0.6.6.14+0 – Task created)
+- [x] **E6:S06:T14 – Add CMW to Workflow Management Package Documentation** - ✅ COMPLETE (v0.6.6.14+1 – CMW documentation added to package README, all acceptance criteria met)
   - Task: [`T14-add-cmw-to-workflow-management-package-documentation.md`](T14-add-cmw-to-workflow-management-package-documentation.md)
   - **Feature Request:** [FR-027](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)
 - [x] **E6:S06:T15 – Cursor IDE Performance Considerations Awareness** - ✅ COMPLETE (v0.6.6.15+1 – Implementation complete: Awareness documentation created and framework guidance updated)

@@ -12,7 +12,8 @@ housekeeping_policy: keep
 **Submitted:** 2025-12-21  
 **Submitted By:** User  
 **Priority:** MEDIUM  
-**Status:** PENDING
+**Status:** COMPLETE ✅  
+**Completed:** 2026-01-03 (v0.6.6.14+1 – CMW documentation added to package README)
 
 ---
 

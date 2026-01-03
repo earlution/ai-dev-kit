@@ -38,6 +38,7 @@ This package contains all essential files needed to implement the Release Workfl
 - `workflows/release-workflow.yaml` - YAML definition of the Release Workflow structure
 - `workflows/intake-workflow.yaml` - YAML definition of the Intake Workflow structure (FR/BR/UXR automation)
 - `workflows/update-kanban-workflow.yaml` - YAML definition of the Update Kanban Workflow structure (UKW - kanban sync)
+- `workflows/changelog-management-workflow.yaml` - YAML definition of the Changelog Management Workflow structure (CMW - changelog maintenance and archival)
 
 ### Optional GitHub Actions Workflows (Private Repos)
 - `templates/github-actions/update-badges-byob.yml` - BYOB badge workflow template for private repositories
@@ -47,6 +48,18 @@ This package contains all essential files needed to implement the Release Workfl
 - `scripts/validation/validate_branch_context.py` - Validates branch/version/epic alignment (supports multi-digit epics)
 - `scripts/validation/validate_changelog_format.py` - Validates changelog format (supports both old and new format)
 - `scripts/validation/validate_version_bump.py` - Validates version bump logic (new task, same task, out-of-order)
+- `scripts/validation/check_changelog_size.py` - Checks changelog size and triggers CMW if threshold exceeded
+
+### Changelog Management Scripts
+- `scripts/changelog/cmw.py` - Main CMW script (deterministic changelog maintenance workflow)
+- `scripts/changelog/analyze_changelog_state.py` - Analyzes changelog state (size, entry count, ordering, duplicates)
+- `scripts/changelog/check_changelog_size.py` - Checks changelog size against threshold
+- `scripts/changelog/remove_duplicates.py` - Detects and removes duplicate changelog entries
+- `scripts/changelog/identify_archival_entries.py` - Identifies entries eligible for archival
+- `scripts/changelog/archive_entries.py` - Archives old entries to archive file
+- `scripts/changelog/changelog_utils.py` - Utility functions for changelog operations
+- `scripts/changelog/cron-cmw-example.sh` - Example cron script for automated CMW execution
+- `scripts/changelog/README.md` - Complete CMW documentation and usage guide
 
 ### Reference Documents
 - `docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
@@ -440,6 +453,95 @@ The Intake Workflow integrates with the Trigger-Aware Release Workflow (E2:S07):
 - **E4:S10 (Agentic Task Creation):** Used for automated Kanban task generation
 - **E2:S07 (Trigger-Aware RW):** Enables automatic execution on FR/BR/UXR commits
 - **Release Workflow:** Shares versioning and documentation update mechanisms
+
+---
+
+## 📋 Changelog Management Workflow (CMW)
+
+### Overview
+
+The **Changelog Management Workflow (CMW)** is a **deterministic workflow** for automated changelog maintenance. Unlike agent-driven workflows (like RW or UKW), CMW uses rule-based scripts to maintain changelog health through validation, duplicate detection, ordering fixes, and archival.
+
+### Key Features
+
+- **Automated Validation:** Analyzes changelog state (size, entry count, ordering, duplicates)
+- **Duplicate Detection:** Identifies and removes duplicate changelog entries
+- **Ordering Fixes:** Corrects changelog ordering violations (version-ordered, not date-ordered)
+- **Archival Support:** Archives old entries based on size-based, time-based, or hybrid policies
+- **Deterministic Execution:** Rule-based scripts (no agentic intelligence required)
+- **Multiple Triggers:** Automatic (RW Step 9.5), manual ("CMW" command), or cron automation
+
+### Integration with Release Workflow
+
+CMW integrates seamlessly with the Release Workflow:
+
+- **Automatic Trigger (RW Step 9.5):** When `check_changelog_size.py` (run in RW Step 9) indicates the changelog exceeds the size threshold, CMW automatically executes to archive entries, remove duplicates, and fix ordering
+- **Non-Blocking:** CMW failures are non-blocking (workflow continues even if CMW encounters issues)
+- **Version-Aware:** CMW respects version ordering (canonical version numbers, not timestamps)
+
+### Manual Execution
+
+CMW can be triggered manually by typing "CMW" or "cmw" (case-insensitive) in your AI assistant:
+
+```bash
+# In your AI assistant (Cursor)
+CMW
+```
+
+The AI assistant will execute the CMW script with appropriate parameters based on your project's changelog state.
+
+### Cron Automation
+
+CMW can be automated via cron for regular maintenance (recommended: weekly execution):
+
+1. **Copy example script:**
+   ```bash
+   cp scripts/changelog/cron-cmw-example.sh ~/scripts/cmw-cron.sh
+   chmod +x ~/scripts/cmw-cron.sh
+   ```
+
+2. **Edit script to set PROJECT_ROOT and paths:**
+   ```bash
+   nano ~/scripts/cmw-cron.sh
+   ```
+
+3. **Add to crontab (weekly, Sunday at 2:00 AM):**
+   ```cron
+   0 2 * * 0 /path/to/scripts/cmw-cron.sh
+   ```
+
+See `scripts/changelog/README.md` for complete cron setup instructions and configuration options.
+
+### CMW Capabilities
+
+**Validation:**
+- Changelog format validation
+- Version ordering validation
+- Entry count and size analysis
+
+**Maintenance:**
+- Duplicate entry detection and removal
+- Ordering violation fixes (ensures version-ordered entries)
+- Archival policy enforcement (size-based, time-based, hybrid)
+
+**Archival:**
+- Identifies entries eligible for archival based on policy
+- Archives entries to archive file with proper formatting
+- Maintains changelog size within threshold
+
+### Documentation
+
+- **CMW Scripts Documentation:** `scripts/changelog/README.md` - Complete CMW documentation, usage guide, and cron setup instructions
+- **Workflow Definition:** `workflows/changelog-management-workflow.yaml` - YAML definition of the CMW structure
+- **CMW Scripts:** All scripts in `scripts/changelog/` directory
+
+### Characteristics
+
+- **Deterministic:** CMW is rule-based and script-driven (no agent execution guide needed)
+- **Non-Blocking:** CMW failures do not block the Release Workflow
+- **Automatic:** CMW automatically executes when changelog threshold is exceeded (RW Step 9.5)
+- **Manual:** CMW can be triggered manually via "CMW" command
+- **Automated:** CMW can be scheduled via cron for regular maintenance
 
 ---
 

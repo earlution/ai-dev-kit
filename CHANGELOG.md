@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.14+1] - 03-01-26
+
+### Added
+- CMW documentation in workflow management package README
+  - Complete CMW section with overview, features, and integration points
+  - CMW scripts documented in "What's Included" section
+  - CMW workflow definition added to "Workflow Definitions" section
+  - CMW integration with RW Step 9.5 documented
+  - Manual execution and cron automation instructions
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.14+1.md)
+
 ## [0.6.6.8+4] - 03-01-26
 
 ### Changed
