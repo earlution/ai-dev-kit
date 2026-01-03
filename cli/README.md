@@ -65,10 +65,17 @@ flake8 cli/
 mypy cli/
 ```
 
+## Documentation
+
+- **CLI Reference:** `docs/documentation/user-docs/framework-dependency-cli-reference.md` - Complete command reference
+- **Usage Examples:** `docs/documentation/user-docs/cli-usage-examples.md` - Common usage scenarios and workflows
+- **Installation Guide:** `docs/documentation/user-docs/framework-dependency-installation-guide.md` - Installation instructions
+- **Configuration Guide:** `docs/documentation/user-docs/cli-configuration-guide.md` - Configuration file format and management
+- **Troubleshooting Guide:** `docs/documentation/user-docs/cli-troubleshooting-guide.md` - Troubleshooting help
+
 ## References
 
 - **Design Document:** `docs/architecture/standards-and-adrs/framework-update-cli-design.md`
 - **Architecture:** `docs/architecture/standards-and-adrs/framework-dependency-architecture.md`
-- **CLI Reference:** `docs/documentation/user-docs/framework-dependency-cli-reference.md`
 - **Feature Request:** `docs/project-management/kanban/fr-br/FR-030-ai-dev-kit-cli-tool.md`
 

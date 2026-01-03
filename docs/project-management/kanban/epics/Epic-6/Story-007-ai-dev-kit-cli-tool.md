@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 007 – ai-dev-kit CLI Tool
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2025-12-22  
-**Last updated:** 2025-12-22 (v0.6.7.11+1 – T11: Remove command complete, framework removal with cleanup, recovery mode, --keep-files option, comprehensive trace cleanup)  
-**Version:** v0.6.7.0+1  
+**Last updated:** 2026-01-03 (v0.6.7.12+1 – T12: Documentation and usage examples complete, comprehensive CLI documentation, usage examples, configuration guide, troubleshooting guide)  
+**Version:** v0.6.7.12+1  
 **Code:** E6S07
 
 ---
@@ -32,7 +32,7 @@ housekeeping_policy: keep
 - [x] **E6:S07:T09 – Error handling and validation** ✅ COMPLETE (v0.6.7.9+1)
 - [x] **E6:S07:T10 – Migration utilities (copy-paste → dependencies)** ✅ COMPLETE (v0.6.7.10+1)
 - [x] **E6:S07:T11 – Remove command (complements FR-008)** ✅ COMPLETE (v0.6.7.11+1)
-- [ ] **E6:S07:T12 – Documentation and usage examples** - TODO
+- [x] **E6:S07:T12 – Documentation and usage examples** ✅ COMPLETE (v0.6.7.12+1)
 - [ ] **E6:S07:T13 – Testing, validation, and PyPI packaging** - TODO
 
 ---
@@ -564,10 +564,11 @@ Build a comprehensive CLI tool that:
 
 ### E6:S07:T12 – Documentation and usage examples
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Dependencies:** E6:S07:T02, E6:S07:T03  
-**Blocker:** None
+**Blocker:** None  
+**Version:** v0.6.7.12+1
 
 **Input:**
 - CLI tool implementation
@@ -589,19 +590,27 @@ Build a comprehensive CLI tool that:
 6. Update existing CLI reference documentation
 
 **Key Deliverables:**
-- CLI command reference (update existing)
-- Installation guide
-- Usage examples
-- Configuration guide
-- Troubleshooting guide
+- CLI command reference (update existing) ✅
+- Installation guide ✅
+- Usage examples ✅
+- Configuration guide ✅
+- Troubleshooting guide ✅
 
 **Acceptance Criteria:**
-- [ ] All commands are documented
-- [ ] Installation guide is clear and complete
-- [ ] Usage examples cover common scenarios
-- [ ] Configuration file format is documented
-- [ ] Troubleshooting guide addresses common issues
-- [ ] Documentation is comprehensive and clear
+- [x] All commands are documented
+- [x] Installation guide is clear and complete
+- [x] Usage examples cover common scenarios
+- [x] Configuration file format is documented
+- [x] Troubleshooting guide addresses common issues
+- [x] Documentation is comprehensive and clear
+
+**Completed Deliverables:**
+- Updated `framework-dependency-cli-reference.md` with all implemented commands (init, install, update, check, status, list, remove, config, migrate)
+- Created `cli-usage-examples.md` with comprehensive usage examples and workflows
+- Updated `framework-dependency-installation-guide.md` to reflect CLI tool availability
+- Created `cli-configuration-guide.md` documenting `.ai-dev-kit.yaml` format and management
+- Created `cli-troubleshooting-guide.md` with common issues and solutions
+- Updated `cli/README.md` with documentation references
 
 ---
 

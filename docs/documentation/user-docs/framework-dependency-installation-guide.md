@@ -305,9 +305,9 @@ echo "Frameworks updated. Review changes and commit."
 
 ---
 
-### Method 2: CLI Tool (Phase 2 - Coming Soon)
+### Method 2: CLI Tool (Phase 2 - Available Now)
 
-The `ai-dev-kit` CLI tool provides a unified interface for installing and managing frameworks across all dependency backends.
+The `ai-dev-kit` CLI tool provides a unified interface for installing and managing frameworks across all dependency backends (Git submodules, Git subtrees, npm, pip).
 
 #### Installation Steps
 
@@ -324,13 +324,16 @@ git init  # Only if not already a Git repository
 **2. Install the CLI tool:**
 
 ```bash
-# Install via pip
-pip install ai-dev-kit
-
-# Or install from source
-git clone https://github.com/earlution/ai-dev-kit.git
-cd ai-dev-kit
+# Install from source (current method)
+cd /path/to/ai-dev-kit
 pip install -e .
+
+# Or install CLI tool directly
+cd /path/to/ai-dev-kit/cli
+pip install -e .
+
+# Future: Install via pip (when published to PyPI)
+# pip install ai-dev-kit
 ```
 
 **3. Initialize ai-dev-kit in your project:**
@@ -343,37 +346,57 @@ ai-dev-kit init
 This creates a `.ai-dev-kit.yaml` configuration file:
 
 ```yaml
-project_root: .
-frameworks_dir: ./frameworks
-backend: git_submodule  # or 'npm', 'pip'
-auto_update: false
+version: "1.0.0"
+default_backend: "git-submodule"
+frameworks: {}
 ```
 
 **4. Install a framework:**
 
 ```bash
-# Install workflow management framework
+# Install workflow management framework (latest version)
 ai-dev-kit install workflow-mgmt
 
 # Install specific version
 ai-dev-kit install workflow-mgmt@2.0.0
 
+# Install with specific backend
+ai-dev-kit install workflow-mgmt --backend git-submodule
+
 # Install multiple frameworks
 ai-dev-kit install workflow-mgmt kanban numbering-versioning
+
+# Preview installation (dry-run)
+ai-dev-kit install workflow-mgmt --dry-run
 ```
 
 **5. Check installed frameworks:**
 
 ```bash
+# Show status of all frameworks
 ai-dev-kit status
+
+# Show status of specific framework
+ai-dev-kit status workflow-mgmt
+
+# List all available frameworks
+ai-dev-kit list
 ```
 
 Output:
 ```
 Installed Frameworks:
-  workflow-mgmt: v2.0.0 (git_submodule)
-  kanban: v1.5.0 (git_submodule)
-  numbering-versioning: v2.1.0 (git_submodule)
+  workflow-mgmt:
+    Version: 2.0.0
+    Backend: git-submodule
+    Path: frameworks/workflow-mgmt
+    Status: Up to date
+  
+  kanban:
+    Version: 1.5.0
+    Backend: git-submodule
+    Path: frameworks/kanban
+    Status: Update available (1.6.0)
 ```
 
 #### Updating Frameworks (CLI Tool)

@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.7.12+1] - 03-01-26
+
+### Added
+- Comprehensive CLI documentation and usage examples
+  - CLI usage examples guide with 20+ scenarios (`docs/documentation/user-docs/cli-usage-examples.md`)
+  - CLI configuration guide with complete `.ai-dev-kit.yaml` format (`docs/documentation/user-docs/cli-configuration-guide.md`)
+  - CLI troubleshooting guide with 15+ common issues and solutions (`docs/documentation/user-docs/cli-troubleshooting-guide.md`)
+
+### Changed
+- CLI command reference updated to version 2.0.0
+  - Documented all 9 implemented commands (init, install, update, check, status, list, remove, config, migrate)
+  - Added comprehensive backend support documentation
+  - Enhanced command documentation with all options and examples
+- Installation guide updated to reflect CLI tool availability
+  - Changed from "Coming Soon" to "Available Now"
+  - Updated installation steps with current method
+- Story E6:S07 updated to mark T12 as COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.12+1.md)
+
 ## [0.6.7.11+1] - 22-12-25
 
 ### Added
