@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.3.3+1] - 03-01-26
+
+### Added
+- Framework health dashboard generator and guide (E6:S03:T03)
+  - Dashboard generator script for markdown dashboard creation
+  - Comprehensive dashboard usage guide
+  - Executive summary, health overview table, detailed reports, and recommendations
+  - Integration with workflows and automation support
+
+### Changed
+- E6:S03 (Framework Health Monitoring) - T03 complete: Framework health dashboard built, Story COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.3.3+1.md)
+
 ## [0.6.3.2+1] - 03-01-26
 
 ### Added
