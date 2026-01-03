@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-       **Last updated:** 2026-01-03 (v0.6.1.5+1 – Story 1 COMPLETE: All tasks complete - Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
+       **Last updated:** 2026-01-03 (v0.6.2.1+1 – Story 1 COMPLETE, Story 2 IN PROGRESS: T01 complete - Framework update procedures)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -24,9 +24,9 @@ housekeeping_policy: keep
 - [ ] **E6:S01 – Framework Version Management** - IN PROGRESS (v0.6.1.3+1 – T01, T02, T03, T04 complete: Framework versioning strategy, release processes, compatibility tracking, and dependency architecture)
   - Story: [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
   - Tasks: T01 ✅ COMPLETE (v0.6.1.1+1 - Framework versioning strategy), T02 ✅ COMPLETE (v0.6.1.2+1 - Framework release processes), T03 ✅ COMPLETE (v0.6.1.3+1 - Framework compatibility tracking), T04 ✅ COMPLETE (v0.6.1.1+2 - Framework dependency architecture), T05 TODO
-- [ ] **E6:S02 – Framework Update and Migration** - TODO
+- [ ] **E6:S02 – Framework Update and Migration** - IN PROGRESS (v0.6.2.1+1 – T01 complete: Framework update procedures created)
   - Story: [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)
-  - Tasks: T01-T03, T05 TODO, T04 SUPERSEDED (by E6:S07 - ai-dev-kit CLI Tool)
+  - Tasks: T01 ✅ COMPLETE (v0.6.2.1+1 - Framework update procedures), T02-T03, T05 TODO, T04 SUPERSEDED (by E6:S07 - ai-dev-kit CLI Tool)
 - [ ] **E6:S03 – Framework Health Monitoring** - TODO
   - Story: [`Story-003-framework-health-monitoring.md`](Story-003-framework-health-monitoring.md)
   - Tasks: T01-T03 TODO

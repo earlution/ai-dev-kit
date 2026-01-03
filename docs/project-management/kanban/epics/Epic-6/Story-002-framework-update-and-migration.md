@@ -8,11 +8,11 @@ housekeeping_policy: keep
 
 # Story 002 – Framework Update and Migration
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-07 (v0.6.2.1+1 – Bug fix task moved to Story 4)  
+**Last updated:** 2026-01-03 (v0.6.2.1+1 – T01 complete: Framework update procedures created)  
 **Version:** v0.6.2.1+1  
 **Code:** E6S02
 
@@ -20,10 +20,10 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E6:S02:T01 – Create framework update procedures** - TODO
+- [x] **E6:S02:T01 – Create framework update procedures** - ✅ COMPLETE (v0.6.2.1+1 – Framework update procedures document created)
 - [ ] **E6:S02:T02 – Build migration guides and tools** - TODO
 - [ ] **E6:S02:T03 – Establish backward compatibility policies** - TODO
-- [ ] **E6:S02:T04 – Build framework update CLI tool** - TODO
+- [ ] **E6:S02:T04 – Build framework update CLI tool** - TODO (SUPERSEDED by E6:S07)
 - [ ] **E6:S02:T05 – Create auto-update mechanisms** - TODO
 
 ---
@@ -44,6 +44,7 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 ### E6:S02:T01 – Create framework update procedures
 
+**Status:** ✅ COMPLETE (v0.6.2.1+1)  
 **Input:** Framework versioning strategy  
 **Deliverable:** Framework update procedure documentation  
 **Dependencies:** E6:S01 (Framework Version Management)  
@@ -54,6 +55,16 @@ Implement comprehensive processes for updating and migrating framework packages.
 2. Create update procedure documentation
 3. Establish update testing processes
 4. Document update procedures
+
+**Key Deliverables:**
+- ✅ Framework update procedures document: `docs/architecture/standards-and-adrs/framework-update-procedures.md`
+- ✅ Comprehensive update workflows (automatic, manual, scheduled)
+- ✅ Update methods (Git submodules, subtrees, CLI tool, package managers)
+- ✅ Pre-update and post-update validation procedures
+- ✅ Update testing processes and strategies
+- ✅ Rollback procedures for all update methods
+- ✅ Update procedures by update type (PATCH/MINOR/MAJOR)
+- ✅ Update best practices and troubleshooting guides
 
 ---
 
