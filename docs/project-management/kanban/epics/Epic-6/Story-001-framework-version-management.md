@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 001 – Framework Version Management
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-05 (v0.6.1.1+1 – Epic 6 created)  
-**Version:** v0.6.1.1+1  
+**Last updated:** 2026-01-03 (v0.6.1.4+3 – Documentation sync: Story status and T04 completion reflected)  
+**Version:** v0.6.1.4+3  
 **Code:** E6S01
 
 ---
@@ -23,7 +23,7 @@ housekeeping_policy: keep
 - [ ] **E6:S01:T01 – Define framework versioning strategy** - TODO
 - [ ] **E6:S01:T02 – Create framework release processes** - TODO
 - [ ] **E6:S01:T03 – Establish framework compatibility tracking** - TODO
-- [ ] **E6:S01:T04 – Design framework dependency architecture** - TODO
+- [x] **E6:S01:T04 – Design framework dependency architecture** - ✅ COMPLETE (v0.6.1.1+2 – Framework dependency architecture document created)
 - [ ] **E6:S01:T05 – Create framework version tagging strategy** - TODO
 
 ---
@@ -89,6 +89,7 @@ Establish comprehensive version management processes for framework packages.
 
 ### E6:S01:T04 – Design framework dependency architecture
 
+**Status:** ✅ COMPLETE (v0.6.1.1+2)  
 **Input:** Framework versioning strategy, current framework structure  
 **Deliverable:** Framework dependency architecture document  
 **Dependencies:** E6:S01:T01  
@@ -102,9 +103,9 @@ Establish comprehensive version management processes for framework packages.
 5. Document dependency versioning and update mechanisms
 
 **Key Deliverables:**
-- Framework dependency architecture document
-- ADR for dependency management approach
-- Comparison of dependency strategies (Git submodules vs subtrees vs package managers)
+- ✅ Framework dependency architecture document: `docs/architecture/standards-and-adrs/framework-dependency-architecture.md`
+- ✅ ADR for dependency management approach (included in architecture document)
+- ✅ Comparison of dependency strategies (Git submodules vs subtrees vs package managers)
 
 ---
 

@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-01-03  
-**Version:** v0.6.7.13+1
+**Version:** v0.6.1.4+3
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
@@ -235,15 +235,18 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.6.6.7+6
+**Last Updated:** v0.6.1.4+3
 
 **Stories:**
-- [x] **E6:S01 – Framework Version Management** - COMPLETE ✅
+- [ ] **E6:S01 – Framework Version Management** - IN PROGRESS (v0.6.1.1+2 – T04 complete: Framework dependency architecture)
   - Story: [`epics/Epic-6/Story-001-framework-version-management.md`](epics/Epic-6/Story-001-framework-version-management.md)
-- [x] **E6:S02 – Framework Update and Migration** - COMPLETE ✅
+  - Tasks: T04 ✅ COMPLETE, T01-T03, T05 TODO
+- [ ] **E6:S02 – Framework Update and Migration** - TODO
   - Story: [`epics/Epic-6/Story-002-framework-update-and-migration.md`](epics/Epic-6/Story-002-framework-update-and-migration.md)
-- [x] **E6:S03 – Framework Health Monitoring** - COMPLETE ✅
+  - Tasks: T01-T03, T05 TODO, T04 SUPERSEDED (by E6:S07)
+- [ ] **E6:S03 – Framework Health Monitoring** - TODO
   - Story: [`epics/Epic-6/Story-003-framework-health-monitoring.md`](epics/Epic-6/Story-003-framework-health-monitoring.md)
+  - Tasks: T01-T03 TODO
 - [ ] **E6:S04 – Bug Reports** - IN PROGRESS
   - Story: [`epics/Epic-6/Story-004-bug-reports.md`](epics/Epic-6/Story-004-bug-reports.md)
 - [ ] **E6:S05 – Feature Requests** - TODO

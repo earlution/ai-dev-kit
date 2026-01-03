@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-       **Last updated:** 2026-01-03 (v0.6.7.13+1 – E6:S07: ai-dev-kit CLI Tool COMPLETE, all 14 tasks T00-T13 finished)
+       **Last updated:** 2026-01-03 (v0.6.1.4+3 – Documentation sync: Epic 6 checklist corrected for E6:S01, S02, S03)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,12 +21,15 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E6:S01 – Framework Version Management** - COMPLETE ✅
+- [ ] **E6:S01 – Framework Version Management** - IN PROGRESS (v0.6.1.1+2 – T04 complete: Framework dependency architecture designed)
   - Story: [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
-- [x] **E6:S02 – Framework Update and Migration** - COMPLETE ✅
+  - Tasks: T04 ✅ COMPLETE (v0.6.1.1+2 - Framework dependency architecture), T01-T03, T05 TODO
+- [ ] **E6:S02 – Framework Update and Migration** - TODO
   - Story: [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)
-- [x] **E6:S03 – Framework Health Monitoring** - COMPLETE ✅
+  - Tasks: T01-T03, T05 TODO, T04 SUPERSEDED (by E6:S07 - ai-dev-kit CLI Tool)
+- [ ] **E6:S03 – Framework Health Monitoring** - TODO
   - Story: [`Story-003-framework-health-monitoring.md`](Story-003-framework-health-monitoring.md)
+  - Tasks: T01-T03 TODO
 - [ ] **E6:S04 – Bug Reports** - IN PROGRESS (Perpetual - v0.6.4.2+1 – Perpetual story: Bug tracking, never completes)
   - Story: [`Story-004-bug-reports.md`](Story-004-bug-reports.md)
   - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE
@@ -76,10 +79,10 @@ Epic 6 owns the **Framework Management and Maintenance** processes for the ai-de
 
 ### Story 1: Framework Version Management
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-05
+**Last updated:** 2025-12-06 (v0.6.1.1+2 – T04 complete: Framework dependency architecture)
 
 **Goal:**  
 Establish version management processes for framework packages.
@@ -88,7 +91,7 @@ Establish version management processes for framework packages.
 - [ ] E6:S01:T01 – Define framework versioning strategy
 - [ ] E6:S01:T02 – Create framework release processes
 - [ ] E6:S01:T03 – Establish framework compatibility tracking
-- [ ] E6:S01:T04 – Design framework dependency architecture
+- [x] E6:S01:T04 – Design framework dependency architecture ✅ COMPLETE (v0.6.1.1+2)
 - [ ] E6:S01:T05 – Create framework version tagging strategy
 
 **Story:** [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
@@ -100,7 +103,7 @@ Establish version management processes for framework packages.
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-05
+**Last updated:** 2025-12-07 (v0.6.2.1+1 – Bug fix task moved to Story 4)
 
 **Goal:**  
 Implement processes for updating and migrating framework packages.
@@ -109,7 +112,7 @@ Implement processes for updating and migrating framework packages.
 - [ ] E6:S02:T01 – Create framework update procedures
 - [ ] E6:S02:T02 – Build migration guides and tools
 - [ ] E6:S02:T03 – Establish backward compatibility policies
-- [ ] E6:S02:T04 – Build framework update CLI tool
+- [ ] E6:S02:T04 – Build framework update CLI tool (SUPERSEDED by E6:S07)
 - [ ] E6:S02:T05 – Create auto-update mechanisms
 
 **Story:** [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)

@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1.4+3] - 03-01-26
+
+### Changed
+- Documentation sync: Epic 6 checklist corrected for E6:S01, S02, S03
+  - E6:S01 changed from COMPLETE to IN PROGRESS (T04 complete)
+  - E6:S02 changed from COMPLETE to TODO (T04 superseded by E6:S07)
+  - E6:S03 changed from COMPLETE to TODO
+  - Story 1 document updated to reflect T04 completion
+  - Kanban board synchronized with corrected status
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.4+3.md)
+
 ## [0.6.4.2+2] - 03-01-26
 
 ### Changed
