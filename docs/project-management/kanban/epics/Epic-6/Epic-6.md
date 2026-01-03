@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-       **Last updated:** 2026-01-03 (v0.6.1.4+3 – Documentation sync: Epic 6 checklist corrected for E6:S01, S02, S03)
+       **Last updated:** 2026-01-03 (v0.6.1.1+1 – T01 complete: Framework versioning strategy defined)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,9 +21,9 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E6:S01 – Framework Version Management** - IN PROGRESS (v0.6.1.1+2 – T04 complete: Framework dependency architecture designed)
+- [ ] **E6:S01 – Framework Version Management** - IN PROGRESS (v0.6.1.1+3 – T01, T04 complete: Framework versioning strategy and dependency architecture)
   - Story: [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
-  - Tasks: T04 ✅ COMPLETE (v0.6.1.1+2 - Framework dependency architecture), T01-T03, T05 TODO
+  - Tasks: T01 ✅ COMPLETE (v0.6.1.1+3 - Framework versioning strategy), T04 ✅ COMPLETE (v0.6.1.1+2 - Framework dependency architecture), T02-T03, T05 TODO
 - [ ] **E6:S02 – Framework Update and Migration** - TODO
   - Story: [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)
   - Tasks: T01-T03, T05 TODO, T04 SUPERSEDED (by E6:S07 - ai-dev-kit CLI Tool)
@@ -82,13 +82,13 @@ Epic 6 owns the **Framework Management and Maintenance** processes for the ai-de
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-06 (v0.6.1.1+2 – T04 complete: Framework dependency architecture)
+**Last updated:** 2026-01-03 (v0.6.1.1+3 – T01, T04 complete: Framework versioning strategy and dependency architecture)
 
 **Goal:**  
 Establish version management processes for framework packages.
 
 **Tasks:**
-- [ ] E6:S01:T01 – Define framework versioning strategy
+- [x] E6:S01:T01 – Define framework versioning strategy ✅ COMPLETE (v0.6.1.1+3)
 - [ ] E6:S01:T02 – Create framework release processes
 - [ ] E6:S01:T03 – Establish framework compatibility tracking
 - [x] E6:S01:T04 – Design framework dependency architecture ✅ COMPLETE (v0.6.1.1+2)
