@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.7.10+1] - 22-12-25
+
+### Added
+- Migration utilities for converting copy-paste frameworks to dependencies
+  - Framework detection for copy-paste installations (`cli/migration.py`)
+  - Migration conversion utilities with automatic backup
+  - `migrate` command with detect, convert, and validate subcommands
+  - Support for multiple backends (git-submodule, git-subtree, npm, pip)
+  - Dry-run mode for previewing migrations
+  - Migration validation with detailed issue reporting
+
+### Changed
+- Story E6:S07 updated to mark T10 as COMPLETE
+- CLI tool now includes migrate command for framework migration
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.10+1.md)
+
 ## [0.6.7.9+1] - 22-12-25
 
 ### Added

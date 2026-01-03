@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** ACCEPTED  
 **GitHub Issue:** [TBD]  
-**Version:** v0.6.7.9+1
+**Version:** v0.6.7.10+1
 
 ---
 
