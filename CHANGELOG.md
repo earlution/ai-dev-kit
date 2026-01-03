@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.2.3+1] - 03-01-26
+
+### Added
+- Framework backward compatibility policy
+  - Backward compatibility guarantees by version type (PATCH/MINOR/MAJOR)
+  - Breaking change policy and requirements
+  - Migration policy and support requirements
+  - Compatibility testing requirements and enforcement mechanisms
+
+### Changed
+- E6:S02 (Framework Update and Migration) - T03 complete: Framework backward compatibility policy established
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.2.3+1.md)
+
 ## [0.6.6.8+5] - 03-01-26
 
 ### Changed
