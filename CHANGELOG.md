@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1.2+1] - 03-01-26
+
+### Added
+- Framework release process documentation
+  - Complete release workflow covering all 13 RW steps
+  - Pre-release checklist and validation procedures
+  - Framework-specific release steps and distribution methods
+  - Release validation and troubleshooting guides
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.2+1.md)
+
 ## [0.6.1.1+1] - 03-01-26
 
 ### Added

@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-01-03  
-**Version:** v0.6.1.1+1
+**Version:** v0.6.1.2+1
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
@@ -235,12 +235,12 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.6.1.1+1
+**Last Updated:** v0.6.1.2+1
 
 **Stories:**
-- [ ] **E6:S01 – Framework Version Management** - IN PROGRESS (v0.6.1.1+1 – T01, T04 complete: Framework versioning strategy and dependency architecture)
+- [ ] **E6:S01 – Framework Version Management** - IN PROGRESS (v0.6.1.2+1 – T01, T02, T04 complete: Framework versioning strategy, release processes, and dependency architecture)
   - Story: [`epics/Epic-6/Story-001-framework-version-management.md`](epics/Epic-6/Story-001-framework-version-management.md)
-  - Tasks: T01 ✅ COMPLETE, T04 ✅ COMPLETE, T02-T03, T05 TODO
+  - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE, T04 ✅ COMPLETE, T03, T05 TODO
 - [ ] **E6:S02 – Framework Update and Migration** - TODO
   - Story: [`epics/Epic-6/Story-002-framework-update-and-migration.md`](epics/Epic-6/Story-002-framework-update-and-migration.md)
   - Tasks: T01-T03, T05 TODO, T04 SUPERSEDED (by E6:S07)
