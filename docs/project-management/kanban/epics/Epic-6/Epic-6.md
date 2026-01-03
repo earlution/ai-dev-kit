@@ -27,11 +27,14 @@ housekeeping_policy: keep
   - Story: [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)
 - [x] **E6:S03 – Framework Health Monitoring** - COMPLETE ✅
   - Story: [`Story-003-framework-health-monitoring.md`](Story-003-framework-health-monitoring.md)
-- [ ] **E6:S04 – Bug Reports** - IN PROGRESS
+- [ ] **E6:S04 – Bug Reports** - IN PROGRESS (Perpetual - v0.6.4.2+1 – Perpetual story: Bug tracking, never completes)
   - Story: [`Story-004-bug-reports.md`](Story-004-bug-reports.md)
-  - Tasks: T01 ✅, T02 ✅
-- [ ] **E6:S05 – Feature Requests** - TODO
+  - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE
+  - **Note:** This is a perpetual maintenance story. New bug reports will create new tasks. Story remains IN PROGRESS even when all current tasks are complete.
+- [ ] **E6:S05 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.5.0+1 – Perpetual story: Feature request tracking, never completes)
   - Story: [`Story-005-feature-requests.md`](Story-005-feature-requests.md)
+  - Tasks: (No tasks yet - story created for future feature requests)
+  - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete.
 - [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.14+1)
   - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T02 ✅ COMPLETE (v0.6.6.9+1), T03 ✅ COMPLETE (v0.6.6.3+1 - Feedback mechanism design, user guide, and template created), T06 ✅ COMPLETE (v0.6.6.6+20), T07 ✅ COMPLETE (v0.6.6.7+6), T08 IN PROGRESS (Perpetual - v0.6.6.8+4), T09 ✅ COMPLETE (v0.6.6.9+1), T04 ✅ COMPLETE (v0.6.6.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.6.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T12 IN PROGRESS (Perpetual - v0.6.6.12+0 - CMW maintenance), T13 ✅ COMPLETE (v0.6.6.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 ✅ COMPLETE (v0.6.6.14+1 - CMW documentation added to package README), T15 ✅ COMPLETE (v0.6.6.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T05 ✅ COMPLETE (v0.6.6.5+1 - Feedback mechanism implementation complete)

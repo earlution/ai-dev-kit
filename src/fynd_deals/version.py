@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 3      # Task number (Task 3: Design pre-release feedback mechanism)
-VERSION_BUILD = 2     # Build number (E6:S06:T03+2 - Documentation sync: Task checklist updated to reflect T03 completion)
+VERSION_STORY = 4     # Story number (Story 4: Bug Reports)
+VERSION_TASK = 2      # Task number (Task 2: Document canonical stories for Kanban framework)
+VERSION_BUILD = 2     # Build number (E6:S04:T02+2 - Perpetual story designation: E6:S04 and E6:S05 marked as perpetual)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

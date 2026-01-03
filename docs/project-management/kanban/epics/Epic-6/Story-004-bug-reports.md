@@ -8,13 +8,17 @@ housekeeping_policy: keep
 
 # Story 004 – Bug Reports
 
-**Status:** IN PROGRESS  
+**Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2025-12-07 (v0.6.4.2+1 – T02 complete: Canonical stories documentation created)  
+**Last updated:** 2026-01-03 (v0.6.4.2+1 – Perpetual story designation: Bug tracking story, never completes)  
 **Version:** v0.6.4.2+1  
 **Code:** E6S04
+
+**Story Type:** Perpetual Maintenance  
+**Completed:** N/A (Perpetual story - never completes)  
+**Explanation:** This story represents ongoing bug tracking and resolution work. New bugs will create new tasks under this story. The story remains IN PROGRESS even when all current tasks are complete, as new bugs may be reported at any time.
 
 ---
 
@@ -28,6 +32,8 @@ housekeeping_policy: keep
 ## Overview
 
 This story tracks all bug reports and bug fixes related to framework management, installation, updates, and maintenance. Bugs are converted into tasks following the FR/BR → Task → Story → Epic flow defined in the Kanban governance policy.
+
+**Perpetual Story:** This is a perpetual maintenance story that never completes. New bug reports will create new tasks under this story. The story remains IN PROGRESS even when all current tasks are complete, as bug tracking is an ongoing activity.
 
 ---
 
