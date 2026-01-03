@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.7.6+1] - 22-12-25
+
+### Added
+- Git subtree backend implementation (`cli/backends/git_subtree.py`)
+  - Full support for install, update, check, status, and remove operations
+  - Git availability checking
+  - Comprehensive error handling with timeouts
+  - Backend registered and available via CLI tool
+
+### Changed
+- Story E6:S07 updated to mark T06 as COMPLETE
+- Backend package updated to register Git subtree backend
+- CLI tool now supports both Git submodules and Git subtrees
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.6+1.md)
+
 ## [0.6.7.5+1] - 22-12-25
 
 ### Added

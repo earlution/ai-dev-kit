@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 7     # Story number (Story 7: ai-dev-kit CLI Tool)
-VERSION_TASK = 5      # Task number (Task 5: Git submodule backend implementation)
-VERSION_BUILD = 1     # Build number (E6:S07:T05+1 - Git submodule backend implementation complete)
+VERSION_TASK = 6      # Task number (Task 6: Git subtree backend implementation)
+VERSION_BUILD = 1     # Build number (E6:S07:T06+1 - Git subtree backend implementation complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
