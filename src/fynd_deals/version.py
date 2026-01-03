@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 1     # Story number (Story 1: Framework Version Management)
-VERSION_TASK = 2      # Task number (Task 2: Create framework release processes)
-VERSION_BUILD = 1     # Build number (E6:S01:T02+1 - Framework release process documentation created)
+VERSION_TASK = 3      # Task number (Task 3: Establish framework compatibility tracking)
+VERSION_BUILD = 1     # Build number (E6:S01:T03+1 - Framework compatibility tracking system created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

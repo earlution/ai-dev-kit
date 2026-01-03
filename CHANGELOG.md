@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1.3+1] - 03-01-26
+
+### Added
+- Framework compatibility tracking system
+  - Comprehensive compatibility matrix for all frameworks
+  - Version compatibility requirements and policies
+  - Backward compatibility policy (MAJOR/MINOR/PATCH)
+  - Dependency management strategies and update policies
+  - Migration support and compatibility validation procedures
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.3+1.md)
+
 ## [0.6.1.2+1] - 03-01-26
 
 ### Added
