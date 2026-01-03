@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1.5+1] - 03-01-26
+
+### Added
+- Framework version tagging strategy
+  - Comprehensive Git tagging strategy for framework releases
+  - Tag naming conventions (project, framework, monorepo tags)
+  - Tag message formats and tagging workflows
+  - Tag distribution methods and management best practices
+
+### Changed
+- E6:S01 (Framework Version Management) - Story marked as COMPLETE
+  - All 5 tasks completed: T01 (versioning strategy), T02 (release processes), T03 (compatibility tracking), T04 (dependency architecture), T05 (version tagging strategy)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.5+1.md)
+
 ## [0.6.1.3+1] - 03-01-26
 
 ### Added
