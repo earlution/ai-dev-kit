@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2025-12-22  
-**Last updated:** 2025-12-22 (v0.6.7.10+1 – T10: Migration utilities complete, detect and convert copy-paste frameworks to dependencies, migration validation, automatic backup)  
+**Last updated:** 2025-12-22 (v0.6.7.11+1 – T11: Remove command complete, framework removal with cleanup, recovery mode, --keep-files option, comprehensive trace cleanup)  
 **Version:** v0.6.7.0+1  
 **Code:** E6S07
 
@@ -31,7 +31,7 @@ housekeeping_policy: keep
 - [x] **E6:S07:T08 – Configuration management (.ai-dev-kit.yaml)** ✅ COMPLETE (v0.6.7.8+1)
 - [x] **E6:S07:T09 – Error handling and validation** ✅ COMPLETE (v0.6.7.9+1)
 - [x] **E6:S07:T10 – Migration utilities (copy-paste → dependencies)** ✅ COMPLETE (v0.6.7.10+1)
-- [ ] **E6:S07:T11 – Remove command (complements FR-008)** - TODO
+- [x] **E6:S07:T11 – Remove command (complements FR-008)** ✅ COMPLETE (v0.6.7.11+1)
 - [ ] **E6:S07:T12 – Documentation and usage examples** - TODO
 - [ ] **E6:S07:T13 – Testing, validation, and PyPI packaging** - TODO
 
@@ -523,10 +523,11 @@ Build a comprehensive CLI tool that:
 
 ### E6:S07:T11 – Remove command (complements FR-008)
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** MEDIUM  
 **Dependencies:** E6:S07:T02, FR-008  
-**Blocker:** None
+**Blocker:** None  
+**Version:** v0.6.7.11+1
 
 **Input:**
 - CLI tool commands
@@ -551,11 +552,11 @@ Build a comprehensive CLI tool that:
 - Recovery mode support
 
 **Acceptance Criteria:**
-- [ ] `ai-dev-kit remove <framework>` removes framework
-- [ ] `--keep-files` option preserves framework files
-- [ ] Cleanup removes all traces (files, config, dependencies)
-- [ ] Recovery mode fixes failed installations
-- [ ] Command works with all backends
+- [x] `ai-dev-kit remove <framework>` removes framework
+- [x] `--keep-files` option preserves framework files
+- [x] Cleanup removes all traces (files, config, dependencies)
+- [x] Recovery mode fixes failed installations
+- [x] Command works with all backends
 
 **Related:** FR-008 (Package Uninstall Capabilities)
 

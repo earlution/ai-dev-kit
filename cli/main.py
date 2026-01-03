@@ -21,6 +21,7 @@ from cli.commands.status import StatusCommand
 from cli.commands.list import ListCommand
 from cli.commands.config import ConfigCommand
 from cli.commands.migrate import MigrateCommand
+from cli.commands.remove import RemoveCommand
 
 
 # Command registry
@@ -33,6 +34,7 @@ _COMMANDS: Dict[str, Type[BaseCommand]] = {
     "list": ListCommand,
     "config": ConfigCommand,
     "migrate": MigrateCommand,
+    "remove": RemoveCommand,
 }
 
 

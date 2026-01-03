@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.7.11+1] - 22-12-25
+
+### Added
+- Remove command for framework uninstallation
+  - `remove` command with framework removal and cleanup (`cli/commands/remove.py`)
+  - `--keep-files` option to preserve framework files
+  - `--recovery` mode for cleaning up failed installations
+  - `--force` option for non-interactive removal
+  - Comprehensive cleanup utilities (files, config, dependencies, traces)
+  - Integration with all backend implementations
+  - Dry-run mode for preview
+
+### Changed
+- Story E6:S07 updated to mark T11 as COMPLETE
+- CLI tool now includes remove command for framework uninstallation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.11+1.md)
+
 ## [0.6.7.10+1] - 22-12-25
 
 ### Added
