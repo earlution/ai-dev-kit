@@ -51,18 +51,61 @@ cli/
 
 ## Development
 
+### Setup Development Environment
+
+```bash
+# Install in development mode
+pip install -e ".[dev]"
+
+# Or install test dependencies separately
+pip install -r tests/requirements.txt
+```
+
 ### Running Tests
 
 ```bash
+# Run all tests
 pytest
+
+# Run with coverage
+pytest --cov=cli --cov-report=html
+
+# Run specific test file
+pytest tests/test_commands.py
+
+# Run specific test category
+pytest -m unit
+pytest -m integration
 ```
 
 ### Code Quality
 
 ```bash
+# Format code
 black cli/
+
+# Lint code
 flake8 cli/
+
+# Type checking
 mypy cli/
+```
+
+### Validation
+
+```bash
+# Run comprehensive validation
+python scripts/validate_cli.py
+```
+
+### Building Package
+
+```bash
+# Build distribution
+python -m build
+
+# Test installation
+pip install dist/ai_dev_kit-*.whl
 ```
 
 ## Documentation
