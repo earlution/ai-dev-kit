@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2025-12-18  
-**Version:** v0.6.6.7+6
+**Last Updated:** 2026-01-03  
+**Version:** v0.6.7.13+1
 
 **Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
 
@@ -250,11 +250,10 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Story: [`epics/Epic-6/Story-005-feature-requests.md`](epics/Epic-6/Story-005-feature-requests.md)
 - [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.9+1)
   - Story: [`epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md`](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-- [ ] **E6:S07 – ai-dev-kit CLI Tool** - TODO (v0.6.7.0+0 – Story created, FR-030 intake complete)
+- [x] **E6:S07 – ai-dev-kit CLI Tool** - COMPLETE ✅ (v0.6.7.13+1 – All 14 tasks T00-T13 complete: Architecture, commands, backend abstraction, all four backends, configuration management, error handling, migration utilities, remove command, documentation, testing, validation, PyPI packaging)
   - Story: [`epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`](epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T13 TODO (CLI tool implementation: architecture, commands, backends, config, migration, testing, packaging)
+  - Tasks: T00 ✅ COMPLETE, T01-T13 ✅ COMPLETE (CLI tool implementation: architecture, commands, backends, config, migration, testing, packaging - ALL COMPLETE)
   - **Feature Request:** [FR-030](fr-br/FR-030-ai-dev-kit-cli-tool.md)
-  - Tasks: T00 ✅, T01 ✅, T02 ✅ COMPLETE (v0.6.6.9+1), T06 ✅, T07 ✅, T08 IN PROGRESS (Perpetual), T03-T05 TODO (feedback mechanism)
 
 **Epic Doc:** [`epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
 
