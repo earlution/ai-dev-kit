@@ -19,6 +19,7 @@ from cli.commands.update import UpdateCommand
 from cli.commands.check import CheckCommand
 from cli.commands.status import StatusCommand
 from cli.commands.list import ListCommand
+from cli.commands.config import ConfigCommand
 
 
 # Command registry
@@ -29,6 +30,7 @@ _COMMANDS: Dict[str, Type[BaseCommand]] = {
     "check": CheckCommand,
     "status": StatusCommand,
     "list": ListCommand,
+    "config": ConfigCommand,
 }
 
 

@@ -6,11 +6,31 @@ Handles reading and writing of .ai-dev-kit.yaml configuration files.
 
 import yaml
 from pathlib import Path
-from typing import Dict, Optional, Any
-from cli.utils import get_project_root, print_error
+from typing import Dict, Optional, Any, List
+from cli.utils import get_project_root, print_error, print_warning
 
 
 CONFIG_FILENAME = ".ai-dev-kit.yaml"
+
+# Configuration schema
+CONFIG_SCHEMA = {
+    "version": str,
+    "default_backend": str,
+    "frameworks": dict,
+    "update_policy": dict,
+    "auto_check": bool,
+    "check_interval": str,
+    "notification_channel": str,
+}
+
+# Valid backends
+VALID_BACKENDS = ["git-submodule", "git-subtree", "npm", "pip"]
+
+# Valid check intervals
+VALID_CHECK_INTERVALS = ["daily", "weekly", "manual"]
+
+# Valid notification channels
+VALID_NOTIFICATION_CHANNELS = ["console", "email", "slack"]
 
 
 class Config:
@@ -148,4 +168,96 @@ class Config:
             del self._config["frameworks"][name]
             return True
         return False
+    
+    def validate(self) -> List[str]:
+        """
+        Validate configuration against schema.
+        
+        Returns:
+            List of validation errors (empty if valid)
+        """
+        errors = []
+        
+        # Check required fields
+        if "version" not in self._config:
+            errors.append("Missing required field: version")
+        if "default_backend" not in self._config:
+            errors.append("Missing required field: default_backend")
+        if "frameworks" not in self._config:
+            errors.append("Missing required field: frameworks")
+        
+        # Validate default_backend
+        if "default_backend" in self._config:
+            backend = self._config["default_backend"]
+            if backend not in VALID_BACKENDS:
+                errors.append(f"Invalid default_backend: {backend}. Must be one of {VALID_BACKENDS}")
+        
+        # Validate check_interval if present
+        if "check_interval" in self._config:
+            interval = self._config["check_interval"]
+            if interval not in VALID_CHECK_INTERVALS:
+                errors.append(f"Invalid check_interval: {interval}. Must be one of {VALID_CHECK_INTERVALS}")
+        
+        # Validate notification_channel if present
+        if "notification_channel" in self._config:
+            channel = self._config["notification_channel"]
+            if channel not in VALID_NOTIFICATION_CHANNELS:
+                errors.append(f"Invalid notification_channel: {channel}. Must be one of {VALID_NOTIFICATION_CHANNELS}")
+        
+        # Validate frameworks structure
+        if "frameworks" in self._config:
+            frameworks = self._config["frameworks"]
+            if not isinstance(frameworks, dict):
+                errors.append("frameworks must be a dictionary")
+            else:
+                for name, info in frameworks.items():
+                    if not isinstance(info, dict):
+                        errors.append(f"Framework '{name}' must be a dictionary")
+                    else:
+                        required_fields = ["version", "backend", "path"]
+                        for field in required_fields:
+                            if field not in info:
+                                errors.append(f"Framework '{name}' missing required field: {field}")
+                        if "backend" in info and info["backend"] not in VALID_BACKENDS:
+                            errors.append(f"Framework '{name}' has invalid backend: {info['backend']}")
+        
+        return errors
+    
+    def reset_to_defaults(self) -> None:
+        """Reset configuration to default values."""
+        self._config = {
+            "version": "1.0.0",
+            "default_backend": "git-submodule",
+            "frameworks": {},
+            "update_policy": {
+                "patch": "auto",
+                "minor": "notify",
+                "major": "manual",
+            },
+            "auto_check": True,
+            "check_interval": "daily",
+            "notification_channel": "console",
+        }
+    
+    def list_all(self) -> Dict[str, Any]:
+        """
+        Get all configuration as a dictionary.
+        
+        Returns:
+            Complete configuration dictionary
+        """
+        return self._config.copy()
+    
+    def get_framework_info(self, name: str) -> Optional[Dict[str, Any]]:
+        """
+        Get information for a specific framework.
+        
+        Args:
+            name: Framework name
+        
+        Returns:
+            Framework configuration dictionary, or None if not found
+        """
+        frameworks = self.get_frameworks()
+        return frameworks.get(name)
 

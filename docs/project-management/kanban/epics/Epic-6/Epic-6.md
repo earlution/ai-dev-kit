@@ -35,7 +35,7 @@ housekeeping_policy: keep
 - [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.3+1)
   - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T02 ✅ COMPLETE (v0.6.6.9+1), T06 ✅ COMPLETE (v0.6.6.6+20), T07 ✅ COMPLETE (v0.6.6.7+6), T08 IN PROGRESS (Perpetual - v0.6.6.8+2), T09 ✅ COMPLETE (v0.6.6.9+1), T04 ✅ COMPLETE (v0.6.6.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.6.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T12 IN PROGRESS (Perpetual - v0.6.6.12+0 - CMW maintenance), T13 ✅ COMPLETE (v0.6.6.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 TODO (v0.6.6.14+0 - Doc-init: FR-027 and T14 created), T15 ✅ COMPLETE (v0.6.6.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T03, T05 TODO (feedback mechanism)
-- [ ] **E6:S07 – ai-dev-kit CLI Tool** - IN PROGRESS (v0.6.7.7+1 – T01-T07 complete: Architecture, commands, backend abstraction, all four backends (Git submodule, Git subtree, npm, pip))
+- [ ] **E6:S07 – ai-dev-kit CLI Tool** - IN PROGRESS (v0.6.7.8+1 – T01-T08 complete: Architecture, commands, backend abstraction, all four backends, configuration management)
   - Story: [`Story-007-ai-dev-kit-cli-tool.md`](Story-007-ai-dev-kit-cli-tool.md)
   - Tasks: T00 ✅ COMPLETE, T01-T13 TODO (CLI tool implementation: architecture, commands, backends, config, migration, testing, packaging)
   - **Feature Request:** [FR-030](../../fr-br/FR-030-ai-dev-kit-cli-tool.md)
