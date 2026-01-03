@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.2.2+1] - 03-01-26
+
+### Added
+- Framework migration guide
+  - Comprehensive migration scenarios (copy-paste → dependency, backend changes, version upgrades)
+  - Step-by-step migration procedures for all scenarios
+  - Migration tools documentation (CLI tool, scripts)
+  - Customization preservation methods
+  - Migration troubleshooting and rollback procedures
+
+### Changed
+- E6:S02 (Framework Update and Migration) - T02 complete: Framework migration guide established
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.2.2+1.md)
+
 ## [0.6.2.1+1] - 03-01-26
 
 ### Added
