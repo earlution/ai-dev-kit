@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
 VERSION_TASK = 8      # Task number (Task 8: Update Kanban Workflow - Perpetual Task)
-VERSION_BUILD = 14    # Build number (E6:S06:T08+14 - Kanban board updated: epic status corrected, completed tasks removed from MoSCoW)
+VERSION_BUILD = 15    # Build number (E6:S06:T08+15 - E5:S02 documentation updated: story marked COMPLETE, T03 deliverables documented)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
