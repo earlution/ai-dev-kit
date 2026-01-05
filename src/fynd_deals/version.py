@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 12    # Story number (Story 12: RW Step 17: Housekeeping)
-VERSION_TASK = 1      # Task number (Task 1: Add Step 17: Housekeeping to Release Workflow)
-VERSION_BUILD = 1     # Build number (E2:S12:T01+1 - Step 17 added: workflow YAML, documentation, and cursor rules updated)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
+VERSION_TASK = 12     # Task number (Task 12: Changelog Maintenance Workflow - Perpetual Task)
+VERSION_BUILD = 1     # Build number (E6:S06:T12+1 - CMW: Changelog maintenance - archived 50 entries, removed 1 duplicate, T16 task created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

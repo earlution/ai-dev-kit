@@ -1,4 +1,1337 @@
 # Changelog Archive
+## [0.2.10.2+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T02 - Doc-Init Validation (Docs-Only Check)
+
+### Summary
+
+**Doc-Init Validation:** Implemented doc-init validation in both version bump and branch context validators. Validators now detect when BUILD=0 (doc-init build) and verify that all changed files are documentation-only, failing with clear error messages if code files are detected.
+
+### Changes
+
+**Validation Scripts Enhanced:**
+- ✅ Added `is_documentation_file()` function to classify files as docs vs code
+- ✅ Added `get_changed_files()` function to detect git changes
+- ✅ Added `validate_doc_init_build()` function for `+0` build validation
+- ✅ Integrated doc-init validation into `validate_version_bump.py`
+- ✅ Integrated doc-init validation into `validate_branch_context.py`
+- ✅ Validators fail with clear error messages if non-doc files detected in `+0` builds
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.2+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.2+1.md)
+
+---
+## [0.2.10.3+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T03 - CHANGELOG Format for Doc Init Entries
+
+### Summary
+
+**CHANGELOG Format Update:** Updated CHANGELOG format documentation to include standardized "Doc Init" format for `+0` builds. Defined format for both main changelog and detailed changelog archive entries.
+
+### Changes
+
+**Format Documentation:**
+- ✅ Updated versioning policy with doc-init format for main and detailed changelogs
+- ✅ Updated implementation guide with doc-init format templates
+- ✅ Standardized format: `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]` for `+0` builds
+- ✅ Documented `**Build Type:** Doc-Init (`+0`)` and `**Type:** 📋 Doc Init` fields
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support), E2:S10:T02 (Doc-Init Validation)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.3+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.3+1.md)
+
+---
+## [0.2.10.4+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T04 - Versioning Policy with Doc-Init Logic
+
+### Summary
+
+**Versioning Policy Update:** Updated versioning policy documents to include comprehensive doc-init logic. Documented `+0` build number for doc-init builds, explained relationship between doc-init (`+0`) and functional work (`+1`), and updated Task transition rules.
+
+### Changes
+
+**Policy Documentation:**
+- ✅ Updated BUILD section in framework and dev-kit versioning policies
+- ✅ Documented doc-init build (`+0`) for first-time Task/Story/Epic document creation
+- ✅ Documented normal builds (`+1` or higher) for functional work
+- ✅ Explained relationship: Doc-init (`+0`) → Functional work (`+1`, `+2`, ...)
+- ✅ Updated Task transition rules to include doc-init path
+- ✅ Expanded Doc-Init Support section with complete documentation
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Feature Request:** FR-018 - Abstract Space for Zero-Numbered E/S/T Docs
+- **Depends On:** E2:S10:T01-T03 (Doc-Init Implementation)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.4+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.4+1.md)
+
+---
+## [0.2.10.5+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T05 - RW Step 2 Procedure Documentation (Doc-Init Examples)
+
+### Summary
+
+**Documentation Update:** Updated RW Step 2 procedure documentation to include comprehensive doc-init logic, examples, and cross-references. Added doc-init scenarios and examples showing doc-init vs normal build paths.
+
+### Changes
+
+**RW Agent Execution Guide:**
+- ✅ Added doc-init scenarios to "B. IDENTIFY COMPLETED TASK" section
+- ✅ Added new "B.2. DOC-INIT SCENARIOS AND EXAMPLES" section with three comprehensive examples
+- ✅ Enhanced Task document location section with doc-init documentation notes
+- ✅ Added cross-references to FR-016, FR-017, and FR-018
+- ✅ Version updated to 1.7.0
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Depends On:** E2:S10:T01-T04 (All doc-init implementation tasks)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.5+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.5+1.md)
+
+---
+## [0.2.10.6+0] - 2025-12-11
+
+📋 Doc Init (Abstract Space): E2:S10:T06 - Task Creation and FR-020 Intake
+
+### Added
+
+- **Epic 2 Story 10 Task 6:** Update Version Validator for Abstract Space Awareness (FR-020)
+  - Created Task 6 under Story 10 for FR-020 implementation
+  - Defined approach and acceptance criteria for validator enhancement
+  - Abstract space `0.2.10.6+0` established for forensic traceability
+
+- **FR-020:** Version Validator Abstract Space Awareness
+  - Created FR-020 document with full requirements
+  - Status: ACCEPTED
+  - Assigned to Epic 2, Story 10, Task 6
+
+### Updated
+
+- **Story 10:** Added T06 to task checklist, updated acceptance criteria (AC8, AC9)
+- **Epic 2:** Updated Story 10 task count (T01-T07)
+- **Story 10:** Added FR-020 to Related Work section
+
+### Related Work
+
+- Epic: 2
+- Story: 10
+- Task: 6
+- FR-020: Version Validator Abstract Space Awareness
+- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) (abstract space concept)
+- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (abstract space definition)
+- E2:S10:T02: Implement Doc-Init Validation (Docs-Only Check) (related validation)
+
+---
+## [0.2.10.6+1] - 12-12-25
+
+🔧 Workflow Management: E2:S10:T06 - Version Validator Abstract Space Awareness (FR-020)
+
+### Summary
+
+**Validator Enhancement:** Updated version validator to recognize `+0` as valid BUILD for abstract spaces (doc-init builds). Added detection logic for first-time E/S/T doc commits and enhanced error messages explaining abstract space requirements.
+
+### Changes
+
+**Version Validator Updates:**
+- ✅ Updated version bump validation logic to recognize `+0` as valid for doc-init builds
+- ✅ Added `detect_first_time_est_doc()` function for first-time E/S/T doc detection
+- ✅ Enhanced abstract space validation with clear error messages
+- ✅ Updated error messages to reference FR-017, FR-018, FR-020
+- ✅ Updated version file validation notes (BUILD >= 0, not >= 1)
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-020 - Version Validator Abstract Space Awareness
+- **Depends On:** E2:S10:T01-T02 (Doc-Init Implementation)
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.6+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.6+1.md)
+
+---
+## [0.2.10.7+1] - 12-12-25
+
+📚 Workflow Management: E2:S10:T07 - Documentation and Testing (Doc-Init)
+
+### Summary
+
+**Documentation & Testing:** Completed comprehensive documentation and testing coverage for doc-init functionality. Created migration guide for existing projects, documented testing scenarios and edge cases, and verified policy document consistency.
+
+### Changes
+
+**New Documentation:**
+- ✅ Doc-Init Migration Guide for existing projects
+- ✅ Testing checklist covering all doc-init scenarios
+- ✅ Edge case documentation
+- ✅ Policy consistency verification guidance
+
+**Migration Guide:**
+- Preconditions and prerequisites for enabling doc-init
+- Step-by-step migration process
+- Testing checklist (new Epic/Story/Task `+0`, docs-only enforcement, functional builds)
+- Changelog and policy alignment guidance
+- Migration anti-patterns
+
+### Related Work
+
+- **Story:** E2:S10 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Requests:** FR-017, FR-018, FR-020
+- **Detailed Changelog:** [CHANGELOG_v0.2.10.7+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.7+1.md)
+
+---
+## [0.2.11.0+0] - 2025-12-11
+
+📋 Doc Init (Abstract Space): E2:S11:T00 - Story Creation and FR-019 Intake
+
+### Added
+
+- **Epic 2 Story 11:** Intake Workflow Automation
+  - Created Story 11 under Epic 2 for FR-019 implementation
+  - Defined 10 tasks (T00-T09) for implementing automated intake workflow
+  - T00 (Story Creation and FR-019 Intake) complete
+  - Abstract space `0.2.11.0+0` established for forensic traceability
+
+- **FR-019:** Intake Workflow Automation
+  - Created FR-019 document with full requirements
+  - Status: ACCEPTED
+  - Assigned to Epic 2, Story 11
+
+### Updated
+
+- **Epic 2:** Added Story 11 to story checklist
+- **FR-019:** Updated intake decision section with Epic/Story/Task assignment
+- **E4:S10, E2:S07, E4:S08:** Added cross-references to FR-019/E2:S11
+
+### Related Work
+
+- Epic: 2
+- Story: 11
+- Task: 0
+- FR-019: Intake Workflow Automation
+- E4:S10: Agentic Kanban Task Creation from FR/BR (task creation integration)
+- E2:S07: Trigger-Aware Release Workflow (trigger integration)
+- E4:S08: Intelligent Epic Matching (semantic matching for decision flow)
+
+---
+## [0.2.11.1+1] - 15-12-25
+
+🏗️ Workflow Management: E2:S11:T01 - Design Intake Workflow Architecture
+
+### Summary
+
+**Architecture:** Designed comprehensive architecture for Intake Workflow, an automated workflow that formalizes and automates the process of "intaking" FR/BR/UXR reports into the Kanban system. The design follows established patterns from Release Workflow and integrates seamlessly with existing workflow systems.
+
+### Changes
+
+**Architecture Design:**
+- ✅ 7-step workflow architecture (Load & Parse → Decision Flow → Task Creation → Documentation Update → Dependency Wiring → Version Assignment → Validation)
+- ✅ Deterministic vs agentic boundaries clearly defined
+- ✅ Integration points with RW, Kanban, trigger-aware execution, and semantic matching
+- ✅ Error handling strategy following RW Step 7 hardening patterns
+- ✅ Framework-agnostic config-driven approach
+
+**Workflow YAML:**
+- ✅ Complete workflow YAML definition with 7 steps
+- ✅ Mandatory and blocking steps defined
+- ✅ Config-driven approach for framework-agnostic reuse
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.1+1.md)
+
+---
+## [0.2.11.1+2] - 15-12-25
+
+🏗️ Workflow Management: E2:S11:T01 - Updated Intake Workflow Architecture (Build 2)
+
+### Summary
+
+**Architecture Update:** Updated Intake Workflow architecture design with key clarifications: E4:S10 integration strategy, version marker assignment flow, pre-flight checks, workflow invocation methods, and epic creation policy.
+
+### Changes
+
+**Architecture Clarifications:**
+- ✅ Added Step 0: Pre-Flight Checks (optional but recommended)
+- ✅ Clarified E4:S10 integration strategy (avoid duplication, leverage existing components)
+- ✅ Resolved version marker assignment flow (Step 6 assigns, Step 4 records)
+- ✅ Added workflow invocation methods documentation (manual and trigger-aware)
+- ✅ Clarified epic creation policy (default: epic must exist, optional auto-create)
+- ✅ Enhanced Step 5 error handling (strict mode support)
+- ✅ Added status management documentation
+
+**Key Improvements:**
+- E4:S10 integration clearly defined (Step 2-3 leverage E4:S10, avoid reimplementation)
+- Version marker flow resolved (clear separation of assignment vs recording)
+- Pre-flight checks added for better error prevention
+- Workflow invocation methods documented
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.1+2.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.1+2.md)
+
+---
+## [0.2.11.2+1] - 15-12-25
+
+🔍 Workflow Management: E2:S11:T02 - Implement Decision Flow Analysis
+
+### Summary
+
+**Implementation:** Implemented Decision Flow Analysis component for Intake Workflow, leveraging E4:S10's EpicStoryMapper for semantic matching and adding intake-specific decision logic for status determination, story/task placement, and manual review detection.
+
+### Changes
+
+**New Components:**
+- ✅ `intake_decision_flow.py` - Decision flow analysis component
+- ✅ `test_intake_decision_flow.py` - Test suite (all tests passing)
+
+**Key Features:**
+- Epic/Story mapping using E4:S10's EpicStoryMapper (no duplication)
+- Intake status determination (ACCEPTED/PENDING based on confidence)
+- Story/task placement logic (new vs existing)
+- Manual review detection for uncertain placements
+- Decision rationale generation
+
+**Integration:**
+- Seamlessly integrates with E4:S10 components
+- Config-driven approach for customization
+- Ready for integration with Step 3 (Task Creation)
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.2+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.2+1.md)
+
+---
+## [0.2.11.3+1] - 15-12-25
+
+🔗 Workflow Management: E2:S11:T03 - Implement Kanban Task Creation Integration
+
+### Summary
+
+**Implementation:** Implemented Kanban Task Creation Integration component for Intake Workflow, delegating to E4:S10's AgenticTaskWorkflow for task creation and adding intake-specific validation, error handling, and FR/BR linking.
+
+### Changes
+
+**New Components:**
+- ✅ `intake_task_creation.py` - Task creation integration component
+- ✅ `test_intake_task_creation.py` - Test suite (all tests passing)
+
+**Key Features:**
+- E4:S10 delegation using AgenticTaskWorkflow.process_fr_br() (no duplication)
+- Intake decision validation before task creation
+- Comprehensive error handling for invalid decisions and workflow failures
+- FR/BR linking (via E4:S10 + intake-specific logic)
+- Manual review support
+
+**Integration:**
+- Seamlessly integrates with E4:S10's AgenticTaskWorkflow
+- Uses intake decision from T02 (Decision Flow Analysis)
+- Ready for integration with Step 4 (Documentation Updates)
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.3+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.3+1.md)
+
+---
+## [0.2.11.4+1] - 15-12-25
+
+📄 Workflow Management: E2:S11:T04 - Implement Intake Documentation Updates
+
+### Summary
+
+**Implementation:** Implemented Intake Documentation Update component for updating FR/BR/UXR documents with intake decision results, status, version markers, and Kanban links.
+
+### Changes
+
+**New Components:**
+- ✅ `intake_documentation_update.py` - Documentation update component
+- ✅ `test_intake_documentation_update.py` - Test suite (all tests passing)
+
+**Key Features:**
+- Status field update (ACCEPTED/PENDING/REJECTED/DEFERRED)
+- Intake Decision section update/creation with decision flow results
+- Records intake date, assigned epic/story/task, version marker
+- Creates Kanban links to assigned tasks
+- Handles markdown with frontmatter or header sections
+- Comprehensive error handling
+
+**Integration:**
+- Uses intake decision from T02 (Decision Flow Analysis)
+- Uses created tasks from T03 (Task Creation)
+- Uses version marker from Step 6 (Version Assignment)
+- Ready for integration with remaining intake workflow steps
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.4+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.4+1.md)
+
+---
+## [0.2.11.5+1] - 15-12-25
+
+🔗 Workflow Management: E2:S11:T05 - Implement Dependency and Reference Wiring
+
+### Summary
+
+**Implementation:** Implemented Dependency and Reference Wiring component for extracting and wiring dependencies from FR/BR/UXR content, including Blocked By, Blocks, and Related Work references.
+
+### Changes
+
+**New Components:**
+- ✅ `intake_dependency_wiring.py` - Dependency wiring component
+- ✅ `test_intake_dependency_wiring.py` - Test suite (all tests passing)
+
+**Key Features:**
+- Pattern-based dependency extraction (FR-XXX, BR-XXX, E2:S11, E2:S11:T05)
+- Dependency categorization (Blocked By, Blocks, Related Work)
+- Dependency validation (existence check, circular dependency detection)
+- Document updates with dependency wiring
+- Cross-references to created tasks
+- Strict mode for blocking on missing/invalid dependencies
+
+**Integration:**
+- Uses created tasks from T03 (Task Creation) for cross-referencing
+- Updates FR/BR/UXR documents with dependency wiring
+- Ready for integration with remaining intake workflow steps
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.5+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.5+1.md)
+
+---
+## [0.2.11.6+1] - 15-12-25
+
+🔄 Workflow Management: E2:S11:T06 - Integrate with Release Workflow
+
+### Summary
+
+**Implementation:** Implemented Release Workflow integration for intake workflow versioning, including version marker assignment with doc-init build support per FR-020.
+
+### Changes
+
+**New Components:**
+- ✅ `intake_version_assignment.py` - Version assignment component integrating with RW
+- ✅ `test_intake_version_assignment.py` - Test suite (all tests passing)
+
+**Key Features:**
+- Version marker assignment following RC.EPIC.STORY.TASK+BUILD schema
+- Doc-init build (+0) support for new Story/Task creation (FR-020)
+- Next build number determination for existing tasks
+- RW integration using RW's versioning logic and version file structure
+- Comprehensive error handling for invalid decisions and missing files
+
+**Integration:**
+- Integrates with RW versioning logic (no duplication)
+- Uses intake decision from T02 (Decision Flow Analysis)
+- Uses created tasks from T03 (Task Creation)
+- Version marker used by T04 (Documentation Updates)
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019, FR-020
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.6+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.6+1.md)
+
+---
+## [0.2.11.7+1] - 15-12-25
+
+⚡ Workflow Management: E2:S11:T07 - Add Trigger-Aware Execution Support
+
+### Summary
+
+**Implementation:** Implemented Trigger-Aware Execution Support for intake workflow, registering it as a trigger handler for FR/BR/UXR commits and integrating with trigger-aware RW (E2:S07).
+
+### Changes
+
+**New Components:**
+- ✅ `intake_workflow_trigger_handler.py` - Trigger handler for intake workflow execution
+- ✅ `test_intake_workflow_trigger.py` - Test suite (all tests passing)
+
+**Modified Components:**
+- ✅ `trigger_registry.py` - Updated FR/BR/UXR triggers to use intake workflow
+- ✅ `trigger_integration.py` - Registered intake workflow with workflow executor
+- ✅ `intake_documentation_update.py` - Fixed missing Tuple import (bug fix)
+
+**Key Features:**
+- Trigger handler executes complete intake workflow when FR/BR/UXR commits detected
+- Updated trigger registry to use intake workflow for FR/BR/UXR commits
+- Registered intake workflow with workflow executor
+- Automatic execution of intake workflow on FR/BR/UXR commits
+- Comprehensive error handling for trigger execution failures
+
+**Integration:**
+- Integrates with trigger-aware RW (E2:S07) - no duplication
+- Uses all intake workflow components (T02-T06)
+- Automatically processes FR/BR/UXR files detected in commits
+- Ready for production use
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019, FR-014
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.7+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.7+1.md)
+
+---
+## [0.2.11.8+1] - 15-12-25
+
+📚 Workflow Management: E2:S11:T08 - Create Agent Execution Guide
+
+### Summary
+
+**Implementation:** Created comprehensive Agent Execution Guide for intake workflow, documenting step-by-step execution instructions, usage examples, integration points, and troubleshooting guidance.
+
+### Changes
+
+**New Documentation:**
+- ✅ `intake-workflow-agent-execution.md` - Comprehensive agent execution guide
+
+**Key Features:**
+- Step-by-step execution guide for all 7 intake workflow steps
+- Detailed ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern for each step
+- Usage examples for manual and trigger-aware execution
+- Integration points documentation (RW, Kanban, Trigger-Aware RW)
+- Troubleshooting guide with common issues and solutions
+- Success criteria checklist
+
+**Documentation Structure:**
+- Overview and execution context
+- Workflow execution flow (3 phases)
+- Step-by-step execution guide (7 steps)
+- Usage examples (manual and trigger-aware)
+- Integration points (RW, Kanban, Trigger-Aware RW)
+- Troubleshooting guide
+- Related documentation links
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.8+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.8+1.md)
+
+---
+## [0.2.11.9+1] - 16-12-25
+
+📚 Workflow Management: E2:S11:T09 - Documentation and Testing
+
+### Summary
+
+**Documentation:** Updated workflow-mgt documentation to include comprehensive references to the Intake Workflow. Added intake workflow to README, trigger-aware RW documentation, and agent-driven workflow execution guide as a canonical example.
+
+### Changes
+
+**Documentation Updates:**
+- ✅ Updated `workflow-mgt/README.md` with Intake Workflow section
+- ✅ Updated `trigger-aware-rw-documentation.md` with Intake Workflow Integration section
+- ✅ Updated `agent-driven-workflow-execution.md` to include Intake Workflow as canonical example
+- ✅ Added cross-references to `intake-workflow-agent-execution.md` throughout documentation
+
+**Key Updates:**
+- Intake Workflow added to "Core Methodology Documents" and "Workflow Definitions" in README
+- Dedicated Intake Workflow section in README with overview, features, steps, and documentation references
+- Intake Workflow Integration section in trigger-aware RW docs explaining automatic execution
+- Intake Workflow added as canonical example alongside Release Workflow
+
+### Testing
+
+- ✅ All intake workflow component tests passing (T02-T07)
+- ✅ Documentation cross-references verified
+- ✅ No linter errors in updated documentation files
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.9+1.md)
+
+---
+## [0.2.11.9+2] - 16-12-25
+
+📚 Workflow Management: E2:S11:T09 - Documentation and Testing (Vision & Purpose docs)
+
+### Summary
+
+**Documentation:** Captured the high-level vision and purpose of AI Dev Kit, including why it exists, the problem it solves (project drift and repeated remedial work across multiple projects), and how it will be released publicly alongside the Head First AI-Assisted Development book. Surfaced this context prominently in the root README and KB landing page.
+
+### Changes
+
+**New Documentation:**
+- ✅ `docs/documentation/ai-dev-kit-vision-and-purpose.md` — Vision, problem statement, book context, adoption paths, and success criteria
+
+**README Updates:**
+- ✅ Root `README.md` — Added **"Why AI Dev Kit?"** section and link to the vision document
+- ✅ `docs/README.md` — Updated structure and Getting Started to point at the vision document first
+
+### Testing
+
+- ✅ Verified links from README and KB README to the vision document
+- ✅ No code changes; documentation-only update
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+2.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.9+2.md)
+
+---
+## [0.2.11.9+3] - 16-12-25
+
+📚 Workflow Management: E2:S11:T09 - Documentation and Testing (Expanded Analysis Framework)
+
+### Summary
+
+**Documentation:** Expanded comprehensive project analysis framework to include all pattern dimensions, not just Kanban and KB structures. Framework now analyzes 10 dimensions (Kanban, KB, Versioning, Workflows, Project Structure, Documentation, Configuration, Testing, Integration, Tooling) to ensure the "golden pre-release version" is informed by real-world patterns across all aspects of project organization.
+
+### Changes
+
+**Framework Expansion:**
+- ✅ Updated `docs/Analysis/comprehensive-project-analysis-framework.md` — Expanded from 4 to 10 analysis dimensions
+- ✅ Added: Versioning Patterns, Project Structure Patterns, Documentation Patterns, Configuration Patterns, Testing Patterns, Tooling & Automation Patterns
+- ✅ Updated Phase 2 (Pattern Extraction) to extract patterns across all dimensions
+- ✅ Updated Phase 5 (Canonical Structure Design) to design canonical structures for all dimensions
+- ✅ Expanded per-project analysis template to include all dimensions
+
+**New Analysis Dimensions:**
+- Versioning Patterns (schemas, changelogs, version file structure)
+- Project Structure Patterns (root organization, source/test/config structure)
+- Documentation Patterns (README, guides, API docs, formats)
+- Configuration Patterns (`.cursorrules`, config files, environment setup)
+- Testing Patterns (test organization, frameworks, coverage)
+- Tooling & Automation Patterns (scripts, CLI tools, code generation)
+
+### Testing
+
+- ✅ Framework document updated and validated
+- ✅ All dimensions included in analysis scope
+- ✅ Methodology updated to cover all dimensions
+
+### Related Work
+
+- **Story:** E2:S11 - Intake Workflow Automation
+- **Epic:** Epic 2 - Workflow Management
+- **Feature Request:** FR-019
+- **Detailed Changelog:** [CHANGELOG_v0.2.11.9+3.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.9+3.md)
+
+---
+## [0.2.11.10+1] - 16-12-25
+
+🔒 Workflow Management: E2:S11:T10 - CHANGELOG Entry Removal Investigation and Hardening
+
+### Summary
+
+**CHANGELOG Protection:** Investigated root cause of accidental CHANGELOG entry removal in commit f092c1f (5,174 lines removed). Implemented comprehensive safeguards including backup requirements, entry preservation validation, large deletion detection, and enhanced RW Step 4 hardening.
+
+### Changes
+
+**Root Cause Analysis:**
+- ✅ Identified file overwrite as primary cause (CHANGELOG.md completely replaced instead of entry insertion)
+- ✅ Documented process gaps (no pre-commit validation, no entry count checks, no backup mechanism)
+- ✅ Created comprehensive root cause analysis document
+
+**Safeguards Implemented:**
+- ✅ Enhanced RW Step 4 with backup-before-write requirement
+- ✅ Added entry preservation validation (verify all existing entries remain)
+- ✅ Added entry count validation (new count = old count + 1)
+- ✅ Added large deletion detection (>100 lines removed triggers error)
+- ✅ Added version continuity check (no gaps introduced)
+- ✅ Updated RW documentation with CHANGELOG protection guidelines
+
+**Documentation Updates:**
+- ✅ Updated `release-workflow-agent-execution.md` Step 4 with protection requirements
+- ✅ Created task document with root cause analysis and implementation details
+- ✅ Documented recovery mechanisms and prevention guidelines
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 11 - Intake Workflow Automation
+- **Task:** Task 10 - Investigate CHANGELOG Entry Removal and Harden Processes
+- **Related:** E2:S01:T06 (Changelog validator ordering bug)
+- **Incident:** Commit f092c1f (v0.2.11.9+3) - 5,174 lines removed, entries restored
+
+---
+## [0.2.11.11+1] - 16-12-25
+
+🔧 Workflow Management: E2:S11:T11 - Fix CHANGELOG Ordering Violations
+
+### Summary
+
+**CHANGELOG Reordering:** Fixed all ordering violations in CHANGELOG.md. Reordered 186 unique entries to correct Keep a Changelog format (newest first), removed 3 duplicate entries, and updated validator to allow build 0 for doc-init builds.
+
+### Changes
+
+**CHANGELOG Fixes:**
+- ✅ Reordered all 186 entries to correct Keep a Changelog order (newest first)
+- ✅ Removed 3 duplicate entries (0.2.11.9+3, 0.2.11.9+2, 0.2.1.6+4)
+- ✅ Preserved all entry content, links, and references
+- ✅ Preserved [Unreleased] section
+- ✅ Validator now passes with `--format keep_a_changelog`
+
+**Validator Updates:**
+- ✅ Updated build number validation to allow build 0 (valid for doc-init builds per FR-020)
+- ✅ Validator correctly validates Keep a Changelog format
+
+**Ordering Results:**
+- Highest version: 0.9.21.3+2 (first entry)
+- Lowest version: 0.1.1.1+1 (last entry)
+- All entries in descending order (newest first)
+
+### Related Work
+
+- **Epic:** Epic 2 - Workflow Management Framework
+- **Story:** Story 11 - Intake Workflow Automation
+- **Task:** Task 11 - Fix CHANGELOG Ordering Violations
+- **Related:** E2:S01:T06 (Validator format support - COMPLETE)
+- **Related:** E2:S11:T10 (CHANGELOG protection - COMPLETE)
+- **Related:** E3:S02:T06 (Changelog ordering process - PERPETUAL)
+
+---
+## [0.3.1.1+1] - 02-12-25
+
+📚 Documentation: Epic 3 structure and Story 1 definition for Numbering & Versioning Framework
+
+### Added
+
+- Created **Epic 3: Numbering & Versioning Framework** (`docs/project-management/kanban/epics/Epic-3.md`)
+- Created **Story 1: Dev Kit Alignment with Versioning Framework** with 5 initial tasks
+- Updated Kanban board views with Epic 3 Story 1 references
+
+### Notes
+
+- Epic 3 owns the `packages/frameworks/numbering & versioning/` package
+- Story 1 tasks focus on establishing dev-kit as canonical SoT for versioning policies
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.1+1.md` for full details
+
+---
+## [0.3.1.1+2] - 02-12-25
+
+📚 Documentation: Task 1 complete - Gap analysis comparing dev-kit versioning policy with framework
+
+### Added
+
+- Created **gap analysis report** comparing dev-kit versioning policy with framework policies
+- Identified 6 critical gaps (missing sections) and provided prioritized recommendations
+- Documented alignment strengths and areas for improvement
+
+### Changed
+
+- Updated Story 001 to mark Task 1 as complete with gap analysis reference
+
+### Notes
+
+- Gap analysis: `docs/project-management/kanban/epics/Epic-3/stories/Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md`
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.1+2.md` for full details
+
+---
+## [0.3.1.2+1] - 02-12-25
+
+📚 Documentation: Task 2 complete - Ingested versioning findings from fynd.deals Epic 15 work
+
+### Added
+
+- Created **findings document** analyzing 12 reusable versioning patterns from fynd.deals Epic 15 work
+- Documented versioning patterns: schema, validation, CHANGELOG structure, traceability, immutability rules
+- Identified that framework package already contains fynd.deals Epic 15 findings
+
+### Changed
+
+- Updated Story 001 to mark Task 2 as complete with findings reference
+
+### Notes
+
+- Findings document: `docs/project-management/kanban/epics/Epic-3/stories/Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md`
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.2+1.md` for full details
+
+---
+## [0.3.1.3+1] - 02-12-25
+
+📚 Documentation: Task 3 complete - Dev-kit versioning policy enhanced with all missing sections
+
+### Added
+
+- Added **6 critical sections** to dev-kit versioning policy:
+  - CHANGELOG Format (two-layer system)
+  - Canonical Ordering Principle
+  - Two-Layer Timestamp System
+  - Forensic Traceability Grid (5 dimensions)
+  - Immutability Rules (3 rules)
+  - Version Validation
+
+### Changed
+
+- Enhanced dev-kit versioning policy with comprehensive documentation
+- Updated policy status from "Draft" to "Active"
+- Added Status and Maintenance section
+- Added comprehensive References section
+
+### Notes
+
+- All 6 critical gaps from gap analysis (T001) have been addressed
+- Policy now fully aligned with framework while maintaining dev-kit-specific context
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.3+1.md` for full details
+
+---
+## [0.3.1.4+1] - 02-12-25
+
+📚 Documentation: Task 4 complete - Version file and CHANGELOG aligned with framework
+
+### Changed
+
+- Enhanced **version file** (`src/fynd_deals/version.py`) with comprehensive documentation and validation notes
+- Verified **CHANGELOG.md** format alignment with framework conventions
+- Updated dev-kit versioning policy with version file location note
+
+### Notes
+
+- Version file now includes docstring explaining schema and dev-kit versioning approach
+- CHANGELOG format verified to match framework (DD-MM-YY date format, archive structure)
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.4+1.md` for full details
+
+---
+## [0.3.1.5+1] - 02-12-25
+
+📚 Documentation: Task 5 complete - Consumption pattern documented for other projects
+
+### Added
+
+- Added **consumption pattern documentation** to README and IMPLEMENTATION_GUIDE
+- Documented copy vs reference pattern (CRITICAL: copy, don't reference)
+- Explained customization boundaries and update process
+- Added example setup workflows
+
+### Changed
+
+- Enhanced README with comprehensive consumption section
+- Enhanced IMPLEMENTATION_GUIDE with consumption pattern section
+- Clarified framework as single source of truth
+
+### Notes
+
+- Projects MUST copy framework files (not reference them) for independence and customization
+- Framework remains canonical SoT while projects adapt for their context
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.5+1.md` for full details
+
+---
+## [0.3.1.6+1] - 02-12-25
+
+📚 Documentation: Task 6 complete - Cursorrules abstracted (removed hardcoded version numbers)
+
+### Changed
+
+- Abstracted **cursorrules-rw-trigger-section.md** to use template placeholders instead of hardcoded paths and versions
+- Replaced hardcoded version examples with generic schema calculation examples
+- Replaced project-specific paths with template placeholders (`{project}`, `{kanban_path}`, `{scripts_path}`)
+- Added version calculation examples and customization instructions
+
+### Notes
+
+- Cursorrules template is now fully abstract and reusable across projects
+- All examples teach the pattern rather than listing stale instances
+- References canonical policy documents instead of duplicating schema details
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.6+1.md` for full details
+
+---
+## [0.3.2.1+1] - 03-12-25
+
+📚 Documentation: Task 1 complete - Core versioning scenarios defined for cookbook
+
+### Added
+
+- Created comprehensive core versioning scenarios document (T001)
+- Defined 8 core scenarios: New Epic, New Story, New Task, Bugfix/Hotfix, Parallel Epics/Stories, Task Transitions, Story Completion, Epic Completion
+- Documented expected version behaviour for each scenario
+- Documented Kanban/RW interactions for each scenario
+- Created scenario summary table for quick reference
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.1+1.md` for full details
+- Scenarios validated against framework policy, dev-kit policy, and integration docs
+- Foundation for T002 cookbook document with worked examples
+
+---
+## [0.3.2.2+1] - 03-12-25
+
+📚 Documentation: Task 2 complete - Versioning cookbook document created with worked examples
+
+### Added
+
+- Created comprehensive versioning cookbook document (`dev-kit-versioning-cookbook.md`)
+- Provided worked examples for all 8 core scenarios from T001
+- Included real dev-kit examples from CHANGELOG archive
+- Added quick reference tables for version component rules and progression patterns
+- Documented RW perspective for each scenario
+
+### Changed
+
+- Updated Architecture README to reference versioning cookbook
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.2+1.md` for full details
+- Cookbook is project-agnostic and safe to copy into other projects
+- Foundation for T003 (cross-framework examples) and T004 (edge cases)
+
+---
+## [0.3.2.3+1] - 03-12-25
+
+📚 Documentation: Task 3 complete - Cross-framework examples added to versioning cookbook
+
+### Added
+
+- Added comprehensive cross-framework examples section to versioning cookbook
+- Example 1: FR → Task → Version → RW → Kanban Update (complete end-to-end flow)
+- Example 2: Bugfix with Verification Requirement (unverified vs verified fixes)
+- Example 3: Parallel Epic/Story Work (canonical ordering, no conflicts)
+- Each example includes Kanban state, version changes, RW steps, and resulting documentation
+
+### Changed
+
+- Updated table of contents to include cross-framework examples section
+- Added reference to integration examples document
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.3+1.md` for full details
+- Examples demonstrate end-to-end integration of Kanban, Versioning, and RW
+- Examples align with existing integration documentation
+- Foundation for T004 (edge cases and anti-patterns)
+
+---
+## [0.3.2.4+1] - 04-12-25
+
+📚 Documentation: Added edge cases and anti-patterns section to versioning cookbook
+
+### Added
+
+- Section 10: Edge Cases and Anti-Patterns in versioning cookbook
+- 10 detailed entries covering common versioning mistakes and edge cases:
+  - Anti-Pattern: BUILD Incremented Instead of TASK
+  - Edge Case: Task Renumbering
+  - Edge Case: Story Re-Parenting Between Epics
+  - Edge Case: Version Conflicts When Branches Diverge
+  - Edge Case: Incorrect TASK Mapping in Version File
+  - Anti-Pattern: Using Standalone Task References
+  - Edge Case: BUILD Number Overflow
+  - Edge Case: Missing Version in Changelog
+  - Anti-Pattern: Version Number in Commit Message Doesn't Match Tag
+  - Edge Case: Parallel Epic Development Version Ordering
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.4+1.md` for full details
+- Each entry includes symptom, root cause, corrective pattern, and preventive guidance
+- References to related documentation (error reference guide, root cause analysis)
+- Versioning cookbook now complete with all major scenarios including edge cases
+
+---
+## [0.3.2.5+1] - 04-12-25
+
+📚 Documentation: Created quick reference summary for users and agents
+
+### Added
+
+- Created versioning quick reference document (`versioning-quick-reference.md`)
+- 1-2 page summary covering common versioning scenarios and rules
+- Tables, decision flows, and "if-then" rules for quick lookup
+- Agent-friendly and human-friendly language
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.5+1.md` for full details
+- Quick reference linked from cookbook, dev-kit versioning policy, and framework README
+- Covers version schema, common scenarios, critical rules, and anti-patterns
+- **Note:** This task was completed after Task 6, demonstrating out-of-order task completion (see edge case documentation)
+
+---
+## [0.3.2.5+2] - 04-12-25
+
+🔧 Process Improvement: Updated RW Step 2 logic to handle out-of-order task completion
+
+### Process Improvement
+
+- Updated RW Step 2 logic to recognize out-of-order task completion as valid scenario
+- Changed logic from ERROR to VALID for completed task < current VERSION_TASK
+- Updated validation steps to handle out-of-order task completion
+- Clarified that version always reflects completed task, not current VERSION_TASK
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.5+2.md` for full details
+- RW Step 2 now correctly handles tasks completed out of sequential order
+- Documentation updated to reflect out-of-order completion as valid scenario
+
+---
+## [0.3.2.5+3] - 04-12-25
+
+🔧 Process Improvement: Hardened RW with automated version bump validation
+
+### Process Improvement
+
+- Created `validate_version_bump.py` validation script to enforce RW Step 2 logic
+- Validates completed task vs. current VERSION_TASK comparison
+- Validates new task detection (VERSION_TASK = completed, BUILD = 1)
+- Validates same task detection (VERSION_TASK unchanged, BUILD incremented)
+- Validates out-of-order completion (VERSION_TASK = completed, BUILD = 1)
+- Updated RW Step 8 to include version bump validation
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.5+3.md` for full details
+- Validation script prevents versioning errors by enforcing RW Step 2 logic
+- RW Step 8 now runs version bump validator in strict mode
+
+---
+## [0.3.2.6+1] - 04-12-25
+
+🔧 Process Improvement: Investigated and hardened changelog ordering process
+
+### Process Improvement
+
+- Root cause analysis: Identified RW Step 4 used chronological insertion instead of canonical ordering
+- Updated RW Step 4: Added canonical ordering logic requiring version number comparison before insertion
+- Enhanced validation: Added changelog ordering validation to `validate_changelog_format.py`
+- Updated RW Step 8: Added changelog ordering validation to validator checklist
+- Documentation: Updated RW execution guide with explicit canonical ordering requirements
+- Changelog reordering: Comprehensively reordered all 84 changelog entries by canonical version number
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.6+1.md` for full details
+- Investigation report: `docs/architecture/standards-and-adrs/changelog-ordering-investigation-report.md`
+- All Epic 2 entries now correctly appear before Epic 3 entries
+- Validator confirms canonical ordering is correct
+
+---
+## [0.3.2.6+2] - 07-12-25
+
+🔄 Process Improvement: Updated changelog ordering task status to PERPETUAL
+
+### Changed
+
+- **E3:S02:T06 Status:** Updated from COMPLETE to PERPETUAL
+- **Task Documentation:** Added status note explaining PERPETUAL designation
+- **Deliverables:** Added "Ongoing maintenance of changelog canonical ordering"
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.6+2.md` for full details
+- Changelog ordering is an ongoing maintenance concern requiring continuous attention
+- Task remains active to track future ordering violations and ensure process continues to work correctly
+
+---
+## [0.3.2.7+1] - 07-12-25
+
+📚 Documentation: Dual-versioning guide for package manager compatibility
+
+### Added
+- **Dual-Versioning Guide** (`docs/architecture/standards-and-adrs/dual-versioning-package-managers.md`):
+  - Comprehensive guide for managing `RC.EPIC.STORY.TASK+BUILD` + SemVer (`MAJOR.MINOR.PATCH`)
+  - Problem statement: Package managers require SemVer while internal development uses RC.EPIC.STORY.TASK+BUILD
+  - Five mapping strategies:
+    - Strategy 1: Direct Mapping (MAJOR=RC, MINOR=EPIC, PATCH=STORY*100+TASK)
+    - Strategy 2: Compact Mapping (includes BUILD in PATCH)
+    - Strategy 3: Independent SemVer (for public releases)
+    - Strategy 4: BUILD-Preserving Mapping (Recommended) - `MINOR = EPIC * 100 + STORY`, `PATCH = TASK * 100 + BUILD`
+    - Strategy 5: Hybrid Approach (combines strategies)
+  - Implementation patterns: Single Source of Truth, Sync Scripts, Build-Time Generation
+  - Code examples: Python, Dart/Flutter (pubspec.yaml), sync scripts, validation scripts
+  - Best practices, validation, troubleshooting, and integration with Release Workflow
+  - Mathematical formula `EPIC * 100 + STORY` (not string concatenation) to avoid ambiguity
+
+### Changed
+- **Implementation Guide** (`packages/frameworks/numbering & versioning/IMPLEMENTATION_GUIDE.md`):
+  - Added warning about package manager compatibility requirements
+  - Added reference to dual-versioning guide
+  - Updated schema adaptation section with package manager notes
+- **Framework README** (`packages/frameworks/numbering & versioning/README.md`):
+  - Added dual-versioning section to Related Documentation
+  - Added package manager compatibility warning
+- **Dev-Kit Versioning Policy** (`docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`):
+  - Added reference to dual-versioning guide in Related Documentation section
+- **Epic 3 Documentation** (`docs/project-management/kanban/epics/Epic-3/Epic-3.md`):
+  - Updated Story 2 status to IN PROGRESS
+  - Added T07 to task checklist
+  - Updated last updated timestamp
+- **Story 2 Documentation** (`docs/project-management/kanban/epics/Epic-3/Story-002-versioning-cookbook-and-examples.md`):
+  - Added T07: Create dual-versioning guide for package manager compatibility
+  - Updated status to IN PROGRESS
+  - Updated last updated timestamp
+
+### Documentation
+- Comprehensive dual-versioning strategy documentation complete
+- Strategy 4 (BUILD-Preserving Mapping) documented as recommended approach
+- Mathematical formula ensures unambiguous mapping (EPIC * 100 + STORY)
+- Framework documentation updated with package manager compatibility guidance
+
+---
+## [0.3.2.8+1] - 07-12-25
+
+📊 Analysis: Created task to audit dual-versioning application across packages
+
+### Added
+- **Task T08:** Created E3:S02:T08 to audit dual-versioning application across all packages
+- **Task Scope:** Investigate current package versioning state, analyze dual-versioning strategy applicability, propose solution
+
+### Notes
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.8+1.md` for full details
+- Task addresses concerns about SemVer continuity and mapping strategy appropriateness for package management
+- Will investigate Workflow Management package versioning pattern (1.0, 1.1, 1.2) mentioned by user
+
+---
+## [0.3.2.9+1] - 08-12-25
+
+🚀 Feature: Implemented Package Version Workflow (PVW) with agentic execution
+
+### Added
+- **Package Version Workflow (PVW):** Complete workflow for intelligent agent-driven package versioning
+  - Workflow definition (`package-version-workflow.yaml`)
+  - Agent execution guide with comprehensive TODO tracking (drift prevention)
+  - Validation scripts as tools (format, increment, consistency, change analysis)
+  - Integrated as RW Step 2.5 (executes after project version bump)
+- **Version Bump Criteria:** Documentation of MAJOR/MINOR/PATCH criteria as guidance (not hard rules)
+- **Cursor Rules:** PVW trigger section with comprehensive TODO tracking requirements
+- **Package Changelog:** Workflow Management package changelog (2.0.0 → 2.1.0)
+
+### Changed
+- **Release Workflow:** Added PVW as Step 2.5 in `release-workflow.yaml`
+- **Workflow Management Package:** Version bumped to 2.1.0 (MINOR - new feature)
+- **Story 2:** Added T09 to task checklist
+- **Epic 3:** Added T09 to task checklist
+
+### Notes
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.9+1.md` for full details
+- PVW follows proven agentic execution pattern from Release Workflow
+- Emphasizes intelligent analysis, validation as tools, criteria as guidance
+- Comprehensive TODO tracking prevents agentic drift during execution
+
+---
+## [0.3.2.10+1] - 08-12-25
+
+📋 Task: Created Kanban task to integrate PVW into Release Workflow agent execution guide
+
+### Added
+- **Task E3:S02:T10:** Created task to integrate PVW into RW agent execution guide
+  - Task definition with complete deliverables and requirements
+  - Identified need to update RW guide from 14 to 15 steps
+  - Documented step-2.5 execution requirements
+
+### Changed
+- **Story 2:** Added T10 to task checklist
+- **Epic 3:** Added T10 to task checklist
+- **Version:** Bumped to 0.3.2.10+1
+
+### Notes
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.10+1.md` for full details
+- Release Workflow YAML already includes PVW as step-2.5
+- Agent execution guide needs to be updated to document step-2.5 execution
+
+---
+## [0.3.3.1+1] - 04-12-25
+
+📚 Documentation: Created Story 3 structure and initial documentation framework
+
+### Added
+
+- Created Story 3 document: "Versioning Integration with Kanban & RW"
+- Defined 5 tasks for framework-level integration documentation
+- Updated Epic 3 doc with Story 3 details
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.1+1.md` for full details
+- Story focuses on framework-level integration documentation (portable, template-ready)
+- Distinct from E4:S03 (dev-kit specific validation)
+- Tasks defined for external project integration patterns
+
+---
+## [0.3.3.2+1] - 04-12-25
+
+📚 Documentation: Created comprehensive framework-level integration guide
+
+### Added
+
+- Created comprehensive framework-level integration guide
+- Documented three-way integration architecture (Kanban ↔ Versioning ↔ RW)
+- Explained integration points and data flow
+- Provided framework-level examples (portable, template-ready)
+- Documented integration patterns and best practices
+- Included troubleshooting section and quick reference
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.2+1.md` for full details
+- Guide located at: `packages/frameworks/numbering & versioning/integration/kanban-workflow-integration.md`
+- Framework-level documentation (portable, template-ready)
+- Distinct from dev-kit implementation validation (E4:S03)
+
+---
+## [0.3.3.3+1] - 04-12-25
+
+📚 Documentation: Created integration patterns and best practices document
+
+### Added
+
+- Created integration patterns and best practices document
+- Documented 5 common integration patterns
+- Created 3 decision trees (version bump logic, changelog insertion, kanban update scope)
+- Documented best practices for each integration point
+- Documented 5 anti-patterns with solutions
+- Documented 4 versioning strategies for different workflows
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.3+1.md` for full details
+- Guide located at: `packages/frameworks/numbering & versioning/integration/integration-patterns-and-best-practices.md`
+- Includes decision trees, anti-patterns, and versioning strategies
+- Framework-level documentation (portable, template-ready)
+
+---
+## [0.3.3.4+1] - 04-12-25
+
+📚 Documentation: Created integration examples for external projects
+
+### Added
+
+- Created integration examples document
+- Provided 7 complete integration examples with step-by-step walkthroughs
+- Included copy-paste ready configurations and templates
+- Documented integration testing approaches
+- Provided example file structures and code samples
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.4+1.md` for full details
+- Guide located at: `packages/frameworks/numbering & versioning/integration/integration-examples-external-projects.md`
+- Includes greenfield, migration, parallel development, and testing examples
+- Framework-level documentation (portable, template-ready)
+
+---
+## [0.3.3.5+1] - 04-12-25
+
+📚 Documentation: Created integration troubleshooting guide
+
+### Added
+
+- Created integration troubleshooting guide
+- Documented 8 common integration issues with symptoms, root causes, and solutions
+- Created 3 troubleshooting decision trees
+- Provided debugging strategies and validation approaches
+- Documented edge cases and handling approaches
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.5+1.md` for full details
+- Guide located at: `packages/frameworks/numbering & versioning/integration/integration-troubleshooting-guide.md`
+- Includes decision trees, debugging strategies, and edge case handling
+- Framework-level documentation (portable, template-ready)
+
+---
+## [0.3.3.6+1] - 05-12-25
+
+🧰 Tooling: Added RW Step 6: Update BR/FR Docs with fix attempt history
+
+### Added
+
+- **New RW Step 6: Update BR/FR Docs** - Added before "Auto-update Kanban Docs" (now Step 7)
+  - Purpose: Document flaws, attempted fixes, and verification status in BR/FR docs
+  - For Bug Reports: Adds entries to "Fix Attempt History" section
+  - For Feature Requests: Updates "Intake Decision" section with implementation status
+  - Enables knowledge transfer between builds when bugs aren't squashed
+- **BR Template Enhancement** - Added "Fix Attempt History" section to `BR_TEMPLATE.md`
+  - Includes fields for: Fix Description, Changes Made, Verification Status, Result, Lessons Learned, Next Steps
+  - Creates knowledge base for future fix attempts
+- **Workflow Flaw Documentation** - Added WF-003 to `workflow-flaws-reference-guide.md`
+  - Documented anti-pattern: Fix attempts not documented in BR/FR docs
+  - Root cause analysis: RW lacked step to update BR/FR documents
+  - Solution: New RW Step 6 added to document fix attempts
+
+### Changed
+
+- **RW Documentation Updated** - Renumbered all steps after new Step 6
+  - `release-workflow-agent-execution.md`: Added Step 6, renumbered Steps 7-14
+  - `cursorrules-rw-trigger-section.md`: Added Step 6, renumbered Steps 7-12
+  - Updated all step references throughout documentation
+- **RW Step Count** - Updated from 13 steps to 14 steps
+  - Steps 1-12: Required
+  - Steps 13-14: Optional (PDCA CHECK and ACT phases)
+
+### Fixed
+
+- **Knowledge Transfer Gap** - Fixed workflow flaw where fix attempts weren't documented in BR/FR docs
+  - Previous builds couldn't learn from previous fix attempts
+  - New Step 6 ensures each build is informed by previous attempts
+
+**Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.6+1.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.6+1.md)
+
+---
+## [0.3.3.6+2] - 05-12-25
+
+📚 Documentation: Marked Epic 3 as COMPLETE - All 3 stories finished
+
+### Changed
+
+- **Epic 3 Status Update** - Marked Epic 3 as COMPLETE in all Kanban documentation
+  - Updated Epic-3.md: Status changed from TODO to COMPLETE ✅
+  - Updated kanban-board.md: Epic 3 and all 3 stories marked as COMPLETE ✅
+  - Epic 3: Numbering & Versioning Framework is now complete with all stories finished
+
+**Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.6+2.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.6+2.md)
+
+---
+## [0.4.1.1+1] - 02-12-25
+
+📚 Documentation: Epic 4 structure and Story 1 definition for Kanban Framework
+
+### Added
+
+- Created **Epic 4: Kanban Framework** (`docs/project-management/kanban/epics/Epic-4.md`)
+- Created **Story 1: Dev Kit Kanban Implementation** with 5 initial tasks
+- Updated Kanban board views with Epic 4 Story 1 references
+
+### Notes
+
+- Epic 4 owns the `packages/frameworks/kanban/` package
+- Story 1 tasks focus on establishing dev-kit as canonical SoT for Kanban policies and templates
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+1.md` for full details
+
+---
 ## [0.2.4.5+1] - 04-12-25
 
 🧪 Testing: T05 complete – RW installer usability tested with identified issues and recommendations documented
