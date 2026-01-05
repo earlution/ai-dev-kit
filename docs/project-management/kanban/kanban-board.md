@@ -51,10 +51,10 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 - **E5:S02:T03** – Build documentation health dashboards - ✅ COMPLETE (v0.5.2.3+1, Last updated: 2025-12-18) - [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
 - **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
-- **E8:S01:T01-T03** – Code Generators - TODO (HIGH priority story) - [Story](epics/Epic-8/Story-001-code-generators.md)
-  - T01: Create generator framework - TODO
-  - T02: Build template-based generators - TODO
-  - T03: Establish generator patterns - TODO
+- **E8:S01** – Code Generators - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05) - [Story](epics/Epic-8/Story-001-code-generators.md)
+  - T01: Create generator framework - ✅ COMPLETE (v0.8.1.1+1)
+  - T02: Build template-based generators - ✅ COMPLETE (v0.8.1.2+1)
+  - T03: Establish generator patterns - ✅ COMPLETE (v0.8.1.3+1)
 - **E8:S02:T01-T03** – Additional Validators - TODO (HIGH priority story) - [Story](epics/Epic-8/Story-002-additional-validators.md)
   - T01: Create validator framework - TODO
   - T02: Build framework-specific validators - TODO

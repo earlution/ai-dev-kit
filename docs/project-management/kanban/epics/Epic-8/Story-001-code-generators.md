@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 001 – Code Generators
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-05 (v0.8.1.2+1 – T02: Template-based generators created)  
-**Version:** v0.8.1.2+1  
+**Last updated:** 2026-01-05 (v0.8.1.3+1 – T03: Generator patterns established)  
+**Version:** v0.8.1.3+1  
 **Code:** E8S01
 
 ---
@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 - [x] **E8:S01:T01 – Create generator framework** - ✅ COMPLETE (v0.8.1.1+1 – Generator framework implemented: BaseGenerator, TemplateBasedGenerator, TemplateEngine, GeneratorRegistry)
 - [x] **E8:S01:T02 – Build template-based generators** - ✅ COMPLETE (v0.8.1.2+1 – Template-based generators implemented: WorkflowGenerator, KanbanTemplateGenerator, templates)
-- [ ] **E8:S01:T03 – Establish generator patterns** - TODO
+- [x] **E8:S01:T03 – Establish generator patterns** - ✅ COMPLETE (v0.8.1.3+1 – Generator patterns library created: 7 pattern categories, pattern examples, best practices)
 
 ---
 
@@ -108,6 +108,7 @@ Build comprehensive code generators for framework patterns.
 
 ### E8:S01:T03 – Establish generator patterns
 
+**Status:** ✅ COMPLETE (v0.8.1.3+1)  
 **Input:** Generator implementations  
 **Deliverable:** Generator pattern documentation  
 **Dependencies:** E8:S01:T02  
@@ -118,6 +119,17 @@ Build comprehensive code generators for framework patterns.
 2. Document pattern library
 3. Create pattern examples
 4. Publish pattern documentation
+
+**Implementation:**
+- Extracted 7 pattern categories from existing generators
+- Documented patterns with code examples and use cases
+- Created pattern examples demonstrating each pattern
+- Integrated pattern library into framework documentation
+
+**Deliverables:**
+- ✅ `packages/frameworks/tooling & automation/generators/PATTERNS.md` - Comprehensive pattern library (7 categories, 20+ patterns)
+- ✅ `packages/frameworks/tooling & automation/generators/examples/pattern_examples.py` - Pattern examples demonstrating each pattern
+- ✅ Updated `packages/frameworks/tooling & automation/generators/README.md` - Added pattern library reference
 
 ---
 

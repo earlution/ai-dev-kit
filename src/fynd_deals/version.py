@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 8      # Epic number (Epic 8: Tooling & Automation)
 VERSION_STORY = 1     # Story number (Story 1: Code Generators)
-VERSION_TASK = 2      # Task number (Task 2: Build template-based generators)
-VERSION_BUILD = 1     # Build number (E8:S01:T02+1 - Template-based generators implemented: WorkflowGenerator, KanbanTemplateGenerator, templates)
+VERSION_TASK = 3      # Task number (Task 3: Establish generator patterns)
+VERSION_BUILD = 1     # Build number (E8:S01:T03+1 - Generator patterns library created: 7 pattern categories, pattern examples, best practices)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

@@ -224,6 +224,22 @@ See:
 
 ---
 
+## Pattern Library
+
+See [`PATTERNS.md`](PATTERNS.md) for a comprehensive catalog of reusable generator patterns:
+
+- **Base Patterns:** Simple and template-based generator patterns
+- **Template Patterns:** Variable substitution, conditionals, loops
+- **Validation Patterns:** Input/output validation approaches
+- **Context Patterns:** Template context building strategies
+- **Path Patterns:** Output path generation patterns
+- **Parameter Patterns:** Parameter management patterns
+- **Registry Patterns:** Generator registration patterns
+
+Pattern examples are available in [`examples/pattern_examples.py`](examples/pattern_examples.py).
+
+---
+
 ## Future Enhancements
 
 - Support for Jinja2 templates (optional)

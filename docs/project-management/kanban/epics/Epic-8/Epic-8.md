@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-05 (v0.8.1.2+1 – T02: Template-based generators created)  
+**Last updated:** 2026-01-05 (v0.8.1.3+1 – T03: Generator patterns established, Story complete)  
 **Branch:** `epic/8-tooling-automation`  
 **Version Schema:** `0.8.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E8:S01 – Code Generators** - IN PROGRESS (v0.8.1.2+1 – T01, T02 complete)
+- [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1 – All tasks complete)
   - Story: [`Story-001-code-generators.md`](Story-001-code-generators.md)
 - [ ] **E8:S02 – Additional Validators** - TODO
   - Story: [`Story-002-additional-validators.md`](Story-002-additional-validators.md)
@@ -59,10 +59,10 @@ Epic 8 owns the **Tooling & Automation** framework for the ai-dev-kit repository
 
 ### Story 1: Code Generators
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
-**Last updated:** 2026-01-05 (v0.8.1.2+1)
+**Last updated:** 2026-01-05 (v0.8.1.3+1)
 
 **Goal:**  
 Build code generators for common framework patterns and templates.
@@ -70,7 +70,7 @@ Build code generators for common framework patterns and templates.
 **Tasks:**
 - [x] E8:S01:T01 – Create generator framework ✅ COMPLETE (v0.8.1.1+1)
 - [x] E8:S01:T02 – Build template-based generators ✅ COMPLETE (v0.8.1.2+1)
-- [ ] E8:S01:T03 – Establish generator patterns
+- [x] E8:S01:T03 – Establish generator patterns ✅ COMPLETE (v0.8.1.3+1)
 
 **Story:** [`Story-001-code-generators.md`](Story-001-code-generators.md)
 
