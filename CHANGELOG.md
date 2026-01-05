@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.16+1] - 05-01-26
+
+### Added
+- Step 3.5: Fix Ordering to CMW workflow (E6:S06:T16)
+  - New script: `fix_ordering.py` sorts changelog entries by canonical version number
+  - Ensures changelog is sorted before archival to prevent archive corruption
+  - Supports both Keep a Changelog format (newest first) and Canonical format (lowest first)
+  - Auto-detects changelog format
+
+### Modified
+- CMW workflow: Added Step 3.5 between Step 3 (Remove Duplicates) and Step 4 (Identify Archival)
+- Archive function: Fixed sorting logic to sort by version components instead of position
+- CMW main script: Integrated Step 3.5 execution
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.16+1.md)
+
+---
+
 ## [0.6.6.12+1] - 05-01-26
 
 ### Changed

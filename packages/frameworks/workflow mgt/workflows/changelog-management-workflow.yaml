@@ -1,7 +1,7 @@
 name: Changelog Management Workflow
 version: 1.0.0
 type: changelog_management
-description: Automated changelog maintenance workflow with validation, duplicate detection, ordering fixes, and archival. DETERMINISTIC workflow - can be automated via cron/scheduled execution or triggered manually. No agentic intelligence required - all operations are rule-based.
+description: Automated changelog maintenance workflow with validation, duplicate detection, ordering fixes (Step 3.5), and archival. DETERMINISTIC workflow - can be automated via cron/scheduled execution or triggered manually. No agentic intelligence required - all operations are rule-based. Step 3.5 ensures changelog is sorted before archival to prevent archive corruption.
 
 config:
   main_changelog: CHANGELOG.md
@@ -68,6 +68,21 @@ steps:
       report_removed: true
       validate_after_removal: true
 
+  - id: step-3.5
+    name: Fix Ordering
+    type: ordering_fix
+    handler: changelog.fix_ordering
+    required: true
+    mandatory: true
+    blocking: false
+    dependencies:
+      - step-3
+    config:
+      main_changelog: ${config.main_changelog}
+      detect_format: true
+      preserve_content: true
+      validate_after_fix: true
+
   - id: step-4
     name: Identify Entries for Archival
     type: archival_identification
@@ -76,7 +91,7 @@ steps:
     mandatory: true
     blocking: false
     dependencies:
-      - step-3
+      - step-3.5
     config:
       main_changelog: ${config.main_changelog}
       archival_policy: ${config.archival_policy}

@@ -86,10 +86,12 @@ def archive_entries(
     existing_versions = {entry.version_str for entry in existing_archive_entries}
     
     # Add archived entries (newest first to maintain ordering)
-    # Sort entries to archive by their position in main (newest first)
+    # Sort entries to archive by version number (canonical ordering)
+    # After Step 3.5, main_entries is already sorted, so we sort by version components
     sorted_entries_to_archive = sorted(
         entries_to_archive,
-        key=lambda e: main_entries.index(e) if e in main_entries else -1
+        key=lambda e: e.version_components,
+        reverse=True  # Newest first for archive (Keep a Changelog format)
     )
     
     for entry in sorted_entries_to_archive:

@@ -6,6 +6,7 @@ Deterministic workflow for automated changelog maintenance:
 1. Analyze changelog state
 2. Validate format and ordering
 3. Detect and remove duplicates
+3.5. Fix ordering (sort by canonical version number)
 4. Identify entries for archival
 5. Archive entries
 6. Validate remaining changelog
@@ -126,6 +127,24 @@ def main():
                 print(f"  🔍 DRY RUN: Would remove duplicates")
         else:
             print("  ✅ No duplicates found")
+        
+        # Step 3.5: Fix ordering
+        print("\n🔧 Step 3.5: Fixing changelog ordering...")
+        if not args.dry_run:
+            from changelog.fix_ordering import fix_changelog_ordering
+            from validation.validate_changelog_format import detect_changelog_format
+            
+            format_type = detect_changelog_format(main_content)
+            fixed_content = fix_changelog_ordering(main_content, format_type)
+            
+            if fixed_content != main_content:
+                main_changelog_path.write_text(fixed_content, encoding='utf-8')
+                main_content = fixed_content
+                print("  ✅ Fixed changelog ordering")
+            else:
+                print("  ✅ Changelog already correctly ordered")
+        else:
+            print("  🔍 DRY RUN: Would fix ordering")
         
         # Step 4: Identify entries for archival
         print("\n📦 Step 4: Identifying entries for archival...")
