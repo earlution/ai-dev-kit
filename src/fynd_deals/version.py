@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
-VERSION_STORY = 1     # Story number (Story 1: Codebase Maintenance Tasks)
-VERSION_TASK = 4      # Task number (Task 4: Integrate maintenance tasks with Kanban framework)
-VERSION_BUILD = 1     # Build number (E7:S01:T04+1 - Maintenance tasks integrated with Kanban framework)
+VERSION_STORY = 2     # Story number (Story 2: Code Review Standards and Processes)
+VERSION_TASK = 1      # Task number (Task 1: Document code review standards and guidelines)
+VERSION_BUILD = 1     # Build number (E7:S02:T01+1 - Code review standards and guidelines documented)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
