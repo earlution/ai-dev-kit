@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
 VERSION_STORY = 2     # Story number (Story 2: Code Review Standards and Processes)
-VERSION_TASK = 1      # Task number (Task 1: Document code review standards and guidelines)
-VERSION_BUILD = 1     # Build number (E7:S02:T01+1 - Code review standards and guidelines documented)
+VERSION_TASK = 2      # Task number (Task 2: Create code review checklist templates)
+VERSION_BUILD = 1     # Build number (E7:S02:T02+1 - Code review checklist templates created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
