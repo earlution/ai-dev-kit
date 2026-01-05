@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
 VERSION_STORY = 1     # Story number (Story 1: Codebase Maintenance Tasks)
-VERSION_TASK = 2      # Task number (Task 2: Create maintenance task prioritization framework)
-VERSION_BUILD = 1     # Build number (E7:S01:T02+1 - Maintenance task prioritization framework created)
+VERSION_TASK = 3      # Task number (Task 3: Document maintenance workflow processes)
+VERSION_BUILD = 1     # Build number (E7:S01:T03+1 - Maintenance workflow processes documented)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
