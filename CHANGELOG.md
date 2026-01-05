@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.2.3+1] - 05-01-26
+
+### Added
+- Code review workflow processes (E7:S02:T03)
+  - Comprehensive workflows for standard features, bug fixes, refactoring, documentation, and configuration changes
+  - Full integration with Release Workflow (RW), Update Kanban Workflow (UKW), and CI/CD
+  - Review metrics and tracking, best practices, and examples
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.2.3+1.md)
+
 ## [0.7.2.2+1] - 05-01-26
 
 ### Added
