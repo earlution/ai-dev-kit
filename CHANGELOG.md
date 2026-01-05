@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.2.4+1] - 05-01-26
+
+### Added
+- Code review Kanban integration (E7:S02:T04)
+  - Comprehensive integration covering review task creation, status tracking, metrics tracking
+  - Full workflow integration with standard features, bug fixes, refactoring, and review initiatives
+  - Epic 4 (Kanban Framework) integration with examples and best practices
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.2.4+1.md)
+
 ## [0.7.2.3+1] - 05-01-26
 
 ### Added
