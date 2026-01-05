@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 12     # Task number (Task 12: Changelog Maintenance Workflow - Perpetual Task)
-VERSION_BUILD = 1     # Build number (E6:S06:T12+1 - CMW: Changelog maintenance - archived 50 entries, removed 1 duplicate, T16 task created)
+VERSION_TASK = 16     # Task number (Task 16: Harden CMW Ordering Before Archival)
+VERSION_BUILD = 1     # Build number (E6:S06:T16+1 - Step 3.5 added to CMW, ordering fixed before archival)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

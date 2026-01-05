@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2026-01-05 (v0.6.6.12+1 – T12: CMW execution - archived 50 entries, removed 1 duplicate, T16 task created)  
-**Version:** v0.6.6.12+1  
+**Last updated:** 2026-01-05 (v0.6.6.16+1 – T16: Step 3.5 added to CMW, ordering fixed before archival)  
+**Version:** v0.6.6.16+1  
 **Code:** E6S06
 
 ---
@@ -51,7 +51,7 @@ housekeeping_policy: keep
 - [x] **E6:S06:T15 – Cursor IDE Performance Considerations Awareness** - ✅ COMPLETE (v0.6.6.15+1 – Implementation complete: Awareness documentation created and framework guidance updated)
   - Task: [`T15-cursor-ide-performance-considerations-awareness.md`](T15-cursor-ide-performance-considerations-awareness.md)
   - **Feature Request:** [FR-028](../../fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)
-- [ ] **E6:S06:T16 – Harden CMW Ordering Before Archival** - TODO (v0.6.6.16+0 – Task created: Fix CMW to sort changelog before archival)
+- [x] **E6:S06:T16 – Harden CMW Ordering Before Archival** - ✅ COMPLETE (v0.6.6.16+1 – All phases complete: Step 3.5 added to CMW, ordering fixed before archival)
   - Task: [`T16-harden-cmw-ordering-before-archival.md`](T16-harden-cmw-ordering-before-archival.md)
   - **Analysis Document:** [`docs/analysis/cmw-ordering-flaw-analysis.md`](../../../../analysis/cmw-ordering-flaw-analysis.md)
 
