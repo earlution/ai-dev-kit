@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 12     # Task number (Task 12: Changelog Maintenance Workflow - Perpetual Task)
-VERSION_BUILD = 2     # Build number (E6:S06:T12+2 - CMW: Fixed ordering (Step 3.5), archived 50 entries, reduced from 6,871 to 5,122 lines, 0 violations remaining)
+VERSION_EPIC = 8      # Epic number (Epic 8: Tooling & Automation)
+VERSION_STORY = 1     # Story number (Story 1: Code Generators)
+VERSION_TASK = 1      # Task number (Task 1: Create generator framework)
+VERSION_BUILD = 1     # Build number (E8:S01:T01+1 - Generator framework implemented: BaseGenerator, TemplateBasedGenerator, TemplateEngine, GeneratorRegistry)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

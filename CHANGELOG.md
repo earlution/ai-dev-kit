@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.8.1.1+1] - 05-01-26
+
+### Added
+- Code Generator Framework (E8:S01:T01)
+  - BaseGenerator abstract base class with workflow orchestration
+  - TemplateBasedGenerator for template-based generators
+  - TemplateEngine with variable substitution, conditionals, and loops
+  - GeneratorRegistry for generator discovery and management
+  - Comprehensive documentation and examples
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.1.1+1.md)
+
 ## [0.9.4.1+1] - 11-12-25
 
 📚 Book Material Capture: E9:S04:T01 - Capture Starborn Legacy Zombie Story Report
