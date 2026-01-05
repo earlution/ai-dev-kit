@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-22 (v0.4.6.8+4 – Story 6: ✅ COMPLETE - FR-030 CLI tool Feature Request created)
+**Last updated:** 2026-01-05 (v0.4.12.10+0 – Story 12: ✅ COMPLETE - All tasks complete: S00 repository pattern fully implemented and documented)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -52,9 +52,9 @@ housekeeping_policy: keep
   - Story: [`Story-011-kanban-granularity-discrete-task-docs.md`](Story-011-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.4.11.1+1), T02 ✅ COMPLETE (v0.4.11.2+2), T03 ✅ COMPLETE (v0.4.11.3+1), T04 ✅ COMPLETE (v0.4.11.4+1), T05 ✅ COMPLETE (v0.4.11.5+0), T06 ✅ COMPLETE (v0.4.11.6+2 – All phases: template optimization, guidelines, audit, migration guide)
   - **Coordination:** Coordinates with E2:S09 (RW integration)
-- [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0 – Story created for FR-021)
+- [x] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - ✅ COMPLETE (v0.4.12.10+0 – All tasks complete: S00 repository pattern fully implemented and documented)
   - Story: [`Story-012-fr-br-uxr-repository-stories.md`](Story-012-fr-br-uxr-repository-stories.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
+  - Tasks: T00 ✅ COMPLETE, T01-T10 ✅ COMPLETE (T01: E5:S00 created, T02: E6:S00 created, T03: E7:S00 created, T04: PERPETUAL state defined, T05: Board display logic updated, T06: Intake workflow updated, T07: Versioning policy updated, T08: Meta-grouping pattern documented, T09: Templates updated, T10: Documentation complete)
 - [x] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - ✅ COMPLETE (v0.4.13.6+2)
   - Story: [`Story-013-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05 ✅ COMPLETE (v0.4.13.5+1), T06 ✅ COMPLETE (v0.4.13.6+1)

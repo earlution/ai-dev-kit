@@ -36,6 +36,26 @@ steps:
         uxr: UXR-*.md
 
   - id: step-2
+    name: Assign to Repository Story (S00:Txx)
+    type: repository_assignment
+    handler: intake.repository_assignment
+    required: true
+    mandatory: true
+    blocking: true
+    dependencies:
+      - step-1
+    config:
+      repository_stories:
+        fr: E5:S00
+        br: E6:S00
+        uxr: E7:S00
+      task_numbering:
+        auto_increment: true
+        start_from: 1
+      version_schema: RC.EPIC.STORY.TASK+BUILD
+      abstract_space_build: 0
+
+  - id: step-3
     name: Decision Flow Analysis
     type: decision_flow
     handler: intake.decision_flow
@@ -44,6 +64,7 @@ steps:
     blocking: true
     dependencies:
       - step-1
+      - step-2
     config:
       semantic_matching:
         enabled: true
@@ -52,7 +73,7 @@ steps:
       epic_assignment:
         auto_detect: true
 
-  - id: step-3
+  - id: step-4
     name: Create/Update Kanban Tasks
     type: kanban_task_creation
     handler: intake.kanban_task_creation
@@ -61,12 +82,15 @@ steps:
     blocking: true
     dependencies:
       - step-2
+      - step-3
     config:
       use_e4s10: true
       template_path: packages/frameworks/kanban/templates
       auto_link_fr_br: true
+      create_traceability_bridge: true
+      repository_task_id: ${step-2.repository_task_id}
 
-  - id: step-4
+  - id: step-5
     name: Update FR/BR/UXR Documentation
     type: intake_documentation_update
     handler: intake.documentation_update
@@ -76,6 +100,7 @@ steps:
     dependencies:
       - step-2
       - step-3
+      - step-4
     config:
       intake_status:
         default: ACCEPTED
@@ -83,8 +108,9 @@ steps:
       version_marker:
         format: v{rc}.{epic}.{story}.{task}+{build}
         build_zero_for_intake: true
+      repository_task_id: ${step-2.repository_task_id}
 
-  - id: step-5
+  - id: step-6
     name: Wire Dependencies
     type: dependency_wiring
     handler: intake.dependency_wiring
@@ -94,6 +120,7 @@ steps:
     dependencies:
       - step-2
       - step-3
+      - step-4
     config:
       dependency_patterns:
         fr: FR-\d+
@@ -105,8 +132,9 @@ steps:
         check_existence: true
         check_circular: true
         strict_mode: false
+      repository_task_id: ${step-2.repository_task_id}
 
-  - id: step-6
+  - id: step-7
     name: Assign Version Marker
     type: version_assignment
     handler: intake.version_assignment
@@ -116,12 +144,14 @@ steps:
     dependencies:
       - step-2
       - step-3
+      - step-4
     config:
       version_schema: RC.EPIC.STORY.TASK+BUILD
       intake_build: 0
       version_file: src/fynd_deals/version.py
+      repository_task_id: ${step-2.repository_task_id}
 
-  - id: step-7
+  - id: step-8
     name: Validate & Report Results
     type: intake_validation
     handler: intake.validation
@@ -135,6 +165,7 @@ steps:
       - step-4
       - step-5
       - step-6
+      - step-7
     config:
       validation:
         check_document_updates: true

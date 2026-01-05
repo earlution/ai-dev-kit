@@ -30,10 +30,11 @@ This document provides a **step-by-step agent execution guide** for the Intake W
 
 **Workflow:** Intake Workflow
 **Type:** `intake`
-**Steps:** 7 steps organized into 3 phases:
-- **Phase 1: Analysis & Decision (Steps 1-2)**
-- **Phase 2: Task Creation & Documentation (Steps 3-4)**
-- **Phase 3: Integration & Validation (Steps 5-7)**
+**Steps:** 8 steps organized into 4 phases:
+- **Phase 1: Repository Assignment (Steps 1-2)**
+- **Phase 2: Analysis & Decision (Step 3)**
+- **Phase 3: Task Creation & Documentation (Steps 4-5)**
+- **Phase 4: Integration & Validation (Steps 6-8)**
 **Canonical Example:** Yes - this workflow demonstrates agent-driven intake automation
 
 ### Agent Execution Pattern
@@ -61,12 +62,13 @@ For each step, the agent follows this pattern:
    ```python
    todo_write(merge=False, todos=[
        {'id': 'intake-step-1', 'status': 'pending', 'content': 'Step 1: Load & Parse FR/BR/UXR Document'},
-       {'id': 'intake-step-2', 'status': 'pending', 'content': 'Step 2: Decision Flow Analysis'},
-       {'id': 'intake-step-3', 'status': 'pending', 'content': 'Step 3: Create/Update Kanban Tasks'},
-       {'id': 'intake-step-4', 'status': 'pending', 'content': 'Step 4: Update FR/BR/UXR Documentation'},
-       {'id': 'intake-step-5', 'status': 'pending', 'content': 'Step 5: Wire Dependencies'},
-       {'id': 'intake-step-6', 'status': 'pending', 'content': 'Step 6: Assign Version Marker'},
-       {'id': 'intake-step-7', 'status': 'pending', 'content': 'Step 7: Validate & Report Results'},
+       {'id': 'intake-step-2', 'status': 'pending', 'content': 'Step 2: Assign to Repository Story (S00:Txx)'},
+       {'id': 'intake-step-3', 'status': 'pending', 'content': 'Step 3: Decision Flow Analysis'},
+       {'id': 'intake-step-4', 'status': 'pending', 'content': 'Step 4: Create/Update Kanban Tasks'},
+       {'id': 'intake-step-5', 'status': 'pending', 'content': 'Step 5: Update FR/BR/UXR Documentation'},
+       {'id': 'intake-step-6', 'status': 'pending', 'content': 'Step 6: Wire Dependencies'},
+       {'id': 'intake-step-7', 'status': 'pending', 'content': 'Step 7: Assign Version Marker'},
+       {'id': 'intake-step-8', 'status': 'pending', 'content': 'Step 8: Validate & Report Results'},
    ])
    ```
 
@@ -99,19 +101,24 @@ For each step, the agent follows this pattern:
 
 ## 🔄 Workflow Execution Flow
 
-### Phase 1: Analysis & Decision
+### Phase 1: Repository Assignment
 
 **Steps:** 1-2
-**Purpose:** Load FR/BR/UXR document and determine Epic/Story/Task placement
+**Purpose:** Load FR/BR/UXR document and assign to repository story (S00:Txx)
 
-### Phase 2: Task Creation & Documentation
+### Phase 2: Analysis & Decision
 
-**Steps:** 3-4
-**Purpose:** Create Kanban tasks and update FR/BR/UXR documentation
+**Steps:** 3
+**Purpose:** Determine Epic/Story/Task placement for implementation work
 
-### Phase 3: Integration & Validation
+### Phase 3: Task Creation & Documentation
 
-**Steps:** 5-7
+**Steps:** 4-5
+**Purpose:** Create Kanban tasks (with traceability bridge) and update FR/BR/UXR documentation
+
+### Phase 4: Integration & Validation
+
+**Steps:** 6-8
 **Purpose:** Wire dependencies, assign version markers, and validate results
 
 ---
@@ -172,11 +179,77 @@ content = fr_br_path.read_text(encoding='utf-8')
 
 ---
 
-### Step 2: Decision Flow Analysis
+### Step 2: Assign to Repository Story (S00:Txx)
 
 **Step Definition:**
 ```yaml
 - id: step-2
+  name: Assign to Repository Story (S00:Txx)
+  type: repository_assignment
+  handler: intake.repository_assignment
+  required: true
+  mandatory: true
+  blocking: true
+  dependencies:
+    - step-1
+```
+
+**Agent Execution:**
+
+**A. ANALYZE:**
+1. **Identify repository story:**
+   - FR → E5:S00 (FR Repo)
+   - BR → E6:S00 (BR Repo)
+   - UXR → E7:S00 (UXR Repo)
+
+2. **Determine next task number:**
+   - Read repository story document (E5:S00, E6:S00, or E7:S00)
+   - Find highest existing task number (T01, T02, T03, etc.)
+   - Next task number = highest + 1
+
+3. **Check traceability pattern:**
+   - FR-001 = E5:S00:T01
+   - BR-001 = E6:S00:T01
+   - UXR-001 = E7:S00:T01
+   - Verify FR/BR/UXR number matches task number
+
+**B. DETERMINE:**
+- Repository story to use (E5:S00, E6:S00, or E7:S00)
+- Next available task number in repository story
+- Abstract space version (v0.5.0.1+0, v0.6.0.1+0, or v0.7.0.1+0)
+
+**C. EXECUTE:**
+1. **Create repository task:**
+   - Create task document in repository story directory
+   - Task ID: E5:S00:T{next_number}, E6:S00:T{next_number}, or E7:S00:T{next_number}
+   - Link to FR/BR/UXR document
+   - Status: TODO (repository anchor)
+
+2. **Update repository story:**
+   - Add task to repository story Task Checklist
+   - Document traceability: FR-001 = E5:S00:T01
+
+3. **Store repository task ID:**
+   - Save repository task ID for traceability bridge creation
+   - Pass to subsequent steps via workflow context
+
+**D. VALIDATE:**
+- Repository task document created
+- Repository story updated with new task
+- Traceability pattern verified (FR-001 = E5:S00:T01)
+- Repository task ID stored in workflow context
+
+**E. PROCEED:**
+- Repository anchor established
+- Move to Step 3: Decision Flow Analysis
+
+---
+
+### Step 3: Decision Flow Analysis
+
+**Step Definition:**
+```yaml
+- id: step-3
   name: Decision Flow Analysis
   type: decision_flow
   handler: intake.decision_flow
@@ -185,6 +258,7 @@ content = fr_br_path.read_text(encoding='utf-8')
   blocking: true
   dependencies:
     - step-1
+    - step-2
 ```
 
 **Agent Execution:**
@@ -230,15 +304,15 @@ if intake_decision.epic_number == 0:
 
 **E. PROCEED:**
 - Decision flow results available
-- Pass intake decision to Step 3
+- Pass intake decision to Step 4
 
 ---
 
-### Step 3: Create/Update Kanban Tasks
+### Step 4: Create/Update Kanban Tasks
 
 **Step Definition:**
 ```yaml
-- id: step-3
+- id: step-4
   name: Create/Update Kanban Tasks
   type: kanban_task_creation
   handler: intake.kanban_task_creation
@@ -247,16 +321,24 @@ if intake_decision.epic_number == 0:
   blocking: true
   dependencies:
     - step-2
+    - step-3
+  config:
+    create_traceability_bridge: true
+    repository_task_id: ${step-2.repository_task_id}
 ```
 
 **Agent Execution:**
 
 **A. ANALYZE:**
 1. **Check intake decision:**
-   - Verify epic/story/task assignment from Step 2
+   - Verify epic/story/task assignment from Step 3
    - Check if manual review required
 
-2. **Prepare task creation:**
+2. **Check repository assignment:**
+   - Retrieve repository task ID from Step 2
+   - Verify repository anchor established
+
+3. **Prepare task creation:**
    - Initialize E4:S10's `AgenticTaskWorkflow`
    - Load task templates if needed
 
@@ -264,6 +346,7 @@ if intake_decision.epic_number == 0:
 - Whether to create new tasks or update existing tasks
 - Task structure and dependencies
 - Task templates to use
+- Traceability bridge creation (S00:Txx → implementation tasks)
 
 **C. EXECUTE:**
 ```python
@@ -272,8 +355,19 @@ from intake_task_creation import IntakeTaskCreation
 # Initialize task creation
 task_creation = IntakeTaskCreation(kanban_path, framework_path, config)
 
-# Create tasks
-result = task_creation.create_tasks(fr_br_path, intake_decision)
+# Create tasks (with traceability bridge)
+result = task_creation.create_tasks(
+    fr_br_path, 
+    intake_decision,
+    repository_task_id=repository_task_id  # From Step 2
+)
+
+# Create traceability bridge
+# Link repository task (E5:S00:T01) to implementation tasks (E12:S03:T05)
+traceability_bridge = create_traceability_bridge(
+    repository_task_id=repository_task_id,
+    implementation_tasks=result.created_tasks
+)
 
 # Check results
 if not result.success:
@@ -284,18 +378,20 @@ if not result.success:
 - ✅ Tasks created successfully
 - ✅ Tasks linked to FR/BR/UXR document
 - ✅ Task files created in correct location
+- ✅ Traceability bridge created (S00:Txx → implementation tasks)
 
 **E. PROCEED:**
 - Tasks created and linked
-- Pass created tasks to Step 4
+- Traceability bridge established
+- Pass created tasks to Step 5
 
 ---
 
-### Step 4: Update FR/BR/UXR Documentation
+### Step 5: Update FR/BR/UXR Documentation
 
 **Step Definition:**
 ```yaml
-- id: step-4
+- id: step-5
   name: Update FR/BR/UXR Documentation
   type: intake_documentation_update
   handler: intake.documentation_update
@@ -305,24 +401,30 @@ if not result.success:
   dependencies:
     - step-2
     - step-3
+    - step-4
+  config:
+    repository_task_id: ${step-2.repository_task_id}
 ```
 
 **Agent Execution:**
 
 **A. ANALYZE:**
 1. **Gather information:**
-   - Intake decision from Step 2
-   - Created tasks from Step 3
-   - Version marker from Step 6 (if available)
+   - Intake decision from Step 3
+   - Created tasks from Step 4
+   - Repository task ID from Step 2
+   - Version marker from Step 7 (if available)
 
 2. **Check document structure:**
    - Identify Status field location
    - Check for existing Intake Decision section
+   - Check for Repository Assignment section
 
 **B. DETERMINE:**
 - Status field update (ACCEPTED/PENDING/REJECTED/DEFERRED)
 - Intake Decision section content
-- Kanban links to add
+- Repository Assignment section content (S00:Txx)
+- Kanban links to add (repository task + implementation tasks)
 
 **C. EXECUTE:**
 ```python
@@ -336,8 +438,12 @@ result = doc_update.update_document(
     fr_br_path,
     intake_decision,
     created_tasks,
-    version_marker  # From Step 6
+    repository_task_id=repository_task_id,  # From Step 2
+    version_marker=version_marker  # From Step 7
 )
+
+# Add repository assignment section
+# Example: "Repository: E5:S00:T01 (FR-001 = E5:S00:T01)"
 ```
 
 **D. VALIDATE:**
@@ -356,7 +462,7 @@ result = doc_update.update_document(
 
 **Step Definition:**
 ```yaml
-- id: step-5
+- id: step-6
   name: Wire Dependencies
   type: dependency_wiring
   handler: intake.dependency_wiring
@@ -366,6 +472,9 @@ result = doc_update.update_document(
   dependencies:
     - step-2
     - step-3
+    - step-4
+  config:
+    repository_task_id: ${step-2.repository_task_id}
 ```
 
 **Agent Execution:**
@@ -416,7 +525,7 @@ if result.warnings:
 
 **Step Definition:**
 ```yaml
-- id: step-6
+- id: step-7
   name: Assign Version Marker
   type: version_assignment
   handler: intake.version_assignment
@@ -426,6 +535,9 @@ if result.warnings:
   dependencies:
     - step-2
     - step-3
+    - step-4
+  config:
+    repository_task_id: ${step-2.repository_task_id}
 ```
 
 **Agent Execution:**
@@ -470,16 +582,16 @@ version_marker = result.version_marker  # e.g., "v0.2.11.6+0"
 - ✅ Build number correct (0 for new, next build for existing)
 
 **E. PROCEED:**
-- Version marker assigned
-- Pass version marker to Step 4 (for documentation update)
+- Version marker assigned (for both repository task and implementation tasks)
+- Pass version marker to Step 5 (for documentation update)
 
 ---
 
-### Step 7: Validate & Report Results
+### Step 8: Validate & Report Results
 
 **Step Definition:**
 ```yaml
-- id: step-7
+- id: step-8
   name: Validate & Report Results
   type: intake_validation
   handler: intake.validation
@@ -493,16 +605,21 @@ version_marker = result.version_marker  # e.g., "v0.2.11.6+0"
     - step-4
     - step-5
     - step-6
+    - step-7
+  config:
+    repository_task_id: ${step-2.repository_task_id}
 ```
 
 **Agent Execution:**
 
 **A. ANALYZE:**
 1. **Gather validation data:**
-   - Check document updates (Step 4)
-   - Check task creation (Step 3)
-   - Check dependency wiring (Step 5)
-   - Check version assignment (Step 6)
+   - Check repository assignment (Step 2)
+   - Check document updates (Step 5)
+   - Check task creation (Step 4)
+   - Check dependency wiring (Step 6)
+   - Check version assignment (Step 7)
+   - Check traceability bridge (Step 4)
 
 2. **Validate each component:**
    - File existence checks
@@ -517,8 +634,10 @@ version_marker = result.version_marker  # e.g., "v0.2.11.6+0"
 ```python
 # Validate all steps completed successfully
 validation_checks = [
+    ("Repository Assignment", check_repository_assignment(repository_task_id)),
     ("Document Updates", check_document_updates(fr_br_path)),
     ("Task Creation", check_task_creation(created_tasks)),
+    ("Traceability Bridge", check_traceability_bridge(repository_task_id, created_tasks)),
     ("Dependency Wiring", check_dependency_wiring(fr_br_path)),
     ("Version Assignment", check_version_assignment(version_marker)),
 ]

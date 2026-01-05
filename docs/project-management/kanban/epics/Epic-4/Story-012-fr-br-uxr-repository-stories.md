@@ -27,11 +27,11 @@ housekeeping_policy: keep
 - [x] **E4:S12:T03 – Create Epic 7, Story 0: UXR Repo (PERPETUAL)** - ✅ COMPLETE (v0.4.12.3+0 – Repository story created: E7:S00)
 - [x] **E4:S12:T04 – Update Kanban Policy with PERPETUAL State Definition** - ✅ COMPLETE (v0.4.12.4+0 – PERPETUAL state defined in Kanban policy)
 - [x] **E4:S12:T05 – Update Board Display Logic to Omit S00 Stories** - ✅ COMPLETE (v0.4.12.5+0 – Board display logic updated: S00 stories omitted from epic checklists)
-- [ ] **E4:S12:T06 – Update Intake Workflow to Assign FR/BR/UXR to S00:Txx**
-- [ ] **E4:S12:T07 – Update Versioning Policy with S00 Abstract Space Concept**
-- [ ] **E4:S12:T08 – Document Meta-Grouping Pattern**
-- [ ] **E4:S12:T09 – Update Epic 5, 6, 7 Templates with S00 Pattern**
-- [ ] **E4:S12:T10 – Documentation and Testing**
+- [x] **E4:S12:T06 – Update Intake Workflow to Assign FR/BR/UXR to S00:Txx** - ✅ COMPLETE (v0.4.12.6+0 – Intake workflow updated: repository assignment step added, traceability bridge creation implemented)
+- [x] **E4:S12:T07 – Update Versioning Policy with S00 Abstract Space Concept** - ✅ COMPLETE (v0.4.12.7+0 – Versioning policy updated: S00 abstract space documented, repository task versioning pattern defined)
+- [x] **E4:S12:T08 – Document Meta-Grouping Pattern** - ✅ COMPLETE (v0.4.12.8+0 – Meta-grouping pattern documented: implementation stories reference repository tasks by task number)
+- [x] **E4:S12:T09 – Update Epic 5, 6, 7 Templates with S00 Pattern** - ✅ COMPLETE (v0.4.12.9+0 – Epic templates updated: S00 added to Story Checklist with PERPETUAL status and board display omission notes)
+- [x] **E4:S12:T10 – Documentation and Testing** - ✅ COMPLETE (v0.4.12.10+0 – Documentation complete: S00 pattern fully documented, templates updated, intake workflow integrated)
 
 > **Format:** `E4:S12:Txx` (Epic 4, Story 12, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.12.1+1)`)  

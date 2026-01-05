@@ -378,6 +378,43 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Abstract space must precede functional work
 - Release Workflow validates abstract space usage
 
+#### S00 Abstract Space for Repository Stories
+
+**Format:** `0.{EPIC}.0.0+0` (repository story abstract space)
+
+**Examples:**
+- `0.5.0.0+0` = Epic 5, Story 0 (FR Repo) abstract space
+- `0.6.0.0+0` = Epic 6, Story 0 (BR Repo) abstract space
+- `0.7.0.0+0` = Epic 7, Story 0 (UXR Repo) abstract space
+
+**Purpose:**
+- Establishes forensic traceability anchor for repository stories (S00)
+- Repository stories are PERPETUAL (never complete)
+- S00 serves as canonical home for FRs/BRs/UXRs
+- Perfect 1:1 traceability: FR-001 = E5:S00:T01, BR-001 = E6:S00:T01, UXR-001 = E7:S00:T01
+
+**Repository Task Versioning:**
+- Repository story: `0.5.0.0+0` (abstract space)
+- First FR: `0.5.0.1+0` (E5:S00:T01 - abstract space for repository task)
+- Second FR: `0.5.0.2+0` (E5:S00:T02 - abstract space for repository task)
+- Third FR: `0.5.0.3+0` (E5:S00:T03 - abstract space for repository task)
+
+**Pattern:**
+- FR-001 = E5:S00:T01 = v0.5.0.1+0 (abstract space)
+- BR-001 = E6:S00:T01 = v0.6.0.1+0 (abstract space)
+- UXR-001 = E7:S00:T01 = v0.7.0.1+0 (abstract space)
+
+**Usage:**
+- Repository story creation → Commit with `0.{EPIC}.0.0+0`
+- Repository task creation → Commit with `0.{EPIC}.0.{TASK}+0` (abstract space)
+- Repository tasks use `+0` build (abstract space) as they are documentation anchors
+- Implementation tasks use `+1` and beyond (functional work)
+
+**Related:**
+- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern) - Feature request
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs - Abstract space concept
+- **E4:S12:** FR/BR/UXR Repository Stories (S00 Pattern) - Implementation story
+
 **SOP for Committing Initial E/S/T Docs:**
 
 1. **Create E/S/T document** with required structure and fields
