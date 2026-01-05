@@ -1,4 +1,1451 @@
 # Changelog Archive
+## [0.2.1.8+1] - 22-12-25
+
+### Added
+- Step 9: Check for and Address IDE-Flagged Problems (NEW STEP in Release Workflow)
+- IDE problem checking before validators (errors block, warnings/infos non-blocking)
+- Integration with IDE diagnostics API (`read_lints` tool)
+- Step 9 documentation with full execution pattern
+
+### Changed
+- Renumbered Release Workflow steps (old Step 9 → Step 10, Step 9.5 → Step 10.5, etc.)
+- Updated all step dependencies and references in RW documentation
+- Updated TODO list examples to include Step 9
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.8+1.md)
+---
+## [0.2.12.1+1] - 05-01-26
+
+### Added
+- Step 17: Housekeeping to Release Workflow (E2:S12:T01)
+  - Runs at end of RW to clean up IDE state
+  - Clears IDE todo list (all `rw-step-*` todos)
+  - Workflow version updated: 2.2.0 → 2.3.0
+  - Documentation version updated: 1.8.0 → 1.9.0
+  - Optional but recommended step
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.12.1+1.md)
+
+---
+---
+## [0.4.1.1+2] - 02-12-25
+
+📚 Documentation: Task 1 complete - Gap analysis of dev-kit Kanban policies and templates
+
+### Added
+
+- Created **gap analysis report** comparing dev-kit Kanban policies and templates with framework
+- Identified 7 critical gaps (atomic RW behaviour, "ALL sections" requirement, accessibility constraints, etc.)
+- Identified template gaps and dev-kit policy gaps
+
+### Notes
+
+- Gap analysis: `docs/project-management/kanban/epics/Epic-4/stories/Story-001-dev-kit-kanban-implementation/T001-gap-analysis-report.md`
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+2.md` for full details
+
+---
+---
+## [0.4.1.1+3] - 02-12-25
+
+📚 Documentation: Task 2 complete - Ingest findings from fynd.deals Epic 15 Kanban work
+
+### Added
+
+- Created **findings document** extracting 7 reusable Kanban patterns from framework packages
+- Identified patterns already in framework vs. missing from policy
+- Provided 9 high-priority recommendations for updating Kanban governance policy
+
+### Notes
+
+- Findings document: `docs/project-management/kanban/epics/Epic-4/stories/Story-001-dev-kit-kanban-implementation/T002-fynd-deals-epic15-kanban-findings.md`
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+3.md` for full details
+
+---
+---
+## [0.4.1.1+4] - 02-12-25
+
+📚 Documentation: Task 3 complete - Update dev-kit Kanban governance policy as canonical SoT
+
+### Added
+
+- Added **9 Operational Principles sections** to framework Kanban governance policy:
+  - Atomic Release Workflow Behaviour
+  - "ALL Sections" Update Requirement
+  - Accessibility Constraints
+  - Forensic Marker Standardization
+  - Consistency Requirements
+  - Review Schedules
+  - Maintenance Responsibilities
+  - Escalation Procedures
+  - Mandatory TODO Tracking
+- Enhanced dev-kit local policy to explicitly reference framework as canonical SoT
+
+### Notes
+
+- Framework policy: `packages/frameworks/kanban/policies/kanban-governance-policy.md` (now comprehensive canonical SoT)
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+4.md` for full details
+
+---
+---
+## [0.4.1.1+5] - 02-12-25
+
+📚 Documentation: Task 4 complete - Align dev-kit Kanban templates with updated governance
+
+### Added
+
+- Enhanced **EPIC_TEMPLATE.md** with governance alignment notes:
+  - "ALL sections" update requirement reminders
+  - Forensic marker format notes (`✅ COMPLETE (vRC.E.S.T+B)`)
+  - Consistency check reminders
+  - Story Checklist as SINGLE SOURCE OF TRUTH emphasis
+- Enhanced **STORY_TEMPLATE.md** with governance alignment notes:
+  - "ALL sections" update requirement reminders
+  - Forensic marker format notes
+  - Consistency check reminders
+
+### Notes
+
+- Templates: `packages/frameworks/kanban/templates/EPIC_TEMPLATE.md` and `STORY_TEMPLATE.md`
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+5.md` for full details
+
+---
+---
+## [0.4.1.1+6] - 02-12-25
+
+📚 Documentation: Task 5 complete - Document consumption pattern for other projects
+
+### Added
+
+- Added comprehensive **"Consumption Pattern for Other Projects"** section to Kanban framework README:
+  - Copy, don't reference pattern
+  - Customization boundaries (what can vs must not customize)
+  - Update process for syncing with framework
+  - Single Source of Truth relationship
+  - Implementation steps and example setup
+
+### Notes
+
+- Framework README: `packages/frameworks/kanban/README.md`
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+6.md` for full details
+- **Story 1 for Epic 4 is now COMPLETE** - all 5 tasks completed
+
+---
+---
+## [0.4.2.1+1] - 02-12-25
+
+📚 Documentation: Task 1 complete - Analyze current FR/BR intake process and requirements
+
+### Added
+
+- Created Story 2 structure for FR/BR Intake to Tasks
+- Created comprehensive analysis report documenting current state, gaps, and requirements
+- Documented 5 use cases for FR/BR intake scenarios
+- Stakeholder analysis (AI agents, human users, maintainers)
+- Gap analysis with priorities and recommendations
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.2.1+1.md` for full details
+- Analysis identifies critical gaps: FR/BR templates, decision flow, process guide
+- Clear path forward: Templates → Decision Flow → Documentation → Guides
+
+---
+---
+## [0.4.2.2+1] - 02-12-25
+
+📚 Documentation: Task 2 complete - Design FR/BR → Task → Story → Epic decision flow
+
+### Added
+
+- Created comprehensive decision flow design document
+- Defined Story matching criteria (scope, Epic alignment, status)
+- Defined Epic matching criteria (domain, status, conceptual fit)
+- Epic creation guidelines (broad, abstract, examples)
+- Edge case handling (5 scenarios: complex FR, ambiguous scope, multi-component BR, cross-Epic FR, duplicates)
+- Versioning integration rules
+- Kanban board integration rules
+- Visual decision flow diagrams (text-based flowcharts)
+- Worked examples (4 scenarios)
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.2.2+1.md` for full details
+- Decision flow provides foundation for templates and guides in next tasks
+- Flow designed for both AI agents (systematic) and human users (intuitive)
+
+---
+---
+## [0.4.2.3+1] - 02-12-25
+
+📚 Documentation: Task 3 complete - Create FR/BR intake templates and forms
+
+### Added
+
+- Created FR template (`FR_TEMPLATE.md`) with structured format for Feature Requests
+- Created BR template (`BR_TEMPLATE.md`) with structured format for Bug Reports
+- Intake Decision sections in both templates for tracking FR/BR → Task → Story → Epic conversion
+- Fix verification status in BR template (aligned with RW requirements)
+- Kanban links and versioning integration fields in both templates
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.2.3+1.md` for full details
+- Templates align with EPIC_TEMPLATE and STORY_TEMPLATE structure
+- Templates support decision flow from T002 and will be used in T004 examples
+
+---
+---
+## [0.4.2.4+1] - 02-12-25
+
+📚 Documentation: Task 4 complete - Document the intake process with examples
+
+### Added
+
+- Created comprehensive intake process guide (`FR_BR_INTAKE_GUIDE.md`) with step-by-step instructions
+- Added 6 worked examples covering all common FR/BR intake scenarios:
+  - FR matching existing Story
+  - FR requiring new Story (existing Epic)
+  - FR requiring new Epic
+  - BR matching existing Story
+  - BR requiring new Story
+  - Complex FR requiring multiple Tasks
+- Added integration documentation (Kanban, Versioning, Release Workflow)
+- Added troubleshooting guide and quick reference sections
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.2.4+1.md` for full details
+- Guide provides complete intake process from FR/BR receipt to Task creation
+- Examples demonstrate decision flow, version assignment, and Kanban integration
+- Will be used in T005 to create agent/user-friendly guides
+
+---
+---
+## [0.4.2.5+1] - 02-12-25
+
+📚 Documentation: Task 5 complete - Create intake workflow guide for agents/users (Story 2 complete)
+
+### Added
+
+- Created agent-friendly guide (`FR_BR_INTAKE_AGENT_GUIDE.md`) with structured, executable workflow for AI assistants
+- Created user-friendly guide (`FR_BR_INTAKE_USER_GUIDE.md`) with conversational, accessible instructions for human users
+- Created quick reference (`FR_BR_INTAKE_QUICK_REFERENCE.md`) with at-a-glance information for both audiences
+- Added troubleshooting sections to all guides
+- Added validation checklists and error handling guidelines
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.2.5+1.md` for full details
+- Story 2: FR/BR Intake to Tasks is now COMPLETE (all 5 tasks finished)
+- Guides provide audience-specific instructions: agent guide for programmatic execution, user guide for human users
+- Quick reference provides decision flow, version format, templates, and validation checklist
+
+---
+---
+## [0.4.2.6+1] - 2025-12-09
+
+✨ Feature: GitHub Issue integration for FR, BR, and UXR submissions (FR-004)
+
+### Added
+
+- **GitHub Issue Templates:** Bug Report, Feature Request, and UXR templates for GitHub Issues
+  - Structured forms aligned with Kanban templates
+  - Automatic conversion to FR/BR/UXR documents
+- **GitHub Action:** Automatic conversion from GitHub Issues to Kanban documents
+  - `.github/workflows/fr-br-intake.yml` - Converts Issues to documents
+  - Bidirectional linking between GitHub Issues and Kanban documents
+- **UXR Template:** User Experience Research template (`UXR_TEMPLATE.md`)
+- **GitHub Submission Guide:** Comprehensive guide for external contributors
+- **Kanban Package v1.3.0:** GitHub integration feature (MINOR bump)
+
+### Changed
+
+- Updated Kanban package README with new templates and guides
+- Enhanced FR/BR intake workflow with GitHub integration
+
+---
+---
+## [0.4.2.6+2] - 2025-12-09
+
+📚 Documentation: Improved discoverability of GitHub submission process
+
+### Added
+
+- **CONTRIBUTING.md:** Client-focused guide for submitting feedback via GitHub Issues
+  - Quick start instructions
+  - Links to all issue templates
+  - Code contribution guidelines
+
+### Changed
+
+- **README.md:** Enhanced Contributing section with quick links to issue templates
+- **GitHub Issue Templates:** Added help links to detailed submission guide in all templates
+
+---
+---
+## [0.4.2.6+3] - 2025-12-10
+
+📋 Feature: E4:S02:T06 Build 3 - UAT Report Submission Lane Added
+
+### Added
+
+- **User Acceptance Testing (UAT) Report Template (`FB_TEMPLATE.md`):**
+  - UAT-focused template requiring empirical evidence (test results, screenshots, logs)
+  - Acceptance criteria results tracking (PASS/FAIL/PARTIAL)
+  - Test results summary (total tested, passed, failed, partial)
+  - Issues found tracking with expected vs actual, evidence, severity
+  - UAT recommendation (ACCEPT/ACCEPT WITH CAVEATS/REJECT)
+
+- **GitHub Issue Template (`feedback.yml`):**
+  - Renamed to "User Acceptance Testing (UAT) Report"
+  - UAT scope selection (Functional, Integration, Adoption, End-to-End testing)
+  - Acceptance criteria results with evidence requirements
+  - Test results summary tracking
+  - UAT assessment and recommendation fields
+  - Warnings about requiring empirical evidence (not opinions)
+
+- **Documentation Updates:**
+  - Updated submission guide (`FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md`) to include UAT reports
+  - Clarified UAT requires empirical evidence, not opinion-based feedback
+  - Updated GitHub Action workflow to handle `uat` label
+  - Updated README to reflect UAT focus
+
+### Changed
+
+- **GitHub Submission System:**
+  - Expanded from FR/BR/UXR to FR/BR/UXR/FB (UAT Reports)
+  - Tightened FB scope to UAT only (removed general feedback options)
+  - Added `uat` label support in workflow
+  - Updated all issue template references
+
+- **Epic 4, Story 2, Task 6:** Build 3 complete
+  - UAT Report submission lane added
+  - Scope tightened to require empirical evidence
+  - All templates and documentation updated
+
+---
+---
+## [0.4.2.6+4] - 10-12-25
+
+🎯 Feature: E4:S02 Complete - FR/BR Intake to Tasks
+
+### Changed
+
+- **Story 2:** Status updated to COMPLETE ✅ (all 6 tasks complete)
+- **Epic 4:** Story 2 marked complete in story checklist
+
+---
+---
+## [0.4.3.1+1] - 02-12-25
+
+📚 Documentation: Task 1 complete - Review existing integration documentation (Story 3 started)
+
+### Added
+
+- Created integration documentation review report analyzing framework integration docs
+- Identified gaps between framework docs and dev-kit implementation
+- Documented recommendations for dev-kit alignment (path references, step numbering, version examples)
+- Reviewed Numbering & Versioning integration and Workflow Management integration
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.1+1.md` for full details
+- Story 3: Kanban + Versioning + RW Integration started
+- Review identified step numbering discrepancy (framework docs reference Step 4, but RW uses Step 6)
+- Path references need updating for dev-kit's consolidated `kanban/` structure
+- Three-way integration needs end-to-end flow documentation
+
+---
+---
+## [0.4.3.2+1] - 02-12-25
+
+📚 Documentation: Task 2 complete - Validate Kanban → Versioning integration in dev-kit
+
+### Added
+
+- Created Kanban → Versioning integration validation report
+- Validated Epic/Story number mapping to version components (✅ PASS)
+- Validated Task number mapping to version TASK component (❌ FAIL - critical issue identified)
+- Documented root cause analysis and recommendations
+
+### Fixed
+
+- **CRITICAL ISSUE IDENTIFIED:** Task numbers are not correctly mapping to version TASK component. All Tasks within a Story are using TASK=1, with BUILD incrementing across Tasks. This violates versioning schema rules and breaks forensic traceability.
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.2+1.md` for full details
+- Validation report identifies critical inconsistency requiring immediate attention
+- Root cause: VERSION_TASK not automatically updated when moving to new Tasks
+- Recommendations provided for immediate fixes, process improvements, and long-term solutions
+
+---
+---
+## [0.4.3.2+2] - 02-12-25
+
+📚 Documentation: Task 2 complete - Critical issue resolution: Task → version TASK component mapping fix
+
+### Added
+
+- Root cause analysis document identifying 4 primary root causes and 8 documentation gaps
+- Documentation updates summary covering all 8 files updated
+- Release Workflow Step 1: Task/version alignment validation
+- Release Workflow Step 2: Task transition detection and automatic updates
+- Versioning Policy: Explicit Task transition rules and examples
+- Intake Guides: Mandatory version.py update requirements
+- Kanban Governance: Task transition requirements and common mistakes
+
+### Fixed
+
+- **CRITICAL ISSUE RESOLVED:** Task numbers not correctly mapping to version TASK component
+- Release Workflow now automatically detects Task transitions and updates VERSION_TASK
+- Release Workflow Step 1 validates Task/version alignment before proceeding
+- Intake process now requires updating version.py when creating Tasks
+- All documentation updated with explicit requirements to prevent recurrence
+
+### Changed
+
+- Enhanced Release Workflow Step 1 with Task/version validation
+- Enhanced Release Workflow Step 2 with Task transition detection
+- Enhanced Versioning Policy with Task transition section
+- Enhanced Intake Guides with mandatory version file updates
+- Enhanced Kanban Governance with Task transition requirements
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.2+2.md` for full details
+- Root cause analysis and documentation updates summary provide complete understanding of issue and resolution
+- All 8 documentation files updated to prevent recurrence
+- Multiple layers of protection now in place: validation, automatic detection, explicit requirements
+
+---
+---
+## [0.4.3.3+1] - 02-12-25
+
+📚 Documentation: Task 3 complete - Validate Versioning → RW integration in dev-kit
+
+### Added
+
+- Created Versioning → RW integration validation report
+- Validated version file reading, BUILD increment, Task transitions, EPIC/STORY progression, version format validation
+- Documented integration points analysis
+- Identified 4 minor gaps with recommendations
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.3+1.md` for full details
+- Validation confirms strong integration with well-implemented integration points
+- Minor gaps identified primarily relate to documentation and validation comprehensiveness
+- Overall status: ✅ GOOD - Integration is functional with minor documentation gaps
+
+---
+---
+## [0.4.3.4+1] - 02-12-25
+
+📚 Documentation: Task 4 complete - Validate RW → Kanban integration in dev-kit
+
+### Added
+
+- Created RW → Kanban integration validation report
+- Validated Epic document updates, Story document updates, "ALL sections" requirement, forensic marker format, consistency
+- Identified 3 gaps with recommendations
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.4+1.md` for full details
+- Validation confirms partial RW → Kanban integration with good foundation
+- Gaps identified: Epic Story Checklist updates, forensic marker format consistency, "ALL sections" requirement
+- Overall status: ⚠️ PARTIAL - Integration is functional but not fully compliant with "ALL sections" requirement
+
+---
+---
+## [0.4.3.5+1] - 02-12-25
+
+📚 Documentation: Task 5 complete - Create dev-kit integration guide
+
+### Added
+
+- Created comprehensive dev-kit integration guide
+- Documented three-way integration architecture (Kanban ↔ Versioning ↔ Release Workflow)
+- Added end-to-end integration flow with complete 13-step workflow example
+- Added troubleshooting section with 5 common issues and solutions
+- Added best practices and related documentation references
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.5+1.md` for full details
+- Integration guide serves as canonical reference for dev-kit integration
+- All three integration points documented with dev-kit specific examples
+
+---
+---
+## [0.4.3.6+1] - 02-12-25
+
+📚 Documentation: Task 6 complete - Document integration examples and edge cases
+
+### Added
+
+- Created comprehensive integration examples and edge cases document
+- Documented 4 worked examples: FR → Task → Version → RW → Kanban update, Multiple Tasks, Story completion, Epic progression
+- Documented 6 edge cases: Parallel Epic development, Task/Story renumbering, Version conflicts, Skipped Task numbers, Multiple Builds
+- Added troubleshooting section with 4 common issues and solutions
+- Added best practices summary
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.6+1.md` for full details
+- Examples and edge cases document complements integration guide (T005)
+- All Tasks in Story 3 are now complete
+
+---
+---
+## [0.4.3.7+1] - 02-12-25
+
+🔧 Fix: Task 7 complete - Address RW → Kanban integration gaps identified in T004
+
+### Fixed
+
+- Fixed Epic Story Checklist to include Task-level version markers
+- Standardized forensic marker format across all sections
+- Enhanced RW Step 6 documentation with explicit "ALL sections" requirement
+- Updated validation report with fix status
+
+### Added
+
+- Created gap resolution summary document
+- Added systematic process steps to RW Step 6 documentation
+- Added consistency validation checks to RW Step 6
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.7+1.md` for full details
+- All 3 critical gaps from T004 validation addressed
+- RW → Kanban integration now fully compliant with "ALL sections" requirement
+
+---
+---
+## [0.4.4.1+1] - 05-12-25
+
+🏗️ Refactoring: Task 1 complete - Kanban structure refactoring
+
+### Changed
+
+- Refactored Kanban file structure: `Epic-X.md` → `Epic-X/Epic-X.md`
+- Removed `stories/` subdirectory: Story files now directly in `Epic-X/`
+- Updated all path references across entire repository (100+ files)
+- Updated validators with legacy fallback support
+- Updated RW config patterns to reflect new structure
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.4.1+1.md` for full details
+- All Epic and Story files now consolidated in their respective Epic directories
+- Improved navigability and reduced directory depth
+
+---
+---
+## [0.4.4.1+2] - 05-12-25
+
+📚 Documentation: Documentation maintenance - Update all Kanban and docs/ docs to reflect completion
+
+### Changed
+
+- Updated `docs/project-management/kanban/kanban-board.md`: Epic 1 & 2 marked COMPLETE
+- Updated `docs/project-management/kanban/_index.md`: All epics shown as COMPLETE, structure updated
+- Updated `docs/architecture/standards-and-adrs/dev-kit-versioning-cookbook.md`: Examples updated
+- Updated `docs/architecture/standards-and-adrs/dev-kit-kanban-versioning-rw-integration.md`: Examples updated
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.4.1+2.md` for full details
+- Corrects documentation inconsistencies where board views showed incomplete status
+- All 4 Epics now correctly shown as COMPLETE ✅ across all documentation
+
+---
+---
+## [0.4.5.1+1] - 08-12-25
+
+📚 Framework: Added canonical epics to Kanban framework package
+
+### Added
+- **Canonical Epics:** Added Epic 5 (FR Implementation) and Epic 6 (BR Implementation) to canonical set
+  - Created `CANONICAL_EPICS.md` with complete documentation of all 6 canonical epics
+  - Documented epic ordering rationale (foundational → operational → implementation)
+  - FR Implementation (Epic 5) comes before BR Implementation (Epic 6)
+- **Epic Ordering:** Established logical ordering for canonical epics:
+  1. AI Dev Kit Core (foundational)
+  2. Workflow Management Framework (operational)
+  3. Numbering & Versioning Framework (operational)
+  4. Kanban Framework (operational)
+  5. FR Implementation (implementation - supports Kanban)
+  6. BR Implementation (implementation - supports Kanban)
+
+### Changed
+- **Intake Guides:** Updated all FR/BR intake guides to reflect canonical epics 1-6
+- **Examples:** Updated examples to use Epic 7 for new project-specific epics (canonical epics are 1-6)
+- **README:** Added reference to CANONICAL_EPICS.md in package contents
+
+### Notes
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.5.1+1.md` for full details
+- Canonical epics provide standard organizational structure for projects using Kanban framework
+- New project-specific epics should start at Epic 7
+
+---
+---
+## [0.4.6.0+1] - 2025-12-09
+
+✨ Feature: Comprehensive Canonical Epics/Stories/Tasks Template System (FR-005)
+
+### Added
+
+- **Comprehensive Canonical Structure:** Complete E/S/T template system
+  - Framework epics (1-7) with Epic 7 as User Experience Research (UXR)
+  - Project-specific canonical epics (8-21+)
+  - ~50+ stories and ~300+ tasks defined
+  - Scalability guidance (tiny → ambitious projects)
+  - Contextualization system with placeholders
+- **Design Documentation:** Comprehensive canonical structure design
+  - Rationale for Epic 7 (UXR) as canonical epic
+  - Epic ordering rationale
+  - Implementation requirements
+- **Story 6:** Comprehensive Canonical E/S/T Template System
+  - 8 implementation tasks defined
+  - Foundation for BR-004 fix
+
+### Changed
+
+- Epic 7 changed from "Codebase Maintenance" to "User Experience Research (UXR)"
+- Codebase Maintenance moved to Epic 8 (project-specific canonical pattern)
+- All project-specific epics renumbered (8→9, 9→10, etc.)
+
+---
+---
+## [0.4.6.0+2] - 2025-12-09
+
+📊 Analysis: Canonical Epic Pattern Analysis
+
+### Added
+
+- **Pattern Analysis:** Comprehensive analysis of epic patterns across all projects
+  - Scanned 50+ epics across 6 projects
+  - Identified Epic 22 (Architecture Refactoring) and Epic 23 (CI/CD) as high-priority additions
+  - Evaluated Epic 24 (Permission & Access Control) as medium-priority
+- **Analysis Document:** Canonical epic pattern analysis document
+  - Detailed analysis methodology
+  - Pattern evaluation against canonical criteria
+  - Recommendations with rationale
+
+---
+---
+## [0.4.6.0+4] - 2025-12-10
+
+🔧 Refinement: Canonical Epic Ordering and Naming
+
+### Changed
+
+- **Epic Ordering:** Reordered canonical epics chronologically following SOP-driven development flow
+  - Core Framework Epics: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 10 → 18 → 22 → 23
+  - Project-Specific Epics: 9 → 11 → 12 → 13 → 14 → 15 → 16 → 17 → 19 → 20 → 21 → 24*
+  - Ordering reflects most-likely chronological adoption sequence
+- **Epic 7 Naming:** Renamed to "UXR (User Experience Research)" for consistency
+  - Updated comprehensive canonical structure document
+  - Updated all canonical epic references
+
+### Added
+
+- **Book Content Task:** Added task to align PM/Kanban chapter with canonical epic structure
+  - Task E9:S01:T04: Align PM/Kanban chapter with ai-dev-kit canonical epics
+  - Includes instructions for mirroring Kanban package structure
+  - Specifies epic-by-epic coverage with need, scope, and first stories
+
+---
+---
+## [0.4.6.0+5] - 2025-12-10
+
+📦 Package Release: Kanban Package v2.0.0 (MAJOR)
+
+### Changed
+
+- **Kanban Package Version:** Bumped to 2.0.0 (MAJOR version bump)
+  - Reflects production-ready comprehensive canonical E/S/T template system
+  - Complete template system with ~50+ stories and ~300+ tasks
+  - Chronological ordering finalized
+  - Production-ready for RC use
+
+### Documentation
+
+- Updated kanban package CHANGELOG with v2.0.0 entry
+- Updated kanban package README version to 2.0.0
+- Updated CANONICAL_EPICS.md with Epic 7 as UXR and reference to comprehensive structure
+
+---
+---
+## [0.4.6.3+1] - 16-12-25
+
+📦 Kanban Framework: E4:S06:T03 - Create Story Template Files (Epic 1-7 Complete)
+
+### Summary
+
+**Template System:** Created story template files for all core framework epics (Epic 1-7). Completed 20 story templates covering foundational project work, workflow management, versioning, Kanban, FR/BR implementation, and user experience research. Each template includes proper structure, placeholders for contextualization, dependencies, integration points, and references.
+
+### Changes
+
+**Story Templates Created:**
+- ✅ Epic 1 (Project Core): 3 story templates (Foundation, Infrastructure, Initial Features)
+- ✅ Epic 2 (Workflow Management): 2 story templates (Workflow Definitions, Workflow Automation)
+- ✅ Epic 3 (Versioning): 2 story templates (Versioning Policy, Version Management)
+- ✅ Epic 4 (Kanban Framework): 2 story templates (Kanban Setup, FR/BR Intake)
+- ✅ Epic 5 (FR Implementation): 3 story templates (FR Intake, FR Prioritization, FR Implementation)
+- ✅ Epic 6 (BR Implementation): 3 story templates (BR Intake, BR Prioritization, Bug Fix Patterns)
+- ✅ Epic 7 (UXR): 5 story templates (User Research, Usability Testing, User Feedback, Journey Mapping, UX Insights)
+
+**Template Structure:** All templates include proper frontmatter, task checklists, overview/goals, acceptance criteria, dependencies, integration points, contextualization notes, and references.
+
+**Remaining Work:** Epic 8-21 story templates (~30+ templates) still need to be created for project-specific epics.
+
+### Related Work
+
+- **Story:** E4:S06 - Comprehensive Canonical EST Template System
+- **Epic:** Epic 4 - Kanban Framework
+- **Feature Request:** FR-005
+- **Detailed Changelog:** [CHANGELOG_v0.4.6.3+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.6.3+1.md)
+
+---
+---
+## [0.4.6.4+1] - 16-12-25
+
+📦 Kanban Framework: E4:S06:T04 - Create Task Template Files (Pattern Established)
+
+### Summary
+
+**Task Template System:** Established task template pattern and created initial task templates for Epic 1 Story 1. Created 7 task templates following the canonical structure, establishing the foundation for creating ~300+ task templates across all epics.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ Epic 1 Story 1: 7 task templates (Project Foundation and Setup)
+- ✅ Template structure validated against `TASK_TEMPLATE.md`
+- ✅ Directory structure: `templates/tasks/Epic-X/Story-Y/`
+- ✅ Pattern established for systematic creation of remaining templates
+
+**Remaining Work:** ~293+ task templates across Epic 1-21.
+
+### Related Work
+
+- **Story:** E4:S06 - Comprehensive Canonical EST Template System
+- **Epic:** Epic 4 - Kanban Framework
+- **Feature Request:** FR-005
+- **Detailed Changelog:** [CHANGELOG_v0.4.6.4+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.6.4+1.md)
+
+---
+---
+## [0.4.6.4+2] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 1 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 6 task templates for Epic 1 Story 2 (Core Infrastructure), bringing total to 13 task templates. Pattern established and validated for scalable template creation across all epics and stories.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design and implement core architecture patterns
+- ✅ T02: Set up configuration management system
+- ✅ T03: Implement logging and error handling infrastructure
+- ✅ T04: Create utility functions and shared libraries
+- ✅ T05: Set up dependency injection or service container
+- ✅ T06: Implement base classes and interfaces
+
+**Progress:**
+- Epic 1 Story 1: 7 task templates ✅ COMPLETE
+- Epic 1 Story 2: 6 task templates ✅ COMPLETE
+- Total: 13 task templates created (~4% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+3] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 1 Story 3
+
+### Summary
+
+**Task Template Creation:** Created 5 task templates for Epic 1 Story 3 (Initial Feature Set), bringing total to 18 task templates. Epic 1 is now complete with all 3 stories having task templates.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Implement minimum viable product (MVP) features
+- ✅ T02: Create core domain models and entities
+- ✅ T03: Implement basic business logic
+- ✅ T04: Set up initial data structures
+- ✅ T05: Create proof-of-concept implementations
+
+**Progress:**
+- Epic 1 Story 1: 7 task templates ✅ COMPLETE
+- Epic 1 Story 2: 6 task templates ✅ COMPLETE
+- Epic 1 Story 3: 5 task templates ✅ COMPLETE
+- **Epic 1: All stories complete** ✅
+- Total: 18 task templates created (~6% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+4] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 2 Story 1
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 2 Story 1 (Workflow Definitions and Patterns), bringing total to 22 task templates. Epic 2 Story 1 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Document existing workflow patterns
+- ✅ T02: Define standard workflow templates
+- ✅ T03: Create workflow execution guidelines
+- ✅ T04: Document workflow integration points
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2 Story 1: 4 task templates ✅ COMPLETE
+- Total: 22 task templates created (~7% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+5] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 2 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 2 Story 2 (Workflow Automation), bringing total to 26 task templates. Epic 2 is now complete with all 2 stories having task templates.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Identify automatable workflows
+- ✅ T02: Implement workflow automation scripts
+- ✅ T03: Create workflow execution tools
+- ✅ T04: Document automation usage
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Total: 26 task templates created (~9% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+6] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 3 Story 1
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 3 Story 1 (Versioning Policy and Schema), bringing total to 30 task templates. Epic 3 Story 1 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Define versioning policy
+- ✅ T02: Design versioning schema
+- ✅ T03: Document versioning conventions
+- ✅ T04: Create versioning examples
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3 Story 1: 4 task templates ✅ COMPLETE
+- Total: 30 task templates created (~10% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+7] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 3 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 3 Story 2 (Version Management Integration), bringing total to 34 task templates. Epic 3 is now complete with all 2 stories having task templates.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Integrate versioning with release workflow
+- ✅ T02: Create version bump automation
+- ✅ T03: Set up changelog generation
+- ✅ T04: Document version management process
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Total: 34 task templates created (~11% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+8] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 4 Story 1
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 4 Story 1 (Kanban Board Setup), bringing total to 38 task templates. Epic 4 Story 1 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Set up Kanban board structure
+- ✅ T02: Configure Kanban columns and workflows
+- ✅ T03: Set up Kanban card templates
+- ✅ T04: Document Kanban board usage
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4 Story 1: 4 task templates ✅ COMPLETE
+- Total: 38 task templates created (~13% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+9] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 4 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 4 Story 2 (Kanban Workflow Configuration), bringing total to 42 task templates. Epic 4 is now complete with all 2 stories having task templates.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Configure Kanban workflow rules
+- ✅ T02: Set up workflow automation
+- ✅ T03: Create workflow metrics and reporting
+- ✅ T04: Document workflow configuration
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Total: 42 task templates created (~14% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+10] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 5 Story 1
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 5 Story 1 (FR Intake and Processing Workflow), bringing total to 46 task templates. Epic 5 Story 1 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design FR intake workflow
+- ✅ T02: Create FR processing automation
+- ✅ T03: Integrate FR intake with Kanban
+- ✅ T04: Document FR intake process
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5 Story 1: 4 task templates ✅ COMPLETE
+- Total: 46 task templates created (~15% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+11] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 5 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 5 Story 2 (FR Prioritization and Planning), bringing total to 50 task templates. Epic 5 Story 2 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design FR prioritization framework
+- ✅ T02: Create FR planning templates
+- ✅ T03: Integrate prioritization with Kanban board
+- ✅ T04: Document prioritization process
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5 Story 1: 4 task templates ✅ COMPLETE
+- Epic 5 Story 2: 4 task templates ✅ COMPLETE
+- Total: 50 task templates created (~17% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+12] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 5 Story 3
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 5 Story 3 (FR Implementation Patterns), bringing total to 54 task templates. Epic 5 is now complete with all 3 stories having task templates.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Document FR implementation patterns
+- ✅ T02: Create implementation templates
+- ✅ T03: Define testing requirements for FRs
+- ✅ T04: Document FR completion criteria
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5: 12 task templates ✅ COMPLETE (all 3 stories)
+- Total: 54 task templates created (~18% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+13] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 6 Story 1
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 6 Story 1 (BR Intake and Triage Workflow), bringing total to 58 task templates. Epic 6 Story 1 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design BR intake and triage workflow
+- ✅ T02: Create BR triage automation
+- ✅ T03: Integrate BR intake with Kanban
+- ✅ T04: Document BR intake process
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 6 Story 1: 4 task templates ✅ COMPLETE
+- Total: 58 task templates created (~19% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+14] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 6 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 6 Story 2 (BR Prioritization and Assignment), bringing total to 62 task templates. Epic 6 Story 2 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design BR prioritization framework
+- ✅ T02: Create BR assignment templates
+- ✅ T03: Integrate prioritization with Kanban board
+- ✅ T04: Document prioritization and assignment process
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 6 Story 1: 4 task templates ✅ COMPLETE
+- Epic 6 Story 2: 4 task templates ✅ COMPLETE
+- Total: 62 task templates created (~21% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+15] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 6 Story 3
+
+### Summary
+
+**Task Template Creation:** Created 4 task templates for Epic 6 Story 3 (Bug Fix Patterns and Best Practices), bringing total to 66 task templates. Epic 6 is now complete with all 3 stories having task templates.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Document bug fix patterns
+- ✅ T02: Create bug fix templates
+- ✅ T03: Define testing requirements for bug fixes
+- ✅ T04: Document bug fix completion criteria
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 6: 12 task templates ✅ COMPLETE (all 3 stories)
+- Total: 66 task templates created (~22% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+16] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 7 Story 1
+
+### Summary
+
+**Task Template Creation:** Created 7 task templates for Epic 7 Story 1 (User Research and Discovery), bringing total to 73 task templates. Epic 7 Story 1 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Define research objectives and questions
+- ✅ T02: Recruit research participants
+- ✅ T03: Conduct user interviews
+- ✅ T04: Conduct user surveys/questionnaires
+- ✅ T05: Analyze research data and synthesize findings
+- ✅ T06: Create user personas
+- ✅ T07: Document research findings and insights
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 6: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 7 Story 1: 7 task templates ✅ COMPLETE
+- Total: 73 task templates created (~24% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+17] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 7 Story 2
+
+### Summary
+
+**Task Template Creation:** Created 7 task templates for Epic 7 Story 2 (Usability Testing and Validation), bringing total to 80 task templates. Epic 7 Story 2 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design usability test scenarios
+- ✅ T02: Recruit test participants
+- ✅ T03: Conduct usability testing sessions
+- ✅ T04: Analyze usability test results
+- ✅ T05: Identify usability issues and pain points
+- ✅ T06: Create usability test reports
+- ✅ T07: Document usability recommendations
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 6: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 7 Story 1: 7 task templates ✅ COMPLETE
+- Epic 7 Story 2: 7 task templates ✅ COMPLETE
+- Total: 80 task templates created (~27% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
+## [0.4.6.4+18] - 16-12-25
+
+📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 7 Story 3
+
+### Summary
+
+**Task Template Creation:** Created 7 task templates for Epic 7 Story 3 (User Feedback Collection and Analysis), bringing total to 87 task templates. Epic 7 Story 3 is now complete.
+
+### Changes
+
+**Task Templates Created:**
+- ✅ T01: Design user feedback collection methods
+- ✅ T02: Set up feedback collection channels (in-app, surveys, support)
+- ✅ T03: Implement feedback collection tools
+- ✅ T04: Create feedback analysis workflow
+- ✅ T05: Analyze feedback patterns and trends
+- ✅ T06: Convert feedback into actionable insights
+- ✅ T07: Document feedback analysis process
+
+**Progress:**
+- Epic 1: 18 task templates ✅ COMPLETE (all 3 stories)
+- Epic 2: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 3: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 4: 8 task templates ✅ COMPLETE (all 2 stories)
+- Epic 5: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 6: 12 task templates ✅ COMPLETE (all 3 stories)
+- Epic 7 Story 1: 7 task templates ✅ COMPLETE
+- Epic 7 Story 2: 7 task templates ✅ COMPLETE
+- Epic 7 Story 3: 7 task templates ✅ COMPLETE
+- Total: 87 task templates created (~29% of ~300+ target)
+
+**Template Quality:**
+- ✅ Consistent structure across all templates
+- ✅ Placeholders for contextualization ({PROJECT_NAME}, {PROJECT_TYPE})
+- ✅ Complete sections: Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies
+- ✅ Version anchor and forensic markers included
+- ✅ Related work and integration points documented
+
+### Related Work
+
+- **Epic:** Epic 4 - Kanban Framework
+- **Story:** Story 6 - Comprehensive Canonical Epics/Stories/Tasks Template System
+- **Task:** Task 4 - Create task template files for each typical task
+- **Related:** E4:S06:T03 (Story templates - COMPLETE)
+- **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
+---
 ## [0.2.10.2+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T02 - Doc-Init Validation (Docs-Only Check)

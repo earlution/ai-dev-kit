@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-05 (v0.6.6.12+1 – CMW: Changelog maintenance - archived 50 entries, removed 1 duplicate, T16 task created)  
+**Last updated:** 2026-01-05 (v0.6.6.12+2 – CMW: Fixed ordering (Step 3.5), archived 50 entries, reduced from 6,871 to 5,122 lines, 0 violations remaining)  
 **Started:** 2025-12-21  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.6.12+1
+**Version:** v0.6.6.12+2
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing changelog maintenance and archival work. High build numbers are expected and valid.
 
-**Progress:** CMW execution complete - Archived 50 entries (reduced changelog from 8,330 to 6,835 lines), removed 1 duplicate (0.6.6.8+15). Created E6:S06:T16 task to fix CMW ordering flaw (archives entries before fixing ordering).  
+**Progress:** CMW execution with Step 3.5 fix - Step 3.5 fixed 17 ordering violations before archival. Archived 50 entries (reduced changelog from 6,871 to 5,122 lines). **0 ordering violations remaining** (validated in Step 6). This validates that Step 3.5 successfully prevents archive corruption and ensures clean changelog after archival.  
 **Code:** E6S06T12
 
 ---
@@ -122,7 +122,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 
 ---
 
-**Last Updated:** 2026-01-05 (v0.6.6.12+1 – CMW: Changelog maintenance - archived 50 entries, removed 1 duplicate, T16 task created)  
-**Version:** v0.6.6.12+1  
+**Last Updated:** 2026-01-05 (v0.6.6.12+2 – CMW: Fixed ordering (Step 3.5), archived 50 entries, reduced from 6,871 to 5,122 lines, 0 violations remaining)  
+**Version:** v0.6.6.12+2  
 **Status:** IN PROGRESS (Perpetual)
 

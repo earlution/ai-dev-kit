@@ -41,7 +41,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 *Critical in-progress tasks that must be completed.*
 
 - **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+13, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+1, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+2, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Should Have (S) - Important Tasks
 

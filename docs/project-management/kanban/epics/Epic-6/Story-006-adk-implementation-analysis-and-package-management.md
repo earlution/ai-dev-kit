@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2026-01-05 (v0.6.6.16+1 – T16: Step 3.5 added to CMW, ordering fixed before archival)  
-**Version:** v0.6.6.16+1  
+**Last updated:** 2026-01-05 (v0.6.6.12+2 – T12: CMW with Step 3.5 fix - archived 50 entries, 0 violations remaining)  
+**Version:** v0.6.6.12+2  
 **Code:** E6S06
 
 ---
@@ -38,7 +38,7 @@ housekeeping_policy: keep
 - [x] **E6:S06:T11 – Changelog Management and Archival Workflow** - ✅ COMPLETE (v0.6.6.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE)
   - Task: [`T11-changelog-management-and-archival-workflow.md`](T11-changelog-management-and-archival-workflow.md)
   - **Feature Request:** [FR-025](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
-- [ ] **E6:S06:T12 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.6.12+1 – CMW: Changelog maintenance - archived 50 entries, removed 1 duplicate, T16 task created)
+- [ ] **E6:S06:T12 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.6.12+2 – CMW: Fixed ordering (Step 3.5), archived 50 entries, reduced from 6,871 to 5,122 lines, 0 violations remaining)
   - Task: [`T12-changelog-maintenance-workflow-cmw.md`](T12-changelog-maintenance-workflow-cmw.md)
   - **Note:** This is a perpetual maintenance task. All CMW-triggered RWs are attributed to T12. BUILD number = CMW run count.
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
