@@ -257,10 +257,10 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ### Epic 7: Codebase Maintenance and Review
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Last Updated:** 2026-01-05  
-**Version:** v0.7.4.4+1
+**Version:** v0.7.5.4+1
 
 **Stories:**
 - [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)
@@ -275,8 +275,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete: Maintenance automation requirements, scripts, workflow integration, and usage documentation established)
   - Story: [`epics/Epic-7/Story-004-maintenance-automation-and-tooling.md`](epics/Epic-7/Story-004-maintenance-automation-and-tooling.md)
   - Tasks: T01 ✅ COMPLETE (v0.7.4.1+0 - Maintenance automation requirements), T02 ✅ COMPLETE (v0.7.4.2+0 - Maintenance automation scripts and tools), T03 ✅ COMPLETE (v0.7.4.3+0 - Maintenance automation workflow integration), T04 ✅ COMPLETE (v0.7.4.4+0 - Maintenance automation usage guide) - **Story COMPLETE**
-- [ ] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - TODO (v0.7.5.0+0)
+- [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete: All 4 UXR documents synthesized, user pain points extracted, migration UX requirements and recommendations documented, findings fed into Epic 4 Stories 7, 8, and 9)
   - Story: [`epics/Epic-7/Story-005-migration-uxr-research.md`](epics/Epic-7/Story-005-migration-uxr-research.md)
+  - Tasks: T01 ✅ COMPLETE (v0.7.5.1+0 - UXR-001 intake and synthesis), T02 ✅ COMPLETE (v0.7.5.2+0 - UXR-002 intake and synthesis), T03 ✅ COMPLETE (v0.7.5.3+0 - UXR-003 intake and synthesis), T04 ✅ COMPLETE (v0.7.5.4+0 - UXR-004 intake and synthesis) - **Story COMPLETE**
 
 **Epic Doc:** [`epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
 
