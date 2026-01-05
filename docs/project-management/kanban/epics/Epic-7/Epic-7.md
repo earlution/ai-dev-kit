@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Last updated:** 2026-01-05 (v0.7.1.4+1 – T04 complete: Maintenance tasks integrated with Kanban framework)  
+**Last updated:** 2026-01-05 (v0.7.1.4+1 – Story 1 COMPLETE: All non-perpetual tasks complete)  
 **Branch:** `epic/7-codebase-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.4+1 – T04 complete: Maintenance tasks integrated with Kanban framework)
+- [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)
 - [ ] **E7:S02 – Code Review Standards and Processes** - TODO
 - [ ] **E7:S03 – Code Quality Metrics and Monitoring** - TODO
 - [ ] **E7:S04 – Maintenance Automation and Tooling** - TODO
@@ -69,9 +69,9 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 **Tasks:**
 - [ ] **E7:S01:T01 – PERPETUAL: Address IDE-Flagged Error, Warning, and Info level problems** - PERPETUAL
-- [x] E7:S01:T02 – Create maintenance task prioritization framework ✅ COMPLETE (v0.7.1.2+1)
-- [ ] E7:S01:T03 – Document maintenance workflow processes
-- [ ] E7:S01:T04 – Integrate maintenance tasks with Kanban framework
+- [x] **E7:S01:T02 – Create maintenance task prioritization framework** - ✅ COMPLETE (v0.7.1.2+1)
+- [x] **E7:S01:T03 – Document maintenance workflow processes** - ✅ COMPLETE (v0.7.1.3+1)
+- [x] **E7:S01:T04 – Integrate maintenance tasks with Kanban framework** - ✅ COMPLETE (v0.7.1.4+1)
 
 > **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E7:S01:T01`, not `T01` alone)
 

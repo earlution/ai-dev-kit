@@ -263,9 +263,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Version:** v0.7.1.4+1
 
 **Stories:**
-- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.4+1 – T04 complete: Maintenance tasks integrated with Kanban framework)
+- [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)
   - Story: [`epics/Epic-7/Story-001-codebase-maintenance-tasks.md`](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
-  - Tasks: T01 PERPETUAL, T02 ✅ COMPLETE (v0.7.1.2+1 - Maintenance task prioritization framework), T03 ✅ COMPLETE (v0.7.1.3+1 - Maintenance workflow processes), T04 ✅ COMPLETE (v0.7.1.4+1 - Maintenance tasks integrated with Kanban framework)
+  - Tasks: T01 PERPETUAL, T02 ✅ COMPLETE (v0.7.1.2+1 - Maintenance task prioritization framework), T03 ✅ COMPLETE (v0.7.1.3+1 - Maintenance workflow processes), T04 ✅ COMPLETE (v0.7.1.4+1 - Maintenance tasks integrated with Kanban framework) - **Story COMPLETE**
 - [ ] **E7:S02 – Code Review Standards and Processes** - TODO
   - Story: [`epics/Epic-7/Story-002-code-review-standards-and-processes.md`](epics/Epic-7/Story-002-code-review-standards-and-processes.md)
 - [ ] **E7:S03 – Code Quality Metrics and Monitoring** - TODO
