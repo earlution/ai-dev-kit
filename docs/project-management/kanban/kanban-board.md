@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Last Updated:** 2026-01-05  
 **Version:** v0.6.6.8+13
 
-**Note:** Epics 1, 2, 3, 7 are COMPLETE ✅. Epics 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
+**Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
 
 ---
 
@@ -40,24 +40,14 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Critical in-progress tasks that must be completed.*
 
-- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+11, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+13, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 - **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+0, Last updated: 2025-12-21) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Should Have (S) - Important Tasks
 
 *Important in-progress tasks that should be completed.*
 
-- **E4:S10:T01-T07** – Agentic Kanban Task Creation from FR/BR - ✅ COMPLETE (v0.4.10.7+0, Last updated: 2026-01-05) - [Story](epics/Epic-4/Story-010-agentic-kanban-task-creation-from-fr-br.md)
-  - T01: Design agentic FR/BR analysis workflow - ✅ COMPLETE
-  - T02: Implement intelligent epic/story mapping - ✅ COMPLETE
-  - T03: Implement template-based task creation - ✅ COMPLETE
-  - T04: Implement task contextualization - ✅ COMPLETE
-  - T05: Integrate with FR/BR intake workflow - ✅ COMPLETE
-  - T06: Add agentic intelligence and explanations - ✅ COMPLETE
-  - T07: Documentation and testing - ✅ COMPLETE
 - **E5:S02:T03** – Build documentation health dashboards - TODO (HIGH priority story, IN PROGRESS) - [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
-- **E6:S06:T04** – Create package management implementation plan - TODO (HIGH priority story) - [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-- **E6:S06:T09** – Review and Prioritize Package Management Investigation Findings - TODO (HIGH priority story) - [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 - **E4:S12:T01-T10** – FR/BR/UXR Repository Stories (S00 Pattern) - TODO (HIGH priority story) - [Story](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
   - T01: Create Epic 5, Story 0: FR Repo (PERPETUAL) - TODO
   - T02: Create Epic 6, Story 0: BR Repo (PERPETUAL) - TODO
