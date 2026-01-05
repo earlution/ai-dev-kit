@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.1.2+1] - 05-01-26
+
+### Added
+- Template-Based Generators (E8:S01:T02)
+  - WorkflowGenerator for generating workflow YAML files
+  - KanbanTemplateGenerator for generating Epic, Story, and Task documents
+  - Templates: workflow-template.yaml, epic-template.md, story-template.md, task-template.md
+  - Comprehensive documentation and usage examples
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.1.2+1.md)
+
 ## [0.8.1.1+1] - 05-01-26
 
 ### Added

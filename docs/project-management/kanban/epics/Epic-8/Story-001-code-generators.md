@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-05 (v0.8.1.1+1 – T01: Generator framework created)  
-**Version:** v0.8.1.1+1  
+**Last updated:** 2026-01-05 (v0.8.1.2+1 – T02: Template-based generators created)  
+**Version:** v0.8.1.2+1  
 **Code:** E8S01
 
 ---
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E8:S01:T01 – Create generator framework** - ✅ COMPLETE (v0.8.1.1+1 – Generator framework implemented: BaseGenerator, TemplateBasedGenerator, TemplateEngine, GeneratorRegistry)
-- [ ] **E8:S01:T02 – Build template-based generators** - TODO
+- [x] **E8:S01:T02 – Build template-based generators** - ✅ COMPLETE (v0.8.1.2+1 – Template-based generators implemented: WorkflowGenerator, KanbanTemplateGenerator, templates)
 - [ ] **E8:S01:T03 – Establish generator patterns** - TODO
 
 ---
@@ -76,6 +76,7 @@ Build comprehensive code generators for framework patterns.
 
 ### E8:S01:T02 – Build template-based generators
 
+**Status:** ✅ COMPLETE (v0.8.1.2+1)  
 **Input:** Generator framework, templates  
 **Deliverable:** Template-based generator implementations  
 **Dependencies:** E8:S01:T01  
@@ -86,6 +87,22 @@ Build comprehensive code generators for framework patterns.
 2. Create template-based generators
 3. Build generator templates
 4. Document generator usage
+
+**Implementation:**
+- Created `WorkflowGenerator` for generating workflow YAML files
+- Created `KanbanTemplateGenerator` for generating Epic, Story, and Task documents
+- Created templates: `workflow-template.yaml`, `epic-template.md`, `story-template.md`, `task-template.md`
+- Created documentation: `README-template-generators.md` with usage examples
+- Integrated generators into package exports
+
+**Deliverables:**
+- ✅ `packages/frameworks/tooling & automation/generators/workflow_generator.py` - WorkflowGenerator
+- ✅ `packages/frameworks/tooling & automation/generators/kanban_template_generator.py` - KanbanTemplateGenerator
+- ✅ `packages/frameworks/tooling & automation/generators/templates/workflow-template.yaml` - Workflow template
+- ✅ `packages/frameworks/tooling & automation/generators/templates/epic-template.md` - Epic template
+- ✅ `packages/frameworks/tooling & automation/generators/templates/story-template.md` - Story template
+- ✅ `packages/frameworks/tooling & automation/generators/templates/task-template.md` - Task template
+- ✅ `packages/frameworks/tooling & automation/generators/README-template-generators.md` - Documentation
 
 ---
 
