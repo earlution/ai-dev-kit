@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.8+12] - 05-01-26
+
+### Changed
+- E4:S10 task checklist updated (E6:S06:T08 - UKW)
+  - Updated task checklist to mark all tasks (T01-T07) as COMPLETE
+  - Task checklist now matches detailed task sections
+  - All tasks show proper completion status and version markers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+12.md)
+
+---
+
 ## [0.6.6.8+11] - 05-01-26
 
 ### Changed
