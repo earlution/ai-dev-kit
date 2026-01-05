@@ -8,10 +8,10 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-03  
-**Version:** v0.6.2.5+1
+**Last Updated:** 2026-01-05  
+**Version:** v0.7.5.4+1
 
-**Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 9, 21 are IN PROGRESS.
+**Note:** Epics 1, 2, 3, 7 are COMPLETE ✅. Epics 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
 
 ---
 
@@ -40,26 +40,81 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Critical in-progress tasks that must be completed.*
 
-*No critical tasks in progress at this time.*
+- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+9, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+0, Last updated: 2025-12-21) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T02** – Investigate proper package management (single package file, hash verification) - TODO (CRITICAL priority story) - [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Should Have (S) - Important Tasks
 
 *Important in-progress tasks that should be completed.*
 
-*No tasks in this section at this time.*
+- **E4:S10:T01-T07** – Agentic Kanban Task Creation from FR/BR - IN PROGRESS (v0.4.10.7+0, Last updated: 2025-12-11) - [Story](epics/Epic-4/Story-010-agentic-kanban-task-creation-from-fr-br.md)
+  - T01: Design agentic FR/BR analysis workflow - IN PROGRESS
+  - T02: Implement intelligent epic/story mapping - IN PROGRESS
+  - T03: Implement template-based task creation - IN PROGRESS
+  - T04: Implement task contextualization - IN PROGRESS
+  - T05: Integrate with FR/BR intake workflow - IN PROGRESS
+  - T06: Add agentic intelligence and explanations - IN PROGRESS
+  - T07: Documentation and testing - IN PROGRESS
+- **E5:S02:T03** – Build documentation health dashboards - TODO (HIGH priority story, IN PROGRESS) - [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
+- **E6:S06:T04** – Create package management implementation plan - TODO (HIGH priority story) - [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T09** – Review and Prioritize Package Management Investigation Findings - TODO (HIGH priority story) - [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E4:S12:T01-T10** – FR/BR/UXR Repository Stories (S00 Pattern) - TODO (HIGH priority story) - [Story](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
+  - T01: Create Epic 5, Story 0: FR Repo (PERPETUAL) - TODO
+  - T02: Create Epic 6, Story 0: BR Repo (PERPETUAL) - TODO
+  - T03: Create Epic 7, Story 0: UXR Repo (PERPETUAL) - TODO
+  - T04: Update Kanban Policy with PERPETUAL State Definition - TODO
+  - T05: Update Board Display Logic to Omit S00 Stories - TODO
+  - T06: Update Intake Workflow to Assign FR/BR/UXR to S00:Txx - TODO
+  - T07: Update Versioning Policy with S00 Abstract Space Concept - TODO
+  - T08: Document Meta-Grouping Pattern - TODO
+  - T09: Update Epic 5, 6, 7 Templates with S00 Pattern - TODO
+  - T10: Documentation and Testing - TODO
+- **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
+- **E8:S01:T01-T03** – Code Generators - TODO (HIGH priority story) - [Story](epics/Epic-8/Story-001-code-generators.md)
+  - T01: Create generator framework - TODO
+  - T02: Build template-based generators - TODO
+  - T03: Establish generator patterns - TODO
+- **E8:S02:T01-T03** – Additional Validators - TODO (HIGH priority story) - [Story](epics/Epic-8/Story-002-additional-validators.md)
+  - T01: Create validator framework - TODO
+  - T02: Build framework-specific validators - TODO
+  - T03: Establish validation patterns - TODO
 
 ### Could Have (C) - Nice-to-Have Tasks
 
 *Nice-to-have in-progress tasks that could be completed.*
 
-*No nice-to-have tasks in progress at this time.*
-
+- **E5:S03:T01-T03** – Documentation Automation - TODO (MEDIUM priority story) - [Story](epics/Epic-5/Story-003-documentation-automation.md)
+  - T01: Create automated documentation update scripts - TODO
+  - T02: Implement documentation synchronization workflows - TODO
+  - T03: Build documentation change detection and notification - TODO
+- **E6:S05** – Feature Requests - TODO (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-005-feature-requests.md)
+- **E8:S03:T01-T03** – Automation Scripts - TODO (MEDIUM priority story) - [Story](epics/Epic-8/Story-003-automation-scripts.md)
+  - T01: Create automation framework - TODO
+  - T02: Build workflow automation scripts - TODO
+  - T03: Establish automation patterns - TODO
+- **E24:S01:T01-T04** – Book Content Development - TODO (MEDIUM priority story, IN PROGRESS) - [Story](epics/Epic-24/Story-001-book-content-development.md)
+  - T01: Create book chapter structure - TODO
+  - T02: Develop chapter content - TODO
+  - T03: Build examples and exercises - TODO
+  - T04: Align PM/Kanban chapter with ai-dev-kit canonical epics - TODO
+- **E24:S02:T01-T03** – Book Integration with Dev-Kit - TODO (MEDIUM priority story) - [Story](epics/Epic-24/Story-002-book-integration-with-dev-kit.md)
+  - T01: Link book content to frameworks - TODO
+  - T02: Create book-specific examples - TODO
+  - T03: Establish integration patterns - TODO
 
 ### Won't Have (W) - Deferred Tasks
 
 *Tasks that are deferred or not being done at this time.*
 
-*No deferred tasks at this time.*
+- **E21:S00:T01-T07** – Language Selection at Setup (UK/US English) - TODO (MEDIUM priority epic) - [Story](epics/Epic-21/Story-000-language-selection-at-setup.md)
+- **E21:S01:T01-T07** – Internationalization Infrastructure - TODO (MEDIUM priority epic) - [Story](epics/Epic-21/Story-001-internationalization-infrastructure.md)
+- **E21:S02:T01-T07** – Translation and Localization - TODO (MEDIUM priority epic) - [Story](epics/Epic-21/Story-002-translation-and-localization.md)
+- **E21:S03:T01-T07** – Cultural Adaptation - TODO (MEDIUM priority epic) - [Story](epics/Epic-21/Story-003-cultural-adaptation.md)
+- **E24:S03:T01-T03** – Book Publishing Support - TODO (LOW priority story) - [Story](epics/Epic-24/Story-003-book-publishing-support.md)
+  - T01: Create publishing workflows - TODO
+  - T02: Build publishing tools - TODO
+  - T03: Establish publishing processes - TODO
 
 ---
 

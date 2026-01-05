@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.8+10] - 05-01-26
+
+### Changed
+- Kanban board MoSCoW prioritization updated (E6:S06:T08 - UKW)
+  - All open tasks categorized into Must Have, Should Have, Could Have, and Won't Have sections
+  - Tasks ordered chronologically within each MoSCoW section (most recently updated first)
+  - Comprehensive task listing with Task IDs, status, versions, last updated dates, and links
+  - Epic 7 documentation updated to reflect completion status
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+10.md)
+
 ## [0.6.6.8+9] - 05-01-26
 
 ### Changed

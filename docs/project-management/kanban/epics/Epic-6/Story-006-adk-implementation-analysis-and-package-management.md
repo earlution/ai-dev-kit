@@ -30,7 +30,7 @@ housekeeping_policy: keep
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 - [x] **E6:S06:T07 – Implement framework hardening recommendations** - ✅ COMPLETE (v0.6.6.7+6 – All phases complete: Epic 9→Epic 24, installer validation, rw-config.yaml, .cursorrules, installation instructions)
   - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
-- [ ] **E6:S06:T08 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.6.8+5 – UKW: Kanban documentation synchronization, E6:S01 status corrected, E6:S02 progress reflected)
+- [ ] **E6:S06:T08 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.6.8+10 – Kanban board MoSCoW prioritization updated with all open tasks)
   - Task: [`T08-update-kanban-workflow-ukw.md`](T08-update-kanban-workflow-ukw.md)
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T08. BUILD number = UKW run count.
 - [x] **E6:S06:T09 – Review and Prioritize Package Management Investigation Findings** - ✅ COMPLETE (v0.6.6.9+1 – Prioritization review complete: findings reviewed, recommendations validated and prioritized, roadmap created)

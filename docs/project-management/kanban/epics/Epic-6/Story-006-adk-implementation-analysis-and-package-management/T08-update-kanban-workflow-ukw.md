@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-05 (v0.6.6.8+9 – UKW: Kanban board updated for E7:S05 completion and Epic 7 completion)  
+**Last updated:** 2026-01-05 (v0.6.6.8+10 – Kanban board MoSCoW prioritization updated with all open tasks)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.6.8+9
+**Version:** v0.6.6.8+10
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** UKW run #9 - Kanban board updated, Epic 7 Story 5 (Migration UXR – Pre-Existing Kanban Structures) marked as COMPLETE with all tasks (T01-T04) reflected. Epic 7 marked as COMPLETE (all 5 stories complete).  
+**Progress:** Kanban board MoSCoW prioritization section updated with all open tasks across all epics. All in-progress and TODO tasks categorized into Must Have, Should Have, Could Have, and Won't Have sections, ordered chronologically by last updated date.  
 **Code:** E6S06T08
 
 ---
