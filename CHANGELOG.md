@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.12.2+0] - 05-01-26
+
+### Added
+- E6:S00 - BR Repo (PERPETUAL) repository story created (E4:S12:T02)
+  - Repository story for all Bug Reports
+  - Traceability pattern: BR-001 = E6:S00:T01
+  - Abstract space: v0.6.0.0+0
+  - Epic 6 Story Checklist updated with S00
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.2+0.md)
+
+---
+
 ## [0.4.12.1+0] - 05-01-26
 
 ### Added
