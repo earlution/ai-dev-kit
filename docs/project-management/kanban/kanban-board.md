@@ -260,7 +260,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Last Updated:** 2026-01-05  
-**Version:** v0.7.2.4+1
+**Version:** v0.7.4.4+1
 
 **Stories:**
 - [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)
@@ -269,10 +269,12 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete: Code review standards, checklists, workflows, and Kanban integration established)
   - Story: [`epics/Epic-7/Story-002-code-review-standards-and-processes.md`](epics/Epic-7/Story-002-code-review-standards-and-processes.md)
   - Tasks: T01 ✅ COMPLETE (v0.7.2.1+1 - Code review standards and guidelines), T02 ✅ COMPLETE (v0.7.2.2+1 - Code review checklist templates), T03 ✅ COMPLETE (v0.7.2.3+1 - Code review workflow processes), T04 ✅ COMPLETE (v0.7.2.4+1 - Code review Kanban integration) - **Story COMPLETE**
-- [ ] **E7:S03 – Code Quality Metrics and Monitoring** - TODO
+- [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete: Code quality metrics framework, dashboards, Kanban integration, and monitoring processes established)
   - Story: [`epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md`](epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md)
-- [ ] **E7:S04 – Maintenance Automation and Tooling** - TODO
+  - Tasks: T01 ✅ COMPLETE (v0.7.3.1+0 - Code quality metrics framework), T02 ✅ COMPLETE (v0.7.3.2+0 - Code quality monitoring dashboards), T03 ✅ COMPLETE (v0.7.3.3+0 - Code quality Kanban integration), T04 ✅ COMPLETE (v0.7.3.4+0 - Code quality monitoring processes) - **Story COMPLETE**
+- [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete: Maintenance automation requirements, scripts, workflow integration, and usage documentation established)
   - Story: [`epics/Epic-7/Story-004-maintenance-automation-and-tooling.md`](epics/Epic-7/Story-004-maintenance-automation-and-tooling.md)
+  - Tasks: T01 ✅ COMPLETE (v0.7.4.1+0 - Maintenance automation requirements), T02 ✅ COMPLETE (v0.7.4.2+0 - Maintenance automation scripts and tools), T03 ✅ COMPLETE (v0.7.4.3+0 - Maintenance automation workflow integration), T04 ✅ COMPLETE (v0.7.4.4+0 - Maintenance automation usage guide) - **Story COMPLETE**
 - [ ] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - TODO (v0.7.5.0+0)
   - Story: [`epics/Epic-7/Story-005-migration-uxr-research.md`](epics/Epic-7/Story-005-migration-uxr-research.md)
 
