@@ -60,10 +60,10 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ### Story 1: Codebase Maintenance Tasks
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-01-03 (v0.7.1.2+1 – T02 complete: Maintenance task prioritization framework created)
+**Last updated:** 2026-01-05 (v0.7.1.4+2 – Story COMPLETE: All non-perpetual tasks complete)
 
 **Goal:** Establish systematic processes for addressing IDE-flagged issues and organizing codebase maintenance work.
 
