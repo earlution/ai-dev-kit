@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.1+1 – Task 1 created)
+- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.2+1 – T02 complete: Maintenance task prioritization framework created)
 - [ ] **E7:S02 – Code Review Standards and Processes** - TODO
 - [ ] **E7:S03 – Code Quality Metrics and Monitoring** - TODO
 - [ ] **E7:S04 – Maintenance Automation and Tooling** - TODO
@@ -63,13 +63,13 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-09 (v0.7.1.1+1 – Story 1, Task 1 created: PERPETUAL task for IDE-flagged issues)
+**Last updated:** 2026-01-03 (v0.7.1.2+1 – T02 complete: Maintenance task prioritization framework created)
 
 **Goal:** Establish systematic processes for addressing IDE-flagged issues and organizing codebase maintenance work.
 
 **Tasks:**
 - [ ] **E7:S01:T01 – PERPETUAL: Address IDE-Flagged Error, Warning, and Info level problems** - PERPETUAL
-- [ ] E7:S01:T02 – Create maintenance task prioritization framework
+- [x] E7:S01:T02 – Create maintenance task prioritization framework ✅ COMPLETE (v0.7.1.2+1)
 - [ ] E7:S01:T03 – Document maintenance workflow processes
 - [ ] E7:S01:T04 – Integrate maintenance tasks with Kanban framework
 

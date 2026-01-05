@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2025-12-09 (v0.7.1.1+1 – Task 1 created: PERPETUAL task for IDE-flagged issues)  
+**Last updated:** 2026-01-03 (v0.7.1.2+1 – T02 complete: Maintenance task prioritization framework created)  
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** 2025-12-09  
 **Completed:** [N/A - Story in progress]  
-**Version:** v0.7.1.1+1  
+**Version:** v0.7.1.2+1  
 **Code:** E7S01
 
 ---
@@ -23,7 +23,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [ ] **E7:S01:T01 – PERPETUAL: Address IDE-Flagged Error, Warning, and Info level problems** - PERPETUAL
-- [ ] **E7:S01:T02 – Create maintenance task prioritization framework** - TODO
+- [x] **E7:S01:T02 – Create maintenance task prioritization framework** - ✅ COMPLETE (v0.7.1.2+1 – Maintenance task prioritization framework created with severity, impact, effort dimensions, scoring formula, and Kanban integration)
 - [ ] **E7:S01:T03 – Document maintenance workflow processes** - TODO
 - [ ] **E7:S01:T04 – Integrate maintenance tasks with Kanban framework** - TODO
 
