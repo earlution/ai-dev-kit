@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.1.4+1] - 05-01-26
+
+### Added
+- Maintenance tasks Kanban integration (E7:S01:T04)
+  - Comprehensive integration guide covering task creation, prioritization mapping, lifecycle tracking
+  - Epic 4 (Kanban Framework) integration details
+  - Workflow integration for all maintenance workflows
+  - Examples and best practices for maintenance task management
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.4+1.md)
+
 ## [0.7.1.3+1] - 05-01-26
 
 ### Added
