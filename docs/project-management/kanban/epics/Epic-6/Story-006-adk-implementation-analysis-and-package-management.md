@@ -38,7 +38,7 @@ housekeeping_policy: keep
 - [x] **E6:S06:T11 – Changelog Management and Archival Workflow** - ✅ COMPLETE (v0.6.6.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE)
   - Task: [`T11-changelog-management-and-archival-workflow.md`](T11-changelog-management-and-archival-workflow.md)
   - **Feature Request:** [FR-025](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
-- [ ] **E6:S06:T12 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.6.12+0 – Perpetual task created)
+- [ ] **E6:S06:T12 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.6.12+1 – CMW: Changelog maintenance - archived 50 entries, removed 1 duplicate, T16 task created)
   - Task: [`T12-changelog-maintenance-workflow-cmw.md`](T12-changelog-maintenance-workflow-cmw.md)
   - **Note:** This is a perpetual maintenance task. All CMW-triggered RWs are attributed to T12. BUILD number = CMW run count.
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
@@ -51,6 +51,9 @@ housekeeping_policy: keep
 - [x] **E6:S06:T15 – Cursor IDE Performance Considerations Awareness** - ✅ COMPLETE (v0.6.6.15+1 – Implementation complete: Awareness documentation created and framework guidance updated)
   - Task: [`T15-cursor-ide-performance-considerations-awareness.md`](T15-cursor-ide-performance-considerations-awareness.md)
   - **Feature Request:** [FR-028](../../fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)
+- [ ] **E6:S06:T16 – Harden CMW Ordering Before Archival** - TODO (v0.6.6.16+0 – Task created: Fix CMW to sort changelog before archival)
+  - Task: [`T16-harden-cmw-ordering-before-archival.md`](T16-harden-cmw-ordering-before-archival.md)
+  - **Analysis Document:** [`docs/analysis/cmw-ordering-flaw-analysis.md`](../../../../analysis/cmw-ordering-flaw-analysis.md)
 
 ---
 

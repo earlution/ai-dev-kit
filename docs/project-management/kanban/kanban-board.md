@@ -41,11 +41,13 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 *Critical in-progress tasks that must be completed.*
 
 - **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+13, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+0, Last updated: 2025-12-21) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+1, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Should Have (S) - Important Tasks
 
 *Important in-progress tasks that should be completed.*
+
+- **E6:S06:T16** – Harden CMW Ordering Before Archival - TODO (HIGH priority bug fix) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T16-harden-cmw-ordering-before-archival.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md) | [Analysis](analysis/cmw-ordering-flaw-analysis.md)
 
 - **E5:S02:T03** – Build documentation health dashboards - ✅ COMPLETE (v0.5.2.3+1, Last updated: 2025-12-18) - [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
 - **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
