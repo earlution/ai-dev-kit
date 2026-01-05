@@ -19,9 +19,9 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
-VERSION_STORY = 3     # Story number (Story 3: Code Quality Metrics and Monitoring)
-VERSION_TASK = 4      # Task number (Task 4: Document metrics and monitoring processes)
-VERSION_BUILD = 1     # Build number (E7:S03:T04+1 - Code quality metrics and monitoring processes documented)
+VERSION_STORY = 4     # Story number (Story 4: Maintenance Automation and Tooling)
+VERSION_TASK = 4      # Task number (Task 4: Document automation and tooling usage)
+VERSION_BUILD = 1     # Build number (E7:S04:T04+1 - Maintenance automation and tooling usage documented)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
