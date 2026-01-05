@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 12    # Story number (Story 12: FR/BR/UXR Repository Stories)
-VERSION_TASK = 2      # Task number (Task 2: Create Epic 6, Story 0: BR Repo)
-VERSION_BUILD = 0     # Build number (E4:S12:T02+0 - Repository story created: E6:S00)
+VERSION_TASK = 3      # Task number (Task 3: Create Epic 7, Story 0: UXR Repo)
+VERSION_BUILD = 0     # Build number (E4:S12:T03+0 - Repository story created: E7:S00)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
