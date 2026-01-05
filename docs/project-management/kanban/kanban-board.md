@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-01-05  
-**Version:** v0.6.6.8+13
+**Version:** v0.6.6.8+15
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
 
@@ -48,17 +48,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 *Important in-progress tasks that should be completed.*
 
 - **E5:S02:T03** – Build documentation health dashboards - ✅ COMPLETE (v0.5.2.3+1, Last updated: 2025-12-18) - [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
-- **E4:S12:T01-T10** – FR/BR/UXR Repository Stories (S00 Pattern) - TODO (HIGH priority story) - [Story](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
-  - T01: Create Epic 5, Story 0: FR Repo (PERPETUAL) - TODO
-  - T02: Create Epic 6, Story 0: BR Repo (PERPETUAL) - TODO
-  - T03: Create Epic 7, Story 0: UXR Repo (PERPETUAL) - TODO
-  - T04: Update Kanban Policy with PERPETUAL State Definition - TODO
-  - T05: Update Board Display Logic to Omit S00 Stories - TODO
-  - T06: Update Intake Workflow to Assign FR/BR/UXR to S00:Txx - TODO
-  - T07: Update Versioning Policy with S00 Abstract Space Concept - TODO
-  - T08: Document Meta-Grouping Pattern - TODO
-  - T09: Update Epic 5, 6, 7 Templates with S00 Pattern - TODO
-  - T10: Documentation and Testing - TODO
 - **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
 - **E8:S01:T01-T03** – Code Generators - TODO (HIGH priority story) - [Story](epics/Epic-8/Story-001-code-generators.md)
   - T01: Create generator framework - TODO
