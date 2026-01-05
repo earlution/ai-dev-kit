@@ -20,8 +20,8 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 12    # Story number (Story 12: FR/BR/UXR Repository Stories)
-VERSION_TASK = 4      # Task number (Task 4: Update Kanban Policy with PERPETUAL State Definition)
-VERSION_BUILD = 0     # Build number (E4:S12:T04+0 - PERPETUAL state defined in Kanban policy)
+VERSION_TASK = 5      # Task number (Task 5: Update Board Display Logic to Omit S00 Stories)
+VERSION_BUILD = 0     # Build number (E4:S12:T05+0 - Board display logic updated: S00 stories omitted)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
