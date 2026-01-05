@@ -254,6 +254,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Priority:** HIGH  
 **Last Updated:** v0.5.2.2+1
 
+**Note:** E5:S00 (FR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 5 document for internal tracking).
+
 **Stories:**
 - [x] **E5:S01 – Documentation Maintenance Framework** - COMPLETE ✅ (v0.5.1.4+2)
   - Story: [`epics/Epic-5/Story-001-documentation-maintenance-framework.md`](epics/Epic-5/Story-001-documentation-maintenance-framework.md)
@@ -273,6 +275,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Priority:** HIGH  
 **Last Updated:** 2026-01-03  
 **Version:** v0.6.3.3+1
+
+**Note:** E6:S00 (BR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 6 document for internal tracking).
 
 **Stories:**
 - [x] **E6:S01 – Framework Version Management** - ✅ COMPLETE (v0.6.1.5+1 – All tasks complete: Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
@@ -305,6 +309,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Priority:** HIGH  
 **Last Updated:** 2026-01-05  
 **Version:** v0.7.5.4+1
+
+**Note:** E7:S00 (UXR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 7 document for internal tracking).
 
 **Stories:**
 - [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)

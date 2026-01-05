@@ -21,12 +21,12 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E4:S12:T00 – Story Creation and FR-021 Intake** ✅ COMPLETE (v0.4.12.0+0)
-- [ ] **E4:S12:T01 – Create Epic 5, Story 0: FR Repo (PERPETUAL)**
-- [ ] **E4:S12:T02 – Create Epic 6, Story 0: BR Repo (PERPETUAL)**
-- [ ] **E4:S12:T03 – Create Epic 7, Story 0: UXR Repo (PERPETUAL)**
-- [ ] **E4:S12:T04 – Update Kanban Policy with PERPETUAL State Definition**
-- [ ] **E4:S12:T05 – Update Board Display Logic to Omit S00 Stories**
+- [x] **E4:S12:T00 – Story Creation and FR-021 Intake** ✅ COMPLETE (v0.4.12.0+0)
+- [x] **E4:S12:T01 – Create Epic 5, Story 0: FR Repo (PERPETUAL)** - ✅ COMPLETE (v0.4.12.1+0 – Repository story created: E5:S00)
+- [x] **E4:S12:T02 – Create Epic 6, Story 0: BR Repo (PERPETUAL)** - ✅ COMPLETE (v0.4.12.2+0 – Repository story created: E6:S00)
+- [x] **E4:S12:T03 – Create Epic 7, Story 0: UXR Repo (PERPETUAL)** - ✅ COMPLETE (v0.4.12.3+0 – Repository story created: E7:S00)
+- [x] **E4:S12:T04 – Update Kanban Policy with PERPETUAL State Definition** - ✅ COMPLETE (v0.4.12.4+0 – PERPETUAL state defined in Kanban policy)
+- [x] **E4:S12:T05 – Update Board Display Logic to Omit S00 Stories** - ✅ COMPLETE (v0.4.12.5+0 – Board display logic updated: S00 stories omitted from epic checklists)
 - [ ] **E4:S12:T06 – Update Intake Workflow to Assign FR/BR/UXR to S00:Txx**
 - [ ] **E4:S12:T07 – Update Versioning Policy with S00 Abstract Space Concept**
 - [ ] **E4:S12:T08 – Document Meta-Grouping Pattern**

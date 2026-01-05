@@ -21,6 +21,9 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
+- [x] **E6:S00 – BR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.6.0.0+0 – Repository story created)
+  - Story: [`Story-000-br-repo.md`](Story-000-br-repo.md)
+  - **Note:** S00 omitted from board displays (UX optimization)
 - [x] **E6:S01 – Framework Version Management** - ✅ COMPLETE (v0.6.1.5+1 – All tasks complete: Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
   - Story: [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
   - Tasks: T01 ✅ COMPLETE (v0.6.1.1+1 - Framework versioning strategy), T02 ✅ COMPLETE (v0.6.1.2+1 - Framework release processes), T03 ✅ COMPLETE (v0.6.1.3+1 - Framework compatibility tracking), T04 ✅ COMPLETE (v0.6.1.1+2 - Framework dependency architecture), T05 ✅ COMPLETE (v0.6.1.5+1 - Framework version tagging strategy)

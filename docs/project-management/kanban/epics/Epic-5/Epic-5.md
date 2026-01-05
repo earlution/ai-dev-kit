@@ -21,6 +21,9 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
+- [x] **E5:S00 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.0.0+0 – Repository story created)
+  - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
+  - **Note:** S00 omitted from board displays (UX optimization)
 - [ ] **E5:S01 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)
   - Story: [`Story-001-documentation-maintenance-framework.md`](Story-001-documentation-maintenance-framework.md)
 - [x] **E5:S02 – Documentation Quality Assurance** - COMPLETE ✅ (v0.5.2.3+1)

@@ -339,6 +339,47 @@ Decompose epic scope into releasable slices.
 
 **Story Directories:** In consolidated structures, Stories live in `Epic-X/stories/` directories, allowing for associated files (diagrams, notes, etc.) alongside the Story document.
 
+#### PERPETUAL State for Repository Stories
+
+**Purpose:** Repository stories (S00) serve as canonical homes for Feature Requests (FRs), Bug Reports (BRs), and User Experience Research reports (UXRs). These stories are PERPETUAL and never complete.
+
+**PERPETUAL State Definition:**
+
+Repository stories are marked with **Status: IN PROGRESS (PERPETUAL)** and have the following characteristics:
+
+- **Never Complete:** Repository stories never transition to COMPLETE status
+- **Excluded from Completion Analytics:** Repository stories are excluded from epic completion calculations
+- **Omitted from Board Displays:** Repository stories (E5:S00, E6:S00, E7:S00) are omitted from epic checklist displays in board views (UX optimization)
+- **Still Tracked Internally:** Repository stories are still tracked in Epic documents' internal Story Checklists
+- **Abstract Space Versioning:** Repository stories use abstract space versioning (e.g., v0.5.0.0+0 for E5:S00)
+
+**Repository Story Pattern (S00):**
+
+- **Epic 5, Story 0:** "FR Repo" - canonical home for all Feature Requests
+- **Epic 6, Story 0:** "BR Repo" - canonical home for all Bug Reports
+- **Epic 7, Story 0:** "UXR Repo" - canonical home for all User Experience Research reports
+
+**Traceability Pattern:**
+
+- FR-001 = E5:S00:T01 (abstract space: v0.5.0.1+0)
+- BR-001 = E6:S00:T01 (abstract space: v0.6.0.1+0)
+- UXR-001 = E7:S00:T01 (abstract space: v0.7.0.1+0)
+
+**Board Display Rules:**
+
+- Epic Story Checklists in board views: S00 stories omitted (reduce clutter)
+- Epic documents: S00 stories included in internal Story Checklist
+- Kanban board: S00 stories not shown in epic sections
+- Quick view board: S00 stories not shown in epic sections
+
+**Rationale:**
+
+- Repository stories are containers, not work units
+- They grow indefinitely (FR-001 through FR-999+)
+- Completion is not meaningful for repositories
+- Board display omission reduces clutter (100+ tasks in S00)
+- Still tracked internally for traceability and versioning
+
 ### Tasks
 
 Atomic units inside a story.
@@ -375,7 +416,7 @@ Every Task document MUST include the following fields:
 - **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 - **Scope:** Clear description of what the task accomplishes
 - **Acceptance Criteria:** Measurable criteria for task completion
-- **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
+- **Status:** Current status (TODO, IN PROGRESS, COMPLETE, or IN PROGRESS (PERPETUAL) for repository stories)
 - **Version Anchor:** Version marker when task is complete (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 - **Completion Date:** Date when task was completed (if applicable)
 - **Related BR/FR Links:** Links to related Bug Reports or Feature Requests
