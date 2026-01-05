@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-22 (v0.2.1.8+1 – Story 1: T08 COMPLETE - Step 9 added for IDE problem checking)
+**Last updated:** 2026-01-05 (v0.2.12.1+1 – Story 12: T01 COMPLETE - Step 17: Housekeeping added to RW)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -56,6 +56,9 @@ housekeeping_policy: keep
 - [x] **E2:S11 – Intake Workflow Automation** - COMPLETE ✅ (v0.2.11.11+1 – All tasks complete: Intake workflow automation, CHANGELOG protection, and ordering fixes)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03 ✅ COMPLETE (v0.2.11.3+1), T04 ✅ COMPLETE (v0.2.11.4+1), T05 ✅ COMPLETE (v0.2.11.5+1), T06 ✅ COMPLETE (v0.2.11.6+1), T07 ✅ COMPLETE (v0.2.11.7+1), T08 ✅ COMPLETE (v0.2.11.8+1), T09 ✅ COMPLETE (v0.2.11.9+3), T10 ✅ COMPLETE (v0.2.11.10+1), T11 ✅ COMPLETE (v0.2.11.11+1 – CHANGELOG ordering violations fixed)
+- [x] **E2:S12 – RW Step 17: Housekeeping** - ✅ COMPLETE (v0.2.12.1+1 – All tasks complete: Step 17 added to RW)
+  - Story: [`Story-012-rw-step-17-housekeeping.md`](Story-012-rw-step-17-housekeeping.md)
+  - Tasks: T01 ✅ COMPLETE (v0.2.12.1+1 – Step 17 added: workflow YAML, documentation, and cursor rules updated)
 
 ---
 

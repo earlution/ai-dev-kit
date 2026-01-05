@@ -1,7 +1,7 @@
 name: Release Workflow
-version: 2.2.0
+version: 2.3.0
 type: release
-description: Automated release workflow with PDCA integration (version bump, changelog, commit, tag, push, verification, action, PIR trigger). Includes Step 9: IDE problem checking.
+description: Automated release workflow with PDCA integration (version bump, changelog, commit, tag, push, verification, action, PIR trigger). Includes Step 9: IDE problem checking and Step 17: Housekeeping.
 
 config:
   version_file: src/confidentia/version.py
@@ -253,6 +253,19 @@ steps:
       kanban_root: docs/project-management/kanban
       epic_doc_pattern: docs/project-management/kanban/epics/Epic-{epic}/Epic-{epic}.md
       story_doc_pattern: docs/project-management/kanban/epics/Epic-{epic}/Story-{story}-*.md
+
+  - id: step-17
+    name: Housekeeping
+    type: housekeeping
+    handler: ide.housekeeping
+    required: false
+    enabled: true
+    blocking: false
+    dependencies:
+      - step-16
+    config:
+      clear_ide_todos: true
+      cleanup_temp_files: false
 
 parameters:
   - name: summary

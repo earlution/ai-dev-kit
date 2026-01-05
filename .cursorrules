@@ -186,6 +186,11 @@ For each step, follow this pattern:
 12. **Push to Remote** - Push epic branch and tag to origin (DO NOT push to main unless ready to deploy)
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
 
+13. **Housekeeping** - Clean up IDE state and temporary artifacts
+    - Clear IDE todo list (all `rw-step-*` todos)
+    - Future: May include cleanup of temporary files, reset IDE state, etc.
+    - **Reference:** See RW documentation Step 17: Housekeeping for details
+
 **Key Principles:**
 - ✅ **Intelligent Analysis:** Understand each step's requirements before executing
 - ✅ **Context-Aware:** Use branch context, version schema, and project state to make decisions

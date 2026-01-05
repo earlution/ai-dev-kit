@@ -16,7 +16,14 @@ housekeeping_policy: keep
 
 ## 📜 Version History
 
-**Current Version:** 1.8.0 (2025-12-16)
+**Current Version:** 1.9.0 (2026-01-05)
+
+### Version 1.9.0 (2026-01-05) - Housekeeping Step
+- **Added:** Step 17: Housekeeping (after Step 16)
+- **Changed:** Updated workflow structure from 16 steps to 17 steps
+- **Changed:** Step 17 clears IDE todo list at end of workflow
+- **Feature:** Clean IDE state after RW completion
+- **Future:** May include additional cleanup tasks (temp files, etc.)
 
 ### Version 1.8.0 (2025-12-16) - PIR Workflow Integration
 - **Added:** Step 15: Check for PIR Trigger (after Step 12)
@@ -176,6 +183,7 @@ For each step, the agent follows this pattern:
       {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Post-Commit Verification & Reflection - Verify changes and reflect on results (optional but recommended)'},
       {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Act on Verification Results - Update changelog, create follow-ups, document improvements (optional but recommended)'},
       {'id': 'rw-step-16', 'status': 'pending', 'content': 'Step 16: Check for PIR Trigger - Check Epic/Story COMPLETE status and trigger PIR workflow (optional but recommended)'},
+      {'id': 'rw-step-17', 'status': 'pending', 'content': 'Step 17: Housekeeping - Clear IDE todo list (optional but recommended)'},
    ])
    ```
 
@@ -2741,9 +2749,95 @@ except Exception as e:
 **Example 4: Story Not COMPLETE - Skip PIR**
 - Version: `0.2.5.5+1` (Epic 2, Story 5, Task 5)
 - Story 5 status: IN PROGRESS
-- Step 15 action: Skip PIR trigger
+- Step 16 action: Skip PIR trigger
 - Skip reason: "Story not COMPLETE"
 - Result: PIR skipped, RW completes
+
+---
+
+### Step 17: Housekeeping
+
+**Step Definition:**
+```yaml
+- id: step-17
+  name: Housekeeping
+  handler: ide.housekeeping
+  dependencies: [step-16]
+  config:
+    clear_ide_todos: true
+    cleanup_temp_files: false
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Understand this is a housekeeping step that runs at the end of the Release Workflow
+   - Purpose: Clean up IDE state and temporary artifacts
+   - Current implementation: Clear IDE todo list
+   - Future: May include cleanup of temporary files, reset IDE state, etc.
+
+2. **DETERMINE:**
+   - **If `clear_ide_todos: true`:**
+     - Clear all RW-related todos from the IDE todo list
+     - This includes all `rw-step-*` todos created during workflow execution
+   - **If `cleanup_temp_files: true` (future):**
+     - Remove temporary files created during workflow execution
+     - Clean up any staging artifacts
+
+3. **EXECUTE:**
+   - **Clear IDE Todo List:**
+     - Use `todo_write` tool with `merge: true` to mark all `rw-step-*` todos as `completed`
+     - Pattern: Find all todos with `id` matching `rw-step-*` and mark as `completed`
+     - Example:
+       ```python
+       # Clear all RW todos
+       todo_write(
+           merge=True,
+           todos=[
+               {'id': 'rw-step-1', 'status': 'completed'},
+               {'id': 'rw-step-2', 'status': 'completed'},
+               # ... all RW steps
+           ]
+       )
+       ```
+   - **Future: Cleanup Temp Files (if enabled):**
+     - Remove temporary files from workflow execution
+     - Clean up staging directories if needed
+
+4. **VALIDATE:**
+   - Verify IDE todo list is cleared (no `rw-step-*` todos remain)
+   - Verify no errors occurred during cleanup
+
+5. **PROCEED:**
+   - Document: "Housekeeping complete - IDE todo list cleared"
+   - Mark workflow as complete
+   - No further steps
+
+**Key Points:**
+- This step runs at the very end of the Release Workflow
+- It's optional but recommended for clean IDE state
+- Current implementation focuses on clearing IDE todos
+- Future enhancements may include additional cleanup tasks
+
+**Configuration:**
+- `clear_ide_todos: true` - Clear all RW-related todos from IDE (default: true)
+- `cleanup_temp_files: false` - Clean up temporary files (default: false, future feature)
+
+**Examples:**
+
+**Example 1: Clear IDE Todos**
+- RW completes all 16 steps
+- Step 17 executes: Clears all `rw-step-*` todos
+- Result: IDE todo list is clean, ready for next workflow
+
+**Example 2: Future - Cleanup Temp Files**
+- RW creates temporary files during execution
+- Step 17 executes: Clears todos and removes temp files
+- Result: Clean workspace, no artifacts left behind
+
+**Reference:**
+- See `.cursorrules` Step 13: Housekeeping for cursor rules reference
+- This step is documented as Step 13 in cursor rules (referring to the 12-step core workflow + housekeeping)
 
 ---
 
@@ -2754,9 +2848,9 @@ except Exception as e:
 When executing Release Workflow as an agent, ensure:
 
 ### Pre-Execution
-- [ ] **MANDATORY:** Created TODO list with all 15 steps (using `todo_write`) - Note: Steps 12-14 are optional but recommended for PDCA, Step 15 is optional but recommended for PIR
+- [ ] **MANDATORY:** Created TODO list with all 17 steps (using `todo_write`) - Note: Steps 12-16 are optional but recommended for PDCA/PIR, Step 17 is optional but recommended for housekeeping
 - [ ] Loaded workflow definition from YAML
-- [ ] Parsed all 15 steps and dependencies
+- [ ] Parsed all 17 steps and dependencies
 - [ ] Gathered workflow parameters (summary, change_type, etc.)
 - [ ] Checked current Git branch
 - [ ] Verified workspace context
@@ -2779,6 +2873,7 @@ When executing Release Workflow as an agent, ensure:
 - [ ] **Step 14:** Analyzed changes, prompted for verification, documented reflection, validated (optional but recommended)
 - [ ] **Step 15:** Analyzed verification results, acted on results, updated changelog, created follow-ups, validated (optional but recommended)
 - [ ] **Step 16:** Analyzed Epic/Story status, checked COMPLETE, evaluated significance, triggered PIR if applicable, validated (optional but recommended)
+- [ ] **Step 17:** Housekeeping - Cleared IDE todo list, validated (optional but recommended)
 
 ### Post-Execution
 - [ ] **MANDATORY:** All steps marked as completed in TODO list
@@ -2790,9 +2885,10 @@ When executing Release Workflow as an agent, ensure:
 - [ ] Files committed with correct message
 - [ ] Tag created and pushed
 - [ ] Branch pushed to remote
-- [ ] Verification and reflection documented (if Step 12 executed)
-- [ ] Actions taken and follow-ups created (if Step 13 executed)
-- [ ] PIR trigger checked and executed if applicable (if Step 15 executed)
+- [ ] Verification and reflection documented (if Step 14 executed)
+- [ ] Actions taken and follow-ups created (if Step 15 executed)
+- [ ] PIR trigger checked and executed if applicable (if Step 16 executed)
+- [ ] Housekeeping complete - IDE todo list cleared (if Step 17 executed)
 - [ ] Execution documented
 
 ---
