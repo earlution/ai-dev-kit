@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.8+7] - 05-01-26
+
+### Changed
+- Kanban board updated (E6:S06:T08 - UKW)
+  - Epic 7, Story 2 marked as COMPLETE (v0.7.2.4+1)
+  - All tasks (T01-T04) marked as COMPLETE with version markers
+  - Epic 7 version updated to v0.7.2.4+1
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+7.md)
+
 ## [0.7.2.4+1] - 05-01-26
 
 ### Added
