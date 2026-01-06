@@ -197,6 +197,23 @@ Future validators can be built using the framework, while existing validators co
 
 ---
 
+## Validation Patterns
+
+A comprehensive library of validation patterns is available in `PATTERNS.md`. These patterns provide guidance for creating new validators and ensure consistency across the codebase.
+
+**Pattern Categories:**
+1. **Base Patterns** - Core validator patterns
+2. **Input Validation Patterns** - Input parameter validation patterns
+3. **File Structure Patterns** - File and directory structure validation patterns
+4. **Content Validation Patterns** - Content and format validation patterns
+5. **Cross-Reference Patterns** - Cross-reference and consistency validation patterns
+6. **Configuration Patterns** - Configuration loading and path resolution patterns
+7. **Error Reporting Patterns** - Error and issue reporting patterns
+
+See `PATTERNS.md` for detailed pattern documentation and `examples/pattern_examples.py` for working examples.
+
+---
+
 ## Framework-Specific Validators
 
 Framework-specific validators are available in the `framework/` subdirectory:

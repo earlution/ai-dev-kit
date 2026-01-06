@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-06 (v0.8.2.2+1 – T02: Framework-specific validators created)  
+**Last updated:** 2026-01-06 (v0.8.2.3+1 – T03: Validation patterns established, Story complete)  
 **Branch:** `epic/8-tooling-automation`  
 **Version Schema:** `0.8.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -23,7 +23,7 @@ housekeeping_policy: keep
 
 - [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1 – All tasks complete)
   - Story: [`Story-001-code-generators.md`](Story-001-code-generators.md)
-- [ ] **E8:S02 – Additional Validators** - IN PROGRESS (T01-T02 complete, T03 TODO)
+- [x] **E8:S02 – Additional Validators** - ✅ COMPLETE (v0.8.2.3+1 – All tasks complete)
   - Story: [`Story-002-additional-validators.md`](Story-002-additional-validators.md)
 - [ ] **E8:S03 – Automation Scripts** - TODO
   - Story: [`Story-003-automation-scripts.md`](Story-003-automation-scripts.md)
