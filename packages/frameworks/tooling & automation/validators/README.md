@@ -192,6 +192,19 @@ Future validators can be built using the framework, while existing validators co
 
 ---
 
-**Last Updated:** 2026-01-05  
+**Last Updated:** 2026-01-06  
 **Version:** 1.0.0
+
+---
+
+## Framework-Specific Validators
+
+Framework-specific validators are available in the `framework/` subdirectory:
+
+- **KanbanValidator** - Validates Kanban document structure and consistency
+- **WorkflowValidator** - Validates workflow YAML files
+- **VersionValidator** - Validates version file format and schema
+- **DocumentLifecycleValidator** - Validates document lifecycle metadata
+
+See `framework/README.md` for detailed documentation on framework-specific validators.
 

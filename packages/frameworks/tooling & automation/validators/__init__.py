@@ -16,6 +16,14 @@ from .base import (
 )
 from .registry import ValidatorRegistry
 
+# Framework-specific validators
+from .framework import (
+    KanbanValidator,
+    WorkflowValidator,
+    VersionValidator,
+    DocumentLifecycleValidator
+)
+
 __all__ = [
     'BaseValidator',
     'ValidatorConfig',
@@ -23,5 +31,10 @@ __all__ = [
     'ValidationStatus',
     'ValidationSeverity',
     'ValidatorRegistry',
+    # Framework validators
+    'KanbanValidator',
+    'WorkflowValidator',
+    'VersionValidator',
+    'DocumentLifecycleValidator',
 ]
 

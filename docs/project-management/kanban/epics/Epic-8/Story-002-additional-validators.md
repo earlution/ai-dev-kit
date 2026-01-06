@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-05 (v0.8.2.1+1 – T01: Validator framework created)  
-**Version:** v0.8.2.1+1  
+**Last updated:** 2026-01-06 (v0.8.2.2+1 – T02: Framework-specific validators created)  
+**Version:** v0.8.2.2+1  
 **Code:** E8S02
 
 ---
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E8:S02:T01 – Create validator framework** - ✅ COMPLETE (v0.8.2.1+1 – Validator framework implemented: BaseValidator, ValidationResult, ValidatorRegistry)
-- [ ] **E8:S02:T02 – Build framework-specific validators** - TODO
+- [x] **E8:S02:T02 – Build framework-specific validators** - ✅ COMPLETE (v0.8.2.2+1 – Framework-specific validators created: KanbanValidator, WorkflowValidator, VersionValidator, DocumentLifecycleValidator)
 - [ ] **E8:S02:T03 – Establish validation patterns** - TODO
 
 ---
@@ -74,16 +74,38 @@ Develop comprehensive validation framework and additional validators.
 
 ### E8:S02:T02 – Build framework-specific validators
 
+**Status:** ✅ COMPLETE (v0.8.2.2+1)
+
 **Input:** Validator framework, framework requirements  
 **Deliverable:** Framework-specific validator implementations  
 **Dependencies:** E8:S02:T01  
 **Blocker:** None
 
 **Approach:**
-1. Identify validation needs per framework
-2. Create framework-specific validators
-3. Build validation test suites
-4. Document validators
+1. ✅ Identify validation needs per framework
+2. ✅ Create framework-specific validators
+3. ✅ Build validation test suites
+4. ✅ Document validators
+
+**Implementation:**
+- Created `KanbanValidator` - Validates Epic/Story/Task document structure, naming conventions, and consistency
+- Created `WorkflowValidator` - Validates workflow YAML files for structure, dependencies, and handler references
+- Created `VersionValidator` - Validates version file format and version schema compliance
+- Created `DocumentLifecycleValidator` - Validates document lifecycle metadata and policy compliance
+- Created test suites for all validators
+- Created comprehensive documentation
+
+**Deliverables:**
+- ✅ `packages/frameworks/tooling & automation/validators/framework/__init__.py` - Framework validators package
+- ✅ `packages/frameworks/tooling & automation/validators/framework/kanban_validator.py` - Kanban framework validator
+- ✅ `packages/frameworks/tooling & automation/validators/framework/workflow_validator.py` - Workflow framework validator
+- ✅ `packages/frameworks/tooling & automation/validators/framework/version_validator.py` - Version framework validator
+- ✅ `packages/frameworks/tooling & automation/validators/framework/document_lifecycle_validator.py` - Document lifecycle validator
+- ✅ `packages/frameworks/tooling & automation/validators/framework/README.md` - Framework validators documentation
+- ✅ `packages/frameworks/tooling & automation/validators/tests/test_kanban_validator.py` - Kanban validator tests
+- ✅ `packages/frameworks/tooling & automation/validators/tests/test_workflow_validator.py` - Workflow validator tests
+- ✅ `packages/frameworks/tooling & automation/validators/tests/test_version_validator.py` - Version validator tests
+- ✅ `packages/frameworks/tooling & automation/validators/tests/test_document_lifecycle_validator.py` - Document lifecycle validator tests
 
 ---
 

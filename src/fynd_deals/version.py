@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
-VERSION_STORY = 3     # Story number (Story 3: Documentation Automation)
-VERSION_TASK = 1      # Task number (Task 1: Create automated documentation update scripts)
-VERSION_BUILD = 1     # Build number (E5:S03:T01+1 - Documentation update scripts created: version references, cross-references, metadata, link validation, documentation sync)
+VERSION_EPIC = 8      # Epic number (Epic 8: Tooling & Automation)
+VERSION_STORY = 2     # Story number (Story 2: Additional Validators)
+VERSION_TASK = 2      # Task number (Task 2: Build framework-specific validators)
+VERSION_BUILD = 1     # Build number (E8:S02:T02+1 - Framework-specific validators created: KanbanValidator, WorkflowValidator, VersionValidator, DocumentLifecycleValidator)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
