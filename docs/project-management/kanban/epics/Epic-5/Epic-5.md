@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-18 (v0.5.2.3+1 – Story 2 complete: Documentation health dashboards implemented)  
+**Last updated:** 2026-01-06 (v0.5.3.1+1 – Story 3 Task 1 complete: Documentation update scripts created)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -29,7 +29,7 @@ housekeeping_policy: keep
 - [x] **E5:S02 – Documentation Quality Assurance** - COMPLETE ✅ (v0.5.2.3+1)
   - Story: [`Story-002-documentation-quality-assurance.md`](Story-002-documentation-quality-assurance.md)
   - Tasks: T01 ✅, T02 ✅, T03 ✅
-- [ ] **E5:S03 – Documentation Automation** - TODO
+- [ ] **E5:S03 – Documentation Automation** - IN PROGRESS (T01 complete, T02-T03 TODO)
   - Story: [`Story-003-documentation-automation.md`](Story-003-documentation-automation.md)
 - [ ] **E5:S04 – Framework Documentation Management** - IN PROGRESS
   - Story: [`Story-004-framework-documentation-management.md`](Story-004-framework-documentation-management.md)

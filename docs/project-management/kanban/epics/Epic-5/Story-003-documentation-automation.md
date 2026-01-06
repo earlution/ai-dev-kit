@@ -8,11 +8,11 @@ housekeeping_policy: keep
 
 # Story 003 – Documentation Automation
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-05  
+**Last updated:** 2026-01-06  
 **Version:** v0.5.3.1+1  
 **Code:** E5S03
 
@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E5:S03:T01 – Create automated documentation update scripts** - TODO
+- [x] **E5:S03:T01 – Create automated documentation update scripts** - ✅ COMPLETE (v0.5.3.1+1 – Documentation update scripts created: version references, cross-references, metadata, link validation, documentation sync)
 - [ ] **E5:S03:T02 – Implement documentation synchronization workflows** - TODO
 - [ ] **E5:S03:T03 – Build documentation change detection and notification** - TODO
 
@@ -42,16 +42,34 @@ Automate documentation maintenance tasks to reduce manual effort and improve con
 
 ### E5:S03:T01 – Create automated documentation update scripts
 
+**Status:** ✅ COMPLETE (v0.5.3.1+1)
+
 **Input:** Documentation update triggers  
 **Deliverable:** Automated documentation update scripts  
 **Dependencies:** E5:S01:T03  
 **Blocker:** None
 
 **Approach:**
-1. Identify documentation update automation opportunities
-2. Create scripts for automated updates
-3. Integrate scripts into workflows
-4. Document script usage and maintenance
+1. ✅ Identify documentation update automation opportunities
+2. ✅ Create scripts for automated updates
+3. ✅ Integrate scripts into workflows
+4. ✅ Document script usage and maintenance
+
+**Deliverables:**
+- `update_version_references.py` - Updates version references across documentation
+- `update_cross_references.py` - Updates cross-references when files are moved/renamed
+- `update_metadata.py` - Updates metadata fields (last_updated, version, etc.)
+- `validate_links.py` - Validates and fixes broken links
+- `sync_documentation.py` - Synchronizes documentation between locations
+- `README.md` - Comprehensive documentation for all scripts
+- `integration_guide.md` - Workflow integration guide
+
+**Implementation Details:**
+- Created 5 core documentation update scripts
+- Scripts support dry-run mode for safe testing
+- Scripts integrate with rw-config.yaml for configuration
+- Scripts can be integrated into Release Workflow, UKW, and CI/CD pipelines
+- Comprehensive documentation and integration guide provided
 
 ---
 
