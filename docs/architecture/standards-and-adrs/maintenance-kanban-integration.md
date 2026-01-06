@@ -141,6 +141,7 @@ Board Updates:
 - **Must Have (M):** Critical maintenance tasks requiring immediate attention
 - **Should Have (S):** Important maintenance tasks to address soon
 - **Could Have (C):** Nice-to-have maintenance tasks for when time permits
+- **Ongoing (O):** Perpetual maintenance tasks that never complete (tracked but don't block other work)
 - **Won't Have (W):** Deferred maintenance tasks
 
 **Task Ordering:**

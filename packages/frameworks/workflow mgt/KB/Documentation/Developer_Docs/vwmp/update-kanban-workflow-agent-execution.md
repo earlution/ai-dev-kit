@@ -408,6 +408,7 @@ After completing UKW, users typically run RW to commit the kanban documentation 
        - **Must Have (M):** Critical for project success, blocks other work, required for release, core functionality
        - **Should Have (S):** Important but not critical, high value, should be included if possible
        - **Could Have (C):** Nice to have, lower priority, can be deferred
+       - **Ongoing (O):** Perpetual maintenance tasks that never complete (e.g., workflow maintenance, changelog management). Tracked but don't block other work.
        - **Won't Have (W):** Explicitly deferred, out of scope for current cycle
      - **Prioritization requires analysis of:**
        - Which tasks block other work (dependencies)

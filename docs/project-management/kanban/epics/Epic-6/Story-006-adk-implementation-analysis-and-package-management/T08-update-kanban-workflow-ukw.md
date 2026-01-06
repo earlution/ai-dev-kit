@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-05 (v0.6.6.8+15 – UKW: E4:S12 kanban synchronization complete)  
+**Last updated:** 2026-01-05 (v0.6.6.8+16 – MoSCoW prioritization enhancement: Added "Ongoing (O)" category)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.6.8+15
+**Version:** v0.6.6.8+16
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** E4:S12 kanban synchronization - Updated E4:S12 story document status from TODO to COMPLETE (all tasks T01-T10 complete). Updated kanban board to reflect E4:S12 completion, removing it from "Should Have" section and updating Epic 4 section. Story document now correctly shows Status: COMPLETE and all tasks marked complete with forensic markers.  
+**Progress:** MoSCoW prioritization enhancement - Added new "Ongoing (O)" category for perpetual tasks, positioned between "Could Have (C)" and "Won't Have (W)". Moved E6:S06:T08 (UKW) and E6:S06:T12 (CMW) from "Must Have" to "Ongoing" category. Updated all framework and project policy documentation to reflect new MoSCoW structure (M/S/C/O/W). This addresses the issue where perpetual tasks created noise in "Must Have" and implied overblown importance.  
 **Code:** E6S06T08
 
 ---

@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.8+16] - 05-01-26
+
+### Added
+- MoSCoW "Ongoing (O)" Category (E6:S06:T08)
+  - New priority category for perpetual maintenance tasks
+  - Positioned between "Could Have (C)" and "Won't Have (W)"
+  - Moved UKW and CMW perpetual tasks to new category
+  - Updated all framework and project policy documentation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+16.md)
+
 ## [0.8.1.3+1] - 05-01-26
 
 ### Added

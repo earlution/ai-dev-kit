@@ -57,6 +57,13 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - **{E{epic}:S{story}:T{task}}** – {Task description}  
   *Last updated: {Date}* | [Task Doc](epics/Epic-{epic}/Story-{story}-{name}/T{task}-{task-name}.md) | [Story](epics/Epic-{epic}/Story-{story}-{name}.md)
 
+### Ongoing (O) - Perpetual Tasks
+
+*Ongoing maintenance tasks that never complete. These are tracked but don't block other work.*
+
+- **{E{epic}:S{story}:T{task}}** – {Task description} - Perpetual Task - {Status}  
+  *Last updated: {Date}* | [Task Doc](epics/Epic-{epic}/Story-{story}-{name}/T{task}-{task-name}.md) | [Story](epics/Epic-{epic}/Story-{story}-{name}.md)
+
 ### Won't Have (W) - Deferred Tasks
 
 *Tasks that are deferred or not being done at this time.*
@@ -83,6 +90,7 @@ This section lists all stories in a compact format (one line per story) with the
 - **Must Have (M):** Critical tasks that must be completed. These are blocking other work or are on the critical path.
 - **Should Have (S):** Important tasks that should be completed. High-value items that contribute significantly to goals.
 - **Could Have (C):** Nice-to-have tasks that could be completed. Lower priority items that add value but are not essential.
+- **Ongoing (O):** Perpetual maintenance tasks that never complete. These are tracked but don't block other work (e.g., workflow maintenance, changelog management).
 - **Won't Have (W):** Tasks that are deferred or not being actively worked on. Items explicitly marked as out of scope for current cycle.
 
 **Default Priority:**

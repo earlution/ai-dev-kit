@@ -250,7 +250,13 @@ The board serves as the **parent document** to Story documents, similar to how S
    - Lower priority items that add value but are not essential
    - Tasks that can be deferred if needed
 
-4. **Won't Have (W) – Deferred Tasks**
+4. **Ongoing (O) – Perpetual Tasks**
+   - Ongoing maintenance tasks that never complete
+   - Perpetual tasks that are tracked but don't block other work
+   - Tasks that require continuous attention (e.g., workflow maintenance, changelog management)
+   - These tasks are visible but don't interfere with prioritization of completable work
+
+5. **Won't Have (W) – Deferred Tasks**
    - Tasks that are deferred or not being actively worked on
    - Items explicitly marked as out of scope for current cycle
    - Tasks that may be revisited in future iterations

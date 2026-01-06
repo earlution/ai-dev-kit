@@ -34,14 +34,18 @@ This Kanban board serves as the **parent document** to Story documents, similar 
 
 ## MoSCoW Prioritized In-Progress Tasks
 
-This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCoW priority and ordered chronologically (most recently updated first).
+This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCoW priority (M/S/C/O/W) and ordered chronologically (most recently updated first).
+
+**MoSCoW Categories:**
+- **M (Must Have):** Critical tasks that must be completed
+- **S (Should Have):** Important tasks that should be completed
+- **C (Could Have):** Nice-to-have tasks that could be completed
+- **O (Ongoing):** Perpetual maintenance tasks that never complete (tracked but don't block other work)
+- **W (Won't Have):** Tasks deferred or not being done at this time
 
 ### Must Have (M) - Critical Tasks
 
 *Critical in-progress tasks that must be completed.*
-
-- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+13, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+2, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Should Have (S) - Important Tasks
 
@@ -55,8 +59,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - T01: Create generator framework - ✅ COMPLETE (v0.8.1.1+1)
   - T02: Build template-based generators - ✅ COMPLETE (v0.8.1.2+1)
   - T03: Establish generator patterns - ✅ COMPLETE (v0.8.1.3+1)
-- **E8:S02:T01-T03** – Additional Validators - TODO (HIGH priority story) - [Story](epics/Epic-8/Story-002-additional-validators.md)
-  - T01: Create validator framework - TODO
+- **E8:S02:T01-T03** – Additional Validators - IN PROGRESS (HIGH priority story) - [Story](epics/Epic-8/Story-002-additional-validators.md)
+  - T01: Create validator framework - ✅ COMPLETE (v0.8.2.1+1)
   - T02: Build framework-specific validators - TODO
   - T03: Establish validation patterns - TODO
 
@@ -82,6 +86,13 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - T01: Link book content to frameworks - TODO
   - T02: Create book-specific examples - TODO
   - T03: Establish integration patterns - TODO
+
+### Ongoing (O) - Perpetual Tasks
+
+*Ongoing maintenance tasks that never complete. These are tracked but don't block other work.*
+
+- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+13, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+2, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Won't Have (W) - Deferred Tasks
 

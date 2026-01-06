@@ -445,6 +445,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
   - **Must Have (M):** Critical Priority (4.0-5.0)
   - **Should Have (S):** High Priority (3.0-3.9)
   - **Could Have (C):** Medium Priority (2.0-2.9)
+  - **Ongoing (O):** Perpetual maintenance tasks (not scored, tracked separately)
   - **Won't Have (W):** Low/Minimal Priority (<2.0)
 
 **Track Progress:**
@@ -475,6 +476,12 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
 - Medium Priority tasks
 - Could be completed if time permits
 - Contributes to codebase health
+
+**Ongoing (O):**
+- Perpetual maintenance tasks
+- Tasks that never complete (e.g., workflow maintenance, changelog management)
+- Tracked but don't block other work
+- Not scored using priority framework (separate category)
 
 **Won't Have (W):**
 - Priority Score: < 2.0
