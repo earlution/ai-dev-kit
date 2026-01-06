@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-05  
-**Version:** v0.6.6.8+15
+**Last Updated:** 2026-01-06  
+**Version:** v0.6.6.8+16
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
 
@@ -51,16 +51,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
-- **E6:S06:T16** – Harden CMW Ordering Before Archival - ✅ COMPLETE (v0.6.6.16+1, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T16-harden-cmw-ordering-before-archival.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md) | [Analysis](analysis/cmw-ordering-flaw-analysis.md)
-
-- **E5:S02:T03** – Build documentation health dashboards - ✅ COMPLETE (v0.5.2.3+1, Last updated: 2025-12-18) - [Story](epics/Epic-5/Story-002-documentation-quality-assurance.md)
 - **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
-- **E8:S01** – Code Generators - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05) - [Story](epics/Epic-8/Story-001-code-generators.md)
-  - T01: Create generator framework - ✅ COMPLETE (v0.8.1.1+1)
-  - T02: Build template-based generators - ✅ COMPLETE (v0.8.1.2+1)
-  - T03: Establish generator patterns - ✅ COMPLETE (v0.8.1.3+1)
-- **E8:S02:T01-T03** – Additional Validators - IN PROGRESS (HIGH priority story) - [Story](epics/Epic-8/Story-002-additional-validators.md)
-  - T01: Create validator framework - ✅ COMPLETE (v0.8.2.1+1)
+- **E8:S02:T02-T03** – Additional Validators - IN PROGRESS (HIGH priority story) - [Story](epics/Epic-8/Story-002-additional-validators.md)
   - T02: Build framework-specific validators - TODO
   - T03: Establish validation patterns - TODO
 
@@ -91,7 +83,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Ongoing maintenance tasks that never complete. These are tracked but don't block other work.*
 
-- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+13, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+16, Last updated: 2026-01-06) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 - **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+2, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Won't Have (W) - Deferred Tasks
@@ -337,15 +329,18 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ### Epic 8: Tooling & Automation
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.8.1.1+1
+**Last Updated:** 2026-01-06  
+**Version:** v0.8.2.1+1
 
 **Stories:**
-- [ ] **E8:S01 – Code Generators** - TODO
+- [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05)
   - Story: [`epics/Epic-8/Story-001-code-generators.md`](epics/Epic-8/Story-001-code-generators.md)
-- [ ] **E8:S02 – Additional Validators** - TODO
+  - Tasks: T01 ✅ COMPLETE (v0.8.1.1+1), T02 ✅ COMPLETE (v0.8.1.2+1), T03 ✅ COMPLETE (v0.8.1.3+1)
+- [ ] **E8:S02 – Additional Validators** - IN PROGRESS (v0.8.2.1+1, Last updated: 2026-01-05)
   - Story: [`epics/Epic-8/Story-002-additional-validators.md`](epics/Epic-8/Story-002-additional-validators.md)
+  - Tasks: T01 ✅ COMPLETE (v0.8.2.1+1), T02 TODO, T03 TODO
 - [ ] **E8:S03 – Automation Scripts** - TODO
   - Story: [`epics/Epic-8/Story-003-automation-scripts.md`](epics/Epic-8/Story-003-automation-scripts.md)
 

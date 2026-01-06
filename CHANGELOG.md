@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.8+17] - 06-01-26
+
+### Changed
+- Kanban Board MoSCoW Section Cleanup (E6:S06:T08)
+  - Removed completed tasks from MoSCoW prioritized sections
+  - Updated task statuses (E8:S01 complete, E8:S02 in progress)
+  - Updated Epic 8 status to IN PROGRESS
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+17.md)
+
 ## [0.6.6.8+16] - 05-01-26
 
 ### Added

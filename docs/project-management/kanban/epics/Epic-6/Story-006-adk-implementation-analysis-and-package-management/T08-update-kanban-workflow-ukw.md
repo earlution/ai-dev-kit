@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-05 (v0.6.6.8+16 – MoSCoW prioritization enhancement: Added "Ongoing (O)" category)  
+**Last updated:** 2026-01-06 (v0.6.6.8+17 – Kanban board MoSCoW section cleanup: Removed completed tasks, updated statuses)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.6.8+16
+**Version:** v0.6.6.8+17
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** MoSCoW prioritization enhancement - Added new "Ongoing (O)" category for perpetual tasks, positioned between "Could Have (C)" and "Won't Have (W)". Moved E6:S06:T08 (UKW) and E6:S06:T12 (CMW) from "Must Have" to "Ongoing" category. Updated all framework and project policy documentation to reflect new MoSCoW structure (M/S/C/O/W). This addresses the issue where perpetual tasks created noise in "Must Have" and implied overblown importance.  
+**Progress:** Kanban board MoSCoW section cleanup - Removed completed tasks (E6:S06:T16, E5:S02:T03, E8:S01, E8:S02:T01) from MoSCoW prioritized sections. Updated task statuses: E8:S01 marked COMPLETE, E8:S02 updated to IN PROGRESS with only remaining tasks (T02-T03) shown. Updated Epic 8 status to IN PROGRESS. This ensures the board only shows in-progress work items, improving clarity and focus.  
 **Code:** E6S06T08
 
 ---
