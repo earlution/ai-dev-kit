@@ -24,7 +24,7 @@ This document defines the **comprehensive integration of maintenance tasks with 
 
 **Key Principles:**
 - **Task-Driven Maintenance:** All maintenance work tracked as Kanban tasks
-- **Prioritization Integration:** Maintenance prioritization framework maps to Kanban MoSCoW classification
+- **Prioritization Integration:** Maintenance prioritization framework maps to Kanban MoSCOW classification
 - **Epic 7 Structure:** All maintenance tasks organized under Epic 7 (Codebase Maintenance and Review)
 - **Workflow Integration:** Maintenance workflows integrate with Kanban task lifecycle
 - **Visibility:** Maintenance tasks visible in Kanban board alongside feature development
@@ -52,7 +52,7 @@ This document defines the **comprehensive integration of maintenance tasks with 
 - Epic 7 uses Epic 4's Kanban framework for task management
 - Maintenance tasks follow Epic 4's task creation and tracking patterns
 - Maintenance workflows integrate with Epic 4's workflow management
-- Maintenance prioritization uses Epic 4's MoSCoW classification
+- Maintenance prioritization uses Epic 4's MoSCOW classification
 
 ---
 
@@ -79,7 +79,7 @@ Apply Maintenance Task Prioritization Framework:
 3. Estimate effort (1-5)
 4. Calculate priority score
 5. Apply contextual adjustments
-6. Determine MoSCoW classification
+6. Determine MoSCOW classification
 
 **Step 3: Create Kanban Task**
 
@@ -91,22 +91,22 @@ Task Creation:
   - E7:S03 for quality monitoring tasks
   - E7:S04 for automation tasks
 - **Task Document:** Create task document following Epic 4 templates
-- **Task Metadata:** Include priority score, severity, impact, effort, MoSCoW
+- **Task Metadata:** Include priority score, severity, impact, effort, MoSCOW
 
 **Step 4: Update Kanban Board**
 
 Board Updates:
 - Add task to Kanban board
-- Assign to appropriate MoSCoW section
+- Assign to appropriate MoSCOW section
 - Update Story task checklist
 - Update Epic story checklist
 - Set task status (TODO, IN PROGRESS, COMPLETE)
 
 ---
 
-## Prioritization and MoSCoW Mapping
+## Prioritization and MoSCOW Mapping
 
-### Priority Score to MoSCoW Classification
+### Priority Score to MoSCOW Classification
 
 **Mapping:**
 - **Critical Priority (4.0-5.0):** **Must Have (M)**
@@ -137,7 +137,7 @@ Board Updates:
 
 ### Kanban Board Organization
 
-**MoSCoW Sections:**
+**MoSCOW Sections:**
 - **Must Have (M):** Critical maintenance tasks requiring immediate attention
 - **Should Have (S):** Important maintenance tasks to address soon
 - **Could Have (C):** Nice-to-have maintenance tasks for when time permits
@@ -145,7 +145,7 @@ Board Updates:
 - **Won't Have (W):** Deferred maintenance tasks
 
 **Task Ordering:**
-- Within each MoSCoW section, tasks ordered by:
+- Within each MoSCOW section, tasks ordered by:
   1. Priority score (highest first)
   2. Severity (highest first)
   3. Impact (highest first)
@@ -205,7 +205,7 @@ Board Updates:
 - **Severity:** Severity rating (1-5)
 - **Impact:** Impact rating (1-5)
 - **Effort:** Effort rating (1-5)
-- **MoSCoW:** Must Have, Should Have, Could Have, Won't Have
+- **MoSCOW:** Must Have, Should Have, Could Have, Won't Have
 - **Epic:** Epic 7 (Codebase Maintenance and Review)
 - **Story:** Story assignment (E7:S01, E7:S02, etc.)
 - **Version:** Version marker (vRC.E.S.T+B)
@@ -250,7 +250,7 @@ Board Updates:
 1. **Task Identification:** Identify maintenance need
 2. **Assessment:** Assess severity, impact, effort
 3. **Priority Calculation:** Calculate priority score
-4. **Kanban Assignment:** Create task, assign MoSCoW, assign to Epic/Story
+4. **Kanban Assignment:** Create task, assign MoSCOW, assign to Epic/Story
 5. **Work Planning:** Plan approach, estimate timeline
 6. **Implementation:** Update task status, document progress
 7. **Completion:** Mark COMPLETE, update Kanban, include in RW
@@ -305,7 +305,7 @@ Board Updates:
 
 **Board Integration:**
 - Maintenance tasks appear in Epic 4 Kanban board
-- Follow Epic 4 MoSCoW organization
+- Follow Epic 4 MoSCOW organization
 - Use Epic 4 status tracking
 - Follow Epic 4 task ordering
 
@@ -320,7 +320,7 @@ Board Updates:
 **Task Creation:**
 - **Task ID:** E7:S01:T01 (perpetual task for IDE issues, or create specific task)
 - **Priority:** Severity=5, Impact=5, Effort=1 → Priority=5.0 (Critical)
-- **MoSCoW:** Must Have (M)
+- **MoSCOW:** Must Have (M)
 - **Epic/Story:** Epic 7, Story 1
 - **Status:** IN PROGRESS
 
@@ -335,7 +335,7 @@ Board Updates:
 - Severity: 5 (Critical)
 - Impact: 5 (Critical)
 - Effort: 1 (Minimal)
-- MoSCoW: Must Have
+- MoSCOW: Must Have
 - Status: IN PROGRESS
 
 **Completion:**
@@ -351,7 +351,7 @@ Board Updates:
 **Task Creation:**
 - **Task ID:** E7:S01:TXX (new task for batch)
 - **Priority:** Average Priority=2.5 (Medium)
-- **MoSCoW:** Could Have (C)
+- **MoSCOW:** Could Have (C)
 - **Epic/Story:** Epic 7, Story 1
 - **Status:** TODO
 
@@ -366,7 +366,7 @@ Board Updates:
 - Severity: 2 (Low)
 - Impact: 3 (Medium)
 - Effort: 3 (Medium)
-- MoSCoW: Could Have
+- MoSCOW: Could Have
 - Status: TODO
 - Batch Scope: List of files/packages to fix
 
@@ -383,7 +383,7 @@ Board Updates:
 **Task Creation:**
 - **Task ID:** E7:S01:TXX (new task)
 - **Priority:** Severity=5, Impact=4, Effort=2, Risk=+0.2 → Priority=4.6 (Critical)
-- **MoSCoW:** Must Have (M)
+- **MoSCOW:** Must Have (M)
 - **Epic/Story:** Epic 7, Story 1
 - **Status:** IN PROGRESS
 
@@ -398,7 +398,7 @@ Board Updates:
 - Severity: 5 (Critical)
 - Impact: 4 (High)
 - Effort: 2 (Low)
-- MoSCoW: Must Have
+- MoSCOW: Must Have
 - Status: IN PROGRESS
 - Contextual Adjustment: Risk factor +0.2
 
@@ -449,7 +449,7 @@ Board Updates:
 **Guidelines:**
 - Apply prioritization framework consistently
 - Re-assess priority as context changes
-- Update MoSCoW classification when needed
+- Update MoSCOW classification when needed
 - Consider dependencies and risks
 - Balance maintenance with feature work
 
@@ -485,7 +485,7 @@ Board Updates:
 **Task Metrics:**
 - Total maintenance tasks created
 - Tasks by status (TODO, IN PROGRESS, COMPLETE)
-- Tasks by MoSCoW (M, S, C, W)
+- Tasks by MoSCOW (M, S, C, W)
 - Tasks by priority level
 - Average priority score
 - Tasks by category (IDE-flagged, quality, debt, framework)
@@ -494,7 +494,7 @@ Board Updates:
 - Tasks completed per period
 - Average time to completion
 - Completion rate by priority
-- Completion rate by MoSCoW
+- Completion rate by MoSCOW
 - Backlog size and trends
 
 **Health Metrics:**
@@ -515,7 +515,7 @@ Board Updates:
 **Report Content:**
 - Task creation and completion statistics
 - Priority distribution
-- MoSCoW distribution
+- MoSCOW distribution
 - Health metrics and trends
 - Outstanding work and recommendations
 

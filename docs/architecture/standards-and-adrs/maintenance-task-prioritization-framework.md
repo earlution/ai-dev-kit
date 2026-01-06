@@ -441,7 +441,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
 **Assign to Kanban:**
 - Create task in appropriate Epic/Story
 - Set priority based on calculated score
-- Assign MoSCoW classification:
+- Assign MoSCOW classification:
   - **Must Have (M):** Critical Priority (4.0-5.0)
   - **Should Have (S):** High Priority (3.0-3.9)
   - **Could Have (C):** Medium Priority (2.0-2.9)
@@ -457,7 +457,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
 
 ## Kanban Integration
 
-### MoSCoW Classification
+### MoSCOW Classification
 
 **Must Have (M):**
 - Priority Score: 4.0 - 5.0
@@ -511,7 +511,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
 - **Severity:** Severity rating (1-5)
 - **Impact:** Impact rating (1-5)
 - **Effort:** Effort rating (1-5)
-- **MoSCoW:** MoSCoW classification
+- **MoSCOW:** MoSCOW classification
 
 **Progress Tracking:**
 - Track priority score accuracy

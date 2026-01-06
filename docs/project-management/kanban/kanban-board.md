@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-01-06  
-**Version:** v0.6.6.8+16
+**Version:** v0.6.6.8+19
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
 
@@ -32,11 +32,11 @@ This Kanban board serves as the **parent document** to Story documents, similar 
 
 ---
 
-## MoSCoW Prioritized In-Progress Tasks
+## MoSCOW Prioritized In-Progress Tasks
 
-This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCoW priority (M/S/C/O/W) and ordered chronologically (most recently updated first).
+This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCOW priority (M/S/C/O/W) and ordered chronologically (most recently updated first).
 
-**MoSCoW Categories:**
+**MoSCOW Categories:**
 - **M (Must Have):** Critical tasks that must be completed
 - **S (Should Have):** Important tasks that should be completed
 - **C (Could Have):** Nice-to-have tasks that could be completed
@@ -51,10 +51,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
-- **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
-- **E8:S02:T02-T03** – Additional Validators - IN PROGRESS (HIGH priority story) - [Story](epics/Epic-8/Story-002-additional-validators.md)
-  - T02: Build framework-specific validators - TODO
-  - T03: Establish validation patterns - TODO
+*(No active tasks in this category at this time)*
 
 ### Could Have (C) - Nice-to-Have Tasks
 
@@ -64,7 +61,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - T01: Create automated documentation update scripts - TODO
   - T02: Implement documentation synchronization workflows - TODO
   - T03: Build documentation change detection and notification - TODO
-- **E6:S05** – Feature Requests - TODO (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-005-feature-requests.md)
 - **E8:S03:T01-T03** – Automation Scripts - TODO (MEDIUM priority story) - [Story](epics/Epic-8/Story-003-automation-scripts.md)
   - T01: Create automation framework - TODO
   - T02: Build workflow automation scripts - TODO
@@ -83,7 +79,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Ongoing maintenance tasks that never complete. These are tracked but don't block other work.*
 
-- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+16, Last updated: 2026-01-06) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
+- **E6:S05** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-005-feature-requests.md)
+- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+19, Last updated: 2026-01-06) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 - **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+2, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ### Won't Have (W) - Deferred Tasks
@@ -210,7 +208,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0)
   - Story: [`epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md`](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
   - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
-- [x] **E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View** - COMPLETE ✅ (v0.4.13.6+2)
+- [x] **E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View** - COMPLETE ✅ (v0.4.13.6+2)
   - Story: [`epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md`](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05 ✅ COMPLETE (v0.4.13.5+1), T06 ✅ COMPLETE (v0.4.13.6+1)
 
@@ -286,7 +284,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Story: [`epics/Epic-6/Story-004-bug-reports.md`](epics/Epic-6/Story-004-bug-reports.md)
 - [ ] **E6:S05 – Feature Requests** - TODO
   - Story: [`epics/Epic-6/Story-005-feature-requests.md`](epics/Epic-6/Story-005-feature-requests.md)
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.9+1)
+- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.8+20)
   - Story: [`epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md`](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 - [x] **E6:S07 – ai-dev-kit CLI Tool** - COMPLETE ✅ (v0.6.7.13+1 – All 14 tasks T00-T13 complete: Architecture, commands, backend abstraction, all four backends, configuration management, error handling, migration utilities, remove command, documentation, testing, validation, PyPI packaging)
   - Story: [`epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`](epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md)
@@ -338,7 +336,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05)
   - Story: [`epics/Epic-8/Story-001-code-generators.md`](epics/Epic-8/Story-001-code-generators.md)
   - Tasks: T01 ✅ COMPLETE (v0.8.1.1+1), T02 ✅ COMPLETE (v0.8.1.2+1), T03 ✅ COMPLETE (v0.8.1.3+1)
-- [ ] **E8:S02 – Additional Validators** - IN PROGRESS (v0.8.2.1+1, Last updated: 2026-01-05)
+- [x] **E8:S02 – Additional Validators** - ✅ COMPLETE (v0.8.2.3+1, Last updated: 2026-01-06)
   - Story: [`epics/Epic-8/Story-002-additional-validators.md`](epics/Epic-8/Story-002-additional-validators.md)
   - Tasks: T01 ✅ COMPLETE (v0.8.2.1+1), T02 TODO, T03 TODO
 - [ ] **E8:S03 – Automation Scripts** - TODO

@@ -18,10 +18,10 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 8      # Epic number (Epic 8: Tooling & Automation)
-VERSION_STORY = 2     # Story number (Story 2: Additional Validators)
-VERSION_TASK = 3      # Task number (Task 3: Establish validation patterns)
-VERSION_BUILD = 1     # Build number (E8:S02:T03+1 - Validation patterns library created: 7 pattern categories, pattern examples, best practices)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
+VERSION_TASK = 8      # Task number (Task 8: Update Kanban Workflow - UKW - Perpetual Task)
+VERSION_BUILD = 20    # Build number (E6:S06:T08+20 - UKW: MoSCOW terminology standardization across codebase)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

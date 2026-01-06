@@ -70,7 +70,7 @@ This document defines the **integration of code quality metrics with the Kanban 
 - Quality debt (hours to fix)
 - Quality improvement potential
 
-**MoSCoW Mapping:**
+**MoSCOW Mapping:**
 - **Must Have:** Critical quality issues
 - **Should Have:** High-priority quality improvements
 - **Could Have:** Medium-priority quality improvements
@@ -119,7 +119,7 @@ This document defines the **integration of code quality metrics with the Kanban 
 
 **Kanban Integration:**
 - Quality tasks in Epic 7
-- Quality prioritization in MoSCoW
+- Quality prioritization in MoSCOW
 - Quality tracking in task lifecycle
 
 ### Quality Review Workflow

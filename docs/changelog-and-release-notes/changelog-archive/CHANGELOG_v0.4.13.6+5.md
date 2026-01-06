@@ -2,7 +2,7 @@
 
 **Release Date:** 2025-12-17 23:26:16 +0000  
 **Epic:** 4 (Kanban Framework)  
-**Story:** 13 (Kanban Board Enhancement - MoSCoW Prioritized Task View)  
+**Story:** 13 (Kanban Board Enhancement - MoSCOW Prioritized Task View)  
 **Task:** 6 (Update other affected packages)  
 **Build:** 5
 
@@ -56,7 +56,7 @@ This release implements the **Update Kanban Workflow (UKW)**, a comprehensive ag
 2. **Update Task Documents** - Evidence-based status updates
 3. **Update Story Documents** - Intelligent task synthesis into tactical overviews
 4. **Update Epic Documents** - Intelligent story synthesis into strategic overviews
-5. **Update Kanban Board** - MoSCoW priority list updated LAST with intelligent prioritization
+5. **Update Kanban Board** - MoSCOW priority list updated LAST with intelligent prioritization
 6. **Validate Consistency** - Cross-check all documents
 7. **Stage Files** - Git stage all kanban files
 8. **Document Changes** - Create summary
@@ -64,7 +64,7 @@ This release implements the **Update Kanban Workflow (UKW)**, a comprehensive ag
 **Intelligence Requirements:**
 - **Synthesis:** Transform raw task/story data into coherent narratives
 - **Status Inference:** Deduce completion state from evidence
-- **Strategic Prioritization:** MoSCoW classification based on goals, dependencies, impact
+- **Strategic Prioritization:** MoSCOW classification based on goals, dependencies, impact
 - **Context Understanding:** Grasp relationships, dependencies, strategic alignment
 - **Narrative Writing:** Create natural, readable summaries
 
@@ -80,7 +80,7 @@ This release implements the **Update Kanban Workflow (UKW)**, a comprehensive ag
 **Workflow YAML Config:**
 - `intelligent_synthesis: true` - Enables intelligent data synthesis
 - `narrative_style: natural` - Natural language narrative writing
-- `intelligent_prioritization: true` - Strategic MoSCoW prioritization
+- `intelligent_prioritization: true` - Strategic MoSCOW prioritization
 - `analyze_context: true` - Context-aware analysis
 
 ---
@@ -117,9 +117,9 @@ This release implements the **Update Kanban Workflow (UKW)**, a comprehensive ag
 ## 🔑 Key Principles
 
 1. **Bottom-Up Approach:** Always update Tasks → Stories → Epics → Board
-2. **MoSCoW List Last:** The MoSCoW priority list is updated LAST
+2. **MoSCOW List Last:** The MoSCOW priority list is updated LAST
 3. **Intelligent Synthesis:** Transform raw data into meaningful narratives (NOT just copying)
-4. **Strategic Prioritization:** MoSCoW classification requires understanding goals, dependencies, impact
+4. **Strategic Prioritization:** MoSCOW classification requires understanding goals, dependencies, impact
 5. **Evidence-Based:** Only update status if there's evidence (commits, FR/BR, file changes)
 
 ---

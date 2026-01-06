@@ -39,7 +39,7 @@ This release implements Phase 3 (HIGH) remaining work: Created comprehensive `.c
      - 8-step UKW trigger with bottom-up approach
      - Agentic intelligence requirements clearly documented
      - Config-driven approach with default paths for ai-dev-kit
-     - MoSCoW prioritization guidance
+     - MoSCOW prioritization guidance
    
    - **Document Lifecycle Management Section:**
      - Lifecycle metadata requirements (evergreen, timeboxed, transient)

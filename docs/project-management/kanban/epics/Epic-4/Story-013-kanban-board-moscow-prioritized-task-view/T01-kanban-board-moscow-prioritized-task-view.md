@@ -6,11 +6,11 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 4, Story 13, Task 1: Kanban Board MoSCoW Prioritized Task View
+# Epic 4, Story 13, Task 1: Kanban Board MoSCOW Prioritized Task View
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.1+1 – T01 COMPLETE: MoSCoW prioritized task view implemented in Kanban board)  
+**Last updated:** 2025-12-18 (v0.4.13.1+1 – T01 COMPLETE: MoSCOW prioritized task view implemented in Kanban board)  
 **Started:** [TBD]  
 **Completed:** [TBD]  
 **Version:** v0.4.13.1+1  
@@ -28,21 +28,21 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design and implement the MoSCoW prioritized task view in the Kanban board document. This task focuses on:
+Design and implement the MoSCOW prioritized task view in the Kanban board document. This task focuses on:
 1. **Parent Document Role:** The Kanban board serves as the parent document to Story docs (like how Story docs are parents of Task docs)
-2. **MoSCoW Prioritized Task View:** Before the story checklist, add MoSCoW prioritized sections (Must Have, Should Have, Could Have, Won't Have) showing all in-progress tasks
-3. **Chronological Ordering:** Tasks within each MoSCoW section are ordered chronologically, with most recently updated tasks at the top
-4. **Story Checklist:** Maintain the story checklist (1 line per story) after the MoSCoW sections
+2. **MoSCOW Prioritized Task View:** Before the story checklist, add MoSCOW prioritized sections (Must Have, Should Have, Could Have, Won't Have) showing all in-progress tasks
+3. **Chronological Ordering:** Tasks within each MoSCOW section are ordered chronologically, with most recently updated tasks at the top
+4. **Story Checklist:** Maintain the story checklist (1 line per story) after the MoSCOW sections
 
 **Problem Statement:**
 The current Kanban board primarily serves as a listing of Epics and Stories, but lacks functionality that justifies its name as a "board." It doesn't provide a prioritized view of in-progress work, making it difficult to quickly understand what needs attention. The board should serve as a true parent document to Story docs, similar to how Story docs are parents of Task docs.
 
 **Solution:**
 Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board.md`) to include:
-- MoSCoW prioritized sections for in-progress tasks (before the story checklist)
+- MoSCOW prioritized sections for in-progress tasks (before the story checklist)
 - Chronological ordering within each priority section (most recently updated first)
 - Clear parent-child relationship documentation (Board → Story → Task)
-- Story checklist remains (1 line per story) after MoSCoW sections
+- Story checklist remains (1 line per story) after MoSCOW sections
 
 **Note:** Policy updates, template updates, system impact assessment, and package updates are handled in separate tasks (T02-T06).
 
@@ -73,7 +73,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 **Enhanced Kanban Board Document:**
 
 1. **Updated `docs/project-management/kanban/kanban-board.md`:**
-   - MoSCoW prioritized sections before story checklist:
+   - MoSCOW prioritized sections before story checklist:
      - **Must Have** (M) - Critical in-progress tasks
      - **Should Have** (S) - Important in-progress tasks
      - **Could Have** (C) - Nice-to-have in-progress tasks
@@ -85,20 +85,20 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
      - Last updated timestamp
      - Link to task document
    - Clear parent document relationship to Story docs documented
-   - Story checklist remains (1 line per story) after MoSCoW sections
-   - All in-progress tasks from all epics/stories included in appropriate MoSCoW section
+   - Story checklist remains (1 line per story) after MoSCOW sections
+   - All in-progress tasks from all epics/stories included in appropriate MoSCOW section
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Kanban board document (`kanban-board.md`) includes MoSCoW prioritized sections before story checklist
-- [ ] MoSCoW sections show all in-progress tasks (status: IN PROGRESS) from all epics/stories
-- [ ] Tasks within each MoSCoW section are ordered chronologically (most recently updated at top)
+- [ ] Kanban board document (`kanban-board.md`) includes MoSCOW prioritized sections before story checklist
+- [ ] MoSCOW sections show all in-progress tasks (status: IN PROGRESS) from all epics/stories
+- [ ] Tasks within each MoSCOW section are ordered chronologically (most recently updated at top)
 - [ ] Each task entry includes Task ID, title/link, last updated timestamp, and link to task document
 - [ ] Kanban board clearly serves as parent document to Story docs (documented relationship)
-- [ ] Story checklist remains (1 line per story) after MoSCoW sections
-- [ ] All in-progress tasks are correctly categorized into appropriate MoSCoW section
+- [ ] Story checklist remains (1 line per story) after MoSCOW sections
+- [ ] All in-progress tasks are correctly categorized into appropriate MoSCOW section
 
 ---
 
@@ -107,16 +107,16 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 1. **Analyze Current Structure:**
    - Review `docs/project-management/kanban/kanban-board.md`
    - Understand current board layout and content
-   - Identify where MoSCoW sections should be inserted
+   - Identify where MoSCOW sections should be inserted
    - Identify all in-progress tasks across all epics/stories
 
 2. **Design New Structure:**
-   - Design MoSCoW section format:
+   - Design MoSCOW section format:
      - Section headers (Must Have, Should Have, Could Have, Won't Have)
      - Task entry format (Task ID, Title, Last Updated timestamp, Link to task document)
      - Chronological ordering logic (most recently updated first)
    - Design parent document relationship documentation
-   - Ensure story checklist remains after MoSCoW sections (1 line per story)
+   - Ensure story checklist remains after MoSCOW sections (1 line per story)
 
 3. **Gather In-Progress Tasks:**
    - Scan all Epic and Story documents for in-progress tasks
@@ -125,21 +125,21 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
      - Task title
      - Last updated timestamp
      - Task document path
-     - MoSCoW priority (if specified, otherwise default to "Should Have")
-   - Categorize tasks into MoSCoW sections based on priority
+     - MoSCOW priority (if specified, otherwise default to "Should Have")
+   - Categorize tasks into MoSCOW sections based on priority
 
 4. **Implement Enhanced Board:**
    - Update `docs/project-management/kanban/kanban-board.md`:
-     - Add MoSCoW sections before story checklist
+     - Add MoSCOW sections before story checklist
      - Populate with all in-progress tasks, categorized by priority
      - Order tasks chronologically within each section (most recently updated first)
      - Document parent-child relationship (Board → Story → Task)
-   - Maintain story checklist (1 line per story) after MoSCoW sections
+   - Maintain story checklist (1 line per story) after MoSCOW sections
    - Ensure all in-progress tasks are included
 
 5. **Verify Implementation:**
    - Verify all in-progress tasks are included
-   - Verify chronological ordering within each MoSCoW section
+   - Verify chronological ordering within each MoSCOW section
    - Verify parent-child relationship is clearly documented
    - Verify story checklist remains intact
 
@@ -189,7 +189,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 
 ## Notes
 
-**MoSCoW Priority Levels:**
+**MoSCOW Priority Levels:**
 - **Must Have (M):** Critical tasks that must be completed
 - **Should Have (S):** Important tasks that should be completed
 - **Could Have (C):** Nice-to-have tasks that could be completed
@@ -206,8 +206,8 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 - This creates a clear hierarchy: Board (parent) → Story (child) → Task (grandchild)
 
 **System Impact Considerations:**
-- Release Workflow may need to understand MoSCoW sections when updating Kanban docs
-- Validators may need to validate MoSCoW structure
+- Release Workflow may need to understand MoSCOW sections when updating Kanban docs
+- Validators may need to validate MoSCOW structure
 - Installers may need to copy updated templates
 - Other systems may need updates based on impact assessment
 
@@ -218,18 +218,18 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 **Task Completed:** 2025-12-18
 
 **Deliverables:**
-- Enhanced Kanban board (`docs/project-management/kanban/kanban-board.md`) with MoSCoW prioritized task view
-- MoSCoW sections (Must Have, Should Have, Could Have, Won't Have) implemented before story checklist
+- Enhanced Kanban board (`docs/project-management/kanban/kanban-board.md`) with MoSCOW prioritized task view
+- MoSCOW sections (Must Have, Should Have, Could Have, Won't Have) implemented before story checklist
 - All in-progress tasks categorized and ordered chronologically (most recently updated first)
 - Parent-child relationship (Board → Story → Task) documented
-- Story checklist maintained (1 line per story) after MoSCoW sections
+- Story checklist maintained (1 line per story) after MoSCOW sections
 
 **Key Features Implemented:**
-1. **MoSCoW Prioritized Sections:** Four priority sections showing all in-progress tasks
+1. **MoSCOW Prioritized Sections:** Four priority sections showing all in-progress tasks
 2. **Chronological Ordering:** Tasks within each section ordered by last updated date (most recent first)
 3. **Task Information:** Each task entry includes Task ID, title, last updated timestamp, and links to task document and story
 4. **Parent-Child Relationship:** Clear documentation of Board → Story → Task hierarchy
-5. **Story Checklist:** Maintained after MoSCoW sections as required
+5. **Story Checklist:** Maintained after MoSCOW sections as required
 
 **Tasks Included:**
 - Must Have: 2 critical tasks (E4:S13:T01, E6:S06:T07)
@@ -238,12 +238,12 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 - Won't Have: No deferred tasks currently
 
 **Acceptance Criteria Met:**
-- ✅ Kanban board includes MoSCoW prioritized sections before story checklist
-- ✅ MoSCoW sections show all in-progress tasks from all epics/stories
+- ✅ Kanban board includes MoSCOW prioritized sections before story checklist
+- ✅ MoSCOW sections show all in-progress tasks from all epics/stories
 - ✅ Tasks ordered chronologically within each section
 - ✅ Each task entry includes required information (Task ID, title, last updated, links)
 - ✅ Parent-child relationship clearly documented
-- ✅ Story checklist remains after MoSCoW sections
+- ✅ Story checklist remains after MoSCOW sections
 
 ---
 

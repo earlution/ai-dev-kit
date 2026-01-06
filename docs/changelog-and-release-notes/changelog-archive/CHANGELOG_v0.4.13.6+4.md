@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Release Date:** 2025-12-17 23:04:05 UTC  
 **Version:** 0.4.13.6+4  
 **Epic:** 4 (Kanban Framework)  
-**Story:** 13 (Kanban Board Enhancement - MoSCoW Prioritized Task View)  
+**Story:** 13 (Kanban Board Enhancement - MoSCOW Prioritized Task View)  
 **Task:** 6 (Update other affected packages)  
 **Build:** 4
 

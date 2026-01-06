@@ -40,7 +40,7 @@ Package management investigation complete. Comprehensive evaluation of package m
 ## Changed
 
 - **Story Document (E6:S06):** Marked T02 as complete, updated version to v0.6.6.2+1
-- **Kanban Board:** Removed T02 from MoSCoW section, updated Epic 6 section
+- **Kanban Board:** Removed T02 from MoSCOW section, updated Epic 6 section
 - **Epic 6 Document:** Updated task list to show T02 complete
 
 ---

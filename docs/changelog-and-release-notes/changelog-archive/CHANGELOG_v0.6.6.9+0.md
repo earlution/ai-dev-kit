@@ -31,7 +31,7 @@ Task document created for T09: Review and Prioritize Package Management Investig
   - Updated task list to include T09 follow-up to T02
 
 - **Kanban Board:**
-  - Added T09 to "Should Have" MoSCoW section
+  - Added T09 to "Should Have" MoSCOW section
   - Updated Epic 6 section to include T09
 
 - **Epic 6 Document:**

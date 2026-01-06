@@ -39,7 +39,7 @@ This release marks E6:S06:T07 as COMPLETE and synchronizes all kanban documentat
    - Updated version markers
 
 4. **Updated Kanban Board:**
-   - Removed T07 from MoSCoW "Must Have" section (no critical tasks currently in progress)
+   - Removed T07 from MoSCOW "Must Have" section (no critical tasks currently in progress)
    - Updated Epic 6 section with current story status and task completion
    - Updated board version to v0.6.6.7+5 and date to 2025-12-18
 
@@ -67,7 +67,7 @@ This release marks E6:S06:T07 as COMPLETE and synchronizes all kanban documentat
 - Epic status accurately reflects story progress
 
 ✅ **Board Status Updated:**
-- MoSCoW list updated (T07 removed from Must Have)
+- MoSCOW list updated (T07 removed from Must Have)
 - Epic 6 section reflects current state
 - Version and date metadata updated
 
@@ -82,7 +82,7 @@ This release marks E6:S06:T07 as COMPLETE and synchronizes all kanban documentat
 - `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T07-implement-framework-hardening-recommendations.md` (marked COMPLETE)
 - `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md` (task checklist and success criteria updated)
 - `docs/project-management/kanban/epics/Epic-6/Epic-6.md` (story checklist updated)
-- `docs/project-management/kanban/kanban-board.md` (MoSCoW list and Epic 6 section updated)
+- `docs/project-management/kanban/kanban-board.md` (MoSCOW list and Epic 6 section updated)
 - `docs/project-management/kanban/_index.md` (version and date updated)
 
 **Version File:**
@@ -97,7 +97,7 @@ This release marks E6:S06:T07 as COMPLETE and synchronizes all kanban documentat
 **Kanban Documentation Synchronization:**
 - All kanban documents now consistently reflect T07 completion
 - Status hierarchy properly maintained (Task → Story → Epic → Board)
-- MoSCoW prioritization updated to reflect current work state
+- MoSCOW prioritization updated to reflect current work state
 - Version markers provide clear traceability
 
 **Framework Hardening Completion Visibility:**

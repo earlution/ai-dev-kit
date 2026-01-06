@@ -32,9 +32,9 @@ This Kanban board serves as the **parent document** to Story documents, similar 
 
 ---
 
-## MoSCoW Prioritized In-Progress Tasks
+## MoSCOW Prioritized In-Progress Tasks
 
-This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCoW priority and ordered chronologically (most recently updated first).
+This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCOW priority and ordered chronologically (most recently updated first).
 
 ### Must Have (M) - Critical Tasks
 
@@ -84,7 +84,7 @@ This section lists all stories in a compact format (one line per story) with the
 
 ## Usage Instructions
 
-### MoSCoW Priority Guidelines
+### MoSCOW Priority Guidelines
 
 **Determining Priority:**
 - **Must Have (M):** Critical tasks that must be completed. These are blocking other work or are on the critical path.
@@ -100,7 +100,7 @@ This section lists all stories in a compact format (one line per story) with the
 ### Chronological Ordering
 
 **Ordering Rules:**
-- Tasks within each MoSCoW section are ordered **chronologically** (most recently updated first)
+- Tasks within each MoSCOW section are ordered **chronologically** (most recently updated first)
 - This ensures the most active work is visible at the top of each section
 - Ordering is based on the task document's `Last updated` field
 
@@ -110,7 +110,7 @@ This section lists all stories in a compact format (one line per story) with the
 
 ### Task Entry Format
 
-Each task entry in the MoSCoW sections should include:
+Each task entry in the MoSCOW sections should include:
 - **Task ID:** `E{epic}:S{story}:T{task}` format (e.g., `E4:S13:T02`)
 - **Task Description:** Brief description of the task
 - **Last Updated:** Date when task was last updated

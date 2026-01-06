@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-06 (v0.6.6.8+17 – Kanban board MoSCoW section cleanup: Removed completed tasks, updated statuses)  
+**Last updated:** 2026-01-06 (v0.6.6.8+19 – Kanban board cleanup: Removed completed E8:S02 from Should Have, moved perpetual E6:S04 to Ongoing)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.6.8+17
+**Version:** v0.6.6.8+19
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** Kanban board MoSCoW section cleanup - Removed completed tasks (E6:S06:T16, E5:S02:T03, E8:S01, E8:S02:T01) from MoSCoW prioritized sections. Updated task statuses: E8:S01 marked COMPLETE, E8:S02 updated to IN PROGRESS with only remaining tasks (T02-T03) shown. Updated Epic 8 status to IN PROGRESS. This ensures the board only shows in-progress work items, improving clarity and focus.  
+**Progress:** Kanban board cleanup - Removed completed story E8:S02 from "Should Have" section (completed stories should not appear in MoSCOW prioritized sections). Moved perpetual task E6:S04 (Bug Reports) from "Should Have" to "Ongoing (O)" section (perpetual tasks belong in Ongoing, not in prioritized sections). Removed duplicate E6:S05 entry from "Could Have" section. Board now accurately reflects only active, completable work items in MoSCOW sections.  
 **Code:** E6S06T08
 
 ---

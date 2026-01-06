@@ -47,7 +47,7 @@ Implementation plan complete for Phase 3 package management system. Comprehensiv
   - Updated version to v0.6.6.10+1
 
 - **Kanban Board:**
-  - Removed T04 from MoSCoW section (task complete)
+  - Removed T04 from MoSCOW section (task complete)
 
 - **Epic 6 Document:**
   - Updated E6:S06 task list to show T04 complete

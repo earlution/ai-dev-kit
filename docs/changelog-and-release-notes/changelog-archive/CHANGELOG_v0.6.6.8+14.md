@@ -10,7 +10,7 @@
 
 ## Summary
 
-Kanban board maintenance: Updated epic status note, corrected T08 version, and cleaned up MoSCoW section by removing completed tasks. Board now accurately reflects current project status.
+Kanban board maintenance: Updated epic status note, corrected T08 version, and cleaned up MoSCOW section by removing completed tasks. Board now accurately reflects current project status.
 
 ---
 
@@ -25,7 +25,7 @@ Kanban board maintenance: Updated epic status note, corrected T08 version, and c
 - **E6:S06:T08 Version:** Updated to latest version
   - Changed from v0.6.6.8+11 to v0.6.6.8+13 (latest version)
 
-- **MoSCoW Section Cleanup:** Removed completed tasks
+- **MoSCOW Section Cleanup:** Removed completed tasks
   - **E4:S10:** Removed (all tasks complete - story is COMPLETE)
   - **E6:S06:T04:** Removed (complete per story document)
   - **E6:S06:T09:** Removed (complete per story document)
@@ -55,5 +55,5 @@ Kanban board maintenance: Updated epic status note, corrected T08 version, and c
 
 ## Notes
 
-This is a kanban board maintenance release to ensure the board accurately reflects current project status. The epic status note was corrected to show Epic 2 as IN PROGRESS (not COMPLETE), and completed tasks were removed from the MoSCoW prioritized tasks section to keep the board focused on active work.
+This is a kanban board maintenance release to ensure the board accurately reflects current project status. The epic status note was corrected to show Epic 2 as IN PROGRESS (not COMPLETE), and completed tasks were removed from the MoSCOW prioritized tasks section to keep the board focused on active work.
 

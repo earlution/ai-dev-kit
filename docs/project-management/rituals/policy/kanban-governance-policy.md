@@ -60,11 +60,11 @@ The board serves as the **parent document** to Story documents, similar to how S
 - **Story → Task:** Story documents link to and track all Task documents
 - This creates a clear hierarchy: **Board (parent) → Story (child) → Task (grandchild)**
 
-#### 2.2.1 MoSCoW Prioritized Task View
+#### 2.2.1 MoSCOW Prioritized Task View
 
-The board includes a **MoSCoW Prioritized In-Progress Tasks** section that shows all in-progress tasks (status: IN PROGRESS or TODO) organized by priority and ordered chronologically.
+The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows all in-progress tasks (status: IN PROGRESS or TODO) organized by priority and ordered chronologically.
 
-**MoSCoW Priority Levels:**
+**MoSCOW Priority Levels:**
 
 1. **Must Have (M) – Critical Tasks**
    - Critical in-progress tasks that must be completed
@@ -94,13 +94,13 @@ The board includes a **MoSCoW Prioritized In-Progress Tasks** section that shows
 
 **Chronological Ordering:**
 
-- Tasks within each MoSCoW section are ordered **chronologically** (most recently updated first)
+- Tasks within each MoSCOW section are ordered **chronologically** (most recently updated first)
 - This ensures the most active work is visible at the top of each section
 - Ordering is based on the task document's `Last updated` field
 
 **Task Entry Format:**
 
-Each task entry in the MoSCoW sections includes:
+Each task entry in the MoSCOW sections includes:
 - **Task ID:** `E{epic}:S{story}:T{task}` format (e.g., `E4:S13:T02`)
 - **Task Description:** Brief description of the task
 - **Last Updated:** Date when task was last updated
@@ -108,7 +108,7 @@ Each task entry in the MoSCoW sections includes:
 
 #### 2.2.2 Story Checklist
 
-After the MoSCoW sections, the board includes a **Story Checklist** section that lists all stories in a compact format (one line per story):
+After the MoSCOW sections, the board includes a **Story Checklist** section that lists all stories in a compact format (one line per story):
 
 - **Format:** One line per story with status indicator
 - **Purpose:** Provides quick overview of all stories and their completion status
@@ -127,7 +127,7 @@ You can represent these as:
 - A column in the board table (e.g., `Status` = `Backlog` / `In Progress` / `Done`), and/or
 - Separate sections in `_index.md` if the board grows more complex.
 
-**Note:** The MoSCoW prioritized task view can be used alongside or instead of the traditional column structure, depending on project needs.
+**Note:** The MoSCOW prioritized task view can be used alongside or instead of the traditional column structure, depending on project needs.
 
 ---
 

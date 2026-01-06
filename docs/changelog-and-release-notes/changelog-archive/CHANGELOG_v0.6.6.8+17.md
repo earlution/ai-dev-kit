@@ -10,13 +10,13 @@
 
 ## Summary
 
-Cleaned up the MoSCoW prioritized tasks section in the kanban board by removing completed tasks and updating task statuses. This ensures the board only shows in-progress work items, improving clarity and focus.
+Cleaned up the MoSCOW prioritized tasks section in the kanban board by removing completed tasks and updating task statuses. This ensures the board only shows in-progress work items, improving clarity and focus.
 
 ---
 
 ## Changed
 
-### Kanban Board MoSCoW Section
+### Kanban Board MoSCOW Section
 
 - **Removed Completed Tasks:**
   - Removed E6:S06:T16 (Harden CMW Ordering) from "Should Have" - task is complete
@@ -41,16 +41,16 @@ Cleaned up the MoSCoW prioritized tasks section in the kanban board by removing 
 
 ### Problem Solved
 
-**Issue:** Completed tasks were still appearing in the MoSCoW prioritized in-progress tasks section, creating clutter and confusion about what work is actually in progress.
+**Issue:** Completed tasks were still appearing in the MoSCOW prioritized in-progress tasks section, creating clutter and confusion about what work is actually in progress.
 
-**Solution:** Removed all completed tasks from the MoSCoW sections, ensuring only active, in-progress work is displayed. This aligns with the purpose of the MoSCoW section: to show prioritized work that needs attention.
+**Solution:** Removed all completed tasks from the MoSCOW sections, ensuring only active, in-progress work is displayed. This aligns with the purpose of the MoSCOW section: to show prioritized work that needs attention.
 
 ### Benefits
 
 1. **Clearer Focus:** Board now shows only work that needs attention
 2. **Reduced Clutter:** Completed tasks no longer distract from in-progress work
 3. **Better Prioritization:** Easier to see what work is actually pending
-4. **Consistency:** Board structure aligns with MoSCoW section purpose
+4. **Consistency:** Board structure aligns with MoSCOW section purpose
 
 ---
 
@@ -58,7 +58,7 @@ Cleaned up the MoSCoW prioritized tasks section in the kanban board by removing 
 
 ### Modified Files
 
-- `docs/project-management/kanban/kanban-board.md` - Cleaned up MoSCoW section, removed completed tasks, updated statuses
+- `docs/project-management/kanban/kanban-board.md` - Cleaned up MoSCOW section, removed completed tasks, updated statuses
 - `src/fynd_deals/version.py` - Updated to v0.6.6.8+17
 
 ---
@@ -73,7 +73,7 @@ Cleaned up the MoSCoW prioritized tasks section in the kanban board by removing 
 
 ## Notes
 
-This cleanup ensures the kanban board accurately reflects the current state of work, with only in-progress tasks appearing in the MoSCoW prioritized sections. Completed work is properly tracked in the Epic sections but doesn't clutter the priority view.
+This cleanup ensures the kanban board accurately reflects the current state of work, with only in-progress tasks appearing in the MoSCOW prioritized sections. Completed work is properly tracked in the Epic sections but doesn't clutter the priority view.
 
 ---
 

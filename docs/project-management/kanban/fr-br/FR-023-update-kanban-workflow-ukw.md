@@ -36,7 +36,7 @@ Create a standalone "Update Kanban Workflow" (UKW) that comprehensively synchron
 1. Tasks (consider recent commits, recent BR/FR/UXRs)
 2. Stories (synthesize task data into succinct tactical overviews, update task checklists)
 3. Epics (same as stories, but with strategic scope, update story checklists)
-4. Kanban Board (MoSCoW priority list updated LAST)
+4. Kanban Board (MoSCOW priority list updated LAST)
 
 **Use Case:**
 - After wrapping up sprints/cycles without full RW execution
@@ -62,7 +62,7 @@ Create a standalone "Update Kanban Workflow" (UKW) that comprehensively synchron
 - [x] Update task documents based on evidence (commits, FR/BR status, file changes)
 - [x] Update story documents by synthesizing task data (tactical overviews, task checklists)
 - [x] Update epic documents by synthesizing story data (strategic overviews, story checklists)
-- [x] Update kanban board MoSCoW priority list LAST
+- [x] Update kanban board MoSCOW priority list LAST
 - [x] Validate consistency across all kanban documents
 - [x] Stage files for commit
 - [x] Document changes summary
@@ -72,7 +72,7 @@ Create a standalone "Update Kanban Workflow" (UKW) that comprehensively synchron
 - [x] Evidence-based updates (only update if evidence exists)
 - [x] Preserves existing forensic markers
 - [x] Synthesizes data (tactical/strategic views, not duplication)
-- [x] Chronological ordering within MoSCoW sections
+- [x] Chronological ordering within MoSCOW sections
 
 ---
 
@@ -111,7 +111,7 @@ User wraps up a sprint/cycle and needs all kanban documentation synchronized to 
 - [x] Workflow updates task documents based on evidence
 - [x] Workflow updates story documents with task synthesis
 - [x] Workflow updates epic documents with story synthesis
-- [x] Workflow updates kanban board MoSCoW list LAST
+- [x] Workflow updates kanban board MoSCOW list LAST
 - [x] Workflow validates consistency across all documents
 - [x] Workflow stages files and creates summary
 - [x] Workflow documented with execution guide
@@ -130,7 +130,7 @@ User wraps up a sprint/cycle and needs all kanban documentation synchronized to 
 
 **Related Work:**
 - **RW (Release Workflow):** Updates kanban docs as part of release process
-- **E4:S13:** Kanban Board Enhancement - MoSCoW Prioritized Task View (enabled MoSCoW structure)
+- **E4:S13:** Kanban Board Enhancement - MoSCOW Prioritized Task View (enabled MoSCOW structure)
 - **E2:S09:** Kanban Granularity & Discrete Task Docs (RW Integration)
 - **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework)
 
@@ -175,14 +175,14 @@ User wraps up a sprint/cycle and needs all kanban documentation synchronized to 
 2. Update Task Documents (evidence-based status updates)
 3. Update Story Documents (task synthesis, tactical overviews)
 4. Update Epic Documents (story synthesis, strategic overviews)
-5. Update Kanban Board (MoSCoW list LAST)
+5. Update Kanban Board (MoSCOW list LAST)
 6. Validate Consistency (cross-check all documents)
 7. Stage Files (git stage all kanban files)
 8. Document Changes (create summary)
 
 **Key Principles:**
 - Bottom-up: Tasks → Stories → Epics → Board
-- MoSCoW list updated LAST
+- MoSCOW list updated LAST
 - Evidence-based updates only
 - Synthesize, don't duplicate
 - Preserve forensic markers
@@ -195,7 +195,7 @@ User wraps up a sprint/cycle and needs all kanban documentation synchronized to 
 - UKW is designed to be run periodically or after bulk changes
 - UKW follows same agent-driven execution pattern as RW for consistency
 - Bottom-up approach ensures status flows correctly up the hierarchy
-- MoSCoW list updated last ensures it reflects final state after all other updates
+- MoSCOW list updated last ensures it reflects final state after all other updates
 
 ---
 

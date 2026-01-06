@@ -42,7 +42,7 @@ Prioritization review complete for package management investigation findings. Co
   - Updated version to v0.6.6.9+1
 
 - **Kanban Board:**
-  - Removed T09 from "Should Have" MoSCoW section (task complete)
+  - Removed T09 from "Should Have" MoSCOW section (task complete)
   - Updated Epic 6 section to show T09 complete
 
 - **Epic 6 Document:**

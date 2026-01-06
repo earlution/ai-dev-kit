@@ -273,7 +273,7 @@ For each step, follow this pattern:
 3. **🧠 AGENTIC INTELLIGENCE REQUIRED:** This workflow requires significant intelligent reasoning:
    - **Synthesis:** Analyze multiple data points and create coherent tactical/strategic summaries
    - **Narrative Updates:** Write natural, meaningful summaries that capture progress and context
-   - **Prioritization:** Determine MoSCoW priorities based on project goals, dependencies, and impact
+   - **Prioritization:** Determine MoSCOW priorities based on project goals, dependencies, and impact
    - **Status Inference:** Intelligently infer task/story status from commits, FR/BR/UXRs, and file changes
    - **Consistency Analysis:** Detect contradictions and align status across hierarchy
    - **Context Understanding:** Understand project state, goals, and relationships between work items
@@ -307,7 +307,7 @@ For each step, follow this pattern:
 3. **Update Task Documents** - Update task document status fields, dates, forensic markers based on recent activity
 4. **Update Story Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize task data into tactical overviews, infer story status, update task checklists
 5. **Update Epic Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize story data into strategic overviews, infer epic status, update story checklists
-6. **Update Kanban Board** - **🧠 INTELLIGENCE REQUIRED:** Update MoSCoW priority list (LAST), update epic status sections, update board metadata
+6. **Update Kanban Board** - **🧠 INTELLIGENCE REQUIRED:** Update MoSCOW priority list (LAST), update epic status sections, update board metadata
 7. **Validate Consistency** - Cross-reference status across all kanban documents, verify version consistency, check link integrity
 8. **Stage Files** - Run `git add` for all kanban files
 9. **Document Changes** - Create summary of updated documents, list key status changes
@@ -340,10 +340,10 @@ For each step, follow this pattern:
 **🔑 Key Principles:**
 
 1. **Bottom-Up Approach:** Always update Tasks → Stories → Epics → Board (in that order)
-2. **MoSCoW List Last:** The MoSCoW priority list in the kanban board is the LAST thing to update
+2. **MoSCOW List Last:** The MoSCOW priority list in the kanban board is the LAST thing to update
 3. **Synthesize Intelligently, Don't Duplicate:** Story/Epic updates require intelligent synthesis of lower-level data into meaningful narratives, not just copying task/story lists
 4. **Intelligent Status Inference:** Status updates require reasoning about completion state, not just counting checkboxes
-5. **Strategic Prioritization:** MoSCoW classification requires understanding of goals, dependencies, impact, and strategic context
+5. **Strategic Prioritization:** MoSCOW classification requires understanding of goals, dependencies, impact, and strategic context
 6. **Meaningful Narratives:** Tactical/strategic overviews must be natural, readable summaries that capture progress and context
 7. **Status Consistency:** Ensure status flows correctly up the hierarchy with intelligent validation
 8. **Consider Recent Activity:** Always check recent commits and FR/BR/UXRs to detect status changes

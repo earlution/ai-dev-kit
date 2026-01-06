@@ -22,10 +22,10 @@ Maintenance tasks integrated with Kanban framework. Comprehensive integration gu
     - Epic 7 structure and organization
     - Integration with Epic 4 (Kanban Framework)
     - Task creation and assignment process
-  - **Prioritization and MoSCoW Mapping**
-    - Priority score to MoSCoW classification mapping
-    - Kanban board organization by MoSCoW
-    - Task ordering within MoSCoW sections
+  - **Prioritization and MoSCOW Mapping**
+    - Priority score to MoSCOW classification mapping
+    - Kanban board organization by MoSCOW
+    - Task ordering within MoSCOW sections
   - **Task Lifecycle and Status Tracking**
     - Status flow (TODO → IN PROGRESS → COMPLETE)
     - Status update process
@@ -69,7 +69,7 @@ Maintenance tasks integrated with Kanban framework. Comprehensive integration gu
 1. Identify maintenance need
 2. Assess and prioritize (using prioritization framework)
 3. Create Kanban task (Epic 7, appropriate Story)
-4. Update Kanban board (MoSCoW section, status)
+4. Update Kanban board (MoSCOW section, status)
 
 **Prioritization Mapping:**
 - Critical Priority (4.0-5.0) → Must Have (M)
@@ -101,7 +101,7 @@ Maintenance tasks integrated with Kanban framework. Comprehensive integration gu
 
 **Prioritized Maintenance:**
 - Create task with prioritization
-- Assign MoSCoW classification
+- Assign MoSCOW classification
 - Track through lifecycle
 - Include in RW
 

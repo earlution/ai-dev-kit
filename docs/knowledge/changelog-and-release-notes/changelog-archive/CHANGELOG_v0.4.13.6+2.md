@@ -3,7 +3,7 @@
 **Release Date:** 2025-12-18  
 **Version:** v0.4.13.6+2  
 **Epic:** Epic 4 – Kanban Framework  
-**Story:** E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View  
+**Story:** E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View  
 **Task:** E4:S13:T06 – Update other affected packages  
 **Build:** +2 (Story 13 final verification and completion)
 
@@ -26,9 +26,9 @@ Final verification and completion of E4:S13. All tasks are complete, all deliver
   - Story documentation finalized
 
 - **Task Completion Verification:**
-  - T01: Enhanced Kanban board with MoSCoW prioritized task view ✅
+  - T01: Enhanced Kanban board with MoSCOW prioritized task view ✅
   - T02: Updated Kanban governance policy (canonical and local) ✅
-  - T03: Created Kanban board template with MoSCoW structure ✅
+  - T03: Created Kanban board template with MoSCOW structure ✅
   - T04: Assessed system impacts and fixed RW doc-init detection bug ✅
   - T05: Verified Kanban package updated (template and policy in place) ✅
   - T06: Verified all affected packages updated (RW package v2.1.2) ✅
@@ -40,8 +40,8 @@ Final verification and completion of E4:S13. All tasks are complete, all deliver
 ### Deliverables Verified
 
 1. **Enhanced Kanban Board**
-   - MoSCoW prioritized task view implemented
-   - Chronological ordering within MoSCoW sections
+   - MoSCOW prioritized task view implemented
+   - Chronological ordering within MoSCOW sections
    - Parent-child relationship documented (Board → Story → Task)
 
 2. **Kanban Governance Policy**
@@ -51,7 +51,7 @@ Final verification and completion of E4:S13. All tasks are complete, all deliver
 
 3. **Kanban Board Template**
    - Template created in framework package
-   - Includes MoSCoW structure
+   - Includes MoSCOW structure
    - Comprehensive usage instructions
 
 4. **System Impact Assessment**
@@ -72,7 +72,7 @@ Final verification and completion of E4:S13. All tasks are complete, all deliver
 - E4:S13:T01-T06 – All tasks complete
 
 **Related Stories:**
-- E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View (COMPLETE)
+- E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View (COMPLETE)
 
 **Related Epics:**
 - E4 – Kanban Framework

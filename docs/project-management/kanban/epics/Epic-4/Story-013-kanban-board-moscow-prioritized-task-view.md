@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 4, Story 13: Kanban Board Enhancement - MoSCoW Prioritized Task View
+# Epic 4, Story 13: Kanban Board Enhancement - MoSCOW Prioritized Task View
 
 **Status:** ✅ COMPLETE
 **Priority:** HIGH  
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [x] **E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board** ✅ COMPLETE (v0.4.13.1+1)
+- [x] **E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board** ✅ COMPLETE (v0.4.13.1+1)
   - Task: [`T01-kanban-board-moscow-prioritized-task-view.md`](T01-kanban-board-moscow-prioritized-task-view.md)
 - [x] **E4:S13:T02 – Update Kanban governance policy** ✅ COMPLETE (v0.4.13.2+1)
   - Task: [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
@@ -43,8 +43,8 @@ housekeeping_policy: keep
 
 Enhance the Kanban board to be more useful by:
 1. Serving as the parent document to Story docs (like how Story docs are parents of Task docs)
-2. Adding MoSCoW prioritized sections of all in-progress tasks before the story checklist
-3. Ordering tasks within each MoSCoW section chronologically (most recently updated at top)
+2. Adding MoSCOW prioritized sections of all in-progress tasks before the story checklist
+3. Ordering tasks within each MoSCOW section chronologically (most recently updated at top)
 4. Updating Kanban policy doc and Kanban board template
 5. Assessing impact on other systems that interact with Kanban
 6. After user verification, updating the Kanban package and affected packages
@@ -54,8 +54,8 @@ Enhance the Kanban board to be more useful by:
 ## Goals
 
 - [ ] Enhance Kanban board structure to serve as parent doc to Story docs
-- [ ] Implement MoSCoW prioritized task view (Must Have, Should Have, Could Have, Won't Have)
-- [ ] Implement chronological ordering within MoSCoW sections (most recently updated first)
+- [ ] Implement MoSCOW prioritized task view (Must Have, Should Have, Could Have, Won't Have)
+- [ ] Implement chronological ordering within MoSCOW sections (most recently updated first)
 - [ ] Update Kanban governance policy to reflect new board structure
 - [ ] Update Kanban board template in framework package
 - [ ] Assess and document impact on other systems (RW, validators, etc.)
@@ -65,10 +65,10 @@ Enhance the Kanban board to be more useful by:
 
 ## Tasks
 
-### E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+### E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 
 **Input:** Current Kanban board structure, Kanban governance policy, user requirements  
-**Deliverable:** Enhanced Kanban board with MoSCoW prioritized task view, updated policy and template, impact assessment document  
+**Deliverable:** Enhanced Kanban board with MoSCOW prioritized task view, updated policy and template, impact assessment document  
 **Dependencies:** None  
 **Blocker:** None  
 **Parallel Development Candidacy:** Safe (documentation and structure changes)
@@ -79,7 +79,7 @@ Enhance the Kanban board to be more useful by:
 
 **Approach:**
 1. Analyze current Kanban board structure (`kanban-board.md`)
-2. Design new structure with MoSCoW sections before story checklist
+2. Design new structure with MoSCOW sections before story checklist
 3. Implement chronological ordering logic (most recently updated at top)
 4. Update Kanban board document with new structure
 
@@ -101,7 +101,7 @@ Enhance the Kanban board to be more useful by:
 1. Review enhanced board structure from T01
 2. Update canonical Kanban governance policy
 3. Update local Kanban governance policy
-4. Document MoSCoW priority levels and chronological ordering rules
+4. Document MoSCOW priority levels and chronological ordering rules
 
 ---
 
@@ -119,7 +119,7 @@ Enhance the Kanban board to be more useful by:
 
 **Approach:**
 1. Locate or create Kanban board template in framework package
-2. Update template to include MoSCoW section structure
+2. Update template to include MoSCOW section structure
 3. Include example format and usage instructions
 4. Reference updated Kanban governance policy
 
@@ -247,15 +247,15 @@ The implementation must:
 **Story Status:** ✅ COMPLETE (v0.4.13.6+1)
 
 **All Tasks Complete:**
-- ✅ T01: Enhanced Kanban board with MoSCoW prioritized task view
+- ✅ T01: Enhanced Kanban board with MoSCOW prioritized task view
 - ✅ T02: Updated Kanban governance policy (canonical and local)
-- ✅ T03: Created Kanban board template with MoSCoW structure
+- ✅ T03: Created Kanban board template with MoSCOW structure
 - ✅ T04: Assessed system impacts and fixed RW doc-init detection bug
 - ✅ T05: Verified Kanban package updated (template and policy in place)
 - ✅ T06: Verified all affected packages updated (RW package v2.1.2)
 
 **Deliverables:**
-- Enhanced Kanban board with MoSCoW prioritized task view
+- Enhanced Kanban board with MoSCOW prioritized task view
 - Updated Kanban governance policy documents
 - Kanban board template in framework package
 - System impact assessment document

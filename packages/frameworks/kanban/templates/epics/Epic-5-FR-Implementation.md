@@ -188,7 +188,7 @@ This epic encompasses Feature Request implementation and management, including F
 ## References
 
 - Feature request management best practices
-- Prioritization frameworks (MoSCoW, RICE, etc.)
+- Prioritization frameworks (MoSCOW, RICE, etc.)
 - Implementation pattern standards
 
 ---

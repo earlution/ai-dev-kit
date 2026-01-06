@@ -100,7 +100,7 @@ Task Creation:
 
 Board Updates:
 - Add task to Kanban board
-- Assign to appropriate MoSCoW section
+- Assign to appropriate MoSCOW section
 - Update Story task checklist
 - Update Epic story checklist
 - Set task status (TODO, IN PROGRESS, COMPLETE)
@@ -281,7 +281,7 @@ Board Updates:
 
 **Board Integration:**
 - Review tasks appear in Epic 4 Kanban board
-- Follow Epic 4 MoSCoW organization
+- Follow Epic 4 MoSCOW organization
 - Use Epic 4 status tracking
 - Follow Epic 4 task ordering
 
@@ -298,7 +298,7 @@ Board Updates:
 - **Epic/Story:** Epic 7, Story 2
 - **Status:** IN PROGRESS
 - **Priority:** High
-- **MoSCoW:** Should Have (S)
+- **MoSCOW:** Should Have (S)
 
 **Task Document:**
 - Description: Comprehensive security review of all framework packages
@@ -329,7 +329,7 @@ Board Updates:
 - **Epic/Story:** Epic 7, Story 2
 - **Status:** IN PROGRESS
 - **Priority:** High
-- **MoSCoW:** Should Have (S)
+- **MoSCOW:** Should Have (S)
 
 **Task Document:**
 - Description: Architecture review for major framework refactoring
@@ -360,7 +360,7 @@ Board Updates:
 - **Epic/Story:** Epic 7, Story 2
 - **Status:** TODO
 - **Priority:** Medium
-- **MoSCoW:** Could Have (C)
+- **MoSCOW:** Could Have (C)
 
 **Task Document:**
 - Description: Improve code review process efficiency

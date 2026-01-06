@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.6.8+20] - 06-01-26
+
+### Changed
+- MoSCOW Terminology Standardization (E6:S06:T08 - UKW)
+  - Updated all references from "MoSCoW" to "MoSCOW" across entire codebase
+  - Reflects inclusion of "Ongoing (O)" category for perpetual maintenance tasks
+  - 125+ instances updated across 50+ files (documentation, policies, templates, workflows)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+20.md)
+
 ## [0.8.2.3+1] - 06-01-26
 
 ### Added

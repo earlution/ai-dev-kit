@@ -57,7 +57,7 @@ After user verification of the enhanced Kanban board structure, update the Kanba
 - **User verification obtained** - user has reviewed and approved the enhancement
 
 **Dependencies:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 - E4:S13:T02 – Update Kanban governance policy
 - E4:S13:T03 – Update Kanban board template
 - E4:S13:T04 – Assess system impacts
@@ -137,7 +137,7 @@ After user verification of the enhanced Kanban board structure, update the Kanba
 ## Dependencies
 
 **Depends On:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 - E4:S13:T02 – Update Kanban governance policy
 - E4:S13:T03 – Update Kanban board template
 - E4:S13:T04 – Assess system impacts
@@ -160,7 +160,7 @@ After user verification of the enhanced Kanban board structure, update the Kanba
 - User request for enhanced Kanban board functionality
 
 **Related Tasks:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view
 - E4:S13:T02 – Update Kanban governance policy
 - E4:S13:T03 – Update Kanban board template
 - E4:S13:T04 – Assess system impacts
@@ -212,9 +212,9 @@ After user verification of the enhanced Kanban board structure, update the Kanba
 **Completed:**
 - ✅ Verified Kanban board template is updated in package (`packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`)
 - ✅ Verified Kanban governance policy is updated in package (`packages/frameworks/kanban/policies/kanban-governance-policy.md`)
-- ✅ Both template and policy include MoSCoW prioritized task view structure
+- ✅ Both template and policy include MoSCOW prioritized task view structure
 - ✅ Template includes comprehensive usage instructions
-- ✅ Policy documents MoSCoW priority levels and chronological ordering rules
+- ✅ Policy documents MoSCOW priority levels and chronological ordering rules
 - ✅ Package components are consistent with enhanced board structure
 - ✅ Templates match policy
 - ✅ Documentation matches implementation

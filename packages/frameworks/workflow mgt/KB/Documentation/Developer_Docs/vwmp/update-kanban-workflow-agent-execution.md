@@ -24,12 +24,12 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 - **Synthesize intelligently:** Transform raw task/story data into coherent, meaningful narratives (tactical/strategic overviews)
 - **Infer status:** Deduce completion state from evidence (commits, FR/BR/UXRs, file changes, acceptance criteria)
-- **Prioritize strategically:** Classify tasks using MoSCoW methodology based on goals, dependencies, impact, deadlines, and strategic context
+- **Prioritize strategically:** Classify tasks using MoSCOW methodology based on goals, dependencies, impact, deadlines, and strategic context
 - **Understand context:** Grasp relationships, dependencies, goals, and strategic context across the project
 - **Write narratives:** Create natural, readable summaries that capture progress and tell a coherent story
 - **Validate consistency:** Detect contradictions and misalignments across the document hierarchy
 
-**Key Principle:** Bottom-up approach - Update Tasks → Stories → Epics → Board (in that order). The MoSCoW priority list is updated LAST.
+**Key Principle:** Bottom-up approach - Update Tasks → Stories → Epics → Board (in that order). The MoSCOW priority list is updated LAST.
 
 **Trigger:** User types "UKW" or "ukw" (case-insensitive)
 
@@ -382,14 +382,14 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 
 ### Step 6: Update Kanban Board
 
-**Purpose:** Update the main kanban board, with MoSCoW list LAST (requires intelligent prioritization)
+**Purpose:** Update the main kanban board, with MoSCOW list LAST (requires intelligent prioritization)
 
 **Agent Execution:**
 
 1. **ANALYZE (🧠 INTELLIGENCE REQUIRED):**
    - Read kanban board: `{kanban_root}/{kanban_board}`
    - Compare with updated Epic/Story/Task documents from Steps 2-4
-   - Identify MoSCoW priority sections
+   - Identify MoSCOW priority sections
    - Check epic summaries in board
    - Review "Last updated" date
    - **Understand prioritization context:**
@@ -402,9 +402,9 @@ After completing UKW, users typically run RW to commit the kanban documentation 
      - Strategic alignment with epic/project goals
 
 2. **DETERMINE (🧠 INTELLIGENCE REQUIRED - PRIORITIZATION):**
-   - **MoSCoW Priority Classification (UPDATE LAST):**
+   - **MoSCOW Priority Classification (UPDATE LAST):**
      - Identify all in-progress tasks (status: IN PROGRESS or TODO)
-     - **Intelligently classify each task into MoSCoW category:**
+     - **Intelligently classify each task into MoSCOW category:**
        - **Must Have (M):** Critical for project success, blocks other work, required for release, core functionality
        - **Should Have (S):** Important but not critical, high value, should be included if possible
        - **Could Have (C):** Nice to have, lower priority, can be deferred
@@ -432,10 +432,10 @@ After completing UKW, users typically run RW to commit the kanban documentation 
      - Update epic status indicators
      - Update epic story lists with completion markers
      - Update epic progress counts
-   - **THEN: Update MoSCoW Priority List (LAST - 🧠 REQUIRES INTELLIGENT PRIORITIZATION):**
+   - **THEN: Update MoSCOW Priority List (LAST - 🧠 REQUIRES INTELLIGENT PRIORITIZATION):**
      - **For each in-progress task, intelligently classify:**
        - Analyze task context, dependencies, impact, deadlines
-       - Assign to appropriate MoSCoW category
+       - Assign to appropriate MoSCOW category
        - Don't just copy existing priority - reassess based on current state
      - Rebuild Must Have (M) section with tasks classified as critical
      - Rebuild Should Have (S) section with tasks classified as important
@@ -446,9 +446,9 @@ After completing UKW, users typically run RW to commit the kanban documentation 
    - Update board version if needed
 
 4. **VALIDATE:**
-   - MoSCoW classifications are strategically sound and consistent
+   - MoSCOW classifications are strategically sound and consistent
    - Priorities align with project goals and strategic context
-   - MoSCoW list matches current in-progress tasks
+   - MoSCOW list matches current in-progress tasks
    - Epic summaries match epic documents
    - All links valid
    - Tasks ordered correctly (most recent first)
@@ -458,13 +458,13 @@ After completing UKW, users typically run RW to commit the kanban documentation 
    - Pass to Step 6
 
 **Key Rules:**
-- **CRITICAL: MoSCoW list is updated LAST** (after all other board updates)
+- **CRITICAL: MoSCOW list is updated LAST** (after all other board updates)
 - **Prioritization requires intelligence** - analyze context, not just copy existing
 - Only include tasks with status IN PROGRESS or TODO
-- Order tasks chronologically within MoSCoW sections
+- Order tasks chronologically within MoSCOW sections
 - Remove completed tasks from "In Progress" sections
 - Epic summaries must match epic documents exactly
-- MoSCoW classification must be strategically sound
+- MoSCOW classification must be strategically sound
 
 ---
 
@@ -559,7 +559,7 @@ After completing UKW, users typically run RW to commit the kanban documentation 
      - Number of stories updated
      - Number of epics updated
      - Key status changes
-     - MoSCoW list updates
+     - MoSCOW list updates
    - List updated documents
 
 4. **VALIDATE:**
@@ -576,15 +576,15 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 ## 🔑 Key Principles
 
 1. **Bottom-Up Approach:** Always update Tasks → Stories → Epics → Board
-2. **MoSCoW List Last:** The MoSCoW priority list in kanban board is updated LAST
+2. **MoSCOW List Last:** The MoSCOW priority list in kanban board is updated LAST
 3. **🧠 Intelligent Synthesis:** Story/Epic updates require intelligent synthesis of lower-level data into meaningful narratives (NOT just copying or listing)
 4. **🧠 Intelligent Status Inference:** Status updates require reasoning about completion state and goals, not just counting checkboxes
-5. **🧠 Strategic Prioritization:** MoSCoW classification requires understanding goals, dependencies, impact, deadlines, and strategic context
+5. **🧠 Strategic Prioritization:** MoSCOW classification requires understanding goals, dependencies, impact, deadlines, and strategic context
 6. **Meaningful Narratives:** Tactical/strategic overviews must be natural, readable summaries that capture progress and context
 7. **Status Consistency:** Ensure status flows correctly up the hierarchy with intelligent validation
 8. **Evidence-Based:** Only update status if there's evidence (commits, FR/BR, file changes)
 9. **Preserve Markers:** Don't remove existing forensic markers
-10. **Chronological Ordering:** Order tasks within MoSCoW sections by last updated date
+10. **Chronological Ordering:** Order tasks within MoSCOW sections by last updated date
 
 **🧠 Intelligence is Not Optional:**
 

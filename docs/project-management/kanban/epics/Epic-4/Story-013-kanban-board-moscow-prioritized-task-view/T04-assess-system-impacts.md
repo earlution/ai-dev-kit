@@ -28,7 +28,7 @@ housekeeping_policy: keep
 
 ## Scope
 
-Assess if the Kanban board enhancement (MoSCoW prioritized task view) affects any other systems that interact with Kanban. Document the impacts so that those systems can be summarily updated.
+Assess if the Kanban board enhancement (MoSCOW prioritized task view) affects any other systems that interact with Kanban. Document the impacts so that those systems can be summarily updated.
 
 **NEW USE CASE DISCOVERED:**
 A bug has been identified in the Release Workflow's doc-init detection logic:
@@ -75,7 +75,7 @@ The `detect_first_time_est_doc` function in `validate_version_bump.py` had flawe
 - **NEW:** Understanding of RW doc-init detection bug scenario
 
 **Dependencies:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 
 ---
 
@@ -98,7 +98,7 @@ The `detect_first_time_est_doc` function in `validate_version_bump.py` had flawe
      - Step 7/8 (Kanban doc updates)
      - **NEW:** Step 2 (Version bump) - doc-init detection bug
      - Does RW parse Kanban board structure?
-     - Does RW need to understand MoSCoW sections?
+     - Does RW need to understand MoSCOW sections?
      - Does RW need to understand chronological ordering?
      - Required updates documented
    
@@ -190,7 +190,7 @@ The `detect_first_time_est_doc` function in `validate_version_bump.py` had flawe
    - For each identified system:
      - Understand current interaction with Kanban
      - Determine if it parses Kanban board structure
-     - Determine if it needs to understand MoSCoW sections
+     - Determine if it needs to understand MoSCOW sections
      - Determine if it needs to understand chronological ordering
      - Determine if it needs to understand parent-child relationships
      - Assess impact of new structure
@@ -231,7 +231,7 @@ The `detect_first_time_est_doc` function in `validate_version_bump.py` had flawe
 ## Dependencies
 
 **Depends On:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 
 **Blocks:**
 - E4:S13:T05 – Update Kanban package (needs impact assessment)
@@ -254,7 +254,7 @@ The `detect_first_time_est_doc` function in `validate_version_bump.py` had flawe
 - **Abstract Anti-Pattern:** Use Case Exposed Design Flaw - [abstract-anti-patterns-use-case-exposed-design-flaw.md](../../../../knowledge/analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md)
 
 **Related Tasks:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view
 - E4:S13:T05 – Update Kanban package
 - E4:S13:T06 – Update other affected packages
 

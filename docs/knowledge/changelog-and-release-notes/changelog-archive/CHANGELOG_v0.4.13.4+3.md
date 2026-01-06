@@ -2,7 +2,7 @@
 
 **Release Date:** 2025-12-18 00:00:00 UTC  
 **Epic:** Epic 4 - Kanban Framework  
-**Story:** Story 13 - Kanban Board Enhancement - MoSCoW Prioritized Task View  
+**Story:** Story 13 - Kanban Board Enhancement - MoSCOW Prioritized Task View  
 **Task:** Task 4 - Assess system impacts  
 **Build Type:** Normal Build (`+3`)
 
@@ -144,7 +144,7 @@
 - E4:S13:T04 – Assess system impacts (this task, packaged RW update)
 
 **Related Stories:**
-- E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View
+- E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View
 
 **Related Epics:**
 - E4 – Kanban Framework

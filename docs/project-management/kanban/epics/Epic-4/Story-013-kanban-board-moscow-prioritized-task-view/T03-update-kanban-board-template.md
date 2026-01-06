@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.3+1 – T03 COMPLETE: Kanban board template created with MoSCoW prioritized task view)  
+**Last updated:** 2025-12-18 (v0.4.13.3+1 – T03 COMPLETE: Kanban board template created with MoSCOW prioritized task view)  
 **Started:** 2025-12-18  
 **Completed:** 2025-12-18  
 **Version:** v0.4.13.3+1  
@@ -28,10 +28,10 @@ housekeeping_policy: keep
 
 ## Scope
 
-Update the Kanban board template in the framework package to reflect the new board structure with MoSCoW prioritized task view. This template will be used by the installer and other projects adopting the Kanban framework.
+Update the Kanban board template in the framework package to reflect the new board structure with MoSCOW prioritized task view. This template will be used by the installer and other projects adopting the Kanban framework.
 
 **Template Updates Required:**
-- Include MoSCoW section structure
+- Include MoSCOW section structure
 - Include chronological ordering guidance
 - Include parent-child relationship documentation
 - Include example format
@@ -52,7 +52,7 @@ Update the Kanban board template in the framework package to reflect the new boa
 - Enhanced Kanban board document (`docs/project-management/kanban/kanban-board.md`)
 
 **Dependencies:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 - E4:S13:T02 – Update Kanban governance policy
 
 ---
@@ -64,17 +64,17 @@ Update the Kanban board template in the framework package to reflect the new boa
 1. **Updated or Created Template in Framework Package:**
    - Location: `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md` (or appropriate location)
    - Template includes:
-     - MoSCoW section structure with example format
+     - MoSCOW section structure with example format
      - Chronological ordering guidance
      - Parent-child relationship documentation
-     - Example task entries for each MoSCoW section
+     - Example task entries for each MoSCOW section
      - Story checklist format (1 line per story)
      - Clear instructions for template usage
 
 2. **Template Structure:**
    - Frontmatter (lifecycle metadata)
    - Overview section
-   - MoSCoW Prioritized Task View section:
+   - MoSCOW Prioritized Task View section:
      - Must Have (M) section with example
      - Should Have (S) section with example
      - Could Have (C) section with example
@@ -85,7 +85,7 @@ Update the Kanban board template in the framework package to reflect the new boa
 
 3. **Template Documentation:**
    - Instructions on how to use the template
-   - Guidance on determining MoSCoW priority
+   - Guidance on determining MoSCOW priority
    - Guidance on chronological ordering
    - Reference to Kanban governance policy
 
@@ -94,8 +94,8 @@ Update the Kanban board template in the framework package to reflect the new boa
 ## Acceptance Criteria
 
 - [ ] Kanban board template exists in framework package
-- [ ] Template includes MoSCoW section structure
-- [ ] Template includes example task entries for each MoSCoW section
+- [ ] Template includes MoSCOW section structure
+- [ ] Template includes example task entries for each MoSCOW section
 - [ ] Template includes chronological ordering guidance
 - [ ] Template includes parent-child relationship documentation
 - [ ] Template includes story checklist format (1 line per story)
@@ -119,7 +119,7 @@ Update the Kanban board template in the framework package to reflect the new boa
 
 3. **Design Template Structure:**
    - Design template to match enhanced board structure
-   - Include all MoSCoW sections
+   - Include all MoSCOW sections
    - Include example task entries
    - Include chronological ordering guidance
    - Include parent-child relationship documentation
@@ -144,7 +144,7 @@ Update the Kanban board template in the framework package to reflect the new boa
 ## Dependencies
 
 **Depends On:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 - E4:S13:T02 – Update Kanban governance policy
 
 **Blocks:**
@@ -164,7 +164,7 @@ Update the Kanban board template in the framework package to reflect the new boa
 - User request for enhanced Kanban board functionality
 
 **Related Tasks:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view
 - E4:S13:T02 – Update Kanban governance policy
 - E4:S13:T05 – Update Kanban package
 
@@ -211,10 +211,10 @@ Update the Kanban board template in the framework package to reflect the new boa
 
 **Deliverables:**
 1. ✅ Created Kanban board template (`packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`)
-   - Template includes MoSCoW section structure with example format
+   - Template includes MoSCOW section structure with example format
    - Template includes chronological ordering guidance
    - Template includes parent-child relationship documentation
-   - Template includes example task entries for each MoSCoW section
+   - Template includes example task entries for each MoSCOW section
    - Template includes Story checklist format (1 line per story)
    - Template includes clear usage instructions
    - Template references Kanban governance policy
@@ -222,14 +222,14 @@ Update the Kanban board template in the framework package to reflect the new boa
 **Template Structure:**
 - Frontmatter (lifecycle metadata)
 - Overview section
-- MoSCoW Prioritized Task View section:
+- MoSCOW Prioritized Task View section:
   - Must Have (M) section with example
   - Should Have (S) section with example
   - Could Have (C) section with example
   - Won't Have (W) section with example
 - Story Checklist section (1 line per story format)
 - Usage Instructions section:
-  - MoSCoW priority guidelines
+  - MoSCOW priority guidelines
   - Chronological ordering rules
   - Task entry format
   - Story checklist format

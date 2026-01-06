@@ -2,13 +2,13 @@
 
 **Release Date:** 2025-12-18 00:00:00 UTC  
 **Epic:** Epic 4 - Kanban Framework  
-**Story:** Story 13 - Kanban Board Enhancement - MoSCoW Prioritized Task View  
+**Story:** Story 13 - Kanban Board Enhancement - MoSCOW Prioritized Task View  
 **Task:** Task 3 - Update Kanban board template  
 **Build Type:** Normal Build (`+1`)
 
 ## Summary
 
-**Task 3 Complete:** Created Kanban board template with MoSCoW prioritized task view structure. Template includes comprehensive usage instructions, example formats, and references to updated governance policy.
+**Task 3 Complete:** Created Kanban board template with MoSCOW prioritized task view structure. Template includes comprehensive usage instructions, example formats, and references to updated governance policy.
 
 ## DO (What Was Done)
 
@@ -16,21 +16,21 @@
 
 **Template Created:**
 - Created `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`
-- Template includes complete MoSCoW prioritized task view structure
+- Template includes complete MoSCOW prioritized task view structure
 - Template includes comprehensive usage instructions
 - Template references updated Kanban governance policy
 
 **Template Structure:**
 - Frontmatter (lifecycle metadata)
 - Overview section with parent-child relationship documentation
-- MoSCoW Prioritized Task View section:
+- MoSCOW Prioritized Task View section:
   - Must Have (M) section with example format
   - Should Have (S) section with example format
   - Could Have (C) section with example format
   - Won't Have (W) section with example format
 - Story Checklist section (1 line per story format)
 - Usage Instructions section:
-  - MoSCoW priority guidelines
+  - MoSCOW priority guidelines
   - Chronological ordering rules
   - Task entry format
   - Story checklist format
@@ -49,7 +49,7 @@
 **Kanban Governance Policy Updated:**
 - Updated canonical policy (`packages/frameworks/kanban/policies/kanban-governance-policy.md`)
 - Updated local policy (`docs/project-management/rituals/policy/kanban-governance-policy.md`)
-- Both policies now document MoSCoW prioritized task view
+- Both policies now document MoSCOW prioritized task view
 - Parent-child relationship clearly explained
 - Chronological ordering rules documented
 
@@ -59,7 +59,7 @@
 
 **Template Structure:**
 - ✅ All required sections included
-- ✅ MoSCoW sections with examples
+- ✅ MoSCOW sections with examples
 - ✅ Story checklist format included
 - ✅ Usage instructions comprehensive
 - ✅ References to policy documents
@@ -72,7 +72,7 @@
 
 **Policy Updates:**
 - ✅ Both policies updated consistently
-- ✅ MoSCoW priority levels clearly defined
+- ✅ MoSCOW priority levels clearly defined
 - ✅ Chronological ordering rules documented
 - ✅ Parent-child relationship explained
 
@@ -107,14 +107,14 @@
 
 - **Kanban Board Template:**
   - Created `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`
-  - Complete template with MoSCoW structure
+  - Complete template with MoSCOW structure
   - Comprehensive usage instructions
   - Example formats for all sections
 
 ### Changed
 
 - **Kanban Governance Policy (T02):**
-  - Updated canonical policy with MoSCoW prioritized task view documentation
+  - Updated canonical policy with MoSCOW prioritized task view documentation
   - Updated local policy with new board structure
   - Both policies now consistent and accurate
 
@@ -166,7 +166,7 @@
 - E4:S13:T03 – Update Kanban board template (this task)
 
 **Related Stories:**
-- E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View
+- E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View
 
 **Related Epics:**
 - E4 – Kanban Framework

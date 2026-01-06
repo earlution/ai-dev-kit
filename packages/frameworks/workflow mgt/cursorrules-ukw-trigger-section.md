@@ -27,7 +27,7 @@ housekeeping_policy: keep
 3. **🧠 AGENTIC INTELLIGENCE REQUIRED:** This workflow requires significant intelligent reasoning:
    - **Synthesis:** Analyze multiple data points and create coherent tactical/strategic summaries
    - **Narrative Updates:** Write natural, meaningful summaries that capture progress and context
-   - **Prioritization:** Determine MoSCoW priorities based on project goals, dependencies, and impact
+   - **Prioritization:** Determine MoSCOW priorities based on project goals, dependencies, and impact
    - **Status Inference:** Intelligently infer task/story status from commits, FR/BR/UXRs, and file changes
    - **Consistency Analysis:** Detect contradictions and align status across hierarchy
    - **Context Understanding:** Understand project state, goals, and relationships between work items
@@ -189,11 +189,11 @@ For each step, follow this pattern:
    - **ANALYZE (🧠 INTELLIGENCE REQUIRED):**
      - Read current kanban board
      - Compare with updated Epic/Story/Task documents
-     - Identify MoSCoW priority sections
+     - Identify MoSCOW priority sections
      - Check epic summaries
      - **Understand prioritization context:** Analyze project goals, dependencies, deadlines, impact, and strategic importance
    - **DETERMINE (🧠 INTELLIGENCE REQUIRED):**
-     - **MoSCoW priority classification:** Intelligently determine Must Have (M), Should Have (S), Could Have (C), Won't Have (W) based on:
+     - **MoSCOW priority classification:** Intelligently determine Must Have (M), Should Have (S), Could Have (C), Ongoing (O), Won't Have (W) based on:
        - Project goals and strategic importance
        - Dependencies and blocking relationships
        - Deadlines and time constraints
@@ -204,17 +204,17 @@ For each step, follow this pattern:
      - Story summaries in epic sections
      - "Last updated" date for board
    - **EXECUTE:**
-     - **LAST: Update MoSCoW priority list (🧠 REQUIRES INTELLIGENT PRIORITIZATION):**
+     - **LAST: Update MoSCOW priority list (🧠 REQUIRES INTELLIGENT PRIORITIZATION):**
        - Remove completed tasks from "In Progress" sections
-       - **Classify tasks intelligently:** Assign each in-progress task to appropriate MoSCoW category based on strategic analysis (not just copying from existing)
-       - Add new in-progress tasks to appropriate MoSCoW sections
+       - **Classify tasks intelligently:** Assign each in-progress task to appropriate MoSCOW category based on strategic analysis (not just copying from existing)
+       - Add new in-progress tasks to appropriate MoSCOW sections
        - Order tasks within each section chronologically (most recently updated first)
      - Update epic status sections
      - Update epic story lists
      - Update board "Last updated" date and version
    - **VALIDATE:**
-     - MoSCoW classifications are strategically sound and consistent
-     - MoSCoW list matches current in-progress tasks
+     - MoSCOW classifications are strategically sound and consistent
+     - MoSCOW list matches current in-progress tasks
      - Epic summaries match epic documents
      - All links valid
    - **PROCEED:**
@@ -306,10 +306,10 @@ For each step, follow this pattern:
 **🔑 Key Principles:**
 
 1. **Bottom-Up Approach:** Always update Tasks → Stories → Epics → Board (in that order)
-2. **MoSCoW List Last:** The MoSCoW priority list in the kanban board is the LAST thing to update
+2. **MoSCOW List Last:** The MoSCOW priority list in the kanban board is the LAST thing to update
 3. **Synthesize Intelligently, Don't Duplicate:** Story/Epic updates require intelligent synthesis of lower-level data into meaningful narratives, not just copying task/story lists
 4. **Intelligent Status Inference:** Status updates require reasoning about completion state, not just counting checkboxes
-5. **Strategic Prioritization:** MoSCoW classification requires understanding of goals, dependencies, impact, and strategic context
+5. **Strategic Prioritization:** MoSCOW classification requires understanding of goals, dependencies, impact, and strategic context
 6. **Meaningful Narratives:** Tactical/strategic overviews must be natural, readable summaries that capture progress and context
 7. **Status Consistency:** Ensure status flows correctly up the hierarchy with intelligent validation
 8. **Consider Recent Activity:** Always check recent commits and FR/BR/UXRs to detect status changes

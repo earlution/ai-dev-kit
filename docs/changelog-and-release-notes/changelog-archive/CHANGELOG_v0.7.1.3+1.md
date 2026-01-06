@@ -72,7 +72,7 @@ Maintenance workflow processes documented. Comprehensive workflows for IDE-flagg
 - Task identification from multiple sources
 - Initial assessment (severity, impact, effort)
 - Priority calculation with contextual adjustments
-- Kanban assignment (MoSCoW classification)
+- Kanban assignment (MoSCOW classification)
 - Work planning and resource allocation
 - Implementation with quality assurance
 - Completion and release integration

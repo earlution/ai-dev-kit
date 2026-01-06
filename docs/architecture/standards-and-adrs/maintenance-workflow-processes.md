@@ -117,7 +117,7 @@ Systematically address IDE-flagged issues (errors, warnings, info) to maintain c
 3. Estimate effort (1-5)
 4. Calculate priority score
 5. Apply contextual adjustments
-6. Determine MoSCoW classification
+6. Determine MoSCOW classification
 
 **Priority Assignment:**
 - **Must Have (M):** Critical errors, blocking issues
@@ -269,7 +269,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
 
 #### Step 4: Kanban Assignment
 
-**MoSCoW Classification:**
+**MoSCOW Classification:**
 - **Must Have (M):** Critical Priority (4.0-5.0)
 - **Should Have (S):** High Priority (3.0-3.9)
 - **Could Have (C):** Medium Priority (2.0-2.9)
@@ -375,7 +375,7 @@ Conduct periodic comprehensive maintenance reviews and batch processing to maint
 - Assess each issue (severity, impact, effort)
 - Calculate priority scores
 - Apply contextual adjustments
-- Classify by MoSCoW
+- Classify by MoSCOW
 
 **Batch Formation:**
 - Group by priority level
@@ -577,7 +577,7 @@ Rapidly respond to critical issues that require immediate attention, bypassing n
 **Task Metadata:**
 - Priority score
 - Severity, impact, effort ratings
-- MoSCoW classification
+- MoSCOW classification
 - Status and progress
 
 ### Progress Tracking

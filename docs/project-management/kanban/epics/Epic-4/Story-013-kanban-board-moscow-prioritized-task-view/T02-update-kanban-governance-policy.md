@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.13.2+1 – T02 COMPLETE: Kanban governance policy updated with MoSCoW prioritized task view)  
+**Last updated:** 2025-12-18 (v0.4.13.2+1 – T02 COMPLETE: Kanban governance policy updated with MoSCOW prioritized task view)  
 **Started:** 2025-12-18  
 **Completed:** 2025-12-18  
 **Version:** v0.4.13.2+1  
@@ -28,13 +28,13 @@ housekeeping_policy: keep
 
 ## Scope
 
-Update the Kanban governance policy documents to document the new board structure with MoSCoW prioritized task view. This includes:
+Update the Kanban governance policy documents to document the new board structure with MoSCOW prioritized task view. This includes:
 1. **Canonical Policy:** Update `packages/frameworks/kanban/policies/kanban-governance-policy.md` (canonical source of truth)
 2. **Local Policy:** Update `docs/project-management/rituals/policy/kanban-governance-policy.md` (dev-kit local implementation)
 
 **Policy Updates Required:**
-- Document new board structure with MoSCoW sections
-- Define MoSCoW priority levels and usage guidelines
+- Document new board structure with MoSCOW sections
+- Define MoSCOW priority levels and usage guidelines
 - Define chronological ordering rules (most recently updated first)
 - Document parent-child relationship (Board → Story → Task)
 - Update board structure section to reflect new layout
@@ -54,7 +54,7 @@ Update the Kanban governance policy documents to document the new board structur
 - Enhanced Kanban board document (`docs/project-management/kanban/kanban-board.md`)
 
 **Dependencies:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 
 ---
 
@@ -63,8 +63,8 @@ Update the Kanban governance policy documents to document the new board structur
 **Updated Kanban Governance Policy Documents:**
 
 1. **Updated `packages/frameworks/kanban/policies/kanban-governance-policy.md`:**
-   - New section documenting board structure with MoSCoW prioritized task view
-   - MoSCoW priority levels defined:
+   - New section documenting board structure with MoSCOW prioritized task view
+   - MoSCOW priority levels defined:
      - **Must Have (M):** Critical in-progress tasks that must be completed
      - **Should Have (S):** Important in-progress tasks that should be completed
      - **Could Have (C):** Nice-to-have in-progress tasks that could be completed
@@ -83,7 +83,7 @@ Update the Kanban governance policy documents to document the new board structur
 ## Acceptance Criteria
 
 - [ ] Canonical Kanban governance policy updated with new board structure
-- [ ] MoSCoW priority levels defined and documented
+- [ ] MoSCOW priority levels defined and documented
 - [ ] Chronological ordering rules documented
 - [ ] Parent-child relationship (Board → Story → Task) documented
 - [ ] Board structure section updated to reflect new layout
@@ -102,9 +102,9 @@ Update the Kanban governance policy documents to document the new board structur
 2. **Update Canonical Policy:**
    - Open `packages/frameworks/kanban/policies/kanban-governance-policy.md`
    - Locate board structure section
-   - Add new section documenting MoSCoW prioritized task view:
+   - Add new section documenting MoSCOW prioritized task view:
      - Board structure overview
-     - MoSCoW section format
+     - MoSCOW section format
      - Priority level definitions
      - Chronological ordering rules
      - Parent-child relationship documentation
@@ -123,14 +123,14 @@ Update the Kanban governance policy documents to document the new board structur
    - Verify both policies are consistent
    - Verify all aspects of new structure are documented
    - Verify parent-child relationship is clearly explained
-   - Verify MoSCoW priority levels are well-defined
+   - Verify MoSCOW priority levels are well-defined
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 
 **Blocks:**
 - E4:S13:T03 – Update Kanban board template (template should reflect policy)
@@ -148,7 +148,7 @@ Update the Kanban governance policy documents to document the new board structur
 - User request for enhanced Kanban board functionality
 
 **Related Tasks:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view
 - E4:S13:T03 – Update Kanban board template
 
 **Related Stories:**
@@ -175,7 +175,7 @@ Update the Kanban governance policy documents to document the new board structur
 - Local policy (`docs/project-management/rituals/policy/kanban-governance-policy.md`) documents project-specific implementation
 - Both should be consistent, with local policy referencing canonical policy
 
-**MoSCoW Priority Guidelines:**
+**MoSCOW Priority Guidelines:**
 - Priority should be determined based on task importance and urgency
 - Default to "Should Have" if priority is not explicitly specified
 - Priority can be updated as work progresses
@@ -188,23 +188,23 @@ Update the Kanban governance policy documents to document the new board structur
 
 **Deliverables:**
 1. ✅ Updated canonical Kanban governance policy (`packages/frameworks/kanban/policies/kanban-governance-policy.md`)
-   - Added comprehensive Board Structure section documenting MoSCoW prioritized task view
-   - Documented MoSCoW priority levels (Must Have, Should Have, Could Have, Won't Have)
+   - Added comprehensive Board Structure section documenting MoSCOW prioritized task view
+   - Documented MoSCOW priority levels (Must Have, Should Have, Could Have, Won't Have)
    - Documented chronological ordering rules (most recently updated first)
    - Documented parent-child relationship (Board → Story → Task)
    - Included task entry format examples
    - Updated board structure to reflect new layout
 
 2. ✅ Updated local Kanban governance policy (`docs/project-management/rituals/policy/kanban-governance-policy.md`)
-   - Added MoSCoW Prioritized Task View section (2.2.1)
+   - Added MoSCOW Prioritized Task View section (2.2.1)
    - Added Story Checklist section (2.2.2)
    - Updated board structure documentation
    - Referenced canonical policy for framework-level details
    - Updated last updated date
 
 **Policy Updates:**
-- Both policies now document the new board structure with MoSCoW prioritized task view
-- MoSCoW priority levels clearly defined
+- Both policies now document the new board structure with MoSCOW prioritized task view
+- MoSCOW priority levels clearly defined
 - Chronological ordering rules documented
 - Parent-child relationship clearly explained
 - Task entry format standardized

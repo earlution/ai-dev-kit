@@ -237,7 +237,7 @@ Updated `detect_first_time_est_doc` function in `validate_version_bump.py` to ch
 
 **Related Work:**
 - **Epic 4:** Kanban Framework
-- **Story 13:** Kanban Board Enhancement - MoSCoW Prioritized Task View
+- **Story 13:** Kanban Board Enhancement - MoSCOW Prioritized Task View
 - **Task 4:** E4:S13:T04 – Assess system impacts (bug fixed here)
 - **Use Case:** UC-D-004 – Story + Task Docs Batch Creation
 - **Abstract Anti-Pattern:** Use Case Exposed Design Flaw
@@ -255,7 +255,7 @@ Updated `detect_first_time_est_doc` function in `validate_version_bump.py` to ch
 
 **Assigned To:**
 - Epic: Epic 4 - Kanban Framework
-- Story: Story 13 - Kanban Board Enhancement - MoSCoW Prioritized Task View
+- Story: Story 13 - Kanban Board Enhancement - MoSCOW Prioritized Task View
 - Task: E4:S13:T04 – Assess system impacts
 - Version: `v0.4.13.4+1`
 

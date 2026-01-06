@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Release Date:** 2025-12-17 22:52:51 UTC  
 **Version:** 0.4.13.6+3  
 **Epic:** 4 (Kanban Framework)  
-**Story:** 13 (Kanban Board Enhancement - MoSCoW Prioritized Task View)  
+**Story:** 13 (Kanban Board Enhancement - MoSCOW Prioritized Task View)  
 **Task:** 6 (Update other affected packages)  
 **Build:** 3
 
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ✅ Documentation Update: Kanban documentation updates to reflect E4:S13 completion across all kanban board views.
 
-This release updates all kanban documentation to accurately reflect that Epic 4, Story 13 (Kanban Board Enhancement - MoSCoW Prioritized Task View) is complete with all 6 tasks finished. The updates ensure consistency across the main kanban board, quick view board, and Epic-4 documentation.
+This release updates all kanban documentation to accurately reflect that Epic 4, Story 13 (Kanban Board Enhancement - MoSCOW Prioritized Task View) is complete with all 6 tasks finished. The updates ensure consistency across the main kanban board, quick view board, and Epic-4 documentation.
 
 ---
 
@@ -56,7 +56,7 @@ This release updates all kanban documentation to accurately reflect that Epic 4,
 
 ## Related Work
 
-- **Story:** E4:S13 - Kanban Board Enhancement - MoSCoW Prioritized Task View
+- **Story:** E4:S13 - Kanban Board Enhancement - MoSCOW Prioritized Task View
 - **Epic:** E4 - Kanban Framework
 - **All Tasks:** T01 ✅, T02 ✅, T03 ✅, T04 ✅, T05 ✅, T06 ✅ (all complete)
 

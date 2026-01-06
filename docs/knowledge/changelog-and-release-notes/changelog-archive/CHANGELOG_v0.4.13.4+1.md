@@ -2,7 +2,7 @@
 
 **Release Date:** 2025-12-18 00:00:00 UTC  
 **Epic:** Epic 4 - Kanban Framework  
-**Story:** Story 13 - Kanban Board Enhancement - MoSCoW Prioritized Task View  
+**Story:** Story 13 - Kanban Board Enhancement - MoSCOW Prioritized Task View  
 **Task:** Task 4 - Assess system impacts  
 **Build Type:** Normal Build (`+1`)
 
@@ -22,7 +22,7 @@
 
 **Impact Analysis:**
 - RW Step 2: Requires doc-init detection fix (bug identified)
-- RW Step 7/8: May need updates to handle MoSCoW sections (future work)
+- RW Step 7/8: May need updates to handle MoSCOW sections (future work)
 - Validators: May need updates for new board structure (future work)
 - Installers: May need template updates (future work)
 
@@ -69,7 +69,7 @@
 - ✅ Bug fix documented and implemented
 
 **Future Work:**
-- RW Step 7/8 updates for MoSCoW sections (after T01-T03 complete)
+- RW Step 7/8 updates for MoSCOW sections (after T01-T03 complete)
 - Validator updates for new board structure (after user verification)
 - Installer template updates (after user verification)
 
@@ -96,7 +96,7 @@
    - T06: Update other affected packages (after user verification)
 
 2. **Future System Updates:**
-   - RW Step 7/8: Update to handle MoSCoW sections (if needed)
+   - RW Step 7/8: Update to handle MoSCOW sections (if needed)
    - Validators: Update for new board structure (if needed)
    - Installers: Update templates (if needed)
 
@@ -163,7 +163,7 @@
 ## Related Work
 
 **Related Tasks:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view (completed)
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view (completed)
 - E4:S13:T04 – Assess system impacts (this task, completed)
 - E4:S13:T02 – Update Kanban governance policy (pending)
 - E4:S13:T03 – Update Kanban board template (pending)
@@ -171,7 +171,7 @@
 - E4:S13:T06 – Update other affected packages (pending, after user verification)
 
 **Related Stories:**
-- E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View
+- E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View
 
 **Related Epics:**
 - E4 – Kanban Framework

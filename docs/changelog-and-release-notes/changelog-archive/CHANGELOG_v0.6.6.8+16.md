@@ -10,20 +10,20 @@
 
 ## Summary
 
-Enhanced MoSCoW prioritization system by adding a new "Ongoing (O)" category for perpetual maintenance tasks. This addresses the issue where perpetual tasks (like UKW and CMW) were creating noise in the "Must Have" category and implying an overblown level of importance. The new category is positioned between "Could Have (C)" and "Won't Have (W)" and clearly communicates that these tasks are tracked but don't block other work.
+Enhanced MoSCOW prioritization system by adding a new "Ongoing (O)" category for perpetual maintenance tasks. This addresses the issue where perpetual tasks (like UKW and CMW) were creating noise in the "Must Have" category and implying an overblown level of importance. The new category is positioned between "Could Have (C)" and "Won't Have (W)" and clearly communicates that these tasks are tracked but don't block other work.
 
 ---
 
 ## Added
 
-### MoSCoW "Ongoing (O)" Category
+### MoSCOW "Ongoing (O)" Category
 
-- **New Priority Category:** Added "Ongoing (O) - Perpetual Tasks" to MoSCoW prioritization
+- **New Priority Category:** Added "Ongoing (O) - Perpetual Tasks" to MoSCOW prioritization
 - **Position:** Between "Could Have (C)" and "Won't Have (W)"
 - **Purpose:** Track perpetual maintenance tasks without blocking other work
 - **Examples:** UKW (Update Kanban Workflow), CMW (Changelog Maintenance Workflow)
 
-### Updated MoSCoW Structure
+### Updated MoSCOW Structure
 
 **New Structure:** M/S/C/O/W
 - **M (Must Have):** Critical tasks that must be completed
@@ -39,7 +39,7 @@ Enhanced MoSCoW prioritization system by adding a new "Ongoing (O)" category for
 ### Kanban Board
 
 - **Moved Perpetual Tasks:** E6:S06:T08 (UKW) and E6:S06:T12 (CMW) moved from "Must Have" to "Ongoing"
-- **Updated Section Description:** Added explanation of all MoSCoW categories including "Ongoing"
+- **Updated Section Description:** Added explanation of all MoSCOW categories including "Ongoing"
 - **Clear Separation:** Perpetual tasks now clearly separated from completable work
 
 ### Framework Policy Documentation
@@ -56,7 +56,7 @@ Enhanced MoSCoW prioritization system by adding a new "Ongoing (O)" category for
   - Updated priority guidelines to include new category
 
 - **UKW Documentation** (`packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md`)
-  - Updated MoSCoW classification guidance to include "Ongoing (O)"
+  - Updated MoSCOW classification guidance to include "Ongoing (O)"
 
 - **Maintenance Framework Docs:**
   - `docs/architecture/standards-and-adrs/maintenance-task-prioritization-framework.md`
@@ -64,7 +64,7 @@ Enhanced MoSCoW prioritization system by adding a new "Ongoing (O)" category for
   - Both updated to include "Ongoing (O)" category
 
 - **Example File** (`packages/frameworks/kanban/examples/Epic-4-Example.md`)
-  - Updated MoSCoW legend to include "ONGOING" category
+  - Updated MoSCOW legend to include "ONGOING" category
 
 ---
 
@@ -90,7 +90,7 @@ Enhanced MoSCoW prioritization system by adding a new "Ongoing (O)" category for
 2. **Clear Separation:** Ongoing maintenance clearly distinguished from completable work
 3. **Better Prioritization:** "Must Have" and "Should Have" focus on completable work
 4. **Prevents Confusion:** No implication that maintenance should block feature work
-5. **Elegant Solution:** Fits naturally into MoSCoW structure (M/S/C/O/W)
+5. **Elegant Solution:** Fits naturally into MoSCOW structure (M/S/C/O/W)
 
 ---
 
@@ -105,7 +105,7 @@ Enhanced MoSCoW prioritization system by adding a new "Ongoing (O)" category for
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md` - Updated classification guidance
 - `docs/architecture/standards-and-adrs/maintenance-task-prioritization-framework.md` - Added "Ongoing (O)" to classification
 - `docs/architecture/standards-and-adrs/maintenance-kanban-integration.md` - Added "Ongoing (O)" to sections list
-- `packages/frameworks/kanban/examples/Epic-4-Example.md` - Updated MoSCoW legend
+- `packages/frameworks/kanban/examples/Epic-4-Example.md` - Updated MoSCOW legend
 - `src/fynd_deals/version.py` - Updated to v0.6.6.8+16
 
 ---
@@ -121,7 +121,7 @@ Enhanced MoSCoW prioritization system by adding a new "Ongoing (O)" category for
 
 ## Notes
 
-This enhancement improves the clarity and usability of the MoSCoW prioritization system by properly categorizing perpetual maintenance tasks. The "Ongoing (O)" category provides a clean, elegant solution that maintains visibility of maintenance work while preventing it from interfering with prioritization of completable features.
+This enhancement improves the clarity and usability of the MoSCOW prioritization system by properly categorizing perpetual maintenance tasks. The "Ongoing (O)" category provides a clean, elegant solution that maintains visibility of maintenance work while preventing it from interfering with prioritization of completable features.
 
 ---
 

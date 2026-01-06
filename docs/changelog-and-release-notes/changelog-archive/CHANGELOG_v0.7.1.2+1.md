@@ -27,7 +27,7 @@ Maintenance task prioritization framework created. Comprehensive framework for s
   - Defines priority score ranges (Critical/High/Medium/Low/Minimal)
   - Includes contextual adjustments (strategic importance, dependencies, risk factors)
   - Documents 5-step prioritization process
-  - Integrates with Kanban framework (MoSCoW classification, Epic/Story assignment)
+  - Integrates with Kanban framework (MoSCOW classification, Epic/Story assignment)
   - Includes 4 comprehensive examples demonstrating framework usage
 
 ---
@@ -55,7 +55,7 @@ Maintenance task prioritization framework created. Comprehensive framework for s
 - Minimal Priority (0.0-0.9): Optional, address when convenient
 
 **Kanban Integration:**
-- MoSCoW classification mapping (Must Have/Should Have/Could Have/Won't Have)
+- MoSCOW classification mapping (Must Have/Should Have/Could Have/Won't Have)
 - Epic/Story assignment guidance
 - Priority tracking and metadata
 
@@ -65,7 +65,7 @@ Maintenance task prioritization framework created. Comprehensive framework for s
 2. **Initial Assessment:** Assess severity, impact, and effort
 3. **Calculate Base Priority Score:** Apply weighted formula
 4. **Apply Contextual Adjustments:** Consider strategic importance, dependencies, risks
-5. **Kanban Integration:** Assign to appropriate Epic/Story with MoSCoW classification
+5. **Kanban Integration:** Assign to appropriate Epic/Story with MoSCOW classification
 
 ---
 

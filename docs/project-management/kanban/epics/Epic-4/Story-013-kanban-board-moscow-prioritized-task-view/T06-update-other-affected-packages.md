@@ -56,7 +56,7 @@ After user verification of the enhanced Kanban board structure, update any other
 - **User verification obtained** - user has reviewed and approved the enhancement
 
 **Dependencies:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 - E4:S13:T02 – Update Kanban governance policy
 - E4:S13:T03 – Update Kanban board template
 - E4:S13:T04 – Assess system impacts
@@ -144,7 +144,7 @@ After user verification of the enhanced Kanban board structure, update any other
 ## Dependencies
 
 **Depends On:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view in Kanban board
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
 - E4:S13:T02 – Update Kanban governance policy
 - E4:S13:T03 – Update Kanban board template
 - E4:S13:T04 – Assess system impacts
@@ -168,7 +168,7 @@ After user verification of the enhanced Kanban board structure, update any other
 - User request for enhanced Kanban board functionality
 
 **Related Tasks:**
-- E4:S13:T01 – Design and implement MoSCoW prioritized task view
+- E4:S13:T01 – Design and implement MoSCOW prioritized task view
 - E4:S13:T02 – Update Kanban governance policy
 - E4:S13:T03 – Update Kanban board template
 - E4:S13:T04 – Assess system impacts

@@ -3,7 +3,7 @@
 **Release Date:** 2025-12-18  
 **Version:** v0.4.13.6+1  
 **Epic:** Epic 4 – Kanban Framework  
-**Story:** E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View  
+**Story:** E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View  
 **Task:** E4:S13:T06 – Update other affected packages  
 **Build:** +1 (T06 COMPLETE: All affected packages verified and confirmed updated)
 
@@ -30,7 +30,7 @@ Completed verification of all affected packages for the Kanban board enhancement
   - All package components verified
 
 - **Story 13 Complete:** All tasks complete
-  - T01: Enhanced Kanban board with MoSCoW prioritized task view ✅
+  - T01: Enhanced Kanban board with MoSCOW prioritized task view ✅
   - T02: Updated Kanban governance policy ✅
   - T03: Created Kanban board template ✅
   - T04: Assessed system impacts and fixed RW bug ✅
@@ -46,7 +46,7 @@ Completed verification of all affected packages for the Kanban board enhancement
 **Kanban Package:**
 - Template: `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md` ✅
 - Policy: `packages/frameworks/kanban/policies/kanban-governance-policy.md` ✅
-- Both include MoSCoW prioritized task view structure
+- Both include MoSCOW prioritized task view structure
 - Package ready for distribution/installation
 
 **Release Workflow Package:**
@@ -69,7 +69,7 @@ Completed verification of all affected packages for the Kanban board enhancement
 - E4:S13:T04 – Assess system impacts (RW package updated)
 
 **Related Stories:**
-- E4:S13 – Kanban Board Enhancement - MoSCoW Prioritized Task View (COMPLETE)
+- E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View (COMPLETE)
 
 **Related Epics:**
 - E4 – Kanban Framework

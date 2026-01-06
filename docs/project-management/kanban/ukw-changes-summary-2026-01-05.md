@@ -27,7 +27,7 @@ This UKW run synchronized kanban documentation to reflect the completion of E4:S
 
 **Main Board (`kanban-board.md`):**
 - **Version:** Updated to v0.6.6.8+14
-- **E4:S12 Entry (MoSCoW Section):** Removed from "Should Have" section (story is complete)
+- **E4:S12 Entry (MoSCOW Section):** Removed from "Should Have" section (story is complete)
 - **E4:S12 Entry (Epic 4 Section):** Updated from TODO to ✅ COMPLETE (v0.4.12.10+0)
   - Updated task list to show all tasks (T01-T10) as ✅ COMPLETE
   - Added detailed task completion summary
@@ -45,7 +45,7 @@ This UKW run synchronized kanban documentation to reflect the completion of E4:S
 
 ✅ **Story Document:** Status matches task completion (all tasks complete → story COMPLETE)  
 ✅ **Epic Document:** E4:S12 marked as COMPLETE (already updated in previous RW)  
-✅ **Kanban Board:** E4:S12 marked as COMPLETE in both MoSCoW and Epic sections  
+✅ **Kanban Board:** E4:S12 marked as COMPLETE in both MoSCOW and Epic sections  
 ✅ **Version Markers:** All forensic markers consistent across documents  
 ✅ **Task Checklist:** All tasks (T01-T10) marked complete with correct version markers
 
