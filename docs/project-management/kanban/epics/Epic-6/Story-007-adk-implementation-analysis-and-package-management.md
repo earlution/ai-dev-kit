@@ -41,7 +41,7 @@ housekeeping_policy: keep
 - [x] **E6:S07:T11 – Changelog Management and Archival Workflow** - ✅ COMPLETE (v0.6.7.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE)
   - Task: [`T11-changelog-management-and-archival-workflow.md`](T11-changelog-management-and-archival-workflow.md)
   - **Feature Request:** [FR-025](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
-- [ ] **E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.102+2 – CMW: Fixed ordering (Step 3.5), archived 50 entries, reduced from 6,871 to 5,122 lines, 0 violations remaining)
+- [ ] **E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.102+3 – CMW: Fixed 8 ordering violations, archived 50 entries, reduced from 5,329 to 3,736 lines)
   - Task: [`T102-changelog-maintenance-workflow-cmw.md`](T102-changelog-maintenance-workflow-cmw.md)
   - **Note:** This is a perpetual maintenance task. All CMW-triggered RWs are attributed to T102 (3-digit perpetual task). BUILD number = CMW run count.
   - **Migration:** Task migrated from T12 to T102 as part of repository story abstract space resolution (E9:S01:T08)
