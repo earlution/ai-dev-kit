@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1.8+2] - 16-01-26
+
+### Added
+- Epic 6 Story File Updates (E9:S01:T08)
+  - Updated all Epic 6 story file headers with new story numbers (S02-S08)
+  - Updated all task references and version numbers
+  - Added migration notes to all updated story files
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+2.md)
+
 ## [0.9.1.8+1] - 16-01-26
 
 ### Added

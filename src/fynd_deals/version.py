@@ -21,7 +21,7 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 9      # Epic number (Epic 9: Release Candidate Readiness)
 VERSION_STORY = 1     # Story number (Story 1: RC Readiness Gap Analysis)
 VERSION_TASK = 8      # Task number (Task 8: Repository Story Abstract Space Contradiction)
-VERSION_BUILD = 1     # Build number (E9:S01:T08+1 - Implementation: Repository story migration complete)
+VERSION_BUILD = 2     # Build number (E9:S01:T08+2 - Epic 6 story file updates complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD

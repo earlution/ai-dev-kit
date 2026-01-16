@@ -10,10 +10,10 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2026-01-16 (v0.9.1.8+1 – Implementation: Repository story migration complete)  
+**Last updated:** 2026-01-16 (v0.9.1.8+2 – Implementation: Epic 6 story file updates complete)  
 **Started:** 2026-01-16  
 **Completed:** [TBD]  
-**Version:** v0.9.1.8+1  
+**Version:** v0.9.1.8+2  
 **Code:** E9S01T08
 
 ---

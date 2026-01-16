@@ -6,15 +6,17 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Story 005 – Feature Requests
+# Story 006 – Feature Requests
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-01-03 (v0.6.5.0+1 – Perpetual story designation: Feature request tracking story, never completes)  
-**Version:** v0.6.5.0+1  
-**Code:** E6S05
+**Last updated:** 2026-01-16 (v0.6.6.0+1, migrated from v0.6.6.0+1 – Story renumbered from S05 to S06 as part of repository story migration)  
+**Version:** v0.6.6.0+1  
+**Code:** E6S06
+
+**Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
 
 **Story Type:** Perpetual Maintenance  
 **Completed:** N/A (Perpetual story - never completes)  

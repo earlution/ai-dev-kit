@@ -6,25 +6,27 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Story 002 – Framework Update and Migration
+# Story 003 – Framework Update and Migration
 
-**Status:** COMPLETE  
+**Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-03 (v0.6.2.3+1 – Story COMPLETE: All active tasks complete - Framework update procedures, migration guide, backward compatibility policy, and auto-update mechanisms)  
-**Version:** v0.6.2.3+1  
-**Code:** E6S02
+**Last updated:** 2026-01-16 (v0.6.3.3+1, migrated from v0.6.3.3+1 – Story renumbered from S02 to S03 as part of repository story migration)  
+**Version:** v0.6.3.3+1  
+**Code:** E6S03
+
+**Note:** This story was renumbered from S02 to S03 as part of the repository story abstract space resolution (E9:S01:T08).
 
 ---
 
 ## Task Checklist
 
-- [x] **E6:S02:T01 – Create framework update procedures** - ✅ COMPLETE (v0.6.2.1+1 – Framework update procedures document created)
-- [x] **E6:S02:T02 – Build migration guides and tools** - ✅ COMPLETE (v0.6.2.2+1 – Framework migration guide created)
-- [x] **E6:S02:T03 – Establish backward compatibility policies** - ✅ COMPLETE (v0.6.2.3+1 – Framework backward compatibility policy document created)
-- [ ] **E6:S02:T04 – Build framework update CLI tool** - TODO (SUPERSEDED by E6:S07)
-- [x] **E6:S02:T05 – Create auto-update mechanisms** - ✅ COMPLETE (v0.6.2.5+1 – Framework auto-update mechanisms created)
+- [x] **E6:S03:T01 – Create framework update procedures** - ✅ COMPLETE (v0.6.3.1+1 – Framework update procedures document created)
+- [x] **E6:S03:T02 – Build migration guides and tools** - ✅ COMPLETE (v0.6.3.2+1 – Framework migration guide created)
+- [x] **E6:S03:T03 – Establish backward compatibility policies** - ✅ COMPLETE (v0.6.3.3+1 – Framework backward compatibility policy document created)
+- [ ] **E6:S03:T04 – Build framework update CLI tool** - TODO (SUPERSEDED by E6:S07)
+- [x] **E6:S03:T05 – Create auto-update mechanisms** - ✅ COMPLETE (v0.6.3.5+1 – Framework auto-update mechanisms created)
 
 ---
 
@@ -42,9 +44,9 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 ## Tasks
 
-### E6:S02:T01 – Create framework update procedures
+### E6:S03:T01 – Create framework update procedures
 
-**Status:** ✅ COMPLETE (v0.6.2.1+1)  
+**Status:** ✅ COMPLETE (v0.6.3.1+1)  
 **Input:** Framework versioning strategy  
 **Deliverable:** Framework update procedure documentation  
 **Dependencies:** E6:S01 (Framework Version Management)  
@@ -68,12 +70,12 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 ---
 
-### E6:S02:T02 – Build migration guides and tools
+### E6:S03:T02 – Build migration guides and tools
 
-**Status:** ✅ COMPLETE (v0.6.2.2+1)  
+**Status:** ✅ COMPLETE (v0.6.3.2+1)  
 **Input:** Framework update procedures  
 **Deliverable:** Migration guides and tools  
-**Dependencies:** E6:S02:T01  
+**Dependencies:** E6:S03:T01  
 **Blocker:** None
 
 **Approach:**
@@ -93,9 +95,9 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 ---
 
-### E6:S02:T03 – Establish backward compatibility policies
+### E6:S03:T03 – Establish backward compatibility policies
 
-**Status:** ✅ COMPLETE (v0.6.2.3+1)  
+**Status:** ✅ COMPLETE (v0.6.3.3+1)  
 **Input:** Framework versioning strategy  
 **Deliverable:** Backward compatibility policy document  
 **Dependencies:** E6:S01 (Framework Version Management)  
@@ -120,14 +122,14 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 ---
 
-### E6:S02:T04 – Build framework update CLI tool
+### E6:S03:T04 – Build framework update CLI tool
 
 **Status:** SUPERSEDED  
 **Note:** This task has been expanded into a full Story: **E6:S07 – ai-dev-kit CLI Tool**. See [`Story-007-ai-dev-kit-cli-tool.md`](Story-007-ai-dev-kit-cli-tool.md) for complete implementation plan.
 
 **Input:** Framework dependency architecture, update procedures  
 **Deliverable:** `ai-dev-kit` CLI tool for framework management  
-**Dependencies:** E6:S01:T04, E6:S02:T01  
+**Dependencies:** E6:S01:T04, E6:S03:T01  
 **Blocker:** None
 
 **Approach:**
@@ -156,12 +158,12 @@ Implement comprehensive processes for updating and migrating framework packages.
 
 ---
 
-### E6:S02:T05 – Create auto-update mechanisms
+### E6:S03:T05 – Create auto-update mechanisms
 
-**Status:** ✅ COMPLETE (v0.6.2.5+1)  
+**Status:** ✅ COMPLETE (v0.6.3.5+1)  
 **Input:** Framework dependency architecture, CLI tool  
 **Deliverable:** Auto-update mechanisms for Git submodules and package managers  
-**Dependencies:** E6:S01:T04, E6:S02:T04 (E6:S07 provides CLI tool)  
+**Dependencies:** E6:S01:T04, E6:S03:T04 (E6:S07 provides CLI tool)  
 **Blocker:** None
 
 **Approach:**
