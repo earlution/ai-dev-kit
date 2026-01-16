@@ -256,12 +256,12 @@ A modular UKW workflow system that supports:
 - Epic: Epic 5: Documentation Management
 - Story: Story 0: FR Repo (PERPETUAL)
 - Task: Task 34: UKW Granular Control and Use Case Flags
-- Version: `v0.5.0.34+0` (doc-init)
+- Version: `v0.5.1.34+0` (doc-init, migrated from v0.5.0.34+0)
 
 **Kanban Links:**
 - Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](epics/Epic-5/Epic-5.md)
-- Story: [`docs/project-management/kanban/epics/Epic-5/Story-000-fr-repo.md`](epics/Epic-5/Story-000-fr-repo.md)
-- Task: [`docs/project-management/kanban/epics/Epic-5/Story-000-fr-repo/T34-ukw-granular-control-and-use-case-flags.md`](epics/Epic-5/Story-000-fr-repo/T34-ukw-granular-control-and-use-case-flags.md)
+- Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](epics/Epic-5/Story-001-fr-repo.md) (migrated from Story-000-fr-repo)
+- Task: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md`](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md)
 
 ---
 

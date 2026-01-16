@@ -6,28 +6,30 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Story 004 – Framework Documentation Management & Maintenance
+# Story 005 – Framework Documentation Management & Maintenance
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-07 (v0.5.4.8+1 – `.cursorrules` setup documentation added)  
-**Version:** v0.5.4.8+1  
-**Code:** E05S04
+**Last updated:** 2026-01-16 (v0.5.5.8+1, migrated from v0.5.5.8+1 – Story renumbered from S04 to S05 as part of repository story migration)  
+**Version:** v0.5.5.8+1  
+**Code:** E5S05
+
+**Note:** This story was renumbered from S04 to S05 as part of the repository story abstract space resolution (E9:S01:T08).
 
 ---
 
 ## Task Checklist
 
-- [ ] **E05:S04:T01 – Conduct framework documentation hygiene analysis** - TODO
-- [ ] **E05:S04:T02 – Define framework documentation maintenance policies** - TODO
-- [ ] **E05:S04:T03 – Create framework documentation review cadences** - TODO
-- [ ] **E05:S04:T04 – Establish framework documentation update triggers** - TODO
-- [x] **E05:S04:T05 – Create comprehensive user documentation for Epic 6 framework dependency architecture** - COMPLETE ✅
-- [ ] **E05:S04:T06 – Create quick-start guide for framework dependency installation** - TODO
-- [x] **E05:S04:T07 – Set up ai-dev-kit repository as GitHub template** ✅ COMPLETE (v0.5.4.7+1) - Documentation complete, manual template enablement pending
-- [x] **E05:S04:T08 – Document `.cursorrules` setup for RW trigger** ✅ COMPLETE (v0.5.4.8+1) - Added `.cursorrules` setup instructions to installation guide, troubleshooting guide, and FAQ
+- [ ] **E5:S05:T01 – Conduct framework documentation hygiene analysis** - TODO
+- [ ] **E5:S05:T02 – Define framework documentation maintenance policies** - TODO
+- [ ] **E5:S05:T03 – Create framework documentation review cadences** - TODO
+- [ ] **E5:S05:T04 – Establish framework documentation update triggers** - TODO
+- [x] **E5:S05:T05 – Create comprehensive user documentation for Epic 6 framework dependency architecture** - COMPLETE ✅
+- [ ] **E5:S05:T06 – Create quick-start guide for framework dependency installation** - TODO
+- [x] **E5:S05:T07 – Set up ai-dev-kit repository as GitHub template** ✅ COMPLETE (v0.5.5.7+1) - Documentation complete, manual template enablement pending
+- [x] **E5:S05:T08 – Document `.cursorrules` setup for RW trigger** ✅ COMPLETE (v0.5.5.8+1) - Added `.cursorrules` setup instructions to installation guide, troubleshooting guide, and FAQ
 
 ---
 
@@ -47,7 +49,7 @@ Establish a comprehensive framework for framework documentation maintenance that
 
 ## Tasks
 
-### E05:S04:T01 – Conduct framework documentation hygiene analysis
+### E5:S05:T01 – Conduct framework documentation hygiene analysis
 
 **Input:** Entire framework documentation corpus (`packages/frameworks/*/docs/`, framework READMEs, framework guides)  
 **Deliverable:** Framework documentation hygiene analysis report with categorized issues and recommendations  
@@ -126,11 +128,11 @@ Before establishing framework documentation maintenance policies, we need a comp
 
 ---
 
-### E05:S04:T02 – Define framework documentation maintenance policies
+### E5:S05:T02 – Define framework documentation maintenance policies
 
-**Input:** Framework documentation hygiene analysis report (E05:S04:T01)  
+**Input:** Framework documentation hygiene analysis report (E5:S05:T01)  
 **Deliverable:** Framework documentation maintenance policy document  
-**Dependencies:** E05:S04:T01  
+**Dependencies:** E5:S05:T01  
 **Blocker:** None
 
 **Approach:**
@@ -143,11 +145,11 @@ Before establishing framework documentation maintenance policies, we need a comp
 
 ---
 
-### E05:S04:T03 – Create framework documentation review cadences
+### E5:S05:T03 – Create framework documentation review cadences
 
-**Input:** Framework documentation maintenance policies (E05:S04:T02)  
+**Input:** Framework documentation maintenance policies (E5:S05:T02)  
 **Deliverable:** Framework documentation review schedule and cadences  
-**Dependencies:** E05:S04:T02  
+**Dependencies:** E5:S05:T02  
 **Blocker:** None
 
 **Approach:**
@@ -158,11 +160,11 @@ Before establishing framework documentation maintenance policies, we need a comp
 
 ---
 
-### E05:S04:T04 – Establish framework documentation update triggers
+### E5:S05:T04 – Establish framework documentation update triggers
 
-**Input:** Framework documentation maintenance policies (E05:S04:T02), Framework documentation review cadences (E05:S04:T03)  
+**Input:** Framework documentation maintenance policies (E5:S05:T02), Framework documentation review cadences (E5:S05:T03)  
 **Deliverable:** Framework documentation update trigger definitions and procedures  
-**Dependencies:** E05:S04:T02, E05:S04:T03  
+**Dependencies:** E5:S05:T02, E5:S05:T03  
 **Blocker:** None
 
 **Problem Statement:**
@@ -207,23 +209,23 @@ Framework documentation often becomes outdated because there isn't a clear, syst
 - A system for tracking framework documentation updates is established
 
 **Related Work:**
-- E05:S04:T01 (Hygiene Analysis) - Provides baseline of current issues
-- E05:S04:T02 (Maintenance Policies) - Policies will inform trigger definitions
+- E5:S05:T01 (Hygiene Analysis) - Provides baseline of current issues
+- E5:S05:T02 (Maintenance Policies) - Policies will inform trigger definitions
 - E05:S02 (Quality Assurance) - Validators can act as automatic triggers
 - E05:S03 (Automation) - Automation scripts will implement automatic triggers
 - E05:S01:T04 (Project Documentation Update Triggers) - Similar triggers for project documentation
 
 ---
 
-### E05:S04:T06 – Create quick-start guide for framework dependency installation
+### E5:S05:T06 – Create quick-start guide for framework dependency installation
 
-**Input:** Framework dependency installation guide (E05:S04:T05)  
+**Input:** Framework dependency installation guide (E5:S05:T05)  
 **Deliverable:** Quick-start guide for users who already have Git set up  
-**Dependencies:** E05:S04:T05  
+**Dependencies:** E5:S05:T05  
 **Blocker:** None
 
 **Problem Statement:**
-The comprehensive installation guide (E05:S04:T05) covers the full setup process from scratch, including Git repository initialization. However, many users may already have a Git repository set up and want a faster path to get started. A quick-start guide would provide a streamlined installation path for experienced users while still maintaining technical accuracy.
+The comprehensive installation guide (E5:S05:T05) covers the full setup process from scratch, including Git repository initialization. However, many users may already have a Git repository set up and want a faster path to get started. A quick-start guide would provide a streamlined installation path for experienced users while still maintaining technical accuracy.
 
 **Approach:**
 
@@ -275,13 +277,13 @@ The comprehensive installation guide (E05:S04:T05) covers the full setup process
 - Guide is accessible to users who want faster installation
 
 **Related Work:**
-- E05:S04:T05 (Comprehensive Installation Guide) - Source material and prerequisite
+- E5:S05:T05 (Comprehensive Installation Guide) - Source material and prerequisite
 - Epic 6 (Framework Management) - Framework dependency architecture
-- E05:S04:T01-T04 (Framework Documentation Management) - Part of framework documentation suite
+- E5:S05:T01-T04 (Framework Documentation Management) - Part of framework documentation suite
 
 ---
 
-### E05:S04:T07 – Set up ai-dev-kit repository as GitHub template
+### E5:S05:T07 – Set up ai-dev-kit repository as GitHub template
 
 **Input:** Current repository structure, GitHub repository settings  
 **Deliverable:** Repository configured as GitHub template with documentation  
@@ -353,17 +355,17 @@ Users should be able to create new projects using `ai-dev-kit` as a template, pr
 - ⏳ Template works correctly for new projects (to be tested after enablement)
 
 **Related Work:**
-- E05:S04:T05 - Installation guide (template usage instructions added)
+- E5:S05:T05 - Installation guide (template usage instructions added)
 - Epic 1: Story 4 - Repository Branding and Renaming (repository setup)
 - Epic 7 - Examples and Adoption (template adoption examples)
 
 ---
 
-### E05:S04:T08 – Document `.cursorrules` setup for RW trigger
+### E5:S05:T08 – Document `.cursorrules` setup for RW trigger
 
 **Input:** User feedback from `been-there` project indicating `.cursorrules` file missing  
 **Deliverable:** Updated documentation with `.cursorrules` setup instructions  
-**Dependencies:** E05:S04:T05 (Installation guide must exist)  
+**Dependencies:** E5:S05:T05 (Installation guide must exist)  
 **Blocker:** None
 
 **Problem Statement:**
@@ -408,7 +410,7 @@ Users installing the Workflow Management framework need clear instructions on ho
 - ✅ Users can successfully enable RW trigger after following documentation
 
 **Related Work:**
-- E05:S04:T05 (Comprehensive Installation Guide) - Base document updated
+- E5:S05:T05 (Comprehensive Installation Guide) - Base document updated
 - `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md` - Template file referenced
 - `packages/frameworks/workflow mgt/scripts/install_release_workflow.py` - RW installer that generates `.cursorrules`
 
@@ -421,9 +423,9 @@ Users installing the Workflow Management framework need clear instructions on ho
 - E05:S03 (Documentation Automation) - Framework documentation automation
 
 **Blocked By:**
-- E05:S04:T01 (Conduct framework documentation hygiene analysis)
-- E05:S04:T02 (Define framework documentation maintenance policies)
-- E05:S04:T03 (Create framework documentation review cadences)
+- E5:S05:T01 (Conduct framework documentation hygiene analysis)
+- E5:S05:T02 (Define framework documentation maintenance policies)
+- E5:S05:T03 (Create framework documentation review cadences)
 
 **Coordinates With:**
 - E05:S01 (Project Documentation Maintenance Framework) - Similar scope but for project docs

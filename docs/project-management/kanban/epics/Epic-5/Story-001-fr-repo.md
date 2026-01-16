@@ -1,0 +1,169 @@
+---
+lifecycle: evergreen
+ttl_days: null
+created_at: 2026-01-16T00:00:00Z
+expires_at: null
+housekeeping_policy: keep
+---
+
+# Epic 5, Story 1: FR Repo (PERPETUAL)
+
+**Status:** IN PROGRESS (PERPETUAL)  
+**Priority:** HIGH  
+**Last updated:** 2026-01-16 (v0.5.1.35+0 – FR-035 task created: Task Template Cross-Wiring Section)  
+**Estimated Effort:** N/A (Perpetual repository)  
+**Started:** 2026-01-16  
+**Completed:** N/A (Perpetual - never completes)  
+**Version:** v0.5.1.0+0  
+**Code:** E5S01
+
+**Story Type:** Repository (PERPETUAL)  
+**Build Warning Suppression:** true  
+**Explanation:** This is a repository story that serves as the canonical home for all Feature Requests. Repository stories never complete and are excluded from completion analytics.
+
+**Note:** This story was migrated from S00 to S01 as part of the repository story abstract space resolution (E9:S01:T08). S00 is now Epic-level abstract space only.
+
+---
+
+## Task Checklist
+
+> **Repository Pattern:** Each Feature Request becomes a task in this repository story.
+> **Traceability:** FR-001 = E5:S01:T01, FR-002 = E5:S01:T02, etc.
+> **Abstract Space:** v0.5.1.0+0 (repository story), v0.5.1.1+0 (first FR), v0.5.1.2+0 (second FR), etc.
+
+- [ ] **E5:S01:T31 – Multi-Agent Coordination Feasibility Investigation** - TODO (C priority) - [Task Document](Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
+- [ ] **E5:S01:T34 – UKW Granular Control and Use Case Flags** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
+- [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
+
+---
+
+## Overview
+
+This is the **Feature Request Repository** (FR Repo) for Epic 5. All Feature Requests (FRs) are tracked as tasks in this repository story, establishing perfect 1:1 traceability between FR numbers and task numbers.
+
+**Repository Pattern:**
+- FR-001 → E5:S01:T01 (abstract space: v0.5.1.1+0)
+- FR-002 → E5:S01:T02 (abstract space: v0.5.1.2+0)
+- FR-003 → E5:S01:T03 (abstract space: v0.5.1.3+0)
+- And so on...
+
+**Bidirectional Traceability:**
+- FR-001 → E5:S01:T01 → v0.5.1.1+0
+- E5:S01:T01 → FR-001
+- v0.5.1.1+0 → E5:S01:T01 → FR-001
+
+**Migration Note:**
+- This story was migrated from S00 to S01 as part of the repository story abstract space resolution (E9:S01:T08).
+- Previous versions used S00 (e.g., FR-031 = E5:S00:T31 = v0.5.0.31+0).
+- New versions use S01 (e.g., FR-031 = E5:S01:T31 = v0.5.1.31+0).
+
+---
+
+## Goals
+
+- [x] Repository story created (PERPETUAL)
+- [x] Abstract space established (v0.5.1.0+0)
+- [x] Traceability pattern documented (FR-001 = E5:S01:T01)
+- [x] Migrated from S00 to S01 (E9:S01:T08)
+- [ ] Intake workflow assigns FRs to S01:Txx
+- [ ] Board display logic omits S01 from epic checklists (UX optimization)
+
+---
+
+## Repository Pattern
+
+### Traceability Mapping
+
+**Feature Request → Task Mapping:**
+- Each FR gets assigned to the next available task number in this repository story
+- FR-001 = E5:S01:T01
+- FR-002 = E5:S01:T02
+- FR-003 = E5:S01:T03
+- Pattern continues indefinitely
+
+**Version Mapping:**
+- Repository story: v0.5.1.0+0 (story-level abstract space)
+- First FR: v0.5.1.1+0 (E5:S01:T01)
+- Second FR: v0.5.1.2+0 (E5:S01:T02)
+- Third FR: v0.5.1.3+0 (E5:S01:T03)
+
+**Intake Workflow Integration:**
+- When FR-001 is filed, intake workflow assigns it to E5:S01:T01
+- Intake workflow then analyzes FR-001 content and assigns implementation work to appropriate epic/story
+- Traceability bridge: E5:S01:T01 → Implementation work (e.g., E12:S03:T05)
+
+---
+
+## PERPETUAL State
+
+**Status:** IN PROGRESS (PERPETUAL)
+
+**Characteristics:**
+- Repository stories never complete
+- Excluded from completion analytics
+- Omitted from epic checklist displays in board views (UX optimization)
+- Still tracked internally in Epic 5 document
+
+**Rationale:**
+- Repository stories are containers, not work units
+- They grow indefinitely (FR-001 through FR-999+)
+- Completion is not meaningful for repositories
+- Board display omission reduces clutter (100+ tasks in S01)
+
+---
+
+## Board Display
+
+**Note:** This story (E5:S01) is **omitted from epic checklist displays** in board views to reduce clutter. It is still tracked internally in the Epic 5 document.
+
+**Display Rules:**
+- Epic 5 Story Checklist: S01 omitted from board views
+- Epic 5 document: S01 included in internal Story Checklist
+- Kanban board: S01 not shown in Epic 5 section
+- Quick view board: S01 not shown in Epic 5 section
+
+---
+
+## Meta-Grouping Support
+
+**Meta-Grouping Pattern:**
+- Implementation stories can reference repository tasks for grouping
+- Example: E5:S02 "Authentication Features" → References: E5:S01:T05, T12, T23
+- Task numbers only (no FR numbers in meta-grouping)
+- FR traceability via task if needed
+
+---
+
+## Dependencies
+
+**Related Work:**
+- **E4:S12:** FR/BR/UXR Repository Stories (S00 Pattern) - Story that created this repository pattern
+- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern) - Feature request
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs - Abstract space concept
+- **E2:S11:** Intake Workflow Automation - Intake workflow integration
+- **E4:S02:** FR/BR Intake to Tasks - Intake foundation
+- **E9:S01:T08:** Repository Story Abstract Space Contradiction - Migration that moved this from S00 to S01
+
+---
+
+## References
+
+- **Epic 5:** `docs/project-management/kanban/epics/Epic-5/Epic-5.md`
+- **E4:S12:** `docs/project-management/kanban/epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md`
+- **FR-021:** `docs/project-management/kanban/fr-br/FR-021-fr-br-uxr-repository-stories.md`
+- **FR-018:** `docs/project-management/kanban/fr-br/FR-018-abstract-space-zero-numbered-est-docs.md`
+- **E9:S01:T08:** `docs/project-management/kanban/epics/Epic-9/Story-001-rc-readiness-gap-analysis/T08-repository-story-abstract-space-contradiction.md`
+
+---
+
+## Notes
+
+- This repository story is PERPETUAL and will never be marked as COMPLETE
+- Tasks in this repository are created automatically by the intake workflow
+- Each FR gets a unique task number (T01, T02, T03, etc.)
+- Version numbers follow story-level abstract space pattern (v0.5.1.1+0, v0.5.1.2+0, etc.)
+- Board display omission is intentional (UX optimization)
+- **Migration:** This story was migrated from S00 to S01 as part of repository story abstract space resolution (E9:S01:T08). S00 is now Epic-level abstract space only.
+
+---
+

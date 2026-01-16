@@ -6,28 +6,30 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 8: Update Kanban Workflow (UKW) - Perpetual Task
+# Epic 6, Story 6, Task 101: Update Kanban Workflow (UKW) - Perpetual Task
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-16 (v0.6.6.8+21 – Epic 9 creation: Created Epic 9 (Release Candidate Readiness) with 5 stories, updated kanban board)  
+**Last updated:** 2026-01-16 (v0.6.7.101+21 – Epic 9 creation: Created Epic 9 (Release Candidate Readiness) with 5 stories, updated kanban board)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.6.8+21
+**Version:** v0.6.7.101+21
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
 **Progress:** Epic 9 creation and kanban synchronization - Created Epic 9 (Release Candidate Readiness) with 5 comprehensive stories covering RC readiness gap analysis, framework reviews (Kanban, Workflow Management, Numbering & Versioning), and canonical E/S/T review. Each framework review story includes 8 tasks covering framework objective/documentation/component analysis, package management/maintenance/installation, update management, and book project integration. Updated kanban board with Epic 9 and all stories. FR-032 accepted and assigned to Epic 9, Story 1.  
-**Code:** E6S06T08
+**Code:** E6S06T101
+
+**Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).
 
 ---
 
 ## Task ID
 
 **Format:** `E{epic}:S{story}:T{task}`
-**Value:** `E6:S06:T08`
+**Value:** `E6:S07:T101`
 
 ---
 
@@ -58,7 +60,7 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 - No mechanism for perpetual maintenance tasks
 
 **Solution:** Create dedicated perpetual task for UKW work:
-- All UKW-triggered RWs use T08
+- All UKW-triggered RWs use T101 (perpetual task, 3-digit)
 - BUILD number = UKW synchronization run count
 - Clear attribution and traceability
 - Proper semantic meaning
@@ -79,34 +81,36 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 
 **When UKW triggers RW:**
 1. Agent detects UKW context (user ran "UKW" then "RW")
-2. Automatically attributes release to T08
+2. Automatically attributes release to T101 (perpetual task, 3-digit)
 3. Increments BUILD number (same task, increment BUILD)
 4. Suppresses build number warnings (perpetual task flag)
 
 ### Version Pattern
 
-- First UKW release: `v0.6.6.8+1`
-- Subsequent UKW releases: `v0.6.6.8+2`, `v0.6.6.8+3`, etc.
+- First UKW release: `v0.6.7.101+1`
+- Subsequent UKW releases: `v0.6.7.101+2`, `v0.6.7.101+3`, etc.
 - BUILD number represents UKW synchronization run count
+- **Note:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)
 
 ---
 
 ## Acceptance Criteria
 
-- [x] Perpetual task document created ✅ COMPLETE (v0.6.6.8+0)
-- [x] RW logic updated to detect UKW context and auto-attribute to T08 ✅ COMPLETE (v0.6.6.8+1)
-- [x] RW logic updated to suppress build number warnings for perpetual tasks ✅ COMPLETE (v0.6.6.8+1)
-- [x] Documentation updated (RW guide, versioning policy) ✅ COMPLETE (v0.6.6.8+2 - both local and packaged)
-- [x] First UKW-triggered RW uses T08 (v0.6.6.8+1) ✅ COMPLETE
+- [x] Perpetual task document created ✅ COMPLETE (v0.6.7.101+0, migrated from v0.6.6.8+0)
+- [x] RW logic updated to detect UKW context and auto-attribute to T101 ✅ COMPLETE (v0.6.7.101+1, migrated from v0.6.6.8+1)
+- [x] RW logic updated to suppress build number warnings for perpetual tasks ✅ COMPLETE (v0.6.7.101+1, migrated from v0.6.6.8+1)
+- [x] Documentation updated (RW guide, versioning policy) ✅ COMPLETE (v0.6.7.101+2, migrated from v0.6.6.8+2 - both local and packaged)
+- [x] First UKW-triggered RW uses T101 (v0.6.7.101+1, migrated from v0.6.6.8+1) ✅ COMPLETE
+- [x] Task migrated from T08 to T101 (E9:S01:T08) ✅ COMPLETE (v0.6.7.101+21, migrated from v0.6.6.8+21)
 
 ---
 
 ## Related Work
 
-- **Story:** E6:S06 - ADK Implementation Analysis and Package Management
+- **Story:** E6:S07 - ADK Implementation Analysis and Package Management
 - **Workflow:** UKW (Update Kanban Workflow)
 - **Workflow:** RW (Release Workflow)
-- **Related Task:** T07 - Framework Hardening (incorrectly attributed UKW release)
+- **Related Task:** T07 - Framework Hardening (previously incorrectly attributed UKW release before perpetual task pattern)
 - **Documentation:** `docs/analysis/ukw-versioning-reasoning-analysis.md`
 
 ---
@@ -120,7 +124,7 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 
 ---
 
-**Last Updated:** 2025-12-18 (v0.6.6.8+2 – RW/UKW wiring documentation complete)  
-**Version:** v0.6.6.8+2  
+**Last Updated:** 2026-01-16 (v0.6.7.101+21 – Task migrated from T08 to T101 as part of repository story abstract space resolution)  
+**Version:** v0.6.7.101+21  
 **Status:** IN PROGRESS (Perpetual)
 

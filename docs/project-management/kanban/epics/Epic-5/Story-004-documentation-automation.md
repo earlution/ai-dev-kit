@@ -6,23 +6,25 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Story 003 – Documentation Automation
+# Story 004 – Documentation Automation
 
 **Status:** IN PROGRESS  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-06  
-**Version:** v0.5.3.1+1  
-**Code:** E5S03
+**Last updated:** 2026-01-16 (v0.5.4.1+1, migrated from v0.5.4.1+1 – Story renumbered from S03 to S04 as part of repository story migration)  
+**Version:** v0.5.4.1+1  
+**Code:** E5S04
+
+**Note:** This story was renumbered from S03 to S04 as part of the repository story abstract space resolution (E9:S01:T08).
 
 ---
 
 ## Task Checklist
 
-- [x] **E5:S03:T01 – Create automated documentation update scripts** - ✅ COMPLETE (v0.5.3.1+1 – Documentation update scripts created: version references, cross-references, metadata, link validation, documentation sync)
-- [ ] **E5:S03:T02 – Implement documentation synchronization workflows** - TODO
-- [ ] **E5:S03:T03 – Build documentation change detection and notification** - TODO
+- [x] **E5:S04:T01 – Create automated documentation update scripts** - ✅ COMPLETE (v0.5.4.1+1 – Documentation update scripts created: version references, cross-references, metadata, link validation, documentation sync)
+- [ ] **E5:S04:T02 – Implement documentation synchronization workflows** - TODO
+- [ ] **E5:S04:T03 – Build documentation change detection and notification** - TODO
 
 ---
 
@@ -40,9 +42,9 @@ Automate documentation maintenance tasks to reduce manual effort and improve con
 
 ## Tasks
 
-### E5:S03:T01 – Create automated documentation update scripts
+### E5:S04:T01 – Create automated documentation update scripts
 
-**Status:** ✅ COMPLETE (v0.5.3.1+1)
+**Status:** ✅ COMPLETE (v0.5.4.1+1)
 
 **Input:** Documentation update triggers  
 **Deliverable:** Automated documentation update scripts  
@@ -73,7 +75,7 @@ Automate documentation maintenance tasks to reduce manual effort and improve con
 
 ---
 
-### E5:S03:T02 – Implement documentation synchronization workflows
+### E5:S04:T02 – Implement documentation synchronization workflows
 
 **Input:** Documentation maintenance policies  
 **Deliverable:** Documentation synchronization workflow  
@@ -88,7 +90,7 @@ Automate documentation maintenance tasks to reduce manual effort and improve con
 
 ---
 
-### E5:S03:T03 – Build documentation change detection and notification
+### E5:S04:T03 – Build documentation change detection and notification
 
 **Input:** Documentation health monitoring  
 **Deliverable:** Change detection and notification system  

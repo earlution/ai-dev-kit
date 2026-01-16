@@ -127,12 +127,12 @@ For each step, follow this pattern:
      - **UKW Context:** User ran "UKW" then "RW" → This is kanban synchronization work
      - **Dynamic Task Discovery:** Search for task document with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
      - **Task ID is Project-Specific:** Perpetual UKW task ID varies by project:
-       - ai-dev-kit: E6:S06:T08 (example)
+       - ai-dev-kit: E6:S06:T101 (example, migrated from T08)
        - Other projects: May be E4:S03:T05, E2:S01:T10, etc. (depends on project structure)
      - **Auto-Attribute to Perpetual Task:** Use discovered perpetual task's Epic/Story/Task numbers, increment `VERSION_BUILD`
      - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
      - **Skip Normal Task Identification:** Do not read Story file for normal task identification when UKW context detected
-     - **Example (ai-dev-kit):** If current is `v0.6.6.8+3`, UKW release becomes `v0.6.6.8+4`
+     - **Example (ai-dev-kit):** If current is `v0.6.6.101+3`, UKW release becomes `v0.6.6.101+4` (T101, migrated from T08)
      - **Example (other project):** If perpetual task is E4:S03:T05 and current is `v0.4.3.5+2`, UKW release becomes `v0.4.3.5+3`
      - **Document:** "UKW context detected. Found perpetual UKW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
    - **A.1.5. CHECK CMW CONTEXT (AFTER UKW CHECK, BEFORE READING VERSION):** **CRITICAL:** Check if this RW was triggered immediately after CMW (only if UKW context NOT detected):
@@ -143,12 +143,12 @@ For each step, follow this pattern:
      - **Dynamic Task Discovery:** Search for task document with `Task Type: Perpetual Maintenance` flag (for CMW)
      - **CMW Identification:** Look for task name/description containing "CMW" or "Changelog Maintenance Workflow"
      - **Task ID is Project-Specific:** Perpetual CMW task ID varies by project:
-       - ai-dev-kit: E6:S06:T12 (example)
+       - ai-dev-kit: E6:S06:T102 (example, migrated from T12)
        - Other projects: May be E4:S03:T06, E2:S01:T11, etc. (depends on project structure)
      - **Auto-Attribute to Perpetual Task:** Use discovered perpetual task's Epic/Story/Task numbers, increment `VERSION_BUILD`
      - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
      - **Skip Normal Task Identification:** Do not read Story file for normal task identification when CMW context detected
-     - **Example (ai-dev-kit):** If current is `v0.6.6.12+2`, CMW release becomes `v0.6.6.12+3`
+     - **Example (ai-dev-kit):** If current is `v0.6.6.102+2`, CMW release becomes `v0.6.6.102+3` (T102, migrated from T12)
      - **Example (other project):** If perpetual task is E4:S03:T06 and current is `v0.4.3.6+1`, CMW release becomes `v0.4.3.6+2`
      - **Document:** "CMW context detected. Found perpetual CMW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
    - **A. READ CURRENT VERSION:** Load config first, read version file to get current `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK`, `VERSION_BUILD`
@@ -300,7 +300,7 @@ For each step, follow this pattern:
 1. **Identify Perpetual UKW Task (Wiring Step)** - **MANDATORY FIRST STEP:** Discover and wire UKW to the project's perpetual UKW task:
    - Search all task documents for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
    - Identify the task dedicated to UKW releases (may be named "Update Kanban Workflow (UKW)" or similar)
-   - Note the task's Epic/Story/Task ID (e.g., E6:S06:T08 in ai-dev-kit, E4:S03:T05 in another project)
+   - Note the task's Epic/Story/Task ID (e.g., E6:S06:T101 in ai-dev-kit, E4:S03:T05 in another project)
    - This establishes the wiring between UKW and the perpetual task for this project instance
    - Store task ID for RW attribution later (when user runs "RW" after "UKW")
 2. **Analyze Recent Activity** - Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers
@@ -319,17 +319,17 @@ For each step, follow this pattern:
 - **UKW Context Detection:** RW Step 2 will detect UKW context (user ran "UKW" then "RW")
 - **Perpetual Task Wiring:** UKW Step 1 establishes wiring to the project's perpetual UKW task (discovers task ID via `perpetual_task: true` flag)
 - **RW Uses Wired Task:** RW uses the perpetual task ID that UKW discovered in Step 1:
-  - **Wiring Established:** UKW Step 1 found the perpetual task (e.g., E6:S06:T08 in ai-dev-kit, E4:S03:T05 in another project)
+  - **Wiring Established:** UKW Step 1 found the perpetual task (e.g., E6:S06:T101 in ai-dev-kit, E4:S03:T05 in another project)
   - **RW Uses Wired ID:** RW Step 2 (UKW context) uses the task ID from UKW's wiring step
   - **Same Task, Different ID per Project:** Each project instance has its own perpetual UKW task with its own E/S/T ID
 - **Version Pattern:** UKW releases use the wired perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
 - **Build Warning Suppression:** Perpetual tasks have `perpetual_task: true` flag, so high BUILD numbers are expected and valid (no warnings)
 
 **Wiring Example (ai-dev-kit):**
-- UKW Step 1 discovers: E6:S06:T08 is the perpetual UKW task
-- UKW wires itself to E6:S06:T08
-- When RW runs after UKW, it uses the wired task ID (E6:S06:T08)
-- Version: `v0.6.6.8+{N}`
+- UKW Step 1 discovers: E6:S06:T101 is the perpetual UKW task (migrated from T08)
+- UKW wires itself to E6:S06:T101
+- When RW runs after UKW, it uses the wired task ID (E6:S06:T101)
+- Version: `v0.6.6.101+{N}` (migrated from `v0.6.6.8+{N}`)
 
 **Wiring Example (other project):**
 - UKW Step 1 discovers: E4:S03:T05 is the perpetual UKW task

@@ -6,21 +6,23 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Story 006 – Policy Documentation Structure
+# Story 007 – Policy Documentation Structure
 
 **Status:** IN PROGRESS  
 **Priority:** MEDIUM  
 **Estimated Effort:** 1 week  
 **Created:** 2025-12-12  
-**Last updated:** 2025-12-12 (v0.5.6.1+1 – Task 1 complete: Policy salience implementation)  
-**Version:** v0.5.6.1+1  
-**Code:** E5S06
+**Last updated:** 2026-01-16 (v0.5.7.1+1, migrated from v0.5.7.1+1 – Story renumbered from S06 to S07 as part of repository story migration)  
+**Version:** v0.5.7.1+1  
+**Code:** E5S07
+
+**Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
 
 ---
 
 ## Task Checklist
 
-- [x] **E5:S06:T01 – Implement Policy Documents Machine-Readable Salience Section (FR-022)** ✅ COMPLETE (v0.5.6.1+1)
+- [x] **E5:S07:T01 – Implement Policy Documents Machine-Readable Salience Section (FR-022)** ✅ COMPLETE (v0.5.7.1+1)
 
 ---
 
@@ -38,7 +40,7 @@ Enable AI agents to quickly parse and understand policy requirements without rea
 
 ## Tasks
 
-### E5:S06:T01 – Implement Policy Documents Machine-Readable Salience Section (FR-022)
+### E5:S07:T01 – Implement Policy Documents Machine-Readable Salience Section (FR-022)
 
 **Scope:** Define and implement a standardized "Policy Salience" section for policy documents that captures key rules, enforcement points, decision criteria, and scope in machine-readable format (YAML). Create schema, template, and update existing policy documents.
 
@@ -69,7 +71,7 @@ Enable AI agents to quickly parse and understand policy requirements without rea
 - [x] ✅ Policy salience template available for new documents
 - [x] ✅ Documentation explains how to create/maintain salience sections
 
-**Status:** ✅ COMPLETE (v0.5.6.1+1)
+**Status:** ✅ COMPLETE (v0.5.7.1+1)
 
 **Completion Summary:**
 - ✅ Created Policy Salience schema specification (`docs/architecture/standards-and-adrs/policy-salience-schema.md`)
@@ -81,7 +83,7 @@ Enable AI agents to quickly parse and understand policy requirements without rea
 - ✅ Schema includes: policy_id, type, domain, audience, applies_to, key_rules, decision_criteria, triggers, integration_points, related_policies
 - ✅ All documentation provides examples, best practices, and usage patterns
 
-**Version Anchor:** v0.5.6.1+0 (doc-init) → v0.5.6.1+1 (implementation complete)
+**Version Anchor:** v0.5.7.1+0 (doc-init) → v0.5.7.1+1 (implementation complete)
 
 ---
 

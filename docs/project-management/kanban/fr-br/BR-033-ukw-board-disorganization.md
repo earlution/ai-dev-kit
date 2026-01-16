@@ -154,12 +154,12 @@ _No fix attempts yet._
 - Epic: Epic 6: Framework Management and Maintenance
 - Story: Story 0: BR Repo (PERPETUAL)
 - Task: Task 33: UKW Board Disorganization
-- Version: `v0.6.0.33+0` (doc-init)
+- Version: `v0.6.1.33+0` (doc-init, migrated from v0.6.0.33+0)
 
 **Kanban Links:**
 - Epic: [`docs/project-management/kanban/epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
-- Story: [`docs/project-management/kanban/epics/Epic-6/Story-000-br-repo.md`](epics/Epic-6/Story-000-br-repo.md)
-- Task: [`docs/project-management/kanban/epics/Epic-6/Story-000-br-repo/T33-ukw-board-disorganization.md`](epics/Epic-6/Story-000-br-repo/T33-ukw-board-disorganization.md)
+- Story: [`docs/project-management/kanban/epics/Epic-6/Story-001-br-repo.md`](epics/Epic-6/Story-001-br-repo.md) (migrated from Story-000-br-repo)
+- Task: [`docs/project-management/kanban/epics/Epic-6/Story-001-br-repo/T33-ukw-board-disorganization.md`](epics/Epic-6/Story-001-br-repo/T33-ukw-board-disorganization.md)
 
 ---
 

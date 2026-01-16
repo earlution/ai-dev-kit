@@ -15,7 +15,7 @@ housekeeping_policy: keep
 **Severity:** MEDIUM  
 **Status:** ACCEPTED  
 **GitHub Issue:** [TBD]  
-**Version:** v0.5.0.35+0
+**Version:** v0.5.1.35+0 (migrated from v0.5.0.35+0)
 
 ---
 
@@ -232,12 +232,12 @@ A comprehensive Standard Operating Procedure has been created based on web resea
 - Epic: Epic 5: Documentation Management
 - Story: Story 0: FR Repo (PERPETUAL)
 - Task: Task 35: Task Template Cross-Wiring Section
-- Version: `v0.5.0.35+0` (doc-init)
+- Version: `v0.5.1.35+0` (doc-init, migrated from v0.5.0.35+0)
 
 **Kanban Links:**
 - Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](epics/Epic-5/Epic-5.md)
-- Story: [`docs/project-management/kanban/epics/Epic-5/Story-000-fr-repo.md`](epics/Epic-5/Story-000-fr-repo.md)
-- Task: [`docs/project-management/kanban/epics/Epic-5/Story-000-fr-repo/T35-task-template-cross-wiring-section.md`](epics/Epic-5/Story-000-fr-repo/T35-task-template-cross-wiring-section.md)
+- Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](epics/Epic-5/Story-001-fr-repo.md) (migrated from Story-000-fr-repo)
+- Task: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md`](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md)
 
 ---
 

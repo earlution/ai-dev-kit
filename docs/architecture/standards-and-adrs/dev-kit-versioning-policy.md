@@ -263,14 +263,21 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - **Build Warning Suppression:** High BUILD numbers are expected and valid (no warnings)
 
 **Version Pattern:**
-- Perpetual tasks use normal version format: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}`
+- Perpetual tasks use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99)
+- Version format: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where PERPETUAL_TASK >= 101
 - BUILD number accumulates naturally as the workflow runs
-- Example: UKW runs → `v0.6.6.8+1`, `v0.6.6.8+2`, `v0.6.6.8+3`, etc.
-- Example: CMW runs → `v0.6.6.12+1`, `v0.6.6.12+2`, `v0.6.6.12+3`, etc.
+- Example: UKW runs → `v0.6.6.101+1`, `v0.6.6.101+2`, `v0.6.6.101+3`, etc.
+- Example: CMW runs → `v0.6.6.102+1`, `v0.6.6.102+2`, `v0.6.6.102+3`, etc.
 
 **Perpetual Task Examples:**
-- **UKW (Update Kanban Workflow):** Epic 6, Story 6, Task 8 (E6:S06:T08) - Kanban documentation synchronization
-- **CMW (Changelog Management Workflow):** Epic 6, Story 6, Task 12 (E6:S06:T12) - Changelog maintenance and archival
+- **UKW (Update Kanban Workflow):** Epic 6, Story 6, Task 101 (E6:S06:T101) - Kanban documentation synchronization
+- **CMW (Changelog Management Workflow):** Epic 6, Story 6, Task 102 (E6:S06:T102) - Changelog maintenance and archival
+
+**Task Number Ranges:**
+- **Regular tasks:** T01-T99 (2-digit) - Standard feature/bug tasks
+- **Perpetual tasks:** T101+ (3-digit) - Ongoing maintenance workflows
+- **Reserved:** T100 is invalid (reserved for future use, if needed)
+- **Rationale:** 3-digit task IDs (T101+) immediately distinguish perpetual tasks from regular tasks, providing unlimited capacity and clear visual differentiation
 
 **RW Context Detection:**
 - RW Step 2 detects perpetual task context (e.g., user ran "UKW" then "RW", or "CMW" then "RW")

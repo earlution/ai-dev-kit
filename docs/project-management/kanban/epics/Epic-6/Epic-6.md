@@ -21,33 +21,41 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E6:S00 – BR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.6.0.33+0 – BR-033 task created: UKW Board Disorganization)
+- [x] **E6:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.6.0.0+0 – Epic-level abstract space only, no tasks)
   - Story: [`Story-000-br-repo.md`](Story-000-br-repo.md)
-  - **Note:** S00 omitted from board displays (UX optimization)
-- [x] **E6:S01 – Framework Version Management** - ✅ COMPLETE (v0.6.1.5+1 – All tasks complete: Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
-  - Story: [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
-  - Tasks: T01 ✅ COMPLETE (v0.6.1.1+1 - Framework versioning strategy), T02 ✅ COMPLETE (v0.6.1.2+1 - Framework release processes), T03 ✅ COMPLETE (v0.6.1.3+1 - Framework compatibility tracking), T04 ✅ COMPLETE (v0.6.1.1+2 - Framework dependency architecture), T05 ✅ COMPLETE (v0.6.1.5+1 - Framework version tagging strategy)
-- [x] **E6:S02 – Framework Update and Migration** - ✅ COMPLETE (v0.6.2.3+1 – All active tasks complete: Framework update procedures, migration guide, backward compatibility policy, and auto-update mechanisms created)
-  - Story: [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)
-  - Tasks: T01 ✅ COMPLETE (v0.6.2.1+1 - Framework update procedures), T02 ✅ COMPLETE (v0.6.2.2+1 - Framework migration guide), T03 ✅ COMPLETE (v0.6.2.3+1 - Framework backward compatibility policy), T05 ✅ COMPLETE (v0.6.2.5+1 - Framework auto-update mechanisms), T04 SUPERSEDED (by E6:S07 - ai-dev-kit CLI Tool)
-- [x] **E6:S03 – Framework Health Monitoring** - ✅ COMPLETE (v0.6.3.3+1 – All tasks complete: Framework health metrics defined, monitoring tools implemented, dashboard built)
-  - Story: [`Story-003-framework-health-monitoring.md`](Story-003-framework-health-monitoring.md)
-  - Tasks: T01 ✅ COMPLETE (v0.6.3.1+1 - Framework health metrics), T02 ✅ COMPLETE (v0.6.3.2+1 - Framework health monitoring tools), T03 ✅ COMPLETE (v0.6.3.3+1 - Framework health dashboard)
-- [ ] **E6:S04 – Bug Reports** - IN PROGRESS (Perpetual - v0.6.4.2+1 – Perpetual story: Bug tracking, never completes)
-  - Story: [`Story-004-bug-reports.md`](Story-004-bug-reports.md)
+  - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
+- [x] **E6:S01 – BR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.6.1.33+0 – BR-033 task created: UKW Board Disorganization)
+  - Story: [`Story-001-br-repo.md`](Story-001-br-repo.md)
+  - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
+- [x] **E6:S02 – Framework Version Management** - ✅ COMPLETE (v0.6.2.5+1, migrated from v0.6.1.5+1 – All tasks complete: Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
+  - Story: [`Story-002-framework-version-management.md`](Story-002-framework-version-management.md)
+  - Tasks: T01 ✅ COMPLETE (v0.6.2.1+1 - Framework versioning strategy), T02 ✅ COMPLETE (v0.6.2.2+1 - Framework release processes), T03 ✅ COMPLETE (v0.6.2.3+1 - Framework compatibility tracking), T04 ✅ COMPLETE (v0.6.2.1+2 - Framework dependency architecture), T05 ✅ COMPLETE (v0.6.2.5+1 - Framework version tagging strategy)
+  - **Note:** Renumbered from S01 to S02 as part of repository story migration (E9:S01:T08).
+- [x] **E6:S03 – Framework Update and Migration** - ✅ COMPLETE (v0.6.3.3+1, migrated from v0.6.2.3+1 – All active tasks complete: Framework update procedures, migration guide, backward compatibility policy, and auto-update mechanisms created)
+  - Story: [`Story-003-framework-update-and-migration.md`](Story-003-framework-update-and-migration.md)
+  - Tasks: T01 ✅ COMPLETE (v0.6.3.1+1 - Framework update procedures), T02 ✅ COMPLETE (v0.6.3.2+1 - Framework migration guide), T03 ✅ COMPLETE (v0.6.3.3+1 - Framework backward compatibility policy), T05 ✅ COMPLETE (v0.6.3.5+1 - Framework auto-update mechanisms), T04 SUPERSEDED (by E6:S08 - ai-dev-kit CLI Tool)
+  - **Note:** Renumbered from S02 to S03 as part of repository story migration (E9:S01:T08).
+- [x] **E6:S04 – Framework Health Monitoring** - ✅ COMPLETE (v0.6.4.3+1, migrated from v0.6.3.3+1 – All tasks complete: Framework health metrics defined, monitoring tools implemented, dashboard built)
+  - Story: [`Story-004-framework-health-monitoring.md`](Story-004-framework-health-monitoring.md)
+  - Tasks: T01 ✅ COMPLETE (v0.6.4.1+1 - Framework health metrics), T02 ✅ COMPLETE (v0.6.4.2+1 - Framework health monitoring tools), T03 ✅ COMPLETE (v0.6.4.3+1 - Framework health dashboard)
+  - **Note:** Renumbered from S03 to S04 as part of repository story migration (E9:S01:T08).
+- [ ] **E6:S05 – Bug Reports** - IN PROGRESS (Perpetual - v0.6.5.2+1, migrated from v0.6.4.2+1 – Perpetual story: Bug tracking, never completes)
+  - Story: [`Story-005-bug-reports.md`](Story-005-bug-reports.md)
   - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE
-  - **Note:** This is a perpetual maintenance story. New bug reports will create new tasks. Story remains IN PROGRESS even when all current tasks are complete.
-- [ ] **E6:S05 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.5.0+1 – Perpetual story: Feature request tracking, never completes)
-  - Story: [`Story-005-feature-requests.md`](Story-005-feature-requests.md)
+  - **Note:** This is a perpetual maintenance story. New bug reports will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S04 to S05 as part of repository story migration (E9:S01:T08).
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.0+1, migrated from v0.6.5.0+1 – Perpetual story: Feature request tracking, never completes)
+  - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
   - Tasks: (No tasks yet - story created for future feature requests)
-  - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete.
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.8+21)
-  - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.6.1+1), T02 ✅ COMPLETE (v0.6.6.2+1), T03 ✅ COMPLETE (v0.6.6.3+1 - Feedback mechanism design, user guide, and template created), T06 ✅ COMPLETE (v0.6.6.6+20), T07 ✅ COMPLETE (v0.6.6.7+6), T08 IN PROGRESS (Perpetual - v0.6.6.8+21 - UKW: Epic 9 creation and kanban synchronization), T09 ✅ COMPLETE (v0.6.6.9+1), T04 ✅ COMPLETE (v0.6.6.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.6.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T12 IN PROGRESS (Perpetual - v0.6.6.12+2 - CMW: Fixed ordering (Step 3.5), archived 50 entries, reduced from 6,871 to 5,122 lines, 0 violations remaining), T13 ✅ COMPLETE (v0.6.6.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 ✅ COMPLETE (v0.6.6.14+1 - CMW documentation added to package README), T15 ✅ COMPLETE (v0.6.6.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T16 ✅ COMPLETE (v0.6.6.16+1 - All phases complete: Step 3.5 added to CMW, ordering fixed before archival), T05 ✅ COMPLETE (v0.6.6.5+1 - Feedback mechanism implementation complete)
-- [x] **E6:S07 – ai-dev-kit CLI Tool** - COMPLETE ✅ (v0.6.7.13+1 – T01-T13 complete: Architecture, commands, backend abstraction, all four backends, configuration management, error handling, migration utilities, remove command, documentation, testing, validation, PyPI packaging)
-  - Story: [`Story-007-ai-dev-kit-cli-tool.md`](Story-007-ai-dev-kit-cli-tool.md)
+  - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
+- [ ] **E6:S07 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.7.101+21, migrated from v0.6.6.101+21)
+  - Story: [`Story-007-adk-implementation-analysis-and-package-management.md`](Story-007-adk-implementation-analysis-and-package-management.md)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.7.1+1), T02 ✅ COMPLETE (v0.6.7.2+1), T03 ✅ COMPLETE (v0.6.7.3+1 - Feedback mechanism design, user guide, and template created), T06 ✅ COMPLETE (v0.6.7.6+20), T07 ✅ COMPLETE (v0.6.7.7+6), T101 IN PROGRESS (Perpetual - v0.6.7.101+21, migrated from T08 - UKW: Epic 9 creation and kanban synchronization), T09 ✅ COMPLETE (v0.6.7.9+1), T04 ✅ COMPLETE (v0.6.7.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.7.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T102 IN PROGRESS (Perpetual - v0.6.7.102+2, migrated from T12 - CMW: Fixed ordering (Step 3.5), archived 50 entries, reduced from 6,871 to 5,122 lines, 0 violations remaining), T13 ✅ COMPLETE (v0.6.7.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 ✅ COMPLETE (v0.6.7.14+1 - CMW documentation added to package README), T15 ✅ COMPLETE (v0.6.7.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T16 ✅ COMPLETE (v0.6.7.16+1 - All phases complete: Step 3.5 added to CMW, ordering fixed before archival), T05 ✅ COMPLETE (v0.6.7.5+1 - Feedback mechanism implementation complete)
+  - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08).
+- [x] **E6:S08 – ai-dev-kit CLI Tool** - COMPLETE ✅ (v0.6.8.13+1, migrated from v0.6.7.13+1 – T01-T13 complete: Architecture, commands, backend abstraction, all four backends, configuration management, error handling, migration utilities, remove command, documentation, testing, validation, PyPI packaging)
+  - Story: [`Story-008-ai-dev-kit-cli-tool.md`](Story-008-ai-dev-kit-cli-tool.md)
   - Tasks: T00 ✅ COMPLETE, T01-T13 ✅ COMPLETE (CLI tool implementation: architecture, commands, backends, config, migration, testing, packaging - ALL COMPLETE)
   - **Feature Request:** [FR-030](../../fr-br/FR-030-ai-dev-kit-cli-tool.md)
+  - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08).
 
 ---
 

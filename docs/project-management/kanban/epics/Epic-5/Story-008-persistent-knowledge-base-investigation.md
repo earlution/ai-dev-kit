@@ -6,21 +6,23 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Story 007 – Persistent Knowledge Base Investigation
+# Story 008 – Persistent Knowledge Base Investigation
 
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-18  
-**Last updated:** 2025-12-18 (v0.5.7.1+1 – Story created, building-persistent-knowledge.md guide added)  
-**Version:** v0.5.7.1+1  
-**Code:** E5S07
+**Last updated:** 2026-01-16 (v0.5.8.1+1, migrated from v0.5.8.1+1 – Story renumbered from S07 to S08 as part of repository story migration)  
+**Version:** v0.5.8.1+1  
+**Code:** E5S08
+
+**Note:** This story was renumbered from S07 to S08 as part of the repository story abstract space resolution (E9:S01:T08).
 
 ---
 
 ## Task Checklist
 
-- [ ] **E5:S07:T01 – Investigate persistent knowledge base concept and ramifications** - TODO
+- [ ] **E5:S08:T01 – Investigate persistent knowledge base concept and ramifications** - TODO
 
 ---
 
@@ -44,7 +46,7 @@ Understand the full scope and implications of the persistent knowledge base conc
 
 ## Tasks
 
-### E5:S07:T01 – Investigate persistent knowledge base concept and ramifications
+### E5:S08:T01 – Investigate persistent knowledge base concept and ramifications
 
 **Scope:** Comprehensive investigation of the persistent knowledge base concept, its integration points, requirements, and implications for the ADK framework.
 
