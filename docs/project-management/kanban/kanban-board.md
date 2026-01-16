@@ -296,6 +296,29 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ---
 
+### Epic 9: Release Candidate Readiness
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Last Updated:** 2026-01-16 (v0.9.0.0+0 – Epic created with 5 stories: RC Readiness Gap Analysis, Framework Reviews, Canonical E/S/T Review)
+
+**Stories:**
+- [ ] **E9:S01 – RC Readiness Gap Analysis** - TODO (v0.9.1.0+0)
+  - Story: [`epics/Epic-9/Story-001-rc-readiness-gap-analysis.md`](epics/Epic-9/Story-001-rc-readiness-gap-analysis.md)
+  - **Feature Request:** [FR-032](fr-br/FR-032-release-candidate-readiness-gap-analysis.md)
+- [ ] **E9:S02 – Kanban Framework RC Readiness Review** - TODO
+  - Story: [`epics/Epic-9/Story-002-kanban-framework-rc-readiness-review.md`](epics/Epic-9/Story-002-kanban-framework-rc-readiness-review.md)
+- [ ] **E9:S03 – Workflow Management Framework RC Readiness Review** - TODO
+  - Story: [`epics/Epic-9/Story-003-workflow-management-framework-rc-readiness-review.md`](epics/Epic-9/Story-003-workflow-management-framework-rc-readiness-review.md)
+- [ ] **E9:S04 – Numbering & Versioning Framework RC Readiness Review** - TODO
+  - Story: [`epics/Epic-9/Story-004-numbering-versioning-framework-rc-readiness-review.md`](epics/Epic-9/Story-004-numbering-versioning-framework-rc-readiness-review.md)
+- [ ] **E9:S05 – Canonical E/S/T Review and Refinement** - TODO
+  - Story: [`epics/Epic-9/Story-005-canonical-est-review-and-refinement.md`](epics/Epic-9/Story-005-canonical-est-review-and-refinement.md)
+
+**Epic Doc:** [`epics/Epic-9/Epic-9.md`](epics/Epic-9/Epic-9.md)
+
+---
+
 ### Epic 7: Codebase Maintenance and Review
 
 **Status:** COMPLETE  
