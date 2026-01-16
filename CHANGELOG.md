@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0.31+0] - 16-01-26
+
+### Added
+- Multi-Agent Coordination Feasibility Investigation (E5:S00:T31 - FR-031)
+  - Created Feature Request FR-031 for investigating multi-agent coordination patterns
+  - Created task document E5:S00:T31 with comprehensive investigation scope
+  - Added Cursor's scaling agents research article to knowledge base
+  - Investigation will evaluate planner/worker architecture, coordination mechanisms, model selection, and integration points
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.0.31+0.md)
+
 ## [0.6.6.8+20] - 06-01-26
 
 ### Changed

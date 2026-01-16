@@ -28,7 +28,9 @@ This directory contains comprehensive articles and blog-style posts covering:
 
 ## Articles
 
-### Hybrid Task Template System
+### Internal Articles
+
+#### Hybrid Task Template System
 
 - **[Building Better Templates: How We Solved the 300-Template Problem with a Hybrid Approach](hybrid-task-template-system-building-better-templates.md)**
   - **Published:** 2025-12-22
@@ -36,6 +38,17 @@ This directory contains comprehensive articles and blog-style posts covering:
   - **Epic:** E4 (Kanban Framework)
   - **Story:** S15 (Procedural Task Template Generation and Hybrid Strategy)
   - **Summary:** Comprehensive deep-dive into solving template management at scale, balancing quality with maintainability through a hybrid approach combining concrete templates with procedural generation.
+
+### External Sources
+
+#### Multi-Agent Coordination Research
+
+- **[Scaling long-running autonomous coding](cursor-scaling-long-running-autonomous-coding-agents.md)**
+  - **Published:** 2026-01-14
+  - **Author:** Wilson Lin (Cursor)
+  - **Source:** [cursor.com/blog/scaling-agents](https://cursor.com/blog/scaling-agents)
+  - **Summary:** Research findings from Cursor's experiments with hundreds of concurrent agents working on large-scale projects. Covers planner/worker architecture, coordination mechanisms, model selection, and lessons learned from running agents for weeks on ambitious projects (browser from scratch, Solid→React migration, etc.).
+  - **Related:** [FR-031: Multi-Agent Coordination Feasibility Investigation](../../project-management/kanban/fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 
 ---
 

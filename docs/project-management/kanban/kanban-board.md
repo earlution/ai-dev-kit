@@ -57,6 +57,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Nice-to-have in-progress tasks that could be completed.*
 
+- **E5:S00:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-000-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - **E5:S03:T01-T03** – Documentation Automation - TODO (MEDIUM priority story) - [Story](epics/Epic-5/Story-003-documentation-automation.md)
   - T01: Create automated documentation update scripts - TODO
   - T02: Implement documentation synchronization workflows - TODO
