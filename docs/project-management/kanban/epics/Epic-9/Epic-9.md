@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-16  
-**Last updated:** 2026-01-16 (v0.9.0.0+0 – Epic created, 5 stories defined: RC Readiness Gap Analysis, Kanban/Workflow/Versioning Framework Reviews, Canonical E/S/T Review)  
+**Last updated:** 2026-01-16 (v0.9.1.8+0 – E9:S01:T08 task created: Repository Story Abstract Space Contradiction)  
 **Branch:** `epic/9-release-candidate-readiness`  
 **Version Schema:** `0.9.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E9:S01 – RC Readiness Gap Analysis** - TODO
+- [ ] **E9:S01 – RC Readiness Gap Analysis** - TODO (v0.9.1.8+0 – T08 task created: Repository Story Abstract Space Contradiction)
   - Story: [`Story-001-rc-readiness-gap-analysis.md`](Story-001-rc-readiness-gap-analysis.md)
 - [ ] **E9:S02 – Kanban Framework RC Readiness Review** - TODO
   - Story: [`Story-002-kanban-framework-rc-readiness-review.md`](Story-002-kanban-framework-rc-readiness-review.md)

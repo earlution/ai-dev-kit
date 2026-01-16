@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** 2026-01-16 (v0.9.1.0+0 – Story created)  
+**Last updated:** 2026-01-16 (v0.9.1.8+0 – E9:S01:T08 task created: Repository Story Abstract Space Contradiction)  
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
@@ -29,6 +29,7 @@ housekeeping_policy: keep
 - [ ] **E9:S01:T05 – Missing Work Identification** - TODO
 - [ ] **E9:S01:T06 – RC Readiness Checklist Creation** - TODO
 - [ ] **E9:S01:T07 – Roadmap to RC=1** - TODO
+- [ ] **E9:S01:T08 – Repository Story Abstract Space Contradiction** - TODO
 
 ---
 
