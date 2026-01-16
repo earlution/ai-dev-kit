@@ -16,6 +16,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.0.31+0.md)
 
+## [0.6.0.33+0] - 16-01-26
+
+### Added
+- BR-033: UKW Board Disorganization (E6:S00:T33)
+  - Created task document for BR-033 in Epic 6, Story 0 (BR Repo)
+  - Bug report created and assigned to E6:S00:T33
+  - SoP document created for mixed BR/FR scope handling
+  - Version anchor established: v0.6.0.33+0 (doc-init)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.0.33+0.md)
+
 ## [0.6.6.8+21] - 16-01-26
 
 ### Added
