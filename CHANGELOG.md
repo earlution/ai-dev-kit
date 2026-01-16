@@ -16,6 +16,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.0.31+0.md)
 
+## [0.5.0.34+0] - 16-01-26
+
+### Added
+- FR-034: UKW Granular Control and Use Case Flags (E5:S00:T34)
+  - Created task document for FR-034 in Epic 5, Story 0 (FR Repo)
+  - Feature request created and assigned to E5:S00:T34
+  - Version anchor established: v0.5.0.34+0 (doc-init)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.0.34+0.md)
+
 ## [0.6.0.33+0] - 16-01-26
 
 ### Added
