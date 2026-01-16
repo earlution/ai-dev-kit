@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-16 (v0.5.0.34+0 – FR-034 task created: UKW Granular Control and Use Case Flags)  
+**Last updated:** 2026-01-16 (v0.5.0.35+0 – FR-035 task created: Task Template Cross-Wiring Section)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-05  
 **Completed:** N/A (Perpetual - never completes)  

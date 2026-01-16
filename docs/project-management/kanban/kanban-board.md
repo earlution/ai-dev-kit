@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-06  
-**Version:** v0.6.6.8+19
+**Last Updated:** 2026-01-16  
+**Version:** v0.5.0.35+0
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
 
@@ -57,6 +57,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Nice-to-have in-progress tasks that could be completed.*
 
+- **E5:S00:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-000-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
 - **E5:S00:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-000-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - **E5:S03:T01-T03** – Documentation Automation - TODO (MEDIUM priority story) - [Story](epics/Epic-5/Story-003-documentation-automation.md)
   - T01: Create automated documentation update scripts - TODO

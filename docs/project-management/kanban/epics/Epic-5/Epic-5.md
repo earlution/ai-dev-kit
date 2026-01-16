@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-16 (v0.5.0.34+0 – E5:S00:T34: FR-034 task created - UKW Granular Control and Use Case Flags)  
+**Last updated:** 2026-01-16 (v0.5.0.35+0 – E5:S00:T35: FR-035 task created - Task Template Cross-Wiring Section)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E5:S00 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.0.34+0 – FR-034 task created: UKW Granular Control and Use Case Flags)
+- [x] **E5:S00 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.0.35+0 – FR-035 task created: Task Template Cross-Wiring Section)
   - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
 - [ ] **E5:S01 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)

@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0.35+0] - 16-01-26
+
+### Added
+- Task Template Cross-Wiring Section (E5:S00:T35 - FR-035)
+  - Created Feature Request FR-035 for enhancing Task Template with explicit cross-wiring section
+  - Created task document E5:S00:T35 for FR-035
+  - Created Standard Operating Procedure (SoP) for task template cross-wiring
+  - Created Knowledge Base guides README with SoP references
+  - FR-035 proposes adding explicit "Cross-Wiring" section with bidirectional wiring guidance, relationship types, and context guidance
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.0.35+0.md)
+
 ## [0.5.0.31+0] - 16-01-26
 
 ### Added
