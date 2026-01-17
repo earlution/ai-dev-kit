@@ -6,25 +6,25 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 16: Harden CMW Ordering Before Archival
+# Epic 6, Story 7, Task 16: Harden CMW Ordering Before Archival
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-01-05 (v0.6.6.16+1 – All phases complete: Step 3.5 added to CMW, ordering fixed before archival)  
+**Last updated:** 2026-01-05 (v0.6.7.16+1 – All phases complete: Step 3.5 added to CMW, ordering fixed before archival, migrated from v0.6.6.16+1)  
 **Started:** 2026-01-05  
 **Completed:** 2026-01-05  
-**Version:** v0.6.6.16+1
+**Version:** v0.6.7.16+1
 
 **Task Type:** Bug Fix / Hardening  
 **Build Warning Suppression:** false  
-**Code:** E6S06T16
+**Code:** E6S07T16
 
 ---
 
 ## Task ID
 
 **Format:** `E{epic}:S{story}:T{task}`  
-**Value:** `E6:S06:T16`
+**Value:** `E6:S07:T16`
 
 ---
 
@@ -284,9 +284,9 @@ sorted_entries_to_archive = sorted(
 
 ## Related Work
 
-- **Story:** E6:S06 - ADK Implementation Analysis and Package Management
-- **Related Task:** E6:S06:T11 - Changelog Management and Archival Workflow (CMW implementation)
-- **Related Task:** E6:S06:T12 - Changelog Maintenance Workflow (CMW) - Perpetual Task
+- **Story:** E6:S07 - ADK Implementation Analysis and Package Management
+- **Related Task:** E6:S07:T11 - Changelog Management and Archival Workflow (CMW implementation)
+- **Related Task:** E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task (migrated from T12)
 - **Analysis Document:** `docs/analysis/cmw-ordering-flaw-analysis.md`
 
 ---
@@ -303,7 +303,7 @@ sorted_entries_to_archive = sorted(
 
 ---
 
-**Last Updated:** 2026-01-05 (v0.6.6.16+1 – All phases complete: Step 3.5 added to CMW, ordering fixed before archival)  
-**Version:** v0.6.6.16+1  
+**Last Updated:** 2026-01-05 (v0.6.7.16+1 – All phases complete: Step 3.5 added to CMW, ordering fixed before archival, migrated from v0.6.6.16+1)  
+**Version:** v0.6.7.16+1  
 **Status:** ✅ COMPLETE
 

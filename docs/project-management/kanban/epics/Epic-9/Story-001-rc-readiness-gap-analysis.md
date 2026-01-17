@@ -29,7 +29,7 @@ housekeeping_policy: keep
 - [ ] **E9:S01:T05 – Missing Work Identification** - TODO
 - [ ] **E9:S01:T06 – RC Readiness Checklist Creation** - TODO
 - [ ] **E9:S01:T07 – Roadmap to RC=1** - TODO
-- [ ] **E9:S01:T08 – Repository Story Abstract Space Contradiction** - IN PROGRESS (v0.9.1.8+2 – Implementation: Epic 6 story file updates complete)
+- [ ] **E9:S01:T08 – Repository Story Abstract Space Contradiction** - IN PROGRESS (v0.9.1.8+3 – Implementation: Task document updates T09, T04, T16 complete)
 
 ---
 

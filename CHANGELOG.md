@@ -38,6 +38,15 @@ Captured Starborn Legacy Zombie Story case study report as unstructured book mat
 ---
 ---
 ---
+## [0.9.1.8+3] - 16-01-26
+
+### Changed
+- Task Document Updates (E9:S01:T08)
+  - Updated T09, T04, T16 task documents (E6:S06→E6:S07, v0.6.6.*→v0.6.7.*)
+  - Updated all internal task references and version numbers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+3.md)
+
 ## [0.6.7.102+3] - 16-01-26
 
 ### Changed
