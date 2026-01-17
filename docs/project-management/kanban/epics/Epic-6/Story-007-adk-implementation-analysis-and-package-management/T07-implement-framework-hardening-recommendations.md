@@ -6,17 +6,17 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 7: Implement Framework Hardening Recommendations
+# Epic 6, Story 7, Task 7: Implement Framework Hardening Recommendations
 
 **Status:** ✅ COMPLETE  
 **Priority:** CRITICAL  
-**Last updated:** 2025-12-18 (v0.6.6.7+6 – UKW: Task marked complete, kanban docs synchronized)  
+**Last updated:** 2025-12-18 (v0.6.7.7+6 – UKW: Task marked complete, kanban docs synchronized, migrated from v0.6.6.7+6)  
 **Started:** 2025-12-18  
 **Completed:** 2025-12-18  
-**Version:** v0.6.6.7+6
+**Version:** v0.6.7.7+6
 
 **Progress:** Phase 1 ✅, Phase 2 ✅, Phase 3 ✅ (rw-config.yaml ✅, .cursorrules ✅), Phase 4 ✅, Acceptance criteria ✅ - ALL PHASES COMPLETE  
-**Code:** E6S06T07
+**Code:** E6S07T07
 
 ---
 
@@ -24,13 +24,13 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}`
 
-**Full Task ID:** `E6:S06:T07`
+**Full Task ID:** `E6:S07:T07`
 
 ---
 
 ## Scope
 
-Implement the critical and high-priority framework hardening recommendations identified in E6:S06:T01's comprehensive ADK implementation analysis. This task addresses the root causes of Epic mashup (affecting 30% of client projects), framework drift, and source repository gaps that prevent ai-dev-kit from serving as a proper reference implementation.
+Implement the critical and high-priority framework hardening recommendations identified in E6:S07:T01's comprehensive ADK implementation analysis. This task addresses the root causes of Epic mashup (affecting 30% of client projects), framework drift, and source repository gaps that prevent ai-dev-kit from serving as a proper reference implementation.
 
 **Problem Statement:**
 - **CRITICAL:** Epic 9 mismatch in ai-dev-kit source ("Book Related Work" vs canonical "User Management and Authentication") is root cause of Epic mashup
@@ -100,25 +100,25 @@ Implement all critical and high-priority hardening actions:
 
 ## Acceptance Criteria
 
-- [x] Epic 9 in ai-dev-kit source renamed to Epic 24+ (or appropriate project-specific number) ✅ COMPLETE (v0.6.6.7+1)
-- [x] All Epic 9 references updated (Epic doc, Stories, Tasks, Kanban board, cross-references) ✅ COMPLETE (v0.6.6.7+1)
-- [x] No Epic 9 "Book Related Work" references remain in source ✅ COMPLETE (v0.6.6.7+1)
-- [x] Epic 24+ documented as project-specific range (not canonical) ✅ COMPLETE (v0.6.6.7+1)
-- [x] Installer validates Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific) ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
-- [x] Installer prevents Epic mashup (detects and blocks Epic 9 "Book Related Work" in non-book projects) ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
-- [x] Installer warns if copying ai-dev-kit's actual Kanban ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
-- [x] Installer validates canonical vs project-specific epic conflicts ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
-- [x] Installer validates version file path ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
-- [x] Installer validates KB structure ✅ COMPLETE (v0.6.6.7+2 - Phase 2)
-- [x] `.cursorrules` file exists in project root with comprehensive RW trigger ✅ COMPLETE (v0.6.6.7+4 - Phase 3: .cursorrules created)
-- [x] `rw-config.yaml` exists in project root with correct configuration ✅ COMPLETE (v0.6.6.7+1 - Phase 3: rw-config.yaml created)
+- [x] Epic 9 in ai-dev-kit source renamed to Epic 24+ (or appropriate project-specific number) ✅ COMPLETE (v0.6.7.7+1, migrated from v0.6.6.7+1)
+- [x] All Epic 9 references updated (Epic doc, Stories, Tasks, Kanban board, cross-references) ✅ COMPLETE (v0.6.7.7+1, migrated from v0.6.6.7+1)
+- [x] No Epic 9 "Book Related Work" references remain in source ✅ COMPLETE (v0.6.7.7+1, migrated from v0.6.6.7+1)
+- [x] Epic 24+ documented as project-specific range (not canonical) ✅ COMPLETE (v0.6.7.7+1, migrated from v0.6.6.7+1)
+- [x] Installer validates Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific) ✅ COMPLETE (v0.6.7.7+2, migrated from v0.6.6.7+2 - Phase 2)
+- [x] Installer prevents Epic mashup (detects and blocks Epic 9 "Book Related Work" in non-book projects) ✅ COMPLETE (v0.6.7.7+2, migrated from v0.6.6.7+2 - Phase 2)
+- [x] Installer warns if copying ai-dev-kit's actual Kanban ✅ COMPLETE (v0.6.7.7+2, migrated from v0.6.6.7+2 - Phase 2)
+- [x] Installer validates canonical vs project-specific epic conflicts ✅ COMPLETE (v0.6.7.7+2, migrated from v0.6.6.7+2 - Phase 2)
+- [x] Installer validates version file path ✅ COMPLETE (v0.6.7.7+2, migrated from v0.6.6.7+2 - Phase 2)
+- [x] Installer validates KB structure ✅ COMPLETE (v0.6.7.7+2, migrated from v0.6.6.7+2 - Phase 2)
+- [x] `.cursorrules` file exists in project root with comprehensive RW trigger ✅ COMPLETE (v0.6.7.7+4, migrated from v0.6.6.7+4 - Phase 3: .cursorrules created)
+- [x] `rw-config.yaml` exists in project root with correct configuration ✅ COMPLETE (v0.6.7.7+1, migrated from v0.6.6.7+1 - Phase 3: rw-config.yaml created)
 - [ ] Version file migrated to `src/ai_dev_kit/version.py` (optional - legacy path acceptable)
 - [ ] All references to version file updated (optional - only if migration occurs)
-- [x] Installation instructions clearly distinguish templates from actual Kanban ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
-- [x] Epic mashup prevention documented in installation instructions ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
-- [x] Clear installation examples provided (step-by-step guide, example projects) ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
-- [x] Common mistakes documented with prevention strategies ✅ COMPLETE (v0.6.6.7+3 - Phase 4)
-- [x] Source serves as reference implementation (demonstrates own frameworks) ✅ COMPLETE (v0.6.6.7+4 - Phase 3: .cursorrules created, rw-config.yaml created)
+- [x] Installation instructions clearly distinguish templates from actual Kanban ✅ COMPLETE (v0.6.7.7+3, migrated from v0.6.6.7+3 - Phase 4)
+- [x] Epic mashup prevention documented in installation instructions ✅ COMPLETE (v0.6.7.7+3, migrated from v0.6.6.7+3 - Phase 4)
+- [x] Clear installation examples provided (step-by-step guide, example projects) ✅ COMPLETE (v0.6.7.7+3, migrated from v0.6.6.7+3 - Phase 4)
+- [x] Common mistakes documented with prevention strategies ✅ COMPLETE (v0.6.7.7+3, migrated from v0.6.6.7+3 - Phase 4)
+- [x] Source serves as reference implementation (demonstrates own frameworks) ✅ COMPLETE (v0.6.7.7+4, migrated from v0.6.6.7+4 - Phase 3: .cursorrules created, rw-config.yaml created)
 
 ---
 
@@ -220,7 +220,7 @@ Implement all critical and high-priority hardening actions:
 ## Dependencies
 
 **Depends On:**
-- E6:S06:T01 - Comprehensive ADK implementation analysis (provides hardening recommendations)
+- E6:S07:T01 - Comprehensive ADK implementation analysis (provides hardening recommendations)
 
 **Blocks:**
 - Framework hardening work (this task implements the hardening)
@@ -237,8 +237,8 @@ Implement all critical and high-priority hardening actions:
 ## Related Work
 
 **Related Tasks:**
-- E6:S06:T01 - Comprehensive ADK implementation analysis (provides input: hardening recommendations)
-- E6:S06:T02-T05 - Package management and feedback mechanism (may benefit from hardened framework)
+- E6:S07:T01 - Comprehensive ADK implementation analysis (provides input: hardening recommendations)
+- E6:S07:T02-T05 - Package management and feedback mechanism (may benefit from hardened framework)
 
 **Related Documents:**
 - `docs/knowledge/analysis/adk-hardening-recommendations.md` - Comprehensive hardening recommendations
@@ -256,7 +256,7 @@ Implement all critical and high-priority hardening actions:
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.6.7+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.7.7+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
