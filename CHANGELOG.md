@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1.8+8] - 17-01-26
+
+### Changed
+- E9:S01:T08: Policy Updates (Kanban Governance, FR-018, FR-021)
+  - Updated Kanban governance policy to reflect S01 repository pattern (migrated from S00)
+  - Clarified S00 as Epic-level abstract space only (no tasks)
+  - Added perpetual task range section (T101+)
+  - Updated FR-018 to document S00/S01 separation
+  - Updated FR-021 to reflect S01 repository pattern and mark completed acceptance criteria
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+8.md)
+
 ## [0.9.1.8+7] - 17-01-26
 
 ### Changed

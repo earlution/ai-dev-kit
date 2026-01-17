@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** 2026-01-17 (v0.9.1.8+7 – E9:S01:T08 implementation: Task document updates T11, T06, T15 complete - migrated from E6:S06 to E6:S07)  
+**Last updated:** 2026-01-17 (v0.9.1.8+8 – E9:S01:T08 implementation: Policy updates complete - Kanban governance policy, FR-018, FR-021 updated to reflect S01 repository pattern)  
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
@@ -29,7 +29,7 @@ housekeeping_policy: keep
 - [ ] **E9:S01:T05 – Missing Work Identification** - TODO
 - [ ] **E9:S01:T06 – RC Readiness Checklist Creation** - TODO
 - [ ] **E9:S01:T07 – Roadmap to RC=1** - TODO
-- [ ] **E9:S01:T08 – Repository Story Abstract Space Contradiction** - IN PROGRESS (v0.9.1.8+7 – Implementation: Task document updates T11, T06, T15 complete - migrated from E6:S06 to E6:S07)
+- [ ] **E9:S01:T08 – Repository Story Abstract Space Contradiction** - IN PROGRESS (v0.9.1.8+8 – Policy updates: Kanban governance policy, FR-018, FR-021 updated to reflect S01 repository pattern)
 
 ---
 

@@ -29,7 +29,9 @@ Add a section to the Kanban policy defining '0' numbered E/S/T docs as an abstra
 A formal policy definition that establishes zero-numbered E/S/T documentation as an **abstract space** for forensic traceability:
 
 - **Epic-level abstract space:** `0.{EPIC}.0.0+0` (e.g., `0.3.0.0+0` = Epic 3's abstract space)
+  - **Note:** S00 is Epic-level abstract space only (no tasks). Repository stories migrated from S00 to S01 as part of repository story abstract space resolution (E9:S01:T08).
 - **Story-level abstract space:** `0.{EPIC}.{STORY}.0+0` (e.g., `0.2.5.0+0` = Epic 2 Story 5's abstract space)
+  - **Note:** S01 is used for repository stories (FR Repo, BR Repo, UXR Repo) which contain concrete tasks.
 - **Task-level abstract space:** `0.{EPIC}.{STORY}.{TASK}+0` (e.g., `0.10.4.6+0` = Epic 10 Story 4 Task 6's abstract space)
 
 This abstract space serves as the **canonical anchor** for forensic traceability, establishing where the documentation lifecycle begins before any functional work is committed.

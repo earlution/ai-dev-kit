@@ -347,7 +347,7 @@ Decompose epic scope into releasable slices.
 
 #### PERPETUAL State for Repository Stories
 
-**Purpose:** Repository stories (S00) serve as canonical homes for Feature Requests (FRs), Bug Reports (BRs), and User Experience Research reports (UXRs). These stories are PERPETUAL and never complete.
+**Purpose:** Repository stories (S01) serve as canonical homes for Feature Requests (FRs), Bug Reports (BRs), and User Experience Research reports (UXRs). These stories are PERPETUAL and never complete.
 
 **PERPETUAL State Definition:**
 
@@ -355,36 +355,44 @@ Repository stories are marked with **Status: IN PROGRESS (PERPETUAL)** and have 
 
 - **Never Complete:** Repository stories never transition to COMPLETE status
 - **Excluded from Completion Analytics:** Repository stories are excluded from epic completion calculations
-- **Omitted from Board Displays:** Repository stories (E5:S00, E6:S00, E7:S00) are omitted from epic checklist displays in board views (UX optimization)
+- **Omitted from Board Displays:** Repository stories (E5:S01, E6:S01, E7:S01) are omitted from epic checklist displays in board views (UX optimization)
 - **Still Tracked Internally:** Repository stories are still tracked in Epic documents' internal Story Checklists
-- **Abstract Space Versioning:** Repository stories use abstract space versioning (e.g., v0.5.0.0+0 for E5:S00)
+- **Story-Level Abstract Space Versioning:** Repository stories use story-level abstract space versioning (e.g., v0.5.1.0+0 for E5:S01)
 
-**Repository Story Pattern (S00):**
+**Repository Story Pattern (S01):**
 
-- **Epic 5, Story 0:** "FR Repo" - canonical home for all Feature Requests
-- **Epic 6, Story 0:** "BR Repo" - canonical home for all Bug Reports
-- **Epic 7, Story 0:** "UXR Repo" - canonical home for all User Experience Research reports
+- **Epic 5, Story 1:** "FR Repo" - canonical home for all Feature Requests
+- **Epic 6, Story 1:** "BR Repo" - canonical home for all Bug Reports
+- **Epic 7, Story 1:** "UXR Repo" - canonical home for all User Experience Research reports
+
+**Note:** S00 is Epic-level abstract space only (no tasks). Repository stories migrated from S00 to S01 as part of repository story abstract space resolution (E9:S01:T08).
 
 **Traceability Pattern:**
 
-- FR-001 = E5:S00:T01 (abstract space: v0.5.0.1+0)
-- BR-001 = E6:S00:T01 (abstract space: v0.6.0.1+0)
-- UXR-001 = E7:S00:T01 (abstract space: v0.7.0.1+0)
+- FR-001 = E5:S01:T01 (story-level abstract space: v0.5.1.1+0)
+- BR-001 = E6:S01:T01 (story-level abstract space: v0.6.1.1+0)
+- UXR-001 = E7:S01:T01 (story-level abstract space: v0.7.1.1+0)
 
 **Board Display Rules:**
 
-- Epic Story Checklists in board views: S00 stories omitted (reduce clutter)
-- Epic documents: S00 stories included in internal Story Checklist
-- Kanban board: S00 stories not shown in epic sections
-- Quick view board: S00 stories not shown in epic sections
+- Epic Story Checklists in board views: S01 stories omitted (reduce clutter)
+- Epic documents: S01 stories included in internal Story Checklist
+- Kanban board: S01 stories not shown in epic sections
+- Quick view board: S01 stories not shown in epic sections
 
 **Rationale:**
 
 - Repository stories are containers, not work units
 - They grow indefinitely (FR-001 through FR-999+)
 - Completion is not meaningful for repositories
-- Board display omission reduces clutter (100+ tasks in S00)
+- Board display omission reduces clutter (100+ tasks in S01)
 - Still tracked internally for traceability and versioning
+
+**Abstract Space Separation:**
+
+- **S00 (Epic-Level Abstract Space):** `0.{EPIC}.0.0+0` - Epic-level abstract space only, no tasks
+- **S01 (Repository Story):** `0.{EPIC}.1.0+0` - Story-level abstract space, contains repository tasks
+- **Repository Tasks:** `0.{EPIC}.1.{TASK}+0` - Concrete tasks in repository story
 
 ### Tasks
 
@@ -443,11 +451,32 @@ The following patterns are **explicitly prohibited**:
 
 **Task Numbering and Format:**
 
-- **Numbering (example):** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)
-- **Format:** `E{epic}:S{story}:T{task}` where task is 2-digit (01-99)
-- **Example:** `E20:S07:T10` = Epic 20, Story 7, Task 10
-- **Example:** `E1:S01:T01` = Epic 1, Story 1, Task 1
+- **Numbering (example):** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit or 3-digit zero padding)
+- **Format:** `E{epic}:S{story}:T{task}` where task is:
+  - **Regular tasks:** 2-digit (01-99)
+  - **Perpetual tasks:** 3-digit (101+)
+- **Example (regular):** `E20:S07:T10` = Epic 20, Story 7, Task 10
+- **Example (regular):** `E1:S01:T01` = Epic 1, Story 1, Task 1
+- **Example (perpetual):** `E6:S07:T101` = Epic 6, Story 7, Task 101 (UKW - perpetual task)
+- **Example (perpetual):** `E6:S07:T102` = Epic 6, Story 7, Task 102 (CMW - perpetual task)
 - **Tracked:** Git commits reference task ID (or equivalent in your VCS)
+
+**Perpetual Task Range (T101+):**
+
+- **Purpose:** Perpetual tasks are ongoing maintenance/synchronization tasks that never complete
+- **Range:** T101+ (3-digit task numbers starting at 101)
+- **Examples:** UKW (Update Kanban Workflow), CMW (Changelog Management Workflow)
+- **Characteristics:**
+  - Status: IN PROGRESS (Perpetual) - never transitions to COMPLETE
+  - Build Warning Suppression: Enabled (high BUILD numbers expected and valid)
+  - BUILD number = workflow run count (not feature iteration)
+  - Task Type: Perpetual Maintenance
+- **Rationale:**
+  - Clear differentiation from regular tasks (3-digit vs 2-digit)
+  - Unlimited capacity (no upper bound)
+  - No conflicts with regular task range (T01-T99)
+  - Visual clarity in task lists
+- **Migration Note:** Perpetual tasks were migrated from regular task numbers (e.g., T08→T101, T12→T102) as part of repository story abstract space resolution (E9:S01:T08)
 
 **Validation Requirements:**
 
