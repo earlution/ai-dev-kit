@@ -6,17 +6,17 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 13: Canonical CMW Perpetual Task
+# Epic 6, Story 7, Task 13: Canonical CMW Perpetual Task
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-21 (v0.6.6.13+2 – Implementation complete)  
+**Last updated:** 2025-12-21 (v0.6.7.13+2 – Implementation complete, migrated from v0.6.6.13+2)  
 **Started:** 2025-12-21  
 **Completed:** 2025-12-21  
-**Version:** v0.6.6.13+2
+**Version:** v0.6.7.13+2
 
 **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)  
-**Code:** E6S06T13
+**Code:** E6S07T13
 
 ---
 
@@ -24,19 +24,19 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}`
 
-**Full Task ID:** `E6:S06:T13`
+**Full Task ID:** `E6:S07:T13`
 
 ---
 
 ## Scope
 
-Include the CMW perpetual task (T12) in the canonical framework task set by updating framework templates, documentation, and RW logic. This enables projects adopting the framework to automatically have the CMW perpetual task pattern available, ensuring consistency across projects.
+Include the CMW perpetual task (T102, migrated from T12) in the canonical framework task set by updating framework templates, documentation, and RW logic. This enables projects adopting the framework to automatically have the CMW perpetual task pattern available, ensuring consistency across projects.
 
 **Problem Statement:**
-- CMW perpetual task (T12) exists in ai-dev-kit but is not included in canonical framework templates
+- CMW perpetual task (T102, migrated from T12) exists in ai-dev-kit but is not included in canonical framework templates
 - Each project would need to create their own CMW perpetual task (inconsistency)
 - No standard pattern documented for CMW maintenance versioning across projects
-- RW logic does not yet detect CMW context and auto-attribute to T12
+- RW logic does not yet detect CMW context and auto-attribute to T102 (migrated from T12)
 
 **Solution:**
 1. Update framework templates to include CMW perpetual task pattern
@@ -52,9 +52,9 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
   - Problem statement and proposed solution
   - Acceptance criteria
   - Implementation considerations
-- **Task T12:** [`T12-changelog-maintenance-workflow-cmw.md`](T12-changelog-maintenance-workflow-cmw.md)
+- **Task T102:** [`T102-changelog-maintenance-workflow-cmw.md`](T102-changelog-maintenance-workflow-cmw.md) (migrated from T12)
   - Perpetual task document (reference pattern)
-- **Task T08:** [`T08-update-kanban-workflow-ukw.md`](T08-update-kanban-workflow-ukw.md)
+- **Task T101:** [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md) (migrated from T08)
   - UKW perpetual task pattern (reference implementation)
 - **Framework Templates:**
   - `packages/frameworks/kanban/templates/COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
@@ -73,9 +73,9 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 **Canonical CMW Perpetual Task Integration:**
 
 1. **Framework Templates Updated:**
-   - Update `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` to include CMW perpetual task in Epic 6, Story 6
+   - Update `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` to include CMW perpetual task in Epic 6, Story 7 (migrated from Story 6)
    - Create/update task template for CMW perpetual task pattern
-   - Ensure templates document the perpetual task pattern (similar to UKW T08)
+   - Ensure templates document the perpetual task pattern (similar to UKW T101, migrated from T08)
 
 2. **Framework Documentation Updated:**
    - Document CMW perpetual task pattern in workflow framework docs
@@ -85,7 +85,7 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 3. **RW Logic Updated:**
    - Update RW Step 2 to detect CMW context (user ran "CMW" then "RW")
    - Implement CMW attribution logic (similar to UKW attribution)
-   - Auto-attribute CMW releases to T12 (perpetual task discovered via flag)
+   - Auto-attribute CMW releases to T102 (perpetual task discovered via flag, migrated from T12)
    - Suppress build warnings for CMW perpetual task
 
 4. **Cursor Rules Updated:**
@@ -98,13 +98,13 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 ## Acceptance Criteria
 
 - [x] Framework templates updated to include CMW perpetual task pattern ✅
-- [x] Task template created/updated for CMW perpetual task (similar to UKW T08 pattern) ✅
+- [x] Task template created/updated for CMW perpetual task (similar to UKW T101 pattern, migrated from T08) ✅
 - [x] `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` includes CMW perpetual task pattern in Epic 2, Story 1 ✅
 - [x] RW execution guide updated with CMW context detection and attribution logic ✅
-- [x] RW Step 2 logic updated to detect CMW context and auto-attribute to T12 ✅
+- [x] RW Step 2 logic updated to detect CMW context and auto-attribute to T102 (migrated from T12) ✅
 - [x] Versioning policy documentation updated to mention CMW perpetual task pattern ✅
 - [x] `.cursorrules` RW trigger section updated with CMW context detection ✅
-- [ ] First CMW-triggered RW uses T12 correctly
+- [x] First CMW-triggered RW uses T102 correctly (migrated from T12) ✅
 - [ ] Pattern documented for adoption across projects
 
 ---
@@ -114,11 +114,11 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 ### Phase 1: Framework Templates Update
 
 1. **Update Comprehensive Structure:**
-   - Add CMW perpetual task (T12) to Epic 6, Story 6 in `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
+   - Add CMW perpetual task (T102, migrated from T12) to Epic 6, Story 7 (migrated from Story 6) in `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
    - Document perpetual task pattern and usage
 
 2. **Create/Update Task Template:**
-   - Review UKW perpetual task template (if exists) or T08 document
+   - Review UKW perpetual task template (if exists) or T101 document (migrated from T08)
    - Create task template for CMW perpetual task pattern
    - Include metadata: `Task Type: Perpetual Maintenance`, `Build Warning Suppression: true`
 
@@ -140,7 +140,7 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
    - Agent must track context between workflow executions
 
 2. **CMW Attribution Logic:**
-   - If CMW context detected → Auto-attribute to perpetual task T12
+   - If CMW context detected → Auto-attribute to perpetual task T102 (migrated from T12)
    - Pattern: Search for task document with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag (for CMW)
    - Use task number from perpetual task, increment BUILD
    - Skip normal task identification when CMW context detected
@@ -166,15 +166,15 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 ## Dependencies
 
 **Depends On:**
-- E6:S06:T12 - Changelog Maintenance Workflow (CMW) - Perpetual Task (must exist first)
-- E6:S06:T11 - Changelog Management and Archival Workflow (CMW implementation)
+- E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task (migrated from T12, must exist first)
+- E6:S07:T11 - Changelog Management and Archival Workflow (CMW implementation)
 
 **Blocks:**
 - Projects adopting framework templates with CMW perpetual task
 - Consistent CMW maintenance versioning across projects
 
 **Blocked By:**
-- None (T12 already exists)
+- None (T102 already exists, migrated from T12)
 
 **Parallel Development Candidacy:** Safe - can proceed independently of other tasks
 
@@ -183,15 +183,15 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 ## Related Work
 
 **Related Tasks:**
-- E6:S06:T08 - Update Kanban Workflow (UKW) - Perpetual Task (pattern reference)
-- E6:S06:T11 - Changelog Management and Archival Workflow (CMW implementation, COMPLETE)
-- E6:S06:T12 - Changelog Maintenance Workflow (CMW) - Perpetual Task (this task references it)
+- E6:S07:T101 - Update Kanban Workflow (UKW) - Perpetual Task (pattern reference, migrated from T08)
+- E6:S07:T11 - Changelog Management and Archival Workflow (CMW implementation, COMPLETE)
+- E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task (this task references it, migrated from T12)
 
 **Related Feature Requests:**
 - [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Canonical Perpetual Task for Changelog Maintenance
 
 **Related Stories:**
-- E6:S06 - ADK Implementation Analysis and Package Management (parent story)
+- E6:S07 - ADK Implementation Analysis and Package Management (parent story, migrated from S06)
 
 **Related Epics:**
 - Epic 6 - Framework Management and Maintenance (parent epic)
@@ -202,8 +202,8 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 
 - **CMW Workflow:** `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
 - **CMW Scripts:** `packages/frameworks/workflow mgt/scripts/changelog/`
-- **UKW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md`
-- **CMW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md`
+- **UKW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md` (migrated from T08, Story 6→Story 7)
+- **CMW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md` (migrated from T12, Story 6→Story 7)
 - **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
 - **Comprehensive Structure:** `packages/frameworks/kanban/templates/COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
@@ -212,11 +212,11 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.6.13+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.7.13+1)`)
 
-**Current Status:** TODO
-- Task created: v0.6.6.13+0
-- Implementation: Not started
+**Current Status:** ✅ COMPLETE
+- Task created: v0.6.7.13+0 (migrated from v0.6.6.13+0)
+- Implementation: Complete (v0.6.7.13+2, migrated from v0.6.6.13+2)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -226,7 +226,7 @@ Include the CMW perpetual task (T12) in the canonical framework task set by upda
 
 ---
 
-**Last Updated:** 2025-12-21 (v0.6.6.13+0 – Task created)  
-**Version:** v0.6.6.13+0  
-**Status:** TODO
+**Last Updated:** 2025-12-21 (v0.6.7.13+2 – Implementation complete, migrated from v0.6.6.13+2)  
+**Version:** v0.6.7.13+2  
+**Status:** ✅ COMPLETE
 

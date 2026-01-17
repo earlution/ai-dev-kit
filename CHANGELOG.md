@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.9.1.8+6] - 17-01-26
+
+### Changed
+- E9:S01:T08: Task Document Update (T13) and SemVer Mapping Proposal
+  - Migrated E6:S06:T13 to E6:S07:T13 (Canonical CMW Perpetual Task)
+  - Updated all internal references and version numbers (v0.6.6.13+* to v0.6.7.13+*)
+  - Created SemVer mapping proposal documentation for dual versioning strategy
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+6.md)
+
 ## [0.9.4.1+1] - 11-12-25
 
 📚 Book Material Capture: E9:S04:T01 - Capture Starborn Legacy Zombie Story Report
