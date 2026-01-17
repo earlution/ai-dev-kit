@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1.8+9] - 17-01-26
+
+### Added
+- E9:S01:T08: BR-035 Created (RW Housekeeping Step Not Working)
+  - Created Bug Report BR-035 documenting that RW Step 13 (Housekeeping) doesn't clear `rw-step-*` todos from IDE todo list
+  - Created task E6:S01:T35 to implement the fix
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+9.md)
+
 ## [0.9.1.8+8] - 17-01-26
 
 ### Changed
