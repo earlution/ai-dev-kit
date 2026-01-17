@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 9      # Epic number (Epic 9: Release Candidate Readiness)
-VERSION_STORY = 1     # Story number (Story 1: RC Readiness Gap Analysis)
-VERSION_TASK = 8      # Task number (Task 8: Repository Story Abstract Space Contradiction)
-VERSION_BUILD = 9     # Build number (E9:S01:T08+9 - BR-035 created: RW Housekeeping Step Not Working)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 1     # Story number (Story 1: BR Repo)
+VERSION_TASK = 35     # Task number (Task 35: RW Housekeeping Step Not Working)
+VERSION_BUILD = 1     # Build number (E6:S01:T35+1 - Fixed: Updated RW Step 13 to mark todos as cancelled)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.9.1.8+9 = Development, Epic 9, Story 1, Task 8, Build 9 (BR-035 created: RW Housekeeping Step Not Working)
+# Current: 0.6.1.35+1 = Development, Epic 6, Story 1, Task 35, Build 1 (Fixed: Updated RW Step 13 to mark todos as cancelled)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

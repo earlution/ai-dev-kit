@@ -2786,17 +2786,28 @@ except Exception as e:
 
 3. **EXECUTE:**
    - **Clear IDE Todo List:**
-     - Use `todo_write` tool with `merge: true` to mark all `rw-step-*` todos as `completed`
-     - Pattern: Find all todos with `id` matching `rw-step-*` and mark as `completed`
+     - Use `todo_write` tool with `merge: true` to mark all `rw-step-*` todos as `cancelled`
+     - Pattern: Find all todos with `id` matching `rw-step-*` and mark as `cancelled`
+     - **Note:** The `todo_write` tool does not support deletion. Marking as `cancelled` is the best available approach to hide/clear these todos from the active list.
      - Example:
        ```python
-       # Clear all RW todos
+       # Clear all RW todos by marking as cancelled
+       # Note: todo_write doesn't support deletion, so cancelled status is used to hide them
        todo_write(
            merge=True,
            todos=[
-               {'id': 'rw-step-1', 'status': 'completed'},
-               {'id': 'rw-step-2', 'status': 'completed'},
-               # ... all RW steps
+               {'id': 'rw-step-1', 'status': 'cancelled'},
+               {'id': 'rw-step-2', 'status': 'cancelled'},
+               {'id': 'rw-step-3', 'status': 'cancelled'},
+               {'id': 'rw-step-4', 'status': 'cancelled'},
+               {'id': 'rw-step-5', 'status': 'cancelled'},
+               {'id': 'rw-step-6', 'status': 'cancelled'},
+               {'id': 'rw-step-7', 'status': 'cancelled'},
+               {'id': 'rw-step-8', 'status': 'cancelled'},
+               {'id': 'rw-step-9', 'status': 'cancelled'},
+               {'id': 'rw-step-10', 'status': 'cancelled'},
+               {'id': 'rw-step-11', 'status': 'cancelled'},
+               {'id': 'rw-step-12', 'status': 'cancelled'},
            ]
        )
        ```
@@ -2816,7 +2827,8 @@ except Exception as e:
 **Key Points:**
 - This step runs at the very end of the Release Workflow
 - It's optional but recommended for clean IDE state
-- Current implementation focuses on clearing IDE todos
+- Current implementation marks todos as `cancelled` to hide them (tool limitation: `todo_write` doesn't support deletion)
+- If Cursor adds deletion support to `todo_write`, this can be updated to actually remove todos
 - Future enhancements may include additional cleanup tasks
 
 **Configuration:**
