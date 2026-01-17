@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1.8+7] - 17-01-26
+
+### Changed
+- E9:S01:T08: Task Document Updates (T11, T06, T15)
+  - Updated T11 task document (E6:S06→E6:S07, v0.6.6.11+4→v0.6.7.11+4)
+  - Updated T06 task document (E6:S06→E6:S07, v0.6.6.6+20→v0.6.7.6+20)
+  - Updated T15 task document (E6:S06→E6:S07, v0.6.6.15+1→v0.6.7.15+1)
+  - Updated all internal task references and version numbers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+7.md)
+
 ## [0.6.7.101+22] - 17-01-26
 
 ### Changed

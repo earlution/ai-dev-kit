@@ -6,17 +6,17 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 11: Changelog Management and Archival Workflow
+# Epic 6, Story 7, Task 11: Changelog Management and Archival Workflow
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-21 (v0.6.6.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE)  
+**Last updated:** 2025-12-21 (v0.6.7.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE, migrated from v0.6.6.11+4)  
 **Started:** 2025-12-21  
 **Completed:** 2025-12-21  
-**Version:** v0.6.6.11+4
+**Version:** v0.6.7.11+4
 
 **Feature Request:** [FR-025](../fr-br/FR-025-changelog-management-and-archival-workflow.md)  
-**Code:** E6S06T11
+**Code:** E6S07T11
 
 ---
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}`
 
-**Full Task ID:** `E6:S06:T11`
+**Full Task ID:** `E6:S07:T11`
 
 ---
 
@@ -225,11 +225,11 @@ Implement automated changelog management workflow (CMW) with:
 - **FR-025:** Changelog Management and Archival Workflow (source of this task)
 
 **Related Tasks:**
-- **E6:S06:T07:** Implement framework hardening recommendations (framework hardening context)
-- **E6:S06:T08:** Update Kanban Workflow (UKW) - Similar workflow pattern
+- **E6:S07:T07:** Implement framework hardening recommendations (framework hardening context)
+- **E6:S07:T101:** Update Kanban Workflow (UKW) - Similar workflow pattern (migrated from T08 to T101)
 
 **Related Stories:**
-- **E6:S06:** ADK Implementation Analysis and Package Management (parent story)
+- **E6:S07:** ADK Implementation Analysis and Package Management (parent story, migrated from S06 to S07)
 
 **Related Epics:**
 - **Epic 2:** Workflow Management Framework (CMW will be part of workflow framework)
@@ -271,10 +271,10 @@ Implement automated changelog management workflow (CMW) with:
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.6.11+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.7.11+1)`)
 
-**Current Status:** TODO
-- Task created: v0.6.6.10+19
+**Current Status:** ✅ COMPLETE
+- Task created: v0.6.7.10+19 (migrated from v0.6.6.10+19)
 - Implementation: Not started
 
 **When Task is Complete:**

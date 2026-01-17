@@ -6,24 +6,24 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 15: Cursor IDE Performance Considerations Awareness
+# Epic 6, Story 7, Task 15: Cursor IDE Performance Considerations Awareness
 
 **Status:** ✅ COMPLETE  
 **Priority:** MEDIUM  
-**Last updated:** 2025-12-21 (v0.6.6.15+1 – Implementation complete: Awareness documentation created and framework guidance updated)  
+**Last updated:** 2025-12-21 (v0.6.7.15+1 – Implementation complete: Awareness documentation created and framework guidance updated, migrated from v0.6.6.15+1)  
 **Started:** 2025-12-21  
 **Completed:** 2025-12-21  
-**Version:** v0.6.6.15+1
+**Version:** v0.6.7.15+1
 
 **Feature Request:** [FR-028](../../fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)  
-**Code:** E6S06T15
+**Code:** E6S07T15
 
 ---
 
 ## Task ID
 
 **Format:** `E{epic}:S{story}:T{task}`
-**Value:** `E6:S06:T15`
+**Value:** `E6:S07:T15`
 
 ---
 
@@ -164,7 +164,7 @@ Create awareness documentation and update framework guidance for Cursor IDE perf
   - Article: `KB/Documentation/Developer_Docs/cursor-crash-investigation-article.md`
 
 **Related Stories:**
-- **E6:S06:** ADK Implementation Analysis and Package Management (parent story)
+- **E6:S07:** ADK Implementation Analysis and Package Management (parent story, migrated from S06 to S07)
 
 **Related Epics:**
 - **Epic 6:** Framework Management and Maintenance
@@ -191,7 +191,7 @@ Create awareness documentation and update framework guidance for Cursor IDE perf
 
 ---
 
-**Last Updated:** 2025-12-21 (v0.6.6.15+1 – Implementation complete: Awareness documentation created and framework guidance updated)  
-**Version:** v0.6.6.15+1  
+**Last Updated:** 2025-12-21 (v0.6.7.15+1 – Implementation complete: Awareness documentation created and framework guidance updated, migrated from v0.6.6.15+1)  
+**Version:** v0.6.7.15+1  
 **Status:** ✅ COMPLETE
 
