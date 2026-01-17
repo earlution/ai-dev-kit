@@ -32,6 +32,7 @@ housekeeping_policy: keep
 > **Abstract Space:** v0.6.1.0+0 (repository story), v0.6.1.1+0 (first BR), v0.6.1.2+0 (second BR), etc.
 
 - [ ] **E6:S01:T33 – UKW Board Disorganization** - TODO (HIGH priority) - [Task Document](Story-001-br-repo/T33-ukw-board-disorganization.md) | [BR-033](../../fr-br/BR-033-ukw-board-disorganization.md)
+- [ ] **E6:S01:T34 – UKW MoSCOW Prioritization Missing** - TODO (HIGH priority) - [Task Document](Story-001-br-repo/T34-ukw-moscow-prioritization-missing.md) | [BR-034](../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
 
 ---
 

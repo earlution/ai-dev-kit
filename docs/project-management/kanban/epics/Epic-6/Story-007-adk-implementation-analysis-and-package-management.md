@@ -32,7 +32,7 @@ housekeeping_policy: keep
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 - [x] **E6:S07:T07 – Implement framework hardening recommendations** - ✅ COMPLETE (v0.6.7.7+6 – All phases complete: Epic 9→Epic 24, installer validation, rw-config.yaml, .cursorrules, installation instructions)
   - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
-- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+21 – UKW: Epic 9 creation and kanban synchronization)
+- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+22 – UKW: Fixed T101 header, updated kanban board MoSCOW section, filed BR-034)
   - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
   - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)

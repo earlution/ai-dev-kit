@@ -6,20 +6,20 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 101: Update Kanban Workflow (UKW) - Perpetual Task
+# Epic 6, Story 7, Task 101: Update Kanban Workflow (UKW) - Perpetual Task
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-16 (v0.6.7.101+21 – Epic 9 creation: Created Epic 9 (Release Candidate Readiness) with 5 stories, updated kanban board)  
+**Last updated:** 2026-01-17 (v0.6.7.101+22 – UKW: Fixed T101 header, updated kanban board MoSCOW section, filed BR-034)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+21
+**Version:** v0.6.7.101+22
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** Epic 9 creation and kanban synchronization - Created Epic 9 (Release Candidate Readiness) with 5 comprehensive stories covering RC readiness gap analysis, framework reviews (Kanban, Workflow Management, Numbering & Versioning), and canonical E/S/T review. Each framework review story includes 8 tasks covering framework objective/documentation/component analysis, package management/maintenance/installation, update management, and book project integration. Updated kanban board with Epic 9 and all stories. FR-032 accepted and assigned to Epic 9, Story 1.  
+**Progress:** UKW execution (v0.6.7.101+22) - Fixed T101 task document header (Story 6 → Story 7), updated kanban board MoSCOW Prioritized In-Progress Tasks section with E9:S01:T08 (Repository Story Abstract Space Contradiction) in Should Have (S) category, updated Epic 9 status from TODO to IN PROGRESS, filed BR-034 documenting missing MoSCOW prioritization logic in UKW Step 6.  
 **Code:** E6S06T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).

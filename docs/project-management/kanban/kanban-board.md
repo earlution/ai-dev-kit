@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-16  
-**Version:** v0.5.0.35+0
+**Last Updated:** 2026-01-17  
+**Version:** v0.6.7.102+4
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 21 are TODO.
 
@@ -51,14 +51,17 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
-*(No active tasks in this category at this time)*
+- **E9:S01:T08** – Repository Story Abstract Space Contradiction - IN PROGRESS (v0.9.1.8+6, HIGH priority) - [Task Document](epics/Epic-9/Story-001-rc-readiness-gap-analysis/T08-repository-story-abstract-space-contradiction.md) | [Story](epics/Epic-9/Story-001-rc-readiness-gap-analysis.md)
+  - **Status:** IN PROGRESS (v0.9.1.8+6 – Implementation: Task document update T13 complete, SemVer mapping proposal documentation)
+  - **Epic:** Epic 9 - Release Candidate Readiness (HIGH priority)
+  - **Rationale:** Critical architectural fix for versioning system. Resolves S00 abstract space contradiction, establishes T101+ for perpetual tasks, enables repository story pattern. Part of RC readiness work.
 
 ### Could Have (C) - Nice-to-Have Tasks
 
 *Nice-to-have in-progress tasks that could be completed.*
 
-- **E5:S00:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-000-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
-- **E5:S00:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-000-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
+- **E5:S01:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
+- **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - **E5:S03:T01-T03** – Documentation Automation - TODO (MEDIUM priority story) - [Story](epics/Epic-5/Story-003-documentation-automation.md)
   - T01: Create automated documentation update scripts - TODO
   - T02: Implement documentation synchronization workflows - TODO
@@ -81,10 +84,10 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Ongoing maintenance tasks that never complete. These are tracked but don't block other work.*
 
-- **E6:S04** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-004-bug-reports.md)
-- **E6:S05** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-005-feature-requests.md)
-- **E6:S06:T08** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.6.8+19, Last updated: 2026-01-06) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-- **E6:S06:T12** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.6.12+2, Last updated: 2026-01-05) - [Task Document](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T12-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
+- **E6:S05** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-005-bug-reports.md)
+- **E6:S06** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-006-feature-requests.md)
+- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+21, Last updated: 2026-01-16) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+4, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 
 ### Won't Have (W) - Deferred Tasks
 
@@ -299,12 +302,12 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ### Epic 9: Release Candidate Readiness
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-16 (v0.9.0.0+0 – Epic created with 5 stories: RC Readiness Gap Analysis, Framework Reviews, Canonical E/S/T Review)
+**Last Updated:** 2026-01-17 (v0.9.1.8+6 – E9:S01:T08 implementation: Task document update T13 complete, SemVer mapping proposal documentation)
 
 **Stories:**
-- [ ] **E9:S01 – RC Readiness Gap Analysis** - TODO (v0.9.1.0+0)
+- [ ] **E9:S01 – RC Readiness Gap Analysis** - IN PROGRESS (v0.9.1.8+6)
   - Story: [`epics/Epic-9/Story-001-rc-readiness-gap-analysis.md`](epics/Epic-9/Story-001-rc-readiness-gap-analysis.md)
   - **Feature Request:** [FR-032](fr-br/FR-032-release-candidate-readiness-gap-analysis.md)
 - [ ] **E9:S02 – Kanban Framework RC Readiness Review** - TODO

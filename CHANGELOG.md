@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.7.101+22] - 17-01-26
+
+### Changed
+- E6:S07:T101: Update Kanban Workflow (UKW) Execution
+  - Fixed T101 task document header (Story 6 → Story 7)
+  - Updated kanban board MoSCOW Prioritized In-Progress Tasks section with E9:S01:T08
+  - Updated Epic 9 status from TODO to IN PROGRESS
+
+### Added
+- E6:S01:T34: UKW MoSCOW Prioritization Missing (BR-034)
+  - Created Bug Report BR-034 documenting missing MoSCOW prioritization logic in UKW Step 6
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+22.md)
+
 ## [0.6.7.102+4] - 17-01-26
 
 ### Changed
