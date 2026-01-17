@@ -1,4 +1,803 @@
 # Changelog Archive
+## [0.6.6.11+4] - 21-12-25
+
+✅ Phase 6 Complete: Initial archival performed - Changelog reduced from 10,083 to 8,785 lines. T11 ALL PHASES COMPLETE.
+
+### Changed
+
+- **Initial Archival Performed:**
+  - Main changelog reduced from 10,083 to 8,785 lines (1,298 line reduction)
+  - Archive file created with 50 archived entries
+  - 5 duplicate version entries removed
+- **Bug Fixes:** Fixed missing Tuple imports in CMW scripts
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+4.md)
+
+---
+---
+---
+---
+## [0.6.6.12+1] - 05-01-26
+
+### Changed
+- CMW: Changelog maintenance and archival (E6:S06:T12 - CMW)
+  - Archived 50 entries (reduced changelog from 8,330 to 6,835 lines)
+  - Removed 1 duplicate entry: 0.6.6.8+15
+  - Archive file updated with archived entries
+
+### Added
+- E6:S06:T16 – Harden CMW Ordering Before Archival (task created)
+  - Task document and analysis created to fix CMW ordering flaw
+  - Identified critical flaw: CMW archives entries before fixing ordering
+  - Proposed solution: Add Step 3.5 "Fix Ordering" before archival
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.12+1.md)
+
+---
+---
+---
+---
+## [0.6.6.12+2] - 05-01-26
+
+### Changed
+- CMW: Changelog maintenance with Step 3.5 fix (E6:S06:T12 - CMW)
+  - Step 3.5 fixed 17 ordering violations before archival
+  - Archived 50 entries (reduced changelog from 6,871 to 5,122 lines)
+  - **0 ordering violations remaining** (validated in Step 6)
+  - Archive file updated with correctly sorted entries
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.12+2.md)
+
+---
+---
+---
+## [0.6.6.13+0] - 21-12-25
+
+📋 Doc Init: E6:S06:T13 - Canonical CMW Perpetual Task
+
+### Doc Init
+
+- **Task Created:** E6:S06:T13 - Canonical CMW Perpetual Task
+- **Feature Request:** FR-026 - Canonical Perpetual Task for Changelog Maintenance
+- **Scope:** Include CMW perpetual task (T12) in canonical framework task set
+- **Status:** TODO (implementation pending)
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.13+0.md)
+
+---
+---
+---
+---
+## [0.6.6.13+1] - 21-12-25
+
+Version marker updates: Story 6 and Epic 6 version markers updated to reflect v0.6.6.13+0
+
+### Changed
+
+- **Documentation:** Updated Story 6 and Epic 6 version markers to v0.6.6.13+0
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.13+1.md)
+
+---
+---
+---
+---
+## [0.6.6.13+2] - 21-12-25
+
+✅ T13 Implementation Complete: CMW perpetual task pattern canonicalized
+
+### Changed
+
+- **Framework Templates:**
+  - CMW perpetual task template created (`Epic-2/Story-1/T05-CMW-Perpetual-Task-Pattern.md`)
+  - Comprehensive canonical structure updated with CMW pattern documentation
+- **Framework Documentation:**
+  - RW execution guide updated with CMW context detection and attribution logic
+  - Versioning policy updated with perpetual task section (6.1.1)
+- **RW Logic:**
+  - `.cursorrules` updated with CMW context detection in RW Step 2
+  - CMW attribution logic added (follows UKW pattern)
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.13+2.md)
+
+---
+---
+---
+---
+## [0.6.6.14+0] - 21-12-25
+
+📋 Doc Init: E6:S06:T14 - Add CMW to Workflow Management Package Documentation
+
+### Doc Init
+
+- **Feature Request Created:** FR-027 - Add CMW to Workflow Management Package Documentation
+- **Task Created:** E6:S06:T14 - Add CMW to Workflow Management Package Documentation
+- **Scope:** Add CMW to workflow management package README to ensure proper documentation and discoverability
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.14+0.md)
+
+---
+---
+---
+---
+## [0.6.6.14+1] - 03-01-26
+
+### Added
+- CMW documentation in workflow management package README
+  - Complete CMW section with overview, features, and integration points
+  - CMW scripts documented in "What's Included" section
+  - CMW workflow definition added to "Workflow Definitions" section
+  - CMW integration with RW Step 9.5 documented
+  - Manual execution and cron automation instructions
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.14+1.md)
+---
+---
+---
+## [0.6.6.15+0] - 21-12-25
+
+📋 Doc Init: E6:S06:T15 - Cursor IDE Performance Considerations Awareness
+
+### Doc Init
+
+- **Feature Request Created:** FR-028 - Cursor IDE Performance Considerations Awareness
+- **Task Created:** E6:S06:T15 - Cursor IDE Performance Considerations Awareness
+- **Scope:** Create awareness documentation and update framework guidance for Cursor IDE performance considerations based on real-world investigation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.15+0.md)
+
+---
+---
+---
+---
+## [0.6.6.15+1] - 21-12-25
+
+✅ T15 Implementation Complete: Cursor IDE Performance Considerations Awareness
+
+### Added
+
+- **Awareness Documentation:**
+  - `docs/architecture/standards-and-adrs/cursor-ide-performance-considerations.md` created
+  - Comprehensive documentation covering root causes, best practices, monitoring, and framework guidance
+  - References external investigation (Confidentia project - Epic 20, Story 5, Task 16)
+
+### Changed
+
+- **Framework Documentation:**
+  - `packages/frameworks/numbering & versioning/IMPLEMENTATION_GUIDE.md` updated
+  - Pre-commit hook examples changed from `pass_filenames: false` to `pass_filenames: true`
+  - Performance note added explaining recommendation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.15+1.md)
+
+---
+---
+---
+---
+## [0.6.6.16+1] - 05-01-26
+
+### Added
+- Step 3.5: Fix Ordering to CMW workflow (E6:S06:T16)
+  - New script: `fix_ordering.py` sorts changelog entries by canonical version number
+  - Ensures changelog is sorted before archival to prevent archive corruption
+  - Supports both Keep a Changelog format (newest first) and Canonical format (lowest first)
+  - Auto-detects changelog format
+
+### Modified
+- CMW workflow: Added Step 3.5 between Step 3 (Remove Duplicates) and Step 4 (Identify Archival)
+- Archive function: Fixed sorting logic to sort by version components instead of position
+- CMW main script: Integrated Step 3.5 execution
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.16+1.md)
+
+---
+---
+---
+---
+## [0.6.7.0+1] - 22-12-25
+
+### Added
+- Story E6:S07: ai-dev-kit CLI Tool (`docs/project-management/kanban/epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`)
+  - Comprehensive Story with 14-task breakdown for CLI tool implementation
+  - Tasks organized into 4 phases: Foundation, Backend Implementations, Advanced Features, Polish & Distribution
+  - Complete implementation roadmap aligned with FR-030 requirements
+
+### Changed
+- FR-030 updated to reference Story E6:S07 instead of single task E6:S02:T04
+- Epic 6 documentation updated to include Story 7 in checklist
+- Kanban board updated to include Story 7 entry
+- E6:S02:T04 updated to note it's been superseded by E6:S07
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.0+1.md)
+---
+---
+---
+## [0.6.7.1+1] - 22-12-25
+
+### Added
+- CLI tool base structure (`cli/` directory)
+  - Entry point with command routing (`cli/main.py`)
+  - Command infrastructure with base class (`cli/commands/__init__.py`)
+  - Configuration management (`cli/config.py`)
+  - Utility modules (`cli/utils.py`)
+  - Backend protocol interface (`cli/backends/__init__.py`)
+- Project setup files (`setup.py`, `requirements.txt`)
+- CLI tool documentation (`cli/README.md`)
+
+### Changed
+- Story E6:S07 updated to mark T01 as COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.1+1.md)
+---
+---
+---
+## [0.6.7.3+1] - 22-12-25
+
+### Added
+- Status and checking commands for CLI tool
+  - `check` command - Check for available framework updates
+  - `status` command - Show installed framework versions and backends
+  - `list` command - List available frameworks and versions
+- JSON output support for `status` and `list` commands
+- Framework filtering options for `check` and `status` commands
+
+### Changed
+- Story E6:S07 updated to mark T03 as COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.3+1.md)
+---
+---
+---
+## [0.6.7.4+1] - 22-12-25
+
+### Added
+- Backend abstraction layer for CLI tool
+  - Base backend interface (`cli/backends/base.py`) with abstract methods
+  - Backend registration system (`cli/backends/registry.py`)
+  - Backend selection logic (`cli/backends/selector.py`) with auto-detection
+  - Project type detection (npm, pip, Git)
+- Backend documentation (`cli/backends/README.md`)
+
+### Changed
+- Story E6:S07 updated to mark T04 as COMPLETE
+- Backend package exports updated to use concrete base class
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.4+1.md)
+---
+---
+---
+## [0.6.7.5+1] - 22-12-25
+
+### Added
+- Git submodule backend implementation (`cli/backends/git_submodule.py`)
+  - Full support for install, update, check, status, and remove operations
+  - Git availability checking
+  - Comprehensive error handling with timeouts
+  - Backend registered and available via CLI tool
+
+### Changed
+- Story E6:S07 updated to mark T05 as COMPLETE
+- Backend package updated to register Git submodule backend
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.5+1.md)
+---
+---
+---
+## [0.6.7.6+1] - 22-12-25
+
+### Added
+- Git subtree backend implementation (`cli/backends/git_subtree.py`)
+  - Full support for install, update, check, status, and remove operations
+  - Git availability checking
+  - Comprehensive error handling with timeouts
+  - Backend registered and available via CLI tool
+
+### Changed
+- Story E6:S07 updated to mark T06 as COMPLETE
+- Backend package updated to register Git subtree backend
+- CLI tool now supports both Git submodules and Git subtrees
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.6+1.md)
+---
+---
+---
+## [0.6.7.7+1] - 22-12-25
+
+### Added
+- Package manager backend implementation (`cli/backends/package_manager.py`)
+  - npm backend with full support for install, update, check, status, remove
+  - pip backend with full support for install, update, check, status, remove
+  - Package existence checking before operations
+  - Graceful error handling for unpublished packages (helpful error messages)
+  - Automatic detection of npm/pip availability
+  - Backends registered and available via CLI tool
+
+### Changed
+- Story E6:S07 updated to mark T07 as COMPLETE
+- T07 dependencies resolved (no longer blocked by E6:S01)
+- Backend package updated to register npm and pip backends
+- CLI tool now supports all four backends (Git submodule, Git subtree, npm, pip)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.7+1.md)
+---
+---
+---
+## [0.6.7.8+1] - 22-12-25
+
+### Added
+- Configuration management enhancements
+  - Enhanced Config class with validation and schema support
+  - `config` command with subcommands: get, set, list, reset, validate
+  - Configuration schema validation with valid values checking
+  - JSON output support for config get and list commands
+  - Automatic fix option for config validate command
+- Configuration schema definition
+  - Valid backends: git-submodule, git-subtree, npm, pip
+  - Valid check intervals: daily, weekly, manual
+  - Valid notification channels: console, email, slack
+
+### Changed
+- Story E6:S07 updated to mark T08 as COMPLETE
+- Config class enhanced with validation, reset, and list methods
+- CLI tool now includes config command for managing configuration
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.8+1.md)
+---
+---
+---
+## [0.6.7.9+1] - 22-12-25
+
+### Added
+- Comprehensive error handling and validation
+  - Custom exception classes with recovery suggestions (`cli/exceptions.py`)
+  - Input validation utilities (`cli/validation.py`)
+  - Centralized error handling with `handle_error()` function
+  - Framework not found errors with available alternatives
+  - Version not found errors with available versions
+  - Backend not available errors with alternatives and installation hints
+  - Invalid input errors with expected format guidance
+  - Configuration errors with validation hints
+  - Installation and update errors with troubleshooting steps
+
+### Changed
+- Story E6:S07 updated to mark T09 as COMPLETE
+- Enhanced error handling across all CLI commands
+- Updated install command to use validation and error handling
+- Updated main entry point to use centralized error handling
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.9+1.md)
+---
+---
+---
+## [0.6.7.10+1] - 22-12-25
+
+### Added
+- Migration utilities for converting copy-paste frameworks to dependencies
+  - Framework detection for copy-paste installations (`cli/migration.py`)
+  - Migration conversion utilities with automatic backup
+  - `migrate` command with detect, convert, and validate subcommands
+  - Support for multiple backends (git-submodule, git-subtree, npm, pip)
+  - Dry-run mode for previewing migrations
+  - Migration validation with detailed issue reporting
+
+### Changed
+- Story E6:S07 updated to mark T10 as COMPLETE
+- CLI tool now includes migrate command for framework migration
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.10+1.md)
+---
+---
+---
+## [0.6.7.11+1] - 22-12-25
+
+### Added
+- Remove command for framework uninstallation
+  - `remove` command with framework removal and cleanup (`cli/commands/remove.py`)
+  - `--keep-files` option to preserve framework files
+  - `--recovery` mode for cleaning up failed installations
+  - `--force` option for non-interactive removal
+  - Comprehensive cleanup utilities (files, config, dependencies, traces)
+  - Integration with all backend implementations
+  - Dry-run mode for preview
+
+### Changed
+- Story E6:S07 updated to mark T11 as COMPLETE
+- CLI tool now includes remove command for framework uninstallation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.11+1.md)
+---
+---
+---
+## [0.6.7.12+1] - 03-01-26
+
+### Added
+- Comprehensive CLI documentation and usage examples
+  - CLI usage examples guide with 20+ scenarios (`docs/documentation/user-docs/cli-usage-examples.md`)
+  - CLI configuration guide with complete `.ai-dev-kit.yaml` format (`docs/documentation/user-docs/cli-configuration-guide.md`)
+  - CLI troubleshooting guide with 15+ common issues and solutions (`docs/documentation/user-docs/cli-troubleshooting-guide.md`)
+
+### Changed
+- CLI command reference updated to version 2.0.0
+  - Documented all 9 implemented commands (init, install, update, check, status, list, remove, config, migrate)
+  - Added comprehensive backend support documentation
+  - Enhanced command documentation with all options and examples
+- Installation guide updated to reflect CLI tool availability
+  - Changed from "Coming Soon" to "Available Now"
+  - Updated installation steps with current method
+- Story E6:S07 updated to mark T12 as COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.12+1.md)
+---
+---
+---
+## [0.6.7.13+1] - 03-01-26
+
+### Added
+- Comprehensive test suite for CLI tool
+  - Unit tests for commands, configuration, utilities, validation, and backends (`tests/` directory)
+  - Integration tests for end-to-end workflows
+  - Pytest configuration and fixtures
+  - Test documentation (`tests/README.md`)
+- CLI validation script (`scripts/validate_cli.py`)
+  - Import validation, entry point validation, code quality checks, test execution, package build validation
+- PyPI packaging configuration
+  - Enhanced `setup.py` with dynamic version management
+  - `MANIFEST.in` for package file inclusion
+  - Publishing guide (`docs/documentation/user-docs/cli-publishing-guide.md`)
+
+### Changed
+- `setup.py` enhanced for PyPI publishing with dynamic version reading and enhanced metadata
+- `cli/README.md` updated with development and testing instructions
+- Story E6:S07 marked as COMPLETE ✅ (all 14 tasks T00-T13 complete)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.13+1.md)
+---
+---
+---
+## [0.6.7.102+3] - 16-01-26
+
+### Changed
+- Changelog Management Workflow (CMW) Execution (E6:S07:T102)
+  - Fixed 8 changelog ordering violations
+  - Archived 50 entries (reduced from 5,329 to 3,736 lines)
+  - Maintained Keep a Changelog format compliance
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.102+3.md)
+---
+## [0.7.1.1+1] - 2025-12-09
+
+📦 New Canonical Epic: Added Epic 7 (Codebase Maintenance and Review) with perpetual task for IDE-flagged issues
+
+### Added
+
+- **Epic 7: Codebase Maintenance and Review** - New canonical epic for codebase maintenance and review work
+  - Story 1: Codebase Maintenance Tasks with perpetual task for IDE-flagged issues (errors, warnings, info)
+  - Example Epic 7 document demonstrating structure and content
+  - Integration with Epic 4 (Kanban Framework) and Epic 6 (BR Implementation)
+- **Kanban Package v1.2.0:** Updated canonical epic count from 1-6 to 1-7, updated intake guides
+
+### Changed
+
+- Updated canonical epic count from 1-6 to 1-7 (new project-specific epics now start at Epic 8)
+- Updated intake guides to reference Epic 7
+- Updated README and documentation to include Epic 7
+
+---
+---
+---
+---
+## [0.7.1.2+1] - 03-01-26
+
+### Added
+- Maintenance task prioritization framework (E7:S01:T02)
+  - Comprehensive prioritization framework with severity, impact, and effort dimensions
+  - Weighted priority score calculation formula
+  - Priority score ranges and MoSCoW classification mapping
+  - Contextual adjustments and 5-step prioritization process
+  - Kanban framework integration and examples
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.2+1.md)
+---
+---
+---
+## [0.7.1.3+1] - 05-01-26
+
+### Added
+- Maintenance workflow processes (E7:S01:T03)
+  - Four comprehensive workflows: IDE-flagged issues, prioritized maintenance, scheduled maintenance, emergency maintenance
+  - Full integration with RW Step 9, UKW, and framework health monitoring
+  - Kanban integration and best practices
+  - Examples demonstrating workflow usage
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.3+1.md)
+---
+---
+---
+## [0.7.1.4+1] - 05-01-26
+
+### Added
+- Maintenance tasks Kanban integration (E7:S01:T04)
+  - Comprehensive integration guide covering task creation, prioritization mapping, lifecycle tracking
+  - Epic 4 (Kanban Framework) integration details
+  - Workflow integration for all maintenance workflows
+  - Examples and best practices for maintenance task management
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.4+1.md)
+---
+---
+---
+## [0.7.1.4+2] - 05-01-26
+
+### Changed
+- Story E7:S01 (Codebase Maintenance Tasks) marked as COMPLETE (v0.7.1.4+2)
+  - All non-perpetual tasks complete (T02, T03, T04)
+  - Perpetual task T01 (IDE-flagged issues) remains ongoing
+  - Maintenance system fully established and ready for use
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.4+2.md)
+---
+---
+---
+## [0.7.2.1+1] - 05-01-26
+
+### Added
+- Code review standards and guidelines (E7:S02:T01)
+  - Comprehensive standards covering code quality, security, testing, documentation, style, and architecture
+  - Reviewer guidelines with focus areas, feedback best practices, and communication guidelines
+  - Review criteria by change type (features, bug fixes, refactoring, documentation, configuration)
+  - Integration with development workflow and best practices for authors and reviewers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.2.1+1.md)
+---
+---
+---
+## [0.7.2.2+1] - 05-01-26
+
+### Added
+- Code review checklist templates (E7:S02:T02)
+  - Comprehensive checklist templates for feature additions, bug fixes, refactoring, documentation, configuration changes
+  - Security-focused and performance-focused review checklists
+  - Quick review and comprehensive review checklists
+  - Usage examples and customization guidelines
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.2.2+1.md)
+---
+---
+---
+## [0.7.2.3+1] - 05-01-26
+
+### Added
+- Code review workflow processes (E7:S02:T03)
+  - Comprehensive workflows for standard features, bug fixes, refactoring, documentation, and configuration changes
+  - Full integration with Release Workflow (RW), Update Kanban Workflow (UKW), and CI/CD
+  - Review metrics and tracking, best practices, and examples
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.2.3+1.md)
+---
+---
+---
+## [0.7.2.4+1] - 05-01-26
+
+### Added
+- Code review Kanban integration (E7:S02:T04)
+  - Comprehensive integration covering review task creation, status tracking, metrics tracking
+  - Full workflow integration with standard features, bug fixes, refactoring, and review initiatives
+  - Epic 4 (Kanban Framework) integration with examples and best practices
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.2.4+1.md)
+---
+---
+---
+## [0.7.3.4+1] - 05-01-26
+
+### Added
+- Code quality metrics and monitoring (E7:S03 - Complete Story)
+  - Comprehensive metrics framework covering seven quality dimensions (complexity, coverage, duplication, maintainability, security, performance, technical debt)
+  - Code quality monitoring dashboards (overall, dimension, module, trend, alert dashboards)
+  - Kanban integration for quality metrics tracking and quality-based prioritization
+  - Comprehensive monitoring processes (collection, dashboard updates, review, improvement, reporting)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.3.4+1.md)
+---
+---
+---
+## [0.7.4.4+1] - 05-01-26
+
+### Added
+- Maintenance automation and tooling (E7:S04 - Complete Story)
+  - Comprehensive automation requirements covering IDE issues, quality checks, dependencies, documentation, changelog
+  - Automation scripts and tools architecture with templates and patterns
+  - Workflow integration with RW, UKW, maintenance workflows, and CI/CD
+  - Comprehensive usage guides, tutorials, examples, and troubleshooting
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.4.4+1.md)
+---
+---
+---
+## [0.7.5.4+1] - 05-01-26
+
+### Added
+- Migration UXR synthesis complete (E7:S05 - Complete Story)
+  - UXR-001 synthesis: Key findings, user pain points, migration UX requirements (fed to Epic 4 Story 7)
+  - UXR-002 synthesis: UAT validation findings, recommendations (fed to Epic 4 Story 8)
+  - UXR-003 synthesis: Semantic matching requirements, canonical adoption recommendations (fed to Epic 4 Story 8)
+  - UXR-004 synthesis: Bug reports and design flaws (fed to Epic 4 Story 9)
+  - Overall UXR synthesis: Common themes, requirements summary, pain points summary
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.5.4+1.md)
+---
+---
+---
+## [0.8.1.1+1] - 05-01-26
+
+### Added
+- Code Generator Framework (E8:S01:T01)
+  - BaseGenerator abstract base class with workflow orchestration
+  - TemplateBasedGenerator for template-based generators
+  - TemplateEngine with variable substitution, conditionals, and loops
+  - GeneratorRegistry for generator discovery and management
+  - Comprehensive documentation and examples
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.1.1+1.md)
+---
+---
+## [0.8.1.2+1] - 05-01-26
+
+### Added
+- Template-Based Generators (E8:S01:T02)
+  - WorkflowGenerator for generating workflow YAML files
+  - KanbanTemplateGenerator for generating Epic, Story, and Task documents
+  - Templates: workflow-template.yaml, epic-template.md, story-template.md, task-template.md
+  - Comprehensive documentation and usage examples
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.1.2+1.md)
+---
+---
+## [0.8.1.3+1] - 05-01-26
+
+### Added
+- Generator Patterns Library (E8:S01:T03)
+  - Comprehensive pattern library with 7 categories and 20+ patterns
+  - Pattern examples demonstrating each pattern
+  - Best practices and usage guidance
+  - Completes E8:S01 - Code Generators story
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.1.3+1.md)
+---
+---
+## [0.8.2.2+1] - 06-01-26
+
+### Added
+- Framework-Specific Validators (E8:S02:T02)
+  - Created 4 framework-specific validators (Kanban, Workflow, Version, Document Lifecycle)
+  - Comprehensive validation for framework structures and compliance
+  - Test suites and documentation for all validators
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.2.2+1.md)
+---
+---
+## [0.8.2.3+1] - 06-01-26
+
+### Added
+- Validation Patterns Library (E8:S02:T03)
+  - Created comprehensive validation patterns library with 7 pattern categories
+  - 20+ specific validation patterns extracted from existing validators
+  - Pattern examples and best practices documentation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.2.3+1.md)
+---
+---
+## [0.9.1.8+0] - 16-01-26
+
+### Added
+- E9:S01:T08: Repository Story Abstract Space Contradiction
+  - Created task document for analyzing and resolving repository story abstract space contradiction
+  - Created analysis documents for architectural contradiction and perpetual task range options
+  - Version anchor established: v0.9.1.8+0 (doc-init)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+0.md)
+---
+---
+## [0.9.1.8+1] - 16-01-26
+
+### Added
+- Repository Story Abstract Space Resolution Implementation (E9:S01:T08)
+  - Implemented repository story abstract space resolution
+  - Migrated perpetual tasks to T101+ range (UKW→T101, CMW→T102)
+  - Migrated Epic 5 repository from S00 to S01 (FR Repo)
+  - Migrated Epic 6 repository from S00 to S01 (BR Repo)
+  - Renumbered Epic 5 stories (S01-S07 → S02-S08)
+  - Renumbered Epic 6 stories (S01-S07 → S02-S08)
+  - Updated S00 documents to Epic-level abstract space only
+  - Updated all FR/BR documents with new task IDs and versions
+  - Updated versioning policy to support T101+ range
+  - Created comprehensive migration status and progress documents
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+1.md)
+---
+---
+## [0.9.1.8+2] - 16-01-26
+
+### Added
+- Epic 6 Story File Updates (E9:S01:T08)
+  - Updated all Epic 6 story file headers with new story numbers (S02-S08)
+  - Updated all task references and version numbers
+  - Added migration notes to all updated story files
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+2.md)
+---
+---
+## [0.9.1.8+3] - 16-01-26
+
+### Changed
+- Task Document Updates (E9:S01:T08)
+  - Updated T09, T04, T16 task documents (E6:S06→E6:S07, v0.6.6.*→v0.6.7.*)
+  - Updated all internal task references and version numbers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+3.md)
+---
+## [0.9.1.8+4] - 17-01-26
+
+### Changed
+- Task Document Update (E9:S01:T08)
+  - Updated T07 task document (E6:S06→E6:S07, v0.6.6.7+*→v0.6.7.7+*)
+  - Updated all internal task references and version numbers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+4.md)
+---
+## [0.9.1.8+5] - 17-01-26
+
+### Changed
+- Task Document Update (E9:S01:T08)
+  - Updated T14 task document (E6:S06→E6:S07, v0.6.6.14+1→v0.6.7.14+1)
+  - Updated all internal task references and version numbers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+5.md)
+---
+## [0.9.1.8+6] - 17-01-26
+
+### Changed
+- E9:S01:T08: Task Document Update (T13) and SemVer Mapping Proposal
+  - Migrated E6:S06:T13 to E6:S07:T13 (Canonical CMW Perpetual Task)
+  - Updated all internal references and version numbers (v0.6.6.13+* to v0.6.7.13+*)
+  - Created SemVer mapping proposal documentation for dual versioning strategy
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+6.md)
+---
+## [0.9.4.1+1] - 11-12-25
+
+📚 Book Material Capture: E9:S04:T01 - Capture Starborn Legacy Zombie Story Report
+
+### Summary
+
+Captured Starborn Legacy Zombie Story case study report as unstructured book material. This report documents the technical debt incurred by E15:S01 (Release Workflow & Versioning Infrastructure) and serves as a cautionary tale and case study for the Head First AI-Assisted Development book.
+
+### Changes
+
+**Material Capture:**
+- ✅ Captured complete case study report from Starborn Legacy project
+- ✅ Report: "The Zombie Story: A Cautionary tale resulting in technical debt"
+- ✅ Type: Case study report for book content
+- ✅ Source: Starborn Legacy project
+- ✅ Date: 2025-12-11
+
+**Report Content:**
+- Documents the "Zombie Story" pattern (story becomes unmanageable and must be retired)
+- Covers versioning mis-numbering issues and technical debt incurred
+- Provides lessons learned and recommendations for ai-dev-kit
+- Serves as case study for AI-assisted development workflows
+
+### Related Work
+
+- **Story:** E9:S04 - Book Material Capture
+- **Epic:** Epic 9 - Book Related Work
+- **Coordinates With:** E9:S01 (Book Content Development) - Material will be processed into structured book content
+- **Source Project:** Starborn Legacy (E15:S01 case study)
+- **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.4.1+1.md)
+
+---
+---
+---
 ## [0.4.6.4+19] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 7 Story 4

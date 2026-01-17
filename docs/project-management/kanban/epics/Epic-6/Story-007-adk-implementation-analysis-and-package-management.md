@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2026-01-16 (v0.6.7.102+2, migrated from v0.6.6.102+2 – Story renumbered from S06 to S07 as part of repository story migration)  
-**Version:** v0.6.7.102+2  
+**Last updated:** 2026-01-17 (v0.6.7.102+4 – CMW execution: Fixed 165 ordering violations, archived 50 entries, reduced from 3,784 to 3,157 lines)  
+**Version:** v0.6.7.102+4  
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -41,7 +41,7 @@ housekeeping_policy: keep
 - [x] **E6:S07:T11 – Changelog Management and Archival Workflow** - ✅ COMPLETE (v0.6.7.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE)
   - Task: [`T11-changelog-management-and-archival-workflow.md`](T11-changelog-management-and-archival-workflow.md)
   - **Feature Request:** [FR-025](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
-- [ ] **E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.102+3 – CMW: Fixed 8 ordering violations, archived 50 entries, reduced from 5,329 to 3,736 lines)
+- [ ] **E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.102+4 – CMW: Fixed 165 ordering violations, archived 50 entries, reduced from 3,784 to 3,157 lines)
   - Task: [`T102-changelog-maintenance-workflow-cmw.md`](T102-changelog-maintenance-workflow-cmw.md)
   - **Note:** This is a perpetual maintenance task. All CMW-triggered RWs are attributed to T102 (3-digit perpetual task). BUILD number = CMW run count.
   - **Migration:** Task migrated from T12 to T102 as part of repository story abstract space resolution (E9:S01:T08)
