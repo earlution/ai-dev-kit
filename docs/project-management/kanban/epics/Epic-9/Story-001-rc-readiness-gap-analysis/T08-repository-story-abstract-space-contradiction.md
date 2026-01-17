@@ -10,10 +10,10 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2026-01-17 (v0.9.1.8+4 – Implementation: Task document update T07 complete)  
+**Last updated:** 2026-01-17 (v0.9.1.8+5 – Implementation: Task document update T14 complete)  
 **Started:** 2026-01-16  
 **Completed:** [TBD]  
-**Version:** v0.9.1.8+4  
+**Version:** v0.9.1.8+5  
 **Code:** E9S01T08
 
 ---

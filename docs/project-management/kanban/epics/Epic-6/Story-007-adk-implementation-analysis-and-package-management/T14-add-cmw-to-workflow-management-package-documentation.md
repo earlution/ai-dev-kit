@@ -6,24 +6,24 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 14: Add CMW to Workflow Management Package Documentation
+# Epic 6, Story 7, Task 14: Add CMW to Workflow Management Package Documentation
 
 **Status:** COMPLETE ✅  
 **Priority:** MEDIUM  
-**Last updated:** 2026-01-03 (v0.6.6.14+1 – CMW documentation added to package README)  
+**Last updated:** 2026-01-03 (v0.6.7.14+1 – CMW documentation added to package README, migrated from v0.6.6.14+1)  
 **Started:** 2026-01-03  
 **Completed:** 2026-01-03  
-**Version:** v0.6.6.14+1
+**Version:** v0.6.7.14+1
 
 **Feature Request:** [FR-027](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)  
-**Code:** E6S06T14
+**Code:** E6S07T14
 
 ---
 
 ## Task ID
 
 **Format:** `E{epic}:S{story}:T{task}`
-**Value:** `E6:S06:T14`
+**Value:** `E6:S07:T14`
 
 ---
 
@@ -167,11 +167,11 @@ Add Changelog Management Workflow (CMW) to the workflow management package docum
 - **FR-027:** Add CMW to Workflow Management Package Documentation (source of this task)
 
 **Related Tasks:**
-- **E6:S06:T11:** Changelog Management and Archival Workflow (CMW implementation, COMPLETE)
-- **E6:S06:T13:** Canonical CMW Perpetual Task (CMW perpetual task pattern, COMPLETE)
+- **E6:S07:T11:** Changelog Management and Archival Workflow (CMW implementation, COMPLETE)
+- **E6:S07:T13:** Canonical CMW Perpetual Task (CMW perpetual task pattern, COMPLETE, migrated from T12 to T102)
 
 **Related Stories:**
-- **E6:S06:** ADK Implementation Analysis and Package Management (parent story)
+- **E6:S07:** ADK Implementation Analysis and Package Management (parent story)
 
 **Related Epics:**
 - **Epic 6:** Framework Management and Maintenance
@@ -198,7 +198,7 @@ Add Changelog Management Workflow (CMW) to the workflow management package docum
 
 ---
 
-**Last Updated:** 2026-01-03 (v0.6.6.14+1 – CMW documentation added to package README, all acceptance criteria met)  
-**Version:** v0.6.6.14+1  
+**Last Updated:** 2026-01-03 (v0.6.7.14+1 – CMW documentation added to package README, all acceptance criteria met, migrated from v0.6.6.14+1)  
+**Version:** v0.6.7.14+1  
 **Status:** COMPLETE ✅
 
