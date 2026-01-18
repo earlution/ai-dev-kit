@@ -175,9 +175,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.4.16.1+1
+**Last Updated:** v0.4.17.1+1
 
-**Note:** Epic 4 has incomplete stories (S12, S15, S16), so Epic status is IN PROGRESS.
+**Note:** Epic 4 has incomplete stories (S12, S15, S16, S17), so Epic status is IN PROGRESS.
 
 **Stories:**
 - [x] **E4:S01 – Dev Kit Kanban Implementation** - COMPLETE ✅ (v0.4.1.1+6)
@@ -213,6 +213,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05 ✅ COMPLETE (v0.4.13.5+1), T06 ✅ COMPLETE (v0.4.13.6+1)
 - [ ] **E4:S16 – Kanban Package Implementation Review** - IN PROGRESS (v0.4.16.1+1 – T01 complete: Expectations baseline documented)
   - Story: [`epics/Epic-4/Story-016-kanban-package-implementation-review.md`](epics/Epic-4/Story-016-kanban-package-implementation-review.md)
+- [ ] **E4:S17 – Kanban Package Installation Evaluation** - IN PROGRESS (v0.4.17.1+1 – T01 complete: Installation paths enumerated)
+  - Story: [`epics/Epic-4/Story-017-kanban-package-installation-evaluation.md`](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 
 **Epic Doc:** [`epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)
 

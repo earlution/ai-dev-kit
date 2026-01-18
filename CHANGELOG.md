@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.17.1+1] - 18-01-26
+
+### Changed
+- E4:S17:T01: Kanban Package Installation Paths Baseline
+  - Enumerated release, submodule, and CLI installation paths
+  - Listed installer modes and authoritative sources
+  - Marked Story 17 Task 1 complete with forensic marker
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.1+1.md)
+
 ## [0.4.16.1+1] - 18-01-26
 
 ### Changed
