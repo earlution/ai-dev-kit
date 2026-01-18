@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-16  
-**Last updated:** 2026-01-17 (v0.9.1.8+8 – E9:S01:T08 implementation: Policy updates complete - Kanban governance policy, FR-018, FR-021 updated to reflect S01 repository pattern)  
+**Last updated:** 2026-01-17 (v0.9.1.8+9 – E9:S01:T08 COMPLETE: Final validation complete - Kanban board S00→S01 references fixed, versioning policy E6:S06→E6:S07 corrected, acceptance criteria marked complete)  
 **Branch:** `epic/9-release-candidate-readiness`  
 **Version Schema:** `0.9.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E9:S01 – RC Readiness Gap Analysis** - IN PROGRESS (v0.9.1.8+8 – T08 implementation: Policy updates complete - Kanban governance policy, FR-018, FR-021 updated to reflect S01 repository pattern)
+- [ ] **E9:S01 – RC Readiness Gap Analysis** - IN PROGRESS (v0.9.1.8+9 – T08 COMPLETE: Final validation complete - Kanban board S00→S01 references fixed, versioning policy E6:S06→E6:S07 corrected, acceptance criteria marked complete)
   - Story: [`Story-001-rc-readiness-gap-analysis.md`](Story-001-rc-readiness-gap-analysis.md)
 - [ ] **E9:S02 – Kanban Framework RC Readiness Review** - TODO
   - Story: [`Story-002-kanban-framework-rc-readiness-review.md`](Story-002-kanban-framework-rc-readiness-review.md)

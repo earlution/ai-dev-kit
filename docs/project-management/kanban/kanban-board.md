@@ -51,11 +51,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
-- **E9:S01:T08** – Repository Story Abstract Space Contradiction - IN PROGRESS (v0.9.1.8+6, HIGH priority) - [Task Document](epics/Epic-9/Story-001-rc-readiness-gap-analysis/T08-repository-story-abstract-space-contradiction.md) | [Story](epics/Epic-9/Story-001-rc-readiness-gap-analysis.md)
-  - **Status:** IN PROGRESS (v0.9.1.8+6 – Implementation: Task document update T13 complete, SemVer mapping proposal documentation)
-  - **Epic:** Epic 9 - Release Candidate Readiness (HIGH priority)
-  - **Rationale:** Critical architectural fix for versioning system. Resolves S00 abstract space contradiction, establishes T101+ for perpetual tasks, enables repository story pattern. Part of RC readiness work.
-
 ### Could Have (C) - Nice-to-Have Tasks
 
 *Nice-to-have in-progress tasks that could be completed.*
@@ -210,9 +205,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [x] **E4:S11 – Kanban Granularity & Discrete Task Docs** - COMPLETE ✅ (v0.4.11.0+0)
   - Story: [`epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md`](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.4.11.1+1), T02 ✅ COMPLETE (v0.4.11.2+2), T03 ✅ COMPLETE (v0.4.11.3+1), T04 ✅ COMPLETE (v0.4.11.4+1), T05 ✅ COMPLETE (v0.4.11.5+0), T06 ✅ COMPLETE (v0.4.11.6+2)
-- [ ] **E4:S12 – FR/BR/UXR Repository Stories (S00 Pattern)** - TODO (v0.4.12.0+0)
+- [ ] **E4:S12 – FR/BR/UXR Repository Stories (S01 Pattern)** - TODO (v0.4.12.0+0)
   - Story: [`epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md`](epics/Epic-4/Story-012-fr-br-uxr-repository-stories.md)
-  - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S00 stories)
+  - Tasks: T00 ✅ COMPLETE, T01-T10 TODO (FR-021: Repository pattern for FR/BR/UXR with S01 stories - S00 is Epic-level abstract space only)
 - [x] **E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View** - COMPLETE ✅ (v0.4.13.6+2)
   - Story: [`epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md`](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05 ✅ COMPLETE (v0.4.13.5+1), T06 ✅ COMPLETE (v0.4.13.6+1)
@@ -251,7 +246,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Priority:** HIGH  
 **Last Updated:** v0.5.2.2+1
 
-**Note:** E5:S00 (FR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 5 document for internal tracking).
+**Note:** E5:S01 (FR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 5 document for internal tracking).
 
 **Stories:**
 - [x] **E5:S01 – Documentation Maintenance Framework** - COMPLETE ✅ (v0.5.1.4+2)
@@ -273,7 +268,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Last Updated:** 2026-01-03  
 **Version:** v0.6.3.3+1
 
-**Note:** E6:S00 (BR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 6 document for internal tracking).
+**Note:** E6:S01 (BR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 6 document for internal tracking).
 
 **Stories:**
 - [x] **E6:S01 – Framework Version Management** - ✅ COMPLETE (v0.6.1.5+1 – All tasks complete: Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
@@ -285,14 +280,14 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [x] **E6:S03 – Framework Health Monitoring** - ✅ COMPLETE (v0.6.3.3+1 – All tasks complete: Framework health metrics defined, monitoring tools implemented, dashboard built)
   - Story: [`epics/Epic-6/Story-003-framework-health-monitoring.md`](epics/Epic-6/Story-003-framework-health-monitoring.md)
   - Tasks: T01 ✅ COMPLETE (v0.6.3.1+1 - Framework health metrics), T02 ✅ COMPLETE (v0.6.3.2+1 - Framework health monitoring tools), T03 ✅ COMPLETE (v0.6.3.3+1 - Framework health dashboard)
-- [ ] **E6:S04 – Bug Reports** - IN PROGRESS
-  - Story: [`epics/Epic-6/Story-004-bug-reports.md`](epics/Epic-6/Story-004-bug-reports.md)
-- [ ] **E6:S05 – Feature Requests** - TODO
-  - Story: [`epics/Epic-6/Story-005-feature-requests.md`](epics/Epic-6/Story-005-feature-requests.md)
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.8+20)
-  - Story: [`epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md`](epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
-- [x] **E6:S07 – ai-dev-kit CLI Tool** - COMPLETE ✅ (v0.6.7.13+1 – All 14 tasks T00-T13 complete: Architecture, commands, backend abstraction, all four backends, configuration management, error handling, migration utilities, remove command, documentation, testing, validation, PyPI packaging)
-  - Story: [`epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`](epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md)
+- [ ] **E6:S05 – Bug Reports** - IN PROGRESS
+  - Story: [`epics/Epic-6/Story-005-bug-reports.md`](epics/Epic-6/Story-005-bug-reports.md)
+- [ ] **E6:S06 – Feature Requests** - TODO
+  - Story: [`epics/Epic-6/Story-006-feature-requests.md`](epics/Epic-6/Story-006-feature-requests.md)
+- [ ] **E6:S07 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.7.101+22)
+  - Story: [`epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md`](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- [x] **E6:S08 – ai-dev-kit CLI Tool** - COMPLETE ✅ (v0.6.8.13+1 – All 14 tasks T00-T13 complete: Architecture, commands, backend abstraction, all four backends, configuration management, error handling, migration utilities, remove command, documentation, testing, validation, PyPI packaging)
+  - Story: [`epics/Epic-6/Story-008-ai-dev-kit-cli-tool.md`](epics/Epic-6/Story-008-ai-dev-kit-cli-tool.md)
   - Tasks: T00 ✅ COMPLETE, T01-T13 ✅ COMPLETE (CLI tool implementation: architecture, commands, backends, config, migration, testing, packaging - ALL COMPLETE)
   - **Feature Request:** [FR-030](fr-br/FR-030-ai-dev-kit-cli-tool.md)
 
@@ -304,7 +299,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-17 (v0.9.1.8+6 – E9:S01:T08 implementation: Task document update T13 complete, SemVer mapping proposal documentation)
+**Last Updated:** 2026-01-17 (v0.9.1.8+9 – E9:S01:T08 COMPLETE: Final validation complete - Kanban board S00→S01 references fixed, versioning policy E6:S06→E6:S07 corrected, acceptance criteria marked complete)
 
 **Stories:**
 - [ ] **E9:S01 – RC Readiness Gap Analysis** - IN PROGRESS (v0.9.1.8+6)
@@ -330,7 +325,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 **Last Updated:** 2026-01-05  
 **Version:** v0.7.5.4+1
 
-**Note:** E7:S00 (UXR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 7 document for internal tracking).
+**Note:** E7:S01 (UXR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 7 document for internal tracking).
 
 **Stories:**
 - [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)

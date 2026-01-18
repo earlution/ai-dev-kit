@@ -266,12 +266,12 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Perpetual tasks use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99)
 - Version format: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where PERPETUAL_TASK >= 101
 - BUILD number accumulates naturally as the workflow runs
-- Example: UKW runs → `v0.6.6.101+1`, `v0.6.6.101+2`, `v0.6.6.101+3`, etc.
-- Example: CMW runs → `v0.6.6.102+1`, `v0.6.6.102+2`, `v0.6.6.102+3`, etc.
+- Example: UKW runs → `v0.6.7.101+1`, `v0.6.7.101+2`, `v0.6.7.101+3`, etc.
+- Example: CMW runs → `v0.6.7.102+1`, `v0.6.7.102+2`, `v0.6.7.102+3`, etc.
 
 **Perpetual Task Examples:**
-- **UKW (Update Kanban Workflow):** Epic 6, Story 6, Task 101 (E6:S06:T101) - Kanban documentation synchronization
-- **CMW (Changelog Management Workflow):** Epic 6, Story 6, Task 102 (E6:S06:T102) - Changelog maintenance and archival
+- **UKW (Update Kanban Workflow):** Epic 6, Story 7, Task 101 (E6:S07:T101) - Kanban documentation synchronization
+- **CMW (Changelog Management Workflow):** Epic 6, Story 7, Task 102 (E6:S07:T102) - Changelog maintenance and archival
 
 **Task Number Ranges:**
 - **Regular tasks:** T01-T99 (2-digit) - Standard feature/bug tasks
