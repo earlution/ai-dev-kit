@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-06 (v0.8.2.3+1 – E8:S02 complete: All validators and patterns established)  
+**Last updated:** 2026-01-18 (v0.8.4.0+0 – Stories 4-5 created: RC package reviews for Tooling & Automation)  
 **Branch:** `epic/8-tooling-automation`  
 **Version Schema:** `0.8.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -27,6 +27,10 @@ housekeeping_policy: keep
   - Story: [`Story-002-additional-validators.md`](Story-002-additional-validators.md)
 - [ ] **E8:S03 – Automation Scripts** - TODO
   - Story: [`Story-003-automation-scripts.md`](Story-003-automation-scripts.md)
+- [ ] **E8:S04 – Tooling & Automation Package Implementation Review** - TODO (v0.8.4.0+0)
+  - Story: [`Story-004-tooling-automation-package-implementation-review.md`](Story-004-tooling-automation-package-implementation-review.md)
+- [ ] **E8:S05 – Tooling & Automation Package Installation Evaluation** - TODO (v0.8.5.0+0)
+  - Story: [`Story-005-tooling-automation-package-installation-evaluation.md`](Story-005-tooling-automation-package-installation-evaluation.md)
 
 ---
 

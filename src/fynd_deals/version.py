@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 16    # Story number (Story 16: Kanban Package Implementation Review)
-VERSION_TASK = 2      # Task number (Task 2: Inventory package components and map to expectations)
-VERSION_BUILD = 1     # Build number (E4:S16:T02+1 - Component inventory mapped for Kanban package)
+VERSION_STORY = 14    # Story number (Story 14: Kanban Framework Maintenance)
+VERSION_TASK = 2      # Task number (Task 2: Restore RC review planning artifacts)
+VERSION_BUILD = 1     # Build number (E4:S14:T02+1 - RC review artifacts restored)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.4.16.2+1 = Development, Epic 4, Story 16, Task 2, Build 1 (Component inventory mapped for Kanban package)
+# Current: 0.4.14.2+1 = Development, Epic 4, Story 14, Task 2, Build 1 (RC review artifacts restored)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

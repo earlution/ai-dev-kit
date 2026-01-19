@@ -1,4 +1,38 @@
 # Changelog Archive
+## [0.4.11.2+1] - 2025-12-11
+
+📋 Template Creation: E4:S11:T02 Phase 1 - Task and Story Templates
+
+### Added
+
+- **Task Document Template:** Created `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
+  - Includes all required fields from Kanban governance policy
+  - Supports separate file format (recommended)
+  - Includes sections for: Task ID, Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies, Related Work, Version Anchor, Notes, Completion Summary, References, Next Actions
+
+### Updated
+
+- **Story Template:** Updated `packages/frameworks/kanban/templates/STORY_TEMPLATE.md`
+  - Added section clarifying Task document formats (separate file vs. delimited section)
+  - Added guidance on when to use each format
+  - Added Task documentation requirements
+  - Added examples for both formats
+  - Updated Task section to reference Task template
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 2
+- Phase: 1 (Templates created, examples pending)
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
+- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
+
+---
+---
+---
+---
+---
 ## [0.6.6.8+11] - 05-01-26
 
 ### Changed

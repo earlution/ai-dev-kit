@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-18  
-**Last updated:** 2025-12-18 (v0.4.14.0+0 – Story created)  
-**Version:** v0.4.14.0+0  
+**Last updated:** 2026-01-19 (v0.4.14.2+1 – T02 complete: RC review artifacts restored)  
+**Version:** v0.4.14.2+1  
 **Code:** E4S14
 
 ---
@@ -22,6 +22,8 @@ housekeeping_policy: keep
 
 - [ ] **E4:S14:T01 – Update packaged RW to handle UKW context and perpetual tasks** - TODO
   - Task: [`T01-update-packaged-rw-ukw-perpetual-tasks.md`](Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
+- [x] **E4:S14:T02 – Restore RC review planning artifacts** ✅ COMPLETE (v0.4.14.2+1)
+  - Task: [`T02-restore-rc-review-artifacts.md`](Story-014-kanban-framework-maintenance/T02-restore-rc-review-artifacts.md)
 
 ---
 
@@ -71,6 +73,21 @@ Ensure the Kanban Framework package remains current, well-maintained, and proper
 - [ ] RW workflow YAML updated if needed
 - [ ] Documentation reflects perpetual task pattern
 
+### E4:S14:T02 – Restore RC review planning artifacts
+
+**Task ID:** E4:S14:T02  
+**Status:** COMPLETE  
+**Scope:** Restore RC review planning artifacts and re-align Kanban references.  
+**Input:** Stashed RC review files, kanban board, and epic story lists.  
+**Deliverable:** RC review artifacts restored and committed under this task.  
+**Version Anchor:** ✅ COMPLETE (v0.4.14.2+1)
+
+**Acceptance Criteria:**
+- [x] Epic 10 and Epic 11 docs restored.
+- [x] Package review story docs restored for Epics 2, 3, and 8.
+- [x] Kanban board reflects restored epics/stories.
+- [x] Changes committed under this task.
+
 ---
 
 ## Dependencies
@@ -97,7 +114,7 @@ Ensure the Kanban Framework package remains current, well-maintained, and proper
 
 ---
 
-**Last Updated:** 2025-12-18 (v0.4.14.0+0 – Story created)  
-**Version:** v0.4.14.0+0  
+**Last Updated:** 2026-01-19 (v0.4.14.2+1 – T02 complete: RC review artifacts restored)  
+**Version:** v0.4.14.2+1  
 **Status:** IN PROGRESS
 

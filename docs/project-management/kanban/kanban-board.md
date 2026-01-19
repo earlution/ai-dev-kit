@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-18  
-**Version:** v0.4.16.2+1
+**Last Updated:** 2026-01-19  
+**Version:** v0.4.14.2+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -121,9 +121,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ### Epic 2: Workflow Management Framework
 
-**Status:** COMPLETE ✅  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.2.11.11+1
+**Last Updated:** v0.2.13.0+0
 
 **Stories:**
 - [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.6+4)
@@ -148,6 +148,10 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Story: [`epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md`](epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md)
 - [x] **E2:S11 – Intake Workflow Automation** - COMPLETE ✅ (v0.2.11.11+1)
   - Story: [`epics/Epic-2/Story-011-intake-workflow-automation.md`](epics/Epic-2/Story-011-intake-workflow-automation.md)
+- [ ] **E2:S13 – Workflow Management Package Implementation Review** - TODO (v0.2.13.0+0)
+  - Story: [`epics/Epic-2/Story-013-workflow-management-package-implementation-review.md`](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
+- [ ] **E2:S14 – Workflow Management Package Installation Evaluation** - TODO (v0.2.14.0+0)
+  - Story: [`epics/Epic-2/Story-014-workflow-management-package-installation-evaluation.md`](epics/Epic-2/Story-014-workflow-management-package-installation-evaluation.md)
 
 **Epic Doc:** [`epics/Epic-2/Epic-2.md`](epics/Epic-2/Epic-2.md)
 
@@ -155,9 +159,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ### Epic 3: Numbering & Versioning Framework
 
-**Status:** COMPLETE ✅  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.3.3.6+1
+**Last Updated:** v0.3.4.0+0
 
 **Stories:**
 - [x] **E3:S01 – Dev Kit Alignment with Versioning Framework** - COMPLETE ✅ (v0.3.1.6+1)
@@ -166,6 +170,10 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Story: [`epics/Epic-3/Story-002-versioning-cookbook-and-examples.md`](epics/Epic-3/Story-002-versioning-cookbook-and-examples.md)
 - [x] **E3:S03 – Versioning Integration with Kanban & RW** - COMPLETE ✅ (v0.3.3.6+1)
   - Story: [`epics/Epic-3/Story-003-versioning-integration-with-kanban-and-rw.md`](epics/Epic-3/Story-003-versioning-integration-with-kanban-and-rw.md)
+- [ ] **E3:S04 – Numbering & Versioning Package Implementation Review** - TODO (v0.3.4.0+0)
+  - Story: [`epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md`](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
+- [ ] **E3:S05 – Numbering & Versioning Package Installation Evaluation** - TODO (v0.3.5.0+0)
+  - Story: [`epics/Epic-3/Story-005-numbering-versioning-package-installation-evaluation.md`](epics/Epic-3/Story-005-numbering-versioning-package-installation-evaluation.md)
 
 **Epic Doc:** [`epics/Epic-3/Epic-3.md`](epics/Epic-3/Epic-3.md)
 
@@ -175,9 +183,9 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.4.16.2+1
+**Last Updated:** v0.4.14.2+1
 
-**Note:** Epic 4 has incomplete stories (S12, S15, S16, S17), so Epic status is IN PROGRESS.
+**Note:** Epic 4 has incomplete stories (S12, S14, S15, S16, S17), so Epic status is IN PROGRESS.
 
 **Stories:**
 - [x] **E4:S01 – Dev Kit Kanban Implementation** - COMPLETE ✅ (v0.4.1.1+6)
@@ -211,6 +219,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - [x] **E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View** - COMPLETE ✅ (v0.4.13.6+2)
   - Story: [`epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md`](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05 ✅ COMPLETE (v0.4.13.5+1), T06 ✅ COMPLETE (v0.4.13.6+1)
+- [ ] **E4:S14 – Kanban Framework Maintenance** - IN PROGRESS (v0.4.14.2+1 – T02 complete: RC review artifacts restored)
+  - Story: [`epics/Epic-4/Story-014-kanban-framework-maintenance.md`](epics/Epic-4/Story-014-kanban-framework-maintenance.md)
 - [ ] **E4:S16 – Kanban Package Implementation Review** - IN PROGRESS (v0.4.16.2+1 – T02 complete: Component inventory mapped)
   - Story: [`epics/Epic-4/Story-016-kanban-package-implementation-review.md`](epics/Epic-4/Story-016-kanban-package-implementation-review.md)
 - [ ] **E4:S17 – Kanban Package Installation Evaluation** - IN PROGRESS (v0.4.17.1+1 – T01 complete: Installation paths enumerated)
@@ -322,6 +332,40 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ---
 
+### Epic 10: Document Lifecycle Framework
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Last Updated:** 2026-01-18  
+**Version:** v0.10.1.0+0
+
+**Stories:**
+- [ ] **E10:S01 – Document Lifecycle Package Implementation Review** - TODO (v0.10.1.0+0)
+  - Story: [`epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md`](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
+- [ ] **E10:S02 – Document Lifecycle Package Installation Evaluation** - TODO (v0.10.2.0+0)
+  - Story: [`epics/Epic-10/Story-002-document-lifecycle-package-installation-evaluation.md`](epics/Epic-10/Story-002-document-lifecycle-package-installation-evaluation.md)
+
+**Epic Doc:** [`epics/Epic-10/Epic-10.md`](epics/Epic-10/Epic-10.md)
+
+---
+
+### Epic 11: Debug Path Framework
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Last Updated:** 2026-01-18  
+**Version:** v0.11.1.0+0
+
+**Stories:**
+- [ ] **E11:S01 – Debug Path Package Implementation Review** - TODO (v0.11.1.0+0)
+  - Story: [`epics/Epic-11/Story-001-debug-path-package-implementation-review.md`](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
+- [ ] **E11:S02 – Debug Path Package Installation Evaluation** - TODO (v0.11.2.0+0)
+  - Story: [`epics/Epic-11/Story-002-debug-path-package-installation-evaluation.md`](epics/Epic-11/Story-002-debug-path-package-installation-evaluation.md)
+
+**Epic Doc:** [`epics/Epic-11/Epic-11.md`](epics/Epic-11/Epic-11.md)
+
+---
+
 ### Epic 7: Codebase Maintenance and Review
 
 **Status:** COMPLETE  
@@ -356,8 +400,8 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-06  
-**Version:** v0.8.2.1+1
+**Last Updated:** 2026-01-18  
+**Version:** v0.8.4.0+0
 
 **Stories:**
 - [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05)
@@ -368,6 +412,10 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
   - Tasks: T01 ✅ COMPLETE (v0.8.2.1+1), T02 TODO, T03 TODO
 - [ ] **E8:S03 – Automation Scripts** - TODO
   - Story: [`epics/Epic-8/Story-003-automation-scripts.md`](epics/Epic-8/Story-003-automation-scripts.md)
+- [ ] **E8:S04 – Tooling & Automation Package Implementation Review** - TODO (v0.8.4.0+0)
+  - Story: [`epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md`](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
+- [ ] **E8:S05 – Tooling & Automation Package Installation Evaluation** - TODO (v0.8.5.0+0)
+  - Story: [`epics/Epic-8/Story-005-tooling-automation-package-installation-evaluation.md`](epics/Epic-8/Story-005-tooling-automation-package-installation-evaluation.md)
 
 **Epic Doc:** [`epics/Epic-8/Epic-8.md`](epics/Epic-8/Epic-8.md)
 

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH
 **Estimated Effort:** [TBD]
 **Created:** 2025-12-02
-**Last updated:** 2025-12-07 (v0.3.2.7+1 – Story 2 T07 added: Dual-versioning package manager documentation)
+**Last updated:** 2026-01-18 (v0.3.4.0+0 – Stories 4-5 created: RC package reviews for Numbering & Versioning)
 **Branch:** `epic/3-numbering-and-versioning-framework`
 **Version Schema:** `0.3.S.T+B`
 **Production URL:** [N/A for this repo]
@@ -25,6 +25,10 @@ housekeeping_policy: keep
 - [ ] **E3:S02 – Versioning Cookbook & Examples** - IN PROGRESS (v0.3.2.7+1 – T07 added: Dual-versioning package manager documentation)
 - [x] **E3:S03 – Versioning Integration with Kanban & RW** - COMPLETE ✅ (v0.3.3.6+2 – All tasks complete: Epic 3 marked COMPLETE)
   - Story: [`Story-003-versioning-integration-with-kanban-and-rw.md`](Story-003-versioning-integration-with-kanban-and-rw.md)
+- [ ] **E3:S04 – Numbering & Versioning Package Implementation Review** - TODO (v0.3.4.0+0)
+  - Story: [`Story-004-numbering-versioning-package-implementation-review.md`](Story-004-numbering-versioning-package-implementation-review.md)
+- [ ] **E3:S05 – Numbering & Versioning Package Installation Evaluation** - TODO (v0.3.5.0+0)
+  - Story: [`Story-005-numbering-versioning-package-installation-evaluation.md`](Story-005-numbering-versioning-package-installation-evaluation.md)
 
 ---
 

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-01-18 (v0.4.16.2+1 – E4:S16:T02 complete: Component inventory mapped)
+**Last updated:** 2026-01-19 (v0.4.14.2+1 – E4:S14:T02 complete: RC review artifacts restored)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -58,9 +58,9 @@ housekeeping_policy: keep
 - [x] **E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View** - ✅ COMPLETE (v0.4.13.6+2)
   - Story: [`Story-013-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T02 ✅ COMPLETE (v0.4.13.2+1), T03 ✅ COMPLETE (v0.4.13.3+1), T04 ✅ COMPLETE (v0.4.13.4+3), T05 ✅ COMPLETE (v0.4.13.5+1), T06 ✅ COMPLETE (v0.4.13.6+1)
-- [ ] **E4:S14 – Kanban Framework Maintenance** - IN PROGRESS (v0.4.14.0+0 – Story created)
+- [ ] **E4:S14 – Kanban Framework Maintenance** - IN PROGRESS (v0.4.14.2+1 – T02 complete: RC review artifacts restored)
   - Story: [`Story-014-kanban-framework-maintenance.md`](Story-014-kanban-framework-maintenance.md)
-  - Tasks: T01 TODO (Update packaged RW to handle UKW context and perpetual tasks)
+  - Tasks: T01 TODO (Update packaged RW to handle UKW context and perpetual tasks), T02 ✅ COMPLETE (v0.4.14.2+1)
 - [ ] **E4:S15 – Procedural Task Template Generation and Hybrid Strategy** - IN PROGRESS (v0.4.15.5+2 – T02-T05 complete: Generator design, implementation, integration, documentation, and agentic enhancement)
   - Story: [`Story-015-procedural-task-template-generation-and-hybrid-strategy.md`](Story-015-procedural-task-template-generation-and-hybrid-strategy.md)
   - Tasks: T01 TODO, T02 ✅ COMPLETE (v0.4.15.3+1), T03 ✅ COMPLETE (v0.4.15.3+1), T04 ✅ COMPLETE (v0.4.15.5+1), T05 ✅ COMPLETE (v0.4.15.5+2 - Enhanced with agentic generation)
