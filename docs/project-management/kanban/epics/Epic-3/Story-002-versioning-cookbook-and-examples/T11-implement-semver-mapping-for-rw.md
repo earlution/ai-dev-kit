@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-01-19  
-**Last updated:** 2026-01-19 (v0.3.2.11+3 – Documentation update: README SemVer display)  
-**Version:** v0.3.2.11+3
+**Last updated:** 2026-01-19 (v0.3.2.11+4 – GitHub release creation with SemVer)  
+**Version:** v0.3.2.11+4
 
 ---
 

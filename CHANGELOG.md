@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.3.2.11+4] - 19-01-26
+
+### Added
+- GitHub release creation functionality in Release Workflow (E3:S02:T11 - Versioning Cookbook & Examples)
+  - New `create_github_release.py` script for creating/updating GitHub releases via API
+  - RW Step 12.5 automatically creates/updates GitHub releases using SemVer tags
+  - Release names display SemVer (e.g., `v0.3.19+4`) instead of internal version
+  - Release body includes both SemVer and internal version for traceability
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+4.md)
+
+---
 ## [0.3.2.11+3] - 19-01-26
 
 ### Changed

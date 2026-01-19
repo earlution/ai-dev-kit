@@ -200,6 +200,16 @@ For each step, follow this pattern:
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
     - Push both tags: `git push origin {branch} --tags` (pushes all tags including internal and SemVer)
 
+12.5. **Create/Update GitHub Release** - **MANDATORY:** Create or update GitHub release using SemVer tag:
+   - **A. Check for GitHub Token:** Verify `GITHUB_TOKEN` environment variable is set (required for GitHub API)
+   - **B. Get Repository:** Use `GITHUB_REPOSITORY` env var or default to `earlution/ai-dev-kit`
+   - **C. Create/Update Release:** Run `create_github_release.py` to create or update GitHub release:
+     - Run: `python "packages/frameworks/workflow mgt/scripts/create_github_release.py" --semver-tag "v{semver}" --internal-version "v{internal_version}" --summary "{summary}" --epic "{epic}" --story "{story}" --task "{task}" --repo "{repo}" --token "$GITHUB_TOKEN"`
+     - Example: Creates/updates release for `v0.3.19+3` (SemVer) with release name showing SemVer
+   - **D. Release Name:** GitHub release name uses SemVer (e.g., `v0.3.19+3`) for external-facing display
+   - **E. Release Body:** Includes both SemVer and internal version for traceability
+   - **Note:** If `GITHUB_TOKEN` is not set, skip this step with a warning (non-blocking)
+
 13. **Housekeeping** - Clean up IDE state and temporary artifacts
    - Clear IDE todo list (all `rw-step-*` todos) by marking them as `cancelled`
    - **Note:** `todo_write` tool doesn't support deletion, so `cancelled` status is used to hide todos
