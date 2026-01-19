@@ -95,6 +95,17 @@ rc_0:
 
 Both tags reference the same commit. Internal tag maintains backward compatibility, SemVer tag provides monotonic versioning for external consumers.
 
+### README Version Display
+
+**Outward-Facing SemVer:** The project README displays the **SemVer version** (not the internal version) as it is the outward-facing version for external consumers.
+
+**RW Step 5** automatically:
+- Generates SemVer from internal version using `semver_converter.py`
+- Updates README with SemVer (e.g., `**Version:** v0.3.19+2`)
+- Internal version remains in version file (`src/fynd_deals/version.py`) for internal tracking
+
+**Rationale:** External users and package managers expect monotonically increasing SemVer versions. The internal `RC.EPIC.STORY.TASK+BUILD` format is for internal development traceability only.
+
 ### Implementation
 
 - **Converter Script:** `packages/frameworks/workflow mgt/scripts/version/semver_converter.py`

@@ -4,26 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-## [0.3.2.11+2] - 19-01-26
+## [0.3.2.11+3] - 19-01-26
 
-### Added
-- SemVer mapping system implementation (E3:S02:T11 - Versioning Cookbook & Examples)
-  - Registry-based SemVer conversion using Hybrid Approach
-  - Dual tagging in RW Step 11 (internal + SemVer tags)
-  - Converter script, migration script, and validation script
-  - Updated versioning policy documents (dev-kit + framework package)
+### Changed
+- Documentation update: README now displays SemVer (outward-facing version) instead of internal version (E3:S02:T11 - Versioning Cookbook & Examples)
+  - Updated versioning policy documents (dev-kit + framework package) with README SemVer display guidance
+  - Enhanced RW Step 5 to automatically generate SemVer and update README
+  - README now shows `v0.3.19+3` (SemVer) instead of `v0.3.2.11+3` (internal)
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+2.md)
-
----
-## [0.3.2.11+1] - 19-01-26
-
-### Added
-- Task E3:S02:T11: Implement SemVer Mapping for Release Workflow (E3:S02 - Versioning Cookbook & Examples)
-  - Created comprehensive task document with implementation plan for SemVer mapping system
-  - Addresses gap where SemVer mapping proposal was never implemented
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+3.md)
 
 ---
 ## [0.6.7.101+24] - 19-01-26

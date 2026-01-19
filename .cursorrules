@@ -167,7 +167,13 @@ For each step, follow this pattern:
 
 4. **Update Main Changelog** - Add new entry at top: `## [version] - DD-MM-YY` (short date format for merge-to-main) with release description and link to detailed changelog. Use config path. Follow [Keep a Changelog](https://github.com/olivierlacan/keep-a-changelog) format.
 
-5. **Update README** - **MANDATORY:** Update project version in README. Update version text (e.g., `**Version:** v{version}`), version badge, and latest release callout if present. **Use config path:** Read `readme_file` from config or fallback to `README.md`.
+5. **Update README** - **MANDATORY:** Update project version in README with **SemVer** (outward-facing version):
+   - **A. Generate SemVer:** Use `semver_converter.py` to convert internal version to SemVer
+     - Run: `python "packages/frameworks/workflow mgt/scripts/version/semver_converter.py" "{internal_version}"`
+     - Example: `0.3.2.11+2` → `0.3.19+2` (SemVer)
+   - **B. Update README:** Update version text with SemVer (e.g., `**Version:** v{semver}`), version badge, and latest release callout if present
+   - **C. Use config path:** Read `readme_file` from config or fallback to `README.md`
+   - **Note:** README displays SemVer for external consumers; internal version remains in version file for tracking
 
 6. **Update BR/FR Docs** - Update Bug Reports and Feature Requests with fix attempt information. Use config path. Document flaws, attempted fixes, and verification status.
 
