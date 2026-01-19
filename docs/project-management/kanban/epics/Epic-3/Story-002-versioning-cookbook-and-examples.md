@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-03  
-**Last updated:** 2025-12-08 (v0.3.2.10+1 – T10 created: Integrate PVW into Release Workflow agent execution guide)  
-**Version:** v0.3.2.10+1  
+**Last updated:** 2026-01-19 (v0.3.2.11+1 – T11 created: Implement SemVer Mapping for Release Workflow)  
+**Version:** v0.3.2.11+1  
 **Code:** E3S02
 
 ---
@@ -30,6 +30,7 @@ housekeeping_policy: keep
 - [x] **E3:S02:T08 – Audit dual-versioning application across packages and propose strategy** ✅ COMPLETE (v0.3.2.8+1)
 - [x] **E3:S02:T09 – Implement Package Version Workflow (PVW) with agentic execution** ✅ COMPLETE (v0.3.2.9+1)
 - [ ] **E3:S02:T10 – Integrate PVW into Release Workflow agent execution guide** - TODO
+- [ ] **E3:S02:T11 – Implement SemVer Mapping for Release Workflow** - TODO (v0.3.2.11+1 – Task document created)
 
 ---
 
@@ -442,6 +443,74 @@ Provide a **versioning cookbook** with worked examples that shows:
 4. Update Step 3 dependencies documentation
 5. Update execution checklist
 6. Update version history
+
+---
+
+### E3:S02:T11 – Implement SemVer Mapping for Release Workflow
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Created:** 2026-01-19  
+**Version:** v0.3.2.11+0
+
+**Input:**  
+- SemVer mapping proposal (`semver-mapping-proposal.md`)
+- Implementation impact analysis (`semver-mapping-implementation-impact.md`)
+- Current RW Step 11 (internal tags only)
+- Historical git tags for registry initialization
+
+**Deliverable:**  
+- `semver-registry.yaml` (registry file structure)
+- `semver_converter.py` (conversion script with Hybrid Approach)
+- `build_semver_registry.py` (migration script for historical tags)
+- Enhanced RW Step 11 (dual tagging: internal + SemVer)
+- Updated `.cursorrules` RW Step 11 instructions
+- Updated versioning policy documents (dev-kit + framework package)
+- Validation script (`validate_semver_monotonic.py`)
+
+**Approach:**  
+1. **Core Implementation:**
+   - Create `semver-registry.yaml` structure (per RC scope)
+   - Implement Hybrid Approach algorithm (MAJOR=RC, MINOR=first-seen Epic, PATCH=first-seen Story, BUILD=preserved)
+   - Create registry management functions (load/update/save)
+   - Build migration script to initialize registry from historical tags
+
+2. **RW Integration:**
+   - Enhance RW Step 11 to generate SemVer tag alongside internal tag
+   - Update registry during tag creation
+   - Push both tags in RW Step 12
+   - Update `.cursorrules` with SemVer generation instructions
+
+3. **Testing & Validation:**
+   - Test converter with sample versions
+   - Validate SemVer increases monotonically across historical releases
+   - Test edge cases (RC transitions, Epic switching, out-of-order)
+
+4. **Documentation:**
+   - Update versioning policy documents (dev-kit + framework package - CRITICAL)
+   - Update RW documentation with dual tagging
+   - Document registry management
+
+**Key Requirements:**
+- SemVer must increase monotonically (no regressions)
+- Registry tracks first appearance of Epic/Story combinations
+- Backward compatible (internal tags remain)
+- Framework package updates are CRITICAL (portable framework)
+
+**Acceptance Criteria:**
+- [ ] Registry structure created and documented
+- [ ] Converter implemented with Hybrid Approach
+- [ ] Migration script builds initial registry from historical tags
+- [ ] SemVer increases monotonically (validated)
+- [ ] RW Step 11 creates dual tags (internal + SemVer)
+- [ ] Registry updates and persists correctly
+- [ ] Versioning policy documents updated (dev-kit + framework)
+- [ ] Validation script created
+- [ ] All edge cases handled
+
+**Related Work:**
+- Proposal: `docs/architecture/standards-and-adrs/semver-mapping-proposal.md`
+- Impact: `docs/architecture/standards-and-adrs/semver-mapping-implementation-impact.md`
 
 ---
 
