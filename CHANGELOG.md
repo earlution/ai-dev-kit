@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.3.2.11+2] - 19-01-26
+
+### Added
+- SemVer mapping system implementation (E3:S02:T11 - Versioning Cookbook & Examples)
+  - Registry-based SemVer conversion using Hybrid Approach
+  - Dual tagging in RW Step 11 (internal + SemVer tags)
+  - Converter script, migration script, and validation script
+  - Updated versioning policy documents (dev-kit + framework package)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+2.md)
+
+---
 ## [0.3.2.11+1] - 19-01-26
 
 ### Added

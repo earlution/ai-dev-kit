@@ -49,6 +49,65 @@ Examples (dev-kit context):
 
 ---
 
+## 2.1 SemVer Mapping for External Releases
+
+**Status:** Implemented (v0.3.2.11+1)  
+**Purpose:** Generate external-facing SemVer tags (`MAJOR.MINOR.PATCH+BUILD`) alongside internal Kanban-based version tags for GitHub releases.
+
+### Problem Statement
+
+Internal versioning (`RC.EPIC.STORY.TASK+BUILD`) is semantically meaningful internally but can appear to regress when switching between epics/stories (e.g., `0.6.7.12+3` → `0.4.6.9+1`), which is problematic for GitHub releases and user perception.
+
+**Solution:** Registry-based SemVer mapping using Hybrid Approach that converts internal versions to monotonic SemVer while preserving semantic meaning.
+
+### Hybrid Approach Algorithm
+
+**Mapping Formula:**
+- **MAJOR** = RC (direct mapping: 0 → 0, 1 → 1, etc.)
+- **MINOR** = First-seen Epic number (sequential based on first appearance, per RC)
+- **PATCH** = First-seen Story number (sequential based on first appearance, per RC)
+- **BUILD** = Preserved from internal version
+
+**Example Conversions:**
+- Internal: `0.6.7.101+24` → SemVer: `0.3.19+24` (Epic 6 first seen → MINOR=3, Story 7 in Epic 6 → PATCH=19)
+- Internal: `0.4.14.2+1` → SemVer: `0.4.34+1` (Epic 4 first seen → MINOR=4, Story 14 in Epic 4 → PATCH=34)
+- Internal: `0.9.1.8+10` → SemVer: `0.9.60+10` (Epic 9 first seen → MINOR=9, Story 1 in Epic 9 → PATCH=60)
+
+### Registry Structure
+
+SemVer mappings are stored in `semver-registry.yaml` (project root):
+
+```yaml
+rc_0:
+  epic_to_minor:
+    3: 1    # Epic 3 → MINOR 1 (first appearance)
+    6: 2    # Epic 6 → MINOR 2 (second appearance)
+  story_to_patch:
+    (3, 2): 1    # Epic 3, Story 2 → PATCH 1
+    (6, 7): 19   # Epic 6, Story 7 → PATCH 19
+```
+
+### Dual Tagging in Release Workflow
+
+**RW Step 11** creates dual tags:
+- **Internal Tag:** `v0.6.7.101+24` (for internal tracking)
+- **SemVer Tag:** `v0.3.19+24` (for GitHub releases)
+
+Both tags reference the same commit. Internal tag maintains backward compatibility, SemVer tag provides monotonic versioning for external consumers.
+
+### Implementation
+
+- **Converter Script:** `packages/frameworks/workflow mgt/scripts/version/semver_converter.py`
+- **Migration Script:** `packages/frameworks/workflow mgt/scripts/version/build_semver_registry.py`
+- **Validation Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_semver_monotonic.py`
+- **Registry File:** `semver-registry.yaml` (project root)
+
+**Related Documentation:**
+- **Proposal:** `docs/architecture/standards-and-adrs/semver-mapping-proposal.md`
+- **Implementation Impact:** `docs/architecture/standards-and-adrs/semver-mapping-implementation-impact.md`
+
+---
+
 ## 3. Epic Ranges for AI Dev Kit
 
 Unlike the legacy/new split in the original policy, this repo starts **clean**:

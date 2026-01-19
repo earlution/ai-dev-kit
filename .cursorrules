@@ -181,10 +181,18 @@ For each step, follow this pattern:
 
 10. **Commit Changes** - Create commit with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
 
-11. **Create Git Tag** - Create annotated tag: `v{version}` with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
+11. **Create Git Tag** - Create dual tags (internal + SemVer):
+   - **A. Generate SemVer:** Use `semver_converter.py` to convert internal version to SemVer
+     - Run: `python "packages/frameworks/workflow mgt/scripts/version/semver_converter.py" "{internal_version}"`
+     - Example: `0.6.7.101+24` → `0.3.19+24` (SemVer)
+   - **B. Create Internal Tag:** Create annotated tag: `v{internal_version}` with message: `Release v{internal_version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
+   - **C. Create SemVer Tag:** Create annotated tag: `v{semver}` with message: `Release v{semver} (internal: v{internal_version}): {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
+   - **D. Registry Update:** Registry is automatically updated by `semver_converter.py` during conversion
+   - **Note:** Both tags reference the same commit. Internal tag for tracking, SemVer tag for GitHub releases.
 
-12. **Push to Remote** - Push epic branch and tag to origin (DO NOT push to main unless ready to deploy)
+12. **Push to Remote** - Push epic branch and both tags (internal + SemVer) to origin (DO NOT push to main unless ready to deploy)
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
+    - Push both tags: `git push origin {branch} --tags` (pushes all tags including internal and SemVer)
 
 13. **Housekeeping** - Clean up IDE state and temporary artifacts
    - Clear IDE todo list (all `rw-step-*` todos) by marking them as `cancelled`
