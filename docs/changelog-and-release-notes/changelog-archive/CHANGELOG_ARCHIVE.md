@@ -1,4 +1,788 @@
 # Changelog Archive
+## [0.6.6.8+11] - 05-01-26
+
+### Changed
+- E6:S06:T02 version correction (E6:S06:T08 - UKW)
+  - Fixed versioning error: T02 was incorrectly documented as v0.6.6.9+1
+  - Corrected T02 version to v0.6.6.2+1 (actual version from version file)
+  - Created proper detailed changelog for T02 (CHANGELOG_v0.6.6.2+1.md)
+  - Updated story document, Epic 6 document, and main changelog
+  - T09 correctly remains at v0.6.6.9+1
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+11.md)
+---
+---
+---
+---
+## [0.6.6.8+12] - 05-01-26
+
+### Changed
+- E4:S10 task checklist updated (E6:S06:T08 - UKW)
+  - Updated task checklist to mark all tasks (T01-T07) as COMPLETE
+  - Task checklist now matches detailed task sections
+  - All tasks show proper completion status and version markers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+12.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.8+13] - 05-01-26
+
+### Changed
+- E4:S10 kanban board updated (E6:S06:T08 - UKW)
+  - Story status changed from IN PROGRESS to ✅ COMPLETE
+  - All tasks (T01-T07) marked as ✅ COMPLETE
+  - Kanban board now matches story document and Epic 4 document
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+13.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.8+14] - 05-01-26
+
+### Changed
+- Kanban board maintenance (E6:S06:T08 - UKW)
+  - Epic status note corrected (Epic 2 is IN PROGRESS, not COMPLETE)
+  - E6:S06:T08 version updated to v0.6.6.8+13
+  - MoSCoW section cleaned up (removed completed tasks: E4:S10, E6:S06:T04, T09)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+14.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.8+15] - 05-01-26
+
+### Changed
+- UKW: E4:S12 kanban synchronization (E6:S06:T08 - UKW)
+  - E4:S12 story document status updated from TODO to COMPLETE
+  - Kanban board updated to reflect E4:S12 completion
+  - All tasks (T01-T10) marked complete with forensic markers
+  - Documentation synchronized across kanban hierarchy
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+15.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.8+16] - 05-01-26
+
+### Added
+- MoSCoW "Ongoing (O)" Category (E6:S06:T08)
+  - New priority category for perpetual maintenance tasks
+  - Positioned between "Could Have (C)" and "Won't Have (W)"
+  - Moved UKW and CMW perpetual tasks to new category
+  - Updated all framework and project policy documentation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+16.md)
+---
+---
+---
+## [0.6.6.8+17] - 06-01-26
+
+### Changed
+- Kanban Board MoSCoW Section Cleanup (E6:S06:T08)
+  - Removed completed tasks from MoSCoW prioritized sections
+  - Updated task statuses (E8:S01 complete, E8:S02 in progress)
+  - Updated Epic 8 status to IN PROGRESS
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+17.md)
+---
+---
+---
+## [0.6.6.8+20] - 06-01-26
+
+### Changed
+- MoSCOW Terminology Standardization (E6:S06:T08 - UKW)
+  - Updated all references from "MoSCoW" to "MoSCOW" across entire codebase
+  - Reflects inclusion of "Ongoing (O)" category for perpetual maintenance tasks
+  - 125+ instances updated across 50+ files (documentation, policies, templates, workflows)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+20.md)
+---
+---
+---
+## [0.6.6.8+21] - 16-01-26
+
+### Added
+- Epic 9: Release Candidate Readiness (E6:S06:T08 - UKW)
+  - Created Epic 9 with 5 stories for comprehensive RC readiness review
+  - E9:S01: RC Readiness Gap Analysis (from FR-032)
+  - E9:S02-S04: Framework RC Readiness Reviews (Kanban, Workflow Management, Numbering & Versioning)
+  - E9:S05: Canonical E/S/T Review and Refinement
+  - Each framework review includes comprehensive scope: framework objective/documentation/component analysis, package management/maintenance/installation, update management, book project integration
+
+### Updated
+- Kanban board synchronized with Epic 9 and all stories
+- FR-032 accepted and assigned to Epic 9, Story 1
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+21.md)
+---
+---
+---
+## [0.6.6.9+1] - 18-12-25
+
+📋 Package Management: Prioritization review complete (T09)
+
+### Added
+
+- **Prioritization Review Document:**
+  - Comprehensive review and validation of T02 investigation findings
+  - Prioritized recommendations (critical/high/medium/low, timeline)
+  - Resource assessment (effort: 7-12 days for Phase 3, dependencies, blockers)
+  - Quick wins identification (package builder, hash verification, GitHub releases)
+  - Implementation roadmap (Phase 3.1-3.3 breakdown)
+  - Risk assessment with mitigation strategies
+  - Decision rationale for all prioritization decisions
+
+### Changed
+
+- **Task Document (E6:S06:T09):** Marked as ✅ COMPLETE
+- **Story Document (E6:S06):** Updated T09 status, version to v0.6.6.9+1
+- **Kanban Board:** Removed T09 from MoSCoW section
+- **Epic 6 Document:** Updated task list and timestamp
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.9+1.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+1] - 18-12-25
+
+📋 Package Management: Implementation plan complete (T04)
+
+### Added
+
+- **Implementation Plan Document:**
+  - Detailed Phase 3.1-3.3 breakdown (11 tasks, 7-12 days total effort)
+  - Task definitions with scope, effort estimates, dependencies
+  - Implementation sequence and critical path
+  - Milestones, success criteria, testing strategy
+  - Risk mitigation strategies
+
+- **Task Document (E6:S06:T04):** Created and completed
+
+### Changed
+
+- **Task Document (E6:S06:T04):** Marked as ✅ COMPLETE
+- **Story Document (E6:S06):** Updated T04 status, version to v0.6.6.10+1
+- **Kanban Board:** Removed T04 from MoSCoW section
+- **Epic 6 Document:** Updated task list and timestamp
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+1.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+2] - 18-12-25
+
+🔨 Package Management: Phase 3.1.1.1 - Package builder script structure complete
+
+### Added
+
+- **Package Builder Script:**
+  - CLI interface with argument parsing (framework name, version, output directory)
+  - Framework name and version validation
+  - Framework directory auto-discovery
+  - Framework structure validation
+  - Verbose output mode
+  - Clear error handling
+
+### Changed
+
+- **Implementation Progress:** Phase 3.1.1.1 complete, ready for archive creation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+2.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+3] - 18-12-25
+
+🔨 Package Management: Phase 3.1.1.2 - tar.gz archive creation complete
+
+### Added
+
+- **Package Archive Creation:**
+  - File collection with recursive directory traversal
+  - tar.gz archive creation with gzip compression
+  - Directory structure and permissions preservation
+  - Package file naming (`{framework-name}-v{version}.tar.gz`)
+
+### Changed
+
+- **Package Builder Script:** Archive creation integrated, tested with kanban framework (330 files → 291KB)
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+3.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+4] - 18-12-25
+
+🔨 Package Management: Phase 3.1.1.3 - MANIFEST.json generation complete
+
+### Added
+
+- **MANIFEST.json Generation:**
+  - Metadata extraction from framework source
+  - Package contents calculation (files, directories, size)
+  - Manifest generation with all required fields
+  - Manifest addition to tar.gz archive
+  - Documentation and installation script detection
+
+### Changed
+
+- **Package Builder Script:** MANIFEST.json generation integrated, manifest added to archive
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+4.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+5] - 18-12-25
+
+🔨 Package Management: Phase 3.1.1.4 - SHA-256 hash computation complete
+
+### Added
+
+- **SHA-256 Hash Computation:**
+  - Hash computation function (chunk-based, memory-efficient)
+  - Hash file creation (standard sha256sum format)
+  - Manifest hash update (includes hash in MANIFEST.json)
+  - Hash verification workflow complete
+
+### Changed
+
+- **Package Builder Script:** Hash computation integrated, hash file generated, MANIFEST.json includes hash
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+5.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+6] - 18-12-25
+
+🔨 Package Management: Phase 3.1.1.5 - Package builder testing and validation complete
+
+### Added
+
+- **Package Validation:**
+  - Comprehensive validation checks (package file, hash file, archive, MANIFEST.json)
+  - Hash consistency verification (computed vs file vs manifest)
+  - Framework metadata consistency checks
+  - Error and warning reporting (verbose mode)
+
+### Changed
+
+- **Package Builder Script:** Validation phase added, exit code 1 on errors, validation status in output
+
+**Milestone:** Phase 3.1.1 (Package Builder Script) - ✅ COMPLETE
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+6.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+7] - 18-12-25
+
+🔨 Package Management: Phase 3.2.1.1 - GitHub Releases integration complete
+
+### Added
+
+- **GitHub Releases Upload Script:**
+  - Release lookup and creation by tag
+  - Package file upload (tar.gz)
+  - Hash file upload (optional .sha256)
+  - Dry-run validation mode
+  - GitHub API integration with authentication
+
+### Changed
+
+- **Package Distribution:** GitHub Releases integration ready for CI/CD automation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+7.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+8] - 18-12-25
+
+🔨 Package Management: Phase 3.3.1.1 - Manual installation documentation complete
+
+### Added
+
+- **Package Installation Guide:**
+  - Installation methods (download/extract, wget/curl automation)
+  - Hash verification instructions
+  - Package structure documentation
+  - Post-installation steps and verification
+  - Package update procedures
+  - Troubleshooting section
+  - Security considerations
+  - Complete installation workflow example
+
+### Changed
+
+- **Documentation:** Manual installation guide added with comprehensive coverage
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+8.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+9] - 18-12-25
+
+🔨 Package Management: Phase 3.3.2.1 - CLI tool package backend complete
+
+### Added
+
+- **Package Installation Script:**
+  - Download package and hash file from GitHub Releases
+  - SHA-256 hash verification (mandatory by default)
+  - Package extraction and installation
+  - Installation verification
+  - Framework name normalization
+  - Progress reporting and dry-run mode
+
+### Changed
+
+- **Package Installation:** CLI tool package backend ready for integration
+
+**Milestone:** Phase 3.3 (Installation) - ✅ COMPLETE
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+9.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+10] - 18-12-25
+
+🎉 Package Management: Phase 3 Complete - All implementation phases finished
+
+### Milestone
+
+**Phase 3: Package Files - ✅ COMPLETE**
+
+All Phase 3 implementation phases complete:
+- ✅ Phase 3.1.1: Package Builder Script (structure, archive, manifest, hash, validation)
+- ✅ Phase 3.2.1.1: GitHub Releases Integration (upload script)
+- ✅ Phase 3.3.1.1: Manual Installation Documentation (comprehensive guide)
+- ✅ Phase 3.3.2.1: CLI Tool Package Backend (installation script)
+
+### Summary
+
+Complete package management system ready for production use:
+- Package creation with MANIFEST.json and SHA-256 verification
+- GitHub Releases distribution
+- Manual and automated installation
+- Comprehensive documentation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+10.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+11] - 18-12-25
+
+📦 Package Management: Phase 3 Distribution Planning Complete
+
+### Added
+
+- **Package Build Scripts:**
+  - `build_all_packages.py` - Automated package building for all frameworks
+  - `build_all_packages.sh` - Bash alternative for package building
+  - Framework version detection and batch processing
+
+- **Phase 3 Distribution Plan:**
+  - Comprehensive implementation guide with step-by-step instructions
+  - GitHub Releases upload procedures
+  - Installation testing workflow
+  - Troubleshooting and verification checklist
+
+**Next:** Ready to build and upload framework packages to GitHub Releases
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+11.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+12] - 18-12-25
+
+📦 Package Management: Package Build Quick Start Guide
+
+### Added
+
+- **Quick Start Guide:**
+  - `BUILD_PACKAGES.md` - Quick start guide with step-by-step commands
+  - Package verification instructions and expected output
+
+- **Alternative Build Script:**
+  - `packages/frameworks/build_packages.py` - Alternative builder for easier access
+
+**Next:** Execute build script to create framework packages
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+12.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+13] - 18-12-25
+
+🚀 Package Management: Master Build-and-Upload Script
+
+### Added
+
+- **Master Orchestration Script:**
+  - `build_and_upload_all.py` - Complete workflow automation
+  - Builds all packages → Creates Git tags → Pushes tags → Uploads to GitHub Releases
+  - One-command solution for entire distribution process
+
+- **Additional Scripts:**
+  - `upload_all_packages.py` - Batch upload script
+  - `build_packages_direct.py` - Direct Python builder
+  - `UPLOAD_COMMANDS.sh` - Bash upload workflow
+  - `BUILD_NOW.sh` - Quick build script
+
+- **Documentation:**
+  - `BUILD_AND_UPLOAD.md` - Complete end-to-end guide
+  - `UPLOAD_PACKAGES.md` - Upload instructions
+  - `BUILD_PACKAGES_COMMANDS.md` - Command reference
+
+**Usage:**
+```bash
+python3 "packages/frameworks/workflow mgt/scripts/build_and_upload_all.py" \
+    --token $GITHUB_TOKEN --verbose
+```
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+13.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+14] - 18-12-25
+
+📖 Package Management: Installation Entry Point Documentation
+
+### Added
+
+- **Installation Entry Point:**
+  - `INSTALL_IN_YOUR_PROJECT.md` - Clear entry point for agents and developers
+  - Quick links to all installation documentation
+  - Agent-specific step-by-step instructions
+  - Installation checklist and verification
+
+- **README Update:**
+  - Added link to installation guide for improved discoverability
+
+**Purpose:** Ensure agents and developers can easily find and follow installation instructions when projects reference the ai-dev-kit repository.
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+14.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+15] - 18-12-25
+
+🔧 Package Management: README Badge Fix & RW Step 5 Mandatory Update
+
+### Changed
+
+- **README Badges:**
+  - Fixed broken BYOB badges by replacing with static Shields.io badges
+  - Removed non-functional badges (version, tests, coverage, code quality)
+  - Added working badges: License, Status, Python version
+  - Version displayed in text format (updated automatically by RW)
+
+- **Release Workflow:**
+  - Step 5 (Update README) marked as MANDATORY
+  - Must update project version text in README (not just badges)
+  - Updated all RW documentation (local and packaged) to reflect requirement
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+15.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+16] - 18-12-25
+
+📦 Package Management: Workflow Mgt Package v2.1.4 - RW Step 5 Mandatory Update
+
+### Changed
+
+- **Workflow Management Package:**
+  - Version bumped: `2.1.3` → `2.1.4` (PATCH)
+  - Includes updated RW documentation requiring Step 5 to be mandatory
+  - Step 5 must update project version text in README
+  - Updated all build and upload scripts to use v2.1.4
+
+**Package Ready:** Rebuild and upload to GitHub Releases
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+16.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+17] - 18-12-25
+
+📝 Feature Request: FR-024 - IDE/Linter Check Before Commit in Release Workflow
+
+### Added
+
+- **FR-024:** IDE/Linter Check Before Commit in Release Workflow
+  - Feature request for new validation step (Step 9.5) to check IDE-flagged problems before commit
+  - Priority handling: Errors (block) → Warnings (flag) → Info (display)
+  - Integration with IDE diagnostics API and project-specific linter tools
+  - Configurable strict mode, auto-fix, and linter tool selection
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+17.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+18] - 21-12-25
+
+🔧 Maintenance: Changelog ordering fixes
+
+### Fixed
+
+- **Changelog Ordering:**
+  - Removed duplicate version entries
+  - Fixed ordering violations to comply with "Keep a Changelog" standard (newest first)
+  - Epic 9 entries now correctly appear before Epic 6/4 entries
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+18.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.10+19] - 21-12-25
+
+📝 Feature Request: FR-025 - Changelog Management and Archival Workflow
+
+### Added
+
+- **FR-025:** Changelog Management and Archival Workflow
+  - Feature request for automated changelog management and archival solution
+  - Documents problem: Current changelog (~9,500 lines) is unsustainable
+  - Proposes CMW (Changelog Management Workflow) with archival policy
+  - Includes industry research on best practices and SOPs for changelog management
+  - Priority: HIGH
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.10+19.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.11+0] - 21-12-25
+
+📝 Doc-Init: Task T11 created for FR-025 - Changelog Management and Archival Workflow
+
+### Doc-Init
+
+- **E6:S06:T11 – Changelog Management and Archival Workflow**
+  - Task document created for FR-025 implementation
+  - Status: TODO | Priority: HIGH
+  - Purpose: Implement automated changelog management and archival workflow
+  - Addresses: Unmanageable changelog (~9,500 lines) problem
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+0.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.11+1] - 21-12-25
+
+📝 T11 Implementation Progress: Policy docs, workflow definition, cron automation setup
+
+### Added
+
+- **Policy Documents:**
+  - Changelog Archival Policy with hybrid criteria (2-month retention default)
+  - Changelog Management Policy with format and validation requirements
+- **CMW Workflow Definition:** Deterministic workflow YAML (8 steps, rule-based)
+- **Cron Automation:** Weekly execution setup (default, adjustable to biweekly/daily)
+- **Documentation:** CMW scripts README and cron example script
+
+### Changed
+
+- **Retention Period:** Updated from 12 months to **2 months** in main changelog
+- **Workflow Type:** Changed to deterministic (rule-based, no agentic intelligence)
+- **Execution Model:** Cron automation (weekly) as recommended approach
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+1.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.11+2] - 21-12-25
+
+🔧 Phase 3 Complete: CMW scripts implementation - All analysis, archival, validation, and orchestration scripts created
+
+### Added
+
+- **CMW Scripts Implementation:**
+  - `changelog_utils.py` - Common utilities (version parsing, entry extraction, date parsing, config loading)
+  - `analyze_changelog_state.py` - Changelog state analysis (metrics, format detection, duplicate detection)
+  - `remove_duplicates.py` - Duplicate entry removal with dry-run support
+  - `identify_archival_entries.py` - Archival candidate identification based on policy
+  - `archive_entries.py` - Entry archival execution (moves entries to archive file)
+  - `cmw.py` - Main orchestration script (executes all 8 CMW workflow steps)
+- **Script Features:** Config-driven, dry-run support, error handling, ready for cron automation
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+2.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.11+3] - 21-12-25
+
+🔗 Phase 4 Complete: CMW integrated with Release Workflow - Step 9.5 added for automatic changelog maintenance
+
+### Added
+
+- **RW Step 9.5: Changelog Management Workflow (CMW)**
+  - New optional, non-blocking step in Release Workflow
+  - Automatically triggers if changelog size exceeds threshold
+  - Executes CMW to archive entries, remove duplicates, fix ordering
+- **Changelog Size Check Script:** `check_changelog_size.py` - Checks if changelog exceeds size threshold, integrated into RW Step 9
+- **Workflow Updates:** RW workflow YAML and documentation updated with Step 9.5
+
+### Changed
+
+- **RW Step 9:** Enhanced to include changelog size check validator
+- **RW Step 10 Dependencies:** Updated to depend on both Step 9 and Step 9.5
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.11+3.md)
+
+---
+---
+---
+---
+---
+## [0.6.7.101+22] - 17-01-26
+
+### Changed
+- E6:S07:T101: Update Kanban Workflow (UKW) Execution
+  - Fixed T101 task document header (Story 6 → Story 7)
+  - Updated kanban board MoSCOW Prioritized In-Progress Tasks section with E9:S01:T08
+  - Updated Epic 9 status from TODO to IN PROGRESS
+
+### Added
+- E6:S01:T34: UKW MoSCOW Prioritization Missing (BR-034)
+  - Created Bug Report BR-034 documenting missing MoSCOW prioritization logic in UKW Step 6
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+22.md)
+---
+## [0.6.7.102+4] - 17-01-26
+
+### Changed
+- E6:S07:T102: Changelog Management Workflow (CMW) Execution
+  - Fixed 165 changelog ordering violations
+  - Archived 50 entries, reducing changelog from 3,784 to 3,157 lines (16.6% reduction)
+  - Updated CMW perpetual task document (E6:S07:T102) progress and version
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.102+4.md)
+---
+## [0.9.1.8+7] - 17-01-26
+
+### Changed
+- E9:S01:T08: Task Document Updates (T11, T06, T15)
+  - Updated T11 task document (E6:S06→E6:S07, v0.6.6.11+4→v0.6.7.11+4)
+  - Updated T06 task document (E6:S06→E6:S07, v0.6.6.6+20→v0.6.7.6+20)
+  - Updated T15 task document (E6:S06→E6:S07, v0.6.6.15+1→v0.6.7.15+1)
+  - Updated all internal task references and version numbers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+7.md)
+---
+## [0.9.1.8+8] - 17-01-26
+
+### Changed
+- E9:S01:T08: Policy Updates (Kanban Governance, FR-018, FR-021)
+  - Updated Kanban governance policy to reflect S01 repository pattern (migrated from S00)
+  - Clarified S00 as Epic-level abstract space only (no tasks)
+  - Added perpetual task range section (T101+)
+  - Updated FR-018 to document S00/S01 separation
+  - Updated FR-021 to reflect S01 repository pattern and mark completed acceptance criteria
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+8.md)
+---
+## [0.9.1.8+9] - 17-01-26
+
+### Added
+- E9:S01:T08: BR-035 Created (RW Housekeeping Step Not Working)
+  - Created Bug Report BR-035 documenting that RW Step 13 (Housekeeping) doesn't clear `rw-step-*` todos from IDE todo list
+  - Created task E6:S01:T35 to implement the fix
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+9.md)
+---
+## [0.9.1.8+10] - 18-01-26
+
+### Changed
+- E9:S01:T08: Final Validation Complete (Repository Story Abstract Space Contradiction)
+  - Fixed remaining S00→S01 references in kanban board
+  - Corrected versioning policy perpetual task examples (E6:S06→E6:S07)
+  - Marked all acceptance criteria as complete
+  - Task status updated to COMPLETE
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.1.8+10.md)
+---
 ## [0.6.6.11+4] - 21-12-25
 
 ✅ Phase 6 Complete: Initial archival performed - Changelog reduced from 10,083 to 8,785 lines. T11 ALL PHASES COMPLETE.
