@@ -9,10 +9,10 @@ housekeeping_policy: keep
 # T02 – Restore RC Review Planning Artifacts
 
 **Task ID:** E4:S14:T02  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
-**Version:** v0.4.14.2+0
+**Version:** v0.4.14.2+1
 
 ---
 
@@ -38,13 +38,14 @@ RC review artifacts restored, tracked in Kanban, and committed against this task
 
 ## Acceptance Criteria
 
-- [ ] Epic 10 and Epic 11 docs restored.
-- [ ] Package review story docs restored for Epics 2, 3, and 8.
-- [ ] Kanban board reflects restored epics/stories.
-- [ ] Changes committed under this task.
+- [x] Epic 10 and Epic 11 docs restored.
+- [x] Package review story docs restored for Epics 2, 3, and 8.
+- [x] Kanban board reflects restored epics/stories.
+- [x] Changes committed under this task.
 
 ---
 
 ## Notes
 
 - Doc-init build (`+0`) used for task creation only.
+- **Version Anchor:** ✅ COMPLETE (v0.4.14.2+1)

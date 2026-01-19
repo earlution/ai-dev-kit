@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.6.7.101+24] - 19-01-26
+
+### Changed
+- Kanban board MoSCOW prioritization refreshed (E6:S07:T101 - UKW)
+  - Restored RC review planning artifacts (Epics 10/11 and package review stories)
+  - Added RC review workstreams to Should Have (S) section
+  - Synced Epic 6/Story 7 T101 references and version markers
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+24.md)
+
+---
 ## [0.6.6.8+10] - 05-01-26
 
 ### Changed

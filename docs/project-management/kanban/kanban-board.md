@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-01-19  
-**Version:** v0.4.14.2+1
+**Version:** v0.6.7.101+24
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -51,6 +51,14 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
+- **E4:S16:T03** – Validate Kanban behavior against documented guidance - TODO - [Story](epics/Epic-4/Story-016-kanban-package-implementation-review.md)
+- **E4:S17:T02** – Validate fresh install steps for each path - TODO - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
+- **E2:S13:T01** – Workflow Mgt expectations baseline - TODO - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
+- **E3:S04:T01** – Versioning expectations baseline - TODO - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
+- **E8:S04:T01** – Tooling & Automation expectations baseline - TODO - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
+- **E10:S01:T01** – Doc lifecycle expectations baseline - TODO - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
+- **E11:S01:T01** – Debug path expectations baseline - TODO - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
+
 ### Could Have (C) - Nice-to-Have Tasks
 
 *Nice-to-have in-progress tasks that could be completed.*
@@ -81,7 +89,7 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 - **E6:S05** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-005-bug-reports.md)
 - **E6:S06** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-006-feature-requests.md)
-- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+21, Last updated: 2026-01-16) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+23, Last updated: 2026-01-19) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+4, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 
 ### Won't Have (W) - Deferred Tasks

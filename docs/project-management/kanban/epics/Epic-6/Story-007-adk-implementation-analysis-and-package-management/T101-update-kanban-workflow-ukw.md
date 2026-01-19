@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-17 (v0.6.7.101+22 – UKW: Fixed T101 header, updated kanban board MoSCOW section, filed BR-034)  
+**Last updated:** 2026-01-19 (v0.6.7.101+24 – UKW: Restored RC review artifacts, refreshed MoSCOW priorities, synced Epic/Story references)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+22
+**Version:** v0.6.7.101+24
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** UKW execution (v0.6.7.101+22) - Fixed T101 task document header (Story 6 → Story 7), updated kanban board MoSCOW Prioritized In-Progress Tasks section with E9:S01:T08 (Repository Story Abstract Space Contradiction) in Should Have (S) category, updated Epic 9 status from TODO to IN PROGRESS, filed BR-034 documenting missing MoSCOW prioritization logic in UKW Step 6.  
+**Progress:** UKW execution (v0.6.7.101+24) - Restored RC review artifacts (Epics 10/11 and package review stories), refreshed MoSCOW prioritized tasks to include RC review workstreams, synced Epic 6/Story 7 T101 references, and updated Kanban board metadata. RW release committed.  
 **Code:** E6S06T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).
