@@ -26,6 +26,7 @@ housekeeping_policy: keep
 - **E4:S17:T02** – Validate fresh install steps for each path - ✅ COMPLETE (v0.4.17.2+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 - **E4:S17:T03** – Validate migration/update paths - ✅ COMPLETE (v0.4.17.3+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 - **E4:S17:T04** – Verify post-install configuration and validation steps - ✅ COMPLETE (v0.4.17.4+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
+- **E4:S17:T05** – Document failure modes and rollback guidance - ✅ COMPLETE (v0.4.17.5+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 - **E2:S13:T01** – Workflow Mgt expectations baseline - TODO - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
 - **E3:S04:T01** – Versioning expectations baseline - TODO - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
