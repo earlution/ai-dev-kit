@@ -18,7 +18,7 @@ def get_release_by_tag(github_token: str, repo: str, tag: str, verbose: bool = F
     """Get existing release by tag name."""
     url = f"https://api.github.com/repos/{repo}/releases/tags/{tag}"
     headers = {
-        "Authorization": f"token {github_token}",
+        "Authorization": f"Bearer {github_token}",
         "Accept": "application/vnd.github.v3+json"
     }
     
@@ -50,7 +50,7 @@ def create_release(
     """Create a new GitHub release for the SemVer tag."""
     url = f"https://api.github.com/repos/{repo}/releases"
     headers = {
-        "Authorization": f"token {github_token}",
+        "Authorization": f"Bearer {github_token}",
         "Accept": "application/vnd.github.v3+json"
     }
     
@@ -103,7 +103,7 @@ def update_release(
     """Update an existing GitHub release."""
     url = f"https://api.github.com/repos/{repo}/releases/{release_id}"
     headers = {
-        "Authorization": f"token {github_token}",
+        "Authorization": f"Bearer {github_token}",
         "Accept": "application/vnd.github.v3+json"
     }
     

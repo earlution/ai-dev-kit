@@ -51,7 +51,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 *Important in-progress tasks that should be completed.*
 
-- **E4:S16:T03** – Validate Kanban behavior against documented guidance - TODO - [Story](epics/Epic-4/Story-016-kanban-package-implementation-review.md)
 - **E4:S17:T02** – Validate fresh install steps for each path - TODO - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 - **E2:S13:T01** – Workflow Mgt expectations baseline - TODO - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
 - **E3:S04:T01** – Versioning expectations baseline - TODO - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)

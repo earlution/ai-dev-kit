@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 3      # Epic number (Epic 3: Numbering & Versioning Framework)
-VERSION_STORY = 2     # Story number (Story 2: Versioning Cookbook & Examples)
-VERSION_TASK = 11    # Task number (Task 11: Implement SemVer Mapping for Release Workflow)
-VERSION_BUILD = 4    # Build number (E3:S02:T11+4 - GitHub release creation with SemVer)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 16    # Story number (Story 16: Kanban Package Implementation Review)
+VERSION_TASK = 4      # Task number (Task 4: Review integrations and dependency alignment)
+VERSION_BUILD = 1     # Build number (E4:S16:T04+1 - Integration alignment review complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.3.2.11+4 = Development, Epic 3, Story 2, Task 11, Build 4 (GitHub release creation with SemVer)
+# Current: 0.4.16.4+1 = Development, Epic 4, Story 16, Task 4, Build 1 (Kanban package integration alignment review)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

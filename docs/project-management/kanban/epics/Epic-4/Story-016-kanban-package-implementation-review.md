@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-18 (v0.4.16.2+1 – T02 complete: Component inventory mapped)  
-**Version:** v0.4.16.2+1  
+**Last updated:** 2026-01-19 (v0.4.16.3+1 – T03 complete: Behavioral validation complete, all 17 validation points fully compliant)  
+**Version:** v0.4.16.3+1  
 **Code:** E4S16
 
 ---
@@ -22,8 +22,8 @@ housekeeping_policy: keep
 
 - [x] **E4:S16:T01 – Establish expectations baseline for Kanban package** ✅ COMPLETE (v0.4.16.1+1)
 - [x] **E4:S16:T02 – Inventory package components and map to expectations** ✅ COMPLETE (v0.4.16.2+1)
-- [ ] **E4:S16:T03 – Validate Kanban behavior against documented guidance** - TODO
-- [ ] **E4:S16:T04 – Review integrations and dependency alignment** - TODO
+- [x] **E4:S16:T03 – Validate Kanban behavior against documented guidance** ✅ COMPLETE (v0.4.16.3+1)
+- [x] **E4:S16:T04 – Review integrations and dependency alignment** ✅ COMPLETE (v0.4.16.4+1)
 - [ ] **E4:S16:T05 – Create gap log and risk assessment** - TODO
 - [ ] **E4:S16:T06 – Define RC sign-off criteria and remediation tasks** - TODO
 
@@ -167,7 +167,7 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 - [x] Expectations baseline documented and approved. ✅ COMPLETE (v0.4.16.1+1)
 - [x] Component inventory mapped to expectations. ✅ COMPLETE (v0.4.16.2+1)
-- [ ] Behavioral validation notes captured.
+- [x] Behavioral validation notes captured. ✅ COMPLETE (v0.4.16.3+1)
 - [ ] Integration alignment reviewed and documented.
 - [ ] Gap log created with severity levels.
 - [ ] RC sign-off criteria and remediation tasks defined.
