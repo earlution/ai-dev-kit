@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.4.17.3+1] - 20-01-26
+
+### Added
+- Kanban package installation evaluation – Migration/update paths validated (E4:S17:T03)
+  - Validated all four migration/update modes (migration, update, hybrid, canonical_adoption)
+  - Created comprehensive validation log with step-by-step validation, behavior preservation verification, and recommendations
+  - Mode 1 (Migration): ✅ PASS, Mode 2 (Update): ⚠️ PARTIAL (version tracking missing), Mode 3 (Hybrid): ✅ PASS, Mode 4 (Canonical Adoption): ✅ PASS
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.3+1.md)
+
+---
 ## [0.4.17.2+1] - 20-01-26
 
 ### Added

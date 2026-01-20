@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.4.17.2+1 – T02 complete: Fresh install steps validated)  
-**Version:** v0.4.17.2+1  
+**Last updated:** 2026-01-20 (v0.4.17.3+1 – T03 complete: Migration/update paths validated)  
+**Version:** v0.4.17.3+1  
 **Code:** E4S17
 
 ---
@@ -23,7 +23,8 @@ housekeeping_policy: keep
 - [x] **E4:S17:T01 – Enumerate supported installation paths for Kanban** ✅ COMPLETE (v0.4.17.1+1)
 - [x] **E4:S17:T02 – Validate fresh install steps for each path** - ✅ COMPLETE (v0.4.17.2+1)
   - Task Doc: [`T02-validate-fresh-install-steps-for-each-path.md`](Story-017-kanban-package-installation-evaluation/T02-validate-fresh-install-steps-for-each-path.md)
-- [ ] **E4:S17:T03 – Validate migration/update paths (if supported)** - TODO
+- [x] **E4:S17:T03 – Validate migration/update paths (if supported)** - ✅ COMPLETE (v0.4.17.3+1)
+  - Task Doc: [`T03-validate-migration-update-paths.md`](Story-017-kanban-package-installation-evaluation/T03-validate-migration-update-paths.md)
 - [ ] **E4:S17:T04 – Verify post-install configuration and validation steps** - TODO
 - [ ] **E4:S17:T05 – Document failure modes and rollback guidance** - TODO
 - [ ] **E4:S17:T06 – Capture documentation gaps and improvements** - TODO
@@ -100,9 +101,23 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 
 ### E4:S17:T03 – Validate migration/update paths (if supported)
 
-**Input:** Migration/update guidance  
-**Deliverable:** Migration validation notes  
-**Approach:** Test upgrades and verify preserved behavior.
+**Task ID:** E4:S17:T03  
+**Status:** ✅ COMPLETE  
+**Scope:** Validate migration and update paths for the Kanban framework package to ensure users can successfully migrate existing Kanban structures or update existing framework installations.  
+**Input:** Migration/update guidance, migration scripts, documentation  
+**Deliverable:** Migration validation notes with results, issues, and recommendations  
+**Approach:** Validate each migration/update mode through documentation review and script analysis, verify preserved behavior.  
+**Version Anchor:** ✅ COMPLETE (v0.4.17.3+1)
+
+**Acceptance Criteria:**
+- [x] Migration mode validated with step-by-step log ✅
+- [x] Update mode validated with step-by-step log ✅
+- [x] Hybrid mode validated with step-by-step log ✅
+- [x] Canonical adoption mode validated with step-by-step log ✅
+- [x] Behavior preservation verified for each mode ✅
+- [x] Validation log created with results for each mode ✅
+- [x] Issues and gaps documented ✅
+- [x] Recommendations provided for RC readiness ✅
 
 ### E4:S17:T04 – Verify post-install configuration and validation steps
 
@@ -128,7 +143,7 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 
 - [x] Installation paths enumerated and verified. ✅ COMPLETE (v0.4.17.1+1)
 - [x] Fresh install steps documented with results. ✅ COMPLETE (v0.4.17.2+1)
-- [ ] Migration/update steps validated or explicitly unsupported.
+- [x] Migration/update steps validated or explicitly unsupported. ✅ COMPLETE (v0.4.17.3+1)
 - [ ] Post-install configuration checklist verified.
 - [ ] Failure modes and rollback guidance documented.
 - [ ] Documentation gaps recorded with remediation tasks.
