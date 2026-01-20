@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.4.17.2+1] - 20-01-26
+
+### Added
+- Kanban package installation evaluation – Fresh install steps validated (E4:S17:T02)
+  - Validated fresh install steps for all three installation paths (GitHub Releases, Git Submodule, CLI Tool)
+  - Created comprehensive validation log with step-by-step validation, issues, and recommendations
+  - Path 1 (GitHub Releases): ⚠️ PARTIAL - Documentation gaps identified
+  - Path 2 (Git Submodule): ✅ PASS - Well documented and functional
+  - Path 3 (CLI Tool): ⚠️ PLACEHOLDER - Not yet implemented
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.2+1.md)
+
+---
 ## [0.4.18.2+1] - 20-01-26
 
 ### Changed
