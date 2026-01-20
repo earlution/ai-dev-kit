@@ -12,16 +12,18 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-20  
-**Last updated:** 2026-01-20 (v0.4.18.1+0 – T01 created)  
-**Version:** v0.4.18.1+0  
+**Last updated:** 2026-01-20 (v0.4.18.2+0 – T02 task document created)  
+**Version:** v0.4.18.2+0  
 **Code:** E4S18
 
 ---
 
 ## Task Checklist
 
-- [ ] **E4:S18:T01 – Implement Kanban Board Info-Only Split** - TODO (v0.4.18.1+0)
+- [x] **E4:S18:T01 – Implement Kanban Board Info-Only Split** - ✅ COMPLETE (v0.4.18.1+1)
   - Task Doc: [`T1-implement-kanban-board-info-only-split.md`](Story-018-kanban-board-info-only-split/T1-implement-kanban-board-info-only-split.md)
+- [x] **E4:S18:T02 – Upgrade Packaged Kanban Framework Board Split** - ✅ COMPLETE (v0.4.18.2+0)
+  - Task Doc: [`T2-upgrade-packaged-kanban-framework-board-split.md`](Story-018-kanban-board-info-only-split/T2-upgrade-packaged-kanban-framework-board-split.md)
 
 ---
 
@@ -33,10 +35,10 @@ Split the Kanban board into two documents: structured information only (`kanban-
 
 ## Goals
 
-- [ ] Create `kanban-board-guide.md` with all rules, explanations, and how-to content
-- [ ] Strip `kanban-board.md` to structured information only (tasks, epics, status, links)
-- [ ] Add cross-references between documents
-- [ ] Update templates and governance policy to reflect the split
+- [x] Create `kanban-board-guide.md` with all rules, explanations, and how-to content
+- [x] Strip `kanban-board.md` to structured information only (tasks, epics, status, links)
+- [x] Add cross-references between documents
+- [ ] Update templates and governance policy to reflect the split (T02)
 
 ---
 

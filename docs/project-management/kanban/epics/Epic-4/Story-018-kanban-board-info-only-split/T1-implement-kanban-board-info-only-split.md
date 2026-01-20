@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # E4:S18:T01 – Implement Kanban Board Info-Only Split
 
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Epic:** E4 – Kanban Framework  
 **Story:** E4:S18 – Kanban Board Info-Only Split  
