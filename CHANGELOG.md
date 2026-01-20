@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.4.18.1+1] - 20-01-26
+
+### Changed
+- Kanban board info-only split (E4:S18:T01)
+  - Split `kanban-board.md` into structured information only (tasks, epics, status, links)
+  - Created `kanban-board-guide.md` with all rules, explanations, and how-to content
+  - Reduced cognitive load when skimming the board by removing non-informational content
+  - Updated `_index.md` to reference both documents
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.1+1.md)
+
+---
 ## [0.4.16.6+1] - 20-01-26
 
 ### Added

@@ -17,12 +17,12 @@ housekeeping_policy: keep
 
 ## Overview
 
-Quick reference board for all Kanban work. For detailed views, see [`kanban-board.md`](kanban-board.md).
+Quick reference board for all Kanban work. For detailed views, see [`kanban-board.md`](kanban-board.md) (structured information) and [`kanban-board-guide.md`](kanban-board-guide.md) (rules and explanations).
 
 **Structure:** All Kanban docs live under `docs/project-management/kanban/`:
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: This file (quick) and `kanban-board.md` (detailed)
+- Board views: This file (quick), `kanban-board.md` (structured information), and `kanban-board-guide.md` (guide)
 
 ---
 

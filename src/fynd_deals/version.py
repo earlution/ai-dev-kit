@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 16    # Story number (Story 16: Kanban Package Implementation Review)
-VERSION_TASK = 6      # Task number (Task 6: Define RC sign-off criteria and remediation tasks)
-VERSION_BUILD = 1     # Build number (E4:S16:T06+1 - RC sign-off criteria and remediation tasks defined)
+VERSION_STORY = 18    # Story number (Story 18: Kanban Board Info-Only Split)
+VERSION_TASK = 1      # Task number (Task 1: Implement Kanban Board Info-Only Split)
+VERSION_BUILD = 1     # Build number (E4:S18:T01+1 - Board split into structured info and guide)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.4.16.6+1 = Development, Epic 4, Story 16, Task 6, Build 1 (Kanban package RC sign-off criteria and remediation tasks)
+# Current: 0.4.18.1+1 = Development, Epic 4, Story 18, Task 1, Build 1 (Kanban board info-only split)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

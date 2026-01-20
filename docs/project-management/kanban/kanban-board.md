@@ -8,48 +8,20 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-19  
-**Version:** v0.6.7.101+24
+**Last Updated:** 2026-01-20  
+**Version:** v0.4.18.1+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
----
-
-## Overview
-
-This board tracks all work on the `ai-dev-kit` repository and the **Head First AI-Assisted Development** book project.
-
-**Structure:** All Kanban documentation lives under `docs/project-management/kanban/`:
-- Epic overviews: `epics/Epic-X/Epic-X.md`
-- Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: `_index.md` (quick view) and this file (detailed view)
-
-**Parent-Child Relationship:**
-This Kanban board serves as the **parent document** to Story documents, similar to how Story documents are parents of Task documents:
-- **Board → Story:** This board links to and tracks all Story documents
-- **Story → Task:** Story documents link to and track all Task documents
-- This creates a clear hierarchy: Board (parent) → Story (child) → Task (grandchild)
+> **For rules, explanations, and how-to content, see:** [`kanban-board-guide.md`](kanban-board-guide.md)
 
 ---
 
 ## MoSCOW Prioritized In-Progress Tasks
 
-This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCOW priority (M/S/C/O/W) and ordered chronologically (most recently updated first).
-
-**MoSCOW Categories:**
-- **M (Must Have):** Critical tasks that must be completed
-- **S (Should Have):** Important tasks that should be completed
-- **C (Could Have):** Nice-to-have tasks that could be completed
-- **O (Ongoing):** Perpetual maintenance tasks that never complete (tracked but don't block other work)
-- **W (Won't Have):** Tasks deferred or not being done at this time
-
 ### Must Have (M) - Critical Tasks
 
-*Critical in-progress tasks that must be completed.*
-
 ### Should Have (S) - Important Tasks
-
-*Important in-progress tasks that should be completed.*
 
 - **E4:S17:T02** – Validate fresh install steps for each path - TODO - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 - **E2:S13:T01** – Workflow Mgt expectations baseline - TODO - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
@@ -59,8 +31,6 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 - **E11:S01:T01** – Debug path expectations baseline - TODO - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
-
-*Nice-to-have in-progress tasks that could be completed.*
 
 - **E5:S01:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
 - **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
@@ -84,16 +54,12 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 ### Ongoing (O) - Perpetual Tasks
 
-*Ongoing maintenance tasks that never complete. These are tracked but don't block other work.*
-
 - **E6:S05** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-005-bug-reports.md)
 - **E6:S06** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-006-feature-requests.md)
 - **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+23, Last updated: 2026-01-19) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+4, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 
 ### Won't Have (W) - Deferred Tasks
-
-*Tasks that are deferred or not being done at this time.*
 
 - **E21:S00:T01-T07** – Language Selection at Setup (UK/US English) - TODO (MEDIUM priority epic) - [Story](epics/Epic-21/Story-000-language-selection-at-setup.md)
 - **E21:S01:T01-T07** – Internationalization Infrastructure - TODO (MEDIUM priority epic) - [Story](epics/Epic-21/Story-001-internationalization-infrastructure.md)
@@ -446,11 +412,4 @@ This section shows all in-progress tasks (status: IN PROGRESS or TODO) organized
 
 **Epic Doc:** [`epics/Epic-24/Epic-24.md`](epics/Epic-24/Epic-24.md)
 
----
-
-## Quick Reference
-
-- **Board Quick View:** [`_index.md`](_index.md)
-- **Kanban Policy:** `docs/project-management/rituals/policy/kanban-governance-policy.md`
-- **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
 
