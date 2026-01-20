@@ -64,7 +64,7 @@ housekeeping_policy: keep
 - [ ] **E4:S15 – Procedural Task Template Generation and Hybrid Strategy** - IN PROGRESS (v0.4.15.5+2 – T02-T05 complete: Generator design, implementation, integration, documentation, and agentic enhancement)
   - Story: [`Story-015-procedural-task-template-generation-and-hybrid-strategy.md`](Story-015-procedural-task-template-generation-and-hybrid-strategy.md)
   - Tasks: T01 TODO, T02 ✅ COMPLETE (v0.4.15.3+1), T03 ✅ COMPLETE (v0.4.15.3+1), T04 ✅ COMPLETE (v0.4.15.5+1), T05 ✅ COMPLETE (v0.4.15.5+2 - Enhanced with agentic generation)
-- [ ] **E4:S16 – Kanban Package Implementation Review** - IN PROGRESS (v0.4.16.2+1 – T02 complete: Component inventory mapped)
+- [x] **E4:S16 – Kanban Package Implementation Review** - COMPLETE ✅ (v0.4.16.6+1 – T01–T06 complete: expectations, inventory, behavior validation, integrations, gap log, and RC sign-off criteria/remediation pattern)
   - Story: [`Story-016-kanban-package-implementation-review.md`](Story-016-kanban-package-implementation-review.md)
 - [ ] **E4:S17 – Kanban Package Installation Evaluation** - IN PROGRESS (v0.4.17.1+1 – T01 complete: Installation paths enumerated)
   - Story: [`Story-017-kanban-package-installation-evaluation.md`](Story-017-kanban-package-installation-evaluation.md)

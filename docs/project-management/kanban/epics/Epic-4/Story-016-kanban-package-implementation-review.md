@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 016 – Kanban Package Implementation Review
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.4.16.5+1 – T05 gap log and risk assessment drafted, no RC-blocking gaps identified)  
-**Version:** v0.4.16.5+1  
+**Last updated:** 2026-01-20 (v0.4.16.6+1 – T06 RC sign-off criteria and remediation pattern defined; Kanban package RC-ready)  
+**Version:** v0.4.16.6+1  
 **Code:** E4S16
 
 ---
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 - [x] **E4:S16:T03 – Validate Kanban behavior against documented guidance** ✅ COMPLETE (v0.4.16.3+1)
 - [x] **E4:S16:T04 – Review integrations and dependency alignment** ✅ COMPLETE (v0.4.16.4+1)
 - [x] **E4:S16:T05 – Create gap log and risk assessment** ✅ COMPLETE (v0.4.16.5+1)
-- [ ] **E4:S16:T06 – Define RC sign-off criteria and remediation tasks** - TODO
+- [x] **E4:S16:T06 – Define RC sign-off criteria and remediation tasks** ✅ COMPLETE (v0.4.16.6+1)
 
 ---
 
@@ -160,20 +160,22 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ### E4:S16:T06 – Define RC sign-off criteria and remediation tasks
 
-**Input:** Gap log and expected behaviors  
-**Deliverable:** RC sign-off checklist and remediation task list  
-**Approach:** Define minimum bar for RC and backlog tasks.
+**Input:** Gap log and expected behaviors, plus findings from T01–T05  
+**Deliverable:** RC sign-off checklist for the Kanban package and remediation task pattern for non-blocking gaps  
+**Approach:** Synthesize expectations, inventory, behavior validation, integrations, and the gap log into:
+- A concrete, checkable RC sign-off checklist (governance, structure, integrations, gap posture, traceability)
+- A reusable remediation pattern that wires non-blocking gaps into Kanban/FR/BR tasks without blocking RC
 
 ---
 
-## Acceptance Criteria
+## Acceptance Criteria (Story-Level)
 
 - [x] Expectations baseline documented and approved. ✅ COMPLETE (v0.4.16.1+1)
 - [x] Component inventory mapped to expectations. ✅ COMPLETE (v0.4.16.2+1)
 - [x] Behavioral validation notes captured. ✅ COMPLETE (v0.4.16.3+1)
-- [ ] Integration alignment reviewed and documented.
-- [ ] Gap log created with severity levels.
-- [ ] RC sign-off criteria and remediation tasks defined.
+- [x] Integration alignment reviewed and documented. ✅ COMPLETE (v0.4.16.4+1)
+- [x] Gap log created with severity levels and RC risk assessment. ✅ COMPLETE (v0.4.16.5+1)
+- [x] RC sign-off criteria and remediation tasks defined; no RC-blocking gaps in the Kanban package. ✅ COMPLETE (v0.4.16.6+1)
 
 ---
 
