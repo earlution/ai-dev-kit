@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 18    # Story number (Story 18: Kanban Board Info-Only Split)
 VERSION_TASK = 2      # Task number (Task 2: Upgrade Packaged Kanban Framework Board Split)
-VERSION_BUILD = 0     # Build number (E4:S18:T02+0 - Task document created, doc-init)
+VERSION_BUILD = 1     # Build number (E4:S18:T02+1 - Packaged framework upgraded with board split)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.4.18.2+0 = Development, Epic 4, Story 18, Task 2, Build 0 (Task document created, doc-init)
+# Current: 0.4.18.2+1 = Development, Epic 4, Story 18, Task 2, Build 1 (Packaged framework upgraded with board split)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

@@ -68,9 +68,9 @@ housekeeping_policy: keep
   - Story: [`Story-016-kanban-package-implementation-review.md`](Story-016-kanban-package-implementation-review.md)
 - [ ] **E4:S17 – Kanban Package Installation Evaluation** - IN PROGRESS (v0.4.17.1+1 – T01 complete: Installation paths enumerated)
   - Story: [`Story-017-kanban-package-installation-evaluation.md`](Story-017-kanban-package-installation-evaluation.md)
-- [ ] **E4:S18 – Kanban Board Info-Only Split** - IN PROGRESS (v0.4.18.2+0 – T02 task document created)
+- [x] **E4:S18 – Kanban Board Info-Only Split** - COMPLETE ✅ (v0.4.18.2+1 – T01-T02 complete: Board split implemented and packaged framework upgraded)
   - Story: [`Story-018-kanban-board-info-only-split.md`](Story-018-kanban-board-info-only-split.md)
-  - Tasks: T01 ✅ COMPLETE (v0.4.18.1+1), T02 ✅ COMPLETE (v0.4.18.2+0 - Task document created)
+  - Tasks: T01 ✅ COMPLETE (v0.4.18.1+1), T02 ✅ COMPLETE (v0.4.18.2+1)
 
 ---
 

@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.4.18.2+1] - 20-01-26
+
+### Changed
+- Kanban board info-only split – Packaged framework upgraded (E4:S18:T02)
+  - Split `KANBAN_BOARD_TEMPLATE.md` into structured information only
+  - Created `KANBAN_BOARD_GUIDE_TEMPLATE.md` with all rules, explanations, and how-to content
+  - Updated package README to document the board split pattern
+  - Framework package now matches dev-kit implementation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.2+1.md)
+
+---
 ## [0.4.18.2+0] - 20-01-26
 
 ### Added

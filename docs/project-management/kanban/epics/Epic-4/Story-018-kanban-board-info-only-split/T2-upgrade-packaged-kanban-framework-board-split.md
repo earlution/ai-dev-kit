@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # E4:S18:T02 – Upgrade Packaged Kanban Framework Board Split
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Epic:** E4 – Kanban Framework  
 **Story:** E4:S18 – Kanban Board Info-Only Split  

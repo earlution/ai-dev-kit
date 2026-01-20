@@ -592,6 +592,28 @@ hierarchy:
 
 **See:** `policies/kanban-governance-policy.md` - Section 3.3: Tasks for complete requirements.
 
+### Board Structure (Info-Only Split)
+
+The Kanban board uses a **split pattern** to optimize for quick scanning:
+
+**Two Documents:**
+- **`kanban-board.md`** - Structured information only (tasks, epics, status, links)
+- **`kanban-board-guide.md`** - Rules, explanations, and how-to content
+
+**Benefits:**
+- Reduced cognitive load when skimming the board
+- Faster information retrieval (no explanatory text to filter)
+- Rules/explanations remain accessible when needed
+
+**Templates:**
+- `templates/KANBAN_BOARD_TEMPLATE.md` - Board template (structured info only)
+- `templates/KANBAN_BOARD_GUIDE_TEMPLATE.md` - Guide template (rules/explanations)
+
+**Usage:**
+- Use `kanban-board.md` for quick scanning of active tasks and epic status
+- Reference `kanban-board-guide.md` when you need rules, explanations, or how-to content
+- Both documents cross-reference each other
+
 ### Forensic Traceability
 
 ```yaml
@@ -1542,6 +1564,8 @@ policies/kanban-governance-policy.md
 # Templates (MUST copy)
 templates/EPIC_TEMPLATE.md
 templates/STORY_TEMPLATE.md
+templates/KANBAN_BOARD_TEMPLATE.md
+templates/KANBAN_BOARD_GUIDE_TEMPLATE.md
 
 # Integration guides (RECOMMENDED)
 integration/numbering-versioning-integration.md
@@ -1784,6 +1808,11 @@ included_docs:
 
   - file: "templates/STORY_TEMPLATE.md"
     purpose: "Story document template"
+
+  - file: "templates/KANBAN_BOARD_TEMPLATE.md"
+    purpose: "Kanban board template (structured information only)"
+  - file: "templates/KANBAN_BOARD_GUIDE_TEMPLATE.md"
+    purpose: "Kanban board guide template (rules, explanations, and how-to content)"
 
   - file: "templates/CANONICAL_STORIES.md"
     purpose: "Reusable canonical story patterns (Bug Reports, Feature Requests)"
