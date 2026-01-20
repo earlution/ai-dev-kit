@@ -2068,6 +2068,17 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 ---
+## [0.4.17.5+1] - 20-01-26
+
+### Added
+- Kanban package installation evaluation – Failure modes and rollback guidance documented (E4:S17:T05)
+  - Documented 5 failure modes (Validation Errors, Migration Failures, Backup Failures, Configuration Failures, Partial Installation)
+  - Created 3 rollback procedures (Automatic Backup Restore, Git Restore, Manual Cleanup)
+  - Created troubleshooting guides and recovery best practices
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.5+1.md)
+
+---
 ## [0.4.17.4+1] - 20-01-26
 
 ### Added

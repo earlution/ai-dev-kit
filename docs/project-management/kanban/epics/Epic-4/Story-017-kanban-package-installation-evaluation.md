@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.4.17.4+1 – T04 complete: Post-install configuration and validation verified)  
-**Version:** v0.4.17.4+1  
+**Last updated:** 2026-01-20 (v0.4.17.5+1 – T05 complete: Failure modes and rollback guidance documented)  
+**Version:** v0.4.17.5+1  
 **Code:** E4S17
 
 ---
@@ -27,7 +27,8 @@ housekeeping_policy: keep
   - Task Doc: [`T03-validate-migration-update-paths.md`](Story-017-kanban-package-installation-evaluation/T03-validate-migration-update-paths.md)
 - [x] **E4:S17:T04 – Verify post-install configuration and validation steps** - ✅ COMPLETE (v0.4.17.4+1)
   - Task Doc: [`T04-verify-post-install-configuration-and-validation-steps.md`](Story-017-kanban-package-installation-evaluation/T04-verify-post-install-configuration-and-validation-steps.md)
-- [ ] **E4:S17:T05 – Document failure modes and rollback guidance** - TODO
+- [x] **E4:S17:T05 – Document failure modes and rollback guidance** - ✅ COMPLETE (v0.4.17.5+1)
+  - Task Doc: [`T05-document-failure-modes-and-rollback-guidance.md`](Story-017-kanban-package-installation-evaluation/T05-document-failure-modes-and-rollback-guidance.md)
 - [ ] **E4:S17:T06 – Capture documentation gaps and improvements** - TODO
 
 ---
@@ -141,9 +142,21 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 
 ### E4:S17:T05 – Document failure modes and rollback guidance
 
-**Input:** Installer behavior and logs  
-**Deliverable:** Failure mode list and rollback steps  
-**Approach:** Capture errors, troubleshooting, and recovery paths.
+**Task ID:** E4:S17:T05  
+**Status:** ✅ COMPLETE  
+**Scope:** Document failure modes and rollback guidance for the Kanban framework package installation to ensure users can recover from installation failures and rollback problematic installations.  
+**Input:** Installer behavior and logs, error handling code, backup mechanisms  
+**Deliverable:** Failure mode list and rollback steps with troubleshooting guides  
+**Approach:** Capture errors, troubleshooting, and recovery paths through code review and error analysis.  
+**Version Anchor:** ✅ COMPLETE (v0.4.17.5+1)
+
+**Acceptance Criteria:**
+- [x] Common failure modes identified and documented ✅
+- [x] Error messages documented with meanings ✅
+- [x] Rollback procedures created for each failure mode ✅
+- [x] Troubleshooting guides created ✅
+- [x] Recovery paths documented ✅
+- [x] Best practices documented ✅
 
 ### E4:S17:T06 – Capture documentation gaps and improvements
 
@@ -159,7 +172,7 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 - [x] Fresh install steps documented with results. ✅ COMPLETE (v0.4.17.2+1)
 - [x] Migration/update steps validated or explicitly unsupported. ✅ COMPLETE (v0.4.17.3+1)
 - [x] Post-install configuration checklist verified. ✅ COMPLETE (v0.4.17.4+1)
-- [ ] Failure modes and rollback guidance documented.
+- [x] Failure modes and rollback guidance documented. ✅ COMPLETE (v0.4.17.5+1)
 - [ ] Documentation gaps recorded with remediation tasks.
 
 ---
