@@ -1,4 +1,83 @@
 # Changelog Archive
+## [0.4.12.1+0] - 05-01-26
+
+### Added
+- E5:S00 - FR Repo (PERPETUAL) repository story created (E4:S12:T01)
+  - Repository story for all Feature Requests
+  - Traceability pattern: FR-001 = E5:S00:T01
+  - Abstract space: v0.5.0.0+0
+  - Epic 5 Story Checklist updated with S00
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.1+0.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.12.2+0] - 05-01-26
+
+### Added
+- E6:S00 - BR Repo (PERPETUAL) repository story created (E4:S12:T02)
+  - Repository story for all Bug Reports
+  - Traceability pattern: BR-001 = E6:S00:T01
+  - Abstract space: v0.6.0.0+0
+  - Epic 6 Story Checklist updated with S00
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.2+0.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.12.3+0] - 05-01-26
+
+### Added
+- E7:S00 - UXR Repo (PERPETUAL) repository story created (E4:S12:T03)
+  - Repository story for all User Experience Research reports
+  - Traceability pattern: UXR-001 = E7:S00:T01
+  - Abstract space: v0.7.0.0+0
+  - Epic 7 Story Checklist updated with S00
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.3+0.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.12.4+0] - 05-01-26
+
+### Changed
+- Kanban governance policy updated with PERPETUAL state definition (E4:S12:T04)
+  - PERPETUAL state defined for repository stories
+  - S00 repository pattern documented
+  - Traceability pattern documented
+  - Board display rules documented
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.4+0.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
 ## [0.3.2.11+3] - 19-01-26
 
 ### Changed
