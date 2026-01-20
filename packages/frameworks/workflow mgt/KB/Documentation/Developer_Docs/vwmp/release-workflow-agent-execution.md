@@ -16,7 +16,15 @@ housekeeping_policy: keep
 
 ## 📜 Version History
 
-**Current Version:** 1.9.0 (2026-01-05)
+**Current Version:** 1.10.0 (2026-01-20)
+
+### Version 1.10.0 (2026-01-20) - GitHub Release Step
+- **Added:** Step 12.5: Create/Update GitHub Release (after Step 13: Push to Remote)
+- **Changed:** Updated workflow structure to include GitHub release creation
+- **Feature:** Automated GitHub release creation using SemVer tags
+- **Feature:** Non-blocking step - gracefully skips if GITHUB_TOKEN not available
+- **Feature:** Clear error handling and user instructions for manual execution
+- **Related:** E3:S02:T11 - Implement SemVer Mapping for Release Workflow
 
 ### Version 1.9.0 (2026-01-05) - Housekeeping Step
 - **Added:** Step 17: Housekeeping (after Step 16)
@@ -2315,6 +2323,195 @@ except Exception as e:
 
 ---
 
+### Step 12.5: Create/Update GitHub Release
+
+**Step Definition:**
+```yaml
+- id: step-12-5
+  name: Create/Update GitHub Release
+  handler: github.create_release
+  dependencies: [step-12, step-13]
+  config:
+    use_semver_tag: true
+    skip_if_no_token: true
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Get `semver_tag` from Step 11 (SemVer tag created):
+     - [Example: ai-dev-kit] `v0.4.36+1` (SemVer for internal `v0.4.16.4+1`)
+   - Get `internal_version` from Step 2:
+     - [Example: ai-dev-kit] `v0.4.16.4+1`
+   - Get summary, epic, story, task from parameters
+   - Get repository from `GITHUB_REPOSITORY` env var or default to `earlution/ai-dev-kit`
+   - **CRITICAL:** Check for `GITHUB_TOKEN` environment variable
+   - Understand this step creates/updates GitHub release using SemVer tag
+   - Understand this step is **non-blocking** if token is missing
+
+2. **DETERMINE:**
+   - **If `GITHUB_TOKEN` is available:**
+     - Check if release already exists for SemVer tag
+     - If exists: Update existing release
+     - If not exists: Create new release
+     - Use SemVer tag for release name and tag reference
+     - Include both SemVer and internal version in release body
+   - **If `GITHUB_TOKEN` is NOT available:**
+     - Skip this step with a clear warning message
+     - Provide user instructions to run manually
+     - Mark step as "skipped" (not "completed")
+     - **DO NOT** mark workflow as failed - this is non-blocking
+
+3. **EXECUTE:**
+   - **Check for GitHub Token:**
+     ```python
+     github_token = os.environ.get('GITHUB_TOKEN')
+     if not github_token:
+         print("⚠️  Warning: GITHUB_TOKEN not set. Skipping GitHub release creation.")
+         print("\n📋 To create GitHub release manually, run:")
+         print(f"   python \"packages/frameworks/workflow mgt/scripts/create_github_release.py\" \\")
+         print(f"     --semver-tag \"{semver_tag}\" \\")
+         print(f"     --internal-version \"{internal_version}\" \\")
+         print(f"     --summary \"{summary}\" \\")
+         print(f"     --epic \"{epic}\" --story \"{story}\" --task \"{task}\" \\")
+         print(f"     --repo \"{repo}\"")
+         return "skipped"  # Mark as skipped, not failed
+     ```
+   
+   - **If token available, run script:**
+     ```python
+     result = run_terminal_cmd(
+         command=f'python "packages/frameworks/workflow mgt/scripts/create_github_release.py" '
+                 f'--semver-tag "{semver_tag}" '
+                 f'--internal-version "{internal_version}" '
+                 f'--summary "{summary}" '
+                 f'--epic "{epic}" --story "{story}" --task "{task}" '
+                 f'--repo "{repo}"',
+         required_permissions=['network']
+     )
+     ```
+   
+   - **Handle script failures gracefully:**
+     - If script returns exit code 1 (token missing): Skip with warning
+     - If script returns exit code 1 (API error): Log error, provide instructions
+     - If script returns exit code 0: Success
+
+4. **VALIDATE:**
+   - **If token missing:**
+     - ✅ Verify warning message was displayed
+     - ✅ Verify user instructions were provided
+     - ✅ Verify step marked as "skipped" (not "completed")
+     - ✅ Verify workflow continues (non-blocking)
+   - **If token available and script succeeded:**
+     - ✅ Verify release was created/updated on GitHub
+     - ✅ Verify release uses SemVer tag
+     - ✅ Verify release body includes both versions
+   - **If token available but script failed:**
+     - ✅ Verify error message was logged
+     - ✅ Verify user instructions were provided
+     - ✅ Verify step marked as "skipped" or "failed" (not "completed")
+     - ✅ Verify workflow continues (non-blocking)
+
+5. **PROCEED:**
+   - **If release created/updated successfully:**
+     - Document: "GitHub release created/updated for SemVer tag {semver_tag}"
+     - Move to Step 14 (if enabled)
+   - **If skipped (no token):**
+     - Document: "GitHub release step skipped - GITHUB_TOKEN not set (non-blocking)"
+     - Provide user instructions for manual execution
+     - Move to Step 14 (if enabled) - workflow is still considered successful
+   - **If failed (API error):**
+     - Document: "GitHub release creation failed - see error message (non-blocking)"
+     - Provide user instructions for manual execution
+     - Move to Step 14 (if enabled) - workflow is still considered successful
+
+**Key Points:**
+- This step is **non-blocking** - RW completes successfully even if this step fails or is skipped
+- **CRITICAL:** Agents MUST check for `GITHUB_TOKEN` BEFORE running the script
+- **CRITICAL:** If token is missing, skip with warning and instructions (do NOT mark as "completed")
+- **CRITICAL:** If script fails, provide clear error message and instructions (do NOT mark as "completed")
+- Release uses SemVer tag for external-facing display
+- Release body includes both SemVer and internal version for traceability
+- This step depends on Step 13 (Push to Remote) - tags must exist on GitHub before creating release
+
+**Error Handling:**
+
+**Missing Token (Expected in Agent Sandbox):**
+```python
+# ✅ CORRECT - Check token before running script
+github_token = os.environ.get('GITHUB_TOKEN')
+if not github_token:
+    print("⚠️  Warning: GITHUB_TOKEN not set. Skipping GitHub release creation.")
+    print("\n📋 To create GitHub release manually, run:")
+    print(f"   python \"packages/frameworks/workflow mgt/scripts/create_github_release.py\" ...")
+    return "skipped"  # Mark as skipped, not failed
+```
+
+**API Errors (500, 401, etc.):**
+```python
+# ✅ CORRECT - Handle API errors gracefully
+result = run_terminal_cmd(...)
+if result.exit_code != 0:
+    print("⚠️  Warning: GitHub release creation failed.")
+    print("   Common causes:")
+    print("   - Tag doesn't exist on GitHub yet (push tags first)")
+    print("   - Invalid/expired GitHub token (regenerate token)")
+    print("   - Missing 'repo' scope on token (check token permissions)")
+    print("\n📋 To create GitHub release manually, run:")
+    print(f"   python \"packages/frameworks/workflow mgt/scripts/create_github_release.py\" ...")
+    return "skipped"  # Mark as skipped, not failed
+```
+
+**Common Issues:**
+
+1. **500 Error (Tag Not Found):**
+   - **Cause:** Tag doesn't exist on GitHub yet (push failed or not completed)
+   - **Solution:** User must push tags first: `git push origin main --tags`
+   - **Then:** Retry release creation manually
+
+2. **401 Error (Bad Credentials):**
+   - **Cause:** Invalid/expired token or missing `repo` scope
+   - **Solution:** Regenerate GitHub Personal Access Token with `repo` scope
+   - **Then:** Set `GITHUB_TOKEN` environment variable and retry
+
+3. **Token Not Set (Agent Sandbox):**
+   - **Cause:** Agent's shell environment doesn't have access to user's `GITHUB_TOKEN`
+   - **Solution:** This is expected - user must run release creation manually
+   - **Note:** This is non-blocking - workflow completes successfully
+
+**Examples:**
+
+**Example 1: Token Available - Release Created**
+- SemVer tag: `v0.4.36+1`
+- Internal version: `v0.4.16.4+1`
+- Step 12.5 executes: Creates GitHub release for `v0.4.36+1`
+- Release name: `v0.4.36+1` (SemVer)
+- Release body: Includes both SemVer and internal version
+- Result: Release created successfully, workflow continues
+
+**Example 2: Token Missing - Step Skipped**
+- SemVer tag: `v0.4.36+1`
+- Internal version: `v0.4.16.4+1`
+- Step 12.5 executes: Checks for `GITHUB_TOKEN` → Not found
+- Step 12.5 action: Skips with warning and instructions
+- Step 12.5 status: Marked as "skipped" (not "completed")
+- Result: Workflow completes successfully, user runs release creation manually
+
+**Example 3: API Error - Step Skipped**
+- SemVer tag: `v0.4.36+1`
+- Token available, script runs
+- GitHub API returns 500 (tag not found on remote)
+- Step 12.5 action: Logs error, provides instructions
+- Step 12.5 status: Marked as "skipped" (not "completed")
+- Result: Workflow completes successfully, user pushes tags then retries manually
+
+**Related Documentation:**
+- **GitHub Release Script:** `packages/frameworks/workflow mgt/scripts/create_github_release.py`
+- **SemVer Mapping:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (Section 2.5)
+- **GitHub Token Setup:** See `.cursorrules` Step 12.5 for token requirements
+
+---
+
 ### Step 14: Post-Commit Verification & Reflection
 
 **Step Definition:**
@@ -2880,8 +3077,9 @@ When executing Release Workflow as an agent, ensure:
 - [ ] **Step 10:** Analyzed validators, ran all validators (including changelog size check), validated results
 - [ ] **Step 10.5:** Checked if CMW needed, executed CMW if threshold exceeded, validated results (optional)
 - [ ] **Step 11:** Analyzed template, built message, created commit, validated
-- [ ] **Step 12:** Analyzed tag format, created annotated tag, validated
-- [ ] **Step 13:** Analyzed remote, pushed branch and tag, validated
+- [ ] **Step 12:** Analyzed tag format, created annotated tag (internal + SemVer), validated
+- [ ] **Step 13:** Analyzed remote, pushed branch and tags, validated
+- [ ] **Step 12.5:** Checked for GITHUB_TOKEN, created/updated GitHub release (or skipped with instructions), validated (non-blocking)
 - [ ] **Step 14:** Analyzed changes, prompted for verification, documented reflection, validated (optional but recommended)
 - [ ] **Step 15:** Analyzed verification results, acted on results, updated changelog, created follow-ups, validated (optional but recommended)
 - [ ] **Step 16:** Analyzed Epic/Story status, checked COMPLETE, evaluated significance, triggered PIR if applicable, validated (optional but recommended)
@@ -2895,8 +3093,9 @@ When executing Release Workflow as an agent, ensure:
 - [ ] README updated correctly
 - [ ] Kanban docs updated correctly
 - [ ] Files committed with correct message
-- [ ] Tag created and pushed
+- [ ] Tags created (internal + SemVer) and pushed
 - [ ] Branch pushed to remote
+- [ ] GitHub release created/updated (or skipped with instructions if token missing)
 - [ ] Verification and reflection documented (if Step 14 executed)
 - [ ] Actions taken and follow-ups created (if Step 15 executed)
 - [ ] PIR trigger checked and executed if applicable (if Step 16 executed)
