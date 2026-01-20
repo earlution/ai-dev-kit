@@ -1,4 +1,367 @@
 # Changelog Archive
+## [0.3.2.11+3] - 19-01-26
+
+### Changed
+- Documentation update: README now displays SemVer (outward-facing version) instead of internal version (E3:S02:T11 - Versioning Cookbook & Examples)
+  - Updated versioning policy documents (dev-kit + framework package) with README SemVer display guidance
+  - Enhanced RW Step 5 to automatically generate SemVer and update README
+  - README now shows `v0.3.19+3` (SemVer) instead of `v0.3.2.11+3` (internal)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+3.md)
+
+---
+## [0.3.2.11+4] - 19-01-26
+
+### Added
+- GitHub release creation functionality in Release Workflow (E3:S02:T11 - Versioning Cookbook & Examples)
+  - New `create_github_release.py` script for creating/updating GitHub releases via API
+  - RW Step 12.5 automatically creates/updates GitHub releases using SemVer tags
+  - Release names display SemVer (e.g., `v0.3.19+4`) instead of internal version
+  - Release body includes both SemVer and internal version for traceability
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+4.md)
+
+---
+---
+## [0.4.11.2+2] - 2025-12-11
+
+📋 Examples Creation: E4:S11:T02 Phase 2 - Task Document Examples
+
+### Added
+
+- **Task Document Examples:** Created examples for both Task document formats
+  - **Separate File Format:** `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md`
+    - Complete example based on E4:S11:T01 (real-world use case)
+    - Demonstrates all required fields from Task template
+    - Shows proper forensic marker usage
+  - **Delimited Section Format:** `packages/frameworks/kanban/examples/Story-Example-With-Delimited-Tasks.md`
+    - Complete Story example with tasks documented as delimited sections
+    - Shows multiple tasks within a single Story document
+    - Demonstrates proper Task ID header format
+
+### Updated
+
+- **Task Template:** Added reference to example file
+- **Story Template:** Added references to both example files
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 2
+- Phase: 2 (Examples created, T02 complete)
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
+- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.11.3+1] - 2025-12-11
+
+📋 Policy Update: E4:S11:T03 - Update Versioning Policy with Task Doc Requirements
+
+### Updated
+
+- **Dev-Kit Versioning Policy:** Updated Kanban-related sections with Task document requirements
+  - Added Task document prerequisites to Section 4 (Mapping Kanban to Version Components)
+  - Added Task document requirements (presence, alignment, required fields, validation)
+  - Updated Section 6.1 (Task Transitions) to require Task document before versioning
+  - Added Task document → Version TASK component alignment requirements
+  - Added validation requirements for Task doc presence and alignment
+  - Referenced FR-017 for doc-init (`+0`) support
+
+- **Framework Versioning Policy:** Updated with Task document requirements
+  - Added "Task Document Requirements (Kanban Integration)" section
+  - Added Task document prerequisites (presence, alignment, required fields)
+  - Added Task transition rules requiring Task document
+  - Added validation requirements
+  - Referenced Kanban Governance Policy and Task Template
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 3
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
+- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
+- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
+- E2:S09:T03: Enhance Validators for Task Doc Presence and Alignment (RW-related updates)
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.11.4+1] - 2025-12-11
+
+📋 Policy Update: E4:S11:T04 - Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)
+
+### Updated
+
+- **Kanban Governance Policy (Canonical):** Added "Abstract Spaces for Forensic Traceability" section
+  - Defined zero-numbered E/S/T documentation as abstract space concept
+  - Added Epic-level (`0.{EPIC}.0.0+0`), Story-level (`0.{EPIC}.{STORY}.0+0`), Task-level (`0.{EPIC}.{STORY}.{TASK}+0`) abstract spaces
+  - Added SOP for committing initial E/S/T docs (when, where, how)
+  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
+  - Cross-referenced Numbering Policy
+
+- **Kanban Governance Policy (Dev-Kit Local):** Added "Abstract Spaces for Forensic Traceability" section
+  - Added zero-numbered E/S/T documentation definition
+  - Added abstract space examples for Epic, Story, and Task levels
+  - Added SOP for committing initial E/S/T docs
+  - Cross-referenced Dev-Kit Versioning Policy
+
+- **Framework Versioning Policy:** Added "Abstract Space Version Schema" section
+  - Added Epic-level, Story-level, and Task-level abstract space definitions
+  - Added examples for each level
+  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
+  - Added validation requirements
+  - Cross-referenced Kanban Governance Policy
+
+- **Dev-Kit Versioning Policy:** Added "Abstract Space Version Schema" subsection (6.2)
+  - Added Epic-level, Story-level, and Task-level abstract space definitions
+  - Added examples for each level
+  - Added SOP for committing initial E/S/T docs
+  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
+  - Cross-referenced Kanban Governance Policy
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 4
+- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (this feature)
+- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure) (prerequisite)
+- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (uses abstract space)
+- E4:S11:T01-T03: Policy and template work (prerequisites)
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.11.5+0] - 2025-12-11
+
+📋 Doc Init (Abstract Space): E4:S11:T05 - Task Creation
+
+### Added
+
+- **Epic 4 Story 11 Task 5:** Dependency Wiring Cross-References
+  - Created Task 5 under Story 11 for dependency wiring cross-references
+  - Abstract space `0.4.11.5+0` established for forensic traceability
+
+### Updated
+
+- **Story 11:** Added T05 to task checklist
+- **Story 11:** Updated Blocks section to include E2:S10:T06
+- **Story 11:** Updated Related Work section with FR-020 and E2:S10:T06 cross-references
+- **Story 11:** Documented that E4:S11 blocks E2:S10:T06 via dependency chain
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 5
+- FR-020: Version Validator Abstract Space Awareness
+- E2:S10:T06: Update Version Validator for Abstract Space Awareness (depends on E4:S11)
+- E2:S09: Kanban Granularity & Discrete Task Docs (RW Integration) (depends on E4:S11)
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.11.6+0] - 2025-12-11
+
+📋 Doc Init (Abstract Space): E4:S11:T06 - Task Creation
+
+### Added
+
+- **Epic 4 Story 11 Task 6:** Review and Optimize Template Structure for Tier Delegation
+  - Created Task 6 under Story 11 for template structure optimization
+  - Task focuses on ensuring proper delegation between Epic → Story → Task tiers
+  - Establishes guidelines for what belongs at each tier (no duplication)
+  - Abstract space `0.4.11.6+0` established for forensic traceability
+
+### Updated
+
+- **E4:S11:** Added Task 6 to task checklist
+- **E4:S11:** Updated acceptance criteria to include template delegation optimization
+
+### Related Work
+
+- Epic: 4
+- Story: 11
+- Task: 6
+- E4:S06: Comprehensive Canonical E/S/T Template System (templates to be optimized)
+- E4:S11:T02: Create Task Document Template (template to be reviewed)
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.11.6+1] - 2025-12-11
+
+🔧 Template Optimization: E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation (Phase 1-4)
+
+### Added
+
+- **Tier Delegation Guidelines** (`packages/frameworks/kanban/templates/TIER_DELEGATION_GUIDELINES.md`):
+  - Comprehensive guide defining tier delegation principle (Epic → Story → Task)
+  - What belongs at each tier and what should be delegated
+  - Anti-patterns to avoid and best practices
+  - Migration guide for updating existing docs
+  - Examples of proper vs. improper delegation
+
+### Updated
+
+- **Epic Template** (`packages/frameworks/kanban/templates/EPIC_TEMPLATE.md`):
+  - Removed detailed Story sections (Status, Priority, Goals, Tasks, Acceptance Criteria)
+  - Added "CRITICAL: Tier Delegation Principle" section with guidance
+  - Replaced detailed Story sections with brief summaries and links to Story documents
+  - Epic now delegates all Story detail to Story documents
+
+- **Story Template** (`packages/frameworks/kanban/templates/STORY_TEMPLATE.md`):
+  - Added "CRITICAL: Tier Delegation Principle" section with guidance
+  - Clarified delimited section format with delegation notes
+  - Enhanced Task documentation requirements section
+  - Story now delegates all Task detail to Task documents
+
+- **Task Template** (`packages/frameworks/kanban/templates/TASK_TEMPLATE.md`):
+  - Reviewed and confirmed as leaf node (no changes needed - already contains all detail)
+
+- **Kanban Board** (`docs/project-management/kanban/kanban-board.md`):
+  - Updated E4:S11 status to IN PROGRESS (v0.4.11.4+1)
+  - Updated task completion markers for T01-T04
+
+### Related Work
+
+- **Story:** E4:S11 - Kanban Granularity & Discrete Task Docs
+- **Task:** E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation
+- **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.11.6+2] - 2025-12-11
+
+📋 Compliance Audit: E4:S11:T06 Phase 5-6 - Tier Delegation Compliance Audit and Migration Guide
+
+### Added
+
+- **Delegation Compliance Audit** (`packages/frameworks/kanban/templates/DELEGATION_COMPLIANCE_AUDIT.md`):
+  - Comprehensive audit of Epic and Story documents for tier delegation violations
+  - Documented violations in Epic-4.md and Epic-2.md
+  - Compliance status tracking and migration priority
+  - Migration progress tracking
+
+### Updated
+
+- **Tier Delegation Guidelines** (`packages/frameworks/kanban/templates/TIER_DELEGATION_GUIDELINES.md`):
+  - Expanded migration guide with detailed steps and examples
+  - Added reference to compliance audit document
+  - Enhanced migration process documentation
+
+### Compliance Audit Findings
+
+- **Epic-4.md:** Multiple violations - detailed Story sections with Status, Priority, Goals, Tasks
+- **Epic-2.md:** Violations found - detailed Story sections with Status, Priority, Goals, Tasks
+- **Other Epic documents:** Not yet audited (medium priority)
+
+### Related Work
+
+- **Story:** E4:S11 - Kanban Granularity & Discrete Task Docs
+- **Task:** E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation
+- **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.12.0+0] - 2025-12-11
+
+📋 Doc Init (Abstract Space): E4:S12:T00 - Story Creation and FR-021 Intake
+
+### Added
+
+- **Epic 4 Story 12:** FR/BR/UXR Repository Stories (S00 Pattern)
+  - Created Story 12 under Epic 4 for FR-021 implementation
+  - Defined 11 tasks (T00-T10) for implementing repository pattern
+  - T00 (Story Creation and FR-021 Intake) complete
+  - Abstract space `0.4.12.0+0` established for forensic traceability
+
+- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern)
+  - Created FR-021 document with full requirements
+  - Status: ACCEPTED
+  - Assigned to Epic 4, Story 12
+
+### Updated
+
+- **Epic 4:** Added Story 12 to story checklist
+- **FR-021:** Updated intake decision section with Epic/Story/Task assignment
+
+### Related Work
+
+- Epic: 4
+- Story: 12
+- Task: 0
+- FR-021: FR/BR/UXR Repository Stories (S00 Pattern)
+- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (abstract space concept)
+- E2:S11: Intake Workflow Automation (intake workflow integration)
+- E4:S02: FR/BR Intake to Tasks (intake foundation)
+
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.12.0+1] - 2025-12-11
+
+📋 Documentation: E4:S12:T00 - Kanban Board Update
+
+### Updated
+
+- **Kanban Board:** Updated to include Epic 4 Story 12 (FR/BR/UXR Repository Stories)
+- **Kanban Quick View:** Updated Epic 4 story count and progress (12 stories, 8/12 complete)
+
+---
+---
+---
+---
+---
+---
+---
+---
 ## [0.4.11.2+1] - 2025-12-11
 
 📋 Template Creation: E4:S11:T02 Phase 1 - Task and Story Templates

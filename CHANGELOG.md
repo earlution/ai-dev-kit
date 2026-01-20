@@ -4,122 +4,6 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-## [0.4.17.3+1] - 20-01-26
-
-### Added
-- Kanban package installation evaluation – Migration/update paths validated (E4:S17:T03)
-  - Validated all four migration/update modes (migration, update, hybrid, canonical_adoption)
-  - Created comprehensive validation log with step-by-step validation, behavior preservation verification, and recommendations
-  - Mode 1 (Migration): ✅ PASS, Mode 2 (Update): ⚠️ PARTIAL (version tracking missing), Mode 3 (Hybrid): ✅ PASS, Mode 4 (Canonical Adoption): ✅ PASS
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.3+1.md)
-
----
-## [0.4.17.2+1] - 20-01-26
-
-### Added
-- Kanban package installation evaluation – Fresh install steps validated (E4:S17:T02)
-  - Validated fresh install steps for all three installation paths (GitHub Releases, Git Submodule, CLI Tool)
-  - Created comprehensive validation log with step-by-step validation, issues, and recommendations
-  - Path 1 (GitHub Releases): ⚠️ PARTIAL - Documentation gaps identified
-  - Path 2 (Git Submodule): ✅ PASS - Well documented and functional
-  - Path 3 (CLI Tool): ⚠️ PLACEHOLDER - Not yet implemented
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.2+1.md)
-
----
-## [0.4.18.2+1] - 20-01-26
-
-### Changed
-- Kanban board info-only split – Packaged framework upgraded (E4:S18:T02)
-  - Split `KANBAN_BOARD_TEMPLATE.md` into structured information only
-  - Created `KANBAN_BOARD_GUIDE_TEMPLATE.md` with all rules, explanations, and how-to content
-  - Updated package README to document the board split pattern
-  - Framework package now matches dev-kit implementation
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.2+1.md)
-
----
-## [0.4.18.2+0] - 20-01-26
-
-### Added
-- Kanban board info-only split – Task document created for packaged framework upgrade (E4:S18:T02)
-  - Created task to upgrade packaged Kanban framework templates with board split pattern
-  - Task will split board template into structured info and guide templates
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.2+0.md)
-
----
-## [0.4.18.1+1] - 20-01-26
-
-### Changed
-- Kanban board info-only split (E4:S18:T01)
-  - Split `kanban-board.md` into structured information only (tasks, epics, status, links)
-  - Created `kanban-board-guide.md` with all rules, explanations, and how-to content
-  - Reduced cognitive load when skimming the board by removing non-informational content
-  - Updated `_index.md` to reference both documents
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.1+1.md)
-
----
-## [0.4.16.6+1] - 20-01-26
-
-### Added
-- Kanban package implementation review – RC sign-off criteria and remediation pattern (E4:S16:T06)
-  - Defined reusable RC sign-off checklist for the Kanban framework package (governance, structure, integrations, gap posture, traceability)
-  - Established remediation task pattern for non-blocking gaps (always surfaced as Tasks/FRs/BRs with ownership and RC impact)
-  - Confirmed no RC-blocking gaps in the Kanban package and documented RC-ready state
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.6+1.md)
-
----
-## [0.4.16.5+1] - 20-01-26
-
-### Added
-- Kanban package implementation review – Gap log and risk assessment (E4:S16:T05)
-  - Consolidated findings from expectations baseline, component inventory, behavioral validation, and integration alignment
-  - Classified gaps by severity, likelihood, RC impact, and ownership (Kanban vs external workflows)
-  - Confirmed no RC-blocking gaps attributable to the Kanban framework package implementation
-  - Documented overall RC risk posture for Kanban as RC-ready
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.5+1.md)
-
----
-## [0.4.16.4+1] - 20-01-26
-
-### Changed
-- Kanban package implementation review – Integration alignment (E4:S16:T04)
-  - Reviewed integration points between the Kanban framework and Numbering & Versioning framework
-  - Reviewed integration points between the Kanban framework and Workflow Management framework (RW + UKW)
-  - Validated hard vs soft dependency model (Git/Markdown as hard deps; Versioning/Workflow as soft deps)
-  - Confirmed that dev-kit implementation matches documented integration guides
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.4+1.md)
-
----
-## [0.3.2.11+4] - 19-01-26
-
-### Added
-- GitHub release creation functionality in Release Workflow (E3:S02:T11 - Versioning Cookbook & Examples)
-  - New `create_github_release.py` script for creating/updating GitHub releases via API
-  - RW Step 12.5 automatically creates/updates GitHub releases using SemVer tags
-  - Release names display SemVer (e.g., `v0.3.19+4`) instead of internal version
-  - Release body includes both SemVer and internal version for traceability
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+4.md)
-
----
-## [0.3.2.11+3] - 19-01-26
-
-### Changed
-- Documentation update: README now displays SemVer (outward-facing version) instead of internal version (E3:S02:T11 - Versioning Cookbook & Examples)
-  - Updated versioning policy documents (dev-kit + framework package) with README SemVer display guidance
-  - Enhanced RW Step 5 to automatically generate SemVer and update README
-  - README now shows `v0.3.19+3` (SemVer) instead of `v0.3.2.11+3` (internal)
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.11+3.md)
-
----
 ## [0.6.7.101+24] - 19-01-26
 
 ### Changed
@@ -131,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+24.md)
 
 ---
+---
 ## [0.6.6.8+10] - 05-01-26
 
 ### Changed
@@ -141,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Epic 7 documentation updated to reflect completion status
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+10.md)
+---
 ---
 ---
 ---
@@ -163,6 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 ---
+---
 ## [0.6.6.8+8] - 05-01-26
 
 ### Changed
@@ -173,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Epic 7 version updated to v0.7.4.4+1
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+8.md)
+---
 ---
 ---
 ---
@@ -194,6 +82,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 ---
+---
 ## [0.6.6.8+6] - 03-01-26
 
 ### Changed
@@ -209,6 +98,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 ---
+---
 ## [0.6.6.8+5] - 03-01-26
 
 ### Changed
@@ -218,6 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - All kanban documents synchronized and consistent
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+5.md)
+---
 ---
 ---
 ---
@@ -240,6 +131,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 ---
+---
 ## [0.6.6.8+3] - 22-12-25
 
 ### Changed
@@ -253,6 +145,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cleaned up invalid directories created due to filename issues
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+3.md)
+---
 ---
 ---
 ---
@@ -285,6 +178,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.8+2.md)
 
+---
 ---
 ---
 ---
@@ -328,6 +222,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 ---
+---
 ## [0.6.6.7+6] - 18-12-25
 
 🔄 Framework Hardening: UKW - T07 marked complete, kanban docs synchronized
@@ -343,6 +238,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+6.md)
 
+---
 ---
 ---
 ---
@@ -387,6 +283,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 ---
+---
 ## [0.6.6.7+4] - 18-12-25
 
 📝 Framework Hardening: .cursorrules file created (Phase 3)
@@ -424,6 +321,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Starting with `v0.1.1.1+1`, all releases use **dev-kit-specific Epic numbers**.
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.21.3+2.md` for full details.
 
+---
 ---
 ---
 ---
@@ -486,6 +384,7 @@ Captured Starborn Legacy Zombie Story case study report as unstructured book mat
 - **Source Project:** Starborn Legacy (E15:S01 case study)
 - **Detailed Changelog:** [CHANGELOG_v0.9.4.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.4.1+1.md)
 
+---
 ---
 ---
 ---
@@ -582,6 +481,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+20] - 18-12-25
 
 ✅ Complete: T06 - Cross-project meta-analysis and canonical framework design - All deliverables verified complete
@@ -613,6 +513,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+20.md)
 
+---
 ---
 ---
 ---
@@ -654,6 +555,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+19.md)
 
+---
 ---
 ---
 ---
@@ -708,6 +610,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+17] - 18-12-25
 
 🤖 Enhanced: Workflow structure with agentic intelligence - task-driven validation and knowledge base updates
@@ -743,6 +646,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md`](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md)
 
+---
 ---
 ---
 ---
@@ -797,6 +701,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+15] - 18-12-25
 
 📋 Split: Use Cases split by type - Canonical→Architecture, Discovered→knowledge
@@ -820,6 +725,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/knowledge/Changelog_and_Release_Notes/changelog-archive/CHANGELOG_v0.6.6.6+15.md`](docs/knowledge/Changelog_and_Release_Notes/changelog-archive/CHANGELOG_v0.6.6.6+15.md)
 
+---
 ---
 ---
 ---
@@ -860,6 +766,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+13] - 18-12-25
 
 ✅ Finalized: Incorporated user feedback and finalized canonical Kanban structure
@@ -880,6 +787,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+13.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+13.md)
 
+---
 ---
 ---
 ---
@@ -927,6 +835,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+11] - 18-12-25
 
 📐 Design: Expanded Epic 4 Story 1 to comprehensive architecture design specification
@@ -960,6 +869,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+10] - 18-12-25
 
 🔧 Fix: Epic 3 FR/BR/UXR placement corrected in revised proposal
@@ -974,6 +884,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+10.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+10.md)
 
+---
 ---
 ---
 ---
@@ -998,6 +909,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+9.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+9.md)
 
+---
 ---
 ---
 ---
@@ -1031,6 +943,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+7] - 17-12-25
 
 📚 Documentation: Playbooks documentation completed
@@ -1044,6 +957,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+7.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+7.md)
 
+---
 ---
 ---
 ---
@@ -1078,6 +992,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+5] - 17-12-25
 
 📝 Documentation: Executive summary rewritten - Decision-focused with proposed canonical structures
@@ -1095,6 +1010,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+5.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+5.md)
 
+---
 ---
 ---
 ---
@@ -1125,6 +1041,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+3] - 17-12-25
 
 📝 Documentation: Task definition updated - Executive summary requirement clarified
@@ -1146,6 +1063,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+3.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+3.md)
 
+---
 ---
 ---
 ---
@@ -1182,6 +1100,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.6+1] - 17-12-25
 
 📚 Documentation: Meta-analysis task added to E6:S06
@@ -1209,6 +1128,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.6.3+2] - 03-01-26
 
 ### Changed
@@ -1218,6 +1138,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - All deliverables verified (design doc, user guide, template exist)
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.3+2.md)
+---
 ---
 ---
 ---
@@ -1236,6 +1157,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - Integration with Kanban (FR/BR intake workflow)
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.3+1.md)
+---
 ---
 ---
 ---
@@ -1275,6 +1197,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.2+1.md)
 
+---
 ---
 ---
 ---
@@ -1330,6 +1253,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.4.2+2] - 03-01-26
 
 ### Changed
@@ -1346,6 +1270,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.4.2+1] - 07-12-25
 
 📚 Documentation: Canonical stories for Kanban framework
@@ -1356,6 +1281,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Details:** [CHANGELOG_v0.6.4.2+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.4.2+1.md)
 
+---
 ---
 ---
 ---
@@ -1385,6 +1311,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.3.3+1] - 03-01-26
 
 ### Added
@@ -1404,6 +1331,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.3.2+1] - 03-01-26
 
 ### Added
@@ -1415,6 +1343,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Comprehensive monitoring procedures documentation
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.3.2+1.md)
+---
 ---
 ---
 ---
@@ -1441,6 +1370,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.2.3+1] - 03-01-26
 
 ### Added
@@ -1454,6 +1384,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - E6:S02 (Framework Update and Migration) - T03 complete: Framework backward compatibility policy established
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.2.3+1.md)
+---
 ---
 ---
 ---
@@ -1474,6 +1405,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - E6:S02 (Framework Update and Migration) - T02 complete: Framework migration guide established
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.2.2+1.md)
+---
 ---
 ---
 ---
@@ -1501,6 +1433,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.1.35+1] - 17-01-26
 
 ### Fixed
@@ -1510,6 +1443,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Note: `todo_write` tool doesn't support deletion, so `cancelled` status is used as workaround
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.35+1.md)
+---
 ---
 ---
 ---
@@ -1533,6 +1467,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.1.4+3] - 03-01-26
 
 ### Changed
@@ -1544,6 +1479,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Kanban board synchronized with corrected status
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.4+3.md)
+---
 ---
 ---
 ---
@@ -1567,6 +1503,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.1.2+1] - 03-01-26
 
 ### Added
@@ -1577,6 +1514,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Release validation and troubleshooting guides
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.2+1.md)
+---
 ---
 ---
 ---
@@ -1613,6 +1551,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.1.1+1] - 03-01-26
 
 ### Added
@@ -1629,6 +1568,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.6.0.33+0] - 16-01-26
 
 ### Added
@@ -1639,6 +1579,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Version anchor established: v0.6.0.33+0 (doc-init)
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.0.33+0.md)
+---
 ---
 ---
 ---
@@ -1686,6 +1627,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.5.1+1] - 07-12-25
 
 📚 Documentation: Legacy repository incorporation analysis and planning
@@ -1724,6 +1666,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.4.8+1] - 07-12-25
 
 📚 Documentation: `.cursorrules` setup for RW trigger
@@ -1739,6 +1682,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Details:** [CHANGELOG_v0.5.4.8+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.4.8+1.md)
 
+---
 ---
 ---
 ---
@@ -1794,6 +1738,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.4.5+4] - 07-12-25
 
 📚 Documentation Management: Comprehensive use cases guide and documentation enhancements
@@ -1830,6 +1775,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Coverage:** All adoption patterns now documented with implementation guidance
 - **Integration:** Use cases guide cross-referenced throughout documentation
 
+---
 ---
 ---
 ---
@@ -1874,6 +1820,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.4.5+1] - 06-12-25
 
 📚 Documentation Management: Framework dependency installation guide created
@@ -1906,6 +1853,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.3.1+1] - 06-01-26
 
 ### Added
@@ -1916,6 +1864,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Comprehensive documentation and integration guide
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.3.1+1.md)
+---
 ---
 ---
 ---
@@ -1949,6 +1898,7 @@ Established material capture infrastructure for unstructured book content. Creat
 - Consistency validator checks version, cross-reference, and terminology consistency
 - Both validators support JSON output and CI/CD integration
 
+---
 ---
 ---
 ---
@@ -1994,6 +1944,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.1.4+2] - 06-12-25
 
 🔔 Documentation Management: Documentation update triggers established (Story 1 complete)
@@ -2031,6 +1982,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.0.35+0] - 16-01-26
 
 ### Added
@@ -2047,6 +1999,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.5.0.34+0] - 16-01-26
 
 ### Added
@@ -2056,6 +2009,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Version anchor established: v0.5.0.34+0 (doc-init)
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.0.34+0.md)
+---
 ---
 ---
 ---
@@ -2076,6 +2030,70 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
+## [0.4.18.2+1] - 20-01-26
+
+### Changed
+- Kanban board info-only split – Packaged framework upgraded (E4:S18:T02)
+  - Split `KANBAN_BOARD_TEMPLATE.md` into structured information only
+  - Created `KANBAN_BOARD_GUIDE_TEMPLATE.md` with all rules, explanations, and how-to content
+  - Updated package README to document the board split pattern
+  - Framework package now matches dev-kit implementation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.2+1.md)
+
+---
+---
+## [0.4.18.2+0] - 20-01-26
+
+### Added
+- Kanban board info-only split – Task document created for packaged framework upgrade (E4:S18:T02)
+  - Created task to upgrade packaged Kanban framework templates with board split pattern
+  - Task will split board template into structured info and guide templates
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.2+0.md)
+
+---
+---
+## [0.4.18.1+1] - 20-01-26
+
+### Changed
+- Kanban board info-only split (E4:S18:T01)
+  - Split `kanban-board.md` into structured information only (tasks, epics, status, links)
+  - Created `kanban-board-guide.md` with all rules, explanations, and how-to content
+  - Reduced cognitive load when skimming the board by removing non-informational content
+  - Updated `_index.md` to reference both documents
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.18.1+1.md)
+
+---
+---
+## [0.4.17.3+1] - 20-01-26
+
+### Added
+- Kanban package installation evaluation – Migration/update paths validated (E4:S17:T03)
+  - Validated all four migration/update modes (migration, update, hybrid, canonical_adoption)
+  - Created comprehensive validation log with step-by-step validation, behavior preservation verification, and recommendations
+  - Mode 1 (Migration): ✅ PASS, Mode 2 (Update): ⚠️ PARTIAL (version tracking missing), Mode 3 (Hybrid): ✅ PASS, Mode 4 (Canonical Adoption): ✅ PASS
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.3+1.md)
+
+---
+---
+## [0.4.17.2+1] - 20-01-26
+
+### Added
+- Kanban package installation evaluation – Fresh install steps validated (E4:S17:T02)
+  - Validated fresh install steps for all three installation paths (GitHub Releases, Git Submodule, CLI Tool)
+  - Created comprehensive validation log with step-by-step validation, issues, and recommendations
+  - Path 1 (GitHub Releases): ⚠️ PARTIAL - Documentation gaps identified
+  - Path 2 (Git Submodule): ✅ PASS - Well documented and functional
+  - Path 3 (CLI Tool): ⚠️ PLACEHOLDER - Not yet implemented
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.2+1.md)
+
+---
+---
 ## [0.4.17.1+1] - 18-01-26
 
 ### Changed
@@ -2086,6 +2104,45 @@ Established material capture infrastructure for unstructured book content. Creat
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.1+1.md)
 ---
+---
+---
+---
+## [0.4.16.6+1] - 20-01-26
+
+### Added
+- Kanban package implementation review – RC sign-off criteria and remediation pattern (E4:S16:T06)
+  - Defined reusable RC sign-off checklist for the Kanban framework package (governance, structure, integrations, gap posture, traceability)
+  - Established remediation task pattern for non-blocking gaps (always surfaced as Tasks/FRs/BRs with ownership and RC impact)
+  - Confirmed no RC-blocking gaps in the Kanban package and documented RC-ready state
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.6+1.md)
+
+---
+---
+## [0.4.16.5+1] - 20-01-26
+
+### Added
+- Kanban package implementation review – Gap log and risk assessment (E4:S16:T05)
+  - Consolidated findings from expectations baseline, component inventory, behavioral validation, and integration alignment
+  - Classified gaps by severity, likelihood, RC impact, and ownership (Kanban vs external workflows)
+  - Confirmed no RC-blocking gaps attributable to the Kanban framework package implementation
+  - Documented overall RC risk posture for Kanban as RC-ready
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.5+1.md)
+
+---
+---
+## [0.4.16.4+1] - 20-01-26
+
+### Changed
+- Kanban package implementation review – Integration alignment (E4:S16:T04)
+  - Reviewed integration points between the Kanban framework and Numbering & Versioning framework
+  - Reviewed integration points between the Kanban framework and Workflow Management framework (RW + UKW)
+  - Validated hard vs soft dependency model (Git/Markdown as hard deps; Versioning/Workflow as soft deps)
+  - Confirmed that dev-kit implementation matches documented integration guides
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.4+1.md)
+
 ---
 ---
 ## [0.4.16.2+1] - 19-01-26
@@ -2100,6 +2157,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.16.1+1] - 18-01-26
 
 ### Changed
@@ -2109,6 +2167,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Marked Story 16 Task 1 complete with forensic marker
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.1+1.md)
+---
 ---
 ---
 ---
@@ -2144,6 +2203,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.15.5+1] - 22-12-25
 
 📚 Documentation Complete: E4:S15:T05 - Generator Integration and Hybrid Strategy Documentation
@@ -2170,6 +2230,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.15.3+1] - 22-12-25
 
 🔧 Generator Implementation: E4:S15:T03 - Task Template Generator Design and Implementation
@@ -2189,6 +2250,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.3+1.md)
 
+---
 ---
 ---
 ---
@@ -2228,6 +2290,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.14.2+1] - 19-01-26
 
 ### Changed
@@ -2237,6 +2300,7 @@ Established material capture infrastructure for unstructured book content. Creat
   - Marked Story 14 Task 2 complete with forensic marker
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.14.2+1.md)
+---
 ---
 ---
 ## [0.4.13.6+5] - 17-12-25
@@ -2272,6 +2336,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.13.6+4] - 17-12-25
 
 ✅ Documentation Correction: Fixed E4:S10 status inconsistency in kanban board
@@ -2286,6 +2351,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+4.md)
 
+---
 ---
 ---
 ---
@@ -2320,6 +2386,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.13.4+3] - 18-12-25
 
 ✅ Complete: T04 - Packaged RW updated to v2.1.2 with BR-010 fix documentation
@@ -2342,6 +2409,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+3.md)
 
+---
 ---
 ---
 ---
@@ -2395,6 +2463,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.13.4+1] - 18-12-25
 
 ✅ Complete: T04 - Assess system impacts - RW doc-init detection bug fixed
@@ -2428,6 +2497,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 **Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+1.md)
 
+---
 ---
 ---
 ---
@@ -2471,6 +2541,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.12.10+0] - 05-01-26
 
 ### Changed
@@ -2490,6 +2561,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.12.5+0] - 05-01-26
 
 ### Changed
@@ -2500,6 +2572,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.5+0.md)
 
+---
 ---
 ---
 ---
@@ -2525,6 +2598,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.12.3+0] - 05-01-26
 
 ### Added
@@ -2536,6 +2610,7 @@ Established material capture infrastructure for unstructured book content. Creat
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.3+0.md)
 
+---
 ---
 ---
 ---
@@ -2561,6 +2636,7 @@ Established material capture infrastructure for unstructured book content. Creat
 ---
 ---
 ---
+---
 ## [0.4.12.1+0] - 05-01-26
 
 ### Added
@@ -2573,335 +2649,6 @@ Established material capture infrastructure for unstructured book content. Creat
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.1+0.md)
 
 ---
----
----
----
----
----
----
-## [0.4.12.0+1] - 2025-12-11
-
-📋 Documentation: E4:S12:T00 - Kanban Board Update
-
-### Updated
-
-- **Kanban Board:** Updated to include Epic 4 Story 12 (FR/BR/UXR Repository Stories)
-- **Kanban Quick View:** Updated Epic 4 story count and progress (12 stories, 8/12 complete)
-
----
----
----
----
----
----
----
-## [0.4.12.0+0] - 2025-12-11
-
-📋 Doc Init (Abstract Space): E4:S12:T00 - Story Creation and FR-021 Intake
-
-### Added
-
-- **Epic 4 Story 12:** FR/BR/UXR Repository Stories (S00 Pattern)
-  - Created Story 12 under Epic 4 for FR-021 implementation
-  - Defined 11 tasks (T00-T10) for implementing repository pattern
-  - T00 (Story Creation and FR-021 Intake) complete
-  - Abstract space `0.4.12.0+0` established for forensic traceability
-
-- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern)
-  - Created FR-021 document with full requirements
-  - Status: ACCEPTED
-  - Assigned to Epic 4, Story 12
-
-### Updated
-
-- **Epic 4:** Added Story 12 to story checklist
-- **FR-021:** Updated intake decision section with Epic/Story/Task assignment
-
-### Related Work
-
-- Epic: 4
-- Story: 12
-- Task: 0
-- FR-021: FR/BR/UXR Repository Stories (S00 Pattern)
-- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (abstract space concept)
-- E2:S11: Intake Workflow Automation (intake workflow integration)
-- E4:S02: FR/BR Intake to Tasks (intake foundation)
-
----
----
----
----
----
----
----
-## [0.4.11.6+2] - 2025-12-11
-
-📋 Compliance Audit: E4:S11:T06 Phase 5-6 - Tier Delegation Compliance Audit and Migration Guide
-
-### Added
-
-- **Delegation Compliance Audit** (`packages/frameworks/kanban/templates/DELEGATION_COMPLIANCE_AUDIT.md`):
-  - Comprehensive audit of Epic and Story documents for tier delegation violations
-  - Documented violations in Epic-4.md and Epic-2.md
-  - Compliance status tracking and migration priority
-  - Migration progress tracking
-
-### Updated
-
-- **Tier Delegation Guidelines** (`packages/frameworks/kanban/templates/TIER_DELEGATION_GUIDELINES.md`):
-  - Expanded migration guide with detailed steps and examples
-  - Added reference to compliance audit document
-  - Enhanced migration process documentation
-
-### Compliance Audit Findings
-
-- **Epic-4.md:** Multiple violations - detailed Story sections with Status, Priority, Goals, Tasks
-- **Epic-2.md:** Violations found - detailed Story sections with Status, Priority, Goals, Tasks
-- **Other Epic documents:** Not yet audited (medium priority)
-
-### Related Work
-
-- **Story:** E4:S11 - Kanban Granularity & Discrete Task Docs
-- **Task:** E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation
-- **FR-016:** Kanban Granularity & Discrete Task Docs
-
----
----
----
----
----
----
----
-## [0.4.11.6+1] - 2025-12-11
-
-🔧 Template Optimization: E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation (Phase 1-4)
-
-### Added
-
-- **Tier Delegation Guidelines** (`packages/frameworks/kanban/templates/TIER_DELEGATION_GUIDELINES.md`):
-  - Comprehensive guide defining tier delegation principle (Epic → Story → Task)
-  - What belongs at each tier and what should be delegated
-  - Anti-patterns to avoid and best practices
-  - Migration guide for updating existing docs
-  - Examples of proper vs. improper delegation
-
-### Updated
-
-- **Epic Template** (`packages/frameworks/kanban/templates/EPIC_TEMPLATE.md`):
-  - Removed detailed Story sections (Status, Priority, Goals, Tasks, Acceptance Criteria)
-  - Added "CRITICAL: Tier Delegation Principle" section with guidance
-  - Replaced detailed Story sections with brief summaries and links to Story documents
-  - Epic now delegates all Story detail to Story documents
-
-- **Story Template** (`packages/frameworks/kanban/templates/STORY_TEMPLATE.md`):
-  - Added "CRITICAL: Tier Delegation Principle" section with guidance
-  - Clarified delimited section format with delegation notes
-  - Enhanced Task documentation requirements section
-  - Story now delegates all Task detail to Task documents
-
-- **Task Template** (`packages/frameworks/kanban/templates/TASK_TEMPLATE.md`):
-  - Reviewed and confirmed as leaf node (no changes needed - already contains all detail)
-
-- **Kanban Board** (`docs/project-management/kanban/kanban-board.md`):
-  - Updated E4:S11 status to IN PROGRESS (v0.4.11.4+1)
-  - Updated task completion markers for T01-T04
-
-### Related Work
-
-- **Story:** E4:S11 - Kanban Granularity & Discrete Task Docs
-- **Task:** E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation
-- **FR-016:** Kanban Granularity & Discrete Task Docs
-
----
----
----
----
----
----
----
-## [0.4.11.6+0] - 2025-12-11
-
-📋 Doc Init (Abstract Space): E4:S11:T06 - Task Creation
-
-### Added
-
-- **Epic 4 Story 11 Task 6:** Review and Optimize Template Structure for Tier Delegation
-  - Created Task 6 under Story 11 for template structure optimization
-  - Task focuses on ensuring proper delegation between Epic → Story → Task tiers
-  - Establishes guidelines for what belongs at each tier (no duplication)
-  - Abstract space `0.4.11.6+0` established for forensic traceability
-
-### Updated
-
-- **E4:S11:** Added Task 6 to task checklist
-- **E4:S11:** Updated acceptance criteria to include template delegation optimization
-
-### Related Work
-
-- Epic: 4
-- Story: 11
-- Task: 6
-- E4:S06: Comprehensive Canonical E/S/T Template System (templates to be optimized)
-- E4:S11:T02: Create Task Document Template (template to be reviewed)
-
----
----
----
----
----
----
----
-## [0.4.11.5+0] - 2025-12-11
-
-📋 Doc Init (Abstract Space): E4:S11:T05 - Task Creation
-
-### Added
-
-- **Epic 4 Story 11 Task 5:** Dependency Wiring Cross-References
-  - Created Task 5 under Story 11 for dependency wiring cross-references
-  - Abstract space `0.4.11.5+0` established for forensic traceability
-
-### Updated
-
-- **Story 11:** Added T05 to task checklist
-- **Story 11:** Updated Blocks section to include E2:S10:T06
-- **Story 11:** Updated Related Work section with FR-020 and E2:S10:T06 cross-references
-- **Story 11:** Documented that E4:S11 blocks E2:S10:T06 via dependency chain
-
-### Related Work
-
-- Epic: 4
-- Story: 11
-- Task: 5
-- FR-020: Version Validator Abstract Space Awareness
-- E2:S10:T06: Update Version Validator for Abstract Space Awareness (depends on E4:S11)
-- E2:S09: Kanban Granularity & Discrete Task Docs (RW Integration) (depends on E4:S11)
-
----
----
----
----
----
----
----
-## [0.4.11.4+1] - 2025-12-11
-
-📋 Policy Update: E4:S11:T04 - Define Abstract Space for Zero-Numbered E/S/T Docs (FR-018)
-
-### Updated
-
-- **Kanban Governance Policy (Canonical):** Added "Abstract Spaces for Forensic Traceability" section
-  - Defined zero-numbered E/S/T documentation as abstract space concept
-  - Added Epic-level (`0.{EPIC}.0.0+0`), Story-level (`0.{EPIC}.{STORY}.0+0`), Task-level (`0.{EPIC}.{STORY}.{TASK}+0`) abstract spaces
-  - Added SOP for committing initial E/S/T docs (when, where, how)
-  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
-  - Cross-referenced Numbering Policy
-
-- **Kanban Governance Policy (Dev-Kit Local):** Added "Abstract Spaces for Forensic Traceability" section
-  - Added zero-numbered E/S/T documentation definition
-  - Added abstract space examples for Epic, Story, and Task levels
-  - Added SOP for committing initial E/S/T docs
-  - Cross-referenced Dev-Kit Versioning Policy
-
-- **Framework Versioning Policy:** Added "Abstract Space Version Schema" section
-  - Added Epic-level, Story-level, and Task-level abstract space definitions
-  - Added examples for each level
-  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
-  - Added validation requirements
-  - Cross-referenced Kanban Governance Policy
-
-- **Dev-Kit Versioning Policy:** Added "Abstract Space Version Schema" subsection (6.2)
-  - Added Epic-level, Story-level, and Task-level abstract space definitions
-  - Added examples for each level
-  - Added SOP for committing initial E/S/T docs
-  - Explained relationship between abstract space (`+0`) and functional work (`+1`)
-  - Cross-referenced Kanban Governance Policy
-
-### Related Work
-
-- Epic: 4
-- Story: 11
-- Task: 4
-- FR-018: Abstract Space for Zero-Numbered E/S/T Docs (this feature)
-- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure) (prerequisite)
-- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (uses abstract space)
-- E4:S11:T01-T03: Policy and template work (prerequisites)
-
----
----
----
----
----
----
----
-## [0.4.11.3+1] - 2025-12-11
-
-📋 Policy Update: E4:S11:T03 - Update Versioning Policy with Task Doc Requirements
-
-### Updated
-
-- **Dev-Kit Versioning Policy:** Updated Kanban-related sections with Task document requirements
-  - Added Task document prerequisites to Section 4 (Mapping Kanban to Version Components)
-  - Added Task document requirements (presence, alignment, required fields, validation)
-  - Updated Section 6.1 (Task Transitions) to require Task document before versioning
-  - Added Task document → Version TASK component alignment requirements
-  - Added validation requirements for Task doc presence and alignment
-  - Referenced FR-017 for doc-init (`+0`) support
-
-- **Framework Versioning Policy:** Updated with Task document requirements
-  - Added "Task Document Requirements (Kanban Integration)" section
-  - Added Task document prerequisites (presence, alignment, required fields)
-  - Added Task transition rules requiring Task document
-  - Added validation requirements
-  - Referenced Kanban Governance Policy and Task Template
-
-### Related Work
-
-- Epic: 4
-- Story: 11
-- Task: 3
-- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
-- FR-017: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
-- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
-- E2:S09:T03: Enhance Validators for Task Doc Presence and Alignment (RW-related updates)
-
----
----
----
----
----
----
----
-## [0.4.11.2+2] - 2025-12-11
-
-📋 Examples Creation: E4:S11:T02 Phase 2 - Task Document Examples
-
-### Added
-
-- **Task Document Examples:** Created examples for both Task document formats
-  - **Separate File Format:** `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md`
-    - Complete example based on E4:S11:T01 (real-world use case)
-    - Demonstrates all required fields from Task template
-    - Shows proper forensic marker usage
-  - **Delimited Section Format:** `packages/frameworks/kanban/examples/Story-Example-With-Delimited-Tasks.md`
-    - Complete Story example with tasks documented as delimited sections
-    - Shows multiple tasks within a single Story document
-    - Demonstrates proper Task ID header format
-
-### Updated
-
-- **Task Template:** Added reference to example file
-- **Story Template:** Added references to both example files
-
-### Related Work
-
-- Epic: 4
-- Story: 11
-- Task: 2
-- Phase: 2 (Examples created, T02 complete)
-- FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
-- E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
-
 ---
 ---
 ---
