@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.4.17.3+1 – T03 complete: Migration/update paths validated)  
-**Version:** v0.4.17.3+1  
+**Last updated:** 2026-01-20 (v0.4.17.4+1 – T04 complete: Post-install configuration and validation verified)  
+**Version:** v0.4.17.4+1  
 **Code:** E4S17
 
 ---
@@ -25,7 +25,8 @@ housekeeping_policy: keep
   - Task Doc: [`T02-validate-fresh-install-steps-for-each-path.md`](Story-017-kanban-package-installation-evaluation/T02-validate-fresh-install-steps-for-each-path.md)
 - [x] **E4:S17:T03 – Validate migration/update paths (if supported)** - ✅ COMPLETE (v0.4.17.3+1)
   - Task Doc: [`T03-validate-migration-update-paths.md`](Story-017-kanban-package-installation-evaluation/T03-validate-migration-update-paths.md)
-- [ ] **E4:S17:T04 – Verify post-install configuration and validation steps** - TODO
+- [x] **E4:S17:T04 – Verify post-install configuration and validation steps** - ✅ COMPLETE (v0.4.17.4+1)
+  - Task Doc: [`T04-verify-post-install-configuration-and-validation-steps.md`](Story-017-kanban-package-installation-evaluation/T04-verify-post-install-configuration-and-validation-steps.md)
 - [ ] **E4:S17:T05 – Document failure modes and rollback guidance** - TODO
 - [ ] **E4:S17:T06 – Capture documentation gaps and improvements** - TODO
 
@@ -121,9 +122,22 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 
 ### E4:S17:T04 – Verify post-install configuration and validation steps
 
-**Input:** README and validation scripts  
-**Deliverable:** Post-install checklist and results  
-**Approach:** Verify configs, validators, and expected outputs.
+**Task ID:** E4:S17:T04  
+**Status:** ✅ COMPLETE  
+**Scope:** Verify post-install configuration and validation steps for the Kanban framework package to ensure users can successfully verify their installation and configure the framework for their project.  
+**Input:** README and validation scripts, configuration documentation  
+**Deliverable:** Post-install checklist and validation results with recommendations  
+**Approach:** Verify configs, validators, and expected outputs through documentation review and script analysis.  
+**Version Anchor:** ✅ COMPLETE (v0.4.17.4+1)
+
+**Acceptance Criteria:**
+- [x] Post-install configuration requirements documented ✅
+- [x] Configuration scripts validated ✅
+- [x] Validation scripts validated ✅
+- [x] Post-install checklist created ✅
+- [x] Expected outputs documented ✅
+- [x] Issues and gaps documented ✅
+- [x] Recommendations provided for RC readiness ✅
 
 ### E4:S17:T05 – Document failure modes and rollback guidance
 
@@ -144,7 +158,7 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 - [x] Installation paths enumerated and verified. ✅ COMPLETE (v0.4.17.1+1)
 - [x] Fresh install steps documented with results. ✅ COMPLETE (v0.4.17.2+1)
 - [x] Migration/update steps validated or explicitly unsupported. ✅ COMPLETE (v0.4.17.3+1)
-- [ ] Post-install configuration checklist verified.
+- [x] Post-install configuration checklist verified. ✅ COMPLETE (v0.4.17.4+1)
 - [ ] Failure modes and rollback guidance documented.
 - [ ] Documentation gaps recorded with remediation tasks.
 

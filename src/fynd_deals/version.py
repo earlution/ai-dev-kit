@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
 VERSION_STORY = 17    # Story number (Story 17: Kanban Package Installation Evaluation)
-VERSION_TASK = 3      # Task number (Task 3: Validate migration/update paths)
-VERSION_BUILD = 1     # Build number (E4:S17:T03+1 - Migration/update paths validated)
+VERSION_TASK = 4      # Task number (Task 4: Verify post-install configuration and validation steps)
+VERSION_BUILD = 1     # Build number (E4:S17:T04+1 - Post-install configuration and validation verified)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.4.17.3+1 = Development, Epic 4, Story 17, Task 3, Build 1 (Migration/update paths validated)
+# Current: 0.4.17.4+1 = Development, Epic 4, Story 17, Task 4, Build 1 (Post-install configuration and validation verified)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
