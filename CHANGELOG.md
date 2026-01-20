@@ -2068,6 +2068,18 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 ---
+## [0.4.17.6+1] - 20-01-26
+
+### Added
+- Kanban package installation evaluation – Documentation gaps captured, Story 017 COMPLETE (E4:S17:T06)
+  - Consolidated 10 documentation gaps from T01-T05 findings
+  - Created remediation tasks for all gaps
+  - RC readiness confirmed: ✅ RC-READY (no blocking gaps)
+  - Story 017: ✅ COMPLETE (all 6 tasks completed)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.17.6+1.md)
+
+---
 ## [0.4.17.5+1] - 20-01-26
 
 ### Added

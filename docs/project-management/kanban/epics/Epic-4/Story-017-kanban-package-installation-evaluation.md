@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 017 – Kanban Package Installation Evaluation
 
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.4.17.5+1 – T05 complete: Failure modes and rollback guidance documented)  
-**Version:** v0.4.17.5+1  
+**Last updated:** 2026-01-20 (v0.4.17.6+1 – T06 complete: Documentation gaps captured, Story 017 COMPLETE)  
+**Version:** v0.4.17.6+1  
 **Code:** E4S17
 
 ---
@@ -29,7 +29,8 @@ housekeeping_policy: keep
   - Task Doc: [`T04-verify-post-install-configuration-and-validation-steps.md`](Story-017-kanban-package-installation-evaluation/T04-verify-post-install-configuration-and-validation-steps.md)
 - [x] **E4:S17:T05 – Document failure modes and rollback guidance** - ✅ COMPLETE (v0.4.17.5+1)
   - Task Doc: [`T05-document-failure-modes-and-rollback-guidance.md`](Story-017-kanban-package-installation-evaluation/T05-document-failure-modes-and-rollback-guidance.md)
-- [ ] **E4:S17:T06 – Capture documentation gaps and improvements** - TODO
+- [x] **E4:S17:T06 – Capture documentation gaps and improvements** - ✅ COMPLETE (v0.4.17.6+1)
+  - Task Doc: [`T06-capture-documentation-gaps-and-improvements.md`](Story-017-kanban-package-installation-evaluation/T06-capture-documentation-gaps-and-improvements.md)
 
 ---
 
@@ -160,9 +161,20 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 
 ### E4:S17:T06 – Capture documentation gaps and improvements
 
-**Input:** Findings from T01–T05  
-**Deliverable:** Documentation gap list and remediation tasks  
-**Approach:** Record missing or unclear instructions.
+**Task ID:** E4:S17:T06  
+**Status:** ✅ COMPLETE  
+**Scope:** Capture and consolidate all documentation gaps and improvements identified during the Kanban package installation evaluation (T01-T05). Create a comprehensive gap list with remediation tasks to ensure RC readiness.  
+**Input:** Findings from T01–T05, gap analysis from each task  
+**Deliverable:** Documentation gap list and remediation tasks with RC readiness assessment  
+**Approach:** Record missing or unclear instructions, consolidate findings, prioritize gaps, create remediation tasks.  
+**Version Anchor:** ✅ COMPLETE (v0.4.17.6+1)
+
+**Acceptance Criteria:**
+- [x] All gaps from T01-T05 consolidated ✅
+- [x] Gaps categorized and prioritized ✅
+- [x] Remediation tasks created ✅
+- [x] RC readiness impact assessed ✅
+- [x] Improvement recommendations documented ✅
 
 ---
 
@@ -173,7 +185,7 @@ Provide a complete installation evaluation with step-by-step verification, gaps,
 - [x] Migration/update steps validated or explicitly unsupported. ✅ COMPLETE (v0.4.17.3+1)
 - [x] Post-install configuration checklist verified. ✅ COMPLETE (v0.4.17.4+1)
 - [x] Failure modes and rollback guidance documented. ✅ COMPLETE (v0.4.17.5+1)
-- [ ] Documentation gaps recorded with remediation tasks.
+- [x] Documentation gaps recorded with remediation tasks. ✅ COMPLETE (v0.4.17.6+1)
 
 ---
 
