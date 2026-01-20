@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-01-19 (v0.4.14.2+1 – E4:S14:T02 complete: RC review artifacts restored)
+**Last updated:** 2026-01-20 (v0.4.17.6+1 – E4:S17 complete: Kanban Package Installation Evaluation, all 6 tasks complete. UKW sync: 2026-01-20)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]

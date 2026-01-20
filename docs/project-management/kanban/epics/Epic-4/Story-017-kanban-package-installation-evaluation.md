@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.4.17.6+1 – T06 complete: Documentation gaps captured, Story 017 COMPLETE)  
+**Last updated:** 2026-01-20 (v0.4.17.6+1 – T06 complete: Documentation gaps captured, Story 017 COMPLETE. UKW sync: 2026-01-20)  
 **Version:** v0.4.17.6+1  
 **Code:** E4S17
 

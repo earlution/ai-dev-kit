@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-20  
+**Last Updated:** 2026-01-20 (UKW sync)  
 **Version:** v0.4.18.1+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
@@ -23,11 +23,6 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E4:S17:T02** – Validate fresh install steps for each path - ✅ COMPLETE (v0.4.17.2+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
-- **E4:S17:T03** – Validate migration/update paths - ✅ COMPLETE (v0.4.17.3+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
-- **E4:S17:T04** – Verify post-install configuration and validation steps - ✅ COMPLETE (v0.4.17.4+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
-- **E4:S17:T05** – Document failure modes and rollback guidance - ✅ COMPLETE (v0.4.17.5+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
-- **E4:S17:T06** – Capture documentation gaps and improvements - ✅ COMPLETE (v0.4.17.6+1) - [Story](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 - **E2:S13:T01** – Workflow Mgt expectations baseline - TODO - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
 - **E3:S04:T01** – Versioning expectations baseline - TODO - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
@@ -200,7 +195,7 @@ housekeeping_policy: keep
   - Story: [`epics/Epic-4/Story-014-kanban-framework-maintenance.md`](epics/Epic-4/Story-014-kanban-framework-maintenance.md)
 - [ ] **E4:S16 – Kanban Package Implementation Review** - IN PROGRESS (v0.4.16.2+1 – T02 complete: Component inventory mapped)
   - Story: [`epics/Epic-4/Story-016-kanban-package-implementation-review.md`](epics/Epic-4/Story-016-kanban-package-implementation-review.md)
-- [ ] **E4:S17 – Kanban Package Installation Evaluation** - IN PROGRESS (v0.4.17.1+1 – T01 complete: Installation paths enumerated)
+- [x] **E4:S17 – Kanban Package Installation Evaluation** - ✅ COMPLETE (v0.4.17.6+1 – All 6 tasks complete: Installation evaluation complete, RC-ready confirmed)
   - Story: [`epics/Epic-4/Story-017-kanban-package-installation-evaluation.md`](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)
 
 **Epic Doc:** [`epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)

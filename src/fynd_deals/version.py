@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 17    # Story number (Story 17: Kanban Package Installation Evaluation)
-VERSION_TASK = 6      # Task number (Task 6: Capture documentation gaps and improvements)
-VERSION_BUILD = 1     # Build number (E4:S17:T06+1 - Documentation gaps captured, Story 017 COMPLETE)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis and Package Management)
+VERSION_TASK = 101    # Task number (Task 101: Update Kanban Workflow (UKW) - Perpetual Task)
+VERSION_BUILD = 26    # Build number (E6:S07:T101+26 - UKW: Story 017 completion synced, kanban docs updated)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.4.17.6+1 = Development, Epic 4, Story 17, Task 6, Build 1 (Documentation gaps captured, Story 017 COMPLETE)
+# Current: 0.6.7.101+26 = Development, Epic 6, Story 7, Task 101, Build 26 (UKW: Story 017 completion synced, kanban docs updated)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

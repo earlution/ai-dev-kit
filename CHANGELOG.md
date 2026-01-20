@@ -2068,6 +2068,18 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 ---
+## [0.6.7.101+26] - 20-01-26
+
+### Changed
+- UKW synchronization: Story 017 completion synced across kanban documents (E6:S07:T101)
+  - Story 017 (Kanban Package Installation Evaluation) marked COMPLETE
+  - Epic 4 last updated refreshed
+  - Kanban board MoSCOW section updated, completed tasks removed
+  - Board metadata refreshed
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+26.md)
+
+---
 ## [0.4.17.6+1] - 20-01-26
 
 ### Added
