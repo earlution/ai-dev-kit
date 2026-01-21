@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-21 (v0.3.4.1+1 – T01: Expectations baseline established)  
-**Version:** v0.3.4.1+1  
+**Last updated:** 2026-01-21 (v0.3.4.2+1 – T02: Component inventory and mapping complete)  
+**Version:** v0.3.4.2+1  
 **Code:** E3S04
 
 ---
@@ -22,7 +22,8 @@ housekeeping_policy: keep
 
 - [x] **E3:S04:T01 – Establish expectations baseline for Numbering & Versioning package** - ✅ COMPLETE (v0.3.4.1+1)
   - Task Doc: [`T01-expectations-baseline.md`](Story-004-numbering-versioning-package-implementation-review/T01-expectations-baseline.md)
-- [ ] **E3:S04:T02 – Inventory package components and map to expectations** - TODO
+- [x] **E3:S04:T02 – Inventory package components and map to expectations** - ✅ COMPLETE (v0.3.4.2+1)
+  - Task Doc: [`T02-component-inventory.md`](Story-004-numbering-versioning-package-implementation-review/T02-component-inventory.md)
 - [ ] **E3:S04:T03 – Validate versioning behavior against documented guidance** - TODO
 - [ ] **E3:S04:T04 – Review integrations and dependency alignment** - TODO
 - [ ] **E3:S04:T05 – Create gap log and risk assessment** - TODO
@@ -63,9 +64,20 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ### E3:S04:T02 – Inventory package components and map to expectations
 
+**Task ID:** E3:S04:T02  
+**Status:** ✅ COMPLETE  
 **Input:** Package directory inventory  
 **Deliverable:** Component map with expected vs actual coverage  
-**Approach:** Map policies, templates, and examples to expectations.
+**Approach:** Map policies, templates, and examples to expectations.  
+**Version Anchor:** ✅ COMPLETE (v0.3.4.2+1)
+
+**Acceptance Criteria:**
+- [x] Package directory fully inventoried ✅
+- [x] All components mapped to expectations ✅
+- [x] Component presence verified ✅
+- [x] Gaps identified and documented ✅
+- [x] Extras identified and documented ✅
+- [x] Component map created ✅
 
 ### E3:S04:T03 – Validate versioning behavior against documented guidance
 
@@ -96,7 +108,7 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 ## Acceptance Criteria
 
 - [x] Expectations baseline documented and approved. ✅ COMPLETE (v0.3.4.1+1)
-- [ ] Component inventory mapped to expectations.
+- [x] Component inventory mapped to expectations. ✅ COMPLETE (v0.3.4.2+1)
 - [ ] Behavioral validation notes captured.
 - [ ] Integration alignment reviewed and documented.
 - [ ] Gap log created with severity levels.

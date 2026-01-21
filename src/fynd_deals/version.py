@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 3      # Epic number (Epic 3: Numbering & Versioning Framework)
 VERSION_STORY = 4     # Story number (Story 4: Numbering & Versioning Package Implementation Review)
-VERSION_TASK = 1     # Task number (Task 1: Establish expectations baseline for Numbering & Versioning package)
-VERSION_BUILD = 1     # Build number (E3:S04:T01+1 - Expectations baseline established)
+VERSION_TASK = 2     # Task number (Task 2: Inventory package components and map to expectations)
+VERSION_BUILD = 1     # Build number (E3:S04:T02+1 - Component inventory and mapping complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.3.4.1+1 = Development, Epic 3, Story 4, Task 1, Build 1 (E3:S04:T01: Expectations baseline established)
+# Current: 0.3.4.2+1 = Development, Epic 3, Story 4, Task 2, Build 1 (E3:S04:T02: Component inventory and mapping complete)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
