@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 13    # Story number (Story 13: Workflow Management Package Implementation Review)
-VERSION_TASK = 1      # Task number (Task 1: Establish expectations baseline for Workflow Management package)
-VERSION_BUILD = 2     # Build number (E2:S13:T01+2 - Fixed .env.local loading in GitHub release script)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis and Package Management)
+VERSION_TASK = 101    # Task number (Task 101: Update Kanban Workflow (UKW) - Perpetual Task)
+VERSION_BUILD = 28    # Build number (E6:S07:T101+28 - UKW: E2:S13:T01 completion synced, kanban docs updated)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.13.1+2 = Development, Epic 2, Story 13, Task 1, Build 2 (Fixed .env.local loading in GitHub release script)
+# Current: 0.6.7.101+28 = Development, Epic 6, Story 7, Task 101, Build 28 (UKW: E2:S13:T01 completion synced, kanban docs updated)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

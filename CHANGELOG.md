@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.6.7.101+28] - 21-01-26
+
+### Changed
+- UKW synchronization: E2:S13:T01 completion synced across kanban documents (E6:S07:T101)
+  - Story 13 status updated to IN PROGRESS
+  - Kanban board MoSCOW section updated to reflect T01 completion
+  - Epic 2 and Story 13 documents refreshed
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+28.md)
+
+---
 ## [0.2.13.1+2] - 21-01-26
 
 ### Fixed

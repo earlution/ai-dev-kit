@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-20 (UKW sync)  
-**Version:** v0.4.18.1+1
+**Last Updated:** 2026-01-21 (UKW sync)  
+**Version:** v0.6.7.101+27
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -23,7 +23,7 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E2:S13:T01** – Workflow Mgt expectations baseline - TODO - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
+- **E2:S13:T01** – Workflow Mgt expectations baseline - ✅ COMPLETE (v0.2.13.1+2) - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
 - **E3:S04:T01** – Versioning expectations baseline - TODO - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
 - **E10:S01:T01** – Doc lifecycle expectations baseline - TODO - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
@@ -120,7 +120,7 @@ housekeeping_policy: keep
   - Story: [`epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md`](epics/Epic-2/Story-010-doc-init-build-zero-for-new-est.md)
 - [x] **E2:S11 – Intake Workflow Automation** - COMPLETE ✅ (v0.2.11.11+1)
   - Story: [`epics/Epic-2/Story-011-intake-workflow-automation.md`](epics/Epic-2/Story-011-intake-workflow-automation.md)
-- [ ] **E2:S13 – Workflow Management Package Implementation Review** - TODO (v0.2.13.0+0)
+- [ ] **E2:S13 – Workflow Management Package Implementation Review** - IN PROGRESS (v0.2.13.1+2 – T01: Fixed .env.local loading)
   - Story: [`epics/Epic-2/Story-013-workflow-management-package-implementation-review.md`](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
 - [ ] **E2:S14 – Workflow Management Package Installation Evaluation** - TODO (v0.2.14.0+0)
   - Story: [`epics/Epic-2/Story-014-workflow-management-package-installation-evaluation.md`](epics/Epic-2/Story-014-workflow-management-package-installation-evaluation.md)
