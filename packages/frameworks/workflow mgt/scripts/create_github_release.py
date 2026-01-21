@@ -12,6 +12,39 @@ import sys
 import argparse
 import requests
 from typing import Optional, Dict
+from pathlib import Path
+
+# Load .env.local if it exists
+def load_env_local():
+    """Load environment variables from .env.local file."""
+    env_local = Path('.env.local')
+    if not env_local.exists():
+        # Try project root
+        project_root = Path(__file__).parent.parent.parent.parent.parent
+        env_local = project_root / '.env.local'
+    
+    if env_local.exists():
+        try:
+            with open(env_local, 'r') as f:
+                for line in f:
+                    line = line.strip()
+                    # Skip comments and empty lines
+                    if not line or line.startswith('#'):
+                        continue
+                    # Parse KEY=VALUE format
+                    if '=' in line:
+                        key, value = line.split('=', 1)
+                        key = key.strip()
+                        value = value.strip().strip('"').strip("'")
+                        # Only set if not already in environment
+                        if key and value and key not in os.environ:
+                            os.environ[key] = value
+        except Exception as e:
+            # Silently fail - don't break if .env.local has issues
+            pass
+
+# Load .env.local before checking for environment variables
+load_env_local()
 
 
 def get_release_by_tag(github_token: str, repo: str, tag: str, verbose: bool = False) -> Optional[Dict]:
@@ -197,10 +230,20 @@ def main() -> int:
         
         args = parser.parse_args()
         
-        # Get GitHub token (from argument or environment)
+        # Get GitHub token (from argument, .env.local, or environment)
+        # Note: .env.local is already loaded by load_env_local() at module level
         github_token = args.token or os.environ.get('GITHUB_TOKEN')
         if not github_token:
-            print("❌ Error: GitHub token required (--token or GITHUB_TOKEN env var)", file=sys.stderr)
+            print("❌ Error: GitHub token required", file=sys.stderr)
+            print("   Options:", file=sys.stderr)
+            print("   1. Set in .env.local file: GITHUB_TOKEN=your_token_here", file=sys.stderr)
+            print("   2. Set as environment variable: export GITHUB_TOKEN=your_token_here", file=sys.stderr)
+            print("   3. Pass via --token flag: --token your_token_here", file=sys.stderr)
+            print("", file=sys.stderr)
+            print("   📋 Setup Instructions:", file=sys.stderr)
+            print("   1. Generate token: GitHub Settings → Developer settings → Personal access tokens", file=sys.stderr)
+            print("   2. Select 'repo' scope", file=sys.stderr)
+            print("   3. Add to .env.local: GITHUB_TOKEN=your_token_here", file=sys.stderr)
             return 1
         
         # Get repository (from argument or environment)

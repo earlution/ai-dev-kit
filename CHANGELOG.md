@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.2.13.1+2] - 21-01-26
+
+### Fixed
+- GitHub release script now automatically loads `.env.local` file (E2:S13:T01)
+  - Script checks `.env.local` before checking environment variables
+  - Eliminates need to manually export `GITHUB_TOKEN`
+  - Improved error messages with clear setup instructions
+  - Updated RW Step 12.5 documentation and execution guide
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.13.1+2.md)
+
+---
 ## [0.2.13.1+1] - 20-01-26
 
 ### Added

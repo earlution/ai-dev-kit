@@ -12,15 +12,15 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.2.13.1+1 – T01 complete: Expectations baseline established)  
-**Version:** v0.2.13.1+1  
+**Last updated:** 2026-01-21 (v0.2.13.1+2 – T01: Fixed .env.local loading in GitHub release script)  
+**Version:** v0.2.13.1+2  
 **Code:** E2S13
 
 ---
 
 ## Task Checklist
 
-- [x] **E2:S13:T01 – Establish expectations baseline for Workflow Management package** - ✅ COMPLETE (v0.2.13.1+1)
+- [x] **E2:S13:T01 – Establish expectations baseline for Workflow Management package** - ✅ COMPLETE (v0.2.13.1+2)
   - Task Doc: [`T01-expectations-baseline.md`](Story-013-workflow-management-package-implementation-review/T01-expectations-baseline.md)
 - [ ] **E2:S13:T02 – Inventory package components and map to expectations** - TODO
 - [ ] **E2:S13:T03 – Validate workflow behavior against documented guidance** - TODO

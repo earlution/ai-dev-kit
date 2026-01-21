@@ -2427,7 +2427,7 @@ except Exception as e:
 
 **Key Points:**
 - This step is **non-blocking** - RW completes successfully even if this step fails or is skipped
-- **CRITICAL:** Agents MUST check for `GITHUB_TOKEN` BEFORE running the script
+- **CRITICAL:** Script automatically loads `.env.local` - no need to check before running
 - **CRITICAL:** If token is missing, skip with warning and instructions (do NOT mark as "completed")
 - **CRITICAL:** If script fails, provide clear error message and instructions (do NOT mark as "completed")
 - Release uses SemVer tag for external-facing display
@@ -2439,11 +2439,8 @@ except Exception as e:
 **Missing Token (Expected in Agent Sandbox):**
 ```python
 # ✅ CORRECT - Check token before running script
-github_token = os.environ.get('GITHUB_TOKEN')
-if not github_token:
-    print("⚠️  Warning: GITHUB_TOKEN not set. Skipping GitHub release creation.")
-    print("\n📋 To create GitHub release manually, run:")
-    print(f"   python \"packages/frameworks/workflow mgt/scripts/create_github_release.py\" ...")
+# Script automatically loads .env.local - just run it
+# If GITHUB_TOKEN is missing, script will provide clear error message with setup instructions
     return "skipped"  # Mark as skipped, not failed
 ```
 
@@ -2475,7 +2472,7 @@ if result.exit_code != 0:
    - **Then:** Set `GITHUB_TOKEN` environment variable and retry
 
 3. **Token Not Set (Agent Sandbox):**
-   - **Cause:** Agent's shell environment doesn't have access to user's `GITHUB_TOKEN`
+   - **Cause:** `GITHUB_TOKEN` not found in `.env.local` or environment (script checks both automatically)
    - **Solution:** This is expected - user must run release creation manually
    - **Note:** This is non-blocking - workflow completes successfully
 
@@ -2492,8 +2489,8 @@ if result.exit_code != 0:
 **Example 2: Token Missing - Step Skipped**
 - SemVer tag: `v0.4.36+1`
 - Internal version: `v0.4.16.4+1`
-- Step 12.5 executes: Checks for `GITHUB_TOKEN` → Not found
-- Step 12.5 action: Skips with warning and instructions
+- Step 12.5 executes: Script loads `.env.local` automatically → `GITHUB_TOKEN` found
+- Step 12.5 action: Creates GitHub release successfully
 - Step 12.5 status: Marked as "skipped" (not "completed")
 - Result: Workflow completes successfully, user runs release creation manually
 
@@ -2508,7 +2505,7 @@ if result.exit_code != 0:
 **Related Documentation:**
 - **GitHub Release Script:** `packages/frameworks/workflow mgt/scripts/create_github_release.py`
 - **SemVer Mapping:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (Section 2.5)
-- **GitHub Token Setup:** See `.cursorrules` Step 12.5 for token requirements
+- **GitHub Token Setup:** Add `GITHUB_TOKEN=your_token_here` to `.env.local` file (script loads automatically)
 
 ---
 

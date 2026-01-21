@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 102    # Task number (Task 102: Changelog Maintenance Workflow (CMW) - Perpetual Task)
-VERSION_BUILD = 5     # Build number (E6:S07:T102+5 - CMW: Fixed changelog ordering, archived 4 entries)
+VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
+VERSION_STORY = 13    # Story number (Story 13: Workflow Management Package Implementation Review)
+VERSION_TASK = 1      # Task number (Task 1: Establish expectations baseline for Workflow Management package)
+VERSION_BUILD = 2     # Build number (E2:S13:T01+2 - Fixed .env.local loading in GitHub release script)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.13.1+1 = Development, Epic 2, Story 13, Task 1, Build 1 (Expectations baseline established)
+# Current: 0.2.13.1+2 = Development, Epic 2, Story 13, Task 1, Build 2 (Fixed .env.local loading in GitHub release script)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
