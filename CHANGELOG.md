@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.6.7.102+5] - 20-01-26
+
+### Changed
+- CMW maintenance: Fixed changelog ordering and archived old entries (E6:S07:T102)
+  - Fixed ordering violation (0.4.18.1+1 appearing before 0.6.7.101+26)
+  - Archived 4 entries to changelog archive
+  - Validated remaining changelog format
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.102+5.md)
+
+---
 ## [0.6.7.101+26] - 20-01-26
 
 ### Changed
