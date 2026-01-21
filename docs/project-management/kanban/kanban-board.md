@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-21 (UKW sync)  
-**Version:** v0.6.7.101+27
+**Last Updated:** 2026-01-21 (RW: E3:S04:T01)  
+**Version:** v0.3.4.1+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 ### Should Have (S) - Important Tasks
 
 - **E2:S13:T01** – Workflow Mgt expectations baseline - ✅ COMPLETE (v0.2.13.1+2) - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
-- **E3:S04:T01** – Versioning expectations baseline - TODO - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
+- **E3:S04:T01** – Versioning expectations baseline - ✅ COMPLETE (v0.3.4.1+1) - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
 - **E10:S01:T01** – Doc lifecycle expectations baseline - TODO - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
 - **E11:S01:T01** – Debug path expectations baseline - TODO - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
@@ -133,7 +133,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.3.4.0+0
+**Last Updated:** v0.3.4.1+1
 
 **Stories:**
 - [x] **E3:S01 – Dev Kit Alignment with Versioning Framework** - COMPLETE ✅ (v0.3.1.6+1)
@@ -142,8 +142,9 @@ housekeeping_policy: keep
   - Story: [`epics/Epic-3/Story-002-versioning-cookbook-and-examples.md`](epics/Epic-3/Story-002-versioning-cookbook-and-examples.md)
 - [x] **E3:S03 – Versioning Integration with Kanban & RW** - COMPLETE ✅ (v0.3.3.6+1)
   - Story: [`epics/Epic-3/Story-003-versioning-integration-with-kanban-and-rw.md`](epics/Epic-3/Story-003-versioning-integration-with-kanban-and-rw.md)
-- [ ] **E3:S04 – Numbering & Versioning Package Implementation Review** - TODO (v0.3.4.0+0)
+- [ ] **E3:S04 – Numbering & Versioning Package Implementation Review** - IN PROGRESS (v0.3.4.1+1 – T01: Expectations baseline established)
   - Story: [`epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md`](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
+  - Tasks: T01 ✅ COMPLETE (v0.3.4.1+1)
 - [ ] **E3:S05 – Numbering & Versioning Package Installation Evaluation** - TODO (v0.3.5.0+0)
   - Story: [`epics/Epic-3/Story-005-numbering-versioning-package-installation-evaluation.md`](epics/Epic-3/Story-005-numbering-versioning-package-installation-evaluation.md)
 

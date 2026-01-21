@@ -8,19 +8,20 @@ housekeeping_policy: keep
 
 # Story 004 – Numbering & Versioning Package Implementation Review
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-18 (v0.3.4.0+0 – Story created)  
-**Version:** v0.3.4.0+0  
+**Last updated:** 2026-01-21 (v0.3.4.1+1 – T01: Expectations baseline established)  
+**Version:** v0.3.4.1+1  
 **Code:** E3S04
 
 ---
 
 ## Task Checklist
 
-- [ ] **E3:S04:T01 – Establish expectations baseline for Numbering & Versioning package** - TODO
+- [x] **E3:S04:T01 – Establish expectations baseline for Numbering & Versioning package** - ✅ COMPLETE (v0.3.4.1+1)
+  - Task Doc: [`T01-expectations-baseline.md`](Story-004-numbering-versioning-package-implementation-review/T01-expectations-baseline.md)
 - [ ] **E3:S04:T02 – Inventory package components and map to expectations** - TODO
 - [ ] **E3:S04:T03 – Validate versioning behavior against documented guidance** - TODO
 - [ ] **E3:S04:T04 – Review integrations and dependency alignment** - TODO
@@ -45,9 +46,20 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ### E3:S04:T01 – Establish expectations baseline for Numbering & Versioning package
 
+**Task ID:** E3:S04:T01  
+**Status:** ✅ COMPLETE  
 **Input:** Package README, policy docs, implementation guides  
 **Deliverable:** Expectations baseline document  
-**Approach:** Extract expected behaviors, schemas, and constraints.
+**Approach:** Extract expected behaviors, schemas, and constraints.  
+**Version Anchor:** ✅ COMPLETE (v0.3.4.1+1)
+
+**Acceptance Criteria:**
+- [x] Expectations baseline documented and approved ✅
+- [x] Core operating principles captured ✅
+- [x] Expected versioning schema documented ✅
+- [x] Integration expectations mapped ✅
+- [x] Package composition documented ✅
+- [x] Sources referenced ✅
 
 ### E3:S04:T02 – Inventory package components and map to expectations
 
@@ -83,7 +95,7 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ## Acceptance Criteria
 
-- [ ] Expectations baseline documented and approved.
+- [x] Expectations baseline documented and approved. ✅ COMPLETE (v0.3.4.1+1)
 - [ ] Component inventory mapped to expectations.
 - [ ] Behavioral validation notes captured.
 - [ ] Integration alignment reviewed and documented.
