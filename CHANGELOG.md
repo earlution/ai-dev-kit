@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.2.13.1+1] - 20-01-26
+
+### Added
+- Workflow Management package implementation review – Expectations baseline established (E2:S13:T01)
+  - Comprehensive expectations baseline document created
+  - Core operating principles, expected workflows, and integration expectations documented
+  - Package composition cataloged (scripts, workflows, templates, docs)
+  - Behavioral expectations documented (atomicity, TODO tracking, error handling)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.13.1+1.md)
+
+---
 ## [0.6.7.102+5] - 20-01-26
 
 ### Changed

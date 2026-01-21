@@ -8,19 +8,20 @@ housekeeping_policy: keep
 
 # Story 013 – Workflow Management Package Implementation Review
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-18 (v0.2.13.0+0 – Story created)  
-**Version:** v0.2.13.0+0  
+**Last updated:** 2026-01-20 (v0.2.13.1+1 – T01 complete: Expectations baseline established)  
+**Version:** v0.2.13.1+1  
 **Code:** E2S13
 
 ---
 
 ## Task Checklist
 
-- [ ] **E2:S13:T01 – Establish expectations baseline for Workflow Management package** - TODO
+- [x] **E2:S13:T01 – Establish expectations baseline for Workflow Management package** - ✅ COMPLETE (v0.2.13.1+1)
+  - Task Doc: [`T01-expectations-baseline.md`](Story-013-workflow-management-package-implementation-review/T01-expectations-baseline.md)
 - [ ] **E2:S13:T02 – Inventory package components and map to expectations** - TODO
 - [ ] **E2:S13:T03 – Validate workflow behavior against documented guidance** - TODO
 - [ ] **E2:S13:T04 – Review integrations and dependency alignment** - TODO
@@ -35,6 +36,45 @@ This story performs the RC readiness **implementation review** for the Workflow 
 
 ---
 
+## Expectations Baseline (Draft)
+
+**Core operating principles (package README):**
+- Package provides complete Release Workflow (RW) trigger and agent-driven workflow execution pattern
+- **Standalone usage:** Can be used independently (9/10 independence score)
+- **Copy, don't reference:** Projects must copy package and customize paths/terminology
+- **Agent-driven execution:** Intelligent, context-aware, not deterministic scripts
+- **Epic branch workflow:** ALWAYS work on epic branches, NEVER commit directly to main
+
+**Expected workflows:**
+- **Release Workflow (RW):** 13-step release process (version bump, changelog, Git ops, Kanban updates)
+- **Update Kanban Workflow (UKW):** 8-step kanban synchronization (bottom-up approach)
+- **Changelog Management Workflow (CMW):** Deterministic changelog maintenance (archive, dedupe, ordering)
+- **Intake Workflow:** 7-step FR/BR/UXR automation (converts to Kanban tasks)
+
+**Integration expectations:**
+- **With Versioning:** RW uses version schema (soft dependency)
+- **With Kanban:** RW auto-updates Kanban docs, UKW syncs kanban (soft dependency)
+- **Complete integration:** Three-way integration (Kanban ↔ Versioning ↔ RW)
+
+**Package composition:**
+- Core methodology documents (agent execution guides)
+- Workflow definitions (YAML)
+- Validation scripts (branch context, changelog format, version bump)
+- Changelog management scripts (CMW)
+- Version management scripts (SemVer conversion)
+- GitHub integration scripts (release creation)
+- Cursor rules sections (RW/UKW triggers)
+- Configuration (rw-config.yaml schema and examples)
+- Installation scripts (RW installer CLI)
+
+**Sources:**
+- `packages/frameworks/workflow mgt/README.md`
+- `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/`
+- `packages/frameworks/workflow mgt/workflows/`
+- `packages/frameworks/workflow mgt/config/rw-config-schema.md`
+
+---
+
 ## Goal
 
 Provide a complete implementation review, evidence, and remediation plan to support RC sign-off for the Workflow Management framework.
@@ -45,9 +85,21 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ### E2:S13:T01 – Establish expectations baseline for Workflow Management package
 
+**Task ID:** E2:S13:T01  
+**Status:** ✅ COMPLETE  
+**Scope:** Define the implementation expectations baseline for the Workflow Management framework package. Extract expected features, workflows, integration behaviors, and package composition from documentation.  
 **Input:** Package README, implementation guides, workflow definitions  
 **Deliverable:** Expectations baseline document for behavior and scope  
-**Approach:** Extract expected features, workflows, and integration behaviors.
+**Approach:** Extract expected features, workflows, and integration behaviors.  
+**Version Anchor:** ✅ COMPLETE (v0.2.13.1+1)
+
+**Acceptance Criteria:**
+- [x] Expectations baseline documented and approved ✅
+- [x] Core operating principles captured ✅
+- [x] Expected workflows documented ✅
+- [x] Integration expectations mapped ✅
+- [x] Package composition documented ✅
+- [x] Sources referenced ✅
 
 ### E2:S13:T02 – Inventory package components and map to expectations
 
@@ -83,7 +135,7 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ## Acceptance Criteria
 
-- [ ] Expectations baseline documented and approved.
+- [x] Expectations baseline documented and approved. ✅ COMPLETE (v0.2.13.1+1)
 - [ ] Component inventory mapped to expectations.
 - [ ] Behavioral validation notes captured.
 - [ ] Integration alignment reviewed and documented.

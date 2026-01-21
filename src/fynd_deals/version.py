@@ -26,7 +26,7 @@ VERSION_BUILD = 5     # Build number (E6:S07:T102+5 - CMW: Fixed changelog order
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.102+5 = Development, Epic 6, Story 7, Task 102, Build 5 (CMW: Fixed changelog ordering, archived 4 entries)
+# Current: 0.2.13.1+1 = Development, Epic 2, Story 13, Task 1, Build 1 (Expectations baseline established)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
