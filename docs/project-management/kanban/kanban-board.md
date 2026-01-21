@@ -142,9 +142,9 @@ housekeeping_policy: keep
   - Story: [`epics/Epic-3/Story-002-versioning-cookbook-and-examples.md`](epics/Epic-3/Story-002-versioning-cookbook-and-examples.md)
 - [x] **E3:S03 – Versioning Integration with Kanban & RW** - COMPLETE ✅ (v0.3.3.6+1)
   - Story: [`epics/Epic-3/Story-003-versioning-integration-with-kanban-and-rw.md`](epics/Epic-3/Story-003-versioning-integration-with-kanban-and-rw.md)
-- [ ] **E3:S04 – Numbering & Versioning Package Implementation Review** - IN PROGRESS (v0.3.4.3+1 – T03: Versioning behavior validation complete)
+- [ ] **E3:S04 – Numbering & Versioning Package Implementation Review** - IN PROGRESS (v0.3.4.5+1 – T05: Gap log and risk assessment complete)
   - Story: [`epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md`](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
-  - Tasks: T01 ✅ COMPLETE (v0.3.4.1+1), T02 ✅ COMPLETE (v0.3.4.2+1), T03 ✅ COMPLETE (v0.3.4.3+1)
+  - Tasks: T01 ✅ COMPLETE (v0.3.4.1+1), T02 ✅ COMPLETE (v0.3.4.2+1), T03 ✅ COMPLETE (v0.3.4.3+1), T04 ✅ COMPLETE (v0.3.4.4+1), T05 ✅ COMPLETE (v0.3.4.5+1)
 - [ ] **E3:S05 – Numbering & Versioning Package Installation Evaluation** - TODO (v0.3.5.0+0)
   - Story: [`epics/Epic-3/Story-005-numbering-versioning-package-installation-evaluation.md`](epics/Epic-3/Story-005-numbering-versioning-package-installation-evaluation.md)
 
