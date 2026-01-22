@@ -428,9 +428,12 @@ After completing UKW, users typically run RW to commit the kanban documentation 
      - Update version (if needed)
 
 3. **EXECUTE:**
-   - **FIRST: Update Epic Sections:**
+   - **FIRST: Update Epic Sections (WITH NUMERICAL SORTING):**
+     - **CRITICAL: Sort epics numerically** (E1, E2, E3, ... E21, E24) before writing to board
+     - **CRITICAL: Sort stories numerically** within each epic section (S01, S02, S03, ...)
+     - **CRITICAL: Sort tasks numerically** within each story section (T01, T02, T03, ...)
      - Update epic status indicators
-     - Update epic story lists with completion markers
+     - Update epic story lists with completion markers (sorted numerically)
      - Update epic progress counts
    - **THEN: Update MoSCOW Priority List (LAST - 🧠 REQUIRES INTELLIGENT PRIORITIZATION):**
      - **For each in-progress task, intelligently classify:**
@@ -459,6 +462,10 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 
 **Key Rules:**
 - **CRITICAL: MoSCOW list is updated LAST** (after all other board updates)
+- **CRITICAL: Numerical Sorting Required** - Epics, stories, and tasks must be sorted numerically:
+  - Epics: E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E21, E24 (canonical 1-23, then project-specific 24+)
+  - Stories: S01, S02, S03, ... (within each epic)
+  - Tasks: T01, T02, T03, ... (within each story)
 - **Prioritization requires intelligence** - analyze context, not just copy existing
 - Only include tasks with status IN PROGRESS or TODO
 - Order tasks chronologically within MoSCOW sections

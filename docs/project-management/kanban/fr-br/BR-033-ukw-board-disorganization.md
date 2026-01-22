@@ -13,9 +13,9 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** PENDING  
+**Status:** ATTEMPTED FIX (Partial - manual fix applied, automatic sorting pending)  
 **GitHub Issue:** [TBD]  
-**Version:** [TBD]
+**Version:** v0.6.1.33+2
 
 ---
 
@@ -118,7 +118,13 @@ After running UKW, the Kanban board's Epics section is not properly ordered. Cur
 
 ### Fix Attempts
 
-_No fix attempts yet._
+**Fix Attempt 1 (v0.6.1.33+2 - 2026-01-22):**
+- **Approach:** Manual epic reordering in kanban board
+- **Result:** Epic order fixed (E1-E11, E21, E24) ✅
+- **Status:** Partial fix - board manually corrected, but UKW Step 6 sorting logic not yet implemented
+- **Remaining Work:** Add automatic sorting logic to UKW Step 6 to ensure consistent sorting on all future UKW runs
+- **Version History:**
+  - v0.6.1.33+2 (2026-01-22): Epic ordering manually fixed in kanban board, documentation updated, UKW execution guide updated with sorting requirements
 
 ---
 

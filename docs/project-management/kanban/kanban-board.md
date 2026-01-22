@@ -209,30 +209,6 @@ housekeeping_policy: keep
 
 ---
 
-### Epic 21: Internationalization and Localization
-
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last Updated:** v0.21.0.0+0
-
-**Stories:**
-- [ ] **E21:S00 – Language Selection at Setup (UK/US English)** - TODO (v0.21.0.0+0)
-  - Story: [`epics/Epic-21/Story-000-language-selection-at-setup.md`](epics/Epic-21/Story-000-language-selection-at-setup.md)
-  - Tasks: T01-T07 TODO
-- [ ] **E21:S01 – Internationalization Infrastructure** - TODO (v0.21.0.0+0)
-  - Story: [`epics/Epic-21/Story-001-internationalization-infrastructure.md`](epics/Epic-21/Story-001-internationalization-infrastructure.md)
-  - Tasks: T01-T07 TODO
-- [ ] **E21:S02 – Translation and Localization** - TODO (v0.21.0.0+0)
-  - Story: [`epics/Epic-21/Story-002-translation-and-localization.md`](epics/Epic-21/Story-002-translation-and-localization.md)
-  - Tasks: T01-T07 TODO
-- [ ] **E21:S03 – Cultural Adaptation** - TODO (v0.21.0.0+0)
-  - Story: [`epics/Epic-21/Story-003-cultural-adaptation.md`](epics/Epic-21/Story-003-cultural-adaptation.md)
-  - Tasks: T01-T07 TODO
-
-**Epic Doc:** [`epics/Epic-21/Epic-21.md`](epics/Epic-21/Epic-21.md)
-
----
-
 ### Epic 5: Documentation Management and Maintenance
 
 **Status:** IN PROGRESS  
@@ -285,6 +261,61 @@ housekeeping_policy: keep
   - **Feature Request:** [FR-030](fr-br/FR-030-ai-dev-kit-cli-tool.md)
 
 **Epic Doc:** [`epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
+
+---
+
+### Epic 7: Codebase Maintenance and Review
+
+**Status:** COMPLETE  
+**Priority:** HIGH  
+**Last Updated:** 2026-01-05  
+**Version:** v0.7.5.4+1
+
+**Note:** E7:S01 (UXR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 7 document for internal tracking).
+
+**Stories:**
+- [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)
+  - Story: [`epics/Epic-7/Story-001-codebase-maintenance-tasks.md`](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
+  - Tasks: T01 PERPETUAL, T02 ✅ COMPLETE (v0.7.1.2+1 - Maintenance task prioritization framework), T03 ✅ COMPLETE (v0.7.1.3+1 - Maintenance workflow processes), T04 ✅ COMPLETE (v0.7.1.4+1 - Maintenance tasks integrated with Kanban framework) - **Story COMPLETE**
+- [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete: Code review standards, checklists, workflows, and Kanban integration established)
+  - Story: [`epics/Epic-7/Story-002-code-review-standards-and-processes.md`](epics/Epic-7/Story-002-code-review-standards-and-processes.md)
+  - Tasks: T01 ✅ COMPLETE (v0.7.2.1+1 - Code review standards and guidelines), T02 ✅ COMPLETE (v0.7.2.2+1 - Code review checklist templates), T03 ✅ COMPLETE (v0.7.2.3+1 - Code review workflow processes), T04 ✅ COMPLETE (v0.7.2.4+1 - Code review Kanban integration) - **Story COMPLETE**
+- [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete: Code quality metrics framework, dashboards, Kanban integration, and monitoring processes established)
+  - Story: [`epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md`](epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md)
+  - Tasks: T01 ✅ COMPLETE (v0.7.3.1+0 - Code quality metrics framework), T02 ✅ COMPLETE (v0.7.3.2+0 - Code quality monitoring dashboards), T03 ✅ COMPLETE (v0.7.3.3+0 - Code quality Kanban integration), T04 ✅ COMPLETE (v0.7.3.4+0 - Code quality monitoring processes) - **Story COMPLETE**
+- [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete: Maintenance automation requirements, scripts, workflow integration, and usage documentation established)
+  - Story: [`epics/Epic-7/Story-004-maintenance-automation-and-tooling.md`](epics/Epic-7/Story-004-maintenance-automation-and-tooling.md)
+  - Tasks: T01 ✅ COMPLETE (v0.7.4.1+0 - Maintenance automation requirements), T02 ✅ COMPLETE (v0.7.4.2+0 - Maintenance automation scripts and tools), T03 ✅ COMPLETE (v0.7.4.3+0 - Maintenance automation workflow integration), T04 ✅ COMPLETE (v0.7.4.4+0 - Maintenance automation usage guide) - **Story COMPLETE**
+- [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete: All 4 UXR documents synthesized, user pain points extracted, migration UX requirements and recommendations documented, findings fed into Epic 4 Stories 7, 8, and 9)
+  - Story: [`epics/Epic-7/Story-005-migration-uxr-research.md`](epics/Epic-7/Story-005-migration-uxr-research.md)
+  - Tasks: T01 ✅ COMPLETE (v0.7.5.1+0 - UXR-001 intake and synthesis), T02 ✅ COMPLETE (v0.7.5.2+0 - UXR-002 intake and synthesis), T03 ✅ COMPLETE (v0.7.5.3+0 - UXR-003 intake and synthesis), T04 ✅ COMPLETE (v0.7.5.4+0 - UXR-004 intake and synthesis) - **Story COMPLETE**
+
+**Epic Doc:** [`epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
+
+---
+
+### Epic 8: Tooling & Automation
+
+**Status:** IN PROGRESS  
+**Priority:** HIGH  
+**Last Updated:** 2026-01-18  
+**Version:** v0.8.4.0+0
+
+**Stories:**
+- [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05)
+  - Story: [`epics/Epic-8/Story-001-code-generators.md`](epics/Epic-8/Story-001-code-generators.md)
+  - Tasks: T01 ✅ COMPLETE (v0.8.1.1+1), T02 ✅ COMPLETE (v0.8.1.2+1), T03 ✅ COMPLETE (v0.8.1.3+1)
+- [x] **E8:S02 – Additional Validators** - ✅ COMPLETE (v0.8.2.3+1, Last updated: 2026-01-06)
+  - Story: [`epics/Epic-8/Story-002-additional-validators.md`](epics/Epic-8/Story-002-additional-validators.md)
+  - Tasks: T01 ✅ COMPLETE (v0.8.2.1+1), T02 TODO, T03 TODO
+- [ ] **E8:S03 – Automation Scripts** - TODO
+  - Story: [`epics/Epic-8/Story-003-automation-scripts.md`](epics/Epic-8/Story-003-automation-scripts.md)
+- [ ] **E8:S04 – Tooling & Automation Package Implementation Review** - TODO (v0.8.4.0+0)
+  - Story: [`epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md`](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
+- [ ] **E8:S05 – Tooling & Automation Package Installation Evaluation** - TODO (v0.8.5.0+0)
+  - Story: [`epics/Epic-8/Story-005-tooling-automation-package-installation-evaluation.md`](epics/Epic-8/Story-005-tooling-automation-package-installation-evaluation.md)
+
+**Epic Doc:** [`epics/Epic-8/Epic-8.md`](epics/Epic-8/Epic-8.md)
 
 ---
 
@@ -345,58 +376,27 @@ housekeeping_policy: keep
 
 ---
 
-### Epic 7: Codebase Maintenance and Review
+### Epic 21: Internationalization and Localization
 
-**Status:** COMPLETE  
-**Priority:** HIGH  
-**Last Updated:** 2026-01-05  
-**Version:** v0.7.5.4+1
-
-**Note:** E7:S01 (UXR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 7 document for internal tracking).
+**Status:** TODO  
+**Priority:** MEDIUM  
+**Last Updated:** v0.21.0.0+0
 
 **Stories:**
-- [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)
-  - Story: [`epics/Epic-7/Story-001-codebase-maintenance-tasks.md`](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
-  - Tasks: T01 PERPETUAL, T02 ✅ COMPLETE (v0.7.1.2+1 - Maintenance task prioritization framework), T03 ✅ COMPLETE (v0.7.1.3+1 - Maintenance workflow processes), T04 ✅ COMPLETE (v0.7.1.4+1 - Maintenance tasks integrated with Kanban framework) - **Story COMPLETE**
-- [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete: Code review standards, checklists, workflows, and Kanban integration established)
-  - Story: [`epics/Epic-7/Story-002-code-review-standards-and-processes.md`](epics/Epic-7/Story-002-code-review-standards-and-processes.md)
-  - Tasks: T01 ✅ COMPLETE (v0.7.2.1+1 - Code review standards and guidelines), T02 ✅ COMPLETE (v0.7.2.2+1 - Code review checklist templates), T03 ✅ COMPLETE (v0.7.2.3+1 - Code review workflow processes), T04 ✅ COMPLETE (v0.7.2.4+1 - Code review Kanban integration) - **Story COMPLETE**
-- [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete: Code quality metrics framework, dashboards, Kanban integration, and monitoring processes established)
-  - Story: [`epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md`](epics/Epic-7/Story-003-code-quality-metrics-and-monitoring.md)
-  - Tasks: T01 ✅ COMPLETE (v0.7.3.1+0 - Code quality metrics framework), T02 ✅ COMPLETE (v0.7.3.2+0 - Code quality monitoring dashboards), T03 ✅ COMPLETE (v0.7.3.3+0 - Code quality Kanban integration), T04 ✅ COMPLETE (v0.7.3.4+0 - Code quality monitoring processes) - **Story COMPLETE**
-- [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete: Maintenance automation requirements, scripts, workflow integration, and usage documentation established)
-  - Story: [`epics/Epic-7/Story-004-maintenance-automation-and-tooling.md`](epics/Epic-7/Story-004-maintenance-automation-and-tooling.md)
-  - Tasks: T01 ✅ COMPLETE (v0.7.4.1+0 - Maintenance automation requirements), T02 ✅ COMPLETE (v0.7.4.2+0 - Maintenance automation scripts and tools), T03 ✅ COMPLETE (v0.7.4.3+0 - Maintenance automation workflow integration), T04 ✅ COMPLETE (v0.7.4.4+0 - Maintenance automation usage guide) - **Story COMPLETE**
-- [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete: All 4 UXR documents synthesized, user pain points extracted, migration UX requirements and recommendations documented, findings fed into Epic 4 Stories 7, 8, and 9)
-  - Story: [`epics/Epic-7/Story-005-migration-uxr-research.md`](epics/Epic-7/Story-005-migration-uxr-research.md)
-  - Tasks: T01 ✅ COMPLETE (v0.7.5.1+0 - UXR-001 intake and synthesis), T02 ✅ COMPLETE (v0.7.5.2+0 - UXR-002 intake and synthesis), T03 ✅ COMPLETE (v0.7.5.3+0 - UXR-003 intake and synthesis), T04 ✅ COMPLETE (v0.7.5.4+0 - UXR-004 intake and synthesis) - **Story COMPLETE**
+- [ ] **E21:S00 – Language Selection at Setup (UK/US English)** - TODO (v0.21.0.0+0)
+  - Story: [`epics/Epic-21/Story-000-language-selection-at-setup.md`](epics/Epic-21/Story-000-language-selection-at-setup.md)
+  - Tasks: T01-T07 TODO
+- [ ] **E21:S01 – Internationalization Infrastructure** - TODO (v0.21.0.0+0)
+  - Story: [`epics/Epic-21/Story-001-internationalization-infrastructure.md`](epics/Epic-21/Story-001-internationalization-infrastructure.md)
+  - Tasks: T01-T07 TODO
+- [ ] **E21:S02 – Translation and Localization** - TODO (v0.21.0.0+0)
+  - Story: [`epics/Epic-21/Story-002-translation-and-localization.md`](epics/Epic-21/Story-002-translation-and-localization.md)
+  - Tasks: T01-T07 TODO
+- [ ] **E21:S03 – Cultural Adaptation** - TODO (v0.21.0.0+0)
+  - Story: [`epics/Epic-21/Story-003-cultural-adaptation.md`](epics/Epic-21/Story-003-cultural-adaptation.md)
+  - Tasks: T01-T07 TODO
 
-**Epic Doc:** [`epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
-
----
-
-### Epic 8: Tooling & Automation
-
-**Status:** IN PROGRESS  
-**Priority:** HIGH  
-**Last Updated:** 2026-01-18  
-**Version:** v0.8.4.0+0
-
-**Stories:**
-- [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05)
-  - Story: [`epics/Epic-8/Story-001-code-generators.md`](epics/Epic-8/Story-001-code-generators.md)
-  - Tasks: T01 ✅ COMPLETE (v0.8.1.1+1), T02 ✅ COMPLETE (v0.8.1.2+1), T03 ✅ COMPLETE (v0.8.1.3+1)
-- [x] **E8:S02 – Additional Validators** - ✅ COMPLETE (v0.8.2.3+1, Last updated: 2026-01-06)
-  - Story: [`epics/Epic-8/Story-002-additional-validators.md`](epics/Epic-8/Story-002-additional-validators.md)
-  - Tasks: T01 ✅ COMPLETE (v0.8.2.1+1), T02 TODO, T03 TODO
-- [ ] **E8:S03 – Automation Scripts** - TODO
-  - Story: [`epics/Epic-8/Story-003-automation-scripts.md`](epics/Epic-8/Story-003-automation-scripts.md)
-- [ ] **E8:S04 – Tooling & Automation Package Implementation Review** - TODO (v0.8.4.0+0)
-  - Story: [`epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md`](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
-- [ ] **E8:S05 – Tooling & Automation Package Installation Evaluation** - TODO (v0.8.5.0+0)
-  - Story: [`epics/Epic-8/Story-005-tooling-automation-package-installation-evaluation.md`](epics/Epic-8/Story-005-tooling-automation-package-installation-evaluation.md)
-
-**Epic Doc:** [`epics/Epic-8/Epic-8.md`](epics/Epic-8/Epic-8.md)
+**Epic Doc:** [`epics/Epic-21/Epic-21.md`](epics/Epic-21/Epic-21.md)
 
 ---
 

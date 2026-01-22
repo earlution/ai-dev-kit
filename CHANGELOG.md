@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.1.33+2] - 22-01-26
+
+### Fixed
+- UKW Board Disorganization (BR-033): Epic ordering fixed in kanban board
+  - Epics now sorted numerically (E1-E11, E21, E24)
+  - Epic 21 moved from after E4 to after E11
+  - Epic 7 and Epic 8 moved from after E11 to after E6
+
+### Changed
+- Task E6:S01:T33 status updated from TODO to IN PROGRESS
+- UKW execution guide updated with sorting requirements
+- BR-033 fix attempt history documented
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.33+2.md)
+
+---
+
 ## [0.6.1.34+2] - 22-01-26
 
 ### Fixed
