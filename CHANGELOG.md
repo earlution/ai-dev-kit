@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.7.101+30] - 22-01-26
+
+### Changed
+- UKW (Update Kanban Workflow): MoSCOW Prioritized In-Progress Tasks section updated
+  - Completed tasks removed (E6:S01:T33, E6:S01:T34)
+  - Current IN PROGRESS/TODO tasks properly categorized and ordered
+  - Must Have (M) section empty, Should Have (S) section updated with current HIGH priority tasks
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+30.md)
+
+---
+
 ## [0.6.1.33+5] - 22-01-26
 
 ### Changed

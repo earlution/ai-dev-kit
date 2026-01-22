@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-22 (v0.6.1.33+5 – E6:S01:T33: Task complete, all acceptance criteria met)
+**Last updated:** 2026-01-22 (v0.6.7.101+30 – E6:S07:T101: UKW - MoSCOW section updated, completed tasks removed)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
