@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.1.33+3] - 22-01-26
+
+### Added
+- Sorting utility script for kanban board (`sort_kanban_board.py`)
+  - Automatically sorts epics numerically (canonical 1-23, then project-specific 24+)
+  - Supports `--dry-run` mode for preview
+  - Auto-detects board path from config
+
+### Changed
+- UKW execution guide updated with sorting utility usage instructions
+- Task E6:S01:T33 implementation progress updated (Phase 2 complete)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.33+3.md)
+
+---
+
 ## [0.6.1.33+2] - 22-01-26
 
 ### Fixed
