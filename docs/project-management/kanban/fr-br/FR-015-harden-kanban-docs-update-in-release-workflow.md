@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** N/A  
-**Status:** PENDING  
+**Status:** PARTIALLY IMPLEMENTED - Kanban board updates missing  
 
 ---
 
@@ -130,10 +130,11 @@ This feature is needed:
   - Story status in story checklist
   - Last updated version
   - Epic completion status if all stories complete
-- [ ] **FR-015:R06** - Update Kanban board with:
+- [ ] **FR-015:R06** - Update Kanban board with: ⚠️ **NOT IMPLEMENTED**
   - Epic/story status
   - Last updated date and version
   - Story/epic completion markers
+  - **Current Status:** Script resolves Kanban board path but does not update it. RW Step 7 only updates Story and Epic docs, not the main Kanban board.
 - [ ] **FR-015:R07** - Validate that all required updates were successful
 - [ ] **FR-015:R08** - Block workflow if validation fails
 - [ ] **FR-015:R09** - Provide clear error messages with recovery guidance
@@ -186,9 +187,9 @@ Every RW execution should automatically and reliably update all relevant Kanban 
 - [ ] **AC1:** Step 7 is mandatory and blocking (cannot be skipped)
 - [ ] **AC2:** Framework-agnostic Kanban update script/handler exists and works
 - [ ] **AC3:** All required Kanban docs are updated automatically:
-  - Story document updated with version marker and task status
-  - Epic document updated with story status and version
-  - Kanban board updated with epic/story status and version
+  - Story document updated with version marker and task status ✅ (IMPLEMENTED)
+  - Epic document updated with story status and version ✅ (IMPLEMENTED)
+  - Kanban board updated with epic/story status and version ❌ (NOT IMPLEMENTED - see FR-015:R06)
 - [ ] **AC4:** Validation confirms all updates were successful
 - [ ] **AC5:** Workflow blocks if validation fails
 - [ ] **AC6:** Clear error messages provided with recovery guidance

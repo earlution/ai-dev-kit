@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.5.1.36+0] - 22-01-26
+
+### Added
+- FR-036: RW Update Kanban Board on Task Completion - Feature request created
+  - Identifies gap: RW Step 7 updates Story/Epic docs but not Kanban board
+  - Task E5:S01:T36 created for implementation
+  - Priority: HIGH
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.36+0.md)
+
+---
+
 ## [0.4.16.5+2] - 22-01-26
 
 ### Changed

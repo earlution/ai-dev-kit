@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-16 (v0.5.1.35+0 – FR-035 task created: Task Template Cross-Wiring Section)  
+**Last updated:** 2026-01-22 (v0.5.1.36+0 – FR-036 task created: RW Update Kanban Board on Task Completion)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.0+0  
+**Version:** v0.5.1.36+0  
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -34,6 +34,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T31 – Multi-Agent Coordination Feasibility Investigation** - TODO (C priority) - [Task Document](Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - [ ] **E5:S01:T34 – UKW Granular Control and Use Case Flags** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
 - [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
+- [ ] **E5:S01:T36 – RW Update Kanban Board on Task Completion** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) | [FR-036](../../fr-br/FR-036-rw-update-kanban-board-on-task-completion.md)
 
 ---
 
