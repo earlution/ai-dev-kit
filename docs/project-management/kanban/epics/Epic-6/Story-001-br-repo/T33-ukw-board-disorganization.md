@@ -10,10 +10,10 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2026-01-22 (v0.6.1.33+3 – Implementation in progress: Sorting utility script created, UKW documentation updated, Phase 2 complete)  
+**Last updated:** 2026-01-22 (v0.6.1.33+4 – Implementation in progress: Story sorting enhanced, Criterion 2 complete)  
 **Started:** 2026-01-22  
 **Completed:** [TBD]  
-**Version:** v0.6.1.33+3  
+**Version:** v0.6.1.33+4  
 **Code:** E6S00T33
 
 ---
@@ -75,8 +75,8 @@ Fix UKW (Update Kanban Workflow) board disorganization bug where epics are not s
 ## Acceptance Criteria
 
 - [x] **Criterion 1:** Epics are sorted numerically in board (E1, E2, E3, ...) ✅ (Manually fixed + automatic sorting utility created)
-- [ ] **Criterion 2:** Stories are sorted numerically within epic sections (Partial - script extracts stories but doesn't reorder in content yet)
-- [ ] **Criterion 3:** Tasks are sorted numerically within story sections (Partial - script extracts tasks but doesn't reorder in content yet)
+- [x] **Criterion 2:** Stories are sorted numerically within epic sections ✅ (Script now sorts stories and reconstructs epic content with sorted stories)
+- [ ] **Criterion 3:** Tasks are sorted numerically within story sections (Tasks are usually in story documents, not board - requires separate implementation)
 - [ ] **Criterion 4:** Epic/story documents have sorted checklists (Requires additional implementation)
 - [x] **Criterion 5:** Sorting is reliable and consistent across all UKW runs ✅ (Sorting utility script created, can be called by UKW Step 6)
 - [x] **Criterion 6:** Manual testing confirms board organization is correct ✅ (Epic order verified: E1-E11, E21, E24; script tested)
@@ -200,13 +200,52 @@ This task was created from BR-033, which was split from a mixed-scope document f
 
 **Remaining Work:**
 - ✅ Add automatic sorting logic to UKW Step 6 (Update Kanban Board) - **COMPLETE**: Created `sort_kanban_board.py` utility script
-- ⚠️ Sort stories numerically within epic sections (Partial - script extracts stories but doesn't reorder them in content yet)
-- ⚠️ Sort tasks numerically within story sections (Partial - script extracts tasks but doesn't reorder them in content yet)
-- ⚠️ Ensure epic/story documents have sorted checklists (Requires additional implementation)
+- ✅ Sort stories numerically within epic sections - **COMPLETE**: Script now sorts stories and reconstructs epic content
+- ⚠️ Sort tasks numerically within story sections (Tasks are usually in story documents, not board - may require separate script)
+- ⚠️ Ensure epic/story documents have sorted checklists (Requires separate implementation for document files)
 - ✅ Make sorting reliable and consistent across all UKW runs - **COMPLETE**: Script can be called by UKW Step 6
 - ✅ Update UKW documentation to reflect sorting behavior - **COMPLETE**: Documentation updated with script usage
 
 **Note:** Phase 1 was a manual fix. Phase 2 implements automatic sorting via utility script that can be called by UKW Step 6.
+
+---
+
+### Phase 2: Automatic Sorting Utility (v0.6.1.33+3 - Enhanced)
+
+**Date:** 2026-01-22
+
+**Completed:**
+1. ✅ **Sorting Utility Script Created:** `packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py`
+   - Parses kanban board and extracts epic sections
+   - Sorts epics numerically (canonical 1-23, then project-specific 24+)
+   - Reconstructs board with sorted epics
+   - Supports `--dry-run` mode for preview
+   - Auto-detects board path from `rw-config.yaml` or uses default
+2. ✅ **Story Sorting Enhanced:** Script now sorts stories within epic sections
+   - Extracts stories with their full content (including indented lines)
+   - Sorts stories numerically (S01, S02, S03, ...)
+   - Reconstructs epic content with sorted stories in Stories section
+3. ✅ **UKW Documentation Updated:** Added script usage instructions to UKW Step 6
+   - Documented how to use sorting utility in UKW execution
+   - Added script reference to Key Rules section
+4. ✅ **Script Testing:** Verified script correctly identifies and sorts all 13 epics
+
+**Remaining Work:**
+- ⚠️ Enhance script to sort tasks within story sections (Tasks are usually in story documents, not board - may require separate script for story documents)
+- ⚠️ Add sorting logic for epic/story document checklists (Requires separate implementation for document files)
+- ✅ Integrate script into UKW Step 6 execution flow - **COMPLETE**: Script ready for use, documented in UKW guide
+
+**Usage:**
+```bash
+# Sort kanban board (uses rw-config.yaml or default path)
+python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py"
+
+# Preview sorting without making changes
+python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py" --dry-run
+
+# Specify custom board path
+python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py" --board-path "path/to/kanban-board.md"
+```
 
 ---
 

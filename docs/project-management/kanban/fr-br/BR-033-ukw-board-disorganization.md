@@ -126,6 +126,7 @@ After running UKW, the Kanban board's Epics section is not properly ordered. Cur
 - **Version History:**
   - v0.6.1.33+2 (2026-01-22): Epic ordering manually fixed in kanban board, documentation updated, UKW execution guide updated with sorting requirements
   - v0.6.1.33+3 (2026-01-22): Sorting utility script created (`sort_kanban_board.py`), UKW documentation updated with script usage instructions
+  - v0.6.1.33+4 (2026-01-22): Story sorting enhanced in sorting utility script, stories now sorted numerically within epic sections
 
 ---
 

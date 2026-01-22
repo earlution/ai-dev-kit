@@ -4,11 +4,13 @@ Kanban Board Sorting Utility
 
 This script sorts the kanban board numerically:
 - Epics: E1, E2, E3, ... E21, E24 (canonical 1-23, then project-specific 24+)
-- Stories: S01, S02, S03, ... (within each epic)
-- Tasks: T01, T02, T03, ... (within each story)
+- Stories: S01, S02, S03, ... (within each epic's Stories section)
 
 This utility is used by UKW Step 6 (Update Kanban Board) to ensure consistent
-numerical ordering of epics, stories, and tasks.
+numerical ordering of epics and stories.
+
+Note: Tasks are typically listed in story documents, not the kanban board.
+For task sorting, see story document sorting utilities (if implemented).
 
 Usage:
     python packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py [--board-path PATH] [--dry-run]
@@ -115,46 +117,92 @@ def parse_epic_section(lines: List[str], start_idx: int, epics_section_start: in
                     break
     
     epic_content_lines = lines[epic_start:epic_end]
-    epic_content = '\n'.join(epic_content_lines)
     
-    # Extract story lines from epic content
-    stories = []
-    for line in epic_content_lines:
+    # Parse stories with their associated lines (indented lines following story entry)
+    stories_with_content = []
+    i = 0
+    while i < len(epic_content_lines):
+        line = epic_content_lines[i]
         if re.search(r'\*\*E\d+:S\d+', line):
-            stories.append(line)
+            # Found a story entry - collect it and any following indented lines
+            story_entry = [line]
+            story_num = extract_story_number(line)
+            i += 1
+            # Collect indented lines (starting with spaces or tabs) that belong to this story
+            while i < len(epic_content_lines):
+                next_line = epic_content_lines[i]
+                # Stop if we hit another story entry, blank line followed by non-indented, or section boundary
+                if (re.search(r'\*\*E\d+:S\d+', next_line) or
+                    (next_line.strip() == '' and i + 1 < len(epic_content_lines) and 
+                     not epic_content_lines[i + 1].startswith((' ', '\t')) and
+                     not re.search(r'\*\*E\d+:S\d+', epic_content_lines[i + 1])) or
+                    next_line.startswith('**Epic Doc:**') or
+                    next_line.startswith('**Note:**')):
+                    break
+                # Include indented lines and blank lines that are part of story entry
+                if next_line.startswith((' ', '\t')) or next_line.strip() == '':
+                    story_entry.append(next_line)
+                    i += 1
+                else:
+                    break
+            
+            if story_num is not None:
+                stories_with_content.append((story_num, '\n'.join(story_entry)))
+        else:
+            i += 1
     
     # Sort stories numerically
-    stories_with_numbers = []
-    for story in stories:
-        story_num = extract_story_number(story)
-        if story_num is not None:
-            stories_with_numbers.append((story_num, story))
+    stories_with_content.sort(key=lambda x: x[0])
     
-    stories_with_numbers.sort(key=lambda x: x[0])
-    sorted_stories = [story for _, story in stories_with_numbers]
-    
-    # Extract task lines (if any in epic section - though tasks are usually in story sections)
-    tasks = []
-    for line in epic_content_lines:
-        if re.search(r'\*\*E\d+:S\d+:T\d+', line):
-            tasks.append(line)
-    
-    # Sort tasks numerically
-    tasks_with_numbers = []
-    for task in tasks:
-        task_num = extract_task_number(task)
-        if task_num is not None:
-            tasks_with_numbers.append((task_num, task))
-    
-    tasks_with_numbers.sort(key=lambda x: x[0])
-    sorted_tasks = [task for _, task in tasks_with_numbers]
+    # Reconstruct epic content with sorted stories
+    # Find the "**Stories:**" section and replace story entries
+    if not stories_with_content:
+        # No stories to sort, use original content
+        reconstructed_content = '\n'.join(epic_content_lines)
+    else:
+        reconstructed_lines = []
+        i = 0
+        
+        while i < len(epic_content_lines):
+            line = epic_content_lines[i]
+            
+            # Detect start of Stories section
+            if line.strip() == '**Stories:**':
+                reconstructed_lines.append(line)
+                i += 1
+                
+                # Skip all existing story entries (we'll replace them with sorted ones)
+                while i < len(epic_content_lines):
+                    next_line = epic_content_lines[i]
+                    # Stop when we hit a non-story line that's not indented and not blank
+                    if (not re.search(r'\*\*E\d+:S\d+', next_line) and
+                        not next_line.startswith((' ', '\t')) and
+                        next_line.strip() != ''):
+                        break
+                    # Skip this line (it's part of a story entry or blank)
+                    i += 1
+                
+                # Insert sorted stories
+                for idx, (_, story_content) in enumerate(stories_with_content):
+                    if idx > 0:
+                        reconstructed_lines.append('')  # Blank line between stories
+                    for story_line in story_content.split('\n'):
+                        if story_line:  # Skip empty lines from split
+                            reconstructed_lines.append(story_line)
+                continue
+            
+            # For non-stories section, keep original lines
+            reconstructed_lines.append(line)
+            i += 1
+        
+        reconstructed_content = '\n'.join(reconstructed_lines)
     
     return {
         'number': epic_number,
         'header': epic_header,
-        'content': epic_content,
-        'stories': sorted_stories,
-        'tasks': sorted_tasks,
+        'content': reconstructed_content,
+        'stories': [content for _, content in stories_with_content],
+        'tasks': [],  # Tasks are usually in story sections, not epic sections
         'start_idx': epic_start,
         'end_idx': epic_end
     }, epic_end

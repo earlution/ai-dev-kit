@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.1.33+4] - 22-01-26
+
+### Changed
+- UKW Board Disorganization (BR-033): Story sorting enhanced in sorting utility script
+  - Script now sorts stories numerically within epic sections
+  - Maintains proper formatting and indentation for story entries
+- Task E6:S01:T33 acceptance criteria updated (Criterion 2 complete)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.33+4.md)
+
+---
+
 ## [0.6.1.33+3] - 22-01-26
 
 ### Added
