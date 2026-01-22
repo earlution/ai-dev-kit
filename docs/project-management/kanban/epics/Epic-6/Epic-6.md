@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-19 (v0.6.7.101+24 – E6:S07:T101: UKW execution - Restored RC review artifacts, refreshed MoSCOW priorities, synced Epic/Story references)
+**Last updated:** 2026-01-22 (v0.6.7.101+29 – E6:S07:T101: UKW execution - E3:S04:T06 completion synced, kanban docs updated)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]

@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 3      # Epic number (Epic 3: Numbering & Versioning Framework)
-VERSION_STORY = 4     # Story number (Story 4: Numbering & Versioning Package Implementation Review)
-VERSION_TASK = 6     # Task number (Task 6: Define RC sign-off criteria and remediation tasks)
-VERSION_BUILD = 1     # Build number (E3:S04:T06+1 - RC sign-off criteria and remediation tasks complete)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
+VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis and Package Management)
+VERSION_TASK = 101    # Task number (Task 101: Update Kanban Workflow (UKW) - Perpetual Task)
+VERSION_BUILD = 29    # Build number (E6:S07:T101+29 - UKW: Kanban board synchronized with E3:S04:T06 release)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.3.4.6+1 = Development, Epic 3, Story 4, Task 6, Build 1 (E3:S04:T06: RC sign-off criteria and remediation tasks complete)
+# Current: 0.6.7.101+29 = Development, Epic 6, Story 7, Task 101, Build 29 (E6:S07:T101: UKW - Kanban board synchronized with E3:S04:T06 release)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
