@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-01-20 (v0.4.17.6+1 – E4:S17 complete: Kanban Package Installation Evaluation, all 6 tasks complete. UKW sync: 2026-01-20)
+**Last updated:** 2026-01-22 (v0.4.16.5+2 – E4:S16:T05: Gap log and risk assessment finalized, all acceptance criteria met)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -64,7 +64,7 @@ housekeeping_policy: keep
 - [ ] **E4:S15 – Procedural Task Template Generation and Hybrid Strategy** - IN PROGRESS (v0.4.15.5+2 – T02-T05 complete: Generator design, implementation, integration, documentation, and agentic enhancement)
   - Story: [`Story-015-procedural-task-template-generation-and-hybrid-strategy.md`](Story-015-procedural-task-template-generation-and-hybrid-strategy.md)
   - Tasks: T01 TODO, T02 ✅ COMPLETE (v0.4.15.3+1), T03 ✅ COMPLETE (v0.4.15.3+1), T04 ✅ COMPLETE (v0.4.15.5+1), T05 ✅ COMPLETE (v0.4.15.5+2 - Enhanced with agentic generation)
-- [x] **E4:S16 – Kanban Package Implementation Review** - COMPLETE ✅ (v0.4.16.6+1 – T01–T06 complete: expectations, inventory, behavior validation, integrations, gap log, and RC sign-off criteria/remediation pattern)
+- [x] **E4:S16 – Kanban Package Implementation Review** - COMPLETE ✅ (v0.4.16.5+2 – T05: Gap log and risk assessment finalized, all acceptance criteria met)
   - Story: [`Story-016-kanban-package-implementation-review.md`](Story-016-kanban-package-implementation-review.md)
 - [x] **E4:S17 – Kanban Package Installation Evaluation** - ✅ COMPLETE (v0.4.17.6+1 – T06 complete: Documentation gaps captured, Story 017 COMPLETE)
   - Story: [`Story-017-kanban-package-installation-evaluation.md`](Story-017-kanban-package-installation-evaluation.md)

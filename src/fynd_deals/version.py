@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
-VERSION_STORY = 7      # Story number (Story 7: ADK Implementation Analysis)
-VERSION_TASK = 101    # Task number (Task 101: Update Kanban Workflow - Perpetual Task)
-VERSION_BUILD = 30    # Build number (E6:S07:T101+30 - UKW: MoSCOW section updated, completed tasks removed)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 16     # Story number (Story 16: Kanban Package Implementation Review)
+VERSION_TASK = 5      # Task number (Task 5: Create Gap Log and Risk Assessment)
+VERSION_BUILD = 2     # Build number (E4:S16:T05+2 - Task complete: Gap log and risk assessment finalized, all acceptance criteria met)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.101+30 = Development, Epic 6, Story 7, Task 101, Build 30 (E6:S07:T101: UKW - MoSCOW section updated, completed tasks removed)
+# Current: 0.4.16.5+2 = Development, Epic 4, Story 16, Task 5, Build 2 (E4:S16:T05: Task complete: Gap log and risk assessment finalized, all acceptance criteria met)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

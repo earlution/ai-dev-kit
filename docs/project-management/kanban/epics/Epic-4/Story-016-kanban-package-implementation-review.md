@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-01-18  
-**Last updated:** 2026-01-20 (v0.4.16.6+1 – T06 RC sign-off criteria and remediation pattern defined; Kanban package RC-ready)  
-**Version:** v0.4.16.6+1  
+**Last updated:** 2026-01-22 (v0.4.16.5+2 – T05: Gap log and risk assessment finalized, all acceptance criteria met)  
+**Version:** v0.4.16.5+2  
 **Code:** E4S16
 
 ---
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [x] **E4:S16:T02 – Inventory package components and map to expectations** ✅ COMPLETE (v0.4.16.2+1)
 - [x] **E4:S16:T03 – Validate Kanban behavior against documented guidance** ✅ COMPLETE (v0.4.16.3+1)
 - [x] **E4:S16:T04 – Review integrations and dependency alignment** ✅ COMPLETE (v0.4.16.4+1)
-- [x] **E4:S16:T05 – Create gap log and risk assessment** ✅ COMPLETE (v0.4.16.5+1)
+- [x] **E4:S16:T05 – Create gap log and risk assessment** ✅ COMPLETE (v0.4.16.5+2 – Gap log and risk assessment finalized, all acceptance criteria met)
 - [x] **E4:S16:T06 – Define RC sign-off criteria and remediation tasks** ✅ COMPLETE (v0.4.16.6+1)
 
 ---
