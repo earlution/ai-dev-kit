@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.1.36+1] - 22-01-26
+
+### Added
+- Bug Report Documentation (E6:S01:T36): Created BR-036 and task documentation for RW Step 7 board update bugs
+  - Documented three critical bugs: story document path resolution, board path resolution, and MoSCOW section updates
+  - Created formal bug report (BR-036) with root cause analysis and fix details
+  - Created task documentation (E6:S01:T36) with acceptance criteria and implementation notes
+  - Bugs were fixed in v0.5.1.34+2; this release documents the bug report and task
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.36+1.md)
+
+---
+
 ## [0.5.1.34+2] - 22-01-26
 
 ### Fixed

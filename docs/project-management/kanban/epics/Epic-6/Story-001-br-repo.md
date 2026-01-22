@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-22 (v0.6.1.33+5 – T33: Task complete, all acceptance criteria met)  
+**Last updated:** 2026-01-22 (v0.5.1.34+2 – T36: Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.6.1.33+5  
+**Version:** v0.5.1.34+2  
 **Code:** E6S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -34,6 +34,7 @@ housekeeping_policy: keep
 - [x] **E6:S01:T33 – UKW Board Disorganization** - ✅ COMPLETE (v0.6.1.33+5 – All acceptance criteria met, document checklist sorting utility created) - [Task Document](Story-001-br-repo/T33-ukw-board-disorganization.md) | [BR-033](../../fr-br/BR-033-ukw-board-disorganization.md)
 - [x] **E6:S01:T34 – UKW MoSCOW Prioritization Missing** - ✅ COMPLETE (v0.6.1.34+2 – Implementation complete: MoSCOW prioritization logic added to UKW Step 6, all acceptance criteria met) - [Task Document](Story-001-br-repo/T34-ukw-moscow-prioritization-missing.md) | [BR-034](../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
 - [x] **E6:S01:T35 – RW Housekeeping Step Not Working** - COMPLETE (v0.6.1.35+1) - [Task Document](Story-001-br-repo/T35-rw-housekeeping-step-not-working.md) | [BR-035](../../fr-br/BR-035-rw-housekeeping-step-not-working.md)
+- [x] **E6:S01:T36 – RW Step 7 Board Update Bugs** - ✅ COMPLETE (v0.5.1.34+2 – Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates) - [Task Document](Story-001-br-repo/T36-rw-step-7-board-update-bugs.md) | [BR-036](../../fr-br/BR-036-rw-step-7-board-update-bugs.md)
 
 ---
 

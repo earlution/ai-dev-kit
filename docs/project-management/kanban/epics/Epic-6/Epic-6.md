@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-22 (v0.6.7.101+30 – E6:S07:T101: UKW - MoSCOW section updated, completed tasks removed)
+**Last updated:** 2026-01-22 (v0.5.1.34+2 – E6:S01:T36: Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [x] **E6:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.6.0.0+0 – Epic-level abstract space only, no tasks)
   - Story: [`Story-000-br-repo.md`](Story-000-br-repo.md)
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
-- [x] **E6:S01 – BR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.6.1.33+5 – T33: Task complete, all acceptance criteria met)
+- [x] **E6:S01 – BR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.34+2 – T36: Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)
   - Story: [`Story-001-br-repo.md`](Story-001-br-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 - [x] **E6:S02 – Framework Version Management** - ✅ COMPLETE (v0.6.2.5+1, migrated from v0.6.1.5+1 – All tasks complete: Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
