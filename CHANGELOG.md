@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.1.33+5] - 22-01-26
+
+### Changed
+- UKW Board Disorganization (BR-033): Task E6:S01:T33 marked as COMPLETE
+  - All 7 acceptance criteria met
+  - Document checklist sorting utility created for task and story checklists
+  - UKW documentation updated with checklist sorting instructions
+- Task E6:S01:T33 acceptance criteria: All criteria complete (100%)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.33+5.md)
+
+---
+
 ## [0.6.1.33+4] - 22-01-26
 
 ### Changed

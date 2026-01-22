@@ -8,11 +8,11 @@ housekeeping_policy: keep
 
 # Epic 6, Story 0, Task 33: UKW Board Disorganization
 
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-01-22 (v0.6.1.33+4 – Implementation in progress: Story sorting enhanced, Criterion 2 complete)  
+**Last updated:** 2026-01-22 (v0.6.1.33+4 – All acceptance criteria complete: Document checklist sorting utility created, all sorting requirements met)  
 **Started:** 2026-01-22  
-**Completed:** [TBD]  
+**Completed:** 2026-01-22  
 **Version:** v0.6.1.33+4  
 **Code:** E6S00T33
 
@@ -76,8 +76,8 @@ Fix UKW (Update Kanban Workflow) board disorganization bug where epics are not s
 
 - [x] **Criterion 1:** Epics are sorted numerically in board (E1, E2, E3, ...) ✅ (Manually fixed + automatic sorting utility created)
 - [x] **Criterion 2:** Stories are sorted numerically within epic sections ✅ (Script now sorts stories and reconstructs epic content with sorted stories)
-- [ ] **Criterion 3:** Tasks are sorted numerically within story sections (Tasks are usually in story documents, not board - requires separate implementation)
-- [ ] **Criterion 4:** Epic/story documents have sorted checklists (Requires additional implementation)
+- [x] **Criterion 3:** Tasks are sorted numerically within story sections ✅ (Document checklist sorting utility created for task checklists in story documents)
+- [x] **Criterion 4:** Epic/story documents have sorted checklists ✅ (Document checklist sorting utility created for both task and story checklists)
 - [x] **Criterion 5:** Sorting is reliable and consistent across all UKW runs ✅ (Sorting utility script created, can be called by UKW Step 6)
 - [x] **Criterion 6:** Manual testing confirms board organization is correct ✅ (Epic order verified: E1-E11, E21, E24; script tested)
 - [x] **Criterion 7:** Documentation updated to reflect sorting behavior ✅ (UKW execution guide updated with script usage)
@@ -231,11 +231,33 @@ This task was created from BR-033, which was split from a mixed-scope document f
 4. ✅ **Script Testing:** Verified script correctly identifies and sorts all 13 epics
 
 **Remaining Work:**
-- ⚠️ Enhance script to sort tasks within story sections (Tasks are usually in story documents, not board - may require separate script for story documents)
-- ⚠️ Add sorting logic for epic/story document checklists (Requires separate implementation for document files)
-- ✅ Integrate script into UKW Step 6 execution flow - **COMPLETE**: Script ready for use, documented in UKW guide
+- ✅ Enhance script to sort tasks within story sections - **COMPLETE**: Document checklist sorting utility created
+- ✅ Add sorting logic for epic/story document checklists - **COMPLETE**: Document checklist sorting utility created
+- ✅ Integrate script into UKW Step 6 execution flow - **COMPLETE**: Scripts ready for use, documented in UKW guide
+
+---
+
+### Phase 3: Document Checklist Sorting (v0.6.1.33+4 - Complete)
+
+**Date:** 2026-01-22
+
+**Completed:**
+1. ✅ **Document Checklist Sorting Utility Created:** `packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py`
+   - Sorts task checklists in story documents numerically (T01, T02, T03, ...)
+   - Sorts story checklists in epic documents numerically (S01, S02, S03, ...)
+   - Preserves entry formatting and indented lines
+   - Supports `--dry-run` mode for preview
+2. ✅ **UKW Documentation Updated:** Added checklist sorting instructions to UKW Steps 4 and 5
+   - Step 4 (Update Story Documents): Added task checklist sorting instruction
+   - Step 5 (Update Epic Documents): Added story checklist sorting instruction
+   - Updated Key Rules section with both sorting utilities
+3. ✅ **Acceptance Criteria Complete:** Criteria 3 and 4 marked as complete
+   - Criterion 3: Tasks sorted numerically within story sections ✅
+   - Criterion 4: Epic/story documents have sorted checklists ✅
 
 **Usage:**
+
+**Kanban Board Sorting:**
 ```bash
 # Sort kanban board (uses rw-config.yaml or default path)
 python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py"
@@ -245,6 +267,18 @@ python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py" --
 
 # Specify custom board path
 python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py" --board-path "path/to/kanban-board.md"
+```
+
+**Document Checklist Sorting:**
+```bash
+# Sort task checklist in story document
+python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py" --document-path "docs/project-management/kanban/epics/Epic-6/Story-001-br-repo.md"
+
+# Sort story checklist in epic document
+python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py" --document-path "docs/project-management/kanban/epics/Epic-6/Epic-6.md"
+
+# Preview sorting without making changes
+python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py" --document-path "{path}" --dry-run
 ```
 
 ---

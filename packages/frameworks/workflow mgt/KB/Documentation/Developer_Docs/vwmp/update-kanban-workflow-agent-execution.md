@@ -283,6 +283,9 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 3. **EXECUTE:**
    - Update story status field
    - Update task checklist (mark completed tasks)
+   - **Sort task checklist numerically:** After updating task checklist, run sorting utility to ensure tasks are sorted numerically (T01, T02, T03, ...)
+     - Run: `python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py" --document-path "{story_path}"`
+     - This ensures task checklist maintains numerical order
    - **Write tactical overview (🧠 REQUIRES INTELLIGENT WRITING):**
      - Create natural, readable narrative that synthesizes task progress
      - Example: "Story has made significant progress with three core tasks completed: authentication framework implemented, user roles defined, and access control tested. Current work focuses on integration testing and edge case handling. One blocker identified: third-party API rate limits require coordination with vendor."
@@ -468,10 +471,15 @@ After completing UKW, users typically run RW to commit the kanban documentation 
   - Epics: E1, E2, E3, E4, E5, E6, E7, E8, E9, E10, E11, E21, E24 (canonical 1-23, then project-specific 24+)
   - Stories: S01, S02, S03, ... (within each epic)
   - Tasks: T01, T02, T03, ... (within each story)
-- **Sorting Utility:** Use `packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py` to automatically sort epics in the kanban board
-  - Run after updating epic sections: `python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py"`
-  - Script automatically detects board path from `rw-config.yaml` or uses default
-  - Use `--dry-run` to preview sorting without making changes
+- **Sorting Utilities:**
+  - **Kanban Board Sorting:** Use `packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py` to automatically sort epics and stories in the kanban board
+    - Run after updating epic sections: `python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py"`
+    - Script automatically detects board path from `rw-config.yaml` or uses default
+    - Use `--dry-run` to preview sorting without making changes
+  - **Document Checklist Sorting:** Use `packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py` to sort checklists in story/epic documents
+    - Run after updating task checklists in story documents: `python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py" --document-path "{story_path}"`
+    - Run after updating story checklists in epic documents: `python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py" --document-path "{epic_path}"`
+    - Use `--dry-run` to preview sorting without making changes
 - **Prioritization requires intelligence** - analyze context, not just copy existing
 - Only include tasks with status IN PROGRESS or TODO
 - Order tasks chronologically within MoSCOW sections
