@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-17 (v0.6.1.35+1 – BR-035 fixed: RW Step 13 updated to mark todos as cancelled)  
+**Last updated:** 2026-01-22 (v0.6.1.34+1 – T34: UKW MoSCOW prioritization implementation complete)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.6.1.35+1  
+**Version:** v0.6.1.34+1  
 **Code:** E6S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -32,7 +32,7 @@ housekeeping_policy: keep
 > **Abstract Space:** v0.6.1.0+0 (repository story), v0.6.1.1+0 (first BR), v0.6.1.2+0 (second BR), etc.
 
 - [ ] **E6:S01:T33 – UKW Board Disorganization** - TODO (HIGH priority) - [Task Document](Story-001-br-repo/T33-ukw-board-disorganization.md) | [BR-033](../../fr-br/BR-033-ukw-board-disorganization.md)
-- [ ] **E6:S01:T34 – UKW MoSCOW Prioritization Missing** - TODO (HIGH priority) - [Task Document](Story-001-br-repo/T34-ukw-moscow-prioritization-missing.md) | [BR-034](../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
+- [ ] **E6:S01:T34 – UKW MoSCOW Prioritization Missing** - IN PROGRESS (v0.6.1.34+1 – Implementation complete: MoSCOW prioritization logic added to UKW Step 6) - [Task Document](Story-001-br-repo/T34-ukw-moscow-prioritization-missing.md) | [BR-034](../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
 - [x] **E6:S01:T35 – RW Housekeeping Step Not Working** - COMPLETE (v0.6.1.35+1) - [Task Document](Story-001-br-repo/T35-rw-housekeeping-step-not-working.md) | [BR-035](../../fr-br/BR-035-rw-housekeeping-step-not-working.md)
 
 ---

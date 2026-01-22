@@ -21,13 +21,19 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
+- **E6:S01:T34** – UKW MoSCOW Prioritization Missing - TODO (HIGH priority) - [Task Document](epics/Epic-6/Story-001-br-repo/T34-ukw-moscow-prioritization-missing.md) | [BR-034](../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
+  - **Critical Reason:** This bug prevents UKW from populating the MoSCOW section, causing the M section to remain empty. Fixing this enables proper task prioritization and visibility.
+
 ### Should Have (S) - Important Tasks
 
-- **E2:S13:T01** – Workflow Mgt expectations baseline - ✅ COMPLETE (v0.2.13.1+2) - [Story](epics/Epic-2/Story-013-workflow-management-package-implementation-review.md)
-- **E3:S04:T01** – Versioning expectations baseline - ✅ COMPLETE (v0.3.4.1+1) - [Story](epics/Epic-3/Story-004-numbering-versioning-package-implementation-review.md)
-- **E8:S04:T01** – Tooling & Automation expectations baseline - TODO - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
-- **E10:S01:T01** – Doc lifecycle expectations baseline - TODO - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
-- **E11:S01:T01** – Debug path expectations baseline - TODO - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
+- **E8:S04:T01** – Tooling & Automation expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
+- **E10:S01:T01** – Doc lifecycle expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
+- **E11:S01:T01** – Debug path expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
+- **E6:S01:T33** – UKW Board Disorganization - TODO (HIGH priority) - [Task Document](epics/Epic-6/Story-001-br-repo/T33-ukw-board-disorganization.md) | [BR-033](../fr-br/BR-033-ukw-board-disorganization.md)
+- **E4:S14:T01** – Update Packaged RW to Handle UKW Context and Perpetual Tasks - TODO (HIGH priority) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
+- **E5:S01:T34** – UKW Granular Control and Use Case Flags - TODO (HIGH priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
+- **E4:S11:T07** – Migrate Embedded Tasks to Discrete Task Documents - TODO (HIGH priority) - [Task Document](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)
+- **E1:S06:T01** – Set up BYOB badges for private repository - IN PROGRESS (HIGH priority) - [Task Document](epics/Epic-1/Story-006-repository-ci-cd-setup/T01-setup-byob-badges-for-private-repository.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 
@@ -55,7 +61,7 @@ housekeeping_policy: keep
 
 - **E6:S05** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic) - [Story](epics/Epic-6/Story-005-bug-reports.md)
 - **E6:S06** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-006-feature-requests.md)
-- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+23, Last updated: 2026-01-19) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+29, Last updated: 2026-01-22) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+4, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 
 ### Won't Have (W) - Deferred Tasks

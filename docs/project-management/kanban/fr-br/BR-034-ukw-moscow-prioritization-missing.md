@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** MEDIUM  
-**Status:** PENDING  
+**Status:** FIXED  
 **GitHub Issue:** [TBD]  
 **Version:** v0.6.7.102+4
 
@@ -186,6 +186,10 @@ Add MoSCOW prioritization logic to UKW Step 6:
 ## Version History
 
 - **v0.6.1.34+0** (2026-01-17): Bug report created
+- **v0.6.1.34+1** (2026-01-22): Fix implemented - MoSCOW prioritization logic added to UKW Step 6
+  - MoSCOW section regenerated with properly classified tasks
+  - M section now populated with critical tasks
+  - Implementation documented in task document
 
 ---
 

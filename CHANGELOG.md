@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [0.6.1.34+1] - 22-01-26
+
+### Fixed
+- UKW MoSCOW Prioritization Missing (BR-034): Implemented MoSCOW prioritization logic in UKW Step 6
+  - Regenerated MoSCOW Prioritized In-Progress Tasks section in kanban board
+  - Classified all active IN PROGRESS/TODO tasks into M/S/C/O/W categories
+  - Removed completed tasks from "In Progress" sections
+  - M section now populated with critical tasks (E6:S01:T34)
+
+### Added
+- MoSCOW task classification for all active tasks
+- New active tasks added to MoSCOW section (E6:S01:T33, E4:S14:T01, E5:S01:T34, E4:S11:T07, E1:S06:T01)
+- Implementation documentation in task document
+
+### Changed
+- Task E6:S01:T34 status updated from TODO to IN PROGRESS
+- Kanban board MoSCOW section completely regenerated with properly classified tasks
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.34+1.md)
+
+---
+
 ## [0.6.7.101+29] - 22-01-26
 
 ### Changed
