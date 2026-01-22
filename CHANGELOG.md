@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.4.16.6+1] - 22-01-26
+
+### Added
+- RC Sign-Off Criteria (E4:S16:T06): Defined RC sign-off criteria and remediation task patterns for Kanban framework package
+  - Created comprehensive 5-criteria checklist for RC readiness (governance, structure, integration, gap log, traceability)
+  - Established remediation task pattern for externalizing non-blocking gaps
+  - Reviewed gap log and confirmed no RC-blocking gaps remain
+  - Verified all gaps tracked in Kanban with explicit remediation paths
+  - Kanban framework package confirmed RC-ready
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.6+1.md)
+
+---
+
 ## [0.6.1.36+1] - 22-01-26
 
 ### Added

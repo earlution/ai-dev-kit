@@ -8,8 +8,12 @@ housekeeping_policy: keep
 
 # E4:S16:T06 – Define RC sign-off criteria and remediation tasks
 
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
+**Last updated:** 2026-01-22 (RC sign-off criteria defined, gap log reviewed, all acceptance criteria met)  
+**Started:** 2026-01-20  
+**Completed:** 2026-01-22  
+**Version:** v0.4.16.6+1  
 **Epic:** E4 – Kanban Framework  
 **Story:** E4:S16 – Kanban Package Implementation Review  
 
@@ -137,10 +141,80 @@ For each **non-blocking** gap:
 
 ---
 
-## Open items / Next steps
+## RC Sign-Off Review (Completed)
 
-- [ ] Review the current E4:S16 gap log against these criteria and confirm **no RC-blocking gaps** remain.
-- [ ] Instantiate remediation tasks/FRs for any non-blocking gaps that are not yet wired into Kanban.
+### Gap Log Review Against RC Criteria
+
+**Review Date:** 2026-01-22
+
+**Gap Log Status (from E4:S16:T05):**
+- ✅ **Gap 1:** UKW MoSCOW Prioritization - Tracked in BR-034/E6:S01:T34 (✅ COMPLETE v0.6.1.34+2)
+- ✅ **Gap 2:** RW Housekeeping - Tracked in BR-035/E6:S01:T35 (✅ FIXED v0.6.1.35+1)
+- ✅ **Gap 3:** Env Var Setup Friction - MITIGATED (SOP + `.env.local` pattern introduced)
+
+**RC-Blocking Gaps:** **NONE**
+
+**Conclusion:** All gaps identified in E4:S16:T05 are either:
+- Tracked in Kanban (BRs/Tasks) with remediation paths, or
+- Mitigated through operational improvements (SOP, patterns)
+
+**No RC-blocking gaps remain** in the Kanban framework package itself.
+
+### Remediation Task Verification
+
+All non-blocking gaps from the gap log are properly tracked:
+- ✅ Gap 1: Externalized as BR-034 → E6:S01:T34 (COMPLETE)
+- ✅ Gap 2: Externalized as BR-035 → E6:S01:T35 (FIXED)
+- ✅ Gap 3: Mitigated via SOP and operational patterns (no task needed)
+
+**All gaps are wired into Kanban** with explicit remediation paths.
+
+### RC Sign-Off Criteria Checklist
+
+Based on review of T01-T05 outputs:
+
+1. **Governance and policy alignment** ✅
+   - Governance policy matches dev-kit policy
+   - Core rules represented (task-driven, FR/BR → Task, repository stories, MoSCOW)
+   - No undocumented deviations
+
+2. **Structure and templates** ✅
+   - Templates match canonical E/S/T structure
+   - Perpetual stories/tasks supported
+   - Examples align with templates
+
+3. **Integration alignment** ✅
+   - Numbering & Versioning integration points accurate
+   - Workflow Management (RW) integration points accurate
+   - UKW/CMW context represented
+
+4. **Gap log and risk posture** ✅
+   - Gap log exists with all required metadata
+   - **No RC-blocking gaps** in Kanban package
+   - Non-blocking gaps tracked in Kanban
+
+5. **Doc lifecycle and traceability** ✅
+   - Package docs have lifecycle metadata
+   - Key docs reference canonical SoT
+   - Version mapping clear
+
+**RC Sign-Off Status:** ✅ **READY FOR RC SIGN-OFF**
+
+---
+
+## Completion Summary
+
+**Task Status:** ✅ COMPLETE  
+**Completion Date:** 2026-01-22  
+**All Deliverables:**
+- ✅ RC sign-off checklist defined (reusable for E4:S16, E9:S02, consumer projects)
+- ✅ Remediation task pattern defined
+- ✅ Gap log reviewed against RC criteria (no RC-blocking gaps)
+- ✅ All non-blocking gaps tracked in Kanban
+
+**Next Steps:**
+- [x] Review gap log against RC criteria ✅
+- [x] Verify all gaps tracked in Kanban ✅
 - [ ] Run RW for E4:S16:T06 to:
   - Update versions,
   - Capture the criteria in changelogs,
