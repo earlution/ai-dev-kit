@@ -294,22 +294,50 @@ For each step, follow this pattern:
 
 ### 🔄 UPDATE KANBAN WORKFLOW (UKW) TRIGGER
 
-**When the user types "UKW" or "ukw" (case-insensitive), execute the Update Kanban Workflow as an intelligent agent:**
+**When the user types "UKW" or "ukw" (case-insensitive), with optional flags, execute the Update Kanban Workflow as an intelligent agent:**
 
+**Command Syntax:**
+- `UKW` or `ukw` (no flags) = Bookkeeping only (default, lightweight)
+- `UKW -u` = Bookkeeping only (explicit)
+- `UKW -p` = Update priorities only (no sorting)
+- `UKW -a <target>` = Assign priorities to target(s) only
+- `UKW -u -p` = Bookkeeping + update priorities
+- `UKW -u -a <target>` = Bookkeeping + assign priorities to target(s)
+- `UKW -u -p -a <target>` = Full UKW (all operations)
+
+**Use Case Flags:**
+- `-u` (bookkeeping): Sorting and organization only (lightweight, default)
+- `-p` (update priorities): Update priorities of existing tasks (expensive, occasional)
+- `-a` (assign priorities): Assign priorities to tasks (expensive, occasional)
+
+**Task Targeting Syntax (for `-a` flag):**
+- Single task: `E09S01T01`, `e9s1t1`, `E09:S01:T01`
+- Multiple tasks: `E09S01T01,E08S02T11`
+- Linear range: `E09S01T01-E09S01T06`
+- Story: `E09S01`, `e9s1`
+- Epic: `E09`, `e9`
+- All unprioritized: `all`, `*`
+
+**Execution Rules:**
 1. **DO NOT** run any deterministic scripts
 2. **DO** execute the Update Kanban Workflow using the **intelligent agent-driven execution pattern**
-3. **🧠 AGENTIC INTELLIGENCE REQUIRED:** This workflow requires significant intelligent reasoning:
+3. **PARSE FLAGS FIRST:** Before Step 1, parse command flags to determine which operations to run:
+   - If `-u` flag present OR no flags: Run bookkeeping operations (Steps 1-5, 7-9, skip Step 6 MoSCOW)
+   - If `-p` flag present: Run priority update operations (Step 6: Update MoSCOW priorities)
+   - If `-a` flag present: Run priority assignment operations (Step 6: Assign priorities to target tasks)
+   - If multiple flags: Run combined operations
+4. **🧠 AGENTIC INTELLIGENCE REQUIRED:** This workflow requires significant intelligent reasoning:
    - **Synthesis:** Analyze multiple data points and create coherent tactical/strategic summaries
    - **Narrative Updates:** Write natural, meaningful summaries that capture progress and context
    - **Prioritization:** Determine MoSCOW priorities based on project goals, dependencies, and impact
    - **Status Inference:** Intelligently infer task/story status from commits, FR/BR/UXRs, and file changes
    - **Consistency Analysis:** Detect contradictions and align status across hierarchy
    - **Context Understanding:** Understand project state, goals, and relationships between work items
-4. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists and `use_kanban: true`. Use config values for kanban paths. If config doesn't exist, use default paths.
-5. **Follow** the step-by-step guide below using **BOTTOM-UP APPROACH**
-6. **Execute all steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern with **intelligent reasoning at each step**
-7. **Document** each step's analysis, reasoning, decisions, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 9 steps
+5. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists and `use_kanban: true`. Use config values for kanban paths. If config doesn't exist, use default paths.
+6. **Follow** the step-by-step guide below using **BOTTOM-UP APPROACH**
+7. **Execute steps conditionally** based on flags using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern with **intelligent reasoning at each step**
+8. **Document** each step's analysis, reasoning, decisions, actions, and results
+9. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 9 steps (mark skipped steps as cancelled)
 
 **Default Paths (ai-dev-kit):**
 - `kanban_root`: `docs/project-management/kanban`
@@ -323,22 +351,36 @@ For each step, follow this pattern:
 
 **REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for all 8 UKW steps.
 
-**The 8 Steps (Bottom-Up Approach):**
+**The 9 Steps (Bottom-Up Approach) - Conditional Execution Based on Flags:**
 
-1. **Identify Perpetual UKW Task (Wiring Step)** - **MANDATORY FIRST STEP:** Discover and wire UKW to the project's perpetual UKW task:
+**Step Execution Matrix:**
+- **Bookkeeping (`-u` or no flags):** Steps 1-5, 7-9 (skip Step 6 MoSCOW prioritization)
+- **Update Priorities (`-p`):** Step 6 only (update MoSCOW priorities of existing tasks)
+- **Assign Priorities (`-a <target>`):** Step 6 only (assign priorities to target tasks)
+- **Combined (`-u -p`, `-u -a`, `-u -p -a`):** Run all specified operations
+
+1. **Identify Perpetual UKW Task (Wiring Step)** - **MANDATORY FIRST STEP (always runs):** Discover and wire UKW to the project's perpetual UKW task:
    - Search all task documents for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
    - Identify the task dedicated to UKW releases (may be named "Update Kanban Workflow (UKW)" or similar)
-   - Note the task's Epic/Story/Task ID (e.g., E6:S06:T101 in ai-dev-kit, E4:S03:T05 in another project)
+   - Note the task's Epic/Story/Task ID (e.g., E6:S07:T101 in ai-dev-kit, E4:S03:T05 in another project)
    - This establishes the wiring between UKW and the perpetual task for this project instance
    - Store task ID for RW attribution later (when user runs "RW" after "UKW")
-2. **Analyze Recent Activity** - Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers
-3. **Update Task Documents** - Update task document status fields, dates, forensic markers based on recent activity
-4. **Update Story Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize task data into tactical overviews, infer story status, update task checklists
-5. **Update Epic Documents** - **🧠 INTELLIGENCE REQUIRED:** Synthesize story data into strategic overviews, infer epic status, update story checklists
-6. **Update Kanban Board** - **🧠 INTELLIGENCE REQUIRED:** Update MoSCOW priority list (LAST), update epic status sections, update board metadata
-7. **Validate Consistency** - Cross-reference status across all kanban documents, verify version consistency, check link integrity
-8. **Stage Files** - Run `git add` for all kanban files
-9. **Document Changes** - Create summary of updated documents, list key status changes
+2. **Analyze Recent Activity** - **Runs if bookkeeping (`-u` or no flags):** Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers
+3. **Update Task Documents** - **Runs if bookkeeping (`-u` or no flags):** Update task document status fields, dates, forensic markers based on recent activity
+4. **Update Story Documents** - **Runs if bookkeeping (`-u` or no flags):** **🧠 INTELLIGENCE REQUIRED:** Synthesize task data into tactical overviews, infer story status, update task checklists. **CRITICAL:** Use `sort_kanban_document_checklists.py` to sort task checklists numerically.
+5. **Update Epic Documents** - **Runs if bookkeeping (`-u` or no flags):** **🧠 INTELLIGENCE REQUIRED:** Synthesize story data into strategic overviews, infer epic status, update story checklists. **CRITICAL:** Use `sort_kanban_document_checklists.py` to sort story checklists numerically.
+6. **Update Kanban Board** - **Conditional execution based on flags:**
+   - **If bookkeeping (`-u` or no flags):** Update epic status sections, update board metadata, **SKIP MoSCOW prioritization**
+   - **If `-p` flag:** Update MoSCOW priorities of existing tasks (no sorting)
+   - **If `-a <target>` flag:** Assign priorities to target tasks using syntax parser
+   - **If `-u -p`:** Bookkeeping + update MoSCOW priorities
+   - **If `-u -a <target>`:** Bookkeeping + assign priorities to target tasks
+   - **If `-u -p -a <target>`:** Full UKW (all operations)
+   - **CRITICAL:** Use `sort_kanban_board.py` to sort epics/stories numerically before writing to board
+   - **CRITICAL:** MoSCOW prioritization requires **🧠 INTELLIGENT PRIORITIZATION** - analyze context, dependencies, impact
+7. **Validate Consistency** - **Runs if bookkeeping (`-u` or no flags):** Cross-reference status across all kanban documents, verify version consistency, check link integrity
+8. **Stage Files** - **Always runs:** Run `git add` for all kanban files
+9. **Document Changes** - **Always runs:** Create summary of updated documents, list key status changes
 
 **🔄 UKW → RW Integration:**
 

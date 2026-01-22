@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.5.1.34+1] - 22-01-26
+
+### Added
+- UKW Granular Control and Use Case Flags (E5:S01:T34): Implemented modular UKW workflow system
+  - Use case flags (`-u`, `-p`, `-a`) for granular control
+  - Flexible task targeting syntax parser (`ukw_syntax_parser.py`)
+  - Conditional step execution based on flags
+  - Efficient default: `UKW` (no flags) = bookkeeping only (lightweight)
+  - Priority operations opt-in (expensive, occasional)
+  - Combined operations support (`-u -p`, `-u -a`, `-u -p -a`)
+  - All acceptance criteria met
+
+### Changed
+- UKW default behavior: Now runs bookkeeping only by default (efficient for frequent operations)
+- UKW execution guide: Updated to v1.1.0 with flag documentation and conditional execution patterns
+- `.cursorrules` UKW trigger: Added flag parsing and task targeting syntax documentation
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.34+1.md)
+
+---
+
 ## [0.5.1.36+1] - 22-01-26
 
 ### Changed

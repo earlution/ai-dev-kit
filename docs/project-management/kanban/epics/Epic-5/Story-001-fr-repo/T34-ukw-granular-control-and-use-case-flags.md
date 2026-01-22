@@ -6,15 +6,15 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 0, Task 34: UKW Granular Control and Use Case Flags
+# Epic 5, Story 1, Task 34: UKW Granular Control and Use Case Flags
 
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-01-16 (v0.5.1.34+0 – Task created)  
-**Started:** [TBD]  
-**Completed:** [TBD]  
-**Version:** v0.5.1.34+0  
-**Code:** E5S00T34
+**Last updated:** 2026-01-22 (v0.5.1.34+1 – Implementation complete: UKW granular control via flags and syntax parser)  
+**Started:** 2026-01-22  
+**Completed:** 2026-01-22  
+**Version:** v0.5.1.34+1  
+**Code:** E5S01T34
 
 ---
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 **Full Task ID:** `E5:S01:T34`
 
-**Repository Pattern:** FR-034 = E5:S01:T34 (abstract space: v0.5.1.34+0)
+**Repository Pattern:** FR-034 = E5:S01:T34 (abstract space: v0.5.1.34+0, completed: v0.5.1.34+1)
 
 ---
 
@@ -94,26 +94,26 @@ Add granular control to UKW (Update Kanban Workflow) via use case flags and flex
 
 ## Acceptance Criteria
 
-- [ ] **Criterion 1:** `UKW -u` runs bookkeeping only (sorting, no priority changes)
-- [ ] **Criterion 2:** `UKW -p` updates priorities only (no sorting)
-- [ ] **Criterion 3:** `UKW -a E09S01T01` assigns priority to single task
-- [ ] **Criterion 4:** `UKW -a E09S01T01,E08S02T11` assigns priorities to multiple tasks
-- [ ] **Criterion 5:** `UKW -a E09S01T01-E09S01T06` assigns priorities to range
-- [ ] **Criterion 6:** `UKW -a E09S01` assigns priorities to story
-- [ ] **Criterion 7:** `UKW -a E09` assigns priorities to epic
-- [ ] **Criterion 8:** `UKW -a all` assigns priorities to all unprioritized tasks
-- [ ] **Criterion 9:** Canonical format supported (`E09S01T01`)
-- [ ] **Criterion 10:** Compact format supported (`E9S1T1`)
-- [ ] **Criterion 11:** Case-insensitive input supported
-- [ ] **Criterion 12:** Optional separators supported (`:`, `-`, none)
-- [ ] **Criterion 13:** Range syntax supported
-- [ ] **Criterion 14:** Multiple task syntax supported
-- [ ] **Criterion 15:** `UKW -u -p` runs both bookkeeping and priority updates
-- [ ] **Criterion 16:** `UKW -u -a E09` runs bookkeeping and assigns priorities to Epic 9
-- [ ] **Criterion 17:** `UKW -u -p -a all` runs full UKW (all operations)
-- [ ] **Criterion 18:** `UKW` (no flags) runs bookkeeping only (efficient default)
-- [ ] **Criterion 19:** Clear error messages for invalid syntax
-- [ ] **Criterion 20:** Documentation updated to reflect new default behavior
+- [x] **Criterion 1:** `UKW -u` runs bookkeeping only (sorting, no priority changes) ✅
+- [x] **Criterion 2:** `UKW -p` updates priorities only (no sorting) ✅
+- [x] **Criterion 3:** `UKW -a E09S01T01` assigns priority to single task ✅
+- [x] **Criterion 4:** `UKW -a E09S01T01,E08S02T11` assigns priorities to multiple tasks ✅
+- [x] **Criterion 5:** `UKW -a E09S01T01-E09S01T06` assigns priorities to range ✅
+- [x] **Criterion 6:** `UKW -a E09S01` assigns priorities to story ✅
+- [x] **Criterion 7:** `UKW -a E09` assigns priorities to epic ✅
+- [x] **Criterion 8:** `UKW -a all` assigns priorities to all unprioritized tasks ✅
+- [x] **Criterion 9:** Canonical format supported (`E09S01T01`) ✅
+- [x] **Criterion 10:** Compact format supported (`E9S1T1`) ✅
+- [x] **Criterion 11:** Case-insensitive input supported ✅
+- [x] **Criterion 12:** Optional separators supported (`:`, `-`, none) ✅
+- [x] **Criterion 13:** Range syntax supported ✅
+- [x] **Criterion 14:** Multiple task syntax supported ✅
+- [x] **Criterion 15:** `UKW -u -p` runs both bookkeeping and priority updates ✅
+- [x] **Criterion 16:** `UKW -u -a E09` runs bookkeeping and assigns priorities to Epic 9 ✅
+- [x] **Criterion 17:** `UKW -u -p -a all` runs full UKW (all operations) ✅
+- [x] **Criterion 18:** `UKW` (no flags) runs bookkeeping only (efficient default) ✅
+- [x] **Criterion 19:** Clear error messages for invalid syntax ✅ (via syntax parser)
+- [x] **Criterion 20:** Documentation updated to reflect new default behavior ✅
 
 ---
 
@@ -228,5 +228,55 @@ Priority operations (UC2/UC3) require significant agentic intelligence and are c
 
 ---
 
-_This Task is part of Epic 5, Story 0: FR Repo. See [`Story-001-fr-repo.md`](../../Story-001-fr-repo.md) for repository context._
+## Implementation Progress
+
+### Phase 1: Syntax Parser Implementation (v0.5.1.34+1)
+
+**Date:** 2026-01-22
+
+**Completed:**
+1. ✅ **Syntax Parser Created:** `ukw_syntax_parser.py` with full task targeting support
+   - Single task parsing (canonical, compact, case-insensitive)
+   - Multiple task parsing (comma-separated)
+   - Range parsing (linear ranges)
+   - Story parsing (all tasks in story)
+   - Epic parsing (all tasks in epic)
+   - "all" / "*" parsing (all unprioritized tasks)
+   - Validation and error handling
+
+2. ✅ **Command-Line Flag Support:** Updated `.cursorrules` UKW trigger section
+   - Flag parsing (`-u`, `-p`, `-a`)
+   - Conditional step execution based on flags
+   - Default behavior: `UKW` = `UKW -u` (bookkeeping only)
+   - Combined operations support
+
+3. ✅ **Workflow Modularization:** Updated UKW execution guide
+   - Step execution matrix based on flags
+   - Bookkeeping operations (Steps 1-5, 7-9, skip Step 6 MoSCOW)
+   - Priority update operations (Step 6 only)
+   - Priority assignment operations (Step 6 only with target parsing)
+   - Combined operations support
+
+4. ✅ **Documentation Updates:**
+   - Updated UKW agent execution guide with flag documentation
+   - Updated `.cursorrules` UKW trigger section
+   - Added use case examples and syntax documentation
+   - Documented default behavior change
+
+**Key Features:**
+- **Efficient Default:** `UKW` (no flags) = bookkeeping only (lightweight, frequent)
+- **Targeted Operations:** `-a <target>` enables precise priority assignment
+- **Flexible Syntax:** Multiple input formats supported for user convenience
+- **Conditional Execution:** Steps execute only when needed based on flags
+- **Backward Compatible:** Existing UKW usage patterns still work (default = bookkeeping)
+
+**Implementation Notes:**
+- Syntax parser is framework-agnostic and reusable
+- Flag parsing happens at agent level (not script level) since UKW is agent-driven
+- MoSCOW prioritization deferred to `-p` or `-a` flags (expensive operations opt-in)
+- Bookkeeping operations remain fast and lightweight (default behavior)
+
+---
+
+_This Task is part of Epic 5, Story 1: FR Repo. See [`Story-001-fr-repo.md`](Story-001-fr-repo.md) for repository context._
 

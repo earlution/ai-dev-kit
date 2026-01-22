@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 36     # Task number (Task 36: RW Update Kanban Board on Task Completion)
-VERSION_BUILD = 1     # Build number (E5:S01:T36+1 - Task complete: Kanban board updates added to RW Step 7)
+VERSION_TASK = 34     # Task number (Task 34: UKW Granular Control and Use Case Flags)
+VERSION_BUILD = 1     # Build number (E5:S01:T34+1 - Task complete: UKW granular control via flags and syntax parser)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.36+1 = Development, Epic 5, Story 1, Task 36, Build 1 (E5:S01:T36: Task complete: Kanban board updates added to RW Step 7)
+# Current: 0.5.1.34+1 = Development, Epic 5, Story 1, Task 34, Build 1 (E5:S01:T34: Task complete: UKW granular control via flags and syntax parser)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

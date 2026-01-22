@@ -8,8 +8,9 @@ housekeeping_policy: keep
 
 # Update Kanban Workflow (UKW) - Agent Execution Guide
 
-**Version:** 1.0.0  
-**Last Updated:** 2025-12-17  
+**Version:** 1.1.0  
+**Last Updated:** 2026-01-22  
+**Enhanced:** E5:S01:T34 - Added granular control via use case flags (`-u`, `-p`, `-a`) and flexible task targeting syntax  
 **Related:** Epic 2 - Workflow Management Framework, Epic 4 - Kanban Framework
 
 ---
@@ -31,7 +32,26 @@ This workflow **requires significant agentic intelligence** at every step. This 
 
 **Key Principle:** Bottom-up approach - Update Tasks → Stories → Epics → Board (in that order). The MoSCOW priority list is updated LAST.
 
-**Trigger:** User types "UKW" or "ukw" (case-insensitive)
+**Trigger:** User types "UKW" or "ukw" (case-insensitive), with optional flags:
+- `UKW` or `UKW -u` = Bookkeeping only (default, lightweight)
+- `UKW -p` = Update priorities only
+- `UKW -a <target>` = Assign priorities to target(s) only
+- `UKW -u -p` = Bookkeeping + update priorities
+- `UKW -u -a <target>` = Bookkeeping + assign priorities
+- `UKW -u -p -a <target>` = Full UKW (all operations)
+
+**Use Case Flags:**
+- `-u` (bookkeeping): Sorting and organization only (lightweight, default)
+- `-p` (update priorities): Update priorities of existing tasks (expensive, occasional)
+- `-a` (assign priorities): Assign priorities to tasks (expensive, occasional)
+
+**Task Targeting Syntax (for `-a` flag):**
+- Single task: `E09S01T01`, `e9s1t1`, `E09:S01:T01`
+- Multiple tasks: `E09S01T01,E08S02T11`
+- Linear range: `E09S01T01-E09S01T06`
+- Story: `E09S01`, `e9s1`
+- Epic: `E09`, `e9`
+- All unprioritized: `all`, `*`
 
 ---
 
@@ -44,11 +64,10 @@ This workflow **requires significant agentic intelligence** at every step. This 
 - **Bottom-Up Accuracy:** Ensures lower-level status correctly flows up the hierarchy
 
 **When to Use UKW:**
-- After manual work that didn't go through RW
-- After wrapping up sprints/cycles
-- Periodically to ensure kanban docs reflect reality
-- After bulk status changes
-- Before important planning sessions
+- **Bookkeeping (`UKW` or `UKW -u`):** After creating new epics/stories/tasks, when board becomes disorganized, periodic maintenance, before planning sessions (frequent, lightweight)
+- **Update Priorities (`UKW -p`):** After project goals change, when dependencies shift, when deadlines change, after strategic planning (occasional, expensive)
+- **Assign Priorities (`UKW -a <target>`):** After creating new tasks, when tasks are missing priorities, bulk priority assignment (occasional, targeted)
+- **Combined (`UKW -u -p -a all`):** After major project changes, comprehensive kanban synchronization (rare, full analysis)
 
 **Relationship to RW:**
 - **RW:** Updates kanban docs as part of releasing completed work
@@ -92,6 +111,18 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 ---
 
 ## 📋 Workflow Steps
+
+**Step Execution Based on Flags:**
+- **Bookkeeping (`-u` or no flags):** Steps 1-5, 7-9 (skip Step 6 MoSCOW prioritization)
+- **Update Priorities (`-p`):** Step 6 only (update MoSCOW priorities)
+- **Assign Priorities (`-a <target>`):** Step 6 only (assign priorities to targets)
+- **Combined:** Run all specified operations
+
+**Flag Parsing (Before Step 1):**
+1. Parse user command for flags (`-u`, `-p`, `-a`)
+2. Parse target specification if `-a` flag present (use `ukw_syntax_parser.py` or equivalent logic)
+3. Determine which steps to execute based on flags
+4. Document execution plan: "UKW executing with flags: {flags}, operations: {operations}"
 
 ### Step 1: Identify Perpetual UKW Task (Wiring Step)
 
