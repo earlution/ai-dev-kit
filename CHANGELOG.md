@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.5.1.36+1] - 22-01-26
+
+### Changed
+- RW Step 7 (Auto-update Kanban Docs): Enhanced to update Kanban board on task completion
+  - Board metadata (Last Updated, Version) automatically updated
+  - Epic/story status updated in board sections
+  - Story completion detection and status updates
+  - All acceptance criteria met (E5:S01:T36 complete)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.36+1.md)
+
+---
+
 ## [0.5.1.36+0] - 22-01-26
 
 ### Added

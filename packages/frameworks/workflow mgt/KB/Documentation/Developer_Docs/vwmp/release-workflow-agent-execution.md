@@ -1579,6 +1579,7 @@ The Versioning Policy requires that:
      - Script resolves Kanban paths using config + canonical defaults
      - Script updates Story doc (header, Task Checklist, completion status)
      - Script updates Epic doc (Story Checklist, header)
+     - Script updates Kanban board (metadata, epic/story status, version markers)
      - Script validates updates (Steps 12-14: comprehensive validation)
      - Exit code 0 = SUCCESS (all updates applied and validated)
      - Exit code 1 = FAILURE (validation failed or update error)
@@ -1607,11 +1608,13 @@ The Versioning Policy requires that:
    - **If script succeeds:**
      - Verify Story doc was updated (header, Task Checklist, version markers)
      - Verify Epic doc was updated (Story Checklist, header, version markers)
+     - Verify Kanban board was updated (metadata, epic/story status, version markers)
      - Verify validation passed (all consistency checks passed)
 
 5. **PROCEED:**
    - **If script succeeds:**
      - Document: "Updated Kanban docs with version markers (framework script)"
+     - Document: "Updated Story doc, Epic doc, and Kanban board"
      - Document: "Validation passed: All Kanban docs updates verified"
      - Move to Step 8 (waits for Steps 2-7 to complete)
    - **If script fails:**

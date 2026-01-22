@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-16 (v0.5.0.35+0 – E5:S00:T35: FR-035 task created - Task Template Cross-Wiring Section)  
+**Last updated:** 2026-01-22 (v0.5.1.36+1 – E5:S01:T36: Implementation complete: Kanban board updates added to RW Step 7)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [x] **E5:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.5.0.0+0 – Epic-level abstract space only, no tasks)
   - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
-- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.35+0 – FR-035 task created: Task Template Cross-Wiring Section)
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.36+1 – T36: Implementation complete: Kanban board updates added to RW Step 7)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 - [ ] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - Repository story for Feature Requests)

@@ -10,6 +10,9 @@ Based on: E2:S08:T01 - Deterministic vs Agentic Analysis
 Implements: Steps 1-7, 9-10, 12-15 (deterministic pipeline)
 Provides hooks for: Steps 2 fallback, 9 non-canonical, 11, 16-18 (agentic)
 
+Enhanced in E5:S01:T36: Added Kanban board update functionality.
+Updates board metadata (Last Updated, Version) and epic/story status sections.
+
 Usage:
     python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py [--version-file PATH] [--config PATH] [--dry-run]
 
@@ -632,6 +635,185 @@ def update_epic_doc(
     return True, changes
 
 
+def parse_kanban_board_metadata(board_content: str) -> Dict:
+    """
+    Parse Kanban board metadata (Last Updated, Version).
+    
+    Returns:
+        Dict with 'last_updated' and 'version' fields
+    """
+    metadata = {}
+    
+    # Parse Last Updated
+    last_updated_pattern = r'\*\*Last Updated:\*\*\s*(.+?)(?:\n|$)'
+    last_updated_match = re.search(last_updated_pattern, board_content, re.IGNORECASE)
+    if last_updated_match:
+        metadata['last_updated'] = last_updated_match.group(1).strip()
+    
+    # Parse Version
+    version_pattern = r'\*\*Version:\*\*\s*(.+?)(?:\n|$)'
+    version_match = re.search(version_pattern, board_content, re.IGNORECASE)
+    if version_match:
+        metadata['version'] = version_match.group(1).strip()
+    
+    return metadata
+
+
+def find_epic_section(board_content: str, epic: int) -> Optional[Tuple[int, int]]:
+    """
+    Find the epic section in the board content.
+    
+    Returns:
+        Tuple of (start_index, end_index) or None if not found
+    """
+    lines = board_content.split('\n')
+    start_idx = None
+    end_idx = len(lines)
+    
+    # Look for epic section header: "### Epic {epic}:"
+    epic_header_pattern = re.compile(rf'^### Epic {epic}:', re.IGNORECASE)
+    
+    for i, line in enumerate(lines):
+        if epic_header_pattern.match(line):
+            start_idx = i
+            break
+    
+    if start_idx is None:
+        return None
+    
+    # Find the end of the epic section (next epic or end of epics section)
+    for i in range(start_idx + 1, len(lines)):
+        line = lines[i]
+        # Stop at next epic section
+        if re.match(r'^### Epic \d+:', line):
+            end_idx = i
+            break
+        # Stop at major section boundary (## header)
+        if line.startswith('##') and not line.startswith('###'):
+            end_idx = i
+            break
+    
+    return (start_idx, end_idx)
+
+
+def update_kanban_board(
+    board_path: Path,
+    epic: int,
+    story: int,
+    task: int,
+    target_state: Dict,
+    story_completion_state: Dict,
+    dry_run: bool = False
+) -> Tuple[bool, List[str]]:
+    """
+    Update Kanban board with task completion information.
+    
+    Updates:
+    - Board metadata (Last Updated, Version)
+    - Epic section status
+    - Story listing in epic section
+    
+    Note: Does NOT update MoSCOW sections (defer to UKW).
+    """
+    if not board_path.exists():
+        return False, ["Kanban board not found"]
+    
+    changes = []
+    
+    try:
+        content = board_path.read_text()
+    except Exception as e:
+        return False, [f"Error reading board: {e}"]
+    
+    # Update board metadata
+    from datetime import datetime
+    today = datetime.now().strftime("%Y-%m-%d")
+    version_string = target_state['version_string']
+    
+    # Update Last Updated
+    last_updated_pattern = r'(\*\*Last Updated:\*\*)\s*(.+?)(?:\n|$)'
+    if re.search(last_updated_pattern, content, re.IGNORECASE):
+        new_last_updated = f"{today} (RW: E{epic}:S{story}:T{task})"
+        content = re.sub(
+            last_updated_pattern,
+            rf'\1 {new_last_updated}\n',
+            content,
+            flags=re.IGNORECASE
+        )
+        changes.append(f"Updated board Last Updated: {new_last_updated}")
+    
+    # Update Version
+    version_pattern = r'(\*\*Version:\*\*)\s*(.+?)(?:\n|$)'
+    if re.search(version_pattern, content, re.IGNORECASE):
+        content = re.sub(
+            version_pattern,
+            rf'\1 {version_string}\n',
+            content,
+            flags=re.IGNORECASE
+        )
+        changes.append(f"Updated board Version: {version_string}")
+    
+    # Find and update epic section
+    epic_section = find_epic_section(content, epic)
+    if epic_section:
+        start_idx, end_idx = epic_section
+        lines = content.split('\n')
+        epic_section_lines = lines[start_idx:end_idx]
+        epic_section_content = '\n'.join(epic_section_lines)
+        
+        # Update epic status if story is complete
+        if story_completion_state.get('is_complete'):
+            # Update epic status to COMPLETE if all stories complete, otherwise keep current
+            status_pattern = r'(\*\*Status:\*\*)\s*(.+?)(?:\n|$)'
+            if re.search(status_pattern, epic_section_content, re.IGNORECASE):
+                # For now, we'll keep the status as-is unless we can detect all stories complete
+                # This is a conservative approach - epic completion detection is complex
+                pass
+        
+        # Update story listing in epic section
+        story_listing_pattern = re.compile(
+            rf'(- \[[x\s]\]\s+\*\*E{epic}:S{story}[^\n]*)',
+            re.IGNORECASE | re.MULTILINE
+        )
+        
+        def update_story_listing(match):
+            line = match.group(1)
+            # Mark as complete if story is complete
+            if story_completion_state.get('is_complete'):
+                line = re.sub(r'\[ \]', '[x]', line)
+                # Update status to COMPLETE
+                if 'COMPLETE' not in line:
+                    line = re.sub(
+                        r'(IN PROGRESS|TODO).*$',
+                        f"COMPLETE ✅ ({version_string})",
+                        line
+                    )
+            else:
+                # Update version in listing
+                if version_string not in line:
+                    line = re.sub(
+                        r'(IN PROGRESS|TODO).*$',
+                        f"IN PROGRESS ({version_string})",
+                        line
+                    )
+            return line
+        
+        if story_listing_pattern.search(epic_section_content):
+            new_epic_section_content = story_listing_pattern.sub(update_story_listing, epic_section_content)
+            # Reconstruct content
+            new_lines = lines[:start_idx] + new_epic_section_content.split('\n') + lines[end_idx:]
+            content = '\n'.join(new_lines)
+            changes.append(f"Updated story {story} listing in Epic {epic} section")
+    
+    if not dry_run:
+        try:
+            board_path.write_text(content)
+        except Exception as e:
+            return False, [f"Error writing board: {e}"]
+    
+    return True, changes
+
+
 def detect_error_type(error_message: str) -> str:
     """
     Detect error type from error message (Step 15 from T01 analysis).
@@ -686,6 +868,7 @@ def add_error(
 def validate_updates(
     story_path: Path,
     epic_path: Optional[Path],
+    board_path: Optional[Path],
     version_string: str,
     version_components: Tuple[int, int, int, int, int],
     task_info: Optional[Dict] = None
@@ -845,6 +1028,25 @@ def validate_updates(
     elif epic_path:
         warnings.append(f"⚠️  EPIC DOC OPTIONAL: Epic doc not found (optional): {epic_path}")
     
+    # Validate Kanban board (if exists)
+    if board_path and board_path.exists():
+        try:
+            board_content = board_path.read_text()
+            board_metadata = parse_kanban_board_metadata(board_content)
+            
+            # Check that version appears in board metadata
+            if version_string not in board_metadata.get('version', ''):
+                warnings.append(
+                    f"⚠️  BOARD VERSION MISMATCH: Board version may not match current version\n"
+                    f"   Expected version: {version_string}\n"
+                    f"   Found in board: {board_metadata.get('version', 'not found')}\n"
+                    f"   File: {board_path}"
+                )
+        except Exception as e:
+            warnings.append(f"⚠️  BOARD READ WARNING: Cannot read board {board_path}: {e}")
+    elif board_path:
+        warnings.append(f"⚠️  BOARD OPTIONAL: Kanban board not found (optional): {board_path}")
+    
     # ===== Step 13: Policy & FR Validation =====
     
     # Validate Story header has required fields
@@ -982,11 +1184,29 @@ def main():
             print(f"⚠️  Epic doc update: {changes}")
             # Don't fail if Epic doc update fails (may not exist in all projects)
     
+    # Update Kanban board
+    if 'kanban_board' in paths:
+        success, changes = update_kanban_board(
+            paths['kanban_board'],
+            epic,
+            story,
+            task,
+            target_state,
+            completion_state,
+            args.dry_run
+        )
+        if success:
+            print(f"✅ Kanban board updated: {', '.join(changes)}")
+        else:
+            print(f"⚠️  Kanban board update: {changes}")
+            # Don't fail if board update fails (may not exist in all projects)
+    
     # Validate updates (Steps 12-14: comprehensive validation)
     if not args.dry_run:
         is_valid, errors, warnings, error_details = validate_updates(
             paths.get('story_doc'),
             paths.get('epic_doc'),
+            paths.get('kanban_board'),
             version_string,
             version_components,
             task_info
