@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.5.1.34+2] - 22-01-26
+
+### Fixed
+- RW Step 7 (Auto-update Kanban Docs): Fixed critical bugs preventing board updates
+  - Fixed story document path resolution (glob pattern matching)
+  - Fixed Kanban board path resolution (absolute/relative path handling)
+  - Fixed MoSCOW section updates (tasks now marked COMPLETE automatically)
+  - Board updates now work correctly end-to-end
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.34+2.md)
+
+---
+
 ## [0.5.1.34+1] - 22-01-26
 
 ### Added

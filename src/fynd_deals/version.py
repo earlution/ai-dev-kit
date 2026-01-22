@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
 VERSION_TASK = 34     # Task number (Task 34: UKW Granular Control and Use Case Flags)
-VERSION_BUILD = 1     # Build number (E5:S01:T34+1 - Task complete: UKW granular control via flags and syntax parser)
+VERSION_BUILD = 2     # Build number (E5:S01:T34+2 - Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.34+1 = Development, Epic 5, Story 1, Task 34, Build 1 (E5:S01:T34: Task complete: UKW granular control via flags and syntax parser)
+# Current: 0.5.1.34+2 = Development, Epic 5, Story 1, Task 34, Build 2 (E5:S01:T34: Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

@@ -295,10 +295,18 @@ def resolve_kanban_paths(
     
     # Determine kanban root
     if config and config.get('use_kanban') and 'kanban_root' in config:
-        kanban_root = Path(config['kanban_root'])
+        kanban_root_str = config['kanban_root']
+        if Path(kanban_root_str).is_absolute():
+            kanban_root = Path(kanban_root_str)
+        else:
+            kanban_root = project_root / kanban_root_str
     else:
         # Default fallback patterns
         kanban_root = project_root / "docs/project-management/kanban"
+    
+    # Ensure kanban_root is absolute
+    if not kanban_root.is_absolute():
+        kanban_root = (project_root / kanban_root).resolve()
     
     # Resolve Story doc path
     if config and config.get('use_kanban') and 'story_doc_pattern' in config:
@@ -307,14 +315,25 @@ def resolve_kanban_paths(
     else:
         # Default fallback: try multiple patterns
         story_patterns = [
-            kanban_root / f"epics/Epic-{epic}/Story-{story:03d}-*.md",
-            kanban_root / f"epics/Epic-{epic}/Story-{story}-*.md",
+            f"epics/Epic-{epic}/Story-{story:03d}-*.md",
+            f"epics/Epic-{epic}/Story-{story}-*.md",
         ]
         story_doc = None
         for pattern in story_patterns:
-            matches = list(project_root.glob(str(pattern.relative_to(project_root))))
+            # Construct pattern relative to kanban_root, then make relative to project_root for glob
+            if kanban_root.is_absolute():
+                # If kanban_root is absolute, use it directly with glob
+                full_pattern = kanban_root / pattern
+                matches = list(full_pattern.parent.glob(full_pattern.name))
+            else:
+                # kanban_root is relative to project_root, so construct relative pattern
+                rel_pattern = str(kanban_root / pattern)
+                matches = list(project_root.glob(rel_pattern))
             if matches:
-                story_doc = matches[0]
+                # Ensure we have an absolute path
+                story_doc = matches[0] if matches[0].is_absolute() else (project_root / matches[0])
+                # Normalize to absolute path
+                story_doc = story_doc.resolve()
                 break
     
     if story_doc and story_doc.exists():
@@ -340,20 +359,31 @@ def resolve_kanban_paths(
         paths['epic_doc'] = epic_doc
     
     # Resolve Kanban board (optional)
+    board_found = False
     if config and config.get('use_kanban') and 'kanban_board' in config:
         board_path = project_root / config['kanban_board']
         if board_path.exists():
-            paths['kanban_board'] = board_path
-    else:
-        # Default fallback
-        board_patterns = [
+            paths['kanban_board'] = board_path.resolve()
+            board_found = True
+    if not board_found:
+        # Default fallback - try multiple locations
+        board_candidates = [
             kanban_root / "kanban-board.md",
             project_root / "docs/project-management/kanban/kanban-board.md",
         ]
-        for pattern in board_patterns:
-            if pattern.exists():
-                paths['kanban_board'] = pattern
-                break
+        for candidate in board_candidates:
+            # Resolve candidate to absolute path
+            try:
+                if candidate.is_absolute():
+                    abs_candidate = candidate
+                else:
+                    abs_candidate = (project_root / candidate).resolve()
+                if abs_candidate.exists() and abs_candidate.is_file():
+                    paths['kanban_board'] = abs_candidate
+                    board_found = True
+                    break
+            except Exception:
+                continue
     
     return paths
 
@@ -712,8 +742,7 @@ def update_kanban_board(
     - Board metadata (Last Updated, Version)
     - Epic section status
     - Story listing in epic section
-    
-    Note: Does NOT update MoSCOW sections (defer to UKW).
+    - MoSCOW section task status (mark complete tasks as COMPLETE)
     """
     if not board_path.exists():
         return False, ["Kanban board not found"]
@@ -804,6 +833,48 @@ def update_kanban_board(
             new_lines = lines[:start_idx] + new_epic_section_content.split('\n') + lines[end_idx:]
             content = '\n'.join(new_lines)
             changes.append(f"Updated story {story} listing in Epic {epic} section")
+    
+    # Update MoSCOW section - mark task as COMPLETE
+    # Pattern: - **E{epic}:S{story}:T{task}** – ... - TODO/IN PROGRESS ...
+    # Note: Story number might be zero-padded (S01) or not (S1)
+    moscow_task_pattern = re.compile(
+        rf'(- \*\*E{epic}:S0?{story}:T0?{task}\*\*[^\n]*(?:TODO|IN PROGRESS)[^\n]*)',
+        re.IGNORECASE | re.MULTILINE
+    )
+    
+    def update_moscow_task(match):
+        line = match.group(1)
+        # Replace TODO/IN PROGRESS with COMPLETE and update Last updated
+        today = datetime.now().strftime("%Y-%m-%d")
+        if 'TODO' in line.upper() or 'IN PROGRESS' in line.upper():
+            # Replace status (handle various formats)
+            line = re.sub(
+                r'\s-\s(TODO|IN PROGRESS)\s',
+                f' - ✅ COMPLETE ',
+                line,
+                flags=re.IGNORECASE
+            )
+            # Update Last updated date (handle various formats)
+            line = re.sub(
+                r'Last updated:\s*\d{4}-\d{2}-\d{2}',
+                f'Last updated: {today}',
+                line,
+                flags=re.IGNORECASE
+            )
+            # Add version if not present (insert after task description, before links)
+            if version_string not in line:
+                # Insert version in parentheses before the dash before links
+                line = re.sub(
+                    r'(\s-\s[^|]+)(\s\|)',
+                    rf'\1 (v{version_string})\2',
+                    line,
+                    count=1
+                )
+        return line
+    
+    if moscow_task_pattern.search(content):
+        content = moscow_task_pattern.sub(update_moscow_task, content)
+        changes.append(f"Updated MoSCOW section: E{epic}:S{story}:T{task} marked as COMPLETE")
     
     if not dry_run:
         try:
@@ -1134,7 +1205,7 @@ def main():
     print(f"🔍 Updating Kanban docs for {version_string} (E{epic}:S{story}:T{task})")
     
     # Resolve Kanban paths
-    paths = resolve_kanban_paths(epic, story, config)
+    paths = resolve_kanban_paths(epic, story, config, project_root=Path.cwd())
     
     if 'story_doc' not in paths:
         print(f"❌ Story doc not found for Epic {epic}, Story {story}")
@@ -1198,8 +1269,10 @@ def main():
         if success:
             print(f"✅ Kanban board updated: {', '.join(changes)}")
         else:
-            print(f"⚠️  Kanban board update: {changes}")
+            print(f"⚠️  Kanban board update failed: {changes}")
             # Don't fail if board update fails (may not exist in all projects)
+    else:
+        print(f"⚠️  Kanban board path not found in resolved paths (paths: {list(paths.keys())})")
     
     # Validate updates (Steps 12-14: comprehensive validation)
     if not args.dry_run:

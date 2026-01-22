@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-01-22 (UKW: E6:S07:T101)  
-**Version:** v0.6.7.101+30
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
+**Version:** v0.5.1.34+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -27,7 +27,7 @@ housekeeping_policy: keep
 
 - **E4:S16:T05** – Create Gap Log and Risk Assessment - IN PROGRESS (HIGH priority, Last updated: 2026-01-20) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T05-create-gap-log-and-risk-assessment.md)
 - **E4:S16:T06** – Define RC sign-off criteria and remediation tasks - IN PROGRESS (HIGH priority) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T6-define-rc-sign-off-criteria-and-remediation-tasks.md)
-- **E5:S01:T34** – UKW Granular Control and Use Case Flags - TODO (HIGH priority, Last updated: 2026-01-16) - [Task Document](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
+- **E5:S01:T34** – UKW Granular Control and Use Case Flags - ✅ COMPLETE (HIGH priority, Last updated: 2026-01-22) (v0.5.1.34+1) - [Task Document](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
 - **E4:S14:T01** – Update Packaged RW to Handle UKW Context and Perpetual Tasks - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
 - **E4:S11:T07** – Migrate Embedded Tasks to Discrete Task Documents - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)
 - **E1:S06:T01** – Set up BYOB badges for private repository - IN PROGRESS (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-1/Story-006-repository-ci-cd-setup/T01-setup-byob-badges-for-private-repository.md)
@@ -83,7 +83,7 @@ housekeeping_policy: keep
 
 **Status:** COMPLETE ✅  
 **Priority:** HIGH  
-**Last Updated:** v0.1.3.6+1
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Stories:**
 - [x] **E1:S01 – Dev Kit Versioning & RW Behaviour** - COMPLETE ✅ (v0.1.1.1+1, E2:S01:T02, E2:S01:T03)
@@ -101,7 +101,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.2.13.0+0
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Stories:**
 - [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.6+4)
@@ -139,7 +139,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.3.4.6+1
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Stories:**
 - [x] **E3:S01 – Dev Kit Alignment with Versioning Framework** - COMPLETE ✅ (v0.3.1.6+1)
@@ -162,7 +162,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.4.14.2+1
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Note:** Epic 4 has incomplete stories (S12, S14, S15, S16, S17), so Epic status is IN PROGRESS.
 
@@ -213,7 +213,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** v0.5.2.2+1
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Note:** E5:S01 (FR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 5 document for internal tracking).
 
@@ -234,8 +234,8 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-03  
-**Version:** v0.6.3.3+1
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
+**Version:** v0.5.1.34+1
 
 **Note:** E6:S01 (BR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 6 document for internal tracking).
 
@@ -268,8 +268,8 @@ housekeeping_policy: keep
 
 **Status:** COMPLETE  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-05  
-**Version:** v0.7.5.4+1
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
+**Version:** v0.5.1.34+1
 
 **Note:** E7:S01 (UXR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 7 document for internal tracking).
 
@@ -298,8 +298,8 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-18  
-**Version:** v0.8.4.0+0
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
+**Version:** v0.5.1.34+1
 
 **Stories:**
 - [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1, Last updated: 2026-01-05)
@@ -323,7 +323,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-17 (v0.9.1.8+9 – E9:S01:T08 COMPLETE: Final validation complete - Kanban board S00→S01 references fixed, versioning policy E6:S06→E6:S07 corrected, acceptance criteria marked complete)
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Stories:**
 - [ ] **E9:S01 – RC Readiness Gap Analysis** - IN PROGRESS (v0.9.1.8+6)
@@ -346,8 +346,8 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-18  
-**Version:** v0.10.1.0+0
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
+**Version:** v0.5.1.34+1
 
 **Stories:**
 - [ ] **E10:S01 – Document Lifecycle Package Implementation Review** - TODO (v0.10.1.0+0)
@@ -363,8 +363,8 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last Updated:** 2026-01-18  
-**Version:** v0.11.1.0+0
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
+**Version:** v0.5.1.34+1
 
 **Stories:**
 - [ ] **E11:S01 – Debug Path Package Implementation Review** - TODO (v0.11.1.0+0)
@@ -380,7 +380,7 @@ housekeeping_policy: keep
 
 **Status:** TODO  
 **Priority:** MEDIUM  
-**Last Updated:** v0.21.0.0+0
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Stories:**
 - [ ] **E21:S00 – Language Selection at Setup (UK/US English)** - TODO (v0.21.0.0+0)
@@ -404,7 +404,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** MEDIUM  
-**Last Updated:** 2025-12-18 (Epic renamed from Epic 9 to Epic 24 - project-specific range)
+**Last Updated:** 2026-01-22 (RW: E5:S1:T34)
 
 **Note:** This is a **project-specific epic** (Epic 24+). Canonical Epic 9 is "User Management and Authentication" (see templates).
 

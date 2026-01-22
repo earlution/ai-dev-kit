@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 5, Story 1: FR Repo (PERPETUAL)
 
-**Status:** IN PROGRESS (PERPETUAL)  
+**Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-01-22 (v0.5.1.34+1 – T34: Implementation complete: UKW granular control via flags and syntax parser)  
+**Last updated:** 2026-01-22 (v0.5.1.34+1 – T34 complete: Task)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.34+1  
+**Version:** v0.5.1.34+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -97,7 +97,7 @@ This is the **Feature Request Repository** (FR Repo) for Epic 5. All Feature Req
 
 ## PERPETUAL State
 
-**Status:** IN PROGRESS (PERPETUAL)
+**Status:** IN PROGRESS
 
 **Characteristics:**
 - Repository stories never complete
