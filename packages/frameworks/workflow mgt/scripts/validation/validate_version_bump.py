@@ -275,18 +275,26 @@ def locate_task_doc(
         story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story:03d}"
         if not story_dir.exists():
             story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
+        if not story_dir.exists() and story_file.exists():
+            # Fallback: story dir may match story file stem (e.g. Story-001-fr-repo/)
+            story_dir = story_file.parent / story_file.stem
     else:
         # Fallback patterns
         story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story:03d}"
         if not story_dir.exists():
             story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story}"
+        if not story_dir.exists() and story_file.exists():
+            story_dir = story_file.parent / story_file.stem
     
     if story_dir.exists():
         # Try Task-{task}-*.md pattern
         task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))
         if not task_files:
-            # Try T{task}-*.md pattern
+            # Try T{task}-*.md pattern (zero-padded)
             task_files = list(story_dir.glob(f"T{task:03d}-*.md"))
+        if not task_files:
+            # Try T{task}-*.md pattern (no padding, e.g. T37-*.md)
+            task_files = list(story_dir.glob(f"T{task}-*.md"))
         if task_files:
             task_file = task_files[0]
             return (task_file, task_file.read_text(), "separate_file")

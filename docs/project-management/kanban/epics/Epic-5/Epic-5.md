@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-22 (v0.5.1.34+1 – E5:S01:T34: Implementation complete: UKW granular control via flags and syntax parser)  
+**Last updated:** 2026-02-08 (v0.5.1.37+1 – E5:S01:T37: Task created: FR-037 repository task)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -24,12 +24,9 @@ housekeeping_policy: keep
 - [x] **E5:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.5.0.0+0 – Epic-level abstract space only, no tasks)
   - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
-- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.34+1 – T34: Implementation complete: UKW granular control via flags and syntax parser)
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.37+1 – T37: Task created: FR-037 repository task)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
-- [ ] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - Repository story for Feature Requests)
-  - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
-  - **Note:** S01 is now the repository story (migrated from S00). S00 is abstract space only.
 - [ ] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)
   - Story: [`Story-002-documentation-maintenance-framework.md`](Story-002-documentation-maintenance-framework.md)
   - **Note:** Renumbered from S01 to S02 as part of repository story migration (E9:S01:T08)

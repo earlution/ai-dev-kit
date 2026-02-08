@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-01-22 (v0.5.1.34+1 – T34 complete: Task)
+**Last updated:** 2026-01-22 (v0.5.1.37+1 – T37 complete: Task created)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.34+1
+**Version:** v0.5.1.37+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -35,6 +35,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T34 – UKW Granular Control and Use Case Flags** - ✅ COMPLETE (v0.5.1.34+1 – Implementation complete: UKW granular control via flags and syntax parser) - [Task Document](Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
 - [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
 - [x] **E5:S01:T36 – RW Update Kanban Board on Task Completion** - ✅ COMPLETE (v0.5.1.36+1 – Implementation complete: Kanban board updates added to RW Step 7) - [Task Document](Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) | [FR-036](../../fr-br/FR-036-rw-update-kanban-board-on-task-completion.md)
+- [x] **E5:S01:T37 – Kanban Policy Task Prioritisation and Queue/Stack** ✅ COMPLETE (v0.5.1.37+1 – Task created: FR-037 repository task) - [Task Document](Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
 
 ---
 
