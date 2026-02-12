@@ -4,6 +4,14 @@ ttl_days: null
 created_at: 2026-01-20T00:00:00Z
 expires_at: null
 housekeeping_policy: keep
+# Discovery: template sections for prioritisation and MUST HAVE ordering (FR-037)
+template_sections:
+  - id: task-prioritisation-and-must-have-ordering
+    title: Task Prioritisation and MUST HAVE Ordering
+    description: How to prioritise tasks and order MUST HAVE (queue vs stack for bug-based vs other work).
+  - id: definition-of-complete
+    title: Definition of COMPLETE
+    description: When a task is considered COMPLETE (implemented and signed off).
 ---
 
 # {Project Name} – Kanban Board Guide
@@ -64,6 +72,25 @@ The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows
 
 **Task Ordering:**
 Tasks within each MoSCOW section are ordered chronologically, with most recently updated tasks at the top.
+
+---
+
+## Task Prioritisation and MUST HAVE Ordering
+
+**Initial prioritisation:** Every new task must be placed in one MoSCOW category (M, S, C, O, or W). No task is added directly to COMPLETE. Projects may define their own criteria for M vs S vs C (e.g. critical path = M, high value = S, nice-to-have = C); the framework does not prescribe domain-specific rules.
+
+**MUST HAVE ordering:** Within the MUST HAVE (M) section, use two ordering behaviours:
+
+- **Stack (for bug-based or breaking work):** Treat M as a stack. Add new items to the **top** of the MUST HAVE list. Work **top-first** so the most recently added urgent item is done first. Use this for tasks that fix critical bugs or address breaking issues.
+- **Queue (for all other MUST HAVE work):** Treat M as a queue. Add new items to the **end** of the MUST HAVE list. Work **front-first** so the first item in the list is done first. Use this for planned feature work and non-urgent M tasks.
+
+**Rule:** For each new MUST HAVE task, classify it as either *bug-based/breaking* (stack) or *other* (queue) and add it to the top or end of the M section accordingly. Scripts and processes that update the board (e.g. UKW, RW) should respect this rule when inserting or ordering tasks, or document that ordering is manual or agent-defined.
+
+---
+
+## Definition of COMPLETE
+
+**COMPLETE** means the task is **fully implemented** (work done, code or docs delivered, released in a version) **and** **signed off** (validated, accepted by the responsible party). A task moves from a MoSCOW column into COMPLETE only when both conditions are met. Do not mark a task COMPLETE solely because a version exists or the story file says so—only when implementation is done and signed off. This definition applies to the board, this guide, governance policy, story and task docs, and any script or process that sets task status.
 
 ---
 

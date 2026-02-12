@@ -514,6 +514,41 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 ---
 
+### 6.3 Doc-Init / Abstract Space Cheat Sheet
+
+This section summarizes how to use **doc-init / abstract space builds (`+0`)** in day-to-day work.
+
+**When to use `+0` (abstract space):**
+- Creating a **new Epic / Story / Task document** with no functional work yet.
+- Typical examples:
+  - Onboarding a new **FR/BR** and creating its associated Task doc (wiring + documentation only).
+  - Creating initial Epic/Story docs before any implementation starts.
+
+**Patterns:**
+- **Epic doc creation:** `0.{EPIC}.0.0+0`
+- **Story doc creation:** `0.{EPIC}.{STORY}.0+0`
+- **Task doc creation:** `0.{EPIC}.{STORY}.{TASK}+0`
+
+**What `+0` means:**
+- Documentation-only anchor (no code / behavior changes).
+- Establishes the **forensic traceability starting point** for that E/S/T.
+- Must be created via the **doc-init path** (FR-017).
+
+**After `+0` (functional work):**
+- First functional release for that E/S/T uses **`+1`**:
+  - Example progression for a Task:
+    - `0.4.11.1+0` – Task document created (abstract space)
+    - `0.4.11.1+1` – First functional change for that Task
+    - `0.4.11.1+2` – Second functional change, etc.
+- Moving to a **new Task**:
+  - Optionally create a **Task-level abstract space** first (`+0`) for the new Task doc.
+  - Then use `+1` for the first functional release on that Task.
+
+**Practical cheat sheet:**
+- **Onboard FR/BR + Task doc only:** use **`+0`** (abstract space).
+- **Start actual implementation for that Task:** bump to **`+1`**.
+- **Continue work on the same Task:** increment BUILD (**`+2`, `+3`, …`**).
+
 ## 7. CHANGELOG Format
 
 This repo uses a **two-layer changelog system** aligned with the framework pattern:

@@ -47,6 +47,20 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ---
 
+## Doc-Init / Abstract Space Quick Reference
+
+For this story, doc-init (`+0`) builds are used for **documentation-only anchors** when first creating E/S/T docs (see dev-kit versioning policy, Section 6.2/6.3):
+
+- **Abstract space (`+0`):**
+  - Epic / Story / Task document creation only (no functional work yet).
+  - Typical use case: onboarding an FR/BR, creating the associated Task doc and wiring, before any implementation.
+- **Functional work (`+1` and beyond):**
+  - First functional release for that Task uses `+1`; subsequent releases increment to `+2`, `+3`, etc.
+
+This implementation review (E3:S04) assumes that abstract spaces are established via the `+0` doc-init path, and that all RC readiness checks (T01–T06) evaluate the **functional behavior and integrations** built on top of those anchors.
+
+---
+
 ## Tasks
 
 ### E3:S04:T01 – Establish expectations baseline for Numbering & Versioning package
