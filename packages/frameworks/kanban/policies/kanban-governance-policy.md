@@ -477,6 +477,7 @@ The following patterns are **explicitly prohibited**:
   - No conflicts with regular task range (T01-T99)
   - Visual clarity in task lists
 - **Migration Note:** Perpetual tasks were migrated from regular task numbers (e.g., T08→T101, T12→T102) as part of repository story abstract space resolution (E9:S01:T08)
+- **Required — Update task document per run:** For each run of a perpetual task, the **task document itself MUST be updated** with a brief record of: what was changed (files, scope), why (purpose, trigger), and the version of this release. This ensures forensic traceability for every run (not only in changelogs). Example: add an "Update History" or inline note in the task doc per release.
 
 **Validation Requirements:**
 
@@ -557,6 +558,8 @@ The following validations MUST be enforced:
    - Release workflow Step 2 validates task/version alignment after update
    - Validators check task/version alignment
    - Pre-commit hooks enforce alignment (if implemented)
+
+5. **Implementation Cycle (adoptable):** Projects may require a mandatory Implementation Cycle (spec + TDD) for all task implementations: Requirement doc → Task creation → Specification & Test Creation (blocking) → Implementation (Red-Green-Refactor) → Release Workflow. When adopted, tests must exist and be failing before implementation starts. **Reference:** `.cursorrules` (Implementation Cycle section), `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md`.
 
 **Common Mistakes to Avoid:**
 - ❌ **DON'T:** Keep `VERSION_TASK = 1` and increment `VERSION_BUILD` when moving to Task 2

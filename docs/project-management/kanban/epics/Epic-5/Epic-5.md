@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-08 (v0.5.1.37+1 – E5:S01:T37: Task created: FR-037 repository task)  
+**Last updated:** 2026-02-12 (v0.5.1.37+3 – E5:S01:T37: Policy alignment, implementation cycle, changelog/IDE/git reminders)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [x] **E5:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.5.0.0+0 – Epic-level abstract space only, no tasks)
   - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
-- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.37+1 – T37: Task created: FR-037 repository task)
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.37+3 – T37: Policy alignment, implementation cycle, changelog/IDE/git reminders)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 - [ ] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)
@@ -87,7 +87,7 @@ Epic 5 owns the **Documentation Management and Maintenance** framework for the a
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
 **Estimated Effort:** N/A (Perpetual repository)  
-**Last updated:** 2026-01-16
+**Last updated:** 2026-02-12 (v0.5.1.37+3)
 
 **Goal:**  
 Repository story for all Feature Requests. Provides 1:1 traceability between FR numbers and task numbers.

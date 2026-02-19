@@ -1,4 +1,816 @@
 # Changelog Archive
+## [0.2.13.1+1] - 20-01-26
+
+### Added
+- Workflow Management package implementation review – Expectations baseline established (E2:S13:T01)
+  - Comprehensive expectations baseline document created
+  - Core operating principles, expected workflows, and integration expectations documented
+  - Package composition cataloged (scripts, workflows, templates, docs)
+  - Behavioral expectations documented (atomicity, TODO tracking, error handling)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.13.1+1.md)
+
+---
+---
+## [0.2.13.1+2] - 21-01-26
+
+### Fixed
+- GitHub release script now automatically loads `.env.local` file (E2:S13:T01)
+  - Script checks `.env.local` before checking environment variables
+  - Eliminates need to manually export `GITHUB_TOKEN`
+  - Improved error messages with clear setup instructions
+  - Updated RW Step 12.5 documentation and execution guide
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.13.1+2.md)
+
+---
+---
+---
+---
+---
+## [0.3.4.1+1] - 21-01-26
+
+### Added
+- Numbering & Versioning package implementation review – Expectations baseline established (E3:S04:T01)
+  - Comprehensive expectations baseline document created
+  - Core operating principles documented (standalone usage, copy vs reference pattern, independence score 10/10)
+  - Versioning schema definition (`RC.EPIC.STORY.TASK+BUILD`) with calculation rules and epic renumbering strategy
+  - SemVer mapping for external releases (Hybrid Approach algorithm) documented
+  - Versioning strategy principles documented (canonical ordering, two-layer timestamp system, forensic traceability, immutability rules)
+  - Integration expectations with Workflow Management and Kanban packages mapped
+  - Package composition documented (14 documents: policies, templates, guides, integration docs)
+  - Expected behaviors documented (version file structure, changelog formats, task document requirements)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.4.1+1.md)
+
+---
+---
+---
+---
+---
+## [0.3.4.2+1] - 21-01-26
+
+### Added
+- Numbering & Versioning package implementation review – Component inventory and mapping complete (E3:S04:T02)
+  - Complete component inventory document created
+  - All 14 expected components verified present and complete (100% coverage)
+  - Component mapping to expectations baseline completed
+  - Coverage analysis: Core Documents (3/3), Versioning Policies (2/2), Numbering Policies (2/2), Governance (1/1), Templates (2/2), Integration Docs (4/4)
+  - No gaps or missing components identified
+  - All components verified complete with expected content
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.4.2+1.md)
+
+---
+---
+---
+---
+---
+## [0.3.4.3+1] - 21-01-26
+
+### Added
+- Numbering & Versioning package implementation review – Versioning behavior validation complete (E3:S04:T03)
+  - Schema rules validation document created
+  - All schema components validated and match documentation
+  - Edge cases validated (doc-init builds, out-of-order tasks, parallel epics)
+  - Guidance consistency verified across policy documents
+  - Implementation validated against documented rules
+  - All validation checks passed, no critical discrepancies found
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.4.3+1.md)
+
+---
+---
+---
+---
+---
+## [0.3.4.4+1] - 21-01-26
+
+### Added
+- Numbering & Versioning package implementation review – Integration and dependency alignment review complete (E3:S04:T04)
+  - Integration alignment report created
+  - Numbering & Versioning ↔ Workflow Management (RW) integration validated (aligned)
+  - Numbering & Versioning ↔ Kanban integration validated (aligned)
+  - Three-way integration (Kanban ↔ Versioning ↔ RW) validated (aligned)
+  - Dependency model validated (no hard dependencies, optional soft dependencies)
+  - All integration patterns validated against actual implementation
+  - No blocking issues found, RC-ready confirmed
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.4.4+1.md)
+
+---
+---
+---
+---
+---
+## [0.3.4.5+1] - 21-01-26
+
+### Added
+- Numbering & Versioning package implementation review – Gap log and risk assessment complete (E3:S04:T05)
+  - Gap log created consolidating findings from T01–T04
+  - Risk assessment completed with RC readiness statement
+  - 3 gaps identified (all INFORMATIONAL, none blocking RC)
+  - All gaps are expected customization paths or documentation enhancement opportunities
+  - RC-READY confirmed with no blocking issues
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.4.5+1.md)
+
+---
+---
+---
+---
+---
+## [0.3.4.6+1] - 22-01-26
+
+### Added
+- Numbering & Versioning package implementation review – RC sign-off criteria and remediation tasks complete (E3:S04:T06)
+  - RC sign-off criteria document created with 5 criteria (all PASS)
+  - Component Completeness: ✅ PASS (100% coverage, all 14 components present)
+  - Behavioral Compliance: ✅ PASS (all validations passed, no discrepancies)
+  - Integration Alignment: ✅ PASS (all integrations validated and working)
+  - Risk Assessment: ✅ PASS (no RC-blocking risks identified)
+  - Documentation Completeness: ✅ PASS (all documentation complete and accurate)
+  - RC Sign-Off Recommendation: ✅ APPROVE
+  - Remediation tasks created for post-RC improvements (3 tasks, all LOW priority, non-blocking)
+  - Post-RC improvement opportunities documented (3 opportunities)
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.4.6+1.md)
+
+---
+---
+---
+---
+---
+## [0.4.12.5+0] - 05-01-26
+
+### Changed
+- Board display logic updated to omit S00 stories (E4:S12:T05)
+  - E5:S00, E6:S00, E7:S00 omitted from epic checklist displays
+  - Notes added explaining omission (PERPETUAL repository stories)
+  - Internal tracking maintained in Epic documents
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.5+0.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.12.10+0] - 05-01-26
+
+### Changed
+- S00 repository pattern documentation completed (E4:S12:T10)
+  - Intake workflow integration documented (8-step workflow with repository assignment)
+  - Versioning policy updated with S00 abstract space concept
+  - Meta-grouping pattern documented in Kanban governance policy
+  - Epic 5, 6, 7 templates updated with S00 pattern
+  - All patterns, workflows, and policies fully documented
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.12.10+0.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.13.3+1] - 18-12-25
+
+✅ Complete: T03 - Kanban board template created with MoSCoW prioritized task view
+
+### Added
+
+- **Kanban Board Template:**
+  - Created `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`
+  - Template includes complete MoSCoW prioritized task view structure
+  - Template includes comprehensive usage instructions
+  - Template references updated Kanban governance policy
+
+### Changed
+
+- **Kanban Governance Policy (T02, also completed):**
+  - Updated canonical policy with MoSCoW prioritized task view documentation
+  - Updated local policy with new board structure
+  - Both policies now consistent and accurate
+
+- **Task Documents:**
+  - T02 marked as COMPLETE (v0.4.13.2+1)
+  - T03 marked as COMPLETE (v0.4.13.3+1)
+  - Story checklist updated with completion markers
+
+- **Version File:**
+  - Version updated to `0.4.13.3+1` (E4:S13:T03, first build - out-of-order completion)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.3+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.13.4+1] - 18-12-25
+
+✅ Complete: T04 - Assess system impacts - RW doc-init detection bug fixed
+
+### Fixed
+
+- **RW Doc-Init Detection Bug:**
+  - Fixed `detect_first_time_est_doc` function to correctly detect when task document already exists
+  - Prevents incorrect BUILD=0 when story + task docs created together in story's abstract space
+  - Ensures first implementation work correctly gets BUILD=1 instead of BUILD=0
+
+### Added
+
+- **System Impact Assessment:**
+  - Documented all systems that interact with Kanban (RW, validators, installers)
+  - Identified and fixed critical RW doc-init detection bug
+  - Documented future work required for other systems
+
+- **Documentation:**
+  - Added Example 4 to RW execution guide (bug scenario and fix)
+  - Updated T04 task document with bug analysis and fix
+
+### Changed
+
+- **RW Validation Script:**
+  - Updated `detect_first_time_est_doc` function logic
+  - Added task document existence check before determining doc-init
+
+- **Version File:**
+  - Version updated to `0.4.13.4+1` (E4:S13:T04, first build)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.13.4+2] - 18-12-25
+
+✅ Complete: T04 - BR-010 created, KB documents anchored to canonical source
+
+### Added
+
+- **BR-010:** Bug Report for RW doc-init detection bug
+  - Complete bug documentation with fix attempt history
+  - Status: FIXED (v0.4.13.4+1)
+  - Properly linked to related work
+
+- **UC-D-004:** Discovered Use Case - Story + Task Docs Batch Creation
+  - Valid workflow documentation
+  - Anchored to BR-010 as canonical source
+
+- **Abstract Anti-Pattern:** Use Case Exposed Design Flaw
+  - Pattern definition and taxonomy
+  - Concrete example from BR-010
+  - Anchored to BR-010 as canonical source
+
+### Changed
+
+- **Document Anchoring:**
+  - KB documents now properly anchor to BR-010
+  - Canonical source hierarchy established
+  - Bidirectional links maintained
+
+- **T04 Task Document:**
+  - Added BR-010 to Related BR/FR Links
+  - Added UC-D-004 and Abstract Anti-Pattern links
+
+- **Discovered Use Cases README:**
+  - Added UC-D-004 to index
+
+- **Version File:**
+  - Version updated to `0.4.13.4+2` (E4:S13:T04, second build)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+2.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.13.4+3] - 18-12-25
+
+✅ Complete: T04 - Packaged RW updated to v2.1.2 with BR-010 fix documentation
+
+### Changed
+
+- **Packaged Release Workflow Framework:**
+  - Updated Workflow Management package from v2.1.1 to v2.1.2
+  - Added BR-010 fix documentation to package CHANGELOG
+  - Updated package README version and last updated date
+  - Updated cursorrules section version to 2.3.1
+
+- **Package Documentation:**
+  - Package CHANGELOG now documents BR-010 fix (doc-init detection bug)
+  - Package README reflects new version (2.1.2) and BR-010 fix in key enhancements
+  - Cursorrules section updated (version 2.3.1, last updated 2025-12-18)
+
+- **Version File:**
+  - Version updated to `0.4.13.4+3` (E4:S13:T04, third build)
+
+**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+3.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.13.6+3] - 17-12-25
+
+✅ Documentation Update: Kanban documentation updates to reflect E4:S13 completion
+
+### Changed
+
+- **Kanban Documentation:**
+  - Updated `kanban-board.md` to remove all E4:S13 tasks from "In Progress" sections
+  - Added E4:S13 to Epic 4 stories section as COMPLETE ✅ with all tasks listed
+  - Updated Epic 4 progress tracking across all kanban board views
+  - Updated `_index.md` (quick view) to reflect E4:S13 completion
+  - Updated `Epic-4.md` to show T05 and T06 as COMPLETE
+
+- **Documentation Consistency:**
+  - All kanban documentation now accurately reflects E4:S13 completion state
+  - Epic 4 story count updated from 12 to 13 (10/13 complete)
+  - Incomplete stories note updated (S06, S10, S12 remain)
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+3.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.13.6+4] - 17-12-25
+
+✅ Documentation Correction: Fixed E4:S10 status inconsistency in kanban board
+
+### Changed
+
+- **Kanban Documentation:**
+  - Corrected E4:S10 status from COMPLETE ✅ to IN PROGRESS in kanban-board.md
+  - Added task details: T00 ✅ COMPLETE, T01-T07 IN PROGRESS
+  - Updated Epic 4 note to clarify S10 is IN PROGRESS (not TODO)
+  - Aligns kanban board with Epic-4.md and Story-010 document actual status
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+4.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.13.6+5] - 17-12-25
+
+🎉 Feature: Update Kanban Workflow (UKW) - Agent-driven kanban synchronization workflow
+
+### Added
+
+- **Update Kanban Workflow (UKW):**
+  - Created `update-kanban-workflow.yaml` - 8-step bottom-up workflow
+  - Created `cursorrules-ukw-trigger-section.md` - Trigger documentation
+  - Created `update-kanban-workflow-agent-execution.md` - Agent execution guide
+  - Trigger: "UKW" or "ukw" (case-insensitive)
+  - Bottom-up approach: Tasks → Stories → Epics → Board
+  - Requires agentic intelligence for synthesis, prioritization, and narrative updates
+- **Feature Request:**
+  - Created `FR-023-update-kanban-workflow-ukw.md` - UKW feature request document
+- **Documentation:**
+  - Updated workflow management package README with UKW references
+
+### Changed
+
+- **Workflow Management Package:**
+  - Added UKW workflow to available workflows
+  - Enhanced documentation with intelligence requirements
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+5.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.14.2+1] - 19-01-26
+
+### Changed
+- E4:S14:T02: Restore RC review planning artifacts
+  - Restored Epics 10/11 and package review story docs
+  - Re-synchronized Kanban board and Epic 4 maintenance references
+  - Marked Story 14 Task 2 complete with forensic marker
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.14.2+1.md)
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.15.0+1] - 22-12-25
+
+📋 Story Creation: E4:S15 - Procedural Task Template Generation and Hybrid Strategy
+
+### Added
+
+- **Story Created:** E4:S15 - Procedural Task Template Generation and Hybrid Strategy
+  - Implements hybrid task template system combining concrete templates with procedural generation
+  - 5 tasks defined for implementation (T01-T05)
+
+- **Architecture Decision Record:**
+  - `docs/architecture/standards-and-adrs/task-template-system-hybrid-adr.md` created
+  - Documents decision to adopt hybrid approach (concrete templates + procedural generator)
+  - Analyzes current state, evaluates options, recommends hybrid strategy
+
+- **Feature Request:**
+  - FR-029 - Procedural Task Template Generation (Hybrid Strategy) created
+  - Defines requirements and acceptance criteria for hybrid template system
+
+- **Analysis Document:**
+  - `docs/analysis/task-template-system-analysis.md` created
+  - Comprehensive analysis addressing time consumption, disk space, maintenance burden
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.0+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.15.3+1] - 22-12-25
+
+🔧 Generator Implementation: E4:S15:T03 - Task Template Generator Design and Implementation
+
+### Added
+
+- **Generator Design Document:**
+  - `docs/architecture/standards-and-adrs/task-template-generator-design.md` created
+  - Comprehensive design for procedural task template generator
+  - Documents parsing strategy, mapping rules, CLI interface, and validation routine
+
+- **Generator Script:**
+  - `packages/frameworks/kanban/scripts/generate_task_templates.py` created
+  - Python script for generating task templates from canonical structure document
+  - Supports dry-run, overwrite protection, epic/story filtering, and validation
+  - CLI interface with comprehensive options
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.3+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.15.5+1] - 22-12-25
+
+📚 Documentation Complete: E4:S15:T05 - Generator Integration and Hybrid Strategy Documentation
+
+### Added
+
+- **Generator Integration:**
+  - Generator script documented in `packages/frameworks/kanban/scripts/README.md`
+  - Comprehensive usage guide with CLI options and examples
+  - Guidance for framework maintainers and adopting projects
+
+- **Hybrid Strategy Documentation:**
+  - Hybrid template system section added to `packages/frameworks/kanban/README.md`
+  - Explanation of hybrid approach (concrete templates + procedural generator)
+  - Benefits and trade-offs documented
+  - Usage guidance for maintainers and clients
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.5+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.15.5+2] - 22-12-25
+
+🤖 Agentic Enhancement: E4:S15:T05+2 - Agentic Template Generator and Integration
+
+### Added
+
+- **Agentic Template Generator:**
+  - `packages/frameworks/kanban/scripts/agentic_template_generator.py` created
+  - AI/LLM-powered template generation for Epic/Story/Task templates
+  - Supports OpenAI, Anthropic, and local models
+  - Procedural fallback when LLM unavailable
+
+- **Process Integration:**
+  - Task template generator enhanced with optional agentic support
+  - Task creator enhanced with optional agentic support
+  - Agentic task workflow enhanced with environment variable support
+
+- **Documentation:**
+  - Agentic generator design document created
+  - Template generation integration guide created
+  - Blog post on hybrid template system published
+  - Knowledge base articles section added
+
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.15.5+2.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.16.1+1] - 18-01-26
+
+### Changed
+- E4:S16:T01: Kanban Package Expectations Baseline (Implementation Review)
+  - Documented core operating principles, governance rules, and package composition
+  - Recorded authoritative sources for RC implementation review
+  - Marked Story 16 Task 1 complete with forensic marker
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.1+1.md)
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.16.2+1] - 19-01-26
+
+### Changed
+- E4:S16:T02: Kanban Package Component Inventory
+  - Cataloged package components and mapped to expectations baseline
+  - Documented scripts, templates, guides, and examples
+  - Marked Story 16 Task 2 complete with forensic marker
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.2+1.md)
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.4.16.4+1] - 20-01-26
+
+### Changed
+- Kanban package implementation review – Integration alignment (E4:S16:T04)
+  - Reviewed integration points between the Kanban framework and Numbering & Versioning framework
+  - Reviewed integration points between the Kanban framework and Workflow Management framework (RW + UKW)
+  - Validated hard vs soft dependency model (Git/Markdown as hard deps; Versioning/Workflow as soft deps)
+  - Confirmed that dev-kit implementation matches documented integration guides
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.4+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+## [0.4.16.5+1] - 20-01-26
+
+### Added
+- Kanban package implementation review – Gap log and risk assessment (E4:S16:T05)
+  - Consolidated findings from expectations baseline, component inventory, behavioral validation, and integration alignment
+  - Classified gaps by severity, likelihood, RC impact, and ownership (Kanban vs external workflows)
+  - Confirmed no RC-blocking gaps attributable to the Kanban framework package implementation
+  - Documented overall RC risk posture for Kanban as RC-ready
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.5+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+## [0.4.16.5+2] - 22-01-26
+
+### Changed
+- Kanban Package Implementation Review (E4:S16:T05): Task complete - Gap log and risk assessment finalized
+  - All acceptance criteria met
+  - Gap tracking references updated (E6:S01:T34, E6:S01:T35 marked complete)
+  - RC risk posture documented: No RC-blocking risks for Kanban framework package
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.5+2.md)
+
+---
+---
+---
+---
+---
+## [0.4.16.6+1] - 22-01-26
+
+### Added
+- RC Sign-Off Criteria (E4:S16:T06): Defined RC sign-off criteria and remediation task patterns for Kanban framework package
+  - Created comprehensive 5-criteria checklist for RC readiness (governance, structure, integration, gap log, traceability)
+  - Established remediation task pattern for externalizing non-blocking gaps
+  - Reviewed gap log and confirmed no RC-blocking gaps remain
+  - Verified all gaps tracked in Kanban with explicit remediation paths
+  - Kanban framework package confirmed RC-ready
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.16.6+1.md)
+
+---
+---
+---
+---
+---
+## [0.5.1.4+2] - 06-12-25
+
+🔔 Documentation Management: Documentation update triggers established (Story 1 complete)
+
+### Added
+
+- Created documentation update triggers document (`docs/architecture/standards-and-adrs/documentation-update-triggers.md`)
+- Defined automatic triggers (Code Changes, Framework Changes, Policy Changes)
+- Defined manual triggers (Regular Reviews, User Feedback, Quality Assurance)
+- Documented update procedures for each trigger type
+- Established update trigger detection (Automated and Manual)
+- Defined update workflows (Automatic and Manual)
+- Integrated with Release Workflow, Kanban, and Framework Health Monitoring
+- Established update trigger metrics and reporting
+
+### Changed
+
+- Updated Story 001 to mark T04 as complete and Story 1 as COMPLETE
+- Updated Epic 5 to mark Story 1 as COMPLETE
+- Version bumped to v0.5.1.4+2 (Story 1, Task 4, Build 2)
+
+### Notes
+
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.4+2.md` for full details
+- Story 1 (Documentation Maintenance Framework) is now COMPLETE - all 4 tasks completed
+- Update triggers ensure documentation stays current with codebase and processes
+- Automatic triggers enable proactive updates
+- Manual triggers support reactive updates
+- Integration with existing workflows ensures seamless operation
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.5.1.5+1] - 07-12-25
+
+📚 Documentation Management: KB platform/tooling evaluation task added
+
+### Added
+- **E5:S01:T05 – Explore and evaluate KB platform/tooling options:**
+  - Comprehensive task definition for evaluating KB platform/tooling options
+  - 14 evaluation criteria categories covering:
+    - Ease of setup and technical fluency requirements
+    - Maintenance overhead and operational considerations
+    - Ringfencing/public exposure capabilities
+    - Remote team support and collaboration features
+    - Integration with existing dev-kit workflows
+    - Cost, licensing, and sustainability
+    - Search, discoverability, and Markdown support
+    - Agent/AI compatibility and automation
+    - Versioning, export, and portability
+    - Performance, scalability, and security
+  - Platform options to evaluate (Git-based, static site generators, documentation platforms, wikis, hybrid solutions)
+  - Use case scenario analysis (framework users, book readers, public-facing content, remote teams)
+  - Deliverables defined (evaluation report, comparison matrix, recommendations)
+
+### Changed
+- **Epic 5, Story 1 Status:** Updated from COMPLETE to IN PROGRESS (T01 and T05 are TODO)
+- **Story 1 Task Checklist:** Added T05 to task list
+
+### Technical Details
+- **Task Scope:** Evaluation of KB platform/tooling options for framework package
+- **Considerations:** Framework user technical fluency, book reader accessibility, public content ringfencing, remote collaboration
+- **Integration:** Will inform KB framework package design and implementation
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
 ## [0.4.12.1+0] - 05-01-26
 
 ### Added

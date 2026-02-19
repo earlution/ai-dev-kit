@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: FR Repo)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 37     # Task number (Task 37: Kanban Policy Task Prioritisation and Queue/Stack)
-VERSION_BUILD = 2     # Build number (E5:S01:T37+2 - Doc-init / abstract space cheat sheet and story quick reference added)
+VERSION_TASK = 39     # Task number (Task 39: AI Dev Kit Project Review and Legacy Clean-Up)
+VERSION_BUILD = 0     # Build number (E5:S01:T39+0 - Doc-init abstract space for AI Dev Kit project review and legacy clean-up)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.37+2 = Development, Epic 5, Story 1, Task 37, Build 2 (E5:S01:T37: Doc-init / abstract space cheat sheet and story quick reference added)
+# Current: 0.5.1.39+0 = Development, Epic 5, Story 1, Task 39, Build 0 (E5:S01:T39: Doc-init abstract space for AI Dev Kit project review and legacy clean-up)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

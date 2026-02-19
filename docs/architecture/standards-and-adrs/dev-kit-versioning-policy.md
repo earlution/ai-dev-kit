@@ -27,6 +27,24 @@ Goals:
 
 ---
 
+### 1.1 Mental Model: Internal vs Release Versions
+
+The dev-kit follows the framework’s **dual-version model**:
+
+- **Internal version (`RC.EPIC.STORY.TASK+BUILD`)**
+  - Forensic coordinate and Kanban anchor.
+  - Encodes Epic/Story/Task/Build and is used by RW/UKW/CMW and Kanban docs.
+
+- **Release version (SemVer `MAJOR.MINOR.PATCH+BUILD`)**
+  - External-facing version shown in README badges, GitHub releases, and package managers.
+  - Always derived from the internal version using the mapping defined in Section 2.1.
+
+In practice:
+
+- When talking to **external consumers**, the dev-kit presents **SemVer first**, optionally followed by the internal version in parentheses, for example:  
+  - `v0.3.19+2 (internal: v0.6.7.101+2)`.
+- When talking about **Kanban, tasks, and workflow internals**, the dev-kit uses `RC.EPIC.STORY.TASK+BUILD` directly.
+
 ## 2. Schema (Adopted)
 
 This repo fully adopts the RC.EPIC.STORY.TASK+BUILD schema:
@@ -116,6 +134,22 @@ Both tags reference the same commit. Internal tag maintains backward compatibili
 **Related Documentation:**
 - **Proposal:** `docs/architecture/standards-and-adrs/semver-mapping-proposal.md`
 - **Implementation Impact:** `docs/architecture/standards-and-adrs/semver-mapping-implementation-impact.md`
+
+**Mapping modes (dev-kit stance):**
+
+- The underlying framework defines multiple **SemVer mapping modes**. The dev-kit itself adopts the **registry-based epic/story mapping mode (Mode A)** as its default:
+  - `MAJOR = RC`
+  - `MINOR` and `PATCH` assigned via the `semver-registry.yaml` registry.
+- Other projects copying this policy MAY choose the **simple global PATCH mode (Mode B)** documented in the framework if they prefer a “SemVer-first, global counter” external story.
+
+**Optional metadata pattern:**
+
+When needed, SemVer tags MAY append metadata that embeds the internal version for machine parsing:
+
+- Pattern: `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`
+- Example: internal `0.6.7.101+2` → SemVer tag `v0.3.19+2+rc.0.e6.s7.t101.b2`
+
+This metadata is optional and does not affect SemVer ordering; public-facing docs SHOULD normally show the clean SemVer (`v0.3.19+2`) and reserve metadata for tooling and tag inspection.
 
 ---
 
@@ -671,27 +705,19 @@ This repo uses a **two-layer changelog system** aligned with the framework patte
 
 ## 8. Canonical Ordering Principle
 
-**Version numbers (`RC.EPIC.STORY.TASK+BUILD`) are the canonical ordering metric for all releases and changelog entries.**
+**Release version numbers (SemVer `MAJOR.MINOR.PATCH`) are the canonical ordering metric for all releases and changelog entries.**
 
 This means:
 
-- **Version ordering is independent of wall-clock time**
+- **Release ordering is independent of wall-clock time**
   - If `0.3.1.2+1` was committed on 2025-12-02 at 10:00:00 UTC
   - And `0.3.1.1+2` was committed on 2025-12-02 at 15:30:00 UTC
   - The changelog still orders them as: `0.3.1.1+2` first, then `0.3.1.2+1`
-  - **The version number determines order, not the actual commit timestamp**
+  - **The release version number determines order, not the actual commit timestamp**
 
-- **Parallel epic development is fully supported**
-  - Epic 1 work (`0.1.x.x+x`) can be committed after Epic 4 work (`0.4.x.x+x`)
-  - Epic 4 work can be committed before Epic 1 work
-  - **The changelog orders by version number, not by Git commit time**
+**Parallel epic development remains fully supported**: multiple epics can work simultaneously and each epic maintains its own internal version stream, while releases are ordered by SemVer in the changelog.
 
-- **This enables true parallel development**
-  - Multiple epics can work simultaneously
-  - Each epic maintains its own version stream
-  - When merged, versions are ordered correctly by their semantic structure
-
-**The version number encodes the work hierarchy (Epic → Story → Task → Build), and that hierarchy is what matters for ordering, not when the code was actually committed.**
+**The internal version continues to encode the work hierarchy (Epic → Story → Task → Build).** The release version provides the canonical ordering for external consumers; the internal version provides the canonical forensic coordinate for tracing work through Kanban, changelogs, and Git history.
 
 > **Reference:** See `packages/frameworks/numbering & versioning/versioning-strategy.md` (Section: Core Principle: Version Numbers Are Canonical) for complete documentation.
 

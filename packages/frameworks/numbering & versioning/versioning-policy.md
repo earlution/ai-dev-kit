@@ -27,6 +27,25 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
 
 ---
 
+## Mental Model: Internal vs Release Versions
+
+This policy assumes a **dual-version model**:
+
+- **Internal version (`RC.EPIC.STORY.TASK+BUILD`)**
+  - Primary role: **forensic coordinate and Kanban anchor**.
+  - Encodes the work hierarchy (Epic → Story → Task → Build).
+  - Used by engineers, workflows, and Kanban governance.
+
+- **Release version (SemVer `MAJOR.MINOR.PATCH+BUILD`)**
+  - Primary role: **external-facing version** for users, package managers, and GitHub releases.
+  - Provides a simple, monotonic version line suitable for SemVer-aware tooling.
+  - Always derived from the internal version using a mapping strategy.
+
+In practice:
+
+- **Storytelling to external consumers** (README badges, GitHub releases, package registries) is done in **SemVer terms**.
+- **Traceability and internal reasoning** (Kanban docs, detailed changelogs, validators) are done in **`RC.EPIC.STORY.TASK+BUILD` terms**.
+
 ## Schema
 
 **Format:** `RC.EPIC.STORY.TASK+BUILD`
@@ -114,6 +133,67 @@ Both tags reference the same commit. Internal tag maintains backward compatibili
 - **Proposal:** `docs/architecture/standards-and-adrs/semver-mapping-proposal.md`
 - **Implementation Impact:** `docs/architecture/standards-and-adrs/semver-mapping-implementation-impact.md`
 - **Dual Versioning Guide:** `docs/architecture/standards-and-adrs/dual-versioning-package-managers.md`
+
+---
+
+## SemVer Mapping Modes
+
+This package supports **two conceptual mapping modes** from internal versions to SemVer. Implementations can choose which mode to adopt on a per-project basis.
+
+### Mode A (Default): Registry-Based Epic/Story Mapping
+
+This is the **default / recommended mode** for framework adopters (and the one used by the AI Dev Kit itself):
+
+- **MAJOR** = RC
+- **MINOR** = First-seen Epic number (per RC), via `epic_to_minor` registry.
+- **PATCH** = First-seen Story number (per RC), via `story_to_patch` registry.
+- **BUILD** = Preserved from internal version.
+
+Characteristics:
+
+- Keeps **SemVer monotonic**.
+- Preserves a **stable logical mapping** from epics/stories to MINOR/PATCH slots.
+- Best suited for **frameworks and long-lived products** with many parallel epics.
+
+### Mode B (Simple): Global PATCH Counter
+
+This optional mode mirrors the simpler Starborn Legacy behaviour for teams that want a very lightweight mental model:
+
+- **MAJOR** = RC
+- **MINOR** = EPIC
+- **PATCH** = **global build counter**, monotonic across all releases for a given RC.
+
+Characteristics:
+
+- PATCH encodes **global release sequence**, not story identity.
+- External consumers can read versions as “higher PATCH = strictly newer”, independent of epic/story.
+- Epic/story identity is still available via:
+  - The **internal version** (`RC.EPIC.STORY.TASK+BUILD`), and/or
+  - Optional SemVer build metadata (see below).
+
+Trade-offs:
+
+- **Pros:** Very simple external story; ideal for **small projects** or teams running a single epic/story at a time.
+- **Cons:** You **lose direct epic/story semantics** from the SemVer core; you must read metadata or internal tags to recover them.
+
+> Implementations SHOULD expose a configuration flag (for example, in `rw-config.yaml`) to select `semver_mode` (e.g. `registry_epic_story` vs `global_patch`). See the workflow management documentation for details.
+
+### Optional SemVer Metadata Pattern
+
+For projects that want **machine-parseable traceability** directly from SemVer tags, this policy defines a **standard optional metadata suffix**:
+
+- **Pattern:** `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`
+- **Example:**  
+  - Internal: `0.6.7.101+24`  
+  - SemVer (Mode A, registry mapping): `0.3.19+24+rc.0.e6.s7.t101.b24`
+
+Key points:
+
+- The metadata is **optional** and does **not** affect SemVer precedence.
+- It is primarily for:
+  - Automated tools that parse Git tags.
+  - Engineers inspecting tags directly in Git.
+- End-user documentation (README, release notes) SHOULD normally present a **clean SemVer string** (`MAJOR.MINOR.PATCH+BUILD`) and leave metadata to tooling.
 
 ---
 

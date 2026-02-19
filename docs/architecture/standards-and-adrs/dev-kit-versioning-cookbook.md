@@ -33,6 +33,16 @@ This cookbook provides **practical, worked examples** for using the `RC.EPIC.STO
 
 ---
 
+### How to Read Versions in This Cookbook
+
+The examples focus on the **internal version** (`RC.EPIC.STORY.TASK+BUILD`) because it drives Kanban, RW, and traceability. When presenting versions:
+
+- For **external audiences** (README, GitHub releases, package managers), prefer the **SemVer release version first**, optionally followed by the internal version, for example:  
+  - `v0.3.19+2 (internal: v0.6.7.101+2)`.
+- For **internal reasoning** (Kanban docs, workflow behaviour, forensic questions), use the internal version directly.
+
+Where helpful, you can imagine each worked example also having a matching SemVer tag derived via the mapping in the framework and dev-kit policies, and optionally including metadata like `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>` when you need machine-parseable coordinates.
+
 ## Table of Contents
 
 - **[Quick Reference](versioning-quick-reference.md)** - 1-2 page summary for quick lookup ⚡

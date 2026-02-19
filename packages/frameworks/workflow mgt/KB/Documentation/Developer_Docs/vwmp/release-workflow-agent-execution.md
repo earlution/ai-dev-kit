@@ -143,10 +143,11 @@ These principles are part of the RW contract for agents and humans in this proje
 
 ### Workflow Definition
 
-**Workflow:** Release Workflow
-**Type:** `release`
-**Steps:** 16 steps organized into 4 phases (Steps 1-13: required, Steps 14-15: optional CHECK and ACT phases, Step 16: optional PIR integration)
-**Canonical Example:** Yes - this workflow demonstrates the agent-driven execution pattern
+**Workflow:** Release Workflow  
+**Type:** `release`  
+**Steps:** 16 steps organized into 4 phases (Steps 1-13: required, Steps 14-15: optional CHECK and ACT phases, Step 16: optional PIR integration)  
+**Canonical Example:** Yes - this workflow demonstrates the agent-driven execution pattern  
+**Version model:** Dual-version (internal `RC.EPIC.STORY.TASK+BUILD` + external SemVer `MAJOR.MINOR.PATCH+BUILD`)
 
 ### Agent Execution Pattern
 
@@ -223,6 +224,24 @@ For each step, the agent follows this pattern:
 **Note:** The markdown checklist below (lines 480-512) serves as a reference, but Cursor TODOs are the **REQUIRED** mechanism for real-time progress tracking and user visibility.
 
 ---
+
+### SemVer vs Internal Version in RW
+
+RW works with **two related versions**:
+
+- The **internal version** (`RC.EPIC.STORY.TASK+BUILD`) from the version file (e.g., `src/fynd_deals/version.py`).
+- The **release version (SemVer)** (`MAJOR.MINOR.PATCH+BUILD`) derived from the internal version using the mapping defined in the numbering & versioning framework and the dev-kit policy.
+
+Rules:
+
+- For **external surfaces** (README, GitHub releases, badges, package manifests), RW treats **SemVer as the primary version**.
+- For **internal coordination** (Kanban markers, detailed changelogs, validators), RW treats the internal version as the **forensic coordinate**.
+- RW MUST always generate SemVer **from** the internal version; the internal version remains the single source of truth for Kanban alignment.
+
+RW consults project configuration (for example, `rw-config.yaml`) to determine:
+
+- Which **SemVer mapping mode** to use (e.g. `registry_epic_story` vs `global_patch`).
+- Whether to include **optional SemVer metadata** (e.g. `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`) in tags.
 
 ## 🔒 Critical Requirement: Fix Verification
 
@@ -1367,36 +1386,36 @@ The Versioning Policy requires that:
 **Agent Execution:**
 
 1. **ANALYZE:**
-   - Get `new_version` from Step 2:
-     - [Example: Confidentia] `"0.4.3.2+9"`
-     - [Example: ai-dev-kit] `"0.6.6.10+14"`
-   - Get summary and change type from parameters
-   - **Use config path:** Read README file (from config `readme_file` or fallback `README.md`)
+   - Get internal `new_version` from Step 2 (e.g. `"0.6.6.10+14"`).
+   - Use `semver_converter.py` (and project config, such as `semver_mode`) to derive the **SemVer release version** from `new_version`.
+   - Get summary and change type from parameters.
+   - **Use config path:** Read README file (from config `readme_file` or fallback `README.md`).
    - **MANDATORY:** Find and identify version text pattern in README:
-     - Common formats: `**Version:** v{version}`, `Version: {version}`, `version: {version}`
-     - May be in header section, near badges, or in About section
-   - **Optional:** Find version badge format: `[![Version](...badge/version-{version}-blue)...]`
-   - **Optional:** Find latest release format: `**🎉 Latest Release: v{version}** - {summary}`
+     - Common formats: `**Version:** v{semver}`, `Version: {semver}`, `version: {semver}`.
+     - May be in header section, near badges, or in About section.
+   - **Optional:** Find version badge format: `[![Version](...badge/version-{semver}-blue)...]`.
+   - **Optional:** Find latest release format: `**🎉 Latest Release: v{semver}** - {summary}`.
 
 2. **DETERMINE:**
-   - **MANDATORY:** Update version text - Replace version number in version text field
-   - **Optional:** Update version badge - Replace version in badge URL (if present)
-   - **Optional:** Update latest release - Replace version and summary (if present)
-   - Find exact patterns in README to replace
+   - **MANDATORY:** Update version text to use the **SemVer release version as the primary external-facing value**.
+   - **Optional:** Update version badge - Replace version in badge URL (if present).
+   - **Optional:** Update latest release - Replace version and summary (if present).
+   - Optionally include the internal version in supporting text (for example, “internal: v{RC.EPIC.STORY.TASK+BUILD}”), but not as the main displayed version.
+   - Find exact patterns in README to replace.
 
 3. **EXECUTE:**
-   - **MANDATORY:** Update version text using `search_replace` (e.g., `**Version:** v{old_version}` → `**Version:** v{new_version}`)
-   - **Optional:** Update version badge using `search_replace` (if present)
-   - **Optional:** Update latest release callout using `search_replace` (if present)
+   - **MANDATORY:** Update version text using `search_replace` (e.g., `**Version:** v{old_semver}` → `**Version:** v{new_semver}`).
+   - **Optional:** Update version badge using `search_replace` (if present).
+   - **Optional:** Update latest release callout using `search_replace` (if present).
 
 4. **VALIDATE:**
-   - **MANDATORY:** Verify version text contains new version number
-   - **Optional:** Verify badge URL contains new version (if badge exists)
-   - **Optional:** Verify latest release callout has new version and summary (if present)
-   - Check README is still valid Markdown
+   - **MANDATORY:** Verify version text contains the new SemVer release version.
+   - **Optional:** Verify badge URL contains new SemVer version (if badge exists).
+   - **Optional:** Verify latest release callout has new SemVer version and summary (if present).
+   - Check README is still valid Markdown.
 
 5. **PROCEED:**
-   - Document: "Updated README project version, badge, and latest release"
+   - Document: "Updated README SemVer project version, badge, and latest release (internal version remains in version file and detailed changelog)."
    - Move to Step 6 (can run in parallel with Steps 4-6)
 
 ---

@@ -5,6 +5,8 @@
 **Version:** 1.0.0  
 **Last Updated:** 2025-12-18
 
+**🚨 Git: Commit and push only via Release Workflow (RW).** Do not run `git commit` or `git push` outside RW. When changes are ready, run "RW" to version, validate, commit, tag, and push. See "Git Workflow Restrictions" below.
+
 ---
 
 ## 🚀 RELEASE WORKFLOW (RW) TRIGGER
@@ -22,7 +24,7 @@
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
 6. **Execute all remaining steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
 7. **Document** each step's analysis, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 12 steps (plus optional Step 9.5) (see below)
+8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 12 steps (plus optional Step 9.5 CMW, recommended Step 9.6 IDE check) (see below)
 
 **🔧 Config-Driven Approach (Preferred):**
 
@@ -185,6 +187,8 @@ For each step, follow this pattern:
 
 9.5. **Changelog Management Workflow (CMW)** - **OPTIONAL, NON-BLOCKING:** If Step 9's `check_changelog_size.py` indicated threshold exceeded (exit code 1), automatically run CMW to archive entries, remove duplicates, and fix ordering. CMW is deterministic (rule-based, no agentic intelligence required). If threshold not exceeded, skip this step. CMW failures are non-blocking (workflow continues).
 
+9.6. **Check IDE-Flagged Problems (recommended before commit)** - **RECOMMENDED, NON-BLOCKING:** Before Step 10, check for IDE/linter errors, warnings, and info-level issues in modified files; fix where practical and re-stage. Reduces accumulation of fixable issues and keeps commits clean. Skip or defer only if not practical; workflow continues.
+
 10. **Commit Changes** - Create commit with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
 
 11. **Create Git Tag** - Create dual tags (internal + SemVer):
@@ -250,6 +254,11 @@ For each step, follow this pattern:
 - Release Workflow Guide: `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - Workflow Flaws Reference: `docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md`
 - Versioning Error Reference: `docs/architecture/standards-and-adrs/versioning-error-reference-guide.md`
+
+**🚨 Changelog Language — No False Claims**
+- **FORBIDDEN:** Do not claim "Fixed", "Resolved", or "Completed" in changelogs until the user has tested and verified.
+- **REQUIRED:** Use "Attempted fix", "Attempted resolution", or "Change implemented" until verified; after verification, a subsequent release may use "Fixed".
+- Use **### Attempted Fixes** for unverified bug-fix attempts; use **### Fixed** only after user confirmation. Full rules: Release Workflow Guide (changelog validation).
 
 ---
 
@@ -479,6 +488,25 @@ Documents in `docs/` directory must have lifecycle metadata in frontmatter:
 - Branch safety check validates branch context
 - Workflow validators ensure compliance
 - Clear error messages for violations
+
+---
+
+## Implementation Cycle (Adoptable Pattern)
+
+**When implementing tasks, projects adopting this pattern MUST follow the Implementation Cycle (spec + TDD):**
+
+**Reference:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md` (framework SoP for adopters).
+
+**Steps (do not skip when pattern is adopted):**
+1. **Requirement Documentation** — Create or update BR/FR or document requirement in task.
+2. **Task Creation** — Create task in Epic/Story with deliverables, acceptance criteria, link to BR/FR; add to Story Task Checklist. Align with Kanban Governance.
+3. **Specification & Test Creation (TDD) — 🚨 BLOCKING** — Ascertain spec from task/BR/FR; identify testable behaviors; write **failing tests** (Red phase). Cannot proceed to implementation without tests.
+4. **Implementation** — Red-Green-Refactor: implement to make tests pass, run tests after each change, refactor while keeping tests green.
+5. **Release Workflow (RW)** — Run RW for version, changelog, Kanban update, commit, tag, push.
+
+**Enforcement when adopted:** Step 3 is BLOCKING — implementation (Step 4) cannot start until tests exist and fail as expected. Pre-implementation checklist: requirement documented, task created, spec ascertained, tests created and failing, tests compile.
+
+**Integration:** Task creation aligns with `packages/frameworks/kanban/policies/kanban-governance-policy.md`; RW updates Kanban (RW Step 7). Projects may make this cycle mandatory for all task implementations.
 
 ---
 

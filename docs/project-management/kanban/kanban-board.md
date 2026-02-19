@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-02-08 (RW: E5:S01:T37)
-**Version:** v0.5.1.37+1
+**Last Updated:** 2026-02-19 (RW: E5:S01:T39)
+**Version:** v0.5.1.39+0
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -28,7 +28,7 @@ housekeeping_policy: keep
 - **E4:S16:T05** – Create Gap Log and Risk Assessment - IN PROGRESS (HIGH priority, Last updated: 2026-01-20) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T05-create-gap-log-and-risk-assessment.md)
 - **E4:S16:T06** – Define RC sign-off criteria and remediation tasks - IN PROGRESS (HIGH priority) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T6-define-rc-sign-off-criteria-and-remediation-tasks.md)
 - **E5:S01:T34** – UKW Granular Control and Use Case Flags - ✅ COMPLETE (HIGH priority, Last updated: 2026-01-22) (v0.5.1.37+1) - [Task Document](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
-- **E5:S01:T37** – Kanban Policy Task Prioritisation and Queue/Stack - ✅ COMPLETE (HIGH priority, Last updated: 2026-02-08) (v0.5.1.37+1) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
+- **E5:S01:T37** – Kanban Policy Task Prioritisation and Queue/Stack - ✅ COMPLETE (HIGH priority, Last updated: 2026-02-19) (v0.5.1.37+4) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
 - **E4:S14:T01** – Update Packaged RW to Handle UKW Context and Perpetual Tasks - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
 - **E4:S11:T07** – Migrate Embedded Tasks to Discrete Task Documents - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)
 - **E1:S06:T01** – Set up BYOB badges for private repository - IN PROGRESS (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-1/Story-006-repository-ci-cd-setup/T01-setup-byob-badges-for-private-repository.md)

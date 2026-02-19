@@ -78,6 +78,29 @@ version: 0.1.0  # MAJOR.MINOR.PATCH (required by pub.dev)
 
 ---
 
+## Choosing a SemVer Mapping Mode
+
+The core framework defines two **conceptual mapping modes** from internal version to SemVer:
+
+- **Mode A – Registry-based epic/story mapping (default for dev-kit/frameworks):**
+  - `MAJOR = RC`
+  - `MINOR` / `PATCH` assigned via a registry that remaps epics and stories into a monotonic SemVer space.
+  - Best for long-lived frameworks and products with many parallel epics/stories.
+
+- **Mode B – Simple global PATCH counter (recommended for small/simple projects):**
+  - `MAJOR = RC`, `MINOR = EPIC`, `PATCH` = **global build counter** (monotonic per RC).
+  - Very simple mental model: “higher PATCH = strictly newer”, independent of epic/story.
+  - Epic/story identity is recovered via the internal version and/or optional metadata (`+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`).
+
+**Guidance:**
+
+- If you are building a **framework or complex product** and care about distinguishing epics/stories at the SemVer level, use **Mode A** (registry-based).
+- If you are building a **small app or library** and mainly care about a simple, monotonic release line, consider **Mode B** (global PATCH) for your project copy of the framework.
+
+The concrete mapping formulas below can be seen as **implementations** that sit under one of these conceptual modes.
+
+---
+
 ## Mapping Strategies
 
 ### Strategy 1: Direct Mapping (Recommended for New Projects)
