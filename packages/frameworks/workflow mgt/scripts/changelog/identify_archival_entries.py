@@ -56,6 +56,27 @@ def identify_archival_entries(
             'version_count_based': []
         }
     }
+
+    # Mode override: latest_only
+    #
+    # When policy['mode'] == 'latest_only', we keep only the newest concrete
+    # release entry in CHANGELOG.md (entries[0]) and archive all older
+    # releases. The "Unreleased" section is not part of `entries` and is
+    # therefore always preserved.
+    #
+    # This mode is intended for projects that maintain detailed per-release
+    # changelog files and want the main changelog to function purely as a
+    # "latest release + Unreleased" landing page rather than a long history.
+    mode = policy.get('mode')
+    if mode == 'latest_only' and entries:
+        if len(entries) > 1:
+            # Archive everything except the newest entry
+            entries_to_archive = list(entries[1:])
+            metadata['criteria_met'].append('latest_only')
+            metadata['entries_by_criterion']['version_count_based'] = [
+                e.version_str for e in entries_to_archive
+            ]
+        return entries_to_archive, metadata
     
     # Minimum retention
     minimum_retention = policy.get('minimum_retention_entries', 50)

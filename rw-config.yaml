@@ -8,6 +8,13 @@ changelog_dir: docs/changelog-and-release-notes/changelog-archive
 scripts_path: packages/frameworks/workflow mgt/scripts
 readme_file: README.md
 
+changelog_archival:
+  # Mode controlling how entries are retained in CHANGELOG.md.
+  # - hybrid (default in framework docs): size/time/version-count based
+  # - latest_only (ai-dev-kit choice): keep only the newest release entry
+  #   in the main changelog, with all older releases archived.
+  mode: latest_only
+
 # Enable Kanban integration
 use_kanban: true
 

@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-19  
-**Last updated:** 2026-02-19 (v0.5.1.37+4 – FR created and task wired)  
-**Version:** v0.5.1.39+0  
+**Last updated:** 2026-02-19 (v0.5.1.39+2 – Latest-only changelog policy and CMW mode)  
+**Version:** v0.5.1.39+2  
 **Code:** E5S01T39
 
 **Repository Pattern:** FR-039 = E5:S01:T39 (abstract space will be v0.5.1.39+0)
@@ -82,7 +82,7 @@ Actual clean-up (archiving/removal/moves) will be handled by a **separate implem
 ## Version Anchor
 
 **Forensic Marker:**  
-- Doc-init abstract space for this Task created at **v0.5.1.39+0** (planning-only release for FR-039 and initial review report).
+- Initial review release for this Task created at **v0.5.1.39+1** (planning-only release for FR-039 and initial review report).
 
 ---
 

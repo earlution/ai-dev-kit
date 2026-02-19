@@ -84,10 +84,14 @@ This policy defines criteria and procedures for archiving changelog entries to m
 
 ### 2.1 File Organization
 
-**Main Changelog:**
+**Main Changelog (Rolling Landing Page):**
 - Location: `CHANGELOG.md` (project root)
-- Purpose: Recent entries, current releases, active development
-- Target Size: 500-1,000 lines (optimal: ~750 lines)
+- Purpose: Human-friendly landing page for **current work**:
+  - `Unreleased` section (pending changes)
+  - The **most recent concrete release**
+- Default Pattern (frameworks): Rolling window of recent releases
+- **AI Dev Kit Pattern:** "Latest-only" – keep only the newest release entry  
+  (Unreleased + latest release), archive all older releases
 
 **Archive File:**
 - Location: `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md`
@@ -124,22 +128,26 @@ For recent changes, see [CHANGELOG.md](../../CHANGELOG.md).
 
 The policy uses a **hybrid approach** combining multiple criteria for flexible and intelligent archival decisions.
 
-### 3.1 Primary Criteria (Size-Based)
+### 3.1 Mode A: Hybrid (Size/Time/Version-Based)
 
-**Trigger:** When `CHANGELOG.md` exceeds **1,000 lines**
+This is the **framework default mode** for adopters who want a rolling
+history of recent releases in `CHANGELOG.md`.
 
-**Action:** Archive oldest entries until changelog is reduced to **750 lines** (25% buffer below threshold)
+**Primary Criteria (Size-Based)**
+
+- **Trigger:** When `CHANGELOG.md` exceeds **1,000 lines**
+- **Action:** Archive oldest entries until changelog is reduced to **750 lines**
+  (25% buffer below threshold)
 
 **Rationale:**
 - Prevents changelog from becoming unmanageable
 - Provides clear threshold for automated triggering
 - Maintains buffer to avoid frequent archival operations
 
-### 3.2 Secondary Criteria (Time-Based)
+**Secondary Criteria (Time-Based)**
 
-**Trigger:** Entries older than **2 months** from current date
-
-**Action:** Archive entries that are older than 2 months
+- **Trigger:** Entries older than **2 months** from current date
+- **Action:** Archive entries that are older than 2 months
 
 **Rationale:**
 - Recent changes (last 2 months) are most relevant to users
@@ -147,18 +155,17 @@ The policy uses a **hybrid approach** combining multiple criteria for flexible a
 - Historical changes (older than 2 months) are still accessible in archive
 - Prevents changelog from growing too large before archival triggers
 
-### 3.3 Tertiary Criteria (Version Count)
+**Tertiary Criteria (Version Count)**
 
-**Trigger:** More than **100 version entries** in main changelog
-
-**Action:** Keep last 100 releases, archive older entries
+- **Trigger:** More than **100 version entries** in main changelog
+- **Action:** Keep last 100 releases, archive older entries
 
 **Rationale:**
 - Provides consistent version-based archival boundary
 - Ensures recent releases (last ~100) remain in main changelog
 - Prevents version count from growing indefinitely
 
-### 3.4 Hybrid Logic
+**Hybrid Logic**
 
 **Archival Decision:** Archive entries if **ANY** of the following conditions are met:
 1. Main changelog exceeds 1,000 lines (size-based)
@@ -168,6 +175,33 @@ The policy uses a **hybrid approach** combining multiple criteria for flexible a
 **Priority Order:**
 1. **Size-based** takes precedence if threshold exceeded (immediate archival required)
 2. **Time-based** and **Version-based** applied in parallel for ongoing maintenance
+
+### 3.2 Mode B: Latest-Only (AI Dev Kit Pattern)
+
+This mode is optimized for projects (like **AI Dev Kit**) that maintain:
+
+- **Immutable per-release changelog files** (`CHANGELOG_v{version}.md`)
+- Strong versioning and forensic traceability elsewhere
+
+**Definition:**
+
+- `CHANGELOG.md` contains:
+  - `Unreleased`
+  - The **single most recent concrete release** (newest version entry)
+- **All older release entries are archived** to the archive file.
+
+**Archival Decision (latest_only mode):**
+
+1. Keep `entries[0]` (newest release) in `CHANGELOG.md`
+2. Archive all other concrete release entries (`entries[1:]`)
+
+**Rationale:**
+
+- Reduces maintenance overhead and validator friction for very long-lived projects
+- Keeps the main file small and easy to scan
+- Delegates full history to:
+  - `CHANGELOG_ARCHIVE.md` (aggregated history)
+  - Per-release `CHANGELOG_v{version}.md` files (detailed history)
 
 ---
 

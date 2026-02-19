@@ -155,6 +155,18 @@ CMW configuration is defined in `rw-config.yaml`:
 ```yaml
 changelog_archival:
   enabled: true
+  # Mode controls how much history stays in CHANGELOG.md.
+  #
+  # - hybrid (framework default):
+  #     * Enforce size/age/version-count thresholds
+  #     * Keep a rolling window of recent releases (see policy defaults)
+  # - latest_only (ai-dev-kit pattern):
+  #     * Keep only the newest concrete release entry in CHANGELOG.md
+  #       (plus the Unreleased section)
+  #     * Archive all older releases to the archive file
+  #
+  # For ai-dev-kit, we set mode: latest_only.
+  mode: latest_only
   size_threshold_lines: 1000
   target_size_lines: 750
   time_threshold_months: 2
