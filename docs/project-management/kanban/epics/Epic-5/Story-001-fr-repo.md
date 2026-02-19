@@ -37,7 +37,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T36 – RW Update Kanban Board on Task Completion** - ✅ COMPLETE (v0.5.1.36+1 – Implementation complete: Kanban board updates added to RW Step 7) - [Task Document](Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) | [FR-036](../../fr-br/FR-036-rw-update-kanban-board-on-task-completion.md)
 - [x] **E5:S01:T37 – Kanban Policy Task Prioritisation and Queue/Stack** ✅ COMPLETE (v0.5.1.37+3 – Policy alignment: implementation cycle, changelog/IDE/git reminders) - [Task Document](Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
 - [ ] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
-- [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+2 – Latest-only changelog policy and CMW mode) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
+- [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
 
 ---
 

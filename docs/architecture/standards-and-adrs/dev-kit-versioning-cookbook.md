@@ -13,6 +13,10 @@ housekeeping_policy: keep
 **Status:** ✅ COMPLETE  
 **Version:** v0.3.2.3+1
 
+**Based on Framework:** This cookbook is a dev-kit specialisation providing worked examples for the versioning schema defined in the Numbering & Versioning framework. For the canonical schema definition and strategy, see:
+- `packages/frameworks/numbering & versioning/versioning-policy.md` (primary SoT)
+- `packages/frameworks/numbering & versioning/versioning-strategy.md` (comprehensive strategy)
+
 ---
 
 ## Executive Summary

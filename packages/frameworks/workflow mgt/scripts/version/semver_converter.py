@@ -9,12 +9,22 @@ Uses Hybrid Approach:
 - BUILD = Preserved from internal version
 
 Registry-based mapping ensures monotonic SemVer increases while preserving semantic meaning.
+
+1:1 Mapping (design invariant):
+- Each internal version string maps to exactly one SemVer string (deterministic given the
+  current registry). The converter is the single source of truth for this mapping.
+- Each SemVer string produced by the converter corresponds to exactly one (RC, EPIC, STORY, BUILD)
+  coordinate; TASK is not encoded in SemVer, so multiple tasks in the same story share the same
+  MINOR.PATCH and are distinguished only by BUILD. For a given SemVer, reverse lookup returns
+  (RC, EPIC, STORY, 0, BUILD) with TASK set to 0 (cannot be recovered from SemVer).
+- Git tags must align: the SemVer tag and the internal tag for a release must point to the
+  same commit. See dev-kit versioning policy Section 2.1 (1:1 mapping and tag alignment).
 """
 
 import yaml
 import os
 from pathlib import Path
-from typing import Tuple, Dict, Any
+from typing import Tuple, Dict, Any, Optional
 
 
 def find_registry_file() -> Path:
@@ -78,6 +88,8 @@ def save_semver_registry(registry: Dict[str, Any]) -> None:
 def convert_internal_to_semver(rc: int, epic: int, story: int, task: int, build: int) -> Tuple[int, int, int, int]:
     """
     Convert internal RC.EPIC.STORY.TASK+BUILD to SemVer MAJOR.MINOR.PATCH+BUILD.
+
+    One internal version always yields exactly one SemVer (1:1 forward mapping).
     
     Uses Hybrid Approach:
     - MAJOR = RC (direct mapping)
@@ -143,6 +155,63 @@ def convert_internal_to_semver(rc: int, epic: int, story: int, task: int, build:
 def format_semver(major: int, minor: int, patch: int, build: int) -> str:
     """Format SemVer as MAJOR.MINOR.PATCH+BUILD string."""
     return f"{major}.{minor}.{patch}+{build}"
+
+
+def semver_to_internal(semver: str) -> Optional[Tuple[int, int, int, int, int]]:
+    """
+    Reverse conversion: SemVer string to internal (RC, EPIC, STORY, TASK, BUILD).
+
+    Given the current registry, returns the unique internal coordinate that would produce
+    this SemVer. TASK is not encoded in SemVer, so it is returned as 0 (cannot be recovered).
+    Returns None if the SemVer cannot be produced by the current registry (e.g. unknown
+    MINOR or PATCH).
+
+    Args:
+        semver: SemVer string (e.g. "0.5.39+2")
+
+    Returns:
+        (rc, epic, story, task, build) with task=0, or None if not in registry.
+    """
+    parts = semver.split("+")
+    if len(parts) != 2:
+        return None
+    try:
+        build = int(parts[1])
+    except ValueError:
+        return None
+    version_parts = parts[0].split(".")
+    if len(version_parts) != 3:
+        return None
+    try:
+        major, minor, patch = int(version_parts[0]), int(version_parts[1]), int(version_parts[2])
+    except ValueError:
+        return None
+    rc = major
+    registry = load_semver_registry()
+    rc_key = f"rc_{rc}"
+    if rc_key not in registry:
+        return None
+    rc_scope = registry[rc_key]
+    epic_to_minor = rc_scope.get("epic_to_minor", {})
+    story_to_patch = rc_scope.get("story_to_patch", {})
+    minor_to_epic = {v: k for k, v in epic_to_minor.items()}
+    patch_to_story = {v: k for k, v in story_to_patch.items()}
+    if minor not in minor_to_epic or patch not in patch_to_story:
+        return None
+    epic = minor_to_epic[minor]
+    story_key = patch_to_story[patch]
+    if not isinstance(story_key, str) or not story_key.startswith("(") or not story_key.endswith(")"):
+        return None
+    inner = story_key[1:-1].split(",")
+    if len(inner) != 2:
+        return None
+    try:
+        story_epic, story = int(inner[0]), int(inner[1])
+    except ValueError:
+        return None
+    if story_epic != epic:
+        return None
+    return (rc, epic, story, 0, build)
 
 
 def convert_version_string(internal_version: str) -> str:

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-19 (v0.5.1.39+2 – E5:S01:T39: Latest-only changelog policy and CMW mode)  
+**Last updated:** 2026-02-19 (v0.5.1.39+3 – E5:S01:T39: Legacy clean-up)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 - [x] **E5:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.5.0.0+0 – Epic-level abstract space only, no tasks)
   - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
-- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.39+2 – T39: Latest-only changelog policy and CMW mode)
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.39+3 – T39: Legacy clean-up)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 - [ ] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)

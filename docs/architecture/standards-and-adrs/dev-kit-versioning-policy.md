@@ -113,6 +113,12 @@ rc_0:
 
 Both tags reference the same commit. Internal tag maintains backward compatibility, SemVer tag provides monotonic versioning for external consumers.
 
+### 1:1 mapping and tag alignment
+
+- **One internal version → one SemVer:** The registry plus BUILD ensure that each internal version string maps to exactly one SemVer string. The converter (`semver_converter.py`) is the single source of truth for this mapping.
+- **One SemVer tag → one commit:** For each release, the SemVer tag and the internal tag MUST point to the **same commit**. No SemVer tag may point to a different commit than the one that contains the corresponding internal version for that release.
+- **Consequence:** If a SemVer tag already exists on the remote but points to a different commit than the current release, that is a violation; it MUST be corrected (e.g. by force-pushing the tag to the correct commit: `git push origin +vX.Y.Z+N`) before considering the release complete. An optional validator can check this before push (see Implementation below).
+
 ### README Version Display
 
 **Outward-Facing SemVer:** The project README displays the **SemVer version** (not the internal version) as it is the outward-facing version for external consumers.
@@ -126,9 +132,10 @@ Both tags reference the same commit. Internal tag maintains backward compatibili
 
 ### Implementation
 
-- **Converter Script:** `packages/frameworks/workflow mgt/scripts/version/semver_converter.py`
+- **Converter Script:** `packages/frameworks/workflow mgt/scripts/version/semver_converter.py` (forward and reverse conversion; 1:1 documented)
 - **Migration Script:** `packages/frameworks/workflow mgt/scripts/version/build_semver_registry.py`
 - **Validation Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_semver_monotonic.py`
+- **Tag-alignment validator (optional):** `packages/frameworks/workflow mgt/scripts/validation/validate_semver_tag_alignment.py` — checks that the SemVer tag on the remote points to the same commit as the current release (see 1:1 mapping and tag alignment).
 - **Registry File:** `semver-registry.yaml` (project root)
 
 **Related Documentation:**

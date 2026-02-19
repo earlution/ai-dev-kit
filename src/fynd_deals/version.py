@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 5      # Epic number (Epic 5: FR Repo)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
 VERSION_TASK = 39     # Task number (Task 39: AI Dev Kit Project Review and Legacy Clean-Up)
-VERSION_BUILD = 2     # Build number (E5:S01:T39+2 - Latest-only changelog policy and CMW mode)
+VERSION_BUILD = 3     # Build number (E5:S01:T39+3 - Legacy clean-up: SoT refs, scripts, adopter docs)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.39+2 = Development, Epic 5, Story 1, Task 39, Build 2 (E5:S01:T39: Latest-only changelog policy and CMW mode)
+# Current: 0.5.1.39+3 = Development, Epic 5, Story 1, Task 39, Build 3 (E5:S01:T39: Legacy clean-up)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

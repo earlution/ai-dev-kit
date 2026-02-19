@@ -136,6 +136,7 @@ This FR ensures we **understand and document** what should change before any str
 
 ## Release History
 
+- **v0.5.1.39+3** (2026-02-19) – Legacy clean-up implementation: SoT references in dev-kit policies, scripts moved to `scripts/internal/`, adopter-facing repo structure doc.
 - **v0.5.1.39+2** (2026-02-19) – Latest-only changelog policy and CMW mode; CHANGELOG.md keeps only Unreleased + newest release.
 - **v0.5.1.39+1** (2026-02-19) – Initial review release for AI Dev Kit project review and legacy clean-up (planning and review docs only).
 

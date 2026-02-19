@@ -15,6 +15,10 @@ housekeeping_policy: keep
 **Story:** Story 2 - Versioning Cookbook and Examples  
 **Related:** Implementation Guide, Package Manager Integration
 
+**Based on Framework:** This document is a dev-kit specialisation providing guidance on dual-versioning patterns. For the canonical versioning schema and SemVer mapping modes, see:
+- `packages/frameworks/numbering & versioning/versioning-policy.md` (primary SoT)
+- `packages/frameworks/numbering & versioning/versioning-strategy.md` (comprehensive strategy)
+
 ---
 
 ## Executive Summary
@@ -86,6 +90,7 @@ The core framework defines two **conceptual mapping modes** from internal versio
   - `MAJOR = RC`
   - `MINOR` / `PATCH` assigned via a registry that remaps epics and stories into a monotonic SemVer space.
   - Best for long-lived frameworks and products with many parallel epics/stories.
+  - **1:1 intent:** The mapping is designed to be one-to-one: one internal version yields exactly one SemVer, and a given SemVer (from this project’s registry) should identify a unique internal coordinate (RC, EPIC, STORY, BUILD; TASK is not encoded). Git tags must align so that the SemVer tag and the internal tag for a release point to the same commit.
 
 - **Mode B – Simple global PATCH counter (recommended for small/simple projects):**
   - `MAJOR = RC`, `MINOR = EPIC`, `PATCH` = **global build counter** (monotonic per RC).

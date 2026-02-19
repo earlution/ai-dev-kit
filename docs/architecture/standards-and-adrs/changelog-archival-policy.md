@@ -65,6 +65,10 @@ policy_salience:
 **Related Work:** Epic 6, Story 6, Task 11 - Changelog Management and Archival Workflow (FR-025)  
 **Version:** 1.0.0
 
+**Based on Framework:** This policy is a dev-kit specialisation of the Changelog Management Workflow (CMW) archival patterns defined in the Workflow Management framework. For the canonical workflow definition and archival implementation, see:
+- `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
+- `packages/frameworks/workflow mgt/scripts/changelog/archive_entries.py`
+
 ---
 
 ## 1. Purpose

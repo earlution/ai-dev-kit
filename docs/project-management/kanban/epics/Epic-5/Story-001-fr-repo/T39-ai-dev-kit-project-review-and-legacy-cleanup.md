@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-19  
-**Last updated:** 2026-02-19 (v0.5.1.39+2 – Latest-only changelog policy and CMW mode)  
-**Version:** v0.5.1.39+2  
+**Last updated:** 2026-02-19 (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs)  
+**Version:** v0.5.1.39+3  
 **Code:** E5S01T39
 
 **Repository Pattern:** FR-039 = E5:S01:T39 (abstract space will be v0.5.1.39+0)
