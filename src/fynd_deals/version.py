@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 5      # Epic number (Epic 5: FR Repo)
-VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 39     # Task number (Task 39: AI Dev Kit Project Review and Legacy Clean-Up)
-VERSION_BUILD = 3     # Build number (E5:S01:T39+3 - Legacy clean-up: SoT refs, scripts, adopter docs)
+VERSION_EPIC = 6      # Epic number (Epic 6: ADK Implementation)
+VERSION_STORY = 7     # Story number (Story 7: Package Management)
+VERSION_TASK = 102   # Task number (T102: CMW Perpetual - docs update)
+VERSION_BUILD = 6     # Build number (E6:S07:T102+6 - Perpetual docs update: runbooks, policy)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.39+3 = Development, Epic 5, Story 1, Task 39, Build 3 (E5:S01:T39: Legacy clean-up)
+# Current: 0.6.7.102+6 = Development, Epic 6, Story 7, Task 102, Build 6 (E6:S07:T102: Perpetual docs update)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

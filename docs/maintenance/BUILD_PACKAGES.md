@@ -94,6 +94,5 @@ sha256sum -c kanban-v2.1.0.tar.gz.sha256
 
 After packages are built:
 1. Review packages in `packages/frameworks/dist/packages/`
-2. Upload to GitHub Releases (see `docs/Analysis/phase3-package-distribution-plan.md`)
+2. Upload to GitHub Releases (see [phase3 package distribution plan](../analysis/phase3-package-distribution-plan.md))
 3. Test installation workflow
-

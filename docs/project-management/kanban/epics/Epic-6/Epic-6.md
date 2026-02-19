@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-22 (v0.5.1.34+2 – E6:S01:T36: Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)
+**Last updated:** 2026-02-19 (v0.6.7.102+6 – E6:S07:T102: Perpetual docs update)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]

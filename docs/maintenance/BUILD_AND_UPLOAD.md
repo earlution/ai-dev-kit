@@ -78,7 +78,7 @@ chmod +x "packages/frameworks/workflow mgt/scripts/UPLOAD_COMMANDS.sh"
 
 ### Method 2: Upload Individually
 
-See `UPLOAD_PACKAGES.md` for individual upload commands.
+See [UPLOAD_PACKAGES.md](UPLOAD_PACKAGES.md) for individual upload commands.
 
 ### Dry Run (Test First)
 
@@ -155,7 +155,7 @@ open https://github.com/earlution/ai-dev-kit/releases
 ---
 
 **Related:**
-- Build Guide: `BUILD_PACKAGES.md`
-- Upload Guide: `UPLOAD_PACKAGES.md`
-- Distribution Plan: `docs/Analysis/phase3-package-distribution-plan.md`
+- [BUILD_PACKAGES.md](BUILD_PACKAGES.md) – Build quick start
+- [UPLOAD_PACKAGES.md](UPLOAD_PACKAGES.md) – Upload details
+- [Phase 3 package distribution plan](../analysis/phase3-package-distribution-plan.md)
 

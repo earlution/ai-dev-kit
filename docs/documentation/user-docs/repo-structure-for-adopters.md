@@ -94,6 +94,20 @@ These are **book project content** and authoring materials, not framework docume
 
 ---
 
+## Project Root
+
+The project root is kept minimal. Only the following belong there:
+
+- **README.md** – Project overview and quick start
+- **CHANGELOG.md** – Main changelog (Keep a Changelog)
+- **CONTRIBUTING.md** – Contribution guidelines
+- **INSTALL_IN_YOUR_PROJECT.md** – How to install frameworks (adopter-facing)
+- **Config files** – e.g. `rw-config.yaml`, `semver-registry.yaml`
+
+**Maintainer runbooks** (build packages, upload to releases, etc.) live in **`docs/maintenance/`**, not in root. See [docs/maintenance/README.md](../../maintenance/README.md).
+
+---
+
 ## Configuration Files
 
 ### rw-config.yaml
@@ -118,6 +132,7 @@ These are **book project content** and authoring materials, not framework docume
 | **Framework scripts** | `packages/frameworks/*/scripts/` | Copy when installing frameworks |
 | **Project utilities** | `scripts/` | Optional reference only |
 | **Book content** | `docs/documentation/`, `docs/knowledge/` | Ignore (book project only) |
+| **Maintainer runbooks** | `docs/maintenance/` | Reference only (build/upload; not for adoption) |
 
 ---
 

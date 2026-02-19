@@ -374,8 +374,8 @@ Before running workflows that require environment variables:
 
 - **Release Workflow:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 12.5)
 - **GitHub Release Script:** `packages/frameworks/workflow mgt/scripts/create_github_release.py`
-- **Package Upload Guide:** `UPLOAD_PACKAGES.md`
-- **Build and Upload Guide:** `BUILD_AND_UPLOAD.md`
+- **Package Upload Guide:** `docs/maintenance/UPLOAD_PACKAGES.md`
+- **Build and Upload Guide:** `docs/maintenance/BUILD_AND_UPLOAD.md`
 - **GitHub Token Setup:** [GitHub Documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 ---

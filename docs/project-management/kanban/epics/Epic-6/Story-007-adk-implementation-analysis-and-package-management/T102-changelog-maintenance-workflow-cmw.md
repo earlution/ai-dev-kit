@@ -6,20 +6,22 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 6, Task 102: Changelog Maintenance Workflow (CMW) - Perpetual Task
+**Task ID:** E6:S07:T102
+
+# Epic 6, Story 7, Task 102: Changelog Maintenance Workflow (CMW) - Perpetual Task
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-17 (v0.6.7.102+4 – CMW: Fixed 165 ordering violations, archived 50 entries, reduced from 3,784 to 3,157 lines)  
+**Last updated:** 2026-02-19 (v0.6.7.102+6 – Perpetual docs update: runbooks, policy)  
 **Started:** 2025-12-21  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.102+4
+**Version:** v0.6.7.102+6
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing changelog maintenance and archival work. High build numbers are expected and valid.
 
-**Progress:** CMW execution (v0.6.7.102+5) - Fixed changelog ordering violation (0.4.18.1+1 appearing before 0.6.7.101+26), archived 4 entries, validated remaining changelog format. **0 duplicates found, remaining changelog validated and compliant** after CMW execution. Changelog health maintained through automated maintenance. RW release committed.  
+**Progress:** Perpetual docs update (v0.6.7.102+6) - Runbooks moved to docs/maintenance/, project root convention in policy. CMW execution (v0.6.7.102+5) - Fixed changelog ordering violation (0.4.18.1+1 appearing before 0.6.7.101+26), archived 4 entries, validated remaining changelog format. **0 duplicates found, remaining changelog validated and compliant** after CMW execution. Changelog health maintained through automated maintenance. RW release committed.  
 **Code:** E6S06T102
 
 **Note:** This task was migrated from T12 to T102 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).
@@ -50,6 +52,14 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 - Never "completes" - it's continuous maintenance work
 
 ---
+
+## Input
+
+- CMW workflow trigger (manual or RW Step 9.5); changelog state; rw-config and changelog archival policy.
+
+## Deliverable
+
+- Version attributed to E6:S07:T102+{N}; changelog validated/archived as per CMW; release committed and tagged.
 
 ## Problem Statement
 
@@ -126,7 +136,13 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 
 ---
 
-**Last Updated:** 2026-01-16 (v0.6.7.102+2 – Task migrated from T12 to T102 as part of repository story abstract space resolution)  
-**Version:** v0.6.7.102+2  
+## Version Anchor
+
+**Forensic marker:** Perpetual task; version pattern `v0.6.7.102+{N}`. Latest: v0.6.7.102+6 (perpetual docs update: runbooks, policy).
+
+---
+
+**Last Updated:** 2026-02-19 (v0.6.7.102+6 – Perpetual docs update: runbooks, policy)  
+**Version:** v0.6.7.102+6  
 **Status:** IN PROGRESS (Perpetual)
 

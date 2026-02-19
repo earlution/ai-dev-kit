@@ -9,7 +9,7 @@
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-**Version (SemVer):** `v0.5.39+3` | **Internal:** `v0.5.1.39+3` (see detailed changelog) | **Last Updated:** 2026-02-19
+**Version (SemVer):** `v0.6.52+6` | **Internal:** `v0.6.7.102+6` (see detailed changelog) | **Last Updated:** 2026-02-19
 
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
@@ -71,6 +71,7 @@ python3 scripts/install_kanban_framework.py --mode fresh
 - [Architecture Documentation](docs/architecture)
 - [Framework Development Guides](packages/frameworks)
 - [Workflow Documentation](packages/frameworks/workflow mgt/docs)
+- **Maintainers:** [Build and upload runbooks](docs/maintenance/README.md) (package build/publish)
 
 ### 🔍 I'm looking for a specific framework
 

@@ -247,8 +247,7 @@ After uploading, verify packages are on GitHub Releases:
 ---
 
 **Related:**
-- Build Guide: `BUILD_PACKAGES.md`
-- Distribution Plan: `docs/Analysis/phase3-package-distribution-plan.md`
-- Upload Script: `packages/frameworks/workflow mgt/scripts/upload_to_github_release.py`
-- Installation Guide: `packages/frameworks/workflow mgt/docs/PACKAGE_INSTALLATION_GUIDE.md`
-
+- [BUILD_PACKAGES.md](BUILD_PACKAGES.md) – Build quick start
+- [Phase 3 package distribution plan](../analysis/phase3-package-distribution-plan.md)
+- Upload script: `packages/frameworks/workflow mgt/scripts/upload_to_github_release.py`
+- Installation guide: `packages/frameworks/workflow mgt/docs/PACKAGE_INSTALLATION_GUIDE.md`
