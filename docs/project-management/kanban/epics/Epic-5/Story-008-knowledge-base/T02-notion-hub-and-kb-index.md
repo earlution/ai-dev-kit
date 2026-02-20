@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Epic 5, Story 8, Task 2: Notion Hub, Knowledge Base Container, and KB Index
 
 **Task ID:** E5:S08:T02  
-**Status:** ✅ COMPLETE (v0.5.8.2+1)  
+**Status:** ✅ COMPLETE (v0.5.8.2+2)  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-20  
 **Last updated:** 2026-02-20  
-**Version:** v0.5.8.2+1  
+**Version:** v0.5.8.2+2  
 **Code:** E5S08T02
 
 ---

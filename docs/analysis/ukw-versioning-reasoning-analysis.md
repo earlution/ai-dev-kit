@@ -1,3 +1,9 @@
+---
+lifecycle: evergreen
+created_at: 2025-12-18T00:00:00
+housekeeping_policy: keep
+---
+
 # UKW Versioning Reasoning Analysis
 
 **Date:** 2025-12-18  

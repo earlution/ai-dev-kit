@@ -1,3 +1,9 @@
+---
+lifecycle: evergreen
+created_at: 2025-12-18T00:00:00
+housekeeping_policy: keep
+---
+
 # Package Management Prioritization Review
 
 **Purpose:** Prioritized review and validation of package management investigation findings  

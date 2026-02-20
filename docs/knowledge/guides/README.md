@@ -38,7 +38,7 @@ SoPs define standardized processes and procedures for consistent execution of wo
 
 ### Package Management
 
-- **[Package Maintenance and Release](../../../knowledge/guides/package-maintenance-and-release.md)** - Guide for maintaining and releasing packages in the framework.
+- **[Package Maintenance and Release](../../architecture/standards-and-adrs/package-maintenance-and-release.md)** - Guide for maintaining and releasing packages in the framework.
 
 ### Knowledge Management
 

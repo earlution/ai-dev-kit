@@ -1,3 +1,9 @@
+---
+lifecycle: evergreen
+created_at: 2025-12-18T00:00:00
+housekeeping_policy: keep
+---
+
 # Package Management Investigation Report
 
 **Purpose:** Comprehensive investigation of package management approaches for AI Dev Kit frameworks  

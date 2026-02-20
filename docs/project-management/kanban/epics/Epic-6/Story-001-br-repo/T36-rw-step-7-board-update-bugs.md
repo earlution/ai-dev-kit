@@ -49,7 +49,7 @@ Fix critical bugs in RW Step 7 (Auto-update Kanban Docs) that prevent the Kanban
 ## Input
 
 - **BR-036:** [`BR-036-rw-step-7-board-update-bugs.md`](../../../fr-br/BR-036-rw-step-7-board-update-bugs.md)
-- **FR-036:** [`FR-036-rw-update-kanban-board-on-task-completion.md`](../../../fr-br/FR-036-rw-update-kanban-board-on-task-completion.md) (related feature)
+- **FR-040:** [`FR-040-rw-update-kanban-board-on-task-completion.md`](../../../fr-br/FR-040-rw-update-kanban-board-on-task-completion.md) (related feature)
 - **E5:S01:T36:** [`../Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md`](../Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) (original implementation)
 - **RW Step 7 Script:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
 
@@ -118,7 +118,7 @@ Fix critical bugs in RW Step 7 (Auto-update Kanban Docs) that prevent the Kanban
 
 **Related Work:**
 - **BR-036:** RW Step 7 Board Update Bugs (this bug report)
-- **FR-036:** RW Update Kanban Board on Task Completion (original feature)
+- **FR-040:** RW Update Kanban Board on Task Completion (original feature)
 - **E5:S01:T36:** RW Update Kanban Board on Task Completion (original implementation)
 
 ---

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-20 (v0.5.8.2+1 – E5:S08:T02: Notion hub, KB index)  
+**Last updated:** 2026-02-20 (v0.5.8.2+2 – E5:S08:T02: KB migration to Notion)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -49,7 +49,7 @@ housekeeping_policy: keep
   - Story: [`Story-007-policy-documentation-structure.md`](Story-007-policy-documentation-structure.md)
   - Tasks: T01 ✅ COMPLETE (FR-022)
   - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08)
-- [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+1 – T02 ✅ Notion hub, KB index)
+- [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+2 – T02 ✅ KB migration to Notion)
   - Story: [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
 

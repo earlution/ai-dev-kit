@@ -121,7 +121,7 @@ Elevate RW Step 7 to an explicit, policy-backed **agentic Kanban sync** step tha
 - None (this FR is documentation/specification first; implementation tasks can be created later).
 
 **Related Work:**
-- **FR-036:** RW Update Kanban Board on Task Completion.
+- **FR-040:** RW Update Kanban Board on Task Completion.
 - **FR-037:** Kanban Policy – Task Prioritisation and Queue/Stack.
 - **UKW Workflow Docs:** Update Kanban Workflow specification.
 - **RW Execution Guide:** Release Workflow agent execution documentation.

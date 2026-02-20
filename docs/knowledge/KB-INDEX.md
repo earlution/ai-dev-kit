@@ -1,9 +1,9 @@
 # KB Index
 
-**Generated:** 2026-02-20 13:13:39 UTC  
+**Generated:** 2026-02-20 14:57:11 UTC  
 **Scope:** /Users/rms/Documents/projects/ai-dev-kit/docs  
-**Total files:** 906  
-**Total size:** 6.95 MB
+**Total files:** 879  
+**Total size:** 6.80 MB
 
 ---
 
@@ -11,33 +11,27 @@
 
 | Section | Files | Size | With frontmatter | Without | evergreen | timeboxed | transient | Expired |
 |---------|-------|------|------------------|---------|-----------|-----------|-----------|--------|
-| analysis | 9 | 152.2 KB | 3 | 6 | 3 | 0 | 0 | 0 |
+| analysis | 9 | 152.7 KB | 9 | 0 | 9 | 0 | 0 | 0 |
 | architecture | 84 | 1.08 MB | 80 | 4 | 80 | 0 | 0 | 0 |
-| changelog-and-release-notes | 422 | 1.85 MB | 126 | 296 | 112 | 0 | 0 | 0 |
+| changelog-and-release-notes | 423 | 1.85 MB | 126 | 297 | 112 | 0 | 0 | 0 |
 | documentation | 24 | 265.4 KB | 23 | 1 | 23 | 0 | 0 | 0 |
 | for-dummies-author-checklist.md | 1 | 4.9 KB | 0 | 1 | 0 | 0 | 0 | 0 |
 | for-dummies-style-guide.md | 1 | 11.3 KB | 0 | 1 | 0 | 0 | 0 | 0 |
 | guides | 4 | 7.1 KB | 4 | 0 | 4 | 0 | 0 | 0 |
-| knowledge | 82 | 1.03 MB | 72 | 10 | 69 | 1 | 2 | 2 |
+| knowledge | 57 | 927.3 KB | 55 | 2 | 54 | 1 | 0 | 0 |
 | maintenance | 5 | 16.3 KB | 0 | 5 | 0 | 0 | 0 | 0 |
-| project-management | 273 | 2.53 MB | 268 | 5 | 268 | 0 | 0 | 0 |
+| project-management | 270 | 2.50 MB | 265 | 5 | 265 | 0 | 0 | 0 |
 | vibe-coding-for-dummies-outline-and-sample.md | 1 | 12.6 KB | 0 | 1 | 0 | 0 | 0 | 0 |
 
 ## Optimization signals
 
 - **docs/README.md exists:** False
-- **Files missing lifecycle frontmatter:** 330
-- **Timeboxed/transient with expires_at in the past:** 2
+- **Files missing lifecycle frontmatter:** 317
+- **Timeboxed/transient with expires_at in the past:** 0
 - **READMEs (under docs/):** 19
 
 ### Missing frontmatter (sample)
 
-- `analysis/cmw-ordering-flaw-analysis.md`
-- `analysis/package-management-implementation-plan.md`
-- `analysis/package-management-investigation-report.md`
-- `analysis/package-management-prioritization-review.md`
-- `analysis/phase3-package-distribution-plan.md`
-- `analysis/ukw-versioning-reasoning-analysis.md`
 - `architecture/standards-and-adrs/doc-lifecycle-metadata-spec.md`
 - `architecture/standards-and-adrs/doc-lifecycle-policy.md`
 - `architecture/standards-and-adrs/package-hash-verification-spec.md`
@@ -82,12 +76,13 @@
 - `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.9+3.md`
 - `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.12.1+1.md`
 - `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.0+1.md`
-- ... and 280 more
-
-### Expired (candidates for archive/delete)
-
-- `knowledge/analysis/adk-implementation-analysis-execution-plan.md`
-- `knowledge/analysis/ai-dev-kit-sitrep.md`
+- `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.1+1.md`
+- `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.2+1.md`
+- `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.3+1.md`
+- `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.4+1.md`
+- `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.5+1.md`
+- `changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.6+1.md`
+- ... and 267 more
 
 ### README locations
 
@@ -115,15 +110,15 @@
 
 | Path | Size | Words | lifecycle | created_at | ttl_days |
 |------|------|-------|----------|------------|----------|
-| analysis/cmw-ordering-flaw-analysis.md | 9.4 KB | 1194 |  |  |  |
-| analysis/package-management-implementation-plan.md | 26.2 KB | 3415 |  |  |  |
-| analysis/package-management-investigation-report.md | 34.6 KB | 4402 |  |  |  |
-| analysis/package-management-prioritization-review.md | 34.3 KB | 4433 |  |  |  |
+| analysis/cmw-ordering-flaw-analysis.md | 9.5 KB | 1194 | evergreen | 2026-01-05T00:00:00 |  |
+| analysis/package-management-implementation-plan.md | 26.3 KB | 3415 | evergreen | 2025-12-18T00:00:00 |  |
+| analysis/package-management-investigation-report.md | 34.7 KB | 4402 | evergreen | 2025-12-18T00:00:00 |  |
+| analysis/package-management-prioritization-review.md | 34.3 KB | 4433 | evergreen | 2025-12-18T00:00:00 |  |
 | analysis/perpetual-task-range-options-analysis.md | 13.0 KB | 1879 | evergreen | 2026-01-16T00:00:00 |  |
-| analysis/phase3-package-distribution-plan.md | 10.0 KB | 1038 |  |  |  |
+| analysis/phase3-package-distribution-plan.md | 10.1 KB | 1038 | evergreen | 2025-12-18T00:00:00 |  |
 | analysis/repository-story-abstract-space-contradiction-analysis.md | 7.9 KB | 1164 | evergreen | 2026-01-16T00:00:00 |  |
 | analysis/task-template-system-analysis.md | 10.1 KB | 1395 | evergreen | 2025-12-22T08:55:00 |  |
-| analysis/ukw-versioning-reasoning-analysis.md | 6.6 KB | 992 |  |  |  |
+| analysis/ukw-versioning-reasoning-analysis.md | 6.7 KB | 992 | evergreen | 2025-12-18T00:00:00 |  |
 | architecture/README.md | 1017 B | 71 | evergreen | 2025-12-04T12:01:54 |  |
 | architecture/standards-and-adrs/agent-network-access-and-git-push-limitations.md | 13.2 KB | 1637 | evergreen | 2025-12-04T12:10:00 |  |
 | architecture/standards-and-adrs/agentic-template-generator-design.md | 8.5 KB | 908 | evergreen | 2025-12-22T11:00:00 |  |
@@ -240,18 +235,16 @@
 | guides/framework-consumption/README.md | 677 B | 62 | evergreen | 2025-12-04T12:01:54 |  |
 | guides/framework-consumption/adk-feedback-guide.md | 5.4 KB | 752 | evergreen | 2025-12-18T00:00:00 |  |
 | guides/getting-started/README.md | 425 B | 41 | evergreen | 2025-12-04T12:01:54 |  |
-| knowledge/KB-INDEX.md | 66.5 KB | 6619 |  |  |  |
+| knowledge/KB-INDEX.md | 70.0 KB | 6728 |  |  |  |
 | knowledge/README.md | 4.8 KB | 552 | evergreen | 2025-12-16T14:30:00 |  |
 | knowledge/USE_CASE_METHODOLOGY.md | 14.0 KB | 1843 | evergreen | 2025-12-16T14:30:00 |  |
 | knowledge/analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md | 13.1 KB | 1798 | evergreen | 2025-12-18T00:00:00 |  |
 | knowledge/analysis/adk-drift-analysis.md | 9.3 KB | 1302 | evergreen | 2025-12-18T00:00:00 |  |
 | knowledge/analysis/adk-hardening-recommendations.md | 10.9 KB | 1457 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/analysis/adk-implementation-analysis-execution-plan.md | 9.0 KB | 1068 | transient | 2025-12-16T15:30:00 | 30 |
 | knowledge/analysis/adk-implementation-analysis-report.md | 11.5 KB | 1503 | evergreen | 2025-12-18T00:00:00 |  |
 | knowledge/analysis/adk-implementation-patterns.md | 11.4 KB | 1499 | evergreen | 2025-12-18T00:00:00 |  |
 | knowledge/analysis/adk-learning-synthesis.md | 12.6 KB | 1708 | evergreen | 2025-12-18T00:00:00 |  |
 | knowledge/analysis/adk-mashup-issues.md | 7.1 KB | 983 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/analysis/ai-dev-kit-sitrep.md | 11.7 KB | 1511 | transient | 2025-12-16T14:00:00 | 3 |
 | knowledge/analysis/comprehensive-adk-analysis-framework.md | 14.6 KB | 2081 | evergreen | 2025-12-16T16:00:00 |  |
 | knowledge/analysis/comprehensive-project-analysis-framework.md | 18.5 KB | 2460 | evergreen | 2025-12-16T11:00:00 |  |
 | knowledge/analysis/critical-framework-completion-plan.md | 17.6 KB | 2132 | evergreen | 2025-12-16T12:00:00 |  |
@@ -285,32 +278,9 @@
 | knowledge/articles/README.md | 3.5 KB | 390 | evergreen | 2025-12-22T10:50:00 |  |
 | knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md | 7.5 KB | 1147 | evergreen | 2026-01-14T00:00:00 |  |
 | knowledge/articles/hybrid-task-template-system-building-better-templates.md | 17.2 KB | 2083 | evergreen | 2025-12-22T10:50:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.6.1+1.md | 4.0 KB | 566 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.1+1.md | 3.8 KB | 494 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.11.7+0.md | 4.8 KB | 539 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.11.7+1.md | 4.8 KB | 577 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.11.7+2.md | 4.1 KB | 489 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.0+0.md | 5.4 KB | 678 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.3+1.md | 6.4 KB | 812 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+1.md | 7.2 KB | 974 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+2.md | 6.8 KB | 937 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.4+3.md | 5.4 KB | 754 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+1.md | 2.6 KB | 365 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.13.6+2.md | 2.4 KB | 340 |  |  |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.7.1+1.md | 4.2 KB | 474 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.1+1.md | 4.7 KB | 570 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+14.md | 3.7 KB | 437 | evergreen | 2025-12-18T07:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+15.md | 3.2 KB | 336 | evergreen | 2025-12-18T07:15:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+16.md | 4.0 KB | 470 | evergreen | 2025-12-18T08:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md | 4.0 KB | 530 | evergreen | 2025-12-18T09:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+18.md | 4.1 KB | 519 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+19.md | 4.1 KB | 476 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+20.md | 4.2 KB | 487 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.7+1.md | 4.1 KB | 479 | evergreen | 2025-12-18T00:00:00 |  |
 | knowledge/guides/README.md | 3.2 KB | 361 | evergreen | 2026-01-16T00:00:00 |  |
 | knowledge/guides/badge-setup-for-private-repos.md | 7.1 KB | 934 |  |  |  |
 | knowledge/guides/building-persistent-knowledge.md | 7.3 KB | 988 | evergreen | 2025-12-18T00:00:00 |  |
-| knowledge/guides/package-maintenance-and-release.md | 15.2 KB | 2050 | evergreen | 2025-12-18T00:00:00 |  |
 | knowledge/reviews/pir/Epic-2/PIR-Epic-2-TEST-v0.2.5.10+1.md | 11.6 KB | 1503 | evergreen | 2025-12-16T20:00:00 |  |
 | knowledge/reviews/pir/Epic-2/PIR-TEST-EXECUTION-REPORT.md | 5.7 KB | 791 | evergreen | 2025-12-16T20:00:00 |  |
 | knowledge/reviews/pir/README.md | 3.6 KB | 408 | evergreen | 2025-12-16T16:00:00 |  |
@@ -362,7 +332,6 @@
 | project-management/kanban/epics/Epic-2/Story-002-pdca-integration-into-release-workflow/T004-enhance-do-phase.md | 3.1 KB | 371 | evergreen | 2025-12-04T12:01:50 |  |
 | project-management/kanban/epics/Epic-2/Story-002-pdca-integration-into-release-workflow/T005-create-pdca-templates-examples.md | 2.8 KB | 362 | evergreen | 2025-12-04T12:01:50 |  |
 | project-management/kanban/epics/Epic-2/Story-002-pdca-integration-into-release-workflow/T006-update-rw-workflow-yaml-docs.md | 3.0 KB | 382 | evergreen | 2025-12-04T12:01:50 |  |
-| project-management/kanban/epics/Epic-2/Story-002-pdca-integration-into-release-workflow/T007-implement-task-naming-change.md | 2.7 KB | 332 | evergreen | 2025-12-04T12:01:50 |  |
 | project-management/kanban/epics/Epic-2/Story-002-pdca-integration-into-release-workflow/T008-update-kanban-docs-to-txx-standard.md | 2.7 KB | 383 | evergreen | 2025-12-04T12:01:50 |  |
 | project-management/kanban/epics/Epic-2/Story-002-pdca-integration-into-release-workflow/T07-implement-task-naming-change.md | 2.7 KB | 332 | evergreen | 2025-12-04T12:01:50 |  |
 | project-management/kanban/epics/Epic-2/Story-002-pdca-integration-into-release-workflow/T08-update-kanban-docs-to-txx-standard-deliverable.md | 3.8 KB | 405 | evergreen | 2025-12-04T12:01:50 |  |
@@ -465,11 +434,8 @@
 | project-management/kanban/epics/Epic-4/Story-018-kanban-board-info-only-split/T1-implement-kanban-board-info-only-split.md | 3.7 KB | 507 | evergreen | 2026-01-20T00:00:00 |  |
 | project-management/kanban/epics/Epic-4/Story-018-kanban-board-info-only-split/T2-upgrade-packaged-kanban-framework-board-split.md | 3.7 KB | 483 | evergreen | 2026-01-20T00:00:00 |  |
 | project-management/kanban/epics/Epic-4/Story-018-kanban-board-info-only-split.md | 2.6 KB | 264 | evergreen | 2026-01-20T00:00:00 |  |
-| project-management/kanban/epics/Epic-5/Epic-5.md | 7.6 KB | 862 | evergreen | 2025-12-05T14:00:00 |  |
-| project-management/kanban/epics/Epic-5/Story-000-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md | 8.4 KB | 1023 | evergreen | 2026-01-14T00:00:00 |  |
-| project-management/kanban/epics/Epic-5/Story-000-fr-repo/T34-ukw-granular-control-and-use-case-flags.md | 9.2 KB | 1187 | evergreen | 2026-01-16T00:00:00 |  |
-| project-management/kanban/epics/Epic-5/Story-000-fr-repo/T35-task-template-cross-wiring-section.md | 7.7 KB | 907 | evergreen | 2026-01-16T00:00:00 |  |
-| project-management/kanban/epics/Epic-5/Story-000-fr-repo.md | 4.1 KB | 499 | evergreen | 2026-01-05T18:10:00 |  |
+| project-management/kanban/epics/Epic-5/Epic-5.md | 7.6 KB | 891 | evergreen | 2025-12-05T14:00:00 |  |
+| project-management/kanban/epics/Epic-5/Story-000-fr-repo.md | 4.2 KB | 510 | evergreen | 2026-01-05T18:10:00 |  |
 | project-management/kanban/epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md | 8.4 KB | 1023 | evergreen | 2026-01-14T00:00:00 |  |
 | project-management/kanban/epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md | 11.5 KB | 1483 | evergreen | 2026-01-16T00:00:00 |  |
 | project-management/kanban/epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md | 7.7 KB | 907 | evergreen | 2026-01-16T00:00:00 |  |
@@ -484,7 +450,8 @@
 | project-management/kanban/epics/Epic-5/Story-005-framework-documentation-management.md | 21.7 KB | 2658 | evergreen | 2025-12-05T17:40:00 |  |
 | project-management/kanban/epics/Epic-5/Story-006-legacy-repository-incorporation.md | 43.3 KB | 5521 | evergreen | 2025-12-07T15:45:00 |  |
 | project-management/kanban/epics/Epic-5/Story-007-policy-documentation-structure.md | 4.4 KB | 536 | evergreen | 2025-12-12T00:00:00 |  |
-| project-management/kanban/epics/Epic-5/Story-008-persistent-knowledge-base-investigation.md | 4.8 KB | 562 | evergreen | 2025-12-18T00:00:00 |  |
+| project-management/kanban/epics/Epic-5/Story-008-knowledge-base/T02-notion-hub-and-kb-index.md | 3.3 KB | 396 | evergreen | 2026-02-20T00:00:00 |  |
+| project-management/kanban/epics/Epic-5/Story-008-knowledge-base.md | 5.4 KB | 629 | evergreen | 2025-12-18T00:00:00 |  |
 | project-management/kanban/epics/Epic-6/Epic-6.md | 10.1 KB | 1239 | evergreen | 2025-12-05T14:10:00 |  |
 | project-management/kanban/epics/Epic-6/Story-000-br-repo/T33-ukw-board-disorganization.md | 6.4 KB | 821 | evergreen | 2026-01-16T00:00:00 |  |
 | project-management/kanban/epics/Epic-6/Story-000-br-repo.md | 4.1 KB | 497 | evergreen | 2026-01-05T18:10:00 |  |
@@ -584,22 +551,22 @@
 | project-management/kanban/fr-br/FR-034-ukw-granular-control-and-use-case-flags.md | 12.0 KB | 1599 | evergreen | 2026-01-16T00:00:00 |  |
 | project-management/kanban/fr-br/FR-035-task-template-cross-wiring-section.md | 9.7 KB | 1196 | evergreen | 2026-01-16T00:00:00 |  |
 | project-management/kanban/fr-br/FR-036-kanban-board-info-only-split.md | 8.2 KB | 993 | evergreen | 2026-01-20T00:00:00 |  |
-| project-management/kanban/fr-br/FR-036-rw-update-kanban-board-on-task-completion.md | 7.9 KB | 1121 | evergreen | 2026-01-22T14:50:00 |  |
 | project-management/kanban/fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md | 9.9 KB | 1430 | evergreen | 2026-01-22T00:00:00 |  |
 | project-management/kanban/fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md | 6.6 KB | 962 | evergreen | 2026-02-19T00:00:00 |  |
 | project-management/kanban/fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md | 6.2 KB | 850 | evergreen | 2026-02-19T00:00:00 |  |
+| project-management/kanban/fr-br/FR-040-rw-update-kanban-board-on-task-completion.md | 7.9 KB | 1121 | evergreen | 2026-01-22T14:50:00 |  |
 | project-management/kanban/fr-br/REOPENING_BR_AND_TASKS_GUIDE.md | 7.9 KB | 1115 | evergreen | 2025-12-16T13:45:00 |  |
 | project-management/kanban/fr-br/UXR-001-migration-user-experience-research.md | 12.2 KB | 1542 | evergreen | 2025-01-27T00:00:00 |  |
 | project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities.md | 10.0 KB | 1284 | evergreen | 2025-12-10T00:00:00 |  |
 | project-management/kanban/fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md | 7.4 KB | 902 | evergreen | 2025-12-10T00:00:00 |  |
 | project-management/kanban/fr-br/UXR-004-kanban-package-installation-uat.md | 6.4 KB | 844 | evergreen | 2025-12-10T17:10:00 |  |
 | project-management/kanban/kanban-board-guide.md | 4.4 KB | 599 | evergreen | 2026-01-20T00:00:00 |  |
-| project-management/kanban/kanban-board.md | 31.1 KB | 2868 | evergreen | 2025-12-04T12:02:50 |  |
+| project-management/kanban/kanban-board.md | 31.3 KB | 2893 | evergreen | 2025-12-04T12:02:50 |  |
 | project-management/kanban/ukw-changes-summary-2026-01-05.md | 2.3 KB | 327 |  |  |  |
 | project-management/kanban/ukw-changes-summary.md | 3.3 KB | 430 |  |  |  |
 | project-management/rituals/README.md | 396 B | 31 | evergreen | 2025-12-04T12:01:54 |  |
 | project-management/rituals/policy/README.md | 316 B | 25 | evergreen | 2025-12-04T12:01:54 |  |
 | project-management/rituals/policy/kanban-governance-policy.md | 19.5 KB | 2649 | evergreen | 2025-12-04T12:02:50 |  |
 | vibe-coding-for-dummies-outline-and-sample.md | 12.6 KB | 2052 |  |  |  |
-| changelog-and-release-notes/changelog-archive/ (summary) (420 files) | 1.85 MB | 243251 |  |  |  |
+| changelog-and-release-notes/changelog-archive/ (summary) (421 files) | 1.85 MB | 243480 |  |  |  |
 

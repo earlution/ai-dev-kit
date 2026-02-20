@@ -89,7 +89,7 @@ Actual clean-up (archiving/removal/moves) will be handled by a **separate implem
 ## Related Work
 
 - **FR-039:** AI Dev Kit Project Review and Legacy Clean-Up.
-- **FR-036:** RW Update Kanban Board on Task Completion.
+- **FR-040:** RW Update Kanban Board on Task Completion.
 - **FR-037:** Kanban Policy – Task Prioritisation and Queue/Stack.
 - **FR-038:** RW Step 7 – Scoped Kanban Sync (UKW Mode).
 

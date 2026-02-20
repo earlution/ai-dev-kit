@@ -71,7 +71,7 @@ housekeeping_policy: keep
 - **E9:S01:T08:** Repository Story Abstract Space Contradiction - Task that resolved this architectural issue
 
 **Repository Story:**
-- **E5:S01:** FR Repo (PERPETUAL) - The concrete repository story for Feature Requests
+- **E5:S01:** [FR Repo (PERPETUAL)](Story-001-fr-repo.md) - The concrete repository story for Feature Requests; canonical task docs (e.g. T31, T34, T35) live under Story 001.
 - **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern) - Original feature request (pattern updated)
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs - Abstract space concept
 

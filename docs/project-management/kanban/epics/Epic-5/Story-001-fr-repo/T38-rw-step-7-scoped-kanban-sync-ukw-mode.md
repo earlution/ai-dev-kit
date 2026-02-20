@@ -78,7 +78,7 @@ Repository anchor task for **FR-038: RW Step 7 – Scoped Kanban Sync (UKW Mode)
 ## Related Work
 
 - **FR-038:** RW Step 7 – Scoped Kanban Sync (UKW Mode).
-- **FR-036:** RW Update Kanban Board on Task Completion.
+- **FR-040:** RW Update Kanban Board on Task Completion.
 - **FR-037:** Kanban Policy – Task Prioritisation and Queue/Stack.
 - **UKW:** Update Kanban Workflow (standalone Kanban sync).
 

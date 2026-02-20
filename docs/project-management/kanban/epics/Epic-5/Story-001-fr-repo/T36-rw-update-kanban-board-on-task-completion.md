@@ -18,7 +18,7 @@ housekeeping_policy: keep
 **Version:** v0.5.1.36+1  
 **Code:** E5S01T36
 
-**Repository Pattern:** FR-036 = E5:S01:T36 (abstract space: v0.5.1.36+0)
+**Repository Pattern:** FR-040 = E5:S01:T36 (abstract space: v0.5.1.36+0)
 
 ---
 
@@ -45,7 +45,7 @@ Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kan
 
 ## Input
 
-- **FR-036:** [`FR-036-rw-update-kanban-board-on-task-completion.md`](../../../fr-br/FR-036-rw-update-kanban-board-on-task-completion.md)
+- **FR-040:** [`FR-040-rw-update-kanban-board-on-task-completion.md`](../../../fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)
 - **FR-015:** [`FR-015-harden-kanban-docs-update-in-release-workflow.md`](../../../fr-br/FR-015-harden-kanban-docs-update-in-release-workflow.md) (related - board updates are part of FR-015:R06)
 - **RW Step 7 Script:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
 - **RW Step 7 Documentation:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
@@ -140,7 +140,7 @@ Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kan
 
 **Related FRs:**
 - **FR-015:** Harden Kanban Docs Update in Release Workflow (partially implemented - board updates missing)
-- **FR-036:** RW Update Kanban Board on Task Completion (this task)
+- **FR-040:** RW Update Kanban Board on Task Completion (this task)
 
 **Related Tasks:**
 - **E2:S08:** Harden Release Workflow Reliability (FR-015 implementation)

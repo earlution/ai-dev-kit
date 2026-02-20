@@ -97,21 +97,21 @@ This feature is needed:
 
 ### Functional Requirements
 
-- [ ] **FR-036:R01** - RW Step 7 must update Kanban board when task is completed
-- [ ] **FR-036:R02** - Update epic/story status in Kanban board sections
-- [ ] **FR-036:R03** - Update "Last updated" date and version in Kanban board metadata
-- [ ] **FR-036:R04** - Update task completion markers in epic/story listings on board
-- [ ] **FR-036:R05** - Detect story completion and update story status on board
-- [ ] **FR-036:R06** - Detect epic completion and update epic status on board
-- [ ] **FR-036:R07** - Validate that Kanban board updates were successful
-- [ ] **FR-036:R08** - Block workflow if Kanban board update fails (optional, can be non-blocking)
+- [ ] **FR-040:R01** - RW Step 7 must update Kanban board when task is completed
+- [ ] **FR-040:R02** - Update epic/story status in Kanban board sections
+- [ ] **FR-040:R03** - Update "Last updated" date and version in Kanban board metadata
+- [ ] **FR-040:R04** - Update task completion markers in epic/story listings on board
+- [ ] **FR-040:R05** - Detect story completion and update story status on board
+- [ ] **FR-040:R06** - Detect epic completion and update epic status on board
+- [ ] **FR-040:R07** - Validate that Kanban board updates were successful
+- [ ] **FR-040:R08** - Block workflow if Kanban board update fails (optional, can be non-blocking)
 
 ### Non-Functional Requirements
 
-- [ ] **FR-036:NF01** - **Reliability:** Board updates should be deterministic for known patterns
-- [ ] **FR-036:NF02** - **Performance:** Board updates should complete in < 2 seconds
-- [ ] **FR-036:NF03** - **Compatibility:** Works with existing Kanban board structure
-- [ ] **FR-036:NF04** - **Maintainability:** Framework-agnostic implementation
+- [ ] **FR-040:NF01** - **Reliability:** Board updates should be deterministic for known patterns
+- [ ] **FR-040:NF02** - **Performance:** Board updates should complete in < 2 seconds
+- [ ] **FR-040:NF03** - **Compatibility:** Works with existing Kanban board structure
+- [ ] **FR-040:NF04** - **Maintainability:** Framework-agnostic implementation
 
 ---
 

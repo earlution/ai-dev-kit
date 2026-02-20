@@ -31,7 +31,7 @@ RW Step 7 (Auto-update Kanban Docs) has critical bugs preventing the Kanban boar
 
 **Issue: RW Step 7 Board Updates Don't Work**
 
-Despite FR-036/E5:S01:T36 implementing board update functionality, the implementation has critical bugs that prevent it from working:
+Despite FR-040/E5:S01:T36 implementing board update functionality, the implementation has critical bugs that prevent it from working:
 
 1. **Story Document Path Resolution Fails:**
    - Script fails to find story documents using glob patterns
@@ -182,7 +182,7 @@ This bug occurs:
 - None
 
 **Related Work:**
-- **FR-036:** RW Update Kanban Board on Task Completion (feature that introduced this functionality)
+- **FR-040:** RW Update Kanban Board on Task Completion (feature that introduced this functionality)
 - **E5:S01:T36:** RW Update Kanban Board on Task Completion (implementation task)
 - **E5:S01:T34:** UKW Granular Control and Use Case Flags (task that exposed the bugs)
 
@@ -190,7 +190,7 @@ This bug occurs:
 
 ## References
 
-- **FR-036:** [`FR-036-rw-update-kanban-board-on-task-completion.md`](FR-036-rw-update-kanban-board-on-task-completion.md)
+- **FR-040:** [`FR-040-rw-update-kanban-board-on-task-completion.md`](FR-040-rw-update-kanban-board-on-task-completion.md)
 - **E5:S01:T36:** [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md`](../epics/Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md)
 - **RW Step 7 Script:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
 - **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
