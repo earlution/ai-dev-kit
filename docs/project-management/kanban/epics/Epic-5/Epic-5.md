@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-19 (v0.5.1.39+3 – E5:S01:T39: Legacy clean-up)  
+**Last updated:** 2026-02-20 (v0.5.8.2+1 – E5:S08:T02: Notion hub, KB index)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -49,8 +49,8 @@ housekeeping_policy: keep
   - Story: [`Story-007-policy-documentation-structure.md`](Story-007-policy-documentation-structure.md)
   - Tasks: T01 ✅ COMPLETE (FR-022)
   - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08)
-- [ ] **E5:S08 – Persistent Knowledge Base Investigation** - TODO
-  - Story: [`Story-008-persistent-knowledge-base-investigation.md`](Story-008-persistent-knowledge-base-investigation.md)
+- [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+1 – T02 ✅ Notion hub, KB index)
+  - Story: [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
 
 ---
@@ -162,20 +162,21 @@ Automate documentation maintenance tasks to reduce manual effort and improve con
 
 ---
 
-### Story 8: Persistent Knowledge Base Investigation
+### Story 8: Knowledge Base
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-18
+**Last updated:** 2026-02-20
 
 **Goal:**  
-Investigate the ramifications of the persistent knowledge base concept, including integration points, workflow impacts, tooling requirements, and agent capabilities.
+Investigate the ramifications of the persistent knowledge base concept, including integration points, workflow impacts, tooling requirements, and agent capabilities; establish Notion hub and KB index for migration.
 
 **Tasks:**
-- [ ] E5:S07:T01 – Investigate persistent knowledge base concept and ramifications
+- [ ] E5:S08:T01 – Investigate persistent knowledge base concept and ramifications
+- [x] E5:S08:T02 – Notion hub, Knowledge Base container, and KB index ✅
 
-**Story:** [`Story-007-persistent-knowledge-base-investigation.md`](Story-007-persistent-knowledge-base-investigation.md)
+**Story:** [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
 
 ---
 

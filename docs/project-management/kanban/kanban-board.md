@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-02-19 (RW: E6:S07:T102)
-**Version:** v0.6.7.102+6
+**Last Updated:** 2026-02-20 (RW: E5:S08:T02)
+**Version:** v0.5.8.2+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -214,18 +214,20 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last Updated:** 2026-02-08 (RW: E5:S01:T37)
+**Last Updated:** 2026-02-20 (RW: E5:S08:T02)
 
 **Note:** E5:S01 (FR Repo) is omitted from this board display (PERPETUAL repository story - see Epic 5 document for internal tracking).
 
 **Stories:**
-- [x] **E5:S01 – Documentation Maintenance Framework** - COMPLETE ✅ (v0.5.1.4+2)
-  - Story: [`epics/Epic-5/Story-001-documentation-maintenance-framework.md`](epics/Epic-5/Story-001-documentation-maintenance-framework.md)
-- [x] **E5:S02 – Documentation Quality Assurance** - ✅ COMPLETE (v0.5.2.3+1)
+- [x] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete)
+  - Story: [`epics/Epic-5/Story-002-documentation-maintenance-framework.md`](epics/Epic-5/Story-002-documentation-maintenance-framework.md)
+- [x] **E5:S03 – Documentation Quality Assurance** - ✅ COMPLETE (v0.5.3.3+1)
   - Tasks: T01 ✅, T02 ✅, T03 ✅
-  - Story: [`epics/Epic-5/Story-002-documentation-quality-assurance.md`](epics/Epic-5/Story-002-documentation-quality-assurance.md)
-- [ ] **E5:S03 – Documentation Automation** - TODO
-  - Story: [`epics/Epic-5/Story-003-documentation-automation.md`](epics/Epic-5/Story-003-documentation-automation.md)
+  - Story: [`epics/Epic-5/Story-003-documentation-quality-assurance.md`](epics/Epic-5/Story-003-documentation-quality-assurance.md)
+- [ ] **E5:S04 – Documentation Automation** - IN PROGRESS (T01 complete)
+  - Story: [`epics/Epic-5/Story-004-documentation-automation.md`](epics/Epic-5/Story-004-documentation-automation.md)
+- [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+1 – T02 ✅ Notion hub, KB index)
+  - Story: [`epics/Epic-5/Story-008-knowledge-base.md`](epics/Epic-5/Story-008-knowledge-base.md)
 
 **Epic Doc:** [`epics/Epic-5/Epic-5.md`](epics/Epic-5/Epic-5.md)
 

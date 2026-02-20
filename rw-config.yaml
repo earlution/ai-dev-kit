@@ -32,6 +32,9 @@ versioning_schema: RC.EPIC.STORY.TASK+BUILD
 # Project name
 project_name: ai-dev-kit
 
+# Notion project hub (single entry point for project context; RMS Teamspace)
+notion_hub_url: https://www.notion.so/30db6f8962c181ceb811f3a6c78ecd4b
+
 # Epic ranges
 canonical_epic_range: "1-23"
 project_specific_epic_range: "24+"

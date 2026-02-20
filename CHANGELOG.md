@@ -6,24 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## [0.6.7.102+6] - 19-02-26
+## [0.5.8.2+1] - 20-02-26
 
-Perpetual docs update (E6:S07:T102): Runbooks moved to `docs/maintenance/`, project root convention and policy updates.
+Notion hub and Knowledge Base container (RMS Teamspace), notion_hub_url in config and .cursorrules, KB index script and KB-INDEX.md/JSON, E5:S08 story renamed to Knowledge Base (E5:S08:T02).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.102+6.md)
-
----
-## [0.5.1.39+3] - 19-02-26
-
-Legacy clean-up (E5:S01:T39): SoT references in dev-kit policies, scripts moved to `scripts/internal/`, adopter-facing repo structure doc.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.39+3.md)
-
----
-## [0.5.1.39+2] - 19-02-26
-
-Latest-only changelog policy and CMW mode (E5:S01:T39). `CHANGELOG.md` now keeps only Unreleased and the newest release; policy, config, and CMW scripts updated.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.39+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.8.2+1.md)
 
 ---

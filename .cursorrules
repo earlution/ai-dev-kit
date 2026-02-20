@@ -243,6 +243,7 @@ For each step, follow this pattern:
 **File Paths (ai-dev-kit):**
 - Version file: `src/fynd_deals/version.py`
 - Changelog: `CHANGELOG.md`
+- Notion project hub: `rw-config.yaml` → `notion_hub_url` (single entry point for project context; RMS Teamspace)
 - Changelog Archive: `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md`
 - Kanban Board: `docs/project-management/kanban/_index.md` or `docs/project-management/kanban/kanban-board.md`
 - Epic Docs: `docs/project-management/kanban/epics/Epic-{epic}/Epic-{epic}.md`

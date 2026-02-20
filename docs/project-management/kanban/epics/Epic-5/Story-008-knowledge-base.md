@@ -6,14 +6,14 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Story 008 – Persistent Knowledge Base Investigation
+# Story 008 – Knowledge Base
 
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-18  
-**Last updated:** 2026-01-16 (v0.5.8.1+1, migrated from v0.5.8.1+1 – Story renumbered from S07 to S08 as part of repository story migration)  
-**Version:** v0.5.8.1+1  
+**Last updated:** 2026-02-20 (v0.5.8.2+1 – T02: Notion hub, KB container, KB index)  
+**Version:** v0.5.8.2+1  
 **Code:** E5S08
 
 **Note:** This story was renumbered from S07 to S08 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -23,6 +23,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [ ] **E5:S08:T01 – Investigate persistent knowledge base concept and ramifications** - TODO
+- [x] **E5:S08:T02 – Notion hub, Knowledge Base container, and KB index** ✅ COMPLETE (v0.5.8.2+1)
 
 ---
 
@@ -98,6 +99,16 @@ Understand the full scope and implications of the persistent knowledge base conc
 
 ---
 
+### E5:S08:T02 – Notion hub, Knowledge Base container, and KB index
+
+**Scope:** Establish Notion project hub and Knowledge Base container (RMS Teamspace), wire repo via `notion_hub_url`, and index project KB for optimization and migration.
+
+**Deliverables:** Notion AI Dev Kit hub page; Knowledge Base container under hub; `rw-config.yaml` and `.cursorrules` hub reference; `scripts/kb_index.py`, `docs/knowledge/KB-INDEX.md`, `docs/knowledge/KB-INDEX.json`; story renamed to "Knowledge Base".
+
+**Task:** [T02-notion-hub-and-kb-index.md](Story-008-knowledge-base/T02-notion-hub-and-kb-index.md)
+
+---
+
 ## Related Work
 
 - **Epic:** Epic 5 - Documentation Management and Maintenance
@@ -122,4 +133,3 @@ Understand the full scope and implications of the persistent knowledge base conc
 - **Cursor Integration:** Indexing and vectorization capabilities
 - **RW Step 9:** Agentic knowledge base update workflow
 - **Taxonomical Standards:** SoP for structuring knowledge (from foundational document)
-

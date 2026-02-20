@@ -290,8 +290,11 @@ def locate_task_doc(
         # Try Task-{task}-*.md pattern
         task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))
         if not task_files:
-            # Try T{task}-*.md pattern (zero-padded)
+            # Try T{task}-*.md pattern (zero-padded 3)
             task_files = list(story_dir.glob(f"T{task:03d}-*.md"))
+        if not task_files:
+            # Try T{task}-*.md pattern (zero-padded 2, e.g. T02-*.md)
+            task_files = list(story_dir.glob(f"T{task:02d}-*.md"))
         if not task_files:
             # Try T{task}-*.md pattern (no padding, e.g. T37-*.md)
             task_files = list(story_dir.glob(f"T{task}-*.md"))
