@@ -12,16 +12,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-02-22 (v0.6.7.103+2 – FR-042 IPW, planning docs)  
+**Last updated:** 2026-02-22 (v0.6.7.103+3 – FR-042 bidirectional wiring, T07 plan wiring)  
 **Started:** 2026-02-22  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.103+2
+**Version:** v0.6.7.103+3
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing Release Workflow and workflow framework maintenance work. High build numbers are expected and valid.
 
-**Progress:** v0.6.7.103+2 – FR-042 Implementation Planning Workflow (IPW) filed; planning docs for E4:S11:T07 and E4:S14:T01.  
+**Progress:** v0.6.7.103+3 – FR-042 bidirectional wiring requirement clarified; T07 plan doc wired to host task.  
 **Code:** E6S07T103
 
 **Note:** Perpetual tasks use 3-digit task numbers (T101+) to differentiate from regular tasks (T01-T99).

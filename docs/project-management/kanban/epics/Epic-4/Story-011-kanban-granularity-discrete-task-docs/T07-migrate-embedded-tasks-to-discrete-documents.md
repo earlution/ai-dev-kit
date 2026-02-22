@@ -54,6 +54,7 @@ Migrate all embedded tasks (delimited sections within Story documents) to discre
 - Task document template: `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
 - FR-016 requirements for 3-tier structure
 - Kanban governance policy (mandates discrete Task documents)
+- **Planning document:** [T07-planning-spec-tests-impl.md](T07-planning-spec-tests-impl.md) (Spec, Test Design, Implementation Plan)
 
 ---
 
@@ -295,6 +296,7 @@ Migrate all embedded tasks (delimited sections within Story documents) to discre
 
 ## References
 
+- [T07-planning-spec-tests-impl.md](T07-planning-spec-tests-impl.md) - Spec, Test Design, Implementation Plan
 - `docs/project-management/kanban/fr-br/FR-016-kanban-granularity-discrete-task-docs.md` - FR-016 requirements
 - `packages/frameworks/kanban/templates/TASK_TEMPLATE.md` - Task document template
 - `docs/project-management/rituals/policy/kanban-governance-policy.md` - Kanban governance policy

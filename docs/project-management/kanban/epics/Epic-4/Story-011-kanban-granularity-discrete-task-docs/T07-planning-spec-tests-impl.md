@@ -1,6 +1,7 @@
 # E4:S11:T07 – Planning: Spec, Tests, Implementation Plan
 
 **Task:** Migrate Embedded Tasks to Discrete Task Documents  
+**Host Task:** [T07-migrate-embedded-tasks-to-discrete-documents.md](T07-migrate-embedded-tasks-to-discrete-documents.md) (E4:S11:T07)  
 **Status:** TODO  
 **Planning doc created:** 2026-02-22
 
