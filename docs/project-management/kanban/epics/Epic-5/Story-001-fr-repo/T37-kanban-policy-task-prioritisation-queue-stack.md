@@ -46,6 +46,25 @@ Anchor task for FR-037: update the framework Kanban governance policy to incorpo
 
 ---
 
+## Specification (FR-037 R01–R05, NF01–NF03)
+
+Concrete governance policy changes required to satisfy FR-037:
+
+| Req | Governance policy change |
+|-----|--------------------------|
+| **R01** | Add section heading "Task prioritisation" (or equivalent); explain when to assign M/S/C/O/W (project-agnostic criteria); state that all new tasks go into a MoSCOW category first; no task is added directly to COMPLETE |
+| **R02** | Define MUST HAVE ordering: Stack (bug-based/breaking) → add to top, work top-first; Queue (other) → add to end, work front-first; classify each new MUST HAVE as bug-based/breaking (stack) or other (queue) |
+| **R03** | State that scripts/processes (UKW, RW) that update MoSCOW either respect stack vs queue when inserting/ordering, or document that ordering is manual/agent-defined |
+| **R04** | (Optional) Include universal COMPLETE: task is COMPLETE only when fully implemented (delivered, released) AND signed off (validated, accepted); tasks move from MoSCOW to COMPLETE only when both hold |
+| **R05** | Reference board guide for prioritisation and queue/stack (or inline short summary with link); ensure discoverability |
+| **NF01** | Wording project-agnostic; projects may add domain rules |
+| **NF02** | Align with existing MoSCOW structure (M/S/C/O/W) and FR-036 |
+| **NF03** | Definitions short and actionable |
+
+**Validation:** `validate_kanban_governance_policy.py` checks R01–R05 assertions against policy content.
+
+---
+
 ## Deliverable
 
 1. **This task document** – Repository anchor for FR-037 (E5:S01:T37).

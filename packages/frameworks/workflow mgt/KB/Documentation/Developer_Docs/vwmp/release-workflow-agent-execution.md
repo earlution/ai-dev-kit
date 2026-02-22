@@ -1565,6 +1565,7 @@ The Versioning Policy requires that:
 - ✅ **MANDATORY:** This step MUST run and cannot be skipped (`required: true`, `mandatory: true`)
 - ✅ **BLOCKING:** If this step fails, the workflow MUST STOP immediately (`blocking: true`)
 - ✅ **FRAMEWORK-AGNOSTIC:** Uses framework script that works across all projects
+- ✅ **KANBAN POLICY:** Updates align with Kanban governance policy (FR-037: task prioritisation, stack/queue for MUST HAVE). MoSCOW ordering is handled by UKW or manual/agent-defined updates; RW Step 7 updates version markers and completion status.
 - ✅ **VALIDATION:** Comprehensive validation runs automatically after updates
 - ✅ **ERROR HANDLING:** Recovery guidance provided for all error types
 - ❌ **DO NOT PROCEED:** If Step 7 fails, DO NOT proceed to Step 8 or any subsequent step
@@ -1678,7 +1679,7 @@ The Versioning Policy requires that:
 **Step 13: Policy & FR Validation:**
 - Required fields present (Status, Last updated, Version)
 - Version string format validation (vRC.EPIC.STORY.TASK+BUILD)
-- Kanban governance policy compliance
+- Kanban governance policy compliance (see `validate_kanban_governance_policy.py` for FR-037: task prioritisation, stack/queue for MUST HAVE)
 
 **Step 14: Cross-check with Version File:**
 - Version components match between version string and parsed components

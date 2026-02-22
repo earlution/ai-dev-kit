@@ -450,7 +450,8 @@ After completing UKW, users typically run RW to commit the kanban documentation 
        - Which tasks are time-sensitive (deadlines)
        - Which tasks align with current strategic focus
        - Risk assessment (what happens if not done)
-     - Order within each section chronologically (most recently updated first)
+     - **For MUST HAVE (M):** Apply stack/queue ordering per Kanban governance policy: bug-based/breaking tasks → add to top (stack, work top-first); all other M tasks → add to end (queue, work front-first). Classify each M task as bug-based/breaking or other and place accordingly.
+     - **For S/C/O/W:** Order within each section chronologically (most recently updated first)
      - Remove completed tasks from "In Progress" sections
      - Add new in-progress tasks to appropriate sections
    - **Epic Status Sections:**
@@ -476,11 +477,11 @@ After completing UKW, users typically run RW to commit the kanban documentation 
        - Analyze task context, dependencies, impact, deadlines
        - Assign to appropriate MoSCOW category
        - Don't just copy existing priority - reassess based on current state
-     - Rebuild Must Have (M) section with tasks classified as critical
+     - Rebuild Must Have (M) section with tasks classified as critical; order using stack/queue: bug-based/breaking tasks at top (stack), other M tasks at end (queue). See Kanban governance policy "Task prioritisation and MUST HAVE ordering".
      - Rebuild Should Have (S) section with tasks classified as important
      - Rebuild Could Have (C) section with tasks classified as nice-to-have
      - Rebuild Won't Have (W) section with explicitly deferred tasks
-     - Order tasks chronologically within each section (most recent first)
+     - Order M section by stack/queue; order S/C/O/W chronologically within each section (most recent first)
    - Update board "Last updated" date
    - Update board version if needed
 
@@ -512,8 +513,9 @@ After completing UKW, users typically run RW to commit the kanban documentation 
     - Run after updating story checklists in epic documents: `python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_document_checklists.py" --document-path "{epic_path}"`
     - Use `--dry-run` to preview sorting without making changes
 - **Prioritization requires intelligence** - analyze context, not just copy existing
+- **MUST HAVE ordering:** Use stack (bug-based/breaking at top) and queue (other M tasks at end) per Kanban governance policy; ordering is agent-defined when UKW runs
 - Only include tasks with status IN PROGRESS or TODO
-- Order tasks chronologically within MoSCOW sections
+- Order M section by stack/queue; order S/C/O/W chronologically within MoSCOW sections
 - Remove completed tasks from "In Progress" sections
 - Epic summaries must match epic documents exactly
 - MoSCOW classification must be strategically sound

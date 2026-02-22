@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [0.5.8.2+7] - 22-02-26
+
+FR-037: Kanban governance policy (task prioritisation, stack/queue, COMPLETE), validator, UKW/RW docs (E5:S08:T02).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.8.2+7.md)
+
+---
 ## [0.5.8.2+6] - 22-02-26
 
 KB migration: stub sweep sessions 2–3, kb_stub_sweep mappings, 29+ stubs pushed, Epic 5 Story 006 chunked (E5:S08:T02).
