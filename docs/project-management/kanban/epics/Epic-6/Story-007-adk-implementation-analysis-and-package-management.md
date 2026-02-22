@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2025-12-16  
-**Last updated:** 2026-01-22 (v0.6.7.101+30 – UKW execution: MoSCOW section updated, completed tasks removed)  
-**Version:** v0.6.7.101+30  
+**Last updated:** 2026-02-22 (v0.6.7.101+31 – UKW: MoSCOW update, four completed tasks removed)  
+**Version:** v0.6.7.101+31  
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -32,7 +32,7 @@ housekeeping_policy: keep
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 - [x] **E6:S07:T07 – Implement framework hardening recommendations** - ✅ COMPLETE (v0.6.7.7+6 – All phases complete: Epic 9→Epic 24, installer validation, rw-config.yaml, .cursorrules, installation instructions)
   - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
-- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+30 – UKW: MoSCOW section updated, completed tasks removed)
+- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+31 – UKW: MoSCOW update, four completed tasks removed)
   - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
   - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)

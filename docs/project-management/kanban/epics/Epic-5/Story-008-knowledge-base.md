@@ -21,11 +21,9 @@ housekeeping_policy: keep
 ---
 
 ## Task Checklist
-
 - [ ] **E5:S08:T01 – Investigate persistent knowledge base concept and ramifications** - TODO
-- [x] **E5:S08:T02 – Notion hub, Knowledge Base container, and KB index** ✅ COMPLETE (v0.5.8.2+8)
 
----
+- [x] **E5:S08:T02 – Notion hub, Knowledge Base container, and KB index** ✅ COMPLETE (v0.5.8.2+8)
 
 ## Overview
 

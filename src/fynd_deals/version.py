@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
-VERSION_STORY = 8     # Story number (Story 8: Knowledge Base)
-VERSION_TASK = 2   # Task number (T02: Notion hub, KB container, KB index)
-VERSION_BUILD = 8     # Build number (E5:S08:T02+8 - E4:S16:T05 gap log spec, validator)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
+VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis)
+VERSION_TASK = 101    # Task number (T101: UKW - perpetual task)
+VERSION_BUILD = 31    # Build number (E6:S07:T101+31 - UKW: MoSCOW update, completed tasks removed)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.8.2+8 = Development, Epic 5, Story 8, Task 2, Build 8 (E5:S08:T02: E4:S16:T05 gap log spec, validator)
+# Current: 0.6.7.101+31 = Development, Epic 6, Story 7, Task 101, Build 31 (UKW: MoSCOW update, completed tasks removed)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
