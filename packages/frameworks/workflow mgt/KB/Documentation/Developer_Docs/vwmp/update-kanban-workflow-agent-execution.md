@@ -112,11 +112,11 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 ## 📋 Workflow Steps
 
 **Step Execution Based on Flags:**
-- **Comprehensive (no flags):** All steps, all operations (bookkeeping + update MoSCOW + assign priorities)
-- **Bookkeeping (`-u` only):** Steps 1-5, 7-9 (skip Step 6 MoSCOW prioritization)
+- **Comprehensive (no flags):** All steps including Step 2.5 (gap discovery: TODO tasks not on board, open FRs/BRs without tasks)
+- **Bookkeeping (`-u` only):** Steps 1-5, 7-9 (skip Step 2.5, skip Step 6 MoSCOW prioritization)
 - **Update Priorities (`-p` only):** Step 6 only (update MoSCOW priorities)
 - **Assign Priorities (`-a <target>` only):** Step 6 only (assign priorities to targets)
-- **Combined flags:** Run specified sub-workflows only
+- **Combined flags:** Run specified sub-workflows only (Step 2.5 runs only when comprehensive)
 
 **Flag Parsing (Before Step 1):**
 1. Parse user command for flags (`-u`, `-p`, `-a`)
@@ -217,6 +217,67 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 - List of stories needing review
 - List of epics needing review
 - Recent FR/BR/UXRs affecting kanban
+
+---
+
+### Step 2.5: Discover Board Gaps (Comprehensive Run Only)
+
+**Purpose:** Identify (a) TODO/IN PROGRESS tasks missing from the Kanban board, and (b) open FRs/BRs without linked tasks. Add missing tasks to the board; for FRs/BRs without tasks, present a formatted list and seek user intention.
+
+**Runs:** Only when UKW is invoked with **no flags** (comprehensive run). Skipped for `-u`, `-p`, `-a` only.
+
+**Agent Execution:**
+
+**Part (a) – TODO Tasks Not on Board:**
+
+1. **ANALYZE:**
+   - Scan all task documents for tasks with status TODO or IN PROGRESS
+   - Extract task IDs (E{X}:S{Y}:T{Z}) and metadata (priority, summary)
+   - Read Kanban board MoSCOW section and epic sections
+   - Build list of all task IDs currently on the board
+
+2. **DETERMINE:**
+   - Which TODO/IN PROGRESS tasks are NOT in the board list
+   - Appropriate MoSCOW category and priority for each missing task
+
+3. **EXECUTE:**
+   - Add each missing task to the Kanban board (MoSCOW section with appropriate M/S/C/O classification)
+   - If task has linked FR/BR, include reference
+
+4. **OUTPUT:** Document which tasks were added
+
+**Part (b) – Open FRs/BRs Without Tasks:**
+
+1. **ANALYZE:**
+   - Scan `{kanban_root}/fr-br/` for FR and BR documents
+   - Extract Status (OPEN, PENDING, REOPENED, Proposed, IN PROGRESS, INTAKE)
+   - Cross-reference with Kanban board and story task checklists
+   - Identify FRs/BRs that have no linked task (no E{X}:S{Y}:T{Z} in board or story checklists)
+
+2. **DETERMINE:**
+   - List of open FRs/BRs without tasks
+
+3. **EXECUTE – Present Formatted List:**
+   - Output a table to the user, for example:
+
+   | Item | Status | On board? |
+   |------|--------|-----------|
+   | FR-042 (IPW) | OPEN | ❌ No task |
+   | FR-038 (RW Step 7 scoped) | PENDING | ❌ No reference |
+   | BR-002 (Changelog validator) | REOPENED | ❌ E2:S01:T06 exists but not in MoSCOW |
+   | ... | ... | ... |
+
+4. **SEEK USER INTENTION:**
+   - Ask: "Leave as is, or file tasks for any of these? If filing, specify which items."
+   - Pause for user response
+   - If user says "leave as is": Document decision, proceed
+   - If user specifies items to file: Create tasks per Kanban governance (create task docs, add to story checklists, wire bidirectional FR/BR ↔ task, add to board)
+
+5. **PROCEED:**
+   - Document outcome (tasks added, user decision on FRs/BRs)
+   - Pass to Step 3
+
+**Output:** (a) List of tasks added to board; (b) formatted FR/BR gap list presented to user; user intention captured; tasks filed if requested.
 
 ---
 
