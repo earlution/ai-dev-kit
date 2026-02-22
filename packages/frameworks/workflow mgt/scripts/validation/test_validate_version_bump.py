@@ -45,9 +45,10 @@ def test_task_id_extraction_prefers_canonical_section():
 
 # --- T2: Perpetual task detection by task number ---
 def test_perpetual_task_detection_by_task_number():
-    """is_perpetual_task(101) returns True; is_perpetual_task(5) returns False."""
+    """is_perpetual_task(101) returns True; is_perpetual_task(103) returns True; is_perpetual_task(5) returns False."""
     assert is_perpetual_task(101) is True
     assert is_perpetual_task(100) is True
+    assert is_perpetual_task(103) is True  # T103 RW Maintenance
     assert is_perpetual_task(5) is False
     assert is_perpetual_task(99) is False
 
@@ -212,6 +213,79 @@ VERSION_STRING = "0.6.7.101+32"
             config = {"use_kanban": True, "kanban_root": "docs/project-management/kanban"}
             is_valid, _ = validate_version_bump(version_file, story_file=story_file, config=config)
             assert is_valid, "BUILD 32 (incremented) for perpetual task should pass"
+        finally:
+            os.chdir(orig_cwd)
+
+
+# --- T7: validate_version_bump passes for T103 (RW Maintenance perpetual task) ---
+def test_validate_version_bump_passes_for_t103():
+    """Version 0.6.7.103+1, T103 task doc, story checklist -> validation passes (E6:S07:T103 RW Maintenance)."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        orig_cwd = os.getcwd()
+        try:
+            os.chdir(tmp)
+
+            version_dir = tmp / "src" / "proj"
+            version_dir.mkdir(parents=True)
+            version_file = version_dir / "version.py"
+            version_file.write_text("""
+VERSION_RC = 0
+VERSION_EPIC = 6
+VERSION_STORY = 7
+VERSION_TASK = 103
+VERSION_BUILD = 1
+VERSION_STRING = "0.6.7.103+1"
+""")
+
+            (tmp / "rw-config.yaml").write_text("""
+version_file: src/proj/version.py
+use_kanban: true
+kanban_root: docs/project-management/kanban
+story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
+""")
+
+            story_dir = tmp / "docs" / "project-management" / "kanban" / "epics" / "Epic-6"
+            story_dir.mkdir(parents=True)
+            task_dir = story_dir / "Story-007-adk-implementation-analysis-and-package-management"
+            task_dir.mkdir(parents=True)
+
+            story_file = story_dir / "Story-007-adk-implementation-analysis-and-package-management.md"
+            story_file.write_text("""
+# Story 007 – ADK Implementation Analysis
+**Code:** E6S07
+
+## Task Checklist
+- [ ] **E6:S07:T103** – Release Workflow (RW) Maintenance - IN PROGRESS (Perpetual)
+""")
+
+            task_file = task_dir / "T103-release-workflow-maintenance-perpetual-task.md"
+            task_file.write_text("""
+# Epic 6, Story 7, Task 103: Release Workflow (RW) Maintenance - Perpetual Task
+
+**Status:** IN PROGRESS (Perpetual)
+**Task Type:** Perpetual Maintenance
+**Scope:** RW maintenance work (Step 7 fixes, validator updates, doc corrections).
+
+## Task ID
+**Value:** `E6:S07:T103`
+
+## Acceptance Criteria
+- [x] Criterion one
+""")
+
+            config = {
+                "version_file": "src/proj/version.py",
+                "use_kanban": True,
+                "kanban_root": "docs/project-management/kanban",
+                "story_doc_pattern": "epics/Epic-{epic}/Story-{story}-*.md",
+            }
+
+            story_path = tmp / "docs" / "project-management" / "kanban" / "epics" / "Epic-6" / "Story-007-adk-implementation-analysis-and-package-management.md"
+            is_valid, errors = validate_version_bump(
+                version_file, story_file=story_path, config=config
+            )
+            assert is_valid, f"Validation should pass for T103 (RW Maintenance), errors: {errors}"
         finally:
             os.chdir(orig_cwd)
 

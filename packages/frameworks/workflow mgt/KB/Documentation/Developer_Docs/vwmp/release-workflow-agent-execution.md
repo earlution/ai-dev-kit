@@ -3215,6 +3215,15 @@ run_terminal_cmd("python scripts/automation/release_workflow.py --auto-go")
 - **Version Pattern:** CMW releases use the perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = CMW run count
 - **See:** Epic 2 Story 1 T05 (CMW Perpetual Task Pattern template) for detailed pattern documentation
 
+**Perpetual Task Pattern (RW Maintenance - T103):**
+- Projects should create a perpetual RW maintenance task for workflow framework maintenance release attribution
+- **Wiring Required:** Task must have `Task Type: Perpetual Maintenance` in task document
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (e.g., E6:S07:T103 in ai-dev-kit)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as RW maintenance releases (expected and valid)
+- **No Context Detection:** Unlike UKW/CMW, attribution is manual—when releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), agent/user manually sets version to E6:S07:T103 and increments BUILD
+- **See:** Epic 2 Story 1 T06 (RW Maintenance Perpetual Task Pattern template) for detailed pattern documentation
+
 ---
 
 ## 📚 Related Documentation

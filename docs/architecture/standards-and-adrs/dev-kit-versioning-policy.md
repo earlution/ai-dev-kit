@@ -383,6 +383,7 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 **Perpetual Task Examples:**
 - **UKW (Update Kanban Workflow):** Epic 6, Story 7, Task 101 (E6:S07:T101) - Kanban documentation synchronization
 - **CMW (Changelog Management Workflow):** Epic 6, Story 7, Task 102 (E6:S07:T102) - Changelog maintenance and archival
+- **RW Maintenance:** Epic 6, Story 7, Task 103 (E6:S07:T103) - Release Workflow and workflow framework maintenance (Step 7 fixes, validator updates, doc corrections)
 
 **Task Number Ranges:**
 - **Regular tasks:** T01-T99 (2-digit) - Standard feature/bug tasks
@@ -396,6 +397,10 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - BUILD number increments for each workflow run (same task, increment BUILD)
 - Build warnings are suppressed (high BUILD numbers are expected and valid)
 
+**T103 (RW Maintenance) - Manual Attribution:**
+- No automatic context detection (unlike UKW/CMW)
+- When releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), agent/user manually sets version to E6:S07:T103 and increments BUILD
+
 **Task ID Variability:**
 - Each project instance has its own perpetual task with its own E/S/T ID
 - ai-dev-kit: UKW = E6:S06:T08, CMW = E6:S06:T12
@@ -405,6 +410,7 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 **Related Documentation:**
 - **UKW Pattern:** Epic 4 Story 3 T01 (Update Packaged RW to Handle UKW Context)
 - **CMW Pattern:** Epic 2 Story 1 T05 (CMW Perpetual Task Pattern)
+- **RW Maintenance Pattern:** Epic 2 Story 1 T06 (RW Maintenance Perpetual Task Pattern)
 - **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 2)
 
 ---
