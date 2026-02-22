@@ -1912,7 +1912,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - Understand strict mode: Failures block workflow
    - Check validators exist and are executable
    - **CRITICAL - Changelog Ordering:** `validate_changelog_format.py` now validates canonical ordering
-   - **CRITICAL - Version Bump Logic:** `validate_version_bump.py` validates RW Step 2 logic is followed correctly
+   - **CRITICAL - Version Bump Logic:** `validate_version_bump.py` validates RW Step 2 logic is followed correctly. Supports perpetual tasks (T101+, `perpetual_task` or `Task Type: Perpetual Maintenance` flag).
    - **CRITICAL - Changelog Size:** `check_changelog_size.py` checks if changelog exceeds threshold (non-blocking, triggers CMW)
 
 2. **DETERMINE:**

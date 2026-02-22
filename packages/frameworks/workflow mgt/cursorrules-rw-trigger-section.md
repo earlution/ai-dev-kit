@@ -335,7 +335,7 @@ For each step, follow this pattern:
      5. **Update ALL Epic sections to match the updated Story file's state**
      6. Validate consistency: Story file, Epic header, Epic checklist, and Epic detailed sections must all match
 8. **Stage Files** - Run `git add -A` to stage all modified files
-9. **Run Validators** - Execute validation scripts. **Use config:** If `rw-config.yaml` exists, read `scripts_path` from config. Otherwise, use `{scripts_path}/validation/` as fallback. Run `validate_branch_context.py`, `validate_changelog_format.py`, and `validate_version_bump.py` (all scripts automatically read from `rw-config.yaml` if available).
+9. **Run Validators** - Execute validation scripts. **Use config:** If `rw-config.yaml` exists, read `scripts_path` from config. Otherwise, use `{scripts_path}/validation/` as fallback. Run `validate_branch_context.py`, `validate_changelog_format.py`, and `validate_version_bump.py` (all scripts automatically read from `rw-config.yaml` if available). **Note:** `validate_version_bump` supports perpetual tasks (T101+, `perpetual_task` or `Task Type: Perpetual Maintenance` flag).
    - **IMPORTANT:** Validators should confirm you're on an epic branch, not `main`
    - If on `main`, warn user and suggest switching to epic branch
    - Validators check version format, branch context alignment, changelog format, and version bump logic

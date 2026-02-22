@@ -41,6 +41,69 @@ except ImportError:
     yaml = None
 
 
+def is_perpetual_task(task_number: int, task_content: Optional[str] = None) -> bool:
+    """
+    Detect if a task is a perpetual maintenance task.
+
+    A task is perpetual if:
+    - VERSION_TASK >= 100 (T101+)
+    - Or task doc contains perpetual_task: true or Task Type: Perpetual Maintenance
+
+    Returns:
+        True if perpetual, False otherwise.
+    """
+    if task_number >= 100:
+        return True
+    if task_content and (
+        "perpetual_task: true" in task_content
+        or "Perpetual Maintenance" in task_content
+    ):
+        return True
+    return False
+
+
+def extract_task_id_canonical(content: str) -> Optional[Tuple[int, int, int]]:
+    """
+    Extract Task ID from canonical section, preferring **Value:** or **Full Task ID:**.
+
+    Prevents wrong extraction when content has other E#:S#:T# references (e.g. in Progress).
+    Returns (epic, story, task) or None if not found.
+    """
+    task_id_pattern = re.compile(r'E(\d+):S(\d+):T(\d+)', re.IGNORECASE)
+
+    # Prefer **Value:** `E{epic}:S{story}:T{task}`
+    value_match = re.search(
+        r'\*\*Value:\*\*\s*[`]?E(\d+):S(\d+):T(\d+)[`]?',
+        content,
+        re.IGNORECASE,
+    )
+    if value_match:
+        return (int(value_match.group(1)), int(value_match.group(2)), int(value_match.group(3)))
+
+    # Or **Full Task ID:** `E{epic}:S{story}:T{task}`
+    full_match = re.search(
+        r'\*\*Full\s+Task\s+ID:\*\*\s*[`]?E(\d+):S(\d+):T(\d+)[`]?',
+        content,
+        re.IGNORECASE,
+    )
+    if full_match:
+        return (int(full_match.group(1)), int(full_match.group(2)), int(full_match.group(3)))
+
+    # Or section after ## Task ID with E#:S#:T#
+    task_id_section = re.search(
+        r'##\s+Task\s+ID\s*\n(.*?)(?=\n##|\n---|\Z)',
+        content,
+        re.DOTALL | re.IGNORECASE,
+    )
+    if task_id_section:
+        section = task_id_section.group(1)
+        match = task_id_pattern.search(section)
+        if match:
+            return (int(match.group(1)), int(match.group(2)), int(match.group(3)))
+
+    return None
+
+
 def load_rw_config(project_root: Path = None) -> Optional[Dict]:
     """Load rw-config.yaml if it exists."""
     if project_root is None:
@@ -235,6 +298,9 @@ def get_completed_task(story_file: Path, version_task: Optional[int] = None) -> 
             completed_tasks.append(task_num)
     
     if not completed_tasks:
+        # Perpetual tasks (T101+) are never COMPLETE; return version_task if provided
+        if version_task is not None and version_task >= 100:
+            return version_task
         return None
     
     # If version_task provided, check if it's completed
@@ -348,7 +414,10 @@ def locate_task_doc(
     return (None, None, "not_found")
 
 
-def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int) -> Tuple[bool, list]:
+def validate_task_doc_fields(
+    task_content: str, epic: int, story: int, task: int,
+    relax_for_perpetual: bool = False
+) -> Tuple[bool, list]:
     """
     Validate Task document contains required fields.
     
@@ -360,6 +429,9 @@ def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int
     - Version Anchor (when complete)
     - Input
     - Deliverable
+    
+    When relax_for_perpetual=True (for perpetual tasks): Input and Deliverable
+    are optional; Version Anchor check skipped for IN PROGRESS tasks.
     
     Returns:
         (is_valid, list_of_errors)
@@ -387,12 +459,14 @@ def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int
     # Check required fields (case-insensitive, flexible patterns)
     # Note: For delimited sections, fields may use **Field:** format
     # Scope can be implicit in task title/description, so make it optional if other fields present
+    # Perpetual tasks: Input and Deliverable are optional
     required_fields = {
         'acceptance criteria': r'(?i)(?:^##\s+Acceptance\s+Criteria|^\*\*Acceptance\s+Criteria\*\*|^Acceptance\s+Criteria:|Acceptance\s+Criteria:)',
         'status': r'(?i)(?:^\*\*Status\*\*|^Status:|Status.*COMPLETE|Status.*TODO|Status.*IN PROGRESS|\*\*Status\*\*.*COMPLETE)',
-        'input': r'(?i)(?:^##\s+Input|^\*\*Input\*\*|^Input:|Input:)',
-        'deliverable': r'(?i)(?:^##\s+Deliverable|^\*\*Deliverable\*\*|^Deliverable:|Deliverable:)',
     }
+    if not relax_for_perpetual:
+        required_fields['input'] = r'(?i)(?:^##\s+Input|^\*\*Input\*\*|^Input:|Input:)'
+        required_fields['deliverable'] = r'(?i)(?:^##\s+Deliverable|^\*\*Deliverable\*\*|^Deliverable:|Deliverable:)'
     
     # Optional fields (warn if missing but don't fail)
     optional_fields = {
@@ -411,8 +485,8 @@ def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int
             if not re.search(r'(?i)(?:task|description|title)', task_content[:200], re.IGNORECASE):
                 errors.append(f"Optional field missing (recommended): {field_name}")
     
-    # Check Version Anchor (if task is complete)
-    if re.search(r'(?i)✅\s+COMPLETE|Status.*COMPLETE', task_content):
+    # Check Version Anchor (if task is complete); skip for perpetual (IN PROGRESS)
+    if not relax_for_perpetual and re.search(r'(?i)✅\s+COMPLETE|Status.*COMPLETE', task_content):
         if not re.search(r'(?i)✅\s+COMPLETE\s+\(v\d+\.\d+\.\d+\.\d+\+\d+\)|Version\s+Anchor', task_content):
             errors.append("Version Anchor missing (task marked COMPLETE but no version marker found)")
     
@@ -817,27 +891,29 @@ def validate_task_doc_alignment(
 ) -> Tuple[bool, list]:
     """
     Validate Task ID alignment with version components.
-    
-    Handles both zero-padded and non-zero-padded Task ID formats.
-    
+
+    Prefers canonical Task ID section (**Value:**, **Full Task ID:**, ## Task ID)
+    to avoid wrong extraction when content references other tasks (e.g. in Progress).
+
     Returns:
         (is_valid, list_of_errors)
     """
     errors = []
-    
-    # Extract Task ID from content (handle zero-padded formats)
-    task_id_pattern = re.compile(r'E(\d+):S(\d+):T(\d+)', re.IGNORECASE)
-    matches = task_id_pattern.findall(task_content)
-    
-    if not matches:
-        errors.append(f"Task ID not found in Task document. Expected: E{epic}:S{story}:T{task}")
-        return False, errors
-    
-    # Use first match (should be in header/title)
-    found_epic, found_story, found_task = matches[0]
-    found_epic = int(found_epic)
-    found_story = int(found_story)
-    found_task = int(found_task)
+
+    # Prefer canonical section over first regex match
+    canonical = extract_task_id_canonical(task_content)
+    if canonical:
+        found_epic, found_story, found_task = canonical
+    else:
+        # Fallback: first E#:S#:T# match
+        task_id_pattern = re.compile(r'E(\d+):S(\d+):T(\d+)', re.IGNORECASE)
+        matches = task_id_pattern.findall(task_content)
+        if not matches:
+            errors.append(f"Task ID not found in Task document. Expected: E{epic}:S{story}:T{task}")
+            return False, errors
+        found_epic = int(matches[0][0])
+        found_story = int(matches[0][1])
+        found_task = int(matches[0][2])
     
     if found_epic != epic:
         errors.append(f"Task ID Epic mismatch: Found E{found_epic}, Expected E{epic}")
@@ -946,9 +1022,10 @@ def validate_version_bump(
         else:
             print(f"  Location: Delimited section in {story_file}")
         
-        # Validate Task doc fields
+        # Validate Task doc fields (relax for perpetual tasks)
+        relax = is_perpetual_task(completed_task, task_doc_content)
         fields_valid, field_errors = validate_task_doc_fields(
-            task_doc_content, epic, story, completed_task
+            task_doc_content, epic, story, completed_task, relax_for_perpetual=relax
         )
         if not fields_valid:
             errors.append(f"❌ TASK DOCUMENT INCOMPLETE: Task E{epic}:S{story}:T{completed_task} document is missing required fields:")

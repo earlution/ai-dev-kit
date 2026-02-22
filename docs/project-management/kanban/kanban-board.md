@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-02-20 (UKW bookkeeping + MoSCOW update)
-**Version:** v0.6.7.101+31
+**Last Updated:** 2026-02-22 (RW: E4:S14:T01)
+**Version:** v0.4.14.1+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E4:S14:T01** – Update Packaged RW to Handle UKW Context and Perpetual Tasks - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
+- **E4:S14:T01** – Update Packaged RW to Handle UKW Context and Perpetual Tasks - ✅ COMPLETE (v0.4.14.1+1) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
 - **E4:S11:T07** – Migrate Embedded Tasks to Discrete Task Documents - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)
 - **E1:S06:T01** – Set up BYOB badges for private repository - IN PROGRESS (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-1/Story-006-repository-ci-cd-setup/T01-setup-byob-badges-for-private-repository.md)
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)

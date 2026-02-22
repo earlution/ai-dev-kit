@@ -8,14 +8,14 @@ housekeeping_policy: keep
 
 # Epic 4, Story 14, Task 1: Update Packaged RW to Handle UKW Context and Perpetual Tasks
 
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-18 (v0.4.14.1+0 – Task created)  
-**Started:** [TBD]  
-**Completed:** [TBD]  
-**Version:** v0.4.14.1+0
+**Last updated:** 2026-02-22 (v0.4.14.1+1 – Implementation complete)  
+**Started:** 2026-02-22  
+**Completed:** 2026-02-22  
+**Version:** v0.4.14.1+1
 
-**Progress:** Task created  
+**Progress:** validate_version_bump.py updated with perpetual task support (is_perpetual_task, extract_task_id_canonical, relaxed field validation). Tests added. T01 task doc and RW/UKW docs updated.  
 **Code:** E4S14T01
 
 ---
@@ -29,7 +29,7 @@ housekeeping_policy: keep
 
 ## Overview
 
-Update the packaged Release Workflow (RW) framework to handle UKW (Update Kanban Workflow) context detection and perpetual task attribution. This ensures that UKW-triggered releases are properly attributed to perpetual tasks (like E6:S06:T08) rather than arbitrary feature tasks.
+Update the packaged Release Workflow (RW) framework to handle UKW (Update Kanban Workflow) context detection and perpetual task attribution. This ensures that UKW-triggered releases are properly attributed to perpetual tasks (like E6:S07:T101) rather than arbitrary feature tasks.
 
 ---
 
@@ -43,7 +43,7 @@ Update the packaged Release Workflow (RW) framework to handle UKW (Update Kanban
 
 **Root Cause:**
 - Packaged RW was updated in source repo (`.cursorrules`), but not in the packaged framework
-- Perpetual task pattern (E6:S06:T08) needs to be integrated into packaged RW
+- Perpetual task pattern (e.g., E6:S07:T101 in ai-dev-kit) needs to be integrated into packaged RW
 - Framework needs to support maintenance workflows (UKW) properly
 
 **Solution:**
@@ -83,7 +83,7 @@ Update packaged RW to:
 
 2. **Auto-Attribution Logic:**
    - If UKW context detected → Auto-attribute to perpetual task
-   - Pattern: Check for perpetual task in Story (e.g., E6:S06:T08)
+   - Pattern: Check for perpetual task in Story (e.g., E6:S07:T101 in ai-dev-kit)
    - Use task number from perpetual task, increment BUILD
    - Skip normal task identification when UKW context detected
 
@@ -135,7 +135,7 @@ Update packaged RW to:
 
 - Packaged RW framework: `packages/frameworks/workflow mgt/`
 - Source repo RW implementation: `.cursorrules` (UKW context detection)
-- UKW perpetual task: `E6:S06:T08` (pattern example)
+- UKW perpetual task: `E6:S07:T101` (ai-dev-kit example; pattern varies by project)
 - UKW analysis: `docs/analysis/ukw-versioning-reasoning-analysis.md`
 
 ---
@@ -152,6 +152,7 @@ Update packaged RW to:
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (RW execution guide)
 - `packages/frameworks/workflow mgt/workflows/release-workflow.yaml` (if needed)
 - `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md` (if exists)
+- `packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py` (supports perpetual tasks: T101+, `perpetual_task` / `Task Type: Perpetual Maintenance` flag)
 
 ---
 
@@ -164,7 +165,7 @@ Update packaged RW to:
 - None
 
 **Coordinates With:**
-- **E6:S06:T08** - UKW perpetual task (source of pattern, already implemented in source repo)
+- **E6:S07:T101** - UKW perpetual task (source of pattern in ai-dev-kit; migrated from T08)
 - **Epic 2** - Workflow Management Framework (RW package owner)
 
 ---
@@ -175,7 +176,7 @@ Update packaged RW to:
 - **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **RW Workflow YAML:** `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`
 - **Source RW Implementation:** `.cursorrules` (RW trigger section)
-- **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md`
+- **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md`
 - **UKW Analysis:** `docs/analysis/ukw-versioning-reasoning-analysis.md`
 
 ---

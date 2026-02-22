@@ -12,15 +12,15 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-18  
-**Last updated:** 2026-01-19 (v0.4.14.2+1 – T02 complete: RC review artifacts restored)  
-**Version:** v0.4.14.2+1  
+**Last updated:** 2026-02-22 (v0.4.14.1+1 – T01 complete: validate_version_bump perpetual task support)  
+**Version:** v0.4.14.1+1  
 **Code:** E4S14
 
 ---
 
 ## Task Checklist
 
-- [ ] **E4:S14:T01 – Update packaged RW to handle UKW context and perpetual tasks** - TODO
+- [x] **E4:S14:T01 – Update packaged RW to handle UKW context and perpetual tasks** ✅ COMPLETE (v0.4.14.1+1)
   - Task: [`T01-update-packaged-rw-ukw-perpetual-tasks.md`](Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
 - [x] **E4:S14:T02 – Restore RC review planning artifacts** ✅ COMPLETE (v0.4.14.2+1)
   - Task: [`T02-restore-rc-review-artifacts.md`](Story-014-kanban-framework-maintenance/T02-restore-rc-review-artifacts.md)
