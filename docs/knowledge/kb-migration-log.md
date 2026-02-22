@@ -25,6 +25,9 @@ Full content is being pushed to Notion pages via Notion MCP (`replace_content`).
 
 ### Updated with full content
 
+- analysis/package-management-investigation-report.md (~38KB)
+- analysis/package-management-prioritization-review.md (~37KB)
+- documentation/user-docs/framework-dependency-installation-guide.md (~28KB)
 - maintenance/README.md, BUILD_AND_UPLOAD.md, BUILD_PACKAGES.md, BUILD_PACKAGES_COMMANDS.md, UPLOAD_PACKAGES.md
 - changelog-and-release-notes/README.md, semver-tag-v0.5.39+2-correction.md
 - guides/README.md, getting-started/README.md, framework-consumption/README.md
@@ -32,16 +35,77 @@ Full content is being pushed to Notion pages via Notion MCP (`replace_content`).
 - documentation/engineering-and-platform/open-kb-starter-map.md, knowledge-service-vision.md, versioning-task-ordering-anti-pattern.md
 - analysis/cmw-ordering-flaw-analysis.md, ukw-versioning-reasoning-analysis.md, repository-story-abstract-space-contradiction-analysis.md, task-template-system-analysis.md
 
-### Pending (27 files — use payloads in docs/knowledge/kb-migration-payloads/ or agent MCP)
+### Stub pages — full content migration 2026-02-20
 
-- analysis/phase3-package-distribution-plan.md (re-push FULL; first push was condensed)
-- analysis/perpetual-task-range-options-analysis.md (re-push FULL; push was condensed – full content in payload)
-- analysis/package-management-*.md (3 files)
-- documentation/engineering-and-platform/ (2 files)
-- documentation/templates/ (2 files)
-- documentation/user-docs/ (16 files)
-- guides/framework-consumption/adk-feedback-guide.md
-- for-dummies-*.md, vibe-coding-for-dummies-outline-and-sample.md (3 files)
+All stub pages below were pushed with **full content** via `call_mcp_tool` (notion-update-page):
+
+**Pushed this session:**
+- Epic 5 Story 000 FR Repo, Epic 5 Story 001 FR Repo
+- Epic 6 Story 000 BR Repo, Epic 6 Story 001 BR Repo
+- Epic 7 Story 000 UXR Repo
+- Epic 24 Story 001 Book Content Development
+- Epic 1 Story 002 Package and Repo Architecture
+- Reopening BR and Tasks Guide
+- FR-031 Multi-Agent Coordination (2 calls; fix truncated push)
+- Epic 6 T35 RW Housekeeping Step (2 calls; fix truncated push)
+
+**Pushed 2026-02-20 (full content via call_mcp_tool):**
+- analysis/package-management-implementation-plan.md
+- documentation/templates/epic-pir-template.md
+- _push_ architecture/legacy-repo-analysis (re-push FULL if truncated)
+
+**Pushed 2026-02-20 (session 2 - full content via call_mcp_tool):**
+- analysis/package-management-implementation-plan
+- analysis/package-management-investigation-report
+- analysis/package-management-prioritization-review
+- documentation/user-docs/framework-dependency-faq
+- documentation/user-docs/framework-dependency-integration-guide
+- documentation/user-docs/framework-dependency-post-template-setup-guide
+- documentation/user-docs/framework-dependency-troubleshooting-guide
+- documentation/user-docs/framework-dependency-update-guide
+- documentation/user-docs/framework-dependency-usage-guide
+- documentation/user-docs/framework-dependency-use-cases
+- vibe-coding-for-dummies-outline-and-sample
+
+**To push (full content - use JSON from kb-migration-mcp-args/):**
+- documentation/user-docs/framework-dependency-installation-guide (~28K)
+
+**Note:** Some pages may have been pushed with condensed content due to MCP payload limits. For full content, re-run with JSON args from `kb-migration-mcp-args/` and `call_mcp_tool(plugin-notion-workspace-notion, notion-update-page, arguments)`.
+
+### Stub sweep automation
+
+**Script:** `scripts/kb_stub_sweep.py`
+
+**Workflow:**
+1. Agent runs Notion search: `notion-search` query "See repo for full content"
+2. Save results to `stubs.json`: `[{"id": "...", "title": "..."}, ...]`
+3. Run: `python scripts/kb_stub_sweep.py stubs.json`
+4. Script maps titles to repo paths, writes MCP args to `docs/knowledge/kb-migration-mcp-args/sweep_*.json`
+5. Agent loads each `sweep_*.json` and calls `call_mcp_tool(server, toolName, arguments)`
+6. Repeat 1–5 until search returns 0 stubs
+
+### Migration status 2026-02-20 (full sweep)
+
+**kb-migration-map (47 entries):** All 26 remaining pushed via MCP args. Some large files may have condensed content; re-push from payload if needed.
+
+**Stub sweeps:** 50+ stub pages pushed (FR/BR docs, Epic/Story/Task docs, architecture docs). Use `kb_stub_sweep.py` to continue until no stubs remain.
+
+### Chunked large pages (2026-02-20)
+
+Large pages (~33–36KB) were chunked via `scripts/push_notion_large_pages.py` and pushed with `insert_content_after` / `replace_content`:
+
+| Page | Parts | Status |
+|------|-------|--------|
+| Confidentia ADK Analysis | 3 | ✅ Complete |
+| Fynd Deals ADK Analysis | 4 | ✅ Complete |
+| Starborn Legacy ADK Analysis | 4 | ✅ Complete (part 3 fixed with `replace_content_range` using Notion HTML table format) |
+
+**Note:** Starborn part 3 initially failed because `insert_content_after` selection used markdown table syntax; Notion stores tables as HTML. Fix used `replace_content_range` with `<td>Document Lifecycle</td>...` HTML snippet.
+
+### Pending / optional re-push
+
+- Large files (~25KB+): installation-guide, troubleshooting-guide, prioritization-review — re-push full if condensed
+- Remaining stubs: search Notion for "See repo for full content", map to repo path, push
 
 ### Blocker (resolved)
 

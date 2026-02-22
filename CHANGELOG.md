@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [0.5.8.2+4] - 22-02-26
+
+KB migration: stub sweeps (10 stubs pushed), Epic 3 Story 002 Versioning Cookbook chunked and pushed (E5:S08:T02).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.8.2+4.md)
+
+---
 ## [0.5.8.2+3] - 20-02-26
 
 KB migration: --emit-mcp-args script, MCP-compatible JSON for remaining pages (E5:S08:T02).

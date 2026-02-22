@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
 VERSION_STORY = 8     # Story number (Story 8: Knowledge Base)
 VERSION_TASK = 2   # Task number (T02: Notion hub, KB container, KB index)
-VERSION_BUILD = 3     # Build number (E5:S08:T02+3 - KB migration MCP args script)
+VERSION_BUILD = 4     # Build number (E5:S08:T02+4 - KB migration stub sweeps, chunked Versioning Cookbook)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.8.2+3 = Development, Epic 5, Story 8, Task 2, Build 3 (E5:S08:T02: KB migration MCP args)
+# Current: 0.5.8.2+4 = Development, Epic 5, Story 8, Task 2, Build 4 (E5:S08:T02: KB migration stub sweeps, chunked Versioning Cookbook)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
