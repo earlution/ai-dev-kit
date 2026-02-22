@@ -6,10 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## [0.6.7.101+32] - 22-02-26
+## [0.6.7.103+2] - 22-02-26
 
-E6:S07:T101: UKW bookkeeping. Checklist sorting (Story 007, Epic 6, kanban board).
+E6:S07:T103: FR-042 IPW, planning docs (T07, T01).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+32.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+2.md)
 
 ---

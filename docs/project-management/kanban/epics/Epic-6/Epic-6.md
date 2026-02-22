@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-22 (v0.6.7.101+32 – E6:S07:T101: UKW bookkeeping)
+**Last updated:** 2026-02-22 (v0.6.7.103+2 – E6:S07:T103: FR-042 IPW)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -53,7 +53,7 @@ housekeeping_policy: keep
   - Tasks: (No tasks yet - story created for future feature requests)
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
-- [ ] **E6:S07 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.7.101+32)
+- [ ] **E6:S07 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.7.103+2)
   - Story: [`Story-007-adk-implementation-analysis-and-package-management.md`](Story-007-adk-implementation-analysis-and-package-management.md)
   - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.7.1+1), T02 ✅ COMPLETE (v0.6.7.2+1), T03 ✅ COMPLETE (v0.6.7.3+1 - Feedback mechanism design, user guide, and template created), T06 ✅ COMPLETE (v0.6.7.6+20), T07 ✅ COMPLETE (v0.6.7.7+6), T101 IN PROGRESS (Perpetual - v0.6.7.101+23, migrated from T08 - UKW: Restored RC review artifacts, refreshed MoSCOW priorities, synced Epic/Story references), T09 ✅ COMPLETE (v0.6.7.9+1), T04 ✅ COMPLETE (v0.6.7.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.7.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T102 IN PROGRESS (Perpetual - v0.6.7.102+4, migrated from T12 - CMW: Fixed 165 ordering violations, archived 50 entries, reduced from 3,784 to 3,157 lines), T13 ✅ COMPLETE (v0.6.7.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 ✅ COMPLETE (v0.6.7.14+1 - CMW documentation added to package README), T15 ✅ COMPLETE (v0.6.7.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T16 ✅ COMPLETE (v0.6.7.16+1 - All phases complete: Step 3.5 added to CMW, ordering fixed before archival), T05 ✅ COMPLETE (v0.6.7.5+1 - Feedback mechanism implementation complete)
   - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08).
