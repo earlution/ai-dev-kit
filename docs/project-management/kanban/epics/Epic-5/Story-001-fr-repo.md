@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-02-22 (v0.5.1.43+1 – FR-043 task creation)
+**Last updated:** 2026-02-22 (v0.5.1.44+1 – FR-044 task creation)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.43+1
+**Version:** v0.5.1.44+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -39,6 +39,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 - [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
 - [ ] **E5:S01:T43 – UKW Gap Discovery (TODO Tasks and Unfiled FR/BR)** - TODO (HIGH priority, v0.5.1.43+1 – Task created) - [Task Document](Story-001-fr-repo/T43-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) | [FR-043](../../fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
+- [ ] **E5:S01:T44 – RW Temporary Execution Log for Recovery and Forensics** - TODO (MEDIUM priority, v0.5.1.44+1 – Task created) - [Task Document](Story-001-fr-repo/T44-rw-temporary-execution-log-for-recovery-and-forensics.md) | [FR-044](../../fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)
 
 ---
 
