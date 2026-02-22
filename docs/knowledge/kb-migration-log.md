@@ -101,6 +101,7 @@ Large pages (~33–36KB) were chunked via `scripts/push_notion_large_pages.py` a
 | Starborn Legacy ADK Analysis | 4 | ✅ Complete (part 3 fixed with `replace_content_range` using Notion HTML table format) |
 | Epic 3 Story 002 Versioning Cookbook | 2 | ✅ Complete (2026-02-22) |
 | Epic 5 Story 002 Documentation Maintenance | 2 | ✅ Complete (2026-02-20) |
+| Epic 5 Story 006 Legacy Repository | 4 | ⚠️ Part2 failed (selection not found) – parts 0,1,3 pushed |
 
 **Note:** Starborn part 3 initially failed because `insert_content_after` selection used markdown table syntax; Notion stores tables as HTML. Fix used `replace_content_range` with `<td>Document Lifecycle</td>...` HTML snippet.
 
@@ -119,6 +120,56 @@ Pushed 8 small stubs and Epic 5 Story 002 (2 chunks) via `call_mcp_tool(notion-u
 - Epic 5 Story 002 Documentation Maintenance (part0 replace_content, part1 insert_content_after)
 
 **Not mapped:** Rituals README — no match in `find_repo_path()`; add mapping in `kb_stub_sweep.py` if needed.
+
+### Stub sweep 2026-02-22
+
+**Search:** 10 stubs found ("See repo for full content"). 8 mapped, 2 skipped (Rituals README, UXR-003).
+
+**Pushed (9 pages):**
+- Kanban Board Guide ✅
+- Epic 4 T002 Root Cause Analysis ✅
+- Epic 4 T002 Decision Flow Design ✅
+- Code Review Kanban Integration ✅
+- BR-002 Changelog Validator Ordering ✅
+- Epic 4 T04 Assess System Impacts ✅
+- Epic 5 T34 UKW Granular Control ✅
+- Epic 5 Story 006 Legacy Repository ✅ (part0, part1, part3; **part2 failed** – selection string not found)
+
+**Epic 5 Story 006 part2:** `insert_content_after` failed (selection_with_ellipsis not found – Notion formatting differs). Re-push part2 with corrected selection or fetch current page and adjust.
+
+**Not mapped:** Rituals README, UXR-003 Intelligent Epic Matching UAT.
+
+### Stub sweep 2026-02-22 (session 2)
+
+**Search:** 10 stubs. 9 mapped, 1 skipped (Policy README – mapping added for next run).
+
+**Pushed (9 pages):**
+- Rituals README ✅
+- Epic 4 T04 Review Integrations ✅
+- FR-024 IDE Linter Check ✅
+- Epic 2 T004 Enhance Do Phase + T004 Consumption Patterns ✅ (both pages)
+- Epic 2 T01 Workflow Taxonomy ✅
+- Epic 7 Story 002 Migration Guides ✅
+- Epic 24 Story 003 Book Publishing ✅
+- Epic 2 Story 004 RW Installer ✅
+
+**kb_stub_sweep.py:** Added mappings for Rituals README, Policy README, UXR-003.
+
+### Stub sweep 2026-02-22 (session 3)
+
+**Search:** 10 stubs. All 10 mapped and pushed.
+
+**Pushed:**
+- Epic 4 T04 Verify Post Install ✅
+- FR-026 Canonical CMW Perpetual ✅
+- Kanban Governance Policy ✅ (19KB)
+- Epic 5 ✅
+- Epic 6 Story 005 Bug Reports ✅
+- FR-035 Task Template Cross Wiring ✅
+- UXR-003 Intelligent Epic Matching UAT ✅
+- FR-021 FR BR UXR Repository Stories ✅
+- Epic 6 T06 Cross Project Meta Analysis ✅
+- Epic 2 Story 001 RW Agent Execution ✅ (22KB)
 
 ### Pending / optional re-push
 
