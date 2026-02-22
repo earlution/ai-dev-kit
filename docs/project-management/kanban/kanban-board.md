@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-02-22 (RW: E5:S08:T02)
-**Version:** v0.5.8.2+7
+**Version:** v0.5.8.2+8
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -25,8 +25,8 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E4:S16:T05** – Create Gap Log and Risk Assessment - IN PROGRESS (HIGH priority, Last updated: 2026-01-20) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T05-create-gap-log-and-risk-assessment.md)
-- **E4:S16:T06** – Define RC sign-off criteria and remediation tasks - IN PROGRESS (HIGH priority) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T6-define-rc-sign-off-criteria-and-remediation-tasks.md)
+- **E4:S16:T05** – Create Gap Log and Risk Assessment - ✅ COMPLETE (HIGH priority, Last updated: 2026-02-20) (v0.4.16.5+2, spec + validator) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T05-create-gap-log-and-risk-assessment.md)
+- **E4:S16:T06** – Define RC sign-off criteria and remediation tasks - ✅ COMPLETE (HIGH priority) (v0.4.16.6+1) - [Task Document](epics/Epic-4/Story-016-kanban-package-implementation-review/T6-define-rc-sign-off-criteria-and-remediation-tasks.md)
 - **E5:S01:T34** – UKW Granular Control and Use Case Flags - ✅ COMPLETE (HIGH priority, Last updated: 2026-01-22) (v0.5.1.37+1) - [Task Document](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
 - **E5:S01:T37** – Kanban Policy Task Prioritisation and Queue/Stack - ✅ COMPLETE (HIGH priority, Last updated: 2026-02-19) (v0.5.1.37+4) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
 - **E4:S14:T01** – Update Packaged RW to Handle UKW Context and Perpetual Tasks - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)

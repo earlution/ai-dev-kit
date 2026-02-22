@@ -150,6 +150,7 @@ Before starting Step 4, verify:
 
 - **Retroactive test addition:** If a task was implemented without tests, add tests for existing behavior, ensure they pass, then run RW. Document in changelog. This is remediation, not the standard path.
 - **Test-first not applicable:** For documentation-only, UI-only, or non-code work, document why tests are not applicable and proceed; consider manual/UAT validation.
+- **Gap log deliverables:** For implementation review gap log tasks (e.g. E4:S16:T05), use `validate_gap_log.py` to verify conformance to the gap-log schema. See `docs/architecture/standards-and-adrs/gap-log-schema.md`.
 
 ---
 

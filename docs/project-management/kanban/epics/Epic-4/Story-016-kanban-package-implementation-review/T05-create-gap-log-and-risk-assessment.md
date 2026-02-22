@@ -20,6 +20,14 @@ housekeeping_policy: keep
 
 ---
 
+## Specification and Validation
+
+This deliverable conforms to the **Gap Log and Risk Assessment Schema**:
+- **Spec:** [docs/architecture/standards-and-adrs/gap-log-schema.md](../../../../../architecture/standards-and-adrs/gap-log-schema.md)
+- **Validator:** `python packages/frameworks/workflow mgt/scripts/validation/validate_gap_log.py --path <path> --strict`
+
+---
+
 ## Scope
 
 Consolidate all findings from **T01–T04** into a single **gap log and risk assessment** for the Kanban framework implementation.  
@@ -66,7 +74,7 @@ A **gap log and risk assessment** that:
 - [x] All relevant findings from **T01–T04** are reviewed and distilled into a single gap log. ✅  
 - [x] Each gap is classified with **severity**, **likelihood**, and **RC impact**. ✅  
 - [x] Gaps that belong to **external workflows (e.g., UKW, RW)** are clearly separated from **Kanban package implementation gaps**. ✅  
-- [ ] Overall RC risk posture for the Kanban package is documented (e.g., “No RC-blocking gaps”, “RC-blocking gaps exist”).  
+- [x] Overall RC risk posture for the Kanban package is documented (e.g., “No RC-blocking gaps”, "RC-blocking gaps exist"). ✅  
 - [x] References to BR/FR/Task IDs are included for each gap. ✅  
 
 ---
