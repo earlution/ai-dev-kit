@@ -99,8 +99,26 @@ Large pages (~33–36KB) were chunked via `scripts/push_notion_large_pages.py` a
 | Confidentia ADK Analysis | 3 | ✅ Complete |
 | Fynd Deals ADK Analysis | 4 | ✅ Complete |
 | Starborn Legacy ADK Analysis | 4 | ✅ Complete (part 3 fixed with `replace_content_range` using Notion HTML table format) |
+| Epic 3 Story 002 Versioning Cookbook | 2 | ✅ Complete (2026-02-22) |
+| Epic 5 Story 002 Documentation Maintenance | 2 | ✅ Complete (2026-02-20) |
 
 **Note:** Starborn part 3 initially failed because `insert_content_after` selection used markdown table syntax; Notion stores tables as HTML. Fix used `replace_content_range` with `<td>Document Lifecycle</td>...` HTML snippet.
+
+### Stub sweep 2026-02-20 (post-RW v0.5.8.2+4)
+
+Pushed 8 small stubs and Epic 5 Story 002 (2 chunks) via `call_mcp_tool(notion-update-page)`:
+
+- UKW Changes Summary
+- BR-003 RW Branch Validation
+- Epic 2 T005 Create PDCA Templates
+- UXR-004 Kanban Package Installation UAT
+- Epic 5 T36 RW Update Kanban Board
+- Epic 5 Story 004 Documentation Automation
+- Epic 5 Story 001 T31 Multi-Agent
+- Epic 6 Story 002 Framework Version Mgmt
+- Epic 5 Story 002 Documentation Maintenance (part0 replace_content, part1 insert_content_after)
+
+**Not mapped:** Rituals README — no match in `find_repo_path()`; add mapping in `kb_stub_sweep.py` if needed.
 
 ### Pending / optional re-push
 

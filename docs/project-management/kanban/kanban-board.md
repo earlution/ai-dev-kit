@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-02-22 (RW: E5:S08:T02)
-**Version:** v0.5.8.2+4
+**Version:** v0.5.8.2+5
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -226,7 +226,7 @@ housekeeping_policy: keep
   - Story: [`epics/Epic-5/Story-003-documentation-quality-assurance.md`](epics/Epic-5/Story-003-documentation-quality-assurance.md)
 - [ ] **E5:S04 – Documentation Automation** - IN PROGRESS (T01 complete)
   - Story: [`epics/Epic-5/Story-004-documentation-automation.md`](epics/Epic-5/Story-004-documentation-automation.md)
-- [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+1 – T02 ✅ Notion hub, KB index)
+- [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+5 – T02 ✅ KB migration log, stub sweep MCP args)
   - Story: [`epics/Epic-5/Story-008-knowledge-base.md`](epics/Epic-5/Story-008-knowledge-base.md)
 
 **Epic Doc:** [`epics/Epic-5/Epic-5.md`](epics/Epic-5/Epic-5.md)

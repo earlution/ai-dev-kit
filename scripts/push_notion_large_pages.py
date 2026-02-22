@@ -33,6 +33,7 @@ LARGE_FILES = [
     "sweep_knowledge_analysis_projects_fynd-deals-adk-analysis_md.json",
     "sweep_knowledge_analysis_projects_starborn-legacy-adk-analysis_md.json",
     "sweep_project-management_kanban_epics_Epic-3_Story-002-versioning-cookbook-and-examples_md.json",
+    "sweep_project-management_kanban_epics_Epic-5_Story-002-documentation-maintenance-framework_md.json",
 ]
 
 

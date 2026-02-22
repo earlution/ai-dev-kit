@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-18  
-**Last updated:** 2026-02-22 (v0.5.8.2+4 – T02: KB migration stub sweeps, chunked Versioning Cookbook)  
-**Version:** v0.5.8.2+4  
+**Last updated:** 2026-02-22 (v0.5.8.2+5 – T02: KB migration log, stub sweep MCP args)  
+**Version:** v0.5.8.2+5  
 **Code:** E5S08
 
 **Note:** This story was renumbered from S07 to S08 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -23,7 +23,7 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [ ] **E5:S08:T01 – Investigate persistent knowledge base concept and ramifications** - TODO
-- [x] **E5:S08:T02 – Notion hub, Knowledge Base container, and KB index** ✅ COMPLETE (v0.5.8.2+4)
+- [x] **E5:S08:T02 – Notion hub, Knowledge Base container, and KB index** ✅ COMPLETE (v0.5.8.2+5)
 
 ---
 
