@@ -33,17 +33,16 @@ This workflow **requires significant agentic intelligence** at every step. This 
 **Key Principle:** Bottom-up approach - Update Tasks → Stories → Epics → Board (in that order). The MoSCOW priority list is updated LAST.
 
 **Trigger:** User types "UKW" or "ukw" (case-insensitive), with optional flags:
-- `UKW` or `UKW -u` = Bookkeeping only (default, lightweight)
-- `UKW -p` = Update priorities only
-- `UKW -a <target>` = Assign priorities to target(s) only
-- `UKW -u -p` = Bookkeeping + update priorities
-- `UKW -u -a <target>` = Bookkeeping + assign priorities
-- `UKW -u -p -a <target>` = Full UKW (all operations)
+- `UKW` (no flags) = **Comprehensive run** (all operations: bookkeeping + update priorities + assign priorities)
+- `UKW -u` = Bookkeeping sub-workflow only (restrict scope)
+- `UKW -p` = Update priorities sub-workflow only (restrict scope)
+- `UKW -a <target>` = Assign priorities sub-workflow only (restrict scope)
+- Flags can combine: `UKW -u -p`, `UKW -u -a <target>`, etc. (restrict to specified sub-workflows)
 
-**Use Case Flags:**
-- `-u` (bookkeeping): Sorting and organization only (lightweight, default)
-- `-p` (update priorities): Update priorities of existing tasks (expensive, occasional)
-- `-a` (assign priorities): Assign priorities to tasks (expensive, occasional)
+**Use Case Flags (limit scope when present):**
+- `-u` (bookkeeping): Restrict to bookkeeping sub-workflow only
+- `-p` (update priorities): Restrict to update priorities sub-workflow only
+- `-a` (assign priorities): Restrict to assign priorities sub-workflow only
 
 **Task Targeting Syntax (for `-a` flag):**
 - Single task: `E09S01T01`, `e9s1t1`, `E09:S01:T01`
@@ -64,10 +63,10 @@ This workflow **requires significant agentic intelligence** at every step. This 
 - **Bottom-Up Accuracy:** Ensures lower-level status correctly flows up the hierarchy
 
 **When to Use UKW:**
-- **Bookkeeping (`UKW` or `UKW -u`):** After creating new epics/stories/tasks, when board becomes disorganized, periodic maintenance, before planning sessions (frequent, lightweight)
-- **Update Priorities (`UKW -p`):** After project goals change, when dependencies shift, when deadlines change, after strategic planning (occasional, expensive)
-- **Assign Priorities (`UKW -a <target>`):** After creating new tasks, when tasks are missing priorities, bulk priority assignment (occasional, targeted)
-- **Combined (`UKW -u -p -a all`):** After major project changes, comprehensive kanban synchronization (rare, full analysis)
+- **Comprehensive (`UKW` no flags):** After major project changes, periodic full sync, when kanban docs need complete refresh (recommended default)
+- **Bookkeeping (`UKW -u`):** Lightweight sync—after creating new epics/stories/tasks, when board needs sorting/organization only
+- **Update Priorities (`UKW -p`):** When goals/dependencies/deadlines change and MoSCOW list needs refresh (no bookkeeping)
+- **Assign Priorities (`UKW -a <target>`):** When specific tasks need priorities assigned (targeted, no bookkeeping)
 
 **Relationship to RW:**
 - **RW:** Updates kanban docs as part of releasing completed work
@@ -113,10 +112,11 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 ## 📋 Workflow Steps
 
 **Step Execution Based on Flags:**
-- **Bookkeeping (`-u` or no flags):** Steps 1-5, 7-9 (skip Step 6 MoSCOW prioritization)
-- **Update Priorities (`-p`):** Step 6 only (update MoSCOW priorities)
-- **Assign Priorities (`-a <target>`):** Step 6 only (assign priorities to targets)
-- **Combined:** Run all specified operations
+- **Comprehensive (no flags):** All steps, all operations (bookkeeping + update MoSCOW + assign priorities)
+- **Bookkeeping (`-u` only):** Steps 1-5, 7-9 (skip Step 6 MoSCOW prioritization)
+- **Update Priorities (`-p` only):** Step 6 only (update MoSCOW priorities)
+- **Assign Priorities (`-a <target>` only):** Step 6 only (assign priorities to targets)
+- **Combined flags:** Run specified sub-workflows only
 
 **Flag Parsing (Before Step 1):**
 1. Parse user command for flags (`-u`, `-p`, `-a`)

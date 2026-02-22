@@ -307,18 +307,19 @@ For each step, follow this pattern:
 **When the user types "UKW" or "ukw" (case-insensitive), with optional flags, execute the Update Kanban Workflow as an intelligent agent:**
 
 **Command Syntax:**
-- `UKW` or `ukw` (no flags) = Bookkeeping only (default, lightweight)
-- `UKW -u` = Bookkeeping only (explicit)
-- `UKW -p` = Update priorities only (no sorting)
-- `UKW -a <target>` = Assign priorities to target(s) only
-- `UKW -u -p` = Bookkeeping + update priorities
+- `UKW` or `ukw` (no flags) = **Comprehensive run** (all operations: bookkeeping + update priorities + assign priorities)
+- `UKW -u` = Bookkeeping sub-workflow only (restrict scope)
+- `UKW -p` = Update priorities sub-workflow only (restrict scope)
+- `UKW -a <target>` = Assign priorities sub-workflow only (restrict scope)
+- `UKW -u -p` = Bookkeeping + update priorities (restrict to these two)
 - `UKW -u -a <target>` = Bookkeeping + assign priorities to target(s)
-- `UKW -u -p -a <target>` = Full UKW (all operations)
+- `UKW -p -a <target>` = Update + assign priorities only
+- `UKW -u -p -a <target>` = Same as comprehensive (redundant with no flags)
 
-**Use Case Flags:**
-- `-u` (bookkeeping): Sorting and organization only (lightweight, default)
-- `-p` (update priorities): Update priorities of existing tasks (expensive, occasional)
-- `-a` (assign priorities): Assign priorities to tasks (expensive, occasional)
+**Use Case Flags (limit scope when present):**
+- `-u` (bookkeeping): Restrict to bookkeeping sub-workflow only
+- `-p` (update priorities): Restrict to update priorities sub-workflow only
+- `-a` (assign priorities): Restrict to assign priorities sub-workflow only
 
 **Task Targeting Syntax (for `-a` flag):**
 - Single task: `E09S01T01`, `e9s1t1`, `E09:S01:T01`
@@ -332,10 +333,12 @@ For each step, follow this pattern:
 1. **DO NOT** run any deterministic scripts
 2. **DO** execute the Update Kanban Workflow using the **intelligent agent-driven execution pattern**
 3. **PARSE FLAGS FIRST:** Before Step 1, parse command flags to determine which operations to run:
-   - If `-u` flag present OR no flags: Run bookkeeping operations (Steps 1-5, 7-9, skip Step 6 MoSCOW)
-   - If `-p` flag present: Run priority update operations (Step 6: Update MoSCOW priorities)
-   - If `-a` flag present: Run priority assignment operations (Step 6: Assign priorities to target tasks)
-   - If multiple flags: Run combined operations
+   - If **no flags:** Run comprehensive UKW (all operations: bookkeeping + update priorities + assign priorities)
+   - If flags present: **Restrict scope** to specified sub-workflow(s):
+     - `-u` only: Bookkeeping (Steps 1-5, 7-9, skip Step 6 MoSCOW)
+     - `-p` only: Step 6 update MoSCOW priorities
+     - `-a <target>` only: Step 6 assign priorities to target(s)
+     - Multiple flags: Run combined sub-workflows
 4. **🧠 AGENTIC INTELLIGENCE REQUIRED:** This workflow requires significant intelligent reasoning:
    - **Synthesis:** Analyze multiple data points and create coherent tactical/strategic summaries
    - **Narrative Updates:** Write natural, meaningful summaries that capture progress and context
@@ -364,31 +367,31 @@ For each step, follow this pattern:
 **The 9 Steps (Bottom-Up Approach) - Conditional Execution Based on Flags:**
 
 **Step Execution Matrix:**
-- **Bookkeeping (`-u` or no flags):** Steps 1-5, 7-9 (skip Step 6 MoSCOW prioritization)
-- **Update Priorities (`-p`):** Step 6 only (update MoSCOW priorities of existing tasks)
-- **Assign Priorities (`-a <target>`):** Step 6 only (assign priorities to target tasks)
-- **Combined (`-u -p`, `-u -a`, `-u -p -a`):** Run all specified operations
+- **Comprehensive (no flags):** All steps, all operations (bookkeeping + update MoSCOW + assign priorities)
+- **Bookkeeping (`-u` only):** Steps 1-5, 7-9 (skip Step 6 MoSCOW)
+- **Update Priorities (`-p` only):** Step 6 only (update MoSCOW priorities)
+- **Assign Priorities (`-a <target>` only):** Step 6 only (assign priorities to target tasks)
+- **Combined flags:** Run specified sub-workflows only
 
-1. **Identify Perpetual UKW Task (Wiring Step)** - **MANDATORY FIRST STEP (always runs):** Discover and wire UKW to the project's perpetual UKW task:
+1. **Identify Perpetual UKW Task (Wiring Step)** - **MANDATORY FIRST STEP (always runs):** Discover and wire UKW to the project's perpetual UKW task (required for comprehensive run and for RW attribution):
    - Search all task documents for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
    - Identify the task dedicated to UKW releases (may be named "Update Kanban Workflow (UKW)" or similar)
    - Note the task's Epic/Story/Task ID (e.g., E6:S07:T101 in ai-dev-kit, E4:S03:T05 in another project)
    - This establishes the wiring between UKW and the perpetual task for this project instance
    - Store task ID for RW attribution later (when user runs "RW" after "UKW")
-2. **Analyze Recent Activity** - **Runs if bookkeeping (`-u` or no flags):** Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers
-3. **Update Task Documents** - **Runs if bookkeeping (`-u` or no flags):** Update task document status fields, dates, forensic markers based on recent activity
-4. **Update Story Documents** - **Runs if bookkeeping (`-u` or no flags):** **🧠 INTELLIGENCE REQUIRED:** Synthesize task data into tactical overviews, infer story status, update task checklists. **CRITICAL:** Use `sort_kanban_document_checklists.py` to sort task checklists numerically.
-5. **Update Epic Documents** - **Runs if bookkeeping (`-u` or no flags):** **🧠 INTELLIGENCE REQUIRED:** Synthesize story data into strategic overviews, infer epic status, update story checklists. **CRITICAL:** Use `sort_kanban_document_checklists.py` to sort story checklists numerically.
+2. **Analyze Recent Activity** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers
+3. **Update Task Documents** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** Update task document status fields, dates, forensic markers based on recent activity
+4. **Update Story Documents** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** **🧠 INTELLIGENCE REQUIRED:** Synthesize task data into tactical overviews, infer story status, update task checklists. **CRITICAL:** Use `sort_kanban_document_checklists.py` to sort task checklists numerically.
+5. **Update Epic Documents** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** **🧠 INTELLIGENCE REQUIRED:** Synthesize story data into strategic overviews, infer epic status, update story checklists. **CRITICAL:** Use `sort_kanban_document_checklists.py` to sort story checklists numerically.
 6. **Update Kanban Board** - **Conditional execution based on flags:**
-   - **If bookkeeping (`-u` or no flags):** Update epic status sections, update board metadata, **SKIP MoSCOW prioritization**
-   - **If `-p` flag:** Update MoSCOW priorities of existing tasks (no sorting)
-   - **If `-a <target>` flag:** Assign priorities to target tasks using syntax parser
-   - **If `-u -p`:** Bookkeeping + update MoSCOW priorities
-   - **If `-u -a <target>`:** Bookkeeping + assign priorities to target tasks
-   - **If `-u -p -a <target>`:** Full UKW (all operations)
+   - **If comprehensive (no flags):** Update epic status sections, board metadata, **and** MoSCOW prioritization (update + assign as needed)
+   - **If bookkeeping (`-u` only):** Update epic status sections, board metadata; **SKIP MoSCOW prioritization**
+   - **If `-p` only:** Step 6 update MoSCOW priorities of existing tasks
+   - **If `-a <target>` only:** Step 6 assign priorities to target tasks using syntax parser
+   - **If combined flags:** Run specified operations
    - **CRITICAL:** Use `sort_kanban_board.py` to sort epics/stories numerically before writing to board
    - **CRITICAL:** MoSCOW prioritization requires **🧠 INTELLIGENT PRIORITIZATION** - analyze context, dependencies, impact
-7. **Validate Consistency** - **Runs if bookkeeping (`-u` or no flags):** Cross-reference status across all kanban documents, verify version consistency, check link integrity
+7. **Validate Consistency** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** Cross-reference status across all kanban documents, verify version consistency, check link integrity
 8. **Stage Files** - **Always runs:** Run `git add` for all kanban files
 9. **Document Changes** - **Always runs:** Create summary of updated documents, list key status changes
 
