@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 45     # Task number (T45: FR-045 ADR-002 task-touch mapping)
-VERSION_BUILD = 1     # Build number (E5:S01:T45+1 - first FR-045 documentation build)
+VERSION_TASK = 46     # Task number (T46: FR-046 RW SemVer tag when task_touch)
+VERSION_BUILD = 1     # Build number (E5:S01:T46+1 - first FR-046 documentation build)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.45+1 = Development, Epic 5, Story 1, Task 45, Build 1 (E5:S01:T45: FR-045 ADR-002 task-touch mapping – docs-only)
+# Current: 0.5.1.46+1 = Development, Epic 5, Story 1, Task 46, Build 1 (E5:S01:T46: FR-046 RW SemVer tag – docs-only)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
