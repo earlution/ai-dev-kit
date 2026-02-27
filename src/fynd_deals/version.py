@@ -19,13 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 6     # Story number (Story 6: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 6      # Task number (Task 6: Cross-project meta-analysis and canonical framework design)
-VERSION_BUILD = 20    # Build number (E6:S06:T06+20 - T06 COMPLETE: All deliverables verified complete - meta-analyses, executive summary, all 4 canonical framework designs)
+VERSION_STORY = 1     # Story number (Story 1: BR Repo)
+VERSION_TASK = 37     # Task number (T37: BR-037 Kanban install consumer board contamination)
+VERSION_BUILD = 1     # Build number (E6:S01:T37+1 - first BR-037 documentation build)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
+# Current: 0.6.1.37+1 = E6:S01:T37 – BR-037 Kanban install consumer board contamination (docs-only)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

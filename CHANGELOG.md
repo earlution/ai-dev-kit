@@ -7,6 +7,14 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.1.37+1] - 26-02-26
+
+📚 Documentation: E6:S01:T37 – Kanban Install Delivers Mixed Dev Kit Backlog and Templates into Consumer Boards – BR repository anchor docs only (no functional changes).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.37+1.md)
+
+---
+
 ## [Unreleased]
 
 ### Planned
