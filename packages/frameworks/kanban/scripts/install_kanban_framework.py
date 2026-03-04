@@ -18,6 +18,7 @@ Arguments:
 """
 
 import argparse
+import os
 import subprocess
 import sys
 from datetime import datetime
@@ -56,6 +57,46 @@ except ImportError:
         install_canonical_epics_only = None
 
 
+INSTALL_LOGGER = None
+_ENV_LOG_FH = None
+_ENV_LOG_PATH_ENV_VAR = "AI_DEV_KIT_INSTALL_LOG_PATH"
+
+
+def _log(level: str, message: str) -> None:
+    """
+    Lightweight logger used by this script.
+
+    Prefers delegating to an external logger callback (INSTALL_LOGGER) when provided.
+    Falls back to appending to the log file path exposed via AI_DEV_KIT_INSTALL_LOG_PATH
+    so that CLI-driven installs can capture structured output in the same per-run log.
+    """
+    global INSTALL_LOGGER, _ENV_LOG_FH
+
+    # Delegate to external logger callback if provided
+    if INSTALL_LOGGER is not None:
+        try:
+            INSTALL_LOGGER(level, "kanban.install", message)
+            return
+        except Exception:
+            # Fall back to env-based logging if the callback fails
+            pass
+
+    # Fallback: append to env-configured log file if present
+    log_path = os.getenv(_ENV_LOG_PATH_ENV_VAR)
+    if not log_path:
+        return
+
+    try:
+        if _ENV_LOG_FH is None:
+            _ENV_LOG_FH = open(log_path, "a", encoding="utf-8")
+        ts = datetime.utcnow().isoformat(timespec="seconds") + "Z"
+        _ENV_LOG_FH.write(f"[{ts}] [{level}] kanban.install {message}\n")
+        _ENV_LOG_FH.flush()
+    except Exception:
+        # Logging should never break installation script behaviour
+        pass
+
+
 def run_command(cmd: list, cwd: Optional[Path] = None) -> tuple[int, str, str]:
     """Run a command and return exit code, stdout, stderr."""
     try:
@@ -68,6 +109,7 @@ def run_command(cmd: list, cwd: Optional[Path] = None) -> tuple[int, str, str]:
         )
         return result.returncode, result.stdout, result.stderr
     except Exception as e:
+        _log("ERROR", f"Subprocess failed for command {cmd}: {e}")
         return 1, "", str(e)
 
 
@@ -140,6 +182,7 @@ def create_consumer_board_skeleton(
 def detect_structure(kanban_path: Path, verbose: bool = False) -> Optional[Path]:
     """Run detection utility and return path to detection report."""
     print("🔍 Step 1: Detecting existing Kanban structure...")
+    _log("INFO", f"[KANBAN_DETECT] Detecting existing Kanban structure at {kanban_path}")
     
     detection_report = Path("detection_report.json")
     cmd = [
@@ -156,9 +199,12 @@ def detect_structure(kanban_path: Path, verbose: bool = False) -> Optional[Path]
     
     if exit_code != 0:
         print(f"❌ Detection failed: {stderr}")
+        _log("ERROR", f"[KANBAN_DETECT] Detection failed: {stderr}")
         return None
     
     print(stdout)
+    if stdout:
+        _log("INFO", f"[KANBAN_DETECT] {stdout.strip()}")
     
     if detection_report.exists():
         return detection_report
@@ -168,6 +214,7 @@ def detect_structure(kanban_path: Path, verbose: bool = False) -> Optional[Path]
 def analyze_structure(detection_report: Path, verbose: bool = False) -> Optional[Path]:
     """Run analysis utility and return path to analysis report."""
     print("\n📊 Step 2: Analyzing structure and generating migration plan...")
+    _log("INFO", f"[KANBAN_ANALYZE] Analyzing structure from detection report {detection_report}")
     
     analysis_report = Path("analysis_report.json")
     cmd = [
@@ -184,9 +231,12 @@ def analyze_structure(detection_report: Path, verbose: bool = False) -> Optional
     
     if exit_code != 0:
         print(f"❌ Analysis failed: {stderr}")
+        _log("ERROR", f"[KANBAN_ANALYZE] Analysis failed: {stderr}")
         return None
     
     print(stdout)
+    if stdout:
+        _log("INFO", f"[KANBAN_ANALYZE] {stdout.strip()}")
     
     if analysis_report.exists():
         return analysis_report
@@ -210,6 +260,7 @@ def select_installation_mode(analysis_report_path: Optional[Path], requested_mod
             pass
     
     print("\n🔧 Step 3: Select installation mode")
+    _log("INFO", "[KANBAN_MODE] Selecting installation mode")
     print("=" * 60)
     print("Available modes:")
     print("  1. fresh              - Clean install (no existing structure)")
@@ -333,6 +384,7 @@ def validate_installation(kanban_path: Path, project_root: Path, force: bool = F
         return True
     
     print("\n🔍 Step 3.5: Validating installation...")
+    _log("INFO", f"[KANBAN_VALIDATE] Validating installation at {kanban_path}")
     print("=" * 60)
     
     validator = InstallationValidator(kanban_path, project_root)
@@ -353,14 +405,17 @@ def validate_installation(kanban_path: Path, project_root: Path, force: bool = F
             response = input("\nProceed despite errors? (yes/no): ").strip().lower()
             if response not in ['yes', 'y']:
                 print("Installation cancelled.")
+                _log("ERROR", "[KANBAN_VALIDATE] Validation failed before migration/install (user cancelled)")
                 return False
         else:
             print("\n⚠️  --force flag set: Proceeding despite validation errors.")
+            _log("WARNING", "[KANBAN_VALIDATE] Proceeding despite validation errors due to --force")
     
     if is_valid and not warnings:
         print("\n✅ Validation passed - no issues found")
     elif is_valid:
         print("\n✅ Validation passed with warnings")
+        _log("INFO", "[KANBAN_VALIDATE] Validation passed with warnings")
     
     return True
 
@@ -374,6 +429,7 @@ def migrate_structure(
 ) -> bool:
     """Run migration utility."""
     print(f"\n🔄 Step 4: Migrating structure (mode: {mode})...")
+    _log("INFO", f"[KANBAN_MIGRATE] Migrating structure in mode '{mode}'")
     
     cmd = [
         sys.executable,
@@ -395,6 +451,7 @@ def migrate_structure(
     
     if exit_code != 0:
         print(f"❌ Migration failed: {stderr}")
+        _log("ERROR", f"[KANBAN_MIGRATE] Migration failed: {stderr}")
         return False
     
     return True
@@ -466,6 +523,7 @@ Examples:
     if args.dry_run:
         print("🔍 DRY RUN MODE - No files will be modified")
     print("=" * 60)
+    _log("INFO", f"[KANBAN_MODE] Kanban install starting (mode={args.mode}, kanban_path={kanban_path}, dry_run={args.dry_run})")
     
     # Step 1: Detect existing structure (unless fresh mode or skipped)
     detection_report = None
@@ -496,11 +554,13 @@ Examples:
     
     # Step 3.5: Validate installation (before migration)
     if not validate_installation(kanban_path, project_root, force=args.force):
+        _log("ERROR", "[KANBAN_VALIDATE] Validation failed before migration/install")
         return 1
     
     # Step 4: Migrate/Install
     if args.mode == "fresh":
         print("\n🆕 Fresh install mode: Installing canonical epics and consumer board skeleton...")
+        _log("INFO", "[KANBAN_FRESH_INSTALL] Fresh install mode: installing canonical epics and consumer board skeleton")
         # Create a clean consumer board and guide from templates
         create_consumer_board_skeleton(kanban_path, project_root, dry_run=args.dry_run)
         # Install canonical core epics from templates (if helper is available)
@@ -512,10 +572,13 @@ Examples:
             )
             if result.get("status") != "completed":
                 print("❌ Canonical epic installation did not complete successfully.")
+                _log("ERROR", f"[KANBAN_FRESH_INSTALL] Canonical epic installation did not complete successfully: {result}")
                 return 1
         else:
             print("⚠️  install_canonical_epics_only helper not available; skipping canonical epic installation.")
+            _log("WARNING", "[KANBAN_FRESH_INSTALL] install_canonical_epics_only helper not available; skipping canonical epic installation")
         print("✅ Fresh install complete (canonical epics and consumer board skeleton installed)")
+        _log("INFO", "[KANBAN_FRESH_INSTALL] Fresh install complete (canonical epics and consumer board skeleton installed)")
     else:
         if not analysis_report:
             print("❌ Error: Analysis report required for migration/update/hybrid modes")

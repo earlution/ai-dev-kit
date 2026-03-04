@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-02-27  
 **Submitted By:** earlution  
 **Priority:** HIGH  
-**Status:** PENDING
+**Status:** IN PROGRESS
 
 ---
 
@@ -50,14 +50,14 @@ This FR proposes adding **structured install logging** so that each invocation o
 
 ### Functional Requirements
 
-- [ ] **FR-047-F1:** Each invocation of `ai-dev-kit install <framework>[@version]` must produce an install log file under a deterministic, project-local path (e.g. `logs/ai-dev-kit/install/`).
-- [ ] **FR-047-F2:** The log must record, at minimum:
+- [x] **FR-047-F1:** Each invocation of `ai-dev-kit install <framework>[@version]` must produce an install log file under a deterministic, project-local path (e.g. `logs/ai-dev-kit/install/`).
+- [x] **FR-047-F2:** The log must record, at minimum:
   - Framework names and requested versions.
   - Selected backend and install path.
   - Source URL or identifier (where safe to log).
   - High-level steps with timestamps (init, backend operations, framework-specific scripts, validation).
   - Exit codes and summary status for each step.
-- [ ] **FR-047-F3:** For frameworks with their own installers (e.g. `install_kanban_framework.py`), key steps and validation results must be captured in the same log (or a clearly linked sub-log).
+- [x] **FR-047-F3:** For frameworks with their own installers (e.g. `install_kanban_framework.py`), key steps and validation results must be captured in the same log (or a clearly linked sub-log).
 - [ ] **FR-047-F4:** Install logging must be **enabled by default** in new projects, with configuration in `.ai-dev-kit.yaml` to:
   - Enable/disable logging.
   - Control log directory.
@@ -68,7 +68,7 @@ This FR proposes adding **structured install logging** so that each invocation o
 
 ### Non-Functional Requirements
 
-- [ ] **FR-047-NF1:** Logs must avoid recording secrets (tokens, passwords, environment values) and should redact obvious credentials in error output where feasible.
+- [x] **FR-047-NF1:** Logs must avoid recording secrets (tokens, passwords, environment values) and should redact obvious credentials in error output where feasible.
 - [ ] **FR-047-NF2:** Logging must add minimal overhead to install time and not significantly degrade performance for typical installs.
 - [ ] **FR-047-NF3:** Log format should be human-readable (plain text with timestamps and levels) and amenable to later extension with machine-readable (JSON) formats.
 - [ ] **FR-047-NF4:** Logging must be robust in failure scenarios: partial logs should still be written even if an install step fails.

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-27 (v0.5.1.47+1 – E5:S01:T47: FR-047 install logging anchor & Kanban installer hardening)  
+**Last updated:** 2026-03-04 (v0.5.1.47+2 – E5:S01:T47: FR-047 Phase 1 – CLI + Kanban install logging integration)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -94,7 +94,7 @@ Epic 5 owns the **Documentation Management and Maintenance** framework for the a
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
 **Estimated Effort:** N/A (Perpetual repository)  
-**Last updated:** 2026-02-27 (v0.5.1.47+1)
+**Last updated:** 2026-03-04 (v0.5.1.47+2)
 
 **Goal:**  
 Repository story for all Feature Requests. Provides 1:1 traceability between FR numbers and task numbers.

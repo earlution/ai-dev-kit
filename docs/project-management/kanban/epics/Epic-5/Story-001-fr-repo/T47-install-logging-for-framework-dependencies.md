@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 47: Install Logging for Framework Dependencies
 
 **Task ID:** E5:S01:T47  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-27  
-**Last updated:** 2026-02-27 (v0.5.1.47+1 – First FR-047 implementation build: Kanban fresh-install hardening & anchors)  
-**Version:** v0.5.1.47+1  
+**Last updated:** 2026-03-04 (v0.5.1.47+2 – FR-047: CLI + Kanban install logging integration, Phase 1)  
+**Version:** v0.5.1.47+2  
 **Code:** E5S01T47
 
 **Repository Pattern:** FR-047 = E5:S01:T47 (abstract space v0.5.1.47+0)
