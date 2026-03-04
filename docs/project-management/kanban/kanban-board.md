@@ -21,7 +21,10 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-*(No critical blocking tasks at this time)*
+- **E6:S01:T37** – Kanban Install Delivers Mixed Dev Kit Backlog and Templates into Consumer Boards - TODO (CRITICAL, Kanban install contamination; docs-only BR repo anchor, bug not yet fixed) - [Task Document](epics/Epic-6/Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md) | [BR-037](../fr-br/BR-037-kanban-install-consumer-board-contamination.md)
+- **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (CRITICAL, SemVer mapping for task_touch and Kanban integration; docs-only FR repo anchor, implementation in versioning framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
+- **E5:S01:T46** – Release Workflow Uses SemVer Tag When task_touch Enabled - TODO (CRITICAL, RW tagging behaviour when task_touch is enabled; docs-only FR repo anchor, implementation in workflow framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
+- **E5:S01:T47** – Install Logging for Framework Dependencies - TODO (HIGH priority, FR repo anchor; enables detailed post-install analysis and debugging for all frameworks) - [Task Document](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../fr-br/FR-047-install-logging-for-framework-dependencies.md)
 
 ### Should Have (S) - Important Tasks
 

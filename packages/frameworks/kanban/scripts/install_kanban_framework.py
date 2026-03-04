@@ -20,6 +20,7 @@ Arguments:
 import argparse
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
@@ -39,6 +40,22 @@ except ImportError:
         InstallationValidator = None
 
 
+# Import canonical epic installer helper (fresh consumer installs)
+try:
+    from migrate_structure import install_canonical_epics_only  # type: ignore[attr-defined]
+except ImportError:
+    # Fallback if running from different directory
+    import importlib.util
+    migrate_path = Path(__file__).parent / "migrate_structure.py"
+    if migrate_path.exists():
+        spec = importlib.util.spec_from_file_location("migrate_structure", migrate_path)
+        migrate_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(migrate_module)
+        install_canonical_epics_only = getattr(migrate_module, "install_canonical_epics_only", None)
+    else:
+        install_canonical_epics_only = None
+
+
 def run_command(cmd: list, cwd: Optional[Path] = None) -> tuple[int, str, str]:
     """Run a command and return exit code, stdout, stderr."""
     try:
@@ -52,6 +69,72 @@ def run_command(cmd: list, cwd: Optional[Path] = None) -> tuple[int, str, str]:
         return result.returncode, result.stdout, result.stderr
     except Exception as e:
         return 1, "", str(e)
+
+
+def _get_project_name(project_root: Path) -> str:
+    """Infer project name from project root."""
+    name = project_root.name
+    # Strip common suffixes
+    return name.replace("-dev-kit", "").replace("-kit", "")
+
+
+def create_consumer_board_skeleton(
+    kanban_path: Path,
+    project_root: Path,
+    dry_run: bool = False,
+) -> None:
+    """
+    Create a clean consumer Kanban board skeleton from templates.
+
+    - Creates `kanban-board.md` from `templates/KANBAN_BOARD_TEMPLATE.md`
+    - Creates `kanban-board-guide.md` from `templates/KANBAN_BOARD_GUIDE_TEMPLATE.md`
+    """
+    script_dir = Path(__file__).parent
+    templates_dir = script_dir.parent / "templates"
+
+    board_template = templates_dir / "KANBAN_BOARD_TEMPLATE.md"
+    guide_template = templates_dir / "KANBAN_BOARD_GUIDE_TEMPLATE.md"
+
+    project_name = _get_project_name(project_root)
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    version_placeholder = "v0.0.0.0+0"
+
+    kanban_path = Path(kanban_path)
+
+    if dry_run:
+        print("🔍 [DRY RUN] Would create consumer board skeleton:")
+        print(f"  - Board: {kanban_path / 'kanban-board.md'}")
+        print(f"  - Guide: {kanban_path / 'kanban-board-guide.md'}")
+        return
+
+    kanban_path.mkdir(parents=True, exist_ok=True)
+
+    # Create board from template
+    if board_template.exists():
+        content = board_template.read_text(encoding="utf-8")
+        content = content.replace("{Project Name}", project_name)
+        content = content.replace("{Date}", today)
+        content = content.replace("{Version}", version_placeholder)
+        (kanban_path / "kanban-board.md").write_text(content, encoding="utf-8")
+        print(f"  ✅ Created consumer board: {kanban_path / 'kanban-board.md'}")
+    else:
+        print(f"  ⚠️  Board template not found: {board_template}")
+
+    # Create board guide from template
+    if guide_template.exists():
+        content = guide_template.read_text(encoding="utf-8")
+        content = content.replace("{Project Name}", project_name)
+        content = content.replace("{project name}", project_name)
+        content = content.replace("{Date}", today)
+        content = content.replace("{Version}", version_placeholder)
+        content = content.replace("{kanban_path}", str(kanban_path.relative_to(project_root)))
+        # Local policy path default – can be customized later by consumers
+        local_policy_path = "docs/project-management/kanban/policies/local-kanban-policy.md"
+        content = content.replace("{local_policy_path}", local_policy_path)
+        (kanban_path / "kanban-board-guide.md").write_text(content, encoding="utf-8")
+        print(f"  ✅ Created consumer board guide: {kanban_path / 'kanban-board-guide.md'}")
+    else:
+        print(f"  ⚠️  Board guide template not found: {guide_template}")
 
 
 def detect_structure(kanban_path: Path, verbose: bool = False) -> Optional[Path]:
@@ -417,10 +500,22 @@ Examples:
     
     # Step 4: Migrate/Install
     if args.mode == "fresh":
-        print("\n🆕 Fresh install mode: Installing canonical epics...")
-        # For fresh install, we'd install canonical epics directly
-        # This would be implemented separately
-        print("✅ Fresh install complete (canonical epics installed)")
+        print("\n🆕 Fresh install mode: Installing canonical epics and consumer board skeleton...")
+        # Create a clean consumer board and guide from templates
+        create_consumer_board_skeleton(kanban_path, project_root, dry_run=args.dry_run)
+        # Install canonical core epics from templates (if helper is available)
+        if install_canonical_epics_only is not None:
+            result = install_canonical_epics_only(
+                kanban_path,
+                dry_run=args.dry_run,
+                force=args.force,
+            )
+            if result.get("status") != "completed":
+                print("❌ Canonical epic installation did not complete successfully.")
+                return 1
+        else:
+            print("⚠️  install_canonical_epics_only helper not available; skipping canonical epic installation.")
+        print("✅ Fresh install complete (canonical epics and consumer board skeleton installed)")
     else:
         if not analysis_report:
             print("❌ Error: Analysis report required for migration/update/hybrid modes")
@@ -438,7 +533,7 @@ Examples:
             return 1
         
         # Step 5: Post-installation validation
-        if not dry_run:
+        if not args.dry_run:
             print("\n🔍 Step 5: Post-installation validation...")
             if not validate_installation(kanban_path, project_root, force=args.force):
                 print("⚠️  Post-installation validation found issues. Please review warnings/errors above.")

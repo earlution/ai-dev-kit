@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-22 (v0.5.8.2+8 – E5:S08:T02: E4:S16:T05 gap log spec, validator)  
+**Last updated:** 2026-02-27 (v0.5.1.47+1 – E5:S01:T47: FR-047 install logging anchor & Kanban installer hardening)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -94,7 +94,7 @@ Epic 5 owns the **Documentation Management and Maintenance** framework for the a
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
 **Estimated Effort:** N/A (Perpetual repository)  
-**Last updated:** 2026-02-12 (v0.5.1.37+3)
+**Last updated:** 2026-02-27 (v0.5.1.47+1)
 
 **Goal:**  
 Repository story for all Feature Requests. Provides 1:1 traceability between FR numbers and task numbers.

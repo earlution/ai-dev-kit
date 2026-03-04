@@ -770,3 +770,58 @@ def main():
 if __name__ == "__main__":
     exit(main())
 
+
+def install_canonical_epics_only(
+    kanban_path: Path,
+    dry_run: bool = False,
+    force: bool = False,
+) -> Dict:
+    """
+    Install canonical core epics into the given Kanban path without performing a full migration.
+
+    This helper is intended for **fresh installs** in consumer projects. It:
+    - Instantiates a KanbanStructureMigrator with a minimal \"analyzed\" report
+    - Skips backup creation and conflict resolution
+    - Invokes the canonical epic installation routine directly
+
+    Returns a summary dictionary:
+    - status: \"completed\"
+    - epics_installed: number of canonical epics installed
+    - files_created: number of epic entries recorded in the migration log
+    - kanban_path: string path to the Kanban root
+    """
+    kanban_path = Path(kanban_path)
+    if not dry_run:
+        kanban_path.mkdir(parents=True, exist_ok=True)
+
+    # Minimal analysis report sufficient for fresh installation
+    analysis_report: Dict = {
+        "status": "analyzed",
+        "migration_plan": {},
+        "epic_mappings": [],
+        "story_mappings": [],
+        "task_mappings": [],
+    }
+
+    migrator = KanbanStructureMigrator(
+        analysis_report=analysis_report,
+        kanban_path=kanban_path,
+        mode="fresh",
+        backup_dir=None,
+        dry_run=dry_run,
+        force=force,
+    )
+
+    # Directly install canonical epics without full migrate() pipeline
+    migrator._install_canonical_epics()
+
+    epics_installed = len([e for e in migrator.migration_log if e.get("type") == "epic"])
+    files_created = len([e for e in migrator.migration_log if e.get("action") == "installed"])
+
+    return {
+        "status": "completed",
+        "epics_installed": epics_installed,
+        "files_created": files_created,
+        "kanban_path": str(kanban_path),
+    }
+
