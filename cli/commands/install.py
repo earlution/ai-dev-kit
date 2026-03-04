@@ -23,6 +23,7 @@ from cli.utils import (
     print_warning,
     get_project_root,
     handle_error,
+    redact,
 )
 
 
@@ -110,17 +111,6 @@ class InstallCommand(BaseCommand):
             def _noop_log(_level: str, _context: str, _message: str) -> None:
                 return
 
-            def _redact(message: str) -> str:
-                """
-                Very simple redaction helper to avoid logging obvious secrets.
-                """
-                patterns = ["GITHUB_TOKEN=", "password=", "PASSWORD=", "Bearer "]
-                redacted = message
-                for pattern in patterns:
-                    if pattern in redacted:
-                        redacted = redacted.replace(pattern, f"{pattern}***")
-                return redacted
-
             fh = None
             try:
                 logging_enabled = not getattr(self.args, "no_install_log", False)
@@ -144,7 +134,7 @@ class InstallCommand(BaseCommand):
 
                     def _log(level: str, context: str, message: str) -> None:
                         ts = datetime.utcnow().isoformat(timespec="seconds") + "Z"
-                        safe = _redact(message)
+                        safe = redact(message)
                         fh.write(f"[{ts}] [{level}] [{context}] {safe}\n")
                         fh.flush()
 

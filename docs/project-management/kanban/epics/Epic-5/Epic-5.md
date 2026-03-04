@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-04 (v0.5.1.47+2 – E5:S01:T47: FR-047 Phase 1 – CLI + Kanban install logging integration)  
+**Last updated:** 2026-02-26 (v0.5.1.47+3 – E5:S01:T47: tests, docs, consumer-vs-framework clarity)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]

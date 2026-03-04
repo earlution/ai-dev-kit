@@ -22,6 +22,8 @@ package:
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 
+**Consumer vs framework Kanban trees:** In a **consumer project**, your working Kanban lives at **`docs/project-management/kanban/`** at the repo root (epics, stories, board files). The framework’s own files (e.g. under `.ai-dev-kit/packages/frameworks/kanban/` or wherever the framework is installed) are the **framework’s internal** board and templates—**do not edit or use them as your project’s Kanban**. Always run the installer from your project root so that it creates/updates `docs/project-management/kanban/` in your repo.
+
 > **Note:** All references to specific projects (for example, *Confidentia*, *Epic 4*, or concrete paths like `docs/project-management/epics/overview/Epic 4/Epic-4.md`) are **examples only**.  
 > When you install this package, you should:
 > - Replace project names with your own.

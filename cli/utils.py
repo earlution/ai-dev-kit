@@ -10,6 +10,18 @@ from typing import Optional
 from cli.exceptions import AIDevKitError
 
 
+def redact(message: str) -> str:
+    """
+    Redact obvious secrets from a message (e.g. for install logs).
+    Replaces GITHUB_TOKEN=, password=, PASSWORD=, Bearer with ... suffix.
+    """
+    out = message
+    for pattern in ("GITHUB_TOKEN=", "password=", "PASSWORD=", "Bearer "):
+        if pattern in out:
+            out = out.replace(pattern, f"{pattern}***")
+    return out
+
+
 def get_project_root() -> Optional[Path]:
     """
     Find the project root by looking for .ai-dev-kit.yaml or .git directory.

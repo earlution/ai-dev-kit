@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-04 (v0.5.1.47+2 – FR-047 Phase 1 – CLI + Kanban install logging integration)
+**Last updated:** 2026-02-26 (v0.5.1.47+3 – FR-047: tests, docs, consumer-vs-framework clarity)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.47+2
+**Version:** v0.5.1.47+3
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -42,7 +42,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T44 – RW Temporary Execution Log for Recovery and Forensics** - TODO (MEDIUM priority, v0.5.1.44+1 – Task created) - [Task Document](Story-001-fr-repo/T44-rw-temporary-execution-log-for-recovery-and-forensics.md) | [FR-044](../../fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)
 - [ ] **E5:S01:T45 – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
 - [ ] **E5:S01:T46 – Release Workflow Uses SemVer Tag When `task_touch` Enabled** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
-- [ ] **E5:S01:T47 – Install Logging for Framework Dependencies** - IN PROGRESS (HIGH priority, v0.5.1.47+2 – Phase 1: CLI + Kanban install logging integration) - [Task Document](Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../../fr-br/FR-047-install-logging-for-framework-dependencies.md)
+- [ ] **E5:S01:T47 – Install Logging for Framework Dependencies** - IN PROGRESS (HIGH priority, v0.5.1.47+3 – tests, docs, consumer-vs-framework clarity) - [Task Document](Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../../fr-br/FR-047-install-logging-for-framework-dependencies.md)
 
 ---
 

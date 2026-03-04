@@ -67,6 +67,12 @@ check_interval: daily  # daily, weekly, manual
 # Notification settings
 notification_channel: console  # console, email, slack
 
+# Install logging (per-run logs under logs/ai-dev-kit/install/)
+install_logging:
+  enabled: true
+  path: "logs/ai-dev-kit/install"
+  keep: 10
+
 # Installed frameworks
 frameworks:
   workflow-mgmt:
@@ -151,6 +157,25 @@ Notification channel for update notifications.
 - **Default:** `"console"`
 - **Valid Values:** `console`, `email`, `slack`
 - **Example:** `notification_channel: console`
+
+#### `install_logging` (optional)
+
+Per-run install logging (FR-047). When enabled, each `ai-dev-kit install` run writes a timestamped log file for debugging and forensic analysis.
+
+- **Type:** Object (or set `install_logging.enabled`, `install_logging.path`, `install_logging.keep` via dot notation)
+- **Defaults:** Logging enabled; path `logs/ai-dev-kit/install`; no retention limit
+- **Fields:**
+  - `enabled` (boolean) – Enable or disable install logging (default: true)
+  - `path` (string) – Project-relative directory for log files (default: `logs/ai-dev-kit/install`)
+  - `keep` (integer) – Keep only the N most recent log files; older files are removed at the end of each run (optional; omit for no rotation)
+- **Example:**
+  ```yaml
+  install_logging:
+    enabled: true
+    path: "logs/ai-dev-kit/install"
+    keep: 10
+  ```
+- **CLI overrides:** Use `--log-path PATH` to override the log directory for a single run, or `--no-install-log` to disable logging for a single run.
 
 #### `frameworks` (required)
 

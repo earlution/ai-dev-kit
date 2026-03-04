@@ -856,6 +856,15 @@ git remote -v
 # Shows remote repository URL if configured
 ```
 
+### 4. Post-install sanity check (Kanban and install logs)
+
+If you installed the Kanban framework, use this checklist to confirm a clean consumer install:
+
+- **Consumer Kanban location:** Your working Kanban is at **`docs/project-management/kanban/`** at your project root. Do not use or edit the framework’s internal Kanban under `.ai-dev-kit/` or the framework package path as your project board.
+- **No ai-dev-kit–specific epics:** Under `docs/project-management/kanban/epics/` there should be **no Epic 24** (or other ai-dev-kit–only epics). A fresh install only adds canonical epics (e.g. Epic 1–8, 10, 18, 22, 23).
+- **Board file:** `docs/project-management/kanban/kanban-board.md` should mention your **project name** and, on first install, version placeholder **`v0.0.0.0+0`**.
+- **Install logs:** If install logging is enabled (default), check `logs/ai-dev-kit/install/` for a timestamped log file. For Kanban installs, the log should contain lines with **`[KANBAN_FRESH_INSTALL]`** (or other `[KANBAN_*]` phase markers) and any validation warnings. Use these logs for debugging if something goes wrong.
+
 ---
 
 ## Troubleshooting

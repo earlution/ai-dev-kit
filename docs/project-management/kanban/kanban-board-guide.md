@@ -120,3 +120,5 @@ The board serves as the parent document to Story documents, providing a comprehe
 - For rules, explanations, and how-to content, see this guide document
 - The board is updated by UKW (Update Kanban Workflow) and RW (Release Workflow)
 - Board views are synchronized with Epic/Story/Task documents
+
+**Install logs:** For debugging Kanban installation or migration issues, see per-run logs under `logs/ai-dev-kit/install/` (when install logging is enabled). Logs include phase markers such as `[KANBAN_FRESH_INSTALL]` and validation output.

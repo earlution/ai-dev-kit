@@ -89,6 +89,8 @@ ai-dev-kit install <framework>[@version] [options]
 - `--backend <type>` - Dependency backend (git-submodule, git-subtree, npm, pip)
 - `--path <path>` - Custom installation path
 - `--dry-run` - Preview changes without applying
+- `--log-path <path>` - Override log directory for this run (see Install logging below)
+- `--no-install-log` - Disable per-run install logging for this run
 
 **Examples:**
 
@@ -115,6 +117,8 @@ ai-dev-kit install workflow-mgmt --dry-run
 - Installs framework using selected backend
 - Updates project configuration files
 - Validates installation
+
+**Install logging (FR-047):** Each run of `ai-dev-kit install` writes a timestamped log file under the project’s `logs/ai-dev-kit/install/` directory (or the path set in `.ai-dev-kit.yaml` under `install_logging.path`). The log records frameworks, backend, path, and framework-specific installer output (e.g. Kanban phase markers). Use `--log-path PATH` to override the log directory for one run, or `--no-install-log` to disable logging for one run. See the configuration guide for `install_logging` options.
 
 **Output:**
 
