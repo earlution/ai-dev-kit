@@ -16,6 +16,8 @@ import sys
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+from contamination_detector import scan_kanban_tree
+
 
 # Canonical epic range: 1-23
 CANONICAL_EPIC_MIN = 1
@@ -250,6 +252,15 @@ class InstallationValidator:
                             f"copying ai-dev-kit's actual Kanban structure. The actual Kanban contains project-specific epics "
                             f"that may not be relevant to your project."
                         )
+
+        # Integrate with contamination detector for BR-037
+        findings = scan_kanban_tree(self.kanban_path)
+        contaminated = [f for f in findings if f.classification == "contaminated"]
+        if contaminated:
+            self.errors.append(
+                f"❌ Detected {len(contaminated)} contaminated Kanban file(s). "
+                f"Run remediate_contamination.py to archive or delete them safely."
+            )
 
 
 def main():

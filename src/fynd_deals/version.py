@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
-VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 47     # Task number (T47: FR-047 Install logging for framework dependencies)
-VERSION_BUILD = 4     # Build number (E5:S01:T47+4 - FR-047: Phase 2 – JSON logging, install-history CLI, extended framework integration)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
+VERSION_STORY = 1     # Story number (Story 1: BR Repo)
+VERSION_TASK = 37     # Task number (T37: BR-037 Kanban install consumer board contamination – detector + remediation)
+VERSION_BUILD = 1     # Build number (E6:S01:T37+1 - BR-037: Detector + remediation tooling for consumer board contamination)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.47+4 = Development, Epic 5, Story 1, Task 47, Build 4 (E5:S01:T47: FR-047 – Phase 2 JSON/history/framework integration)
+# Current: 0.6.1.37+1 = Development, Epic 6, Story 1, Task 37, Build 1 (E6:S01:T37: BR-037 – Kanban install consumer board contamination detector + remediation)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

@@ -112,7 +112,8 @@ class TestKanbanFreshInstallIntegration:
             board_file = kanban_path / "kanban-board.md"
             assert board_file.exists()
             board_content = board_file.read_text(encoding="utf-8")
-            assert "v0.0.0.0+0" in board_content or "0.0.0.0" in board_content
+            # Post-fix invariant: consumer boards must NOT claim to be "AI Dev Kit – Kanban Board"
+            assert "AI Dev Kit – Kanban Board" not in board_content
 
             # Log contains phase markers
             content = log_file.read_text(encoding="utf-8")

@@ -121,4 +121,4 @@ The board serves as the parent document to Story documents, providing a comprehe
 - The board is updated by UKW (Update Kanban Workflow) and RW (Release Workflow)
 - Board views are synchronized with Epic/Story/Task documents
 
-**Install logs:** For debugging Kanban installation or migration issues, see per-run logs under `logs/ai-dev-kit/install/` (when install logging is enabled). Logs include phase markers such as `[KANBAN_FRESH_INSTALL]` and validation output.
+**Install logs and remediation:** For debugging Kanban installation or migration issues, see per-run logs under `logs/ai-dev-kit/install/` (when install logging is enabled). Logs include phase markers such as `[KANBAN_FRESH_INSTALL]` and validation output. If a consumer project’s board appears to be contaminated with `ai-dev-kit`’s own backlog (e.g. `AI Dev Kit – Kanban Board` title or dev-kit epics like Epic 24), run the Kanban contamination detector and remediation tooling in that project’s repo to identify and archive/delete dev-kit artefacts before continuing.
