@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-27  
-**Last updated:** 2026-02-26 (v0.5.1.47+3 – FR-047: tests, docs, consumer-vs-framework clarity)  
-**Version:** v0.5.1.47+3  
+**Last updated:** 2026-02-26 (v0.5.1.47+4 – FR-047: Phase 2 – JSON logging, install-history CLI, extended framework integration)  
+**Version:** v0.5.1.47+4  
 **Code:** E5S01T47
 
 **Repository Pattern:** FR-047 = E5:S01:T47 (abstract space v0.5.1.47+0)
@@ -52,7 +52,7 @@ Concrete implementation work (CLI changes, tests, docs) will be carried out unde
 
 1. FR-047 documented and anchored as `E5:S01:T47` in the FR repository story.
 2. Clear problem statement and requirements for install logging captured in FR-047.
-3. **Phase 1 implemented:** CLI install logging (per-run log file under `logs/ai-dev-kit/install/`, config and CLI flags, redaction, rotation) and Kanban installer integration via `AI_DEV_KIT_INSTALL_LOG_PATH` with phase-tagged log lines. Automated tests added for CLI logging and Kanban installer logging; docs updated (FR-047 Implementation Notes, Kanban/install docs).
+3. **Phase 1–2 implemented:** CLI install logging (per-run log file under `logs/ai-dev-kit/install/`, config and CLI flags, redaction, rotation), optional JSON log format, `ai-dev-kit logs install-history` summariser, and framework installer integration via `AI_DEV_KIT_INSTALL_LOG_PATH` (Kanban phase-tagged log lines plus workflow-mgt installer markers). Automated tests added for CLI logging, history summarisation, and Kanban logging; docs updated (FR-047 Implementation Notes, CLI/config/install docs, Kanban docs).
 
 ---
 
@@ -61,7 +61,7 @@ Concrete implementation work (CLI changes, tests, docs) will be carried out unde
 - [x] FR-047 exists with a complete description of the desired install logging behaviour.
 - [x] This task is present in the **E5:S01 FR Repo** story checklist as **E5:S01:T47** and links correctly to FR-047.
 - [x] Implementation tasks under the CLI/Framework Management epics can reference this task/FR as the canonical requirement for install logging.
-- [x] Phase 1: Logging and Kanban integration implemented; tests and docs added (see FR-047 Implementation Notes).
+- [x] Phase 1–2: Logging, JSON/CLI history, and framework integrations implemented; tests and docs added (see FR-047 Implementation Notes).
 
 ---
 

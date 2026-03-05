@@ -127,11 +127,13 @@ This FR proposes adding **structured install logging** so that each invocation o
 
 ---
 
-## Implementation Notes (Phase 1)
+## Implementation Notes (Phase 1–2)
 
 - **Log location:** Logs are per-run and per-project. When `ai-dev-kit install` is run from a **consumer repo root** (where `get_project_root()` resolves to that repo), the log file is created under `logs/ai-dev-kit/install/` in that repo, with a timestamped filename `install-YYYYMMDD-HHMMSS.log`. Running the CLI from inside a framework checkout (e.g. `.ai-dev-kit/`) will place logs under that checkout; for consumer-project logs, run the install from the consumer repo root.
-- **Kanban integration:** When the CLI has logging enabled, it sets the environment variable `AI_DEV_KIT_INSTALL_LOG_PATH` to the current log file path before invoking framework installers. The Kanban installer (`install_kanban_framework.py`) appends phase-tagged lines to that file when the variable is set: `[KANBAN_MODE]`, `[KANBAN_DETECT]`, `[KANBAN_ANALYZE]`, `[KANBAN_VALIDATE]`, `[KANBAN_MIGRATE]`, `[KANBAN_FRESH_INSTALL]`. This allows a single log file to contain both CLI and Kanban installer output for the same run.
-- **Validation (test install):** A disposable test-project install confirmed that the consumer Kanban board is clean (canonical epics only, no Epic 24) and that Phase 1 logging and Kanban integration behave as intended.
+- **Log format (text/JSON):** Per-run logs are plain-text by default (`install_logging.format: text`), using the prefix `[ISO8601 UTC] [LEVEL] [context] message`. Projects can opt into a machine-readable format via `install_logging.format: json`, which emits one JSON object per line with fields like `timestamp_utc`, `level`, `context`, `message`, and an `install_run_id` to correlate events.
+- **Framework integration:** When the CLI has logging enabled, it sets the environment variable `AI_DEV_KIT_INSTALL_LOG_PATH` to the current log file path before invoking framework installers. The Kanban installer (`install_kanban_framework.py`) appends phase-tagged lines to that file when the variable is set: `[KANBAN_MODE]`, `[KANBAN_DETECT]`, `[KANBAN_ANALYZE]`, `[KANBAN_VALIDATE]`, `[KANBAN_MIGRATE]`, `[KANBAN_FRESH_INSTALL]`. Other framework installers (e.g. Workflow Management’s `install_release_workflow.py`) append `[workflow_mgt.install]` lines to the same log file when the env var is present. This allows a single per-run log to contain both CLI and framework-level events.
+- **Install history:** The `ai-dev-kit logs install-history` command reads `logs/ai-dev-kit/install/` (text or JSON logs) and prints a compact summary of recent runs (timestamp, frameworks, backend, status, log file) to support quick forensic analysis.
+- **Validation (test installs):** Disposable test-project installs confirm that the consumer Kanban board is clean (canonical epics only, no Epic 24) and that Phase 1–2 logging and framework integrations behave as intended.
 
 ---
 

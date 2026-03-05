@@ -10,6 +10,7 @@ Test design (from apply-test-install-learnings plan):
 """
 
 import argparse
+import json
 import os
 import re
 from pathlib import Path
@@ -147,6 +148,59 @@ install_logging:
             assert len(logs) == 2, "rotation should retain only keep=2 newest files"
             newest_name = logs[-1].name
             assert newest_name.startswith("install-202") or newest_name.startswith("install-203")
+        finally:
+            os.chdir(original_cwd)
+
+
+class TestInstallLoggingJsonFormat:
+    """When install_logging.format=json, logs are written as JSON lines with expected keys."""
+
+    def test_json_log_lines_have_expected_structure(self, temp_project_dir: Path):
+        """Execute install with format=json; assert log lines are valid JSON with core fields."""
+        config_content = """version: "1.0.0"
+default_backend: "git-submodule"
+frameworks: {}
+install_logging:
+  enabled: true
+  path: "logs/ai-dev-kit/install"
+  format: json
+"""
+        (temp_project_dir / ".ai-dev-kit.yaml").write_text(config_content)
+        log_dir = temp_project_dir / "logs" / "ai-dev-kit" / "install"
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(temp_project_dir)
+            args = argparse.Namespace(
+                frameworks=["kanban"],
+                backend=None,
+                path=None,
+                dry_run=True,
+                log_path=None,
+                no_install_log=False,
+            )
+            command = InstallCommand(args)
+            command.execute()
+            assert log_dir.exists()
+            logs = sorted(log_dir.glob("install-*.log"))
+            assert logs, "expected at least one JSON log file"
+            content = logs[-1].read_text(encoding="utf-8")
+            lines = [l for l in content.strip().split("\n") if l.strip()]
+            assert lines, "JSON log file should not be empty"
+
+            saw_header = False
+            for line in lines:
+                entry = json.loads(line)
+                assert "timestamp_utc" in entry
+                assert "level" in entry
+                assert "context" in entry
+                assert "message" in entry
+                assert "install_run_id" in entry
+                if (
+                    entry["context"] == "install.main"
+                    and "ai-dev-kit install started in" in entry["message"]
+                ):
+                    saw_header = True
+            assert saw_header, "expected an install.main header entry in JSON log"
         finally:
             os.chdir(original_cwd)
 

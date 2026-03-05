@@ -16,6 +16,7 @@ from cli.config import Config
 from cli.exceptions import AIDevKitError, InvalidInputError, BackendNotAvailableError, InstallationError
 from cli.validation import validate_framework_spec, validate_backend, validate_path
 from cli.backends import BackendRegistry, select_backend, get_backend
+from cli.logging import create_install_logger, close_install_logger
 from cli.utils import (
     print_success,
     print_error,
@@ -23,7 +24,6 @@ from cli.utils import (
     print_warning,
     get_project_root,
     handle_error,
-    redact,
 )
 
 
@@ -101,59 +101,12 @@ class InstallCommand(BaseCommand):
             # Load or create configuration
             config = Config(project_root / ".ai-dev-kit.yaml")
             
-            # ------------------------------------------------------------------
-            # Install logging setup (FR-047)
-            # ------------------------------------------------------------------
-            log_file = None
-            log_dir: Optional[Path] = None
-            log: Callable[[str, str, str], None]
-
-            def _noop_log(_level: str, _context: str, _message: str) -> None:
-                return
-
-            fh = None
-            try:
-                logging_enabled = not getattr(self.args, "no_install_log", False)
-                if logging_enabled:
-                    logging_enabled = config.get("install_logging.enabled", True)
-
-                if logging_enabled:
-                    # Resolve log directory
-                    if getattr(self.args, "log_path", None):
-                        log_dir = Path(self.args.log_path).resolve()
-                    else:
-                        default_rel = config.get("install_logging.path", "logs/ai-dev-kit/install")
-                        log_dir = (project_root / default_rel).resolve()
-
-                    log_dir.mkdir(parents=True, exist_ok=True)
-
-                    # Open timestamped log file
-                    timestamp = datetime.utcnow().strftime("%Y%m%d-%H%M%S")
-                    log_file = log_dir / f"install-{timestamp}.log"
-                    fh = log_file.open("a", encoding="utf-8")
-
-                    def _log(level: str, context: str, message: str) -> None:
-                        ts = datetime.utcnow().isoformat(timespec="seconds") + "Z"
-                        safe = redact(message)
-                        fh.write(f"[{ts}] [{level}] [{context}] {safe}\n")
-                        fh.flush()
-
-                    log = _log
-
-                    # Per-run header
-                    log("INFO", "install.main", f"ai-dev-kit install started in {project_root}")
-                    log("INFO", "install.main", f"Config file: {config.config_path}")
-                    # Expose log path for framework installers (e.g. Kanban) via env var
-                    os.environ["AI_DEV_KIT_INSTALL_LOG_PATH"] = str(log_file)
-                else:
-                    log = _noop_log
-            except Exception as e:
-                print_warning(f"Install logging disabled due to logger setup error: {e}")
-                log = _noop_log
-                log_file = None
-                log_dir = None
-                # Ensure no stale env-based log wiring leaks into child processes
-                os.environ.pop("AI_DEV_KIT_INSTALL_LOG_PATH", None)
+            # Install logging setup (FR-047 – Phase 1 + Phase 2 JSON support)
+            log, log_dir, log_file, fh = create_install_logger(
+                project_root=project_root,
+                config=config,
+                args=self.args,
+            )
             
             # Parse and validate framework specifications
             frameworks_to_install: List[Tuple[str, Optional[str]]] = []
@@ -213,6 +166,7 @@ class InstallCommand(BaseCommand):
                     version_str = f"@{version}" if version else " (latest)"
                     print_info(f"  - {framework}{version_str}")
                 log("INFO", "install.main", "Dry run only - no changes will be made")
+                close_install_logger(fh, log_dir, config)
                 return 0
             
             # Perform installation
@@ -269,51 +223,13 @@ class InstallCommand(BaseCommand):
             if failed_installations:
                 print_error(f"Failed to install: {', '.join(failed_installations)}")
                 log("ERROR", "install.main", f"Failed installations: {', '.join(failed_installations)}")
-                # Close log and perform simple retention
-                if fh and log_dir:
-                    try:
-                        keep = config.get("install_logging.keep")
-                        if isinstance(keep, int) and keep > 0:
-                            logs = sorted(log_dir.glob("install-*.log"))
-                            if len(logs) > keep:
-                                for old in logs[0 : len(logs) - keep]:
-                                    try:
-                                        old.unlink()
-                                    except Exception:
-                                        pass
-                    except Exception:
-                        # Do not fail install because of log rotation
-                        pass
-                    finally:
-                        try:
-                            fh.close()
-                        except Exception:
-                            pass
+                close_install_logger(fh, log_dir, config)
                 return 1
             
             print_success(f"Successfully installed {len(frameworks_to_install)} framework(s)")
             log("INFO", "install.main", f"Successfully installed {len(frameworks_to_install)} framework(s)")
 
-            # Close log and perform simple retention
-            if fh and log_dir:
-                try:
-                    keep = config.get("install_logging.keep")
-                    if isinstance(keep, int) and keep > 0:
-                        logs = sorted(log_dir.glob("install-*.log"))
-                        if len(logs) > keep:
-                            for old in logs[0 : len(logs) - keep]:
-                                try:
-                                    old.unlink()
-                                except Exception:
-                                    pass
-                except Exception:
-                    # Do not fail install because of log rotation
-                    pass
-                finally:
-                    try:
-                        fh.close()
-                    except Exception:
-                        pass
+            close_install_logger(fh, log_dir, config)
             return 0
             
         except AIDevKitError as e:
