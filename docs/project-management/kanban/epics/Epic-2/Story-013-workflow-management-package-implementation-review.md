@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [ ] **E2:S13:T04 – Review integrations and dependency alignment** - TODO
 - [ ] **E2:S13:T05 – Create gap log and risk assessment** - TODO
 - [ ] **E2:S13:T06 – Define RC sign-off criteria and remediation tasks** - TODO
-- [ ] **E2:S13:T07 – RW Uses SemVer Tag When `task_touch` Enabled** - TODO
+- [x] **E2:S13:T07 – RW Uses SemVer Tag When `task_touch` Enabled** ✅ COMPLETE (v0.2.13.7+1)
   - Task Doc: [`T07-rw-semver-tag-when-task-touch-enabled.md`](Story-013-workflow-management-package-implementation-review/T07-rw-semver-tag-when-task-touch-enabled.md)
 
 ---

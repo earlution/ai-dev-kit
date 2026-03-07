@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 3      # Epic number (Epic 3: Versioning Framework)
-VERSION_STORY = 2     # Story number (Story 2: Versioning Cookbook and Examples)
-VERSION_TASK = 12     # Task number (T12: Implement ADR-002 Task-Touch SemVer Mapping Mode)
-VERSION_BUILD = 1     # Build number (E3:S02:T12+1 - File implementation task for FR-045 + SemVer collision incident log)
+VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management)
+VERSION_STORY = 13    # Story number (Story 13: Workflow Management Package Implementation Review)
+VERSION_TASK = 7      # Task number (T07: Release Workflow uses SemVer tags when task_touch enabled)
+VERSION_BUILD = 1     # Build number (E2:S13:T07+1 - File implementation task for FR-046)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.3.2.12+1 = Development, Epic 3, Story 2, Task 12, Build 1 (E3:S02:T12: Implement ADR-002 Task-Touch SemVer Mapping Mode - File implementation task + incident log)
+# Current: 0.2.13.7+1 = Development, Epic 2, Story 13, Task 7, Build 1 (E2:S13:T07: Release Workflow uses SemVer tags when task_touch enabled - File implementation task)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
