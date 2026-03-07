@@ -847,6 +847,22 @@ def validate_doc_init_build(
     
     print(f"🔍 Doc-init build detected (BUILD=0) - validating docs-only changes...")
     
+    # Get project root
+    project_root = project_root or Path.cwd()
+    
+    # Allow version file updates in doc-init builds
+    allowed_non_doc_relpaths = set()
+    if config and 'version_file' in config:
+        version_file_path = Path(config['version_file'])
+    else:
+        # Default fallback
+        version_file_path = Path("src/fynd_deals/version.py")
+    
+    try:
+        allowed_non_doc_relpaths.add(str(version_file_path.relative_to(project_root)))
+    except Exception:
+        pass
+    
     # Get changed files
     changed_files = get_changed_files(project_root)
     
@@ -860,6 +876,14 @@ def validate_doc_init_build(
     for file_path in changed_files:
         # Skip if file doesn't exist (might be deleted)
         if not file_path.exists():
+            continue
+        
+        try:
+            rel_path = str(file_path.relative_to(project_root))
+        except ValueError:
+            rel_path = str(file_path)
+        
+        if rel_path in allowed_non_doc_relpaths:
             continue
         
         if not is_documentation_file(file_path):
