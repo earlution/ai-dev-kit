@@ -31,6 +31,7 @@ housekeeping_policy: keep
 - [x] **E3:S02:T09 – Implement Package Version Workflow (PVW) with agentic execution** ✅ COMPLETE (v0.3.2.9+1)
 - [ ] **E3:S02:T10 – Integrate PVW into Release Workflow agent execution guide** - TODO
 - [x] **E3:S02:T11 – Implement SemVer Mapping for Release Workflow** ✅ COMPLETE (v0.3.2.11+4 – GitHub release creation with SemVer)
+- [ ] **E3:S02:T12 – Implement ADR-002 Task-Touch SemVer Mapping Mode** - TODO - [Task Doc](Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md)
 
 ---
 
