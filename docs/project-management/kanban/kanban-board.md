@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-02-22 (RW: E5:S01:T44)
-**Version:** v0.5.1.44+1
+**Last Updated:** 2026-03-07 (UKW: E6:S07:T101+33)
+**Version:** v0.6.7.101+33
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -22,16 +22,17 @@ housekeeping_policy: keep
 ### Must Have (M) - Critical Tasks
 
 - **E6:S01:T37** – Kanban Install Consumer Board Contamination – Detector + Remediation - IN PROGRESS (CRITICAL, Kanban install contamination; prevention + clean‑up tooling implemented, pending release RW and consumer verification) - [Task Document](epics/Epic-6/Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md) | [BR-037](../fr-br/BR-037-kanban-install-consumer-board-contamination.md)
-- **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (CRITICAL, SemVer mapping for task_touch and Kanban integration; docs-only FR repo anchor, implementation in versioning framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
-- **E5:S01:T46** – Release Workflow Uses SemVer Tag When task_touch Enabled - TODO (CRITICAL, RW tagging behaviour when task_touch is enabled; docs-only FR repo anchor, implementation in workflow framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
+- **E6:S07:T104** – Release Automation Audit - TODO (CRITICAL, Audit RW/PVW validators, GitHub Actions, badge workflow, GitHub Release script, and required secrets for task-touch SemVer compatibility) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md)
+- **E6:S07:T105** – Release Runbook Creation - TODO (CRITICAL, Create comprehensive runbook with exact commands respecting "no manual commit/push" policy) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md)
+- **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH priority, SemVer mapping for task_touch and Kanban integration; docs-only FR repo anchor, implementation in versioning framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
 - **E5:S01:T47** – Install Logging for Framework Dependencies - TODO (HIGH priority, FR repo anchor; enables detailed post-install analysis and debugging for all frameworks) - [Task Document](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../fr-br/FR-047-install-logging-for-framework-dependencies.md)
 
 ### Should Have (S) - Important Tasks
 
+- **E5:S01:T46** – Release Workflow Uses SemVer Tag When task_touch Enabled - TODO (HIGH priority, RW tagging behaviour when task_touch is enabled; FR-046 implementation complete) - [Task Document](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
+- **E6:S07:T106** – Windsurf Migration: .cursorrules to Workflow Equivalents - TODO (HIGH priority, Map key policies/workflows to Windsurf/Cascade equivalents including system instructions and developer workflows) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflows.md)
 - **E4:S11:T07** – Migrate Embedded Tasks to Discrete Task Documents - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)
 - **E6:S07:T18** – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs (Cursor TODO Migration) - TODO (HIGH priority) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
-- **E6:S07:T104** – Release Automation Audit - TODO (HIGH priority, Audit RW/PVW validators, GitHub Actions, badge workflow, GitHub Release script, and required secrets for task-touch SemVer compatibility) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md)
-- **E6:S07:T105** – Release Runbook Creation - TODO (HIGH priority, Create comprehensive runbook with exact commands respecting "no manual commit/push" policy) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md)
 - **E1:S06:T01** – Set up BYOB badges for private repository - IN PROGRESS (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-1/Story-006-repository-ci-cd-setup/T01-setup-byob-badges-for-private-repository.md)
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
 - **E10:S01:T01** – Doc lifecycle expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
@@ -39,7 +40,6 @@ housekeeping_policy: keep
 
 ### Could Have (C) - Nice-to-Have Tasks
 
-- **E6:S07:T106** – Windsurf Migration: .cursorrules to Workflow Equivalents - TODO (MEDIUM priority, Map key policies/workflows to Windsurf/Cascade equivalents including system instructions and developer workflows) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflows.md)
 - **E5:S01:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
 - **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - **E5:S03:T01-T03** – Documentation Automation - TODO (MEDIUM priority story) - [Story](epics/Epic-5/Story-003-documentation-automation.md)
@@ -48,8 +48,8 @@ housekeeping_policy: keep
   - T03: Build documentation change detection and notification - TODO
 - **E8:S03:T01-T03** – Automation Scripts - TODO (MEDIUM priority story) - [Story](epics/Epic-8/Story-003-automation-scripts.md)
   - T01: Create automation framework - TODO
-  - T02: Build workflow automation scripts - TODO
-  - T03: Establish automation patterns - TODO
+  - T02: Create book-specific examples - TODO
+  - T03: Establish integration patterns - TODO
 - **E24:S01:T01-T04** – Book Content Development - TODO (MEDIUM priority story, IN PROGRESS) - [Story](epics/Epic-24/Story-001-book-content-development.md)
   - T01: Create book chapter structure - TODO
   - T02: Develop chapter content - TODO
@@ -67,7 +67,7 @@ housekeeping_policy: keep
 - **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+32, Last updated: 2026-02-22) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+6, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 - **E6:S07:T103** – Release Workflow (RW) Maintenance - Perpetual Task - IN PROGRESS (v0.6.7.103+4, Last updated: 2026-02-22) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
-- **E7:S01:T05** – Markdown Maintenance (Perpetual Task) - PERPETUAL (v0.7.1.5+1, Last updated: 2026-03-07) - [Task Document](epics/Epic-7/Story-001-codebase-maintenance-tasks/T05-markdown-maintenance-perpetual-task.md) | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
+- **E7:S01:T05** – Markdown Maintenance (Perpetual Task) - PERPETUAL (v0.7.1.5+2, Last updated: 2026-03-07) - [Task Document](epics/Epic-7/Story-001-codebase-maintenance-tasks/T05-markdown-maintenance-perpetual-task.md) | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
 
 ### Won't Have (W) - Deferred Tasks
 

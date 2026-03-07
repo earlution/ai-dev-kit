@@ -18,9 +18,8 @@ housekeeping_policy: keep
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
 
----
-
 ## Task Checklist
+
 - [x] **E6:S07:T00 – Story creation and comprehensive structure documentation** ✅ COMPLETE
 
 - [x] **E6:S07:T01 – Comprehensive ADK implementation analysis across all projects** ✅ COMPLETE (10 project reports + 4 granular analyses + 6 synthesis reports completed)
@@ -93,6 +92,10 @@ housekeeping_policy: keep
   - Task: [`T106-windsurf-migration-cursorrules-to-workflows.md`](T106-windsurf-migration-cursorrules-to-workflows.md)
   - **Scope:** Map key policies/workflows to Windsurf/Cascade equivalents, including system instructions and developer workflows
 
+- [ ] **E6:S07:T107 – IDE Command Whitelist Optimization** - TODO
+  - Task: [`T107-ide-command-whitelist-optimization.md`](T107-ide-command-whitelist-optimization.md)
+  - **Scope:** Optimize IDE command whitelist to reduce approval friction by implementing pattern-based command approval
+
 ---
 
 ## Overview
@@ -141,6 +144,7 @@ Multiple projects have implemented ai-dev-kit (ADK) frameworks at various versio
 Conduct comprehensive analysis of all projects that have implemented ADK frameworks, identify implementation issues and patterns, investigate proper package management, and design feedback mechanisms to inform ADK hardening before continued development.
 
 **Success Criteria:**
+
 - ✅ All projects with ADK implementations analyzed
 - ✅ Implementation issues cataloged (mashups, drift, misuse)
 - ✅ Good and bad patterns identified and documented
@@ -166,12 +170,14 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Deliverable:** This story document with complete task breakdown
 
 **Approach:**
+
 1. Document problem statement
 2. Define goal and success criteria
 3. Break down into actionable tasks
 4. Link to existing analysis framework
 
 **Acceptance Criteria:**
+
 - [x] Story document created
 - [x] Problem statement documented
 - [x] Goal and success criteria defined
@@ -188,11 +194,13 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Version:** v0.6.7.1+1
 
 **Input:**
+
 - All projects in `/Users/rms/Documents/projects`
 - Comprehensive ADK analysis framework
 - ADK framework source code (canonical structures)
 
 **Deliverable:** Comprehensive per-project analysis reports documenting:
+
 - **Deep trawl** of ALL Kanban E/S/T, KB, `.cursorrules`, CI/CD, workflows, scripts
 - Implementation patterns (good and bad)
 - Mashup issues (ai-dev-kit Kanban + Kanban package template)
@@ -285,8 +293,10 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Synthesize ADK learning per project
 
 **Deliverables:**
+
 - **Per-Project Reports:** `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` - Comprehensive analysis for each project
 - **Synthesis Reports:**
+
   - `docs/Analysis/adk-implementation-analysis-report.md` - Overall analysis report
   - `docs/Analysis/adk-implementation-patterns.md` - Pattern catalog (good and bad) across all projects
   - `docs/Analysis/adk-drift-analysis.md` - Framework drift analysis across all projects
@@ -295,6 +305,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
   - `docs/Analysis/adk-learning-synthesis.md` - What ADK can learn (implement, harden, avoid, do differently)
 
 **Acceptance Criteria:**
+
 - [x] All projects scanned and ADK implementations identified (9 projects analyzed)
 - [x] **Deep trawl complete:** All Kanban E/S/T, KB, `.cursorrules`, CI/CD, workflows, scripts analyzed per project
 - [x] Per-project comprehensive reports created (9 project reports)
@@ -313,6 +324,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [x] Hardening recommendations provided ✅ COMPLETE (6 synthesis reports created)
 
 **Files to Create:**
+
 - `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` (one per project with ADK implementation)
 - `docs/Analysis/adk-implementation-analysis-report.md`
 - `docs/Analysis/adk-implementation-patterns.md`
@@ -331,12 +343,14 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Estimated Effort:** MEDIUM-LARGE
 
 **Input:**
+
 - ADK implementation analysis findings
 - Current package management approaches (Git submodules, CLI tool plans)
 - Package management best practices
 - Security requirements (hash verification)
 
 **Deliverable:** Package management investigation report with:
+
 - Evaluation of package management approaches
 - Single package file design
 - Hash verification mechanism
@@ -370,6 +384,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Security best practices
 
 5. **Implementation Plan:**
+
    - Package creation process
    - Package distribution mechanism
    - Package installation process
@@ -377,11 +392,13 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Hash verification integration
 
 **Deliverables:**
+
 - `docs/Analysis/package-management-investigation-report.md` - Comprehensive investigation report
 - `docs/architecture/standards-and-adrs/package-management-design.md` - Package management design spec
 - `docs/architecture/standards-and-adrs/package-hash-verification-spec.md` - Hash verification spec
 
 **Acceptance Criteria:**
+
 - [x] Package management approaches evaluated ✅
 - [x] Single package file format designed ✅
 - [x] Hash verification mechanism designed ✅
@@ -390,6 +407,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [x] Design specifications created ✅
 
 **Files to Create:**
+
 - `docs/Analysis/package-management-investigation-report.md`
 - `docs/architecture/standards-and-adrs/package-management-design.md`
 - `docs/architecture/standards-and-adrs/package-hash-verification-spec.md`
@@ -404,11 +422,13 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Estimated Effort:** MEDIUM
 
 **Input:**
+
 - ADK implementation analysis findings
 - Package management design
 - Feedback mechanism requirements
 
 **Deliverable:** Pre-release feedback mechanism design with:
+
 - Feedback collection mechanism
 - Feedback categories (installation, post-install, usability, issues)
 - Feedback storage and analysis
@@ -438,16 +458,19 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Create feedback analysis workflow
 
 4. **Integration Design:**
+
    - Integrate with FR/BR intake workflow
    - Integrate with Kanban board
    - Integrate with package management (post-install feedback)
 
 **Deliverables:**
+
 - ✅ `docs/architecture/standards-and-adrs/pre-release-feedback-mechanism-design.md` - Feedback mechanism design
 - ✅ `docs/guides/framework-consumption/adk-feedback-guide.md` - User-facing feedback guide
 - ✅ `packages/frameworks/kanban/templates/feedback-template.md` - Feedback template
 
 **Acceptance Criteria:**
+
 - [x] Feedback categories defined
 - [x] Feedback collection mechanism designed
 - [x] Feedback storage designed
@@ -466,6 +489,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Estimated Effort:** SMALL-MEDIUM
 
 **Input:**
+
 - Package management investigation report (T02)
 - Package management design specifications (T02)
 - Hash verification specification (T02)
@@ -505,9 +529,11 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Mitigation strategies
 
 **Deliverables:**
+
 - `docs/Analysis/package-management-prioritization-review.md` - Prioritized review document
 
 **Acceptance Criteria:**
+
 - [ ] Investigation findings reviewed
 - [ ] Recommendations validated and prioritized
 - [ ] Resource assessment completed
@@ -516,6 +542,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [ ] Prioritization rationale documented
 
 **Files to Create:**
+
 - `docs/Analysis/package-management-prioritization-review.md`
 
 ---
@@ -528,6 +555,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Estimated Effort:** MEDIUM
 
 **Input:**
+
 - Package management design
 - Feedback mechanism design
 - ADK implementation analysis findings
@@ -566,10 +594,12 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Integrate with Kanban (version tracking)
 
 **Deliverables:**
+
 - `docs/Analysis/package-management-implementation-plan.md` - Implementation plan
 - Implementation tasks (may create new story/epic)
 
 **Acceptance Criteria:**
+
 - [ ] Implementation phases defined
 - [ ] Tasks broken down
 - [ ] Effort estimated
@@ -577,6 +607,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [ ] Implementation plan documented
 
 **Files to Create:**
+
 - `docs/Analysis/package-management-implementation-plan.md`
 
 ---
@@ -589,6 +620,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Estimated Effort:** MEDIUM
 
 **Input:**
+
 - Feedback mechanism design
 - Feedback templates
 
@@ -617,12 +649,14 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Integrate with package management
 
 **Deliverables:**
+
 - Feedback collection tool/script
 - Feedback storage system
 - Feedback analysis tools
 - Integration with Kanban
 
 **Acceptance Criteria:**
+
 - [ ] Feedback collection implemented
 - [ ] Feedback storage implemented
 - [ ] Feedback analysis implemented
@@ -639,6 +673,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Estimated Effort:** VERY LARGE
 
 **Input:**
+
 - All 9 project analysis reports (`docs/Analysis/projects/*-adk-analysis.md`)
 - Task-level Kanban structure analysis (`docs/Analysis/task-level-kanban-structure-analysis.md`)
 - Knowledge/documentation structure analysis (`docs/Analysis/knowledge-documentation-structure-analysis.md`)
@@ -647,6 +682,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - ADK canonical structures (current frameworks)
 
 **Deliverable:** Comprehensive meta-analysis report with:
+
 - Pattern frequency tables across all projects
 - Convergence/divergence maps (what projects converge on vs diverge from)
 - "Canonical vs legacy" matrices (ADK canonical vs real-world patterns)
@@ -661,6 +697,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Approach:**
 
 1. **Pattern Frequency Analysis:**
+
    - Extract all patterns from granular analyses
    - Count frequency of each pattern across projects
    - Create frequency tables:
@@ -674,6 +711,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Identify rare patterns (divergence)
 
 2. **Convergence/Divergence Maps:**
+
    - **Convergence Analysis:** What patterns do projects converge on?
      - Common naming conventions
      - Common structure patterns
@@ -687,6 +725,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - **Convergence/Divergence Matrix:** Map each pattern to convergence/divergence status
 
 3. **"Canonical vs Legacy" Matrices:**
+
    - **Kanban Structure:** ADK canonical E/S/T vs real-world patterns
      - Compare canonical structure to task-level analysis findings
      - Identify gaps (what's missing in canonical)
@@ -706,6 +745,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
      - Identify customization patterns
 
 4. **Kanban Structure Meta-Analysis:**
+
    - Synthesize task-level Kanban structure analysis
    - Identify "ultimate" canonical E/S/T structure:
      - Task naming conventions (format, padding, context)
@@ -720,6 +760,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Design canonical E/S/T governance rules
 
 5. **Documentation/Knowledge Structure Meta-Analysis:**
+
    - Synthesize knowledge/documentation structure analysis
    - Identify "ultimate" canonical docs/documentation structure:
      - Directory naming conventions
@@ -735,6 +776,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Support for legacy structures (migration paths)
 
 6. **Workflows Meta-Analysis:**
+
    - Synthesize workflow structure analysis
    - Identify "ultimate" canonical workflow structure:
      - Workflow file naming (`*-workflow.yaml`)
@@ -751,6 +793,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Design canonical workflow governance rules
 
 7. **Cursorrules Use/Mis-use Meta-Analysis:**
+
    - Synthesize cursorrules structure analysis
    - Identify "ultimate" canonical cursorrules structure:
      - File naming (`.cursorrules` standard)
@@ -777,6 +820,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Design canonical cursorrules governance rules
 
 8. **Good/Bad Practice Catalog:**
+
    - **Good Practices:** Synthesize from all project reports (including ai-dev-kit source)
      - Kanban: Good naming conventions, proper structure, good governance
      - KB: Good organization, proper lifecycle metadata, good navigation (ai-dev-kit perfect 5-pillar reference)
@@ -791,6 +835,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - **CRITICAL:** Include ai-dev-kit source findings (both good - perfect KB structure, and bad - Epic 9 mismatch, missing cursorrules)
 
 9. **Pattern/Anti-Pattern Identification:**
+
    - **Patterns:** Recurring good practices across projects (including ai-dev-kit source)
      - Config-driven customization
      - Agent-driven workflow execution
@@ -812,10 +857,11 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
      - Examples (including ai-dev-kit source examples)
 
 10. **Executive Summary (Decision-Focused Synthesis):**
-    - **CRITICAL DELIVERABLE:** Create executive summary document for decision-making
-    - **Purpose:** Inform concrete decisions about canonical framework designs
-    - **Format:** High-level, decision-focused (detailed analysis in supporting tactical docs)
-    - Synthesize findings from all 7 meta-analysis documents to inform decisions
+
+  - **CRITICAL DELIVERABLE:** Create executive summary document for decision-making
+  - **Purpose:** Inform concrete decisions about canonical framework designs
+  - **Format:** High-level, decision-focused (detailed analysis in supporting tactical docs)
+  - Synthesize findings from all 7 meta-analysis documents to inform decisions
     - **MUST INCLUDE Proposed "Ultimate" Canonical Structures:**
       - **Kanban:** Proposed ultimate canonical E/S/T structure (epic/story/task naming, organization, templates)
       - **docs/documentation:** Proposed ultimate canonical docs/documentation structure (directory organization, document structure, lifecycle)
@@ -833,7 +879,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
       - Structure-specific meta-analyses (for detailed recommendations)
     - Format: Executive-friendly, decision-oriented, high-level summary
 
-11. **"Ultimate" Canonical Framework Designs:**
+    **"Ultimate" Canonical Framework Designs:**
     - **Kanban Framework:** Design ultimate canonical E/S/T structure
       - Based on task-level analysis synthesis
       - Incorporates good practices
@@ -856,6 +902,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
       - Supports customization patterns
 
 **Deliverables:**
+
 - `docs/Analysis/meta-analysis-pattern-frequency-tables.md` - Pattern frequency tables ✅ COMPLETE
 - `docs/Analysis/meta-analysis-convergence-divergence-maps.md` - Convergence/divergence analysis ✅ COMPLETE
 - `docs/Analysis/meta-analysis-canonical-vs-legacy-matrices.md` - Canonical vs legacy comparison matrices ✅ COMPLETE
@@ -872,12 +919,14 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - `docs/architecture/standards-and-adrs/ultimate-canonical-cursorrules-structure.md` - Ultimate canonical cursorrules structure design ❌ **MISSING - REQUIRED**
 
 **Note:** The executive summary is a **CRITICAL DELIVERABLE** that synthesizes all meta-analyses and presents all findings (good and bad) in a unified, executive-friendly format. This document is essential for:
+
 - Understanding the complete picture across all analyses
 - Identifying critical issues (Epic 9 mismatch, Epic mashup, source repository gaps)
 - Prioritizing framework hardening work
 - Making informed decisions about ADK improvements
 
 **Acceptance Criteria:**
+
 - [x] Pattern frequency tables created for all pattern types ✅ COMPLETE
 - [x] Convergence/divergence maps created (what projects converge on vs diverge from) ✅ COMPLETE
 - [x] "Canonical vs legacy" matrices created for Kanban, KB, workflows, cursorrules ✅ COMPLETE
@@ -895,6 +944,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
   - [ ] Ultimate canonical cursorrules structure design ❌ **MISSING - REQUIRED**
 
 **Files to Create:**
+
 - [x] `docs/Analysis/meta-analysis-pattern-frequency-tables.md` ✅ COMPLETE
 - [x] `docs/Analysis/meta-analysis-convergence-divergence-maps.md` ✅ COMPLETE
 - [x] `docs/Analysis/meta-analysis-canonical-vs-legacy-matrices.md` ✅ COMPLETE
@@ -911,6 +961,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [ ] `docs/architecture/standards-and-adrs/ultimate-canonical-cursorrules-structure.md` ❌ **MISSING - REQUIRED**
 
 **Priority Order:**
+
 1. **CRITICAL:** `meta-analysis-executive-summary.md` - Synthesizes all findings (good and bad) from all 7 meta-analysis documents
 2. **HIGH:** `meta-analysis-good-bad-practices.md` - Comprehensive catalog of good and bad practices
 3. **HIGH:** `meta-analysis-patterns-anti-patterns.md` - Pattern and anti-pattern identification
@@ -926,6 +977,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Estimated Effort:** LARGE
 
 **Input:**
+
 - `docs/knowledge/analysis/adk-hardening-recommendations.md` - Comprehensive hardening recommendations from T01
 - `docs/knowledge/analysis/adk-implementation-analysis-report.md` - Overall analysis findings
 - `docs/knowledge/analysis/adk-mashup-issues.md` - Epic mashup issue details
@@ -933,6 +985,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - Current ai-dev-kit source structure
 
 **Deliverable:** Implementation of critical and high-priority hardening recommendations:
+
 - **CRITICAL:** Epic 9 mismatch fixed (renamed to Epic 24+)
 - **CRITICAL:** Installer validation added (prevents Epic mashup)
 - **HIGH:** Source repository frameworks added (`.cursorrules`, `rw-config.yaml`)
@@ -978,7 +1031,8 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
      - Update workflows and scripts
 
 4. **Improve Installation Instructions (HIGH):**
-   - Clearly distinguish templates from actual Kanban:
+
+   - Clearly distinguish between templates and actual Kanban:
      - Document canonical templates location
      - Document ai-dev-kit's actual Kanban location
      - Explain difference clearly
@@ -992,14 +1046,13 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
      - Step-by-step installation guide
      - Example projects (tiny, small, ambitious)
      - Common mistakes and how to avoid them
-
 **Acceptance Criteria:**
+
 - [ ] Epic 9 in ai-dev-kit source renamed to Epic 24+
 - [ ] All Epic 9 references updated
 - [ ] No Epic 9 "Book Related Work" in source
 - [ ] Installer validates Epic numbering
 - [ ] Installer prevents Epic mashup
-- [ ] Installer warns about copying actual Kanban
 - [ ] `.cursorrules` file exists in project root
 - [ ] `rw-config.yaml` exists in project root
 - [ ] Version file at canonical path (`src/ai_dev_kit/version.py`)
@@ -1009,6 +1062,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [ ] Source serves as reference implementation
 
 **Files to Create/Modify:**
+
 - Epic 9 → Epic 24+ (rename and update all references)
 - Installer scripts (add validation)
 - `.cursorrules` (create in project root)
@@ -1017,8 +1071,10 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - Installation documentation (improve instructions)
 
 **Related Work:**
+
 - **Related Task:** E6:S07:T01 - Comprehensive ADK implementation analysis (provides hardening recommendations)
 - **Related Documents:**
+
   - `docs/knowledge/analysis/adk-hardening-recommendations.md`
   - `docs/knowledge/analysis/adk-mashup-issues.md`
   - `docs/knowledge/analysis/adk-drift-analysis.md`

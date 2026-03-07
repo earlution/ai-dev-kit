@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-02-22 (v0.6.7.101+32 – UKW: bookkeeping, checklist sorting)  
+**Last updated:** 2026-03-07 (v0.6.7.101+33 – UKW: Comprehensive MoSCOW reprioritization, moved T104/T105 to Must Have, T106 to Should Have)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+32
+**Version:** v0.6.7.101+33
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
 
-**Progress:** UKW execution (v0.6.7.101+32) - Bookkeeping run. Checklist sorting applied to Story 007 task checklist, Epic 6 story checklist, kanban board epic sections.  
+**Progress:** UKW execution (v0.6.7.101+33) - Comprehensive MoSCOW reprioritization: moved E6:S07:T104/T105 to Must Have (critical release process tasks), E6:S07:T106 to Should Have (Windsurf migration), updated kanban board priorities and version tracking.  
 **Code:** E6S06T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).
