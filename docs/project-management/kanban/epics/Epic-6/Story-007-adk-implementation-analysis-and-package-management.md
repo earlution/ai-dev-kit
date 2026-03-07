@@ -90,6 +90,10 @@ housekeeping_policy: keep
 
 
 
+- [ ] **E6:S07:T18 – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs (Cursor TODO Migration)** - TODO
+  - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
+
+
 
 - [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+32 – UKW: bookkeeping, checklist sorting)
   - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
