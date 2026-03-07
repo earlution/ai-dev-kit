@@ -75,6 +75,14 @@ rc_0:
     (2,13): 63
     (3,4): 64
     (5,8): 65
+  task_touch_mode:
+    epic_count: 4
+    task_touch_counter: 582
+    mapping_history: []
 rc_1:
   epic_to_minor: {}
   story_to_patch: {}
+  task_touch_mode:
+    epic_count: 0
+    task_touch_counter: 0
+    mapping_history: []

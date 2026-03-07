@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** 2026-01-05  
-**Last updated:** 2026-01-05 (v0.7.5.4+1 – Epic COMPLETE: All 5 stories complete - Codebase maintenance and review framework fully established)  
+**Last updated:** 2026-03-07 (v0.7.1.5+2 – First markdown maintenance cycle completed: fixed trailing spaces, excessive blank lines, and formatting in high-priority documents; perpetual tasks T01 and T05 active)  
 **Branch:** `epic/7-codebase-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 - [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.7.0.0+0 – Repository story created)
   - Story: [`Story-000-uxr-repo.md`](Story-000-uxr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
-- [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.4+1 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established)
+- [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.5+2 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established; perpetual tasks T01 and T05 active with first maintenance cycle completed)
 - [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete)
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
@@ -67,15 +67,16 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-01-05 (v0.7.1.4+2 – Story COMPLETE: All non-perpetual tasks complete)
+**Last updated:** 2026-03-07 (v0.7.1.5+2 – Story COMPLETE: All non-perpetual tasks complete; perpetual tasks T01 and T05 active with first markdown maintenance cycle completed)
 
 **Goal:** Establish systematic processes for addressing IDE-flagged issues and organizing codebase maintenance work.
 
 **Tasks:**
-- [ ] **E7:S01:T01 – PERPETUAL: Address IDE-Flagged Error, Warning, and Info level problems** - PERPETUAL
-- [x] **E7:S01:T02 – Create maintenance task prioritization framework** - ✅ COMPLETE (v0.7.1.2+1)
-- [x] **E7:S01:T03 – Document maintenance workflow processes** - ✅ COMPLETE (v0.7.1.3+1)
-- [x] **E7:S01:T04 – Integrate maintenance tasks with Kanban framework** - ✅ COMPLETE (v0.7.1.4+1)
+- **E7:S01:T01** – PERPETUAL: Address IDE-Flagged Error, Warning, and Info level problems
+- **E7:S01:T02** – ✅ COMPLETE: Create maintenance task prioritization framework
+- **E7:S01:T03** – ✅ COMPLETE: Document maintenance workflow processes  
+- **E7:S01:T04** – ✅ COMPLETE: Integrate maintenance tasks with Kanban framework
+- **E7:S01:T05** – PERPETUAL: Markdown Maintenance (first maintenance cycle completed v0.7.1.5+2)
 
 > **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E7:S01:T01`, not `T01` alone)
 

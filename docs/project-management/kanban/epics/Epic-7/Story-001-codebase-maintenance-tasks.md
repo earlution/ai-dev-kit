@@ -26,6 +26,7 @@ housekeeping_policy: keep
 - [x] **E7:S01:T02 – Create maintenance task prioritization framework** - ✅ COMPLETE (v0.7.1.2+1 – Maintenance task prioritization framework created with severity, impact, effort dimensions, scoring formula, and Kanban integration)
 - [x] **E7:S01:T03 – Document maintenance workflow processes** - ✅ COMPLETE (v0.7.1.3+1 – Maintenance workflow processes documented: IDE-flagged issues workflow, prioritized maintenance workflow, scheduled maintenance workflow, emergency maintenance workflow, with Kanban and tool integration)
 - [x] **E7:S01:T04 – Integrate maintenance tasks with Kanban framework** - ✅ COMPLETE (v0.7.1.4+1 – Maintenance tasks integrated with Kanban framework: task creation, prioritization mapping, lifecycle tracking, Epic 4 integration, examples, and best practices documented)
+- [ ] **E7:S01:T05 – Markdown Maintenance (Perpetual Task)** - PERPETUAL (v0.7.1.5+1 – Perpetual task established for markdown maintenance across all documentation files)
 
 > **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E7:S01:T01`, `E7:S01:T02`)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  

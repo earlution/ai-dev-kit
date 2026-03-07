@@ -8,9 +8,9 @@ housekeeping_policy: keep
 
 # Dev Kit Versioning Policy
 
-**Status:** Active  
-**Owner:** AI Dev Kit / Book Project Lead  
-**Last Updated:** 2025-12-02  
+**Status:** Active
+**Owner:** AI Dev Kit / Book Project Lead
+**Last Updated:** 2025-12-02
 **Related Work:** Epic 1 (AI Dev Kit Core)
 
 ---
@@ -41,7 +41,7 @@ The dev-kit follows the framework’s **dual-version model**:
 
 In practice:
 
-- When talking to **external consumers**, the dev-kit presents **SemVer first**, optionally followed by the internal version in parentheses, for example:  
+- When talking to **external consumers**, the dev-kit presents **SemVer first**, optionally followed by the internal version in parentheses, for example:
   - `v0.3.19+2 (internal: v0.6.7.101+2)`.
 - When talking about **Kanban, tasks, and workflow internals**, the dev-kit uses `RC.EPIC.STORY.TASK+BUILD` directly.
 
@@ -59,8 +59,8 @@ This repo fully adopts the RC.EPIC.STORY.TASK+BUILD schema:
 
 Examples (dev-kit context):
 
-- `0.1.1.1+1` – Dev snapshot for **Epic 1**, Story 1, Task 1, first build  
-- `0.2.3.2+4` – Dev snapshot for **Epic 2**, Story 3, Task 2, 4th build  
+- `0.1.1.1+1` – Dev snapshot for **Epic 1**, Story 1, Task 1, first build
+- `0.2.3.2+4` – Dev snapshot for **Epic 2**, Story 3, Task 2, 4th build
 - `1.4.1.1+1` – Release Candidate 1 for **Epic 4**, Story 1, Task 1, first build
 
 > **Note:** Any references to versions like `0.9.21.3+1` in framework docs are **examples from other projects**, not dev-kit releases.
@@ -69,7 +69,7 @@ Examples (dev-kit context):
 
 ## 2.1 SemVer Mapping for External Releases
 
-**Status:** Implemented (v0.3.2.11+1)  
+**Status:** Implemented (v0.3.2.11+1)
 **Purpose:** Generate external-facing SemVer tags (`MAJOR.MINOR.PATCH+BUILD`) alongside internal Kanban-based version tags for GitHub releases.
 
 ### Problem Statement
@@ -99,7 +99,7 @@ This approach doesn't encode TASK, so multiple tasks in the same story can produ
 
 ### Task-Touch Derived Mapping (ADR-002)
 
-**Status:** Implemented (v0.6.7.18+1)  
+**Status:** Implemented (v0.6.7.18+1)
 **Purpose:** Provide strictly monotonic, collision-free SemVer mapping suitable for package managers.
 
 #### Problem Statement
@@ -803,7 +803,7 @@ The versioning strategy uses **two distinct timestamp layers** with **different 
 
 ### Layer 1: Main Summary Changelog (`CHANGELOG.md`)
 
-**Format:** Short date in `DD-MM-YY` format  
+**Format:** Short date in `DD-MM-YY` format
 **Example:** `## [0.3.1.1+2] - 02-12-25`
 
 **Purpose:**
@@ -819,7 +819,7 @@ The versioning strategy uses **two distinct timestamp layers** with **different 
 
 ### Layer 2: Detailed Changelog Archive (`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md`)
 
-**Format:** Full timestamp in `YYYY-MM-DD HH:MM:SS UTC` format  
+**Format:** Full timestamp in `YYYY-MM-DD HH:MM:SS UTC` format
 **Example:** `**Release Date:** 2025-12-02 00:00:00 UTC`
 
 **Purpose:**
@@ -1032,9 +1032,9 @@ The dev-kit policy:
 
 ## 14. Status and Maintenance
 
-**Status:** Active  
-**Owner:** AI Dev Kit Lead  
-**Last Updated:** 2025-12-02  
+**Status:** Active
+**Owner:** AI Dev Kit Lead
+**Last Updated:** 2025-12-02
 **Related Work:** Epic 3, Story 1 (Dev Kit Alignment with Versioning Framework)
 
 **Maintenance:**
@@ -1067,5 +1067,3 @@ The dev-kit policy:
 - `docs/architecture/standards-and-adrs/dev-kit-versioning-cookbook.md` - Practical worked examples
 - `docs/project-management/kanban/epics/Epic-3/Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md` (gap analysis)
 - `docs/project-management/kanban/epics/Epic-3/Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md` (findings)
-
-

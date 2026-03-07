@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 007 – ADK Implementation Analysis and Package Management
 
-**Status:** IN PROGRESS  
-**Priority:** CRITICAL  
-**Estimated Effort:** Large  
-**Created:** 2025-12-16  
-**Last updated:** 2026-02-22 (v0.6.7.103+4 – RW: UKW comprehensive-by-default, workflow docs)  
-**Version:** v0.6.7.103+4  
+**Status:** IN PROGRESS
+**Priority:** CRITICAL
+**Estimated Effort:** Large
+**Created:** 2025-12-16
+**Last updated:** 2026-02-22 (v0.6.7.103+4 – RW: UKW comprehensive-by-default, workflow docs)
+**Version:** v0.6.7.103+4
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -23,84 +23,52 @@ housekeeping_policy: keep
 ## Task Checklist
 - [x] **E6:S07:T00 – Story creation and comprehensive structure documentation** ✅ COMPLETE
 
-
-
 - [x] **E6:S07:T01 – Comprehensive ADK implementation analysis across all projects** ✅ COMPLETE (10 project reports + 4 granular analyses + 6 synthesis reports completed)
-
-
 
 - [x] **E6:S07:T02 – Investigate proper package management (single package file, hash verification)** - ✅ COMPLETE (v0.6.7.2+1 – Investigation complete: package management approaches evaluated, tar.gz design, SHA-256 hash verification, security considerations, design specs created)
 
-
-
 - [x] **E6:S07:T03 – Design pre-release feedback mechanism** - ✅ COMPLETE (v0.6.7.3+1 – Feedback mechanism design, user guide, and template created)
-
-
 
 - [x] **E6:S07:T04 – Create package management implementation plan** - ✅ COMPLETE (v0.6.7.10+17 – FR-024 IDE/Linter check before commit feature request created)
 
-
-
 - [x] **E6:S07:T05 – Implement feedback mechanism** - ✅ COMPLETE (v0.6.7.5+1)
-
-
 
 - [x] **E6:S07:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.7.6+20 – All deliverables verified complete: 7 meta-analyses, executive summary, all 4 canonical framework designs)
   - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 
-
-
 - [x] **E6:S07:T07 – Implement framework hardening recommendations** - ✅ COMPLETE (v0.6.7.7+6 – All phases complete: Epic 9→Epic 24, installer validation, rw-config.yaml, .cursorrules, installation instructions)
   - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
 
-
-
 - [x] **E6:S07:T09 – Review and Prioritize Package Management Investigation Findings** - ✅ COMPLETE (v0.6.7.9+1 – Prioritization review complete: findings reviewed, recommendations validated and prioritized, roadmap created)
   - Task: [`T09-review-and-prioritize-package-management-investigation.md`](T09-review-and-prioritize-package-management-investigation.md)
-
-
 
 - [x] **E6:S07:T11 – Changelog Management and Archival Workflow** - ✅ COMPLETE (v0.6.7.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE)
   - Task: [`T11-changelog-management-and-archival-workflow.md`](T11-changelog-management-and-archival-workflow.md)
   - **Feature Request:** [FR-025](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
 
-
-
 - [x] **E6:S07:T13 – Canonical CMW Perpetual Task** - ✅ COMPLETE (v0.6.7.13+2 – All phases complete: CMW perpetual task pattern canonicalized)
   - Task: [`T13-canonical-cmw-perpetual-task.md`](T13-canonical-cmw-perpetual-task.md)
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
-
-
 
 - [x] **E6:S07:T14 – Add CMW to Workflow Management Package Documentation** - ✅ COMPLETE (v0.6.7.14+1 – CMW documentation added to package README, all acceptance criteria met)
   - Task: [`T14-add-cmw-to-workflow-management-package-documentation.md`](T14-add-cmw-to-workflow-management-package-documentation.md)
   - **Feature Request:** [FR-027](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)
 
-
-
 - [x] **E6:S07:T15 – Cursor IDE Performance Considerations Awareness** - ✅ COMPLETE (v0.6.7.15+1 – Implementation complete: Awareness documentation created and framework guidance updated)
   - Task: [`T15-cursor-ide-performance-considerations-awareness.md`](T15-cursor-ide-performance-considerations-awareness.md)
   - **Feature Request:** [FR-028](../../fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)
-
-
 
 - [x] **E6:S07:T16 – Harden CMW Ordering Before Archival** - ✅ COMPLETE (v0.6.7.16+1 – All phases complete: Step 3.5 added to CMW, ordering fixed before archival)
   - Task: [`T16-harden-cmw-ordering-before-archival.md`](T16-harden-cmw-ordering-before-archival.md)
   - **Analysis Document:** [`docs/analysis/cmw-ordering-flaw-analysis.md`](../../../../analysis/cmw-ordering-flaw-analysis.md)
 
-
-
 - [ ] **E6:S07:T18 – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs (Cursor TODO Migration)** - TODO
   - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
-
-
 
 - [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+32 – UKW: bookkeeping, checklist sorting)
   - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
   - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)
-
-
 
 - [ ] **E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.102+6 – Perpetual docs update: runbooks, policy)
   - Task: [`T102-changelog-maintenance-workflow-cmw.md`](T102-changelog-maintenance-workflow-cmw.md)
@@ -108,12 +76,22 @@ housekeeping_policy: keep
   - **Migration:** Task migrated from T12 to T102 as part of repository story abstract space resolution (E9:S01:T08)
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
 
-
-
 - [ ] **E6:S07:T103 – Release Workflow (RW) Maintenance - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.103+4 – UKW comprehensive-by-default, workflow docs)
   - Task: [`T103-release-workflow-maintenance-perpetual-task.md`](T103-release-workflow-maintenance-perpetual-task.md)
   - **Note:** This is a perpetual maintenance task. RW maintenance releases (Step 7 fixes, validator updates, doc corrections) are attributed to T103 when not tied to a specific feature task.
   - **Feature Request:** [FR-041](../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
+
+- [ ] **E6:S07:T104 – Release Automation Audit** - TODO
+  - Task: [`T104-release-automation-audit.md`](T104-release-automation-audit.md)
+  - **Scope:** Audit RW/PVW validators, GitHub Actions, badge workflow, GitHub Release script, and required secrets for compatibility with task-touch SemVer tagging
+
+- [ ] **E6:S07:T105 – Release Runbook Creation** - TODO
+  - Task: [`T105-release-runbook-creation.md`](T105-release-runbook-creation.md)
+  - **Scope:** Create comprehensive runbook with exact commands and order, respecting "no manual commit/push" policy
+
+- [ ] **E6:S07:T106 – Windsurf Migration: .cursorrules to Workflow Equivalents** - TODO
+  - Task: [`T106-windsurf-migration-cursorrules-to-workflows.md`](T106-windsurf-migration-cursorrules-to-workflows.md)
+  - **Scope:** Map key policies/workflows to Windsurf/Cascade equivalents, including system instructions and developer workflows
 
 ---
 
@@ -159,7 +137,7 @@ Multiple projects have implemented ai-dev-kit (ADK) frameworks at various versio
 
 ## Goal
 
-**Primary Goal:**  
+**Primary Goal:**
 Conduct comprehensive analysis of all projects that have implemented ADK frameworks, identify implementation issues and patterns, investigate proper package management, and design feedback mechanisms to inform ADK hardening before continued development.
 
 **Success Criteria:**
@@ -177,10 +155,10 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T00 – Story creation and comprehensive structure documentation
 
-**Status:** ✅ COMPLETE  
-**Priority:** HIGH  
-**Dependencies:** None  
-**Estimated Effort:** Small  
+**Status:** ✅ COMPLETE
+**Priority:** HIGH
+**Dependencies:** None
+**Estimated Effort:** Small
 **Version:** v0.6.7.0+1
 
 **Input:** User requirements, existing comprehensive project analysis framework
@@ -203,13 +181,13 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T01 – Comprehensive ADK implementation analysis across all projects
 
-**Status:** ✅ COMPLETE  
-**Priority:** CRITICAL  
-**Dependencies:** E6:S07:T00  
-**Estimated Effort:** VERY LARGE  
+**Status:** ✅ COMPLETE
+**Priority:** CRITICAL
+**Dependencies:** E6:S07:T00
+**Estimated Effort:** VERY LARGE
 **Version:** v0.6.7.1+1
 
-**Input:** 
+**Input:**
 - All projects in `/Users/rms/Documents/projects`
 - Comprehensive ADK analysis framework
 - ADK framework source code (canonical structures)
@@ -232,7 +210,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Classify implementation type (Git submodule, copy-paste, etc.)
 
 2. **Deep Trawl - Per Project:**
-   
+
    **Kanban Structure (E/S/T):**
    - Read ALL Epic documents
    - Read ALL Story documents
@@ -241,7 +219,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Compare to ADK canonical structure
    - Measure distance from canonical
    - Identify good/bad practices
-   
+
    **Knowledge Base (KB):**
    - Map entire KB directory structure
    - Analyze document organization
@@ -249,7 +227,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Analyze cross-referencing patterns
    - Compare to ADK canonical KB
    - Identify good/bad practices
-   
+
    **Cursor Rules (`.cursorrules`):**
    - Read all `.cursorrules` files
    - Analyze structure and sections
@@ -257,14 +235,14 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Check ADK integration
    - Compare to ADK canonical
    - Identify good/bad practices
-   
+
    **CI/CD Configurations:**
    - Read all workflow configuration files (`.github/workflows/`, `.gitlab-ci.yml`, etc.)
    - Analyze pipeline definitions
    - Check ADK workflow integration
    - Identify custom workflows
    - Compare to ADK canonical
-   
+
    **Workflow Definitions:**
    - Read all workflow definition files
    - Read workflow scripts
@@ -272,7 +250,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Identify customizations
    - Compare to ADK canonical
    - Identify drift
-   
+
    **Scripts:**
    - Find all scripts used by workflows/Kanban/KB
    - Read and analyze scripts
@@ -347,9 +325,9 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T02 – Investigate proper package management (single package file, hash verification)
 
-**Status:** ✅ COMPLETE (v0.6.7.2+1)  
-**Priority:** CRITICAL  
-**Dependencies:** E6:S07:T01 (informs requirements)  
+**Status:** ✅ COMPLETE (v0.6.7.2+1)
+**Priority:** CRITICAL
+**Dependencies:** E6:S07:T01 (informs requirements)
 **Estimated Effort:** MEDIUM-LARGE
 
 **Input:**
@@ -420,9 +398,9 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T03 – Design pre-release feedback mechanism
 
-**Status:** ✅ COMPLETE (v0.6.7.3+1)  
-**Priority:** HIGH  
-**Dependencies:** E6:S07:T01, E6:S07:T02  
+**Status:** ✅ COMPLETE (v0.6.7.3+1)
+**Priority:** HIGH
+**Dependencies:** E6:S07:T01, E6:S07:T02
 **Estimated Effort:** MEDIUM
 
 **Input:**
@@ -482,9 +460,9 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T09 – Review and Prioritize Package Management Investigation Findings
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Dependencies:** E6:S07:T02  
+**Status:** TODO
+**Priority:** HIGH
+**Dependencies:** E6:S07:T02
 **Estimated Effort:** SMALL-MEDIUM
 
 **Input:**
@@ -544,9 +522,9 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T04 – Create package management implementation plan
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Dependencies:** E6:S07:T02, E6:S07:T09, E6:S07:T03  
+**Status:** TODO
+**Priority:** HIGH
+**Dependencies:** E6:S07:T02, E6:S07:T09, E6:S07:T03
 **Estimated Effort:** MEDIUM
 
 **Input:**
@@ -605,9 +583,9 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T05 – Implement feedback mechanism
 
-**Status:** ✅ COMPLETE (v0.6.7.5+1)  
-**Priority:** MEDIUM  
-**Dependencies:** E6:S07:T03  
+**Status:** ✅ COMPLETE (v0.6.7.5+1)
+**Priority:** MEDIUM
+**Dependencies:** E6:S07:T03
 **Estimated Effort:** MEDIUM
 
 **Input:**
@@ -655,9 +633,9 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T06 – Cross-project meta-analysis and canonical framework design
 
-**Status:** TODO  
-**Priority:** CRITICAL  
-**Dependencies:** E6:S07:T01 (requires all project reports and granular analyses)  
+**Status:** TODO
+**Priority:** CRITICAL
+**Dependencies:** E6:S07:T01 (requires all project reports and granular analyses)
 **Estimated Effort:** VERY LARGE
 
 **Input:**
@@ -942,9 +920,9 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T07 – Implement framework hardening recommendations
 
-**Status:** TODO  
-**Priority:** CRITICAL  
-**Dependencies:** E6:S07:T01 (requires hardening recommendations from analysis)  
+**Status:** TODO
+**Priority:** CRITICAL
+**Dependencies:** E6:S07:T01 (requires hardening recommendations from analysis)
 **Estimated Effort:** LARGE
 
 **Input:**
@@ -1074,7 +1052,6 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2025-12-18 (v0.6.7.7+1 – T07 created: Framework hardening implementation task)  
-**Version:** v0.6.7.7+1  
+**Last Updated:** 2025-12-18 (v0.6.7.7+1 – T07 created: Framework hardening implementation task)
+**Version:** v0.6.7.7+1
 **Status:** IN PROGRESS
-
