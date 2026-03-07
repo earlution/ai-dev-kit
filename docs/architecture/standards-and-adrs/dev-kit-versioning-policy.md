@@ -91,6 +91,67 @@ Internal versioning (`RC.EPIC.STORY.TASK+BUILD`) is semantically meaningful inte
 - Internal: `0.4.14.2+1` → SemVer: `0.4.34+1` (Epic 4 first seen → MINOR=4, Story 14 in Epic 4 → PATCH=34)
 - Internal: `0.9.1.8+10` → SemVer: `0.9.60+10` (Epic 9 first seen → MINOR=9, Story 1 in Epic 9 → PATCH=60)
 
+### Limitations
+
+This approach doesn't encode TASK, so multiple tasks in the same story can produce SemVer collisions (e.g., `0.6.7.101+5`, `0.6.7.102+5`, `0.6.7.103+5` all map to `0.6.52+5`).
+
+---
+
+### Task-Touch Derived Mapping (ADR-002)
+
+**Status:** Implemented (v0.6.7.18+1)  
+**Purpose:** Provide strictly monotonic, collision-free SemVer mapping suitable for package managers.
+
+#### Problem Statement
+
+Registry-based mapping can cause SemVer tag collisions when multiple tasks within the same epic/story are released with the same BUILD number, violating the "1 internal → 1 SemVer" expectation.
+
+#### Solution
+
+Task-Touch Derived Mapping uses a global counter that increments each time a task is "touched" by a release, ensuring unique SemVer for every internal version.
+
+#### Task-Touch Algorithm
+
+**Mapping Formula:**
+- **MAJOR** = RC (direct mapping: 0 → 0, 1 → 1, etc.)
+- **MINOR** = count of epics signed off (per RC)
+- **PATCH** = global task-touch counter (increments once per RW release)
+- **BUILD** = Preserved from internal version
+
+#### Example Conversions
+
+Assuming 6 epics signed off for RC 0 and task-touch counter starts at 1:
+- Internal: `0.6.7.101+5` → SemVer: `0.6.1+5` (first task touch)
+- Internal: `0.3.2.12+2` → SemVer: `0.6.2+2` (second task touch)
+- Internal: `0.2.13.7+1` → SemVer: `0.6.3+1` (third task touch)
+- Internal: `0.6.7.103+5` → SemVer: `0.6.4+5` (fourth task touch)
+
+#### Benefits
+
+- **Zero Collisions**: Each internal version maps to exactly one SemVer
+- **Strict Monotonicity**: PATCH always increases (package-manager friendly)
+- **1:1 Traceability**: Direct mapping between internal and external versions
+- **Deterministic**: Given repository history, mapping is reproducible
+
+#### Configuration
+
+Task-Touch mapping is configured via `rw-config.yaml`:
+
+```yaml
+# SemVer mapping strategy: "registry" (default) or "task_touch"
+semver_mapping_strategy: registry
+```
+
+#### Migration
+
+Existing projects can migrate by:
+1. Analyzing git history to compute initial task-touch counter
+2. Running migration utility to backfill counters
+3. Switching configuration to `task_touch` mode
+4. Verifying no collisions in test environment
+
+---
+
 ### Registry Structure
 
 SemVer mappings are stored in `semver-registry.yaml` (project root):

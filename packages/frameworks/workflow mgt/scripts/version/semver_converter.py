@@ -27,6 +27,53 @@ from pathlib import Path
 from typing import Tuple, Dict, Any, Optional
 
 
+def load_rw_config() -> Dict[str, Any]:
+    """Load RW configuration from YAML file."""
+    # Start from script location and walk up to find project root
+    current = Path(__file__).parent
+    while current != current.parent:
+        config_file = current / "rw-config.yaml"
+        if config_file.exists():
+            break
+        # Also check one level up (common project root location)
+        parent_config = current.parent / "rw-config.yaml"
+        if parent_config.exists():
+            config_file = parent_config
+            break
+        current = current.parent
+    
+    # Default: assume project root is 4 levels up from scripts/version/
+    if not 'config_file' in locals():
+        config_file = Path(__file__).parent.parent.parent.parent.parent / "rw-config.yaml"
+    
+    if not config_file.exists():
+        return {}
+    
+    try:
+        with open(config_file, 'r', encoding='utf-8') as f:
+            return yaml.safe_load(f) or {}
+    except Exception as e:
+        print(f"⚠️  Warning: Failed to load RW config: {e}")
+        return {}
+
+
+def get_semver_mapping_strategy() -> str:
+    """
+    Get the configured SemVer mapping strategy.
+    
+    Returns:
+        "registry" (default) or "task_touch"
+    """
+    config = load_rw_config()
+    strategy = config.get("semver_mapping_strategy", "registry")
+    
+    if strategy not in ["registry", "task_touch"]:
+        print(f"⚠️  Warning: Invalid semver_mapping_strategy '{strategy}', using 'registry'")
+        return "registry"
+    
+    return strategy
+
+
 def find_registry_file() -> Path:
     """Find semver-registry.yaml in project root."""
     # Start from script location and walk up to find project root
@@ -49,28 +96,75 @@ def load_semver_registry() -> Dict[str, Any]:
     registry_file = find_registry_file()
     
     if not registry_file.exists():
-        # Create empty registry structure
+        # Create empty registry structure with task-touch support
         return {
-            "rc_0": {"epic_to_minor": {}, "story_to_patch": {}},
-            "rc_1": {"epic_to_minor": {}, "story_to_patch": {}}
+            "rc_0": {
+                "epic_to_minor": {}, 
+                "story_to_patch": {},
+                "task_touch_mode": {
+                    "epic_count": 0,
+                    "task_touch_counter": 0,
+                    "mapping_history": []
+                }
+            },
+            "rc_1": {
+                "epic_to_minor": {}, 
+                "story_to_patch": {},
+                "task_touch_mode": {
+                    "epic_count": 0,
+                    "task_touch_counter": 0,
+                    "mapping_history": []
+                }
+            }
         }
     
     try:
         with open(registry_file, 'r', encoding='utf-8') as f:
             registry = yaml.safe_load(f) or {}
         
-        # Ensure rc_0 and rc_1 exist
-        if "rc_0" not in registry:
-            registry["rc_0"] = {"epic_to_minor": {}, "story_to_patch": {}}
-        if "rc_1" not in registry:
-            registry["rc_1"] = {"epic_to_minor": {}, "story_to_patch": {}}
+        # Ensure rc_0 and rc_1 exist with full structure
+        for rc_key in ["rc_0", "rc_1"]:
+            if rc_key not in registry:
+                registry[rc_key] = {"epic_to_minor": {}, "story_to_patch": {}}
+            
+            rc_scope = registry[rc_key]
+            
+            # Add task_touch_mode section if missing
+            if "task_touch_mode" not in rc_scope:
+                rc_scope["task_touch_mode"] = {
+                    "epic_count": 0,
+                    "task_touch_counter": 0,
+                    "mapping_history": []
+                }
+            
+            # Ensure backward compatibility
+            if "epic_to_minor" not in rc_scope:
+                rc_scope["epic_to_minor"] = {}
+            if "story_to_patch" not in rc_scope:
+                rc_scope["story_to_patch"] = {}
         
         return registry
     except Exception as e:
         print(f"⚠️  Warning: Failed to load registry: {e}")
         return {
-            "rc_0": {"epic_to_minor": {}, "story_to_patch": {}},
-            "rc_1": {"epic_to_minor": {}, "story_to_patch": {}}
+            "rc_0": {
+                "epic_to_minor": {}, 
+                "story_to_patch": {},
+                "task_touch_mode": {
+                    "epic_count": 0,
+                    "task_touch_counter": 0,
+                    "mapping_history": []
+                }
+            },
+            "rc_1": {
+                "epic_to_minor": {}, 
+                "story_to_patch": {},
+                "task_touch_mode": {
+                    "epic_count": 0,
+                    "task_touch_counter": 0,
+                    "mapping_history": []
+                }
+            }
         }
 
 
@@ -152,6 +246,136 @@ def convert_internal_to_semver(rc: int, epic: int, story: int, task: int, build:
     return (major, minor, patch, build_semver)
 
 
+def get_epic_count(rc: int) -> int:
+    """
+    Get the count of epics signed off for a given RC.
+    
+    Args:
+        rc: Release Candidate number
+        
+    Returns:
+        Number of epics signed off for this RC
+    """
+    registry = load_semver_registry()
+    rc_key = f"rc_{rc}"
+    
+    if rc_key not in registry:
+        return 0
+    
+    rc_scope = registry[rc_key]
+    task_touch_mode = rc_scope.get("task_touch_mode", {})
+    
+    return task_touch_mode.get("epic_count", 0)
+
+
+def set_epic_count(rc: int, count: int) -> None:
+    """
+    Set the epic count for a given RC.
+    
+    Args:
+        rc: Release Candidate number
+        count: Number of epics signed off
+    """
+    registry = load_semver_registry()
+    rc_key = f"rc_{rc}"
+    
+    if rc_key not in registry:
+        registry[rc_key] = {"epic_to_minor": {}, "story_to_patch": {}, "task_touch_mode": {}}
+    
+    if "task_touch_mode" not in registry[rc_key]:
+        registry[rc_key]["task_touch_mode"] = {}
+    
+    registry[rc_key]["task_touch_mode"]["epic_count"] = count
+    save_semver_registry(registry)
+
+
+def get_task_touch_counter(rc: int) -> int:
+    """
+    Get the current task-touch counter for a given RC.
+    
+    Args:
+        rc: Release Candidate number
+        
+    Returns:
+        Current task-touch counter value
+    """
+    registry = load_semver_registry()
+    rc_key = f"rc_{rc}"
+    
+    if rc_key not in registry:
+        return 0
+    
+    rc_scope = registry[rc_key]
+    task_touch_mode = rc_scope.get("task_touch_mode", {})
+    
+    return task_touch_mode.get("task_touch_counter", 0)
+
+
+def increment_task_touch_counter(rc: int) -> int:
+    """
+    Increment the task-touch counter and return the new value.
+    
+    Args:
+        rc: Release Candidate number
+        
+    Returns:
+        New task-touch counter value after increment
+    """
+    registry = load_semver_registry()
+    rc_key = f"rc_{rc}"
+    
+    if rc_key not in registry:
+        registry[rc_key] = {"epic_to_minor": {}, "story_to_patch": {}, "task_touch_mode": {}}
+    
+    if "task_touch_mode" not in registry[rc_key]:
+        registry[rc_key]["task_touch_mode"] = {"epic_count": 0, "task_touch_counter": 0, "mapping_history": []}
+    
+    task_touch_mode = registry[rc_key]["task_touch_mode"]
+    current_counter = task_touch_mode.get("task_touch_counter", 0)
+    new_counter = current_counter + 1
+    task_touch_mode["task_touch_counter"] = new_counter
+    
+    save_semver_registry(registry)
+    return new_counter
+
+
+def convert_internal_to_semver_task_touch(rc: int, epic: int, story: int, task: int, build: int) -> Tuple[int, int, int, int]:
+    """
+    Convert internal RC.EPIC.STORY.TASK+BUILD to SemVer using task-touch derived mapping.
+    
+    Uses Task-Touch Derived Mapping (ADR-002):
+    - MAJOR = RC (direct mapping)
+    - MINOR = count of epics signed off (per RC)
+    - PATCH = global task-touch counter (increments once per RW release)
+    - BUILD = preserved from internal version
+    
+    This provides strictly monotonic SemVer sequences suitable for package managers.
+    
+    Args:
+        rc: Release Candidate (0 = development, 1+ = release candidate)
+        epic: Epic number (not used in mapping, but preserved for reference)
+        story: Story number (not used in mapping, but preserved for reference)
+        task: Task number (not used in mapping, but preserved for reference)
+        build: Build number (preserved in SemVer)
+    
+    Returns:
+        Tuple of (major, minor, patch, build) for SemVer
+    """
+    # MAJOR = RC (direct mapping)
+    major = rc
+    
+    # MINOR = count of epics signed off (per RC)
+    minor = get_epic_count(rc)
+    
+    # PATCH = global task-touch counter (increment and use)
+    patch = increment_task_touch_counter(rc)
+    
+    # BUILD = preserved from internal version
+    build_semver = build
+    
+    return (major, minor, patch, build_semver)
+
+
 def format_semver(major: int, minor: int, patch: int, build: int) -> str:
     """Format SemVer as MAJOR.MINOR.PATCH+BUILD string."""
     return f"{major}.{minor}.{patch}+{build}"
@@ -214,12 +438,13 @@ def semver_to_internal(semver: str) -> Optional[Tuple[int, int, int, int, int]]:
     return (rc, epic, story, 0, build)
 
 
-def convert_version_string(internal_version: str) -> str:
+def convert_version_string(internal_version: str, strategy: Optional[str] = None) -> str:
     """
     Convert internal version string to SemVer string.
     
     Args:
         internal_version: Internal version string (e.g., "0.6.7.101+24")
+        strategy: Mapping strategy ("registry", "task_touch", or None to use config)
     
     Returns:
         SemVer string (e.g., "0.1.1+24")
@@ -240,7 +465,16 @@ def convert_version_string(internal_version: str) -> str:
     story = int(version_parts[2])
     task = int(version_parts[3])
     
-    major, minor, patch, build_semver = convert_internal_to_semver(rc, epic, story, task, build)
+    # Determine strategy
+    if strategy is None:
+        strategy = get_semver_mapping_strategy()
+    
+    # Convert based on strategy
+    if strategy == "task_touch":
+        major, minor, patch, build_semver = convert_internal_to_semver_task_touch(rc, epic, story, task, build)
+    else:  # registry (default)
+        major, minor, patch, build_semver = convert_internal_to_semver(rc, epic, story, task, build)
+    
     return format_semver(major, minor, patch, build_semver)
 
 
