@@ -357,7 +357,14 @@ def validate_doc_init_build(version: str, config: Optional[Dict] = None) -> Tupl
     
     # Get project root
     project_root = Path.cwd()
-    
+
+    allowed_non_doc_relpaths = set()
+    version_file_path = get_version_file_path(config)
+    try:
+        allowed_non_doc_relpaths.add(str(version_file_path.relative_to(project_root)))
+    except Exception:
+        pass
+
     # Get changed files
     changed_files = get_changed_files(project_root)
     
@@ -371,6 +378,14 @@ def validate_doc_init_build(version: str, config: Optional[Dict] = None) -> Tupl
     for file_path in changed_files:
         # Skip if file doesn't exist (might be deleted)
         if not file_path.exists():
+            continue
+
+        try:
+            rel_path = str(file_path.relative_to(project_root))
+        except ValueError:
+            rel_path = str(file_path)
+
+        if rel_path in allowed_non_doc_relpaths:
             continue
         
         if not is_documentation_file(file_path):
