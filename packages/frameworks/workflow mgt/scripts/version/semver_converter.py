@@ -74,6 +74,109 @@ def get_semver_mapping_strategy() -> str:
     return strategy
 
 
+def get_rw_tag_info(internal_version: str) -> Dict[str, str]:
+    """
+    Get tagging information for Release Workflow based on mapping strategy.
+    
+    Args:
+        internal_version: Internal version string (e.g., "0.6.7.18+2")
+    
+    Returns:
+        Dictionary with tagging information:
+        - strategy: "registry" or "task_touch"
+        - primary_tag: Main tag to create (e.g., "v0.6.7.18+2" or "v0.9.5")
+        - internal_tag: Internal version tag (optional, for traceability)
+        - semver_full: Full SemVer with BUILD (e.g., "0.9.5+2")
+        - tag_message: Tag message content
+    """
+    strategy = get_semver_mapping_strategy()
+    
+    if strategy == "task_touch":
+        # Task-touch mode: use SemVer as primary tag
+        semver_full = convert_version_string(internal_version, strategy="task_touch")
+        semver_tag = semver_full.split('+')[0]  # Remove BUILD for tag name
+        
+        return {
+            "strategy": "task_touch",
+            "primary_tag": f"v{semver_tag}",
+            "internal_tag": f"v{internal_version}",
+            "semver_full": semver_full,
+            "tag_message": f"Release {semver_tag} (Internal: {internal_version})"
+        }
+    else:
+        # Registry mode: use internal version as tag
+        return {
+            "strategy": "registry", 
+            "primary_tag": f"v{internal_version}",
+            "internal_tag": None,
+            "semver_full": None,
+            "tag_message": f"Release {internal_version}"
+        }
+
+
+def create_rw_tags(internal_version: str, create_internal_tag: bool = True) -> Dict[str, str]:
+    """
+    Create appropriate tags for Release Workflow based on mapping strategy.
+    
+    Args:
+        internal_version: Internal version string (e.g., "0.6.7.18+2")
+        create_internal_tag: Whether to create internal tag in task-touch mode
+    
+    Returns:
+        Dictionary with created tags information
+    """
+    tag_info = get_rw_tag_info(internal_version)
+    created_tags = []
+    
+    # Create primary tag
+    primary_tag = tag_info["primary_tag"]
+    tag_message = tag_info["tag_message"]
+    
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["git", "tag", "-a", primary_tag, "-m", tag_message],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        created_tags.append(primary_tag)
+        print(f"✅ Created primary tag: {primary_tag}")
+    except subprocess.CalledProcessError as e:
+        if "already exists" in e.stderr:
+            print(f"⚠️  Tag {primary_tag} already exists")
+        else:
+            raise e
+    
+    # Create internal tag for task-touch mode (optional)
+    if tag_info["strategy"] == "task_touch" and create_internal_tag and tag_info["internal_tag"]:
+        internal_tag = tag_info["internal_tag"]
+        internal_message = f"Internal version for {tag_info['primary_tag']}"
+        
+        try:
+            result = subprocess.run(
+                ["git", "tag", "-a", internal_tag, "-m", internal_message],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            created_tags.append(internal_tag)
+            print(f"✅ Created internal tag: {internal_tag}")
+        except subprocess.CalledProcessError as e:
+            if "already exists" in e.stderr:
+                print(f"⚠️  Internal tag {internal_tag} already exists")
+            else:
+                raise e
+    
+    return {
+        "strategy": tag_info["strategy"],
+        "primary_tag": primary_tag,
+        "internal_tag": tag_info["internal_tag"] if tag_info["internal_tag"] else None,
+        "created_tags": created_tags,
+        "semver_full": tag_info["semver_full"]
+    }
+
+
 def find_registry_file() -> Path:
     """Find semver-registry.yaml in project root."""
     # Start from script location and walk up to find project root

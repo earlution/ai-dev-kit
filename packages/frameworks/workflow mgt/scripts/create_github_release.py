@@ -14,6 +14,26 @@ import requests
 from typing import Optional, Dict
 from pathlib import Path
 
+# Add semver_converter to path for strategy detection
+script_dir = Path(__file__).parent
+sys.path.insert(0, str(script_dir / "version"))
+
+try:
+    from semver_converter import get_rw_tag_info, get_semver_mapping_strategy
+except ImportError:
+    # Fallback if semver_converter not available
+    def get_semver_mapping_strategy() -> str:
+        return "registry"
+    
+    def get_rw_tag_info(internal_version: str) -> Dict[str, str]:
+        return {
+            "strategy": "registry",
+            "primary_tag": f"v{internal_version}",
+            "internal_tag": None,
+            "semver_full": None,
+            "tag_message": f"Release {internal_version}"
+        }
+
 # Load .env.local if it exists
 def load_env_local():
     """Load environment variables from .env.local file."""
@@ -173,6 +193,106 @@ def update_release(
     return response.json()
 
 
+def get_release_tag_info(internal_version: str, semver_tag: Optional[str] = None) -> Dict[str, str]:
+    """
+    Get release tag information based on strategy or explicit tag.
+    
+    Args:
+        internal_version: Internal version (e.g., "0.6.7.18+2")
+        semver_tag: Optional explicit SemVer tag (e.g., "v0.9.5")
+    
+    Returns:
+        Dictionary with tag information for release
+    """
+    if semver_tag:
+        # Explicit tag provided, use it
+        strategy = get_semver_mapping_strategy()
+        return {
+            "strategy": strategy,
+            "primary_tag": semver_tag,
+            "internal_tag": f"v{internal_version}" if strategy == "task_touch" else None,
+            "semver_full": semver_tag.lstrip('v'),
+            "tag_message": f"Release {semver_tag}"
+        }
+    else:
+        # Auto-detect based on strategy
+        return get_rw_tag_info(internal_version)
+
+
+def create_or_update_release_auto(
+    github_token: str,
+    repo: str,
+    internal_version: str,
+    summary: str,
+    epic: str,
+    story: str,
+    task: str,
+    semver_tag: Optional[str] = None,
+    verbose: bool = False
+) -> Optional[Dict]:
+    """
+    Create or update GitHub release using automatic tag detection.
+    
+    Args:
+        github_token: GitHub API token
+        repo: Repository name (owner/repo)
+        internal_version: Internal version (e.g., "0.6.7.18+2")
+        summary: Release summary
+        epic: Epic identifier
+        story: Story identifier
+        task: Task identifier
+        semver_tag: Optional explicit SemVer tag
+        verbose: Enable verbose output
+    
+    Returns:
+        GitHub release data or None if failed
+    """
+    tag_info = get_release_tag_info(internal_version, semver_tag)
+    primary_tag = tag_info["primary_tag"]
+    
+    if verbose:
+        strategy = tag_info["strategy"]
+        print(f"   Using strategy: {strategy}")
+        print(f"   Primary tag: {primary_tag}")
+        if tag_info["internal_tag"]:
+            print(f"   Internal tag: {tag_info['internal_tag']}")
+    
+    # Try to update existing release first
+    existing = get_release_by_tag(github_token, repo, primary_tag, verbose)
+    
+    if existing:
+        if verbose:
+            print(f"   Updating existing release for tag: {primary_tag}")
+        
+        return update_release(
+            github_token=github_token,
+            repo=repo,
+            release_id=existing["id"],
+            semver_tag=primary_tag,
+            internal_version=internal_version,
+            summary=summary,
+            epic=epic,
+            story=story,
+            task=task,
+            verbose=verbose
+        )
+    else:
+        if verbose:
+            print(f"   Creating new release for tag: {primary_tag}")
+        
+        return create_release(
+            github_token=github_token,
+            repo=repo,
+            semver_tag=primary_tag,
+            internal_version=internal_version,
+            summary=summary,
+            epic=epic,
+            story=story,
+            task=task,
+            verbose=verbose
+        )
+
+
 def main() -> int:
     """Main execution function."""
     try:
@@ -181,13 +301,11 @@ def main() -> int:
         )
         parser.add_argument(
             "--semver-tag",
-            required=True,
-            help="SemVer tag name (e.g., v0.3.19+3)"
+            help="SemVer tag name (e.g., v0.3.19+3). If not provided, will auto-detect based on strategy."
         )
         parser.add_argument(
             "--internal-version",
-            required=True,
-            help="Internal version (e.g., v0.3.2.11+3)"
+            help="Internal version (e.g., 0.3.2.11+3). Required for auto-detection mode."
         )
         parser.add_argument(
             "--summary",
@@ -197,21 +315,22 @@ def main() -> int:
         parser.add_argument(
             "--epic",
             required=True,
-            help="Epic number"
+            help="Epic identifier (e.g., E2)"
         )
         parser.add_argument(
             "--story",
             required=True,
-            help="Story number"
+            help="Story identifier (e.g., S13)"
         )
         parser.add_argument(
             "--task",
             required=True,
-            help="Task number"
+            help="Task identifier (e.g., T07)"
         )
         parser.add_argument(
             "--repo",
-            help="GitHub repository (owner/repo). Defaults to GITHUB_REPOSITORY env var"
+            default="earlution/ai-dev-kit",
+            help="Repository name (default: earlution/ai-dev-kit)"
         )
         parser.add_argument(
             "--token",
@@ -257,65 +376,54 @@ def main() -> int:
             print(f"Internal version: {args.internal_version}")
             print(f"Repository: {repo}")
         
-        # Dry run mode
-        if args.dry_run:
-            print("✅ Dry run: Would create/update GitHub release")
-            print(f"   SemVer tag: {args.semver_tag}")
-            print(f"   Release name: {args.semver_tag}")
-            print(f"   Summary: {args.summary}")
-            return 0
-        
-        # Check for existing release
-        if args.verbose:
-            print(f"\n🔍 Checking for existing release: {args.semver_tag}")
-        
-        existing_release = get_release_by_tag(github_token, repo, args.semver_tag, args.verbose)
-        
-        if existing_release:
-            if args.verbose:
-                print(f"   ✅ Found existing release, updating...")
-            release = update_release(
-                github_token,
-                repo,
-                existing_release['id'],
-                args.semver_tag,
-                args.internal_version,
-                args.summary,
-                args.epic,
-                args.story,
-                args.task,
-                args.verbose
-            )
-        else:
-            if args.verbose:
-                print(f"   Release not found, creating new release...")
-            release = create_release(
-                github_token,
-                repo,
-                args.semver_tag,
-                args.internal_version,
-                args.summary,
-                args.epic,
-                args.story,
-                args.task,
-                args.verbose
-            )
-        
-        if not release:
+        # Validate arguments
+        if not args.semver_tag and not args.internal_version:
+            print("❌ Error: Either --semver-tag or --internal-version must be provided", file=sys.stderr)
             return 1
         
-        release_url = release.get('html_url', f"https://github.com/{repo}/releases/tag/{args.semver_tag}")
-        print(f"\n✅ GitHub release created/updated successfully!")
-        print(f"   Release: {release_url}")
-        if args.verbose:
-            print(f"   Release name: {release.get('name', args.semver_tag)}")
-            print(f"   Tag: {release.get('tag_name', args.semver_tag)}")
+        # Use auto-detection if internal version provided
+        if args.internal_version:
+            if args.verbose:
+                print(f"   Auto-detecting tag for internal version: {args.internal_version}")
+            
+            result = create_or_update_release_auto(
+                github_token=github_token,
+                repo=repo,
+                internal_version=args.internal_version,
+                summary=args.summary,
+                epic=args.epic,
+                story=args.story,
+                task=args.task,
+                semver_tag=args.semver_tag,
+                verbose=args.verbose
+            )
+        else:
+            # Use existing explicit tag mode
+            if args.verbose:
+                print(f"   Using explicit tag: {args.semver_tag}")
+            
+            result = create_or_update_release_auto(
+                github_token=github_token,
+                repo=repo,
+                internal_version="unknown",  # Placeholder
+                summary=args.summary,
+                epic=args.epic,
+                story=args.story,
+                task=args.task,
+                semver_tag=args.semver_tag,
+                verbose=args.verbose
+            )
         
-        return 0
-        
-    except KeyboardInterrupt:
-        print("\n❌ Upload cancelled by user", file=sys.stderr)
-        return 1
+        if result:
+            if args.verbose:
+                print(f"✅ Release created/updated successfully: {result['html_url']}")
+            else:
+                print(result['html_url'])
+            return 0
+        else:
+            print("❌ Failed to create/update release", file=sys.stderr)
+            return 1
+            
     except Exception as e:
         print(f"❌ Unexpected error: {e}", file=sys.stderr)
         return 1

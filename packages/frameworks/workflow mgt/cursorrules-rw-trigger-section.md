@@ -341,7 +341,14 @@ For each step, follow this pattern:
    - If on `main`, warn user and suggest switching to epic branch
    - Validators check version format, branch context alignment, changelog format, and version bump logic
 10. **Commit Changes** - Create commit with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
-11. **Create Git Tag** - Create annotated tag: `v{version}` with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
+11. **Create Git Tag** - Create annotated tag based on SemVer mapping strategy:
+   - **Default (Registry mode)**: Create tag `v{version}` with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
+   - **Task-touch mode**: Create SemVer tag `v{semver}` as primary tag with message: `Release {semver} (Internal: {version})\n\nEpic: {epic} | Story: {story} | Task: {task}`
+     - Optionally also create internal tag `v{version}` on same commit for traceability
+   - **Configuration**: Strategy detected from `rw-config.yaml` → `semver_mapping_strategy`
+   - **Examples**:
+     - Registry mode: `v0.6.7.18+2` (internal version tag)
+     - Task-touch mode: `v0.9.5` (SemVer tag, internal: `v0.6.7.18+2`)
 12. **Push to Remote** - Push epic branch and tag to origin (DO NOT push to main unless ready to deploy)
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
     - Example: `run_terminal_cmd(command="git push origin {branch} --tags", required_permissions=['network'])`
