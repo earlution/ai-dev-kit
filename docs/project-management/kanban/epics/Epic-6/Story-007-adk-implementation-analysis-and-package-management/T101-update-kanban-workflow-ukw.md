@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-03-07 (v0.6.7.101+33 – UKW: Comprehensive MoSCOW reprioritization, moved T104/T105 to Must Have, T106 to Should Have)  
+**Last updated:** 2026-03-09 (v0.6.7.101+34 – UKW: Documented Cascade whitelist security prompt issues as critical usability blocker affecting developer productivity)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+33
+**Version:** v0.6.7.101+34
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
-**Explanation:** This task represents ongoing kanban documentation synchronization work. High build numbers are expected and valid.
+**Explanation:** This task represents ongoing kanban documentation synchronization work. High BUILD numbers are expected and valid.
 
-**Progress:** UKW execution (v0.6.7.101+33) - Comprehensive MoSCOW reprioritization: moved E6:S07:T104/T105 to Must Have (critical release process tasks), E6:S07:T106 to Should Have (Windsurf migration), updated kanban board priorities and version tracking.  
+**Progress:** UKW execution (v0.6.7.101+34) - Documented Cascade whitelist security prompt issues as critical usability blocker. Identified that Cascade's whitelist feature is non-functional - security prompts appear for every command despite previous approvals. This creates constant micromanagement friction that prevents productive workflow execution. User focus shifted from project work to tool management. Created BR-039 with comprehensive documentation and video evidence. Added BR-039 to Must Have priority on FR/BR/UXR board.  
 **Code:** E6S06T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).
@@ -38,15 +38,23 @@ housekeeping_policy: keep
 This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All UKW-triggered Release Workflows (RW) are attributed to this task.
 
 **Purpose:**
+
 - Provide proper version attribution for UKW synchronization runs
+
 - Ensure semantic correctness (BUILD number = UKW run count, not feature iteration)
+
 - Enable build number warning suppression (high BUILD numbers expected)
+
 - Maintain clear traceability of kanban documentation synchronization work
 
 **Why Perpetual:**
+
 - UKW is an ongoing maintenance/synchronization workflow
+
 - Runs periodically to keep kanban docs in sync
+
 - Not tied to any single feature completion
+
 - Never "completes" - it's continuous maintenance work
 
 ---
@@ -54,15 +62,23 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 ## Problem Statement
 
 **Issue:** UKW releases were being incorrectly attributed to arbitrary tasks (e.g., T07) because:
+
 - UKW updates ALL kanban documents across the hierarchy
+
 - Attribution to any single feature task is arbitrary
+
 - BUILD number semantics break (UKW runs ≠ task iterations)
+
 - No mechanism for perpetual maintenance tasks
 
 **Solution:** Create dedicated perpetual task for UKW work:
+
 - All UKW-triggered RWs use T101 (perpetual task, 3-digit)
+
 - BUILD number = UKW synchronization run count
+
 - Clear attribution and traceability
+
 - Proper semantic meaning
 
 ---
@@ -72,17 +88,25 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 ### Task Structure
 
 **Perpetual Task Pattern:**
+
 - Status: IN PROGRESS (never changes to COMPLETE)
-- Task Type: Maintenance/Synchronization
-- Build Warning Suppression: Enabled
-- Version Pattern: `v0.6.6.8+{N}` where N = UKW run number
+
+- BUILD number increments with each UKW run
+
+- High build numbers expected and valid
+
+- Clear perpetual task identification (3-digit T101+)
 
 ### RW Attribution Logic
 
 **When UKW triggers RW:**
+
 1. Agent detects UKW context (user ran "UKW" then "RW")
+
 2. Automatically attributes release to T101 (perpetual task, 3-digit)
+
 3. Increments BUILD number (same task, increment BUILD)
+
 4. Suppresses build number warnings (perpetual task flag)
 
 ### Version Pattern
@@ -108,9 +132,13 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 ## Related Work
 
 - **Story:** E6:S07 - ADK Implementation Analysis and Package Management
+
 - **Workflow:** UKW (Update Kanban Workflow)
+
 - **Workflow:** RW (Release Workflow)
+
 - **Related Task:** T07 - Framework Hardening (previously incorrectly attributed UKW release before perpetual task pattern)
+
 - **Documentation:** `docs/analysis/ukw-versioning-reasoning-analysis.md`
 
 ---
