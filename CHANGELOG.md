@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.1.37+2] - 09-03-26
+
+E6:S01:T37+2 – Kanban Install Consumer Board Contamination - RELEASE COMPLETE: Comprehensive contamination detection and remediation tooling released for consumer use. All core components implemented, tested, and officially released.
+
+### Released
+- **Contamination Detector:** Classification rules for identifying dev-kit backlog contamination
+- **Remediation Tool:** Safe cleanup with dry-run defaults and archive-before-delete
+- **Prevention System:** Updated installer to prevent future contamination
+- **Validator Integration:** Automatic contamination detection and flagging
+- **Consumer Documentation:** Complete workflow guides and remediation instructions
+
+### Fixed
+- **Installation Safety:** Consumer projects can no longer create contaminated kanban boards
+- **Epic/Story/Task Isolation:** Proper separation between framework and consumer projects
+- **Forensic Guarantees:** Version markers and BR/FR traceability preserved
+- **Mental Model Clarity:** Consumer kanban trees are project-specific, not dev-kit mixed
+
+### Testing
+- **Unit Tests:** Detector classification rules validated
+- **Integration Tests:** End-to-end remediation idempotency verified
+- **Consumer Tests:** Fresh install behavior confirmed
+- **Safety Tests:** Archive-before-delete workflow validated
+
+### Impact
+- **Prevention:** ✅ Future installations cannot create contaminated boards
+- **Detection:** ✅ Existing contamination can be reliably identified and classified  
+- **Remediation:** ✅ Contaminated boards can be safely cleaned with full audit trail
+- **Validation:** ✅ Contamination is automatically detected and flagged
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.37+2.md)
+
 ## [0.6.6.2+7] - 09-03-26
 
 E6:S06:T02+7 – Implementation Cycle Workflow (ICW) Phase 1 Complete: Structured three-phase implementation workflow with specification definition, test design, and implementation planning phases. Core infrastructure implemented including workflow engine, templates, and system integration.
