@@ -15,16 +15,76 @@
 
 1. **DO NOT** run the deterministic script `scripts/release_workflow.py`
 2. **DO** execute the Release Workflow using the **intelligent agent-driven execution pattern**
-3. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists. This is the **single source of truth** for all project-specific paths. If config exists, use its values. If not, use placeholders/examples (backward compatibility).
-4. **Follow** the step-by-step guide below
-5. **🚨 MANDATORY: Start with Step 1: Branch Safety Check** - This is a **MANDATORY BLOCKING STEP** that MUST run before any file modifications
+3. **THINK FIRST, ACT SECOND** - Analyze the current state and make intelligent decisions
+4. **BE ADAPTIVE** - When things fail, find workarounds, don't just stop
+5. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists. This is the **single source of truth** for all project-specific paths. If config exists, use its values. If not, use placeholders/examples (backward compatibility).
+6. **🚨 MANDATORY: Start with Step 1: Branch Safety Check** - This is a **MANDATORY BLOCKING STEP** that MUST run before any file modifications
    - **CRITICAL:** Step 1 MUST run `validate_branch_context.py --strict` and check exit code
    - **CRITICAL:** If Step 1 fails (non-zero exit code), **DO NOT PROCEED** to Step 2
    - **CRITICAL:** If Step 1 fails, mark all steps as `cancelled` and stop workflow immediately
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
-6. **Execute all remaining steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
-7. **Document** each step's analysis, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 12 steps (plus optional Step 9.5 CMW, recommended Step 9.6 IDE check) (see below)
+7. **EXECUTE INTELLIGENTLY** - Use your AI capabilities to solve problems, don't just follow rigid steps
+8. **ADAPT AND RECOVER** - When scripts fail, find alternative approaches or implement manual workarounds
+9. **Document** each step's analysis, actions, and results
+10. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all steps (see below)
+
+**🧠 AGENT INTELLIGENCE REQUIREMENTS:**
+
+- **Problem Solving:** When a script fails, analyze why and find a solution
+- **Pattern Recognition:** Recognize when files are in unexpected locations/patterns
+- **Adaptive Execution:** Adjust your approach based on what actually exists vs. what should exist
+- **Manual Fallback:** When automation fails, implement the manual equivalent
+- **Context Awareness:** Understand the current state and make decisions accordingly
+- **Speed Optimization:** Complete the workflow in 1-2 minutes like Cursor did
+
+**🔧 DETERMINISTIC vs. INTELLIGENT WORK:**
+
+**DELEGATE TO SCRIPTS (Deterministic):**
+- Version file parsing (when file exists)
+- Git operations (add, commit, tag, push)
+- Simple text replacements
+- File existence checks
+
+**HANDLE WITH INTELLIGENCE (Adaptive):**
+- Pattern matching failures (find files manually)
+- Missing files (create from templates or skip gracefully)
+- Script errors (implement manual workarounds)
+- Configuration issues (use defaults or ask for clarification)
+- Path resolution problems (search intelligently)
+
+**🎯 SPECIFIC INTELLIGENT HANDLING EXAMPLES:**
+
+**Pattern Matching Failures (like update_kanban_docs.py):**
+- **Problem:** Script can't find `Story-006-feature-requests.md` with pattern `epics/Epic-6/Story-006-*.md`
+- **Intelligent Solution:** Search manually, find the file, implement the update directly
+- **Manual Fallback:** Update the Story and Epic documents with version info manually
+- **Don't Stop:** Continue with the workflow instead of failing completely
+- **✅ FIXED:** Pattern matching now uses kanban_root prefix and manual fallback discovery
+
+**File Discovery Issues:**
+- **Problem:** Script looks for files in wrong locations
+- **Intelligent Solution:** Use `find` and `glob` to locate files intelligently
+- **Adapt:** Use the actual file structure, not the expected one
+- **Continue:** Proceed with the found files
+
+**Script Execution Failures:**
+- **Problem:** Script fails with cryptic error messages
+- **Intelligent Solution:** Analyze the error, understand what the script was trying to do
+- **Manual Implementation:** Do the same work manually using file operations
+- **Recover:** Continue with the next steps
+
+**Kanban Init Mode (RW -k equivalent):**
+- **Problem:** User needs to initialize kanban documentation for a release
+- **Intelligent Solution:** Run `update_kanban_docs.py --mode kanban_init` with fallback handling
+- **Manual Fallback:** Update Story and Epic docs manually with version info if script fails
+- **Expected Result:** Story/Epic docs updated with "Kanban documentation setup" notation
+- **✅ WORKING:** Script now handles pattern matching and errors gracefully
+
+**RW -k Flag Handling:**
+- **User Intent:** Initialize kanban documentation for current version
+- **Agent Action:** Execute kanban_init mode with intelligent fallback
+- **Success Criteria:** Story and Epic docs updated, workflow continues
+- **Time Target:** Complete in under 2 minutes without micromanagement
 
 **🔧 Config-Driven Approach (Preferred):**
 

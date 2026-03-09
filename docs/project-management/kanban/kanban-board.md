@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-09 (RW: E4:S18:T01+2)
-**Version:** v0.4.18.1+2
+**Last Updated:** 2026-03-09 (RW: E6:S6:T2)
+**Version:** v0.6.6.2+2
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -24,6 +24,7 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
+- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - ✅ COMPLETE (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) (vv0.6.6.2+2) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 - **E6:S01:T37** – Kanban Install Consumer Board Contamination – Detector + Remediation - IN PROGRESS (CRITICAL, ~85% complete - technical implementation finished, all core components implemented and tested; Release Workflow blocked by tooling friction; core contamination problem solved, remaining work is procedural) - [Task Document](epics/Epic-6/Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md) | [BR-037](../fr-br/BR-037-kanban-install-consumer-board-contamination.md)
 - **E6:S07:T104** – Release Automation Audit - TODO (CRITICAL, Audit RW/PVW validators, GitHub Actions, badge workflow, GitHub Release script, and required secrets for task-touch SemVer compatibility) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md)
 - **E6:S07:T105** – Release Runbook Creation - TODO (CRITICAL, Create comprehensive runbook with exact commands respecting "no manual commit/push" policy) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md)
@@ -40,8 +41,6 @@ housekeeping_policy: keep
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
 - **E10:S01:T01** – Doc lifecycle expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
 - **E11:S01:T01** – Debug path expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
-
-- **E6:S06:T01** – FR/BR/UXR Prioritization Board Implementation - ✅ COMPLETED (HIGH priority, Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board) - [Task Document](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) | [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTATION COMPLETE*
 
 ### Could Have (C) - Nice-to-Have Tasks
 

@@ -95,6 +95,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 ### Critical Priority (Must Have - M)
 
+- **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 - **BR-037** – Kanban Install Consumer Board Contamination - IN PROGRESS (CRITICAL, Technical implementation finished, core contamination problem solved, Release Workflow blocked by tooling friction) - [BR-037](fr-br/BR-037-kanban-install-consumer-board-contamination.md) | [E6:S01:T37](epics/Epic-6/Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md)
 
 ### Medium Priority (Could Have - C)
@@ -135,11 +136,11 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 ## Summary Statistics
 
-**Total Items:** 69 FR/BR/UXR documents
+**Total Items:** 70 FR/BR/UXR documents
 
 ### By Type:
 - **Feature Requests:** 51 (1 completed: FR-051)
-- **Bug Reports:** 14 (1 in progress: BR-037)
+- **Bug Reports:** 15 (1 in progress: BR-037)
 - **User Experience Research:** 4
 
 ### By Status:
@@ -148,7 +149,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **COMPLETED:** 1 (FR-051 - tracked in fr-br-uxr-completed.md)
 
 ### By MoSCOW Priority:
-- **Must Have (M):** 1 (BR-037)
+- **Must Have (M):** 2 (BR-038, BR-037)
 - **Should Have (S):** 6 (FR-045, FR-047, FR-046, UXR-001, UXR-002, FR-051)
 - **Could Have (C):** 62
 - **Won't Have (W):** 0

@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 006 – Feature Requests
 
-**Status:** IN PROGRESS (Perpetual)  
+**Status:** IN PROGRESS
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-03-09 (v0.6.7.107+1 – T01: FR/BR/UXR Prioritization Board Implementation created)
-**Version:** v0.6.7.107+1  
+**Last updated:** 2026-03-09 (v0.6.6.2+2 – Kanban documentation setup)
+**Version:** v0.6.6.2+2
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -26,9 +26,15 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - TODO (HIGH priority, Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board)
+- [x] **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - ✅ COMPLETED (HIGH priority, Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board)
   - Task: [`T01-fr-br-uxr-prioritization-board.md`](T01-fr-br-uxr-prioritization-board.md)
-  - **Scope:** Implement main board, completed board, priority system, and integration with existing FR/BR/UXR documents
+  - Status: ✅ COMPLETED - Board implemented with MoSCOW structure, all 69 items tracked
+  - Completed: 2026-03-09
+
+- [ ] **E6:S06:T02 – Fix Release Workflow Micromanagement Issues** - TODO (HIGH priority, Implement simplified, reliable Release Workflow to reduce user friction)
+  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](T02-fix-release-workflow-micromanagement-issues.md)
+  - Associated BR: [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+  - Status: 🔄 TODO - Addresses critical usability issues in release process
 
 ---
 
@@ -48,22 +54,32 @@ Systematically track, prioritize, and implement feature requests for framework p
 
 ## Tasks
 
-- **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - TODO (HIGH priority)
+- **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - ✅ COMPLETED (HIGH priority)
   - Task: [`T01-fr-br-uxr-prioritization-board.md`](T01-fr-br-uxr-prioritization-board.md)
   - **Scope:** Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board
   - **Associated FR:** [FR-051](../../../fr-br/FR-051-fr-br-uxr-prioritization-board.md)
+  - **Status:** IN PROGRESS
+
+- **E6:S06:T02 – Fix Release Workflow Micromanagement Issues** - TODO (HIGH priority)
+  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](T02-fix-release-workflow-micromanagement-issues.md)
+  - **Scope:** Implement simplified, reliable Release Workflow to reduce user friction
+  - **Associated BR:** [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+  - **Status:** IN PROGRESS
 
 ---
 
 ## Dependencies
 
 **Blocks:**
+
 - None
 
 **Blocked By:**
+
 - None
 
 **Coordinates With:**
+
 - Epic 5 (Documentation Management) - Features may require documentation updates
 - Epic 2 (Workflow Management Framework) - Features for workflow framework tools
 - Epic 7 (Examples & Adoption) - Features for framework adoption and examples

@@ -36,7 +36,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Must Have (M) - Critical Items
 
-- **BR-037** – Kanban Install Consumer Board Contamination - IN PROGRESS (CRITICAL, Technical implementation finished, core contamination problem solved, Release Workflow blocked by tooling friction) - [BR-037](fr-br/BR-037-kanban-install-consumer-board-contamination.md) | [E6:S01:T37](epics/Epic-6/Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md)
+- **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
 ---
 

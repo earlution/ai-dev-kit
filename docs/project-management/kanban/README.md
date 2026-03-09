@@ -116,11 +116,11 @@ The **FR/BR/UXR Prioritization Board** provides centralized visibility and prior
 - **Active Tasks:** Varies by priority level
 
 ### FR/BR/UXR System:
-- **Total Items:** 69 FR/BR/UXR documents
+- **Total Items:** 70 FR/BR/UXR documents
 - **Feature Requests:** 51 (1 completed: FR-051)
-- **Bug Reports:** 14 (1 in progress: BR-037)
+- **Bug Reports:** 15 (1 in progress: BR-037)
 - **User Experience Research:** 4
-- **MoSCOW Distribution:** M:1, S:6, C:62, W:0, O:0
+- **MoSCOW Distribution:** M:2, S:6, C:62, W:0, O:0
 
 ## Governance
 

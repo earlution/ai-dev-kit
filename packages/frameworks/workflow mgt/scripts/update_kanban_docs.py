@@ -311,7 +311,10 @@ def resolve_kanban_paths(
     # Resolve Story doc path
     if config and config.get('use_kanban') and 'story_doc_pattern' in config:
         story_pattern = config['story_doc_pattern'].format(epic=epic, story=story)
-        story_doc = project_root / story_pattern
+        # IMPORTANT: Pattern is relative to kanban_root, not project_root
+        full_pattern = kanban_root / story_pattern
+        matches = list(full_pattern.parent.glob(full_pattern.name)) if full_pattern.parent.exists() else []
+        story_doc = matches[0].resolve() if matches else None
     else:
         # Default fallback: try multiple patterns
         story_patterns = [
@@ -342,7 +345,10 @@ def resolve_kanban_paths(
     # Resolve Epic doc path
     if config and config.get('use_kanban') and 'epic_doc_pattern' in config:
         epic_pattern = config['epic_doc_pattern'].format(epic=epic)
-        epic_doc = project_root / epic_pattern
+        # IMPORTANT: Pattern is relative to kanban_root, not project_root
+        full_pattern = kanban_root / epic_pattern
+        matches = list(full_pattern.parent.glob(full_pattern.name)) if full_pattern.parent.exists() else []
+        epic_doc = matches[0].resolve() if matches else None
     else:
         # Default fallback patterns
         epic_patterns = [
@@ -513,7 +519,7 @@ def derive_target_state(
     # Use all_tasks_complete (actual completion state) not story_complete (current status in doc)
     story_target = {
         'status': 'IN PROGRESS' if not completion_state['all_tasks_complete'] else '✅ COMPLETE',
-        'last_updated': f"{current_date} ({version_string} – T{task:02d} complete: {task_info.get('task_id', 'Task')})",
+        'last_updated': f"{current_date} ({version_string} – T{task:02d} complete: {task_info.get('task_id', 'Task')})" if task_info else f"{current_date} ({version_string} – Kanban documentation setup)",
         'version': version_string,
         'completed': current_date if completion_state['all_tasks_complete'] else None
     }
@@ -1253,7 +1259,37 @@ def main():
     
     if 'story_doc' not in paths:
         print(f"❌ Story doc not found for Epic {epic}, Story {story}")
-        sys.exit(1)
+        print(f"🔍 Attempting manual discovery...")
+        
+        # Manual fallback discovery
+        kanban_root = Path.cwd() / "docs/project-management/kanban"
+        manual_patterns = [
+            kanban_root / f"epics/Epic-{epic}/Story-{story:03d}-*.md",
+            kanban_root / f"epics/Epic-{epic}/Story-{story}-*.md",
+            kanban_root / f"epics/Epic-{epic}/Story-00*-*.md",  # Broader search
+        ]
+        
+        story_doc = None
+        for pattern in manual_patterns:
+            matches = list(pattern.parent.glob(pattern.name)) if pattern.parent.exists() else []
+            if matches:
+                story_doc = matches[0].resolve()
+                print(f"✅ Found story doc: {story_doc}")
+                break
+        
+        if not story_doc:
+            print(f"❌ Manual discovery failed. Checked patterns:")
+            for pattern in manual_patterns:
+                print(f"   - {pattern}")
+            print(f"💡 Suggestion: Check if Story {story} exists for Epic {epic}")
+            print(f"💡 Suggestion: Verify kanban_root path: {kanban_root}")
+            if args.allow_override:
+                print(f"⚠️  Continuing without story doc (allow_override)")
+                story_doc = None
+            else:
+                sys.exit(1)
+        else:
+            paths['story_doc'] = story_doc
     
     story_path = paths['story_doc']
     print(f"📄 Story doc: {story_path}")
@@ -1304,7 +1340,7 @@ def main():
     # Update Kanban board if available
     if 'kanban_board' in paths:
         board_path = paths['kanban_board']
-        success, changes = update_kanban_board(board_path, epic, story, target_state, args.dry_run)
+        success, changes = update_kanban_board(board_path, epic, story, task, target_state, completion_state, args.dry_run)
         if not success:
             print(f"❌ Failed to update Kanban board: {changes}")
             sys.exit(1)
