@@ -560,6 +560,55 @@ The workflow definition is located at:
 
 ---
 
+### 🔄 IMPLEMENTATION CYCLE WORKFLOW (ICW) TRIGGER
+
+**When the user types "ICW" or "icw" (case-insensitive), execute the Implementation Cycle Workflow as an intelligent agent:**
+
+1. **DO NOT** run any deterministic scripts
+2. **DO** execute the Implementation Cycle Workflow using the **intelligent agent-driven execution pattern**
+3. **THINK FIRST, ACT SECOND** - Analyze the implementation requirements and guide through three phases
+4. **BE ADAPTIVE** - Provide intelligent guidance for specification, testing, and implementation planning
+5. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `icw-config.yaml` from workflow directory
+6. **🚨 MANDATORY: Start with Step 1: Initialize Implementation Cycle** - This is a **MANDATORY BLOCKING STEP**
+7. **EXECUTE INTELLIGENTLY** - Use your AI capabilities to guide through specification, test design, and implementation planning
+8. **GUIDE THE USER** - Ask relevant questions and provide intelligent assistance throughout the three phases
+9. **Document** each phase's analysis, decisions, and results
+
+**🧠 AGENT INTELLIGENCE REQUIREMENTS:**
+
+- **Three-Phase Guidance:** Guide through Specification Definition → Test Design → Implementation Planning
+- **Interactive Questioning:** Ask relevant questions to elicit complete requirements
+- **Template Processing:** Generate structured documents using ICW templates
+- **Quality Assurance:** Validate completeness and consistency across phases
+- **Context Awareness:** Understand project patterns and integration requirements
+
+### 🔄 THREE-PHASE EXECUTION PATTERN
+
+**When user types "ICW":**
+
+1. **START IMMEDIATELY** - Begin Phase 1: Specification Definition
+2. **PHASE 1: SPECIFICATION DEFINITION** - Guide through requirements gathering and specification creation
+3. **PHASE 2: TEST DESIGN** - Guide through comprehensive test design based on specifications
+4. **PHASE 3: IMPLEMENTATION PLANNING** - Guide through detailed implementation planning
+5. **GENERATE PACKAGE** - Create complete implementation package with all three phases
+6. **INTEGRATE WITH KANBAN** - Update kanban system with implementation task and artifacts
+7. **COMPLETE** - Report success and provide next steps
+
+**Agent Guidance for Each Phase:**
+
+- **Phase 1:** Ask questions about problem, objectives, constraints, acceptance criteria
+- **Phase 2:** Review specifications and guide test design for coverage and completeness
+- **Phase 3:** Analyze tests and specifications to create detailed implementation plan
+
+**🚨 CONTINUOUS GUIDANCE REQUIRED:**
+
+- **DO NOT** stop after each phase and wait for user guidance
+- **DO** continue asking relevant questions and providing intelligent assistance
+- **DO** ensure each phase is complete before proceeding to next
+- **DO** validate quality and completeness at each step
+
+---
+
 ## Document Lifecycle Management
 
 Documents in `docs/` directory must have lifecycle metadata in frontmatter:

@@ -103,6 +103,16 @@ workflow_registry:
       triggers: ["FHM"]
       steps: 3
       
+    implementation-cycle-workflow:
+      name: "Implementation Cycle Workflow"
+      abbreviation: "ICW"
+      description: "Structured three-phase implementation workflow: Specification Definition, Test Design, and Implementation Planning"
+      directory: "implementation-cycle-workflow/"
+      main_file: "icw-workflow.yaml"
+      config_file: "icw-config.yaml"
+      triggers: ["ICW"]
+      steps: 8
+      
   common_components:
     templates: "common/templates/"
     schemas: "common/schemas/"
