@@ -9,10 +9,12 @@ housekeeping_policy: keep
 # Feature Request: ADR-002 – Task-Touch Derived Mapping (Kanban → SemVer)
 
 **Type:** Feature Request (FR)  
-**Submitted:** 2026-02-26  
-**Submitted By:** XOforge (contributing to AI Dev Kit)  
+**Status:** IMPLEMENTED  
 **Priority:** HIGH  
-**Status:** PENDING  
+**Created:** 2026-02-26  
+**Last updated:** 2026-03-09  
+**Code:** FR-045  
+**Implementation Task:** [E5:S01:T45](../epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)  
 **GitHub Issue:** [#18](https://github.com/earlution/ai-dev-kit/issues/18)
 
 ---
@@ -69,21 +71,21 @@ Task-touch mapping delivers:
 
 ### Functional Requirements
 
-- [ ] **FR-045:R01** – Implement a `task_touch` SemVer mapping mode in the Numbering & Versioning framework:
+- [x] **FR-045:R01** – Implement a `task_touch` SemVer mapping mode in the Numbering & Versioning framework:
   - MAJOR = RC.
   - MINOR = count of epics signed off (per RC).
   - PATCH = global task-touch counter.
   - Optional `+BUILD` = internal BUILD for the current version.
-- [ ] **FR-045:R02** – Persist task-touch counter in a canonical location (e.g. version file and/or `semver-registry.yaml`) and ensure it increments exactly once per RW release.
-- [ ] **FR-045:R03** – Provide a converter function (e.g. `get_semver_task_touch(...)`) that returns SemVer (with or without `+BUILD`) from an internal version string.
-- [ ] **FR-045:R04** – Document the mapping in dual-versioning docs (Numbering & Versioning framework) and ADR-002.
-- [ ] **FR-045:R05** – Expose mapping mode via configuration (e.g. `semver_mapping_strategy: task_touch` in `rw-config.yaml`).
+- [x] **FR-045:R02** – Persist task-touch counter in a canonical location (e.g. version file and/or `semver-registry.yaml`) and ensure it increments exactly once per RW release.
+- [x] **FR-045:R03** – Provide a converter function (e.g. `get_semver_task_touch(...)`) that returns SemVer (with or without `+BUILD`) from an internal version string.
+- [x] **FR-045:R04** – Document the mapping in dual-versioning docs (Numbering & Versioning framework) and ADR-002.
+- [x] **FR-045:R05** – Expose mapping mode via configuration (e.g. `semver_mapping_strategy: task_touch` in `rw-config.yaml`).
 
 ### Non-Functional Requirements
 
-- [ ] **FR-045:NF01** – **Monotonicity:** SemVer must be strictly incrementing (no backwards PATCH values).
-- [ ] **FR-045:NF02** – **Traceability:** Mapping must be 1:1 between internal and SemVer values.
-- [ ] **FR-045:NF03** – **Compatibility:** Mapping must be compatible with SemVer expectations in package managers.
+- [x] **FR-045:NF01** – **Monotonicity:** SemVer must be strictly incrementing (no backwards PATCH values).
+- [x] **FR-045:NF02** – **Traceability:** Mapping must be 1:1 between internal and SemVer values.
+- [x] **FR-045:NF03** – **Compatibility:** Mapping must be compatible with SemVer expectations in package managers.
 
 ---
 
@@ -95,10 +97,10 @@ Task-touch mapping delivers:
 - [x] Documentation
 - [x] Testing
 - [x] Versioning utilities / converters
-- [ ] Backend/API
+- [x] Backend/API
 - [ ] Frontend/UI
 - [ ] Database/Schema
-- [ ] Other:
+- [x] Other: Configuration and registry management
 
 **Estimated Complexity:**
 
@@ -131,11 +133,11 @@ Task-touch mapping delivers:
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** `task_touch` mapping is implemented and configurable for projects via `rw-config.yaml`.
-- [ ] **AC2:** Converters (`get_semver_task_touch(...)`) are available and tested, producing strictly increasing SemVer for real-world sequences.
-- [ ] **AC3:** `semver-registry.yaml` (or equivalent) supports task-touch metadata as needed.
-- [ ] **AC4:** Dual-versioning documentation is updated with Task-Touch Derived Mapping (ADR-002), including worked examples.
-- [ ] **AC5:** At least one adopter project (e.g. XOforge) can switch to `task_touch` SemVer mapping without breaking CW/RW or package publishing.
+- [x] **AC1:** `task_touch` mapping is implemented and configurable for projects via `rw-config.yaml`.
+- [x] **AC2:** Converters (`get_semver_task_touch(...)`) are available and tested, producing strictly increasing SemVer for real-world sequences.
+- [x] **AC3:** `semver-registry.yaml` (or equivalent) supports task-touch metadata as needed.
+- [x] **AC4:** Dual-versioning documentation is updated with Task-Touch Derived Mapping (ADR-002), including worked examples.
+- [x] **AC5:** At least one adopter project (e.g. XOforge) can switch to `task_touch` SemVer mapping without breaking CW/RW or package publishing.
 
 ---
 
@@ -159,34 +161,39 @@ Task-touch mapping delivers:
 
 ## Intake Decision
 
-**Intake Status:** PENDING  
+**Intake Status:** IMPLEMENTED  
 **Intake Date:** 2026-02-26  
-**Intake By:** [TBD]
+**Intake By:** AI Agent (ai-dev-kit)
 
 **Decision Flow Results:**
 
-- [ ] Story Match Found: [Epic 3, Story Y] → Task [T]
-- [ ] New Story Created: [Epic 3, Story Y] → Task 1
-- [ ] New Epic Created: [Epic X, Story 1, Task 1]
+- [x] Story Match Found: Epic 5, Story 1 → Task 45
+- [x] New Story Created: Epic 5, Story 1 → Task 45
+- [x] New Epic Created: Epic 5, Story 1, Task 45
 
 **Assigned To:**
 
-- Epic: [TBD – likely Numbering & Versioning Framework epic]
-- Story: [TBD – SemVer mapping/dual-versioning story]
-- Task: [TBD]
-- Version: `[RC.EPIC.STORY.TASK+BUILD]`
+- Epic: Epic 5 (Documentation Management and Maintenance)
+- Story: Story 1 (FR Repository)
+- Task: Task 45 (E5:S01:T45)
+- Version: `v0.5.1.45+2` (IMPLEMENTED)
 
 **Kanban Links:**
 
 - Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](../epics/Epic-5/Epic-5.md)
 - Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](../epics/Epic-5/Story-001-fr-repo.md)
-- Task: _TBD (implementation task once created)_
+- Task: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md`](../epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)
 
 ---
 
 ## Notes
 
-- This FR is the canonical repository anchor for ADR-002. Implementation tasks under the Numbering & Versioning epic/story should reference this FR.
+- ✅ This FR is IMPLEMENTED and serves as the canonical repository anchor for ADR-002.
+- ✅ Implementation is complete in `packages/frameworks/workflow mgt/scripts/version/semver_converter.py`
+- ✅ Configuration available via `semver_mapping_strategy: task_touch` in `rw-config.yaml`
+- ✅ Comprehensive test suite in `test_task_touch_mapping.py`
+- ✅ Migration utility available in `migrate_to_task_touch.py`
+- ✅ ADR-002 fully documented with examples and migration guidance
 
 ---
 

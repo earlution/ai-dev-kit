@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
-VERSION_STORY = 6     # Story number (Story 6: Comprehensive Canonical E/S/T Template System)
-VERSION_TASK = 7      # Task number (T07: Integrate with template setup guide and installation workflow)
-VERSION_BUILD = 2     # Build number (E4:S06:T07+2 - Kanban Template Integration Complete)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
+VERSION_STORY = 1     # Story number (Story 1: FR Repository)
+VERSION_TASK = 45     # Task number (T45: ADR-002 Task-Touch Derived Mapping)
+VERSION_BUILD = 3     # Build number (E5:S01:T45+3 - ADR-002 Task-Touch Mapping Implementation Complete)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.4.6.7+2 = Development, Epic 4, Story 6, Task 7, Build 2 (E4:S06:T07+2: Kanban Template Integration Complete)
+# Current: 0.5.1.45+3 = Development, Epic 5, Story 1, Task 45, Build 3 (E5:S01:T45+3: ADR-002 Task-Touch Mapping Implementation Complete)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
