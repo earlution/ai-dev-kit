@@ -30,12 +30,67 @@
 
 **🧠 AGENT INTELLIGENCE REQUIREMENTS:**
 
-- **Problem Solving:** When a script fails, analyze why and find a solution
-- **Pattern Recognition:** Recognize when files are in unexpected locations/patterns
-- **Adaptive Execution:** Adjust your approach based on what actually exists vs. what should exist
-- **Manual Fallback:** When automation fails, implement the manual equivalent
-- **Context Awareness:** Understand the current state and make decisions accordingly
-- **Speed Optimization:** Complete the workflow in 1-2 minutes like Cursor did
+- **Autonomous Execution:** Execute the entire RW continuously without stopping for user guidance
+- **Proactive Problem Solving:** Anticipate next steps and execute them without being told
+- **Intelligent Tool Discovery:** Search for tools when paths fail, don't stop and ask
+- **Continuous Flow:** Complete the entire workflow in one session (target: 1-2 minutes total)
+- **Self-Recovery:** When something fails, find alternatives and continue without stopping
+- **Context Awareness:** Understand the current state and determine next steps autonomously
+- **Speed Optimization:** Focus on total user time, not just script execution time
+
+### 🚨 CRITICAL: NEVER STOP EXECUTING
+
+- **DO NOT** stop after each step and wait for user guidance
+
+- **DO NOT** ask "what should I do next?" - determine it yourself
+
+- **DO NOT** require manual intervention for tool discovery
+
+- **DO** continue executing until the RW is complete or you encounter a blocking error
+
+- **DO** handle failures intelligently and continue the workflow
+
+### 🔄 CONTINUOUS EXECUTION PATTERN
+
+**When user types "RW":**
+
+1. **START IMMEDIATELY** - Don't ask questions, begin execution
+
+2. **EXECUTE STEP 1** - Branch safety check (find validation script intelligently)
+
+3. **IF STEP 1 PASSES** - Continue immediately to Step 2 (version bump)
+
+4. **EXECUTE STEP 2** - Increment version and update files
+
+5. **EXECUTE STEP 3** - Update changelog
+
+6. **EXECUTE STEP 4** - Run kanban documentation updates
+
+7. **EXECUTE STEP 5** - Git operations (add, commit, tag, push)
+
+8. **EXECUTE STEP 6** - Final validation and reporting
+
+9. **COMPLETE** - Report success and stop
+
+**If any step fails:**
+
+- **Analyze the failure** - Understand what went wrong
+
+- **Find alternative approach** - Use intelligent fallbacks
+
+- **Continue execution** - Don't stop and wait for user
+
+- **Report the workaround** - Explain what you did instead
+
+**🚨 NEVER STOP BETWEEN STEPS**
+
+- The user should not have to say "continue" or "proceed"
+
+- The user should not have to guide tool discovery
+
+- The user should not have to tell you what to do next
+
+- The workflow should feel like one continuous operation
 
 **🔧 DETERMINISTIC vs. INTELLIGENT WORK:**
 
