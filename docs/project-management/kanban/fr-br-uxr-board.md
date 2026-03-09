@@ -43,6 +43,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Should Have (S) - Important Items
 
+- **FR-040** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [FR-040](fr-br/FR-040-implementation-cycle-workflow-icw.md)
 - **FR-045** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH, SemVer mapping for task_touch and Kanban integration) - [FR-045](fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [E5:S01:T45](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)
 - **FR-047** – Install Logging for Framework Dependencies - TODO (HIGH, Enables detailed post-install analysis and debugging) - [FR-047](fr-br/FR-047-install-logging-for-framework-dependencies.md) | [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 - **FR-046** – RW SemVer Tag When task_touch Enabled - TODO (HIGH, RW tagging behaviour when task_touch is enabled) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)

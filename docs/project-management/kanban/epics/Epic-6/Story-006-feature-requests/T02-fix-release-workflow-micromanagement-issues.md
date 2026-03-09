@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # Task T01 – Fix Release Workflow Micromanagement Issues
 
-**Status:** IN PROGRESS  
+**Status:** IN PROGRESS, BLOCKED  
 **Priority:** HIGH  
 **Estimated Effort:** Large (5-7 days)  
 **Created:** 2026-03-09  

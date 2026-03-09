@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-03-09 (RW: E6:S6:T2)
-**Version:** v0.6.6.2+5
+**Version:** v0.6.6.2+6
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -24,12 +24,13 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - ✅ COMPLETE (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) (vv0.6.6.2+2) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 - **E6:S01:T37** – Kanban Install Consumer Board Contamination – Detector + Remediation - IN PROGRESS (CRITICAL, ~85% complete - technical implementation finished, all core components implemented and tested; Release Workflow blocked by tooling friction; core contamination problem solved, remaining work is procedural) - [Task Document](epics/Epic-6/Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md) | [BR-037](../fr-br/BR-037-kanban-install-consumer-board-contamination.md)
 - **E6:S07:T104** – Release Automation Audit - TODO (CRITICAL, Audit RW/PVW validators, GitHub Actions, badge workflow, GitHub Release script, and required secrets for task-touch SemVer compatibility) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md)
 - **E6:S07:T105** – Release Runbook Creation - TODO (CRITICAL, Create comprehensive runbook with exact commands respecting "no manual commit/push" policy) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md)
+- **E5:S01:T40** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [Task Document](epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) | [FR-040](../fr-br/FR-040-implementation-cycle-workflow-icw.md)
 - **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH priority, SemVer mapping for task_touch and Kanban integration; docs-only FR repo anchor, implementation in versioning framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
 - **E5:S01:T47** – Install Logging for Framework Dependencies - TODO (HIGH priority, FR repo anchor; enables detailed post-install analysis and debugging for all frameworks) - [Task Document](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../fr-br/FR-047-install-logging-for-framework-dependencies.md)
+- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS, BLOCKED (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work. Root cause identified as Cascade whitelist security prompts (BR-039). Phase 1-2 complete, Phase 3 (user experience) blocked by Cascade security issues.) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) (vv0.6.6.2+6) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
 ### Should Have (S) - Important Tasks
 
