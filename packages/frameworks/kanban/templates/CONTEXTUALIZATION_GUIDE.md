@@ -330,6 +330,10 @@ The contextualization process integrates with the Kanban installer:
 - Customize as needed
 - Validate structure
 
+**4. Setup Guide Integration:**
+- See Step 4 of the [Framework Dependency Post-Template Setup Guide](../../../docs/documentation/user-docs/framework-dependency-post-template-setup-guide.md) for complete installation workflow
+- The setup guide provides step-by-step instructions for using the installer and contextualizing templates
+
 ---
 
 ## References
@@ -339,6 +343,8 @@ The contextualization process integrates with the Kanban installer:
 - **Story Template:** `STORY_TEMPLATE.md`
 - **Task Template:** `TASK_TEMPLATE.md`
 - **Examples:** `examples/contextualized/`
+- **Setup Guide:** `docs/documentation/user-docs/framework-dependency-post-template-setup-guide.md` - Complete project setup instructions
+- **Installer:** `scripts/install_kanban_framework.py` - Interactive installation script
 
 ---
 
