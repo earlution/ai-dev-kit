@@ -15,7 +15,8 @@ housekeeping_policy: keep
 
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)  
-> **For completed tasks, see:** [`kanban-completed.md`](kanban-completed.md)
+> **For completed tasks, see:** [`kanban-completed.md`](kanban-completed.md)  
+> **For FR/BR/UXR prioritization, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)
 
 ---
 
@@ -39,6 +40,8 @@ housekeeping_policy: keep
 - **E8:S04:T01** – Tooling & Automation expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
 - **E10:S01:T01** – Doc lifecycle expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
 - **E11:S01:T01** – Debug path expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
+
+- **E6:S06:T01** – FR/BR/UXR Prioritization Board Implementation - ✅ COMPLETED (HIGH priority, Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board) - [Task Document](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) | [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTATION COMPLETE*
 
 ### Could Have (C) - Nice-to-Have Tasks
 

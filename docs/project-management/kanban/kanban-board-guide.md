@@ -13,7 +13,8 @@ housekeeping_policy: keep
 
 > **For structured information only, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
-> **For completed tasks, see:** [`kanban-completed.md`](kanban-completed.md)
+> **For completed tasks, see:** [`kanban-completed.md`](kanban-completed.md)  
+> **For FR/BR/UXR prioritization, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)
 
 ---
 
@@ -103,6 +104,7 @@ See [`README.md`](README.md) for full structure details and `docs/project-manage
 - **Board Quick View:** [`_index.md`](_index.md)
 - **Board (MoSCOW Tasks):** [`kanban-board.md`](kanban-board.md)
 - **Board (Epic Structure):** [`kanban-structure.md`](kanban-structure.md)
+- **Board (FR/BR/UXR Prioritization):** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)
 - **Kanban Policy:** `docs/project-management/rituals/policy/kanban-governance-policy.md`
 - **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
 
@@ -110,13 +112,39 @@ See [`README.md`](README.md) for full structure details and `docs/project-manage
 
 ## Board Structure
 
-The board is organized into three separate documents:
+The board is organized into five separate documents:
 
 1. **MoSCOW Prioritized Tasks** (`kanban-board.md`) - Shows all active tasks organized by priority (M/S/C/O/W)
 2. **Epic/Story/Task Structure** (`kanban-structure.md`) - Shows all epics with their status, priority, stories, and links
-3. **Rules and Explanations** (`kanban-board-guide.md`) - This document with how-to content and policies
+3. **FR/BR/UXR Prioritization** (`fr-br-uxr-board.md`) - Shows all open FRs, BRs, and UXRs organized by priority
+4. **FR/BR/UXR Structure** (`fr-br-uxr-structure.md`) - Shows complete listings of all FRs, BRs, and UXRs by type
+5. **Rules and Explanations** (`kanban-board-guide.md`) - This document with how-to content and policies
 
 The board serves as the parent document to Story documents, providing a comprehensive view of all work items in the project.
+
+---
+
+## FR/BR/UXR Prioritization Board
+
+The **FR/BR/UXR Prioritization Board** (`fr-br-uxr-board.md`) provides centralized visibility and prioritization for all open Feature Requests, Bug Reports, and User Experience Research items.
+
+### Board Sections:
+- **Critical Priority** - Urgent items requiring immediate attention
+- **High Priority** - Important items for near-term work  
+- **Medium Priority** - Standard priority items
+- **Low Priority** - Nice-to-have items
+- **Under Review** - Items being evaluated or worked on
+- **Awaiting Information** - Items blocked by missing information
+
+### Usage:
+- **For Stakeholders** - Review priorities and provide input on FR/BR/UXR documents
+- **For Developers** - Pick highest priority items and convert to tasks when appropriate
+- **For Product Management** - Adjust priorities and plan based on board content
+
+### Integration:
+- Links to individual FR/BR/UXR documents in `/fr-br/` directory
+- Cross-references to associated Kanban tasks when created
+- Completed items move to `fr-br-uxr-completed.md`
 
 ---
 

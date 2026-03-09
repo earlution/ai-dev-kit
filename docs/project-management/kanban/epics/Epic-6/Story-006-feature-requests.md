@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-01-16 (v0.6.6.0+1, migrated from v0.6.6.0+1 – Story renumbered from S05 to S06 as part of repository story migration)  
-**Version:** v0.6.6.0+1  
+**Last updated:** 2026-03-09 (v0.6.7.107+1 – T01: FR/BR/UXR Prioritization Board Implementation created)
+**Version:** v0.6.7.107+1  
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -26,7 +26,9 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-(No tasks yet - story created for future feature requests)
+- [ ] **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - TODO (HIGH priority, Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board)
+  - Task: [`T01-fr-br-uxr-prioritization-board.md`](T01-fr-br-uxr-prioritization-board.md)
+  - **Scope:** Implement main board, completed board, priority system, and integration with existing FR/BR/UXR documents
 
 ---
 
@@ -46,7 +48,10 @@ Systematically track, prioritize, and implement feature requests for framework p
 
 ## Tasks
 
-(No tasks yet - this story will be populated as feature requests are received and converted to tasks)
+- **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - TODO (HIGH priority)
+  - Task: [`T01-fr-br-uxr-prioritization-board.md`](T01-fr-br-uxr-prioritization-board.md)
+  - **Scope:** Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board
+  - **Associated FR:** [FR-051](../../../fr-br/FR-051-fr-br-uxr-prioritization-board.md)
 
 ---
 
