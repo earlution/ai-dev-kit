@@ -129,6 +129,7 @@ def create_consumer_board_skeleton(
     Create a clean consumer Kanban board skeleton from templates.
 
     - Creates `kanban-board.md` from `templates/KANBAN_BOARD_TEMPLATE.md`
+    - Creates `kanban-structure.md` from `templates/KANBAN_STRUCTURE_TEMPLATE.md` (if exists)
     - Creates `kanban-board-guide.md` from `templates/KANBAN_BOARD_GUIDE_TEMPLATE.md`
     """
     script_dir = Path(__file__).parent
@@ -146,6 +147,7 @@ def create_consumer_board_skeleton(
     if dry_run:
         print("🔍 [DRY RUN] Would create consumer board skeleton:")
         print(f"  - Board: {kanban_path / 'kanban-board.md'}")
+        print(f"  - Structure: {kanban_path / 'kanban-structure.md'}")
         print(f"  - Guide: {kanban_path / 'kanban-board-guide.md'}")
         return
 
@@ -161,6 +163,18 @@ def create_consumer_board_skeleton(
         print(f"  ✅ Created consumer board: {kanban_path / 'kanban-board.md'}")
     else:
         print(f"  ⚠️  Board template not found: {board_template}")
+
+    # Create structure from template (if exists)
+    structure_template = templates_dir / "KANBAN_STRUCTURE_TEMPLATE.md"
+    if structure_template.exists():
+        content = structure_template.read_text(encoding="utf-8")
+        content = content.replace("{Project Name}", project_name)
+        content = content.replace("{Date}", today)
+        content = content.replace("{Version}", version_placeholder)
+        (kanban_path / "kanban-structure.md").write_text(content, encoding="utf-8")
+        print(f"  ✅ Created consumer structure: {kanban_path / 'kanban-structure.md'}")
+    else:
+        print(f"  ⚠️  Structure template not found: {structure_template}")
 
     # Create board guide from template
     if guide_template.exists():

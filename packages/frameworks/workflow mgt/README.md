@@ -20,7 +20,11 @@ housekeeping_policy: keep
 
 ## 📋 What's Included
 
-This package contains all essential files needed to implement the Release Workflow (RW) trigger in your project. The RW trigger enables AI assistants to execute a complete 13-step release process (version bump, changelog generation, Git operations, PDCA verification and action) using intelligent agent-driven execution.
+This package contains all essential files needed to implement the Release Workflow (RW) trigger in your project. The RW trigger enables AI assistants to execute a complete 17-step release process (version bump, changelog generation, Git operations, PDCA verification and action) using intelligent agent-driven execution with support for multiple trigger types:
+
+- **"RW"** - Full Release Workflow (all 17 steps)
+- **"RW -k"** - Initial Kanban Documentation Commit (documentation setup only)
+- **"RW -d"** - Documentation-Only Release (documentation updates without full release cycle)
 
 ### Core Methodology Documents
 - `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md` - General methodology for agent-driven workflow execution
@@ -35,10 +39,17 @@ This package contains all essential files needed to implement the Release Workfl
 - `docs/architecture/standards-and-adrs/versioning-strategy.md` - Complete versioning strategy with forensic traceability
 
 ### Workflow Definitions
-- `workflows/release-workflow.yaml` - YAML definition of the Release Workflow structure
-- `workflows/intake-workflow.yaml` - YAML definition of the Intake Workflow structure (FR/BR/UXR automation)
-- `workflows/update-kanban-workflow.yaml` - YAML definition of the Update Kanban Workflow structure (UKW - kanban sync)
-- `workflows/changelog-management-workflow.yaml` - YAML definition of the Changelog Management Workflow structure (CMW - changelog maintenance and archival)
+- `workflows/release-workflow/release-workflow.yaml` - YAML definition of the Release Workflow structure
+- `workflows/intake-workflow/intake-workflow.yaml` - YAML definition of the Intake Workflow structure (FR/BR/UXR automation)
+- `workflows/update-kanban-workflow/update-kanban-workflow.yaml` - YAML definition of the Update Kanban Workflow structure (UKW - kanban sync)
+- `workflows/changelog-management-workflow/changelog-management-workflow.yaml` - YAML definition of the Changelog Management Workflow structure (CMW - changelog maintenance and archival)
+- `workflows/post-implementation-review/pir-workflow.yaml` - YAML definition of the Post-Implementation Review structure (PIR)
+- `workflows/migration-workflow/migration-workflow.yaml` - YAML definition of the Migration Workflow structure
+- `workflows/refactor-workflow/refactor-workflow.yaml` - YAML definition of the Refactor Workflow structure
+- `workflows/testing-workflow/testing-workflow.yaml` - YAML definition of the Testing Workflow structure
+- `workflows/package-version-workflow/package-version-workflow.yaml` - YAML definition of the Package Version Workflow structure
+- `workflows/framework-health-monitoring-workflow/framework-health-monitoring-workflow.yaml` - YAML definition of the Framework Health Monitoring Workflow structure
+- `workflows/workflow-registry.yaml` - Registry of all workflows with metadata
 
 ### Optional GitHub Actions Workflows (Private Repos)
 - `templates/github-actions/update-badges-byob.yml` - BYOB badge workflow template for private repositories
@@ -156,6 +167,7 @@ Projects must **copy** this package into their repository, not link to it.
 - Full versioning integration
 
 **Scenario 3: Complete Integration**
+
 - Copy all three packages (Workflow, Versioning, Kanban)
 - Full three-way integration
 - Automated Kanban updates with version markers
@@ -204,7 +216,7 @@ python scripts/install_release_workflow.py --mode c --dry-run
 
 1. **Generates `rw-config.yaml`** - Single source of truth for all paths
 2. **Updates `.cursorrules`** - Adds RW trigger section with correct paths
-3. **Patches `workflows/release-workflow.yaml`** - Uses config values instead of hardcoded paths
+3. **Patches `workflows/release-workflow/release-workflow.yaml`** - Uses config values instead of hardcoded paths
 4. **Validates paths** - Ensures all paths match your project structure
 
 ### Next Steps After Installation
@@ -319,7 +331,7 @@ If using different branch naming conventions:
    - Step 10: Commit created
    - Step 11: Tag created
    - Step 12: Branch and tag pushed (or manual instructions provided)
-   - Step 13: Post-Commit Verification & Reflection (optional but recommended)
+   - Step 13: Post-Commit Verification, Housekeeping & Reflection (optional but recommended)
    - Step 14: Act on Verification Results (optional but recommended)
 
 ---
@@ -328,14 +340,27 @@ If using different branch naming conventions:
 
 ### The RW Trigger
 
-When a user types "RW" or "rw" (case-insensitive) in their AI assistant:
+When a user types any RW trigger in their AI assistant (case-insensitive):
 
-1. **AI Assistant Recognizes Trigger:** The `.cursorrules` file instructs the AI to execute the Release Workflow
-2. **Intelligent Execution:** The AI follows the step-by-step guide, analyzing each step before executing
-3. **Progress Tracking:** The AI creates and maintains a TODO list tracking all 13 steps (plus optional Step 9.5, 13-15)
-4. **Validation:** Each step is validated before proceeding to the next
-5. **Documentation:** All actions are documented with analysis and results
-6. **Atomicity:** The workflow either completes all 13 steps or stops with a clear "RW BLOCKED" message
+- **"RW"** - Full Release Workflow (all 17 steps)
+- **"RW -k"** - Initial Kanban Documentation Commit (7 steps: 1,2,3,4,7,11,12)
+- **"RW -d"** - Documentation-Only Release (13 steps: 1,2,3,4,5,6,7,8,9,10,11,13,14)
+
+The AI assistant:
+
+1. **AI Assistant Recognizes Trigger:** The `.cursorrules` file instructs the AI to execute the Release Workflow with the specified trigger type
+2. **Parse Trigger Type:** Determines which workflow variant to execute based on the trigger
+3. **Select Execution Path:** Chooses appropriate step sequence based on trigger type
+4. **Intelligent Execution:** The AI follows the step-by-step guide for the selected path, analyzing each step before executing
+5. **Progress Tracking:** The AI creates and maintains a TODO list tracking the steps for the selected execution path
+6. **Validation:** Each step is validated before proceeding to the next
+7. **Documentation:** All actions are documented with analysis and results
+8. **Atomicity:** The workflow either completes all steps for the selected path or stops with a clear "RW BLOCKED" message
+
+**Execution Path Details:**
+- **RW (Full Release):** Steps 1-17 (complete release with Git operations, verification, PIR)
+- **RW -k (Kanban Init):** Steps [1, 2, 3, 4, 7, 11, 12] - Documentation setup only, Step 7 modified for Kanban init mode
+- **RW -d (Documentation Only):** Steps [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14] - Documentation updates, skips Git tag, push, PIR trigger, housekeeping
 
 ### The 13 Steps (Plus Optional Steps)
 
@@ -626,8 +651,10 @@ After implementation, verify:
 - [ ] Version file exists and is accessible
 - [ ] Changelog directory exists
 - [ ] Validation scripts are executable
-- [ ] RW trigger responds to "RW" or "rw" in AI assistant
-- [ ] All 13 steps execute in correct order
+- [ ] RW trigger responds to "RW" or "rw" in AI assistant (17 steps)
+- [ ] RW trigger responds to "RW -k" or "rw -k" in AI assistant (7 steps)
+- [ ] RW trigger responds to "RW -d" or "rw -d" in AI assistant (13 steps)
+- [ ] All steps execute in correct order for each trigger type
 - [ ] Version file updates correctly
 - [ ] Changelogs created with full timestamps
 - [ ] Epic docs updated in ALL sections (header, checklist, detailed story sections)
@@ -635,8 +662,10 @@ After implementation, verify:
 - [ ] Git commit includes version number
 - [ ] Git tag created with correct format
 - [ ] Branch and tag pushed to remote (or manual instructions provided)
-- [ ] TODO list tracks all 13 steps (visible in AI assistant)
+- [ ] TODO list tracks all steps for selected execution path (visible in AI assistant)
 - [ ] RW completes atomically or stops with clear "RW BLOCKED" message
+- [ ] Kanban init mode (RW -k) only updates documentation fields
+- [ ] Documentation-only mode (RW -d) skips Git tag, push, PIR trigger, housekeeping
 - [ ] PDCA CHECK and ACT phases executed (Steps 12-13)
 
 ---

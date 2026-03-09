@@ -326,7 +326,7 @@ For each step, follow this pattern:
 **📋 Workflow YAML:**
 
 The workflow definition is located at:
-- `packages/frameworks/workflow mgt/workflows/update-kanban-workflow.yaml`
+- `packages/frameworks/workflow mgt/workflows/update-kanban-workflow/update-kanban-workflow.yaml`
 
 **📚 Related Documentation:**
 

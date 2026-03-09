@@ -8,10 +8,12 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board Guide
 
-**Last Updated:** 2026-01-20  
-**Version:** v0.4.18.1+1
+**Last Updated:** 2026-03-09 (RW: E4:S18:T01+2)  
+**Version:** v0.4.18.1+2
 
-> **For structured information only, see:** [`kanban-board.md`](kanban-board.md)
+> **For structured information only, see:** [`kanban-board.md`](kanban-board.md)  
+> **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
+> **For completed tasks, see:** [`kanban-completed.md`](kanban-completed.md)
 
 ---
 
@@ -20,15 +22,17 @@ housekeeping_policy: keep
 This guide explains how to use and understand the Kanban board. The board tracks all work on the `ai-dev-kit` repository and the **Head First AI-Assisted Development** book project.
 
 **Structure:** All Kanban documentation lives under `docs/project-management/kanban/`:
+
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: `_index.md` (quick view), `kanban-board.md` (structured information), and this file (guide)
+- Board views: `_index.md` (quick view), `kanban-board.md` (tasks), `kanban-structure.md` (epics), and this file (guide)
 
 ---
 
 ## Parent-Child Relationship
 
 This Kanban board serves as the **parent document** to Story documents, similar to how Story documents are parents of Task documents:
+
 - **Board → Story:** This board links to and tracks all Story documents
 - **Story → Task:** Story documents link to and track all Task documents
 - This creates a clear hierarchy: Board (parent) → Story (child) → Task (grandchild)
@@ -97,7 +101,8 @@ See [`README.md`](README.md) for full structure details and `docs/project-manage
 ## Quick Reference
 
 - **Board Quick View:** [`_index.md`](_index.md)
-- **Board (Structured Info):** [`kanban-board.md`](kanban-board.md)
+- **Board (MoSCOW Tasks):** [`kanban-board.md`](kanban-board.md)
+- **Board (Epic Structure):** [`kanban-structure.md`](kanban-structure.md)
 - **Kanban Policy:** `docs/project-management/rituals/policy/kanban-governance-policy.md`
 - **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
 
@@ -105,10 +110,11 @@ See [`README.md`](README.md) for full structure details and `docs/project-manage
 
 ## Board Structure
 
-The board is organized into two main sections:
+The board is organized into three separate documents:
 
-1. **MoSCOW Prioritized In-Progress Tasks** - Shows all active tasks organized by priority (M/S/C/O/W)
-2. **Epics** - Shows all epics with their status, priority, stories, and links
+1. **MoSCOW Prioritized Tasks** (`kanban-board.md`) - Shows all active tasks organized by priority (M/S/C/O/W)
+2. **Epic/Story/Task Structure** (`kanban-structure.md`) - Shows all epics with their status, priority, stories, and links
+3. **Rules and Explanations** (`kanban-board-guide.md`) - This document with how-to content and policies
 
 The board serves as the parent document to Story documents, providing a comprehensive view of all work items in the project.
 
@@ -116,7 +122,8 @@ The board serves as the parent document to Story documents, providing a comprehe
 
 ## Notes
 
-- The board is optimized for quick scanning - structured information only
+- The MoSCOW board is optimized for quick scanning - structured information only
+- For Epic/Story/Task structure, see kanban-structure.md
 - For rules, explanations, and how-to content, see this guide document
 - The board is updated by UKW (Update Kanban Workflow) and RW (Release Workflow)
 - Board views are synchronized with Epic/Story/Task documents

@@ -43,7 +43,9 @@ The implementation in this repo starts simple:
 
 - **Board files:**
   - `docs/project-management/kanban/_index.md` (quick board view)
-  - `docs/project-management/kanban/kanban-board.md` (detailed board view)
+  - `docs/project-management/kanban/kanban-board.md` (MoSCOW prioritized tasks)
+  - `docs/project-management/kanban/kanban-structure.md` (Epic/Story/Task structure)
+  - `docs/project-management/kanban/kanban-board-guide.md` (rules and explanations)
   - `docs/project-management/kanban/README.md` (structure overview)
 
 - **Epic files:**

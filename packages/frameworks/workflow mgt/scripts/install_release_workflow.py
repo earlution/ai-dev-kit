@@ -442,7 +442,7 @@ Examples:
         print(f"\n🔍 [DRY RUN] Would update: {cursorrules_path}")
     
     # Patch workflow YAML
-    workflow_path = project_root / "workflows" / "release-workflow.yaml"
+    workflow_path = project_root / "workflows" / "release-workflow" / "release-workflow.yaml"
     if workflow_path.exists():
         result = patch_workflow_yaml(workflow_path, config, dry_run=args.dry_run)
         print(f"\n{result}")

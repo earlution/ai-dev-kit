@@ -1,42 +1,84 @@
+#!/usr/bin/env python3
 """
-Workflow Chaining and Orchestration for Release Workflow
+Workflow Orchestrator for Release Workflow
 
-This module implements workflow chaining and orchestration that can plan,
-execute, and manage multiple workflows in sequence based on dependencies.
-It follows a hybrid approach: dependency graph for known workflows, with
-agentic planning for complex/novel scenarios.
+This script orchestrates the execution of the Release Workflow (RW) with support for
+multiple trigger types. It loads canonical step definitions from the single source
+of truth to prevent duplication and drift.
 
-Epic: Epic 2 (Workflow Management Framework)
-Story: Story 7 (Trigger-Aware Release Workflow)
-Task: Task 7 (Add workflow chaining and orchestration)
+Usage:
+    python workflow_orchestrator.py --workflow release --trigger RW
+    python workflow_orchestrator.py --workflow release --trigger "RW -k"
+    python workflow_orchestrator.py --workflow release --trigger "RW -d"
 """
 
-import logging
-from typing import Dict, List, Optional, Any, Set
+import argparse
+import json
+import sys
+from pathlib import Path
+from typing import Dict, List, Optional, Any
+from enum import Enum
 from dataclasses import dataclass
+
+# Import canonical steps loader
+from canonical_steps import (
+    get_canonical_steps, get_execution_path, should_execute_step,
+    get_step_modifications, get_step_name, get_step_description,
+    list_triggers
+)
 from enum import Enum
 from pathlib import Path
 from workflow_executor import WorkflowExecutor, WorkflowDefinition, WorkflowResult, WorkflowStatus
 from deliverable_processor import DeliverableProcessor, Deliverable, DeliverableType
 
 
-class ExecutionPlanStatus(Enum):
-    """Status of execution plan."""
-    PENDING = "pending"
-    VALIDATED = "validated"
-    EXECUTING = "executing"
-    COMPLETED = "completed"
-    FAILED = "failed"
-    CANCELLED = "cancelled"
+class TriggerType(Enum):
+    """RW trigger types - now loaded from canonical definition."""
+    def __init__(self, value):
+        self._value_ = value
+    
+    @classmethod
+    def from_string(cls, trigger_str: str):
+        """Create TriggerType from string trigger."""
+        # Map trigger strings to enum values using canonical definition
+        available_triggers = list_triggers()
+        if trigger_str in available_triggers:
+            return cls(trigger_str)
+        raise ValueError(f"Unknown trigger: {trigger_str}")
 
 
-@dataclass
-class ExecutionPlan:
-    """Represents a plan for executing multiple workflows."""
-    workflows: List[str]  # Workflow IDs in execution order
-    dependencies: Dict[str, List[str]]  # workflow_id -> [dependency_ids]
-    status: ExecutionPlanStatus
-    results: Dict[str, WorkflowResult] = None  # workflow_id -> result
+def parse_rw_trigger(trigger_str: str) -> TriggerType:
+    """Parse RW trigger string and return TriggerType enum."""
+    trigger_str = trigger_str.strip().upper()
+    
+    # Map trigger strings to canonical trigger types
+    trigger_mapping = {
+        "RW": "RW",
+        "RW -K": "RW -k", 
+        "RW -D": "RW -d"
+    }
+    
+    canonical_trigger = trigger_mapping.get(trigger_str, trigger_str)
+    return TriggerType.from_string(canonical_trigger)
+
+
+def get_execution_path_for_trigger(trigger_type: TriggerType) -> List[float]:
+    """Get execution path for a trigger type using canonical definition."""
+    from canonical_steps import get_execution_path as get_canonical_execution_path
+    path = get_canonical_execution_path(trigger_type.value)
+    return path.steps if path else []
+
+
+def should_execute_step_for_trigger(step_number: float, trigger_type: TriggerType) -> bool:
+    """Check if a step should execute for a given trigger using canonical definition."""
+    from canonical_steps import should_execute_step as canonical_should_execute_step
+    return canonical_should_execute_step(step_number, trigger_type.value)
+
+
+def get_step_modifications_for_trigger(step_number: float, trigger_type: TriggerType) -> Dict[str, Any]:
+    """Get step modifications for a trigger using canonical definition."""
+    from canonical_steps import get_step_modifications as canonical_get_step_modifications
+    return canonical_get_step_modifications(step_number, trigger_type.value)
 
 
 # Dependency Graph for Known Workflows
@@ -452,4 +494,101 @@ def chain_workflows(
     """
     orchestrator = WorkflowOrchestrator()
     return orchestrator.chain_workflows(workflow_ids, user_request, rw_context)
+
+
+def execute_rw_with_trigger(trigger_input: str, **kwargs) -> ExecutionPlan:
+    """
+    Execute Release Workflow with specific trigger type.
+    
+    Args:
+        trigger_input: RW trigger input ('RW', 'RW -k', 'RW -d')
+        **kwargs: Additional arguments for workflow execution
+    
+    Returns:
+        Execution plan with results
+    """
+    try:
+        # Parse trigger type
+        trigger_type = parse_rw_trigger(trigger_input)
+        
+        # Get execution path using canonical definition
+        execution_path = get_execution_path_for_trigger(trigger_type)
+        
+        # Create workflow list based on execution path
+        workflow_ids = [f"release-step-{step}" for step in execution_path]
+        
+        # Prepare RW context with trigger information
+        rw_context = kwargs.get('rw_context', {})
+        rw_context.update({
+            'trigger_type': trigger_type.value,
+            'trigger_input': trigger_input,
+            'execution_path': execution_path
+        })
+        
+        # Execute workflows
+        return chain_workflows(workflow_ids, kwargs.get('user_request'), rw_context)
+        
+    except ValueError as e:
+        # Create failed execution plan for invalid trigger
+        plan = ExecutionPlan(
+            workflows=[],
+            dependencies={},
+            status=ExecutionPlanStatus.FAILED
+        )
+        plan.results = {'error': str(e)}
+        return plan
+
+
+if __name__ == "__main__":
+    import argparse
+    import sys
+    
+    parser = argparse.ArgumentParser(description="Workflow Orchestrator for Release Workflow")
+    parser.add_argument(
+        "--workflow",
+        type=str,
+        help="Workflow to execute (release, intake, update-kanban)"
+    )
+    parser.add_argument(
+        "--trigger",
+        type=str,
+        help="RW trigger type (RW, RW -k, RW -d)"
+    )
+    parser.add_argument(
+        "--user-request",
+        type=str,
+        help="User request context"
+    )
+    
+    args = parser.parse_args()
+    
+    if args.trigger:
+        # Execute RW with specific trigger
+        plan = execute_rw_with_trigger(
+            trigger_input=args.trigger,
+            user_request=args.user_request
+        )
+        
+        if plan.status == ExecutionPlanStatus.COMPLETED:
+            print(f"✅ RW execution completed successfully")
+            sys.exit(0)
+        else:
+            print(f"❌ RW execution failed: {plan.results.get('error', 'Unknown error')}")
+            sys.exit(1)
+    
+    elif args.workflow:
+        # Execute specific workflow
+        orchestrator = WorkflowOrchestrator()
+        plan = orchestrator.chain_workflows([args.workflow], args.user_request)
+        
+        if plan.status == ExecutionPlanStatus.COMPLETED:
+            print(f"✅ Workflow {args.workflow} completed successfully")
+            sys.exit(0)
+        else:
+            print(f"❌ Workflow {args.workflow} failed")
+            sys.exit(1)
+    
+    else:
+        print("❌ Must specify either --workflow or --trigger")
+        sys.exit(1)
 

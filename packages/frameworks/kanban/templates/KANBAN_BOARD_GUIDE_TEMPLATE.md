@@ -19,7 +19,8 @@ template_sections:
 **Last Updated:** {Date}  
 **Version:** {Version}
 
-> **For structured information only, see:** [`kanban-board.md`](kanban-board.md)
+> **For structured information only, see:** [`kanban-board.md`](kanban-board.md)  
+> **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)
 
 ---
 
@@ -28,15 +29,17 @@ template_sections:
 This guide explains how to use and understand the Kanban board. The board tracks all work on the {project name} repository.
 
 **Structure:** All Kanban documentation lives under `{kanban_path}/`:
+
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: `_index.md` (quick view), `kanban-board.md` (structured information), and this file (guide)
+- Board views: `_index.md` (quick view), `kanban-board.md` (tasks), `kanban-structure.md` (epics), and this file (guide)
 
 ---
 
 ## Parent-Child Relationship
 
 This Kanban board serves as the **parent document** to Story documents, similar to how Story documents are parents of Task documents:
+
 - **Board → Story:** This board links to and tracks all Story documents
 - **Story → Task:** Story documents link to and track all Task documents
 - This creates a clear hierarchy: Board (parent) → Story (child) → Task (grandchild)
@@ -99,12 +102,12 @@ Tasks within each MoSCOW section are ordered chronologically, with most recently
 1. **Create Epic** (if needed):
    - Create `epics/Epic-X/` directory
    - Add `epics/Epic-X/Epic-X.md` (Epic overview)
-   - Update `kanban-board.md` and `_index.md`
+   - Update `kanban-board.md`, `kanban-structure.md`, and `_index.md`
 
 2. **Create Story**:
    - Add `epics/Epic-X/Story-XXX-short-slug.md`
    - Update Epic doc (`epics/Epic-X/Epic-X.md`) with Story reference
-   - Update `kanban-board.md` and `_index.md`
+   - Update `kanban-board.md`, `kanban-structure.md`, and `_index.md`
 
 3. **Create Task**:
    - Add `epics/Epic-X/Story-XXX/T{task}-description.md` (separate file format) OR
@@ -124,7 +127,8 @@ See [`README.md`](README.md) for full structure details and `{local_policy_path}
 ## Quick Reference
 
 - **Board Quick View:** [`_index.md`](_index.md)
-- **Board (Structured Info):** [`kanban-board.md`](kanban-board.md)
+- **Board (MoSCOW Tasks):** [`kanban-board.md`](kanban-board.md)
+- **Board (Epic Structure):** [`kanban-structure.md`](kanban-structure.md)
 - **Kanban Governance Policy:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Framework-level policy documentation
 - **Local Kanban Policy:** `{local_policy_path}` - Project-specific implementation details
 
@@ -132,10 +136,11 @@ See [`README.md`](README.md) for full structure details and `{local_policy_path}
 
 ## Board Structure
 
-The board is organized into two main sections:
+The board is organized into three separate documents:
 
-1. **MoSCOW Prioritized In-Progress Tasks** - Shows all active tasks organized by priority (M/S/C/O/W)
-2. **Epics** - Shows all epics with their status, priority, stories, and links
+1. **MoSCOW Prioritized Tasks** (`kanban-board.md`) - Shows all active tasks organized by priority (M/S/C/O/W)
+2. **Epic/Story/Task Structure** (`kanban-structure.md`) - Shows all epics with their status, priority, stories, and links
+3. **Rules and Explanations** (`kanban-board-guide.md`) - This document with how-to content and policies
 
 The board serves as the parent document to Story documents, providing a comprehensive view of all work items in the project.
 
@@ -146,23 +151,30 @@ The board serves as the parent document to Story documents, providing a comprehe
 ### MoSCOW Priority Guidelines
 
 **Determining Priority:**
-- **Must Have (M):** Critical tasks that must be completed. These are blocking other work or are on the critical path.
-- **Should Have (S):** Important tasks that should be completed. High-value items that contribute significantly to goals.
-- **Could Have (C):** Nice-to-have tasks that could be completed. Lower priority items that add value but are not essential.
-- **Ongoing (O):** Perpetual maintenance tasks that never complete. These are tracked but don't block other work (e.g., workflow maintenance, changelog management).
-- **Won't Have (W):** Tasks that are deferred or not being actively worked on. Items explicitly marked as out of scope for current cycle.
 
+ 
+- **M (Must Have):** Critical tasks that block other work or are essential for the next release
+- **S (Should Have):** Important tasks that are not blocking but have significant impact
+- **C (Could Have):** Nice-to-have tasks that add value but are not essential
+- **O (Ongoing):** Perpetual tasks that never complete (maintenance, monitoring, etc.)
+- **W (Won't Have):** Tasks explicitly deferred or not being done at this time
+
+ 
 **Default Priority:**
 - If priority is not explicitly specified, default to "Should Have (S)"
 - Priority can be updated as work progresses
 
 ### Chronological Ordering
 
-**Ordering Rules:**
-- Tasks within each MoSCOW section are ordered **chronologically** (most recently updated first)
-- This ensures the most active work is visible at the top of each section
-- Ordering is based on the task document's `Last updated` field
+**Ordering Within Priority:**
 
+ 
+- Tasks within each MoSCOW section are ordered chronologically
+- Most recently updated tasks appear at the top
+- This ensures visibility of recent activity
+- Use version numbers or timestamps for ordering consistency
+
+ 
 **How to Update Order:**
 - When a task is updated, its `Last updated` field should be updated
 - The board should be re-sorted to place the most recently updated tasks at the top of each section
@@ -199,11 +211,13 @@ The Story Checklist section should list all stories in a compact format (one lin
 ### Parent-Child Relationship
 
 **Hierarchy:**
+
 - **Board → Story:** The board links to and tracks all Story documents
 - **Story → Task:** Story documents link to and track all Task documents
 - This creates a clear hierarchy: Board (parent) → Story (child) → Task (grandchild)
 
 **Maintaining Links:**
+
 - Ensure all Story links in the board are valid
 - Ensure all Task links in Stories are valid
 - Update links when documents are moved or renamed
@@ -212,7 +226,8 @@ The Story Checklist section should list all stories in a compact format (one lin
 
 ## Notes
 
-- The board is optimized for quick scanning - structured information only
+- The MoSCOW board is optimized for quick scanning - structured information only
+- For Epic/Story/Task structure, see kanban-structure.md
 - For rules, explanations, and how-to content, see this guide document
 - The board is updated by UKW (Update Kanban Workflow) and RW (Release Workflow) if integrated
 - Board views are synchronized with Epic/Story/Task documents

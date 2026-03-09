@@ -9,6 +9,7 @@ config:
   story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
   task_doc_pattern: epics/Epic-{epic}/Story-{story}/T{task}-*.md
   kanban_board: kanban-board.md
+  kanban_structure: kanban-structure.md
   fr_br_root: fr-br
   git_commit_history_days: 7
   use_rw_config: true

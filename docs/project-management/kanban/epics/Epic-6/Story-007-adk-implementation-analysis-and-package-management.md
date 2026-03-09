@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-02-22 (v0.6.7.103+4 – RW: UKW comprehensive-by-default, workflow docs)
-**Version:** v0.6.7.103+4
+**Last updated:** 2026-03-09 (v0.6.7.107+1 – T107: Workflows Directory Structure Reorganization COMPLETED)
+**Version:** v0.6.7.107+1
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -92,9 +92,9 @@ housekeeping_policy: keep
   - Task: [`T106-windsurf-migration-cursorrules-to-workflows.md`](T106-windsurf-migration-cursorrules-to-workflows.md)
   - **Scope:** Map key policies/workflows to Windsurf/Cascade equivalents, including system instructions and developer workflows
 
-- [ ] **E6:S07:T107 – IDE Command Whitelist Optimization** - TODO
-  - Task: [`T107-ide-command-whitelist-optimization.md`](T107-ide-command-whitelist-optimization.md)
-  - **Scope:** Optimize IDE command whitelist to reduce approval friction by implementing pattern-based command approval
+- [x] **E6:S07:T107 – Workflows Directory Structure Reorganization** ✅ COMPLETE
+  - Task: [`T107-workflows-directory-structure-reorganization.md`](T107-workflows-directory-structure-reorganization.md)
+  - **Scope:** Reorganize workflows directory into named subdirectories for better organization and maintainability
 
 ---
 

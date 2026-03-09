@@ -20,20 +20,38 @@ housekeeping_policy: keep
 
 ### 🚀 RELEASE WORKFLOW (RW) TRIGGER
 
-**When the user types "RW" or "rw" (case-insensitive), execute the Release Workflow as an intelligent agent:**
+**When the user types any of the following triggers (case-insensitive), execute the Release Workflow as an intelligent agent:**
 
-1. **DO NOT** run the deterministic script `scripts/release_workflow.py`
-2. **DO** execute the Release Workflow using the **intelligent agent-driven execution pattern**
-3. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists. This is the **single source of truth** for all project-specific paths. If config exists, use its values. If not, use placeholders/examples (backward compatibility).
-4. **Follow** the step-by-step guide below
+- **"RW"** - Full Release Workflow (all 17 steps)
+- **"RW -k"** - Initial Kanban Documentation Commit (documentation setup only)
+- **"RW -d"** - Documentation-Only Release (documentation updates without full release cycle)
+
+**Trigger Processing:**
+
+1. **Parse Trigger Type:** Determine which workflow variant to execute
+2. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists. This is the **single source of truth** for all project-specific paths. If config exists, use its values. If not, use placeholders/examples (backward compatibility).
+3. **Select Execution Path:** Choose appropriate step sequence based on trigger type
+4. **Follow** the step-by-step guide for selected path
 5. **🚨 MANDATORY: Start with Step 1: Branch Safety Check** - This is a **MANDATORY BLOCKING STEP** that MUST run before any file modifications
    - **CRITICAL:** Step 1 MUST run `validate_branch_context.py --strict` and check exit code
    - **CRITICAL:** If Step 1 fails (non-zero exit code), **DO NOT PROCEED** to Step 2
    - **CRITICAL:** If Step 1 fails, mark all steps as `cancelled` and stop workflow immediately
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
-6. **Execute all remaining steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
+6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
 7. **Document** each step's analysis, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 14 steps (see below)
+8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking the steps for the selected path
+
+**Execution Paths by Trigger Type:**
+
+**RW (Full Release):** Steps 1-17 (complete release with Git operations, verification, PIR)
+
+**RW -k (Kanban Init):** Steps [1, 2, 3, 4, 7, 11, 12] - Documentation setup only
+- Step 7 modified: Only update changelog, version number, and Kanban docs
+- Skip: Git push, verification, PIR, housekeeping
+
+**RW -d (Documentation Only):** Steps [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14] - Documentation updates
+- Skip: Git tag, push, PIR trigger, housekeeping  
+- Step 14 optional: Agent determines if verification actions needed
 
 **🔧 Config-Driven Approach (Preferred):**
 
@@ -77,26 +95,64 @@ kanban_root = config.get('kanban_root', 'docs/project-management/kanban') if con
 
 **🚨 MANDATORY: Progress Tracking with Cursor TODOs**
 
-**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for all 14 Release Workflow steps:
+**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for the steps in the selected execution path:
 
-1. **At Workflow Start:** Create TODO list with all 14 steps as `pending`
-   ```python
-   todo_write(merge=False, todos=[
-       {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
-       {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Read Story file, identify completed task number, compare to current VERSION_TASK, determine if new task or same task, update version file, validate'},
-       {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG with full timestamp'},
-       {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
-       {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
-       {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-      {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
-      {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
-      {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
-      {'id': 'rw-step-9.5', 'status': 'pending', 'content': 'Step 9.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
-      {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
-      {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
-      {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags (with network permissions)'},
-   ])
-   ```
+**Trigger-Specific Step Lists:**
+
+**For "RW" (Full Release - 17 steps):**
+```python
+todo_write(merge=False, todos=[
+    {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Read Story file, identify completed task number, compare to current VERSION_TASK, determine if new task or same task, update version file, validate'},
+    {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG with full timestamp'},
+    {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
+    {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-9.5', 'status': 'pending', 'content': 'Step 9.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
+    {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
+    {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags (with network permissions)'},
+    {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification, Housekeeping & Reflection - Verify release, perform housekeeping tasks, and reflect on process'},
+    {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found during verification'},
+    {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Check for PIR Trigger - Determine if Post-Implementation Review is needed'},
+    {'id': 'rw-step-16', 'status': 'pending', 'content': 'Step 16: Housekeeping - Clean up temporary files and IDE todos'},
+    {'id': 'rw-step-17', 'status': 'pending', 'content': 'Step 17: Complete - Final verification and cleanup'},
+])
+```
+
+**For "RW -k" (Kanban Init - 7 steps):**
+```python
+todo_write(merge=False, todos=[
+    {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for Kanban documentation setup'},
+    {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for Kanban init'},
+    {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for Kanban init'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Kanban Documentation Update - Update changelog, version number, and Kanban docs only'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Commit Changes - Create git commit for Kanban documentation setup'},
+    {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Create Git Tag - Create tag for Kanban documentation setup'},
+])
+```
+
+**For "RW -d" (Documentation Only - 13 steps):**
+```python
+todo_write(merge=False, todos=[
+    {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for documentation release'},
+    {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for documentation updates'},
+    {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for documentation release'},
+    {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Post-Commit Verification & Reflection - Verify documentation release'},
+    {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found (optional, agent-determined)'},
+])
+```
 
 2. **Before Each Step:** Mark step as `in_progress`
    ```python

@@ -222,13 +222,14 @@ class InstallationValidator:
         # Check for kanban board files
         board_files = [
             "kanban-board.md",
+            "kanban-structure.md",
             "_index.md",
         ]
         
         found_boards = [f for f in board_files if (self.kanban_path / f).exists()]
         if not found_boards:
             self.warnings.append(
-                "⚠️  No kanban board files found (kanban-board.md or _index.md). "
+                "⚠️  No kanban board files found (kanban-board.md, kanban-structure.md, or _index.md). "
                 "Board files are recommended for project management."
             )
     
