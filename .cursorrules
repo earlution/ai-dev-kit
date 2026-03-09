@@ -564,15 +564,30 @@ The workflow definition is located at:
 
 **When the user types "ICW" or "icw" (case-insensitive), execute the Implementation Cycle Workflow as an intelligent agent:**
 
-1. **DO NOT** run any deterministic scripts
-2. **DO** execute the Implementation Cycle Workflow using the **intelligent agent-driven execution pattern**
-3. **THINK FIRST, ACT SECOND** - Analyze the implementation requirements and guide through three phases
-4. **BE ADAPTIVE** - Provide intelligent guidance for specification, testing, and implementation planning
-5. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `icw-config.yaml` from workflow directory
-6. **🚨 MANDATORY: Start with Step 1: Initialize Implementation Cycle** - This is a **MANDATORY BLOCKING STEP**
-7. **EXECUTE INTELLIGENTLY** - Use your AI capabilities to guide through specification, test design, and implementation planning
-8. **GUIDE THE USER** - Ask relevant questions and provide intelligent assistance throughout the three phases
-9. **Document** each phase's analysis, decisions, and results
+**🚨 CRITICAL REQUIREMENT: ICW MUST BE EXECUTED IN PLANNING MODE**
+
+1. **MODE VALIDATION (MANDATORY):** ICW will detect execution mode and CANCEL if not in planning mode
+2. **DO NOT** run any deterministic scripts
+3. **DO** execute the Implementation Cycle Workflow using the **intelligent agent-driven execution pattern**
+4. **THINK FIRST, ACT SECOND** - Analyze the implementation requirements and guide through three phases
+5. **BE ADAPTIVE** - Provide intelligent guidance for specification, testing, and implementation planning
+6. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `icw-config.yaml` from workflow directory
+7. **🚨 MANDATORY: Start with Step 1: Initialize Implementation Cycle** - This is a **MANDATORY BLOCKING STEP**
+8. **EXECUTE INTELLIGENTLY** - Use your AI capabilities to guide through specification, test design, and implementation planning
+9. **GUIDE THE USER** - Ask relevant questions and provide intelligent assistance throughout the three phases
+10. **Document** each phase's analysis, decisions, and results
+
+**🔍 MODE DETECTION AND VALIDATION:**
+- **Planning Mode:** ✅ ALLOWED - ICW requires intelligent agent guidance
+- **Implementation Mode:** 🚫 BLOCKED - ICW will cancel execution with error message
+- **Unknown Mode:** 🚫 BLOCKED - ICW requires explicit planning mode
+
+**📝 ERROR HANDLING FOR WRONG MODE:**
+If ICW detects implementation mode:
+- Display clear error message explaining planning mode requirement
+- Provide instructions to switch to planning mode
+- Cancel execution gracefully
+- Do not proceed with any ICW steps
 
 **🧠 AGENT INTELLIGENCE REQUIREMENTS:**
 

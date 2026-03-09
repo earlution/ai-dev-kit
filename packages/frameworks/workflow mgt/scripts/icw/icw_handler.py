@@ -2,6 +2,8 @@
 """
 Implementation Cycle Workflow (ICW) Handler
 Provides three-phase implementation workflow: Specification Definition, Test Design, Implementation Planning
+
+REQUIRES PLAN MODE: ICW must be executed in planning mode for proper intelligent agent guidance.
 """
 
 import os
@@ -21,6 +23,29 @@ class ICWHandler:
         self.config = self._load_config()
         self.cycle_state = {}
         self.current_phase = None
+        
+    def _detect_execution_mode(self) -> str:
+        """Detect if running in planning mode or implementation mode"""
+        # Check for planning mode indicators
+        planning_indicators = [
+            os.environ.get('PLANNING_MODE', '').lower() == 'true',
+        ]
+        
+        # Check for implementation mode indicators  
+        impl_indicators = [
+            os.environ.get('IMPLEMENTATION_MODE', '').lower() == 'true',
+        ]
+        
+        # Only use explicit environment variables for mode detection
+        # Avoid path-based detection which can be unreliable
+        
+        if any(planning_indicators):
+            return 'planning'
+        elif any(impl_indicators):
+            return 'implementation'
+        else:
+            # Default to requiring planning mode
+            return 'unknown'
         
     def _find_config(self) -> str:
         """Find ICW configuration file"""
@@ -42,15 +67,52 @@ class ICWHandler:
         with open(self.config_path, 'r') as f:
             return yaml.safe_load(f)
     
+    def validate_execution_mode(self) -> bool:
+        """Validate that ICW is running in the correct mode"""
+        mode = self._detect_execution_mode()
+        
+        if mode == 'planning':
+            print("✅ ICW running in PLANNING MODE - Correct mode for intelligent agent guidance")
+            return True
+        elif mode == 'implementation':
+            print("🚫 ERROR: ICW detected IMPLEMENTATION MODE")
+            print("🚫 ICW requires PLANNING MODE for proper intelligent agent guidance")
+            print("🚫 Implementation mode bypasses the intelligent agent guidance that ICW provides")
+            print("🚫 Please switch to planning mode to execute ICW properly")
+            print("")
+            print("💡 To fix this:")
+            print("   1. Set PLANNING_MODE=true environment variable")
+            print("   2. Or run from a planning context")
+            print("   3. Or use planning-specific execution method")
+            return False
+        else:
+            print("🚫 ERROR: ICW cannot determine execution mode")
+            print("🚫 ICW requires explicit PLANNING MODE for proper execution")
+            print("🚫 Please ensure you're running in planning mode")
+            print("")
+            print("💡 To fix this:")
+            print("   1. Set PLANNING_MODE=true environment variable")
+            print("   2. Ensure planning context is detected")
+            print("   3. Use planning-specific execution method")
+            return False
+    
     def initialize_cycle(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """Initialize implementation cycle (Step 1)"""
+        # First validate execution mode
+        if not self.validate_execution_mode():
+            return {
+                'success': False,
+                'error': 'ICW requires planning mode for execution',
+                'mode_detected': self._detect_execution_mode()
+            }
+        
         print("🚀 Initializing Implementation Cycle...")
         
         # Create cycle ID
         cycle_id = f"ICW-{datetime.now().strftime('%Y%m%d-%H%M%S')}"
         
         # Create output directory
-        output_dir = Path(self.config['paths']['output_dir'])
+        output_dir = Path("/Users/rms/Documents/projects/ai-dev-kit/docs/implementation-cycles")
         output_dir.mkdir(parents=True, exist_ok=True)
         
         # Initialize cycle state
