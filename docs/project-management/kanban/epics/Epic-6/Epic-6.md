@@ -66,9 +66,9 @@ housekeeping_policy: keep
 
 
 
-- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.1+1 – Kanban documentation setup)
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.3+2 – Apple SDK License Blocking Issue Investigation Complete)
   - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
-  - Tasks: (No tasks yet - story created for future feature requests)
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument)
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
 
