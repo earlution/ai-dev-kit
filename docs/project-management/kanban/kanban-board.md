@@ -24,9 +24,9 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E5:S01:T48** – ICW Task Identifier Argument - TODO (HIGH priority, Extend ICW to require task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](epics/Epic-5/Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../fr-br/FR-048-icw-task-identifier-argument.md)
+- **E5:S01:T48** – ICW Task Identifier Argument - COMPLETE (HIGH priority, Extend ICW to require task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](epics/Epic-5/Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../fr-br/FR-048-icw-task-identifier-argument.md)
 - **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS, BLOCKED (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work. Root cause identified as Cascade whitelist security prompts (BR-039). Phase 1-2 complete, Phase 3 (user experience) blocked by Cascade security issues.) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) (vv0.6.6.2+6) (vv0.6.6.2+7) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
-- **E6:S06:T03** – Investigate Apple SDK License Blocking Issue - TODO (HIGH priority, Apple SDK license blocking issue prevents proper installation or usage of ai-dev-kit components on Apple platforms; needs investigation to understand root cause and implement solution) - [Task Document](epics/Epic-6/Story-006-feature-requests/T03-apple-sdk-license-blocking-issue.md) | [BR-040](fr-br/BR-040-apple-sdk-license-blocking-issue.md)
+- **E6:S06:T03** – Investigate Apple SDK License Blocking Issue - COMPLETE (HIGH priority, Apple SDK license blocking issue prevents proper installation or usage of ai-dev-kit components on Apple platforms; needs investigation to understand root cause and implement solution) - [Task Document](epics/Epic-6/Story-006-feature-requests/T03-apple-sdk-license-blocking-issue.md) | [BR-040](fr-br/BR-040-apple-sdk-license-blocking-issue.md)
 
 ### Should Have (S) - Important Tasks
 
