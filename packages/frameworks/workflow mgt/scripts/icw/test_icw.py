@@ -1,92 +1,34 @@
 #!/usr/bin/env python3
 """
-Test script for Implementation Cycle Workflow (ICW)
-Validates the basic functionality of the ICW handler
+Test suite for Implementation Cycle Workflow (ICW) Handler
+Tests ICW functionality including task identifier validation and planning mode requirements
 """
 
-import os
+import unittest
 import sys
-import json
+import os
 import tempfile
-import shutil
+import json
+from unittest.mock import patch, MagicMock
 from pathlib import Path
 
-# Add the ICW handler to the path
+# Add the ICW module to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from icw_handler import ICWHandler
 
-def test_icw_basic():
-    """Test basic ICW functionality"""
-    print("🧪 Testing ICW Basic Functionality")
+class TestICTaskIdentifierValidation(unittest.TestCase):
+    """Test task identifier parsing and validation functionality"""
     
-    # Create temporary directory for testing
-    with tempfile.TemporaryDirectory() as temp_dir:
-        # Create test config with correct paths
-        test_config = {
+    def setUp(self):
+        """Set up test environment"""
+        self.handler = ICWHandler()
+        # Mock config for testing
+        self.handler.config = {
             'paths': {
-                'templates_dir': '/Users/rms/Documents/projects/ai-dev-kit/packages/frameworks/workflow mgt/templates/icw',
-                'output_dir': temp_dir,
-                'scripts_dir': '.',
-                'kanban_root': '/Users/rms/Documents/projects/ai-dev-kit/docs/project-management/kanban'
-            },
-            'templates': {
-                'specification': {'file': 'specification-template.md'},
-                'test_design': {'file': 'test-design-template.md'},
-                'implementation_plan': {'file': 'implementation-plan-template.md'}
+                'kanban_root': 'docs/project-management/kanban'
             }
         }
-        
-        # Save test config
-        config_file = Path(temp_dir) / 'icw-config.yaml'
-        import yaml
-        with open(config_file, 'w') as f:
-            yaml.dump(test_config, f)
-        
-        # Initialize ICW handler
-        handler = ICWHandler(str(config_file))
-        
-        # Test parameters
-        test_params = {
-            'implementation_title': 'Test Implementation',
-            'problem_context': 'This is a test implementation for validation',
-            'scope': 'feature',
-            'priority': 'medium',
-            'stakeholders': 'Test Team',
-            'constraints': 'Test constraints only',
-            'existing_documentation': 'N/A'
-        }
-        
-        # Test Step 1: Initialize
-        print("📋 Step 1: Initialize Cycle")
-        result = handler.initialize_cycle(test_params)
-        assert result['success'], f"Initialize failed: {result}"
-        cycle_id = result['cycle_id']
-        print(f"✅ Cycle initialized: {cycle_id}")
-        
-        # Test Step 2: Specification Definition
-        print("📋 Step 2: Specification Definition")
-        result = handler.specification_definition(test_params)
-        assert result['success'], f"Specification failed: {result}"
-        print(f"✅ Specification created: {result['output_file']}")
-        
-        # Test Step 3: Test Design
-        print("📋 Step 3: Test Design")
-        result = handler.test_design(test_params)
-        assert result['success'], f"Test design failed: {result}"
-        print(f"✅ Test design created: {result['output_file']}")
-        
-        # Test Step 4: Implementation Planning
-        print("📋 Step 4: Implementation Planning")
-        result = handler.implementation_planning(test_params)
-        assert result['success'], f"Implementation planning failed: {result}"
-        print(f"✅ Implementation plan created: {result['output_file']}")
-        
-        # Test Step 5: Generate Package
-        print("📋 Step 5: Generate Package")
-        result = handler.generate_package(test_params)
-        assert result['success'], f"Package generation failed: {result}"
-        print(f"✅ Package generated: {result['package_summary']}")
         
         # Test Step 6: Quality Validation
         print("📋 Step 6: Quality Validation")

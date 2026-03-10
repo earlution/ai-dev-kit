@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
-VERSION_STORY = 1     # Story number (Story 1: FR Repository)
-VERSION_TASK = 45     # Task number (T45: ADR-002 Task-Touch Derived Mapping)
-VERSION_BUILD = 3     # Build number (E5:S01:T45+3 - ADR-002 Task-Touch Mapping Implementation Complete)
+VERSION_EPIC = 6      # Epic number (Epic 6: Feature Requests and Bug Reports)
+VERSION_STORY = 6     # Story number (Story 6: Feature Requests)
+VERSION_TASK = 3      # Task number (T03: Apple SDK License Blocking Issue Investigation)
+VERSION_BUILD = 1     # Build number (E6:S06:T03+1 - Apple SDK License Blocking Issue Investigation Created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.45+3 = Development, Epic 5, Story 1, Task 45, Build 3 (E5:S01:T45+3: ADR-002 Task-Touch Mapping Implementation Complete)
+# Current: 0.6.6.3+1 = Development, Epic 6, Story 6, Task 3, Build 1 (E6:S06:T03+1: Apple SDK License Blocking Issue Investigation Created)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

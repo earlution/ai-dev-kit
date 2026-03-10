@@ -4,15 +4,18 @@ Implementation Cycle Workflow (ICW) Handler
 Provides three-phase implementation workflow: Specification Definition, Test Design, Implementation Planning
 
 REQUIRES PLAN MODE: ICW must be executed in planning mode for proper intelligent agent guidance.
+REQUIRES TASK IDENTIFIER: ICW must be bound to a specific Kanban task.
 """
 
 import os
 import sys
 import yaml
 import json
+import argparse
+import re
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Tuple
 
 class ICWHandler:
     """Main handler for Implementation Cycle Workflow"""
@@ -23,6 +26,8 @@ class ICWHandler:
         self.config = self._load_config()
         self.cycle_state = {}
         self.current_phase = None
+        self.task_identifier = None
+        self.task_context = None
         
     def _detect_execution_mode(self) -> str:
         """Detect if running in planning mode or implementation mode"""
@@ -46,6 +51,163 @@ class ICWHandler:
         else:
             # Default to requiring planning mode
             return 'unknown'
+        
+    def parse_task_identifier(self, task_id: str) -> Dict[str, int]:
+        """Parse task identifier into Epic/Story/Task components
+        
+        Supports formats:
+        - E5:S01:T47 (full Epic:Story:Task)
+        - E5S01T47 (compact format)
+        - T47 (task-only, assumes current context)
+        """
+        task_id = task_id.strip()
+        
+        # Full format: E5:S01:T47
+        full_pattern = r'^E(\d+):S(\d+):T(\d+)$'
+        match = re.match(full_pattern, task_id, re.IGNORECASE)
+        if match:
+            return {
+                'epic': int(match.group(1)),
+                'story': int(match.group(2)),
+                'task': int(match.group(3))
+            }
+        
+        # Compact format: E5S01T47
+        compact_pattern = r'^E(\d+)S(\d+)T(\d+)$'
+        match = re.match(compact_pattern, task_id, re.IGNORECASE)
+        if match:
+            return {
+                'epic': int(match.group(1)),
+                'story': int(match.group(2)),
+                'task': int(match.group(3))
+            }
+        
+        # Task-only format: T47
+        task_only_pattern = r'^T(\d+)$'
+        match = re.match(task_only_pattern, task_id, re.IGNORECASE)
+        if match:
+            # For task-only, we'll need to determine epic/story from context
+            # For now, return just the task and let validation handle context
+            return {
+                'epic': None,
+                'story': None,
+                'task': int(match.group(1))
+            }
+        
+        raise ValueError(f"Invalid task identifier format: {task_id}")
+    
+    def validate_task_exists(self, task_components: Dict[str, int]) -> Tuple[bool, str]:
+        """Check if task exists in Kanban framework
+        
+        Returns:
+            Tuple of (exists, error_message)
+        """
+        try:
+            # Get Kanban root from config
+            kanban_root = Path(self.config.get('paths', {}).get('kanban_root', 'docs/project-management/kanban'))
+            
+            epic = task_components['epic']
+            story = task_components['story']
+            task = task_components['task']
+            
+            # If epic/story are None, we need to infer from context or current directory
+            if epic is None or story is None:
+                return False, f"Task-only format T{task} requires Epic/Story context. Use full format like E5:S01:T{task}"
+            
+            # Check if task document exists
+            task_doc_path = kanban_root / f"epics/Epic-{epic}/Story-{story:03d}-*/T{task}-*.md"
+            task_docs = list(Path.cwd().glob(str(task_doc_path)))
+            
+            if not task_docs:
+                return False, f"Task E{epic}:S{story}:T{task} not found in Kanban"
+            
+            # Load task document for context
+            task_doc = task_docs[0]
+            with open(task_doc, 'r') as f:
+                content = f.read()
+            
+            return True, content
+            
+        except Exception as e:
+            return False, f"Error validating task: {str(e)}"
+    
+    def get_available_tasks(self, epic: int = None) -> List[str]:
+        """Get list of available tasks for user guidance"""
+        try:
+            kanban_root = Path(self.config.get('paths', {}).get('kanban_root', 'docs/project-management/kanban'))
+            
+            if epic:
+                # Get tasks for specific epic
+                epic_dir = kanban_root / f"epics/Epic-{epic}"
+                if epic_dir.exists():
+                    task_files = list(epic_dir.glob("**/T*-*.md"))
+                    return [f.name for f in task_files if f.name.startswith('T')]
+            else:
+                # Get all tasks
+                task_files = list(kanban_root.glob("**/T*-*.md"))
+                return [f.name for f in task_files if f.name.startswith('T')]
+                
+        except Exception:
+            return []
+        
+    def validate_task_identifier(self, task_id: str) -> Tuple[bool, str, Dict[str, Any]]:
+        """Validate task identifier and return task context
+        
+        Returns:
+            Tuple of (is_valid, error_message, task_context)
+        """
+        try:
+            # Parse the task identifier
+            task_components = self.parse_task_identifier(task_id)
+            
+            # Validate task exists
+            exists, result = self.validate_task_exists(task_components)
+            
+            if not exists:
+                # Get available tasks for helpful error message
+                available_tasks = self.get_available_tasks(task_components.get('epic'))
+                
+                error_msg = f"{result}"
+                if available_tasks:
+                    error_msg += f"\nAvailable tasks: {', '.join(available_tasks[:5])}"
+                    if len(available_tasks) > 5:
+                        error_msg += f" and {len(available_tasks) - 5} more..."
+                
+                return False, error_msg, {}
+            
+            # Get the task document path for context
+            kanban_root = Path(self.config.get('paths', {}).get('kanban_root', 'docs/project-management/kanban'))
+            epic = task_components['epic']
+            story = task_components['story']
+            task = task_components['task']
+            
+            task_doc_path = kanban_root / f"epics/Epic-{epic}/Story-{story:03d}-*/T{task}-*.md"
+            task_docs = list(Path.cwd().glob(str(task_doc_path)))
+            task_doc = task_docs[0] if task_docs else None
+            
+            # Parse task document content for context
+            task_context = {
+                'task_id': task_id,
+                'components': task_components,
+                'document_content': result,
+                'document_path': str(task_doc) if task_doc else None
+            }
+            
+            return True, "", task_context
+            
+        except ValueError as e:
+            # Get available tasks for format guidance
+            available_tasks = self.get_available_tasks()
+            
+            error_msg = f"{str(e)}\nExpected formats:\n"
+            error_msg += "  - E5:S01:T47 (full Epic:Story:Task)\n"
+            error_msg += "  - E5S01T47 (compact format)\n"
+            error_msg += "  - T47 (task-only, requires context)\n"
+            
+            if available_tasks:
+                error_msg += f"\nExample tasks: {', '.join(available_tasks[:3])}"
+            
+            return False, error_msg, {}
         
     def _find_config(self) -> str:
         """Find ICW configuration file"""
@@ -93,16 +255,58 @@ class ICWHandler:
             print("💡 To fix this:")
             print("   1. Set PLANNING_MODE=true environment variable")
             print("   2. Ensure planning context is detected")
-            print("   3. Use planning-specific execution method")
+            print("   3. Or use planning-specific execution method")
             return False
+    
+    def validate_execution_mode_with_task(self, task_id: str) -> bool:
+        """Validate both planning mode and task identifier
+        
+        Returns:
+            bool: True if both validations pass
+        """
+        # First validate execution mode
+        if not self.validate_execution_mode():
+            return False
+        
+        # Then validate task identifier
+        print(f"🔍 Validating task identifier: {task_id}")
+        
+        is_valid, error_msg, task_context = self.validate_task_identifier(task_id)
+        
+        if not is_valid:
+            print("🚫 ERROR: Invalid task identifier")
+            print(f"🚫 {error_msg}")
+            print("")
+            print("💡 To fix this:")
+            print("   1. Use a valid task identifier format")
+            print("   2. Ensure the task exists in the Kanban framework")
+            print("   3. Check the task identifier spelling")
+            return False
+        
+        # Store task context
+        self.task_identifier = task_id
+        self.task_context = task_context
+        
+        print(f"✅ Task identifier validated: {task_id}")
+        print(f"✅ Task context loaded from: {task_context.get('document_path', 'Unknown')}")
+        
+        return True
     
     def initialize_cycle(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """Initialize implementation cycle (Step 1)"""
-        # First validate execution mode
-        if not self.validate_execution_mode():
+        # Extract task_id from params
+        task_id = params.get('task_id')
+        if not task_id:
             return {
                 'success': False,
-                'error': 'ICW requires planning mode for execution',
+                'error': 'Task identifier is required for ICW execution'
+            }
+        
+        # First validate execution mode and task identifier
+        if not self.validate_execution_mode_with_task(task_id):
+            return {
+                'success': False,
+                'error': 'ICW requires planning mode and valid task identifier for execution',
                 'mode_detected': self._detect_execution_mode()
             }
         
@@ -115,10 +319,12 @@ class ICWHandler:
         output_dir = Path("/Users/rms/Documents/projects/ai-dev-kit/docs/implementation-cycles")
         output_dir.mkdir(parents=True, exist_ok=True)
         
-        # Initialize cycle state
+        # Initialize cycle state with task context
         self.cycle_state = {
             'cycle_id': cycle_id,
             'start_time': datetime.now().isoformat(),
+            'task_identifier': task_id,
+            'task_context': self.task_context,
             'params': params,
             'phases': {
                 'specification': {'status': 'pending', 'output': None},
@@ -418,18 +624,47 @@ class ICWHandler:
 
 def main():
     """Main entry point for ICW handler"""
-    if len(sys.argv) < 2:
-        print("Usage: icw_handler.py <command> [params]")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description='Implementation Cycle Workflow (ICW) Handler',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  icw_handler.py --task E5:S01:T47 initialize
+  icw_handler.py --task E5S01T47 initialize
+  icw_handler.py --task T47 initialize
+  
+Available commands:
+  initialize               Initialize implementation cycle
+  specification           Phase 1: Specification Definition
+  test_design             Phase 2: Test Design
+  implementation_planning Phase 3: Implementation Planning
+  generate_package        Generate complete package
+  kanban_update           Update Kanban status
+  validate_quality        Validate quality
+  archive                  Archive completed cycle
+        """
+    )
     
-    command = sys.argv[1]
+    parser.add_argument('--task', required=True, 
+                       help='Task identifier (e.g., E5:S01:T47, E5S01T47, T47)')
+    parser.add_argument('command', choices=[
+        'initialize', 'specification', 'test_design', 
+        'implementation_planning', 'generate_package', 
+        'kanban_update', 'validate_quality', 'archive'
+    ], help='ICW command to execute')
+    parser.add_argument('params', nargs='?', 
+                       help='JSON parameters for the command')
+    
+    args = parser.parse_args()
+    
     handler = ICWHandler()
     
     # Parse parameters (simple JSON for now)
-    params = {}
-    if len(sys.argv) > 2:
+    params = {'task_id': args.task}
+    if args.params:
         try:
-            params = json.loads(sys.argv[2])
+            additional_params = json.loads(args.params)
+            params.update(additional_params)
         except json.JSONDecodeError:
             print("Error: Invalid JSON parameters")
             sys.exit(1)
@@ -446,12 +681,7 @@ def main():
         'archive': handler.archive_cycle
     }
     
-    if command not in commands:
-        print(f"Error: Unknown command '{command}'")
-        print(f"Available commands: {list(commands.keys())}")
-        sys.exit(1)
-    
-    result = commands[command](params)
+    result = commands[args.command](params)
     
     if result['success']:
         print(f"✅ {result.get('message', 'Command completed successfully')}")

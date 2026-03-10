@@ -24,12 +24,9 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E6:S07:T104** – Release Automation Audit - TODO (CRITICAL, Audit RW/PVW validators, GitHub Actions, badge workflow, GitHub Release script, and required secrets for task-touch SemVer compatibility) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md)
-- **E6:S07:T105** – Release Runbook Creation - TODO (CRITICAL, Create comprehensive runbook with exact commands respecting "no manual commit/push" policy) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md)
-- **E5:S01:T40** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [Task Document](epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) | [FR-040](../fr-br/FR-040-implementation-cycle-workflow-icw.md)
-- **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH priority, SemVer mapping for task_touch and Kanban integration; docs-only FR repo anchor, implementation in versioning framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
-- **E5:S01:T47** – Install Logging for Framework Dependencies - TODO (HIGH priority, FR repo anchor; enables detailed post-install analysis and debugging for all frameworks) - [Task Document](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../fr-br/FR-047-install-logging-for-framework-dependencies.md)
+- **E5:S01:T48** – ICW Task Identifier Argument - TODO (HIGH priority, Extend ICW to require task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](epics/Epic-5/Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../fr-br/FR-048-icw-task-identifier-argument.md)
 - **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS, BLOCKED (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work. Root cause identified as Cascade whitelist security prompts (BR-039). Phase 1-2 complete, Phase 3 (user experience) blocked by Cascade security issues.) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) (vv0.6.6.2+6) (vv0.6.6.2+7) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+- **E6:S06:T03** – Investigate Apple SDK License Blocking Issue - TODO (HIGH priority, Apple SDK license blocking issue prevents proper installation or usage of ai-dev-kit components on Apple platforms; needs investigation to understand root cause and implement solution) - [Task Document](epics/Epic-6/Story-006-feature-requests/T03-apple-sdk-license-blocking-issue.md) | [BR-040](fr-br/BR-040-apple-sdk-license-blocking-issue.md)
 
 ### Should Have (S) - Important Tasks
 
@@ -64,6 +61,17 @@ housekeeping_policy: keep
   - T01: Link book content to frameworks - TODO
   - T02: Create book-specific examples - TODO
   - T03: Establish integration patterns - TODO
+
+---
+
+### Completed Tasks
+
+- **E5:S01:T47** – Install Logging for Framework Dependencies - COMPLETE (HIGH priority, Comprehensive install logging implementation with CLI integration, JSON/text formats, framework installer integration, install-history command, and full test coverage) - [Task Document](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../fr-br/FR-047-install-logging-for-framework-dependencies.md)
+- **E5:S01:T40** – Implementation Cycle Workflow (ICW) - COMPLETE (HIGH priority, Structured three-phase workflow with specification definition, test design, and implementation planning; complete workflow engine, templates, validation, and comprehensive test suite implemented) - [Task Document](epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) | [FR-040](../fr-br/FR-040-implementation-cycle-workflow-icw.md)
+- **E6:S07:T105** – Release Runbook Creation - COMPLETE (HIGH priority, Comprehensive release procedures with exact commands for both registry and task-touch SemVer modes; supplementary materials include quick reference, checklists, configuration examples, and integration guides) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md) | [Release Runbook](../maintenance/release-runbook.md)
+- **E6:S07:T104** – Release Automation Audit - COMPLETE (HIGH priority, Audit and fix release automation for task-touch SemVer compatibility; critical fixes implemented, release automation restored) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md) | [Audit Report](docs/implementation-cycles/E6S07T104-release-automation-audit-report.md) | [Remediation Implementation](docs/implementation-cycles/E6S07T104-remediation-implementation.md)
+- **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - COMPLETE (HIGH priority, SemVer mapping for task_touch and Kanban integration; docs-only FR repo anchor, implementation in versioning framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [Validation Report](epics/Epic-5/Story-001-fr-repo/E5S01T45-implementation-validation-report.md)
+- **E4:S06:T07** – Kanban Template Integration - COMPLETE (HIGH, Integrate with template setup guide and installation workflow) - [Task Document](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system/T07-integrate-with-template-setup-guide-and-installation-workflow.md) | [Validation Report](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system/E4S06T07-integration-validation-report.md)
 
 ### Ongoing (O) - Perpetual Tasks
 

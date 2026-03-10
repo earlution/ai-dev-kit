@@ -7,6 +7,125 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.6.3+1] - 10-03-26
+
+E6:S06:T03+1 – Apple SDK License Blocking Issue Investigation Created: Comprehensive bug report and task created to investigate and resolve Apple SDK license blocking issues that prevent proper installation or usage of ai-dev-kit components on Apple platforms.
+
+### Bug Report
+- **BR-040 Created:** Apple SDK License Blocking Issue investigation with detailed problem analysis
+- **Investigation Plan:** 4-phase approach to identify root cause and implement solution
+- **Task Document:** E6:S06:T03 created with comprehensive implementation plan
+- **Kanban Board:** Updated to include new HIGH priority task for Apple platform compatibility
+
+### Investigation Scope
+- **Platform Focus:** Apple platforms (macOS, iOS) with SDK license blocking issues
+- **Root Cause Analysis:** License requirements, dependency conflicts, platform-specific constraints
+- **Solution Options:** License compliance, alternative dependencies, conditional installation, user guidance
+- **Timeline:** 1-2 weeks investigation, 2-4 weeks resolution
+
+### Impact Assessment
+- **User Impact:** Significant impact on Apple platform users unable to install or use ai-dev-kit
+- **Priority:** HIGH due to blocking nature of the issue for Apple platforms
+- **Dependencies:** Installation workflows, CI/CD pipelines, platform compatibility
+
+---
+
+## [0.5.1.47+5] - 10-03-26
+
+E5:S01:T47+5 – Install Logging Implementation Complete: Comprehensive implementation of FR-047 install logging for framework dependencies with CLI integration, JSON/text formats, framework installer integration, install-history command, and full test coverage.
+
+### Implementation
+- **Core CLI Logging:** Per-run timestamped log files under `logs/ai-dev-kit/install/` with structured format
+- **Format Support:** Text and JSON log formats via `install_logging.format` configuration
+- **CLI Flags:** `--log-path PATH` and `--no-install-log` override options
+- **Configuration:** Complete `install_logging.*` config block with rotation and redaction
+- **Install History Command:** `ai-dev-kit logs install-history [--limit N]` for forensic analysis
+- **Framework Integration:** `AI_DEV_KIT_INSTALL_LOG_PATH` environment variable with Kanban and Workflow Management markers
+- **Testing:** Comprehensive test suite covering CLI logging, install history, and framework integration
+- **Documentation:** Updated configuration guide, installation guides, and FR-047 specification
+
+### Features
+- **Per-run Logging:** Each `ai-dev-kit install` creates detailed logs for debugging and analysis
+- **Framework Markers:** Kanban installer emits `[KANBAN_*]` markers, Workflow Management emits `[workflow_mgt.install]` markers
+- **Secret Redaction:** Automatic redaction of sensitive patterns (GITHUB_TOKEN, passwords, Bearer tokens)
+- **Log Rotation:** Configurable retention via `install_logging.keep` setting
+- **Robust Failure Handling:** Partial logs written even if install steps fail
+
+---
+
+## [0.5.1.48+1] - 10-03-26
+
+E5:S01:T48+1 – ICW Task Identifier Argument Implementation Complete: Full implementation of FR-048 to extend the Implementation Cycle Workflow (ICW) to require a task identifier argument when called, ensuring explicit task binding with clear Epic/Story/Task numbering and comprehensive validation.
+
+### Implementation
+- **Task Identifier Parsing:** Support for E5:S01:T47, E5S01T47, T47 formats with regex validation
+- **Task Validation:** Kanban task existence checking and validation against project structure
+- **CLI Enhancement:** Required --task argument with argparse integration and helpful error messages
+- **Planning Mode Integration:** Extended validation to require both planning mode and task identifier
+- **Error Handling:** Clear, helpful error messages with examples and suggestions
+
+### Technical Implementation
+- **ICW Handler Enhancement:** Extended icw_handler.py with task identifier support
+- **Configuration Updates:** Added task validation settings to icw-config.yaml
+- **Test Suite:** Comprehensive tests in test_icw_new.py covering all functionality
+- **Validation Script:** Simple validation in validate_task_identifier.py for quick testing
+
+### FR-048 Requirements
+- **FR-048:R01:** ✅ ICW requires task identifier argument when invoked
+- **FR-048:R02:** ✅ Task identifier must include clear E/S/T numbering
+- **FR-048:R03:** ✅ Flexible formatting support for various task identifier formats
+- **FR-048:R04:** ✅ Validation that task identifier references existing Kanban task
+- **FR-048:R05:** ✅ Integration with existing planning mode requirement
+- **FR-048:R06:** ✅ Clear error messages when task identifier is missing or invalid
+
+### Usage Examples
+```bash
+# Full format
+icw_handler.py --task E5:S01:T47 initialize
+
+# Compact format
+icw_handler.py --task E5S01T47 initialize
+
+# Task-only format
+icw_handler.py --task T47 initialize
+```
+
+### Breaking Changes
+- **Required Task Argument:** ICW calls must include --task argument
+- **Planning Mode + Task:** Both planning mode and valid task identifier required
+
+---
+
+## [0.5.1.48+0] - 10-03-26
+
+E5:S01:T48+0 – ICW Task Identifier Argument: Created Feature Request FR-048 to extend the Implementation Cycle Workflow (ICW) to require a task identifier argument when called in planning mode, ensuring explicit task binding with clear Epic/Story/Task numbering.
+
+### Documentation
+- **Feature Request:** Created comprehensive FR-048 for ICW task identifier argument
+- **Requirements:** Defined 6 functional and 3 non-functional requirements
+- **Acceptance Criteria:** Established 6 specific acceptance criteria
+- **Task Documentation:** Created repository anchor task E5:S01:T48
+
+### Requirements Analysis
+- **FR-048:R01:** ICW requires task identifier argument when invoked
+- **FR-048:R02:** Task identifier must include clear E/S/T numbering
+- **FR-048:R03:** Flexible formatting support for various identifier formats
+- **FR-048:R04:** Validation that task identifier references existing Kanban task
+- **FR-048:R05:** Integration with existing planning mode requirement
+- **FR-048:R06:** Clear error messages for missing or invalid identifiers
+
+### Use Cases
+- **Primary:** User calls `icw --task E5:S01:T47` for task-specific planning
+- **Additional:** Support multiple formats, task validation, error handling
+- **Integration:** Automatic linking to task documentation
+
+### Kanban Integration
+- **Board Update:** Added E5:S01:T48 to "Must Have" critical tasks
+- **Priority:** HIGH priority for ICW enhancement
+- **Status:** TODO (documentation complete, awaiting implementation)
+
+---
+
 ## [0.5.1.45+3] - 09-03-26
 
 E5:S01:T45+3 – ADR-002 Task-Touch Derived Mapping Implementation Complete: Documentation and validation of the completed ADR-002 Task-Touch Derived Mapping implementation, providing strictly monotonic, 1:1 traceable SemVer sequences suitable for package managers.

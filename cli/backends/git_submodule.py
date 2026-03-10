@@ -4,11 +4,13 @@ Git submodule backend implementation for framework dependency management.
 
 import subprocess
 import shutil
+import platform
 from pathlib import Path
 from typing import Optional, Dict, Any
 
 from cli.backends.base import BackendBase
 from cli.utils import print_error, print_success, print_info, print_warning
+from cli.exceptions import AppleSDKLicenseError
 
 
 class GitSubmoduleBackend(BackendBase):
@@ -38,6 +40,57 @@ class GitSubmoduleBackend(BackendBase):
         except (subprocess.TimeoutExpired, FileNotFoundError):
             return False
     
+    def _check_apple_sdk_prerequisites(self) -> bool:
+        """Check Apple SDK prerequisites on macOS systems."""
+        if platform.system() != "Darwin":
+            return True
+        
+        try:
+            # Check if xcode-select is available
+            result = subprocess.run(
+                ["xcode-select", "--print-path"],
+                capture_output=True,
+                text=True,
+                timeout=10
+            )
+            
+            if result.returncode != 0:
+                print_warning("Xcode Command Line Tools may not be installed")
+                print_info("Install with: xcode-select --install")
+                return False
+            
+            # Check if Git is working properly
+            result = subprocess.run(
+                ["git", "--version"],
+                capture_output=True,
+                text=True,
+                timeout=10
+            )
+            
+            if result.returncode != 0:
+                print_warning("Git may not be properly configured")
+                return False
+                
+            return True
+            
+        except subprocess.TimeoutExpired:
+            print_warning("Apple SDK prerequisite check timed out")
+            return False
+        except FileNotFoundError:
+            print_warning("Xcode Command Line Tools not found")
+            return False
+    
+    def _detect_apple_sdk_error(self, stderr: str) -> bool:
+        """Detect if error is related to Apple SDK licensing."""
+        apple_sdk_indicators = [
+            "xcode-select", "xcodebuild", "command line tools",
+            "xcode license", "developer tools", "sdk not found",
+            "ios sdk", "macos sdk"
+        ]
+        
+        stderr_lower = stderr.lower()
+        return any(indicator in stderr_lower for indicator in apple_sdk_indicators)
+    
     def install(self, framework: str, version: str, path: Path, **kwargs) -> bool:
         """
         Install a framework as a Git submodule.
@@ -59,6 +112,13 @@ class GitSubmoduleBackend(BackendBase):
             return False
         
         try:
+            # Check Apple SDK prerequisites on macOS
+            if not self._check_apple_sdk_prerequisites():
+                raise AppleSDKLicenseError(
+                    operation="git submodule prerequisite check",
+                    error_details="Xcode Command Line Tools not properly configured"
+                )
+            
             # Ensure parent directory exists
             path.parent.mkdir(parents=True, exist_ok=True)
             
@@ -84,6 +144,12 @@ class GitSubmoduleBackend(BackendBase):
             )
             
             if result.returncode != 0:
+                # Check for Apple SDK license issues
+                if self._detect_apple_sdk_error(result.stderr):
+                    raise AppleSDKLicenseError(
+                        operation="git submodule add",
+                        error_details=result.stderr
+                    )
                 print_error(f"Failed to add Git submodule: {result.stderr}")
                 return False
             

@@ -206,6 +206,41 @@ class InstallationError(AIDevKitError):
         self.backend = backend
 
 
+class AppleSDKLicenseError(AIDevKitError):
+    """Raised when Apple SDK license issues are detected."""
+    
+    def __init__(self, operation: str, error_details: Optional[str] = None):
+        """
+        Initialize Apple SDK license error.
+        
+        Args:
+            operation: Operation that failed (e.g., 'git submodule add')
+            error_details: Optional error details from subprocess
+        """
+        message = f"Apple SDK license issue detected during {operation}"
+        suggestions = [
+            "Install Xcode Command Line Tools: xcode-select --install",
+            "Accept Xcode license: sudo xcodebuild -license accept",
+            "Set up Xcode path: sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer",
+            "Try using package manager backend: --backend pip or --backend npm",
+            "See Apple platform setup guide: https://github.com/earlution/ai-dev-kit/docs/apple-platform-setup.md"
+        ]
+        
+        # Add specific suggestions based on error details
+        if error_details:
+            error_lower = error_details.lower()
+            if "xcode-select" in error_lower:
+                suggestions.insert(0, "Install Xcode Command Line Tools: xcode-select --install")
+            elif "license" in error_lower:
+                suggestions.insert(0, "Accept Xcode license: sudo xcodebuild -license accept")
+            elif "command line tools" in error_lower:
+                suggestions.insert(0, "Install Command Line Tools from System Preferences > Software Update")
+        
+        super().__init__(message, suggestions)
+        self.operation = operation
+        self.error_details = error_details
+
+
 class UpdateError(AIDevKitError):
     """Raised when update fails."""
     

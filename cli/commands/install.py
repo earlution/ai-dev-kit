@@ -13,7 +13,7 @@ from typing import List, Tuple, Optional, Callable
 
 from cli.commands import BaseCommand
 from cli.config import Config
-from cli.exceptions import AIDevKitError, InvalidInputError, BackendNotAvailableError, InstallationError
+from cli.exceptions import AIDevKitError, InvalidInputError, BackendNotAvailableError, InstallationError, AppleSDKLicenseError
 from cli.validation import validate_framework_spec, validate_backend, validate_path
 from cli.backends import BackendRegistry, select_backend, get_backend
 from cli.logging import create_install_logger, close_install_logger
@@ -213,7 +213,7 @@ class InstallCommand(BaseCommand):
                             backend_name
                         )
                 except Exception as e:
-                    if isinstance(e, (AIDevKitError, InstallationError)):
+                    if isinstance(e, (AIDevKitError, InstallationError, AppleSDKLicenseError)):
                         print_error(str(e))
                     else:
                         print_error(f"Failed to install {framework}: {str(e)}")

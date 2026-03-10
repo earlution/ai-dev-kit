@@ -2,6 +2,18 @@ name: icw-config
 version: 1.0.0
 description: Configuration for Implementation Cycle Workflow (ICW)
 
+# Task identifier validation settings
+task_identifier:
+  required: true
+  supported_formats:
+    - "E5:S01:T47"  # Full Epic:Story:Task format
+    - "E5S01T47"    # Compact format
+    - "T47"         # Task-only format (requires context)
+  validation:
+    strict_mode: true
+    check_task_exists: true
+    provide_helpful_errors: true
+
 # Paths and directories
 paths:
   templates_dir: ../../../templates/icw

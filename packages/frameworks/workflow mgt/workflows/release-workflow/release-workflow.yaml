@@ -191,9 +191,13 @@ steps:
     dependencies:
       - step-11
     config:
-      tag_template: v{version}
+      tag_template: v{semver_version}
+      internal_tag_template: v{internal_version}
       message_template: "Release {tag}: {summary}"
       annotated: true
+      detect_semver_strategy: true
+      create_internal_tag: false
+      semver_mapping_strategy: auto
 
   - id: step-13
     name: Push to Remote

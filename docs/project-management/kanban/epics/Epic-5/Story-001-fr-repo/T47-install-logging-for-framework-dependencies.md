@@ -9,13 +9,14 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 47: Install Logging for Framework Dependencies
 
 **Task ID:** E5:S01:T47  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-27  
-**Last updated:** 2026-02-26 (v0.5.1.47+4 – FR-047: Phase 2 – JSON logging, install-history CLI, extended framework integration)  
-**Version:** v0.5.1.47+4  
-**Code:** E5S01T47
+**Last updated:** 2026-03-10 (Install Logging COMPLETE - Comprehensive implementation with CLI integration, framework logging, install-history command, and full test coverage)
+
+**Implementation Status:** ✅ COMPLETE
+**Progress:** All phases complete - CLI logging, JSON/text formats, framework installer integration, install-history command, comprehensive testing, and documentation fully implemented
 
 **Repository Pattern:** FR-047 = E5:S01:T47 (abstract space v0.5.1.47+0)
 
@@ -65,10 +66,62 @@ Concrete implementation work (CLI changes, tests, docs) will be carried out unde
 
 ---
 
+## Implementation Results
+
+### ✅ Core CLI Implementation
+**Files:** `cli/commands/install.py`, `cli/logging.py`
+**Features Implemented:**
+- **Per-run logging:** Timestamped log files under `logs/ai-dev-kit/install/`
+- **Format support:** Text and JSON log formats via `install_logging.format` config
+- **CLI flags:** `--log-path PATH` and `--no-install-log` overrides
+- **Configuration:** Complete `install_logging.*` config block support
+- **Log rotation:** Retention control via `install_logging.keep`
+- **Secret redaction:** Automatic redaction of sensitive patterns
+
+### ✅ Install History Command
+**File:** `cli/commands/logs.py`
+**Features Implemented:**
+- **install-history subcommand:** `ai-dev-kit logs install-history [--limit N]`
+- **Format support:** Handles both text and JSON log files
+- **Summary output:** Timestamp, frameworks, backend, status, log file path
+- **Recent runs filtering:** Configurable limit (default: 10)
+
+### ✅ Framework Installer Integration
+**Files:** `packages/frameworks/kanban/scripts/install_kanban_framework.py`, `packages/frameworks/workflow mgt/scripts/install_release_workflow.py`
+**Features Implemented:**
+- **Environment variable:** `AI_DEV_KIT_INSTALL_LOG_PATH` integration
+- **Kanban markers:** `[KANBAN_MODE]`, `[KANBAN_DETECT]`, `[KANBAN_ANALYZE]`, `[KANBAN_VALIDATE]`, `[KANBAN_MIGRATE]`, `[KANBAN_FRESH_INSTALL]`
+- **Workflow Management markers:** `[workflow_mgt.install]` lines
+- **Shared logging:** Single per-run log contains both CLI and framework events
+
+### ✅ Comprehensive Testing
+**Files:** `tests/cli/test_install_logging.py`, `tests/cli/test_install_history.py`, `tests/kanban/test_install_kanban_logging.py`
+**Test Coverage:**
+- **CLI logging:** Log file creation, format validation, rotation, redaction
+- **Install history:** Summary generation, mixed format handling
+- **Framework integration:** Kanban and Workflow Management installer logging
+- **Configuration:** Config file and CLI flag behavior
+- **Error handling:** Robust failure scenarios
+
+### ✅ Documentation Updates
+**Files:** Configuration guide, installation guides, FR-047 documentation
+**Documentation Added:**
+- **Configuration guide:** Complete `install_logging` section with examples
+- **Installation guides:** Post-install sanity checks and install log references
+- **FR-047:** Complete specification and implementation notes
+- **CLI reference:** Updated with logging flags and behavior
+
+### ✅ Version Progression
+- **v0.5.1.47+2:** Phase 1 implementation (basic logging, CLI flags, Kanban integration)
+- **v0.5.1.47+3:** Phase 1 testing and validation
+- **v0.5.1.47+4:** Phase 2 implementation (JSON format, install-history command, extended framework integration)
+
+---
+
 ## Version Anchor
 
-- **Abstract Space:** v0.5.1.47+0 – initial documentation-only anchor for FR-047 (no functional changes yet).
-- Subsequent functional work for install logging should use `BUILD >= 1` on this task or on follow-up tasks in Epic 6.
+- **Abstract Space:** v0.5.1.47+0 – initial documentation-only anchor for FR-047
+- **Implementation Complete:** v0.5.1.47+4 – All phases implemented and tested
 
 ---
 

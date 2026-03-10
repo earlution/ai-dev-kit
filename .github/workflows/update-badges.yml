@@ -38,51 +38,74 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Extract version
+      - name: Extract version and detect SemVer strategy
         id: version
         run: |
-          VERSION=$(python3 -c "import sys; sys.path.insert(0, 'src'); from fynd_deals import version; print(version.VERSION_STRING)")
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Extracted version: $VERSION"
+          # Extract internal version
+          INTERNAL_VERSION=$(python3 -c "import sys; sys.path.insert(0, 'src'); from fynd_deals import version; print(version.VERSION_STRING)")
+          echo "internal_version=$INTERNAL_VERSION" >> $GITHUB_OUTPUT
+          
+          # Detect SemVer mapping strategy
+          SEMVER_STRATEGY="registry"
+          if [ -f "rw-config.yaml" ]; then
+            DETECTED_STRATEGY=$(grep "semver_mapping_strategy:" rw-config.yaml | cut -d: -f2 | tr -d ' ')
+            if [ "$DETECTED_STRATEGY" = "task_touch" ]; then
+              SEMVER_STRATEGY="task_touch"
+            fi
+          fi
+          echo "semver_strategy=$SEMVER_STRATEGY" >> $GITHUB_OUTPUT
+          
+          # Convert to SemVer if task_touch mode
+          if [ "$SEMVER_STRATEGY" = "task_touch" ]; then
+            SEMVER_VERSION=$(python3 -c "import sys, os; sys.path.insert(0, 'packages/frameworks/workflow mgt/scripts/version'); from semver_converter import convert_version_string; print(convert_version_string('$INTERNAL_VERSION', 'task_touch'))" 2>/dev/null || echo "$INTERNAL_VERSION")
+          else
+            SEMVER_VERSION="$INTERNAL_VERSION"
+          fi
+          echo "semver_version=$SEMVER_VERSION" >> $GITHUB_OUTPUT
+          
+          echo "Extracted versions:"
+          echo "  Internal: $INTERNAL_VERSION"
+          echo "  Strategy: $SEMVER_STRATEGY"
+          echo "  Display: $SEMVER_VERSION"
 
       - name: Update version badge
         uses: RubbaBoy/BYOB@v1.3.0
         with:
-          NAME: version
-          LABEL: 'version'
-          STATUS: ${{ steps.version.outputs.version }}
-          COLOR: 007ACC
-          ICON: 'tag'
-          GITHUB_TOKEN: ${{ secrets.BADGES_REPO_TOKEN || secrets.GITHUB_TOKEN }}
+          name: version
+          label: 'version'
+          status: ${{ steps.version.outputs.semver_version }}
+          color: 007ACC
+          icon: 'tag'
+          github_token: ${{ secrets.BADGES_REPO_TOKEN || secrets.GITHUB_TOKEN }}
           # For private repo: uncomment and set these to your public repo
-          # REPOSITORY: 'earlution/ai-dev-kit-badges'
-          # ACTOR: 'earlution'
+          # repository: 'earlution/ai-dev-kit-badges'
+          # actor: 'earlution'
 
       - name: Update license badge
         uses: RubbaBoy/BYOB@v1.3.0
         with:
-          NAME: license
-          LABEL: 'license'
-          STATUS: 'MIT'
-          COLOR: green
-          ICON: 'scale'
-          GITHUB_TOKEN: ${{ secrets.BADGES_REPO_TOKEN || secrets.GITHUB_TOKEN }}
+          name: license
+          label: 'license'
+          status: 'MIT'
+          color: green
+          icon: 'scale'
+          github_token: ${{ secrets.BADGES_REPO_TOKEN || secrets.GITHUB_TOKEN }}
           # For private repo: uncomment and set these to your public repo
-          # REPOSITORY: 'earlution/ai-dev-kit-badges'
-          # ACTOR: 'earlution'
+          # repository: 'earlution/ai-dev-kit-badges'
+          # actor: 'earlution'
 
       - name: Update status badge
         uses: RubbaBoy/BYOB@v1.3.0
         with:
-          NAME: status
-          LABEL: 'status'
-          STATUS: 'active'
-          COLOR: success
-          ICON: 'check-circle'
-          GITHUB_TOKEN: ${{ secrets.BADGES_REPO_TOKEN || secrets.GITHUB_TOKEN }}
+          name: status
+          label: 'status'
+          status: 'active'
+          color: success
+          icon: 'check-circle'
+          github_token: ${{ secrets.BADGES_REPO_TOKEN || secrets.GITHUB_TOKEN }}
           # For private repo: uncomment and set these to your public repo
-          # REPOSITORY: 'earlution/ai-dev-kit-badges'
-          # ACTOR: 'earlution'
+          # repository: 'earlution/ai-dev-kit-badges'
+          # actor: 'earlution'
 
       - name: Run tests and extract status
         id: test-status
