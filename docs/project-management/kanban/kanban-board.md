@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS, BLOCKED (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work. Root cause identified as Cascade whitelist security prompts (BR-039). Phase 1-2 complete, Phase 3 (user experience) blocked by Cascade security issues.) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) (vv0.6.6.2+6) (vv0.6.6.2+7) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+*No critical tasks currently in progress*
 
 ### Should Have (S) - Important Tasks
 
