@@ -59,11 +59,19 @@ This workflow requires significant agentic intelligence:
 - Verify kanban board consistency
 - Confirm successful integration
 
+**Step 8: kanban-completed.md Coordination**
+- Coordinate with Documentation Agent for completed task updates
+- Provide task completion information when applicable
+- Ensure timestamp tracking for completed intake tasks
+- Maintain recent tasks dashboard consistency
+
 ### Integration Points
 
 - Works with UKW Agent for kanban updates
+- Coordinates with Documentation Agent for kanban-completed.md updates
 - Supports Documentation Agent for task documentation
 - Provides task creation services to all workflows
+- Uses Documentation Agent for completed task tracking
 
 ### Task Structure
 

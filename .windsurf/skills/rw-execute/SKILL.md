@@ -45,57 +45,63 @@ Follow the 17-step RW process:
 - Update task status and documentation
 - Maintain kanban board consistency
 
-**Step 7: Stage Files**
+**Step 7: Update kanban-completed.md**
+- Invoke Documentation Agent for kanban_completed_update skill
+- Update completed task information with timestamps
+- Maintain recent tasks dashboard
+- Coordinate with UKW Agent for board synchronization
+
+**Step 8: Stage Files**
 - Use git-status skill for file staging
 - Stage all modified files for commit
 - Verify file changes
 
-**Step 8: Check IDE Problems**
+**Step 9: Check IDE Problems**
 - Use validation skills for IDE checks
 - Check for syntax errors and issues
 - Validate file integrity
 
-**Step 9: Run Validators**
+**Step 10: Run Validators**
 - Use validation skills for script execution
 - Run validation scripts from workflow framework
 - Ensure compliance with standards
 
-**Step 10: Commit Changes**
+**Step 11: Commit Changes**
 - Use git-commit skill for commit operations
 - Create commit with standardized message
 - Verify commit success
 
-**Step 11: Post-Commit Verification**
+**Step 12: Post-Commit Verification**
 - Use validation skills for post-commit checks
 - Verify repository state after commit
 - Check for any issues
 
-**Step 12: Push to Remote**
+**Step 13: Push to Remote**
 - Use git-push skill for remote operations
 - Push changes to remote repository
 - Verify push success
 
-**Step 13: Check for PIR Trigger**
+**Step 14: Check for PIR Trigger**
 - Use workflow-check skill for PIR evaluation
 - Check Epic/Story COMPLETE status
 - Trigger PIR workflow if appropriate
 
-**Step 14: Act on Verification Results**
+**Step 15: Act on Verification Results**
 - Use validation skills for result processing
 - Address any verification issues
 - Ensure workflow completion
 
-**Step 15: Create/Update GitHub Release**
+**Step 16: Create/Update GitHub Release**
 - Use release-create skill for GitHub operations
 - Create or update GitHub release
 - Use SemVer tags for release
 
-**Step 16: Housekeeping**
+**Step 17: Housekeeping**
 - Use cleanup skill for IDE maintenance
 - Clear IDE todo list
 - Clean temporary files
 
-**Step 17: Final Verification**
+**Step 18: Final Verification**
 - Use validation skills for final checks
 - Verify workflow completion
 - Document success status

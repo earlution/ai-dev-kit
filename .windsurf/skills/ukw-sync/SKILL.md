@@ -65,25 +65,14 @@ The MoSCOW priority list is updated LAST.
 **Step 6: Board Cleanup**
 - Scan all MoSCOW sections for COMPLETED tasks
 - Remove COMPLETED tasks from active MoSCOW sections
-- Archive completed tasks to kanban-completed.md
+- Invoke Documentation Agent for kanban_completed_update skill
+- Archive completed tasks with timestamps to kanban-completed.md
 - Validate active sections contain only IN PROGRESS/TODO tasks
 - Ensure board organization reflects current work priorities
-
-### Use Case Flags
-
-- `UKW` (no flags): Comprehensive run (all operations)
-- `UKW -u`: Bookkeeping sub-workflow only (Step 1)
-- `UKW -p`: Update priorities sub-workflow only (Step 4)
-- `UKW -a <target>`: Assign priorities sub-workflow only (Step 4, specific targets)
-
-### Task Targeting Syntax
-
-- Single task: `E09S01T01`, `e9s1t1`, `E09:S01:T01`
-- Multiple tasks: `E09S01T01,E08S02T11`
-- Linear range: `E09S01T01-E09S01T06`
 
 ### Integration Points
 
 - Works with Intake Agent for new task processing
-- Supports Documentation Agent for kanban updates
+- Coordinates with Documentation Agent for kanban-completed.md updates
 - Provides status information to RW Agent
+- Uses Documentation Agent for completed task archival

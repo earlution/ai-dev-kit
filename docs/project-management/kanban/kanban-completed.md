@@ -8,12 +8,27 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-09 (RW: E4:S18:T01+2)
-**Version:** v0.4.18.1+2
+**Last Updated:** 2026-03-11 (Documentation Agent: E5:S01:T49)
+**Version:** v0.5.1.49+0
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)
+
+---
+
+## 20 Most Recently Completed Tasks
+
+| Task ID | Description | Completed | Version | Agent |
+|---------|-------------|-----------|---------|-------|
+| E6:S06:T42 | Fix UKW Agent Board Cleanup Failure | 2026-03-11T16:15:00Z | v0.6.6.41+1 | Documentation Agent |
+| E5:S01:T48 | ICW Task Identifier Argument | 2026-03-11T16:20:00Z | v0.5.1.48+1 | Documentation Agent |
+| E6:S06:T999 | Board Cleanup Test Task | 2026-03-11T16:10:00Z | v0.6.6.41+1 | Documentation Agent |
+| E6:S06:T41 | Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows | 2026-03-11T16:05:00Z | v0.6.6.41+1 | Documentation Agent |
+| E6:S06:T03 | Investigate Apple SDK License Blocking Issue | 2026-03-11T16:00:00Z | v0.6.6.3+1 | Documentation Agent |
+| E5:S01:T37 | Kanban Policy Task Prioritisation and Queue/Stack | 2026-03-11T15:55:00Z | v0.5.1.37+3 | Documentation Agent |
+| E5:S01:T36 | RW Update Kanban Board on Task Completion | 2026-03-11T15:50:00Z | v0.5.1.36+1 | Documentation Agent |
+| E5:S01:T34 | UKW Granular Control and Use Case Flags | 2026-03-11T15:45:00Z | v0.5.1.34+1 | Documentation Agent |
 
 ---
 
@@ -226,9 +241,9 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 - **E6:S06:T01** – FR/BR/UXR Prioritization Board Implementation - ✅ COMPLETE (v0.6.6.1+1)
 - **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - 🔄 IN PROGRESS (v0.6.6.2+7)
 - **E6:S06:T03** – Investigate Apple SDK License Blocking Issue - ✅ COMPLETE (v0.6.6.3+1)
-- **E6:S06:T41** – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows - ✅ COMPLETE (v0.6.6.41+1)
-- **E6:S06:T42** – Fix UKW Agent Board Cleanup Failure - ✅ COMPLETE (v0.6.6.41+1)
-- **E6:S06:T999** – Board Cleanup Test Task - ✅ COMPLETE (v0.6.6.41+1)
+- **E6:S06:T41** – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows - ✅ COMPLETE (v0.6.6.41+1, 2026-03-11T16:05:00Z)
+- **E6:S06:T42** – Fix UKW Agent Board Cleanup Failure - ✅ COMPLETE (v0.6.6.41+1, 2026-03-11T16:15:00Z)
+- **E6:S06:T999** – Board Cleanup Test Task - ✅ COMPLETE (v0.6.6.41+1, 2026-03-11T16:10:00Z)
 - **E6:S08:T03** – Create configuration management - ✅ COMPLETE (v0.6.8.4+1)
 - **E6:S08:T04** – Add error handling - ✅ COMPLETE (v0.6.8.5+1)
 - **E6:S08:T05** – Create migration utilities - ✅ COMPLETE (v0.6.8.6+1)
@@ -291,7 +306,7 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 - **E5:S01:T34** – UKW Granular Control and Use Case Flags - ✅ COMPLETE (v0.5.1.34+1)
 - **E5:S01:T36** – RW Update Kanban Board on Task Completion - ✅ COMPLETE (v0.5.1.36+1)
 - **E5:S01:T37** – Kanban Policy Task Prioritisation and Queue/Stack - ✅ COMPLETE (v0.5.1.37+3)
-- **E5:S01:T48** – ICW Task Identifier Argument - ✅ COMPLETE (v0.5.1.48+1)
+- **E5:S01:T48** – ICW Task Identifier Argument - ✅ COMPLETE (v0.5.1.48+1, 2026-03-11T16:20:00Z)
 - **E5:S01:T47** – Install Logging for Framework Dependencies - 🔄 IN PROGRESS (v0.5.1.47+3)
 
 ---
