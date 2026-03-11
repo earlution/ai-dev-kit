@@ -21,14 +21,26 @@ housekeeping_policy: keep
 
 | Task ID | Description | Completed | Version | Agent |
 |---------|-------------|-----------|---------|-------|
-| E6:S06:T42 | Fix UKW Agent Board Cleanup Failure | 2026-03-11T16:15:00Z | v0.6.6.41+1 | Documentation Agent |
+| E5:S01:T49 | Enhanced kanban-completed.md with Timestamps and Recent Tasks | 2026-03-11T16:30:00Z | v0.5.1.49+1 | Documentation Agent |
 | E5:S01:T48 | ICW Task Identifier Argument | 2026-03-11T16:20:00Z | v0.5.1.48+1 | Documentation Agent |
+| E6:S06:T42 | Fix UKW Agent Board Cleanup Failure | 2026-03-11T16:15:00Z | v0.6.6.41+1 | Documentation Agent |
 | E6:S06:T999 | Board Cleanup Test Task | 2026-03-11T16:10:00Z | v0.6.6.41+1 | Documentation Agent |
 | E6:S06:T41 | Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows | 2026-03-11T16:05:00Z | v0.6.6.41+1 | Documentation Agent |
 | E6:S06:T03 | Investigate Apple SDK License Blocking Issue | 2026-03-11T16:00:00Z | v0.6.6.3+1 | Documentation Agent |
 | E5:S01:T37 | Kanban Policy Task Prioritisation and Queue/Stack | 2026-03-11T15:55:00Z | v0.5.1.37+3 | Documentation Agent |
 | E5:S01:T36 | RW Update Kanban Board on Task Completion | 2026-03-11T15:50:00Z | v0.5.1.36+1 | Documentation Agent |
 | E5:S01:T34 | UKW Granular Control and Use Case Flags | 2026-03-11T15:45:00Z | v0.5.1.34+1 | Documentation Agent |
+| E4:S13:T06 | Add view documentation | 2025-12-15T14:00:00Z | v0.4.13.6+2 | Documentation Agent |
+| E4:S16:T05 | Create risk assessment | 2025-12-10T16:00:00Z | v0.4.16.5+2 | Documentation Agent |
+| E4:S17:T06 | Create deployment guide | 2025-12-08T16:00:00Z | v0.4.17.6+1 | Documentation Agent |
+| E4:S18:T01 | Final kanban package review | 2025-12-05T16:00:00Z | v0.4.18.1+2 | Documentation Agent |
+| E4:S11:T06 | Create task documentation | 2025-11-28T16:00:00Z | v0.4.11.6+2 | Documentation Agent |
+| E4:S10:T07 | Add deployment support | 2025-11-25T16:00:00Z | v0.4.10.7+0 | Documentation Agent |
+| E4:S08:T06 | Implement validation system | 2025-11-20T16:00:00Z | v0.4.8.6+1 | Documentation Agent |
+| E4:S07:T03 | Create migration documentation | 2025-11-15T16:00:00Z | v0.4.7.3+1 | Documentation Agent |
+| E4:S06:T10 | Create template migration | 2025-11-10T16:00:00Z | v0.4.6.8+1 | Documentation Agent |
+| E4:S05:T01 | Create canonical Epic structure | 2025-11-05T16:00:00Z | v0.4.5.1+1 | Documentation Agent |
+| E4:S04:T01 | Refactor board structure | 2025-11-01T16:00:00Z | v0.4.4.1+1 | Documentation Agent |
 
 ---
 
@@ -185,7 +197,7 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 - **E4:S13:T03** – Add task ordering - ✅ COMPLETE (v0.4.13.3+1)
 - **E4:S13:T04** – Create view validation - ✅ COMPLETE (v0.4.13.4+3)
 - **E4:S13:T05** – Implement view updates - ✅ COMPLETE (v0.4.13.5+1)
-- **E4:S13:T06** – Add view documentation - ✅ COMPLETE (v0.4.13.6+2)
+- **E4:S13:T06** – Add view documentation - ✅ COMPLETE (v0.4.13.6+2, 2025-12-15T14:00:00Z)
 
 **Story 016: Kanban Package Implementation Review** ✅ COMPLETE (v0.4.16.5+2)
 - **E4:S16:T01** – Review implementation - ✅ COMPLETE (v0.4.16.1+1)
@@ -306,7 +318,7 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 - **E5:S01:T34** – UKW Granular Control and Use Case Flags - ✅ COMPLETE (v0.5.1.34+1)
 - **E5:S01:T36** – RW Update Kanban Board on Task Completion - ✅ COMPLETE (v0.5.1.36+1)
 - **E5:S01:T37** – Kanban Policy Task Prioritisation and Queue/Stack - ✅ COMPLETE (v0.5.1.37+3)
-- **E5:S01:T48** – ICW Task Identifier Argument - ✅ COMPLETE (v0.5.1.48+1, 2026-03-11T16:20:00Z)
+- **E5:S01:T49** – Enhanced kanban-completed.md with Timestamps and Recent Tasks - ✅ COMPLETE (v0.5.1.49+2, 2026-03-11T16:30:00Z)
 - **E5:S01:T47** – Install Logging for Framework Dependencies - 🔄 IN PROGRESS (v0.5.1.47+3)
 
 ---
