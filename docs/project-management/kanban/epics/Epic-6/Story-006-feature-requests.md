@@ -34,8 +34,10 @@ housekeeping_policy: keep
   - Task: [`T03-apple-sdk-license-blocking-issue.md`](T03-apple-sdk-license-blocking-issue.md) | [BR-040](../../../fr-br/BR-040-apple-sdk-license-blocking-issue.md)
 - [x] **E6:S06:T41 – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows** - ✅ COMPLETED (CRITICAL, Implement AGENTS.md and SKILL.md to define specialized workflow agents and capabilities, enabling Cascade to execute workflows autonomously without manual intervention. This addresses fundamental workflow execution issues including terminal interaction problems and agent behavior inconsistencies.)
   - Task: [`T41-windsurf-investigate-agents-skills-for-workflows.md`](T41-windsurf-investigate-agents-skills-for-workflows.md) | [FR-041](../../../fr-br/FR-041-windsurf-investigate-agents-skills-for-workflows.md)
-- [ ] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - 📝 TODO (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
+- [x] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - ✅ COMPLETED (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
   - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
+- [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
+  - Task: [`T999-board-cleanup-test.md`](T999-board-cleanup-test.md)
   - Status: ✅ COMPLETED - Board implemented with MoSCOW structure, all 69 items tracked
   - Completed: 2026-03-09
 

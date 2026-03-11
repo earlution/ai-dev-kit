@@ -9,10 +9,11 @@ housekeeping_policy: keep
 # Task T42 – Fix UKW Agent Board Cleanup Failure
 
 **Task ID:** E6:S06:T42  
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Medium (2.5 days)  
 **Created:** 2026-03-11  
+**Completed:** 2026-03-11  
 **Version:** v0.6.6.41+1  
 
 **Associated BR:** [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)

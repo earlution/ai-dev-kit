@@ -62,6 +62,13 @@ The MoSCOW priority list is updated LAST.
 - Validate consistency across all documents
 - Update board version and metadata
 
+**Step 6: Board Cleanup**
+- Scan all MoSCOW sections for COMPLETED tasks
+- Remove COMPLETED tasks from active MoSCOW sections
+- Archive completed tasks to kanban-completed.md
+- Validate active sections contain only IN PROGRESS/TODO tasks
+- Ensure board organization reflects current work priorities
+
 ### Use Case Flags
 
 - `UKW` (no flags): Comprehensive run (all operations)

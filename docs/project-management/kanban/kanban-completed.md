@@ -199,18 +199,18 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 **Completed:** 2026-01-05  
 **Version:** v0.6.8.13+1
 
-#### Story 001: Framework Version Management ✅ COMPLETE
-- **E6:S01:T01** – Create versioning strategy - ✅ COMPLETE (v0.6.1.1+1)
-- **E6:S01:T02** – Implement version tracking - ✅ COMPLETE (v0.6.1.2+1)
-- **E6:S01:T03** – Create compatibility policy - ✅ COMPLETE (v0.6.1.3+1)
-- **E6:S01:T04** – Add dependency architecture - ✅ COMPLETE (v0.6.1.4+1)
-- **E6:S01:T05** – Create version tagging - ✅ COMPLETE (v0.6.1.5+1)
+#### Story 001: Framework Version Management 
+- **E6:S01:T01** – Create versioning strategy - COMPLETE (v0.6.1.1+1)
+- **E6:S01:T02** – Implement version tracking - COMPLETE (v0.6.1.2+1)
+- **E6:S01:T03** – Create compatibility policy - COMPLETE (v0.6.1.3+1)
+- **E6:S01:T04** – Add dependency architecture - COMPLETE (v0.6.1.4+1)
+- **E6:S01:T05** – Create version tagging - COMPLETE (v0.6.1.5+1)
 
-#### Story 002: Framework Update and Migration ✅ COMPLETE
-- **E6:S02:T01** – Create update procedures - ✅ COMPLETE (v0.6.2.1+1)
-- **E6:S02:T02** – Build migration guide - ✅ COMPLETE (v0.6.2.2+1)
-- **E6:S02:T03** – Implement backward compatibility - ✅ COMPLETE (v0.6.2.3+1)
-- **E6:S02:T05** – Add auto-update mechanisms - ✅ COMPLETE (v0.6.2.5+1)
+#### Story 002: Framework Update and Migration 
+- **E6:S02:T01** – Create update procedures - COMPLETE (v0.6.2.1+1)
+- **E6:S02:T02** – Build migration guide - COMPLETE (v0.6.2.2+1)
+- **E6:S02:T03** – Implement backward compatibility - COMPLETE (v0.6.2.3+1)
+- **E6:S02:T05** – Add auto-update mechanisms - COMPLETE (v0.6.2.5+1)
 
 #### Story 003: Framework Health Monitoring ✅ COMPLETE
 - **E6:S03:T01** – Define health metrics - ✅ COMPLETE (v0.6.3.1+1)
@@ -221,6 +221,14 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 - **E6:S08:T00** – Design CLI architecture - ✅ COMPLETE (v0.6.8.1+1)
 - **E6:S08:T01** – Implement core commands - ✅ COMPLETE (v0.6.8.2+1)
 - **E6:S08:T02** – Add backend abstraction - ✅ COMPLETE (v0.6.8.3+1)
+
+#### Story 006: Feature Requests 🔄 IN PROGRESS
+- **E6:S06:T01** – FR/BR/UXR Prioritization Board Implementation - ✅ COMPLETE (v0.6.6.1+1)
+- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - 🔄 IN PROGRESS (v0.6.6.2+7)
+- **E6:S06:T03** – Investigate Apple SDK License Blocking Issue - ✅ COMPLETE (v0.6.6.3+1)
+- **E6:S06:T41** – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows - ✅ COMPLETE (v0.6.6.41+1)
+- **E6:S06:T42** – Fix UKW Agent Board Cleanup Failure - ✅ COMPLETE (v0.6.6.41+1)
+- **E6:S06:T999** – Board Cleanup Test Task - ✅ COMPLETE (v0.6.6.41+1)
 - **E6:S08:T03** – Create configuration management - ✅ COMPLETE (v0.6.8.4+1)
 - **E6:S08:T04** – Add error handling - ✅ COMPLETE (v0.6.8.5+1)
 - **E6:S08:T05** – Create migration utilities - ✅ COMPLETE (v0.6.8.6+1)

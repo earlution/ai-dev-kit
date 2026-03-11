@@ -9,6 +9,7 @@ When working with kanban boards:
 - Use status_inference skill for intelligent status deduction
 - Use moscow_prioritize skill for MoSCOW prioritization
 - Use narrative_synthesis skill for coherent progress summaries
+- Use board_cleanup skill for autonomous board maintenance
 
 **Intelligence Requirements:**
 - Follow bottom-up approach: Tasks → Stories → Epics → Board
