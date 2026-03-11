@@ -8,11 +8,11 @@ housekeeping_policy: keep
 
 # Epic 6, Story 6, Task 41: Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows
 
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-03-11 (v0.6.6.3+2 – Task created)  
-**Started:** [TBD]  
-**Completed:** [TBD]  
+**Last updated:** 2026-03-11 (v0.6.6.41+1 – Implementation complete)  
+**Started:** 2026-03-11  
+**Completed:** 2026-03-11  
 **Version:** v0.6.6.3+2  
 **Code:** E6S06T41
 
