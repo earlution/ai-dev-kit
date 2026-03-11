@@ -9,11 +9,12 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 48: ICW Task Identifier Argument
 
 **Task ID:** E5:S01:T48  
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
 **Created:** 2026-03-10  
-**Last updated:** 2026-03-10 (v0.5.1.48+1 – Implementation complete, ready for testing)  
+**Completed:** 2026-03-11  
+**Last updated:** 2026-03-11 (v0.5.1.48+1 – Implementation complete and validated)  
 **Version:** v0.5.1.48+1  
 **Code:** E5S01T48
 
@@ -118,9 +119,12 @@ This task:
 
 ## Acceptance Criteria
 
-- [ ] Task document exists and is linked from the FR Repo story checklist as **E5:S01:T48**.
-- [ ] FR-048 is created and explicitly assigned to E5:S01:T48.
-- [ ] The ICW task identifier argument requirement is described clearly enough here and in FR-048 to support separate implementation tasks.
+- [x] Task document exists and is linked from the FR Repo story checklist as **E5:S01:T48**.
+- [x] FR-048 is created and explicitly assigned to E5:S01:T48.
+- [x] The ICW task identifier argument requirement is described clearly enough here and in FR-048 to support separate implementation tasks.
+- [x] Implementation is complete with task identifier parsing, validation, and CLI enhancement.
+- [x] ICW requires task identifier argument when invoked in planning mode.
+- [x] Task identifier includes clear E/S/T numbering with flexible format support.
 
 ---
 

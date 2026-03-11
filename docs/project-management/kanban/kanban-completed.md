@@ -281,6 +281,21 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 
 ---
 
+### Epic 5: Framework Management and FR Repository 🔄 IN PROGRESS
+
+**Status:** IN PROGRESS  
+**Started:** 2025-12-04  
+**Version:** v0.5.1.48+1
+
+#### Story 001: Feature Request Repository 🔄 IN PROGRESS (PERPETUAL)
+- **E5:S01:T34** – UKW Granular Control and Use Case Flags - ✅ COMPLETE (v0.5.1.34+1)
+- **E5:S01:T36** – RW Update Kanban Board on Task Completion - ✅ COMPLETE (v0.5.1.36+1)
+- **E5:S01:T37** – Kanban Policy Task Prioritisation and Queue/Stack - ✅ COMPLETE (v0.5.1.37+3)
+- **E5:S01:T48** – ICW Task Identifier Argument - ✅ COMPLETE (v0.5.1.48+1)
+- **E5:S01:T47** – Install Logging for Framework Dependencies - 🔄 IN PROGRESS (v0.5.1.47+3)
+
+---
+
 ### Epic 8: Tooling & Automation ✅ COMPLETE
 
 **Status:** COMPLETE  
