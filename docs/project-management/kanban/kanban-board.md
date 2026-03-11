@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-11 (RW: E5:S1:T49)
-**Version:** v0.5.1.49+2
+**Last Updated:** 2026-03-11 (RW -k: Kanban Task Doc Only Release)
+**Version:** v0.6.7.107+2
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -28,6 +28,7 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
+- **E6:S07:T108** – UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization - TODO (HIGH priority, Extend ukw-sync skill to handle FR/BR/UXR documentation with temporal tracking and recent completions dashboard; FR-050 implementation) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md) | [FR-050](../fr-br/FR-050-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
 - **E5:S01:T46** – Release Workflow Uses SemVer Tag When task_touch Enabled - TODO (HIGH priority, RW tagging behaviour when task_touch is enabled; FR-046 implementation complete) - [Task Document](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
 - **E6:S07:T106** – Windsurf Migration: .cursorrules to Workflow Equivalents - TODO (HIGH priority, Map key policies/workflows to Windsurf/Cascade equivalents including system instructions and developer workflows) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflows.md)
 - **E4:S11:T07** – Migrate Embedded Tasks to Discrete Task Documents - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-011-kanban-granularity-discrete-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)

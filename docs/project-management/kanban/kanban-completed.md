@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-11 (Documentation Agent: E5:S01:T49)
-**Version:** v0.5.1.49+0
+**Last Updated:** 2026-03-11 (RW -k: Kanban Task Doc Only Release)
+**Version:** v0.6.7.107+2
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
