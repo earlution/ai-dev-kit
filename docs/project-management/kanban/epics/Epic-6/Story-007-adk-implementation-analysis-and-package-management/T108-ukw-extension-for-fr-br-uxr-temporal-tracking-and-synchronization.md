@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # Task T108 – UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Medium (3-4 days)  
 **Created:** 2026-03-11  

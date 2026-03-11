@@ -70,9 +70,33 @@ The MoSCOW priority list is updated LAST.
 - Validate active sections contain only IN PROGRESS/TODO tasks
 - Ensure board organization reflects current work priorities
 
+**Step 7: FR/BR/UXR Synchronization**
+- Analyze FR/BR/UXR completion status based on task completion
+- Update fr-br-uxr-board.md with latest status and metadata
+- Remove completed items from active board
+- Cross-reference FR/BR/UXR status with associated task completion
+- Validate FR/BR/UXR to task relationship integrity
+
+**Step 8: FR/BR/UXR Temporal Tracking**
+- Add ISO 8601 completion timestamps to fr-br-uxr-completed.md
+- Create recent completions dashboard (20 most recent)
+- Maintain consistent format with kanban-completed.md
+- Update historical FR/BR/UXR completions with estimated timestamps
+- Invoke Documentation Agent for fr_br_uxr_completed_update skill
+
+**Step 9: FR/BR/UXR Structure Updates**
+- Update fr-br-uxr-structure.md with current inventory
+- Ensure cross-reference integrity across all FR/BR/UXR docs
+- Validate consistency between board, structure, and completed docs
+- Update metadata and version references across FR/BR/UXR docs
+- Maintain link validity and document organization
+
 ### Integration Points
 
 - Works with Intake Agent for new task processing
 - Coordinates with Documentation Agent for kanban-completed.md updates
 - Provides status information to RW Agent
 - Uses Documentation Agent for completed task archival
+- Coordinates with Documentation Agent for fr_br_uxr_completed_update skill
+- Integrates with Intake Agent for FR/BR/UXR processing coordination
+- Provides FR/BR/UXR synchronization for complete documentation coverage
