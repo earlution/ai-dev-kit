@@ -44,6 +44,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T46 – Release Workflow Uses SemVer Tag When `task_touch` Enabled** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
 - [x] **E5:S01:T47 – Install Logging for Framework Dependencies** - IN PROGRESS (HIGH priority, v0.5.1.47+3 – tests, docs, consumer-vs-framework clarity) - [Task Document](Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../../fr-br/FR-047-install-logging-for-framework-dependencies.md)
 - [x] **E5:S01:T48 – ICW Task Identifier Argument** - ✅ COMPLETE (v0.5.1.48+1 – Implementation complete: ICW requires task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../../fr-br/FR-048-icw-task-identifier-argument.md)
+- [ ] **E5:S01:T49 – Enhanced kanban-completed.md with Timestamps and Recent Tasks Tracking** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T49-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md) | [FR-049](../../fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)
 
 ---
 

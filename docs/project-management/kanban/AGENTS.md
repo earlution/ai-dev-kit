@@ -44,3 +44,60 @@ When processing intake:
 - Works with UKW Agent for task status updates
 - Works with Documentation Agent for task documentation
 - Supports kanban board maintenance and organization
+
+---
+
+## Documentation Agent - Documentation Specialist
+
+When working with documentation:
+
+**Primary Responsibilities:**
+- Use readme_update skill for README changes with version references
+- Use docs_generate skill for documentation generation from templates
+- Use changelog_manage skill for changelog updates and archival
+- Use kanban_completed_update skill for kanban-completed.md maintenance
+- Ultimate responsibility for kanban-completed.md integrity and updates
+
+**Intelligence Requirements:**
+- Follow documentation-first approach for all project changes
+- Apply agentic intelligence for consistency and formatting
+- Maintain cross-references and link integrity across documentation
+- Ensure version consistency across all documentation files
+- Coordinate with other agents for documentation updates
+
+**Key Principle:**
+- Single source of truth - Documentation Agent owns document integrity
+- Standard interface for other agents needing documentation updates
+- Validation and consistency checking for all documentation changes
+
+**Ultimate Responsibility:**
+- **kanban-completed.md:** Final authority over structure, format, and updates
+- **Agent Coordination:** Primary interface for all agents updating completed tasks
+- **Validation:** Ensures consistent timestamp format and recent tasks tracking
+
+---
+
+**Agent Coordination Patterns:**
+
+### Standard Update Interface for kanban-completed.md
+```
+Documentation Agent.update_kanban_completed({
+  task_id: "E5:S01:T48",
+  status: "COMPLETE",
+  version: "v0.5.1.48+1", 
+  timestamp: "2026-03-11T16:20:00Z",
+  completing_agent: "RW Agent"
+})
+```
+
+### Invoking Agents (Examples)
+- **RW Agent:** When tasks complete during release workflow
+- **UKW Agent:** When board cleanup archives completed tasks  
+- **Intake Agent:** When new tasks are created and completed
+- **Any Workflow Agent:** When task completion occurs
+
+### Coordination Protocol
+1. **Primary Responsibility:** Documentation Agent has final authority
+2. **Standard Interface:** All agents use documented update patterns
+3. **Validation:** Built-in consistency checks and error handling
+4. **Audit Trail:** Complete temporal tracking of all updates
