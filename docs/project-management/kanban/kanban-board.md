@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-09 (RW: E6:S1:T37)
-**Version:** v0.6.1.37+2
+**Last Updated:** 2026-03-11 (RW: E6:S6:T41)
+**Version:** v0.6.6.41+1
 
 **Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
 
@@ -26,8 +26,7 @@ housekeeping_policy: keep
 
 - **E5:S01:T48** – ICW Task Identifier Argument - COMPLETE (HIGH priority, Extend ICW to require task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](epics/Epic-5/Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../fr-br/FR-048-icw-task-identifier-argument.md)
 - **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS, BLOCKED (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work. Root cause identified as Cascade whitelist security prompts (BR-039). Phase 1-2 complete, Phase 3 (user experience) blocked by Cascade security issues.) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) (vv0.6.6.2+6) (vv0.6.6.2+7) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
-- **E6:S06:T03** – Investigate Apple SDK License Blocking Issue - COMPLETE (HIGH priority, Apple SDK license blocking issue prevents proper installation or usage of ai-dev-kit components on Apple platforms; needs investigation to understand root cause and implement solution) - [Task Document](epics/Epic-6/Story-006-feature-requests/T03-apple-sdk-license-blocking-issue.md) | [BR-040](fr-br/BR-040-apple-sdk-license-blocking-issue.md)
-- **E6:S06:T41** – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows - TODO (CRITICAL, Investigate and implement AGENTS.md and SKILL.md to define specialized workflow agents and capabilities, enabling Cascade to execute workflows autonomously without manual intervention. This addresses fundamental workflow execution issues including terminal interaction problems and agent behavior inconsistencies.) - [Task Document](epics/Epic-6/Story-006-feature-requests/T41-windsurf-investigate-agents-skills-for-workflows.md) | [FR-041](../fr-br/FR-041-windsurf-investigate-agents-skills-for-workflows.md)
+- **E6:S06:T42** – Fix UKW Agent Board Cleanup Failure - TODO (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.) - [Task Document](epics/Epic-6/Story-006-feature-requests/T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
 
 ### Should Have (S) - Important Tasks
 

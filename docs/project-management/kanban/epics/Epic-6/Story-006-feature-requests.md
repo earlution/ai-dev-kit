@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-03-09 (v0.6.6.2+7 – Kanban documentation setup)
-**Version:** v0.6.6.2+7
+**Last updated:** 2026-03-11 (v0.6.6.41+1 – Kanban documentation setup)
+**Version:** v0.6.6.41+1
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -28,6 +28,14 @@ housekeeping_policy: keep
 
 - [x] **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - ✅ COMPLETED (HIGH priority, Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board)
   - Task: [`T01-fr-br-uxr-prioritization-board.md`](T01-fr-br-uxr-prioritization-board.md)
+- [x] **E6:S06:T02 – Fix Release Workflow Micromanagement Issues** - 🔄 IN PROGRESS, BLOCKED (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work. Root cause identified as Cascade whitelist security prompts.)
+  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](T02-fix-release-workflow-micromanagement-issues.md) | [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+- [x] **E6:S06:T03 – Investigate Apple SDK License Blocking Issue** - ✅ COMPLETED (HIGH priority, Apple SDK license blocking issue prevents proper installation or usage of ai-dev-kit components on Apple platforms; needs investigation to understand root cause and implement solution)
+  - Task: [`T03-apple-sdk-license-blocking-issue.md`](T03-apple-sdk-license-blocking-issue.md) | [BR-040](../../../fr-br/BR-040-apple-sdk-license-blocking-issue.md)
+- [x] **E6:S06:T41 – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows** - ✅ COMPLETED (CRITICAL, Implement AGENTS.md and SKILL.md to define specialized workflow agents and capabilities, enabling Cascade to execute workflows autonomously without manual intervention. This addresses fundamental workflow execution issues including terminal interaction problems and agent behavior inconsistencies.)
+  - Task: [`T41-windsurf-investigate-agents-skills-for-workflows.md`](T41-windsurf-investigate-agents-skills-for-workflows.md) | [FR-041](../../../fr-br/FR-041-windsurf-investigate-agents-skills-for-workflows.md)
+- [ ] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - 📝 TODO (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
+  - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
   - Status: ✅ COMPLETED - Board implemented with MoSCOW structure, all 69 items tracked
   - Completed: 2026-03-09
 
