@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Feature Requests and Bug Reports)
 VERSION_STORY = 6     # Story number (Story 6: Feature Requests)
-VERSION_TASK = 3      # Task number (T03: Apple SDK License Blocking Issue Investigation)
-VERSION_BUILD = 2     # Build number (E6:S06:T03+2 - Apple SDK License Blocking Issue Investigation Complete)
+VERSION_TASK = 41     # Task number (T41: Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows)
+VERSION_BUILD = 0     # Build number (E6:S06:T41+0 - Task Created)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.6.3+2 = Development, Epic 6, Story 6, Task 3, Build 2 (E6:S06:T03+2: Apple SDK License Blocking Issue Investigation Complete)
+# Current: 0.6.6.41+0 = Development, Epic 6, Story 6, Task 41, Build 0 (E6:S06:T41+0: Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows - Task Created)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

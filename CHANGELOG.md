@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.6.41+0] - 11-03-26
+
+E6:S06:T41+0 – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows Created: Comprehensive investigation into implementing AGENTS.md and SKILL.md to define specialized workflow agents and capabilities, enabling Cascade to execute workflows autonomously without manual intervention. Task created with CRITICAL priority to address fundamental workflow execution issues.
+
+### Task Creation
+
+- **Critical Task Created:** E6:S06:T41 - Investigate AGENTS.md and SKILL.md for workflow automation
+- **Problem Statement:** Current Cascade agent behavior is generic and doesn't understand specialized workflows
+- **Solution Design:** Specialized agents for RW, UKW, MW, FR/BR, Validation, and Documentation workflows
+- **Investigation Phases:** 4-phase approach (Research, Implementation, Validation, Deployment)
+- **Expected Outcomes:** Autonomous workflow execution, reduced manual intervention, improved terminal interaction
+
+### Files Created
+
+- `docs/project-management/kanban/fr-br/FR-041-windsurf-investigate-agents-skills-for-workflows.md` - Feature request document
+- `docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T41-windsurf-investigate-agents-skills-for-workflows.md` - Task document
+- Updated kanban board with CRITICAL priority task
+
+### Agent Architecture Design
+
+- **RW Agent:** Release Workflow specialist (version bumping, changelog generation, git operations)
+- **UKW Agent:** Universal Kanban Workflow specialist (kanban updates, task creation)
+- **Validation Agent:** Validation specialist (branch safety, changelog format validation)
+- **Documentation Agent:** Documentation specialist (README updates, documentation generation)
+
+### Impact Assessment
+
+- **Current Issues:** Terminal interaction problems, workflow execution inconsistencies, manual intervention requirements
+- **Potential Solution:** Specialized agents with proper skill definitions for autonomous execution
+- **Success Criteria:** Autonomous RW -d workflow execution, proper terminal command execution, end-to-end workflow completion
+
+---
+
 ## [0.6.6.3+2] - 10-03-26
 
 E6:S06:T03+2 – Apple SDK License Blocking Issue Investigation Complete: Successfully resolved Apple SDK license blocking issue with enhanced error handling, user documentation, and prerequisite checks. Users now receive clear error messages with actionable resolution steps for Apple platform setup.
