@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 1      # Epic number (Epic 1: Foundation and Infrastructure)
-VERSION_STORY = 6     # Story number (Story 6: Repository Infrastructure)
-VERSION_TASK = 1      # Task number (T1: Set up BYOB badges for private repository)
-VERSION_BUILD = 1     # Build number (E1:S06:T01+1 - BYOB Badges implementation release)
+VERSION_EPIC = 8      # Epic number (Epic 8: Tooling and Automation)
+VERSION_STORY = 4     # Story number (Story 4: Tooling Standards)
+VERSION_TASK = 1      # Task number (T1: Tooling & Automation expectations baseline)
+VERSION_BUILD = 1     # Build number (E8:S04:T01+1 - Tooling Baseline implementation release)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.1.6.1+1 = Development, Epic 1, Story 6, Task 1, Build 1 (E1:S06:T01+1: BYOB Badges implementation release)
+# Current: 0.8.4.1+1 = Development, Epic 8, Story 4, Task 1, Build 1 (E8:S04:T01+1: Tooling Baseline implementation release)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
