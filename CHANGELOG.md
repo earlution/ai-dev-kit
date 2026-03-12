@@ -7,9 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ---
+
+## [0.4.14.4+1] - 12-03-26
+
+E4:S14:T04 – Epic Renumbering Complete: Major structural reorganization establishing contiguous epic numbering and logical grouping. Documentation epic moved from E18 to E09 (Core Framework), User Management epic moved from E09 to E18 (Ancillary). Core epics redefined as E1-E10, ancillary epics as E11-E23. All 47 files updated with 100% reference consistency including version schemas, task codes, forensic markers, and related links. Framework now features improved scalability with clear universal vs project-specific epic separation.
+
+[Detailed changelog](docs/changelog/archive/0.4.14.4+1_epic-renumbering.md)
+
 ---
 
-## [0.4.14.3+2] - 12-03-26
+## [0.4.14.3+3] - 12-03-26
+
+E5:S01:T56 – Workflow Documentation Framework Complete: Comprehensive documentation system implemented for all 12 workflows with standardized 16-section template, style guide, and automated validation. Created complete workflow library covering Core Workflows (Testing, Refactor, Migration, Release), Management Workflows (CMW, UKW, PIR), and Specialized Workflows (Intake, Package Version, Framework Health Monitoring, ICW, Documentation). Enhanced package metadata with workflow references and documentation dependencies. Framework now features enterprise-grade documentation with automated quality assurance and scalable template-based approach.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.4.14.3+3.md)
+
+---
 
 E4:S14:T03+2 – Implementation Cycle Workflow (ICW) Complete: Full ICW implementation with workflow generator integration, comprehensive documentation, and testing suite. ICW now available as standard workflow type following agent-driven execution pattern (ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED). GitHub Issue #22 resolved, BR-055 completed with complete bidirectional wiring. Framework completeness restored with all standard workflow types available.
 

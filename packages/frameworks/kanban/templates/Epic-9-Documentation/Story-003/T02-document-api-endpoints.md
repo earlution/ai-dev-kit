@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 2, Task 6: Add in-app help/tooltips
+# Epic 9, Story 3, Task 2: Document API endpoints
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E18S02T06
+**Code:** E09S03T02
 
 ---
 
@@ -24,20 +24,20 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E18:S02:T06`
+**Full Task ID:** `E09:S03:T02`
 
 ---
 
 ## Scope
 
-Add in-app help/tooltips for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
+Document API endpoints for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
 
 ---
 
 ## Input
 
 - Project requirements and specifications
-- add in-app help/tooltips requirements
+- document api endpoints requirements
 - {PROJECT_NAME} project context and constraints
 - Related documentation and reference materials
 
@@ -45,7 +45,7 @@ Add in-app help/tooltips for the {PROJECT_NAME} project. This task establishes t
 
 ## Deliverable
 
-- add in-app help/tooltips completed and verified
+- document api endpoints completed and verified
 - Documentation and artifacts created
 - Integration with existing systems verified
 - Quality checks and validation completed
@@ -54,7 +54,7 @@ Add in-app help/tooltips for the {PROJECT_NAME} project. This task establishes t
 
 ## Acceptance Criteria
 
-- [ ] Add in-app help/tooltips completed successfully (measurable, testable)
+- [ ] Document API endpoints completed successfully (measurable, testable)
 - [ ] Documentation and artifacts created and reviewed (measurable, testable)
 - [ ] Integration with existing systems verified (measurable, testable)
 - [ ] Quality standards met and validated (measurable, testable)
@@ -64,9 +64,9 @@ Add in-app help/tooltips for the {PROJECT_NAME} project. This task establishes t
 
 ## Approach
 
-1. Review requirements and specifications for add in-app help/tooltips
+1. Review requirements and specifications for document api endpoints
 2. Design and plan the implementation approach
-3. Implement add in-app help/tooltips components
+3. Implement document api endpoints components
 4. Test and validate the implementation
 5. Document the implementation and usage
 6. Review and refine based on feedback
@@ -97,10 +97,10 @@ Add in-app help/tooltips for the {PROJECT_NAME} project. This task establishes t
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E18:S02:T06: Related Task Title](path/to/task.md)
+- [E09:S03:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E18:S02: Related Story Title](path/to/story.md)
+- [E09:S03: Related Story Title](path/to/story.md)
 
 ---
 

@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 1, Task 5: Implement email verification
+# Epic 18, Story 1, Task 5: Implement email verification
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E09S01T05
+**Code:** E18S01T05
 
 ---
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E09:S01:T05`
+**Full Task ID:** `E18:S01:T05`
 
 ---
 
@@ -97,10 +97,10 @@ Implement email verification for the {PROJECT_NAME} project. This task establish
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E09:S01:T05: Related Task Title](path/to/task.md)
+- [E18:S01:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E09:S01: Related Story Title](path/to/story.md)
+- [E18:S01: Related Story Title](path/to/story.md)
 
 ---
 

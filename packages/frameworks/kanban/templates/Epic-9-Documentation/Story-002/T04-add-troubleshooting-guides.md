@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 2, Task 4: Add troubleshooting guides
+# Epic 9, Story 2, Task 4: Add troubleshooting guides
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E18S02T04
+**Code:** E09S02T04
 
 ---
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E18:S02:T04`
+**Full Task ID:** `E09:S02:T04`
 
 ---
 
@@ -97,10 +97,10 @@ Add troubleshooting guides for the {PROJECT_NAME} project. This task establishes
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E18:S02:T04: Related Task Title](path/to/task.md)
+- [E09:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E18:S02: Related Story Title](path/to/story.md)
+- [E09:S02: Related Story Title](path/to/story.md)
 
 ---
 

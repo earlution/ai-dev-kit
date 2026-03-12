@@ -16,7 +16,7 @@ housekeeping_policy: keep
 
 ---
 
-## Core Framework Epics (1-8)
+## Core Framework Epics (1-10)
 
 These epics are part of the ai-dev-kit framework and should be included in all projects. They represent universal needs that almost any category of prospective user will require.
 
@@ -29,31 +29,33 @@ These epics are part of the ai-dev-kit framework and should be included in all p
 - Epic 6: BR Implementation
 - Epic 7: UXR (User Experience Research)
 - Epic 8: Codebase Maintenance and Review
+- Epic 9: Documentation
+- Epic 10: Data Management and Database
 
-**Note:** Epics 1-6 are framework infrastructure epics. Epic 7: UXR (User Experience Research) bridges framework and project work. Epic 8: Codebase Maintenance and Review is a universal project need.
+**Note:** Epics 1-6 are framework infrastructure epics. Epic 7: UXR (User Experience Research) bridges framework and project work. Epic 8: Codebase Maintenance and Review, Epic 9: Documentation, and Epic 10: Data Management are universal project needs.
 
 ---
 
-## Ancillary Epics (9-21)
+## Ancillary Epics (11-23)
 
-These epics represent common patterns found in ambitious projects. Use as needed based on project scope, following the chronological adoption order: 9 → 11 → 12 → 13 → 14 → 15 → 16 → 17 → 19 → 20 → 21.
+These epics represent common patterns found in ambitious projects. Use as needed based on project scope, following the chronological adoption order: 11 → 12 → 13 → 14 → 15 → 16 → 17 → 18 → 19 → 20 → 21 → 22 → 23.
 
 **Ancillary Epics (Users Pick and Choose):**
-- Epic 9: User Management and Authentication
-- Epic 10: Data Management and Database (Core+ - recommended by default)
-- Epic 11: API and Backend Services
-- Epic 12: Frontend and User Interface
-- Epic 13: Testing and Quality Assurance
-- Epic 14: Deployment and DevOps
+- Epic 11: User Management and Authentication
+- Epic 12: API and Backend Services
+- Epic 13: Frontend and User Interface
+- Epic 14: Testing and Quality Assurance
 - Epic 15: Security
 - Epic 16: Performance and Optimization
 - Epic 17: Integration and Third-Party Services
-- Epic 18: Documentation (Core+ - recommended by default)
-- Epic 19: Analytics and Monitoring
-- Epic 20: Mobile Application
-- Epic 21: Internationalization and Localization
+- Epic 18: Analytics and Monitoring
+- Epic 19: Mobile Application
+- Epic 20: Internationalization and Localization
+- Epic 21: Architecture Refactoring and Code Quality
+- Epic 22: Process Automation and CI/CD
+- Epic 23: [Reserved for future expansion]
 
-**Note:** Epics 10, 18, 22, and 23 are marked as "Core+" (recommended by default) because they are universal needs, but they remain in the ancillary range to avoid renumbering disruption. Epic 22 (Architecture Refactoring) and Epic 23 (CI/CD) are also Core+ epics.
+**Note:** These epics are project-specific and should be selected based on project requirements and scope.
 
 ---
 

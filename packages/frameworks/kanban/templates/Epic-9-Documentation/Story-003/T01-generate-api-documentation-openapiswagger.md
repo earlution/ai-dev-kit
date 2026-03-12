@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 1, Task 6: Add code examples and tutorials
+# Epic 9, Story 3, Task 1: Generate API documentation (OpenAPI/Swagger)
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E18S01T06
+**Code:** E09S03T01
 
 ---
 
@@ -24,20 +24,20 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E18:S01:T06`
+**Full Task ID:** `E09:S03:T01`
 
 ---
 
 ## Scope
 
-Add code examples and tutorials for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
+Generate API documentation (OpenAPI/Swagger) for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
 
 ---
 
 ## Input
 
 - Project requirements and specifications
-- add code examples and tutorials requirements
+- generate api documentation (openapi/swagger) requirements
 - {PROJECT_NAME} project context and constraints
 - Related documentation and reference materials
 
@@ -45,7 +45,7 @@ Add code examples and tutorials for the {PROJECT_NAME} project. This task establ
 
 ## Deliverable
 
-- add code examples and tutorials completed and verified
+- generate api documentation (openapi/swagger) completed and verified
 - Documentation and artifacts created
 - Integration with existing systems verified
 - Quality checks and validation completed
@@ -54,7 +54,7 @@ Add code examples and tutorials for the {PROJECT_NAME} project. This task establ
 
 ## Acceptance Criteria
 
-- [ ] Add code examples and tutorials completed successfully (measurable, testable)
+- [ ] Generate API documentation (OpenAPI/Swagger) completed successfully (measurable, testable)
 - [ ] Documentation and artifacts created and reviewed (measurable, testable)
 - [ ] Integration with existing systems verified (measurable, testable)
 - [ ] Quality standards met and validated (measurable, testable)
@@ -64,9 +64,9 @@ Add code examples and tutorials for the {PROJECT_NAME} project. This task establ
 
 ## Approach
 
-1. Review requirements and specifications for add code examples and tutorials
+1. Review requirements and specifications for generate api documentation (openapi/swagger)
 2. Design and plan the implementation approach
-3. Implement add code examples and tutorials components
+3. Implement generate api documentation (openapi/swagger) components
 4. Test and validate the implementation
 5. Document the implementation and usage
 6. Review and refine based on feedback
@@ -97,10 +97,10 @@ Add code examples and tutorials for the {PROJECT_NAME} project. This task establ
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E18:S01:T06: Related Task Title](path/to/task.md)
+- [E09:S03:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E18:S01: Related Story Title](path/to/story.md)
+- [E09:S03: Related Story Title](path/to/story.md)
 
 ---
 

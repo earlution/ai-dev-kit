@@ -6,27 +6,27 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18: Documentation
+# Epic 9: Documentation
 
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** [YYYY-MM-DD]  
-**Last updated:** [YYYY-MM-DD] (v0.18.0.0+0 – Template created)  
-**Branch:** `epic/18-documentation`  
-**Version Schema:** `0.18.S.T+B`  
+**Last updated:** [YYYY-MM-DD] (v0.9.0.0+0 – Template created)  
+**Branch:** `epic/9-documentation`  
+**Version Schema:** `0.9.S.T+B`  
 **Production URL:** [Optional]
 
 ---
 
 ## Story Checklist
 
-- [ ] **E18:S01 – Developer Documentation** - TODO
-- [ ] **E18:S02 – User Documentation** - TODO
-- [ ] **E18:S03 – API Documentation** - TODO
+- [ ] **E09:S01 – Developer Documentation** - TODO
+- [ ] **E09:S02 – User Documentation** - TODO
+- [ ] **E09:S03 – API Documentation** - TODO
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.18.1.3+1)`)  
+> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.3+1)`)  
 > **Release Workflow Requirement:** When Release Workflow (RW) Step 4 updates this Epic document, it MUST update **ALL sections**:
 > - Epic header `Last updated` field
 > - Story Checklist (status and version markers)
@@ -62,21 +62,21 @@ This epic encompasses project documentation, user guides, and developer document
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** [YYYY-MM-DD] (v0.18.1.0+0 – Template created)
+**Last updated:** [YYYY-MM-DD] (v0.9.1.0+0 – Template created)
 
 **Goal:** Create comprehensive developer documentation.
 
 **Tasks:**
-- [ ] E18:S01:T01 – Create architecture documentation
-- [ ] E18:S01:T02 – Document code structure and patterns
-- [ ] E18:S01:T03 – Create setup and installation guides
-- [ ] E18:S01:T04 – Document development workflow
-- [ ] E18:S01:T05 – Create contribution guidelines
-- [ ] E18:S01:T06 – Add code examples and tutorials
+- [ ] E09:S01:T01 – Create architecture documentation
+- [ ] E09:S01:T02 – Document code structure and patterns
+- [ ] E09:S01:T03 – Create setup and installation guides
+- [ ] E09:S01:T04 – Document development workflow
+- [ ] E09:S01:T05 – Create contribution guidelines
+- [ ] E09:S01:T06 – Add code examples and tutorials
 
-> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E18:S01:T01`, not `T01` alone)
+> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E09:S01:T01`, not `T01` alone)
 
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.18.1.3+1)`)  
+> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.3+1)`)  
 > **Consistency:** Task checkboxes in this detailed section must match the Story file's Task Checklist.
 
 **Acceptance Criteria:**
@@ -91,7 +91,7 @@ This epic encompasses project documentation, user guides, and developer document
 - None
 - *Parallel Development Candidacy:* Safe (can be done independently)
 
-> Full story: `docs/project-management/kanban/epics/Epic-18/Story-001-developer-documentation.md`
+> Full story: `docs/project-management/kanban/epics/Epic-9/Story-001-developer-documentation.md`
 
 ---
 
@@ -100,21 +100,21 @@ This epic encompasses project documentation, user guides, and developer document
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** [YYYY-MM-DD] (v0.18.2.0+0 – Template created)
+**Last updated:** [YYYY-MM-DD] (v0.9.2.0+0 – Template created)
 
 **Goal:** Create user-facing documentation.
 
 **Tasks:**
-- [ ] E18:S02:T01 – Create user manual/guide
-- [ ] E18:S02:T02 – Document features and functionality
-- [ ] E18:S02:T03 – Create FAQ section
-- [ ] E18:S02:T04 – Add troubleshooting guides
-- [ ] E18:S02:T05 – Create video tutorials (optional)
-- [ ] E18:S02:T06 – Add in-app help/tooltips
+- [ ] E09:S02:T01 – Create user manual/guide
+- [ ] E09:S02:T02 – Document features and functionality
+- [ ] E09:S02:T03 – Create FAQ section
+- [ ] E09:S02:T04 – Add troubleshooting guides
+- [ ] E09:S02:T05 – Create video tutorials (optional)
+- [ ] E09:S02:T06 – Add in-app help/tooltips
 
-> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E18:S02:T01`, not `T01` alone)
+> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E09:S02:T01`, not `T01` alone)
 
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.18.2.3+1)`)  
+> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.2.3+1)`)  
 > **Consistency:** Task checkboxes in this detailed section must match the Story file's Task Checklist.
 
 **Acceptance Criteria:**
@@ -129,7 +129,7 @@ This epic encompasses project documentation, user guides, and developer document
 - Coordinates with Epic 12 (Frontend & UI) for in-app help
 - *Parallel Development Candidacy:* Safe (can coordinate with Epic 12)
 
-> Full story: `docs/project-management/kanban/epics/Epic-18/Story-002-user-documentation.md`
+> Full story: `docs/project-management/kanban/epics/Epic-9/Story-002-user-documentation.md`
 
 ---
 
@@ -138,20 +138,20 @@ This epic encompasses project documentation, user guides, and developer document
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** [YYYY-MM-DD] (v0.18.3.0+0 – Template created)
+**Last updated:** [YYYY-MM-DD] (v0.9.3.0+0 – Template created)
 
 **Goal:** Create comprehensive API documentation.
 
 **Tasks:**
-- [ ] E18:S03:T01 – Generate API documentation (OpenAPI/Swagger)
-- [ ] E18:S03:T02 – Document API endpoints
-- [ ] E18:S03:T03 – Add API usage examples
-- [ ] E18:S03:T04 – Create API integration guides
-- [ ] E18:S03:T05 – Document API versioning
+- [ ] E09:S03:T01 – Generate API documentation (OpenAPI/Swagger)
+- [ ] E09:S03:T02 – Document API endpoints
+- [ ] E09:S03:T03 – Add API usage examples
+- [ ] E09:S03:T04 – Create API integration guides
+- [ ] E09:S03:T05 – Document API versioning
 
-> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E18:S03:T01`, not `T01` alone)
+> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E09:S03:T01`, not `T01` alone)
 
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.18.3.3+1)`)  
+> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.3+1)`)  
 > **Consistency:** Task checkboxes in this detailed section must match the Story file's Task Checklist.
 
 **Acceptance Criteria:**
@@ -165,7 +165,7 @@ This epic encompasses project documentation, user guides, and developer document
 - Depends on Epic 11 (API & Backend Services) for API implementation
 - *Parallel Development Candidacy:* Blocked (requires Epic 11 API)
 
-> Full story: `docs/project-management/kanban/epics/Epic-18/Story-003-api-documentation.md`
+> Full story: `docs/project-management/kanban/epics/Epic-9/Story-003-api-documentation.md`
 
 ---
 

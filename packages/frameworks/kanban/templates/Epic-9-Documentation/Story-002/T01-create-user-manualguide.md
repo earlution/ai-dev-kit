@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 1, Task 1: Create architecture documentation
+# Epic 9, Story 2, Task 1: Create user manual/guide
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E18S01T01
+**Code:** E09S02T01
 
 ---
 
@@ -24,20 +24,20 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E18:S01:T01`
+**Full Task ID:** `E09:S02:T01`
 
 ---
 
 ## Scope
 
-Create architecture documentation for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
+Create user manual/guide for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
 
 ---
 
 ## Input
 
 - Project requirements and specifications
-- create architecture documentation requirements
+- create user manual/guide requirements
 - {PROJECT_NAME} project context and constraints
 - Related documentation and reference materials
 
@@ -45,7 +45,7 @@ Create architecture documentation for the {PROJECT_NAME} project. This task esta
 
 ## Deliverable
 
-- create architecture documentation completed and verified
+- create user manual/guide completed and verified
 - Documentation and artifacts created
 - Integration with existing systems verified
 - Quality checks and validation completed
@@ -54,7 +54,7 @@ Create architecture documentation for the {PROJECT_NAME} project. This task esta
 
 ## Acceptance Criteria
 
-- [ ] Create architecture documentation completed successfully (measurable, testable)
+- [ ] Create user manual/guide completed successfully (measurable, testable)
 - [ ] Documentation and artifacts created and reviewed (measurable, testable)
 - [ ] Integration with existing systems verified (measurable, testable)
 - [ ] Quality standards met and validated (measurable, testable)
@@ -64,9 +64,9 @@ Create architecture documentation for the {PROJECT_NAME} project. This task esta
 
 ## Approach
 
-1. Review requirements and specifications for create architecture documentation
+1. Review requirements and specifications for create user manual/guide
 2. Design and plan the implementation approach
-3. Implement create architecture documentation components
+3. Implement create user manual/guide components
 4. Test and validate the implementation
 5. Document the implementation and usage
 6. Review and refine based on feedback
@@ -97,10 +97,10 @@ Create architecture documentation for the {PROJECT_NAME} project. This task esta
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E18:S01:T01: Related Task Title](path/to/task.md)
+- [E09:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E18:S01: Related Story Title](path/to/story.md)
+- [E09:S02: Related Story Title](path/to/story.md)
 
 ---
 

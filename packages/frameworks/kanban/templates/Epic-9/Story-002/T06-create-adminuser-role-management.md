@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 2, Task 6: Create admin/user role management
+# Epic 18, Story 2, Task 6: Create admin/user role management
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E09S02T06
+**Code:** E18S02T06
 
 ---
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E09:S02:T06`
+**Full Task ID:** `E18:S02:T06`
 
 ---
 
@@ -97,10 +97,10 @@ Create admin/user role management for the {PROJECT_NAME} project. This task esta
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E09:S02:T06: Related Task Title](path/to/task.md)
+- [E18:S02:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E09:S02: Related Story Title](path/to/story.md)
+- [E18:S02: Related Story Title](path/to/story.md)
 
 ---
 

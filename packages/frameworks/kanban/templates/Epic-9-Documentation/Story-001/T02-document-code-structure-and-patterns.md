@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 3, Task 5: Document API versioning
+# Epic 9, Story 1, Task 2: Document code structure and patterns
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E18S03T05
+**Code:** E09S01T02
 
 ---
 
@@ -24,20 +24,20 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E18:S03:T05`
+**Full Task ID:** `E09:S01:T02`
 
 ---
 
 ## Scope
 
-Document API versioning for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
+Document code structure and patterns for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
 
 ---
 
 ## Input
 
 - Project requirements and specifications
-- document api versioning requirements
+- document code structure and patterns requirements
 - {PROJECT_NAME} project context and constraints
 - Related documentation and reference materials
 
@@ -45,7 +45,7 @@ Document API versioning for the {PROJECT_NAME} project. This task establishes th
 
 ## Deliverable
 
-- document api versioning completed and verified
+- document code structure and patterns completed and verified
 - Documentation and artifacts created
 - Integration with existing systems verified
 - Quality checks and validation completed
@@ -54,7 +54,7 @@ Document API versioning for the {PROJECT_NAME} project. This task establishes th
 
 ## Acceptance Criteria
 
-- [ ] Document API versioning completed successfully (measurable, testable)
+- [ ] Document code structure and patterns completed successfully (measurable, testable)
 - [ ] Documentation and artifacts created and reviewed (measurable, testable)
 - [ ] Integration with existing systems verified (measurable, testable)
 - [ ] Quality standards met and validated (measurable, testable)
@@ -64,9 +64,9 @@ Document API versioning for the {PROJECT_NAME} project. This task establishes th
 
 ## Approach
 
-1. Review requirements and specifications for document api versioning
+1. Review requirements and specifications for document code structure and patterns
 2. Design and plan the implementation approach
-3. Implement document api versioning components
+3. Implement document code structure and patterns components
 4. Test and validate the implementation
 5. Document the implementation and usage
 6. Review and refine based on feedback
@@ -97,10 +97,10 @@ Document API versioning for the {PROJECT_NAME} project. This task establishes th
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E18:S03:T05: Related Task Title](path/to/task.md)
+- [E09:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E18:S03: Related Story Title](path/to/story.md)
+- [E09:S01: Related Story Title](path/to/story.md)
 
 ---
 

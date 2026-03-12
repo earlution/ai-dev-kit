@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 1, Task 4: Document development workflow
+# Epic 9, Story 1, Task 5: Create contribution guidelines
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E18S01T04
+**Code:** E09S01T05
 
 ---
 
@@ -24,20 +24,20 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E18:S01:T04`
+**Full Task ID:** `E09:S01:T05`
 
 ---
 
 ## Scope
 
-Document development workflow for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
+Create contribution guidelines for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
 
 ---
 
 ## Input
 
 - Project requirements and specifications
-- document development workflow requirements
+- create contribution guidelines requirements
 - {PROJECT_NAME} project context and constraints
 - Related documentation and reference materials
 
@@ -45,7 +45,7 @@ Document development workflow for the {PROJECT_NAME} project. This task establis
 
 ## Deliverable
 
-- document development workflow completed and verified
+- create contribution guidelines completed and verified
 - Documentation and artifacts created
 - Integration with existing systems verified
 - Quality checks and validation completed
@@ -54,7 +54,7 @@ Document development workflow for the {PROJECT_NAME} project. This task establis
 
 ## Acceptance Criteria
 
-- [ ] Document development workflow completed successfully (measurable, testable)
+- [ ] Create contribution guidelines completed successfully (measurable, testable)
 - [ ] Documentation and artifacts created and reviewed (measurable, testable)
 - [ ] Integration with existing systems verified (measurable, testable)
 - [ ] Quality standards met and validated (measurable, testable)
@@ -64,9 +64,9 @@ Document development workflow for the {PROJECT_NAME} project. This task establis
 
 ## Approach
 
-1. Review requirements and specifications for document development workflow
+1. Review requirements and specifications for create contribution guidelines
 2. Design and plan the implementation approach
-3. Implement document development workflow components
+3. Implement create contribution guidelines components
 4. Test and validate the implementation
 5. Document the implementation and usage
 6. Review and refine based on feedback
@@ -97,10 +97,10 @@ Document development workflow for the {PROJECT_NAME} project. This task establis
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E18:S01:T04: Related Task Title](path/to/task.md)
+- [E09:S01:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E18:S01: Related Story Title](path/to/story.md)
+- [E09:S01: Related Story Title](path/to/story.md)
 
 ---
 

@@ -13,26 +13,26 @@ housekeeping_policy: keep
 **Usage:** When adopting ai-dev-kit as a template, use this structure as the foundation. Contextualize placeholders (e.g., `{PROJECT_NAME}`, `{DOMAIN}`) to match your project, then add project-specific epics as needed.
 
 **Scalability:** This structure is designed to scale:
-- **Tiny projects:** Use Core Epics 1-7, 8, 10, 18, 22, 23 (all core framework epics)
-- **Small projects:** Add 1-3 project-specific epics (Epics 9, 11-17, 19-21+)
-- **Medium projects:** Add 3-5 project-specific epics (Epics 9, 11-17, 19-21+)
-- **Ambitious projects:** Use full structure (Core Epics + Epics 9, 11-21+) as needed
+- **Tiny projects:** Use Core Epics 1-7, 8, 9, 10, 22, 23 (all core framework epics)
+- **Small projects:** Add 1-3 project-specific epics (Epics 11-17, 18-21+)
+- **Medium projects:** Add 3-5 project-specific epics (Epics 11-17, 18-21+)
+- **Ambitious projects:** Use full structure (Core Epics + Epics 11-21+) as needed
 
 ---
 
-## Canonical Epics (1-7, 8, 10, 18, 22, 23): Core Framework Epics
+## Canonical Epics (1-7, 8, 9, 10, 22, 23): Core Framework Epics
 
 These epics are part of the ai-dev-kit framework and should be included in all projects. They represent universal needs that almost any category of prospective user will require.
 
 **Core Framework Epics:**
 - **Epics 1-7:** Framework infrastructure and user research
 - **Epic 8:** Codebase Maintenance and Review (universal need)
+- **Epic 9:** Documentation (universal need)
 - **Epic 10:** Data Management and Database (universal need)
-- **Epic 18:** Documentation (universal need)
 - **Epic 22:** Architecture Refactoring and Code Quality (universal need)
 - **Epic 23:** Process Automation and CI/CD (universal need)
 
-**Note:** Epics 1-6 are framework infrastructure epics. Epic 7: UXR (User Experience Research) bridges framework and project work. Epics 8, 10, 18, 22, and 23 are universal project needs and are therefore part of the core set.
+**Note:** Epics 1-6 are framework infrastructure epics. Epic 7: UXR (User Experience Research) bridges framework and project work. Epics 8, 9, 10, 22, and 23 are universal project needs and are therefore part of the core set.
 
 ### Epic 1: {PROJECT_NAME} Core
 
@@ -398,11 +398,53 @@ This epic encompasses codebase maintenance and review activities, including addr
 
 ---
 
-## Project-Specific Canonical Epics (9, 11-17, 19-21+)
+### Epic 9: Documentation
 
-These epics represent common patterns found in ambitious projects. Use as needed based on project scope, and when possible follow the chronological order from the adoption guide: 9 → 11 → 12 → 13 → 14 → 15 → 16 → 17 → 19 → 20 → 21 → 24* (with 24 only if multi-role access is core early).
+**Purpose:** Project documentation, user guides, and developer documentation.  
+**Scope:** API documentation, user manuals, developer guides, architecture documentation.  
+**Status:** Core Framework Epic (universal need)
 
-### Epic 9: User Management and Authentication
+**Typical Stories:**
+
+#### Story 1: Developer Documentation
+**Purpose:** Create comprehensive developer documentation.
+
+**Typical Tasks:**
+- T01: Create architecture documentation
+- T02: Document code structure and patterns
+- T03: Create setup and installation guides
+- T04: Document development workflow
+- T05: Create contribution guidelines
+- T06: Add code examples and tutorials
+
+#### Story 2: User Documentation
+**Purpose:** Create user-facing documentation.
+
+**Typical Tasks:**
+- T01: Create user manual/guide
+- T02: Document features and functionality
+- T03: Create FAQ section
+- T04: Add troubleshooting guides
+- T05: Create video tutorials (optional)
+- T06: Add in-app help/tooltips
+
+#### Story 3: API Documentation
+**Purpose:** Create comprehensive API documentation.
+
+**Typical Tasks:**
+- T01: Generate API documentation (OpenAPI/Swagger)
+- T02: Document API endpoints
+- T03: Add API usage examples
+- T04: Create API integration guides
+- T05: Document API versioning
+
+---
+
+## Project-Specific Canonical Epics (11-17, 18-21+)
+
+These epics represent common patterns found in ambitious projects. Use as needed based on project scope, and when possible follow the chronological order from the adoption guide: 11 → 12 → 13 → 14 → 15 → 16 → 17 → 18 → 19 → 20 → 21 → 24* (with 24 only if multi-role access is core early).
+
+### Epic 18: User Management and Authentication
 
 **Purpose:** User management, authentication, and authorization.  
 **Scope:** User accounts, authentication, authorization, user profiles, session management.  
@@ -774,48 +816,6 @@ These epics represent common patterns found in ambitious projects. Use as needed
 - T04: Create payment flow UI
 - T05: Implement payment webhooks
 - T06: Add payment testing
-
----
-
-### Epic 18: Documentation
-
-**Purpose:** Project documentation, user guides, and developer documentation.  
-**Scope:** API documentation, user manuals, developer guides, architecture documentation.  
-**Status:** Core Framework Epic (universal need)
-
-**Typical Stories:**
-
-#### Story 1: Developer Documentation
-**Purpose:** Create comprehensive developer documentation.
-
-**Typical Tasks:**
-- T01: Create architecture documentation
-- T02: Document code structure and patterns
-- T03: Create setup and installation guides
-- T04: Document development workflow
-- T05: Create contribution guidelines
-- T06: Add code examples and tutorials
-
-#### Story 2: User Documentation
-**Purpose:** Create user-facing documentation.
-
-**Typical Tasks:**
-- T01: Create user manual/guide
-- T02: Document features and functionality
-- T03: Create FAQ section
-- T04: Add troubleshooting guides
-- T05: Create video tutorials (optional)
-- T06: Add in-app help/tooltips
-
-#### Story 3: API Documentation
-**Purpose:** Create comprehensive API documentation.
-
-**Typical Tasks:**
-- T01: Generate API documentation (OpenAPI/Swagger)
-- T02: Document API endpoints
-- T03: Add API usage examples
-- T04: Create API integration guides
-- T05: Document API versioning
 
 ---
 

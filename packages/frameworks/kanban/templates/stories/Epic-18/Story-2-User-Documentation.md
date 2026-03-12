@@ -6,30 +6,30 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 2: User Documentation
+# Epic 9, Story 2: User Documentation
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.18.2.0+0 – Template created)  
+**Last updated:** [YYYY-MM-DD] (v0.9.2.0+0 – Template created)  
 **Estimated Effort:** [TBD]  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
-**Version:** v0.18.2.0+0  
-**Code:** E18S02
+**Version:** v0.9.2.0+0  
+**Code:** E09S02
 
 ---
 
 ## Task Checklist
 
-- [ ] **E18:S02:T01 – Create user manual/guide** - TODO
-- [ ] **E18:S02:T02 – Document features and functionality** - TODO
-- [ ] **E18:S02:T03 – Create FAQ section** - TODO
-- [ ] **E18:S02:T04 – Add troubleshooting guides** - TODO
-- [ ] **E18:S02:T05 – Create video tutorials (optional)** - TODO
-- [ ] **E18:S02:T06 – Add in-app help/tooltips** - TODO
+- [ ] **E09:S02:T01 – Create user manual/guide** - TODO
+- [ ] **E09:S02:T02 – Document features and functionality** - TODO
+- [ ] **E09:S02:T03 – Create FAQ section** - TODO
+- [ ] **E09:S02:T04 – Add troubleshooting guides** - TODO
+- [ ] **E09:S02:T05 – Create video tutorials (optional)** - TODO
+- [ ] **E09:S02:T06 – Add in-app help/tooltips** - TODO
 
-> **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E18:S02:T01`)  
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.18.2.3+1)`)
+> **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E09:S02:T01`)  
+> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.2.3+1)`)
 
 ---
 
@@ -54,12 +54,12 @@ Create user-facing documentation for the {PROJECT_NAME} project.
 
 ### Task Summaries
 
-- **E18:S02:T01** – Create user manual/guide for {PROJECT_NAME}
-- **E18:S02:T02** – Document features and functionality
-- **E18:S02:T03** – Create FAQ section
-- **E18:S02:T04** – Add troubleshooting guides
-- **E18:S02:T05** – Create video tutorials (optional)
-- **E18:S02:T06** – Add in-app help/tooltips
+- **E09:S02:T01** – Create user manual/guide for {PROJECT_NAME}
+- **E09:S02:T02** – Document features and functionality
+- **E09:S02:T03** – Create FAQ section
+- **E09:S02:T04** – Add troubleshooting guides
+- **E09:S02:T05** – Create video tutorials (optional)
+- **E09:S02:T06** – Add in-app help/tooltips
 
 ---
 

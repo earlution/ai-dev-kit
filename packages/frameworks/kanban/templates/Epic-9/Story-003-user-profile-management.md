@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 3: User Profile Management
+# Epic 18, Story 3: User Profile Management
 
 **Status:** [TODO/IN PROGRESS/COMPLETE/DEFERRED]
 **Priority:** [HIGH/MEDIUM/LOW]
@@ -16,15 +16,15 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]
 **Completed:** [YYYY-MM-DD]
 **Version:** vX.Y.Z.T+B
-**Code:** E09S03
+**Code:** E18S03
 
 ---
 
 ## Task Checklist
 
-- [ ] **E09:S03:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
-- [ ] **E09:S03:T02 – [Task Title]**
-- [ ] **E09:S03:T03 – [Task Title]**
+- [ ] **E18:S03:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
+- [ ] **E18:S03:T02 – [Task Title]**
+- [ ] **E18:S03:T03 – [Task Title]**
 
 > **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E1:S01:T01`, `E2:S04:T05`)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.1.3+1)`)  
@@ -94,7 +94,7 @@ Every Task MUST have a discrete Task document. Tasks can be documented in one of
 - Projects requiring maximum traceability
 
 **Task Checklist Reference:**
-- [ ] **E09:S03:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
+- [ ] **E18:S03:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
   - Task Doc: [`Task-001-task-title.md`](Task-001-task-title.md)
 
 ### Format 2: Delimited Section Within Story (Alternative)
@@ -111,7 +111,7 @@ Every Task MUST have a discrete Task document. Tasks can be documented in one of
 
 **Example Structure:**
 ```markdown
-### E09:S03:T01 – [Task Title]
+### E18:S03:T01 – [Task Title]
 
 > **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E1:S01:T01`, not `T01` alone)
 
@@ -157,14 +157,14 @@ Regardless of format, every Task MUST include:
 #### Example: Separate Task File Format
 
 **Task Checklist Entry:**
-- [ ] **E09:S03:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
+- [ ] **E18:S03:T01 – [Task Title]** ✅ COMPLETE (vX.Y.Z.T+B)
   - Task Doc: [`Task-001-task-title.md`](Task-001-task-title.md)
 
 #### Example: Delimited Section Format
 
 > **Note:** Even when using delimited sections within the Story document, the Task content should be self-contained and complete. The Story document serves as a container, but the Task section should contain all Task-level detail (Input, Deliverable, Approach, Acceptance Criteria, etc.).
 
-### E09:S03:T01 – [Task Title]
+### E18:S03:T01 – [Task Title]
 
 > **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E1:S01:T01`, not `T01` alone)
 

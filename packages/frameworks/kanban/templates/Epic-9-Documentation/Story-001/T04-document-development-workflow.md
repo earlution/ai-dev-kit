@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 2, Task 5: Create video tutorials (optional)
+# Epic 9, Story 1, Task 4: Document development workflow
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E18S02T05
+**Code:** E09S01T04
 
 ---
 
@@ -24,20 +24,20 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E18:S02:T05`
+**Full Task ID:** `E09:S01:T04`
 
 ---
 
 ## Scope
 
-Create video tutorials (optional) for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
+Document development workflow for the {PROJECT_NAME} project. This task establishes the necessary components and processes to support the story's objectives and enables subsequent work.
 
 ---
 
 ## Input
 
 - Project requirements and specifications
-- create video tutorials (optional) requirements
+- document development workflow requirements
 - {PROJECT_NAME} project context and constraints
 - Related documentation and reference materials
 
@@ -45,7 +45,7 @@ Create video tutorials (optional) for the {PROJECT_NAME} project. This task esta
 
 ## Deliverable
 
-- create video tutorials (optional) completed and verified
+- document development workflow completed and verified
 - Documentation and artifacts created
 - Integration with existing systems verified
 - Quality checks and validation completed
@@ -54,7 +54,7 @@ Create video tutorials (optional) for the {PROJECT_NAME} project. This task esta
 
 ## Acceptance Criteria
 
-- [ ] Create video tutorials (optional) completed successfully (measurable, testable)
+- [ ] Document development workflow completed successfully (measurable, testable)
 - [ ] Documentation and artifacts created and reviewed (measurable, testable)
 - [ ] Integration with existing systems verified (measurable, testable)
 - [ ] Quality standards met and validated (measurable, testable)
@@ -64,9 +64,9 @@ Create video tutorials (optional) for the {PROJECT_NAME} project. This task esta
 
 ## Approach
 
-1. Review requirements and specifications for create video tutorials (optional)
+1. Review requirements and specifications for document development workflow
 2. Design and plan the implementation approach
-3. Implement create video tutorials (optional) components
+3. Implement document development workflow components
 4. Test and validate the implementation
 5. Document the implementation and usage
 6. Review and refine based on feedback
@@ -97,10 +97,10 @@ Create video tutorials (optional) for the {PROJECT_NAME} project. This task esta
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E18:S02:T05: Related Task Title](path/to/task.md)
+- [E09:S01:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E18:S02: Related Story Title](path/to/story.md)
+- [E09:S01: Related Story Title](path/to/story.md)
 
 ---
 

@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 2, Task 4: Implement access control middleware
+# Epic 18, Story 2, Task 4: Implement access control middleware
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E09S02T04
+**Code:** E18S02T04
 
 ---
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E09:S02:T04`
+**Full Task ID:** `E18:S02:T04`
 
 ---
 
@@ -97,10 +97,10 @@ Implement access control middleware for the {PROJECT_NAME} project. This task es
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E09:S02:T04: Related Task Title](path/to/task.md)
+- [E18:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E09:S02: Related Story Title](path/to/story.md)
+- [E18:S02: Related Story Title](path/to/story.md)
 
 ---
 

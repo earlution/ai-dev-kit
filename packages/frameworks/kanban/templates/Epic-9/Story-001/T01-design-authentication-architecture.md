@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 1, Task 1: Design authentication architecture
+# Epic 18, Story 1, Task 1: Design authentication architecture
 
 > **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
 
@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** vX.Y.Z.T+B  
-**Code:** E09S01T01
+**Code:** E18S01T01
 
 ---
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 **Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 
-**Full Task ID:** `E09:S01:T01`
+**Full Task ID:** `E18:S01:T01`
 
 ---
 
@@ -97,10 +97,10 @@ Design authentication architecture for the {PROJECT_NAME} project. This task est
 - [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
 
 **Related Tasks:**
-- [E09:S01:T01: Related Task Title](path/to/task.md)
+- [E18:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- [E09:S01: Related Story Title](path/to/story.md)
+- [E18:S01: Related Story Title](path/to/story.md)
 
 ---
 
