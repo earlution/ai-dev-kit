@@ -2,7 +2,8 @@ name: FR/BR/UXR/FB Intake from GitHub Issues
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, labeled, unlabeled]
+  workflow_dispatch:
 
 jobs:
   convert-issue-to-document:
@@ -12,7 +13,8 @@ jobs:
       (contains(github.event.issue.labels.*.name, 'bug') ||
        contains(github.event.issue.labels.*.name, 'enhancement') ||
        contains(github.event.issue.labels.*.name, 'ux-research') ||
-       contains(github.event.issue.labels.*.name, 'feedback'))
+       contains(github.event.issue.labels.*.name, 'feedback')) &&
+      github.event.action != 'edited'
     
     steps:
       - name: Checkout repository
