@@ -28,7 +28,7 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E4:S14:T03** – Add Missing Implementation Cycle Workflow (ICW) - TODO (HIGH priority, Add missing ICW to workflow management framework package; includes workflow file creation, generator support, documentation, and testing) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T03-add-missing-implementation-cycle-workflow-icw.md) | [Story](epics/Epic-4/Story-014-kanban-framework-maintenance.md) | [BR-055](../fr-br/BR-055-missing-implementation-cycle-workflow-icw.md) | [GitHub Issue #22](https://github.com/earlution/ai-dev-kit/issues/22)
+*No "Should Have" tasks currently in progress - All completed via multi-agent ICW execution*
 
 ### Could Have (C) - Nice-to-Have Tasks
 
@@ -38,7 +38,7 @@ housekeeping_policy: keep
 
 ### Completed Tasks
 
-- **E5:S01:T47** – Install Logging for Framework Dependencies - COMPLETE (HIGH priority, Comprehensive install logging implementation with CLI integration, JSON/text formats, framework installer integration, install-history command, and full test coverage) - [Task Document](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../fr-br/FR-047-install-logging-for-framework-dependencies.md)
+- **E4:S14:T03** – Add Missing Implementation Cycle Workflow (ICW) - COMPLETE (HIGH priority, Added ICW to workflow management framework package; includes workflow generator support, comprehensive documentation, and testing. ICW now available as standard workflow type following agent-driven execution pattern) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T03-add-missing-implementation-cycle-workflow-icw.md) | [Story](epics/Epic-4/Story-014-kanban-framework-maintenance.md) | [BR-055](../fr-br/BR-055-missing-implementation-cycle-workflow-icw.md) | [GitHub Issue #22](https://github.com/earlution/ai-dev-kit/issues/22)
 - **E5:S01:T40** – Implementation Cycle Workflow (ICW) - COMPLETE (HIGH priority, Structured three-phase workflow with specification definition, test design, and implementation planning; complete workflow engine, templates, validation, and comprehensive test suite implemented) - [Task Document](epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) | [FR-040](../fr-br/FR-040-implementation-cycle-workflow-icw.md)
 - **E6:S07:T105** – Release Runbook Creation - COMPLETE (HIGH priority, Comprehensive release procedures with exact commands for both registry and task-touch SemVer modes; supplementary materials include quick reference, checklists, configuration examples, and integration guides) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md) | [Release Runbook](../maintenance/release-runbook.md)
 - **E6:S07:T104** – Release Automation Audit - COMPLETE (HIGH priority, Audit and fix release automation for task-touch SemVer compatibility; critical fixes implemented, release automation restored) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md) | [Audit Report](docs/implementation-cycles/E6S07T104-release-automation-audit-report.md) | [Remediation Implementation](docs/implementation-cycles/E6S07T104-remediation-implementation.md)

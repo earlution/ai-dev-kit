@@ -47,6 +47,7 @@ This package contains all essential files needed to implement the Release Workfl
 - `workflows/migration-workflow/migration-workflow.yaml` - YAML definition of the Migration Workflow structure
 - `workflows/refactor-workflow/refactor-workflow.yaml` - YAML definition of the Refactor Workflow structure
 - `workflows/testing-workflow/testing-workflow.yaml` - YAML definition of the Testing Workflow structure
+- `workflows/implementation-cycle-workflow/icw-workflow.yaml` - YAML definition of the Implementation Cycle Workflow structure (ICW - systematic implementation workflow)
 - `workflows/package-version-workflow/package-version-workflow.yaml` - YAML definition of the Package Version Workflow structure
 - `workflows/framework-health-monitoring-workflow/framework-health-monitoring-workflow.yaml` - YAML definition of the Framework Health Monitoring Workflow structure
 - `workflows/workflow-registry.yaml` - Registry of all workflows with metadata
