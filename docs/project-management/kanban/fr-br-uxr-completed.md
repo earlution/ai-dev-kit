@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-03-11 (E6:S07:T108: UKW Extension for FR/BR/UXR Temporal Tracking)
-**Version:** v0.6.7.107+2
+**Last Updated:** 2026-03-12 (GitHub Issues #14 and #17 resolved with proper BR/FR/UXR wiring)
+**Version:** v0.24.2.1+1
 
 > **For open FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -33,7 +33,37 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| BR-054 | BR | Kanban Package Migration/Installation Completely Broken | 2026-03-12T13:20:00Z | v0.24.2.1+1 | Documentation Agent |
+| BR-009 | BR | Installer Discoverability and Documentation | 2026-03-09T16:00:00Z | v0.6.7.104+2 | RW Agent |
 | FR-051 | FR | FR/BR/UXR Prioritization Board | 2026-03-09T15:20:00Z | v0.6.7.107+1 | Documentation Agent |
+
+---
+
+## Completed Bug Reports
+
+### 2026-03-12
+
+**BR-054 – Kanban Package Migration/Installation Completely Broken**  
+**Completed:** 2026-03-12T13:20:00Z (v0.24.2.1+1)  
+**GitHub Issue:** [#17](https://github.com/earlution/ai-dev-kit/issues/17)  
+**Implementing Story:** [E4:S17](epics/Epic-4/Story-017-kanban-package-installation-evaluation.md)  
+**Completing Agent:** Documentation Agent  
+**Description:** Comprehensive evaluation and resolution of kanban package installation issues including migration path failures, path inflexibility, missing validation, and poor error handling  
+**Impact:** Package upgraded from beta to production-ready with comprehensive testing and validation  
+**Files Created:**
+- [BR-054](fr-br/BR-054-kanban-package-migration-installation-completely-broken.md) - Bug report documentation
+
+### 2026-03-09
+
+**BR-009 – Installer Discoverability and Documentation**  
+**Completed:** 2026-03-09T16:00:00Z (v0.6.7.104+2)  
+**GitHub Issue:** [#14](https://github.com/earlution/ai-dev-kit/issues/14)  
+**Implementing Task:** [E4:S06:T07](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system/E4S06T07-integration-validation-report.md)  
+**Completing Agent:** RW Agent  
+**Description:** Fixed installer prominence and template distinction issues in kanban framework installation  
+**Impact:** Users now properly guided to use interactive installer with clear template vs. actual kanban distinction  
+**Files Referenced:**
+- [BR-009](fr-br/BR-009-installer-discoverability-and-documentation.md) - Bug report documentation
 
 ---
 
