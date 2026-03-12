@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 24     # Epic number (Epic 24: Book Content Development)
-VERSION_STORY = 2      # Story number (Story 2: Book Integration with Dev-Kit)
-VERSION_TASK = 1      # Task number (T01-T03: Book Integration with Dev-Kit)
-VERSION_BUILD = 1     # Build number (E24:S02:T01-T03+1 - Book Integration with Dev-Kit)
+VERSION_EPIC = 4      # Epic number (Epic 4: Kanban Framework)
+VERSION_STORY = 14     # Story number (Story 14: Kanban Framework Maintenance)
+VERSION_TASK = 3      # Task number (Task 3: Add Missing Implementation Cycle Workflow (ICW))
+VERSION_BUILD = 1     # Build number (E4:S14:T03+1 - Add Missing Implementation Cycle Workflow (ICW))
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.24.2.1+1 = Development, Epic 24, Story 2, Task 1-3, Build 1 (E24:S02:T01-T03+1: Book Integration with Dev-Kit)
+# Current: 0.4.14.3+1 = Development, Epic 4, Story 14, Task 3, Build 1 (E4:S14:T03+1: Add Missing Implementation Cycle Workflow (ICW))
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

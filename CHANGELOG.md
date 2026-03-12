@@ -9,6 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 
+## [0.4.14.3+1] - 12-03-26
+
+E4:S14:T03+1 – Add Missing Implementation Cycle Workflow (ICW): Task filed for adding missing ICW to workflow management framework package. Comprehensive implementation plan created with phased approach: Core ICW implementation (workflow file creation, generator support), Documentation integration (execution guide, framework updates), and Testing & validation (comprehensive test suite). Complete bidirectional wiring established: GitHub Issue #22 → BR-055 → E4:S14:T03. Task ready for assignment with HIGH priority and 5-8 day estimated effort.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.4.14.3+1.md)
+
+---
+
+## [0.24.2.1+1] - 12-03-26
+
+E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
+
+---
+
 ## [0.8.3.1+1] - 12-03-26
 
 E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
