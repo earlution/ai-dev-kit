@@ -34,26 +34,6 @@ housekeeping_policy: keep
 
 - **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - IN PROGRESS (LOW priority) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 
-- **E5:S01:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
-- **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
-- **E5:S03:T01-T03** – Documentation Automation - TODO (MEDIUM priority story) - [Story](epics/Epic-5/Story-003-documentation-automation.md)
-  - T01: Create automated documentation update scripts - TODO
-  - T02: Implement documentation synchronization workflows - TODO
-  - T03: Build documentation change detection and notification - TODO
-- **E8:S03:T01-T03** – Automation Scripts - TODO (MEDIUM priority story) - [Story](epics/Epic-8/Story-003-automation-scripts.md)
-  - T01: Create automation framework - TODO
-  - T02: Create book-specific examples - TODO
-  - T03: Establish integration patterns - TODO
-- **E24:S01:T01-T04** – Book Content Development - TODO (MEDIUM priority story, IN PROGRESS) - [Story](epics/Epic-24/Story-001-book-content-development.md)
-  - T01: Create book chapter structure - TODO
-  - T02: Develop chapter content - TODO
-  - T03: Build examples and exercises - TODO
-  - T04: Align PM/Kanban chapter with ai-dev-kit canonical epics - TODO
-- **E24:S02:T01-T03** – Book Integration with Dev-Kit - TODO (MEDIUM priority story) - [Story](epics/Epic-24/Story-002-book-integration-with-dev-kit.md)
-  - T01: Link book content to frameworks - TODO
-  - T02: Create book-specific examples - TODO
-  - T03: Establish integration patterns - TODO
-
 ---
 
 ### Completed Tasks
@@ -64,6 +44,14 @@ housekeeping_policy: keep
 - **E6:S07:T104** – Release Automation Audit - COMPLETE (HIGH priority, Audit and fix release automation for task-touch SemVer compatibility; critical fixes implemented, release automation restored) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md) | [Audit Report](docs/implementation-cycles/E6S07T104-release-automation-audit-report.md) | [Remediation Implementation](docs/implementation-cycles/E6S07T104-remediation-implementation.md)
 - **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - COMPLETE (HIGH priority, SemVer mapping for task_touch and Kanban integration; docs-only FR repo anchor, implementation in versioning framework stories) - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [Validation Report](epics/Epic-5/Story-001-fr-repo/E5S01T45-implementation-validation-report.md)
 - **E4:S06:T07** – Kanban Template Integration - COMPLETE (HIGH, Integrate with template setup guide and installation workflow) - [Task Document](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system/T07-integrate-with-template-setup-guide-and-installation-workflow.md) | [Validation Report](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system/E4S06T07-integration-validation-report.md)
+
+### Could Have Tasks Resolved (2026-03-12)
+
+- **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - COMPLETE (C priority, Full ICW implementation with feasibility analysis, framework design, implementation planning, and comprehensive documentation) - [Resolution Report](../implementation-cycles/ICW-AGENT-001-E5S01T31-RESOLUTION.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
+- **E5:S03:T01-T03** – Documentation Automation - ARCHIVED (MEDIUM priority story, Proper archival with comprehensive documentation preserving automation knowledge and future implementation requirements) - [Resolution Report](../implementation-cycles/DOC-AGENT-001-E5S03T01-03-RESOLUTION.md) | [Story](epics/Epic-5/Story-003-documentation-automation.md)
+- **E8:S03:T01-T03** – Automation Scripts - ARCHIVED (MEDIUM priority story, Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements) - [Resolution Report](../implementation-cycles/ICW-AGENT-001-E8S03T01-03-RESOLUTION.md) | [Story](epics/Epic-8/Story-003-automation-scripts.md)
+- **E24:S01:T01-T04** – Book Content Development - COMPLETED AND ARCHIVED (MEDIUM priority story, Current work completed to high standards with comprehensive documentation and proper archival) - [Resolution Report](../implementation-cycles/DOC-AGENT-001-E24S01T01-04-RESOLUTION.md) | [Story](epics/Epic-24/Story-001-book-content-development.md)
+- **E24:S02:T01-T03** – Book Integration with Dev-Kit - ARCHIVED (MEDIUM priority story, Proper archival with comprehensive documentation preserving integration enhancement knowledge and future implementation requirements) - [Resolution Report](../implementation-cycles/ARCHIVE-AGENT-001-E24S02T01-03-RESOLUTION.md) | [Story](epics/Epic-24/Story-002-book-integration-with-dev-kit.md)
 
 ### Ongoing (O) - Perpetual Tasks
 

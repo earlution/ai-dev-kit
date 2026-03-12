@@ -32,7 +32,7 @@ versioning_schema: RC.EPIC.STORY.TASK+BUILD
 # SemVer mapping strategy: "registry" (default) or "task_touch"
 # registry: Hybrid approach with epic/story registry (current default)
 # task_touch: ADR-002 task-touch derived mapping (strictly monotonic)
-semver_mapping_strategy: registry
+semver_mapping_strategy: task_touch
 
 # Project name
 project_name: ai-dev-kit
