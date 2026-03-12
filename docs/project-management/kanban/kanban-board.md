@@ -28,7 +28,7 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-*No "Should Have" tasks currently in progress - All completed via multi-agent ICW execution*
+- **E4:S14:T03** – Add Missing Implementation Cycle Workflow (ICW) - TODO (HIGH priority, Add missing ICW to workflow management framework package; includes workflow file creation, generator support, documentation, and testing) - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T03-add-missing-implementation-cycle-workflow-icw.md) | [Story](epics/Epic-4/Story-014-kanban-framework-maintenance.md) | [BR-055](../fr-br/BR-055-missing-implementation-cycle-workflow-icw.md) | [GitHub Issue #22](https://github.com/earlution/ai-dev-kit/issues/22)
 
 ### Could Have (C) - Nice-to-Have Tasks
 

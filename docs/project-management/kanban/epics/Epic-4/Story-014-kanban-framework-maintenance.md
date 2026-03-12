@@ -24,6 +24,10 @@ housekeeping_policy: keep
   - Task: [`T01-update-packaged-rw-ukw-perpetual-tasks.md`](Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
 - [x] **E4:S14:T02 – Restore RC review planning artifacts** ✅ COMPLETE (v0.4.14.2+1)
   - Task: [`T02-restore-rc-review-artifacts.md`](Story-014-kanban-framework-maintenance/T02-restore-rc-review-artifacts.md)
+- [ ] **E4:S14:T03 – Add Missing Implementation Cycle Workflow (ICW)** 🔄 TODO (v0.4.14.3+0)
+  - Task: [`T03-add-missing-implementation-cycle-workflow-icw.md`](Story-014-kanban-framework-maintenance/T03-add-missing-implementation-cycle-workflow-icw.md)
+  - BR Reference: [BR-055](../fr-br/BR-055-missing-implementation-cycle-workflow-icw.md)
+  - GitHub Issue: #22
 
 ---
 
