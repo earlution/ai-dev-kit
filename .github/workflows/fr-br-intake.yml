@@ -9,6 +9,7 @@ jobs:
   convert-issue-to-document:
     runs-on: ubuntu-latest
     if: |
+      false &&  # TEMPORARY: Disable workflow to test push triggers
       contains(github.event.issue.labels.*.name, 'needs-triage') &&
       (contains(github.event.issue.labels.*.name, 'bug') ||
        contains(github.event.issue.labels.*.name, 'enhancement') ||
