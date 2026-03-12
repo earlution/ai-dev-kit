@@ -8,10 +8,10 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-11 (RW: E6:S07:T108 UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization)
-**Version:** v0.6.7.108+1
+**Last Updated:** 2026-03-12 (UKW: Post-RW Board Synchronization - All 8 Should Have Tasks Completed)
+**Version:** v0.11.1.1+1
 
-**Note:** Epics 1, 3, 7 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 8, 10, 11, 21 are TODO.
+**Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE ✅. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO.
 
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)  
@@ -33,7 +33,6 @@ housekeeping_policy: keep
 ### Could Have (C) - Nice-to-Have Tasks
 
 - **E5:S01:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
-- **E6:S07:T107** – Workflows Directory Structure Reorganization - COMPLETED (MEDIUM priority, Reorganized workflows into named subdirectories for better organization and maintainability) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T107-workflows-directory-structure-reorganization.md) | [FR-050](../fr-br/FR-050-workflows-directory-structure-reorganization.md)
 - **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - **E5:S03:T01-T03** – Documentation Automation - TODO (MEDIUM priority story) - [Story](epics/Epic-5/Story-003-documentation-automation.md)
   - T01: Create automated documentation update scripts - TODO
