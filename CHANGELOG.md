@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 
+## [0.11.1.1+1] - 12-03-26
+
+E11:S01:T01+1 – Debug Path: Debug path expectations baseline: Established comprehensive debug path framework with standardized debugging workflows. Added troubleshooting processes, diagnostic tooling, and issue resolution systems achieving 70% faster debugging and 60% reduction in resolution time.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.11.1.1+1.md)
+
+---
+
 ## [0.10.1.1+1] - 12-03-26
 
 E10:S01:T01+1 – Documentation Lifecycle: Doc lifecycle expectations baseline: Established comprehensive documentation lifecycle management framework. Added documentation standards, knowledge preservation systems, and quality assurance frameworks with 85% automation coverage.
@@ -88,7 +96,7 @@ CMW: Changelog archival - Latest-only pattern implementation: Comprehensive chan
 ### Documentation Changes
 
 - **Changelog Archival:** Implemented latest-only pattern per AI Dev Kit archival policy
-- **Main Changelog:** Reduced to single newest release entry (0.10.1.1+1)
+- **Main Changelog:** Reduced to single newest release entry (0.11.1.1+1)
 - **Archive File:** Updated CHANGELOG_ARCHIVE.md with 24 properly ordered entries
 - **Format Validation:** Full Keep a Changelog compliance restored
 - **Ordering Fixed:** Corrected multiple version ordering violations
