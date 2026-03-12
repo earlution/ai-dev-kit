@@ -11,10 +11,6 @@
 
 **Version (SemVer):** `v0.7.1.5+4` | **Internal:** `v0.7.1.5+4` (see detailed changelog) | **Last Updated:** 2026-03-12
 
-*Testing GitHub Actions workflow fix - should not trigger spam emails*
-
-**Second test at 11:14 UTC - verifying fix effectiveness**
-
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
 </div>
