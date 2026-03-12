@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18: Documentation
+# Epic 9: Documentation
 
 **Status:** [TODO/IN PROGRESS/COMPLETE]
 **Priority:** [HIGH/MEDIUM/LOW]
