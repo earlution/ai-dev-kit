@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-*No critical tasks currently in progress*
+- **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - IN PROGRESS (CRITICAL priority) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 
 ### Should Have (S) - Important Tasks
 
