@@ -24,13 +24,15 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - IN PROGRESS (CRITICAL priority) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
+*No critical tasks currently in progress*
 
 ### Should Have (S) - Important Tasks
 
 *No "Should Have" tasks currently in progress - All completed via multi-agent ICW execution*
 
 ### Could Have (C) - Nice-to-Have Tasks
+
+- **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - IN PROGRESS (LOW priority) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 
 - **E5:S01:T35** – Task Template Cross-Wiring Section - TODO (MEDIUM priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../fr-br/FR-035-task-template-cross-wiring-section.md)
 - **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority) - [Task Document](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
