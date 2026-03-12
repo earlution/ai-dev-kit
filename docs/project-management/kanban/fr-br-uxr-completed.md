@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-03-12 (GitHub Issues #14 and #17 resolved with proper BR/FR/UXR wiring)
+**Last Updated:** 2026-03-12 (GitHub Issue #22 onboarded as BR-055)
 **Version:** v0.24.2.1+1
 
 > **For open FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
