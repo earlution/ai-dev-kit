@@ -21,6 +21,14 @@ housekeeping_policy: keep
 
 | Task ID | Description | Completed | Version | Agent |
 |---------|-------------|-----------|---------|-------|
+| E5:S01:T46 | Release Workflow Uses SemVer Tag When task_touch Enabled | 2026-03-12T14:00:00Z | v0.5.1.46+2 | PM-AGENT-001 |
+| E6:S07:T106 | Windsurf Migration: .cursorrules to Workflow Equivalents | 2026-03-12T14:00:00Z | v0.6.7.106+1 | PM-AGENT-001 |
+| E4:S11:T07 | Migrate Embedded Tasks to Discrete Task Documents | 2026-03-12T14:00:00Z | v0.4.11.7+1 | PM-AGENT-001 |
+| E6:S07:T18 | Tool-Agnostic Workflow Step Tracking + Persisted Run Logs | 2026-03-12T14:00:00Z | v0.6.7.18+1 | PM-AGENT-001 |
+| E1:S06:T01 | Set up BYOB badges for private repository | 2026-03-12T14:00:00Z | v0.1.6.1+1 | PM-AGENT-001 |
+| E8:S04:T01 | Tooling & Automation expectations baseline | 2026-03-12T14:00:00Z | v0.8.4.1+1 | PM-AGENT-001 |
+| E10:S01:T01 | Doc lifecycle expectations baseline | 2026-03-12T14:00:00Z | v0.10.1.1+1 | PM-AGENT-001 |
+| E11:S01:T01 | Debug path expectations baseline | 2026-03-12T14:00:00Z | v0.11.1.1+1 | PM-AGENT-001 |
 | E6:S07:T108 | UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization | 2026-03-11T17:15:00Z | v0.6.7.108+1 | RW Agent |
 | E6:S06:T02 | Fix Release Workflow Micromanagement Issues | 2026-03-11T16:45:00Z | v0.6.6.2+8 | Documentation Agent |
 | E5:S01:T49 | Enhanced kanban-completed.md with Timestamps and Recent Tasks | 2026-03-11T16:30:00Z | v0.5.1.49+2 | Documentation Agent |
@@ -33,14 +41,6 @@ housekeeping_policy: keep
 | E5:S01:T36 | RW Update Kanban Board on Task Completion | 2026-03-11T15:50:00Z | v0.5.1.36+1 | Documentation Agent |
 | E5:S01:T34 | UKW Granular Control and Use Case Flags | 2026-03-11T15:45:00Z | v0.5.1.34+1 | Documentation Agent |
 | E4:S13:T06 | Add view documentation | 2025-12-15T14:00:00Z | v0.4.13.6+2 | Documentation Agent |
-| E4:S16:T05 | Create risk assessment | 2025-12-10T16:00:00Z | v0.4.16.5+2 | Documentation Agent |
-| E4:S17:T06 | Create deployment guide | 2025-12-08T16:00:00Z | v0.4.17.6+1 | Documentation Agent |
-| E4:S18:T01 | Final kanban package review | 2025-12-05T16:00:00Z | v0.4.18.1+2 | Documentation Agent |
-| E4:S11:T06 | Create task documentation | 2025-11-28T16:00:00Z | v0.4.11.6+2 | Documentation Agent |
-| E4:S10:T07 | Add deployment support | 2025-11-25T16:00:00Z | v0.4.10.7+0 | Documentation Agent |
-| E4:S08:T06 | Implement validation system | 2025-11-20T16:00:00Z | v0.4.8.6+1 | Documentation Agent |
-| E4:S07:T03 | Create migration documentation | 2025-11-15T16:00:00Z | v0.4.7.3+1 | Documentation Agent |
-| E4:S06:T10 | Create template migration | 2025-11-10T16:00:00Z | v0.4.6.8+1 | Documentation Agent |
 | E4:S05:T01 | Create canonical Epic structure | 2025-11-05T16:00:00Z | v0.4.5.1+1 | Documentation Agent |
 | E4:S04:T01 | Refactor board structure | 2025-11-01T16:00:00Z | v0.4.4.1+1 | Documentation Agent |
 

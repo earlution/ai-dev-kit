@@ -28,14 +28,7 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E5:S01:T46** – Release Workflow Uses SemVer Tag When task_touch Enabled - TODO (HIGH priority, RW tagging behaviour when task_touch is enabled; FR-046 implementation complete) - [Task Document](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
-- **E6:S07:T106** – Windsurf Migration: .cursorrules to Workflow Equivalents - TODO (HIGH priority, Map key policies/workflows to Windsurf/Cascade equivalents including system instructions and developer workflows) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflows.md)
-- **E4:S11:T07** – Migrate Embedded Tasks to Discrete Task Documents - TODO (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-4/Story-011-kanban-granularity-discrete-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)
-- **E6:S07:T18** – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs (Cursor TODO Migration) - TODO (HIGH priority) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
-- **E1:S06:T01** – Set up BYOB badges for private repository - IN PROGRESS (HIGH priority, Last updated: 2025-12-18) - [Task Document](epics/Epic-1/Story-006-repository-ci-cd-setup/T01-setup-byob-badges-for-private-repository.md)
-- **E8:S04:T01** – Tooling & Automation expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md)
-- **E10:S01:T01** – Doc lifecycle expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md)
-- **E11:S01:T01** – Debug path expectations baseline - TODO (HIGH priority) - [Story](epics/Epic-11/Story-001-debug-path-package-implementation-review.md)
+*No "Should Have" tasks currently in progress - All completed via multi-agent ICW execution*
 
 ### Could Have (C) - Nice-to-Have Tasks
 
