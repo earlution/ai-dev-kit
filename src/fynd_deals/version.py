@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 8      # Epic number (Epic 8: Tooling & Automation)
-VERSION_STORY = 3      # Story number (Story 3: Automation Scripts)
-VERSION_TASK = 1      # Task number (T01-T03: Automation Scripts)
-VERSION_BUILD = 1     # Build number (E8:S03:T01-T03+1 - Automation Scripts)
+VERSION_EPIC = 24     # Epic number (Epic 24: Book Content Development)
+VERSION_STORY = 1      # Story number (Story 1: Book Content Development)
+VERSION_TASK = 1      # Task number (T01-T04: Book Content Development)
+VERSION_BUILD = 1     # Build number (E24:S01:T01-T04+1 - Book Content Development)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.8.3.1+1 = Development, Epic 8, Story 3, Task 1-3, Build 1 (E8:S03:T01-T03+1: Automation Scripts)
+# Current: 0.24.1.1+1 = Development, Epic 24, Story 1, Task 1-4, Build 1 (E24:S01:T01-T04+1: Book Content Development)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
