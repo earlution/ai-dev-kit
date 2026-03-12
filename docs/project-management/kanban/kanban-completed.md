@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-12 (UKW: Post-RW Board Synchronization - All 8 Should Have Tasks Completed)
+**Last Updated:** 2026-03-12 (UXR: Enhanced Recent Tasks Readability - Visual Format with Links)
 **Version:** v0.11.1.1+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -19,30 +19,143 @@ housekeeping_policy: keep
 
 ## 20 Most Recently Completed Tasks
 
-| Task ID | Description | Completed | Version | Agent |
-|---------|-------------|-----------|---------|-------|
-| E5:S01:T46 | Release Workflow Uses SemVer Tag When task_touch Enabled | 2026-03-12T14:00:00Z | v0.5.1.46+2 | PM-AGENT-001 |
-| E6:S07:T106 | Windsurf Migration: .cursorrules to Workflow Equivalents | 2026-03-12T14:00:00Z | v0.6.7.106+1 | PM-AGENT-001 |
-| E4:S11:T07 | Migrate Embedded Tasks to Discrete Task Documents | 2026-03-12T14:00:00Z | v0.4.11.7+1 | PM-AGENT-001 |
-| E6:S07:T18 | Tool-Agnostic Workflow Step Tracking + Persisted Run Logs | 2026-03-12T14:00:00Z | v0.6.7.18+1 | PM-AGENT-001 |
-| E1:S06:T01 | Set up BYOB badges for private repository | 2026-03-12T14:00:00Z | v0.1.6.1+1 | PM-AGENT-001 |
-| E8:S04:T01 | Tooling & Automation expectations baseline | 2026-03-12T14:00:00Z | v0.8.4.1+1 | PM-AGENT-001 |
-| E10:S01:T01 | Doc lifecycle expectations baseline | 2026-03-12T14:00:00Z | v0.10.1.1+1 | PM-AGENT-001 |
-| E11:S01:T01 | Debug path expectations baseline | 2026-03-12T14:00:00Z | v0.11.1.1+1 | PM-AGENT-001 |
-| E6:S07:T108 | UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization | 2026-03-11T17:15:00Z | v0.6.7.108+1 | RW Agent |
-| E6:S06:T02 | Fix Release Workflow Micromanagement Issues | 2026-03-11T16:45:00Z | v0.6.6.2+8 | Documentation Agent |
-| E5:S01:T49 | Enhanced kanban-completed.md with Timestamps and Recent Tasks | 2026-03-11T16:30:00Z | v0.5.1.49+2 | Documentation Agent |
-| E5:S01:T48 | ICW Task Identifier Argument | 2026-03-11T16:20:00Z | v0.5.1.48+1 | Documentation Agent |
-| E6:S06:T42 | Fix UKW Agent Board Cleanup Failure | 2026-03-11T16:15:00Z | v0.6.6.41+1 | Documentation Agent |
-| E6:S06:T999 | Board Cleanup Test Task | 2026-03-11T16:10:00Z | v0.6.6.41+1 | Documentation Agent |
-| E6:S06:T41 | Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows | 2026-03-11T16:05:00Z | v0.6.6.41+1 | Documentation Agent |
-| E6:S06:T03 | Investigate Apple SDK License Blocking Issue | 2026-03-11T16:00:00Z | v0.6.6.3+1 | Documentation Agent |
-| E5:S01:T37 | Kanban Policy Task Prioritisation and Queue/Stack | 2026-03-11T15:55:00Z | v0.5.1.37+3 | Documentation Agent |
-| E5:S01:T36 | RW Update Kanban Board on Task Completion | 2026-03-11T15:50:00Z | v0.5.1.36+1 | Documentation Agent |
-| E5:S01:T34 | UKW Granular Control and Use Case Flags | 2026-03-11T15:45:00Z | v0.5.1.34+1 | Documentation Agent |
-| E4:S13:T06 | Add view documentation | 2025-12-15T14:00:00Z | v0.4.13.6+2 | Documentation Agent |
-| E4:S05:T01 | Create canonical Epic structure | 2025-11-05T16:00:00Z | v0.4.5.1+1 | Documentation Agent |
-| E4:S04:T01 | Refactor board structure | 2025-11-01T16:00:00Z | v0.4.4.1+1 | Documentation Agent |
+### 🚀 Latest Releases (Today - 2026-03-12)
+
+**📋 Batch Release: 8 Should Have Tasks via RW Execution**
+
+---
+
+#### **Epic 11: Debugging and Troubleshooting**
+- **[E11:S01:T01](epics/Epic-11/Story-001-debug-path/T01-debug-path-expectations-baseline.md)** – Debug path expectations baseline  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.11.1.1+1` | **Agent:** `PM-AGENT-001`
+
+---
+
+#### **Epic 10: Documentation and Knowledge Management**
+- **[E10:S01:T01](epics/Epic-10/Story-001-documentation-lifecycle/T01-doc-lifecycle-expectations-baseline.md)** – Doc lifecycle expectations baseline  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.10.1.1+1` | **Agent:** `PM-AGENT-001`
+
+---
+
+#### **Epic 8: Tooling & Automation**
+- **[E8:S04:T01](epics/Epic-8/Story-004-tooling-baseline/T01-tooling-automation-expectations-baseline.md)** – Tooling & Automation expectations baseline  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.8.4.1+1` | **Agent:** `PM-AGENT-001`
+
+---
+
+#### **Epic 1: AI Dev Kit Core**
+- **[E1:S06:T01](epics/Epic-1/Story-006-repository-infrastructure/T01-set-up-byob-badges-for-private-repository.md)** – Set up BYOB badges for private repository  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.1.6.1+1` | **Agent:** `PM-AGENT-001`
+
+---
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S07:T18](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-persisted-run-logs.md)** – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.6.7.18+1` | **Agent:** `PM-AGENT-001`
+
+---
+
+#### **Epic 4: Kanban Framework**
+- **[E4:S11:T07](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-task-documents.md)** – Migrate Embedded Tasks to Discrete Task Documents  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.4.11.7+1` | **Agent:** `PM-AGENT-001`
+
+---
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S07:T106](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflow-equivalents.md)** – Windsurf Migration: .cursorrules to Workflow Equivalents  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.6.7.106+1` | **Agent:** `PM-AGENT-001`
+
+---
+
+#### **Epic 5: Framework Management and FR Repository**
+- **[E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-release-workflow-uses-semver-tag-when-task-touch-enabled.md)** – Release Workflow Uses SemVer Tag When task_touch Enabled  
+  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.5.1.46+2` | **Agent:** `PM-AGENT-001`
+
+---
+
+### 📅 Recent Completions (Yesterday - 2026-03-11)
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S07:T108](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-synchronization.md)** – UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization  
+  **Completed:** `2026-03-11T17:15:00Z` | **Version:** `v0.6.7.108+1` | **Agent:** `RW Agent`
+
+---
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S06:T02](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md)** – Fix Release Workflow Micromanagement Issues  
+  **Completed:** `2026-03-11T16:45:00Z` | **Version:** `v0.6.6.2+8` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 5: Framework Management and FR Repository**
+- **[E5:S01:T49](epics/Epic-5/Story-001-fr-repo/T49-enhanced-kanban-completed-md-with-timestamps-recent-tasks.md)** – Enhanced kanban-completed.md with Timestamps and Recent Tasks  
+  **Completed:** `2026-03-11T16:30:00Z` | **Version:** `v0.5.1.49+2` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 5: Framework Management and FR Repository**
+- **[E5:S01:T48](epics/Epic-5/Story-001-fr-repo/T48-icw-task-identifier-argument.md)** – ICW Task Identifier Argument  
+  **Completed:** `2026-03-11T16:20:00Z` | **Version:** `v0.5.1.48+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S06:T42](epics/Epic-6/Story-006-feature-requests/T42-fix-ukw-agent-board-cleanup-failure.md)** – Fix UKW Agent Board Cleanup Failure  
+  **Completed:** `2026-03-11T16:15:00Z` | **Version:** `v0.6.6.41+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S06:T999](epics/Epic-6/Story-006-feature-requests/T999-board-cleanup-test-task.md)** – Board Cleanup Test Task  
+  **Completed:** `2026-03-11T16:10:00Z` | **Version:** `v0.6.6.41+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S06:T41](epics/Epic-6/Story-006-feature-requests/T41-windsurf-investigate-how-to-leverage-agents-md-skill-md-for-workflows.md)** – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows  
+  **Completed:** `2026-03-11T16:05:00Z` | **Version:** `v0.6.6.41+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 6: Framework Management and Maintenance**
+- **[E6:S06:T03](epics/Epic-6/Story-006-feature-requests/T03-investigate-apple-sdk-license-blocking-issue.md)** – Investigate Apple SDK License Blocking Issue  
+  **Completed:** `2026-03-11T16:00:00Z` | **Version:** `v0.6.6.3+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 5: Framework Management and FR Repository**
+- **[E5:S01:T37](epics/Epic-5/Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md)** – Kanban Policy Task Prioritisation and Queue/Stack  
+  **Completed:** `2026-03-11T15:55:00Z` | **Version:** `v0.5.1.37+3` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 5: Framework Management and FR Repository**
+- **[E5:S01:T36](epics/Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md)** – RW Update Kanban Board on Task Completion  
+  **Completed:** `2026-03-11T15:50:00Z` | **Version:** `v0.5.1.36+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 5: Framework Management and FR Repository**
+- **[E5:S01:T34](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-use-case-flags.md)** – UKW Granular Control and Use Case Flags  
+  **Completed:** `2026-03-11T15:45:00Z` | **Version:** `v0.5.1.34+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 4: Kanban Framework**
+- **[E4:S13:T06](epics/Epic-4/Story-013-kanban-board-enhancement-moscow-prioritized-task-view/T06-add-view-documentation.md)** – Add view documentation  
+  **Completed:** `2025-12-15T14:00:00Z` | **Version:** `v0.4.13.6+2` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 4: Kanban Framework**
+- **[E4:S05:T01](epics/Epic-4/Story-005-canonical-epics-for-kanban-framework/T01-create-canonical-epic-structure.md)** – Create canonical Epic structure  
+  **Completed:** `2025-11-05T16:00:00Z` | **Version:** `v0.4.5.1+1` | **Agent:** `Documentation Agent`
+
+---
+
+#### **Epic 4: Kanban Framework**
+- **[E4:S04:T01](epics/Epic-4/Story-004-kanban-structure-refactoring/T01-refactor-board-structure.md)** – Refactor board structure  
+  **Completed:** `2025-11-01T16:00:00Z` | **Version:** `v0.4.4.1+1` | **Agent:** `Documentation Agent`
 
 ---
 
