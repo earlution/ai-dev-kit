@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Multi-Agent Coordination & Documentation)
-VERSION_STORY = 1      # Story number (Story 1: Feature Requests)
-VERSION_TASK = 31     # Task number (T31: Multi-Agent Coordination Feasibility Investigation)
-VERSION_BUILD = 1     # Build number (E5:S01:T31+1 - Multi-Agent Coordination Feasibility Investigation)
+VERSION_STORY = 3      # Story number (Story 3: Documentation Automation)
+VERSION_TASK = 1      # Task number (T01-T03: Documentation Automation)
+VERSION_BUILD = 1     # Build number (E5:S03:T01-T03+1 - Documentation Automation)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.31+1 = Development, Epic 5, Story 1, Task 31, Build 1 (E5:S01:T31+1: Multi-Agent Coordination Feasibility Investigation)
+# Current: 0.5.3.1+1 = Development, Epic 5, Story 3, Task 1-3, Build 1 (E5:S03:T01-T03+1: Documentation Automation)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
