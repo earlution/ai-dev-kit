@@ -6,13 +6,12 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Release Workflow (RW) Implementation Package
+# Workflow Management Framework
 
 **Version:** 2.2.0  
-**Last Updated:** 2025-12-22  
-**Purpose:** Complete package for implementing the Release Workflow (RW) trigger and agent-driven workflow execution pattern in your project  
-**Source Project:** fynd.deals (Epic 15, Story 1)  
-**Key Enhancements:** "ALL sections" requirement, atomicity, blocked protocol, epic branch workflow, doc-init detection bug fix (BR-010), optional BYOB badge workflow for private repos, RW Step 5 mandatory README version update
+**Last Updated:** 2026-03-12  
+**Purpose:** Complete workflow management framework with 12 comprehensive workflows, documentation standards, and automated validation  
+**Key Features:** 12 fully documented workflows, standardized templates, style guide, validation tools, and automated quality assurance
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 
@@ -20,11 +19,25 @@ housekeeping_policy: keep
 
 ## 📋 What's Included
 
-This package contains all essential files needed to implement the Release Workflow (RW) trigger in your project. The RW trigger enables AI assistants to execute a complete 17-step release process (version bump, changelog generation, Git operations, PDCA verification and action) using intelligent agent-driven execution with support for multiple trigger types:
+This package contains a comprehensive workflow management framework with 12 fully documented workflows, standardized templates, and automated validation tools. The framework enables AI assistants to execute various workflows using intelligent agent-driven execution with support for multiple workflow types:
 
-- **"RW"** - Full Release Workflow (all 17 steps)
-- **"RW -k"** - Initial Kanban Documentation Commit (documentation setup only)
-- **"RW -d"** - Documentation-Only Release (documentation updates without full release cycle)
+### Core Workflows (4)
+- **Testing Workflow (TESTING)** - Quality assurance and coverage analysis
+- **Refactor Workflow (REFACTOR)** - Code refactoring with validation
+- **Migration Workflow (MIGRATION)** - Data/code migration with rollback support
+- **Release Workflow (RW)** - Release management and deployment
+
+### Management Workflows (3)
+- **Changelog Management Workflow (CMW)** - Documentation maintenance
+- **Update Kanban Workflow (UKW)** - Project tracking and status management
+- **Post-Implementation Review (PIR)** - Implementation evaluation
+
+### Specialized Workflows (5)
+- **Intake Workflow** - FR/BR/UXR automation and processing
+- **Package Version Workflow (PKG-VERSION)** - Version management and updates
+- **Framework Health Monitoring Workflow (FHM)** - System health monitoring
+- **Implementation Cycle Workflow (ICW)** - Structured implementation process
+- **Documentation Workflow** - Documentation generation and maintenance
 
 ### Core Methodology Documents
 - `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md` - General methodology for agent-driven workflow execution
@@ -37,6 +50,45 @@ This package contains all essential files needed to implement the Release Workfl
 ### Versioning Policy Documents
 - `docs/architecture/standards-and-adrs/versioning-policy.md` - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
 - `docs/architecture/standards-and-adrs/versioning-strategy.md` - Complete versioning strategy with forensic traceability
+
+### 🚀 Workflow Overview
+
+The AI Dev Kit workflow management framework provides **12 standardized workflows** for systematic development operations. Each workflow follows consistent documentation standards and includes comprehensive usage instructions.
+
+#### 📋 Available Workflows
+
+| Workflow | Abbreviation | Purpose | Documentation |
+|-----------|--------------|---------|----------------|
+| **Release Workflow** | RW | Complete release process with version management | [README](workflows/release-workflow/README.md) |
+| **Implementation Cycle Workflow** | ICW | Structured three-phase implementation workflow | [README](workflows/implementation-cycle-workflow/README.md) |
+| **Changelog Management Workflow** | CMW | Manage changelog size and organization | [README](workflows/changelog-management-workflow/README.md) |
+| **Update Kanban Workflow** | UKW | Update Kanban board documentation | [README](workflows/update-kanban-workflow/README.md) |
+| **Post-Implementation Review** | PIR | Review implementation after release | [README](workflows/post-implementation-review/README.md) |
+| **Intake Workflow** | INTAKE | FR/BR/UXR automation and intake process | [README](workflows/intake-workflow/README.md) |
+| **Migration Workflow** | MIGRATION | Migration and data transfer tasks | [README](workflows/migration-workflow/README.md) |
+| **Refactor Workflow** | REFACTOR | Code refactoring and improvement tasks | [README](workflows/refactor-workflow/README.md) |
+| **Testing Workflow** | TESTING | Testing and quality assurance tasks | [README](workflows/testing-workflow/README.md) |
+| **Package Version Workflow** | PKG-VERSION | Package version management and updates | [README](workflows/package-version-workflow/README.md) |
+| **Framework Health Monitoring** | FHM | Framework health monitoring and maintenance | [README](workflows/framework-health-monitoring-workflow/README.md) |
+
+#### 🎯 Quick Workflow Selection
+
+- **For Releases**: Use **Release Workflow (RW)** for version management and distribution
+- **For Implementation**: Use **Implementation Cycle Workflow (ICW)** for structured development
+- **For Kanban Updates**: Use **Update Kanban Workflow (UKW)** for board synchronization
+- **For Quality**: Use **Testing Workflow (TESTING)** for comprehensive testing
+- **For Maintenance**: Use **Changelog Management (CMW)** for documentation upkeep
+
+#### 📚 Documentation Standards
+
+All workflows follow the **AI Dev Kit Documentation Standards** with:
+- ✅ **Comprehensive README files** with consistent structure
+- ✅ **Usage examples** and troubleshooting guides
+- ✅ **Configuration documentation** with YAML examples
+- ✅ **Integration guidance** and best practices
+- ✅ **Automated validation** and quality assurance
+
+For detailed documentation standards, see: [Workflow Documentation Style Guide](docs/workflow-documentation-style-guide.md)
 
 ### Workflow Definitions
 - `workflows/release-workflow/release-workflow.yaml` - YAML definition of the Release Workflow structure

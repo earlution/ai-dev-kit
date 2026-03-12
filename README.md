@@ -71,6 +71,7 @@ python3 scripts/install_kanban_framework.py --mode fresh
 - [Architecture Documentation](docs/architecture)
 - [Framework Development Guides](packages/frameworks)
 - [Workflow Documentation](packages/frameworks/workflow mgt/docs)
+- **Complete Workflow Library** - 12 comprehensive workflows with documentation
 - **Maintainers:** [Build and upload runbooks](docs/maintenance/README.md) (package build/publish)
 
 ### 🔍 I'm looking for a specific framework
@@ -78,13 +79,13 @@ python3 scripts/install_kanban_framework.py --mode fresh
 **→ Jump to:** [Frameworks](#frameworks)
 
 **Available Frameworks:**
-- **Workflow Management** (`v2.1.3`) - Release Workflow, UKW, PVW automation
+- **Workflow Management** (`v2.1.3`) - 12 comprehensive workflows with full documentation
 - **Kanban** (`v2.1.0`) - Project management and task tracking
 - **Numbering & Versioning** (`v2.0.0`) - Version schema and policies
 - **Document Lifecycle** (`v1.0.0`) - Documentation management
 - **Debug Path** (`v1.0.0`) - Debugging utilities
 
-Each framework includes installation guides, usage examples, and documentation.
+Each framework includes installation guides, usage examples, and comprehensive documentation.
 
 ---
 

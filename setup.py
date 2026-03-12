@@ -23,7 +23,7 @@ long_description = readme_file.read_text(encoding="utf-8") if readme_file.exists
 setup(
     name="ai-dev-kit",
     version=get_version(),
-    description="Unified CLI tool for managing AI Dev Kit framework dependencies",
+    description="Unified CLI tool for managing AI Dev Kit framework dependencies and workflows",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="AI Dev Kit Team",
@@ -31,6 +31,7 @@ setup(
     url="https://github.com/earlution/ai-dev-kit",
     project_urls={
         "Documentation": "https://github.com/earlution/ai-dev-kit/tree/main/docs/documentation",
+        "Workflow Documentation": "https://github.com/earlution/ai-dev-kit/tree/main/packages/frameworks/workflow%20mgt/workflows",
         "Source": "https://github.com/earlution/ai-dev-kit",
         "Tracker": "https://github.com/earlution/ai-dev-kit/issues",
     },
@@ -69,7 +70,7 @@ setup(
         "Topic :: Software Development :: Version Control :: Git",
         "Topic :: System :: Systems Administration",
     ],
-    keywords="cli, framework, dependency-management, git, workflow",
+    keywords="cli, framework, dependency-management, git, workflow, documentation, automation",
     include_package_data=True,
     zip_safe=False,
 )
