@@ -68,6 +68,12 @@ housekeeping_policy: keep
 ---
 
 #### **Epic 7: Codebase Maintenance and Review**
+- **[BR-052](docs/project-management/kanban/fr-br/BR-052-github-actions-workflow-optimization.md)** – GitHub Actions Workflow Optimization  
+  **Completed:** `2026-03-12T11:09:00Z` | **Version:** `v0.7.1.5+4` | **Agent:** `RW Agent`
+
+---
+
+#### **Epic 7: Codebase Maintenance and Review**
 - **[E7:S01:T05](epics/Epic-7/Story-001-codebase-maintenance-tasks/T05-markdown-maintenance-perpetual-task.md)** – Markdown Maintenance: UXR Enhancement for kanban-completed.md  
   **Completed:** `2026-03-12T11:05:00Z` | **Version:** `v0.7.1.5+3` | **Agent:** `RW Agent`
 

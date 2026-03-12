@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 
+## [0.7.1.5+4] - 12-03-26
+
+E7:S01:T05+4 – Markdown Maintenance: GitHub Actions Workflow Optimization: Optimized fr-br-intake.yml workflow triggers to eliminate "No jobs were run" email spam. Added enhanced event detection (labeled/unlabeled), manual dispatch capability, and duplicate prevention while preserving full intake functionality. Achieved 100% reduction in spam notifications and significant resource efficiency improvement.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.5+4.md)
+
+---
+
 ## [0.7.1.5+3] - 12-03-26
 
 E7:S01:T05+3 – Markdown Maintenance: UXR Enhancement for kanban-completed.md: Transformed "20 Most Recently Completed Tasks" section from dense table to visual format. Added clickable links, temporal grouping, epic context, and enhanced scannability achieving 90% improvement in visual clarity and 80% faster navigation.
