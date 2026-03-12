@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 11     # Story number (Story 11: Intake Workflow Automation)
-VERSION_TASK = 12     # Task number (T12: GitHub Actions Workflow Bug Resolution)
-VERSION_BUILD = 1     # Build number (E2:S11:T12+1 - GitHub Actions Workflow Bug Resolution)
+VERSION_EPIC = 5      # Epic number (Epic 5: Multi-Agent Coordination & Documentation)
+VERSION_STORY = 1      # Story number (Story 1: Feature Requests)
+VERSION_TASK = 31     # Task number (T31: Multi-Agent Coordination Feasibility Investigation)
+VERSION_BUILD = 1     # Build number (E5:S01:T31+1 - Multi-Agent Coordination Feasibility Investigation)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.11.12+1 = Development, Epic 2, Story 11, Task 12, Build 1 (E2:S11:T12+1: GitHub Actions Workflow Bug Resolution)
+# Current: 0.5.1.31+1 = Development, Epic 5, Story 1, Task 31, Build 1 (E5:S01:T31+1: Multi-Agent Coordination Feasibility Investigation)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
