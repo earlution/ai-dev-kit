@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 ---
 
+## [0.5.1.46+2] - 12-03-26
+
+E5:S01:T46+2 – RW SemVer Tag task_touch Mode: Implemented dual tagging system for Release Workflow when task_touch mapping strategy is enabled. Added configuration support, tag coherence validation, and backward compatibility with registry mode. Enhanced RW Step 16 for SemVer tag generation with comprehensive error handling and rollback capability.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+2.md)
+
+---
+
 ## [0.6.7.102+7] - 11-03-26
 
 E6:S07:T102+7 – CMW Documentation-Only Release: Comprehensive changelog cleanup and archival following AI Dev Kit latest-only pattern. Reduced main changelog from 615 to 20 lines, archived 24 historical entries to CHANGELOG_ARCHIVE.md, restored proper ordering, and validated format compliance. Documentation-only release following CMW execution.
