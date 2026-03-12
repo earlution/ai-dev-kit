@@ -9,7 +9,7 @@
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-**Version (SemVer):** `v0.5.1.46+2` | **Internal:** `v0.5.1.46+2` (see detailed changelog) | **Last Updated:** 2026-03-12
+**Version (SemVer):** `v0.6.7.106+1` | **Internal:** `v0.6.7.106+1` (see detailed changelog) | **Last Updated:** 2026-03-12
 
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
