@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 11     # Epic number (Epic 11: Debugging and Troubleshooting)
-VERSION_STORY = 1     # Story number (Story 1: Debug Path)
-VERSION_TASK = 1      # Task number (T1: Debug path expectations baseline)
-VERSION_BUILD = 1     # Build number (E11:S01:T01+1 - Debug Path implementation release)
+VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
+VERSION_STORY = 1     # Story number (Story 1: Codebase Maintenance Tasks)
+VERSION_TASK = 5      # Task number (T5: Markdown Maintenance Perpetual Task)
+VERSION_BUILD = 3     # Build number (E7:S01:T05+3 - UXR Enhancement for kanban-completed.md)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.11.1.1+1 = Development, Epic 11, Story 1, Task 1, Build 1 (E11:S01:T01+1: Debug Path implementation release)
+# Current: 0.7.1.5+3 = Development, Epic 7, Story 1, Task 5, Build 3 (E7:S01:T05+3: UXR Enhancement for kanban-completed.md)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

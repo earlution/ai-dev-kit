@@ -67,6 +67,12 @@ housekeeping_policy: keep
 
 ---
 
+#### **Epic 7: Codebase Maintenance and Review**
+- **[E7:S01:T05](epics/Epic-7/Story-001-codebase-maintenance-tasks/T05-markdown-maintenance-perpetual-task.md)** – Markdown Maintenance: UXR Enhancement for kanban-completed.md  
+  **Completed:** `2026-03-12T11:05:00Z` | **Version:** `v0.7.1.5+3` | **Agent:** `RW Agent`
+
+---
+
 #### **Epic 5: Framework Management and FR Repository**
 - **[E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-release-workflow-uses-semver-tag-when-task-touch-enabled.md)** – Release Workflow Uses SemVer Tag When task_touch Enabled  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.5.1.46+2` | **Agent:** `PM-AGENT-001`
