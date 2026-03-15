@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Epic 7: Codebase Maintenance and Review
 
-**Status:** COMPLETE  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
-**Completed:** 2026-01-05  
-**Last updated:** 2026-03-07 (v0.7.1.5+2 – First markdown maintenance cycle completed: fixed trailing spaces, excessive blank lines, and formatting in high-priority documents; perpetual tasks T01 and T05 active)  
+**Completed:** [Reopened – TBD]  
+**Last updated:** 2026-03-15 (v0.7.1.5+6 – Story 1 reopened for Update Changelog Workflow task T06)  
 **Branch:** `epic/7-codebase-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -25,7 +25,7 @@ housekeeping_policy: keep
 - [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.7.0.0+0 – Repository story created)
   - Story: [`Story-000-uxr-repo.md`](Story-000-uxr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
-- [x] **E7:S01 – Codebase Maintenance Tasks** - ✅ COMPLETE (v0.7.1.5+2 – All non-perpetual tasks complete: Prioritization framework, workflow processes, and Kanban integration established; perpetual tasks T01 and T05 active with first maintenance cycle completed)
+- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.5+6 – Story reopened: filed T06 Update Changelog Workflow to implement UCW tooling and documentation)
 - [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete)
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
@@ -34,11 +34,12 @@ housekeeping_policy: keep
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
 > **Release Workflow Requirement:** When Release Workflow (RW) Step 4 updates this Epic document, it MUST update **ALL sections**:
+>
 > - Epic header `Last updated` field
 > - Story Checklist (status and version markers)
 > - Detailed story sections (Status, Last updated, task checkboxes)
 > - Any other references to the story/task being released
-> 
+>
 > **Consistency Check:** After each RW, verify that Epic header, Story Checklist, and detailed sections all match.
 
 ---
@@ -64,33 +65,33 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ### Story 1: Codebase Maintenance Tasks
 
-**Status:** COMPLETE  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-07 (v0.7.1.5+2 – Story COMPLETE: All non-perpetual tasks complete; perpetual tasks T01 and T05 active with first markdown maintenance cycle completed)
+**Last updated:** 2026-03-15 (v0.7.1.5+6 – Story reopened via T06 Update Changelog Workflow filing)
 
 **Goal:** Establish systematic processes for addressing IDE-flagged issues and organizing codebase maintenance work.
 
 **Tasks:**
+
 - **E7:S01:T01** – PERPETUAL: Address IDE-Flagged Error, Warning, and Info level problems
-- **E7:S01:T02** – ✅ COMPLETE: Create maintenance task prioritization framework
-- **E7:S01:T03** – ✅ COMPLETE: Document maintenance workflow processes  
-- **E7:S01:T04** – ✅ COMPLETE: Integrate maintenance tasks with Kanban framework
+- **E7:S01:T02** – COMPLETE: Create maintenance task prioritization framework
 - **E7:S01:T05** – PERPETUAL: Markdown Maintenance (first maintenance cycle completed v0.7.1.5+2)
+- [ ] **E7:S01:T06** – Implement Update Changelog Workflow (UCW) – TODO (v0.7.1.5+6 – Implement workflow + tooling enforcing latest-only changelog policy, archival automation, RW integration per FR-057)
 
-> **Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E7:S01:T01`, not `T01` alone)
+**Format:** Always use full `Exx:Sxx:Txx` format (e.g., `E7:S01:T01`, not `T01` alone).
 
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
-> **Perpetual Tasks:** Tasks marked as PERPETUAL are ongoing maintenance tasks that never truly "complete" but are continuously worked on. They should be tracked with version markers for each maintenance cycle or batch of work.
-> **Consistency:** Task checkboxes in this detailed section must match the Story file's Task Checklist.
+**Forensic Marker Format:** `COMPLETE (vRC.E.S.T+B)` (e.g., `COMPLETE (v0.7.1.3+1)`). Perpetual tasks are ongoing and should be tracked with version markers for each maintenance cycle or batch of work. Task checkboxes in this detailed section must match the Story file's Task Checklist.
 
 **Acceptance Criteria:**
+
 - Perpetual task established for IDE-flagged issues
 - Maintenance task prioritization framework documented
 - Maintenance workflow processes documented
 - Integration with Epic 4 (Kanban Framework) established
 
 **Parallel Development Dependencies:**
+
 - Epic 4 (Kanban Framework) - Uses Kanban for tracking maintenance tasks
 - Epic 2 (Workflow Management) - May use workflows for maintenance automation
 - *Parallel Development Candidacy:* Safe (can develop independently)
@@ -101,7 +102,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ### Story 2: Code Review Standards and Processes
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Last updated:** 2026-01-05 (v0.7.2.1+1 – Task 1 COMPLETE: Code review standards and guidelines documented)
@@ -109,18 +110,24 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Goal:** Define code review standards and processes to ensure consistent code quality and maintainability.
 
 **Tasks:**
-- [x] E7:S02:T01 – Document code review standards and guidelines - ✅ COMPLETE (v0.7.2.1+1)
-- [x] E7:S02:T02 – Create code review checklist templates - ✅ COMPLETE (v0.7.2.2+1)
-- [x] E7:S02:T03 – Establish code review workflow processes - ✅ COMPLETE (v0.7.2.3+1)
-- [x] E7:S02:T04 – Integrate code review with Kanban framework - ✅ COMPLETE (v0.7.2.4+1)
+
+- [x] E7:S02:T01 – Document code review standards and guidelines - COMPLETE (v0.7.2.1+1)
+
+- [x] E7:S02:T02 – Create code review checklist templates - COMPLETE (v0.7.2.2+1)
+
+- [x] E7:S02:T03 – Establish code review workflow processes - COMPLETE (v0.7.2.3+1)
+
+- [x] E7:S02:T04 – Integrate code review with Kanban framework - COMPLETE (v0.7.2.4+1)
 
 **Acceptance Criteria:**
+
 - Code review standards and guidelines documented
 - Review checklist templates created
 - Code review workflow processes established
 - Integration with Kanban framework completed
 
 **Parallel Development Dependencies:**
+
 - Epic 4 (Kanban Framework) - Uses Kanban for tracking review tasks
 - *Parallel Development Candidacy:* Safe (can develop independently)
 
@@ -138,18 +145,24 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Goal:** Enable comprehensive monitoring of codebase health and quality metrics, providing visibility into code quality trends.
 
 **Tasks:**
-- [x] E7:S03:T01 – Design code quality metrics framework - ✅ COMPLETE (v0.7.3.1+0)
-- [x] E7:S03:T02 – Create code quality monitoring dashboards - ✅ COMPLETE (v0.7.3.2+0)
-- [x] E7:S03:T03 – Integrate metrics with Kanban framework - ✅ COMPLETE (v0.7.3.3+0)
-- [x] E7:S03:T04 – Document metrics and monitoring processes - ✅ COMPLETE (v0.7.3.4+0)
+
+- [x] E7:S03:T01 – Design code quality metrics framework - COMPLETE (v0.7.3.1+0)
+
+- [x] E7:S03:T02 – Create code quality monitoring dashboards - COMPLETE (v0.7.3.2+0)
+
+- [x] E7:S03:T03 – Integrate metrics with Kanban framework - COMPLETE (v0.7.3.3+0)
+
+- [x] E7:S03:T04 – Document metrics and monitoring processes - COMPLETE (v0.7.3.4+0)
 
 **Acceptance Criteria:**
+
 - Code quality metrics framework designed and implemented
 - Monitoring dashboards created
 - Integration with Kanban framework established
 - Metrics and monitoring processes documented
 
 **Parallel Development Dependencies:**
+
 - Epic 4 (Kanban Framework) - Uses Kanban for tracking quality work
 - Epic 2 (Workflow Management) - May use workflows for metrics automation
 - *Parallel Development Candidacy:* Safe (can develop independently)
@@ -168,18 +181,24 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Goal:** Develop automation and tooling to streamline maintenance work and reduce manual effort.
 
 **Tasks:**
-- [x] E7:S04:T01 – Design maintenance automation requirements - ✅ COMPLETE (v0.7.4.1+0)
-- [x] E7:S04:T02 – Develop maintenance automation scripts and tools - ✅ COMPLETE (v0.7.4.2+0)
-- [x] E7:S04:T03 – Integrate automation with existing workflows - ✅ COMPLETE (v0.7.4.3+0)
-- [x] E7:S04:T04 – Document automation and tooling usage - ✅ COMPLETE (v0.7.4.4+0)
+
+- [x] E7:S04:T01 – Design maintenance automation requirements - COMPLETE (v0.7.4.1+0)
+
+- [x] E7:S04:T02 – Develop maintenance automation scripts and tools - COMPLETE (v0.7.4.2+0)
+
+- [x] E7:S04:T03 – Integrate automation with existing workflows - COMPLETE (v0.7.4.3+0)
+
+- [x] E7:S04:T04 – Document automation and tooling usage - COMPLETE (v0.7.4.4+0)
 
 **Acceptance Criteria:**
+
 - Maintenance automation requirements documented
 - Automation scripts and tools developed
 - Integration with existing workflows established
 - Automation usage documented
 
 **Parallel Development Dependencies:**
+
 - Epic 2 (Workflow Management) - Uses workflows for automation
 - Epic 4 (Kanban Framework) - Integrates with Kanban processes
 - *Parallel Development Candidacy:* Safe (can develop independently)
@@ -198,7 +217,9 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Goal:** Capture and operationalize user experience research for migrating pre-existing Kanban/Sprint/Issue structures to the ai-dev-kit Kanban framework.
 
 **Tasks:**
+
 - [ ] **E7:S05:T01 – UXR-001 intake and synthesis**  
+
   - Intake UXR-001 findings, extract user pain points, and summarize migration UX requirements.  
   - **Linked UXR:** `docs/project-management/kanban/fr-br/UXR-001-migration-user-experience-research.md` (GitHub issue #4).  
   - **Acceptance:** Findings synthesized; UX requirements fed into Epic 4 Story 7 tasks; recap documented in this story.
@@ -210,12 +231,15 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 ## Dependencies
 
 **Blocks:**
+
 - None
 
 **Blocked By:**
+
 - None
 
 **Coordinates With:**
+
 - **Epic 4 (Kanban Framework):** Uses Kanban for tracking maintenance tasks
 - **Epic 2 (Workflow Management):** May use workflows for maintenance automation
 - **Epic 3 (Versioning):** Tracks maintenance work with version markers
@@ -227,10 +251,8 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 - **Risk:** Maintenance tasks may be deprioritized if not systematically tracked  
   **Mitigation:** Establish perpetual task for IDE-flagged issues and integrate with Kanban framework
-
 - **Risk:** Lack of code review standards may lead to inconsistent code quality  
   **Mitigation:** Establish code review standards early (Story 2) and integrate with development workflow
-
 - **Risk:** Code quality metrics may not be actionable without proper tooling  
   **Mitigation:** Develop automation and tooling (Story 4) to make metrics actionable
 
@@ -244,4 +266,4 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ---
 
-_Last updated: 2025-12-09 (v0.7.1.1+1 – Story 1, Task 1 created: PERPETUAL task for IDE-flagged issues)_
+Last updated: 2025-12-09 (v0.7.1.1+1 – Story 1, Task 1 created: PERPETUAL task for IDE-flagged issues)
