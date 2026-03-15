@@ -132,7 +132,36 @@ origin  https://github.com/earlution/ai-dev-kit.git (push)
 
 ---
 
-## 🚀 Release Execution Commands
+## � UCW – Update Changelog Workflow (Manual Stewardship)
+
+**Scope:** UCW keeps `CHANGELOG.md` limited to the most recent 20 releases via a manual, checklist-driven process documented in `docs/implementation-cycles/ICW-E7S01T06-specification.md`.
+
+### When to Run UCW
+- After RW Step 3 (Detailed Changelog) and before Step 8 (Validators).
+- Whenever changelog edits risk exceeding retention or violating ordering.
+
+### UCW Checklist (Manual)
+1. **Prepare:** Copy current `CHANGELOG.md`, archive files, and UCW checklist template (`docs/maintenance/logs/ucw/UCW-<date>.md`).
+2. **Review:** Verify ordering, duplicates, date format, and identify entries beyond the retention threshold (default 20).
+3. **Trim & Archive:** Manually edit `CHANGELOG.md`, keeping top 20 entries. Move older entries to archive files with backlinks, capturing diffs/screenshots.
+4. **Validate:** Run read-only validators (ordering checker, markdownlint) and capture outputs.
+5. **Record:** Complete UCW checklist (operator, reviewer, versions moved), store under `docs/maintenance/logs/ucw/`, and reference it in the RW log.
+
+### CI Hook (`ucw-verification`)
+- Read-only job that checks for:
+  - Latest UCW checklist file matching the run date.
+  - Evidence attachments (diff hash, validator output).
+  - Confirmation that `CHANGELOG.md` lists ≤ 20 entries.
+- Fails RW Step 8 if evidence is missing. Hook **never** edits changelog files.
+
+### References
+- Spec/Test/Plan: `docs/implementation-cycles/ICW-E7S01T06-*.md`
+- Task: `docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/T06-update-changelog-workflow.md`
+- FR: `docs/project-management/kanban/fr-br/FR-057-update-changelog-workflow.md`
+
+---
+
+## �🚀 Release Execution Commands
 
 ### Registry Mode Commands
 

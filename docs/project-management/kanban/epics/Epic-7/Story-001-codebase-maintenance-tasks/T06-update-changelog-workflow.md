@@ -27,11 +27,11 @@ Design and implement the missing Update Changelog Workflow (UCW) that keeps `CHA
 
 ## Deliverables
 
-- UCW workflow directory with README + YAML + config.  
-- UCW CLI/entry script with retention, archival, dry-run, and summary output.  
-- Automated tests covering retention, ordering, archive linkage, and failure cases.  
-- Documentation updates (`release-runbook`, `CHANGELOG.md` policy section).  
-- RW integration notes/logs showing UCW hook.  
+- UCW workflow specification + checklist template (`docs/implementation-cycles/ICW-E7S01T06-specification.md`).  
+- UCW test design + implementation plan (`ICW-E7S01T06-test-design.md`, `ICW-E7S01T06-implementation-plan.md`).  
+- Manual UCW checklist log folder (`docs/maintenance/logs/ucw/`).  
+- Release runbook section describing UCW responsibilities + CI hook (`docs/maintenance/release-runbook.md`).  
+- Read-only CI verification job definition + RW log instructions.  
 - Archived changelog entries demonstrating workflow output.
 
 ---
