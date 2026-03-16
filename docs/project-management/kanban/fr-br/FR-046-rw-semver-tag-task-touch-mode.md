@@ -35,6 +35,7 @@ When a project uses **ADR-002 Task-Touch Derived Mapping** (SemVer from internal
   - Optionally, RW may:
     - Also create an internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability.
 
+
 ### What problem does this solve?
 
 Without this behaviour:
@@ -42,6 +43,7 @@ Without this behaviour:
 - Projects using task-touch mapping still get **internal-version tags** by default (e.g. `v0.5.1.44+1`), while:
   - Packages and external docs expect SemVer (e.g. `0.1.22`).
   - RW’s tags and package versions diverge, confusing automation and users.
+
 
 Using SemVer tags when task_touch is enabled ensures:
 
@@ -54,12 +56,14 @@ Using SemVer tags when task_touch is enabled ensures:
   - Tags like `v0.1.22` to match their package version.
   - Internal versions to remain visible but secondary.
 
+
 ### Who would benefit from this feature?
 
 - Projects publishing packages to registries.
 - Any workflow that:
   - Uses RW.
   - Has configured `semver_mapping_strategy: task_touch`.
+
 
 ---
 
@@ -71,6 +75,7 @@ Using SemVer tags when task_touch is enabled ensures:
 - [ ] **FR-046:R02** – When enabled, RW Step 11:
   - Calls the task-touch SemVer converter (e.g. `get_semver_task_touch(include_build=False)`).
   - Creates a Git tag `v{semver}` (e.g. `v0.1.22`) pointing to the release commit.
+
 - [ ] **FR-046:R03** – RW Step 11 may create an internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability, but SemVer is the **primary external tag**.
 - [ ] **FR-046:R04** – `create_github_release.py` (or equivalent tooling) uses the SemVer tag as the primary release name and includes the internal version in the body/metadata.
 - [ ] **FR-046:R05** – Documentation (RW execution guide, `.cursorrules` RW trigger section) is updated to reflect this behaviour when `task_touch` is configured.
@@ -124,6 +129,7 @@ Using SemVer tags when task_touch is enabled ensures:
   - `package.json` version.
   - Git tag `v0.1.22`.
 
+
 ---
 
 ## Acceptance Criteria
@@ -132,6 +138,7 @@ Using SemVer tags when task_touch is enabled ensures:
 - [ ] **AC2:** Tag creation is tested for:
   - `task_touch` enabled.
   - `task_touch` disabled (fallback to existing behaviour).
+
 - [ ] **AC3:** GitHub releases and package versions align on SemVer when `task_touch` is enabled.
 - [ ] **AC4:** Documentation clearly explains the change and how to configure it.
 

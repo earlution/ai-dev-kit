@@ -282,6 +282,7 @@ Comprehensive User Acceptance Testing (UAT) of ai-dev-kit migration utilities (v
   - `migrate_structure.py`
   - `install_kanban_framework.py`
 
+
 ---
 
 _This user experience research is part of the Kanban Framework. See `packages/frameworks/kanban/` for complete framework documentation._

@@ -34,6 +34,7 @@ Create a canonical perpetual task for Release Workflow (RW) and workflow framewo
 - RW maintenance work (Step 7 fixes, validator updates, doc corrections, framework hardening) is either:
   - Attributed to arbitrary feature tasks (wrong semantics), or
   - Requires creating one-off tasks for each fix (overhead)
+
 - BUILD number semantics break when RW maintenance is attributed to feature tasks
 - Projects adopting the framework have no standard pattern for workflow maintenance attribution
 

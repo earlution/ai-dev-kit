@@ -27,6 +27,7 @@ Introduce a **hybrid task template system** for the Kanban framework:
   - Be run on client projects for local generation.
   - Be used by maintainers to regenerate templates after structural changes.
 
+
 This balances high-quality, human-authored templates with low-cost maintenance and distribution.
 
 ---
@@ -55,6 +56,7 @@ A hybrid approach addresses these issues by:
 - Introducing a generator that can:
   - Recreate templates from the canonical structure.
   - Keep templates synchronized with evolving patterns.
+
 
 ---
 
@@ -117,13 +119,16 @@ A hybrid approach addresses these issues by:
   - [ ] Create missing templates.
   - [ ] Regenerate templates from the canonical structure with an explicit flag.
   - [ ] Run in dry-run mode.
+
 - [ ] Generated templates match the concrete “golden” templates for:
   - [ ] Task IDs and file paths.
   - [ ] Core structural sections (frontmatter + main headings).
+
 - [ ] Documentation is updated to:
   - [ ] Explain the hybrid strategy.
   - [ ] Show maintainers how to run/extend the generator.
   - [ ] Show clients how to generate templates in their own projects.
+
 
 ---
 
@@ -135,6 +140,7 @@ A hybrid approach addresses these issues by:
   - E4:S06 – Comprehensive Canonical Epics/Stories/Tasks Template System.
   - `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` (canonical E/S/T structure).
   - `TASK_TEMPLATE.md` (task-level template structure).
+
 
 ---
 

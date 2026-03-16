@@ -66,6 +66,7 @@ housekeeping_policy: keep
   - Validation Agent (Branch safety, changelog format validation)
   - Documentation Agent (README, changelog, kanban docs updates)
 
+
 - **Design skill definitions for workflow capabilities:**
   - Version bumping skills
   - Changelog generation skills
@@ -73,6 +74,7 @@ housekeeping_policy: keep
   - Kanban board update skills
   - Validation and verification skills
   - Documentation update skills
+
 
 ### Phase 3: Implementation and Testing
 - **Create AGENTS.md with specialized agent definitions**

@@ -158,6 +158,7 @@ An external contributor discovers a bug and wants to report it. They create a Gi
   - GitHub Issues (primary)
   - GitHub Discussions (alternative for community discussions)
   - GitHub Issue Forms (structured templates)
+
 - **Automation Approach:** Could use GitHub Actions, webhooks, or scheduled scripts to convert Issues to FR/BR documents
 - **Template Alignment:** GitHub Issue templates should align with existing FR/BR templates in the Kanban framework
 - **Future Enhancement:** Could extend to other platforms (GitLab, Jira, etc.) if needed

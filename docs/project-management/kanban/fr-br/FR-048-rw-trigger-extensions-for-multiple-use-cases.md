@@ -48,6 +48,7 @@ Extend the RW trigger system to support multiple use cases with distinct executi
 - **Constraints:** 
   - Step 7 modified to only update changelog, version number, and Kanban docs
   - No Git operations (skip push, verification, PIR, housekeeping)
+
 ### Use Case 3: Documentation-Only Release
 
 - **Trigger:** `RW -d`
@@ -59,6 +60,7 @@ Extend the RW trigger system to support multiple use cases with distinct executi
 - **Constraints:**
   - Skip Git tag, push, PIR trigger, housekeeping
   - Step 14 optional - agent determines if verification actions needed
+
 
 ## Acceptance Criteria
 ### Functional Requirements

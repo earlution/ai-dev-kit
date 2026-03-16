@@ -33,6 +33,7 @@ The `validate_branch_context.py` script only recognizes `main` branch and `epic/
   - Skip version validation (similar to `main` branch behavior), OR
   - Extract version context from the branch name or configuration, OR
   - Provide a configurable mapping for update branches
+
 - **Actual:** The validator issues a warning and cannot validate version context for update branches, even though these branches are valid for framework update work.
 
 **When does it occur?**

@@ -177,6 +177,7 @@ Create a deterministic workflow for changelog maintenance (unlike UKW, no agenti
   - **Automated:** Scheduled execution via cron (recommended - **weekly** by default, can be adjusted to biweekly or daily if needed)
   - **Automated:** RW Step 9.5 triggers when changelog exceeds threshold
   - **Manual:** "CMW" or "cmw" command (for testing/debugging)
+
 - **Type:** Deterministic (rule-based, script-driven, no agentic intelligence needed)
 - **Steps:**
   1. Analyze current changelog state (size, ordering, duplicates)
@@ -187,6 +188,7 @@ Create a deterministic workflow for changelog maintenance (unlike UKW, no agenti
   6. Validate remaining changelog entries
   7. Stage and commit changes
   8. Report summary of maintenance actions
+
 
 ### 2. Archival Policy
 

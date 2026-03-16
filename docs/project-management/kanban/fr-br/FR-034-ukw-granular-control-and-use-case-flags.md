@@ -89,6 +89,7 @@ A modular UKW workflow system that supports:
   - Story: `E09S01`, `e9s1`
   - Epic: `E09`, `e9`
   - All unprioritized: `all`, `*`
+
 - [ ] **FR-034:R05:** Support combined operations (`-u -p`, `-u -a`, `-u -p -a`)
 - [ ] **FR-034:R06:** Default behavior: `UKW` (no flags) = `UKW -u` (bookkeeping only)
 - [ ] **FR-034:R07:** Syntax parser supports canonical and compact formats
@@ -120,6 +121,7 @@ A modular UKW workflow system that supports:
   - Syntax parser implementation
   - Workflow modularization
   - Documentation updates
+
 
 ---
 

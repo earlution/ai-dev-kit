@@ -92,11 +92,13 @@ A project (dev-toolkit) has an existing Kanban structure with completed work. Th
   - Identify story documents
   - Report findings
 
+
 - [ ] **FR-2:** Analysis utility can map existing work to E/S/T structure
   - Map existing epics to canonical format
   - Map existing stories to canonical format
   - Map existing tasks to canonical format
   - Identify conflicts and gaps
+
 
 - [ ] **FR-3:** Migration utility can convert existing items to canonical structure
   - Preserve existing content
@@ -104,16 +106,19 @@ A project (dev-toolkit) has an existing Kanban structure with completed work. Th
   - Preserve forensic markers
   - Preserve work history
 
+
 - [ ] **FR-4:** Installation modes support different scenarios
   - Fresh Install mode (current behavior)
   - Migration Install mode (detect and migrate)
   - Update Install mode (update existing framework)
   - Hybrid Install mode (preserve project epics, install framework epics)
 
+
 - [ ] **FR-5:** Preservation utility backs up existing work
   - Create backup before migration
   - Preserve complete structure
   - Enable rollback if needed
+
 
 ### Non-Functional Requirements
 

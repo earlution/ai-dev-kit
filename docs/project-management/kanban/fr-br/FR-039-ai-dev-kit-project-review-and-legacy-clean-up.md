@@ -41,10 +41,12 @@ This FR is **review-only**; actual deletions/moves/edits will be performed under
   - Historic copies of policies that were later extracted into framework packages.
   - Multiple RW/UKW/CMW docs representing earlier iterations.
   - Legacy or experimental scripts alongside canonical workflow tooling.
+
 - For adopters and for the book, we want ai-dev-kit to look like a **sharp, minimal reference**:
   - Clear canonical docs.
   - Minimal duplication.
   - Obvious paths for installing and using frameworks.
+
 
 This FR ensures we **understand and document** what should change before any structural clean-up is done.
 
@@ -64,25 +66,31 @@ This FR ensures we **understand and document** what should change before any str
   - Framework SoT.
   - Dev-kit-local specialisation.
   - Likely legacy or transitional.
+
 - [ ] **FR-039:R02** – Review each core framework package (`numbering & versioning`, `workflow mgt`, `kanban`, etc.) for:
   - Legacy or superseded docs.
   - Redundant examples or partial drafts.
+
 - [ ] **FR-039:R03** – Identify and document **duplication** between framework docs/scripts and dev-kit-local copies (policies, RW docs, Kanban governance, etc.).
 - [ ] **FR-039:R04** – Review Kanban and workflow documentation (RW/UKW/CMW) for:
   - Outdated patterns.
   - Conflicting narratives or overlapping guides.
+
 - [ ] **FR-039:R05** – Review versioning and changelog artefacts (version file, `rw-config.yaml`, `CHANGELOG.md`, archive) for:
   - Consistency with the current dev-kit versioning policy.
   - Stray or obsolete files.
+
 - [ ] **FR-039:R06** – Catalogue scripts and helpers, tagging each as:
   - Core framework/RW/UKW tooling.
   - Project utility.
   - Legacy/experimental.
+
 - [ ] **FR-039:R07** – Produce a **single markdown review report** summarising findings and proposing:
   - What to keep as canonical.
   - What to consolidate or merge.
   - What to archive as historical.
   - What to remove.
+
 - [ ] **FR-039:R08** – Derive from the report a **sequenced clean-up checklist** suitable for a follow-up implementation task.
 
 ### Non-Functional Requirements

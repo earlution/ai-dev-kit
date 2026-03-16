@@ -57,10 +57,12 @@ Extend the framework Kanban governance policy so that adopters have clear, reusa
 - [x] **FR-037:R01** – Governance policy includes a **“Task prioritisation”** (or equivalent) section that explains:
   - When to assign M / S / C / O / W (project-agnostic criteria; projects may add domain-specific rules).
   - That all new tasks must be placed in a MoSCOW category first; no task is added directly to COMPLETE.
+
 - [x] **FR-037:R02** – Governance policy defines **MUST HAVE ordering**:
   - **Stack (for bug-based / breaking tasks):** Add to **top** of MUST HAVE; work **top-first** (e.g. “do first” = most recently added).
   - **Queue (for all other MUST HAVE tasks):** Add to **end** of MUST HAVE; work **front-first** (e.g. “do first” = first in list).
   - Clear rule: classify each new MUST HAVE task as either “bug-based/breaking” (stack) or “other” (queue) and add accordingly.
+
 - [x] **FR-037:R03** – Policy states that **scripts and processes** that update the MoSCOW section (e.g. UKW, RW) must respect stack vs queue when inserting or ordering tasks (or document that ordering is manual / agent-defined).
 - [x] **FR-037:R04** – (Optional) Policy includes a **universal definition of COMPLETE**: task is COMPLETE only when **fully implemented** (work done, code/docs delivered, released in a version) **and** **signed off** (validated, accepted by the responsible party). Tasks move from a MoSCOW column into COMPLETE only when both conditions are met.
 - [x] **FR-037:R05** – Kanban board guide template (or guide section in policy) is updated so that “how to prioritise” and “queue/stack for MUST HAVE” are discoverable (e.g. referenced from the board guide or governance policy).

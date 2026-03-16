@@ -46,12 +46,15 @@ Elevate RW Step 7 to an explicit, policy-backed **agentic Kanban sync** step tha
   - RW Step 7 is documented and implemented largely as a **deterministic doc update step**.
   - Some responsibilities (board updates, prioritisation, narrative synthesis) already need agentic intelligence, but this is not formalised.
   - UKW is the “big hammer” for Kanban alignment, but its relationship to RW is implicit rather than specified.
+
 - **Gap:**
   - No clear **policy-level contract** that “RW Step 7 = UKW in scoped mode”.
   - UKW is not defined as **RW-aware**, so the interplay between RW runs and standalone UKW runs is left to convention.
+
 - **Benefit:**
   - A single, canonical understanding that RW Step 7 **always uses the same Kanban engine (UKW)** in a scoped fashion.
   - UKW gains a formal **RW-embedded mode**, making it safer and more predictable when called per-release.
+
 
 ### What is the Use Case?
 
@@ -59,9 +62,11 @@ Elevate RW Step 7 to an explicit, policy-backed **agentic Kanban sync** step tha
   - Uses Step 7 to run a **Scoped Kanban Sync (UKW Mode)** for the active task.
   - Ensures Task/Story/Epic docs and the Kanban board are aligned with the just-released work.
   - Applies **local prioritisation** when the release creates a new task or changes its urgency.
+
 - **Secondary:** UKW runs in standalone mode to:
   - Perform **board-wide housekeeping and prioritisation** (existing `-u/-p/-a` flows).
   - Remain compatible with RW by being aware when it is called from within RW vs standalone.
+
 
 ---
 
@@ -73,11 +78,13 @@ Elevate RW Step 7 to an explicit, policy-backed **agentic Kanban sync** step tha
 - [ ] **FR-038:R02** – UKW documentation updated to define an `invocation_context` (for example, `rw_step_7` vs `standalone`) with clear behavioural differences:
   - `rw_step_7`: scoped to a single E/S/T + directly related docs/board entries; conservative on reprioritisation.
   - `standalone`: full-board operations according to flags (`-u`, `-p`, `-a`, etc.).
+
 - [ ] **FR-038:R03** – RW Step 7 spec enumerates **agentic responsibilities**:
   - Task-level updates (status, version markers, narrative).
   - Story/Epic rewiring (overview updates, checklist consistency).
   - Kanban board updates for the active epic/story.
   - Limited prioritisation of **new or newly-significant tasks** following Kanban governance rules.
+
 - [ ] **FR-038:R04** – UKW spec documents how **prioritisation and MoSCOW** updates behave differently in RW-scoped mode vs standalone runs (e.g., RW-scoped mode does not re-shuffle the entire board).
 - [ ] **FR-038:R05** – RW and UKW reference each other so that the relationship “RW Step 7 = Scoped UKW” is discoverable from both sides.
 

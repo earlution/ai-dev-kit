@@ -42,6 +42,7 @@ A document split that separates **structured information** from **explanatory co
   - MoSCOW prioritized task lists (M/S/C/O/W sections with task entries)
   - Epic sections with status, priority, stories, links
   - No explanatory text, rules, or how-to content
+
 - `kanban-board-guide.md` (new sister document) contains:
   - Overview and structure explanations
   - MoSCOW category definitions
@@ -49,6 +50,7 @@ A document split that separates **structured information** from **explanatory co
   - How-to sections (how to add work, etc.)
   - Quick reference links
   - All rules and explanatory content
+
 
 ### What Should Happen vs. What Currently Happens?
 
@@ -78,14 +80,17 @@ A document split that separates **structured information** from **explanatory co
   - "How to Add Work" section
   - Quick Reference section
   - All italicized explanatory text under sections
+
 - [ ] **FR-036:R03** - Strip `kanban-board.md` to structured information only:
   - Keep: MoSCOW task lists (task entries only, no category explanations)
   - Keep: Epic sections (status, priority, stories, links)
   - Remove: All explanatory text, rules, how-to sections
   - Remove: Italicized descriptions under section headers
+
 - [ ] **FR-036:R04** - Add cross-reference between documents:
   - `kanban-board.md` links to `kanban-board-guide.md` for rules/explanations
   - `kanban-board-guide.md` links to `kanban-board.md` for structured data
+
 - [ ] **FR-036:R05** - Update `_index.md` to reference both documents
 - [ ] **FR-036:R06** - Update Kanban board template in framework package
 - [ ] **FR-036:R07** - Update Kanban governance policy to document the split

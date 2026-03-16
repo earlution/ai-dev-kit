@@ -208,6 +208,7 @@ A comprehensive Standard Operating Procedure has been created based on web resea
   - Relationship types (6 types: Complements, Coordinates With, Informs, Follows, Precedes, Related To)
   - Template structure and examples
   - Best practices and validation checklist
+
 - **Research-Based:** SoP incorporates findings from multiple SOP template sources and best practices
 
 **Relationship Types:**

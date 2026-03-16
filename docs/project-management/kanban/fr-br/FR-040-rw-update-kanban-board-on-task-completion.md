@@ -41,6 +41,7 @@ Enhance RW Step 7 to automatically update the main Kanban board (`kanban-board.m
     - Update task completion markers in epic/story listings
     - Update MoSCOW sections if task affects priority (optional, can defer to UKW)
 
+
 **Current Behavior:**
 - RW Step 7 updates Story and Epic documents only
 - The `update_kanban_docs.py` script resolves the Kanban board path but does not update it

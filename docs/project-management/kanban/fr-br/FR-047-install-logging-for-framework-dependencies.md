@@ -57,14 +57,17 @@ This FR proposes adding **structured install logging** so that each invocation o
   - Source URL or identifier (where safe to log).
   - High-level steps with timestamps (init, backend operations, framework-specific scripts, validation).
   - Exit codes and summary status for each step.
+
 - [x] **FR-047-F3:** For frameworks with their own installers (e.g. `install_kanban_framework.py`), key steps and validation results must be captured in the same log (or a clearly linked sub-log).
 - [x] **FR-047-F4:** Install logging must be **enabled by default** in new projects, with configuration in `.ai-dev-kit.yaml` to:
   - Enable/disable logging.
   - Control log directory.
   - Configure simple retention (e.g. keep last N logs).
+
 - [x] **FR-047-F5:** CLI options must allow on-demand overrides:
   - `--log-path PATH` to override log directory.
   - `--no-install-log` to explicitly disable logging for a specific run (if needed).
+
 
 ### Non-Functional Requirements
 
@@ -119,11 +122,13 @@ This FR proposes adding **structured install logging** so that each invocation o
   - Requested frameworks and versions.
   - Backend, source, and install path for each framework.
   - Entry/exit for each major step (backend install, framework-specific scripts, validation).
+
 - [x] **AC-3:** For Kanban installs, the log includes the key phases of `install_kanban_framework.py` (detection, analysis, migration mode, validation) and any Epic mashup / contamination warnings.
 - [x] **AC-4:** Logging behaviour is configurable via `.ai-dev-kit.yaml` and CLI flags as described, with sane defaults for new projects.
 - [x] **AC-5:** Automated tests exist that:
   - Run `ai-dev-kit install` in a temp project.
   - Assert that a log file is created with at least the required fields present.
+
 
 ---
 

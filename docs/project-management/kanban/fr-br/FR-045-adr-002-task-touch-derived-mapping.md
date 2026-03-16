@@ -58,12 +58,14 @@ Task-touch mapping delivers:
   - Package-manager-friendly SemVer for public distribution (npm, pub.dev, PyPI, etc.) that **never goes backwards**.
   - Automatic mapping, not manual SemVer decisions per release.
 
+
 ### Who would benefit from this feature?
 
 - AI Dev Kit itself (canonical SemVer story for frameworks).
 - Any consumer project that:
   - Uses the `RC.EPIC.STORY.TASK+BUILD` schema internally.
   - Publishes packages to SemVer-enforcing registries.
+
 
 ---
 
@@ -76,6 +78,7 @@ Task-touch mapping delivers:
   - MINOR = count of epics signed off (per RC).
   - PATCH = global task-touch counter.
   - Optional `+BUILD` = internal BUILD for the current version.
+
 - [x] **FR-045:R02** – Persist task-touch counter in a canonical location (e.g. version file and/or `semver-registry.yaml`) and ensure it increments exactly once per RW release.
 - [x] **FR-045:R03** – Provide a converter function (e.g. `get_semver_task_touch(...)`) that returns SemVer (with or without `+BUILD`) from an internal version string.
 - [x] **FR-045:R04** – Document the mapping in dual-versioning docs (Numbering & Versioning framework) and ADR-002.
@@ -128,6 +131,7 @@ Task-touch mapping delivers:
 - XOforge and other adopters configure `semver_mapping_strategy: task_touch` to:
   - Get monotonic SemVer tags.
   - Keep internal versions Kanban-aligned.
+
 
 ---
 

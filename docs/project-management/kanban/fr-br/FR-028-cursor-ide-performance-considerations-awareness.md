@@ -31,6 +31,7 @@ Create awareness documentation and update framework guidance for Cursor IDE perf
   - Large file counts causing file watching/indexing overhead
   - Bulk file operations triggering many file watcher events
   - File watching/indexing overhead overwhelming IDE resources
+
 - ai-dev-kit currently has 1,021 markdown files (growing), 266 changelog archive files, 181 Kanban files
 - Framework documentation shows `pass_filenames: false` as example (problematic pattern)
 - No awareness documentation exists for IDE performance considerations
@@ -109,6 +110,7 @@ Link to Confidentia project investigation (Epic 20, Story 5, Task 16) as source 
   - Bug Report: `KB/PM_and_Portfolio/kanban/Epic 20/Story-5-BR-Cursor-IDE-Crashes.md`
   - Investigation Report: `KB/Documentation/Developer_Docs/cursor-crash-investigation.md`
   - Article: `KB/Documentation/Developer_Docs/cursor-crash-investigation-article.md`
+
 - **Epic:** 6 - Framework Management and Maintenance
 - **Story:** 6 - ADK Implementation Analysis and Package Management
 

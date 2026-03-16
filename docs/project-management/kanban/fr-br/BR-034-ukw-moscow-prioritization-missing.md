@@ -45,6 +45,7 @@ After running UKW, the "## MoSCOW Prioritized In-Progress Tasks" section in the 
   - Task priority (HIGH, MEDIUM, LOW)
   - Task status (IN PROGRESS vs TODO)
   - Task type (perpetual tasks → O category)
+
 - UKW should update the MoSCOW Prioritized In-Progress Tasks section with all active tasks, properly categorized and ordered (most recently updated first)
 
 **Observed Behavior:**
@@ -190,6 +191,7 @@ Add MoSCOW prioritization logic to UKW Step 6:
   - MoSCOW section regenerated with properly classified tasks
   - M section now populated with critical tasks
   - Implementation documented in task document
+
 
 ---
 

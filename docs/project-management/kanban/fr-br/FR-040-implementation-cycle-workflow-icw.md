@@ -51,6 +51,7 @@ When user invokes "ICW", the workflow should execute the following three phases 
 
   - Create specification documents
 
+
 - **Deliverables:** Complete specification document(s)
 
 #### Phase 2: Test Design
@@ -68,6 +69,7 @@ When user invokes "ICW", the workflow should execute the following three phases 
   - Define test data and mock requirements
 
   - Create test documentation
+
 - **Deliverables:** Complete test design documentation
 
 #### Phase 3: Implementation Planning
@@ -78,6 +80,7 @@ When user invokes "ICW", the workflow should execute the following three phases 
   - Plan development tasks and dependencies
   - Identify required tools, libraries, and resources
   - Create implementation roadmap
+
 - **Deliverables:** Complete implementation plan
 
 ## Success Criteria

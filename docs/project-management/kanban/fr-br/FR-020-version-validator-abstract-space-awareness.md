@@ -40,10 +40,12 @@ An enhancement to `validate_version_bump.py` that:
   - An E/S/T doc (Epic/Story/Task) is being committed for the first time
   - The commit is docs-only (no code changes)
   - The version matches the E/S/T being created (e.g., `0.2.11.0+0` for E2:S11:T00)
+
 - Validator rejects `+0` when:
   - Non-doc changes are present in the commit
   - The E/S/T doc already exists (not first-time commit)
   - Functional changes are included
+
 - Validator enforces `+1` or higher for functional changes
 - Clear error messages explain why `+0` is invalid if used incorrectly
 

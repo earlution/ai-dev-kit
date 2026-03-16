@@ -46,6 +46,7 @@ An intelligent, agentic workflow that automatically creates Kanban tasks from Fe
   - Which Story(ies) within those Epics
   - How many tasks are needed
   - What each task should contain
+
 - Workflow creates Kanban tasks from templates
 - Tasks are properly contextualized with FR/BR information
 - Tasks are linked back to the original FR/BR

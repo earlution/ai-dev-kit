@@ -46,6 +46,7 @@ An intelligent, trigger-aware Release Workflow (RW) system that can:
   - Determines what actions to take with the deliverable
   - Integrates the deliverable into the release process
   - Updates versioning, changelog, documentation as needed
+
 - RW continues with normal release process, incorporating the deliverable
 
 **Current Behavior:**

@@ -37,6 +37,7 @@ housekeeping_policy: keep
 - Completed tasks should either:
   1. Be moved to a "Recently Completed" section, or
   2. Be completely removed from active sections (referenced in kanban-completed.md)
+
 - Active MoSCOW sections should only contain IN PROGRESS or TODO tasks
 
 ### Specific Example

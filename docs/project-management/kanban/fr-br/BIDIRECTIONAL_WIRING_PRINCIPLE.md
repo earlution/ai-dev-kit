@@ -204,9 +204,11 @@ Use relative paths from the document location:
   - To Story: `../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md`
   - To Task: `../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug`
 
+
 - From `docs/project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md`:
   - To BR: `../../fr-br/BR-002-changelog-validator-ordering-bug.md`
   - To Documentation: `../../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md`
+
 ```
 
 ---

@@ -217,11 +217,13 @@ The framework installation process was designed for fresh installs only. No cons
   - Identify story documents
   - Report findings
 
+
 - [ ] **Criterion 2:** Detection utility created: `detect_existing_structure.py`
   - Scans `docs/project-management/kanban/epics/` (or configured path)
   - Detects epic documents
   - Detects story documents
   - Generates detection report
+
 
 ### Fix 2: Analysis Utilities
 
@@ -230,11 +232,13 @@ The framework installation process was designed for fresh installs only. No cons
   - Identify conflicts
   - Generate migration plan
 
+
 - [ ] **Criterion 4:** Analysis utility created: `analyze_structure.py`
   - Maps existing epics to canonical format
   - Maps existing stories to canonical format
   - Maps existing tasks to canonical format
   - Identifies conflicts and gaps
+
 
 ### Fix 3: Migration Utilities
 
@@ -244,12 +248,14 @@ The framework installation process was designed for fresh installs only. No cons
   - Preserve forensic markers
   - Preserve work history
 
+
 - [ ] **Criterion 6:** Migration utility created: `migrate_structure.py`
   - Backs up existing structure
   - Migrates epics to canonical format
   - Migrates stories to canonical format
   - Migrates tasks to canonical format
   - Preserves forensic markers
+
 
 ### Fix 4: Installation Modes
 
@@ -259,10 +265,12 @@ The framework installation process was designed for fresh installs only. No cons
   - Update Install (update existing framework)
   - Hybrid Install (preserve project epics, install framework epics)
 
+
 - [ ] **Criterion 8:** Installation mode selection implemented
   - Interactive mode selection
   - Automatic mode detection
   - Mode-specific installation paths
+
 
 ### Fix 5: Documentation
 

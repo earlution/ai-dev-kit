@@ -24,6 +24,7 @@ BR-037 tracks both **prevention** (fresh installs) and **remediation** (clean-up
   - Dev-kit epics and stories mixed into their own Kanban trees.
   - Dev-kit FR/BR repo documents under `docs/project-management/kanban/fr-br/`.
   - Confusing status signals on boards and stories, breaking the Epic/Story/Task coordination model.
+
 - This violated the design goal that **framework templates** must be clearly separated from **consumer project content**.
 - It also undermined the forensic guarantees of the Kanban + RW stack (version markers, BR/FR traceability, etc.).
 
@@ -61,11 +62,13 @@ As of the remediation work for **E6:S01:T37**:
     - Consumer boards do **not** advertise `AI Dev Kit – Kanban Board` as the title.
   - Install runs are logged via FR-047, including Kanban-specific markers (`[KANBAN_FRESH_INSTALL]`, etc.).
 
+
 - **Contamination detection**:
   - A dedicated contamination detector walks `docs/project-management/kanban/` and:
     - Flags dev-kit boards and BR/FR repo docs that appear in consumer trees.
     - Flags non-canonical epics (e.g. dev-kit project epics copied into consumers).
     - Produces a machine-readable classification (`template`, `devkit_reference`, `contaminated`, `unknown`) along with reasons.
+
 
 - **Remediation tooling**:
   - A remediation script:
@@ -75,10 +78,12 @@ As of the remediation work for **E6:S01:T37**:
     - In **delete** mode, removes contaminated files outright.
     - Is tested for **idempotency**: running it multiple times on the same tree is a no-op after the first clean-up.
 
+
 - **Validator integration**:
   - The Kanban installation validator invokes the detector and:
     - Fails validation if any `contaminated` files are found.
     - Emits an explicit message instructing users to run the remediation tool to clean up their Kanban tree.
+
 
 ## Symptoms & Diagnosis
 
@@ -104,6 +109,7 @@ As of the remediation work for **E6:S01:T37**:
   - Creates only the canonical consumer epics and board skeleton.
   - Avoids copying dev-kit’s live backlog or project-specific epics.
   - Asserts via tests that canonical invariants hold (no Epic 24 in consumer epics, board title not `AI Dev Kit – Kanban Board`).
+
 - Integrate with FR-047 logging to make fresh install behaviour observable.
 
 **Status:** Implemented and covered by tests.
@@ -118,6 +124,7 @@ As of the remediation work for **E6:S01:T37**:
     - Non-canonical epic numbers/content copied from dev-kit.
   - Exposes a simple API for use by validators and tooling.
 
+
 **Status:** Implemented, with unit tests for classification rules.
 
 ### F3 – Remediation engine (CLEAN-UP)
@@ -128,6 +135,7 @@ As of the remediation work for **E6:S01:T37**:
   - Preserves structure when archiving, under `.contaminated/`.
   - Is explicitly tested for idempotency.
 
+
 **Status:** Implemented with both unit and end-to-end tests.
 
 ### F4 – Validator integration and docs
@@ -135,9 +143,11 @@ As of the remediation work for **E6:S01:T37**:
 - Wire the detector into the Kanban installation validator so that:
   - Validation fails when contamination is present.
   - The validator output clearly points to the remediation command as the next step.
+
 - Update:
   - Task document `E6:S01:T37` with the final remediation design and acceptance criteria.
   - Kanban board and guide with a short pointer to the detection/remediation tools and their relationship to install logs (FR-047).
+
 
 **Status:** Implemented in code; docs and Kanban entries updated as part of this BR.
 
@@ -146,12 +156,16 @@ As of the remediation work for **E6:S01:T37**:
 - **Safety-first operation**:
   - Default to **dry-run** for remediation; require an explicit flag to mutate files.
   - Archive before delete to allow manual inspection/recovery where needed.
+
 - **Idempotency**:
   - Multiple remediation runs should be safe and converge quickly (no repeated archives or inconsistent states).
+
 - **Forensic traceability**:
   - Detection and remediation should integrate with install logging (FR-047) to support end-to-end troubleshooting of installs.
+
 - **Consumer focus**:
   - Tooling should be safe to run in real consumer projects and never introduce new dev-kit artefacts.
+
 
 ## Status
 

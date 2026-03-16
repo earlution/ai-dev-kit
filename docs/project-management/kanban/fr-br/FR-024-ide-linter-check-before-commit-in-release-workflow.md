@@ -124,6 +124,7 @@ This feature would be used:
   - Warn on warnings (optionally block on warnings)
   - Show info messages (display for awareness)
   - Auto-fix options (attempt auto-fix for fixable issues)
+
 - [ ] **FR-024:R10** - Works across different project types (Python, TypeScript, JavaScript, etc.)
 - [ ] **FR-024:R11** - Uses project-specific linting configuration
 - [ ] **FR-024:R12** - Only checks staged files (performance optimization)
@@ -198,6 +199,7 @@ This feature would be used:
     show_info: true  # Display info messages
     auto_fix: false  # Don't auto-fix (manual review preferred)
     check_staged_only: true  # Only check staged files (performance)
+
 ```
 
 ### Option 2: Enhanced Step 9
@@ -355,9 +357,11 @@ config:
 - **Design Consideration:** Should this be mandatory for all projects or optional?
   - **Recommendation:** Mandatory for errors (always check), configurable for warnings/info (project-specific)
   
+
 - **Linter Tool Integration:** How to handle different project types and linting tools?
   - **Recommendation:** Use IDE diagnostics API (e.g., `read_lints` in Cursor) as primary method (universal access), fallback to project-specific tools if IDE diagnostics unavailable
   
+
 - **Performance:** Running linters can be slow. How to optimize?
   - **Recommendation:** 
     - Only check staged files (not entire codebase)
@@ -365,11 +369,14 @@ config:
     - Parallel execution for multiple linters
     - Timeout mechanism (fail gracefully if too slow)
   
+
 - **Auto-fix:** Should the step attempt to auto-fix issues?
   - **Recommendation:** Optional auto-fix (configurable), with confirmation before applying. Default: `auto_fix: false` (manual review preferred)
   
+
 - **IDE Integration:** How to ensure compatibility across different IDEs?
   - **Recommendation:** Primary: IDE diagnostics API (e.g., `read_lints` tool). Fallback: Invoke project-specific linter tools directly. This ensures compatibility while maintaining performance.
+
 
 **User Request:**
 > "in our packaged RW, is there a step, before commit, where we check for and address any IDE-flagged problems? If not we need one. We should prioritise; Errors, Warnings, then finally, Infos. File a BR, if we don't have this setup already."
