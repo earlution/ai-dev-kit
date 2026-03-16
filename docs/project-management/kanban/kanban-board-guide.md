@@ -44,7 +44,7 @@ This Kanban board serves as the **parent document** to Story documents, similar 
 
 The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCOW priority and ordered chronologically (most recently updated first).
 
-**MoSCOW Categories:**
+### MoSCOW Categories
 
 - **M (Must Have):** Critical tasks that must be completed
   - Highest priority items requiring immediate attention
@@ -67,7 +67,9 @@ The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows
   - Tasks explicitly marked as deferred
   - Tasks not being actively worked on
 
-**Task Ordering:**
+
+### Task Ordering
+
 Tasks within each MoSCOW section are ordered chronologically, with most recently updated tasks at the top.
 
 ---
@@ -96,6 +98,19 @@ Tasks within each MoSCOW section are ordered chronologically, with most recently
    - Update board views as needed
 
 See [`README.md`](README.md) for full structure details and `docs/project-management/rituals/policy/kanban-governance-policy.md` for governance.
+
+---
+
+## Formatting Governance (E7:S01:T09 / UXR-005)
+
+The UXR workflow owns all Kanban template/document maintenance. As of **E7:S01:T09 / UXR-005**, every multi-line MoSCOW bullet must have **exactly one blank line** separating it from adjacent entries (single-line bullets stay contiguous). When updating `kanban-board*.md`, `fr-br-uxr-board.md`, `kanban-structure.md`, `_index.md`, or related templates:
+
+- Insert a blank line between bullets whose description spans more than one visual line.
+- Leave single-line bullets directly adjacent to minimize vertical noise.
+- If a release reveals formatting drift, escalate through T09 (Kanban Template Governance) before touching other boards.
+- RW/UKW/MMW agents should log evidence (MMW log + validator output) showing the rule was checked or restored.
+
+Future validator support is tracked in the documentation validator script (`scripts/documentation/validate-documentation-consistency.py`, TODO tagged with E7:S01:T09). Until automation lands, treat spacing verification as part of RW Step 7/8 reviews.
 
 ---
 
@@ -128,7 +143,8 @@ The board serves as the parent document to Story documents, providing a comprehe
 
 The **FR/BR/UXR Prioritization Board** (`fr-br-uxr-board.md`) provides centralized visibility and prioritization for all open Feature Requests, Bug Reports, and User Experience Research items.
 
-### Board Sections:
+### Board Sections
+
 - **Critical Priority** - Urgent items requiring immediate attention
 - **High Priority** - Important items for near-term work  
 - **Medium Priority** - Standard priority items
@@ -136,12 +152,14 @@ The **FR/BR/UXR Prioritization Board** (`fr-br-uxr-board.md`) provides centraliz
 - **Under Review** - Items being evaluated or worked on
 - **Awaiting Information** - Items blocked by missing information
 
-### Usage:
+### Usage
+
 - **For Stakeholders** - Review priorities and provide input on FR/BR/UXR documents
 - **For Developers** - Pick highest priority items and convert to tasks when appropriate
 - **For Product Management** - Adjust priorities and plan based on board content
 
-### Integration:
+### Integration
+
 - Links to individual FR/BR/UXR documents in `/fr-br/` directory
 - Cross-references to associated Kanban tasks when created
 - Completed items move to `fr-br-uxr-completed.md`

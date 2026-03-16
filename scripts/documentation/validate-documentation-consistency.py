@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Dict, List, Set, Optional
 from collections import defaultdict
 
+# TODO(E7:S01:T09): add multi-line MoSCOW spacing detection for Kanban docs once rule is automated.
 # Version pattern
 VERSION_PATTERN = re.compile(r'v?(\d+\.\d+\.\d+(?:\+\d+)?)')
 
