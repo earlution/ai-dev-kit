@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2026-03-15 (v0.7.1.5+6 – UCW workflow task filed)  
+**Last updated:** 2026-03-16 (v0.7.1.6+2 – Docusaurus portal scaffold + task doc naming standardization)  
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Version:** v0.7.1.5+6  
+**Version:** v0.7.1.6+2  
 **Code:** E7S01
 
 ---
@@ -28,6 +28,8 @@ housekeeping_policy: keep
 - [x] **E7:S01:T04 – Integrate maintenance tasks with Kanban framework** - ✅ COMPLETE (v0.7.1.4+1 – Maintenance tasks integrated with Kanban framework: task creation, prioritization mapping, lifecycle tracking, Epic 4 integration, examples, and best practices documented)
 - [ ] **E7:S01:T05 – Markdown Maintenance (Perpetual Task)** - PERPETUAL (v0.7.1.5+1 – Perpetual task established for markdown maintenance across all documentation files)
 - [ ] **E7:S01:T06 – Implement Update Changelog Workflow (UCW)** - TODO (v0.7.1.5+6 – FR-057 defines UCW scope for latest-only changelog policy, archival automation, and RW integration)
+- [ ] **E7:S01:T07 – Markdown Maintenance Workflow (MMW)** - TODO (v0.7.1.6+2 – FR-058 defines workflow for resolving markdown lint blockers and coordinating perpetual maintenance cycles)
+- [ ] **E7:S01:T08 – Task Doc Naming Standardization** - IN PROGRESS (v0.7.1.6+2 – Establishes `EddSddTdd-[title].md` canonical naming and migration plan)
 
 > **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E7:S01:T01`, `E7:S01:T02`)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
@@ -240,6 +242,69 @@ This story establishes systematic processes for addressing IDE-flagged issues an
 - Documentation clearly distinguishes UCW vs UKW responsibilities and provides SOP.  
 - Tests cover retention boundaries, ordering, duplicates, archive write failures, and dry-run safety.  
 - Task tracked via `T06-update-changelog-workflow.md` with evidence of UCW execution logs.
+
+---
+
+### E7:S01:T07 – Markdown Maintenance Workflow (MMW)
+
+**Input:** FR-058 Markdown Maintenance Workflow, E7:S01:T05 perpetual markdown task, documentation validator outputs  
+**Deliverable:** Deterministic workflow + tooling that triages RW markdown validation failures, distinguishes regressions vs legacy debt, and drives remediation cycles with auditable evidence  
+**Dependencies:** FR-058, Documentation Policy Framework, Release Runbook RW Step 8  
+**Blocker:** None  
+**Parallel Development Candidacy:** Safe
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Version Marker:** v0.7.1.6+2 (FR filing)
+
+**Approach:**
+
+1. Author ICW artifacts (spec/test/plan) describing MMW phases, roles, CI hook contract, and evidence requirements.  
+2. Extend documentation validator to emit scoped vs baseline findings; integrate with RW + MMW decision tree.  
+3. Build checklist + log template under `docs/maintenance/logs/mmw/` and wire to RW Step 8 fallback path.  
+4. Execute initial MMW maintenance cycle targeting representative backlog slice; capture diff + log.  
+5. Update Release Runbook, Kanban board, and Story references to include MMW instructions and status reporting.  
+6. Coordinate with T05 to ensure perpetual markdown maintenance metrics get updated per cycle.  
+7. Create a dedicated **MMW Perpetual Task** (E7:S01:T08 placeholder) that RW teams can update/run against whenever markdown debt blocks a release, ensuring each RW has an up-to-date maintenance checkpoint.
+
+**Acceptance Criteria:**
+
+- Validator supports scoped/baseline modes with documented CLI usage.  
+- RW runbook defines MMW trigger + evidence requirements; CI hook blocks releases lacking MMW log when baseline debt remains.  
+- `docs/maintenance/logs/mmw/` contains checklist/log entries for first maintenance cycle with before/after stats.  
+- Kanban Story + task docs reference FR-058 and include completion markers once workflow is operational.  
+- Perpetual markdown maintenance Task (T05) includes pointers to MMW cycle outputs as ongoing maintenance mechanism.
+
+---
+
+### E7:S01:T08 – Task Doc Naming Standardization
+
+**Input:** User directive (2026-03-16) to adopt `EddSddTdd-[Task Title].md` naming, Documentation Policy Framework, Kanban board structure  
+**Deliverable:** Canonical naming standard applied to all task docs plus migration tooling/checklist to keep Release Workflow and Kanban references consistent  
+**Dependencies:** Documentation Policy Framework updates, Release Runbook references, Story/Epic file cross-links  
+**Blocker:** None  
+**Parallel Development Candidacy:** Safe
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Version Marker:** v0.7.1.6+3
+
+**Approach:**
+
+1. Update Documentation Policy + Kanban board guide to codify the `EddSddTdd-[title].md` format (with 3-digit Task exception).  
+2. Inventory all existing task files; generate mapping old→new names with traceability log.  
+3. Build/execute rename plan (script or documented steps) ensuring links in Story/Epic/FR/kanban board update atomically.  
+4. Add validator or lint rule to flag future deviations.  
+5. Provide RW guidance describing how task renames impact step 4 updates + evidence storage.  
+6. Publish migration completion log under `docs/maintenance/logs/mmw/` or similar for audit.
+
+**Acceptance Criteria:**
+
+- Documentation policy + runbook explicitly reference the new naming scheme and exceptions.  
+- All task files under `docs/project-management/kanban/epics/**` follow the new naming format (or are queued with migration checklist).  
+- Kanban board/task references resolve correctly after renames; validator confirms no broken links.  
+- A lint/validation hook exists to prevent regressions.  
+- Migration summary captured (versions, files renamed, blockers) for future audits.
 
 ---
 

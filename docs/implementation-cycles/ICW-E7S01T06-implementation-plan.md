@@ -59,14 +59,14 @@ Manual UCW process replacing missing changelog governance. Execution focuses on 
 ### Phase 4 – Handoff & Monitoring
 
 - Create `docs/maintenance/logs/ucw/README.md` describing log retention & sign-off expectations.
-- UKW Agent schedules monthly audit block referencing perpetual lint task (E7:S01:T05).
+- UKW Agent schedules monthly audit block referencing perpetual lint Task (E7:S01:T05).
 - Wire CI job `ucw-verification` into RW pipeline (read-only guard) and document rollback procedure if evidence missing.
 
 ## 4. Resource & Ownership
 
 - **Documentation Agent:** Lead spec, checklist, manual operations, archive upkeep.
 - **Release Engineer:** Validate ordering, integrate CI verification, ensure RW gating.
-- **UKW Agent/Auditor:** Monitor compliance, manage backlog tie-ins (perpetual tasks).
+- **UKW Agent/Auditor:** Monitor compliance, manage backlog tie-ins (perpetual Tasks).
 
 ## 5. Risks & Mitigations
 
@@ -78,7 +78,7 @@ Manual UCW process replacing missing changelog governance. Execution focuses on 
 
 - FR-057 Update Changelog Workflow (now referencing manual UCW).
 - Release Runbook & RW validations (Step 8 gating).
-- Perpetual markdown task E7:S01:T05 for global doc hygiene.
+- Perpetual markdown Task E7:S01:T05 for global doc hygiene.
 
 ## 7. Completion Criteria
 

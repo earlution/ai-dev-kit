@@ -79,4 +79,4 @@ Define the Update Changelog Workflow (UCW) as a manual, checklist-driven process
 - FR-057 Update Changelog Workflow
 - E7:S01 Story + Task documents
 - Release Runbook (Section: Changelog Stewardship)
-- MoSCOW policy (Should Have tasks)
+- MoSCOW policy (Should Have Tasks)

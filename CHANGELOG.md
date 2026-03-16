@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.7.1.6+2] - 16-03-26
+
+E7:S01:T08 – Task Doc Naming Standardization & Doc Portal Foundation: Scaffolded the new Docusaurus-based documentation portal (classic template, npm wiring) to prepare lifecycle-driven publishing. Filed FR-058 and T07 assets for the Markdown Maintenance Workflow, refined the documentation validator to honor canonical terminology conventions, and established the `EddSddTdd-[Task Title].md` naming standard (with migration task artifacts) so Release Workflow automation can rely on deterministic file identities.
+
+---
+
 ## [0.7.1.6+1] - 15-03-26
 
 E7:S01:T06 – Update Changelog Workflow Definition (UCW): Filed FR-057 and Task T06 to restore the missing UCW governance layer. Documented scope, responsibilities, and acceptance criteria for a deterministic workflow that trims `CHANGELOG.md`, archives older entries, enforces ordering, and integrates with Release Workflow validations. Reopened Epic 7 Story 1, updated task checklists, and wired kanban board narrative so kanban-only releases can reference UCW explicitly.
