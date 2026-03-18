@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
-VERSION_STORY = 1     # Story number (Story 1: Codebase Maintenance Tasks)
-VERSION_TASK = 6      # Task number (Task 6: Implement Update Changelog Workflow)
-VERSION_BUILD = 1     # Build number (E7:S01:T06+1 – UCW workflow documentation release)
+VERSION_STORY = 6     # Story number (Story 6: Post-Windsurf Project Review)
+VERSION_TASK = 1      # Task number (T01: Windsurf artifact cleanup)
+VERSION_BUILD = 0     # Build number (E7:S06:T01+0 – doc-init)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.1.6+1 = Development, Epic 7, Story 1, Task 6, Build 1 (E7:S01:T06+1: Update Changelog Workflow definition and docs)
+# Current: 0.7.6.1+0 = Development, Epic 7, Story 6, Task 1 (E7:S06:T01+0: Windsurf artifact cleanup doc-init)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

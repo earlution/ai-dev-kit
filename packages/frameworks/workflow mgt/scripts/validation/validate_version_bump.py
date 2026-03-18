@@ -674,6 +674,9 @@ def detect_first_time_est_doc(
         re.compile(rf'.*Epic-{epic}/Story-{story}/Task-{task:03d}.*\.md$'),      # Mixed
         re.compile(rf'.*Epic-{epic}/Story-{story:03d}/Task-{task}.*\.md$'),     # Mixed
         re.compile(rf'.*Epic-{epic}/Story-{story}/Task-{task}.*\.md$'),          # Non-zero-padded
+        # T-prefix format (e.g. T01-*.md in Story-006-post-windsurf-project-review/)
+        re.compile(rf'.*Epic-{epic}/Story-{story:03d}[^/]*/T{task:02d}-.*\.md$'),
+        re.compile(rf'.*Epic-{epic}/Story-{story}[^/]*/T{task}-.*\.md$'),
     ]
     
     new_est_doc_found = False
@@ -695,10 +698,10 @@ def detect_first_time_est_doc(
                         break
         
         if is_est_doc:
-            # Check if it's a new file (not modified)
+            # Check if it's a new file (Added in staged changes)
             try:
                 result = subprocess.run(
-                    ["git", "diff", "--name-status", "--", str(file_path)],
+                    ["git", "diff", "--cached", "--name-status", "--", str(file_path)],
                     cwd=project_root,
                     capture_output=True,
                     text=True,
@@ -757,13 +760,21 @@ def detect_first_time_est_doc(
     except Exception:
         pass
     
-    # Check changelog for prior version
+    # Check changelog for prior version - use HEAD (committed) only to avoid false positive
+    # during RW when CHANGELOG has already been updated with the version we're committing
     if not prior_version_exists:
-        changelog_file = project_root / "CHANGELOG.md"
-        if changelog_file.exists():
-            changelog_content = changelog_file.read_text()
-            if re.search(version_pattern, changelog_content):
+        try:
+            result = subprocess.run(
+                ["git", "show", "HEAD:CHANGELOG.md"],
+                cwd=project_root,
+                capture_output=True,
+                text=True,
+                check=False
+            )
+            if result.returncode == 0 and re.search(version_pattern, result.stdout or ""):
                 prior_version_exists = True
+        except Exception:
+            pass
     
     # CRITICAL FIX: Check if task document already exists (even if not created in this commit)
     # If task doc exists, it's NOT doc-init, regardless of prior version history
@@ -855,11 +866,11 @@ def validate_doc_init_build(
     if config and 'version_file' in config:
         version_file_path = Path(config['version_file'])
     else:
-        # Default fallback
         version_file_path = Path("src/fynd_deals/version.py")
-    
     try:
-        allowed_non_doc_relpaths.add(str(version_file_path.relative_to(project_root)))
+        # Resolve relative to project_root so relative_to works
+        resolved_vf = (project_root / version_file_path).resolve()
+        allowed_non_doc_relpaths.add(str(resolved_vf.relative_to(project_root.resolve())))
     except Exception:
         pass
     
@@ -973,9 +984,11 @@ def validate_version_bump(
     print(f"Current version: {rc}.{epic}.{story}.{current_task}+{current_build}")
     
     # NEW: Validate doc-init build (if BUILD = 0, must be docs-only and first-time E/S/T doc)
-    project_root = version_file.parent.parent if version_file else Path.cwd()
+    # Project root: script runs from repo root (where rw-config.yaml, CHANGELOG live)
+    project_root = Path.cwd()
     
     # If BUILD = 0, validate abstract space conditions
+    is_first_time = False
     if current_build == 0:
         # Check if this is a first-time E/S/T doc commit
         is_first_time, first_time_warnings = detect_first_time_est_doc(
@@ -1020,7 +1033,10 @@ def validate_version_bump(
     print(f"Story file: {story_file}")
     
     # Get completed task - use current_task as hint (the task we're validating)
-    completed_task = get_completed_task(story_file, version_task=current_task)
+    # Doc-init (BUILD=0, first-time E/S/T): use current_task (we're creating the doc, not completing it)
+    completed_task = current_task if (current_build == 0 and is_first_time) else None
+    if completed_task is None:
+        completed_task = get_completed_task(story_file, version_task=current_task)
     if completed_task is None:
         errors.append(f"Could not identify completed task from {story_file}")
         return False, errors
@@ -1113,15 +1129,16 @@ def validate_version_bump(
     elif completed_task == current_task:
         # Same task
         if is_doc_init:
-            # Doc-init on same task: This shouldn't happen (doc-init is for first-time creation)
-            errors.append(
-                f"❌ ABSTRACT SPACE VALIDATION ERROR: Doc-init build (BUILD=0) detected for existing task T{completed_task:02d}.\n"
-                f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
-                f"   Since this task already exists, use BUILD >= 1 for subsequent changes.\n"
-                f"   Doc-init builds establish the canonical version anchor before functional work begins.\n"
-                f"   Once the E/S/T document exists, all subsequent changes require BUILD >= 1.\n"
-                f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
-            )
+            # Doc-init on same task: Valid when is_first_time (we're creating the doc)
+            if not is_first_time:
+                errors.append(
+                    f"❌ ABSTRACT SPACE VALIDATION ERROR: Doc-init build (BUILD=0) detected for existing task T{completed_task:02d}.\n"
+                    f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
+                    f"   Since this task already exists, use BUILD >= 1 for subsequent changes.\n"
+                    f"   Doc-init builds establish the canonical version anchor before functional work begins.\n"
+                    f"   Once the E/S/T document exists, all subsequent changes require BUILD >= 1.\n"
+                    f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
+                )
         else:
             # Same task, normal build - BUILD should be incremented (can't validate exact increment without previous version)
             if current_build < 1:

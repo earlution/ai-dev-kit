@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-15 (v0.7.1.5+6 – Story 1 reopened for Update Changelog Workflow task T06)  
+**Last updated:** 2026-03-18 (v0.7.6.1+0 – Story 6 Task 1 complete)
 **Branch:** `epic/7-codebase-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -31,6 +31,7 @@ housekeeping_policy: keep
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
 - [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete)
+- [ ] **E7:S06 – Post-Windsurf Project Review** - TODO (v0.7.6.0+0 – Story filed: systematic review of project state after Windsurf evaluation period)
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
@@ -69,7 +70,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-15 (v0.7.1.5+6 – Story reopened via T06 Update Changelog Workflow filing)
+**Last updated:** 2026-03-18 (v0.7.6.1+0 – Story 6 Task 1 complete)
 
 **Goal:** Establish systematic processes for addressing IDE-flagged issues and organizing codebase maintenance work.
 
@@ -106,7 +107,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** COMPLETE  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-01-05 (v0.7.2.1+1 – Task 1 COMPLETE: Code review standards and guidelines documented)
+**Last updated:** 2026-03-18 (v0.7.6.1+0 – Story 6 Task 1 complete)
 
 **Goal:** Define code review standards and processes to ensure consistent code quality and maintainability.
 
@@ -141,7 +142,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** COMPLETE  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-01-05 (v0.7.3.4+1 – Story COMPLETE: All tasks complete)
+**Last updated:** 2026-03-18 (v0.7.6.1+0 – Story 6 Task 1 complete)
 
 **Goal:** Enable comprehensive monitoring of codebase health and quality metrics, providing visibility into code quality trends.
 
@@ -177,7 +178,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** COMPLETE  
 **Priority:** LOW  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-01-05 (v0.7.4.4+1 – Story COMPLETE: All tasks complete)
+**Last updated:** 2026-03-18 (v0.7.6.1+0 – Story 6 Task 1 complete)
 
 **Goal:** Develop automation and tooling to streamline maintenance work and reduce manual effort.
 
@@ -213,7 +214,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** COMPLETE  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-01-05 (v0.7.5.4+1 – Story COMPLETE: All UXR tasks synthesized and documented)
+**Last updated:** 2026-03-18 (v0.7.6.1+0 – Story 6 Task 1 complete)
 
 **Goal:** Capture and operationalize user experience research for migrating pre-existing Kanban/Sprint/Issue structures to the ai-dev-kit Kanban framework.
 
@@ -227,6 +228,43 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 
 > Full story: `docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research.md`
+
+---
+
+### Story 6: Post-Windsurf Project Review
+
+**Status:** TODO  
+**Priority:** HIGH  
+**Estimated Effort:** [TBD]  
+**Last updated:** 2026-03-18 (v0.7.6.1+0 – Story 6 Task 1 complete)
+
+**Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
+
+**Tasks:**
+
+- [ ] **E7:S06:T01** – Windsurf artifact cleanup
+- [ ] **E7:S06:T02** – Version and changelog alignment
+- [ ] **E7:S06:T03** – Kanban documentation consistency (E9↔E18 renumbering fallout)
+- [ ] **E7:S06:T04** – Recent commit review
+- [ ] **E7:S06:T05** – Workflow script integrity
+- [ ] **E7:S06:T06** – FR/BR/UXR intake documentation quality
+- [ ] **E7:S06:T07** – General documentation and cross-reference integrity
+- [ ] **E7:S06:T08** – Dependency and tooling audit
+- [ ] **E7:S06:T09** – Config and git state validation
+
+**Acceptance Criteria:**
+
+- All review tasks completed with findings documented
+- Critical issues (artifacts, version drift) remediated
+- Non-critical findings filed as BR/FR where appropriate
+
+**Parallel Development Dependencies:**
+
+- Epic 4 (Kanban Framework) – Uses kanban structure
+- Epic 2 (Workflow Management) – Workflow scripts under review
+- *Parallel Development Candidacy:* Safe (review is independent)
+
+> Full story: [`Story-006-post-windsurf-project-review.md`](Story-006-post-windsurf-project-review.md)
 
 ---
 

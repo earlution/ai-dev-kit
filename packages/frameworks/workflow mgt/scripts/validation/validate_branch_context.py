@@ -361,7 +361,8 @@ def validate_doc_init_build(version: str, config: Optional[Dict] = None) -> Tupl
     allowed_non_doc_relpaths = set()
     version_file_path = get_version_file_path(config)
     try:
-        allowed_non_doc_relpaths.add(str(version_file_path.relative_to(project_root)))
+        vp = (project_root / version_file_path).resolve().relative_to(project_root.resolve())
+        allowed_non_doc_relpaths.add(str(vp))
     except Exception:
         pass
 
@@ -443,8 +444,12 @@ def check_task_doc_presence(version: str, config: Optional[Dict] = None) -> Tupl
     return len(warnings) == 0, warnings
 
 
-def check_changelog(branch, config: Optional[Dict] = None):
-    """Check CHANGELOG.md for cross-epic contamination (supports both old and new format)."""
+def check_changelog(branch, config: Optional[Dict] = None, current_version: Optional[str] = None):
+    """Check CHANGELOG.md for cross-epic contamination (supports both old and new format).
+    
+    When current_version is provided, only validates that entry (avoids false positives
+    when reordering causes many lines to appear as 'added' in diff).
+    """
     if config and 'main_changelog' in config:
         changelog_file = Path(config['main_changelog'])
     else:
@@ -466,6 +471,7 @@ def check_changelog(branch, config: Optional[Dict] = None):
                 capture_output=True,
                 text=True,
                 check=False,
+                cwd=Path.cwd(),
             )
             
             # Extract version from staged additions
@@ -475,6 +481,9 @@ def check_changelog(branch, config: Optional[Dict] = None):
                     match = re.match(r"\+## \[([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(?:\+\d+)?)\]", line)
                     if match:
                         staged_version = match.group(1)
+                        # When reordering, many entries show as +; only validate current version
+                        if current_version and staged_version != current_version:
+                            continue
                         version_epic = parse_version_epic(staged_version)
                         if version_epic is None:
                             issues.append(
@@ -539,8 +548,9 @@ def validate_branch_context():
     elif branch != "main" and not maintenance_branch:
         warnings.append(f"Branch '{branch}' not in known mapping - cannot validate version")
 
-    # Check CHANGELOG
-    changelog_ok, changelog_issues = check_changelog(branch, config)
+    # Check CHANGELOG (only validate current version to avoid false positives on reorder)
+    current_version = get_version(config)
+    changelog_ok, changelog_issues = check_changelog(branch, config, current_version=current_version)
     if not changelog_ok:
         errors.extend(changelog_issues)
     
