@@ -20,6 +20,14 @@ housekeeping_policy: keep
 
 Review Package Version Workflow (PVW) for Windsurf impact, .windsurf skill mappings, and migration needs. Deliverable informs T01 cleanup/migration.
 
+## Anti-Pattern Vigilance
+
+**Be vigilant for:** Windsurf models deferring to deterministic, script-everything approaches when this workflow requires agentic intelligence.
+
+- **Anti-pattern:** Over-reliance on rigid scripts, hardcoded paths, or "run X then Y" sequences without reasoning, synthesis, or adaptive fallbacks.
+- **Expected:** Agent-driven execution: analyze context, make intelligent decisions, handle failures with workarounds, synthesize narrative updates where required.
+- **Review for:** .windsurf skills or docs that would steer implementers toward script-orchestration rather than agentic reasoning for this workflow.
+
 ## Input
 
 - .cursorrules PVW section
@@ -35,6 +43,7 @@ Review document: Windsurf impact assessment; .windsurf dependencies; migration p
 - [ ] Windsurf impact on PVW documented
 - [ ] .windsurf skill mappings identified
 - [ ] Migration plan for T01 noted
+- [ ] Anti-pattern vigilance findings documented (or "none observed" if clear)
 
 ## Dependencies
 
