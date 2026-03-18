@@ -46,6 +46,20 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.7.6.4+0] - 18-03-26
+
+📋 Doc Init: E7:S06:T04 - Recent commit review
+
+### Doc Init
+**New E/S/T Documentation:**
+- ✅ T04 task document for Post-Windsurf Project Review
+
+### Notes
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.4+0.md` for full details
+- **This is a doc-init build (+0).** No functional changes are included.
+
+---
+
 ## [0.7.6.3+0] - 18-03-26
 
 📋 Doc Init: E7:S06:T03 - Kanban documentation consistency
