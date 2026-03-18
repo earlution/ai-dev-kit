@@ -55,6 +55,13 @@ E7:S06:T16+1 – Kanban init: Review PIR workflow (Windsurf impact). Task docume
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.16+1.md)
 
 ---
+## [0.7.6.15+3] - 18-03-26
+
+E7:S06:T15+3 – T15 Intake workflow Windsurf impact review deliverable.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.15+3.md)
+
+---
 ## [0.7.6.15+2] - 18-03-26
 
 E7:S06:T15+2 – RW -d: Documentation update for T15.
