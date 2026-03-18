@@ -45,6 +45,12 @@ Review document: Windsurf impact assessment; .windsurf dependencies; migration p
 - [ ] Migration plan for T01 noted
 - [ ] Anti-pattern vigilance findings documented (or "none observed" if clear)
 
+## References
+
+- [ICW-E7S06-T10-T16 Specification](../../../../../implementation-cycles/ICW-E7S06-T10-T16-specification.md)
+- [ICW-E7S06-T10-T16 Test Design](../../../../../implementation-cycles/ICW-E7S06-T10-T16-test-design.md)
+- [ICW-E7S06-T10-T16 Implementation Plan](../../../../../implementation-cycles/ICW-E7S06-T10-T16-implementation-plan.md)
+
 ## Dependencies
 
 None

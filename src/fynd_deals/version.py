@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
 VERSION_STORY = 6     # Story number (Story 6: Post-Windsurf Project Review)
-VERSION_TASK = 16     # Task number (T16: Review PIR workflow Windsurf impact)
-VERSION_BUILD = 2     # Build number (E7:S06:T16+2 – RW -d doc update)
+VERSION_TASK = 10     # Task number (T10: Review RW workflow Windsurf impact)
+VERSION_BUILD = 3     # Build number (E7:S06:T10+3 – planning package)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.6.16+2 = Development, Epic 7, Story 6, Task 16 (E7:S06:T16+2: RW -d doc update)
+# Current: 0.7.6.10+3 = Development, Epic 7, Story 6, Task 10 (E7:S06:T10+3: ICW planning package)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

@@ -125,6 +125,13 @@ E7:S06:T11+1 – Kanban init: Review UKW workflow (Windsurf impact). Task docume
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.11+1.md)
 
 ---
+## [0.7.6.10+3] - 18-03-26
+
+E7:S06:T10+3 – RW -d: ICW planning package (spec, test design, impl plan) for T10-T16 Windsurf impact reviews.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.10+3.md)
+
+---
 ## [0.7.6.10+2] - 18-03-26
 
 E7:S06:T10+2 – RW -d: Anti-pattern vigilance added to T10–T16 workflow review tasks.
