@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 1, Task 3: Configure Development Environment and Tooling
+# Epic 1, Story 1, Task 3: Configure development environment and tooling
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.1.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.1.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.1.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S1:T3`)
+**Format:** `E1:S1:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S01:T03`
 
@@ -28,84 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Configure the development environment and essential tooling for the {PROJECT_NAME} project. Set up IDE/editor configuration, development tools, and environment setup scripts to ensure consistent development experience across team members.
+Configure development environment and tooling for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project structure (from T01)
-- Version control setup (from T02)
-- Technology stack decisions
-- IDE/editor preferences
-- Development tool requirements
-- ai-dev-kit development environment templates (if adopting)
+- Requirements and specifications
+- configure development environment and tooling requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- IDE/editor configuration files (`.vscode/`, `.idea/`, etc.)
-- Development environment setup scripts
-- Environment configuration files (`.env.example`, etc.)
-- Development tooling configuration
-- Setup documentation
+- configure development environment and tooling completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] IDE/editor configuration files created
-- [ ] Development environment setup scripts created
-- [ ] Environment configuration files set up (`.env.example`, etc.)
-- [ ] Development tooling configured
-- [ ] Setup documentation created
-- [ ] Development environment can be set up from scratch using documentation
+- [ ] Configure development environment and tooling completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Choose and configure IDE/editor (VS Code, IntelliJ, etc.)
-2. Create IDE/editor configuration files
-3. Set up environment configuration files (`.env.example`)
-4. Create development environment setup scripts
-5. Configure development tools (debuggers, formatters, etc.)
-6. Create setup documentation
-7. Test setup process from scratch
+1. Analyze requirements for configure development environment and tooling
+2. Design approach and plan
+3. Implement configure development environment and tooling
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- T01: Define project structure and directory layout (requires structure)
-- T02: Set up version control and repository configuration (benefits from version control)
+- E1:S1:T02
 
 **Blocks:**
-- T05: Set up build system and dependency management (benefits from development environment)
-- T06: Configure code quality tools (requires development environment)
+- E1:S1:T04
 
-**Parallel Development Candidacy:** Safe (can proceed independently once structure and version control are set up)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E01:S01:T01: Define project structure and directory layout
-- E01:S01:T02: Set up version control and repository configuration
-- E01:S01:T05: Set up build system and dependency management
-- E01:S01:T06: Configure code quality tools
+- [E01:S01:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E01:S01: Project Foundation and Setup
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.1.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,10 +111,7 @@ Configure the development environment and essential tooling for the {PROJECT_NAM
 
 ## Notes
 
-- Consider team IDE/editor preferences
-- Make setup process as automated as possible
-- Document any manual steps required
-- Test setup on clean environment
+[Additional notes, context, or considerations for this task.]
 
 ---
 
@@ -132,14 +123,12 @@ Configure the development environment and essential tooling for the {PROJECT_NAM
 
 ## References
 
-- IDE/editor configuration best practices
-- Development environment setup patterns
-- Environment configuration management
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
 
 ---
 
 ## Next Actions
 
-- [ ] Configure IDE/editor settings
-- [ ] Create environment setup scripts
-- [ ] Write setup documentation
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

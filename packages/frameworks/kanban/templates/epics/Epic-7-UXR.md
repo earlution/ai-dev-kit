@@ -21,11 +21,14 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
+- [ ] **E07:S00 – UXR Repo** - PERPETUAL (v0.7.0.0+0)
 - [ ] **E07:S01 – User Research and Discovery** - TODO
 - [ ] **E07:S02 – Usability Testing and Validation** - TODO
 - [ ] **E07:S03 – User Feedback Collection and Analysis** - TODO
 - [ ] **E07:S04 – User Journey Mapping and Experience Design** - TODO
 - [ ] **E07:S05 – UX Insights and Recommendations** - TODO
+
+> **Note:** E7:S00 (UXR Repo) is omitted from board displays (PERPETUAL repository story - see Epic 7 document for internal tracking).
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  

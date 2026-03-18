@@ -8,9 +8,9 @@ housekeeping_policy: keep
 
 # Dev Kit Versioning Policy
 
-**Status:** Active  
-**Owner:** AI Dev Kit / Book Project Lead  
-**Last Updated:** 2025-12-02  
+**Status:** Active
+**Owner:** AI Dev Kit / Book Project Lead
+**Last Updated:** 2025-12-02
 **Related Work:** Epic 1 (AI Dev Kit Core)
 
 ---
@@ -27,6 +27,24 @@ Goals:
 
 ---
 
+### 1.1 Mental Model: Internal vs Release Versions
+
+The dev-kit follows the framework’s **dual-version model**:
+
+- **Internal version (`RC.EPIC.STORY.TASK+BUILD`)**
+  - Forensic coordinate and Kanban anchor.
+  - Encodes Epic/Story/Task/Build and is used by RW/UKW/CMW and Kanban docs.
+
+- **Release version (SemVer `MAJOR.MINOR.PATCH+BUILD`)**
+  - External-facing version shown in README badges, GitHub releases, and package managers.
+  - Always derived from the internal version using the mapping defined in Section 2.1.
+
+In practice:
+
+- When talking to **external consumers**, the dev-kit presents **SemVer first**, optionally followed by the internal version in parentheses, for example:
+  - `v0.3.19+2 (internal: v0.6.7.101+2)`.
+- When talking about **Kanban, tasks, and workflow internals**, the dev-kit uses `RC.EPIC.STORY.TASK+BUILD` directly.
+
 ## 2. Schema (Adopted)
 
 This repo fully adopts the RC.EPIC.STORY.TASK+BUILD schema:
@@ -41,11 +59,165 @@ This repo fully adopts the RC.EPIC.STORY.TASK+BUILD schema:
 
 Examples (dev-kit context):
 
-- `0.1.1.1+1` – Dev snapshot for **Epic 1**, Story 1, Task 1, first build  
-- `0.2.3.2+4` – Dev snapshot for **Epic 2**, Story 3, Task 2, 4th build  
+- `0.1.1.1+1` – Dev snapshot for **Epic 1**, Story 1, Task 1, first build
+- `0.2.3.2+4` – Dev snapshot for **Epic 2**, Story 3, Task 2, 4th build
 - `1.4.1.1+1` – Release Candidate 1 for **Epic 4**, Story 1, Task 1, first build
 
 > **Note:** Any references to versions like `0.9.21.3+1` in framework docs are **examples from other projects**, not dev-kit releases.
+
+---
+
+## 2.1 SemVer Mapping for External Releases
+
+**Status:** Implemented (v0.3.2.11+1)
+**Purpose:** Generate external-facing SemVer tags (`MAJOR.MINOR.PATCH+BUILD`) alongside internal Kanban-based version tags for GitHub releases.
+
+### Problem Statement
+
+Internal versioning (`RC.EPIC.STORY.TASK+BUILD`) is semantically meaningful internally but can appear to regress when switching between epics/stories (e.g., `0.6.7.12+3` → `0.4.6.9+1`), which is problematic for GitHub releases and user perception.
+
+**Solution:** Registry-based SemVer mapping using Hybrid Approach that converts internal versions to monotonic SemVer while preserving semantic meaning.
+
+### Hybrid Approach Algorithm
+
+**Mapping Formula:**
+- **MAJOR** = RC (direct mapping: 0 → 0, 1 → 1, etc.)
+- **MINOR** = First-seen Epic number (sequential based on first appearance, per RC)
+- **PATCH** = First-seen Story number (sequential based on first appearance, per RC)
+- **BUILD** = Preserved from internal version
+
+**Example Conversions:**
+- Internal: `0.6.7.101+24` → SemVer: `0.3.19+24` (Epic 6 first seen → MINOR=3, Story 7 in Epic 6 → PATCH=19)
+- Internal: `0.4.14.2+1` → SemVer: `0.4.34+1` (Epic 4 first seen → MINOR=4, Story 14 in Epic 4 → PATCH=34)
+- Internal: `0.9.1.8+10` → SemVer: `0.9.60+10` (Epic 9 first seen → MINOR=9, Story 1 in Epic 9 → PATCH=60)
+
+### Limitations
+
+This approach doesn't encode TASK, so multiple tasks in the same story can produce SemVer collisions (e.g., `0.6.7.101+5`, `0.6.7.102+5`, `0.6.7.103+5` all map to `0.6.52+5`).
+
+---
+
+### Task-Touch Derived Mapping (ADR-002)
+
+**Status:** Implemented (v0.6.7.18+1)
+**Purpose:** Provide strictly monotonic, collision-free SemVer mapping suitable for package managers.
+
+#### Problem Statement
+
+Registry-based mapping can cause SemVer tag collisions when multiple tasks within the same epic/story are released with the same BUILD number, violating the "1 internal → 1 SemVer" expectation.
+
+#### Solution
+
+Task-Touch Derived Mapping uses a global counter that increments each time a task is "touched" by a release, ensuring unique SemVer for every internal version.
+
+#### Task-Touch Algorithm
+
+**Mapping Formula:**
+- **MAJOR** = RC (direct mapping: 0 → 0, 1 → 1, etc.)
+- **MINOR** = count of epics signed off (per RC)
+- **PATCH** = global task-touch counter (increments once per RW release)
+- **BUILD** = Preserved from internal version
+
+#### Example Conversions
+
+Assuming 6 epics signed off for RC 0 and task-touch counter starts at 1:
+- Internal: `0.6.7.101+5` → SemVer: `0.6.1+5` (first task touch)
+- Internal: `0.3.2.12+2` → SemVer: `0.6.2+2` (second task touch)
+- Internal: `0.2.13.7+1` → SemVer: `0.6.3+1` (third task touch)
+- Internal: `0.6.7.103+5` → SemVer: `0.6.4+5` (fourth task touch)
+
+#### Benefits
+
+- **Zero Collisions**: Each internal version maps to exactly one SemVer
+- **Strict Monotonicity**: PATCH always increases (package-manager friendly)
+- **1:1 Traceability**: Direct mapping between internal and external versions
+- **Deterministic**: Given repository history, mapping is reproducible
+
+#### Configuration
+
+Task-Touch mapping is configured via `rw-config.yaml`:
+
+```yaml
+# SemVer mapping strategy: "registry" (default) or "task_touch"
+semver_mapping_strategy: registry
+```
+
+#### Migration
+
+Existing projects can migrate by:
+1. Analyzing git history to compute initial task-touch counter
+2. Running migration utility to backfill counters
+3. Switching configuration to `task_touch` mode
+4. Verifying no collisions in test environment
+
+---
+
+### Registry Structure
+
+SemVer mappings are stored in `semver-registry.yaml` (project root):
+
+```yaml
+rc_0:
+  epic_to_minor:
+    3: 1    # Epic 3 → MINOR 1 (first appearance)
+    6: 2    # Epic 6 → MINOR 2 (second appearance)
+  story_to_patch:
+    (3, 2): 1    # Epic 3, Story 2 → PATCH 1
+    (6, 7): 19   # Epic 6, Story 7 → PATCH 19
+```
+
+### Dual Tagging in Release Workflow
+
+**RW Step 11** creates dual tags:
+- **Internal Tag:** `v0.6.7.101+24` (for internal tracking)
+- **SemVer Tag:** `v0.3.19+24` (for GitHub releases)
+
+Both tags reference the same commit. Internal tag maintains backward compatibility, SemVer tag provides monotonic versioning for external consumers.
+
+### 1:1 mapping and tag alignment
+
+- **One internal version → one SemVer:** The registry plus BUILD ensure that each internal version string maps to exactly one SemVer string. The converter (`semver_converter.py`) is the single source of truth for this mapping.
+- **One SemVer tag → one commit:** For each release, the SemVer tag and the internal tag MUST point to the **same commit**. No SemVer tag may point to a different commit than the one that contains the corresponding internal version for that release.
+- **Consequence:** If a SemVer tag already exists on the remote but points to a different commit than the current release, that is a violation; it MUST be corrected (e.g. by force-pushing the tag to the correct commit: `git push origin +vX.Y.Z+N`) before considering the release complete. An optional validator can check this before push (see Implementation below).
+
+### README Version Display
+
+**Outward-Facing SemVer:** The project README displays the **SemVer version** (not the internal version) as it is the outward-facing version for external consumers.
+
+**RW Step 5** automatically:
+- Generates SemVer from internal version using `semver_converter.py`
+- Updates README with SemVer (e.g., `**Version:** v0.3.19+2`)
+- Internal version remains in version file (`src/fynd_deals/version.py`) for internal tracking
+
+**Rationale:** External users and package managers expect monotonically increasing SemVer versions. The internal `RC.EPIC.STORY.TASK+BUILD` format is for internal development traceability only.
+
+### Implementation
+
+- **Converter Script:** `packages/frameworks/workflow mgt/scripts/version/semver_converter.py` (forward and reverse conversion; 1:1 documented)
+- **Migration Script:** `packages/frameworks/workflow mgt/scripts/version/build_semver_registry.py`
+- **Validation Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_semver_monotonic.py`
+- **Tag-alignment validator (optional):** `packages/frameworks/workflow mgt/scripts/validation/validate_semver_tag_alignment.py` — checks that the SemVer tag on the remote points to the same commit as the current release (see 1:1 mapping and tag alignment).
+- **Registry File:** `semver-registry.yaml` (project root)
+
+**Related Documentation:**
+- **Proposal:** `docs/architecture/standards-and-adrs/semver-mapping-proposal.md`
+- **Implementation Impact:** `docs/architecture/standards-and-adrs/semver-mapping-implementation-impact.md`
+
+**Mapping modes (dev-kit stance):**
+
+- The underlying framework defines multiple **SemVer mapping modes**. The dev-kit itself adopts the **registry-based epic/story mapping mode (Mode A)** as its default:
+  - `MAJOR = RC`
+  - `MINOR` and `PATCH` assigned via the `semver-registry.yaml` registry.
+- Other projects copying this policy MAY choose the **simple global PATCH mode (Mode B)** documented in the framework if they prefer a “SemVer-first, global counter” external story.
+
+**Optional metadata pattern:**
+
+When needed, SemVer tags MAY append metadata that embeds the internal version for machine parsing:
+
+- Pattern: `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`
+- Example: internal `0.6.7.101+2` → SemVer tag `v0.3.19+2+rc.0.e6.s7.t101.b2`
+
+This metadata is optional and does not affect SemVer ordering; public-facing docs SHOULD normally show the clean SemVer (`v0.3.19+2`) and reserve metadata for tooling and tag inspection.
 
 ---
 
@@ -251,6 +423,59 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 ---
 
+### 6.1.1 Perpetual Tasks (Maintenance Workflows)
+
+**CRITICAL:** Some tasks represent ongoing maintenance/synchronization work that never "completes" (e.g., UKW - Update Kanban Workflow, CMW - Changelog Management Workflow). These are **perpetual tasks** with special versioning semantics.
+
+**Perpetual Task Characteristics:**
+- **Status:** Always IN PROGRESS (never changes to COMPLETE)
+- **Task Type:** Perpetual Maintenance (marked in task document with `Task Type: Perpetual Maintenance`)
+- **Purpose:** Ongoing maintenance/synchronization workflows
+- **Build Number Semantics:** BUILD number = workflow run count (not feature iteration)
+- **Build Warning Suppression:** High BUILD numbers are expected and valid (no warnings)
+
+**Version Pattern:**
+- Perpetual tasks use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99)
+- Version format: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where PERPETUAL_TASK >= 101
+- BUILD number accumulates naturally as the workflow runs
+- Example: UKW runs → `v0.6.7.101+1`, `v0.6.7.101+2`, `v0.6.7.101+3`, etc.
+- Example: CMW runs → `v0.6.7.102+1`, `v0.6.7.102+2`, `v0.6.7.102+3`, etc.
+
+**Perpetual Task Examples:**
+- **UKW (Update Kanban Workflow):** Epic 6, Story 7, Task 101 (E6:S07:T101) - Kanban documentation synchronization
+- **CMW (Changelog Management Workflow):** Epic 6, Story 7, Task 102 (E6:S07:T102) - Changelog maintenance and archival
+- **RW Maintenance:** Epic 6, Story 7, Task 103 (E6:S07:T103) - Release Workflow and workflow framework maintenance (Step 7 fixes, validator updates, doc corrections)
+
+**Task Number Ranges:**
+- **Regular tasks:** T01-T99 (2-digit) - Standard feature/bug tasks
+- **Perpetual tasks:** T101+ (3-digit) - Ongoing maintenance workflows
+- **Reserved:** T100 is invalid (reserved for future use, if needed)
+- **Rationale:** 3-digit task IDs (T101+) immediately distinguish perpetual tasks from regular tasks, providing unlimited capacity and clear visual differentiation
+
+**RW Context Detection:**
+- RW Step 2 detects perpetual task context (e.g., user ran "UKW" then "RW", or "CMW" then "RW")
+- RW automatically attributes releases to the perpetual task (discovered via `Task Type: Perpetual Maintenance` flag)
+- BUILD number increments for each workflow run (same task, increment BUILD)
+- Build warnings are suppressed (high BUILD numbers are expected and valid)
+
+**T103 (RW Maintenance) - Manual Attribution:**
+- No automatic context detection (unlike UKW/CMW)
+- When releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), agent/user manually sets version to E6:S07:T103 and increments BUILD
+
+**Task ID Variability:**
+- Each project instance has its own perpetual task with its own E/S/T ID
+- ai-dev-kit: UKW = E6:S06:T08, CMW = E6:S06:T12
+- Other projects: May use different IDs (e.g., E4:S03:T05, E2:S01:T11)
+- Pattern discovery: Search for `Task Type: Perpetual Maintenance` flag in task documents
+
+**Related Documentation:**
+- **UKW Pattern:** Epic 4 Story 3 T01 (Update Packaged RW to Handle UKW Context)
+- **CMW Pattern:** Epic 2 Story 1 T05 (CMW Perpetual Task Pattern)
+- **RW Maintenance Pattern:** Epic 2 Story 1 T06 (RW Maintenance Perpetual Task Pattern)
+- **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Step 2)
+
+---
+
 ### 6.2 Abstract Space Version Schema
 
 **CRITICAL:** Zero-numbered E/S/T documentation uses `+0` build number to establish the **abstract space** for forensic traceability, serving as the canonical version anchor before any functional work is committed.
@@ -338,6 +563,43 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Abstract space must precede functional work
 - Release Workflow validates abstract space usage
 
+#### S00 Abstract Space for Repository Stories
+
+**Format:** `0.{EPIC}.0.0+0` (repository story abstract space)
+
+**Examples:**
+- `0.5.0.0+0` = Epic 5, Story 0 (FR Repo) abstract space
+- `0.6.0.0+0` = Epic 6, Story 0 (BR Repo) abstract space
+- `0.7.0.0+0` = Epic 7, Story 0 (UXR Repo) abstract space
+
+**Purpose:**
+- Establishes forensic traceability anchor for repository stories (S00)
+- Repository stories are PERPETUAL (never complete)
+- S00 serves as canonical home for FRs/BRs/UXRs
+- Perfect 1:1 traceability: FR-001 = E5:S00:T01, BR-001 = E6:S00:T01, UXR-001 = E7:S00:T01
+
+**Repository Task Versioning:**
+- Repository story: `0.5.0.0+0` (abstract space)
+- First FR: `0.5.0.1+0` (E5:S00:T01 - abstract space for repository task)
+- Second FR: `0.5.0.2+0` (E5:S00:T02 - abstract space for repository task)
+- Third FR: `0.5.0.3+0` (E5:S00:T03 - abstract space for repository task)
+
+**Pattern:**
+- FR-001 = E5:S00:T01 = v0.5.0.1+0 (abstract space)
+- BR-001 = E6:S00:T01 = v0.6.0.1+0 (abstract space)
+- UXR-001 = E7:S00:T01 = v0.7.0.1+0 (abstract space)
+
+**Usage:**
+- Repository story creation → Commit with `0.{EPIC}.0.0+0`
+- Repository task creation → Commit with `0.{EPIC}.0.{TASK}+0` (abstract space)
+- Repository tasks use `+0` build (abstract space) as they are documentation anchors
+- Implementation tasks use `+1` and beyond (functional work)
+
+**Related:**
+- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern) - Feature request
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs - Abstract space concept
+- **E4:S12:** FR/BR/UXR Repository Stories (S00 Pattern) - Implementation story
+
 **SOP for Committing Initial E/S/T Docs:**
 
 1. **Create E/S/T document** with required structure and fields
@@ -359,6 +621,41 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (this feature)
 
 ---
+
+### 6.3 Doc-Init / Abstract Space Cheat Sheet
+
+This section summarizes how to use **doc-init / abstract space builds (`+0`)** in day-to-day work.
+
+**When to use `+0` (abstract space):**
+- Creating a **new Epic / Story / Task document** with no functional work yet.
+- Typical examples:
+  - Onboarding a new **FR/BR** and creating its associated Task doc (wiring + documentation only).
+  - Creating initial Epic/Story docs before any implementation starts.
+
+**Patterns:**
+- **Epic doc creation:** `0.{EPIC}.0.0+0`
+- **Story doc creation:** `0.{EPIC}.{STORY}.0+0`
+- **Task doc creation:** `0.{EPIC}.{STORY}.{TASK}+0`
+
+**What `+0` means:**
+- Documentation-only anchor (no code / behavior changes).
+- Establishes the **forensic traceability starting point** for that E/S/T.
+- Must be created via the **doc-init path** (FR-017).
+
+**After `+0` (functional work):**
+- First functional release for that E/S/T uses **`+1`**:
+  - Example progression for a Task:
+    - `0.4.11.1+0` – Task document created (abstract space)
+    - `0.4.11.1+1` – First functional change for that Task
+    - `0.4.11.1+2` – Second functional change, etc.
+- Moving to a **new Task**:
+  - Optionally create a **Task-level abstract space** first (`+0`) for the new Task doc.
+  - Then use `+1` for the first functional release on that Task.
+
+**Practical cheat sheet:**
+- **Onboard FR/BR + Task doc only:** use **`+0`** (abstract space).
+- **Start actual implementation for that Task:** bump to **`+1`**.
+- **Continue work on the same Task:** increment BUILD (**`+2`, `+3`, …`**).
 
 ## 7. CHANGELOG Format
 
@@ -482,27 +779,19 @@ This repo uses a **two-layer changelog system** aligned with the framework patte
 
 ## 8. Canonical Ordering Principle
 
-**Version numbers (`RC.EPIC.STORY.TASK+BUILD`) are the canonical ordering metric for all releases and changelog entries.**
+**Release version numbers (SemVer `MAJOR.MINOR.PATCH`) are the canonical ordering metric for all releases and changelog entries.**
 
 This means:
 
-- **Version ordering is independent of wall-clock time**
+- **Release ordering is independent of wall-clock time**
   - If `0.3.1.2+1` was committed on 2025-12-02 at 10:00:00 UTC
   - And `0.3.1.1+2` was committed on 2025-12-02 at 15:30:00 UTC
   - The changelog still orders them as: `0.3.1.1+2` first, then `0.3.1.2+1`
-  - **The version number determines order, not the actual commit timestamp**
+  - **The release version number determines order, not the actual commit timestamp**
 
-- **Parallel epic development is fully supported**
-  - Epic 1 work (`0.1.x.x+x`) can be committed after Epic 4 work (`0.4.x.x+x`)
-  - Epic 4 work can be committed before Epic 1 work
-  - **The changelog orders by version number, not by Git commit time**
+**Parallel epic development remains fully supported**: multiple epics can work simultaneously and each epic maintains its own internal version stream, while releases are ordered by SemVer in the changelog.
 
-- **This enables true parallel development**
-  - Multiple epics can work simultaneously
-  - Each epic maintains its own version stream
-  - When merged, versions are ordered correctly by their semantic structure
-
-**The version number encodes the work hierarchy (Epic → Story → Task → Build), and that hierarchy is what matters for ordering, not when the code was actually committed.**
+**The internal version continues to encode the work hierarchy (Epic → Story → Task → Build).** The release version provides the canonical ordering for external consumers; the internal version provides the canonical forensic coordinate for tracing work through Kanban, changelogs, and Git history.
 
 > **Reference:** See `packages/frameworks/numbering & versioning/versioning-strategy.md` (Section: Core Principle: Version Numbers Are Canonical) for complete documentation.
 
@@ -514,7 +803,7 @@ The versioning strategy uses **two distinct timestamp layers** with **different 
 
 ### Layer 1: Main Summary Changelog (`CHANGELOG.md`)
 
-**Format:** Short date in `DD-MM-YY` format  
+**Format:** Short date in `DD-MM-YY` format
 **Example:** `## [0.3.1.1+2] - 02-12-25`
 
 **Purpose:**
@@ -530,7 +819,7 @@ The versioning strategy uses **two distinct timestamp layers** with **different 
 
 ### Layer 2: Detailed Changelog Archive (`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md`)
 
-**Format:** Full timestamp in `YYYY-MM-DD HH:MM:SS UTC` format  
+**Format:** Full timestamp in `YYYY-MM-DD HH:MM:SS UTC` format
 **Example:** `**Release Date:** 2025-12-02 00:00:00 UTC`
 
 **Purpose:**
@@ -743,9 +1032,9 @@ The dev-kit policy:
 
 ## 14. Status and Maintenance
 
-**Status:** Active  
-**Owner:** AI Dev Kit Lead  
-**Last Updated:** 2025-12-02  
+**Status:** Active
+**Owner:** AI Dev Kit Lead
+**Last Updated:** 2025-12-02
 **Related Work:** Epic 3, Story 1 (Dev Kit Alignment with Versioning Framework)
 
 **Maintenance:**
@@ -778,5 +1067,3 @@ The dev-kit policy:
 - `docs/architecture/standards-and-adrs/dev-kit-versioning-cookbook.md` - Practical worked examples
 - `docs/project-management/kanban/epics/Epic-3/Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md` (gap analysis)
 - `docs/project-management/kanban/epics/Epic-3/Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md` (findings)
-
-

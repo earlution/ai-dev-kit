@@ -106,6 +106,7 @@ A project adopting ai-dev-kit needs guidance on how to customize their README to
   - [ ] Keep a Changelog
   - [ ] Shields.io
   - [ ] ai-dev-kit
+
 - [ ] Customization guide provides clear instructions for adopting projects
 - [ ] Template is ready to use and can be customized for any project
 

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 1, Task 1: Design Authentication Architecture
+# Epic 9, Story 1, Task 1: Design authentication architecture
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S1:T1`)
+**Format:** `E9:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S01:T01`
 
@@ -28,94 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design authentication architecture for the {PROJECT_NAME} project. Establish the architectural foundation for user authentication, including authentication methods, security protocols, session management, and integration with user management systems.
+Design authentication architecture for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Authentication requirements
-- Security requirements
-- User management requirements
-- Authentication method preferences
-- Integration requirements
-- ai-dev-kit authentication architecture (if adopting)
+- Requirements and specifications
+- design authentication architecture requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Authentication architecture designed
-- Architecture documentation
-- Authentication flow diagrams
-- Security protocol specifications
-- Integration specifications
+- design authentication architecture completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Authentication architecture designed and documented
-- [ ] Architecture supports required authentication methods
-- [ ] Security protocols defined
-- [ ] Authentication flows documented
-- [ ] Integration points identified
-- [ ] Architecture documentation complete
-- [ ] Architecture supports scalability
-- [ ] Architecture aligns with security requirements
+- [ ] Design authentication architecture completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review authentication and security requirements
-2. Review user management requirements
-3. Identify authentication methods needed
-4. Design authentication architecture
-5. Define security protocols
-6. Document authentication flows
-7. Identify integration points
-8. Document architecture specifications
-9. Review and refine architecture
+1. Analyze requirements for design authentication architecture
+2. Design approach and plan
+3. Implement design authentication architecture
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Authentication requirements
-- Security requirements
-- User management requirements (from E9, if available)
+- None
 
 **Blocks:**
-- E9:S1:T02: Implement user registration (registration uses architecture)
-- E9:S1:T03: Implement login/logout (login/logout uses architecture)
-- E9:S1:T04: Implement password reset (password reset uses architecture)
-- E9:S1:T05: Implement email verification (email verification uses architecture)
-- E9:S1:T07: Implement session management (session management uses architecture)
+- E9:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, foundational task)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S1:T02: Implement user registration (registration uses architecture)
-- E9:S1:T03: Implement login/logout (login/logout uses architecture)
-- E9:S1:T07: Implement session management (session management uses architecture)
-- E9:S1:T08: Add authentication security measures (security measures implement architecture protocols)
+- [E09:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S1: User Authentication System (this story)
-- E9:S2: User Authorization and Permissions (authorization builds on authentication)
-- E9:S3: User Profile Management (profile management integrates with authentication)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -124,3 +108,27 @@ Design authentication architecture for the {PROJECT_NAME} project. Establish the
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

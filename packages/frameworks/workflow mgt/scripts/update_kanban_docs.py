@@ -10,6 +10,9 @@ Based on: E2:S08:T01 - Deterministic vs Agentic Analysis
 Implements: Steps 1-7, 9-10, 12-15 (deterministic pipeline)
 Provides hooks for: Steps 2 fallback, 9 non-canonical, 11, 16-18 (agentic)
 
+Enhanced in E5:S01:T36: Added Kanban board update functionality.
+Updates board metadata (Last Updated, Version) and epic/story status sections.
+
 Usage:
     python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py [--version-file PATH] [--config PATH] [--dry-run]
 
@@ -292,26 +295,48 @@ def resolve_kanban_paths(
     
     # Determine kanban root
     if config and config.get('use_kanban') and 'kanban_root' in config:
-        kanban_root = Path(config['kanban_root'])
+        kanban_root_str = config['kanban_root']
+        if Path(kanban_root_str).is_absolute():
+            kanban_root = Path(kanban_root_str)
+        else:
+            kanban_root = project_root / kanban_root_str
     else:
         # Default fallback patterns
         kanban_root = project_root / "docs/project-management/kanban"
     
+    # Ensure kanban_root is absolute
+    if not kanban_root.is_absolute():
+        kanban_root = (project_root / kanban_root).resolve()
+    
     # Resolve Story doc path
     if config and config.get('use_kanban') and 'story_doc_pattern' in config:
         story_pattern = config['story_doc_pattern'].format(epic=epic, story=story)
-        story_doc = project_root / story_pattern
+        # IMPORTANT: Pattern is relative to kanban_root, not project_root
+        full_pattern = kanban_root / story_pattern
+        matches = list(full_pattern.parent.glob(full_pattern.name)) if full_pattern.parent.exists() else []
+        story_doc = matches[0].resolve() if matches else None
     else:
         # Default fallback: try multiple patterns
         story_patterns = [
-            kanban_root / f"epics/Epic-{epic}/Story-{story:03d}-*.md",
-            kanban_root / f"epics/Epic-{epic}/Story-{story}-*.md",
+            f"epics/Epic-{epic}/Story-{story:03d}-*.md",
+            f"epics/Epic-{epic}/Story-{story}-*.md",
         ]
         story_doc = None
         for pattern in story_patterns:
-            matches = list(project_root.glob(str(pattern.relative_to(project_root))))
+            # Construct pattern relative to kanban_root, then make relative to project_root for glob
+            if kanban_root.is_absolute():
+                # If kanban_root is absolute, use it directly with glob
+                full_pattern = kanban_root / pattern
+                matches = list(full_pattern.parent.glob(full_pattern.name))
+            else:
+                # kanban_root is relative to project_root, so construct relative pattern
+                rel_pattern = str(kanban_root / pattern)
+                matches = list(project_root.glob(rel_pattern))
             if matches:
-                story_doc = matches[0]
+                # Ensure we have an absolute path
+                story_doc = matches[0] if matches[0].is_absolute() else (project_root / matches[0])
+                # Normalize to absolute path
+                story_doc = story_doc.resolve()
                 break
     
     if story_doc and story_doc.exists():
@@ -320,7 +345,10 @@ def resolve_kanban_paths(
     # Resolve Epic doc path
     if config and config.get('use_kanban') and 'epic_doc_pattern' in config:
         epic_pattern = config['epic_doc_pattern'].format(epic=epic)
-        epic_doc = project_root / epic_pattern
+        # IMPORTANT: Pattern is relative to kanban_root, not project_root
+        full_pattern = kanban_root / epic_pattern
+        matches = list(full_pattern.parent.glob(full_pattern.name)) if full_pattern.parent.exists() else []
+        epic_doc = matches[0].resolve() if matches else None
     else:
         # Default fallback patterns
         epic_patterns = [
@@ -337,20 +365,31 @@ def resolve_kanban_paths(
         paths['epic_doc'] = epic_doc
     
     # Resolve Kanban board (optional)
+    board_found = False
     if config and config.get('use_kanban') and 'kanban_board' in config:
         board_path = project_root / config['kanban_board']
         if board_path.exists():
-            paths['kanban_board'] = board_path
-    else:
-        # Default fallback
-        board_patterns = [
+            paths['kanban_board'] = board_path.resolve()
+            board_found = True
+    if not board_found:
+        # Default fallback - try multiple locations
+        board_candidates = [
             kanban_root / "kanban-board.md",
             project_root / "docs/project-management/kanban/kanban-board.md",
         ]
-        for pattern in board_patterns:
-            if pattern.exists():
-                paths['kanban_board'] = pattern
-                break
+        for candidate in board_candidates:
+            # Resolve candidate to absolute path
+            try:
+                if candidate.is_absolute():
+                    abs_candidate = candidate
+                else:
+                    abs_candidate = (project_root / candidate).resolve()
+                if abs_candidate.exists() and abs_candidate.is_file():
+                    paths['kanban_board'] = abs_candidate
+                    board_found = True
+                    break
+            except Exception:
+                continue
     
     return paths
 
@@ -450,13 +489,22 @@ def compute_story_completion_state(story_content: str) -> Dict:
 
 def derive_target_state(
     version: Tuple[int, int, int, int, int],
-    story_header: Dict,
     task_info: Dict,
+    story_header: Dict,
     completion_state: Dict,
-    current_date: str = None
+    current_date: str = None,
+    mode: str = "full"
 ) -> Dict:
     """
     Derive desired target state for each artefact from authoritative Story state.
+    
+    Args:
+        version: Version components (rc, epic, story, task, build)
+        task_info: Task information from checklist
+        story_header: Story header information
+        completion_state: Story completion state
+        current_date: Current date string
+        mode: Update mode ('full' or 'kanban_init')
     
     Returns:
         Dict with target states for Story doc, Epic doc, Kanban board
@@ -471,7 +519,7 @@ def derive_target_state(
     # Use all_tasks_complete (actual completion state) not story_complete (current status in doc)
     story_target = {
         'status': 'IN PROGRESS' if not completion_state['all_tasks_complete'] else '✅ COMPLETE',
-        'last_updated': f"{current_date} ({version_string} – T{task:02d} complete: {task_info.get('task_id', 'Task')})",
+        'last_updated': f"{current_date} ({version_string} – T{task:02d} complete: {task_info.get('task_id', 'Task')})" if task_info else f"{current_date} ({version_string} – Kanban documentation setup)",
         'version': version_string,
         'completed': current_date if completion_state['all_tasks_complete'] else None
     }
@@ -488,12 +536,33 @@ def derive_target_state(
         'last_updated': f"{current_date} ({version_string} – Story {story} Task {task} complete)"
     }
     
-    return {
-        'story': story_target,
-        'epic_checklist': epic_checklist_entry,
-        'epic_header': epic_header,
-        'version_string': version_string
-    }
+    # Mode-specific filtering
+    if mode == "kanban_init":
+        # In kanban_init mode, only update version-related fields
+        return {
+            'story': {
+                'version': version_string,
+                'last_updated': f"{current_date} ({version_string} – Kanban documentation setup)"
+            },
+            'epic_checklist': {
+                'version': version_string,
+                'status': 'IN PROGRESS'  # Don't mark complete in init mode
+            },
+            'epic_header': {
+                'last_updated': f"{current_date} ({version_string} – Kanban documentation setup)"
+            },
+            'version_string': version_string,
+            'mode': 'kanban_init'
+        }
+    else:
+        # Full mode - return all target states
+        return {
+            'story': story_target,
+            'epic_checklist': epic_checklist_entry,
+            'epic_header': epic_header,
+            'version_string': version_string,
+            'mode': 'full'
+        }
 
 
 def update_story_doc(
@@ -513,26 +582,9 @@ def update_story_doc(
     
     content = story_path.read_text()
     changes = []
+    mode = target_state.get('mode', 'full')
     
-    # Update Story header Status
-    status_pattern = r'(\*\*Status:\*\*)\s*(.+?)(?:\n|$)'
-    if re.search(status_pattern, content, re.IGNORECASE):
-        new_status = f"**Status:** {target_state['story']['status']}"
-        content = re.sub(status_pattern, rf'\1 {target_state["story"]["status"]}\n', content, flags=re.IGNORECASE)
-        changes.append(f"Updated Status: {target_state['story']['status']}")
-    
-    # Update Story header Last updated
-    last_updated_pattern = r'(\*\*Last updated:\*\*)\s*(.+?)(?:\n|$)'
-    if re.search(last_updated_pattern, content, re.IGNORECASE):
-        content = re.sub(
-            last_updated_pattern,
-            rf'\1 {target_state["story"]["last_updated"]}\n',
-            content,
-            flags=re.IGNORECASE
-        )
-        changes.append(f"Updated Last updated: {target_state['story']['last_updated']}")
-    
-    # Update Story header Version
+    # Update Story header Version (always updated)
     version_pattern = r'(\*\*Version:\*\*)\s*(.+?)(?:\n|$)'
     if re.search(version_pattern, content, re.IGNORECASE):
         content = re.sub(
@@ -543,28 +595,52 @@ def update_story_doc(
         )
         changes.append(f"Updated Version: {target_state['story']['version']}")
     
-    # Update Completed date if story is complete
-    if target_state['story']['completed']:
-        completed_pattern = r'(\*\*Completed:\*\*)\s*(.+?)(?:\n|$)'
-        if re.search(completed_pattern, content, re.IGNORECASE):
+    # Update Story header Last updated (always updated)
+    if 'last_updated' in target_state['story']:
+        last_updated_pattern = r'(\*\*Last updated:\*\*)\s*(.+?)(?:\n|$)'
+        if re.search(last_updated_pattern, content, re.IGNORECASE):
             content = re.sub(
-                completed_pattern,
-                rf'\1 {target_state["story"]["completed"]}\n',
+                last_updated_pattern,
+                rf'\1 {target_state["story"]["last_updated"]}\n',
                 content,
                 flags=re.IGNORECASE
             )
-            changes.append(f"Updated Completed: {target_state['story']['completed']}")
-        else:
-            # Add Completed field if missing
-            # Find Version line and add Completed after it
-            version_line_match = re.search(r'(\*\*Version:\*\*.*\n)', content, re.IGNORECASE)
-            if version_line_match:
-                insert_pos = version_line_match.end()
-                content = content[:insert_pos] + f"**Completed:** {target_state['story']['completed']}\n" + content[insert_pos:]
-                changes.append(f"Added Completed: {target_state['story']['completed']}")
+            changes.append(f"Updated Last updated: {target_state['story']['last_updated']}")
     
-    if not dry_run:
+    # In full mode, update additional fields
+    if mode == 'full':
+        # Update Story header Status
+        if 'status' in target_state['story']:
+            status_pattern = r'(\*\*Status:\*\*)\s*(.+?)(?:\n|$)'
+            if re.search(status_pattern, content, re.IGNORECASE):
+                content = re.sub(status_pattern, rf'\1 {target_state["story"]["status"]}\n', content, flags=re.IGNORECASE)
+                changes.append(f"Updated Status: {target_state['story']['status']}")
+        
+        # Update Completed date if story is complete
+        if target_state['story'].get('completed'):
+            completed_pattern = r'(\*\*Completed:\*\*)\s*(.+?)(?:\n|$)'
+            if re.search(completed_pattern, content, re.IGNORECASE):
+                content = re.sub(
+                    completed_pattern,
+                    rf'\1 {target_state["story"]["completed"]}\n',
+                    content,
+                    flags=re.IGNORECASE
+                )
+                changes.append(f"Updated Completed: {target_state['story']['completed']}")
+            else:
+                # Add completed date if not present
+                status_match = re.search(r'(\*\*Status:\*\*)\s*(.+?)(?:\n|$)', content, re.IGNORECASE)
+                if status_match and 'COMPLETE' in target_state['story']['status']:
+                    completed_line = f"**Completed:** {target_state['story']['completed']}\n"
+                    content = content[:status_match.end()] + completed_line + content[status_match.end():]
+                    changes.append(f"Added Completed: {target_state['story']['completed']}")
+    
+    # Write changes
+    if not dry_run and changes:
         story_path.write_text(content)
+        changes.append(f"✅ Story doc updated: {story_path}")
+    elif dry_run and changes:
+        changes.append(f"🔍 DRY RUN: Would update Story doc: {story_path}")
     
     return True, changes
 
@@ -632,6 +708,226 @@ def update_epic_doc(
     return True, changes
 
 
+def parse_kanban_board_metadata(board_content: str) -> Dict:
+    """
+    Parse Kanban board metadata (Last Updated, Version).
+    
+    Returns:
+        Dict with 'last_updated' and 'version' fields
+    """
+    metadata = {}
+    
+    # Parse Last Updated
+    last_updated_pattern = r'\*\*Last Updated:\*\*\s*(.+?)(?:\n|$)'
+    last_updated_match = re.search(last_updated_pattern, board_content, re.IGNORECASE)
+    if last_updated_match:
+        metadata['last_updated'] = last_updated_match.group(1).strip()
+    
+    # Parse Version
+    version_pattern = r'\*\*Version:\*\*\s*(.+?)(?:\n|$)'
+    version_match = re.search(version_pattern, board_content, re.IGNORECASE)
+    if version_match:
+        metadata['version'] = version_match.group(1).strip()
+    
+    return metadata
+
+
+def find_epic_section(board_content: str, epic: int) -> Optional[Tuple[int, int]]:
+    """
+    Find the epic section in the board content.
+    
+    Returns:
+        Tuple of (start_index, end_index) or None if not found
+    """
+    lines = board_content.split('\n')
+    start_idx = None
+    end_idx = len(lines)
+    
+    # Look for epic section header: "### Epic {epic}:"
+    epic_header_pattern = re.compile(rf'^### Epic {epic}:', re.IGNORECASE)
+    
+    for i, line in enumerate(lines):
+        if epic_header_pattern.match(line):
+            start_idx = i
+            break
+    
+    if start_idx is None:
+        return None
+    
+    # Find the end of the epic section (next epic or end of epics section)
+    for i in range(start_idx + 1, len(lines)):
+        line = lines[i]
+        # Stop at next epic section
+        if re.match(r'^### Epic \d+:', line):
+            end_idx = i
+            break
+        # Stop at major section boundary (## header)
+        if line.startswith('##') and not line.startswith('###'):
+            end_idx = i
+            break
+    
+    return (start_idx, end_idx)
+
+
+def update_kanban_board(
+    board_path: Path,
+    epic: int,
+    story: int,
+    task: int,
+    target_state: Dict,
+    story_completion_state: Dict,
+    dry_run: bool = False
+) -> Tuple[bool, List[str]]:
+    """
+    Update Kanban board with task completion information.
+    
+    Updates:
+    - Board metadata (Last Updated, Version)
+    - Epic section status
+    - Story listing in epic section
+    - MoSCOW section task status (mark complete tasks as COMPLETE)
+    """
+    if not board_path.exists():
+        return False, ["Kanban board not found"]
+    
+    changes = []
+    
+    try:
+        content = board_path.read_text()
+    except Exception as e:
+        return False, [f"Error reading board: {e}"]
+    
+    # Update board metadata
+    from datetime import datetime
+    today = datetime.now().strftime("%Y-%m-%d")
+    version_string = target_state['version_string']
+    
+    # Update Last Updated
+    last_updated_pattern = r'(\*\*Last Updated:\*\*)\s*(.+?)(?:\n|$)'
+    if re.search(last_updated_pattern, content, re.IGNORECASE):
+        new_last_updated = f"{today} (RW: E{epic}:S{story}:T{task})"
+        content = re.sub(
+            last_updated_pattern,
+            rf'\1 {new_last_updated}\n',
+            content,
+            flags=re.IGNORECASE
+        )
+        changes.append(f"Updated board Last Updated: {new_last_updated}")
+    
+    # Update Version
+    version_pattern = r'(\*\*Version:\*\*)\s*(.+?)(?:\n|$)'
+    if re.search(version_pattern, content, re.IGNORECASE):
+        content = re.sub(
+            version_pattern,
+            rf'\1 {version_string}\n',
+            content,
+            flags=re.IGNORECASE
+        )
+        changes.append(f"Updated board Version: {version_string}")
+    
+    # Find and update epic section
+    epic_section = find_epic_section(content, epic)
+    if epic_section:
+        start_idx, end_idx = epic_section
+        lines = content.split('\n')
+        epic_section_lines = lines[start_idx:end_idx]
+        epic_section_content = '\n'.join(epic_section_lines)
+        
+        # Update epic status if story is complete
+        if story_completion_state.get('is_complete'):
+            # Update epic status to COMPLETE if all stories complete, otherwise keep current
+            status_pattern = r'(\*\*Status:\*\*)\s*(.+?)(?:\n|$)'
+            if re.search(status_pattern, epic_section_content, re.IGNORECASE):
+                # For now, we'll keep the status as-is unless we can detect all stories complete
+                # This is a conservative approach - epic completion detection is complex
+                pass
+        
+        # Update story listing in epic section
+        story_listing_pattern = re.compile(
+            rf'(- \[[x\s]\]\s+\*\*E{epic}:S{story}[^\n]*)',
+            re.IGNORECASE | re.MULTILINE
+        )
+        
+        def update_story_listing(match):
+            line = match.group(1)
+            # Mark as complete if story is complete
+            if story_completion_state.get('is_complete'):
+                line = re.sub(r'\[ \]', '[x]', line)
+                # Update status to COMPLETE
+                if 'COMPLETE' not in line:
+                    line = re.sub(
+                        r'(IN PROGRESS|TODO).*$',
+                        f"COMPLETE ✅ ({version_string})",
+                        line
+                    )
+            else:
+                # Update version in listing
+                if version_string not in line:
+                    line = re.sub(
+                        r'(IN PROGRESS|TODO).*$',
+                        f"IN PROGRESS ({version_string})",
+                        line
+                    )
+            return line
+        
+        if story_listing_pattern.search(epic_section_content):
+            new_epic_section_content = story_listing_pattern.sub(update_story_listing, epic_section_content)
+            # Reconstruct content
+            new_lines = lines[:start_idx] + new_epic_section_content.split('\n') + lines[end_idx:]
+            content = '\n'.join(new_lines)
+            changes.append(f"Updated story {story} listing in Epic {epic} section")
+    
+    # Update MoSCOW section - mark task as COMPLETE
+    # Pattern: - **E{epic}:S{story}:T{task}** – ... - TODO/IN PROGRESS ...
+    # Note: Story number might be zero-padded (S01) or not (S1)
+    moscow_task_pattern = re.compile(
+        rf'(- \*\*E{epic}:S0?{story}:T0?{task}\*\*[^\n]*(?:TODO|IN PROGRESS)[^\n]*)',
+        re.IGNORECASE | re.MULTILINE
+    )
+    
+    def update_moscow_task(match):
+        line = match.group(1)
+        # Replace TODO/IN PROGRESS with COMPLETE and update Last updated
+        today = datetime.now().strftime("%Y-%m-%d")
+        if 'TODO' in line.upper() or 'IN PROGRESS' in line.upper():
+            # Replace status (handle various formats)
+            line = re.sub(
+                r'\s-\s(TODO|IN PROGRESS)\s',
+                f' - ✅ COMPLETE ',
+                line,
+                flags=re.IGNORECASE
+            )
+            # Update Last updated date (handle various formats)
+            line = re.sub(
+                r'Last updated:\s*\d{4}-\d{2}-\d{2}',
+                f'Last updated: {today}',
+                line,
+                flags=re.IGNORECASE
+            )
+            # Add version if not present (insert after task description, before links)
+            if version_string not in line:
+                # Insert version in parentheses before the dash before links
+                line = re.sub(
+                    r'(\s-\s[^|]+)(\s\|)',
+                    rf'\1 (v{version_string})\2',
+                    line,
+                    count=1
+                )
+        return line
+    
+    if moscow_task_pattern.search(content):
+        content = moscow_task_pattern.sub(update_moscow_task, content)
+        changes.append(f"Updated MoSCOW section: E{epic}:S{story}:T{task} marked as COMPLETE")
+    
+    if not dry_run:
+        try:
+            board_path.write_text(content)
+        except Exception as e:
+            return False, [f"Error writing board: {e}"]
+    
+    return True, changes
+
+
 def detect_error_type(error_message: str) -> str:
     """
     Detect error type from error message (Step 15 from T01 analysis).
@@ -686,6 +982,7 @@ def add_error(
 def validate_updates(
     story_path: Path,
     epic_path: Optional[Path],
+    board_path: Optional[Path],
     version_string: str,
     version_components: Tuple[int, int, int, int, int],
     task_info: Optional[Dict] = None
@@ -845,6 +1142,25 @@ def validate_updates(
     elif epic_path:
         warnings.append(f"⚠️  EPIC DOC OPTIONAL: Epic doc not found (optional): {epic_path}")
     
+    # Validate Kanban board (if exists)
+    if board_path and board_path.exists():
+        try:
+            board_content = board_path.read_text()
+            board_metadata = parse_kanban_board_metadata(board_content)
+            
+            # Check that version appears in board metadata
+            if version_string not in board_metadata.get('version', ''):
+                warnings.append(
+                    f"⚠️  BOARD VERSION MISMATCH: Board version may not match current version\n"
+                    f"   Expected version: {version_string}\n"
+                    f"   Found in board: {board_metadata.get('version', 'not found')}\n"
+                    f"   File: {board_path}"
+                )
+        except Exception as e:
+            warnings.append(f"⚠️  BOARD READ WARNING: Cannot read board {board_path}: {e}")
+    elif board_path:
+        warnings.append(f"⚠️  BOARD OPTIONAL: Kanban board not found (optional): {board_path}")
+    
     # ===== Step 13: Policy & FR Validation =====
     
     # Validate Story header has required fields
@@ -910,6 +1226,13 @@ def main():
         action="store_true",
         help="Allow override for recoverable errors (use with caution - may mask issues)",
     )
+    parser.add_argument(
+        "--mode",
+        type=str,
+        choices=["full", "kanban_init"],
+        default="full",
+        help="Update mode: 'full' (default) or 'kanban_init' (documentation only)",
+    )
     args = parser.parse_args()
     
     # Load config
@@ -929,14 +1252,44 @@ def main():
     rc, epic, story, task, build = version_components
     version_string = f"v{rc}.{epic}.{story}.{task}+{build}"
     
-    print(f"🔍 Updating Kanban docs for {version_string} (E{epic}:S{story}:T{task})")
+    print(f"🔍 Updating Kanban docs for {version_string} (E{epic}:S{story}:T{task}) - Mode: {args.mode}")
     
     # Resolve Kanban paths
-    paths = resolve_kanban_paths(epic, story, config)
+    paths = resolve_kanban_paths(epic, story, config, project_root=Path.cwd())
     
     if 'story_doc' not in paths:
         print(f"❌ Story doc not found for Epic {epic}, Story {story}")
-        sys.exit(1)
+        print(f"🔍 Attempting manual discovery...")
+        
+        # Manual fallback discovery
+        kanban_root = Path.cwd() / "docs/project-management/kanban"
+        manual_patterns = [
+            kanban_root / f"epics/Epic-{epic}/Story-{story:03d}-*.md",
+            kanban_root / f"epics/Epic-{epic}/Story-{story}-*.md",
+            kanban_root / f"epics/Epic-{epic}/Story-00*-*.md",  # Broader search
+        ]
+        
+        story_doc = None
+        for pattern in manual_patterns:
+            matches = list(pattern.parent.glob(pattern.name)) if pattern.parent.exists() else []
+            if matches:
+                story_doc = matches[0].resolve()
+                print(f"✅ Found story doc: {story_doc}")
+                break
+        
+        if not story_doc:
+            print(f"❌ Manual discovery failed. Checked patterns:")
+            for pattern in manual_patterns:
+                print(f"   - {pattern}")
+            print(f"💡 Suggestion: Check if Story {story} exists for Epic {epic}")
+            print(f"💡 Suggestion: Verify kanban_root path: {kanban_root}")
+            if args.allow_override:
+                print(f"⚠️  Continuing without story doc (allow_override)")
+                story_doc = None
+            else:
+                sys.exit(1)
+        else:
+            paths['story_doc'] = story_doc
     
     story_path = paths['story_doc']
     print(f"📄 Story doc: {story_path}")
@@ -959,34 +1312,58 @@ def main():
     # Derive target state
     target_state = derive_target_state(
         version_components,
+        task_info,
         story_header,
-        task_info or {},
-        completion_state
+        completion_state,
+        mode=args.mode  # Pass mode to target state derivation
     )
     
+    # Apply updates
+    all_changes = []
+    
     # Update Story doc
-    if 'story_doc' in paths:
-        success, changes = update_story_doc(paths['story_doc'], target_state, task_info or {}, args.dry_run)
-        if success:
-            print(f"✅ Story doc updated: {', '.join(changes)}")
-        else:
-            print(f"❌ Failed to update Story doc: {changes}")
-            sys.exit(1)
+    success, changes = update_story_doc(story_path, target_state, task_info, args.dry_run)
+    if not success:
+        print(f"❌ Failed to update Story doc: {changes}")
+        sys.exit(1)
+    all_changes.extend(changes)
     
-    # Update Epic doc
+    # Update Epic doc if available
     if 'epic_doc' in paths:
-        success, changes = update_epic_doc(paths['epic_doc'], story, target_state, args.dry_run)
-        if success:
-            print(f"✅ Epic doc updated: {', '.join(changes)}")
-        else:
-            print(f"⚠️  Epic doc update: {changes}")
-            # Don't fail if Epic doc update fails (may not exist in all projects)
+        epic_path = paths['epic_doc']
+        success, changes = update_epic_doc(epic_path, story, target_state, args.dry_run)
+        if not success:
+            print(f"❌ Failed to update Epic doc: {changes}")
+            sys.exit(1)
+        all_changes.extend(changes)
     
+    # Update Kanban board if available
+    if 'kanban_board' in paths:
+        board_path = paths['kanban_board']
+        success, changes = update_kanban_board(board_path, epic, story, task, target_state, completion_state, args.dry_run)
+        if not success:
+            print(f"❌ Failed to update Kanban board: {changes}")
+            sys.exit(1)
+        all_changes.extend(changes)
+    
+    # Report results
+    if args.dry_run:
+        print(f"🔍 DRY RUN: Would make {len(all_changes)} changes")
+        for change in all_changes:
+            print(f"   {change}")
+    else:
+        print(f"✅ Successfully made {len(all_changes)} changes:")
+        for change in all_changes:
+            print(f"   {change}")
+    
+    print(f"🎯 Kanban documentation update completed in {args.mode} mode")
+
     # Validate updates (Steps 12-14: comprehensive validation)
     if not args.dry_run:
         is_valid, errors, warnings, error_details = validate_updates(
             paths.get('story_doc'),
             paths.get('epic_doc'),
+            paths.get('kanban_board'),
             version_string,
             version_components,
             task_info

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 1, Task 1: Design Database Schema
+# Epic 10, Story 1, Task 1: Design database schema
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.10.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S1:T1`)
+**Format:** `E10:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S01:T01`
 
@@ -28,93 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design database schema for the {PROJECT_NAME} project. Establish the database structure, including tables, columns, data types, relationships, and normalization strategy to support application data requirements.
+Design database schema for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Application requirements
-- Data model requirements
-- Entity and relationship definitions
-- Data storage requirements
-- Performance requirements
-- Database system selection
-- ai-dev-kit database schema patterns (if adopting)
+- Requirements and specifications
+- design database schema requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Database schema designed
-- Schema documentation
-- Table definitions
-- Column definitions and data types
-- Relationship definitions
-- Normalization strategy
+- design database schema completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Database schema designed and documented
-- [ ] Schema supports application requirements
-- [ ] Table definitions complete
-- [ ] Column definitions and data types defined
-- [ ] Relationships between tables defined
-- [ ] Normalization strategy established
-- [ ] Schema documentation complete
-- [ ] Schema is scalable and maintainable
+- [ ] Design database schema completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review application and data model requirements
-2. Identify entities and their attributes
-3. Identify relationships between entities
-4. Design database tables and columns
-5. Define data types and constraints
-6. Establish normalization strategy
-7. Document database schema
-8. Review and refine schema design
+1. Analyze requirements for design database schema
+2. Design approach and plan
+3. Implement design database schema
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Application requirements
-- Data model requirements
+- None
 
 **Blocks:**
-- E10:S1:T02: Create entity-relationship diagrams (ERDs visualize schema)
-- E10:S1:T03: Implement database migrations (migrations implement schema)
-- E10:S1:T04: Set up database indexes (indexes optimize schema)
-- E10:S1:T05: Define database constraints (constraints enforce schema rules)
+- E10:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, foundational task)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S1:T02: Create entity-relationship diagrams (ERDs visualize schema)
-- E10:S1:T03: Implement database migrations (migrations implement schema)
-- E10:S1:T04: Set up database indexes (indexes optimize schema)
-- E10:S1:T05: Define database constraints (constraints enforce schema rules)
+- [E10:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S1: Database Schema Design (this story)
-- E10:S2: Data Access Layer (data access layer uses schema)
-- E10:S3: Data Migration and Seeding (migrations implement schema)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -123,3 +108,27 @@ Design database schema for the {PROJECT_NAME} project. Establish the database st
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

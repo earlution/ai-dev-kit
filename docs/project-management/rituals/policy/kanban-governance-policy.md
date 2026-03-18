@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Governance Policy
 
 **Owner:** AI Dev Kit / Book Project Lead  
-**Last Updated:** 2025-12-02  
+**Last Updated:** 2025-12-18  
 **Applies To:** All work tracked in the `ai-dev-kit` repo  
 **Based On:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` (project-agnostic framework - **CANONICAL SOURCE OF TRUTH**)
 
@@ -43,7 +43,9 @@ The implementation in this repo starts simple:
 
 - **Board files:**
   - `docs/project-management/kanban/_index.md` (quick board view)
-  - `docs/project-management/kanban/kanban-board.md` (detailed board view)
+  - `docs/project-management/kanban/kanban-board.md` (MoSCOW prioritized tasks)
+  - `docs/project-management/kanban/kanban-structure.md` (Epic/Story/Task structure)
+  - `docs/project-management/kanban/kanban-board-guide.md` (rules and explanations)
   - `docs/project-management/kanban/README.md` (structure overview)
 
 - **Epic files:**
@@ -52,9 +54,71 @@ The implementation in this repo starts simple:
 - **Story files:**
   - `docs/project-management/kanban/epics/Epic-X/stories/Story-XXX-*.md` (Story documents and associated files)
 
-### 2.2 Columns (Conceptual)
+### 2.2 Board Structure
 
-The current board is implemented as a **table**, but conceptually it follows three columns:
+The board serves as the **parent document** to Story documents, similar to how Story documents are parents of Task documents:
+
+- **Board → Story:** The board links to and tracks all Story documents
+- **Story → Task:** Story documents link to and track all Task documents
+- This creates a clear hierarchy: **Board (parent) → Story (child) → Task (grandchild)**
+
+#### 2.2.1 MoSCOW Prioritized Task View
+
+The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows all in-progress tasks (status: IN PROGRESS or TODO) organized by priority and ordered chronologically.
+
+**MoSCOW Priority Levels:**
+
+1. **Must Have (M) – Critical Tasks**
+   - Critical in-progress tasks that must be completed
+   - Highest priority items requiring immediate attention
+   - Tasks that block other work or are on critical path
+
+2. **Should Have (S) – Important Tasks**
+   - Important in-progress tasks that should be completed
+   - High-value items that contribute significantly to goals
+   - Tasks that are important but not blocking
+
+3. **Could Have (C) – Nice-to-Have Tasks**
+   - Nice-to-have in-progress tasks that could be completed
+   - Lower priority items that add value but are not essential
+   - Tasks that can be deferred if needed
+
+4. **Ongoing (O) – Perpetual Tasks**
+   - Ongoing maintenance tasks that never complete
+   - Perpetual tasks that are tracked but don't block other work
+   - Tasks that require continuous attention (e.g., workflow maintenance, changelog management)
+   - These tasks are visible but don't interfere with prioritization of completable work
+
+5. **Won't Have (W) – Deferred Tasks**
+   - Tasks that are deferred or not being actively worked on
+   - Items explicitly marked as out of scope for current cycle
+   - Tasks that may be revisited in future iterations
+
+**Chronological Ordering:**
+
+- Tasks within each MoSCOW section are ordered **chronologically** (most recently updated first)
+- This ensures the most active work is visible at the top of each section
+- Ordering is based on the task document's `Last updated` field
+
+**Task Entry Format:**
+
+Each task entry in the MoSCOW sections includes:
+- **Task ID:** `E{epic}:S{story}:T{task}` format (e.g., `E4:S13:T02`)
+- **Task Description:** Brief description of the task
+- **Last Updated:** Date when task was last updated
+- **Links:** Links to Task document and parent Story document
+
+#### 2.2.2 Story Checklist
+
+After the MoSCOW sections, the board includes a **Story Checklist** section that lists all stories in a compact format (one line per story):
+
+- **Format:** One line per story with status indicator
+- **Purpose:** Provides quick overview of all stories and their completion status
+- **Forensic Markers:** Includes version markers for completed stories (e.g., `✅ COMPLETE (v0.4.13.1+1)`)
+
+#### 2.2.3 Traditional Column Structure (Optional)
+
+Projects may also use a traditional column-based board structure with three columns:
 
 1. **Backlog** – Defined stories not yet started  
 2. **In Progress** – Stories currently being worked on  
@@ -64,6 +128,8 @@ You can represent these as:
 
 - A column in the board table (e.g., `Status` = `Backlog` / `In Progress` / `Done`), and/or
 - Separate sections in `_index.md` if the board grows more complex.
+
+**Note:** The MoSCOW prioritized task view can be used alongside or instead of the traditional column structure, depending on project needs.
 
 ---
 

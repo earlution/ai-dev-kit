@@ -61,11 +61,13 @@ A complete, systematic template system that defines abstract canonical epics, st
   - Templates use placeholders for contextualization (e.g., `{PROJECT_NAME} Core`)
   - Templates stored in `packages/frameworks/kanban/templates/epics/`
 
+
 - [ ] **FR-005-R2:** Complete template set for canonical stories
   - Stories defined for each canonical epic
   - Story templates include: purpose, typical tasks, key deliverables, integration points
   - Templates use placeholders for contextualization
   - Templates stored in `packages/frameworks/kanban/templates/stories/`
+
 
 - [ ] **FR-005-R3:** Complete template set for canonical tasks
   - Tasks defined for each canonical story
@@ -73,20 +75,24 @@ A complete, systematic template system that defines abstract canonical epics, st
   - Templates use placeholders for contextualization
   - Templates stored in `packages/frameworks/kanban/templates/tasks/`
 
+
 - [ ] **FR-005-R4:** Contextualization mechanism
   - Clear process for converting abstract templates to concrete project epics/stories/tasks
   - Placeholder replacement guide (what to replace, how to customize)
   - Examples of contextualized templates
+
 
 - [ ] **FR-005-R5:** Systematic canonical addition process
   - Defined process for adding new canonical epics/stories/tasks
   - Criteria for what qualifies as "canonical" (reusable across projects)
   - Review and approval process for canonical additions
 
+
 - [ ] **FR-005-R6:** Template documentation and usage guide
   - Comprehensive guide on using canonical templates
   - Examples of template → contextualized conversion
   - Best practices for customization
+
 
 ### Non-Functional Requirements
 
@@ -141,10 +147,12 @@ A developer starts a new project using ai-dev-kit as a template:
   - Uses canonical templates to understand what structure to adopt
   - Contextualizes templates to match existing project structure
 
+
 - **Use Case 3: Framework Maintainer Adding Canonical Pattern**
   - Maintainer identifies a pattern that appears in multiple projects
   - Uses systematic process to add new canonical epic/story/task
   - Follows defined criteria and review process
+
 
 ---
 
@@ -268,10 +276,12 @@ A developer starts a new project using ai-dev-kit as a template:
   - Canonical epics documented (CANONICAL_EPICS.md)
   - Some canonical stories documented (CANONICAL_STORIES.md, CANONICAL_STORIES_FR_BR.md)
   - Missing: Complete story templates, task templates, contextualization system
+
 - **Future Work:** This FR may trigger follow-up work on:
   - Automated installer/initializer (separate FR/Task)
   - Template separation infrastructure (separate FR/Task)
   - Integration with RW installer (separate FR/Task)
+
 
 ---
 

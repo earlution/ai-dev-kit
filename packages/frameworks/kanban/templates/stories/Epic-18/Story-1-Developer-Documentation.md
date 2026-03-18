@@ -6,30 +6,30 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 1: Developer Documentation
+# Epic 9, Story 1: Developer Documentation
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.18.1.0+0 – Template created)  
+**Last updated:** [YYYY-MM-DD] (v0.9.1.0+0 – Template created)  
 **Estimated Effort:** [TBD]  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
-**Version:** v0.18.1.0+0  
-**Code:** E18S01
+**Version:** v0.9.1.0+0  
+**Code:** E09S01
 
 ---
 
 ## Task Checklist
 
-- [ ] **E18:S01:T01 – Create architecture documentation** - TODO
-- [ ] **E18:S01:T02 – Document code structure and patterns** - TODO
-- [ ] **E18:S01:T03 – Create setup and installation guides** - TODO
-- [ ] **E18:S01:T04 – Document development workflow** - TODO
-- [ ] **E18:S01:T05 – Create contribution guidelines** - TODO
-- [ ] **E18:S01:T06 – Add code examples and tutorials** - TODO
+- [ ] **E09:S01:T01 – Create architecture documentation** - TODO
+- [ ] **E09:S01:T02 – Document code structure and patterns** - TODO
+- [ ] **E09:S01:T03 – Create setup and installation guides** - TODO
+- [ ] **E09:S01:T04 – Document development workflow** - TODO
+- [ ] **E09:S01:T05 – Create contribution guidelines** - TODO
+- [ ] **E09:S01:T06 – Add code examples and tutorials** - TODO
 
-> **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E18:S01:T01`)  
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.18.1.3+1)`)
+> **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E09:S01:T01`)  
+> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.3+1)`)
 
 ---
 
@@ -54,12 +54,12 @@ Create comprehensive developer documentation for the {PROJECT_NAME} project.
 
 ### Task Summaries
 
-- **E18:S01:T01** – Create architecture documentation for {PROJECT_NAME}
-- **E18:S01:T02** – Document code structure and patterns
-- **E18:S01:T03** – Create setup and installation guides
-- **E18:S01:T04** – Document development workflow
-- **E18:S01:T05** – Create contribution guidelines
-- **E18:S01:T06** – Add code examples and tutorials
+- **E09:S01:T01** – Create architecture documentation for {PROJECT_NAME}
+- **E09:S01:T02** – Document code structure and patterns
+- **E09:S01:T03** – Create setup and installation guides
+- **E09:S01:T04** – Document development workflow
+- **E09:S01:T05** – Create contribution guidelines
+- **E09:S01:T06** – Add code examples and tutorials
 
 ---
 

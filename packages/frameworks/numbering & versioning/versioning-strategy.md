@@ -23,7 +23,8 @@ housekeeping_policy: keep
 
 This document defines the **complete versioning strategy** for fynd.deals, including:
 
-- **Canonical ordering principles** (version numbers, not timestamps)
+- **Dual-version model** (internal Kanban version vs external SemVer release version)
+- **Canonical ordering principles** (release version numbers, not timestamps)
 - **Two-layer timestamp system** (short dates vs. full timestamps)
 - **Forensic traceability grid** (version ↔ epic/story/task ↔ changelogs ↔ kanban markers)
 - **Immutability rules** for historical metadata
@@ -33,29 +34,77 @@ This strategy ensures **complete accountability** and **efficient traceability**
 
 ---
 
-## Core Principle: Version Numbers Are Canonical
+## Dual-Version Model (Internal vs Release SemVer)
+
+This strategy is built around a **dual-version model**:
+
+- **Internal version (Kanban version)**  
+  - **Format:** `RC.EPIC.STORY.TASK+BUILD`  
+  - **Purpose:** Planning, traceability, and Kanban alignment.  
+  - **Where used:** Kanban docs, detailed changelogs, validators, internal tooling.
+
+- **Release version (SemVer)**  
+  - **Format:** `MAJOR.MINOR.PATCH+metadata`  
+  - **Purpose:** External-facing version for users, GitHub releases, and package managers.  
+  - **Where used:** README badges, release pages, package manifests.
+
+High-level rules:
+
+- **Externally:** When talking to users or package registries, we speak in **SemVer terms**.
+- **Internally:** When reasoning about work, Kanban coordinates, or forensic questions, we speak in **`RC.EPIC.STORY.TASK+BUILD` terms**.
+- The release version is always **derived from the internal version** via a mapping strategy defined in `versioning-policy.md`.
+
+### Mapping Modes (Conceptual)
+
+The mapping from internal version to SemVer can follow one of two conceptual modes (see policy document for full details):
+
+- **Mode A (default / registry-based):**
+  - `MAJOR = RC`
+  - `MINOR` and `PATCH` are assigned via a registry that remaps epics and stories into a monotonic SemVer space.
+  - Best suited for frameworks and larger products.
+
+- **Mode B (simple / global PATCH):**
+  - `MAJOR = RC`, `MINOR = EPIC`, `PATCH` = global build counter per RC.
+  - Very simple external story; epic/story identity recovered via internal version and/or metadata.
+
+### Optional SemVer Metadata
+
+To retain full forensic traceability at the SemVer level, this strategy defines an **optional metadata suffix**:
+
+- **Pattern:** `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`
+- **Example:** internal `0.17.2.4+3` → release `0.17.1423+rc.0.e17.s2.t4.b3`
+
+This metadata:
+
+- Is **optional** and does **not** affect SemVer precedence.
+- Allows tools (and engineers) to recover the internal Kanban coordinates directly from the release version string when present.
+
+---
+
+## Core Principle: Release Version Numbers Are Canonical
 
 ### The Fundamental Rule
 
-**Version numbers (`RC.EPIC.STORY.TASK+BUILD`) are the canonical ordering metric for all releases and changelog entries.**
+**Release version numbers (`MAJOR.MINOR.PATCH`) are the canonical ordering metric for all releases and changelog entries.**
 
 This means:
 
-- **Version ordering is independent of wall-clock time**
-  - If `0.9.21.3+2` was committed on 2025-12-01 at 15:30:00 UTC
-  - And `0.9.20.5+1` was committed on 2025-12-02 at 10:00:00 UTC
-  - The changelog still orders them as: `0.9.20.5+1` first, then `0.9.21.3+2`
-  - **The version number determines order, not the actual commit timestamp**
+This means:
+
+- **Release ordering is independent of wall-clock time**
+  - If release `0.9.32.1+98` was committed on 2025-12-01 at 15:30:00 UTC
+  - And release `0.9.31.1+5` was committed on 2025-12-02 at 10:00:00 UTC
+  - The changelog still orders them as: `0.9.31.1+5` first, then `0.9.32.1+98`
+  - **The release version number determines order, not the actual commit timestamp**
 
 - **Parallel epic development is fully supported**
-  - Epic 4 work (`0.4.x.x+x`) can be committed after Epic 9 work (`0.9.x.x+x`)
-  - Epic 9 work can be committed before Epic 4 work
-  - **The changelog orders by version number, not by Git commit time**
+  - Epic 8 work can be released after Epic 9 work (or vice versa)
+  - The changelog orders releases by **SemVer**, not by Git commit time
 
 - **This enables true parallel development**
   - Multiple epics can work simultaneously
-  - Each epic maintains its own version stream
-  - When merged, versions are ordered correctly by their semantic structure
+  - Each epic maintains its own internal version stream
+  - When merged, releases are ordered correctly by their SemVer structure
 
 ### Why This Matters
 
@@ -65,7 +114,7 @@ Without this principle, you cannot:
 - Provide reliable traceability when commits span multiple days/weeks
 - Support the `RC.EPIC.STORY.TASK+BUILD` schema effectively
 
-**The version number encodes the work hierarchy (Epic → Story → Task → Build), and that hierarchy is what matters for ordering, not when the code was actually committed.**
+**The release version number encodes the ordering of releases. The internal version continues to encode the work hierarchy (Epic → Story → Task → Build), which is used for traceability and Kanban alignment rather than external ordering.**
 
 ### Epic Renumbering Strategy
 

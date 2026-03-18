@@ -138,6 +138,20 @@ WORKFLOW_TYPES = {
             "type_check_command": "mypy"
         }
     },
+    "implementation-cycle": {
+        "description": "Systematic implementation workflow following agent-driven execution pattern (ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED)",
+        "branch_prefix": "implement/",
+        "common_steps": ["analysis", "planning", "execution", "validation", "documentation"],
+        "config": {
+            "implementation_branch_prefix": "implement/",
+            "analysis_depth": "full",
+            "planning_required": True,
+            "validation_strict": True,
+            "documentation_comprehensive": True,
+            "agent_driven": True,
+            "phases": ["specification", "test_design", "implementation_planning"]
+        }
+    },
     "custom": {
         "description": "Custom workflow following agent-driven execution pattern",
         "branch_prefix": "workflow/",
@@ -264,7 +278,7 @@ def main():
         "--type",
         required=True,
         choices=list(WORKFLOW_TYPES.keys()),
-        help="Workflow type (refactor, migration, testing, custom)"
+        help="Workflow type (refactor, migration, testing, implementation-cycle, custom)"
     )
     
     parser.add_argument(

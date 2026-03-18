@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 3, Task 1: Set Up Code Quality Metrics
+# Epic 8, Story 3, Task 1: Set up code quality metrics
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.8.3.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.3.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.3.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S3:T1`)
+**Format:** `E8:S3:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S03:T01`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up code quality metrics for the {PROJECT_NAME} project. Establish metrics tracking systems to measure and monitor code quality indicators such as complexity, test coverage, technical debt, and code maintainability.
+Set up code quality metrics for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Code quality requirements
-- Metrics tracking requirements
-- Quality measurement tools
-- Integration requirements
-- ai-dev-kit code quality metrics practices (if adopting)
+- Requirements and specifications
+- set up code quality metrics requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Code quality metrics set up
-- Metrics tracking configured
-- Quality measurement tools integrated
-- Metrics collection system established
-- Metrics configuration documentation
+- set up code quality metrics completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Code quality metrics set up and configured
-- [ ] Metrics tracking system established
-- [ ] Quality measurement tools integrated
-- [ ] Metrics collection automated
-- [ ] Metrics cover key quality indicators
-- [ ] Metrics configuration documented
-- [ ] Metrics data accessible for monitoring
-- [ ] Metrics system is maintainable
+- [ ] Set up code quality metrics completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Define code quality metrics requirements
-2. Identify quality measurement tools
-3. Set up metrics tracking system
-4. Configure quality measurement tools
-5. Integrate metrics collection
-6. Automate metrics collection (if applicable)
-7. Test metrics collection
-8. Document metrics setup and configuration
-9. Review and refine metrics setup
+1. Analyze requirements for set up code quality metrics
+2. Design approach and plan
+3. Implement set up code quality metrics
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Code quality requirements
-- Quality measurement tools
+- None
 
 **Blocks:**
-- E8:S3:T02: Create quality monitoring dashboards (dashboards use metrics)
-- E8:S3:T03: Define quality thresholds (thresholds apply to metrics)
+- E8:S3:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S3:T02: Create quality monitoring dashboards (dashboards use metrics)
-- E8:S3:T03: Define quality thresholds (thresholds apply to metrics)
-- E8:S3:T04: Document quality improvement process (process uses metrics)
+- [E08:S03:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S3: Code Quality Metrics and Monitoring (this story)
-- E8:S1: Codebase Maintenance Tasks (metrics inform maintenance priorities)
-- E8:S2: Code Review Standards and Processes (metrics support review standards)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.3.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Set up code quality metrics for the {PROJECT_NAME} project. Establish metrics tr
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

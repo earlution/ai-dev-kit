@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 12, Story 2, Task 4: Build Form Components
+# Epic 12, Story 2, Task 4: Build form components
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.12.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.12.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.12.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E12:S2:T4`)
+**Format:** `E12:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E12:S02:T04`
 
@@ -28,91 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Build form components for the {PROJECT_NAME} project. Create components that handle form inputs, validation, form submission, and form state management, including text inputs, select dropdowns, checkboxes, radio buttons, and form containers.
+Build form components for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Component architecture (from E12:S2:T01)
-- Base components (from E12:S2:T02)
-- Form requirements
-- Validation requirements
-- Design specifications
-- ai-dev-kit form component patterns (if adopting)
+- Requirements and specifications
+- build form components requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Form components built
-- Text input components
-- Select dropdown components
-- Checkbox components
-- Radio button components
-- Form container component
-- Form validation components
-- Other form components
+- build form components completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Form components built
-- [ ] Text input components implemented
-- [ ] Select dropdown components implemented
-- [ ] Checkbox components implemented
-- [ ] Radio button components implemented
-- [ ] Form container component implemented
-- [ ] Form validation components implemented
-- [ ] Form components support validation
-- [ ] Components are reusable and well-documented
+- [ ] Build form components completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review component architecture and base components
-2. Review form and validation requirements
-3. Design form component APIs and props
-4. Implement text input components
-5. Implement select dropdown components
-6. Implement checkbox and radio button components
-7. Implement form container component
-8. Implement form validation components
-9. Test form components
-10. Review and refine components
+1. Analyze requirements for build form components
+2. Design approach and plan
+3. Implement build form components
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E12:S2:T01: Design component architecture (form components implement architecture)
-- E12:S2:T02: Implement base components (form components use base components)
+- E12:S2:T03
 
 **Blocks:**
-- E12:S3: User Interface Implementation (UI implementation uses form components)
+- E12:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E12:S2:T01: Design component architecture (form components implement architecture)
-- E12:S2:T02: Implement base components (form components use base components)
+- [E12:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E12:S2: Core UI Components (this story)
-- E12:S3: User Interface Implementation (UI implementation uses form components)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.12.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -121,3 +108,27 @@ Build form components for the {PROJECT_NAME} project. Create components that han
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

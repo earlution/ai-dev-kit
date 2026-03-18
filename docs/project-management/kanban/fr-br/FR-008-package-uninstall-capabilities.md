@@ -100,6 +100,7 @@ A project wants to switch from Git submodule to npm package manager. User needs 
   - Remove package dependencies
   - Update project configuration
 
+
 - [ ] **FR-2:** Cleanup utilities remove all traces
   - Remove framework files
   - Remove configuration entries
@@ -107,11 +108,13 @@ A project wants to switch from Git submodule to npm package manager. User needs 
   - Remove package manager dependencies (if applicable)
   - Clean up backup files
 
+
 - [ ] **FR-3:** Recovery mode fixes failed installations
   - Detect failed installation state
   - Clean up partial installations
   - Restore project to working state
   - Provide recovery options
+
 
 - [ ] **FR-4:** Rollback support handles breaking changes
   - Uninstall current version
@@ -119,11 +122,13 @@ A project wants to switch from Git submodule to npm package manager. User needs 
   - Or remove package entirely
   - Preserve project work
 
+
 - [ ] **FR-5:** Backend-specific uninstall support
   - Git submodule uninstall
   - npm package uninstall
   - pip package uninstall
   - CLI tool uninstall
+
 
 ### Non-Functional Requirements
 

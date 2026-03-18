@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 3, Task 6: Create Profile Viewing/Editing UI
+# Epic 9, Story 3, Task 6: Create profile viewing/editing UI
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.9.3.6+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.3.6+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.3.6+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S3:T6`)
+**Format:** `E9:S3:T6` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S03:T06`
 
@@ -28,94 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create profile viewing/editing UI for the {PROJECT_NAME} project. Build user interfaces that enable users to view and edit their profiles, including profile information display, editing forms, profile picture management, settings management, and account management options.
+Create profile viewing/editing UI for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Profile CRUD operations (from E9:S3:T02)
-- Profile picture upload (from E9:S3:T03)
-- Profile settings (from E9:S3:T04)
-- Account deletion/deactivation (from E9:S3:T05)
-- UI/UX requirements
-- Design requirements
-- ai-dev-kit UI patterns (if adopting)
+- Requirements and specifications
+- create profile viewing/editing ui requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Profile viewing/editing UI created
-- Profile viewing interface
-- Profile editing interface
-- Profile picture upload UI
-- Profile settings UI
-- Account management UI
+- create profile viewing/editing ui completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Profile viewing/editing UI created
-- [ ] Profile viewing interface implemented
-- [ ] Profile editing interface implemented
-- [ ] Profile picture upload UI integrated
-- [ ] Profile settings UI integrated
-- [ ] Account management UI integrated
-- [ ] UI is user-friendly and accessible
-- [ ] UI integrates with profile CRUD operations
-- [ ] Profile viewing/editing UI is tested and functional
+- [ ] Create profile viewing/editing UI completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review profile CRUD operations and related features
-2. Review UI/UX requirements and design requirements
-3. Design profile viewing/editing UI
-4. Implement profile viewing interface
-5. Implement profile editing interface
-6. Integrate profile picture upload UI
-7. Integrate profile settings UI
-8. Integrate account management UI
-9. Test profile viewing/editing UI functionality
-10. Review and refine UI implementation
+1. Analyze requirements for create profile viewing/editing ui
+2. Design approach and plan
+3. Implement create profile viewing/editing ui
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S3:T02: Implement profile CRUD operations (UI uses CRUD operations)
-- E9:S3:T03: Add profile picture upload (UI integrates upload)
-- E9:S3:T04: Implement profile settings (UI integrates settings)
-- E9:S3:T05: Add account deletion/deactivation (UI integrates deletion/deactivation)
+- E9:S3:T05
 
 **Blocks:**
-- None (UI task)
+- E9:S3:T07
 
-**Parallel Development Candidacy:** Blocked (depends on T02, T03, T04, T05)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S3:T02: Implement profile CRUD operations (UI uses CRUD operations)
-- E9:S3:T03: Add profile picture upload (UI integrates upload)
-- E9:S3:T04: Implement profile settings (UI integrates settings)
-- E9:S3:T05: Add account deletion/deactivation (UI integrates deletion/deactivation)
+- [E09:S03:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S3: User Profile Management (this story)
-- E12:S3: User Interface Implementation (profile UI is part of user interface)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.6+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -124,3 +108,27 @@ Create profile viewing/editing UI for the {PROJECT_NAME} project. Build user int
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

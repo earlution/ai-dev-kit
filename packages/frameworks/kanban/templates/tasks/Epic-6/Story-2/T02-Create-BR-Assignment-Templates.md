@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 2, Task 2: Create BR Assignment Templates
+# Epic 6, Story 2, Task 2: Create BR assignment templates
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.2.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.2.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.2.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S2:T2`)
+**Format:** `E6:S2:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S02:T02`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create BR (Bug Report) assignment templates for the {PROJECT_NAME} project. Develop reusable templates that support BR assignment activities, including assignment criteria, ownership rules, and assignment workflows.
+Create BR assignment templates for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- BR prioritization framework (from E6:S2:T01)
-- Assignment requirements
-- Team structure and roles
-- ai-dev-kit BR assignment templates (if adopting)
-- Team preferences and conventions
+- Requirements and specifications
+- create br assignment templates requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- BR assignment templates created
-- Template structure defined
-- Template fields configured
-- Assignment criteria documented
-- Template documentation
-- Template examples
+- create br assignment templates completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] BR assignment templates created
-- [ ] Templates support prioritization framework
-- [ ] Template structure defined and consistent
-- [ ] Template fields configured appropriately
-- [ ] Assignment criteria documented
-- [ ] Template documentation created
-- [ ] Template examples provided
-- [ ] Templates support efficient assignment
-- [ ] Templates are reusable and maintainable
+- [ ] Create BR assignment templates completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review BR prioritization framework
-2. Identify assignment template requirements
-3. Design assignment template structure
-4. Define template fields and requirements
-5. Document assignment criteria
-6. Create assignment templates
-7. Configure template fields
-8. Write template documentation
-9. Create template examples
-10. Review and refine templates
+1. Analyze requirements for create br assignment templates
+2. Design approach and plan
+3. Implement create br assignment templates
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E6:S2:T01: Design BR prioritization framework (templates use prioritization framework)
+- E6:S2:T01
 
 **Blocks:**
-- E6:S2:T03: Integrate prioritization with Kanban board (integration may use templates)
-- E6:S2:T04: Document prioritization and assignment process (documentation covers templates)
+- E6:S2:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S2:T01: Design BR prioritization framework (templates use prioritization framework)
-- E6:S2:T03: Integrate prioritization with Kanban board (integration may use templates)
-- E6:S2:T04: Document prioritization and assignment process (documentation covers templates)
+- [E06:S02:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S2: BR Prioritization and Assignment (this story)
-- E6:S1: BR Intake and Triage Workflow (assignment follows triage)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.2.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Create BR (Bug Report) assignment templates for the {PROJECT_NAME} project. Deve
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

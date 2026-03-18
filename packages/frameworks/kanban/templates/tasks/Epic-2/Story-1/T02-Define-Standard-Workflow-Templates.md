@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 1, Task 2: Define Standard Workflow Templates
+# Epic 2, Story 1, Task 2: Define standard workflow templates
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.2.1.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.2.1.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.2.1.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E2:S1:T2`)
+**Format:** `E2:S1:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E02:S01:T02`
 
@@ -28,85 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Define standard workflow templates for the {PROJECT_NAME} project. Create reusable workflow templates that standardize common processes and enable consistent workflow execution across the project.
+Define standard workflow templates for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Documented existing workflow patterns (from E2:S1:T01)
-- Workflow requirements and use cases
-- Standard workflow patterns and best practices
-- ai-dev-kit workflow templates (if adopting)
-- Team preferences and conventions (if applicable)
+- Requirements and specifications
+- define standard workflow templates requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Standard workflow templates defined
-- Workflow template documentation
-- Workflow template examples
-- Workflow template structure
-- Workflow template usage guidelines
+- define standard workflow templates completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Standard workflow templates defined for common workflows
-- [ ] Workflow templates follow consistent structure
-- [ ] Workflow templates are reusable and adaptable
-- [ ] Workflow template documentation created
-- [ ] Workflow template examples provided
-- [ ] Workflow template usage guidelines created
-- [ ] Workflow templates support project needs
-- [ ] Workflow templates enable standardization
+- [ ] Define standard workflow templates completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Analyze documented workflow patterns
-2. Identify common workflow patterns suitable for templating
-3. Design workflow template structure
-4. Define standard workflow templates
-5. Create workflow template documentation
-6. Provide workflow template examples
-7. Create workflow template usage guidelines
-8. Review and refine workflow templates
+1. Analyze requirements for define standard workflow templates
+2. Design approach and plan
+3. Implement define standard workflow templates
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E2:S1:T01: Document existing workflow patterns (templates use documented patterns)
+- E2:S1:T01
 
 **Blocks:**
-- E2:S1:T03: Create workflow execution guidelines (guidelines use templates)
-- E2:S2: Workflow Automation (automation may use templates)
+- E2:S1:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E2:S1:T01: Document existing workflow patterns (templates use documented patterns)
-- E2:S1:T03: Create workflow execution guidelines (guidelines use templates)
-- E2:S1:T04: Document workflow integration points (integration may use templates)
+- [E02:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E2:S1: Workflow Definitions and Patterns (this story)
-- E2:S2: Workflow Automation (automation may use templates)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.1.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -115,3 +108,27 @@ Define standard workflow templates for the {PROJECT_NAME} project. Create reusab
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

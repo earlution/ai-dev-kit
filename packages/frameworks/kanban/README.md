@@ -22,6 +22,8 @@ package:
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 
+**Consumer vs framework Kanban trees:** In a **consumer project**, your working Kanban lives at **`docs/project-management/kanban/`** at the repo root (epics, stories, board files). The framework’s own files (e.g. under `.ai-dev-kit/packages/frameworks/kanban/` or wherever the framework is installed) are the **framework’s internal** board and templates—**do not edit or use them as your project’s Kanban**. Always run the installer from your project root so that it creates/updates `docs/project-management/kanban/` in your repo.
+
 > **Note:** All references to specific projects (for example, *Confidentia*, *Epic 4*, or concrete paths like `docs/project-management/epics/overview/Epic 4/Epic-4.md`) are **examples only**.  
 > When you install this package, you should:
 > - Replace project names with your own.
@@ -164,6 +166,7 @@ structure:
     - analyze_structure.py                    # Analysis utility for migration planning
     - migrate_structure.py                    # Migration utility for canonical format conversion
     - install_kanban_framework.py             # Integrated installation script with mode selection
+    - generate_task_templates.py              # Procedural task template generator (hybrid system)
     - README.md                               # Scripts documentation and usage guide
 
   README.md                              # This file
@@ -263,13 +266,119 @@ cp -r packages/frameworks/ai-dev-kit/docs/project-management/kanban/epics/* docs
 - You'll get ai-dev-kit's project-specific epics (Epic 1: "AI Dev Kit Core", etc.)
 - You'll get ai-dev-kit's actual stories and tasks with their specific content
 - Epic 1 won't be contextualized with your project name
-- You'll receive project-specific epics (5-9) that are specific to ai-dev-kit
+- You'll receive project-specific epics (like Epic 24 "Book Related Work") that are specific to ai-dev-kit
+- **CRITICAL: Epic Mashup Risk** - You may get Epic 9 "Book Related Work" instead of canonical Epic 9 "User Management and Authentication"
 
 **✅ CORRECT - Use the installer:**
 ```bash
 # ✅ CORRECT - Use the interactive installer
 python3 scripts/install_kanban_framework.py
 ```
+
+The installer will:
+- ✅ Install from canonical templates (`templates/epics/`)
+- ✅ Validate Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific)
+- ✅ Prevent Epic mashup by detecting conflicts
+- ✅ Warn if it detects copying of ai-dev-kit's actual Kanban
+- ✅ Provide clear error messages if issues are detected
+
+## 🔄 Hybrid Task Template System
+
+The Kanban framework uses a **hybrid task template system** that combines high-quality concrete templates with procedural generation capabilities.
+
+### What is the Hybrid System?
+
+The hybrid system provides:
+- **Concrete Templates:** Pre-generated, high-quality task templates for all canonical tasks
+- **Procedural Generator:** Script that can regenerate templates from the canonical structure document
+- **Best of Both Worlds:** Immediate availability of complete templates + easy maintenance
+
+### Why Hybrid?
+
+**Benefits:**
+- **Storage Efficiency:** Generator reduces storage from ~1.6MB to ~60KB (source + generator)
+- **Maintenance Efficiency:** Structural changes can be propagated in minutes instead of hours
+- **Quality:** Concrete templates provide high-quality, contextual content
+- **Flexibility:** Generator enables on-demand template generation for new tasks
+
+**Trade-offs:**
+- Initial investment in creating concrete templates
+- Generator may produce more generic content than hand-crafted templates
+- Requires validation to ensure generator output matches concrete templates
+
+### Using the Generator
+
+**For Framework Maintainers:**
+
+```bash
+# Generate all missing task templates (procedural)
+python3 scripts/generate_task_templates.py
+
+# Generate with agentic intelligence (richer content)
+python3 scripts/generate_task_templates.py --agentic --agentic-provider openai
+
+# Regenerate templates after structure changes (with overwrite)
+python3 scripts/generate_task_templates.py --overwrite
+
+# Dry run to preview changes
+python3 scripts/generate_task_templates.py --dry-run
+
+# Validate generated templates
+python3 scripts/generate_task_templates.py --validate
+```
+
+**Agentic Generation (Optional):**
+
+The generator can optionally use AI/LLM to generate richer, more contextual templates:
+
+```bash
+# Generate with OpenAI
+python3 scripts/generate_task_templates.py --agentic --agentic-provider openai --agentic-model gpt-4
+
+# Generate with Anthropic
+python3 scripts/generate_task_templates.py --agentic --agentic-provider anthropic --agentic-model claude-3-opus
+
+# Generate Epic/Story/Task templates with agentic intelligence
+python3 scripts/agentic_template_generator.py --type all --provider openai
+```
+
+**Benefits of Agentic Generation:**
+- **Richer Content:** AI generates contextual, detailed content
+- **Better Quality:** More nuanced and specific than procedural generation
+- **Context-Aware:** Uses Epic/Story/Task hierarchy for better understanding
+- **Fallback:** Automatically falls back to procedural if LLM unavailable
+
+**For Adopting Projects:**
+
+You have two options:
+
+1. **Use Pre-Generated Templates (Recommended):**
+   - Templates are included in the framework package
+   - Ready to use immediately
+   - No generation required
+
+2. **Generate Templates Locally:**
+   ```bash
+   # Generate templates from canonical structure
+   python3 scripts/generate_task_templates.py \
+     --structure-file templates/COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md \
+     --output-dir templates/tasks/
+   ```
+
+**When to Regenerate:**
+- After updating `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
+- When adding new canonical tasks
+- After structural changes to `TASK_TEMPLATE.md`
+- To validate template consistency
+
+**Related Documentation:**
+- ADR: `docs/architecture/standards-and-adrs/task-template-system-hybrid-adr.md`
+- Design: `docs/architecture/standards-and-adrs/task-template-generator-design.md`
+- Agentic Design: `docs/architecture/standards-and-adrs/agentic-template-generator-design.md`
+- FR-029: Procedural Task Template Generation (Hybrid Strategy)
+- Script Documentation: `scripts/README.md` (see `generate_task_templates.py` and `agentic_template_generator.py`)
+
+---
 
 ### Understanding Canonical Templates vs. ai-dev-kit's Actual Kanban
 
@@ -278,17 +387,86 @@ python3 scripts/install_kanban_framework.py
 - ✅ Designed to be contextualized for your project
 - ✅ These are what the installer uses
 - ✅ Located in: `packages/frameworks/kanban/templates/epics/Epic-{N}-*.md`
+- ✅ Epic 1-23 are canonical (standard framework epics)
+- ✅ Epic 9 is "User Management and Authentication" (canonical)
 
 **ai-dev-kit's Actual Kanban** (`docs/project-management/kanban/epics/`):
 - ❌ ai-dev-kit's project-specific epics (e.g., "AI Dev Kit Core")
 - ❌ ai-dev-kit's actual stories and tasks
+- ❌ Contains Epic 24 "Book Related Work" (project-specific, not canonical)
 - ❌ Example/reference only - **DO NOT COPY**
 - ❌ Located in: `docs/project-management/kanban/epics/Epic-{N}/`
+- ⚠️ **Epic Mashup Risk**: Contains project-specific content in Epic 24+ range
 
 **The installer automatically:**
 - Copies from `templates/epics/` (canonical templates)
 - Contextualizes placeholders with your project name
 - Does NOT copy from `docs/project-management/kanban/epics/` (ai-dev-kit's actual Kanban)
+- Validates Epic numbering to prevent Epic mashup
+- Detects and warns about copying ai-dev-kit's actual Kanban
+
+### 🚨 Epic Mashup Prevention
+
+**What is Epic Mashup?**
+
+Epic mashup occurs when a project incorrectly gets canonical Epic content mixed with project-specific content, causing confusion about which epics are canonical vs project-specific.
+
+**Common Epic Mashup Scenarios:**
+
+1. **Epic 9 Mismatch (CRITICAL):**
+   - ❌ **WRONG**: Epic 9 contains "Book Related Work" (project-specific content from ai-dev-kit)
+   - ✅ **CORRECT**: Epic 9 is "User Management and Authentication" (canonical)
+   - **Root Cause**: Copying ai-dev-kit's actual Kanban instead of using templates
+   - **Impact**: Affects 30% of client projects - causes confusion and incorrect epic structure
+
+2. **Project-Specific Epics in Canonical Range:**
+   - ❌ **WRONG**: Epic 9-23 contain project-specific content
+   - ✅ **CORRECT**: Epic 1-23 are canonical, Epic 24+ are project-specific
+
+**How the Installer Prevents Epic Mashup:**
+
+The installer includes validation that:
+- ✅ Validates Epic numbering (Epic 1-23 canonical, Epic 24+ project-specific)
+- ✅ Detects Epic 9 "Book Related Work" in canonical range → ERROR
+- ✅ Warns if Epic 24 "Book Related Work" detected (suggests copying ai-dev-kit's Kanban)
+- ✅ Blocks installation if Epic conflicts detected (unless `--force` used)
+- ✅ Provides clear error messages explaining the issue and how to fix it
+
+**Installation Validation:**
+
+The installer runs validation automatically:
+- **Pre-installation validation** (Step 3.5) - Before migration to catch issues early
+- **Post-installation validation** (Step 5) - After migration to confirm success
+
+To run validation manually:
+```bash
+python3 scripts/validate_installation.py --kanban-path docs/project-management/kanban
+```
+
+**What Happens if Epic Mashup is Detected:**
+
+The installer will:
+1. Report errors with clear explanations
+2. Block installation (unless `--force` used)
+3. Provide guidance on how to fix the issue
+4. Show which epics are causing conflicts
+
+Example error output:
+```
+❌ ERRORS (must be fixed before installation):
+  ❌ CRITICAL: Epic 9 contains 'Book Related Work' but canonical Epic 9 is 
+    'User Management and Authentication'. This is the root cause of Epic mashup. 
+    Rename Epic 9 to Epic 24+ (project-specific range).
+```
+
+**Best Practices to Avoid Epic Mashup:**
+
+1. ✅ **Always use the installer** - Don't manually copy epics
+2. ✅ **Use canonical templates** - Installer uses `templates/epics/`, not `docs/.../epics/`
+3. ✅ **Follow Epic numbering** - Epic 1-23 canonical, Epic 24+ project-specific
+4. ✅ **Run validation** - Use `validate_installation.py` to check your structure
+5. ✅ **Review Epic content** - Ensure Epic 1-23 match canonical templates
+6. ❌ **Never copy ai-dev-kit's actual Kanban** - Use templates instead
 
 ### Alternative: Manual Installation (Advanced - Not Recommended)
 
@@ -415,6 +593,28 @@ hierarchy:
 - **Delimited Section (Alternative):** Section within Story file using Task ID header (`### E{epic}:S{story}:T{task} –`)
 
 **See:** `policies/kanban-governance-policy.md` - Section 3.3: Tasks for complete requirements.
+
+### Board Structure (Info-Only Split)
+
+The Kanban board uses a **split pattern** to optimize for quick scanning:
+
+**Two Documents:**
+- **`kanban-board.md`** - Structured information only (tasks, epics, status, links)
+- **`kanban-board-guide.md`** - Rules, explanations, and how-to content
+
+**Benefits:**
+- Reduced cognitive load when skimming the board
+- Faster information retrieval (no explanatory text to filter)
+- Rules/explanations remain accessible when needed
+
+**Templates:**
+- `templates/KANBAN_BOARD_TEMPLATE.md` - Board template (structured info only)
+- `templates/KANBAN_BOARD_GUIDE_TEMPLATE.md` - Guide template (rules/explanations)
+
+**Usage:**
+- Use `kanban-board.md` for quick scanning of active tasks and epic status
+- Reference `kanban-board-guide.md` when you need rules, explanations, or how-to content
+- Both documents cross-reference each other
 
 ### Forensic Traceability
 
@@ -1366,6 +1566,8 @@ policies/kanban-governance-policy.md
 # Templates (MUST copy)
 templates/EPIC_TEMPLATE.md
 templates/STORY_TEMPLATE.md
+templates/KANBAN_BOARD_TEMPLATE.md
+templates/KANBAN_BOARD_GUIDE_TEMPLATE.md
 
 # Integration guides (RECOMMENDED)
 integration/numbering-versioning-integration.md
@@ -1608,6 +1810,11 @@ included_docs:
 
   - file: "templates/STORY_TEMPLATE.md"
     purpose: "Story document template"
+
+  - file: "templates/KANBAN_BOARD_TEMPLATE.md"
+    purpose: "Kanban board template (structured information only)"
+  - file: "templates/KANBAN_BOARD_GUIDE_TEMPLATE.md"
+    purpose: "Kanban board guide template (rules, explanations, and how-to content)"
 
   - file: "templates/CANONICAL_STORIES.md"
     purpose: "Reusable canonical story patterns (Bug Reports, Feature Requests)"

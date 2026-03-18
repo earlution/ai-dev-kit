@@ -27,6 +27,25 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
 
 ---
 
+## Mental Model: Internal vs Release Versions
+
+This policy assumes a **dual-version model**:
+
+- **Internal version (`RC.EPIC.STORY.TASK+BUILD`)**
+  - Primary role: **forensic coordinate and Kanban anchor**.
+  - Encodes the work hierarchy (Epic → Story → Task → Build).
+  - Used by engineers, workflows, and Kanban governance.
+
+- **Release version (SemVer `MAJOR.MINOR.PATCH+BUILD`)**
+  - Primary role: **external-facing version** for users, package managers, and GitHub releases.
+  - Provides a simple, monotonic version line suitable for SemVer-aware tooling.
+  - Always derived from the internal version using a mapping strategy.
+
+In practice:
+
+- **Storytelling to external consumers** (README badges, GitHub releases, package registries) is done in **SemVer terms**.
+- **Traceability and internal reasoning** (Kanban docs, detailed changelogs, validators) are done in **`RC.EPIC.STORY.TASK+BUILD` terms**.
+
 ## Schema
 
 **Format:** `RC.EPIC.STORY.TASK+BUILD`
@@ -43,6 +62,138 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
 - `0.9.21.3+2` - Development, Epic 9, Story 21, Task 3, Build 2
 - `0.9.21.4+1` - Development, Epic 9, Story 21, Task 4, Build 1
 - `1.9.21.3+1` - Release Candidate 1, Epic 9, Story 21, Task 3, Build 1
+
+---
+
+## SemVer Mapping for External Releases
+
+**Status:** Implemented (v0.3.2.11+1)  
+**Purpose:** Generate external-facing SemVer tags (`MAJOR.MINOR.PATCH+BUILD`) alongside internal Kanban-based version tags for GitHub releases and package managers.
+
+### Problem Statement
+
+Internal versioning (`RC.EPIC.STORY.TASK+BUILD`) is semantically meaningful internally but can appear to regress when switching between epics/stories (e.g., `0.6.7.12+3` → `0.4.6.9+1`), which is problematic for GitHub releases, package managers, and user perception.
+
+**Solution:** Registry-based SemVer mapping using Hybrid Approach that converts internal versions to monotonic SemVer while preserving semantic meaning.
+
+### Hybrid Approach Algorithm
+
+**Mapping Formula:**
+- **MAJOR** = RC (direct mapping: 0 → 0, 1 → 1, etc.)
+- **MINOR** = First-seen Epic number (sequential based on first appearance, per RC)
+- **PATCH** = First-seen Story number (sequential based on first appearance, per RC)
+- **BUILD** = Preserved from internal version
+
+**Example Conversions:**
+- Internal: `0.6.7.101+24` → SemVer: `0.3.19+24` (Epic 6 first seen → MINOR=3, Story 7 in Epic 6 → PATCH=19)
+- Internal: `0.4.14.2+1` → SemVer: `0.4.34+1` (Epic 4 first seen → MINOR=4, Story 14 in Epic 4 → PATCH=34)
+- Internal: `0.9.1.8+10` → SemVer: `0.9.60+10` (Epic 9 first seen → MINOR=9, Story 1 in Epic 9 → PATCH=60)
+
+### Registry Structure
+
+SemVer mappings are stored in `semver-registry.yaml` (project root):
+
+```yaml
+rc_0:
+  epic_to_minor:
+    3: 1    # Epic 3 → MINOR 1 (first appearance)
+    6: 2    # Epic 6 → MINOR 2 (second appearance)
+  story_to_patch:
+    (3, 2): 1    # Epic 3, Story 2 → PATCH 1
+    (6, 7): 19   # Epic 6, Story 7 → PATCH 19
+```
+
+### Dual Tagging in Release Workflow
+
+**RW Step 11** creates dual tags:
+- **Internal Tag:** `v0.6.7.101+24` (for internal tracking)
+- **SemVer Tag:** `v0.3.19+24` (for GitHub releases)
+
+Both tags reference the same commit. Internal tag maintains backward compatibility, SemVer tag provides monotonic versioning for external consumers.
+
+### README Version Display
+
+**Outward-Facing SemVer:** The project README displays the **SemVer version** (not the internal version) as it is the outward-facing version for external consumers.
+
+**RW Step 5** automatically:
+- Generates SemVer from internal version using `semver_converter.py`
+- Updates README with SemVer (e.g., `**Version:** v0.3.19+2`)
+- Internal version remains in version file for internal tracking
+
+**Rationale:** External users and package managers expect monotonically increasing SemVer versions. The internal `RC.EPIC.STORY.TASK+BUILD` format is for internal development traceability only.
+
+### Implementation
+
+- **Converter Script:** `packages/frameworks/workflow mgt/scripts/version/semver_converter.py`
+- **Migration Script:** `packages/frameworks/workflow mgt/scripts/version/build_semver_registry.py`
+- **Validation Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_semver_monotonic.py`
+- **Registry File:** `semver-registry.yaml` (project root)
+
+**Related Documentation:**
+- **Proposal:** `docs/architecture/standards-and-adrs/semver-mapping-proposal.md`
+- **Implementation Impact:** `docs/architecture/standards-and-adrs/semver-mapping-implementation-impact.md`
+- **Dual Versioning Guide:** `docs/architecture/standards-and-adrs/dual-versioning-package-managers.md`
+
+---
+
+## SemVer Mapping Modes
+
+This package supports **two conceptual mapping modes** from internal versions to SemVer. Implementations can choose which mode to adopt on a per-project basis.
+
+### Mode A (Default): Registry-Based Epic/Story Mapping
+
+This is the **default / recommended mode** for framework adopters (and the one used by the AI Dev Kit itself):
+
+- **MAJOR** = RC
+- **MINOR** = First-seen Epic number (per RC), via `epic_to_minor` registry.
+- **PATCH** = First-seen Story number (per RC), via `story_to_patch` registry.
+- **BUILD** = Preserved from internal version.
+
+Characteristics:
+
+- Keeps **SemVer monotonic**.
+- Preserves a **stable logical mapping** from epics/stories to MINOR/PATCH slots.
+- Best suited for **frameworks and long-lived products** with many parallel epics.
+
+### Mode B (Simple): Global PATCH Counter
+
+This optional mode mirrors the simpler Starborn Legacy behaviour for teams that want a very lightweight mental model:
+
+- **MAJOR** = RC
+- **MINOR** = EPIC
+- **PATCH** = **global build counter**, monotonic across all releases for a given RC.
+
+Characteristics:
+
+- PATCH encodes **global release sequence**, not story identity.
+- External consumers can read versions as “higher PATCH = strictly newer”, independent of epic/story.
+- Epic/story identity is still available via:
+  - The **internal version** (`RC.EPIC.STORY.TASK+BUILD`), and/or
+  - Optional SemVer build metadata (see below).
+
+Trade-offs:
+
+- **Pros:** Very simple external story; ideal for **small projects** or teams running a single epic/story at a time.
+- **Cons:** You **lose direct epic/story semantics** from the SemVer core; you must read metadata or internal tags to recover them.
+
+> Implementations SHOULD expose a configuration flag (for example, in `rw-config.yaml`) to select `semver_mode` (e.g. `registry_epic_story` vs `global_patch`). See the workflow management documentation for details.
+
+### Optional SemVer Metadata Pattern
+
+For projects that want **machine-parseable traceability** directly from SemVer tags, this policy defines a **standard optional metadata suffix**:
+
+- **Pattern:** `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`
+- **Example:**  
+  - Internal: `0.6.7.101+24`  
+  - SemVer (Mode A, registry mapping): `0.3.19+24+rc.0.e6.s7.t101.b24`
+
+Key points:
+
+- The metadata is **optional** and does **not** affect SemVer precedence.
+- It is primarily for:
+  - Automated tools that parse Git tags.
+  - Engineers inspecting tags directly in Git.
+- End-user documentation (README, release notes) SHOULD normally present a **clean SemVer string** (`MAJOR.MINOR.PATCH+BUILD`) and leave metadata to tooling.
 
 ---
 
@@ -248,6 +399,43 @@ Defines semantic versioning schema using the `RC.EPIC.STORY.TASK+BUILD` format f
 - **Kanban Governance Policy:** Abstract Spaces for Forensic Traceability (complementary section)
 - **FR-017:** Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T (implementation)
 - **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs (this feature)
+
+#### S00 Abstract Space for Repository Stories
+
+**Format:** `0.{EPIC}.0.0+0` (repository story abstract space)
+
+**Examples:**
+- `0.5.0.0+0` = Epic 5, Story 0 (FR Repo) abstract space
+- `0.6.0.0+0` = Epic 6, Story 0 (BR Repo) abstract space
+- `0.7.0.0+0` = Epic 7, Story 0 (UXR Repo) abstract space
+
+**Purpose:**
+- Establishes forensic traceability anchor for repository stories (S00)
+- Repository stories are PERPETUAL (never complete)
+- S00 serves as canonical home for FRs/BRs/UXRs
+- Perfect 1:1 traceability: FR-001 = E5:S00:T01, BR-001 = E6:S00:T01, UXR-001 = E7:S00:T01
+
+**Repository Task Versioning:**
+- Repository story: `0.5.0.0+0` (abstract space)
+- First FR: `0.5.0.1+0` (E5:S00:T01 - abstract space for repository task)
+- Second FR: `0.5.0.2+0` (E5:S00:T02 - abstract space for repository task)
+- Third FR: `0.5.0.3+0` (E5:S00:T03 - abstract space for repository task)
+
+**Pattern:**
+- FR-001 = E5:S00:T01 = v0.5.0.1+0 (abstract space)
+- BR-001 = E6:S00:T01 = v0.6.0.1+0 (abstract space)
+- UXR-001 = E7:S00:T01 = v0.7.0.1+0 (abstract space)
+
+**Usage:**
+- Repository story creation → Commit with `0.{EPIC}.0.0+0`
+- Repository task creation → Commit with `0.{EPIC}.0.{TASK}+0` (abstract space)
+- Repository tasks use `+0` build (abstract space) as they are documentation anchors
+- Implementation tasks use `+1` and beyond (functional work)
+
+**Related:**
+- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern) - Feature request
+- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs - Abstract space concept
+- **E4:S12:** FR/BR/UXR Repository Stories (S00 Pattern) - Implementation story
 
 ---
 

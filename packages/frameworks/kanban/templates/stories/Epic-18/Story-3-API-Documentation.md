@@ -6,29 +6,29 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 18, Story 3: API Documentation
+# Epic 9, Story 3: API Documentation
 
 **Status:** TODO  
 **Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.18.3.0+0 – Template created)  
+**Last updated:** [YYYY-MM-DD] (v0.9.3.0+0 – Template created)  
 **Estimated Effort:** [TBD]  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
-**Version:** v0.18.3.0+0  
-**Code:** E18S03
+**Version:** v0.9.3.0+0  
+**Code:** E09S03
 
 ---
 
 ## Task Checklist
 
-- [ ] **E18:S03:T01 – Generate API documentation (OpenAPI/Swagger)** - TODO
-- [ ] **E18:S03:T02 – Document API endpoints** - TODO
-- [ ] **E18:S03:T03 – Add API usage examples** - TODO
-- [ ] **E18:S03:T04 – Create API integration guides** - TODO
-- [ ] **E18:S03:T05 – Document API versioning** - TODO
+- [ ] **E09:S03:T01 – Generate API documentation (OpenAPI/Swagger)** - TODO
+- [ ] **E09:S03:T02 – Document API endpoints** - TODO
+- [ ] **E09:S03:T03 – Add API usage examples** - TODO
+- [ ] **E09:S03:T04 – Create API integration guides** - TODO
+- [ ] **E09:S03:T05 – Document API versioning** - TODO
 
-> **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E18:S03:T01`)  
-> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.18.3.3+1)`)
+> **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E09:S03:T01`)  
+> **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.3+1)`)
 
 ---
 
@@ -52,11 +52,11 @@ Create comprehensive API documentation for the {PROJECT_NAME} project.
 
 ### Task Summaries
 
-- **E18:S03:T01** – Generate API documentation (OpenAPI/Swagger) for {PROJECT_NAME}
-- **E18:S03:T02** – Document API endpoints
-- **E18:S03:T03** – Add API usage examples
-- **E18:S03:T04** – Create API integration guides
-- **E18:S03:T05** – Document API versioning
+- **E09:S03:T01** – Generate API documentation (OpenAPI/Swagger) for {PROJECT_NAME}
+- **E09:S03:T02** – Document API endpoints
+- **E09:S03:T03** – Add API usage examples
+- **E09:S03:T04** – Create API integration guides
+- **E09:S03:T05** – Document API versioning
 
 ---
 

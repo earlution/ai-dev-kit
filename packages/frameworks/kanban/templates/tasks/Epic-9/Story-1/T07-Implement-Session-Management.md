@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 1, Task 7: Implement Session Management
+# Epic 9, Story 1, Task 7: Implement session management
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.1.7+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.1.7+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.1.7+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S1:T7`)
+**Format:** `E9:S1:T7` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S01:T07`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement session management for the {PROJECT_NAME} project. Build the session management system that handles user sessions, session tokens, session expiration, and secure session storage.
+Implement session management for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Authentication architecture (from E9:S1:T01)
-- Login/logout implementation (from E9:S1:T03)
-- Session management requirements
-- Security requirements
-- Session storage requirements
-- ai-dev-kit session management patterns (if adopting)
+- Requirements and specifications
+- implement session management requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Session management implemented
-- Session token generation
-- Session storage system
-- Session expiration handling
-- Session refresh mechanism
-- Session management API
+- implement session management completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Session management implemented
-- [ ] Session token generation implemented
-- [ ] Session storage system implemented
-- [ ] Session expiration handling implemented
-- [ ] Session refresh mechanism implemented
-- [ ] Session management integrates with login/logout
-- [ ] Session management is secure
-- [ ] Session management is tested and functional
+- [ ] Implement session management completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review authentication architecture
-2. Review session management requirements
-3. Design session management system
-4. Implement session token generation
-5. Implement session storage system
-6. Implement session expiration handling
-7. Implement session refresh mechanism
-8. Integrate with login/logout
-9. Test session management functionality
-10. Review and refine implementation
+1. Analyze requirements for implement session management
+2. Design approach and plan
+3. Implement implement session management
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S1:T01: Design authentication architecture (session management uses architecture)
-- E9:S1:T03: Implement login/logout (session management supports login/logout)
+- E9:S1:T06
 
 **Blocks:**
-- None (session management supports other authentication features)
+- E9:S1:T08
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S1:T01: Design authentication architecture (session management uses architecture)
-- E9:S1:T03: Implement login/logout (session management supports login/logout)
-- E9:S1:T08: Add authentication security measures (security measures protect sessions)
+- [E09:S01:T07: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S1: User Authentication System (this story)
-- E9:S2: User Authorization and Permissions (authorization uses session information)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.7+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Implement session management for the {PROJECT_NAME} project. Build the session m
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

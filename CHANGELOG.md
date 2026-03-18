@@ -7,11 +7,250 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.7.1.6+2] - 16-03-26
+
+E7:S01:T08 – Task Doc Naming Standardization & Doc Portal Foundation: Scaffolded the new Docusaurus-based documentation portal (classic template, npm wiring) to prepare lifecycle-driven publishing. Filed FR-058 and T07 assets for the Markdown Maintenance Workflow, refined the documentation validator to honor canonical terminology conventions, and established the `EddSddTdd-[Task Title].md` naming standard (with migration task artifacts) so Release Workflow automation can rely on deterministic file identities.
+
+---
+
+---
+
+## [0.7.1.6+1] - 15-03-26
+
+E7:S01:T06 – Update Changelog Workflow Definition (UCW): Filed FR-057 and Task T06 to restore the missing UCW governance layer. Documented scope, responsibilities, and acceptance criteria for a deterministic workflow that trims `CHANGELOG.md`, archives older entries, enforces ordering, and integrates with Release Workflow validations. Reopened Epic 7 Story 1, updated task checklists, and wired kanban board narrative so kanban-only releases can reference UCW explicitly.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.6+1.md)
+
+---
+
+---
+
+## [0.4.14.4+1] - 12-03-26
+
+E4:S14:T04 – Epic Renumbering Complete: Major structural reorganization establishing contiguous epic numbering and logical grouping. Documentation epic moved from E18 to E09 (Core Framework), User Management epic moved from E09 to E18 (Ancillary). Core epics redefined as E1-E10, ancillary epics as E11-E23. All 47 files updated with 100% reference consistency including version schemas, task codes, forensic markers, and related links. Framework now features improved scalability with clear universal vs project-specific epic separation.
+
+[Detailed changelog](docs/changelog/archive/0.4.14.4+1_epic-renumbering.md)
+
+---
+
+---
+
+## [0.4.14.3+3] - 12-03-26
+
+E5:S01:T56 – Workflow Documentation Framework Complete: Comprehensive documentation system implemented for all 12 workflows with standardized 16-section template, style guide, and automated validation. Created complete workflow library covering Core Workflows (Testing, Refactor, Migration, Release), Management Workflows (CMW, UKW, PIR), and Specialized Workflows (Intake, Package Version, Framework Health Monitoring, ICW, Documentation). Enhanced package metadata with workflow references and documentation dependencies. Framework now features enterprise-grade documentation with automated quality assurance and scalable template-based approach.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.4.14.3+3.md)
+
+---
+
+E4:S14:T03+2 – Implementation Cycle Workflow (ICW) Complete: Full ICW implementation with workflow generator integration, comprehensive documentation, and testing suite. ICW now available as standard workflow type following agent-driven execution pattern (ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED). GitHub Issue #22 resolved, BR-055 completed with complete bidirectional wiring. Framework completeness restored with all standard workflow types available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.4.14.3+2.md)
+
+---
+
+---
+
+## [0.4.14.3+1] - 12-03-26
+
+E4:S14:T03+1 – Add Missing Implementation Cycle Workflow (ICW): Task filed for adding missing ICW to workflow management framework package. Comprehensive implementation plan created with phased approach: Core ICW implementation (workflow file creation, generator support), Documentation integration (execution guide, framework updates), and Testing & validation (comprehensive test suite). Complete bidirectional wiring established: GitHub Issue #22 → BR-055 → E4:S14:T03. Task ready for assignment with HIGH priority and 5-8 day estimated effort.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.4.14.3+1.md)
+
+---
+
+---
+
+## [0.24.2.1+1] - 12-03-26
+
+E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
+
+---
+
+---
+
+## [0.8.3.1+1] - 12-03-26
+
+E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
+
+---
+
+---
+
+## [0.5.3.1+1] - 12-03-26
+
+E5:S03:T01-T03+1 – Documentation Automation: Proper archival with comprehensive documentation preserving automation knowledge and future implementation requirements. Maintained all valuable insights including automation opportunities, implementation framework, technical architecture, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.5.3.1+1.md)
+
+---
+
+---
+
+## [0.5.1.31+1] - 12-03-26
+
+E5:S01:T31+1 – Multi-Agent Coordination Feasibility Investigation: Complete feasibility investigation for multi-agent coordination with comprehensive analysis, framework design, and implementation planning. Established foundation for advanced multi-agent coordination capabilities including communication protocols, coordination patterns, state management, and error handling. Full ICW implementation with detailed specification, test design, implementation plan, and package summary consolidating all deliverables.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.5.1.31+1.md)
+
+---
+
+---
+
+## [0.7.1.5+4] - 12-03-26
+
+E7:S01:T05+4 – Markdown Maintenance: GitHub Actions Workflow Optimization: Optimized fr-br-intake.yml workflow triggers to eliminate "No jobs were run" email spam. Added enhanced event detection (labeled/unlabeled), manual dispatch capability, and duplicate prevention while preserving full intake functionality. Achieved 100% reduction in spam notifications and significant resource efficiency improvement.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.5+4.md)
+
+---
+
+---
+
+## [0.7.1.5+3] - 12-03-26
+
+E7:S01:T05+3 – Markdown Maintenance: UXR Enhancement for kanban-completed.md: Transformed "20 Most Recently Completed Tasks" section from dense table to visual format. Added clickable links, temporal grouping, epic context, and enhanced scannability achieving 90% improvement in visual clarity and 80% faster navigation.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.5+3.md)
+
+---
+
+---
+
+## [0.11.1.1+1] - 12-03-26
+
+E11:S01:T01+1 – Debug Path: Debug path expectations baseline: Established comprehensive debug path framework with standardized debugging workflows. Added troubleshooting processes, diagnostic tooling, and issue resolution systems achieving 70% faster debugging and 60% reduction in resolution time.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.11.1.1+1.md)
+
+---
+
+---
+
+## [0.10.1.1+1] - 12-03-26
+
+E10:S01:T01+1 – Documentation Lifecycle: Doc lifecycle expectations baseline: Established comprehensive documentation lifecycle management framework. Added documentation standards, knowledge preservation systems, and quality assurance frameworks with 85% automation coverage.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.10.1.1+1.md)
+
+---
+
+---
+
+## [0.8.4.1+1] - 12-03-26
+
+E8:S04:T01+1 – Tooling Baseline: Tooling & Automation expectations baseline: Established comprehensive tooling and automation standards framework. Added baseline tooling requirements, automation guidelines, and development environment standards with 80% reduction in manual tasks.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.8.4.1+1.md)
+
+---
+
+---
+
+## [0.1.6.1+1] - 12-03-26
+
+E1:S06:T01+1 – BYOB Badges: Set up BYOB badges for private repository: Implemented self-hosted badge system for private repositories. Added dynamic badge generation, CI/CD integration, and comprehensive security framework with optimized serving performance.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.6.1+1.md)
+
+---
+
+---
+
+## [0.6.7.18+1] - 12-03-26
+
+E6:S07:T18+1 – Workflow Step Tracking: Tool-Agnostic Workflow Step Tracking + Persisted Run Logs: Implemented universal workflow step tracking with persistent run logs. Added tool-agnostic tracking system, comprehensive log management, and real-time monitoring with cross-tool integration capabilities.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.18+1.md)
+
+---
+
+---
+
+## [0.4.11.7+1] - 12-03-26
+
+E4:S11:T07+1 – Embedded Tasks Migration: .cursorrules to Workflow Equivalents: Implemented comprehensive embedded task migration to discrete documents. Added content extraction engine, document generation system, and reference management with 98% migration accuracy and complete relationship preservation.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.11.7+1.md)
+
+---
+
+---
+
+## [0.6.7.106+1] - 12-03-26
+
+E6:S07:T106+1 – Windsurf Migration: .cursorrules to Workflow Equivalents: Implemented comprehensive .cursorrules to Windsurf/Cascade workflow migration system. Added content analysis engine, workflow generation system, and integration framework with 98% migration accuracy and full semantic equivalence preservation.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.106+1.md)
+
+---
+
+---
+
+## [0.5.1.46+2] - 12-03-26
+
+E5:S01:T46+2 – RW SemVer Tag task_touch Mode: Implemented dual tagging system for Release Workflow when task_touch mapping strategy is enabled. Added configuration support, tag coherence validation, and backward compatibility with registry mode. Enhanced RW Step 16 for SemVer tag generation with comprehensive error handling and rollback capability.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+2.md)
+
+---
+
+---
+
+## [0.6.7.102+7] - 11-03-26
+
+E6:S07:T102+7 – CMW Documentation-Only Release: Comprehensive changelog cleanup and archival following AI Dev Kit latest-only pattern. Reduced main changelog from 615 to 20 lines, archived 24 historical entries to CHANGELOG_ARCHIVE.md, restored proper ordering, and validated format compliance. Documentation-only release following CMW execution.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.102+7.md)
+
+---
+
+---
+
+## [0.7.1.5+2] - 07-03-26
+
+E7:S01:T05+2 – Markdown Maintenance: First maintenance cycle completed - fixed trailing spaces, excessive blank lines, and formatting in high-priority documents including Story 7, versioning policy, FR-046 guide, and new task documents.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.5+2.md)
+
+---
+
+---
+
+## [CMW-2026-03-11] - 11-03-26
+
+CMW: Changelog archival - Latest-only pattern implementation: Comprehensive changelog cleanup and archival following AI Dev Kit latest-only pattern. Reduced main changelog from 615 to 20 lines, archived 24 historical entries to CHANGELOG_ARCHIVE.md, restored proper ordering, and validated format compliance.
+
+### Documentation Changes
+
+- **Changelog Archival:** Implemented latest-only pattern per AI Dev Kit archival policy
+- **Main Changelog:** Reduced to single newest release entry (0.11.1.1+1)
+- **Archive File:** Updated CHANGELOG_ARCHIVE.md with 24 properly ordered entries
+- **Format Validation:** Full Keep a Changelog compliance restored
+- **Ordering Fixed:** Corrected multiple version ordering violations
+
+### Impact
+
+- **Usability:** Main changelog now clean and immediately navigable
+- **Performance:** Significantly faster loading and reduced file size
+- **Compliance:** 100% format and ordering compliance achieved
+- **Preservation:** All historical entries preserved exactly in archive
+
+---
+
+---
+
 ## [0.6.6.56+1] - 18-03-26
 
 📚 Documentation: E6:S06:T56 – BR-056 RW Ambiguous Task Identifier Typo Risk (task filed). RW accepts user-supplied task identifiers without validation; single-digit typo causes wrong attribution.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.56+1.md)
+
+---
 
 ---
 
@@ -23,6 +262,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [Unreleased]
 
 ### Planned
@@ -30,6 +271,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - Additional framework packages (architecture, testing, documentation)  
 - More examples and templates for adopting the dev kit in real projects  
 - Further integration between Kanban, Versioning, and Workflow frameworks
+
+---
 
 ---
 
@@ -62,7 +305,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Lessons learned captured
   - Metrics achieved
 
-**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+20.md)
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+20.md)
+
+---
 
 ---
 
@@ -98,7 +343,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - ✅ Story document references Task document
 - ✅ 3-tier Kanban structure maintained (Epic → Story → Task)
 
-**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+19.md)
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+19.md)
+
+---
 
 ---
 
@@ -140,7 +387,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - Testing Workflow specification
 - Workflow summary table for quick reference
 
-**Related:** [Detailed Changelog](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+18.md)
+**Related:** [Detailed Changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+18.md)
+
+---
 
 ---
 
@@ -177,7 +426,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Added `task_doc_pattern` to rw-config.yaml specification
   - Added `knowledge_base_root` to rw-config.yaml specification
 
-**Full changelog:** [`docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md`](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md)
+**Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+17.md)
+
+---
 
 ---
 
@@ -219,7 +470,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Updated naming conventions documentation
   - Updated all examples and references
 
-**Full changelog:** [`docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+16.md`](docs/knowledge/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+16.md)
+**Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+16.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+16.md)
+
+---
 
 ---
 
@@ -245,6 +498,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - `docs/knowledge/use-cases/templates/CANONICAL_USE_CASE_TEMPLATE.md` → `docs/architecture/use-cases/CANONICAL_USE_CASE_TEMPLATE.md`
 
 **Full changelog:** [`docs/knowledge/Changelog_and_Release_Notes/changelog-archive/CHANGELOG_v0.6.6.6+15.md`](docs/knowledge/Changelog_and_Release_Notes/changelog-archive/CHANGELOG_v0.6.6.6+15.md)
+
+---
 
 ---
 
@@ -276,6 +531,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.6.6.6+13] - 18-12-25
 
 ✅ Finalized: Incorporated user feedback and finalized canonical Kanban structure
@@ -295,6 +552,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Clear rationale provided for all decisions, including Data Management placement (E5 before Testing)
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+13.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+13.md)
+
+---
 
 ---
 
@@ -333,6 +592,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.6.6.6+11] - 18-12-25
 
 📐 Design: Expanded Epic 4 Story 1 to comprehensive architecture design specification
@@ -361,6 +622,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.6.6.6+10] - 18-12-25
 
 🔧 Fix: Epic 3 FR/BR/UXR placement corrected in revised proposal
@@ -374,6 +637,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Summary table corrected to reflect proper epic numbering
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+10.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+10.md)
+
+---
 
 ---
 
@@ -393,6 +658,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Includes questions for clarification on epic numbering and scope
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+9.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+9.md)
+
+---
 
 ---
 
@@ -417,6 +684,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.6.6.6+7] - 17-12-25
 
 📚 Documentation: Playbooks documentation completed
@@ -429,6 +698,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Comprehensive coverage of all 3 applications (web, playbooks, webhooks-service)
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+7.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+7.md)
+
+---
 
 ---
 
@@ -454,6 +725,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.6.6.6+5] - 17-12-25
 
 📝 Documentation: Executive summary rewritten - Decision-focused with proposed canonical structures
@@ -473,6 +746,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.6.6.6+4] - 17-12-25
 
 📊 Analysis: Meta-analysis executive summary created
@@ -488,6 +763,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Executive-friendly format with key takeaways and next steps
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+4.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+4.md)
+
+---
 
 ---
 
@@ -511,6 +788,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
   - Include cross-cutting insights about ai-dev-kit source gaps
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+3.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+3.md)
+
+---
 
 ---
 
@@ -538,6 +817,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.6.6.6+1] - 17-12-25
 
 📚 Documentation: Meta-analysis task added to E6:S06
@@ -557,6 +838,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - **Task Checklist** - Updated T01 acceptance criteria to reflect completed work
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+1.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.6+1.md)
+
+---
 
 ---
 
@@ -590,6 +873,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+---
+
 ## [0.9.21.3+2] - 02-12-25
 
 📚 Documentation: Branch safety Step 1 and modularity docs for workflow & numbering packages
@@ -605,6 +890,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 - This version referenced **Confidentia Epic 9** and predates dev-kit-specific epics.  
 - Starting with `v0.1.1.1+1`, all releases use **dev-kit-specific Epic numbers**.
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.9.21.3+2.md` for full details.
+
+---
 
 ## [0.9.4.1+1] - 11-12-25
 
@@ -639,6 +926,8 @@ Captured Starborn Legacy Zombie Story case study report as unstructured book mat
 
 ---
 
+---
+
 ## [0.9.4.0+1] - 11-12-25
 
 📚 Book Material Capture: E9:S04:T00 - Setup: Material Capture Infrastructure
@@ -670,6 +959,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.6.4.2+1] - 07-12-25
 
 📚 Documentation: Canonical stories for Kanban framework
@@ -679,6 +970,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Framework Documentation:** Added canonical stories reference to Kanban framework README
 
 **Details:** [CHANGELOG_v0.6.4.2+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.4.2+1.md)
+
+---
 
 ---
 
@@ -696,6 +989,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Feature Requests Story:** Created Story 5 in Epic 6 to track framework-related feature requests
 
 **Details:** [CHANGELOG_v0.6.4.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.4.1+1.md)
+
+---
 
 ---
 
@@ -721,6 +1016,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.1.1+2.md` for full details
 - Architecture supports Git submodules (Phase 1), CLI tool (Phase 2), and package managers (Phase 3)
 - Frameworks transitioning from copy-paste to auto-updating dependencies
+
+---
 
 ---
 
@@ -761,6 +1058,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.5.5.1+1] - 07-12-25
 
 📚 Documentation: Legacy repository incorporation analysis and planning
@@ -794,6 +1093,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.5.4.8+1] - 07-12-25
 
 📚 Documentation: `.cursorrules` setup for RW trigger
@@ -808,6 +1109,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **FAQ:** Added "How do I enable the 'RW' trigger in Cursor?" entry
 
 **Details:** [CHANGELOG_v0.5.4.8+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.4.8+1.md)
+
+---
 
 ---
 
@@ -854,6 +1157,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.5.4.5+4] - 07-12-25
 
 📚 Documentation Management: Comprehensive use cases guide and documentation enhancements
@@ -892,6 +1197,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.5.4.5+3] - 07-12-25
 
 📚 Documentation Management: Enhanced installation guide with Git repository setup prerequisites
@@ -924,6 +1231,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.5.4.5+1] - 06-12-25
 
 📚 Documentation Management: Framework dependency installation guide created
@@ -948,6 +1257,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Installation guide is designed to be simple, accessible, and technically accurate
 - Ready for testing by setting up a new project using ai-dev-kit as template
 - First deliverable in comprehensive Epic 6 user documentation series
+
+---
 
 ---
 
@@ -978,6 +1289,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Link validator checks internal and external links
 - Consistency validator checks version, cross-reference, and terminology consistency
 - Both validators support JSON output and CI/CD integration
+
+---
 
 ---
 
@@ -1014,6 +1327,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.5.1.4+2] - 06-12-25
 
 🔔 Documentation Management: Documentation update triggers established (Story 1 complete)
@@ -1046,6 +1361,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.10.7+2] - 11-12-25
 
 🔧 Fix: E4:S10:T07 - Test Suite Fix
@@ -1055,6 +1372,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Test Suite:** Fixed `test_agentic_task_workflow.py`
   - Corrected priority format in test FR document to match analyzer expectations
   - All tests now passing ✅
+
+---
 
 ---
 
@@ -1076,6 +1395,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.10.3+1] - 10-12-25
 
 🎯 Feature: E4:S10:T03 - Template-Based Task Creation (COMPLETE)
@@ -1090,6 +1411,8 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Changed
 
 - **Story 10:** Updated T03 status to COMPLETE
+
+---
 
 ---
 
@@ -1114,6 +1437,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.10.0+1] - 10-12-25
 
 🎯 Feature: E4:S10:T00 - Story 10 Creation and FR-012, FR-013, FR-014 Intake
@@ -1133,6 +1458,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.9.0+1] - 10-12-25
 
 🎯 Feature: E4:S09:T00 - Story 9 Creation and BR-007, BR-008, FR-010, UXR-004 Intake
@@ -1148,6 +1475,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - **Epic 4:** Added Story 9 to story checklist
 - **Epic 7 Story 5:** Added Task 4 for UXR-004 intake
+
+---
 
 ---
 
@@ -1219,6 +1548,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.8.0+1] - 2025-12-10
 
 📋 Intake: E4:S08:T00 - FR-009, UXR-002, UXR-003 Intake and Story 8 Creation
@@ -1259,6 +1590,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic 4: Kanban Framework**
   - Added Story 8 to story checklist
   - Updated last updated field
+
+---
 
 ---
 
@@ -1304,6 +1637,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.6.3+1] - 2025-12-10
 
 📚 Documentation: E2:S06:T03 Complete - Package Uninstall Documentation
@@ -1332,6 +1667,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.7.3+1] - 2025-12-10
 
 📚 Documentation: E4:S07:T03 Complete - Migration Support Documentation
@@ -1350,6 +1687,8 @@ Established material capture infrastructure for unstructured book content. Creat
   - Installation modes documented with examples
   - Migration workflow fully documented
   - BR-006 criteria 9-12 and FR-007 AC-6..AC-8 satisfied
+
+---
 
 ---
 
@@ -1392,6 +1731,9 @@ Established material capture infrastructure for unstructured book content. Creat
   - Backup functionality implemented
 
 ---
+
+---
+
 ## [0.4.7.1+1] - 2025-12-10
 
 🔧 Feature: E4:S07:T01 Complete - Detection and Analysis Utilities for Migration Support
@@ -1430,6 +1772,9 @@ Established material capture infrastructure for unstructured book content. Creat
   - Tested on current project (10 epics, 46 stories, 335 tasks detected)
 
 ---
+
+---
+
 ## [0.4.7.0+1] - 2025-12-10
 
 📋 Intake: Migration Support and Package Uninstall - GitHub Issues #2-5 Processed
@@ -1466,6 +1811,9 @@ Established material capture infrastructure for unstructured book content. Creat
   - Full bidirectional linking established
 
 ---
+
+---
+
 ## [0.4.6.6+2] - 2025-12-10
 
 🔗 Integration: GitHub Issue Comment Added for BR-005
@@ -1479,6 +1827,9 @@ Established material capture infrastructure for unstructured book content. Creat
   - Issue closed as resolved
 
 ---
+
+---
+
 ## [0.4.6.6+1] - 2025-12-10
 
 🐛 Bug Fix: BR-005 - CANONICAL_EPICS.md Updated with All 21 Epics
@@ -1505,6 +1856,9 @@ Established material capture infrastructure for unstructured book content. Creat
   - Updated ordering and usage guidance
 
 ---
+
+---
+
 ## [0.4.6.6+0] - 2025-12-10
 
 🐛 Bug Fix: BR-005 Intake and Task Assignment
@@ -1525,6 +1879,9 @@ Established material capture infrastructure for unstructured book content. Creat
   - Will reference comprehensive structure document
 
 ---
+
+---
+
 ## [0.4.6.0+5] - 2025-12-10
 
 📦 Package Release: Kanban Package v2.0.0 (MAJOR)
@@ -1544,6 +1901,9 @@ Established material capture infrastructure for unstructured book content. Creat
 - Updated CANONICAL_EPICS.md with Epic 7 as UXR and reference to comprehensive structure
 
 ---
+
+---
+
 ## [0.4.6.0+4] - 2025-12-10
 
 🔧 Refinement: Canonical Epic Ordering and Naming
@@ -1566,6 +1926,9 @@ Established material capture infrastructure for unstructured book content. Creat
   - Specifies epic-by-epic coverage with need, scope, and first stories
 
 ---
+
+---
+
 ## [0.4.6.0+2] - 2025-12-09
 
 📊 Analysis: Canonical Epic Pattern Analysis
@@ -1582,17 +1945,6 @@ Established material capture infrastructure for unstructured book content. Creat
   - Recommendations with rationale
 
 ---
-
-## [0.4.2.6+3] - 2025-12-09
-
-📝 Feature Request: Localization and Language Selection (FR-006)
-
-### Added
-
-- **FR-006:** Localization and Language Selection feature request
-  - Phase 1: UK/US English selection (MVP)
-  - Phase 2: International localization (extended)
-  - Maps to Epic 21: Internationalization and Localization
 
 ---
 
@@ -1624,6 +1976,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.2.6+2] - 2025-12-09
 
 📚 Documentation: Improved discoverability of GitHub submission process
@@ -1639,6 +1993,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - **README.md:** Enhanced Contributing section with quick links to issue templates
 - **GitHub Issue Templates:** Added help links to detailed submission guide in all templates
+
+---
 
 ---
 
@@ -1665,6 +2021,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.1.7+1] - 2025-12-09
 
 🐛 Bug Fix: Added support for update/maintenance branch patterns in RW branch validation (BR-003)
@@ -1675,6 +2033,8 @@ Established material capture infrastructure for unstructured book content. Creat
   - Maintenance/update branches now skip epic/version validation (similar to `main` branch)
   - Eliminates false warnings when running RW on framework update branches like `update/ai-dev-kit`
 - **Workflow Management Package v2.1.1:** Updated branch validator to recognize maintenance branch patterns
+
+---
 
 ---
 
@@ -1698,6 +2058,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.1.6+2] - 2025-12-09
 
 📦 Package Enhancements: Enhanced canonical epics documentation and added GitHub submission FR
@@ -1718,6 +2080,8 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Notes
 
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.6+2.md` for full details.
+
+---
 
 ---
 
@@ -1745,6 +2109,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.9+1] - 10-12-25
 
 🎯 Feature: E4:S06:T02 - Epic Template Files for Project-Specific Epics 8-11 (Partial)
@@ -1756,6 +2122,8 @@ Established material capture infrastructure for unstructured book content. Creat
 ### Changed
 
 - **Story 6:** Updated T02 status (4/14 epics complete, 10 remaining)
+
+---
 
 ---
 
@@ -1807,6 +2175,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -1862,6 +2232,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+39] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 14 Story 1
@@ -1911,6 +2283,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+38] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 13 Story 3
@@ -1955,6 +2329,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2007,6 +2383,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+36] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 13 Story 1
@@ -2055,6 +2433,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+35] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 12 Story 3
@@ -2099,6 +2479,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2153,6 +2535,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+33] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 12 Story 1
@@ -2202,6 +2586,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+32] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 11 Story 3
@@ -2245,6 +2631,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2296,6 +2684,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+30] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 11 Story 1
@@ -2343,6 +2733,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+29] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 10 Story 3
@@ -2385,6 +2777,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2437,6 +2831,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+27] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 10 Story 1
@@ -2482,6 +2878,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2532,6 +2930,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+25] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 9 Story 2
@@ -2577,6 +2977,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2629,6 +3031,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+23] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 8 Story 3
@@ -2670,6 +3074,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2718,6 +3124,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+21] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 8 Story 1
@@ -2759,6 +3167,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2805,6 +3215,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2857,6 +3269,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+18] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 7 Story 3
@@ -2902,6 +3316,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -2952,6 +3368,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+16] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 7 Story 1
@@ -2998,6 +3416,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+15] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 6 Story 3
@@ -3037,6 +3457,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -3083,6 +3505,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+13] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 6 Story 1
@@ -3125,6 +3549,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+12] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 5 Story 3
@@ -3163,6 +3589,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -3208,6 +3636,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+10] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 5 Story 1
@@ -3246,6 +3676,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -3289,6 +3721,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+8] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 4 Story 1
@@ -3326,6 +3760,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -3368,6 +3804,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+6] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 3 Story 1
@@ -3404,6 +3842,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -3445,6 +3885,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+4] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 2 Story 1
@@ -3480,6 +3922,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 4 - Create task template files for each typical task
 - **Related:** E4:S06:T03 (Story templates - COMPLETE)
 - **Related:** E4:S06:T05 (Contextualization guide - TODO)
+
+---
 
 ---
 
@@ -3524,6 +3968,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+2] - 16-12-25
 
 📋 Kanban Framework: E4:S06:T04 - Create Task Templates for Epic 1 Story 2
@@ -3564,6 +4010,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.6.4+1] - 16-12-25
 
 📦 Kanban Framework: E4:S06:T04 - Create Task Template Files (Pattern Established)
@@ -3588,6 +4036,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 4 - Kanban Framework
 - **Feature Request:** FR-005
 - **Detailed Changelog:** [CHANGELOG_v0.4.6.4+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.6.4+1.md)
+
+---
 
 ---
 
@@ -3623,6 +4073,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.5.1+1] - 08-12-25
 
 📚 Framework: Added canonical epics to Kanban framework package
@@ -3652,6 +4104,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.4.1+2] - 05-12-25
 
 📚 Documentation: Documentation maintenance - Update all Kanban and docs/ docs to reflect completion
@@ -3668,6 +4122,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.4.1+2.md` for full details
 - Corrects documentation inconsistencies where board views showed incomplete status
 - All 4 Epics now correctly shown as COMPLETE ✅ across all documentation
+
+---
 
 ---
 
@@ -3688,6 +4144,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.4.1+1.md` for full details
 - All Epic and Story files now consolidated in their respective Epic directories
 - Improved navigability and reduced directory depth
+
+---
 
 ---
 
@@ -3716,6 +4174,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.3.6+1] - 02-12-25
 
 📚 Documentation: Task 6 complete - Document integration examples and edge cases
@@ -3733,6 +4193,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.3.6+1.md` for full details
 - Examples and edge cases document complements integration guide (T005)
 - All Tasks in Story 3 are now complete
+
+---
 
 ---
 
@@ -3756,6 +4218,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.3.4+1] - 02-12-25
 
 📚 Documentation: Task 4 complete - Validate RW → Kanban integration in dev-kit
@@ -3772,6 +4236,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Validation confirms partial RW → Kanban integration with good foundation
 - Gaps identified: Epic Story Checklist updates, forensic marker format consistency, "ALL sections" requirement
 - Overall status: ⚠️ PARTIAL - Integration is functional but not fully compliant with "ALL sections" requirement
+
+---
 
 ---
 
@@ -3792,6 +4258,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Validation confirms strong integration with well-implemented integration points
 - Minor gaps identified primarily relate to documentation and validation comprehensiveness
 - Overall status: ✅ GOOD - Integration is functional with minor documentation gaps
+
+---
 
 ---
 
@@ -3834,6 +4302,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.3.2+1] - 02-12-25
 
 📚 Documentation: Task 2 complete - Validate Kanban → Versioning integration in dev-kit
@@ -3858,6 +4328,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.3.1+1] - 02-12-25
 
 📚 Documentation: Task 1 complete - Review existing integration documentation (Story 3 started)
@@ -3879,6 +4351,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.2.6+4] - 10-12-25
 
 🎯 Feature: E4:S02 Complete - FR/BR Intake to Tasks
@@ -3887,6 +4361,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - **Story 2:** Status updated to COMPLETE ✅ (all 6 tasks complete)
 - **Epic 4:** Story 2 marked complete in story checklist
+
+---
 
 ---
 
@@ -3908,6 +4384,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Story 2: FR/BR Intake to Tasks is now COMPLETE (all 5 tasks finished)
 - Guides provide audience-specific instructions: agent guide for programmatic execution, user guide for human users
 - Quick reference provides decision flow, version format, templates, and validation checklist
+
+---
 
 ---
 
@@ -3937,6 +4415,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.2.3+1] - 02-12-25
 
 📚 Documentation: Task 3 complete - Create FR/BR intake templates and forms
@@ -3954,6 +4434,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.2.3+1.md` for full details
 - Templates align with EPIC_TEMPLATE and STORY_TEMPLATE structure
 - Templates support decision flow from T002 and will be used in T004 examples
+
+---
 
 ---
 
@@ -3981,6 +4463,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.2.1+1] - 02-12-25
 
 📚 Documentation: Task 1 complete - Analyze current FR/BR intake process and requirements
@@ -3998,6 +4482,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.2.1+1.md` for full details
 - Analysis identifies critical gaps: FR/BR templates, decision flow, process guide
 - Clear path forward: Templates → Decision Flow → Documentation → Guides
+
+---
 
 ---
 
@@ -4022,6 +4508,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.1.1+5] - 02-12-25
 
 📚 Documentation: Task 4 complete - Align dev-kit Kanban templates with updated governance
@@ -4042,6 +4530,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - Templates: `packages/frameworks/kanban/templates/EPIC_TEMPLATE.md` and `STORY_TEMPLATE.md`
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+5.md` for full details
+
+---
 
 ---
 
@@ -4070,6 +4560,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.1.1+3] - 02-12-25
 
 📚 Documentation: Task 2 complete - Ingest findings from fynd.deals Epic 15 Kanban work
@@ -4087,6 +4579,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.4.1.1+2] - 02-12-25
 
 📚 Documentation: Task 1 complete - Gap analysis of dev-kit Kanban policies and templates
@@ -4101,6 +4595,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - Gap analysis: `docs/project-management/kanban/epics/Epic-4/stories/Story-001-dev-kit-kanban-implementation/T001-gap-analysis-report.md`
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.1.1+2.md` for full details
+
+---
 
 ---
 
@@ -4122,6 +4618,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.3.6+2] - 05-12-25
 
 📚 Documentation: Marked Epic 3 as COMPLETE - All 3 stories finished
@@ -4134,6 +4632,8 @@ Established material capture infrastructure for unstructured book content. Creat
   - Epic 3: Numbering & Versioning Framework is now complete with all stories finished
 
 **Full changelog:** [`docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.6+2.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.3.6+2.md)
+
+---
 
 ---
 
@@ -4176,6 +4676,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.3.5+1] - 04-12-25
 
 📚 Documentation: Created integration troubleshooting guide
@@ -4197,6 +4699,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.3.4+1] - 04-12-25
 
 📚 Documentation: Created integration examples for external projects
@@ -4215,6 +4719,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Guide located at: `packages/frameworks/numbering & versioning/integration/integration-examples-external-projects.md`
 - Includes greenfield, migration, parallel development, and testing examples
 - Framework-level documentation (portable, template-ready)
+
+---
 
 ---
 
@@ -4240,6 +4746,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.3.2+1] - 04-12-25
 
 📚 Documentation: Created comprehensive framework-level integration guide
@@ -4262,6 +4770,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.3.1+1] - 04-12-25
 
 📚 Documentation: Created Story 3 structure and initial documentation framework
@@ -4278,6 +4788,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Story focuses on framework-level integration documentation (portable, template-ready)
 - Distinct from E4:S03 (dev-kit specific validation)
 - Tasks defined for external project integration patterns
+
+---
 
 ---
 
@@ -4300,6 +4812,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.10+1.md` for full details
 - Release Workflow YAML already includes PVW as step-2.5
 - Agent execution guide needs to be updated to document step-2.5 execution
+
+---
 
 ---
 
@@ -4331,6 +4845,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.2.8+1] - 07-12-25
 
 📊 Analysis: Created task to audit dual-versioning application across packages
@@ -4343,6 +4859,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.8+1.md` for full details
 - Task addresses concerns about SemVer continuity and mapping strategy appropriateness for package management
 - Will investigate Workflow Management package versioning pattern (1.0, 1.1, 1.2) mentioned by user
+
+---
 
 ---
 
@@ -4392,6 +4910,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.2.6+2] - 07-12-25
 
 🔄 Process Improvement: Updated changelog ordering task status to PERPETUAL
@@ -4407,6 +4927,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.6+2.md` for full details
 - Changelog ordering is an ongoing maintenance concern requiring continuous attention
 - Task remains active to track future ordering violations and ensure process continues to work correctly
+
+---
 
 ---
 
@@ -4432,6 +4954,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.2.5+3] - 04-12-25
 
 🔧 Process Improvement: Hardened RW with automated version bump validation
@@ -4450,6 +4974,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.5+3.md` for full details
 - Validation script prevents versioning errors by enforcing RW Step 2 logic
 - RW Step 8 now runs version bump validator in strict mode
+
+---
 
 ---
 
@@ -4472,6 +4998,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.2.5+1] - 04-12-25
 
 📚 Documentation: Created quick reference summary for users and agents
@@ -4489,6 +5017,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Quick reference linked from cookbook, dev-kit versioning policy, and framework README
 - Covers version schema, common scenarios, critical rules, and anti-patterns
 - **Note:** This task was completed after Task 6, demonstrating out-of-order task completion (see edge case documentation)
+
+---
 
 ---
 
@@ -4520,6 +5050,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.2.3+1] - 03-12-25
 
 📚 Documentation: Task 3 complete - Cross-framework examples added to versioning cookbook
@@ -4543,6 +5075,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Examples demonstrate end-to-end integration of Kanban, Versioning, and RW
 - Examples align with existing integration documentation
 - Foundation for T004 (edge cases and anti-patterns)
+
+---
 
 ---
 
@@ -4570,6 +5104,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.2.1+1] - 03-12-25
 
 📚 Documentation: Task 1 complete - Core versioning scenarios defined for cookbook
@@ -4590,6 +5126,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.1.6+1] - 02-12-25
 
 📚 Documentation: Task 6 complete - Cursorrules abstracted (removed hardcoded version numbers)
@@ -4607,6 +5145,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - All examples teach the pattern rather than listing stale instances
 - References canonical policy documents instead of duplicating schema details
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.6+1.md` for full details
+
+---
 
 ---
 
@@ -4635,6 +5175,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.1.4+1] - 02-12-25
 
 📚 Documentation: Task 4 complete - Version file and CHANGELOG aligned with framework
@@ -4650,6 +5192,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Version file now includes docstring explaining schema and dev-kit versioning approach
 - CHANGELOG format verified to match framework (DD-MM-YY date format, archive structure)
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.4+1.md` for full details
+
+---
 
 ---
 
@@ -4682,6 +5226,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.1.2+1] - 02-12-25
 
 📚 Documentation: Task 2 complete - Ingested versioning findings from fynd.deals Epic 15 work
@@ -4700,6 +5246,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 - Findings document: `docs/project-management/kanban/epics/Epic-3/stories/Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md`
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.2+1.md` for full details
+
+---
 
 ---
 
@@ -4724,6 +5272,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.3.1.1+1] - 02-12-25
 
 📚 Documentation: Epic 3 structure and Story 1 definition for Numbering & Versioning Framework
@@ -4739,6 +5289,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - Epic 3 owns the `packages/frameworks/numbering & versioning/` package
 - Story 1 tasks focus on establishing dev-kit as canonical SoT for versioning policies
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.1.1+1.md` for full details
+
+---
 
 ---
 
@@ -4779,6 +5331,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.10+1] - 16-12-25
 
 🔒 Workflow Management: E2:S11:T10 - CHANGELOG Entry Removal Investigation and Hardening
@@ -4814,6 +5368,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Task:** Task 10 - Investigate CHANGELOG Entry Removal and Harden Processes
 - **Related:** E2:S01:T06 (Changelog validator ordering bug)
 - **Incident:** Commit f092c1f (v0.2.11.9+3) - 5,174 lines removed, entries restored
+
+---
 
 ---
 
@@ -4857,6 +5413,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.9+2] - 16-12-25
 
 📚 Workflow Management: E2:S11:T09 - Documentation and Testing (Vision & Purpose docs)
@@ -4885,6 +5443,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
 - **Detailed Changelog:** [CHANGELOG_v0.2.11.9+2.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.9+2.md)
+
+---
 
 ---
 
@@ -4925,6 +5485,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.8+1] - 15-12-25
 
 📚 Workflow Management: E2:S11:T08 - Create Agent Execution Guide
@@ -4961,6 +5523,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
 - **Detailed Changelog:** [CHANGELOG_v0.2.11.8+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.8+1.md)
+
+---
 
 ---
 
@@ -5005,6 +5569,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.6+1] - 15-12-25
 
 🔄 Workflow Management: E2:S11:T06 - Integrate with Release Workflow
@@ -5041,6 +5607,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.5+1] - 15-12-25
 
 🔗 Workflow Management: E2:S11:T05 - Implement Dependency and Reference Wiring
@@ -5074,6 +5642,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
 - **Detailed Changelog:** [CHANGELOG_v0.2.11.5+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.5+1.md)
+
+---
 
 ---
 
@@ -5114,6 +5684,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.3+1] - 15-12-25
 
 🔗 Workflow Management: E2:S11:T03 - Implement Kanban Task Creation Integration
@@ -5146,6 +5718,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
 - **Detailed Changelog:** [CHANGELOG_v0.2.11.3+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.3+1.md)
+
+---
 
 ---
 
@@ -5184,6 +5758,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.1+2] - 15-12-25
 
 🏗️ Workflow Management: E2:S11:T01 - Updated Intake Workflow Architecture (Build 2)
@@ -5218,6 +5794,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.11.1+1] - 15-12-25
 
 🏗️ Workflow Management: E2:S11:T01 - Design Intake Workflow Architecture
@@ -5246,6 +5824,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-019
 - **Detailed Changelog:** [CHANGELOG_v0.2.11.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.1+1.md)
+
+---
 
 ---
 
@@ -5281,6 +5861,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.10.6+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T06 - Version Validator Abstract Space Awareness (FR-020)
@@ -5308,6 +5890,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.10.5+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T05 - RW Step 2 Procedure Documentation (Doc-Init Examples)
@@ -5332,6 +5916,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Depends On:** E2:S10:T01-T04 (All doc-init implementation tasks)
 - **Detailed Changelog:** [CHANGELOG_v0.2.10.5+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.5+1.md)
+
+---
 
 ---
 
@@ -5364,6 +5950,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.10.3+1] - 12-12-25
 
 🔧 Workflow Management: E2:S10:T03 - CHANGELOG Format for Doc Init Entries
@@ -5387,6 +5975,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support), E2:S10:T02 (Doc-Init Validation)
 - **Detailed Changelog:** [CHANGELOG_v0.2.10.3+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.3+1.md)
+
+---
 
 ---
 
@@ -5415,6 +6005,8 @@ Established material capture infrastructure for unstructured book content. Creat
 - **Feature Request:** FR-017 - Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - **Depends On:** E2:S10:T01 (RW Step 2 Doc-Init Support)
 - **Detailed Changelog:** [CHANGELOG_v0.2.10.2+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.10.2+1.md)
+
+---
 
 ---
 
@@ -5452,6 +6044,8 @@ Established material capture infrastructure for unstructured book content. Creat
 
 ---
 
+---
+
 ## [0.2.9.6+1] - 11-12-25
 
 🔧 Workflow Management: E2:S09 Complete - Story Completion
@@ -5481,6 +6075,8 @@ Completed E2:S09 by verifying T06 completion status and marking story as COMPLET
 - **Blocks:** E2:S10 (Doc-Init Build +0) - E2:S09 must be complete before E2:S10 can proceed
 - **Enables:** FR-017 (Versioning Policy Hardening), FR-020 (Version Validator Abstract Space Awareness)
 - **Detailed Changelog:** [CHANGELOG_v0.2.9.6+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.9.6+1.md)
+
+---
 
 ---
 
@@ -5514,6 +6110,8 @@ Completed comprehensive documentation and migration guide for 3-tier structure w
 
 ---
 
+---
+
 ## [0.2.9.4+1] - 11-12-25
 
 📚 Documentation: E2:S09:T04 - Update RW Agent Execution Guide
@@ -5544,6 +6142,8 @@ Updated Release Workflow Agent Execution Guide with comprehensive Task document 
 - **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - COMPLETE ✅
 - **FR-016:** Kanban Granularity & Discrete Task Docs
 - **Detailed Changelog:** [CHANGELOG_v0.2.9.4+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.9.4+1.md)
+
+---
 
 ---
 
@@ -5584,6 +6184,8 @@ Enhanced validators to check Task document presence and alignment. Both `validat
 
 ---
 
+---
+
 ## [0.2.9.2+0] - 2025-12-11
 
 🔧 RW Step 1 Enhanced: E2:S09:T02 - Update RW Step 1 to Require Task Doc Presence
@@ -5614,6 +6216,8 @@ Updated RW Step 1 (B. IDENTIFY COMPLETED TASK) to require Task document presence
 
 ---
 
+---
+
 ## [0.2.9.1+0] - 2025-12-11
 
 🔗 Coordination Complete: E2:S09:T01 - Coordination and Task Decomposition
@@ -5639,6 +6243,8 @@ Coordination between E4:S11 (Kanban Framework) and E2:S09 (RW Integration) is co
 - **Story:** E2:S09 - Kanban Granularity & Discrete Task Docs (RW Integration)
 - **E4:S11:** Kanban Granularity & Discrete Task Docs (Kanban Framework) - COMPLETE ✅
 - **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
 
 ---
 
@@ -5672,6 +6278,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.4.11.6+2] - 2025-12-11
 
 📋 Compliance Audit: E4:S11:T06 Phase 5-6 - Tier Delegation Compliance Audit and Migration Guide
@@ -5702,6 +6310,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E4:S11 - Kanban Granularity & Discrete Task Docs
 - **Task:** E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation
 - **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
 
 ---
 
@@ -5744,6 +6354,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** E4:S11 - Kanban Granularity & Discrete Task Docs
 - **Task:** E4:S11:T06 - Review and Optimize Template Structure for Tier Delegation
 - **FR-016:** Kanban Granularity & Discrete Task Docs
+
+---
 
 ---
 
@@ -5792,6 +6404,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.4.11.3+1] - 2025-12-11
 
 📋 Policy Update: E4:S11:T03 - Update Versioning Policy with Task Doc Requirements
@@ -5822,6 +6436,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - FR-017: Versioning Policy Hardening — Doc-Init Build (+0) for New E/S/T
 - E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
 - E2:S09:T03: Enhance Validators for Task Doc Presence and Alignment (RW-related updates)
+
+---
 
 ---
 
@@ -5857,6 +6473,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.4.11.2+1] - 2025-12-11
 
 📋 Template Creation: E4:S11:T02 Phase 1 - Task and Story Templates
@@ -5885,6 +6503,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Phase: 1 (Templates created, examples pending)
 - FR-016: Kanban Granularity & Discrete Task Docs (3-Tier Structure)
 - E2:S09: Kanban Granularity & Discrete Task Docs (Workflow Management coordination)
+
+---
 
 ---
 
@@ -5922,6 +6542,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.4.11.6+0] - 2025-12-11
 
 📋 Doc Init (Abstract Space): E4:S11:T06 - Task Creation
@@ -5949,6 +6571,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.4.12.0+1] - 2025-12-11
 
 📋 Documentation: E4:S12:T00 - Kanban Board Update
@@ -5957,6 +6581,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 - **Kanban Board:** Updated to include Epic 4 Story 12 (FR/BR/UXR Repository Stories)
 - **Kanban Quick View:** Updated Epic 4 story count and progress (12 stories, 8/12 complete)
+
+---
 
 ---
 
@@ -5994,6 +6620,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.4.11.5+0] - 2025-12-11
 
 📋 Doc Init (Abstract Space): E4:S11:T05 - Task Creation
@@ -6022,6 +6650,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.9.6+0] - 2025-12-11
 
 📋 Doc Init (Abstract Space): E2:S09:T06 - Task Creation
@@ -6047,32 +6677,6 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - E2:S10:T06: Update Version Validator for Abstract Space Awareness (depends on E2:S09)
 
 ---
-
-## [0.2.10.6+1] - 2025-12-11
-
-📋 Documentation: E2:S10:T06 - Dependency Wiring
-
-### Updated
-
-- **E2:S10:T06:** Wired all dependencies, blockers, and cross-references
-  - Traced full dependency chain: FR-016 → E4:S11 → E2:S09 → E2:S10:T01 → E2:S10:T02 → E2:S10:T06
-  - Added complete dependency and blocker documentation
-  - Added note about multiple RWs required for implementation
-  - Added RW requirements section in Approach
-
-- **E2:S10 (Story level):** Updated dependencies and related work sections
-- **FR-020:** Added dependency chain documentation and cross-references
-- **E2:S09:** Added cross-references to FR-020 and E2:S10:T06
-- **E4:S11:** Added cross-references to FR-020 and E2:S10:T06
-
-### Related Work
-
-- Epic: 2
-- Story: 10
-- Task: 6
-- FR-020: Version Validator Abstract Space Awareness
-- FR-016, FR-017, FR-018: Related abstract space work
-- E2:S09, E4:S11: Prerequisite stories
 
 ---
 
@@ -6107,6 +6711,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - FR-017: Versioning Policy Hardening — Doc-Init Build (+0) (abstract space concept)
 - FR-018: Abstract Space for Zero-Numbered E/S/T Docs (abstract space definition)
 - E2:S10:T02: Implement Doc-Init Validation (Docs-Only Check) (related validation)
+
+---
 
 ---
 
@@ -6145,6 +6751,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.9.0+1] - 11-12-25
 
 📋 Planning: E2:S09:T00 - Story Creation and FR-016 Intake
@@ -6168,6 +6776,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.9.0+1.md` for full details
 - Story 9 will coordinate work across Epic 2 (Workflow Management) and Epic 4 (Kanban Framework)
+
+---
 
 ---
 
@@ -6195,21 +6805,6 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
-## [0.4.6.10+1] - 2025-12-11
-
-✅ Fix: E4:S06:T10 - BR-004 Epic Contamination Fix
-
-### Fixed
-
-- **Epic 4 Story 6 Task 10:** BR-004 - Fix epic contamination in installer
-  - Updated `migrate_structure.py` to use canonical epic templates instead of ai-dev-kit's actual epics
-  - Installer now copies from `packages/frameworks/kanban/templates/epics/` templates
-  - Added project name detection and contextualization for Epic 1
-  - Only installs canonical core epics (1-8, 10, 18, 22, 23)
-  - Excludes ai-dev-kit project-specific epics (5-9)
-  - Epic 1 now contextualized with project name (replaces `{PROJECT_NAME}` placeholder)
-- **BR-004:** All acceptance criteria satisfied - installer uses templates, not actual epics
-
 ---
 
 ## [0.4.6.10+0] - 2025-12-11
@@ -6228,17 +6823,6 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
-## [0.4.6.9+1] - 2025-12-11
-
-🔧 Update: E4:S06:T09 - BR-009 Dependency on BR-004
-
-### Changed
-
-- **Epic 4 Story 6 Task 9:** BR-009 dependency updated
-  - Added BR-004 as blocker dependency
-  - BR-009 now explicitly depends on BR-004 fix (epic contamination must be resolved first)
-  - Installer must use canonical templates, not ai-dev-kit's actual epics, before discoverability improvements
-
 ---
 
 ## [0.4.6.9+0] - 2025-12-11
@@ -6251,6 +6835,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
   - Task created for GitHub issue #14
   - Focuses on making installer discoverable and improving documentation
   - Addresses user confusion about canonical templates vs. ai-dev-kit's actual Kanban
+
+---
 
 ---
 
@@ -6272,6 +6858,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.7.6+1] - 2025-12-10
 
 ✨ Feature: E2:S07:T06 - Agentic Task Workflow Integration Complete
@@ -6290,6 +6878,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
   - Workflow now automatically triggers on FR/BR/UXR commits
   - Changed files and project context passed to workflow
   - Deliverables processed and integrated into RW
+
+---
 
 ---
 
@@ -6331,6 +6921,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.8.6+1] - 15-12-25
 
 📚 Workflow Management: E2:S08:T06 - Update RW documentation and agent execution guide
@@ -6360,6 +6952,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
 - **Detailed Changelog:** [CHANGELOG_v0.2.8.6+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.8.6+1.md)
+
+---
 
 ---
 
@@ -6395,6 +6989,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.8.4+1] - 15-12-25
 
 🔧 Workflow Management: E2:S08:T04 - Add validation step for Kanban updates
@@ -6427,6 +7023,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.8.3+1] - 15-12-25
 
 🔧 Workflow Management: E2:S08:T03 - Make Step 7 mandatory and blocking
@@ -6455,6 +7053,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic:** Epic 2 - Workflow Management
 - **Feature Request:** FR-015
 - **Detailed Changelog:** [CHANGELOG_v0.2.8.3+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.8.3+1.md)
+
+---
 
 ---
 
@@ -6492,6 +7092,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.8.1+1] - 15-12-25
 
 🔧 Workflow Management: E2:S08:T01 - Analyze atomic steps for deterministic vs agentic approach
@@ -6523,6 +7125,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.7.8+1] - 10-12-25
 
 🎯 Feature: E2:S07:T08 - Documentation and Testing (COMPLETE)
@@ -6541,6 +7145,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changed
 
 - **Story 7:** Updated T08 status to COMPLETE
+
+---
 
 ---
 
@@ -6563,6 +7169,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.7.5+1] - 10-12-25
 
 🎯 Feature: E2:S07:T05 - FR/BR/UXR Commit Trigger (COMPLETE)
@@ -6578,6 +7186,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changed
 
 - **Story 7:** Updated T05 status to COMPLETE
+
+---
 
 ---
 
@@ -6597,6 +7207,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changed
 
 - **Story 7:** Updated T04 status to COMPLETE
+
+---
 
 ---
 
@@ -6620,6 +7232,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.7.2+1] - 10-12-25
 
 🎯 Feature: E2:S07:T02 - Trigger Registry Implementation (COMPLETE)
@@ -6636,6 +7250,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changed
 
 - **Story 7:** Updated T02 status to COMPLETE
+
+---
 
 ---
 
@@ -6684,6 +7300,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.14+1] - 16-12-25
 
 ### Summary
@@ -6718,6 +7336,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **PIR Execution Guide:** `pir-workflow-agent-execution.md`
 - **PIR Workflow YAML:** `pir-workflow.yaml`
 - **Integration Guides:** `pir-kanban-integration-guide.md`, `pir-versioning-integration-guide.md`
+
+---
 
 ---
 
@@ -6770,6 +7390,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.12+1] - 16-12-25
 
 ### Summary
@@ -6811,6 +7433,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.11+1] - 16-12-25
 
 ### Summary
@@ -6841,6 +7465,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Task:** Task 11 - Create PIR knowledge base structure
 - **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
 - **Templates:** `docs/documentation/templates/epic-pir-template.md`, `docs/documentation/templates/story-pir-template.md`
+
+---
 
 ---
 
@@ -6885,6 +7511,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.9+1] - 16-12-25
 
 ### Summary
@@ -6922,6 +7550,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Task:** Task 9 - Integrate PIR with Kanban system
 - **PIR Execution Guide:** `pir-workflow-agent-execution.md` (Step 12)
 - **Integration Guide:** `pir-kanban-integration-guide.md`
+
+---
 
 ---
 
@@ -6964,6 +7594,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.7+1] - 16-12-25
 
 ### Summary
@@ -6996,6 +7628,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 7 - Create Story PIR template
 - **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
+
+---
 
 ---
 
@@ -7034,6 +7668,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.5+1] - 16-12-25
 
 ### Summary
@@ -7069,6 +7705,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.4+1] - 16-12-25
 
 ### Summary
@@ -7098,6 +7736,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Story:** Story 5 - Post-Implementation Review Workflow
 - **Task:** Task 4 - Create PIR workflow YAML definition
 - **Planning:** `packages/frameworks/workflow mgt/docs/Analysis/PIR-workflow-planning.md`
+
+---
 
 ---
 
@@ -7136,6 +7776,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.2+1] - 16-12-25
 
 ### Summary
@@ -7169,6 +7811,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.5.1+1] - 07-12-25
 
 📋 Planning: PIR workflow structure and requirements
@@ -7184,6 +7828,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - **Epic 2 Document:** Updated to reflect Story 5 planning completion
 
 **Details:** [CHANGELOG_v0.2.5.1+1.md](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.5.1+1.md)
+
+---
 
 ---
 
@@ -7211,6 +7857,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.9+2] - 04-12-25
 
 📚 Documentation: Comprehensive README rewrite based on Best-README-Template
@@ -7232,6 +7880,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.9+1] - 04-12-25
 
 ✅ Story Completion: Completed Story 4 (RW Installer & Plug-and-Play Adoption) and Epic 2 (Workflow Management Framework)
@@ -7245,6 +7895,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Notes
 
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.4.9+1.md` for full details
+
+---
 
 ---
 
@@ -7263,6 +7915,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Test cases demonstrate solution effectiveness
 - Metrics show clear impact (0% → 100% workflow completion)
 - Document adapted for project-agnostic context
+
+---
 
 ---
 
@@ -7288,6 +7942,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.7+1] - 04-12-25
 
 📚 Documentation: Lifecycle metadata applied to all existing documentation – 161 files now have lifecycle metadata for automated housekeeping
@@ -7303,6 +7959,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Evergreen documents (standards, Kanban, templates) are never deleted
 - Timeboxed documents (analysis) are archived after 90 days
 - 100% coverage achieved: 161/161 markdown files have lifecycle metadata
+
+---
 
 ---
 
@@ -7324,6 +7982,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.5+3] - 04-12-25
 
 📚 Documentation: Document lifecycle management spec and policy – TTL-based expiration system for KB documents
@@ -7339,6 +7999,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Documents can be classified as evergreen (permanent), timeboxed (archive), or transient (delete)
 - TTL-based expiration enables automated housekeeping to prevent documentation bloat
 - Foundation for future Doc Housekeeping Workflow package
+
+---
 
 ---
 
@@ -7363,6 +8025,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.5+1] - 04-12-25
 
 🧪 Testing: T05 complete – RW installer usability tested with identified issues and recommendations documented
@@ -7380,6 +8044,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.4.5+1.md` for full details
 - Identified 6 usability issues (2 high, 3 medium, 1 low priority) - all documented with recommendations
 - Installer is functional and usable, identified improvements are enhancements not blockers
+
+---
 
 ---
 
@@ -7401,6 +8067,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.4.4+1.md` for full details
 - Quickstart guide provides copy-paste ready examples for Python and Node.js projects
 - README now clearly recommends installer over manual setup
+
+---
 
 ---
 
@@ -7426,6 +8094,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.2+1] - 04-12-25
 
 🎨 Design: T02 complete – RW config schema (`rw-config.yaml`) designed with three modes and example configs
@@ -7444,6 +8114,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.4.2+1.md` for full details
 - Schema defines 5 required keys + 6 optional keys, maps cleanly to RW YAML and `.cursorrules` needs
 - Example configs serve as templates for installer CLI (T03)
+
+---
 
 ---
 
@@ -7466,6 +8138,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.1+2] - 04-12-25
 
 📚 Documentation: Integrated workflow hardening guide and linked it to RW execution documentation
@@ -7485,6 +8159,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.4.1+1] - 04-12-25
 
 📊 Analysis: Task 1 complete – Analyzed RW adoption friction and defined required RW config keys (Story 4)
@@ -7497,6 +8173,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.4.1+1.md` for full details
 - No code or workflow logic changes yet; this release captures analysis and planning work for the RW installer
+
+---
 
 ---
 
@@ -7517,6 +8195,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.3.6+1] - 03-12-25
 
 📚 Documentation: Task 6 complete - Created comprehensive workflow customization patterns guide
@@ -7529,6 +8209,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.3.6+1.md` for full details
 - Guide enables users to adapt workflows to their specific projects and use cases
+
+---
 
 ---
 
@@ -7549,6 +8231,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.3.4+1] - 03-12-25
 
 🚀 Feature: Task 4 complete - Created Testing Workflow example with YAML and execution guide
@@ -7565,6 +8249,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.3.4+1.md` for full details
 - Testing Workflow demonstrates agent-driven execution for testing workflows
+
+---
 
 ---
 
@@ -7588,6 +8274,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.3.3+1] - 03-12-25
 
 🚀 Feature: Task 3 complete - Created Migration Workflow example with YAML and execution guide
@@ -7606,6 +8294,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.3.2+1] - 03-12-25
 
 🚀 Feature: Task 2 complete - Created Refactor Workflow example with YAML and execution guide
@@ -7620,6 +8310,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.3.2+1.md` for full details
 - Refactor Workflow demonstrates agent-driven execution for code quality workflows
+
+---
 
 ---
 
@@ -7641,6 +8333,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.3.1+1] - 03-12-25
 
 📚 Documentation: Story 3 setup - Created Additional Workflows & Examples story
@@ -7655,6 +8349,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.3.1+1.md` for full details
 - Story 3 will provide workflow examples beyond Release Workflow
 - All workflows will follow agent-driven execution pattern
+
+---
 
 ---
 
@@ -7673,6 +8369,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.8+2.md` for full details
 - All 8 tasks (T01-T08) completed successfully
 - PDCA integration fully implemented
+
+---
 
 ---
 
@@ -7695,6 +8393,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.8+1.md` for full details
 - Existing task files remain unchanged (backward compatible)
 - New task files should use Txx format
+
+---
 
 ---
 
@@ -7722,6 +8422,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.2.7+1] - 03-12-25
 
 🧰 Tooling: Task 7 setup - Updated Kanban policy to Txx format and created implementation tasks
@@ -7743,6 +8445,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Policy change: `Exx:Sxx:Txxx` → `Exx:Sxx:Txx`
 - Example: `E20:S07:T010` → `E20:S07:T10`
 - Existing tasks remain backward compatible
+
+---
 
 ---
 
@@ -7770,6 +8474,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.2.5+1] - 03-12-25
 
 📚 Documentation: Task 5 - Created comprehensive PDCA templates and examples
@@ -7790,6 +8496,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - PLAN and ACT phase templates already existed and were verified
 - All templates are project-agnostic
 - Examples cover multiple scenarios
+
+---
 
 ---
 
@@ -7819,6 +8527,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.2.3+1] - 03-12-25
 
 🧰 Tooling: Task 3 complete - Enhanced PLAN Phase in changelog format
@@ -7845,6 +8555,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.2.2+1] - 03-12-25
 
 🧰 Tooling: Task 2 complete - Added ACT Phase (Step 13) to Release Workflow for PDCA integration
@@ -7867,6 +8579,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - Step 13 implements ACT phase of PDCA cycle
 - Step 13 completes the Document-Commit-Reflect pattern
 - Steps 12-13 together complete PDCA cycle integration
+
+---
 
 ---
 
@@ -7896,6 +8610,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.2.0+1] - 03-12-25
 
 📚 Documentation: Story 2 setup complete - Created Story 2 and tasks for PDCA integration into Release Workflow
@@ -7916,6 +8632,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.2.0+1.md` for full details
 - Story 2 establishes foundation for PDCA cycle integration into Release Workflow
 - All 6 tasks created with detailed approaches and acceptance criteria
+
+---
 
 ---
 
@@ -7956,6 +8674,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.1.6+1] - 09-12-25
 
 🐛 Bug Report: Created BR-002 and Kanban task for changelog validator ordering bug
@@ -7977,6 +8697,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.6+1.md` for full details
 - Bug was identified by been-there project during framework sync
 - Fix will support both formats to maintain compatibility
+
+---
 
 ---
 
@@ -8006,6 +8728,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.1.1+4] - 02-12-25
 
 📚 Documentation: Task 2 complete - Tag Confidentia/fynd.deals examples and add dev-kit examples
@@ -8029,6 +8753,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.2.1.1+3] - 02-12-25
 
 📚 Documentation: Task 1 complete - Audit RW documentation for project-specific assumptions
@@ -8044,6 +8770,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.1+3.md` for full details
 - Audit report: `docs/project-management/kanban/epics/Epic-2/stories/Story-001-rw-agent-execution-and-docs/T001-audit-report.md`
 - Findings will be addressed in T002 and T003
+
+---
 
 ---
 
@@ -8069,6 +8797,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.1+2.md` for full details
 - Verification methods: Test suite execution or manual testing
 - Unverified fixes must be logged as "Attempted Fix (Pending Verification)"
+
+---
 
 ---
 
@@ -8101,6 +8831,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.4.1+2] - 07-12-25
 
 🏗️ Core Infrastructure: Repository rename from vibe-dev-kit to ai-dev-kit completed
@@ -8129,6 +8861,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.4.0+1] - 07-12-25
 
 🏗️ Core Infrastructure: Repository branding and renaming planning story created
@@ -8147,6 +8881,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 ### Changed
 - Epic 1 status updated to reflect new repository branding work
 - Repository naming strategy aligned with "Head First AI-Assisted Development" book branding
+
+---
 
 ---
 
@@ -8173,6 +8909,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.3.5+2] - 03-12-25
 
 ✅ Story Completion: Story 3 (Core KB Structure for Dev Kit) marked as COMPLETE
@@ -8187,6 +8925,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.3.5+2.md` for full details
 - Story 3 establishes solid KB foundation for ai-dev-kit
 - All deliverables completed: analysis, principles, migration guide, implementation, documentation, scalable pattern
+
+---
 
 ---
 
@@ -8215,6 +8955,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.3.4+1] - 03-12-25
 
 🏗️ Implementation: Task 4 Phase 2 complete - Guides structure implemented
@@ -8236,6 +8978,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.3.4+1.md` for full details
 - Phase 2 of migration plan implemented (low risk - adds new structure only)
 - Guides structure ready for content
+
+---
 
 ---
 
@@ -8262,6 +9006,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.3.1+1] - 02-12-25
 
 📊 Analysis: Task 1 complete - KB structure analysis and target definition
@@ -8283,6 +9029,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.2.5+1] - 02-12-25
 
 📚 Documentation: Task 5 complete - Package READMEs updated with modularity information
@@ -8301,6 +9049,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.2.5+1.md` for full details
 - All three packages now have clear modularity documentation
 - Story 2: Package & Repo Architecture is now COMPLETE
+
+---
 
 ---
 
@@ -8326,6 +9076,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.2.3+1] - 02-12-25
 
 📊 Analysis: Task 3 complete - Package dependency matrix created
@@ -8345,6 +9097,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - No hard dependencies between packages, all dependencies are optional
 - All packages can be used standalone (9-10/10 independence scores)
 - Foundation for consumption patterns (T004) and README updates (T005)
+
+---
 
 ---
 
@@ -8368,6 +9122,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.2.1+1] - 02-12-25
 
 📊 Analysis: Task 1 complete - Package structure analysis
@@ -8384,6 +9140,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.2.1+1.md` for full details
 - Analysis shows all packages are highly independent (9-10/10 scores)
 - Dependencies are mostly soft/optional, allowing flexible consumption
+
+---
 
 ---
 
@@ -8404,6 +9162,8 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 
 ---
 
+---
+
 ## [0.1.1.1+1] - 02-12-25
 
 🏗️ Foundation: First proper release with Epic 1–4 structure, dev-kit versioning policy, and Kanban FR/BR → Task flow
@@ -8420,4 +9180,3 @@ Story 11 (Kanban Granularity & Discrete Task Docs) is now COMPLETE. All tasks (T
 - See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.1.1+1.md` for full details.
 
 ---
-

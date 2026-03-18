@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 1, Task 5: Set Up Build System and Dependency Management
+# Epic 1, Story 1, Task 5: Set up build system and dependency management
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.1.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.1.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.1.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S1:T5`)
+**Format:** `E1:S1:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S01:T05`
 
@@ -28,82 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up build system and dependency management for the {PROJECT_NAME} project. Configure build tools, package managers, and dependency management to support development, testing, and deployment workflows.
+Set up build system and dependency management for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project structure (from T01)
-- Development environment (from T03)
-- Technology stack decisions
-- Build tool preferences ({BUILD_TOOL})
-- Package manager choice ({PACKAGE_MANAGER})
-- ai-dev-kit build configuration templates (if adopting)
+- Requirements and specifications
+- set up build system and dependency management requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Build system configured ({BUILD_TOOL})
-- Dependency management set up ({PACKAGE_MANAGER})
-- Build configuration files
-- Dependency lock files (if applicable)
-- Build scripts and commands documented
+- set up build system and dependency management completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Build system configured and working
-- [ ] Dependency management set up
-- [ ] Build configuration files created
-- [ ] Dependencies can be installed successfully
-- [ ] Build commands work correctly
-- [ ] Build process documented
+- [ ] Set up build system and dependency management completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Choose build system ({BUILD_TOOL})
-2. Choose package manager ({PACKAGE_MANAGER})
-3. Initialize build system configuration
-4. Set up dependency management
-5. Configure build scripts and commands
-6. Test build process
-7. Document build system usage
+1. Analyze requirements for set up build system and dependency management
+2. Design approach and plan
+3. Implement set up build system and dependency management
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- T03: Configure development environment and tooling (requires development environment)
+- E1:S1:T04
 
 **Blocks:**
-- T06: Configure code quality tools (benefits from build system)
-- T07: Establish coding standards and conventions (benefits from build system)
+- E1:S1:T06
 
-**Parallel Development Candidacy:** Safe (can proceed independently once development environment is configured)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E01:S01:T03: Configure development environment and tooling
-- E01:S01:T06: Configure code quality tools
-- E01:S01:T07: Establish coding standards and conventions
+- [E01:S01:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E01:S01: Project Foundation and Setup
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.1.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -115,10 +111,7 @@ Set up build system and dependency management for the {PROJECT_NAME} project. Co
 
 ## Notes
 
-- Choose build tools appropriate for {PROJECT_TYPE}
-- Lock dependencies for reproducible builds
-- Document build commands clearly
-- Consider CI/CD integration requirements
+[Additional notes, context, or considerations for this task.]
 
 ---
 
@@ -130,14 +123,12 @@ Set up build system and dependency management for the {PROJECT_NAME} project. Co
 
 ## References
 
-- {BUILD_TOOL} documentation
-- {PACKAGE_MANAGER} best practices
-- Build system configuration patterns
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
 
 ---
 
 ## Next Actions
 
-- [ ] Configure build system
-- [ ] Set up dependency management
-- [ ] Test and document build process
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

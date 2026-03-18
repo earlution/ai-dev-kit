@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Epic 6, Story 1: BR Repo (PERPETUAL)
 
-**Status:** IN PROGRESS (PERPETUAL)  
+**Status:** ✅ COMPLETE
 **Priority:** HIGH  
-**Last updated:** 2026-01-22 (v0.5.1.34+2 – T36: Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)  
+**Last updated:** 2026-03-09 (v0.6.1.37+2 – Kanban documentation setup)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
-**Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.34+2  
+**Completed:** 2026-03-09
+**Version:** v0.6.1.37+2
 **Code:** E6S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -35,7 +35,7 @@ housekeeping_policy: keep
 - [x] **E6:S01:T34 – UKW MoSCOW Prioritization Missing** - ✅ COMPLETE (v0.6.1.34+2 – Implementation complete: MoSCOW prioritization logic added to UKW Step 6, all acceptance criteria met) - [Task Document](Story-001-br-repo/T34-ukw-moscow-prioritization-missing.md) | [BR-034](../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
 - [x] **E6:S01:T35 – RW Housekeeping Step Not Working** - COMPLETE (v0.6.1.35+1) - [Task Document](Story-001-br-repo/T35-rw-housekeeping-step-not-working.md) | [BR-035](../../fr-br/BR-035-rw-housekeeping-step-not-working.md)
 - [x] **E6:S01:T36 – RW Step 7 Board Update Bugs** - ✅ COMPLETE (v0.5.1.34+2 – Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates) - [Task Document](Story-001-br-repo/T36-rw-step-7-board-update-bugs.md) | [BR-036](../../fr-br/BR-036-rw-step-7-board-update-bugs.md)
-- [x] **E6:S01:T37 – Kanban Install Delivers Mixed Dev Kit Backlog and Templates into Consumer Boards** ✅ COMPLETE (v0.6.1.37+1 – Doc-only anchor: BR/task docs created) - [Task Document](Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md) | [BR-037](../../fr-br/BR-037-kanban-install-consumer-board-contamination.md)
+- [x] **E6:S01:T37 – Kanban Install Consumer Board Contamination** - ✅ COMPLETE (v0.6.1.37+1 – Contamination detector + remediation tooling implemented; CHANGE IMPLEMENTED, awaiting consumer verification) - [Task Document](Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md) | [BR-037](../../fr-br/BR-037-kanban-install-consumer-board-contamination.md)
 
 ---
 
@@ -98,7 +98,7 @@ This is the **Bug Report Repository** (BR Repo) for Epic 6. All Bug Reports (BRs
 
 ## PERPETUAL State
 
-**Status:** IN PROGRESS (PERPETUAL)
+**Status:** ✅ COMPLETE
 
 **Characteristics:**
 - Repository stories never complete

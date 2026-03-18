@@ -2,20 +2,96 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-v0.6.6.56%2B1-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+<!-- Badges: Version is shown in text below, other badges use static Shields.io -->
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-[Features](#features) • [Installation](#getting-started) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
+**Version (SemVer):** `v0.4.14.4+1` | **Internal:** `v0.4.14.4+1` (see detailed changelog) | **Last Updated:** 2026-03-12
+
+[Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
 </div>
 
 ---
 
+## 🚀 Quick Start / Bootstrap
+
+**Not sure where to start? Choose your path:**
+
+### 🎯 I want to use AI Dev Kit frameworks in my project
+
+**→ Start here:** [`INSTALL_IN_YOUR_PROJECT.md`](INSTALL_IN_YOUR_PROJECT.md)
+
+- **New project?** Install frameworks as dependencies (recommended)
+- **Existing project?** Migrate from copy-paste to package management
+- **Just exploring?** Browse frameworks and documentation first
+
+**Quick Install (Git Submodule - Recommended for Existing Projects):**
+```bash
+# 1. Add ai-dev-kit as submodule
+git submodule add https://github.com/earlution/ai-dev-kit.git .ai-dev-kit
+
+# 2. Copy frameworks
+cp -r .ai-dev-kit/packages/frameworks/workflow\ mgt/* ./
+cp -r .ai-dev-kit/packages/frameworks/kanban/* ./
+
+# 3. Run installers (REQUIRED)
+python scripts/install_release_workflow.py --mode c
+python3 scripts/install_kanban_framework.py --mode fresh
+```
+
+**📖 Complete Guide:** See [`INSTALL_IN_YOUR_PROJECT.md`](INSTALL_IN_YOUR_PROJECT.md) for detailed instructions and all installation methods.
+
+### 📚 I want to understand what AI Dev Kit is
+
+**→ Start here:** [About The Project](#about-the-project)
+
+- Read the problem statement and vision
+- Explore available frameworks
+- Review design principles
+- Check out the roadmap
+
+**Key Documents:**
+- [Vision and Purpose](docs/documentation/ai-dev-kit-vision-and-purpose.md)
+- [Frameworks Overview](#frameworks)
+
+### 🔧 I want to contribute or develop
+
+**→ Start here:** [Contributing](#contributing) and [Roadmap](#roadmap)
+
+- Review contributing guidelines
+- Check open issues and feature requests
+- Explore the codebase structure
+- Join discussions
+
+**Developer Resources:**
+- [Architecture Documentation](docs/architecture)
+- [Framework Development Guides](packages/frameworks)
+- [Workflow Documentation](packages/frameworks/workflow mgt/docs)
+- **Complete Workflow Library** - 12 comprehensive workflows with documentation
+- **Maintainers:** [Build and upload runbooks](docs/maintenance/README.md) (package build/publish)
+
+### 🔍 I'm looking for a specific framework
+
+**→ Jump to:** [Frameworks](#frameworks)
+
+**Available Frameworks:**
+- **Workflow Management** (`v2.1.3`) - 12 comprehensive workflows with full documentation
+- **Kanban** (`v2.1.0`) - Project management and task tracking
+- **Numbering & Versioning** (`v2.0.0`) - Version schema and policies
+- **Document Lifecycle** (`v1.0.0`) - Documentation management
+- **Debug Path** (`v1.0.0`) - Debugging utilities
+
+Each framework includes installation guides, usage examples, and comprehensive documentation.
+
+---
+
 ## 📋 Table of Contents
 
+- [Quick Start / Bootstrap](#-quick-start--bootstrap)
 - [About The Project](#about-the-project)
   - [Features](#features)
   - [Built With](#built-with)

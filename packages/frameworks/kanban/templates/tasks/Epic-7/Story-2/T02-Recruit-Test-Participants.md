@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 2, Task 2: Recruit Test Participants
+# Epic 7, Story 2, Task 2: Recruit test participants
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.2.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.2.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.2.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S2:T2`)
+**Format:** `E7:S2:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S02:T02`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Recruit test participants for usability testing in the {PROJECT_NAME} project. Identify, screen, and recruit appropriate participants for usability testing sessions to ensure representative and relevant test outcomes.
+Recruit test participants for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Usability test scenarios (from E7:S2:T01)
-- User personas (from E7:S1:T06, if available)
-- Participant criteria and screening requirements
-- Recruitment channels and methods
-- Recruitment resources and budget
-- ai-dev-kit UXR recruitment practices (if adopting)
+- Requirements and specifications
+- recruit test participants requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Participant recruitment plan
-- Participant screening criteria
-- Recruited test participants
-- Recruitment documentation
-- Participant database/contact list
+- recruit test participants completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Participant recruitment plan created
-- [ ] Participant screening criteria defined
-- [ ] Appropriate test participants recruited
-- [ ] Participants meet screening criteria
-- [ ] Sufficient number of participants recruited
-- [ ] Recruitment documentation complete
-- [ ] Participant database/contact list maintained
-- [ ] Participants represent target user base
+- [ ] Recruit test participants completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review usability test scenarios
-2. Review user personas (if available)
-3. Define participant screening criteria
-4. Identify recruitment channels and methods
-5. Create participant recruitment plan
-6. Recruit participants through selected channels
-7. Screen participants against criteria
-8. Maintain participant database/contact list
-9. Document recruitment process and outcomes
-10. Review and refine recruitment approach
+1. Analyze requirements for recruit test participants
+2. Design approach and plan
+3. Implement recruit test participants
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S2:T01: Design usability test scenarios (recruitment aligns with scenarios)
+- E7:S2:T01
 
 **Blocks:**
-- E7:S2:T03: Conduct usability testing sessions (sessions require participants)
+- E7:S2:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S2:T01: Design usability test scenarios (recruitment aligns with scenarios)
-- E7:S2:T03: Conduct usability testing sessions (sessions require participants)
+- [E07:S02:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S2: Usability Testing and Validation (this story)
-- E7:S1: User Research and Discovery (recruitment may use research participants)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.2.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Recruit test participants for usability testing in the {PROJECT_NAME} project. I
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

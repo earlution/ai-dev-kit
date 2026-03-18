@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 3, Task 5: Add Account Deletion/Deactivation
+# Epic 9, Story 3, Task 5: Add account deletion/deactivation
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.9.3.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.3.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.3.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S3:T5`)
+**Format:** `E9:S3:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S03:T05`
 
@@ -28,92 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Add account deletion/deactivation for the {PROJECT_NAME} project. Implement functionality that allows users to delete or deactivate their accounts, including data handling, confirmation processes, and integration with authentication systems.
+Add account deletion/deactivation for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- User profile data model (from E9:S3:T01)
-- Profile CRUD operations (from E9:S3:T02)
-- User authentication system (from E9:S1)
-- Account deletion/deactivation requirements
-- Data retention requirements
-- Security requirements
-- ai-dev-kit account management patterns (if adopting)
+- Requirements and specifications
+- add account deletion/deactivation requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Account deletion/deactivation implemented
-- Account deletion functionality
-- Account deactivation functionality
-- Confirmation processes
-- Data handling procedures
-- Integration with authentication
+- add account deletion/deactivation completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Account deletion/deactivation implemented
-- [ ] Account deletion functionality implemented
-- [ ] Account deactivation functionality implemented
-- [ ] Confirmation processes implemented
-- [ ] Data handling procedures defined and implemented
-- [ ] Integration with authentication system complete
-- [ ] Account deletion/deactivation is secure
-- [ ] Account deletion/deactivation is tested and functional
+- [ ] Add account deletion/deactivation completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review user profile data model and CRUD operations
-2. Review authentication system
-3. Review account deletion/deactivation requirements and data retention policies
-4. Design account deletion/deactivation flow
-5. Implement account deletion functionality
-6. Implement account deactivation functionality
-7. Implement confirmation processes
-8. Implement data handling procedures
-9. Integrate with authentication system
-10. Test account deletion/deactivation functionality
-11. Review and refine implementation
+1. Analyze requirements for add account deletion/deactivation
+2. Design approach and plan
+3. Implement add account deletion/deactivation
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S3:T01: Design user profile data model (deletion/deactivation uses data model)
-- E9:S3:T02: Implement profile CRUD operations (deletion/deactivation uses delete operations)
-- E9:S1: User Authentication System (deletion/deactivation integrates with authentication)
+- E9:S3:T04
 
 **Blocks:**
-- E9:S3:T06: Create profile viewing/editing UI (UI may include deletion/deactivation options)
+- E9:S3:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, and E9:S1)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S3:T01: Design user profile data model (deletion/deactivation uses data model)
-- E9:S3:T02: Implement profile CRUD operations (deletion/deactivation uses delete operations)
-- E9:S3:T06: Create profile viewing/editing UI (UI may include deletion/deactivation options)
+- [E09:S03:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S3: User Profile Management (this story)
-- E9:S1: User Authentication System (deletion/deactivation integrates with authentication)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -122,3 +108,27 @@ Add account deletion/deactivation for the {PROJECT_NAME} project. Implement func
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

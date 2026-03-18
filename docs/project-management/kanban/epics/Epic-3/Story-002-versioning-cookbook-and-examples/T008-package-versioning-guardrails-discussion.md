@@ -250,17 +250,20 @@ def validate_version_consistency(package_path: Path) -> Tuple[bool, List[str]]:
   - Removing templates or core components
   - Changing package directory structure significantly
 
+
 - ✅ **Breaking Policy Changes:**
   - Changing core policy rules that break existing implementations
   - Removing policy options or requirements
   - Changing mandatory vs. optional requirements
   - Changing integration patterns that break existing setups
 
+
 - ✅ **Breaking API Changes (for script packages):**
   - Removing command-line arguments or options
   - Changing script behavior in incompatible ways
   - Removing functions or classes from public API
   - Changing return types or signatures
+
 
 **Examples:**
 - **MAJOR:** Removing `EPIC_TEMPLATE.md` (breaking - consumers depend on it)
@@ -284,17 +287,20 @@ def validate_version_consistency(package_path: Path) -> Tuple[bool, List[str]]:
   - Adding new optional features or capabilities
   - Adding new examples or use cases
 
+
 - ✅ **Enhancements:**
   - Expanding existing templates with new sections
   - Adding new policy options (non-breaking)
   - Adding new configuration options
   - Adding new validation rules (non-breaking)
 
+
 - ✅ **New Documentation:**
   - Adding new guides or tutorials
   - Adding new examples or case studies
   - Adding new integration documentation
   - Adding new troubleshooting guides
+
 
 **Examples:**
 - **MINOR:** Adding new `MIGRATION_GUIDE.md` (new feature)
@@ -319,11 +325,13 @@ def validate_version_consistency(package_path: Path) -> Tuple[bool, List[str]]:
   - Fixing formatting or rendering issues
   - Fixing validation script bugs
 
+
 - ✅ **Corrections:**
   - Correcting typos or grammatical errors
   - Correcting factual errors
   - Correcting version numbers or dates
   - Correcting file paths or references
+
 
 - ✅ **Clarifications:**
   - Clarifying ambiguous language
@@ -331,11 +339,13 @@ def validate_version_consistency(package_path: Path) -> Tuple[bool, List[str]]:
   - Improving readability without changing meaning
   - Adding cross-references or links
 
+
 - ✅ **Minor Improvements:**
   - Improving formatting or structure
   - Updating outdated information (non-breaking)
   - Improving code examples (non-breaking)
   - Minor refactoring of documentation structure
+
 
 **Examples:**
 - **PATCH:** Fixing broken link to external resource

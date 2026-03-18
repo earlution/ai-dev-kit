@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 1, Task 2: Create BR Triage Automation
+# Epic 6, Story 1, Task 2: Create BR triage automation
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.1.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.1.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.1.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S1:T2`)
+**Format:** `E6:S1:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S01:T02`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create BR (Bug Report) triage automation for the {PROJECT_NAME} project. Develop automated processes that handle BR intake, validation, triage, and conversion to tasks according to the defined workflow.
+Create BR triage automation for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- BR intake and triage workflow (from E6:S1:T01)
-- Automation requirements
-- ai-dev-kit BR triage automation (if adopting)
-- Workflow automation patterns (from E2:S2)
-- Scripting language preferences
+- Requirements and specifications
+- create br triage automation requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- BR triage automation scripts/tools
-- Automation configuration
-- Automation documentation
-- Automation tests (if applicable)
-- Automation examples
+- create br triage automation completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] BR triage automation created
-- [ ] Automation implements intake and triage workflow
-- [ ] Automation handles BR validation
-- [ ] Automation performs triage classification
-- [ ] Automation converts BRs to tasks
-- [ ] Automation configuration documented
-- [ ] Automation tests created (if applicable)
-- [ ] Automation is reliable and maintainable
-- [ ] Automation reduces manual effort
+- [ ] Create BR triage automation completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review BR intake and triage workflow
-2. Identify automation opportunities
-3. Design automation structure
-4. Implement BR triage automation
-5. Add BR validation logic
-6. Implement triage classification
-7. Implement BR to task conversion
-8. Create automation configuration
-9. Write automation documentation
-10. Create automation tests (if applicable)
-11. Review and refine automation
+1. Analyze requirements for create br triage automation
+2. Design approach and plan
+3. Implement create br triage automation
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E6:S1:T01: Design BR intake and triage workflow (automation implements workflow)
-- E2:S2: Workflow Automation (automation uses workflow patterns)
+- E6:S1:T01
 
 **Blocks:**
-- E6:S1:T03: Integrate BR intake with Kanban (integration may use automation)
-- E6:S1:T04: Document BR intake process (documentation covers automation)
+- E6:S1:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S1:T01: Design BR intake and triage workflow (automation implements workflow)
-- E6:S1:T03: Integrate BR intake with Kanban (integration may use automation)
-- E6:S1:T04: Document BR intake process (documentation covers automation)
+- [E06:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S1: BR Intake and Triage Workflow (this story)
-- E2:S2: Workflow Automation (automation uses workflow patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.1.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Create BR (Bug Report) triage automation for the {PROJECT_NAME} project. Develop
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

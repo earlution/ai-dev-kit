@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 1, Task 7: Document Research Findings and Insights
+# Epic 7, Story 1, Task 7: Document research findings and insights
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.7.1.7+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.1.7+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.1.7+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S1:T7`)
+**Format:** `E7:S1:T7` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S01:T07`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document research findings and insights for the {PROJECT_NAME} project. Create comprehensive documentation that captures research outcomes, insights, and learnings for reference and knowledge sharing.
+Document research findings and insights for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Research objectives and questions (from E7:S1:T01)
-- Research findings (from E7:S1:T05)
-- User personas (from E7:S1:T06)
-- Research data (from E7:S1:T03, T04)
-- Documentation requirements
+- Requirements and specifications
+- document research findings and insights requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Research findings documentation
-- Insights documentation
-- Research summary report
-- Research methodology documentation
-- Research recommendations
+- document research findings and insights completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Research findings documented comprehensively
-- [ ] Insights documented and explained
-- [ ] Research summary report created
-- [ ] Research methodology documented
-- [ ] Research recommendations provided
-- [ ] Documentation is clear and accessible
-- [ ] Documentation supports decision-making
-- [ ] Documentation enables knowledge sharing
+- [ ] Document research findings and insights completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all research components
-2. Identify documentation needs
-3. Create research findings documentation
-4. Document key insights
-5. Create research summary report
-6. Document research methodology
-7. Provide research recommendations
-8. Organize documentation structure
-9. Review and refine documentation
+1. Analyze requirements for document research findings and insights
+2. Design approach and plan
+3. Implement document research findings and insights
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S1:T01: Define research objectives and questions (documentation references objectives/questions)
-- E7:S1:T05: Analyze research data and synthesize findings (documentation covers findings)
-- E7:S1:T06: Create user personas (documentation includes personas)
+- E7:S1:T06
 
 **Blocks:**
-- None (documentation task)
+- E7:S1:T08
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T05, T06)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S1:T01: Define research objectives and questions (documentation references objectives/questions)
-- E7:S1:T05: Analyze research data and synthesize findings (documentation covers findings)
-- E7:S1:T06: Create user personas (documentation includes personas)
+- [E07:S01:T07: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S1: User Research and Discovery (this story)
-- E7:S5: UX Insights and Recommendations (insights build on research documentation)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.7+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Document research findings and insights for the {PROJECT_NAME} project. Create c
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

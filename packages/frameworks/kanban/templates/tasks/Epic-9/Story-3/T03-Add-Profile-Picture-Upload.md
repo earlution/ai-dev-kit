@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 3, Task 3: Add Profile Picture Upload
+# Epic 9, Story 3, Task 3: Add profile picture upload
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.9.3.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.3.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.3.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S3:T3`)
+**Format:** `E9:S3:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S03:T03`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Add profile picture upload for the {PROJECT_NAME} project. Implement functionality that allows users to upload, manage, and display profile pictures, including file upload handling, image processing, and storage integration.
+Add profile picture upload for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- User profile data model (from E9:S3:T01)
-- Profile CRUD operations (from E9:S3:T02)
-- File upload requirements
-- Image processing requirements
-- Storage requirements
-- ai-dev-kit file upload patterns (if adopting)
+- Requirements and specifications
+- add profile picture upload requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Profile picture upload implemented
-- File upload handling
-- Image processing functionality
-- Profile picture storage integration
-- Profile picture display functionality
-- Upload UI components
+- add profile picture upload completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Profile picture upload implemented
-- [ ] File upload handling implemented
-- [ ] Image processing (resize, validation) implemented
-- [ ] Profile picture storage integrated
-- [ ] Profile picture display functionality implemented
-- [ ] Upload UI components created
-- [ ] Upload includes validation and error handling
-- [ ] Profile picture upload is tested and functional
+- [ ] Add profile picture upload completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review user profile data model and CRUD operations
-2. Review file upload and image processing requirements
-3. Design profile picture upload flow
-4. Implement file upload handling
-5. Implement image processing (resize, format conversion, validation)
-6. Integrate with profile storage
-7. Implement profile picture display
-8. Create upload UI components
-9. Test profile picture upload functionality
-10. Review and refine implementation
+1. Analyze requirements for add profile picture upload
+2. Design approach and plan
+3. Implement add profile picture upload
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S3:T01: Design user profile data model (upload uses data model)
-- E9:S3:T02: Implement profile CRUD operations (upload uses update operations)
+- E9:S3:T02
 
 **Blocks:**
-- E9:S3:T06: Create profile viewing/editing UI (UI includes picture upload)
+- E9:S3:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S3:T01: Design user profile data model (upload uses data model)
-- E9:S3:T02: Implement profile CRUD operations (upload uses update operations)
-- E9:S3:T06: Create profile viewing/editing UI (UI includes picture upload)
+- [E09:S03:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S3: User Profile Management (this story)
-- E17:S1: Third-Party Service Integration (file storage may use third-party services)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Add profile picture upload for the {PROJECT_NAME} project. Implement functionali
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

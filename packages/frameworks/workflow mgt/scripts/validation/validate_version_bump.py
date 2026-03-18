@@ -41,6 +41,69 @@ except ImportError:
     yaml = None
 
 
+def is_perpetual_task(task_number: int, task_content: Optional[str] = None) -> bool:
+    """
+    Detect if a task is a perpetual maintenance task.
+
+    A task is perpetual if:
+    - VERSION_TASK >= 100 (T101+)
+    - Or task doc contains perpetual_task: true or Task Type: Perpetual Maintenance
+
+    Returns:
+        True if perpetual, False otherwise.
+    """
+    if task_number >= 100:
+        return True
+    if task_content and (
+        "perpetual_task: true" in task_content
+        or "Perpetual Maintenance" in task_content
+    ):
+        return True
+    return False
+
+
+def extract_task_id_canonical(content: str) -> Optional[Tuple[int, int, int]]:
+    """
+    Extract Task ID from canonical section, preferring **Value:** or **Full Task ID:**.
+
+    Prevents wrong extraction when content has other E#:S#:T# references (e.g. in Progress).
+    Returns (epic, story, task) or None if not found.
+    """
+    task_id_pattern = re.compile(r'E(\d+):S(\d+):T(\d+)', re.IGNORECASE)
+
+    # Prefer **Value:** `E{epic}:S{story}:T{task}`
+    value_match = re.search(
+        r'\*\*Value:\*\*\s*[`]?E(\d+):S(\d+):T(\d+)[`]?',
+        content,
+        re.IGNORECASE,
+    )
+    if value_match:
+        return (int(value_match.group(1)), int(value_match.group(2)), int(value_match.group(3)))
+
+    # Or **Full Task ID:** `E{epic}:S{story}:T{task}`
+    full_match = re.search(
+        r'\*\*Full\s+Task\s+ID:\*\*\s*[`]?E(\d+):S(\d+):T(\d+)[`]?',
+        content,
+        re.IGNORECASE,
+    )
+    if full_match:
+        return (int(full_match.group(1)), int(full_match.group(2)), int(full_match.group(3)))
+
+    # Or section after ## Task ID with E#:S#:T#
+    task_id_section = re.search(
+        r'##\s+Task\s+ID\s*\n(.*?)(?=\n##|\n---|\Z)',
+        content,
+        re.DOTALL | re.IGNORECASE,
+    )
+    if task_id_section:
+        section = task_id_section.group(1)
+        match = task_id_pattern.search(section)
+        if match:
+            return (int(match.group(1)), int(match.group(2)), int(match.group(3)))
+
+    return None
+
+
 def load_rw_config(project_root: Path = None) -> Optional[Dict]:
     """Load rw-config.yaml if it exists."""
     if project_root is None:
@@ -235,6 +298,9 @@ def get_completed_task(story_file: Path, version_task: Optional[int] = None) -> 
             completed_tasks.append(task_num)
     
     if not completed_tasks:
+        # Perpetual tasks (T101+) are never COMPLETE; return version_task if provided
+        if version_task is not None and version_task >= 100:
+            return version_task
         return None
     
     # If version_task provided, check if it's completed
@@ -275,26 +341,28 @@ def locate_task_doc(
         story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story:03d}"
         if not story_dir.exists():
             story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
+        if not story_dir.exists() and story_file.exists():
+            # Fallback: story dir may match story file stem (e.g. Story-001-fr-repo/)
+            story_dir = story_file.parent / story_file.stem
     else:
         # Fallback patterns
         story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story:03d}"
         if not story_dir.exists():
             story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story}"
-    
-    # Fallback: directory named like story file (e.g. Story-001-br-repo/ for Story-001-br-repo.md)
-    if not story_dir.exists() and story_file.exists():
-        alt_story_dir = story_file.parent / story_file.stem
-        if alt_story_dir.is_dir():
-            story_dir = alt_story_dir
+        if not story_dir.exists() and story_file.exists():
+            story_dir = story_file.parent / story_file.stem
     
     if story_dir.exists():
         # Try Task-{task}-*.md pattern
         task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))
         if not task_files:
-            # Try T{task}-*.md pattern (3-digit)
+            # Try T{task}-*.md pattern (zero-padded 3)
             task_files = list(story_dir.glob(f"T{task:03d}-*.md"))
         if not task_files:
-            # Try T{task}-*.md pattern (no leading zero, e.g. T37)
+            # Try T{task}-*.md pattern (zero-padded 2, e.g. T02-*.md)
+            task_files = list(story_dir.glob(f"T{task:02d}-*.md"))
+        if not task_files:
+            # Try T{task}-*.md pattern (no padding, e.g. T37-*.md)
             task_files = list(story_dir.glob(f"T{task}-*.md"))
         if task_files:
             task_file = task_files[0]
@@ -346,7 +414,10 @@ def locate_task_doc(
     return (None, None, "not_found")
 
 
-def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int) -> Tuple[bool, list]:
+def validate_task_doc_fields(
+    task_content: str, epic: int, story: int, task: int,
+    relax_for_perpetual: bool = False
+) -> Tuple[bool, list]:
     """
     Validate Task document contains required fields.
     
@@ -358,6 +429,9 @@ def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int
     - Version Anchor (when complete)
     - Input
     - Deliverable
+    
+    When relax_for_perpetual=True (for perpetual tasks): Input and Deliverable
+    are optional; Version Anchor check skipped for IN PROGRESS tasks.
     
     Returns:
         (is_valid, list_of_errors)
@@ -385,12 +459,14 @@ def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int
     # Check required fields (case-insensitive, flexible patterns)
     # Note: For delimited sections, fields may use **Field:** format
     # Scope can be implicit in task title/description, so make it optional if other fields present
+    # Perpetual tasks: Input and Deliverable are optional
     required_fields = {
         'acceptance criteria': r'(?i)(?:^##\s+Acceptance\s+Criteria|^\*\*Acceptance\s+Criteria\*\*|^Acceptance\s+Criteria:|Acceptance\s+Criteria:)',
         'status': r'(?i)(?:^\*\*Status\*\*|^Status:|Status.*COMPLETE|Status.*TODO|Status.*IN PROGRESS|\*\*Status\*\*.*COMPLETE)',
-        'input': r'(?i)(?:^##\s+Input|^\*\*Input\*\*|^Input:|Input:)',
-        'deliverable': r'(?i)(?:^##\s+Deliverable|^\*\*Deliverable\*\*|^Deliverable:|Deliverable:)',
     }
+    if not relax_for_perpetual:
+        required_fields['input'] = r'(?i)(?:^##\s+Input|^\*\*Input\*\*|^Input:|Input:)'
+        required_fields['deliverable'] = r'(?i)(?:^##\s+Deliverable|^\*\*Deliverable\*\*|^Deliverable:|Deliverable:)'
     
     # Optional fields (warn if missing but don't fail)
     optional_fields = {
@@ -409,8 +485,8 @@ def validate_task_doc_fields(task_content: str, epic: int, story: int, task: int
             if not re.search(r'(?i)(?:task|description|title)', task_content[:200], re.IGNORECASE):
                 errors.append(f"Optional field missing (recommended): {field_name}")
     
-    # Check Version Anchor (if task is complete)
-    if re.search(r'(?i)✅\s+COMPLETE|Status.*COMPLETE', task_content):
+    # Check Version Anchor (if task is complete); skip for perpetual (IN PROGRESS)
+    if not relax_for_perpetual and re.search(r'(?i)✅\s+COMPLETE|Status.*COMPLETE', task_content):
         if not re.search(r'(?i)✅\s+COMPLETE\s+\(v\d+\.\d+\.\d+\.\d+\+\d+\)|Version\s+Anchor', task_content):
             errors.append("Version Anchor missing (task marked COMPLETE but no version marker found)")
     
@@ -689,10 +765,35 @@ def detect_first_time_est_doc(
             if re.search(version_pattern, changelog_content):
                 prior_version_exists = True
     
+    # CRITICAL FIX: Check if task document already exists (even if not created in this commit)
+    # If task doc exists, it's NOT doc-init, regardless of prior version history
+    # This fixes the bug where story + all task docs created together in story's abstract space
+    # causes first implementation work to incorrectly get BUILD=0 instead of BUILD=1
+    task_doc_exists = False
+    if task > 0:  # Task-level detection
+        story_file = find_story_file(config, epic, story)
+        if story_file:
+            task_doc_path, task_doc_content, format_type = locate_task_doc(
+                story_file, epic, story, task, config
+            )
+            if format_type != "not_found":
+                task_doc_exists = True
+    
     # Determine if this is first-time
     est_doc_created = new_est_doc_found or delimited_section_found
     
-    if est_doc_created and not prior_version_exists:
+    # CRITICAL: If task document already exists, it's NOT doc-init
+    # This handles the case where story + task docs created together in story's abstract space
+    # When first implementation work is done, task doc exists but wasn't created in this commit
+    # Without this check, function incorrectly returns is_first_time=True, causing BUILD=0
+    if task_doc_exists and not est_doc_created:
+        # Task doc exists but wasn't created in this commit → NOT doc-init
+        is_first_time = False
+        warnings.append(
+            f"⚠️  Task document already exists (not created in this commit). "
+            f"This is NOT a doc-init build. Task doc exists, so BUILD should be >= 1."
+        )
+    elif est_doc_created and not prior_version_exists:
         is_first_time = True
     elif est_doc_created and prior_version_exists:
         warnings.append(
@@ -702,11 +803,21 @@ def detect_first_time_est_doc(
     elif not est_doc_created and not prior_version_exists:
         # No E/S/T doc detected, but no prior version exists
         # This could be a delimited section or edge case - be lenient but warn
-        is_first_time = True
-        warnings.append(
-            f"⚠️  No new E/S/T doc file or section detected, but no prior version exists. "
-            f"Assuming first-time commit (doc-init). If this is incorrect, validation will fail on docs-only check."
-        )
+        # BUT: Only if task doc doesn't exist (if it exists, we already handled it above)
+        if not task_doc_exists:
+            is_first_time = True
+            warnings.append(
+                f"⚠️  No new E/S/T doc file or section detected, but no prior version exists. "
+                f"Assuming first-time commit (doc-init). If this is incorrect, validation will fail on docs-only check."
+            )
+        else:
+            # Task doc exists but wasn't detected as created in this commit
+            # This shouldn't happen, but handle it gracefully
+            is_first_time = False
+            warnings.append(
+                f"⚠️  Task document exists but wasn't detected as created in this commit. "
+                f"This is NOT a doc-init build. BUILD should be >= 1."
+            )
     
     return is_first_time, warnings
 
@@ -736,6 +847,22 @@ def validate_doc_init_build(
     
     print(f"🔍 Doc-init build detected (BUILD=0) - validating docs-only changes...")
     
+    # Get project root
+    project_root = project_root or Path.cwd()
+    
+    # Allow version file updates in doc-init builds
+    allowed_non_doc_relpaths = set()
+    if config and 'version_file' in config:
+        version_file_path = Path(config['version_file'])
+    else:
+        # Default fallback
+        version_file_path = Path("src/fynd_deals/version.py")
+    
+    try:
+        allowed_non_doc_relpaths.add(str(version_file_path.relative_to(project_root)))
+    except Exception:
+        pass
+    
     # Get changed files
     changed_files = get_changed_files(project_root)
     
@@ -749,6 +876,14 @@ def validate_doc_init_build(
     for file_path in changed_files:
         # Skip if file doesn't exist (might be deleted)
         if not file_path.exists():
+            continue
+        
+        try:
+            rel_path = str(file_path.relative_to(project_root))
+        except ValueError:
+            rel_path = str(file_path)
+        
+        if rel_path in allowed_non_doc_relpaths:
             continue
         
         if not is_documentation_file(file_path):
@@ -780,27 +915,29 @@ def validate_task_doc_alignment(
 ) -> Tuple[bool, list]:
     """
     Validate Task ID alignment with version components.
-    
-    Handles both zero-padded and non-zero-padded Task ID formats.
-    
+
+    Prefers canonical Task ID section (**Value:**, **Full Task ID:**, ## Task ID)
+    to avoid wrong extraction when content references other tasks (e.g. in Progress).
+
     Returns:
         (is_valid, list_of_errors)
     """
     errors = []
-    
-    # Extract Task ID from content (handle zero-padded formats)
-    task_id_pattern = re.compile(r'E(\d+):S(\d+):T(\d+)', re.IGNORECASE)
-    matches = task_id_pattern.findall(task_content)
-    
-    if not matches:
-        errors.append(f"Task ID not found in Task document. Expected: E{epic}:S{story}:T{task}")
-        return False, errors
-    
-    # Use first match (should be in header/title)
-    found_epic, found_story, found_task = matches[0]
-    found_epic = int(found_epic)
-    found_story = int(found_story)
-    found_task = int(found_task)
+
+    # Prefer canonical section over first regex match
+    canonical = extract_task_id_canonical(task_content)
+    if canonical:
+        found_epic, found_story, found_task = canonical
+    else:
+        # Fallback: first E#:S#:T# match
+        task_id_pattern = re.compile(r'E(\d+):S(\d+):T(\d+)', re.IGNORECASE)
+        matches = task_id_pattern.findall(task_content)
+        if not matches:
+            errors.append(f"Task ID not found in Task document. Expected: E{epic}:S{story}:T{task}")
+            return False, errors
+        found_epic = int(matches[0][0])
+        found_story = int(matches[0][1])
+        found_task = int(matches[0][2])
     
     if found_epic != epic:
         errors.append(f"Task ID Epic mismatch: Found E{found_epic}, Expected E{epic}")
@@ -909,9 +1046,10 @@ def validate_version_bump(
         else:
             print(f"  Location: Delimited section in {story_file}")
         
-        # Validate Task doc fields
+        # Validate Task doc fields (relax for perpetual tasks)
+        relax = is_perpetual_task(completed_task, task_doc_content)
         fields_valid, field_errors = validate_task_doc_fields(
-            task_doc_content, epic, story, completed_task
+            task_doc_content, epic, story, completed_task, relax_for_perpetual=relax
         )
         if not fields_valid:
             errors.append(f"❌ TASK DOCUMENT INCOMPLETE: Task E{epic}:S{story}:T{completed_task} document is missing required fields:")

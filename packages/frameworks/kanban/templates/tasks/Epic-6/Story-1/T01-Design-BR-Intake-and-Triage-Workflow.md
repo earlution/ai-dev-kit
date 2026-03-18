@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 1, Task 1: Design BR Intake and Triage Workflow
+# Epic 6, Story 1, Task 1: Design BR intake and triage workflow
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S1:T1`)
+**Format:** `E6:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S01:T01`
 
@@ -28,91 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design BR (Bug Report) intake and triage workflow for the {PROJECT_NAME} project. Create a systematic workflow that defines how Bug Reports are received, triaged, prioritized, and converted into actionable tasks.
+Design BR intake and triage workflow for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Bug Report requirements
-- Existing intake/triage processes (if any)
-- Team workflow preferences
-- ai-dev-kit BR intake workflow (if adopting)
-- Kanban board structure (from E4:S1)
-- Workflow management patterns (from E2:S1)
+- Requirements and specifications
+- design br intake and triage workflow requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- BR intake and triage workflow design
-- Triage process documentation
-- Workflow diagram (if applicable)
-- Workflow validation criteria
-- Workflow design documentation
+- design br intake and triage workflow completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] BR intake and triage workflow designed and documented
-- [ ] Triage process clearly defined
-- [ ] Workflow diagram created (if applicable)
-- [ ] Workflow validation criteria established
-- [ ] Workflow integrates with Kanban board
-- [ ] Workflow supports efficient BR processing
-- [ ] Workflow is clear and maintainable
-- [ ] Workflow design documentation complete
+- [ ] Design BR intake and triage workflow completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Analyze Bug Report requirements
-2. Review existing intake/triage processes (if any)
-3. Design BR intake and triage workflow structure
-4. Define workflow steps and transitions
-5. Establish triage criteria and prioritization
-6. Integrate workflow with Kanban board
-7. Create workflow diagram (if applicable)
-8. Establish workflow validation criteria
-9. Document workflow design
-10. Review and refine workflow
+1. Analyze requirements for design br intake and triage workflow
+2. Design approach and plan
+3. Implement design br intake and triage workflow
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Kanban board structure (from E4:S1:T01)
-- Workflow management patterns (from E2:S1, if applicable)
+- None
 
 **Blocks:**
-- E6:S1:T02: Create BR triage automation (automation implements workflow)
-- E6:S1:T03: Integrate BR intake with Kanban (integration uses workflow)
-- E6:S1:T04: Document BR intake process (documentation covers workflow)
+- E6:S1:T02
 
-**Parallel Development Candidacy:** Blocked (depends on E4:S1)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S1:T02: Create BR triage automation (automation implements workflow)
-- E6:S1:T03: Integrate BR intake with Kanban (integration uses workflow)
-- E6:S1:T04: Document BR intake process (documentation covers workflow)
+- [E06:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S1: BR Intake and Triage Workflow (this story)
-- E4:S1: Kanban Board Setup (workflow uses Kanban board)
-- E2:S1: Workflow Definitions and Patterns (workflow uses patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -121,3 +108,27 @@ Design BR (Bug Report) intake and triage workflow for the {PROJECT_NAME} project
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

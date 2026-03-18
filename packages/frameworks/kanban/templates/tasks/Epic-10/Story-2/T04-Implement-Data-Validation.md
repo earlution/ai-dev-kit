@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 2, Task 4: Implement Data Validation
+# Epic 10, Story 2, Task 4: Implement data validation
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.10.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S2:T4`)
+**Format:** `E10:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S02:T04`
 
@@ -28,85 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement data validation for the {PROJECT_NAME} project. Build validation mechanisms that ensure data integrity, validate data before database operations, and enforce business rules at the data access layer.
+Implement data validation for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Data access architecture (from E10:S2:T01)
-- Repository pattern (from E10:S2:T02)
-- Query builders/ORMs (from E10:S2:T03)
-- Validation requirements
-- Business rule requirements
-- ai-dev-kit data validation patterns (if adopting)
+- Requirements and specifications
+- implement data validation requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Data validation implemented
-- Validation rules defined
-- Validation logic implemented
-- Validation integration with data access
-- Validation error handling
+- implement data validation completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Data validation implemented
-- [ ] Validation rules defined
-- [ ] Validation logic implemented
-- [ ] Validation integrates with data access layer
-- [ ] Validation error handling implemented
-- [ ] Validation enforces business rules
-- [ ] Data validation is tested and functional
+- [ ] Implement data validation completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review data access architecture and implementations
-2. Review validation and business rule requirements
-3. Define validation rules
-4. Implement validation logic
-5. Integrate validation with data access layer
-6. Implement validation error handling
-7. Test data validation
-8. Review and refine validation implementation
+1. Analyze requirements for implement data validation
+2. Design approach and plan
+3. Implement implement data validation
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S2:T01: Design data access architecture (validation implements architecture)
-- E10:S2:T02: Implement repository pattern (validation integrates with repositories)
-- E10:S2:T03: Create query builders/ORMs (validation may use ORM features)
+- E10:S2:T03
 
 **Blocks:**
-- None (validation enhances existing features)
+- E10:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S2:T01: Design data access architecture (validation implements architecture)
-- E10:S2:T02: Implement repository pattern (validation integrates with repositories)
-- E10:S2:T03: Create query builders/ORMs (validation may use ORM features)
+- [E10:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S2: Data Access Layer (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -115,3 +108,27 @@ Implement data validation for the {PROJECT_NAME} project. Build validation mecha
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -70,11 +70,13 @@ Currently, ai-dev-kit uses US English throughout all documentation, templates, a
   - Selection persists throughout setup and project lifecycle
   - Stored in project configuration file (e.g., `ai-dev-kit-config.yaml`)
 
+
 - [ ] **Content Localization**
   - All documentation uses selected English variant
   - All templates use selected English variant
   - All generated content (changelogs, README, etc.) uses selected variant
   - Consistent spelling and terminology throughout
+
 
 - [ ] **Configuration Persistence**
   - Language preference stored in project config
@@ -82,11 +84,13 @@ Currently, ai-dev-kit uses US English throughout all documentation, templates, a
   - Kanban templates respect language preference
   - Framework installers respect language preference
 
+
 - [ ] **Template Generation**
   - README templates in both variants
   - Documentation templates in both variants
   - Code comments/templates in both variants (if applicable)
   - Changelog templates in both variants
+
 
 #### Phase 2: International Localization (Extended)
 
@@ -105,17 +109,20 @@ Currently, ai-dev-kit uses US English throughout all documentation, templates, a
     - Arabic (العربية)
     - Other languages as needed
 
+
 - [ ] **Translation Infrastructure**
   - Translation file structure (e.g., `locales/en-GB/`, `locales/en-US/`, `locales/es/`)
   - Translation key system for all user-facing content
   - Translation workflow and management
   - Fallback to English if translation missing
 
+
 - [ ] **Cultural Adaptation**
   - Date/time formatting per locale
   - Number formatting per locale
   - Currency formatting (if applicable)
   - Cultural context in examples and documentation
+
 
 ### Non-Functional Requirements
 
@@ -124,11 +131,13 @@ Currently, ai-dev-kit uses US English throughout all documentation, templates, a
   - Translation lookup is fast (cached, indexed)
   - No impact on framework performance
 
+
 - [ ] **Usability Considerations**
   - Language selection is clear and intuitive
   - Default to US English (most common) with easy override
   - Language can be changed later (with re-generation of content)
   - Clear indication of current language in UI/docs
+
 
 - [ ] **Compatibility Considerations**
   - Works with all installation methods (template, CLI, submodules)
@@ -136,11 +145,13 @@ Currently, ai-dev-kit uses US English throughout all documentation, templates, a
   - Migration path for existing projects to add language preference
   - Framework packages remain language-agnostic (code, not content)
 
+
 - [ ] **Maintainability Considerations**
   - Translation files are easy to update
   - New languages can be added without code changes
   - Translation keys are well-organized and documented
   - Translation workflow integrates with existing processes
+
 
 ---
 
@@ -422,6 +433,7 @@ Use standard i18n approach:
   - Europe: Often UK English (taught in schools)
   - Asia: Often US English (tech industry influence)
   - Other regions: Mixed
+
 
 **User's Perception Check:**
 - User's perception that US English is more common internationally (especially in tech) is generally accurate

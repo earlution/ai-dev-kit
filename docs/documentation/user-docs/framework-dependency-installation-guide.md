@@ -305,9 +305,9 @@ echo "Frameworks updated. Review changes and commit."
 
 ---
 
-### Method 2: CLI Tool (Phase 2 - Coming Soon)
+### Method 2: CLI Tool (Phase 2 - Available Now)
 
-The `ai-dev-kit` CLI tool provides a unified interface for installing and managing frameworks across all dependency backends.
+The `ai-dev-kit` CLI tool provides a unified interface for installing and managing frameworks across all dependency backends (Git submodules, Git subtrees, npm, pip).
 
 #### Installation Steps
 
@@ -324,13 +324,16 @@ git init  # Only if not already a Git repository
 **2. Install the CLI tool:**
 
 ```bash
-# Install via pip
-pip install ai-dev-kit
-
-# Or install from source
-git clone https://github.com/earlution/ai-dev-kit.git
-cd ai-dev-kit
+# Install from source (current method)
+cd /path/to/ai-dev-kit
 pip install -e .
+
+# Or install CLI tool directly
+cd /path/to/ai-dev-kit/cli
+pip install -e .
+
+# Future: Install via pip (when published to PyPI)
+# pip install ai-dev-kit
 ```
 
 **3. Initialize ai-dev-kit in your project:**
@@ -343,37 +346,57 @@ ai-dev-kit init
 This creates a `.ai-dev-kit.yaml` configuration file:
 
 ```yaml
-project_root: .
-frameworks_dir: ./frameworks
-backend: git_submodule  # or 'npm', 'pip'
-auto_update: false
+version: "1.0.0"
+default_backend: "git-submodule"
+frameworks: {}
 ```
 
 **4. Install a framework:**
 
 ```bash
-# Install workflow management framework
+# Install workflow management framework (latest version)
 ai-dev-kit install workflow-mgmt
 
 # Install specific version
 ai-dev-kit install workflow-mgmt@2.0.0
 
+# Install with specific backend
+ai-dev-kit install workflow-mgmt --backend git-submodule
+
 # Install multiple frameworks
 ai-dev-kit install workflow-mgmt kanban numbering-versioning
+
+# Preview installation (dry-run)
+ai-dev-kit install workflow-mgmt --dry-run
 ```
 
 **5. Check installed frameworks:**
 
 ```bash
+# Show status of all frameworks
 ai-dev-kit status
+
+# Show status of specific framework
+ai-dev-kit status workflow-mgmt
+
+# List all available frameworks
+ai-dev-kit list
 ```
 
 Output:
 ```
 Installed Frameworks:
-  workflow-mgmt: v2.0.0 (git_submodule)
-  kanban: v1.5.0 (git_submodule)
-  numbering-versioning: v2.1.0 (git_submodule)
+  workflow-mgmt:
+    Version: 2.0.0
+    Backend: git-submodule
+    Path: frameworks/workflow-mgmt
+    Status: Up to date
+  
+  kanban:
+    Version: 1.5.0
+    Backend: git-submodule
+    Path: frameworks/kanban
+    Status: Update available (1.6.0)
 ```
 
 #### Updating Frameworks (CLI Tool)
@@ -594,6 +617,74 @@ When you type "RW" or "rw" in Cursor, the AI assistant will:
 
 ---
 
+### Setup Kanban Board (Kanban Framework)
+
+**⚠️ IMPORTANT:** If you installed the Kanban framework, you need to set up your Kanban board using the **interactive installer**. Do NOT manually copy epics from ai-dev-kit's actual Kanban board.
+
+**🚨 CRITICAL: Use the Installer (REQUIRED)**
+
+The Kanban installer is the **ONLY** supported method for setting up your Kanban board. It installs canonical epic templates (not ai-dev-kit's actual epics).
+
+**Option A: Use the Kanban Installer (Recommended)**
+
+```bash
+# Navigate to your project root
+cd /path/to/your/project
+
+# Run the Kanban installer
+python3 frameworks/kanban/scripts/install_kanban_framework.py --mode fresh
+
+# The installer will:
+# - Install canonical epic templates from templates/epics/ (NOT from ai-dev-kit's actual epics)
+# - Contextualize Epic 1 with your project name
+# - Only install canonical core epics (1-8, 10, 18, 22, 23)
+# - Exclude ai-dev-kit project-specific epics
+```
+
+**What You Get After Installation:**
+- ✅ Canonical epic templates installed in `docs/project-management/kanban/epics/Epic-{N}/`
+- ✅ Epic 1 contextualized with your project name (e.g., "MyProject Core", not "AI Dev Kit Core")
+- ✅ Only canonical core epics (1-8, 10, 18, 22, 23) installed
+- ✅ No ai-dev-kit project-specific epics
+- ✅ Empty epic directories ready for you to create stories and tasks
+
+**Option B: Advanced Customization (Optional)**
+
+If you want to customize templates beyond the installer's automatic contextualization:
+
+```bash
+# Review the contextualization guide
+cat frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md
+
+# The guide explains:
+# - Placeholder replacement ({PROJECT_NAME}, {DOMAIN}, etc.)
+# - Scalability guidance (tiny, small, medium, ambitious projects)
+# - Customization guidelines (Epic, Story, Task levels)
+# - Examples for different project types
+```
+
+**Related Documentation:**
+- **Contextualization Guide:** `frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md` - Complete guide for customizing templates
+- **Contextualization Examples:** `frameworks/kanban/templates/examples/contextualized/` - Examples for tiny, small, and ambitious projects
+- **Kanban Installer:** `frameworks/kanban/scripts/install_kanban_framework.py` - Interactive installer script
+- **Post-Template Setup Guide:** See [Post-Template Setup Guide](framework-dependency-post-template-setup-guide.md) Step 4 for detailed Kanban setup instructions
+
+**⚠️ What NOT to Do:**
+
+```bash
+# ❌ WRONG - This copies ai-dev-kit's actual Kanban, not templates!
+cp -r /path/to/ai-dev-kit/docs/project-management/kanban/epics/* docs/project-management/kanban/epics/
+```
+
+**Why this is wrong:**
+- You'll get ai-dev-kit's project-specific epics (Epic 1: "AI Dev Kit Core", etc.)
+- You'll get ai-dev-kit's actual stories and tasks with their specific content
+- Epic 1 won't be contextualized with your project name
+- You'll receive project-specific epics (like Epic 24 "Book Related Work") that are specific to ai-dev-kit
+- **CRITICAL: Epic Mashup Risk** - You may get Epic 9 "Book Related Work" instead of canonical Epic 9 "User Management and Authentication"
+
+---
+
 ## Post-Installation Setup (Other Frameworks)
 
 After installing frameworks, you need to configure them for your project:
@@ -764,6 +855,15 @@ git submodule status
 git remote -v
 # Shows remote repository URL if configured
 ```
+
+### 4. Post-install sanity check (Kanban and install logs)
+
+If you installed the Kanban framework, use this checklist to confirm a clean consumer install:
+
+- **Consumer Kanban location:** Your working Kanban is at **`docs/project-management/kanban/`** at your project root. Do not use or edit the framework’s internal Kanban under `.ai-dev-kit/` or the framework package path as your project board.
+- **No ai-dev-kit–specific epics:** Under `docs/project-management/kanban/epics/` there should be **no Epic 24** (or other ai-dev-kit–only epics). A fresh install only adds canonical epics (e.g. Epic 1–8, 10, 18, 22, 23).
+- **Board file:** `docs/project-management/kanban/kanban-board.md` should mention your **project name** and, on first install, version placeholder **`v0.0.0.0+0`**.
+- **Install logs:** If install logging is enabled (default), check `logs/ai-dev-kit/install/` for a timestamped log file. For Kanban installs, the log should contain lines with **`[KANBAN_FRESH_INSTALL]`** (or other `[KANBAN_*]` phase markers) and any validation warnings. Use these logs for debugging if something goes wrong.
 
 ---
 

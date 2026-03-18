@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 3, Task 3: Define Testing Requirements for Bug Fixes
+# Epic 6, Story 3, Task 3: Define testing requirements for bug fixes
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.3.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.3.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.3.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S3:T3`)
+**Format:** `E6:S3:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S03:T03`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Define testing requirements for bug fixes in the {PROJECT_NAME} project. Establish clear testing standards and requirements that ensure bug fixes are properly tested before completion.
+Define testing requirements for bug fixes for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Bug fix patterns (from E6:S3:T01)
-- Bug fix templates (from E6:S3:T02)
-- Testing standards and best practices
-- Project testing requirements
-- ai-dev-kit testing requirements (if adopting)
-- Team preferences and conventions
+- Requirements and specifications
+- define testing requirements for bug fixes requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Testing requirements defined
-- Testing standards documented
-- Testing checklist created
-- Testing requirements documentation
-- Testing examples
+- define testing requirements for bug fixes completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Testing requirements defined for bug fixes
-- [ ] Testing standards documented
-- [ ] Testing checklist created
-- [ ] Testing requirements align with bug fix patterns
-- [ ] Testing requirements are clear and actionable
-- [ ] Testing requirements documentation complete
-- [ ] Testing examples provided
-- [ ] Testing requirements support quality assurance
+- [ ] Define testing requirements for bug fixes completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review bug fix patterns and templates
-2. Analyze testing standards and best practices
-3. Define testing requirements for bug fixes
-4. Document testing standards
-5. Create testing checklist
-6. Align testing requirements with bug fix patterns
-7. Write testing requirements documentation
-8. Create testing examples
-9. Review and refine testing requirements
+1. Analyze requirements for define testing requirements for bug fixes
+2. Design approach and plan
+3. Implement define testing requirements for bug fixes
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E6:S3:T01: Document bug fix patterns (testing aligns with patterns)
-- E6:S3:T02: Create bug fix templates (testing may use templates)
+- E6:S3:T02
 
 **Blocks:**
-- E6:S3:T04: Document bug fix completion criteria (criteria include testing requirements)
+- E6:S3:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and ideally T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S3:T01: Document bug fix patterns (testing aligns with patterns)
-- E6:S3:T02: Create bug fix templates (testing may use templates)
-- E6:S3:T04: Document bug fix completion criteria (criteria include testing requirements)
+- [E06:S03:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S3: Bug Fix Patterns and Best Practices (this story)
-- E6:S1: BR Intake and Triage Workflow (testing part of bug fixing)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.3.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Define testing requirements for bug fixes in the {PROJECT_NAME} project. Establi
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

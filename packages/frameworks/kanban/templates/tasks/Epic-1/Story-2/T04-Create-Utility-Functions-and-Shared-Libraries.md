@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 2, Task 4: Create Utility Functions and Shared Libraries
+# Epic 1, Story 2, Task 4: Create utility functions and shared libraries
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.1.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S2:T4`)
+**Format:** `E1:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S02:T04`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create utility functions and shared libraries for the {PROJECT_NAME} project. Establish reusable utility functions, helper modules, and shared libraries that can be used across the entire project to reduce code duplication and ensure consistency.
+Create utility functions and shared libraries for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Architecture patterns (from E1:S2:T01)
-- Configuration system (from E1:S2:T02)
-- Logging and error handling (from E1:S2:T03)
-- Common utility needs identified
-- Team preferences and conventions (if applicable)
-- ai-dev-kit utility patterns (if adopting)
+- Requirements and specifications
+- create utility functions and shared libraries requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Utility functions library/module
-- Shared libraries for common functionality
-- Utility function documentation
-- Example usage patterns
-- Unit tests for utility functions
-- Utility function organization structure
+- create utility functions and shared libraries completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Utility functions library created
-- [ ] Common utility functions implemented (string, date, validation, etc.)
-- [ ] Shared libraries for common functionality created
-- [ ] Utility functions documented with usage examples
-- [ ] Unit tests created for utility functions
-- [ ] Utility functions follow project coding standards
-- [ ] Utility functions are reusable across project
-- [ ] Utility function organization structure established
+- [ ] Create utility functions and shared libraries completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Identify common utility needs across project
-2. Design utility function organization structure
-3. Implement common utility functions (string manipulation, date handling, validation, etc.)
-4. Create shared libraries for common functionality
-5. Write unit tests for utility functions
-6. Document utility functions with usage examples
-7. Review and refactor utility functions
-8. Ensure utility functions follow coding standards
+1. Analyze requirements for create utility functions and shared libraries
+2. Design approach and plan
+3. Implement create utility functions and shared libraries
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E1:S2:T01: Design and implement core architecture patterns (utilities use architecture patterns)
-- E1:S2:T02: Set up configuration management system (utilities may use configuration)
-- E1:S2:T03: Implement logging and error handling infrastructure (utilities may use logging)
+- E1:S2:T03
 
 **Blocks:**
-- E1:S3: Initial Feature Set (features may use utility functions)
+- E1:S2:T05
 
-**Parallel Development Candidacy:** Safe (can proceed after T01-T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E1:S2:T01: Design and implement core architecture patterns (utilities use architecture patterns)
-- E1:S2:T02: Set up configuration management system (utilities may use configuration)
-- E1:S2:T03: Implement logging and error handling infrastructure (utilities may use logging)
+- [E01:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E1:S2: Core Infrastructure (this story)
-- E1:S3: Initial Feature Set (features may use utility functions)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Create utility functions and shared libraries for the {PROJECT_NAME} project. Es
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-18 (v0.6.6.56+1 – Story 6 Task 56 complete)
+**Last updated:** 2026-03-11 (v0.6.6.41+1 – Kanban documentation setup)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -20,21 +20,82 @@ housekeeping_policy: keep
 ---
 
 ## Story Checklist
+- [x] **E6:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.6.0.0+0 – Epic-level abstract space only, no tasks)
+  - Story: [`Story-000-br-repo.md`](Story-000-br-repo.md)
+  - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
 
-- [x] **E6:S01 – Framework Version Management** - COMPLETE ✅
-  - Story: [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
-- [x] **E6:S02 – Framework Update and Migration** - COMPLETE ✅
-  - Story: [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)
-- [x] **E6:S03 – Framework Health Monitoring** - COMPLETE ✅
-  - Story: [`Story-003-framework-health-monitoring.md`](Story-003-framework-health-monitoring.md)
-- [ ] **E6:S04 – Bug Reports** - IN PROGRESS
-  - Story: [`Story-004-bug-reports.md`](Story-004-bug-reports.md)
-  - Tasks: T01 ✅, T02 ✅
-- [ ] **E6:S05 – Feature Requests** - TODO
-  - Story: [`Story-005-feature-requests.md`](Story-005-feature-requests.md)
-- [ ] **E6:S06 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.6.6+17)
-  - Story: [`Story-006-adk-implementation-analysis-and-package-management.md`](Story-006-adk-implementation-analysis-and-package-management.md)
-  - Tasks: T00 ✅ COMPLETE, T01 IN PROGRESS, T06 ✅ COMPLETE (v0.6.6.6+17)
+
+
+
+
+- [x] **E6:S01 – BR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.34+2 – T36: Bug fix: Fixed RW Step 7 board update path resolution and MoSCOW section updates)
+  - Story: [`Story-001-br-repo.md`](Story-001-br-repo.md)
+  - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
+
+
+
+
+
+- [x] **E6:S02 – Framework Version Management** - ✅ COMPLETE (v0.6.2.5+1, migrated from v0.6.1.5+1 – All tasks complete: Framework versioning strategy, release processes, compatibility tracking, dependency architecture, and version tagging strategy)
+  - Story: [`Story-002-framework-version-management.md`](Story-002-framework-version-management.md)
+  - Tasks: T01 ✅ COMPLETE (v0.6.2.1+1 - Framework versioning strategy), T02 ✅ COMPLETE (v0.6.2.2+1 - Framework release processes), T03 ✅ COMPLETE (v0.6.2.3+1 - Framework compatibility tracking), T04 ✅ COMPLETE (v0.6.2.1+2 - Framework dependency architecture), T05 ✅ COMPLETE (v0.6.2.5+1 - Framework version tagging strategy)
+  - **Note:** Renumbered from S01 to S02 as part of repository story migration (E9:S01:T08).
+
+
+
+
+
+- [x] **E6:S03 – Framework Update and Migration** - ✅ COMPLETE (v0.6.3.3+1, migrated from v0.6.2.3+1 – All active tasks complete: Framework update procedures, migration guide, backward compatibility policy, and auto-update mechanisms created)
+  - Story: [`Story-003-framework-update-and-migration.md`](Story-003-framework-update-and-migration.md)
+  - Tasks: T01 ✅ COMPLETE (v0.6.3.1+1 - Framework update procedures), T02 ✅ COMPLETE (v0.6.3.2+1 - Framework migration guide), T03 ✅ COMPLETE (v0.6.3.3+1 - Framework backward compatibility policy), T05 ✅ COMPLETE (v0.6.3.5+1 - Framework auto-update mechanisms), T04 SUPERSEDED (by E6:S08 - ai-dev-kit CLI Tool)
+  - **Note:** Renumbered from S02 to S03 as part of repository story migration (E9:S01:T08).
+
+
+
+
+
+- [x] **E6:S04 – Framework Health Monitoring** - ✅ COMPLETE (v0.6.4.3+1, migrated from v0.6.3.3+1 – All tasks complete: Framework health metrics defined, monitoring tools implemented, dashboard built)
+  - Story: [`Story-004-framework-health-monitoring.md`](Story-004-framework-health-monitoring.md)
+  - Tasks: T01 ✅ COMPLETE (v0.6.4.1+1 - Framework health metrics), T02 ✅ COMPLETE (v0.6.4.2+1 - Framework health monitoring tools), T03 ✅ COMPLETE (v0.6.4.3+1 - Framework health dashboard)
+  - **Note:** Renumbered from S03 to S04 as part of repository story migration (E9:S01:T08).
+
+
+
+
+
+- [ ] **E6:S05 – Bug Reports** - IN PROGRESS (Perpetual - v0.6.5.2+1, migrated from v0.6.4.2+1 – Perpetual story: Bug tracking, never completes)
+  - Story: [`Story-005-bug-reports.md`](Story-005-bug-reports.md)
+  - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE
+  - **Note:** This is a perpetual maintenance story. New bug reports will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S04 to S05 as part of repository story migration (E9:S01:T08).
+
+
+
+
+
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.3+2 – Apple SDK License Blocking Issue Investigation Complete)
+  - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument)
+  - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
+
+
+
+
+
+- [ ] **E6:S07 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.7.103+4)
+  - Story: [`Story-007-adk-implementation-analysis-and-package-management.md`](Story-007-adk-implementation-analysis-and-package-management.md)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.7.1+1), T02 ✅ COMPLETE (v0.6.7.2+1), T03 ✅ COMPLETE (v0.6.7.3+1 - Feedback mechanism design, user guide, and template created), T06 ✅ COMPLETE (v0.6.7.6+20), T07 ✅ COMPLETE (v0.6.7.7+6), T09 ✅ COMPLETE (v0.6.7.9+1), T04 ✅ COMPLETE (v0.6.7.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.7.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T13 ✅ COMPLETE (v0.6.7.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 ✅ COMPLETE (v0.6.7.14+1 - CMW documentation added to package README), T15 ✅ COMPLETE (v0.6.7.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T16 ✅ COMPLETE (v0.6.7.16+1 - All phases complete: Step 3.5 added to CMW, ordering fixed before archival), T05 ✅ COMPLETE (v0.6.7.5+1 - Feedback mechanism implementation complete), T101 IN PROGRESS (Perpetual - v0.6.7.101+33 – UKW: comprehensive MoSCOW reprioritization), T102 IN PROGRESS (Perpetual - v0.6.7.102+6 – Perpetual docs update: runbooks, policy), T103 IN PROGRESS (Perpetual - v0.6.7.103+4 – UKW comprehensive-by-default, workflow docs)
+  - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08).
+
+
+
+
+
+- [x] **E6:S08 – ai-dev-kit CLI Tool** - COMPLETE ✅ (v0.6.8.13+1, migrated from v0.6.7.13+1 – T01-T13 complete: Architecture, commands, backend abstraction, all four backends, configuration management, error handling, migration utilities, remove command, documentation, testing, validation, PyPI packaging)
+  - Story: [`Story-008-ai-dev-kit-cli-tool.md`](Story-008-ai-dev-kit-cli-tool.md)
+  - Tasks: T00 ✅ COMPLETE, T01-T13 ✅ COMPLETE (CLI tool implementation: architecture, commands, backends, config, migration, testing, packaging - ALL COMPLETE)
+  - **Feature Request:** [FR-030](../../fr-br/FR-030-ai-dev-kit-cli-tool.md)
+  - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08).
+
 
 ---
 
@@ -69,20 +130,20 @@ Epic 6 owns the **Framework Management and Maintenance** processes for the ai-de
 
 ### Story 1: Framework Version Management
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-18 (v0.6.6.56+1 – Story 6 Task 56 complete)
+**Last updated:** 2026-03-11 (v0.6.6.41+1 – Kanban documentation setup)
 
 **Goal:**  
 Establish version management processes for framework packages.
 
 **Tasks:**
-- [ ] E6:S01:T01 – Define framework versioning strategy
-- [ ] E6:S01:T02 – Create framework release processes
-- [ ] E6:S01:T03 – Establish framework compatibility tracking
-- [ ] E6:S01:T04 – Design framework dependency architecture
-- [ ] E6:S01:T05 – Create framework version tagging strategy
+- [x] E6:S01:T01 – Define framework versioning strategy ✅ COMPLETE (v0.6.1.1+1)
+- [x] E6:S01:T02 – Create framework release processes ✅ COMPLETE (v0.6.1.2+1)
+- [x] E6:S01:T03 – Establish framework compatibility tracking ✅ COMPLETE (v0.6.1.3+1)
+- [x] E6:S01:T04 – Design framework dependency architecture ✅ COMPLETE (v0.6.1.1+2)
+- [x] E6:S01:T05 – Create framework version tagging strategy ✅ COMPLETE (v0.6.1.5+1)
 
 **Story:** [`Story-001-framework-version-management.md`](Story-001-framework-version-management.md)
 
@@ -93,17 +154,17 @@ Establish version management processes for framework packages.
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-18 (v0.6.6.56+1 – Story 6 Task 56 complete)
+**Last updated:** 2026-03-11 (v0.6.6.41+1 – Kanban documentation setup)
 
 **Goal:**  
 Implement processes for updating and migrating framework packages.
 
 **Tasks:**
-- [ ] E6:S02:T01 – Create framework update procedures
-- [ ] E6:S02:T02 – Build migration guides and tools
-- [ ] E6:S02:T03 – Establish backward compatibility policies
-- [ ] E6:S02:T04 – Build framework update CLI tool
-- [ ] E6:S02:T05 – Create auto-update mechanisms
+- [x] E6:S02:T01 – Create framework update procedures ✅ COMPLETE (v0.6.2.1+1)
+- [x] E6:S02:T02 – Build migration guides and tools ✅ COMPLETE (v0.6.2.2+1)
+- [x] E6:S02:T03 – Establish backward compatibility policies ✅ COMPLETE (v0.6.2.3+1)
+- [ ] E6:S02:T04 – Build framework update CLI tool (SUPERSEDED by E6:S07)
+- [x] E6:S02:T05 – Create auto-update mechanisms ✅ COMPLETE (v0.6.2.5+1)
 
 **Story:** [`Story-002-framework-update-and-migration.md`](Story-002-framework-update-and-migration.md)
 
@@ -111,18 +172,18 @@ Implement processes for updating and migrating framework packages.
 
 ### Story 3: Framework Health Monitoring
 
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-18 (v0.6.6.56+1 – Story 6 Task 56 complete)
+**Last updated:** 2026-03-11 (v0.6.6.41+1 – Kanban documentation setup)
 
 **Goal:**  
 Build monitoring and health tracking for framework packages.
 
 **Tasks:**
-- [ ] E6:S03:T01 – Create framework health metrics
-- [ ] E6:S03:T02 – Implement health monitoring tools
-- [ ] E6:S03:T03 – Build framework health dashboards
+- [x] E6:S03:T01 – Create framework health metrics ✅ COMPLETE (v0.6.3.1+1)
+- [x] E6:S03:T02 – Implement health monitoring tools ✅ COMPLETE (v0.6.3.2+1)
+- [x] E6:S03:T03 – Build framework health dashboards ✅ COMPLETE (v0.6.3.3+1)
 
 **Story:** [`Story-003-framework-health-monitoring.md`](Story-003-framework-health-monitoring.md)
 

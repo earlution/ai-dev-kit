@@ -70,10 +70,11 @@ Epic 4 has completed the MVP core user workflows (Stories 1-2, 5, 9-10, 36-37) i
 
 ---
 
-**MoSCoW Legend:**
+**MoSCOW Legend:**
 - **MUST:** Critical for launch
 - **SHOULD:** Important but not vital
 - **COULD:** Nice to have
+- **ONGOING:** Perpetual maintenance tasks (tracked but don't block other work)
 - **WON'T:** Out of scope for now
 
 ---

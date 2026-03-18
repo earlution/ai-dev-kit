@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 3, Task 1: Design User Profile Data Model
+# Epic 9, Story 3, Task 1: Design user profile data model
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.3.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.3.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.3.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S3:T1`)
+**Format:** `E9:S3:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S03:T01`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design user profile data model for the {PROJECT_NAME} project. Establish the data structure and schema for user profiles, including profile fields, relationships, validation rules, and integration with user authentication and authorization systems.
+Design user profile data model for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- User authentication system (from E9:S1)
-- User authorization system (from E9:S2)
-- Profile requirements
-- Data storage requirements
-- Integration requirements
-- ai-dev-kit profile data model (if adopting)
+- Requirements and specifications
+- design user profile data model requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- User profile data model designed
-- Data model documentation
-- Schema definitions
-- Field definitions and validation rules
-- Relationship specifications
-- Integration specifications
+- design user profile data model completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] User profile data model designed and documented
-- [ ] Data model schema defined
-- [ ] Profile fields defined
-- [ ] Validation rules established
-- [ ] Relationships with user authentication/authorization defined
-- [ ] Data model documentation complete
-- [ ] Data model supports profile requirements
-- [ ] Data model is extensible and maintainable
+- [ ] Design user profile data model completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review user authentication and authorization systems
-2. Review profile requirements
-3. Identify profile fields and data needs
-4. Design profile data model schema
-5. Define field types and validation rules
-6. Define relationships with user systems
-7. Document data model specifications
-8. Review and refine data model
+1. Analyze requirements for design user profile data model
+2. Design approach and plan
+3. Implement design user profile data model
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- User authentication system (from E9:S1 - optional, beneficial)
-- User authorization system (from E9:S2 - optional, beneficial)
+- None
 
 **Blocks:**
-- E9:S3:T02: Implement profile CRUD operations (CRUD operations use data model)
+- E9:S3:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, benefits from authentication/authorization)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S3:T02: Implement profile CRUD operations (CRUD operations use data model)
-- E9:S3:T03: Add profile picture upload (upload uses data model)
-- E9:S3:T04: Implement profile settings (settings use data model)
+- [E09:S03:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S3: User Profile Management (this story)
-- E9:S1: User Authentication System (profile integrates with authentication)
-- E9:S2: User Authorization and Permissions (profile may use authorization)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.3.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Design user profile data model for the {PROJECT_NAME} project. Establish the dat
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

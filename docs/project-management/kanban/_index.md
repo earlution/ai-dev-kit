@@ -8,21 +8,26 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board (Quick View)
 
-**Last Updated:** 2025-12-11  
-**Version:** v0.4.11.4+1
+**Last Updated:** 2025-12-18  
+**Version:** v0.6.6.7+6
 
-**Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 8, 9, 21 are IN PROGRESS or TODO.
+**Note:** Epics 1, 3 are COMPLETE ✅. Epics 2, 4, 5, 6, 7, 8, 21, 24 are IN PROGRESS or TODO. Epic 24+ is project-specific range (not canonical).
 
 ---
 
 ## Overview
 
-Quick reference board for all Kanban work. For detailed views, see [`kanban-board.md`](kanban-board.md).
+Quick reference board for all Kanban work. For detailed views, see:
+
+- [`kanban-board.md`](kanban-board.md) (MoSCOW prioritized tasks)
+- [`kanban-structure.md`](kanban-structure.md) (Epic/Story/Task structure)
+- [`kanban-board-guide.md`](kanban-board-guide.md) (rules and explanations)
 
 **Structure:** All Kanban docs live under `docs/project-management/kanban/`:
+
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: This file (quick) and `kanban-board.md` (detailed)
+- Board views: This file (quick), kanban-board.md (tasks), kanban-structure.md (epics), and kanban-board-guide.md (guide)
 
 ---
 
@@ -30,18 +35,19 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
 
 | Epic | Title                              | Status         | Stories | Progress |
 |------|------------------------------------|----------------|---------|----------|
-| 1    | AI Dev Kit Core                 | COMPLETE ✅     | 3       | 3/3      |
+| 1    | AI Dev Kit Core                    | COMPLETE ✅     | 3       | 3/3      |
 | 2    | Workflow Management Framework      | IN PROGRESS    | 11      | 7/11     |
 | 3    | Numbering & Versioning Framework   | COMPLETE ✅     | 3       | 3/3      |
-| 4    | Kanban Framework                   | IN PROGRESS    | 12      | 8/12     |
+| 4    | Kanban Framework                   | IN PROGRESS    | 13      | 10/13    |
 | 5    | Documentation Management          | IN PROGRESS    | 3       | 1/3      |
 | 6    | Framework Management               | COMPLETE ✅     | 3       | 3/3      |
 | 7    | Codebase Maintenance and Review    | IN PROGRESS    | 5       | 0/5      |
 | 8    | Tooling & Automation               | TODO           | 3       | 0/3      |
-| 9    | Book Related Work                 | IN PROGRESS    | 3       | 0/3      |
+| 24   | Book Related Work (Project-Specific) | IN PROGRESS    | 3       | 0/3      |
 | 21   | Internationalization and Localization | TODO        | 4       | 0/4      |
 
-**Epic Docs:** 
+**Epic Docs:**
+
 - [`epics/Epic-1/Epic-1.md`](epics/Epic-1/Epic-1.md)
 - [`epics/Epic-2/Epic-2.md`](epics/Epic-2/Epic-2.md)
 - [`epics/Epic-3/Epic-3.md`](epics/Epic-3/Epic-3.md)
@@ -50,7 +56,7 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
 - [`epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
 - [`epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
 - [`epics/Epic-8/Epic-8.md`](epics/Epic-8/Epic-8.md)
-- [`epics/Epic-9/Epic-9.md`](epics/Epic-9/Epic-9.md)
+- [`epics/Epic-24/Epic-24.md`](epics/Epic-24/Epic-24.md) (Project-Specific)
 - [`epics/Epic-21/Epic-21.md`](epics/Epic-21/Epic-21.md)
 
 ---
@@ -60,12 +66,12 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
 1. **Create Epic** (if needed):
    - Create `epics/Epic-X/` directory
    - Add `epics/Epic-X/Epic-X.md` (Epic overview)
-   - Update this board (`_index.md`) and `kanban-board.md`
+   - Update this board (`_index.md`), `kanban-board.md`, and `kanban-structure.md`
 
 2. **Create Story**:
    - Add `epics/Epic-X/Story-XXX-short-slug.md`
    - Update Epic doc (`epics/Epic-X/Epic-X.md`) with Story reference
-   - Update this board (`_index.md`) and `kanban-board.md`
+   - Update this board (`_index.md`), `kanban-board.md`, and `kanban-structure.md`
 
 3. **Track Progress**:
    - Update Story status in Story doc
@@ -73,5 +79,3 @@ Quick reference board for all Kanban work. For detailed views, see [`kanban-boar
    - Update board views as needed
 
 See [`README.md`](README.md) for full structure details and `docs/project-management/rituals/policy/kanban-governance-policy.md` for governance.
-
-

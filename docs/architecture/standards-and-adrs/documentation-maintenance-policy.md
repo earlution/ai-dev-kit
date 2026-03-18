@@ -174,8 +174,7 @@ This policy defines the framework for maintaining documentation accuracy, consis
 **Documentation Locations:**
 - `docs/` - Main knowledge base
 - `packages/frameworks/*/` - Framework documentation
-- Root-level documentation (`README.md`, `CHANGELOG.md`)
-- `docs/` - Additional documentation
+- **Project root:** Only standard entry points and config—`README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `INSTALL_IN_YOUR_PROJECT.md`, and config files (e.g. `rw-config.yaml`). Operational runbooks (e.g. build/upload) live in `docs/maintenance/`, not in root.
 
 ### Out of Scope
 

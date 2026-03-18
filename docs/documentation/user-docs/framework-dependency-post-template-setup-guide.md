@@ -164,62 +164,72 @@ mv CHANGELOG-template-backup.md docs/changelog-and-release-notes/Template_Refere
 
 ### Step 4: Customize Kanban Board
 
-**4.1 Clear Template Epics/Stories:**
+**🚨 IMPORTANT: Use the Kanban Installer (REQUIRED)**
 
-The template includes ai-dev-kit's Kanban board. Clear it for your project:
+**⚠️ DO NOT manually copy epics from `docs/project-management/kanban/epics/`**
+
+The template includes ai-dev-kit's **actual Kanban board** (with project-specific epics). This is **NOT** what you want. You need **canonical epic templates** that are contextualized for your project.
+
+**✅ USE THE INSTALLER INSTEAD:**
+
+**4.1 Run Kanban Framework Installer:**
 
 ```bash
-# Option A: Remove all template epics
-rm -rf docs/project-management/kanban/epics/Epic-*
-
-# Option B: Keep structure, clear content
-# Edit each epic file to remove template-specific content
+# The installer is the ONLY supported method for setting up your Kanban board
+# It installs canonical epic templates (not ai-dev-kit's actual epics)
+python3 packages/frameworks/kanban/scripts/install_kanban_framework.py --mode fresh
 ```
 
-**4.2 Initialize Your First Epic:**
+**What the installer does:**
+- ✅ Installs **canonical epic templates** from `packages/frameworks/kanban/templates/epics/`
+- ✅ Contextualizes Epic 1 with your project name (e.g., "MyProject Core", not "AI Dev Kit Core")
+- ✅ Only installs canonical core epics (1-8, 10, 18, 22, 23)
+- ✅ Excludes ai-dev-kit project-specific epics
+- ✅ Creates properly structured epic directories ready for stories and tasks
+
+**4.2 Contextualize Templates (Optional - Advanced):**
+
+If you want to customize templates beyond the installer's automatic contextualization:
 
 ```bash
-# Create your first epic
-mkdir -p docs/project-management/kanban/epics/Epic-1
-cat > docs/project-management/kanban/epics/Epic-1/Epic-1.md << 'EOF'
----
-lifecycle: evergreen
-ttl_days: null
-created_at: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
-expires_at: null
-housekeeping_policy: keep
----
+# Review the contextualization guide
+cat packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md
 
-# Epic 1: [Your Epic Name]
-
-**Status:** TODO  
-**Priority:** HIGH  
-**Created:** $(date -u +"%Y-%m-%d")  
-**Version:** v0.1.0.0+0
-
----
-
-## Overview
-
-[Your epic description]
-
----
-
-## Stories
-
-- [ ] Story 1: [Story name] - TODO
-
----
-EOF
+# The guide explains:
+# - Placeholder replacement ({PROJECT_NAME}, {DOMAIN}, etc.)
+# - Scalability guidance (tiny, small, medium, ambitious projects)
+# - Customization guidelines (Epic, Story, Task levels)
+# - Examples for different project types
 ```
 
 **4.3 Update Kanban Board Views:**
 
+After installation, update the board views:
+
 ```bash
 # Update docs/project-management/kanban/_index.md
 # Update docs/project-management/kanban/kanban-board.md
-# Remove template epics, add your project epics
+# Add your project epics to the board views
 ```
+
+**4.4 Verify Installation:**
+
+```bash
+# Check that canonical epics are installed (not ai-dev-kit's epics)
+ls docs/project-management/kanban/epics/
+
+# Should show: Epic-1, Epic-2, Epic-3, Epic-4, Epic-5, Epic-6, Epic-7, Epic-8, Epic-10, Epic-18, Epic-22, Epic-23
+# Should NOT show: Epic-24 (ai-dev-kit specific)
+
+# Verify Epic 1 is contextualized with your project name
+grep "Epic 1:" docs/project-management/kanban/epics/Epic-1/Epic-1.md
+# Should show your project name, not "AI Dev Kit"
+```
+
+**Related Documentation:**
+- **Contextualization Guide:** `packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md` - Complete guide for customizing templates
+- **Contextualization Examples:** `packages/frameworks/kanban/templates/examples/contextualized/` - Examples for tiny, small, and ambitious projects
+- **Kanban Installer:** `packages/frameworks/kanban/scripts/install_kanban_framework.py` - Interactive installer script
 
 ---
 
@@ -486,6 +496,8 @@ After completing setup:
 - [Installation Guide](framework-dependency-installation-guide.md) - Framework installation
 - [Usage Guide](framework-dependency-usage-guide.md) - Using installed frameworks
 - [Integration Guide](framework-dependency-integration-guide.md) - Integrating frameworks
+- [Contextualization Guide](../../../packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md) - Customizing canonical templates for your project
+- [Contextualization Examples](../../../packages/frameworks/kanban/templates/examples/contextualized/) - Example projects (tiny, small, ambitious)
 
 ---
 

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 1, Task 4: Document Workflow Integration Points
+# Epic 2, Story 1, Task 4: Document workflow integration points
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.2.1.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.2.1.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.2.1.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E2:S1:T4`)
+**Format:** `E2:S1:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E02:S01:T04`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document workflow integration points for the {PROJECT_NAME} project. Identify and document how workflows integrate with other systems, tools, and processes to enable seamless workflow execution and coordination.
+Document workflow integration points for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Documented existing workflow patterns (from E2:S1:T01)
-- Standard workflow templates (from E2:S1:T02)
-- Workflow execution guidelines (from E2:S1:T03)
-- System architecture and integration requirements
-- Tool integrations and APIs
-- Process dependencies
-- ai-dev-kit workflow integration patterns (if adopting)
+- Requirements and specifications
+- document workflow integration points requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Workflow integration points documented
-- Integration point inventory
-- Integration point documentation
-- Integration examples
-- Integration troubleshooting guide
+- document workflow integration points completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Workflow integration points identified and documented
-- [ ] Integration points with other systems documented
-- [ ] Integration points with tools documented
-- [ ] Integration points with processes documented
-- [ ] Integration examples provided
-- [ ] Integration troubleshooting guide created
-- [ ] Integration documentation is clear and accessible
-- [ ] Integration points support seamless workflow execution
+- [ ] Document workflow integration points completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Identify workflow integration points with systems, tools, and processes
-2. Analyze integration requirements and dependencies
-3. Document integration points with descriptions
-4. Create integration point inventory
-5. Provide integration examples
-6. Create integration troubleshooting guide
-7. Review and refine integration documentation
+1. Analyze requirements for document workflow integration points
+2. Design approach and plan
+3. Implement document workflow integration points
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E2:S1:T01: Document existing workflow patterns (integration uses documented patterns)
-- E2:S1:T02: Define standard workflow templates (integration uses templates)
-- E2:S1:T03: Create workflow execution guidelines (integration follows guidelines)
+- E2:S1:T03
 
 **Blocks:**
-- E2:S2: Workflow Automation (automation may use integration points)
+- E2:S1:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E2:S1:T01: Document existing workflow patterns (integration uses documented patterns)
-- E2:S1:T02: Define standard workflow templates (integration uses templates)
-- E2:S1:T03: Create workflow execution guidelines (integration follows guidelines)
+- [E02:S01:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E2:S1: Workflow Definitions and Patterns (this story)
-- E2:S2: Workflow Automation (automation may use integration points)
-- Epic 1: {PROJECT_NAME} Core (workflows integrate with core infrastructure)
-- Epic 4: Kanban Framework (workflows integrate with Kanban)
-- Epic 23: Process Automation and CI/CD (workflows integrate with automation)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.1.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Document workflow integration points for the {PROJECT_NAME} project. Identify an
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

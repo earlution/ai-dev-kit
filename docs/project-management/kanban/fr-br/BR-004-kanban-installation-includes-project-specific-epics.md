@@ -36,6 +36,7 @@ When a new project uses ai-dev-kit as a template and installs the Kanban framewo
   - Epic 8: Tooling and Automation (ai-dev-kit specific)
   - Epic 9: Book Content Development (ai-dev-kit specific)
 
+
 **What should happen vs. what actually happens?**
 - **Expected:** New projects should receive only canonical framework epics (1-7) with generic, customizable names:
   1. Project Core (generic name, not "AI Dev Kit Core")
@@ -45,6 +46,7 @@ When a new project uses ai-dev-kit as a template and installs the Kanban framewo
   5. FR Implementation
   6. BR Implementation
   7. Codebase Maintenance and Review
+
 - **Actual:** New projects receive all epics (1-9) including ai-dev-kit project-specific epics (5-9), and Epic 1 has a project-specific name.
 
 **When does it occur?**

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-12 (v0.5.6.1+1 – Story 6 Task 1 complete: Policy salience implementation)  
+**Last updated:** 2026-02-26 (v0.5.1.47+3 – E5:S01:T47: tests, docs, consumer-vs-framework clarity)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -20,23 +20,54 @@ housekeeping_policy: keep
 ---
 
 ## Story Checklist
+- [x] **E5:S00 – Abstract Space (Epic-Level)** - ABSTRACT SPACE (v0.5.0.0+0 – Epic-level abstract space only, no tasks)
+  - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
+  - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
 
-- [ ] **E5:S01 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)
-  - Story: [`Story-001-documentation-maintenance-framework.md`](Story-001-documentation-maintenance-framework.md)
-- [ ] **E5:S02 – Documentation Quality Assurance** - IN PROGRESS
-  - Story: [`Story-002-documentation-quality-assurance.md`](Story-002-documentation-quality-assurance.md)
-  - Tasks: T01 ✅, T02 ✅, T03 TODO
-- [ ] **E5:S03 – Documentation Automation** - TODO
-  - Story: [`Story-003-documentation-automation.md`](Story-003-documentation-automation.md)
-- [ ] **E5:S04 – Framework Documentation Management** - IN PROGRESS
-  - Story: [`Story-004-framework-documentation-management.md`](Story-004-framework-documentation-management.md)
+
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.44+1 – T44: FR-044 task created)
+  - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+  - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
+
+
+- [ ] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)
+  - Story: [`Story-002-documentation-maintenance-framework.md`](Story-002-documentation-maintenance-framework.md)
+  - **Note:** Renumbered from S01 to S02 as part of repository story migration (E9:S01:T08)
+
+
+- [x] **E5:S03 – Documentation Quality Assurance** - COMPLETE ✅ (v0.5.3.3+1, migrated from v0.5.2.3+1)
+  - Story: [`Story-003-documentation-quality-assurance.md`](Story-003-documentation-quality-assurance.md)
+  - Tasks: T01 ✅, T02 ✅, T03 ✅
+  - **Note:** Renumbered from S02 to S03 as part of repository story migration (E9:S01:T08)
+
+
+- [ ] **E5:S04 – Documentation Automation** - IN PROGRESS (T01 complete, T02-T03 TODO)
+  - Story: [`Story-004-documentation-automation.md`](Story-004-documentation-automation.md)
+  - **Note:** Renumbered from S03 to S04 as part of repository story migration (E9:S01:T08)
+
+
+- [ ] **E5:S05 – Framework Documentation Management** - IN PROGRESS
+  - Story: [`Story-005-framework-documentation-management.md`](Story-005-framework-documentation-management.md)
   - Tasks: T01 TODO, T02 TODO, T03 TODO, T04 TODO, T05 ✅, T06 TODO, T07 ✅
-- [ ] **E5:S05 – Legacy Repository Incorporation** - IN PROGRESS
-  - Story: [`Story-005-legacy-repository-incorporation.md`](Story-005-legacy-repository-incorporation.md)
+  - **Note:** Renumbered from S04 to S05 as part of repository story migration (E9:S01:T08)
+
+
+- [ ] **E5:S06 – Legacy Repository Incorporation** - IN PROGRESS
+  - Story: [`Story-006-legacy-repository-incorporation.md`](Story-006-legacy-repository-incorporation.md)
   - Tasks: T01 ✅, T02-T25 TODO (25 tasks across 4 phases)
-- [ ] **E5:S06 – Policy Documentation Structure** - IN PROGRESS (v0.5.6.1+1 – Task 1 complete: Policy salience implementation)
-  - Story: [`Story-006-policy-documentation-structure.md`](Story-006-policy-documentation-structure.md)
+  - **Note:** Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08)
+
+
+- [ ] **E5:S07 – Policy Documentation Structure** - IN PROGRESS (v0.5.7.1+1, migrated from v0.5.6.1+1 – Task 1 complete: Policy salience implementation)
+  - Story: [`Story-007-policy-documentation-structure.md`](Story-007-policy-documentation-structure.md)
   - Tasks: T01 ✅ COMPLETE (FR-022)
+  - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08)
+
+
+- [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+8 – T02 ✅ E4:S16:T05 gap log spec, validator)
+  - Story: [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
+  - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
+
 
 ---
 
@@ -67,9 +98,25 @@ Epic 5 owns the **Documentation Management and Maintenance** framework for the a
 
 ## Stories (Initial)
 
-### Story 1: Documentation Maintenance Framework
+### Story 1: FR Repo (PERPETUAL)
 
-**Status:** TODO  
+**Status:** IN PROGRESS (PERPETUAL)  
+**Priority:** HIGH  
+**Estimated Effort:** N/A (Perpetual repository)  
+**Last updated:** 2026-03-04 (v0.5.1.47+2)
+
+**Goal:**  
+Repository story for all Feature Requests. Provides 1:1 traceability between FR numbers and task numbers.
+
+**Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+
+**Note:** This story was migrated from S00 to S01 as part of repository story abstract space resolution (E9:S01:T08). S00 is now abstract space only.
+
+---
+
+### Story 2: Documentation Maintenance Framework
+
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Last updated:** 2025-12-05
@@ -78,37 +125,41 @@ Epic 5 owns the **Documentation Management and Maintenance** framework for the a
 Establish a framework for maintaining documentation accuracy and consistency across the dev-kit.
 
 **Tasks:**
-- [ ] E5:S01:T01 – Conduct comprehensive documentation hygiene analysis
-- [ ] E5:S01:T02 – Define documentation maintenance policies
-- [ ] E5:S01:T03 – Create documentation review cadences
-- [ ] E5:S01:T04 – Establish documentation update triggers
+- [ ] E5:S02:T01 – Conduct comprehensive documentation hygiene analysis
+- [ ] E5:S02:T02 – Define documentation maintenance policies
+- [ ] E5:S02:T03 – Create documentation review cadences
+- [ ] E5:S02:T04 – Establish documentation update triggers
 
-**Story:** [`Story-001-documentation-maintenance-framework.md`](Story-001-documentation-maintenance-framework.md)
+**Story:** [`Story-002-documentation-maintenance-framework.md`](Story-002-documentation-maintenance-framework.md)
+
+**Note:** Renumbered from S01 to S02 as part of repository story migration (E9:S01:T08).
 
 ---
 
-### Story 2: Documentation Quality Assurance
+### Story 3: Documentation Quality Assurance
 
-**Status:** TODO  
+**Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-05
+**Last updated:** 2026-01-05
 
 **Goal:**  
 Implement quality assurance processes and tools for documentation validation.
 
 **Tasks:**
-- [ ] E5:S02:T01 – Create documentation consistency validators
-- [ ] E5:S02:T02 – Implement documentation review workflows
-- [ ] E5:S02:T03 – Build documentation health dashboards
+- [x] E5:S03:T01 – Create documentation consistency validators ✅
+- [x] E5:S03:T02 – Implement documentation review workflows ✅
+- [x] E5:S03:T03 – Build documentation health dashboards ✅
 
-**Story:** [`Story-002-documentation-quality-assurance.md`](Story-002-documentation-quality-assurance.md)
+**Story:** [`Story-003-documentation-quality-assurance.md`](Story-003-documentation-quality-assurance.md)
+
+**Note:** Renumbered from S02 to S03 as part of repository story migration (E9:S01:T08).
 
 ---
 
-### Story 3: Documentation Automation
+### Story 4: Documentation Automation
 
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Last updated:** 2025-12-05
@@ -117,11 +168,31 @@ Implement quality assurance processes and tools for documentation validation.
 Automate documentation maintenance tasks to reduce manual effort and improve consistency.
 
 **Tasks:**
-- [ ] E5:S03:T01 – Create automated documentation update scripts
-- [ ] E5:S03:T02 – Implement documentation synchronization workflows
-- [ ] E5:S03:T03 – Build documentation change detection and notification
+- [x] E5:S04:T01 – Create automated documentation update scripts ✅
+- [ ] E5:S04:T02 – Implement documentation synchronization workflows
+- [ ] E5:S04:T03 – Build documentation change detection and notification
 
-**Story:** [`Story-003-documentation-automation.md`](Story-003-documentation-automation.md)
+**Story:** [`Story-004-documentation-automation.md`](Story-004-documentation-automation.md)
+
+**Note:** Renumbered from S03 to S04 as part of repository story migration (E9:S01:T08).
+
+---
+
+### Story 8: Knowledge Base
+
+**Status:** IN PROGRESS  
+**Priority:** HIGH  
+**Estimated Effort:** [TBD]  
+**Last updated:** 2026-02-20
+
+**Goal:**  
+Investigate the ramifications of the persistent knowledge base concept, including integration points, workflow impacts, tooling requirements, and agent capabilities; establish Notion hub and KB index for migration.
+
+**Tasks:**
+- [ ] E5:S08:T01 – Investigate persistent knowledge base concept and ramifications
+- [x] E5:S08:T02 – Notion hub, Knowledge Base container, and KB index ✅
+
+**Story:** [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
 
 ---
 

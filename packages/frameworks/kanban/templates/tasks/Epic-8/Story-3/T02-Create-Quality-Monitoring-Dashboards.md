@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 3, Task 2: Create Quality Monitoring Dashboards
+# Epic 8, Story 3, Task 2: Create quality monitoring dashboards
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.8.3.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.3.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.3.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S3:T2`)
+**Format:** `E8:S3:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S03:T02`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create quality monitoring dashboards for the {PROJECT_NAME} project. Develop dashboards that visualize code quality metrics and provide real-time visibility into code quality status, trends, and issues.
+Create quality monitoring dashboards for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Code quality metrics (from E8:S3:T01)
-- Dashboard requirements and preferences
-- Visualization tools and platforms
-- Dashboard design requirements
-- ai-dev-kit dashboard practices (if adopting)
+- Requirements and specifications
+- create quality monitoring dashboards requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Quality monitoring dashboards created
-- Dashboard visualizations
-- Dashboard configuration
-- Dashboard documentation
-- Dashboards accessible to team
+- create quality monitoring dashboards completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Quality monitoring dashboards created
-- [ ] Dashboards visualize key quality metrics
-- [ ] Dashboards show quality trends over time
-- [ ] Dashboards highlight quality issues
-- [ ] Dashboard visualizations are clear and actionable
-- [ ] Dashboards are accessible to team members
-- [ ] Dashboard configuration documented
-- [ ] Dashboards support quality monitoring and decision-making
+- [ ] Create quality monitoring dashboards completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review code quality metrics
-2. Define dashboard requirements and structure
-3. Select visualization tools and platforms
-4. Design dashboard layouts
-5. Create dashboard visualizations
-6. Configure dashboard data sources
-7. Test dashboard functionality
-8. Document dashboard usage
-9. Review and refine dashboards
+1. Analyze requirements for create quality monitoring dashboards
+2. Design approach and plan
+3. Implement create quality monitoring dashboards
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E8:S3:T01: Set up code quality metrics (dashboards use metrics)
+- E8:S3:T01
 
 **Blocks:**
-- E8:S3:T03: Define quality thresholds (thresholds may be visualized in dashboards)
-- E8:S3:T04: Document quality improvement process (process may reference dashboards)
+- E8:S3:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S3:T01: Set up code quality metrics (dashboards use metrics)
-- E8:S3:T03: Define quality thresholds (thresholds may be visualized in dashboards)
-- E8:S3:T04: Document quality improvement process (process may reference dashboards)
+- [E08:S03:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S3: Code Quality Metrics and Monitoring (this story)
-- E19:S2: Metrics and Reporting (quality metrics may be part of broader reporting)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.3.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Create quality monitoring dashboards for the {PROJECT_NAME} project. Develop das
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

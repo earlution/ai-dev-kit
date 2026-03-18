@@ -12,28 +12,46 @@ housekeeping_policy: keep
 
 **Location in `.cursorrules`:** Add this section in the "Version Control and Release Process" section (or equivalent).
 
-**Last Updated:** 2025-12-08  
+**Last Updated:** 2025-12-18  
 **Source Project:** Originally fynd.deals (Epic 15, Story 1), now maintained in ai-dev-kit as canonical SoT  
-**Version:** 2.3.0 (added PVW trigger section)
+**Version:** 2.3.1 (BR-010 fix: doc-init detection bug resolved)
 
 ---
 
 ### 🚀 RELEASE WORKFLOW (RW) TRIGGER
 
-**When the user types "RW" or "rw" (case-insensitive), execute the Release Workflow as an intelligent agent:**
+**When the user types any of the following triggers (case-insensitive), execute the Release Workflow as an intelligent agent:**
 
-1. **DO NOT** run the deterministic script `scripts/release_workflow.py`
-2. **DO** execute the Release Workflow using the **intelligent agent-driven execution pattern**
-3. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists. This is the **single source of truth** for all project-specific paths. If config exists, use its values. If not, use placeholders/examples (backward compatibility).
-4. **Follow** the step-by-step guide below
+- **"RW"** - Full Release Workflow (all 17 steps)
+- **"RW -k"** - Initial Kanban Documentation Commit (documentation setup only)
+- **"RW -d"** - Documentation-Only Release (documentation updates without full release cycle)
+
+**Trigger Processing:**
+
+1. **Parse Trigger Type:** Determine which workflow variant to execute
+2. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `rw-config.yaml` from project root if it exists. This is the **single source of truth** for all project-specific paths. If config exists, use its values. If not, use placeholders/examples (backward compatibility).
+3. **Select Execution Path:** Choose appropriate step sequence based on trigger type
+4. **Follow** the step-by-step guide for selected path
 5. **🚨 MANDATORY: Start with Step 1: Branch Safety Check** - This is a **MANDATORY BLOCKING STEP** that MUST run before any file modifications
    - **CRITICAL:** Step 1 MUST run `validate_branch_context.py --strict` and check exit code
    - **CRITICAL:** If Step 1 fails (non-zero exit code), **DO NOT PROCEED** to Step 2
    - **CRITICAL:** If Step 1 fails, mark all steps as `cancelled` and stop workflow immediately
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
-6. **Execute all remaining steps** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
+6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
 7. **Document** each step's analysis, actions, and results
-8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking all 14 steps (see below)
+8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking the steps for the selected path
+
+**Execution Paths by Trigger Type:**
+
+**RW (Full Release):** Steps 1-17 (complete release with Git operations, verification, PIR)
+
+**RW -k (Kanban Init):** Steps [1, 2, 3, 4, 7, 11, 12] - Documentation setup only
+- Step 7 modified: Only update changelog, version number, and Kanban docs
+- Skip: Git push, verification, PIR, housekeeping
+
+**RW -d (Documentation Only):** Steps [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14] - Documentation updates
+- Skip: Git tag, push, PIR trigger, housekeeping  
+- Step 14 optional: Agent determines if verification actions needed
 
 **🔧 Config-Driven Approach (Preferred):**
 
@@ -77,24 +95,64 @@ kanban_root = config.get('kanban_root', 'docs/project-management/kanban') if con
 
 **🚨 MANDATORY: Progress Tracking with Cursor TODOs**
 
-**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for all 14 Release Workflow steps:
+**REQUIRED:** Agents **MUST** use `todo_write` to create and maintain a TODO list for the steps in the selected execution path:
 
-1. **At Workflow Start:** Create TODO list with all 14 steps as `pending`
-   ```python
-   todo_write(merge=False, todos=[
-       {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
-       {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Read Story file, identify completed task number, compare to current VERSION_TASK, determine if new task or same task, update version file, validate'},
-       {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG with full timestamp'},
-       {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
-       {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
-       {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-       {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
-       {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Run Validators - Execute branch context and changelog format validators'},
-       {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Commit Changes - Create git commit with versioned message'},
-       {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Create Git Tag - Create annotated tag'},
-       {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Push to Remote - Push branch and tags (with network permissions)'},
-   ])
-   ```
+**Trigger-Specific Step Lists:**
+
+**For "RW" (Full Release - 17 steps):**
+```python
+todo_write(merge=False, todos=[
+    {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Read Story file, identify completed task number, compare to current VERSION_TASK, determine if new task or same task, update version file, validate'},
+    {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG with full timestamp'},
+    {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
+    {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-9.5', 'status': 'pending', 'content': 'Step 9.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
+    {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
+    {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags (with network permissions)'},
+    {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification, Housekeeping & Reflection - Verify release, perform housekeeping tasks, and reflect on process'},
+    {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found during verification'},
+    {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Check for PIR Trigger - Determine if Post-Implementation Review is needed'},
+    {'id': 'rw-step-16', 'status': 'pending', 'content': 'Step 16: Housekeeping - Clean up temporary files and IDE todos'},
+    {'id': 'rw-step-17', 'status': 'pending', 'content': 'Step 17: Complete - Final verification and cleanup'},
+])
+```
+
+**For "RW -k" (Kanban Init - 7 steps):**
+```python
+todo_write(merge=False, todos=[
+    {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for Kanban documentation setup'},
+    {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for Kanban init'},
+    {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for Kanban init'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Kanban Documentation Update - Update changelog, version number, and Kanban docs only'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Commit Changes - Create git commit for Kanban documentation setup'},
+    {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Create Git Tag - Create tag for Kanban documentation setup'},
+])
+```
+
+**For "RW -d" (Documentation Only - 13 steps):**
+```python
+todo_write(merge=False, todos=[
+    {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for documentation release'},
+    {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for documentation updates'},
+    {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for documentation release'},
+    {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Post-Commit Verification & Reflection - Verify documentation release'},
+    {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found (optional, agent-determined)'},
+])
+```
 
 2. **Before Each Step:** Mark step as `in_progress`
    ```python
@@ -157,14 +215,28 @@ For each step, follow this pattern:
    - **DO NOT SKIP:** This step cannot be bypassed or ignored
    - **DO NOT PROCEED:** If Step 1 fails, DO NOT attempt Step 2 or any subsequent step
 2. **Bump Version** - **MANDATORY STEP-BY-STEP PROCESS (DO NOT SKIP ANY STEP):**
-
-   **A. READ CURRENT VERSION:**
+   - **A. CHECK UKW CONTEXT (BEFORE READING VERSION):** **CRITICAL:** Check if this RW was triggered immediately after UKW:
+     - **IF UKW was just executed:** This is UKW work → Skip to UKW Attribution Logic (see below)
+     - **IF NOT UKW context:** Proceed with normal task identification
+   - **A.1. UKW ATTRIBUTION LOGIC (IF UKW CONTEXT DETECTED):**
+     - **UKW Context:** User ran "UKW" then "RW" → This is kanban synchronization work
+     - **Dynamic Task Discovery:** Search for task document with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+     - **Task ID is Project-Specific:** Perpetual UKW task ID varies by project:
+       - ai-dev-kit: E6:S06:T08 (example)
+       - Other projects: May be E4:S03:T05, E2:S01:T10, etc. (depends on project structure)
+     - **Auto-Attribute to Perpetual Task:** Use discovered perpetual task's Epic/Story/Task numbers, increment `VERSION_BUILD`
+     - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
+     - **Skip Normal Task Identification:** Do not read Story file for normal task identification when UKW context detected
+     - **Example (ai-dev-kit):** If current is `v0.6.6.8+3`, UKW release becomes `v0.6.6.8+4`
+     - **Example (other project):** If perpetual task is E4:S03:T05 and current is `v0.4.3.5+2`, UKW release becomes `v0.4.3.5+3`
+     - **Document:** "UKW context detected. Found perpetual UKW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
+   - **A. READ CURRENT VERSION:**
    - **Load config first:** If `rw-config.yaml` exists, read `version_file` from config. Otherwise, use `src/{project}/version.py` as fallback.
    - Read the version file (from config or fallback) to get current `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK`, `VERSION_BUILD`
    - Document current version: `RC.EPIC.STORY.TASK+BUILD`
    - [Example: ai-dev-kit] Read `src/fynd_deals/version.py` (or from `rw-config.yaml` if present)
 
-   **B. IDENTIFY COMPLETED TASK (MANDATORY):**
+   **B. IDENTIFY COMPLETED TASK (MANDATORY - ONLY IF NOT UKW):**
    - **Load config first:** If `rw-config.yaml` exists and `use_kanban: true`, read `kanban_root` and `story_doc_pattern` from config. Otherwise, use `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` as fallback.
    - Read the Story file using config values or fallback pattern
    - [Example: ai-dev-kit] `docs/project-management/kanban/epics/Epic-{epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
@@ -172,7 +244,7 @@ For each step, follow this pattern:
    - Extract the task number from the task identifier: `E{epic}:S{story}:T{task}` (e.g., `E2:S02:T08` → task number is `8`)
    - **CRITICAL:** If no task is marked complete, or you cannot identify which task was just completed, **STOP** and ask the user which task was completed
 
-   **B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY - NEW REQUIREMENT):**
+   **B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY):**
    - **MANDATORY:** After identifying completed task, locate Task document in one of two formats:
      1. **Separate File:** `{kanban_root}/epics/Epic-{epic}/Story-{story}/Task-{task}-*.md` or `T{task}-*.md`
      2. **Delimited Section:** Within Story file, header matching `### E{epic}:S{story}:T{task} –`
@@ -181,6 +253,9 @@ For each step, follow this pattern:
    - **MANDATORY:** Verify Task ID alignment with version components
    - **CRITICAL:** If Task document not found or incomplete, **STOP** and report error with guidance
    - **DO NOT PROCEED** until Task document exists and is validated
+   - **B.2. CHECK PERPETUAL TASK FLAG:** Read task document for `perpetual_task: true` or `Task Type: Perpetual Maintenance`:
+     - **IF perpetual task:** Note for build warning suppression (high BUILD numbers expected and valid)
+     - **IF not perpetual:** Normal task handling applies
 
    **C. DETERMINE VERSION BUMP (MANDATORY LOGIC):**
    - Compare completed task number to current `VERSION_TASK`:
@@ -201,7 +276,7 @@ For each step, follow this pattern:
        - **CRITICAL:** Changelog entry will appear before higher task numbers (canonical ordering)
 
    **D. VALIDATE BEFORE UPDATING:**
-   - Verify: New `VERSION_TASK` matches completed task number
+   - Verify: New `VERSION_TASK` matches completed task number (unless UKW context)
    - Verify: If new task, `VERSION_BUILD` = 1; if same task, `VERSION_BUILD` = current + 1
    - Document decision: "Task {completed_task} completed. Current TASK={current_task}, BUILD={current_build}. Decision: {new_task/new_build} → TASK={new_task}, BUILD={new_build}"
 
@@ -218,18 +293,54 @@ For each step, follow this pattern:
 
    **Use format:** `RC.EPIC.STORY.TASK+BUILD`
 
-   **🚨 CRITICAL: Step 2 Version Bump Requirements:**
-   - **MUST** read Story file to identify completed task number
-   - **MUST** compare completed task number to current VERSION_TASK
-   - **MUST** validate TASK number matches completed task before updating
-   - **MUST** validate TASK number matches completed task after updating
-   - **MUST** document decision: "Task {N} completed. Current TASK={X}, BUILD={Y}. Decision: {new_task/new_build} → TASK={Z}, BUILD={W}"
+      **🚨 CRITICAL: Step 2 Version Bump Requirements:**
+   - **MUST** check for UKW context before reading version (Step 2.A)
+   - **MUST** read Story file to identify completed task number (only if NOT UKW context)
+   - **MUST** compare completed task number to current VERSION_TASK (only if NOT UKW context)
+   - **MUST** validate TASK number matches completed task before updating (unless UKW context)
+   - **MUST** validate TASK number matches completed task after updating (unless UKW context)
+   - **MUST** document decision: "Task {N} completed. Current TASK={X}, BUILD={Y}. Decision: {new_task/new_build} → TASK={Z}, BUILD={W}" (or UKW context documentation)
    - See `docs/architecture/standards-and-adrs/versioning-error-reference-guide.md` for error prevention reference
    - See `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 2 for complete procedure
+
+**🔄 UKW → RW Integration (Wiring):**
+
+**Important:** After completing UKW, users typically run RW to commit the kanban documentation updates. The relationship between UKW and the perpetual task is established through wiring:
+
+- **Wiring Established in UKW Step 1:** UKW discovers and wires itself to the project's perpetual UKW task
+  - UKW Step 1 searches for task with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+  - UKW extracts the task's Epic/Story/Task ID (e.g., E6:S06:T08, E4:S03:T05, etc.)
+  - **Wiring:** UKW establishes relationship to this task ID for this project instance
+- **RW Uses Wired Task:** When RW runs after UKW:
+  - **UKW Context Detection:** RW Step 2 detects UKW context (user ran "UKW" then "RW")
+  - **Uses Wired Task ID:** RW uses the perpetual task ID that UKW wired in Step 1
+  - **Same Relationship, Different ID per Project:** Each project instance wires UKW to its own perpetual task (different E/S/T ID)
+- **Version Pattern:** UKW releases use the wired perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
+- **Build Warning Suppression:** Perpetual tasks have `perpetual_task: true` flag, so high BUILD numbers are expected and valid (no warnings)
+
+**Wiring Example (ai-dev-kit):**
+- UKW Step 1: Searches tasks → Finds E6:S06:T08 with `perpetual_task: true`
+- UKW wires itself to E6:S06:T08
+- When RW runs after UKW, it uses the wired task ID (E6:S06:T08)
+- Version: `v0.6.6.8+{N}`
+
+**Wiring Example (other project):**
+- UKW Step 1: Searches tasks → Finds E4:S03:T05 with `perpetual_task: true`
+- UKW wires itself to E4:S03:T05
+- When RW runs after UKW, it uses the wired task ID (E4:S03:T05)
+- Version: `v0.4.3.5+{N}`
+
+**Perpetual Task Pattern:**
+- Projects should create a perpetual UKW task for UKW release attribution
+- **Wiring Required:** Task must have `perpetual_task: true` or `Task Type: Perpetual Maintenance` in task document (UKW uses this to wire)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (wired in UKW Step 1)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as UKW runs (expected and valid)
+- **RW Maintenance (T103):** Manual attribution only—when releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), set version to E6:S07:T103 and increment BUILD. See Epic 2 Story 1 T06 (RW Maintenance Perpetual Task Pattern).
 3. **Create Detailed Changelog** - Create detailed changelog in changelog archive directory. **Use config:** If `rw-config.yaml` exists, read `changelog_dir` from config. Otherwise, use `{changelog_archive_path}/CHANGELOG_v{version}.md` as fallback. Full timestamp (`YYYY-MM-DD HH:MM:SS UTC`). **CRITICAL:** Timestamp is IMMUTABLE once written - never edit the `**Release Date:**` field.
    - [Example: ai-dev-kit] `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md` (or from `rw-config.yaml` if present)
 4. **Update Main Changelog** - Add new entry at top: `## [version] - DD-MM-YY` (short date format for merge-to-main) with release description and link to detailed changelog. **Use config:** If `rw-config.yaml` exists, read `main_changelog` from config. Otherwise, use `CHANGELOG.md` as fallback. Follow [Keep a Changelog](https://github.com/olivierlacan/keep-a-changelog) format. **Note:** Main changelog date can be updated if merge date changes, but detailed changelog timestamp is immutable.
-5. **Update README** - Update version badge and latest release callout if present (optional). **Use config:** If `rw-config.yaml` exists, read `readme_file` from config. Otherwise, use `README.md` as fallback.
+5. **Update README** - **MANDATORY:** Update project version in README. **MUST update:** Version text (e.g., `**Version:** v{version}`), version badge (if present), and latest release callout (if present). **Use config:** If `rw-config.yaml` exists, read `readme_file` from config. Otherwise, use `README.md` as fallback.
 6. **Update BR/FR Docs** - Update Bug Reports and Feature Requests with fix attempt information. **Use config:** If `rw-config.yaml` exists, read `fr_br_root` from config. Otherwise, use `docs/project-management/kanban/fr-br` as fallback. **Purpose:** Document flaws, attempted fixes, and verification status so that if a bug isn't squashed, the next build can be informed by previous attempts.
    - **For Bug Reports (BR):**
      - Search for BR files linked to the completed task (via Story file, Epic file, or BR "Intake Decision" section)
@@ -281,12 +392,19 @@ For each step, follow this pattern:
      5. **Update ALL Epic sections to match the updated Story file's state**
      6. Validate consistency: Story file, Epic header, Epic checklist, and Epic detailed sections must all match
 8. **Stage Files** - Run `git add -A` to stage all modified files
-9. **Run Validators** - Execute validation scripts. **Use config:** If `rw-config.yaml` exists, read `scripts_path` from config. Otherwise, use `{scripts_path}/validation/` as fallback. Run `validate_branch_context.py`, `validate_changelog_format.py`, and `validate_version_bump.py` (all scripts automatically read from `rw-config.yaml` if available).
+9. **Run Validators** - Execute validation scripts. **Use config:** If `rw-config.yaml` exists, read `scripts_path` from config. Otherwise, use `{scripts_path}/validation/` as fallback. Run `validate_branch_context.py`, `validate_changelog_format.py`, and `validate_version_bump.py` (all scripts automatically read from `rw-config.yaml` if available). **Note:** `validate_version_bump` supports perpetual tasks (T101+, `perpetual_task` or `Task Type: Perpetual Maintenance` flag).
    - **IMPORTANT:** Validators should confirm you're on an epic branch, not `main`
    - If on `main`, warn user and suggest switching to epic branch
    - Validators check version format, branch context alignment, changelog format, and version bump logic
 10. **Commit Changes** - Create commit with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
-11. **Create Git Tag** - Create annotated tag: `v{version}` with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
+11. **Create Git Tag** - Create annotated tag based on SemVer mapping strategy:
+   - **Default (Registry mode)**: Create tag `v{version}` with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
+   - **Task-touch mode**: Create SemVer tag `v{semver}` as primary tag with message: `Release {semver} (Internal: {version})\n\nEpic: {epic} | Story: {story} | Task: {task}`
+     - Optionally also create internal tag `v{version}` on same commit for traceability
+   - **Configuration**: Strategy detected from `rw-config.yaml` → `semver_mapping_strategy`
+   - **Examples**:
+     - Registry mode: `v0.6.7.18+2` (internal version tag)
+     - Task-touch mode: `v0.9.5` (SemVer tag, internal: `v0.6.7.18+2`)
 12. **Push to Remote** - Push epic branch and tag to origin (DO NOT push to main unless ready to deploy)
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
     - Example: `run_terminal_cmd(command="git push origin {branch} --tags", required_permissions=['network'])`

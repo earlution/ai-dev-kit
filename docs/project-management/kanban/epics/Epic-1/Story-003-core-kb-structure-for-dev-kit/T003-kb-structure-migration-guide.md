@@ -121,11 +121,13 @@ Migration phases:
   - `docs/project-management/rituals/README.md`
   - `docs/project-management/rituals/policy/README.md`
 
+
 **Future Phases:**
 - For Phases 2–4, rollback procedures will include:
   - Removing or reverting created directories
   - Reverting cross-reference changes
   - Restoring previous documentation versions from git history
+
 
 ---
 

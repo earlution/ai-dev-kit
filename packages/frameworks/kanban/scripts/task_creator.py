@@ -57,17 +57,58 @@ class CreatedTask:
 class TaskCreator:
     """Creates Kanban tasks from templates with contextualization."""
     
-    def __init__(self, kanban_path: Path, framework_path: Path):
+    def __init__(
+        self,
+        kanban_path: Path,
+        framework_path: Path,
+        use_agentic: bool = False,
+        agentic_provider: Optional[str] = None,
+        agentic_config: Optional[Dict] = None
+    ):
         """
         Initialize the task creator.
         
         Args:
             kanban_path: Path to project's Kanban structure
             framework_path: Path to Kanban framework
+            use_agentic: Use agentic generator for richer task content
+            agentic_provider: LLM provider for agentic generation
+            agentic_config: Additional agentic configuration
         """
         self.kanban_path = Path(kanban_path)
         self.framework_path = Path(framework_path)
         self.templates_path = framework_path / "templates"
+        self.use_agentic = use_agentic
+        self.agentic_provider = agentic_provider
+        self.agentic_config = agentic_config or {}
+        
+        # Initialize agentic generator if requested
+        self.agentic_generator = None
+        if self.use_agentic:
+            try:
+                from agentic_template_generator import AgenticTemplateGenerator, LLMConfig
+                llm_config = LLMConfig(
+                    provider=agentic_provider or "none",
+                    **self.agentic_config
+                )
+                structure_file = self.templates_path / "COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md"
+                self.agentic_generator = AgenticTemplateGenerator(
+                    structure_file=structure_file,
+                    template_dir=self.templates_path,
+                    output_dir=self.templates_path,  # Not used for task creation, but required
+                    llm_config=llm_config,
+                    overwrite=False,
+                    dry_run=False
+                )
+                if not self.agentic_generator.parse_structure():
+                    print("⚠️  Warning: Failed to initialize agentic generator for task creation")
+                    self.agentic_generator = None
+            except ImportError:
+                print("⚠️  Warning: Agentic generator not available for task creation")
+                self.use_agentic = False
+            except Exception as e:
+                print(f"⚠️  Warning: Agentic generator initialization failed: {e}")
+                self.use_agentic = False
     
     def create_tasks_from_fr_br(
         self,

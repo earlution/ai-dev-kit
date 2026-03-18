@@ -34,6 +34,7 @@ Provide safe adoption paths for projects with pre-existing Kanban/Sprint/Issue s
   - **Linked BR:** `BR-006-missing-migration-support-pre-existing-kanban.md` (GitHub issue #2)  
   - **Acceptance:** ✅ Criteria 1-4 of BR-006 satisfied and documented.
 
+
 - [x] **E4:S07:T02 – FR-007: Migration utilities and installation modes** ✅ COMPLETE (v0.4.7.2+1)
   - Implemented migration utility (`migrate_structure.py`) - creates backups, migrates epics/stories/tasks, preserves forensic markers, supports all installation modes
   - Implemented installation script (`install_kanban_framework.py`) - interactive mode selection, integrates detection/analysis/migration, supports Fresh/Migration/Update/Hybrid modes
@@ -43,6 +44,7 @@ Provide safe adoption paths for projects with pre-existing Kanban/Sprint/Issue s
   - **Linked FR:** `FR-007-migration-utilities-and-installation-modes.md` (GitHub issue #3)  
   - **Acceptance:** ✅ AC-1..AC-8 of FR-007 satisfied and documented.
 
+
 - [x] **E4:S07:T03 – Documentation and guides update** ✅ COMPLETE (v0.4.7.3+1)
   - Updated `packages/frameworks/kanban/README.md` with migration support section, installation options (interactive vs manual), migration workflow documentation, and package contents update
   - Added migration support section covering pre-existing Kanban, Sprint-based systems, issue trackers, and older framework versions
@@ -51,6 +53,7 @@ Provide safe adoption paths for projects with pre-existing Kanban/Sprint/Issue s
   - Updated package contents to include scripts directory and utilities
   - **Linked BR/FR:** BR-006 / FR-007.  
   - **Acceptance:** ✅ BR-006 criteria 9-12 and FR-007 AC-6..AC-8 addressed in docs.
+
 
 ---
 

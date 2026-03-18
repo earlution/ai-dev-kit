@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 1, Task 1: Define Project Structure and Directory Layout
+# Epic 1, Story 1, Task 1: Define project structure and directory layout
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S1:T1`)
+**Format:** `E1:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S01:T01`
 
@@ -28,80 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Define the project structure and directory layout for the {PROJECT_NAME} project. Establish a clear, scalable directory organization that supports the project's architecture and makes it easy for developers to navigate and understand the codebase.
+Define project structure and directory layout for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project requirements and scope
-- Technology stack decisions
-- Architecture patterns to follow
-- Team preferences and conventions (if applicable)
-- ai-dev-kit canonical structure (if adopting)
+- Requirements and specifications
+- define project structure and directory layout requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Documented project structure and directory layout
-- Directory structure created (or documented for creation)
-- README or documentation describing the structure
-- Rationale for structure decisions
+- define project structure and directory layout completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Project structure and directory layout defined
-- [ ] Directory structure documented with clear rationale
-- [ ] Structure supports project architecture and scalability
-- [ ] Structure follows best practices for {PROJECT_TYPE}
-- [ ] Structure is consistent with ai-dev-kit patterns (if adopting)
+- [ ] Define project structure and directory layout completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Research best practices for {PROJECT_TYPE} directory structures
-2. Review ai-dev-kit canonical structure (if adopting)
-3. Design directory layout based on project architecture
-4. Document structure with clear naming conventions
-5. Create or document directory structure
-6. Add structure documentation to project README or docs
+1. Analyze requirements for define project structure and directory layout
+2. Design approach and plan
+3. Implement define project structure and directory layout
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Project requirements and scope definition
-- Technology stack decisions
+- None
 
 **Blocks:**
-- T02: Set up version control and repository configuration (benefits from structure)
-- T03: Configure development environment and tooling (requires structure)
-- T04: Create initial project documentation (requires structure)
+- E1:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently once requirements are known)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E01:S01:T02: Set up version control and repository configuration
-- E01:S01:T03: Configure development environment and tooling
-- E01:S01:T04: Create initial project documentation
+- [E01:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E01:S01: Project Foundation and Setup
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -113,10 +111,7 @@ Define the project structure and directory layout for the {PROJECT_NAME} project
 
 ## Notes
 
-- Consider scalability: structure should accommodate growth
-- Follow language/framework conventions where applicable
-- Document decisions for future reference
-- Consider team familiarity with structure patterns
+[Additional notes, context, or considerations for this task.]
 
 ---
 
@@ -128,14 +123,12 @@ Define the project structure and directory layout for the {PROJECT_NAME} project
 
 ## References
 
-- ai-dev-kit canonical structure documentation
-- {PROJECT_TYPE} directory structure best practices
-- Project architecture patterns
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
 
 ---
 
 ## Next Actions
 
-- [ ] Review and finalize structure design
-- [ ] Create or document directory structure
-- [ ] Update project documentation
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

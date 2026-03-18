@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 1, Task 5: Analyze Research Data and Synthesize Findings
+# Epic 7, Story 1, Task 5: Analyze research data and synthesize findings
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.1.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.1.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.1.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S1:T5`)
+**Format:** `E7:S1:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S01:T05`
 
@@ -28,93 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Analyze research data and synthesize findings for the {PROJECT_NAME} project. Process, analyze, and synthesize data from user interviews, surveys, and other research activities to extract meaningful insights and answer research questions.
+Analyze research data and synthesize findings for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Research objectives and questions (from E7:S1:T01)
-- Interview data (from E7:S1:T03)
-- Survey data (from E7:S1:T04)
-- Other research data (if applicable)
-- Analysis methodology and tools
-- ai-dev-kit UXR analysis practices (if adopting)
+- Requirements and specifications
+- analyze research data and synthesize findings requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Research data analysis completed
-- Findings synthesized
-- Insights identified
-- Analysis documentation
-- Findings summary
+- analyze research data and synthesize findings completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Research data analyzed systematically
-- [ ] Findings synthesized from multiple sources
-- [ ] Insights identified and documented
-- [ ] Research questions answered
-- [ ] Analysis documentation created
-- [ ] Findings summary created
-- [ ] Findings are actionable and relevant
-- [ ] Analysis supports persona creation and documentation
+- [ ] Analyze research data and synthesize findings completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review research objectives and questions
-2. Organize research data (interviews, surveys, etc.)
-3. Analyze qualitative data (interviews)
-4. Analyze quantitative data (surveys)
-5. Identify patterns and themes
-6. Synthesize findings across data sources
-7. Extract key insights
-8. Answer research questions
-9. Create analysis documentation
-10. Create findings summary
-11. Review and refine analysis
+1. Analyze requirements for analyze research data and synthesize findings
+2. Design approach and plan
+3. Implement analyze research data and synthesize findings
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S1:T01: Define research objectives and questions (analysis uses objectives/questions)
-- E7:S1:T03: Conduct user interviews (analysis uses interview data)
-- E7:S1:T04: Conduct user surveys/questionnaires (analysis uses survey data)
+- E7:S1:T04
 
 **Blocks:**
-- E7:S1:T06: Create user personas (personas use research findings)
-- E7:S1:T07: Document research findings and insights (documentation uses analysis)
+- E7:S1:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T03, T04)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S1:T01: Define research objectives and questions (analysis uses objectives/questions)
-- E7:S1:T03: Conduct user interviews (analysis uses interview data)
-- E7:S1:T04: Conduct user surveys/questionnaires (analysis uses survey data)
-- E7:S1:T06: Create user personas (personas use research findings)
-- E7:S1:T07: Document research findings and insights (documentation uses analysis)
+- [E07:S01:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S1: User Research and Discovery (this story)
-- E7:S5: UX Insights and Recommendations (insights build on research findings)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -123,3 +108,27 @@ Analyze research data and synthesize findings for the {PROJECT_NAME} project. Pr
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

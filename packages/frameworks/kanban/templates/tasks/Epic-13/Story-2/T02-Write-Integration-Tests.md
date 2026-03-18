@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 13, Story 2, Task 2: Write Integration Tests
+# Epic 13, Story 2, Task 2: Write integration tests
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.13.2.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.13.2.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.13.2.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E13:S2:T2`)
+**Format:** `E13:S2:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E13:S02:T02`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Write integration tests for the {PROJECT_NAME} project. Create integration tests that test the interaction between multiple components, modules, or systems to ensure they work together correctly.
+Write integration tests for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Testing infrastructure (from E13:S1)
-- Unit tests (from E13:S2:T01)
-- Integration testing requirements
-- Test data requirements
-- System integration points
-- ai-dev-kit integration testing patterns (if adopting)
+- Requirements and specifications
+- write integration tests requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Integration tests written
-- Tests for component interactions
-- Tests for module interactions
-- Tests for system integrations
-- Integration test data and fixtures
-- Integration test suite
+- write integration tests completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Integration tests written
-- [ ] Tests cover component interactions
-- [ ] Tests cover module interactions
-- [ ] Tests cover system integrations
-- [ ] Integration test data and fixtures created
-- [ ] Integration tests validate system behavior
-- [ ] Integration test suite is functional
+- [ ] Write integration tests completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review testing infrastructure and unit tests
-2. Identify integration points to test
-3. Design integration test structure
-4. Write integration tests for component interactions
-5. Write integration tests for module interactions
-6. Write integration tests for system integrations
-7. Create integration test data and fixtures
-8. Run and validate integration tests
-9. Review and refine integration tests
+1. Analyze requirements for write integration tests
+2. Design approach and plan
+3. Implement write integration tests
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Testing infrastructure (from E13:S1)
-- E13:S2:T01: Write unit tests (integration tests complement unit tests)
+- E13:S2:T01
 
 **Blocks:**
-- E13:S2:T03: Write end-to-end tests (E2E tests complement integration tests)
+- E13:S2:T03
 
-**Parallel Development Candidacy:** Safe (can proceed independently after testing infrastructure)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E13:S2:T01: Write unit tests (integration tests complement unit tests)
-- E13:S2:T03: Write end-to-end tests (E2E tests complement integration tests)
+- [E13:S02:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E13:S2: Test Implementation (this story)
-- E13:S1: Testing Infrastructure Setup (integration tests use testing infrastructure)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.13.2.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Write integration tests for the {PROJECT_NAME} project. Create integration tests
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

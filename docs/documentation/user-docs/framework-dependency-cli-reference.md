@@ -9,11 +9,11 @@ housekeeping_policy: keep
 # Framework Dependency CLI Reference
 
 **Status:** Active  
-**Version:** 1.0.0  
-**Last Updated:** 2025-12-07  
-**Epic:** Epic 5 - Documentation Management and Maintenance  
-**Story:** Story 4 - Framework Documentation Management  
-**Task:** E05:S04:T05 - Create comprehensive user documentation for Epic 6 framework dependency architecture
+**Version:** 2.0.0  
+**Last Updated:** 2026-01-03  
+**Epic:** Epic 6 - Framework Management and Maintenance  
+**Story:** Story 7 - ai-dev-kit CLI Tool  
+**Task:** E6:S07:T12 - Documentation and usage examples
 
 ---
 
@@ -24,14 +24,19 @@ This document provides a complete reference for the `ai-dev-kit` CLI tool comman
 **Installation:**
 
 ```bash
-# Install via pip
-pip install ai-dev-kit
-
-# Or from source
-git clone https://github.com/earlution/ai-dev-kit.git
-cd ai-dev-kit/cli
+# Install from source (current method)
+cd /path/to/ai-dev-kit
 pip install -e .
+
+# Or install CLI tool directly
+cd /path/to/ai-dev-kit/cli
+pip install -e .
+
+# Future: Install via pip (when published to PyPI)
+pip install ai-dev-kit
 ```
+
+**Note:** The CLI tool is currently available from source. PyPI distribution is planned for a future release.
 
 ---
 
@@ -84,6 +89,8 @@ ai-dev-kit install <framework>[@version] [options]
 - `--backend <type>` - Dependency backend (git-submodule, git-subtree, npm, pip)
 - `--path <path>` - Custom installation path
 - `--dry-run` - Preview changes without applying
+- `--log-path <path>` - Override log directory for this run (see Install logging below)
+- `--no-install-log` - Disable per-run install logging for this run
 
 **Examples:**
 
@@ -110,6 +117,8 @@ ai-dev-kit install workflow-mgmt --dry-run
 - Installs framework using selected backend
 - Updates project configuration files
 - Validates installation
+
+**Install logging (FR-047):** Each run of `ai-dev-kit install` writes a timestamped log file under the project’s `logs/ai-dev-kit/install/` directory (or the path set in `.ai-dev-kit.yaml` under `install_logging.path`). The log records frameworks, backend, path, and framework-specific installer output (e.g. Kanban phase markers). Use `--log-path PATH` to override the log directory for one run, or `--no-install-log` to disable logging for one run. See the configuration guide for `install_logging` options.
 
 **Output:**
 
@@ -364,21 +373,36 @@ ai-dev-kit remove <framework> [options]
 
 **Options:**
 - `--keep-files` - Keep framework files but remove dependency tracking
+- `--force` - Force removal without confirmation
+- `--dry-run` - Preview removal without applying
 
 **Examples:**
 
 ```bash
-# Remove framework
+# Remove framework (with confirmation)
 ai-dev-kit remove workflow-mgmt
 
 # Remove but keep files
 ai-dev-kit remove workflow-mgmt --keep-files
+
+# Force removal without confirmation
+ai-dev-kit remove workflow-mgmt --force
+
+# Preview removal
+ai-dev-kit remove workflow-mgmt --dry-run
 ```
 
 **Behavior:**
 - Removes framework from `.ai-dev-kit.yaml`
 - Removes framework files (unless `--keep-files`)
+- Removes backend-specific tracking (e.g., Git submodule entries)
 - Updates project configuration
+- Prompts for confirmation (unless `--force`)
+
+**Backend-Specific Behavior:**
+- **Git submodule:** Deinitializes submodule, removes from `.gitmodules` and `.git/config`, removes `.git/modules` entry
+- **Git subtree:** Removes subtree merge history
+- **npm/pip:** Uninstalls package from node_modules or site-packages
 
 ---
 
@@ -395,193 +419,198 @@ ai-dev-kit config <command> [options]
 ```
 
 **Commands:**
-- `get <key>` - Get configuration value
-- `set <key> <value>` - Set configuration value
+- `get <key>` - Get configuration value (supports dot notation)
+- `set <key> <value>` - Set configuration value (supports dot notation, YAML parsing)
 - `list` - List all configuration
-- `reset` - Reset to defaults
+- `reset` - Reset to defaults (requires `--force`)
+- `validate` - Validate configuration against schema (with optional `--fix`)
 
 **Examples:**
 
 ```bash
 # Get configuration value
 ai-dev-kit config get default_backend
+ai-dev-kit config get frameworks.workflow-mgmt.version
 
-# Set configuration value
+# Get with JSON output
+ai-dev-kit config get default_backend --json
+
+# Set configuration value (supports YAML types)
 ai-dev-kit config set default_backend git-submodule
 ai-dev-kit config set auto_check true
 ai-dev-kit config set check_interval daily
+ai-dev-kit config set frameworks.workflow-mgmt.version "2.0.0"
 
 # List all configuration
 ai-dev-kit config list
+ai-dev-kit config list --json
 
-# Reset to defaults
-ai-dev-kit config reset
+# Validate configuration
+ai-dev-kit config validate
+
+# Validate and auto-fix issues
+ai-dev-kit config validate --fix
+
+# Reset to defaults (requires confirmation bypass)
+ai-dev-kit config reset --force
 ```
 
 **Configuration Keys:**
-- `default_backend` - Default dependency backend
+- `version` - Configuration file version (default: "1.0.0")
+- `default_backend` - Default dependency backend (git-submodule, git-subtree, npm, pip)
 - `auto_check` - Enable automatic update checking (true/false)
 - `check_interval` - Update check interval (daily/weekly/manual)
 - `notification_channel` - Notification channel (console/email/slack)
 - `update_policy.patch` - Patch update policy (auto/notify/manual)
 - `update_policy.minor` - Minor update policy (auto/notify/manual)
 - `update_policy.major` - Major update policy (auto/notify/manual)
+- `frameworks.<name>.version` - Framework version
+- `frameworks.<name>.backend` - Framework backend
+- `frameworks.<name>.path` - Framework installation path
+- `frameworks.<name>.source` - Source repository URL (for Git backends)
+- `frameworks.<name>.tag` - Git tag/branch (for Git backends)
+- `frameworks.<name>.pin` - Pin to version (prevent auto-updates)
 
 ---
 
-## Information Commands
+## Backend Support
 
-### `ai-dev-kit changelog`
+The CLI tool supports multiple dependency backends:
 
-View framework changelog.
+### Git Submodule Backend
+
+**Backend Name:** `git-submodule`
+
+**Requirements:**
+- Git installed and in PATH
+- Git repository initialized in project
 
 **Usage:**
 
 ```bash
-ai-dev-kit changelog <framework> [options]
+ai-dev-kit install workflow-mgmt --backend git-submodule
 ```
 
-**Arguments:**
-- `<framework>` - Framework name (required)
+**Behavior:**
+- Adds framework as Git submodule
+- Tracks framework version via Git tags/branches
+- Updates via `git submodule update`
 
-**Options:**
-- `--from <version>` - Show changes from version
-- `--to <version>` - Show changes to version
-- `--breaking` - Show only breaking changes
-- `--config` - Show configuration changes
+### Git Subtree Backend
 
-**Examples:**
+**Backend Name:** `git-subtree`
 
-```bash
-# Show full changelog
-ai-dev-kit changelog workflow-mgmt
-
-# Show changes between versions
-ai-dev-kit changelog workflow-mgmt --from 2.0.0 --to 2.1.0
-
-# Show only breaking changes
-ai-dev-kit changelog workflow-mgmt --breaking
-
-# Show configuration changes
-ai-dev-kit changelog workflow-mgmt --config
-```
-
----
-
-### `ai-dev-kit deps`
-
-Show framework dependencies.
+**Requirements:**
+- Git installed and in PATH
+- Git repository initialized in project
 
 **Usage:**
 
 ```bash
-ai-dev-kit deps <framework>
+ai-dev-kit install workflow-mgmt --backend git-subtree
 ```
 
-**Arguments:**
-- `<framework>` - Framework name (required)
+**Behavior:**
+- Merges framework into project as subtree
+- Framework files are part of main repository
+- Updates via `git subtree pull`
 
-**Example:**
+### npm Backend
 
-```bash
-ai-dev-kit deps workflow-mgmt
-```
+**Backend Name:** `npm`
 
-**Output:**
-
-```
-Framework: workflow-mgmt
-Dependencies:
-  numbering-versioning: >=2.0.0
-  kanban: >=1.0.0
-```
-
----
-
-### `ai-dev-kit check-compatibility`
-
-Check framework compatibility.
+**Requirements:**
+- Node.js and npm installed
+- Framework published to npm registry
 
 **Usage:**
 
 ```bash
-ai-dev-kit check-compatibility [options]
+ai-dev-kit install workflow-mgmt --backend npm
 ```
 
-**Options:**
-- `--json` - Output in JSON format
+**Behavior:**
+- Installs framework via `npm install`
+- Manages version via `package.json`
+- Updates via `npm update`
 
-**Example:**
+**Note:** Currently, frameworks are not yet published to npm. The backend will provide helpful messages if packages are not found.
 
-```bash
-ai-dev-kit check-compatibility
-```
+### pip Backend
 
-**Output:**
+**Backend Name:** `pip`
 
-```
-Framework Compatibility:
-  workflow-mgmt@2.0.0: ✓ Compatible
-  kanban@1.0.0: ✓ Compatible
-  numbering-versioning@2.0.0: ✓ Compatible
-```
-
----
-
-## Utility Commands
-
-### `ai-dev-kit validate-config`
-
-Validate configuration files.
+**Requirements:**
+- Python and pip installed
+- Framework published to PyPI
 
 **Usage:**
 
 ```bash
-ai-dev-kit validate-config [options]
+ai-dev-kit install workflow-mgmt --backend pip
 ```
 
-**Options:**
-- `--fix` - Automatically fix issues
+**Behavior:**
+- Installs framework via `pip install`
+- Manages version via `requirements.txt` or `pyproject.toml`
+- Updates via `pip install --upgrade`
 
-**Example:**
-
-```bash
-# Validate configuration
-ai-dev-kit validate-config
-
-# Validate and fix
-ai-dev-kit validate-config --fix
-```
+**Note:** Currently, frameworks are not yet published to PyPI. The backend will provide helpful messages if packages are not found.
 
 ---
 
 ### `ai-dev-kit migrate`
 
-Migrate from copy-paste to dependencies.
+Migrate copy-paste frameworks to dependency-based installations.
 
 **Usage:**
 
 ```bash
-ai-dev-kit migrate [options]
+ai-dev-kit migrate [--detect] [--convert] [--validate] [options]
 ```
 
 **Options:**
-- `--detect` - Detect existing frameworks
-- `--convert` - Convert to dependencies
-- `--dry-run` - Preview migration
+- `--detect` - Detect copy-paste frameworks in the project
+- `--convert` - Convert detected frameworks to dependencies
+- `--validate` - Validate that migration was successful
+- `--framework <name>` - Specific framework to convert (by name or path)
+- `--backend <type>` - Backend to use for dependency installation (default: git-submodule)
+- `--dry-run` - Preview migration without applying changes
 
 **Examples:**
 
 ```bash
-# Detect existing frameworks
+# Detect existing copy-paste frameworks
 ai-dev-kit migrate --detect
 
-# Convert to dependencies
+# Convert all detected frameworks
 ai-dev-kit migrate --convert
+
+# Convert specific framework
+ai-dev-kit migrate --convert --framework workflow-mgmt
+
+# Convert with specific backend
+ai-dev-kit migrate --convert --backend git-subtree
 
 # Preview migration
 ai-dev-kit migrate --convert --dry-run
+
+# Validate migration
+ai-dev-kit migrate --validate
 ```
+
+**Behavior:**
+- **Detect:** Scans project for frameworks installed via copy-paste (signature file matching)
+- **Convert:** Converts detected frameworks to dependency-managed installations
+- **Validate:** Verifies that migrated frameworks are properly configured
+
+**Migration Process:**
+1. Detects frameworks using signature files and version detection
+2. Backs up existing framework files
+3. Removes copy-paste installation
+4. Installs framework via selected backend
+5. Updates `.ai-dev-kit.yaml` configuration
+6. Validates installation
 
 ---
 
@@ -589,26 +618,18 @@ ai-dev-kit migrate --convert --dry-run
 
 All commands support these global options:
 
-- `--help` - Show command help
+- `--help` or `-h` - Show command help
 - `--version` - Show CLI version
-- `--verbose` - Verbose output
-- `--quiet` - Quiet output (errors only)
-- `--config <path>` - Use custom config file
 
 **Examples:**
 
 ```bash
 # Show help
+ai-dev-kit --help
 ai-dev-kit install --help
 
 # Show version
 ai-dev-kit --version
-
-# Verbose output
-ai-dev-kit check --verbose
-
-# Use custom config
-ai-dev-kit status --config /path/to/config.yaml
 ```
 
 ---
@@ -732,10 +753,10 @@ if [ $? -ne 0 ]; then
 fi
 ```
 
-### Migration
+### Migration from Copy-Paste
 
 ```bash
-# Detect existing frameworks
+# Detect existing copy-paste frameworks
 ai-dev-kit migrate --detect
 
 # Preview migration
@@ -743,6 +764,39 @@ ai-dev-kit migrate --convert --dry-run
 
 # Execute migration
 ai-dev-kit migrate --convert
+
+# Validate migration
+ai-dev-kit migrate --validate
+```
+
+### Configuration Management
+
+```bash
+# View current configuration
+ai-dev-kit config list
+
+# Get specific value
+ai-dev-kit config get default_backend
+
+# Set configuration
+ai-dev-kit config set default_backend git-submodule
+ai-dev-kit config set auto_check true
+
+# Validate configuration
+ai-dev-kit config validate --fix
+```
+
+### Framework Removal
+
+```bash
+# Remove framework (with confirmation)
+ai-dev-kit remove workflow-mgmt
+
+# Remove but keep files
+ai-dev-kit remove workflow-mgmt --keep-files
+
+# Force removal
+ai-dev-kit remove workflow-mgmt --force
 ```
 
 ---

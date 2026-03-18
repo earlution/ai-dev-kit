@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 14, Story 2, Task 5: Configure CDN and Static Assets
+# Epic 14, Story 2, Task 5: Configure CDN and static assets
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.14.2.5+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.14.2.5+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.14.2.5+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E14:S2:T5`)
+**Format:** `E14:S2:T5` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E14:S02:T05`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Configure CDN and static assets for the {PROJECT_NAME} project. Set up content delivery network (CDN) and static asset hosting to improve performance, caching, and global content delivery for static files.
+Configure CDN and static assets for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Infrastructure setup (from E14:S2:T01)
-- Deployment environments (from E14:S1:T02)
-- Static asset requirements
-- CDN preferences
-- Performance requirements
-- Caching requirements
-- ai-dev-kit CDN patterns (if adopting)
+- Requirements and specifications
+- configure cdn and static assets requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- CDN configured
-- Static asset hosting configured
-- CDN caching configured
-- Static asset delivery optimized
-- CDN integration with deployment
+- configure cdn and static assets completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] CDN configured
-- [ ] Static asset hosting configured
-- [ ] CDN caching configured
-- [ ] Static asset delivery optimized
-- [ ] CDN integrates with deployment pipeline
-- [ ] CDN improves performance
-- [ ] CDN configuration is functional
+- [ ] Configure CDN and static assets completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review infrastructure setup and deployment environments
-2. Review static asset and CDN requirements
-3. Select CDN provider
-4. Configure CDN
-5. Configure static asset hosting
-6. Configure CDN caching
-7. Optimize static asset delivery
-8. Integrate CDN with deployment pipeline
-9. Test CDN configuration
-10. Document CDN configuration
+1. Analyze requirements for configure cdn and static assets
+2. Design approach and plan
+3. Implement configure cdn and static assets
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E14:S2:T01: Set up infrastructure (CDN uses infrastructure)
-- Deployment environments (from E14:S1:T02 - optional, beneficial)
+- E14:S2:T04
 
 **Blocks:**
-- None (CDN enhances performance)
+- E14:S2:T06
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E14:S2:T01: Set up infrastructure (CDN uses infrastructure)
+- [E14:S02:T05: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E14:S2: Infrastructure Setup (this story)
-- E16:S2: Performance Optimization (CDN contributes to performance optimization)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.14.2.5+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Configure CDN and static assets for the {PROJECT_NAME} project. Set up content d
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 3, Task 4: Document FR Completion Criteria
+# Epic 5, Story 3, Task 4: Document FR completion criteria
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.5.3.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.5.3.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.5.3.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E5:S3:T4`)
+**Format:** `E5:S3:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E05:S03:T04`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document FR (Feature Request) completion criteria for the {PROJECT_NAME} project. Create comprehensive documentation that defines when a Feature Request is considered complete, including all necessary checks and validations.
+Document FR completion criteria for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- FR implementation patterns (from E5:S3:T01)
-- Implementation templates (from E5:S3:T02)
-- Testing requirements (from E5:S3:T03)
-- Completion criteria requirements
-- Documentation requirements
+- Requirements and specifications
+- document fr completion criteria requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- FR completion criteria documented
-- Completion checklist created
-- Validation criteria defined
-- Completion criteria documentation
-- Completion examples
+- document fr completion criteria completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] FR completion criteria documented
-- [ ] Completion checklist created
-- [ ] Validation criteria defined
-- [ ] Completion criteria reference implementation patterns
-- [ ] Completion criteria include testing requirements
-- [ ] Completion criteria are clear and actionable
-- [ ] Completion criteria documentation complete
-- [ ] Completion examples provided
+- [ ] Document FR completion criteria completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all FR implementation components
-2. Identify completion criteria requirements
-3. Define FR completion criteria
-4. Create completion checklist
-5. Define validation criteria
-6. Reference implementation patterns and testing requirements
-7. Write completion criteria documentation
-8. Create completion examples
-9. Review and refine completion criteria
+1. Analyze requirements for document fr completion criteria
+2. Design approach and plan
+3. Implement document fr completion criteria
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E5:S3:T01: Document FR implementation patterns (criteria reference patterns)
-- E5:S3:T02: Create implementation templates (criteria may reference templates)
-- E5:S3:T03: Define testing requirements for FRs (criteria include testing requirements)
+- E5:S3:T03
 
 **Blocks:**
-- None (documentation task)
+- E5:S3:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E5:S3:T01: Document FR implementation patterns (criteria reference patterns)
-- E5:S3:T02: Create implementation templates (criteria may reference templates)
-- E5:S3:T03: Define testing requirements for FRs (criteria include testing requirements)
+- [E05:S03:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E5:S3: FR Implementation Patterns (this story)
-- E5:S1: FR Intake and Processing Workflow (completion closes workflow)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.5.3.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Document FR (Feature Request) completion criteria for the {PROJECT_NAME} project
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

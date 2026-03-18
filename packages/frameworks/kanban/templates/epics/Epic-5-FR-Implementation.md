@@ -21,9 +21,12 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
+- [ ] **E05:S00 – FR Repo** - PERPETUAL (v0.5.0.0+0)
 - [ ] **E05:S01 – FR Intake and Processing Workflow** - TODO
 - [ ] **E05:S02 – FR Prioritization and Planning** - TODO
 - [ ] **E05:S03 – FR Implementation Patterns** - TODO
+
+> **Note:** E5:S00 (FR Repo) is omitted from board displays (PERPETUAL repository story - see Epic 5 document for internal tracking).
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.5.1.3+1)`)  
@@ -185,7 +188,7 @@ This epic encompasses Feature Request implementation and management, including F
 ## References
 
 - Feature request management best practices
-- Prioritization frameworks (MoSCoW, RICE, etc.)
+- Prioritization frameworks (MoSCOW, RICE, etc.)
 - Implementation pattern standards
 
 ---

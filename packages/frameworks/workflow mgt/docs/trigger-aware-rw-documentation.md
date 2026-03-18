@@ -117,7 +117,7 @@ The **Intake Workflow** (E2:S11) is a complete workflow that automatically execu
 
 **Documentation:**
 - See `docs/documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` for complete agent execution guide
-- See `workflows/intake-workflow.yaml` for workflow definition
+- See `workflows/intake-workflow/intake-workflow.yaml` for workflow definition
 
 ### Workflow Chaining
 

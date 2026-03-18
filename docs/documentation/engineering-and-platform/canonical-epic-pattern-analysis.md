@@ -202,13 +202,13 @@ This document analyzes Epic/Story/Task patterns across all projects in `/Users/r
 
 **Pattern:**
 - Feature ideas capture
-- MoSCoW priority organization
+- MoSCOW priority organization
 - Future planning structure
 - Idea preservation
 
 **Typical Stories:**
 - Story 1: Feature Ideas Capture & Organization
-- Story 2: Priority Framework (MoSCoW)
+- Story 2: Priority Framework (MoSCOW)
 - Story 3: Future Planning Structure
 
 **Canonical Candidacy:** ⭐ LOW

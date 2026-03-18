@@ -50,6 +50,7 @@ python generate_workflow.py --type refactor --name "Custom Refactor Workflow"
 - `refactor` - Code refactoring workflows
 - `migration` - Migration workflows (code, data, infrastructure)
 - `testing` - Testing workflows
+- `implementation-cycle` - Implementation Cycle Workflows (ICW) following agent-driven execution pattern
 - `custom` - Custom workflow with basic structure
 
 ### Command-Line Options
@@ -58,7 +59,7 @@ python generate_workflow.py --type refactor --name "Custom Refactor Workflow"
 python generate_workflow.py [OPTIONS]
 
 Required:
-  --type {refactor,migration,testing,custom}
+  --type {refactor,migration,testing,implementation-cycle,custom}
                         Workflow type
   --name NAME           Workflow name
 

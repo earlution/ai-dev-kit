@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2025-12-16 (v0.1.5.0+0 – Story 5 created: Comprehensive Project Analysis for Canonical Patterns)  
+**Last updated:** 2025-12-17 (v0.1.6.1+1 – Story 6 Task 1 complete)
 **Branch:** `epic/1-ai-dev-kit-core`  
 **Version Schema:** `0.1.S.T+B` (dev-kit RC.EPIC.STORY.TASK+BUILD)  
 **Production URL:** [N/A for this repo]
@@ -25,14 +25,22 @@ housekeeping_policy: keep
 - [x] **E1:S02 – Package & Repo Architecture** - COMPLETE ✅ (v0.1.2.5+1)
   - Tasks: T001 ✅ (v0.1.2.1+1), T002 ✅ (v0.1.2.2+1), T003 ✅ (v0.1.2.3+1), T004 ✅ (v0.1.2.4+1), T005 ✅ (v0.1.2.5+1)
   - Story: [`Story-002-package-and-repo-architecture.md`](Story-002-package-and-repo-architecture.md)  
+
 - [x] **E1:S03 – Core KB Structure for Dev Kit** - COMPLETE ✅ (v0.1.3.6+1 – All tasks complete)
   - Tasks: T001 ✅ (v0.1.3.1+1), T002 ✅ (v0.1.3.2+1), T003 ✅ (v0.1.3.3+1), T004 ✅ (v0.1.3.4+1), T005 ✅ (v0.1.3.5+1), T006 ✅ (v0.1.3.6+1)
   - Story: [`Story-003-core-kb-structure-for-dev-kit.md`](Story-003-core-kb-structure-for-dev-kit.md)  
+
 - [ ] **E1:S04 – Repository Branding and Renaming** - TODO
   - Story: [`Story-004-repository-branding-and-renaming.md`](Story-004-repository-branding-and-renaming.md)
+
 - [ ] **E1:S05 – Comprehensive Project Analysis for Canonical Patterns** - TODO (v0.1.5.0+0 – Story created)
   - Story: [`Story-005-comprehensive-project-analysis-for-canonical-patterns.md`](Story-005-comprehensive-project-analysis-for-canonical-patterns.md)
   - Tasks: T00 ✅ COMPLETE, T01-T06 TODO (Comprehensive analysis of ~21 projects across 10 dimensions)
+
+- [ ] **E1:S06 – Repository CI/CD Setup** - IN PROGRESS (v0.1.6.1+1 – T01 IN PROGRESS: BYOB badge setup with test, coverage, and code quality badges)
+  - Story: [`Story-006-repository-ci-cd-setup.md`](Story-006-repository-ci-cd-setup.md)
+  - Tasks: T01 IN PROGRESS (v0.1.6.1+1)
+
 
 ---
 
@@ -66,7 +74,7 @@ It defines how the repo is structured, how versioning works for the dev kit itse
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-02 (v0.1.1.1+2 – Documentation restructured to industry-standard templates)  
+**Last updated:** 2025-12-17 (v0.1.6.1+1 – Story 6 Task 1 complete)
 
 **Goal:**  
 Define and implement how the dev kit uses `RC.EPIC.STORY.TASK+BUILD`, and how RW interprets versions and tasks when run in this repo.
@@ -90,7 +98,7 @@ Define and implement how the dev kit uses `RC.EPIC.STORY.TASK+BUILD`, and how RW
 **Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-02 (v0.1.3.2+1 – Task 2 complete: KB structure principles and conventions documented)
+**Last updated:** 2025-12-17 (v0.1.6.1+1 – Story 6 Task 1 complete)
 
 **Goal:**  
 Clarify the modular architecture of the `ai-dev-kit` repository, ensuring that users can easily consume individual frameworks (workflow mgt, versioning, kanban) without pulling in the entire repository.
@@ -111,7 +119,7 @@ Clarify the modular architecture of the `ai-dev-kit` repository, ensuring that u
 **Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-03 (v0.1.3.5+1)
+**Last updated:** 2025-12-17 (v0.1.6.1+1 – Story 6 Task 1 complete)
 
 **Goal:**  
 Establish core KB locations for architecture, PM & portfolio, and dev-kit governance. Provide a clear, maintainable documentation structure that supports the dev-kit's modular architecture and makes it easy for users to navigate and understand the repository.
@@ -149,8 +157,10 @@ Establish core KB locations for architecture, PM & portfolio, and dev-kit govern
 - Risk: Confusion between dev-kit versions and external-project versions.  
   - Mitigation: Always label external examples as such; centralise dev-kit policy.
 
+
 - Risk: Over-complexity for early adopters of the dev kit.  
   - Mitigation: Provide clear, minimal “start here” examples and keep advanced details in separate docs.
+
 
 ---
 

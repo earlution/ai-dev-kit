@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 2, Task 4: Document Prioritization and Assignment Process
+# Epic 6, Story 2, Task 4: Document prioritization and assignment process
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.6.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S2:T4`)
+**Format:** `E6:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S02:T04`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document BR (Bug Report) prioritization and assignment process for the {PROJECT_NAME} project. Create comprehensive documentation that explains how BRs are prioritized and assigned.
+Document prioritization and assignment process for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- BR prioritization framework (from E6:S2:T01)
-- BR assignment templates (from E6:S2:T02)
-- Prioritization-Kanban integration (from E6:S2:T03)
-- Documentation requirements
+- Requirements and specifications
+- document prioritization and assignment process requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Prioritization and assignment process documentation
-- Framework usage guide
-- Assignment template usage guide
-- Integration usage guide
-- Troubleshooting guide
-- Best practices documentation
+- document prioritization and assignment process completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Prioritization and assignment process documentation created
-- [ ] Framework usage guide created
-- [ ] Assignment template usage guide created
-- [ ] Integration usage guide created
-- [ ] Troubleshooting guide created
-- [ ] Best practices documented
-- [ ] Documentation is clear and accessible
-- [ ] Documentation supports effective prioritization and assignment
+- [ ] Document prioritization and assignment process completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all prioritization and assignment components
-2. Identify documentation needs
-3. Create prioritization and assignment process documentation
-4. Create framework usage guide
-5. Create assignment template usage guide
-6. Create integration usage guide
-7. Create troubleshooting guide
-8. Document best practices
-9. Review and refine documentation
+1. Analyze requirements for document prioritization and assignment process
+2. Design approach and plan
+3. Implement document prioritization and assignment process
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E6:S2:T01: Design BR prioritization framework (documentation covers framework)
-- E6:S2:T02: Create BR assignment templates (documentation covers templates)
-- E6:S2:T03: Integrate prioritization with Kanban board (documentation covers integration)
+- E6:S2:T03
 
 **Blocks:**
-- None (documentation task)
+- E6:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S2:T01: Design BR prioritization framework (documentation covers framework)
-- E6:S2:T02: Create BR assignment templates (documentation covers templates)
-- E6:S2:T03: Integrate prioritization with Kanban board (documentation covers integration)
+- [E06:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S2: BR Prioritization and Assignment (this story)
-- E6:S1: BR Intake and Triage Workflow (prioritization follows triage)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Document BR (Bug Report) prioritization and assignment process for the {PROJECT_
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

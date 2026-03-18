@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 2, Task 1: Design Authorization Architecture
+# Epic 9, Story 2, Task 1: Design authorization architecture
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.2.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.2.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.2.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S2:T1`)
+**Format:** `E9:S2:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S02:T01`
 
@@ -28,90 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design authorization architecture for the {PROJECT_NAME} project. Establish the architectural foundation for user authorization, including role-based access control (RBAC), permission systems, access control patterns, and integration with authentication systems.
+Design authorization architecture for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Authentication architecture (from E9:S1:T01)
-- Authorization requirements
-- Security requirements
-- Role and permission requirements
-- Integration requirements
-- ai-dev-kit authorization architecture (if adopting)
+- Requirements and specifications
+- design authorization architecture requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Authorization architecture designed
-- Architecture documentation
-- RBAC model design
-- Permission model design
-- Access control patterns defined
-- Integration specifications
+- design authorization architecture completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Authorization architecture designed and documented
-- [ ] Architecture supports RBAC model
-- [ ] Permission model defined
-- [ ] Access control patterns documented
-- [ ] Integration with authentication identified
-- [ ] Architecture documentation complete
-- [ ] Architecture supports scalability
-- [ ] Architecture aligns with security requirements
+- [ ] Design authorization architecture completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review authentication architecture
-2. Review authorization and security requirements
-3. Identify role and permission requirements
-4. Design RBAC model
-5. Design permission model
-6. Define access control patterns
-7. Document authorization architecture
-8. Identify integration points with authentication
-9. Review and refine architecture
+1. Analyze requirements for design authorization architecture
+2. Design approach and plan
+3. Implement design authorization architecture
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S1:T01: Design authentication architecture (authorization builds on authentication)
+- None
 
 **Blocks:**
-- E9:S2:T02: Implement role-based access control (RBAC) (RBAC implements architecture)
-- E9:S2:T03: Create permission system (permission system implements architecture)
-- E9:S2:T04: Implement access control middleware (middleware implements architecture)
+- E9:S2:T02
 
-**Parallel Development Candidacy:** Blocked (depends on E9:S1:T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S2:T02: Implement role-based access control (RBAC) (RBAC implements architecture)
-- E9:S2:T03: Create permission system (permission system implements architecture)
-- E9:S2:T04: Implement access control middleware (middleware implements architecture)
+- [E09:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S2: User Authorization and Permissions (this story)
-- E9:S1: User Authentication System (authorization builds on authentication)
-- E9:S3: User Profile Management (profile management may use authorization)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.2.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -120,3 +108,27 @@ Design authorization architecture for the {PROJECT_NAME} project. Establish the 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -20,6 +20,7 @@ housekeeping_policy: keep
 This guide provides a step-by-step process for converting Feature Requests (FRs) and Bug Reports (BRs) into Kanban Tasks, Stories, and Epics. It operationalizes the decision flow design and demonstrates how to use the FR/BR templates.
 
 **Key Principles:**
+
 - All work is **Task/FR-driven**
 - FRs/BRs must generate a Kanban Task on the appropriate Story
 - If no Story exists, create one under the appropriate Epic
@@ -48,19 +49,15 @@ FR/BR Arrives
     ↓
 1. Capture FR/BR Details (use template)
     ↓
-2. Classify as FR or BR
+2. Analyze Scope and Impact
     ↓
-3. Extract Key Information
+3. Determine Work Type (Feature/Bug)
     ↓
-4. Search for Existing Story
+4. Find or Create Epic
     ↓
-5. Decision Point: Story Found?
-    ├─ YES → Create Task under Story
-    └─ NO → Search for Existing Epic
-            ├─ YES → Create Story under Epic, then Task
-            └─ NO → Create Epic, Story, then Task
+5. Find or Create Story
     ↓
-6. Assign Version Number
+6. Create Task with Version
     ↓
 7. Update Kanban Board
     ↓
@@ -190,18 +187,18 @@ FR/BR Arrives
 
 **Example:** If Epic 2 has Stories 1-2, create Story 3 → Task 1 → Version: `0.2.3.1+1`
 
-3. **Update Epic Document:**
+1. **Update Epic Document:**
    - Add Story to Epic's Story Checklist
    - Add Story details in Epic's Stories section
    - Update Epic status if needed
 
-4. **Update FR/BR Document:**
+2. **Update FR/BR Document:**
    - Set Intake Status: ACCEPTED
    - Mark "New Story Created" in Decision Flow Results
    - Record Epic, Story, Task, and Version
    - Add Kanban links
 
-5. **Update Kanban Board:**
+3. **Update Kanban Board:**
    - Add new Story to board
    - Update Epic's Story count
 
@@ -238,11 +235,21 @@ FR/BR Arrives
 
 **Example:** If current Epics are 1-7, create Epic 8 → Story 1 → Task 1 → Version: `0.8.1.1+1`
 
-4. **Update Kanban Board:**
+4. **Update Epic Document:**
+   - Add Story 1 to Epic's Story Checklist
+   - Add Story 1 details in Epic's Stories section
+   - Set Epic status: IN PROGRESS
+
+5. **Update Story Document:**
+   - Set Story status: IN PROGRESS
+   - Add Task 1 to Story's Task Checklist
+   - Add Task 1 details in Story's Tasks section
+
+6. **Update Kanban Board:**
    - Add new Epic to board
    - Add new Story to board
 
-5. **Update FR/BR Document:**
+7. **Update FR/BR Document:**
    - Set Intake Status: ACCEPTED
    - Mark "New Epic Created" in Decision Flow Results
    - Record Epic, Story, Task, and Version
@@ -252,15 +259,16 @@ FR/BR Arrives
 
 ### Step 6: Assign Version Number
 
-**Version Schema:** `RC.EPIC.STORY.TASK+BUILD`
-
-**Rules:**
-- RC: Release Candidate (0 = development, 1+ = release candidate)
-- EPIC: Epic number (matches assigned Epic)
-- STORY: Story number (matches assigned Story)
-- TASK: Task number (matches assigned Task)
-- BUILD: Build number (starts at 1, incremented by Release Workflow)
-
+**Version Schema:**
+```yaml
+version: RC.EPIC.STORY.TASK+BUILD
+components:
+  RC: Release Candidate (0 = development, 1+ = release candidate)
+  EPIC: Epic number (matches assigned Epic)
+  STORY: Story number (matches assigned Story)
+  TASK: Task number (matches assigned Task)
+  BUILD: Build number (starts at 1, incremented by Release Workflow)
+```
 **Update Version File:**
 - **CRITICAL:** Update `src/[project]/version.py` (or project-specific version file)
 - Set `VERSION_EPIC` to match assigned Epic number
@@ -288,7 +296,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 ### Step 7: Update Kanban Board
 
 **Actions:**
-1. Update `docs/project-management/kanban/kanban-board.md`:
+1. Update `docs/project-management/kanban/kanban-board.md`, `kanban-structure.md`, and `_index.md`:
    - Add new Epic (if created)
    - Add new Story (if created)
    - Update Story status (if Task added)
@@ -613,7 +621,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 ### Kanban Integration
 
 - **Templates:** Use EPIC_TEMPLATE, STORY_TEMPLATE for new items
-- **Board Updates:** Always update `kanban-board.md` and `_index.md`
+- **Board Updates:** Always update `kanban-board.md`, `kanban-structure.md`, and `_index.md`
 - **Status Synchronization:** Ensure Epic, Story, and Task status fields match
 - **Forensic Markers:** RW will add version markers when Tasks are completed
 

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 1, Task 2: Create FR Processing Automation
+# Epic 5, Story 1, Task 2: Create FR processing automation
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.5.1.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.5.1.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.5.1.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E5:S1:T2`)
+**Format:** `E5:S1:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E05:S01:T02`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create FR (Feature Request) processing automation for the {PROJECT_NAME} project. Develop automated processes that handle FR intake, validation, and conversion to tasks according to the defined workflow.
+Create FR processing automation for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- FR intake workflow (from E5:S1:T01)
-- Automation requirements
-- ai-dev-kit FR processing automation (if adopting)
-- Workflow automation patterns (from E2:S2)
-- Scripting language preferences
+- Requirements and specifications
+- create fr processing automation requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- FR processing automation scripts/tools
-- Automation configuration
-- Automation documentation
-- Automation tests (if applicable)
-- Automation examples
+- create fr processing automation completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] FR processing automation created
-- [ ] Automation implements intake workflow
-- [ ] Automation handles FR validation
-- [ ] Automation converts FRs to tasks
-- [ ] Automation configuration documented
-- [ ] Automation tests created (if applicable)
-- [ ] Automation is reliable and maintainable
-- [ ] Automation reduces manual effort
+- [ ] Create FR processing automation completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review FR intake workflow
-2. Identify automation opportunities
-3. Design automation structure
-4. Implement FR processing automation
-5. Add FR validation logic
-6. Implement FR to task conversion
-7. Create automation configuration
-8. Write automation documentation
-9. Create automation tests (if applicable)
-10. Review and refine automation
+1. Analyze requirements for create fr processing automation
+2. Design approach and plan
+3. Implement create fr processing automation
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E5:S1:T01: Design FR intake workflow (automation implements workflow)
-- E2:S2: Workflow Automation (automation uses workflow patterns)
+- E5:S1:T01
 
 **Blocks:**
-- E5:S1:T03: Integrate FR intake with Kanban (integration may use automation)
-- E5:S1:T04: Document FR intake process (documentation covers automation)
+- E5:S1:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E5:S1:T01: Design FR intake workflow (automation implements workflow)
-- E5:S1:T03: Integrate FR intake with Kanban (integration may use automation)
-- E5:S1:T04: Document FR intake process (documentation covers automation)
+- [E05:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E5:S1: FR Intake and Processing Workflow (this story)
-- E2:S2: Workflow Automation (automation uses workflow patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.5.1.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Create FR (Feature Request) processing automation for the {PROJECT_NAME} project
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

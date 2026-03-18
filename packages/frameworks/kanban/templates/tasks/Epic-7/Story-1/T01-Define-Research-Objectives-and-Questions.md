@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 1, Task 1: Define Research Objectives and Questions
+# Epic 7, Story 1, Task 1: Define research objectives and questions
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S1:T1`)
+**Format:** `E7:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S01:T01`
 
@@ -28,92 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Define research objectives and questions for the {PROJECT_NAME} project. Establish clear research goals and formulate research questions that guide user research activities and ensure alignment with project needs.
+Define research objectives and questions for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project goals and requirements
-- Business objectives
-- Product vision and strategy
-- Research requirements
-- Stakeholder input
-- ai-dev-kit UXR research objectives (if adopting)
+- Requirements and specifications
+- define research objectives and questions requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Research objectives defined
-- Research questions formulated
-- Research plan outline
-- Research objectives documentation
-- Research questions documentation
+- define research objectives and questions completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Research objectives clearly defined
-- [ ] Research questions formulated and documented
-- [ ] Research objectives align with project goals
-- [ ] Research questions are actionable and answerable
-- [ ] Research plan outline created
-- [ ] Research objectives documentation complete
-- [ ] Research questions documentation complete
-- [ ] Objectives and questions support research activities
+- [ ] Define research objectives and questions completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review project goals and requirements
-2. Analyze business objectives
-3. Review product vision and strategy
-4. Identify research needs and gaps
-5. Define research objectives
-6. Formulate research questions
-7. Create research plan outline
-8. Document research objectives and questions
-9. Review and refine objectives and questions
+1. Analyze requirements for define research objectives and questions
+2. Design approach and plan
+3. Implement define research objectives and questions
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Project goals and requirements
-- Business objectives
-- Stakeholder input (if applicable)
+- None
 
 **Blocks:**
-- E7:S1:T02: Recruit research participants (recruitment aligns with objectives)
-- E7:S1:T03: Conduct user interviews (interviews address research questions)
-- E7:S1:T04: Conduct user surveys/questionnaires (surveys address research questions)
-- E7:S1:T05: Analyze research data and synthesize findings (analysis uses objectives/questions)
+- E7:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S1:T02: Recruit research participants (recruitment aligns with objectives)
-- E7:S1:T03: Conduct user interviews (interviews address research questions)
-- E7:S1:T04: Conduct user surveys/questionnaires (surveys address research questions)
-- E7:S1:T05: Analyze research data and synthesize findings (analysis uses objectives/questions)
+- [E07:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S1: User Research and Discovery (this story)
-- E7:S5: UX Insights and Recommendations (insights address research objectives)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -122,3 +108,27 @@ Define research objectives and questions for the {PROJECT_NAME} project. Establi
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -68,6 +68,39 @@ This story tracks all feature requests and feature implementations related to th
 
 ---
 
+### Framework Maintenance
+
+**Story Pattern:** Framework Maintenance  
+**Purpose:** Track ongoing maintenance and updates to framework packages, ensuring frameworks remain current, well-maintained, and properly integrated.  
+**Typical Epic:** Framework Management, Kanban Framework, Workflow Management  
+**Status:** Canonical (reusable across projects)
+
+**Description:**
+This story tracks ongoing maintenance tasks for framework packages, including framework updates, bug fixes, documentation improvements, and integration with other frameworks. Maintenance tasks address issues discovered in framework usage, update documentation, and implement framework improvements as needed.
+
+**Key Characteristics:**
+- Tracks framework maintenance and updates
+- Addresses framework bug fixes and improvements
+- Updates framework documentation
+- Ensures framework integration with other ADK frameworks
+- Keeps frameworks current and well-maintained
+
+**Typical Tasks:**
+- **T01:** Update packaged workflows to handle new patterns (e.g., UKW context, perpetual tasks)
+- **T02:** Framework bug fixes and improvements
+- **T03:** Documentation updates and improvements
+- **T04:** Framework integration improvements
+- **T05:** Framework version updates
+
+**Template Reference:**
+- Framework maintenance follows standard task creation patterns
+- Use framework-specific templates for workflow updates
+
+**Example Location:**
+- `docs/project-management/kanban/epics/Epic-4/Story-014-kanban-framework-maintenance.md`
+
+---
+
 ## How to Use Canonical Stories
 
 1. **Identify Need:** Determine if your Epic needs a Bug Reports or Feature Requests story

@@ -52,10 +52,12 @@ Establish a complete canonical set of epics for the Kanban framework package, pr
   - Complete documentation of all 6 canonical epics
   - Epic ordering rationale
   - Usage guidance and extension patterns
+
 - ✅ **Updated Intake Guides:**
   - `FR_BR_INTAKE_GUIDE.md` - Updated epic list from 1-4 to 1-6, updated examples
   - `FR_BR_INTAKE_AGENT_GUIDE.md` - Added canonical epics reference
   - `FR_BR_INTAKE_USER_GUIDE.md` - Updated example to use Epic 7
+
 - ✅ **Updated README:** Added reference to CANONICAL_EPICS.md
 - ✅ **Updated Examples:** Changed example epic numbers from Epic 5 to Epic 7
 
@@ -67,6 +69,7 @@ Establish a complete canonical set of epics for the Kanban framework package, pr
   4. Kanban Framework (operational)
   5. FR Implementation (implementation - supports Kanban)
   6. BR Implementation (implementation - supports Kanban)
+
 - **FR before BR:** Epic 5 (FR Implementation) comes before Epic 6 (BR Implementation) because Feature Requests typically precede Bug Reports in the intake flow
 - **New Epic Starting Point:** Project-specific epics now start at Epic 7 (canonical epics are 1-6)
 

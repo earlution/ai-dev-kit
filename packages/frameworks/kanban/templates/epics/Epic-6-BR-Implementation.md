@@ -21,9 +21,12 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
+- [ ] **E06:S00 – BR Repo** - PERPETUAL (v0.6.0.0+0)
 - [ ] **E06:S01 – BR Intake and Triage Workflow** - TODO
 - [ ] **E06:S02 – BR Prioritization and Assignment** - TODO
 - [ ] **E06:S03 – BR Fix Patterns** - TODO
+
+> **Note:** E6:S00 (BR Repo) is omitted from board displays (PERPETUAL repository story - see Epic 6 document for internal tracking).
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.1.3+1)`)  

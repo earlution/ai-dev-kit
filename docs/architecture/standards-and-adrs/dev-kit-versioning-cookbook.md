@@ -13,6 +13,10 @@ housekeeping_policy: keep
 **Status:** ✅ COMPLETE  
 **Version:** v0.3.2.3+1
 
+**Based on Framework:** This cookbook is a dev-kit specialisation providing worked examples for the versioning schema defined in the Numbering & Versioning framework. For the canonical schema definition and strategy, see:
+- `packages/frameworks/numbering & versioning/versioning-policy.md` (primary SoT)
+- `packages/frameworks/numbering & versioning/versioning-strategy.md` (comprehensive strategy)
+
 ---
 
 ## Executive Summary
@@ -32,6 +36,16 @@ This cookbook provides **practical, worked examples** for using the `RC.EPIC.STO
 **Safe to Copy:** All examples are **project-agnostic** and safe to copy into other projects.
 
 ---
+
+### How to Read Versions in This Cookbook
+
+The examples focus on the **internal version** (`RC.EPIC.STORY.TASK+BUILD`) because it drives Kanban, RW, and traceability. When presenting versions:
+
+- For **external audiences** (README, GitHub releases, package managers), prefer the **SemVer release version first**, optionally followed by the internal version, for example:  
+  - `v0.3.19+2 (internal: v0.6.7.101+2)`.
+- For **internal reasoning** (Kanban docs, workflow behaviour, forensic questions), use the internal version directly.
+
+Where helpful, you can imagine each worked example also having a matching SemVer tag derived via the mapping in the framework and dev-kit policies, and optionally including metadata like `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>` when you need machine-parseable coordinates.
 
 ## Table of Contents
 

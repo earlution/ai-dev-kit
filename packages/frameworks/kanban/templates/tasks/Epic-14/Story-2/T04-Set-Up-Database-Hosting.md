@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 14, Story 2, Task 4: Set Up Database Hosting
+# Epic 14, Story 2, Task 4: Set up database hosting
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.14.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.14.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.14.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E14:S2:T4`)
+**Format:** `E14:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E14:S02:T04`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up database hosting for the {PROJECT_NAME} project. Configure and provision database instances in deployment environments, including database servers, connection management, and database-specific configurations.
+Set up database hosting for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Infrastructure setup (from E14:S2:T01)
-- Deployment environments (from E14:S1:T02)
-- Database requirements (from E10)
-- Database hosting preferences
-- Scalability requirements
-- Backup and recovery requirements
-- ai-dev-kit database hosting patterns (if adopting)
+- Requirements and specifications
+- set up database hosting requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Database hosting set up
-- Database instances provisioned
-- Database connection management configured
-- Database configurations applied
-- Backup and recovery configured (if applicable)
+- set up database hosting completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Database hosting set up
-- [ ] Database instances provisioned
-- [ ] Database connection management configured
-- [ ] Database configurations applied
-- [ ] Backup and recovery configured (if applicable)
-- [ ] Database hosting supports application requirements
-- [ ] Database hosting is scalable and reliable
+- [ ] Set up database hosting completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review infrastructure setup and deployment environments
-2. Review database requirements
-3. Design database hosting architecture
-4. Provision database instances
-5. Configure database connection management
-6. Apply database configurations
-7. Configure backup and recovery (if applicable)
-8. Test database hosting setup
-9. Document database hosting configuration
+1. Analyze requirements for set up database hosting
+2. Design approach and plan
+3. Implement set up database hosting
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E14:S2:T01: Set up infrastructure (database hosting uses infrastructure)
-- Deployment environments (from E14:S1:T02 - optional, beneficial)
-- Database schema (from E10 - optional, beneficial)
+- E14:S2:T03
 
 **Blocks:**
-- None (database hosting supports data access)
+- E14:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E14:S2:T01: Set up infrastructure (database hosting uses infrastructure)
+- [E14:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E14:S2: Infrastructure Setup (this story)
-- E10:S1: Database Schema Design (database hosting hosts database schema)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.14.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Set up database hosting for the {PROJECT_NAME} project. Configure and provision 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

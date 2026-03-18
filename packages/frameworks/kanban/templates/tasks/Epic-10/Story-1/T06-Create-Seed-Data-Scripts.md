@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 10, Story 1, Task 6: Create Seed Data Scripts
+# Epic 10, Story 1, Task 6: Create seed data scripts
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.10.1.6+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.10.1.6+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.10.1.6+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E10:S1:T6`)
+**Format:** `E10:S1:T6` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E10:S01:T06`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create seed data scripts for the {PROJECT_NAME} project. Develop scripts that populate the database with initial data for development, testing, and demonstration purposes, ensuring consistent and repeatable seed data.
+Create seed data scripts for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Database schema design (from E10:S1:T01)
-- Database migrations (from E10:S1:T03)
-- Seed data requirements
-- Initial data definitions
-- Seed data format requirements
-- ai-dev-kit seed data patterns (if adopting)
+- Requirements and specifications
+- create seed data scripts requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Seed data scripts created
-- Initial data seed scripts
-- Development seed data
-- Test seed data
-- Seed script documentation
+- create seed data scripts completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Seed data scripts created
-- [ ] Initial data seed scripts implemented
-- [ ] Development seed data provided
-- [ ] Test seed data provided
-- [ ] Seed scripts are repeatable
-- [ ] Seed scripts are maintainable
-- [ ] Seed script documentation created
-- [ ] Seed data scripts are functional
+- [ ] Create seed data scripts completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review database schema design and migrations
-2. Review seed data requirements
-3. Identify initial data needs
-4. Design seed data structure
-5. Create initial data seed scripts
-6. Create development seed data
-7. Create test seed data
-8. Document seed scripts
-9. Test seed data scripts
-10. Review and refine seed scripts
+1. Analyze requirements for create seed data scripts
+2. Design approach and plan
+3. Implement create seed data scripts
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E10:S1:T01: Design database schema (seed scripts use schema)
-- E10:S1:T03: Implement database migrations (seed scripts run after migrations)
+- E10:S1:T05
 
 **Blocks:**
-- E10:S3: Data Migration and Seeding (seed scripts are part of seeding process)
+- E10:S1:T07
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E10:S1:T01: Design database schema (seed scripts use schema)
-- E10:S1:T03: Implement database migrations (seed scripts run after migrations)
+- [E10:S01:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E10:S1: Database Schema Design (this story)
-- E10:S3: Data Migration and Seeding (seed scripts are part of seeding process)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.10.1.6+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Create seed data scripts for the {PROJECT_NAME} project. Develop scripts that po
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

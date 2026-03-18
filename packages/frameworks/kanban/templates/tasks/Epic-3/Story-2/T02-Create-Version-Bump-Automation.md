@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 3, Story 2, Task 2: Create Version Bump Automation
+# Epic 3, Story 2, Task 2: Create version bump automation
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.3.2.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.3.2.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.3.2.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E3:S2:T2`)
+**Format:** `E3:S2:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E03:S02:T02`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create version bump automation for the {PROJECT_NAME} project. Develop tools and scripts that automatically increment version numbers according to the versioning policy, reducing manual effort and ensuring consistency.
+Create version bump automation for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Versioning policy (from E3:S1:T01)
-- Versioning schema (from E3:S1:T02)
-- Version file structure (from E3:S1:T03 or similar)
-- Automation requirements
-- ai-dev-kit version bump automation (if adopting)
-- Scripting language preferences
+- Requirements and specifications
+- create version bump automation requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Version bump automation scripts/tools
-- Version bump CLI tool (if applicable)
-- Version bump documentation
-- Version bump examples
-- Version bump tests (if applicable)
+- create version bump automation completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Version bump automation created
-- [ ] Automation follows versioning policy
-- [ ] Automation validates version schema
-- [ ] CLI tool created (if applicable)
-- [ ] Version bump documentation created
-- [ ] Version bump examples provided
-- [ ] Automation is reliable and tested
-- [ ] Automation handles edge cases
+- [ ] Create version bump automation completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review versioning policy and schema
-2. Design version bump automation structure
-3. Implement version bump scripts/tools
-4. Create CLI tool (if applicable)
-5. Add version validation
-6. Write version bump documentation
-7. Create version bump examples
-8. Test and validate automation
-9. Review and refine automation
+1. Analyze requirements for create version bump automation
+2. Design approach and plan
+3. Implement create version bump automation
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E3:S1:T01: Define versioning policy (automation implements policy)
-- E3:S1:T02: Design versioning schema (automation uses schema)
-- E3:S1:T03: Create version file structure (automation modifies version files)
+- E3:S2:T01
 
 **Blocks:**
-- E3:S2:T01: Integrate versioning with release workflow (workflow may use automation)
-- E3:S2:T03: Set up changelog generation (changelog may use bumped versions)
+- E3:S2:T03
 
-**Parallel Development Candidacy:** Blocked (depends on E3:S1 tasks)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E3:S2:T01: Integrate versioning with release workflow (workflow may use automation)
-- E3:S2:T03: Set up changelog generation (changelog may use bumped versions)
-- E3:S2:T04: Document version management process (process includes automation)
+- [E03:S02:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E3:S2: Version Management Integration (this story)
-- E3:S1: Versioning Policy and Schema (automation uses policy and schema)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.3.2.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Create version bump automation for the {PROJECT_NAME} project. Develop tools and
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

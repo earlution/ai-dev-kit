@@ -33,12 +33,14 @@ This document summarizes all documentation updates made to address the critical 
   - If mismatch detected, workflow stops with error message
   - Added example Task alignment checks
 
+
 - **Step 2:** Added Task transition detection and handling
   - Explicit detection of Task transitions (comparing `VERSION_TASK` with active Task)
   - If Task transition: Update `VERSION_TASK` to match active Task, reset `VERSION_BUILD` to 1
   - If same Task: Increment `VERSION_BUILD` by 1
   - Added validation checks after update
   - Added examples showing Task transitions vs BUILD increments
+
 
 **Impact:** Agents now have explicit instructions to detect and handle Task transitions during RW execution.
 
@@ -56,9 +58,11 @@ This document summarizes all documentation updates made to address the critical 
   - Validation requirements
   - Example showing Task transition (before/after)
 
+
 - **Common Mistakes to Avoid:**
   - Added examples of incorrect vs correct version numbers
   - Clear guidance on what NOT to do
+
 
 **Impact:** Versioning policy now explicitly states how Task transitions should be handled.
 
@@ -75,6 +79,7 @@ This document summarizes all documentation updates made to address the critical 
   - Added example showing correct version file update
   - Added note about RW validation and automatic detection
 
+
 **Impact:** Intake process now explicitly requires updating `version.py` with correct Task number.
 
 ---
@@ -90,6 +95,7 @@ This document summarizes all documentation updates made to address the critical 
   - Example showing correct update
   - Explanation of why this matters (RW validation)
 
+
 **Impact:** Agent guide now explicitly requires version file updates during Task creation.
 
 ---
@@ -104,6 +110,7 @@ This document summarizes all documentation updates made to address the critical 
   - Explicit rules for updating `version.py` when creating new Tasks
   - Explicit rules for RW Step 1 and Step 2 handling of Task transitions
   - Added "Common Mistakes to Avoid" with examples
+
 
 **Impact:** Kanban governance policy now explicitly states Task transition requirements.
 

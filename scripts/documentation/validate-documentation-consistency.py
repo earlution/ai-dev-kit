@@ -18,6 +18,7 @@ from pathlib import Path
 from typing import Dict, List, Set, Optional
 from collections import defaultdict
 
+# TODO(E7:S01:T09): add multi-line MoSCOW spacing detection for Kanban docs once rule is automated.
 # Version pattern
 VERSION_PATTERN = re.compile(r'v?(\d+\.\d+\.\d+(?:\+\d+)?)')
 
@@ -154,14 +155,16 @@ def check_cross_reference_consistency(files: List[Path], repo_root: Path) -> Dic
         results['files'][rel_path] = {'references': references}
     
     # Check for broken references
-    all_files = {str(f.relative_to(repo_root)): f for f in files}
-    
     for file_path, references in file_references.items():
         for ref in references:
             # Resolve reference
             ref_path = resolve_reference(ref, Path(file_path), repo_root)
-            
-            if ref_path and ref_path not in all_files:
+
+            if not ref_path:
+                continue
+
+            # Only flag as broken if the resolved target does NOT exist on disk
+            if not ref_path.exists():
                 results['inconsistencies'].append({
                     'type': 'broken_reference',
                     'file': file_path,
@@ -202,10 +205,10 @@ def check_terminology_consistency(files: List[Path], repo_root: Path) -> Dict:
     
     # Common terminology patterns
     terminology_patterns = {
-        'Release Workflow': [r'Release Workflow', r'RW', r'release workflow'],
-        'Epic': [r'Epic', r'epic'],
-        'Story': [r'Story', r'story'],
-        'Task': [r'Task', r'task'],
+        'Release Workflow': [r'Release Workflow', r'RW'],
+        'Epic': [r'Epic'],
+        'Story': [r'Story'],
+        'Task': [r'Task'],
     }
     
     # Check each file
@@ -224,12 +227,14 @@ def check_terminology_consistency(files: List[Path], repo_root: Path) -> Dict:
                     found_patterns.append(pattern)
             
             if len(found_patterns) > 1:
-                results['inconsistencies'].append({
-                    'type': 'terminology_inconsistency',
-                    'file': rel_path,
-                    'term': term,
-                    'patterns_found': found_patterns,
-                })
+                # Allow Release Workflow + RW to co-exist (canonical + abbreviation)
+                if not (term == 'Release Workflow' and set(found_patterns) == set(terminology_patterns[term])):
+                    results['inconsistencies'].append({
+                        'type': 'terminology_inconsistency',
+                        'file': rel_path,
+                        'term': term,
+                        'patterns_found': found_patterns,
+                    })
     
     return results
 

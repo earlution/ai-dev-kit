@@ -49,10 +49,12 @@ The interactive installation process (`install_kanban_framework.py`) exists but 
   3. Prompts for installation mode selection (Fresh, Migration, Update, Hybrid)
   4. **Installs canonical core epics** (templates, not ai-dev-kit's actual epics)
   5. Customizes the Kanban structure for the consuming project's needs
+
 - Installation results in:
   - Canonical epic templates (Epic-1-Project-Core.md, etc.) available for reference
   - **Empty epic directories** ready for the project to create their own epics
   - Project-specific customization based on interactive prompts
+
 
 **Actual Behavior:**
 - Users manually copy files: `cp -r packages/frameworks/ai-dev-kit/docs/project-management/kanban/epics/* docs/project-management/kanban/epics/`
@@ -95,10 +97,12 @@ cp -r packages/frameworks/ai-dev-kit/docs/project-management/kanban/epics/* docs
   1. There's an interactive installer that should be used
   2. The canonical templates are different from ai-dev-kit's actual Kanban
   3. The installer should customize epics for the consuming project
+
 - **Multiple attempts** needed to understand:
   - First attempt: Only copied templates, not understanding canonical epics should be installed
   - Second attempt: Copied ai-dev-kit's actual epics, not realizing these were project-specific
   - Only after explicit clarification understood the distinction
+
 - Even then ended up with ai-dev-kit's actual epics rather than properly customized installation
 
 ---
@@ -169,6 +173,7 @@ cp -r packages/frameworks/ai-dev-kit/docs/project-management/kanban/epics/* docs
 - [ ] **Criterion 2:** README clearly distinguishes between:
   - Canonical epic templates (for reference)
   - ai-dev-kit's actual Kanban (example only, not for copying)
+
 - [ ] **Criterion 3:** Installer is prominently featured in installation instructions (not buried)
 - [ ] **Criterion 4:** Installer defaults to installing canonical templates, not copying ai-dev-kit's actual board
 - [ ] **Criterion 5:** Warning added if someone tries to manually copy epics (direct them to installer)

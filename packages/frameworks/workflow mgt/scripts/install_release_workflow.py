@@ -18,6 +18,7 @@ Usage:
 import argparse
 import os
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, Optional
 
@@ -35,6 +36,34 @@ FRAMEWORK_ROOT = SCRIPT_DIR.parent  # workflow mgt directory
 TEMPLATES_DIR = PACKAGE_ROOT / "templates"
 CURSORRULES_TEMPLATE = FRAMEWORK_ROOT / "cursorrules-rw-trigger-section.md"
 SCHEMA_DOC = FRAMEWORK_ROOT / "config" / "rw-config-schema.md"
+
+_ENV_LOG_FH = None
+_ENV_LOG_PATH_ENV_VAR = "AI_DEV_KIT_INSTALL_LOG_PATH"
+
+
+def _log(level: str, message: str) -> None:
+    """
+    Best-effort logging helper for this installer.
+
+    If AI_DEV_KIT_INSTALL_LOG_PATH is set (by the CLI), append structured
+    lines into the shared install log so that workflow-mgt installs can be
+    correlated with CLI runs. Logging failures must never break behaviour.
+    """
+    global _ENV_LOG_FH
+
+    log_path = os.getenv(_ENV_LOG_PATH_ENV_VAR)
+    if not log_path:
+        return
+
+    try:
+        if _ENV_LOG_FH is None:
+            _ENV_LOG_FH = open(log_path, "a", encoding="utf-8")
+        ts = datetime.utcnow().isoformat(timespec="seconds") + "Z"
+        _ENV_LOG_FH.write(f"[{ts}] [{level}] workflow_mgt.install {message}\n")
+        _ENV_LOG_FH.flush()
+    except Exception:
+        # Logging must not interfere with installation
+        pass
 
 
 def load_template(template_path: Path) -> str:
@@ -413,7 +442,7 @@ Examples:
         print(f"\n🔍 [DRY RUN] Would update: {cursorrules_path}")
     
     # Patch workflow YAML
-    workflow_path = project_root / "workflows" / "release-workflow.yaml"
+    workflow_path = project_root / "workflows" / "release-workflow" / "release-workflow.yaml"
     if workflow_path.exists():
         result = patch_workflow_yaml(workflow_path, config, dry_run=args.dry_run)
         print(f"\n{result}")

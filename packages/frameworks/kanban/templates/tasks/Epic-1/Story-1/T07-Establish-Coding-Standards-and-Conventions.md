@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 1, Story 1, Task 7: Establish Coding Standards and Conventions
+# Epic 1, Story 1, Task 7: Establish coding standards and conventions
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.1.1.7+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.1.1.7+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.1.1.7+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S1:T7`)
+**Format:** `E1:S1:T7` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E01:S01:T07`
 
@@ -28,81 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Establish coding standards and conventions for the {PROJECT_NAME} project. Define naming conventions, code organization patterns, documentation standards, and other coding guidelines to ensure consistency across the codebase.
+Establish coding standards and conventions for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Code quality tools (from T06)
-- Build system (from T05)
-- Technology stack decisions
-- Team preferences (if applicable)
-- Industry best practices for {PROJECT_TYPE}
-- ai-dev-kit coding standards (if adopting)
+- Requirements and specifications
+- establish coding standards and conventions requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Coding standards document
-- Naming conventions guide
-- Code organization patterns documented
-- Documentation standards defined
-- Coding guidelines integrated with tooling
+- establish coding standards and conventions completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Coding standards document created
-- [ ] Naming conventions defined and documented
-- [ ] Code organization patterns documented
-- [ ] Documentation standards defined
-- [ ] Coding guidelines integrated with linters/formatters
-- [ ] Standards are clear and accessible
+- [ ] Establish coding standards and conventions completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Research best practices for {PROJECT_TYPE}
-2. Define naming conventions
-3. Establish code organization patterns
-4. Define documentation standards
-5. Create coding standards document
-6. Integrate standards with code quality tools
-7. Review and refine standards
+1. Analyze requirements for establish coding standards and conventions
+2. Design approach and plan
+3. Implement establish coding standards and conventions
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- T06: Configure code quality tools (benefits from code quality tools)
+- E1:S1:T06
 
 **Blocks:**
-- Development work across project (establishes standards)
+- E1:S1:T08
 
-**Parallel Development Candidacy:** Safe (can proceed independently once code quality tools are configured)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E01:S01:T06: Configure code quality tools
-- E08:S02: Code Review Standards and Processes
+- [E01:S01:T07: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E01:S01: Project Foundation and Setup
-- E08:S02: Code Review Standards and Processes
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.1.1.7+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -114,10 +111,7 @@ Establish coding standards and conventions for the {PROJECT_NAME} project. Defin
 
 ## Notes
 
-- Align standards with code quality tool configuration
-- Make standards practical and enforceable
-- Document rationale for standards
-- Review and update standards as project evolves
+[Additional notes, context, or considerations for this task.]
 
 ---
 
@@ -129,14 +123,12 @@ Establish coding standards and conventions for the {PROJECT_NAME} project. Defin
 
 ## References
 
-- Coding standards best practices
-- Naming convention guidelines
-- Code organization patterns
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
 
 ---
 
 ## Next Actions
 
-- [ ] Define coding standards
-- [ ] Document conventions and patterns
-- [ ] Integrate with code quality tools
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

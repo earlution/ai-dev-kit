@@ -374,12 +374,14 @@ steps:
   - Agent understands package type and context
   - Agent gathers data using scripts as tools
 
+
 **Step 3: Determine Version Bumps**
 - For each changed package:
   - Agent analyzes changes against criteria (guidance)
   - Agent determines appropriate bump type (MAJOR/MINOR/PATCH)
   - Agent documents reasoning and justification
   - Agent plans version update approach
+
 
 **Step 4: Execute Version Updates**
 - For each package:
@@ -388,12 +390,14 @@ steps:
   - Agent creates/updates package changelog entry
   - Agent documents justification
 
+
 **Step 5: Validate Updates**
 - For each package:
   - Agent runs validation scripts as tools
   - Agent verifies version format is correct
   - Agent checks version consistency
   - Agent validates changelog entry
+
 
 **Step 6: Document & Proceed**
 - Agent documents all package version changes

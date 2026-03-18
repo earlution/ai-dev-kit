@@ -139,6 +139,22 @@ docs/
 
 ---
 
+### 2.5 Maintenance (`docs/maintenance/`)
+
+**Purpose:** Operational runbooks for maintainers (build packages, upload to GitHub Releases). Not for adopters.
+
+**Contents:**
+- `README.md` – Index of runbooks
+- `BUILD_PACKAGES.md`, `BUILD_AND_UPLOAD.md`, `UPLOAD_PACKAGES.md`, etc.
+
+**When to Use:**
+- Building or publishing framework packages
+- CI/maintainer workflows
+
+**Convention:** These runbooks live under `docs/maintenance/` so the project root stays minimal (README, CHANGELOG, CONTRIBUTING, INSTALL_IN_YOUR_PROJECT, config files only).
+
+---
+
 ## 3. Navigation Patterns
 
 ### 3.1 Entry Points

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 2, Task 3: Create Workflow Execution Tools
+# Epic 2, Story 2, Task 3: Create workflow execution tools
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.2.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.2.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.2.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E2:S2:T3`)
+**Format:** `E2:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E02:S02:T03`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create workflow execution tools for the {PROJECT_NAME} project. Develop tools that enable easy execution of automated workflows, providing user-friendly interfaces and command-line utilities for workflow management.
+Create workflow execution tools for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Workflow automation scripts (from E2:S2:T02)
-- Workflow templates (from E2:S1:T02)
-- Workflow execution guidelines (from E2:S1:T03)
-- Tool requirements and use cases
-- User interface preferences
-- ai-dev-kit workflow execution tools (if adopting)
+- Requirements and specifications
+- create workflow execution tools requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Workflow execution tools implemented
-- Command-line interface (CLI) tools
-- User interface tools (if applicable)
-- Tool documentation
-- Tool usage examples
-- Tool tests (if applicable)
+- create workflow execution tools completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Workflow execution tools implemented
-- [ ] CLI tools created for workflow execution
-- [ ] User interface tools created (if applicable)
-- [ ] Tools integrate with automation scripts
-- [ ] Tools follow workflow execution guidelines
-- [ ] Tool documentation created
-- [ ] Tool usage examples provided
-- [ ] Tools are tested and validated
-- [ ] Tools are user-friendly and accessible
+- [ ] Create workflow execution tools completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Design workflow execution tool structure
-2. Implement CLI tools for workflow execution
-3. Create user interface tools (if applicable)
-4. Integrate tools with automation scripts
-5. Add error handling and user feedback
-6. Write tool documentation
-7. Create tool usage examples
-8. Test and validate tools
-9. Review and refine tools
+1. Analyze requirements for create workflow execution tools
+2. Design approach and plan
+3. Implement create workflow execution tools
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E2:S2:T02: Implement workflow automation scripts (tools execute scripts)
-- E2:S1:T02: Define standard workflow templates (tools use templates)
-- E2:S1:T03: Create workflow execution guidelines (tools follow guidelines)
+- E2:S2:T02
 
 **Blocks:**
-- E2:S2:T04: Document automation usage (documentation covers tools)
+- E2:S2:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E2:S2:T02: Implement workflow automation scripts (tools execute scripts)
-- E2:S2:T04: Document automation usage (documentation covers tools)
+- [E02:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E2:S2: Workflow Automation (this story)
-- E2:S1: Workflow Definitions and Patterns (tools use patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Create workflow execution tools for the {PROJECT_NAME} project. Develop tools th
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

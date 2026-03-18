@@ -36,9 +36,11 @@ When a user epic partially matches multiple canonical epics, intelligently split
 - Partial matches:
   - Canonical Epic 3: "Versioning Framework" (65% similarity)
   - Canonical Epic 2: "Workflow Management Framework" (55% similarity)
+
 - **Solution:** Split tasks intelligently
   - Versioning tasks → Canonical Epic 3
   - Workflow tasks → Canonical Epic 2
+
 
 ### What problem does this solve?
 

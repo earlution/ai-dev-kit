@@ -15,6 +15,10 @@ housekeeping_policy: keep
 **Story:** Story 2 - Versioning Cookbook and Examples  
 **Related:** Implementation Guide, Package Manager Integration
 
+**Based on Framework:** This document is a dev-kit specialisation providing guidance on dual-versioning patterns. For the canonical versioning schema and SemVer mapping modes, see:
+- `packages/frameworks/numbering & versioning/versioning-policy.md` (primary SoT)
+- `packages/frameworks/numbering & versioning/versioning-strategy.md` (comprehensive strategy)
+
 ---
 
 ## Executive Summary
@@ -75,6 +79,30 @@ version: 0.1.0  # MAJOR.MINOR.PATCH (required by pub.dev)
 2. **Package Manager Version:** `MAJOR.MINOR.PATCH` (derived from internal version)
 
 **Synchronization:** Package manager version is **derived from** internal version using a mapping strategy.
+
+---
+
+## Choosing a SemVer Mapping Mode
+
+The core framework defines two **conceptual mapping modes** from internal version to SemVer:
+
+- **Mode A – Registry-based epic/story mapping (default for dev-kit/frameworks):**
+  - `MAJOR = RC`
+  - `MINOR` / `PATCH` assigned via a registry that remaps epics and stories into a monotonic SemVer space.
+  - Best for long-lived frameworks and products with many parallel epics/stories.
+  - **1:1 intent:** The mapping is designed to be one-to-one: one internal version yields exactly one SemVer, and a given SemVer (from this project’s registry) should identify a unique internal coordinate (RC, EPIC, STORY, BUILD; TASK is not encoded). Git tags must align so that the SemVer tag and the internal tag for a release point to the same commit.
+
+- **Mode B – Simple global PATCH counter (recommended for small/simple projects):**
+  - `MAJOR = RC`, `MINOR = EPIC`, `PATCH` = **global build counter** (monotonic per RC).
+  - Very simple mental model: “higher PATCH = strictly newer”, independent of epic/story.
+  - Epic/story identity is recovered via the internal version and/or optional metadata (`+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`).
+
+**Guidance:**
+
+- If you are building a **framework or complex product** and care about distinguishing epics/stories at the SemVer level, use **Mode A** (registry-based).
+- If you are building a **small app or library** and mainly care about a simple, monotonic release line, consider **Mode B** (global PATCH) for your project copy of the framework.
+
+The concrete mapping formulas below can be seen as **implementations** that sit under one of these conceptual modes.
 
 ---
 

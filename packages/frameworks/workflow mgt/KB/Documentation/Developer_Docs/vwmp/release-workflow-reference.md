@@ -508,56 +508,66 @@ After execution, this step outputs:
 
 ---
 
-### Step 4: Update README
+### Step 5: Update README
 
 **Handler:** `release.readme_update`
 **Category:** Documentation
 **Icon:** 📖
-**Required:** ❌ No (optional step)
-**Default Dependencies:** `step-1` (needs new version)
+**Required:** ✅ Yes (mandatory step)
+**Default Dependencies:** `step-2` (needs new version from Step 2)
 
 #### Purpose
 
-Updates the README.md file with the new version badge and latest release information. This keeps the README current for users viewing the project.
+**MANDATORY:** Updates the README.md file with the new project version. Updates version text (required), version badge (if present), and latest release information (if present). This keeps the README current and accurate for users viewing the project.
 
 #### Execution Flow
 
-1. Retrieves version from Step 1 output
+1. Retrieves version from Step 2 output
 2. Retrieves release details from workflow parameters
-3. Updates version badge (if `update_badge: true`)
-4. Updates "Latest Release" callout (if `update_latest_release: true`)
-5. Writes updated README.md
+3. **MANDATORY:** Updates version text in README (e.g., `**Version:** v{version}`)
+4. **Optional:** Updates version badge (if `update_badge: true` and badge exists)
+5. **Optional:** Updates "Latest Release" callout (if `update_latest_release: true` and callout exists)
+6. Writes updated README.md
 
 #### Configuration Parameters
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `readme_file` | string | ❌ No | `README.md` | Path to README.md file |
-| `update_badge` | boolean | ❌ No | `true` | Whether to update version badge |
-| `update_latest_release` | boolean | ❌ No | `true` | Whether to update latest release callout |
+| `update_version_text` | boolean | ✅ Yes | `true` | **MANDATORY:** Update project version text in README |
+| `update_badge` | boolean | ❌ No | `true` | Optional: Whether to update version badge (if present) |
+| `update_latest_release` | boolean | ❌ No | `true` | Optional: Whether to update latest release callout (if present) |
 
 #### Configuration Example
 
 ```yaml
 config:
   readme_file: README.md
-  update_badge: true
-  update_latest_release: true
+  update_version_text: true  # MANDATORY: Update project version in README
+  update_badge: true         # Optional: Update version badge if present
+  update_latest_release: true # Optional: Update latest release callout if present
 ```
 
 #### Updates Performed
 
-1. **Version Badge Update:**
-   - Finds badge pattern: `[![Version]...badge/version-...-blue](.../releases)`
-   - Replaces with: `[![Version](https://img.shields.io/badge/version-0.21.0.2-blue)](https://github.com/earlution/confidentia/releases)`
+1. **Version Text Update (MANDATORY):**
+   - Finds version text pattern: `**Version:** v{version}`, `Version: {version}`, or similar
+   - Replaces with: `**Version:** v{new_version}` (e.g., `**Version:** v0.6.6.10+14`)
+   - **MANDATORY:** This update is required - README must always reflect current project version
 
-2. **Latest Release Update:**
+2. **Version Badge Update (Optional):**
+   - Finds badge pattern: `[![Version]...badge/version-...-blue](.../releases)`
+   - Replaces with: `[![Version](https://img.shields.io/badge/version-{new_version}-blue)](https://github.com/owner/repo/releases)`
+   - Only updates if badge is present in README
+
+3. **Latest Release Update (Optional):**
    - Finds pattern: `**🎉 Latest Release: v...**`
-   - Replaces with: `**🎉 Latest Release: v0.21.0.2** - 🐞 Fix: VWMP designer renders Release Workflow`
+   - Replaces with: `**🎉 Latest Release: v{new_version}** - {summary}`
+   - Only updates if latest release callout is present in README
 
 #### Data Sources
 
-1. **Version:** From Step 1 output (`step-1.output.new_version`)
+1. **Version:** From Step 2 output (`step-2.output.new_version`)
 2. **Summary:** From workflow parameter `summary`
 3. **Change Type:** From workflow parameter `change_type` (used for emoji)
 
@@ -568,15 +578,17 @@ After execution, this step outputs:
 ```json
 {
   "readme_file": "README.md",
-  "version": "0.21.0.2"
+  "version": "0.6.6.10+14"
 }
 ```
 
 #### Error Handling
 
-- **Version not found:** Step fails if Step 1 output is not available
-- **README.md not found:** Step is skipped (not failed) if README.md doesn't exist
+- **Version not found:** Step fails if Step 2 output is not available
+- **README.md not found:** Step fails if README.md doesn't exist (mandatory step)
+- **Version text not found:** Step fails if version text pattern cannot be found in README
 - **File write error:** Step fails if README.md cannot be written
+- **Note:** Badge and latest release updates are optional - missing these patterns does not cause failure
 
 ---
 

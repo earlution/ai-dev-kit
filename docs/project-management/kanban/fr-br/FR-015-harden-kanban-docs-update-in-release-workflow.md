@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** N/A  
-**Status:** PENDING  
+**Status:** IMPLEMENTED ✅ (E5:S01:T36 completed board updates)  
 
 ---
 
@@ -43,10 +43,12 @@ A hardened, mandatory Kanban documentation update step in the Release Workflow t
   - Current version (Epic.Story.Task)
   - Changed files in the commit
   - Task completion status
+
 - RW updates all required Kanban documentation:
   - Story document (version marker, task status, completion status)
   - Epic document (story status, last updated version)
   - Kanban board (epic/story status, version markers)
+
 - RW validates that all updates were successful
 - RW blocks workflow if any updates fail
 - Clear error messages guide manual fixes if needed
@@ -122,18 +124,23 @@ This feature is needed:
   - Current version (Epic.Story.Task)
   - Changed files
   - Task/story/epic completion status
+
 - [ ] **FR-015:R04** - Update Story document with:
   - Version marker in "Last updated" field
   - Task completion status in task checklist
   - Story completion status if all tasks complete
+
 - [ ] **FR-015:R05** - Update Epic document with:
   - Story status in story checklist
   - Last updated version
   - Epic completion status if all stories complete
-- [ ] **FR-015:R06** - Update Kanban board with:
-  - Epic/story status
-  - Last updated date and version
-  - Story/epic completion markers
+
+- [x] **FR-015:R06** - Update Kanban board with: ✅ **IMPLEMENTED (E5:S01:T36)**
+  - Epic/story status ✅
+  - Last updated date and version ✅
+  - Story/epic completion markers ✅
+  - **Implementation Status:** Implemented in E5:S01:T36 (v0.5.1.36+1). RW Step 7 now updates Kanban board metadata and epic/story sections.
+
 - [ ] **FR-015:R07** - Validate that all required updates were successful
 - [ ] **FR-015:R08** - Block workflow if validation fails
 - [ ] **FR-015:R09** - Provide clear error messages with recovery guidance
@@ -185,10 +192,11 @@ Every RW execution should automatically and reliably update all relevant Kanban 
 
 - [ ] **AC1:** Step 7 is mandatory and blocking (cannot be skipped)
 - [ ] **AC2:** Framework-agnostic Kanban update script/handler exists and works
-- [ ] **AC3:** All required Kanban docs are updated automatically:
-  - Story document updated with version marker and task status
-  - Epic document updated with story status and version
-  - Kanban board updated with epic/story status and version
+- [x] **AC3:** All required Kanban docs are updated automatically:
+  - Story document updated with version marker and task status ✅ (IMPLEMENTED)
+  - Epic document updated with story status and version ✅ (IMPLEMENTED)
+  - Kanban board updated with epic/story status and version ✅ (IMPLEMENTED - E5:S01:T36)
+
 - [ ] **AC4:** Validation confirms all updates were successful
 - [ ] **AC5:** Workflow blocks if validation fails
 - [ ] **AC6:** Clear error messages provided with recovery guidance

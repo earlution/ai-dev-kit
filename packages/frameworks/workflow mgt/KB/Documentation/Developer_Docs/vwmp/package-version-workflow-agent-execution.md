@@ -18,7 +18,9 @@ housekeeping_policy: keep
 
 This document provides a **step-by-step agent execution guide** for the Package Version Workflow (PVW). PVW uses **intelligent agent-driven execution** to determine and apply appropriate SemVer bumps to packages based on actual changes.
 
-**Key Principle:** PVW uses intelligent analysis and decision-making, not deterministic scripts. The agent analyzes actual changes, determines appropriate version bumps using criteria as guidance, and documents reasoning clearly.
+**Key Principle:** PVW uses intelligent analysis and decision-making, not deterministic scripts. The agent analyzes actual changes, determines appropriate SemVer bumps using criteria as guidance, and documents reasoning clearly.
+
+PVW always treats the **SemVer release version** as the **external-facing version** for packages, while the project-level internal version (`RC.EPIC.STORY.TASK+BUILD`) remains the forensic coordinate used by RW and Kanban.
 
 **This guide shows exactly how an AI agent should analyze, determine, execute, validate, and proceed through each of the 6 PVW steps.**
 

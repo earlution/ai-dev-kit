@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 1, Task 4: Implement Password Reset
+# Epic 9, Story 1, Task 4: Implement password reset
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.1.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.1.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.1.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S1:T4`)
+**Format:** `E9:S1:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S01:T04`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement password reset for the {PROJECT_NAME} project. Build the password reset system that allows users to securely reset forgotten passwords through email verification and secure token-based reset processes.
+Implement password reset for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Authentication architecture (from E9:S1:T01)
-- Password reset requirements
-- Email service integration requirements
-- Security requirements
-- Token generation requirements
-- ai-dev-kit password reset patterns (if adopting)
+- Requirements and specifications
+- implement password reset requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Password reset functionality implemented
-- Password reset UI/forms
-- Password reset API endpoints
-- Email integration for reset tokens
-- Password reset validation
+- implement password reset completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Password reset functionality implemented
-- [ ] Password reset UI/forms created
-- [ ] Password reset API endpoints created
-- [ ] Email integration for reset tokens implemented
-- [ ] Password reset uses secure tokens
-- [ ] Password reset validation implemented
-- [ ] Password reset is secure and tested
-- [ ] Password reset is functional
+- [ ] Implement password reset completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review authentication architecture
-2. Review password reset requirements
-3. Design password reset flow
-4. Implement password reset UI/forms
-5. Implement token generation for reset
-6. Implement email integration
-7. Implement password reset API endpoints
-8. Implement password reset validation
-9. Test password reset functionality
-10. Review and refine implementation
+1. Analyze requirements for implement password reset
+2. Design approach and plan
+3. Implement implement password reset
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S1:T01: Design authentication architecture (password reset uses architecture)
+- E9:S1:T03
 
 **Blocks:**
-- None (can proceed in parallel with other authentication features)
+- E9:S1:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, but can proceed with T02/T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S1:T01: Design authentication architecture (password reset uses architecture)
-- E9:S1:T05: Implement email verification (email verification may use similar email infrastructure)
+- [E09:S01:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S1: User Authentication System (this story)
-- E17:S2: Webhook Implementation (email webhooks may be used)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Implement password reset for the {PROJECT_NAME} project. Build the password rese
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

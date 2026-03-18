@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 1, Task 3: Conduct User Interviews
+# Epic 7, Story 1, Task 3: Conduct user interviews
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.1.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.1.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.1.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S1:T3`)
+**Format:** `E7:S1:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S01:T03`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Conduct user interviews for the {PROJECT_NAME} project. Plan, execute, and document user interviews to gather qualitative insights about user needs, behaviors, and pain points.
+Conduct user interviews for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Research objectives and questions (from E7:S1:T01)
-- Research participants (from E7:S1:T02)
-- Interview methodology and best practices
-- Interview questions and discussion guide
-- Interview tools and equipment
-- ai-dev-kit UXR interview practices (if adopting)
+- Requirements and specifications
+- conduct user interviews requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Interview discussion guide
-- Conducted interviews
-- Interview recordings/transcripts
-- Interview notes
-- Interview summary documentation
+- conduct user interviews completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Interview discussion guide created
-- [ ] User interviews conducted
-- [ ] Interview recordings/transcripts captured
-- [ ] Interview notes taken and organized
-- [ ] Interviews address research questions
-- [ ] Interview summary documentation created
-- [ ] Interviews yield meaningful insights
-- [ ] Interview data ready for analysis
+- [ ] Conduct user interviews completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review research objectives and questions
-2. Review recruited participants
-3. Design interview discussion guide
-4. Prepare interview questions
-5. Schedule interview sessions
-6. Conduct user interviews
-7. Record and transcribe interviews
-8. Take and organize interview notes
-9. Create interview summary documentation
-10. Review and refine interview process
+1. Analyze requirements for conduct user interviews
+2. Design approach and plan
+3. Implement conduct user interviews
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S1:T01: Define research objectives and questions (interviews address research questions)
-- E7:S1:T02: Recruit research participants (interviews require participants)
+- E7:S1:T02
 
 **Blocks:**
-- E7:S1:T05: Analyze research data and synthesize findings (analysis uses interview data)
+- E7:S1:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S1:T01: Define research objectives and questions (interviews address research questions)
-- E7:S1:T02: Recruit research participants (interviews require participants)
-- E7:S1:T04: Conduct user surveys/questionnaires (complements interviews)
-- E7:S1:T05: Analyze research data and synthesize findings (analysis uses interview data)
+- [E07:S01:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S1: User Research and Discovery (this story)
-- E7:S2: Usability Testing and Validation (testing may use interview insights)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Conduct user interviews for the {PROJECT_NAME} project. Plan, execute, and docum
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

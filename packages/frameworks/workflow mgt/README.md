@@ -6,13 +6,12 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Release Workflow (RW) Implementation Package
+# Workflow Management Framework
 
-**Version:** 2.1.1  
-**Last Updated:** 2025-12-08  
-**Purpose:** Complete package for implementing the Release Workflow (RW) trigger and agent-driven workflow execution pattern in your project  
-**Source Project:** fynd.deals (Epic 15, Story 1)  
-**Key Enhancements:** "ALL sections" requirement, atomicity, blocked protocol, epic branch workflow
+**Version:** 2.2.0  
+**Last Updated:** 2026-03-12  
+**Purpose:** Complete workflow management framework with 12 comprehensive workflows, documentation standards, and automated validation  
+**Key Features:** 12 fully documented workflows, standardized templates, style guide, validation tools, and automated quality assurance
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
 
@@ -20,7 +19,25 @@ housekeeping_policy: keep
 
 ## 📋 What's Included
 
-This package contains all essential files needed to implement the Release Workflow (RW) trigger in your project. The RW trigger enables AI assistants to execute a complete 13-step release process (version bump, changelog generation, Git operations, PDCA verification and action) using intelligent agent-driven execution.
+This package contains a comprehensive workflow management framework with 12 fully documented workflows, standardized templates, and automated validation tools. The framework enables AI assistants to execute various workflows using intelligent agent-driven execution with support for multiple workflow types:
+
+### Core Workflows (4)
+- **Testing Workflow (TESTING)** - Quality assurance and coverage analysis
+- **Refactor Workflow (REFACTOR)** - Code refactoring with validation
+- **Migration Workflow (MIGRATION)** - Data/code migration with rollback support
+- **Release Workflow (RW)** - Release management and deployment
+
+### Management Workflows (3)
+- **Changelog Management Workflow (CMW)** - Documentation maintenance
+- **Update Kanban Workflow (UKW)** - Project tracking and status management
+- **Post-Implementation Review (PIR)** - Implementation evaluation
+
+### Specialized Workflows (5)
+- **Intake Workflow** - FR/BR/UXR automation and processing
+- **Package Version Workflow (PKG-VERSION)** - Version management and updates
+- **Framework Health Monitoring Workflow (FHM)** - System health monitoring
+- **Implementation Cycle Workflow (ICW)** - Structured implementation process
+- **Documentation Workflow** - Documentation generation and maintenance
 
 ### Core Methodology Documents
 - `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md` - General methodology for agent-driven workflow execution
@@ -28,26 +45,93 @@ This package contains all essential files needed to implement the Release Workfl
 - `docs/documentation/Developer_Docs/vwmp/release-workflow-reference.md` - Complete workflow reference
 - `docs/documentation/Developer_Docs/vwmp/portable-workflow-implementation-guide.md` - Detailed implementation guide
 - `docs/documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md` - Step-by-step guide for executing the 7-step Intake Workflow (FR/BR/UXR automation)
+- `docs/documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md` - Step-by-step guide for executing the 8-step Update Kanban Workflow (UKW - kanban sync)
 
 ### Versioning Policy Documents
 - `docs/architecture/standards-and-adrs/versioning-policy.md` - Version schema definition (RC.EPIC.STORY.TASK+BUILD)
 - `docs/architecture/standards-and-adrs/versioning-strategy.md` - Complete versioning strategy with forensic traceability
 
+### 🚀 Workflow Overview
+
+The AI Dev Kit workflow management framework provides **12 standardized workflows** for systematic development operations. Each workflow follows consistent documentation standards and includes comprehensive usage instructions.
+
+#### 📋 Available Workflows
+
+| Workflow | Abbreviation | Purpose | Documentation |
+|-----------|--------------|---------|----------------|
+| **Release Workflow** | RW | Complete release process with version management | [README](workflows/release-workflow/README.md) |
+| **Implementation Cycle Workflow** | ICW | Structured three-phase implementation workflow | [README](workflows/implementation-cycle-workflow/README.md) |
+| **Changelog Management Workflow** | CMW | Manage changelog size and organization | [README](workflows/changelog-management-workflow/README.md) |
+| **Update Kanban Workflow** | UKW | Update Kanban board documentation | [README](workflows/update-kanban-workflow/README.md) |
+| **Post-Implementation Review** | PIR | Review implementation after release | [README](workflows/post-implementation-review/README.md) |
+| **Intake Workflow** | INTAKE | FR/BR/UXR automation and intake process | [README](workflows/intake-workflow/README.md) |
+| **Migration Workflow** | MIGRATION | Migration and data transfer tasks | [README](workflows/migration-workflow/README.md) |
+| **Refactor Workflow** | REFACTOR | Code refactoring and improvement tasks | [README](workflows/refactor-workflow/README.md) |
+| **Testing Workflow** | TESTING | Testing and quality assurance tasks | [README](workflows/testing-workflow/README.md) |
+| **Package Version Workflow** | PKG-VERSION | Package version management and updates | [README](workflows/package-version-workflow/README.md) |
+| **Framework Health Monitoring** | FHM | Framework health monitoring and maintenance | [README](workflows/framework-health-monitoring-workflow/README.md) |
+
+#### 🎯 Quick Workflow Selection
+
+- **For Releases**: Use **Release Workflow (RW)** for version management and distribution
+- **For Implementation**: Use **Implementation Cycle Workflow (ICW)** for structured development
+- **For Kanban Updates**: Use **Update Kanban Workflow (UKW)** for board synchronization
+- **For Quality**: Use **Testing Workflow (TESTING)** for comprehensive testing
+- **For Maintenance**: Use **Changelog Management (CMW)** for documentation upkeep
+
+#### 📚 Documentation Standards
+
+All workflows follow the **AI Dev Kit Documentation Standards** with:
+- ✅ **Comprehensive README files** with consistent structure
+- ✅ **Usage examples** and troubleshooting guides
+- ✅ **Configuration documentation** with YAML examples
+- ✅ **Integration guidance** and best practices
+- ✅ **Automated validation** and quality assurance
+
+For detailed documentation standards, see: [Workflow Documentation Style Guide](docs/workflow-documentation-style-guide.md)
+
 ### Workflow Definitions
-- `workflows/release-workflow.yaml` - YAML definition of the Release Workflow structure
-- `workflows/intake-workflow.yaml` - YAML definition of the Intake Workflow structure (FR/BR/UXR automation)
+- `workflows/release-workflow/release-workflow.yaml` - YAML definition of the Release Workflow structure
+- `workflows/intake-workflow/intake-workflow.yaml` - YAML definition of the Intake Workflow structure (FR/BR/UXR automation)
+- `workflows/update-kanban-workflow/update-kanban-workflow.yaml` - YAML definition of the Update Kanban Workflow structure (UKW - kanban sync)
+- `workflows/changelog-management-workflow/changelog-management-workflow.yaml` - YAML definition of the Changelog Management Workflow structure (CMW - changelog maintenance and archival)
+- `workflows/post-implementation-review/pir-workflow.yaml` - YAML definition of the Post-Implementation Review structure (PIR)
+- `workflows/migration-workflow/migration-workflow.yaml` - YAML definition of the Migration Workflow structure
+- `workflows/refactor-workflow/refactor-workflow.yaml` - YAML definition of the Refactor Workflow structure
+- `workflows/testing-workflow/testing-workflow.yaml` - YAML definition of the Testing Workflow structure
+- `workflows/implementation-cycle-workflow/icw-workflow.yaml` - YAML definition of the Implementation Cycle Workflow structure (ICW - systematic implementation workflow)
+- `workflows/package-version-workflow/package-version-workflow.yaml` - YAML definition of the Package Version Workflow structure
+- `workflows/framework-health-monitoring-workflow/framework-health-monitoring-workflow.yaml` - YAML definition of the Framework Health Monitoring Workflow structure
+- `workflows/workflow-registry.yaml` - Registry of all workflows with metadata
+
+### Optional GitHub Actions Workflows (Private Repos)
+- `templates/github-actions/update-badges-byob.yml` - BYOB badge workflow template for private repositories
+- `templates/github-actions/README.md` - Documentation for optional GitHub Actions workflows
 
 ### Validation Scripts
 - `scripts/validation/validate_branch_context.py` - Validates branch/version/epic alignment (supports multi-digit epics)
 - `scripts/validation/validate_changelog_format.py` - Validates changelog format (supports both old and new format)
 - `scripts/validation/validate_version_bump.py` - Validates version bump logic (new task, same task, out-of-order)
+- `scripts/validation/check_changelog_size.py` - Checks changelog size and triggers CMW if threshold exceeded
+
+### Changelog Management Scripts
+- `scripts/changelog/cmw.py` - Main CMW script (deterministic changelog maintenance workflow)
+- `scripts/changelog/analyze_changelog_state.py` - Analyzes changelog state (size, entry count, ordering, duplicates)
+- `scripts/changelog/check_changelog_size.py` - Checks changelog size against threshold
+- `scripts/changelog/remove_duplicates.py` - Detects and removes duplicate changelog entries
+- `scripts/changelog/identify_archival_entries.py` - Identifies entries eligible for archival
+- `scripts/changelog/archive_entries.py` - Archives old entries to archive file
+- `scripts/changelog/changelog_utils.py` - Utility functions for changelog operations
+- `scripts/changelog/cron-cmw-example.sh` - Example cron script for automated CMW execution
+- `scripts/changelog/README.md` - Complete CMW documentation and usage guide
 
 ### Reference Documents
 - `docs/architecture/standards-and-adrs/workflow-flaws-reference-guide.md` - Comprehensive reference for all discovered RW flaws
 - `docs/architecture/standards-and-adrs/versioning-error-reference-guide.md` - Versioning-specific error reference (WF-002)
 
-### Cursor Rules Section
-- `cursorrules-rw-trigger-section.md` - Section to add to your `.cursorrules` file (includes "ALL sections" requirement, atomicity, blocked protocol)
+### Cursor Rules Sections
+- `cursorrules-rw-trigger-section.md` - Section to add to your `.cursorrules` file for RW trigger (includes "ALL sections" requirement, atomicity, blocked protocol)
+- `cursorrules-ukw-trigger-section.md` - Section to add to your `.cursorrules` file for UKW trigger (Update Kanban Workflow)
 
 ---
 
@@ -136,6 +220,7 @@ Projects must **copy** this package into their repository, not link to it.
 - Full versioning integration
 
 **Scenario 3: Complete Integration**
+
 - Copy all three packages (Workflow, Versioning, Kanban)
 - Full three-way integration
 - Automated Kanban updates with version markers
@@ -184,7 +269,7 @@ python scripts/install_release_workflow.py --mode c --dry-run
 
 1. **Generates `rw-config.yaml`** - Single source of truth for all paths
 2. **Updates `.cursorrules`** - Adds RW trigger section with correct paths
-3. **Patches `workflows/release-workflow.yaml`** - Uses config values instead of hardcoded paths
+3. **Patches `workflows/release-workflow/release-workflow.yaml`** - Uses config values instead of hardcoded paths
 4. **Validates paths** - Ensures all paths match your project structure
 
 ### Next Steps After Installation
@@ -293,12 +378,14 @@ If using different branch naming conventions:
    - Step 5: README updated (if applicable)
    - Step 6: Kanban docs auto-updated
    - Step 7: Files staged
-   - Step 8: Validators run
-   - Step 9: Commit created
-   - Step 10: Tag created
-   - Step 11: Branch and tag pushed (or manual instructions provided)
-   - Step 12: Post-Commit Verification & Reflection (optional but recommended)
-   - Step 13: Act on Verification Results (optional but recommended)
+   - Step 8: IDE problem checking (errors, warnings, infos)
+   - Step 9: Validators run
+   - Step 9.5: Changelog Management Workflow (CMW) if needed (optional)
+   - Step 10: Commit created
+   - Step 11: Tag created
+   - Step 12: Branch and tag pushed (or manual instructions provided)
+   - Step 13: Post-Commit Verification, Housekeeping & Reflection (optional but recommended)
+   - Step 14: Act on Verification Results (optional but recommended)
 
 ---
 
@@ -306,16 +393,29 @@ If using different branch naming conventions:
 
 ### The RW Trigger
 
-When a user types "RW" or "rw" (case-insensitive) in their AI assistant:
+When a user types any RW trigger in their AI assistant (case-insensitive):
 
-1. **AI Assistant Recognizes Trigger:** The `.cursorrules` file instructs the AI to execute the Release Workflow
-2. **Intelligent Execution:** The AI follows the step-by-step guide, analyzing each step before executing
-3. **Progress Tracking:** The AI creates and maintains a TODO list tracking all 13 steps
-4. **Validation:** Each step is validated before proceeding to the next
-5. **Documentation:** All actions are documented with analysis and results
-6. **Atomicity:** The workflow either completes all 13 steps or stops with a clear "RW BLOCKED" message
+- **"RW"** - Full Release Workflow (all 17 steps)
+- **"RW -k"** - Initial Kanban Documentation Commit (7 steps: 1,2,3,4,7,11,12)
+- **"RW -d"** - Documentation-Only Release (13 steps: 1,2,3,4,5,6,7,8,9,10,11,13,14)
 
-### The 13 Steps
+The AI assistant:
+
+1. **AI Assistant Recognizes Trigger:** The `.cursorrules` file instructs the AI to execute the Release Workflow with the specified trigger type
+2. **Parse Trigger Type:** Determines which workflow variant to execute based on the trigger
+3. **Select Execution Path:** Chooses appropriate step sequence based on trigger type
+4. **Intelligent Execution:** The AI follows the step-by-step guide for the selected path, analyzing each step before executing
+5. **Progress Tracking:** The AI creates and maintains a TODO list tracking the steps for the selected execution path
+6. **Validation:** Each step is validated before proceeding to the next
+7. **Documentation:** All actions are documented with analysis and results
+8. **Atomicity:** The workflow either completes all steps for the selected path or stops with a clear "RW BLOCKED" message
+
+**Execution Path Details:**
+- **RW (Full Release):** Steps 1-17 (complete release with Git operations, verification, PIR)
+- **RW -k (Kanban Init):** Steps [1, 2, 3, 4, 7, 11, 12] - Documentation setup only, Step 7 modified for Kanban init mode
+- **RW -d (Documentation Only):** Steps [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14] - Documentation updates, skips Git tag, push, PIR trigger, housekeeping
+
+### The 13 Steps (Plus Optional Steps)
 
 **Phase 1: Version & Documentation Updates (Steps 1-6)**
 1. **Branch Safety Check** - Verify work aligns with branch context
@@ -325,12 +425,14 @@ When a user types "RW" or "rw" (case-insensitive) in their AI assistant:
 5. **Update README** - Update version references if present (optional)
 6. **Auto-update Kanban Docs** - Update **ALL sections** (header, checklist, detailed story sections) to match authoritative Story file
 
-**Phase 2: Git Operations & Validation (Steps 7-11)**
+**Phase 2: Git Operations & Validation (Steps 7-12)**
 7. **Stage Files** - Stage all modified files
-8. **Run Validators** - Execute branch context and changelog format validators (must be on epic branch, not main)
-9. **Commit Changes** - Create git commit with versioned message
-10. **Create Git Tag** - Create annotated tag
-11. **Push to Remote** - Push epic branch and tags to remote repository (DO NOT push to main unless ready to deploy)
+8. **Check for IDE-Flagged Problems** - Check errors (blocking), warnings/infos (non-blocking) in order
+9. **Run Validators** - Execute branch context, changelog format, version bump, and changelog size validators
+9.5. **Changelog Management Workflow (CMW)** - Optional: Archive entries if changelog exceeds threshold
+10. **Commit Changes** - Create git commit with versioned message
+11. **Create Git Tag** - Create annotated tag
+12. **Push to Remote** - Push epic branch and tags to remote repository (DO NOT push to main unless ready to deploy)
 
 **Phase 3: PDCA CHECK & ACT (Steps 12-13, optional but recommended)**
 12. **Post-Commit Verification & Reflection** - Verify changes worked as expected, evaluate against objectives, reflect on results
@@ -432,6 +534,95 @@ The Intake Workflow integrates with the Trigger-Aware Release Workflow (E2:S07):
 
 ---
 
+## 📋 Changelog Management Workflow (CMW)
+
+### Overview
+
+The **Changelog Management Workflow (CMW)** is a **deterministic workflow** for automated changelog maintenance. Unlike agent-driven workflows (like RW or UKW), CMW uses rule-based scripts to maintain changelog health through validation, duplicate detection, ordering fixes, and archival.
+
+### Key Features
+
+- **Automated Validation:** Analyzes changelog state (size, entry count, ordering, duplicates)
+- **Duplicate Detection:** Identifies and removes duplicate changelog entries
+- **Ordering Fixes:** Corrects changelog ordering violations (version-ordered, not date-ordered)
+- **Archival Support:** Archives old entries based on size-based, time-based, or hybrid policies
+- **Deterministic Execution:** Rule-based scripts (no agentic intelligence required)
+- **Multiple Triggers:** Automatic (RW Step 9.5), manual ("CMW" command), or cron automation
+
+### Integration with Release Workflow
+
+CMW integrates seamlessly with the Release Workflow:
+
+- **Automatic Trigger (RW Step 9.5):** When `check_changelog_size.py` (run in RW Step 9) indicates the changelog exceeds the size threshold, CMW automatically executes to archive entries, remove duplicates, and fix ordering
+- **Non-Blocking:** CMW failures are non-blocking (workflow continues even if CMW encounters issues)
+- **Version-Aware:** CMW respects version ordering (canonical version numbers, not timestamps)
+
+### Manual Execution
+
+CMW can be triggered manually by typing "CMW" or "cmw" (case-insensitive) in your AI assistant:
+
+```bash
+# In your AI assistant (Cursor)
+CMW
+```
+
+The AI assistant will execute the CMW script with appropriate parameters based on your project's changelog state.
+
+### Cron Automation
+
+CMW can be automated via cron for regular maintenance (recommended: weekly execution):
+
+1. **Copy example script:**
+   ```bash
+   cp scripts/changelog/cron-cmw-example.sh ~/scripts/cmw-cron.sh
+   chmod +x ~/scripts/cmw-cron.sh
+   ```
+
+2. **Edit script to set PROJECT_ROOT and paths:**
+   ```bash
+   nano ~/scripts/cmw-cron.sh
+   ```
+
+3. **Add to crontab (weekly, Sunday at 2:00 AM):**
+   ```cron
+   0 2 * * 0 /path/to/scripts/cmw-cron.sh
+   ```
+
+See `scripts/changelog/README.md` for complete cron setup instructions and configuration options.
+
+### CMW Capabilities
+
+**Validation:**
+- Changelog format validation
+- Version ordering validation
+- Entry count and size analysis
+
+**Maintenance:**
+- Duplicate entry detection and removal
+- Ordering violation fixes (ensures version-ordered entries)
+- Archival policy enforcement (size-based, time-based, hybrid)
+
+**Archival:**
+- Identifies entries eligible for archival based on policy
+- Archives entries to archive file with proper formatting
+- Maintains changelog size within threshold
+
+### Documentation
+
+- **CMW Scripts Documentation:** `scripts/changelog/README.md` - Complete CMW documentation, usage guide, and cron setup instructions
+- **Workflow Definition:** `workflows/changelog-management-workflow.yaml` - YAML definition of the CMW structure
+- **CMW Scripts:** All scripts in `scripts/changelog/` directory
+
+### Characteristics
+
+- **Deterministic:** CMW is rule-based and script-driven (no agent execution guide needed)
+- **Non-Blocking:** CMW failures do not block the Release Workflow
+- **Automatic:** CMW automatically executes when changelog threshold is exceeded (RW Step 9.5)
+- **Manual:** CMW can be triggered manually via "CMW" command
+- **Automated:** CMW can be scheduled via cron for regular maintenance
+
+---
+
 ## 🔧 Customization Guide
 
 ### File Paths
@@ -513,8 +704,10 @@ After implementation, verify:
 - [ ] Version file exists and is accessible
 - [ ] Changelog directory exists
 - [ ] Validation scripts are executable
-- [ ] RW trigger responds to "RW" or "rw" in AI assistant
-- [ ] All 13 steps execute in correct order
+- [ ] RW trigger responds to "RW" or "rw" in AI assistant (17 steps)
+- [ ] RW trigger responds to "RW -k" or "rw -k" in AI assistant (7 steps)
+- [ ] RW trigger responds to "RW -d" or "rw -d" in AI assistant (13 steps)
+- [ ] All steps execute in correct order for each trigger type
 - [ ] Version file updates correctly
 - [ ] Changelogs created with full timestamps
 - [ ] Epic docs updated in ALL sections (header, checklist, detailed story sections)
@@ -522,8 +715,10 @@ After implementation, verify:
 - [ ] Git commit includes version number
 - [ ] Git tag created with correct format
 - [ ] Branch and tag pushed to remote (or manual instructions provided)
-- [ ] TODO list tracks all 13 steps (visible in AI assistant)
+- [ ] TODO list tracks all steps for selected execution path (visible in AI assistant)
 - [ ] RW completes atomically or stops with clear "RW BLOCKED" message
+- [ ] Kanban init mode (RW -k) only updates documentation fields
+- [ ] Documentation-only mode (RW -d) skips Git tag, push, PIR trigger, housekeeping
 - [ ] PDCA CHECK and ACT phases executed (Steps 12-13)
 
 ---

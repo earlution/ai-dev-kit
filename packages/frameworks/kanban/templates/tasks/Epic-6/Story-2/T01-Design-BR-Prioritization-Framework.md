@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 2, Task 1: Design BR Prioritization Framework
+# Epic 6, Story 2, Task 1: Design BR prioritization framework
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.2.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.2.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.2.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S2:T1`)
+**Format:** `E6:S2:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S02:T01`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Design BR (Bug Report) prioritization framework for the {PROJECT_NAME} project. Create a systematic framework that enables consistent prioritization of Bug Reports based on severity, impact, urgency, and other relevant factors.
+Design BR prioritization framework for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Bug Report requirements
-- Business priorities and goals
-- Existing prioritization methods (if any)
-- Team preferences and conventions
-- ai-dev-kit BR prioritization framework (if adopting)
-- Project constraints and resources
+- Requirements and specifications
+- design br prioritization framework requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- BR prioritization framework design
-- Prioritization criteria defined
-- Prioritization methodology documented
-- Framework validation criteria
-- Framework design documentation
+- design br prioritization framework completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] BR prioritization framework designed and documented
-- [ ] Prioritization criteria clearly defined (e.g., severity, impact, urgency)
-- [ ] Prioritization methodology established
-- [ ] Framework validation criteria created
-- [ ] Framework supports consistent prioritization
-- [ ] Framework is clear and maintainable
-- [ ] Framework design documentation complete
-- [ ] Framework enables informed decision-making
+- [ ] Design BR prioritization framework completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Analyze Bug Report requirements
-2. Review business priorities and goals
-3. Research prioritization methodologies
-4. Design prioritization framework structure
-5. Define prioritization criteria (e.g., severity, impact, urgency, risk)
-6. Establish prioritization methodology
-7. Create framework validation criteria
-8. Document framework design
-9. Review and refine framework
+1. Analyze requirements for design br prioritization framework
+2. Design approach and plan
+3. Implement design br prioritization framework
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Bug Report requirements
-- Business priorities and goals
+- None
 
 **Blocks:**
-- E6:S2:T02: Create BR assignment templates (templates use prioritization framework)
-- E6:S2:T03: Integrate prioritization with Kanban board (integration uses framework)
-- E6:S2:T04: Document prioritization and assignment process (documentation covers framework)
+- E6:S2:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S2:T02: Create BR assignment templates (templates use prioritization framework)
-- E6:S2:T03: Integrate prioritization with Kanban board (integration uses framework)
-- E6:S2:T04: Document prioritization and assignment process (documentation covers framework)
+- [E06:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S2: BR Prioritization and Assignment (this story)
-- E6:S1: BR Intake and Triage Workflow (prioritization follows triage)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.2.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Design BR (Bug Report) prioritization framework for the {PROJECT_NAME} project. 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

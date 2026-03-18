@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 1, Task 2: Implement User Registration
+# Epic 9, Story 1, Task 2: Implement user registration
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.1.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.1.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.1.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S1:T2`)
+**Format:** `E9:S1:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S01:T02`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement user registration for the {PROJECT_NAME} project. Build the registration system that allows new users to create accounts, validate registration data, and integrate with the authentication architecture.
+Implement user registration for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Authentication architecture (from E9:S1:T01)
-- Registration requirements
-- User data model
-- Validation requirements
-- Integration requirements
-- ai-dev-kit registration patterns (if adopting)
+- Requirements and specifications
+- implement user registration requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- User registration implemented
-- Registration UI/forms
-- Registration validation
-- Registration API endpoints
-- Registration integration with authentication
+- implement user registration completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] User registration implemented
-- [ ] Registration UI/forms created
-- [ ] Registration validation implemented
-- [ ] Registration API endpoints created
-- [ ] Registration integrates with authentication architecture
-- [ ] Registration handles errors appropriately
-- [ ] Registration is secure and validated
-- [ ] Registration is tested and functional
+- [ ] Implement user registration completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review authentication architecture
-2. Review registration requirements
-3. Design registration flow
-4. Implement registration UI/forms
-5. Implement registration validation
-6. Implement registration API endpoints
-7. Integrate with authentication architecture
-8. Test registration functionality
-9. Review and refine implementation
+1. Analyze requirements for implement user registration
+2. Design approach and plan
+3. Implement implement user registration
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S1:T01: Design authentication architecture (registration uses architecture)
+- E9:S1:T01
 
 **Blocks:**
-- E9:S1:T05: Implement email verification (email verification may be part of registration flow)
+- E9:S1:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S1:T01: Design authentication architecture (registration uses architecture)
-- E9:S1:T03: Implement login/logout (login uses registered users)
-- E9:S1:T05: Implement email verification (email verification may be part of registration)
+- [E09:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S1: User Authentication System (this story)
-- E9:S3: User Profile Management (registration creates user profile)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Implement user registration for the {PROJECT_NAME} project. Build the registrati
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

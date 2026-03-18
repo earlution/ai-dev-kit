@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 3, Task 1: Document FR Implementation Patterns
+# Epic 5, Story 3, Task 1: Document FR implementation patterns
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.5.3.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.5.3.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.5.3.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E5:S3:T1`)
+**Format:** `E5:S3:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E05:S03:T01`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document FR (Feature Request) implementation patterns for the {PROJECT_NAME} project. Identify, analyze, and document consistent patterns for implementing Feature Requests to ensure quality, maintainability, and consistency.
+Document FR implementation patterns for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Feature Request requirements
-- Existing implementation examples (if any)
-- Best practices and design patterns
-- Team preferences and conventions
-- ai-dev-kit FR implementation patterns (if adopting)
-- Project architecture and constraints
+- Requirements and specifications
+- document fr implementation patterns requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- FR implementation patterns documented
-- Pattern catalog created
-- Pattern examples provided
-- Pattern usage guidelines
-- Pattern documentation
+- document fr implementation patterns completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] FR implementation patterns identified and documented
-- [ ] Pattern catalog created
-- [ ] Pattern examples provided
-- [ ] Pattern usage guidelines created
-- [ ] Patterns support consistent implementation
-- [ ] Patterns are clear and maintainable
-- [ ] Pattern documentation complete
-- [ ] Patterns enable quality implementations
+- [ ] Document FR implementation patterns completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Analyze Feature Request requirements
-2. Review existing implementation examples (if any)
-3. Research best practices and design patterns
-4. Identify common implementation patterns
-5. Document each pattern with description and examples
-6. Create pattern catalog
-7. Develop pattern usage guidelines
-8. Review and refine patterns
+1. Analyze requirements for document fr implementation patterns
+2. Design approach and plan
+3. Implement document fr implementation patterns
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Feature Request requirements
-- Project architecture and constraints
+- None
 
 **Blocks:**
-- E5:S3:T02: Create implementation templates (templates use patterns)
-- E5:S3:T03: Define testing requirements for FRs (testing aligns with patterns)
-- E5:S3:T04: Document FR completion criteria (criteria reference patterns)
+- E5:S3:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E5:S3:T02: Create implementation templates (templates use patterns)
-- E5:S3:T03: Define testing requirements for FRs (testing aligns with patterns)
-- E5:S3:T04: Document FR completion criteria (criteria reference patterns)
+- [E05:S03:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E5:S3: FR Implementation Patterns (this story)
-- E5:S1: FR Intake and Processing Workflow (patterns used in implementation)
-- E5:S2: FR Prioritization and Planning (planning considers patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.5.3.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Document FR (Feature Request) implementation patterns for the {PROJECT_NAME} pro
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

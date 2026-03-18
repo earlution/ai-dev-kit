@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 2, Task 2: Implement Workflow Automation Scripts
+# Epic 2, Story 2, Task 2: Implement workflow automation scripts
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.2.2.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.2.2.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.2.2.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E2:S2:T2`)
+**Format:** `E2:S2:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E02:S02:T02`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement workflow automation scripts for the {PROJECT_NAME} project. Create scripts that automate identified workflows to reduce manual effort, improve consistency, and increase efficiency.
+Implement workflow automation scripts for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Identified automatable workflows (from E2:S2:T01)
-- Workflow templates (from E2:S1:T02)
-- Workflow execution guidelines (from E2:S1:T03)
-- Automation requirements
-- Scripting language and tool preferences
-- ai-dev-kit workflow automation patterns (if adopting)
+- Requirements and specifications
+- implement workflow automation scripts requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Workflow automation scripts implemented
-- Script documentation
-- Script usage examples
-- Script tests (if applicable)
-- Automation script structure
+- implement workflow automation scripts completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Workflow automation scripts implemented for identified workflows
-- [ ] Scripts follow workflow execution guidelines
-- [ ] Scripts are well-documented
-- [ ] Script usage examples provided
-- [ ] Scripts are tested and validated
-- [ ] Scripts handle errors gracefully
-- [ ] Scripts are maintainable and extensible
-- [ ] Scripts integrate with workflow templates
+- [ ] Implement workflow automation scripts completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review identified automatable workflows
-2. Design automation script structure
-3. Implement workflow automation scripts
-4. Integrate scripts with workflow templates
-5. Add error handling and validation
-6. Write script documentation
-7. Create script usage examples
-8. Test and validate scripts
-9. Review and refine scripts
+1. Analyze requirements for implement workflow automation scripts
+2. Design approach and plan
+3. Implement implement workflow automation scripts
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E2:S2:T01: Identify automatable workflows (scripts automate identified workflows)
-- E2:S1:T02: Define standard workflow templates (scripts use templates)
-- E2:S1:T03: Create workflow execution guidelines (scripts follow guidelines)
+- E2:S2:T01
 
 **Blocks:**
-- E2:S2:T03: Create workflow execution tools (tools may use scripts)
-- E2:S2:T04: Document automation usage (documentation covers scripts)
+- E2:S2:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E2:S2:T01: Identify automatable workflows (scripts automate identified workflows)
-- E2:S2:T03: Create workflow execution tools (tools may use scripts)
-- E2:S2:T04: Document automation usage (documentation covers scripts)
+- [E02:S02:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E2:S2: Workflow Automation (this story)
-- E2:S1: Workflow Definitions and Patterns (scripts use patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.2.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Implement workflow automation scripts for the {PROJECT_NAME} project. Create scr
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

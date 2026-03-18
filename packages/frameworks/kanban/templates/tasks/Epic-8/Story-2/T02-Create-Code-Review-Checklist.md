@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 2, Task 2: Create Code Review Checklist
+# Epic 8, Story 2, Task 2: Create code review checklist
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.8.2.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.2.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.2.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S2:T2`)
+**Format:** `E8:S2:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S02:T02`
 
@@ -28,86 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create code review checklist for the {PROJECT_NAME} project. Develop a comprehensive, actionable checklist that implements code review standards and guides reviewers through systematic code review.
+Create code review checklist for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Code review standards (from E8:S2:T01)
-- Review requirements and focus areas
-- Checklist format preferences
-- Review workflow integration needs
-- ai-dev-kit code review checklist (if adopting)
+- Requirements and specifications
+- create code review checklist requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Code review checklist created
-- Checklist items defined
-- Checklist documentation
-- Checklist templates
-- Checklist integration with review process
+- create code review checklist completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Code review checklist created
-- [ ] Checklist items cover all review standards
-- [ ] Checklist items are specific and actionable
-- [ ] Checklist is organized and easy to use
-- [ ] Checklist documentation created
-- [ ] Checklist templates created
-- [ ] Checklist integrates with review process
-- [ ] Checklist supports systematic review
+- [ ] Create code review checklist completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review code review standards
-2. Identify checklist categories and focus areas
-3. Create checklist items for each category
-4. Organize checklist structure
-5. Create checklist templates
-6. Document checklist usage
-7. Integrate checklist with review process
-8. Review and refine checklist
+1. Analyze requirements for create code review checklist
+2. Design approach and plan
+3. Implement create code review checklist
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E8:S2:T01: Define code review standards (checklist implements standards)
+- E8:S2:T01
 
 **Blocks:**
-- E8:S2:T03: Set up code review automation (automation may use checklist)
-- E8:S2:T04: Document code review process (process includes checklist)
+- E8:S2:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S2:T01: Define code review standards (checklist implements standards)
-- E8:S2:T03: Set up code review automation (automation may use checklist)
-- E8:S2:T04: Document code review process (process includes checklist)
+- [E08:S02:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S2: Code Review Standards and Processes (this story)
-- E8:S1: Codebase Maintenance Tasks (checklist may guide maintenance reviews)
-- E8:S3: Code Quality Metrics and Monitoring (checklist completion may be tracked)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.2.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -116,3 +108,27 @@ Create code review checklist for the {PROJECT_NAME} project. Develop a comprehen
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

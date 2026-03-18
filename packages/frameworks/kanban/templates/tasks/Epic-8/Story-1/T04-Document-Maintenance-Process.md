@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 1, Task 4: Document Maintenance Process
+# Epic 8, Story 1, Task 4: Document maintenance process
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.8.1.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.1.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.1.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S1:T4`)
+**Format:** `E8:S1:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S01:T04`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document maintenance process for the {PROJECT_NAME} project. Create comprehensive documentation that captures the maintenance process, including issue tracking, workflow, priorities, and procedures for ongoing codebase maintenance.
+Document maintenance process for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- IDE issue tracking setup (from E8:S1:T01)
-- Maintenance task workflow (from E8:S1:T02)
-- Maintenance priorities (from E8:S1:T03)
-- Documentation requirements
-- ai-dev-kit maintenance documentation practices (if adopting)
+- Requirements and specifications
+- document maintenance process requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Maintenance process documented
-- Process documentation created
-- Procedures documented
-- Best practices documented
-- Maintenance process documentation
+- document maintenance process completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Maintenance process documented comprehensively
-- [ ] Process documentation created
-- [ ] Issue tracking procedures documented
-- [ ] Workflow procedures documented
-- [ ] Priority framework documented
-- [ ] Best practices documented
-- [ ] Documentation is accessible and clear
-- [ ] Documentation supports team onboarding
-- [ ] Maintenance process documentation complete
+- [ ] Document maintenance process completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all maintenance components (issue tracking, workflow, priorities)
-2. Organize documentation structure
-3. Document IDE issue tracking setup and procedures
-4. Document maintenance task workflow
-5. Document maintenance priorities and priority framework
-6. Document maintenance procedures and best practices
-7. Create process documentation
-8. Review and refine documentation
+1. Analyze requirements for document maintenance process
+2. Design approach and plan
+3. Implement document maintenance process
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E8:S1:T01: Set up IDE issue tracking (documentation includes issue tracking)
-- E8:S1:T02: Create maintenance task workflow (documentation includes workflow)
-- E8:S1:T03: Define maintenance priorities (documentation includes priorities)
+- E8:S1:T03
 
 **Blocks:**
-- None (documentation task)
+- E8:S1:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S1:T01: Set up IDE issue tracking (documentation includes issue tracking)
-- E8:S1:T02: Create maintenance task workflow (documentation includes workflow)
-- E8:S1:T03: Define maintenance priorities (documentation includes priorities)
+- [E08:S01:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S1: Codebase Maintenance Tasks (this story)
-- E8:S2: Code Review Standards and Processes (maintenance process may reference code review)
-- E5:S04: Framework Documentation Management (documentation may be framework documentation)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.1.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Document maintenance process for the {PROJECT_NAME} project. Create comprehensiv
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

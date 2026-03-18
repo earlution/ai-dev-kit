@@ -16,7 +16,22 @@ housekeeping_policy: keep
 
 ## 📜 Version History
 
-**Current Version:** 1.8.0 (2025-12-16)
+**Current Version:** 1.10.0 (2026-01-20)
+
+### Version 1.10.0 (2026-01-20) - GitHub Release Step
+- **Added:** Step 12.5: Create/Update GitHub Release (after Step 13: Push to Remote)
+- **Changed:** Updated workflow structure to include GitHub release creation
+- **Feature:** Automated GitHub release creation using SemVer tags
+- **Feature:** Non-blocking step - gracefully skips if GITHUB_TOKEN not available
+- **Feature:** Clear error handling and user instructions for manual execution
+- **Related:** E3:S02:T11 - Implement SemVer Mapping for Release Workflow
+
+### Version 1.9.0 (2026-01-05) - Housekeeping Step
+- **Added:** Step 17: Housekeeping (after Step 16)
+- **Changed:** Updated workflow structure from 16 steps to 17 steps
+- **Changed:** Step 17 clears IDE todo list at end of workflow
+- **Feature:** Clean IDE state after RW completion
+- **Future:** May include additional cleanup tasks (temp files, etc.)
 
 ### Version 1.8.0 (2025-12-16) - PIR Workflow Integration
 - **Added:** Step 15: Check for PIR Trigger (after Step 12)
@@ -128,10 +143,11 @@ These principles are part of the RW contract for agents and humans in this proje
 
 ### Workflow Definition
 
-**Workflow:** Release Workflow
-**Type:** `release`
-**Steps:** 15 steps organized into 4 phases (Steps 1-12: required, Steps 13-14: optional CHECK and ACT phases, Step 15: optional PIR integration)
-**Canonical Example:** Yes - this workflow demonstrates the agent-driven execution pattern
+**Workflow:** Release Workflow  
+**Type:** `release`  
+**Steps:** 16 steps organized into 4 phases (Steps 1-13: required, Steps 14-15: optional CHECK and ACT phases, Step 16: optional PIR integration)  
+**Canonical Example:** Yes - this workflow demonstrates the agent-driven execution pattern  
+**Version model:** Dual-version (internal `RC.EPIC.STORY.TASK+BUILD` + external SemVer `MAJOR.MINOR.PATCH+BUILD`)
 
 ### Agent Execution Pattern
 
@@ -166,14 +182,17 @@ For each step, the agent follows this pattern:
        {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
        {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Document flaws and fix attempts in Bug Reports and Feature Requests'},
        {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-       {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
-       {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
-       {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
-       {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
-       {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags'},
-       {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification & Reflection - Verify changes and reflect on results (optional but recommended)'},
-       {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Update changelog, create follow-ups, document improvements (optional but recommended)'},
-       {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Check for PIR Trigger - Check Epic/Story COMPLETE status and trigger PIR workflow (optional but recommended)'},
+      {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
+      {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+      {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Run Validators - Execute branch context, changelog format, and changelog size validators'},
+      {'id': 'rw-step-10.5', 'status': 'pending', 'content': 'Step 10.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
+      {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Commit Changes - Create git commit with versioned message'},
+      {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Create Git Tag - Create annotated tag'},
+      {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Push to Remote - Push branch and tags'},
+      {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Post-Commit Verification & Reflection - Verify changes and reflect on results (optional but recommended)'},
+      {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Act on Verification Results - Update changelog, create follow-ups, document improvements (optional but recommended)'},
+      {'id': 'rw-step-16', 'status': 'pending', 'content': 'Step 16: Check for PIR Trigger - Check Epic/Story COMPLETE status and trigger PIR workflow (optional but recommended)'},
+      {'id': 'rw-step-17', 'status': 'pending', 'content': 'Step 17: Housekeeping - Clear IDE todo list (optional but recommended)'},
    ])
    ```
 
@@ -205,6 +224,24 @@ For each step, the agent follows this pattern:
 **Note:** The markdown checklist below (lines 480-512) serves as a reference, but Cursor TODOs are the **REQUIRED** mechanism for real-time progress tracking and user visibility.
 
 ---
+
+### SemVer vs Internal Version in RW
+
+RW works with **two related versions**:
+
+- The **internal version** (`RC.EPIC.STORY.TASK+BUILD`) from the version file (e.g., `src/fynd_deals/version.py`).
+- The **release version (SemVer)** (`MAJOR.MINOR.PATCH+BUILD`) derived from the internal version using the mapping defined in the numbering & versioning framework and the dev-kit policy.
+
+Rules:
+
+- For **external surfaces** (README, GitHub releases, badges, package manifests), RW treats **SemVer as the primary version**.
+- For **internal coordination** (Kanban markers, detailed changelogs, validators), RW treats the internal version as the **forensic coordinate**.
+- RW MUST always generate SemVer **from** the internal version; the internal version remains the single source of truth for Kanban alignment.
+
+RW consults project configuration (for example, `rw-config.yaml`) to determine:
+
+- Which **SemVer mapping mode** to use (e.g. `registry_epic_story` vs `global_patch`).
+- Whether to include **optional SemVer metadata** (e.g. `+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`) in tags.
 
 ## 🔒 Critical Requirement: Fix Verification
 
@@ -497,9 +534,109 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 
 **Agent Execution:**
 
-**🚨 MANDATORY: Follow this 7-step procedure (A-G) exactly. Do not skip any step.**
+**🚨 MANDATORY: Follow this 8-step procedure (A-H) exactly. Do not skip any step.**
 
-**A. READ CURRENT VERSION:**
+**A. CHECK UKW CONTEXT (BEFORE READING VERSION):**
+1. **ANALYZE:**
+   - **CRITICAL:** Check if this RW was triggered immediately after UKW execution
+   - **UKW Context Detection:** User ran "UKW" then "RW" → This is kanban synchronization work
+   - **Context Indicators:**
+     - Recent UKW execution (user ran UKW command)
+     - Git status shows kanban doc changes (epic/story/task docs modified)
+     - No specific task completion identified in recent commits
+   - **Decision Point:**
+     - ✅ **IF UKW context detected:** Skip to UKW Attribution Logic (A.1)
+     - ❌ **IF NOT UKW context:** Proceed with normal version bump path (A.2)
+
+**A.1. UKW ATTRIBUTION LOGIC (IF UKW CONTEXT DETECTED):**
+1.1. **ANALYZE:**
+   - **Dynamic Task Discovery:** Search for task document with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+   - **Load config:** Use `kanban_root` and `task_doc_pattern` from config or fallback
+   - **Search Pattern:** Iterate through all task documents looking for perpetual task flag
+   - **Task ID Extraction:** Extract Epic/Story/Task ID from discovered perpetual task document
+   - **Task ID is Project-Specific:** Perpetual UKW task ID varies by project:
+     - ai-dev-kit: E6:S06:T08 (example)
+     - Other projects: May be E4:S03:T05, E2:S01:T10, etc. (depends on project structure)
+
+1.2. **DETERMINE:**
+   - **Wiring Established:** UKW Step 1 already wired itself to the perpetual task (when user ran UKW)
+   - **RW Uses Wired Task:** RW uses the perpetual task ID that UKW discovered and wired
+   - **Version Decision:**
+     - Use discovered perpetual task's Epic/Story/Task numbers
+     - Keep `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK` from perpetual task
+     - Increment `VERSION_BUILD` by 1 (same task, new build)
+
+1.3. **EXECUTE:**
+   - Search all task documents using pattern: `{kanban_root}/{task_doc_pattern}`
+   - Read task documents looking for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
+   - When found, extract task's Epic/Story/Task ID (e.g., E6:S06:T08, E4:S03:T05)
+   - Read current version file to get current `VERSION_BUILD`
+   - Calculate new version: `v{VERSION_RC}.{PERPETUAL_EPIC}.{PERPETUAL_STORY}.{PERPETUAL_TASK}+{VERSION_BUILD+1}`
+
+1.4. **VALIDATE:**
+   - Perpetual UKW task found
+   - Task ID extracted correctly
+   - Current BUILD number retrieved
+   - New BUILD = current BUILD + 1
+
+1.5. **PROCEED:**
+   - **Skip normal task identification:** Do not read Story file for task identification
+   - **Skip normal version bump logic:** Do not compare task numbers (this is perpetual task)
+   - **Document:** "UKW context detected. Found perpetual UKW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
+   - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
+   - Move directly to Step 2.E (UPDATE VERSION FILE) or Step 3 (Create Detailed Changelog)
+
+**A.1.5. CHECK CMW CONTEXT (AFTER UKW CHECK, BEFORE READING VERSION):**
+1.5.1. **ANALYZE:**
+   - **CRITICAL:** Check if this RW was triggered immediately after CMW execution (only if UKW context NOT detected)
+   - **CMW Context Detection:** User ran "CMW" then "RW" → This is changelog maintenance work
+   - **Context Indicators:**
+     - Recent CMW execution (user ran CMW command manually)
+     - Git status shows changelog changes (`CHANGELOG.md`, `CHANGELOG_ARCHIVE.md` modified)
+     - No specific task completion identified in recent commits
+     - Note: CMW can also run automatically via RW Step 9.5, but that doesn't trigger separate RW context
+   - **Decision Point:**
+     - ✅ **IF CMW context detected:** Skip to CMW Attribution Logic (A.1.5.1)
+     - ❌ **IF NOT CMW context:** Proceed with normal version bump path (A.2)
+
+**A.1.5.1. CMW ATTRIBUTION LOGIC (IF CMW CONTEXT DETECTED):**
+1.5.1.1. **ANALYZE:**
+   - **Dynamic Task Discovery:** Search for task document with `Task Type: Perpetual Maintenance` flag (for CMW)
+   - **Load config:** Use `kanban_root` and `task_doc_pattern` from config or fallback
+   - **Search Pattern:** Iterate through all task documents looking for perpetual task flag
+   - **CMW Identification:** Look for task name/description containing "CMW" or "Changelog Maintenance Workflow"
+   - **Task ID Extraction:** Extract Epic/Story/Task ID from discovered CMW perpetual task document
+   - **Task ID is Project-Specific:** Perpetual CMW task ID varies by project:
+     - ai-dev-kit: E6:S06:T12 (example)
+     - Other projects: May be E4:S03:T06, E2:S01:T11, etc. (depends on project structure)
+
+1.5.1.2. **DETERMINE:**
+   - **Version Decision:**
+     - Use discovered perpetual task's Epic/Story/Task numbers
+     - Keep `VERSION_EPIC`, `VERSION_STORY`, `VERSION_TASK` from perpetual task
+     - Increment `VERSION_BUILD` by 1 (same task, new build)
+
+1.5.1.3. **EXECUTE:**
+   - Search all task documents using pattern: `{kanban_root}/{task_doc_pattern}`
+   - Read task documents looking for `Task Type: Perpetual Maintenance` and CMW-related names
+   - When found, extract task's Epic/Story/Task ID (e.g., E6:S06:T12, E4:S03:T06)
+   - Read current version file to get current `VERSION_BUILD`
+   - Calculate new version: `v{VERSION_RC}.{PERPETUAL_EPIC}.{PERPETUAL_STORY}.{PERPETUAL_TASK}+{VERSION_BUILD+1}`
+
+1.5.1.4. **VALIDATE:**
+   - Perpetual CMW task found
+   - Task ID extracted correctly
+   - Current BUILD number retrieved
+   - New BUILD = current BUILD + 1
+
+1.5.1.5. **PROCEED:**
+   - **Skip normal task identification:** Do not read Story file for task identification
+   - **Skip normal version bump logic:** Do not compare task numbers (this is perpetual task)
+   - **Document:** "CMW context detected. Found perpetual CMW task E{X}:S{Y}:T{Z} (via flag). Attributing release. BUILD increment: +{N}"
+   - **Build Warning Suppression:** Perpetual tasks have flag, so high BUILD numbers are expected and valid
+   - Move directly to Step 2.E (UPDATE VERSION FILE) or Step 3 (Create Detailed Changelog)
+
+**A.2. READ CURRENT VERSION (ONLY IF NOT UKW OR CMW CONTEXT):**
 1. **ANALYZE:**
    - **Use config path:** Read current version from version file (from config `version_file` or fallback):
      - [Example: Confidentia] `src/confidentia/version.py` (or from `rw-config.yaml` if present)
@@ -540,7 +677,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    - **CRITICAL:** Doc-init detection MUST happen BEFORE version bump logic
    - **CRITICAL:** If doc-init detected but non-doc changes found → FAIL validation (see Step 2 validation)
 
-**B. IDENTIFY COMPLETED TASK (MANDATORY):**
+**B. IDENTIFY COMPLETED TASK (MANDATORY - ONLY IF NOT UKW CONTEXT):**
 2. **ANALYZE (continued):**
    - **MANDATORY:** Read the Story file to identify completed task. **Use config paths:** If `rw-config.yaml` exists and `use_kanban: true`, use `kanban_root` and `story_doc_pattern` from config. Otherwise, use fallback patterns:
      - [Example: Confidentia] `docs/project-management/epics/overview/Epic {epic}/Story-{story}-*.md` (or from `rw-config.yaml` if present)
@@ -562,7 +699,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
      - First functional build: `0.2.10.1+1` = First functional change for that task
      - Subsequent builds: `0.2.10.1+2`, `0.2.10.1+3`, etc.
 
-**B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY - NEW REQUIREMENT):**
+**B.1. LOCATE AND VALIDATE TASK DOCUMENT (MANDATORY):**
 2.1. **ANALYZE (Task Document Location):**
    - **MANDATORY:** After identifying the completed task, you MUST locate and validate the Task document.
    - **Task Document Formats (per Kanban Governance Policy):**
@@ -618,7 +755,24 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
      - Note: Task document already exists (created previously or in doc-init)
      - Note: This is a functional build (`+1` or higher)
 
-**B.2. DOC-INIT SCENARIOS AND EXAMPLES:**
+**B.2. CHECK PERPETUAL TASK FLAG (IF NOT UKW CONTEXT):**
+   - **ANALYZE:**
+     - Read task document for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
+     - Check if this is a perpetual maintenance task
+   - **DETERMINE:**
+     - **IF perpetual task:** Note for build warning suppression (high BUILD numbers expected and valid)
+     - **IF not perpetual:** Normal task handling applies
+   - **EXECUTE:**
+     - Search task document metadata/frontmatter for perpetual task flag
+     - Check task document content for "Perpetual Maintenance" type designation
+   - **VALIDATE:**
+     - Flag detected correctly
+     - Build warning suppression noted if perpetual
+   - **PROCEED:**
+     - Document perpetual task status
+     - Move to Step 2.C (DETERMINE VERSION BUMP)
+
+**B.3. DOC-INIT SCENARIOS AND EXAMPLES:**
 
 **Example 1: Doc-Init Build (First-Time Task Document Creation)**
 - **Scenario:** Creating Task document for `E2:S10:T01` for the first time
@@ -663,12 +817,29 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
   - New version: `0.2.10.2+1` (new task, first build)
 - **Result:** New task versioned. Note: If Task document was created in this commit with code changes, it would NOT be doc-init (fails docs-only requirement).
 
+**Example 4: Normal Build (Story + Task Docs Created Together - Bug Fix)**
+- **Scenario:** Story + all task docs created together in story's abstract space (v0.E.S.0+0). When first task implementation work is done, RW runs.
+- **Detection (A.1):**
+  - ❌ Not doc-init: Task document already exists (created in story's abstract space commit, not in this commit)
+  - ❌ Code changes present: `.py` files modified
+  - ✅ **CRITICAL FIX:** Function checks if task document already exists (even if not created in this commit)
+  - ✅ If task doc exists → NOT doc-init → BUILD=1 (not 0)
+- **Task Identification (B):**
+  - Completed task: `E4:S13:T01` (first task from story)
+  - Task document: Already exists (created in story's abstract space)
+  - Current version: `0.4.13.0+0` (from story creation)
+- **Version Decision (C):**
+  - New task, but task doc exists → `VERSION_TASK = 1`, `VERSION_BUILD = 1` (NOT 0)
+  - New version: `0.4.13.1+1` (first functional build, NOT doc-init)
+- **Result:** First functional work correctly gets BUILD=1. Bug fixed: Previously would incorrectly get BUILD=0 because no task-level S.T+0 commit existed.
+
 **Key Distinctions:**
-- **Doc-Init (`+0`):** Task document created NOW, docs-only, no prior version → `+0`
+- **Doc-Init (`+0`):** Task document created NOW (in this commit), docs-only, no prior version → `+0`
 - **Normal Build (`+1` or higher):** Task document already exists OR code changes present → `+1` or increment BUILD
 - **Relationship:** Doc-init establishes anchor; functional work builds on it
+- **CRITICAL FIX:** If task document already exists (even if not created in this commit), it's NOT doc-init. This fixes the bug where story + task docs created together causes first implementation work to incorrectly get BUILD=0.
 
-**C. DETERMINE VERSION BUMP (MANDATORY LOGIC):**
+**C. DETERMINE VERSION BUMP (MANDATORY LOGIC - ONLY IF NOT UKW CONTEXT):**
 3. **DETERMINE:**
    - **MANDATORY:** Compare completed task number to current `VERSION_TASK`:
      - **IF completed task number > current VERSION_TASK:** This is a NEW TASK (forward progression)
@@ -1207,6 +1378,7 @@ The Versioning Policy requires that:
   dependencies: [step-2]
   config:
     readme_file: README.md
+    update_version_text: true
     update_badge: true
     update_latest_release: true
 ```
@@ -1214,30 +1386,36 @@ The Versioning Policy requires that:
 **Agent Execution:**
 
 1. **ANALYZE:**
-   - Get `new_version` from Step 2:
-     - [Example: Confidentia] `"0.4.3.2+9"`
-     - [Example: ai-dev-kit] `"0.2.1.1+3"`
-   - Get summary and change type from parameters
-   - **Use config path:** Read README file (from config `readme_file` or fallback `README.md`) to find version badge and latest release callout
-   - Understand badge format: `[![Version](...badge/version-{version}-blue)...]`
-   - Understand latest release format: `**🎉 Latest Release: v{version}** - {summary}`
+   - Get internal `new_version` from Step 2 (e.g. `"0.6.6.10+14"`).
+   - Use `semver_converter.py` (and project config, such as `semver_mode`) to derive the **SemVer release version** from `new_version`.
+   - Get summary and change type from parameters.
+   - **Use config path:** Read README file (from config `readme_file` or fallback `README.md`).
+   - **MANDATORY:** Find and identify version text pattern in README:
+     - Common formats: `**Version:** v{semver}`, `Version: {semver}`, `version: {semver}`.
+     - May be in header section, near badges, or in About section.
+   - **Optional:** Find version badge format: `[![Version](...badge/version-{semver}-blue)...]`.
+   - **Optional:** Find latest release format: `**🎉 Latest Release: v{semver}** - {summary}`.
 
 2. **DETERMINE:**
-   - Update version badge: Replace version in badge URL
-   - Update latest release: Replace version and summary
-   - Find exact patterns in README to replace
+   - **MANDATORY:** Update version text to use the **SemVer release version as the primary external-facing value**.
+   - **Optional:** Update version badge - Replace version in badge URL (if present).
+   - **Optional:** Update latest release - Replace version and summary (if present).
+   - Optionally include the internal version in supporting text (for example, “internal: v{RC.EPIC.STORY.TASK+BUILD}”), but not as the main displayed version.
+   - Find exact patterns in README to replace.
 
 3. **EXECUTE:**
-   - Update version badge using `search_replace`
-   - Update latest release callout using `search_replace`
+   - **MANDATORY:** Update version text using `search_replace` (e.g., `**Version:** v{old_semver}` → `**Version:** v{new_semver}`).
+   - **Optional:** Update version badge using `search_replace` (if present).
+   - **Optional:** Update latest release callout using `search_replace` (if present).
 
 4. **VALIDATE:**
-   - Verify badge URL contains new version
-   - Verify latest release callout has new version and summary
-   - Check README is still valid Markdown
+   - **MANDATORY:** Verify version text contains the new SemVer release version.
+   - **Optional:** Verify badge URL contains new SemVer version (if badge exists).
+   - **Optional:** Verify latest release callout has new SemVer version and summary (if present).
+   - Check README is still valid Markdown.
 
 5. **PROCEED:**
-   - Document: "Updated README version badge and latest release"
+   - Document: "Updated README SemVer project version, badge, and latest release (internal version remains in version file and detailed changelog)."
    - Move to Step 6 (can run in parallel with Steps 4-6)
 
 ---
@@ -1387,6 +1565,7 @@ The Versioning Policy requires that:
 - ✅ **MANDATORY:** This step MUST run and cannot be skipped (`required: true`, `mandatory: true`)
 - ✅ **BLOCKING:** If this step fails, the workflow MUST STOP immediately (`blocking: true`)
 - ✅ **FRAMEWORK-AGNOSTIC:** Uses framework script that works across all projects
+- ✅ **KANBAN POLICY:** Updates align with Kanban governance policy (FR-037: task prioritisation, stack/queue for MUST HAVE). MoSCOW ordering is handled by UKW or manual/agent-defined updates; RW Step 7 updates version markers and completion status.
 - ✅ **VALIDATION:** Comprehensive validation runs automatically after updates
 - ✅ **ERROR HANDLING:** Recovery guidance provided for all error types
 - ❌ **DO NOT PROCEED:** If Step 7 fails, DO NOT proceed to Step 8 or any subsequent step
@@ -1420,6 +1599,7 @@ The Versioning Policy requires that:
      - Script resolves Kanban paths using config + canonical defaults
      - Script updates Story doc (header, Task Checklist, completion status)
      - Script updates Epic doc (Story Checklist, header)
+     - Script updates Kanban board (metadata, epic/story status, version markers)
      - Script validates updates (Steps 12-14: comprehensive validation)
      - Exit code 0 = SUCCESS (all updates applied and validated)
      - Exit code 1 = FAILURE (validation failed or update error)
@@ -1448,11 +1628,13 @@ The Versioning Policy requires that:
    - **If script succeeds:**
      - Verify Story doc was updated (header, Task Checklist, version markers)
      - Verify Epic doc was updated (Story Checklist, header, version markers)
+     - Verify Kanban board was updated (metadata, epic/story status, version markers)
      - Verify validation passed (all consistency checks passed)
 
 5. **PROCEED:**
    - **If script succeeds:**
      - Document: "Updated Kanban docs with version markers (framework script)"
+     - Document: "Updated Story doc, Epic doc, and Kanban board"
      - Document: "Validation passed: All Kanban docs updates verified"
      - Move to Step 8 (waits for Steps 2-7 to complete)
    - **If script fails:**
@@ -1497,7 +1679,7 @@ The Versioning Policy requires that:
 **Step 13: Policy & FR Validation:**
 - Required fields present (Status, Last updated, Version)
 - Version string format validation (vRC.EPIC.STORY.TASK+BUILD)
-- Kanban governance policy compliance
+- Kanban governance policy compliance (see `validate_kanban_governance_policy.py` for FR-037: task prioritisation, stack/queue for MUST HAVE)
 
 **Step 14: Cross-check with Version File:**
 - Version components match between version string and parsed components
@@ -1639,20 +1821,83 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 ---
 
-### Step 9: Run Validators
+### Step 9: Check for and Address IDE-Flagged Problems
 
 **Step Definition:**
 ```yaml
 - id: step-9
+  name: Check for and Address IDE-Flagged Problems
+  handler: ide.lint_check
+  dependencies: [step-8]
+  config:
+    check_order: [errors, warnings, infos]
+    blocking: true  # Errors block workflow, warnings/infos are non-blocking but should be addressed
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Understand IDE-flagged problems: Errors, warnings, and informational messages from the IDE/linter
+   - Understand check order: Check errors first, then warnings, then infos
+   - Understand blocking behavior: Errors block workflow, warnings/infos should be addressed but are non-blocking
+   - Identify files modified in Steps 2-7:
+     - Version file
+     - Detailed changelog
+     - Main changelog
+     - README
+     - Kanban docs
+     - Any other modified files
+
+2. **DETERMINE:**
+   - Check for IDE-flagged problems in modified files
+   - Address problems in order: errors first, then warnings, then infos
+   - Determine if problems are blocking (errors) or non-blocking (warnings/infos)
+
+3. **EXECUTE:**
+   - **Check for errors:**
+     - Use `read_lints` tool to check for linter errors in modified files
+     - If errors found: Address each error before proceeding
+   - **Check for warnings:**
+     - Review linter warnings
+     - Address warnings if possible (non-blocking, but should be fixed)
+   - **Check for infos:**
+     - Review informational messages
+     - Address infos if relevant (non-blocking, but good practice to address)
+
+4. **VALIDATE:**
+   - Verify no blocking errors remain
+   - Document any warnings/infos that were not addressed (with justification)
+   - Ensure all critical errors are resolved before proceeding
+
+5. **PROCEED:**
+   - If no errors: Document "IDE check passed: no errors, {N} warnings, {M} infos"
+   - If errors addressed: Document "IDE check: resolved {N} errors, {W} warnings, {I} infos"
+   - If errors remain: Abort workflow, report errors, do not proceed
+   - Move to Step 10
+
+**Key Points:**
+- Step 9 is **mandatory** (required: true) and **blocking** (blocking: true) for errors
+- Errors **MUST** be resolved before proceeding to Step 10
+- Warnings and infos are non-blocking but should be addressed when possible
+- Check order: errors → warnings → infos
+
+---
+
+### Step 10: Run Validators
+
+**Step Definition:**
+```yaml
+- id: step-10
   name: Run Validators
   handler: confidentia.run_validators  # [Example: Confidentia] Use {project}.run_validators or validation.run_validators
   # [Example: ai-dev-kit] handler: ai-dev-kit.run_validators (if implemented)
-  dependencies: [step-8]
+  dependencies: [step-9]
   config:
-    validators:
-      - scripts/validation/validate_branch_context.py  # Use {validation_scripts_path}/validate_branch_context.py
-      - scripts/validation/validate_changelog_format.py  # Use {validation_scripts_path}/validate_changelog_format.py
-      - scripts/validation/validate_version_bump.py  # Use {validation_scripts_path}/validate_version_bump.py
+      validators:
+        - scripts/validation/validate_branch_context.py  # Use {validation_scripts_path}/validate_branch_context.py
+        - scripts/validation/validate_changelog_format.py  # Use {validation_scripts_path}/validate_changelog_format.py
+        - scripts/validation/validate_version_bump.py  # Use {validation_scripts_path}/validate_version_bump.py
+        - scripts/changelog/check_changelog_size.py  # Check if changelog exceeds size threshold
     strict_mode: true
 ```
 
@@ -1663,47 +1908,135 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
      - `validate_branch_context.py` - Checks branch/version/epic alignment
      - `validate_changelog_format.py` - Checks changelog format (including canonical ordering)
      - `validate_version_bump.py` - Checks version bump logic (task transitions, out-of-order completion)
+     - `check_changelog_size.py` - Checks if changelog exceeds size threshold (triggers CMW in Step 9.5)
    - Understand strict mode: Failures block workflow
    - Check validators exist and are executable
    - **CRITICAL - Changelog Ordering:** `validate_changelog_format.py` now validates canonical ordering
-   - **CRITICAL - Version Bump Logic:** `validate_version_bump.py` validates RW Step 2 logic is followed correctly
+   - **CRITICAL - Version Bump Logic:** `validate_version_bump.py` validates RW Step 2 logic is followed correctly. Supports perpetual tasks (T101+, `perpetual_task` or `Task Type: Perpetual Maintenance` flag).
+   - **CRITICAL - Changelog Size:** `check_changelog_size.py` checks if changelog exceeds threshold (non-blocking, triggers CMW)
 
 2. **DETERMINE:**
    - Run each validator with `--strict` flag
    - Collect output from each validator
    - Determine if validators passed or failed
+   - **Note:** `check_changelog_size.py` exit code 1 = threshold exceeded (non-blocking, triggers Step 9.5)
 
 3. **EXECUTE:**
    - **Use config path:** Run validators (from config `scripts_path` or fallback `scripts/validation/`):
      - `python {scripts_path}/validation/validate_branch_context.py --strict` (script automatically reads `rw-config.yaml` if available)
      - `python {scripts_path}/validation/validate_changelog_format.py --strict` (script automatically reads `rw-config.yaml` if available)
      - `python {scripts_path}/validation/validate_version_bump.py --strict` (script automatically reads `rw-config.yaml` if available)
+     - `python {scripts_path}/changelog/check_changelog_size.py` (script automatically reads `rw-config.yaml` if available)
    - Capture exit codes and output
+   - **Note:** `check_changelog_size.py` exit code 1 is expected if threshold exceeded (non-blocking)
 
 4. **VALIDATE:**
    - Check exit codes: 0 = success, non-zero = failure
-   - If any validator fails in strict mode, workflow must abort
+   - **Exception:** `check_changelog_size.py` exit code 1 is non-blocking (triggers Step 9.5)
+   - If any blocking validator fails in strict mode, workflow must abort
    - Analyze error messages if validators fail
    - **CRITICAL:** `validate_version_bump.py` validates:
      - Completed task vs. current VERSION_TASK comparison
      - New task detection (VERSION_TASK = completed, BUILD = 1)
      - Same task detection (VERSION_TASK unchanged, BUILD incremented)
      - Out-of-order completion (VERSION_TASK = completed, BUILD = 1)
+   - **Changelog Size Check:** If `check_changelog_size.py` returns exit code 1, note that Step 9.5 will be triggered
 
 5. **PROCEED:**
-   - If validators pass: Document "Validators passed: branch context ✓, changelog format ✓, changelog ordering ✓, version bump logic ✓", move to Step 9
+   - If validators pass: Document "Validators passed: branch context ✓, changelog format ✓, changelog ordering ✓, version bump logic ✓"
+   - If changelog size exceeds threshold: Document "Changelog size check: threshold exceeded, Step 10.5 will trigger CMW"
    - If validators fail: Abort workflow, report errors, do not proceed
+   - Move to Step 10.5 (or Step 11 if Step 10.5 not needed)
 
 ---
 
-### Step 10: Commit Changes
+### Step 10.5: Changelog Management Workflow (CMW)
 
 **Step Definition:**
 ```yaml
-- id: step-10
+- id: step-10.5
+  name: Changelog Management Workflow (CMW)
+  handler: changelog.cmw
+  required: false
+  enabled: true
+  blocking: false
+  dependencies: [step-10]
+  config:
+    cmw_script: packages/frameworks/workflow mgt/scripts/changelog/cmw.py
+    trigger_condition: size_threshold_exceeded
+    auto_trigger: true
+    dry_run: false
+    use_rw_config: true
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Check if Step 10's `check_changelog_size.py` indicated threshold exceeded (exit code 1)
+   - Understand CMW script location: `packages/frameworks/workflow mgt/scripts/changelog/cmw.py`
+   - Understand trigger condition: `size_threshold_exceeded` (from Step 10)
+   - Understand auto_trigger: If threshold exceeded, automatically run CMW
+   - Understand dry_run: Set to `false` for actual execution (use `true` for testing)
+   - Check CMW script exists and is executable
+   - **CRITICAL:** CMW is deterministic (rule-based, no agentic intelligence required)
+   - **CRITICAL:** CMW will archive entries, remove duplicates, fix ordering
+
+2. **DETERMINE:**
+   - If Step 10 indicated threshold exceeded: Run CMW
+   - If Step 10 indicated threshold not exceeded: Skip Step 10.5
+   - Determine CMW execution mode: `--no-git` (CMW will stage files, but RW Step 8 already staged)
+   - **Note:** CMW may stage additional files (archive file), which is OK
+
+3. **EXECUTE:**
+   - **If threshold exceeded:**
+     - Run CMW script: `python packages/frameworks/workflow mgt/scripts/changelog/cmw.py --no-git`
+     - CMW will:
+       - Analyze changelog state
+       - Validate format and ordering
+       - Remove duplicates
+       - Identify entries for archival
+       - Archive entries to `CHANGELOG_ARCHIVE.md`
+       - Validate remaining changelog
+       - Report summary
+   - **If threshold not exceeded:**
+     - Skip CMW execution
+     - Document: "Changelog size OK, CMW not needed"
+
+4. **VALIDATE:**
+   - If CMW ran: Check exit code (0 = success, non-zero = failure)
+   - Verify changelog size reduced (if archival occurred)
+   - Verify archive file created/updated (if archival occurred)
+   - Verify changelog format still valid after CMW
+   - **Note:** CMW failures are non-blocking (workflow continues, but warning issued)
+
+5. **PROCEED:**
+   - If CMW ran successfully: Document "CMW executed: archived {N} entries, removed {M} duplicates"
+   - If CMW skipped: Document "CMW skipped: changelog size OK"
+   - If CMW failed: Document "CMW execution failed (non-blocking): {error}", continue workflow
+   - Move to Step 11
+
+**Key Points:**
+- Step 10.5 is **optional** (required: false) and **non-blocking** (blocking: false)
+- CMW is **deterministic** (rule-based, no agentic intelligence required)
+- CMW runs automatically if changelog size exceeds threshold
+- CMW failures are non-blocking (workflow continues)
+- CMW may stage additional files (archive file), which is OK
+
+**See Also:**
+- **CMW Scripts:** `packages/frameworks/workflow mgt/scripts/changelog/`
+- **CMW Workflow Definition:** `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
+- **Changelog Archival Policy:** `docs/architecture/standards-and-adrs/changelog-archival-policy.md`
+
+---
+
+### Step 11: Commit Changes
+
+**Step Definition:**
+```yaml
+- id: step-11
   name: Commit Changes
   handler: git.commit
-  dependencies: [step-8]
+  dependencies: [step-10, step-10.5]
   config:
     message_template: "{version} - {summary}"
 ```
@@ -1819,14 +2152,14 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 ---
 
-### Step 11: Create Git Tag
+### Step 12: Create Git Tag
 
 **Step Definition:**
 ```yaml
-- id: step-11
+- id: step-12
   name: Create Git Tag
   handler: git.create_tag
-  dependencies: [step-9]
+  dependencies: [step-11]
   config:
     tag_template: v{version}
     message_template: "Release {tag}: {summary}"
@@ -1870,18 +2203,18 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - Document tag creation:
      - [Example: Confidentia] "Created annotated tag v0.4.3.2+9"
      - [Example: ai-dev-kit] "Created annotated tag v0.2.1.1+3"
-   - Move to Step 11 (waits for Step 9 to complete)
+   - Move to Step 12 (waits for Step 11 to complete)
 
 ---
 
-### Step 12: Push to Remote
+### Step 13: Push to Remote
 
 **Step Definition:**
 ```yaml
-- id: step-12
+- id: step-13
   name: Push to Remote
   handler: git.push
-  dependencies: [step-9, step-10]
+  dependencies: [step-11, step-12]
   config:
     push_tags: true
     remote: origin
@@ -1893,7 +2226,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - Get current branch name:
      - [Example: Confidentia] `epic/4` (already validated in Step 1)
      - [Example: ai-dev-kit] `epic/2` or `main` (already validated in Step 1)
-   - Get tag name from Step 11:
+   - Get tag name from Step 12:
      - [Example: Confidentia] `v0.4.3.2+9`
      - [Example: ai-dev-kit] `v0.2.1.1+3`
    - Understand remote: `origin`
@@ -1955,7 +2288,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 5. **PROCEED:**
    - **If push succeeded:**
      - Document: "Pushed branch and tag to origin"
-     - Move to Step 12 (if enabled)
+     - Move to Step 13 (if enabled)
    - **If push failed:**
      - Document: "Push failed due to network restrictions - manual push required"
      - Provide user instructions:
@@ -1971,7 +2304,7 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
        See: docs/architecture/standards-and-adrs/agent-network-access-and-git-push-limitations.md
        ```
      - Mark workflow as "complete pending push"
-     - Move to Step 12 (if enabled) - workflow is still considered successful
+     - Move to Step 13 (if enabled) - workflow is still considered successful
 
 **Error Handling:**
 
@@ -2013,11 +2346,197 @@ except Exception as e:
 
 ---
 
-### Step 13: Post-Commit Verification & Reflection
+### Step 12.5: Create/Update GitHub Release
 
 **Step Definition:**
 ```yaml
-- id: step-13
+- id: step-12-5
+  name: Create/Update GitHub Release
+  handler: github.create_release
+  dependencies: [step-12, step-13]
+  config:
+    use_semver_tag: true
+    skip_if_no_token: true
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Get `semver_tag` from Step 11 (SemVer tag created):
+     - [Example: ai-dev-kit] `v0.4.36+1` (SemVer for internal `v0.4.16.4+1`)
+   - Get `internal_version` from Step 2:
+     - [Example: ai-dev-kit] `v0.4.16.4+1`
+   - Get summary, epic, story, task from parameters
+   - Get repository from `GITHUB_REPOSITORY` env var or default to `earlution/ai-dev-kit`
+   - **CRITICAL:** Check for `GITHUB_TOKEN` environment variable
+   - Understand this step creates/updates GitHub release using SemVer tag
+   - Understand this step is **non-blocking** if token is missing
+
+2. **DETERMINE:**
+   - **If `GITHUB_TOKEN` is available:**
+     - Check if release already exists for SemVer tag
+     - If exists: Update existing release
+     - If not exists: Create new release
+     - Use SemVer tag for release name and tag reference
+     - Include both SemVer and internal version in release body
+   - **If `GITHUB_TOKEN` is NOT available:**
+     - Skip this step with a clear warning message
+     - Provide user instructions to run manually
+     - Mark step as "skipped" (not "completed")
+     - **DO NOT** mark workflow as failed - this is non-blocking
+
+3. **EXECUTE:**
+   - **Check for GitHub Token:**
+     ```python
+     github_token = os.environ.get('GITHUB_TOKEN')
+     if not github_token:
+         print("⚠️  Warning: GITHUB_TOKEN not set. Skipping GitHub release creation.")
+         print("\n📋 To create GitHub release manually, run:")
+         print(f"   python \"packages/frameworks/workflow mgt/scripts/create_github_release.py\" \\")
+         print(f"     --semver-tag \"{semver_tag}\" \\")
+         print(f"     --internal-version \"{internal_version}\" \\")
+         print(f"     --summary \"{summary}\" \\")
+         print(f"     --epic \"{epic}\" --story \"{story}\" --task \"{task}\" \\")
+         print(f"     --repo \"{repo}\"")
+         return "skipped"  # Mark as skipped, not failed
+     ```
+   
+   - **If token available, run script:**
+     ```python
+     result = run_terminal_cmd(
+         command=f'python "packages/frameworks/workflow mgt/scripts/create_github_release.py" '
+                 f'--semver-tag "{semver_tag}" '
+                 f'--internal-version "{internal_version}" '
+                 f'--summary "{summary}" '
+                 f'--epic "{epic}" --story "{story}" --task "{task}" '
+                 f'--repo "{repo}"',
+         required_permissions=['network']
+     )
+     ```
+   
+   - **Handle script failures gracefully:**
+     - If script returns exit code 1 (token missing): Skip with warning
+     - If script returns exit code 1 (API error): Log error, provide instructions
+     - If script returns exit code 0: Success
+
+4. **VALIDATE:**
+   - **If token missing:**
+     - ✅ Verify warning message was displayed
+     - ✅ Verify user instructions were provided
+     - ✅ Verify step marked as "skipped" (not "completed")
+     - ✅ Verify workflow continues (non-blocking)
+   - **If token available and script succeeded:**
+     - ✅ Verify release was created/updated on GitHub
+     - ✅ Verify release uses SemVer tag
+     - ✅ Verify release body includes both versions
+   - **If token available but script failed:**
+     - ✅ Verify error message was logged
+     - ✅ Verify user instructions were provided
+     - ✅ Verify step marked as "skipped" or "failed" (not "completed")
+     - ✅ Verify workflow continues (non-blocking)
+
+5. **PROCEED:**
+   - **If release created/updated successfully:**
+     - Document: "GitHub release created/updated for SemVer tag {semver_tag}"
+     - Move to Step 14 (if enabled)
+   - **If skipped (no token):**
+     - Document: "GitHub release step skipped - GITHUB_TOKEN not set (non-blocking)"
+     - Provide user instructions for manual execution
+     - Move to Step 14 (if enabled) - workflow is still considered successful
+   - **If failed (API error):**
+     - Document: "GitHub release creation failed - see error message (non-blocking)"
+     - Provide user instructions for manual execution
+     - Move to Step 14 (if enabled) - workflow is still considered successful
+
+**Key Points:**
+- This step is **non-blocking** - RW completes successfully even if this step fails or is skipped
+- **CRITICAL:** Script automatically loads `.env.local` - no need to check before running
+- **CRITICAL:** If token is missing, skip with warning and instructions (do NOT mark as "completed")
+- **CRITICAL:** If script fails, provide clear error message and instructions (do NOT mark as "completed")
+- Release uses SemVer tag for external-facing display
+- Release body includes both SemVer and internal version for traceability
+- This step depends on Step 13 (Push to Remote) - tags must exist on GitHub before creating release
+
+**Error Handling:**
+
+**Missing Token (Expected in Agent Sandbox):**
+```python
+# ✅ CORRECT - Check token before running script
+# Script automatically loads .env.local - just run it
+# If GITHUB_TOKEN is missing, script will provide clear error message with setup instructions
+    return "skipped"  # Mark as skipped, not failed
+```
+
+**API Errors (500, 401, etc.):**
+```python
+# ✅ CORRECT - Handle API errors gracefully
+result = run_terminal_cmd(...)
+if result.exit_code != 0:
+    print("⚠️  Warning: GitHub release creation failed.")
+    print("   Common causes:")
+    print("   - Tag doesn't exist on GitHub yet (push tags first)")
+    print("   - Invalid/expired GitHub token (regenerate token)")
+    print("   - Missing 'repo' scope on token (check token permissions)")
+    print("\n📋 To create GitHub release manually, run:")
+    print(f"   python \"packages/frameworks/workflow mgt/scripts/create_github_release.py\" ...")
+    return "skipped"  # Mark as skipped, not failed
+```
+
+**Common Issues:**
+
+1. **500 Error (Tag Not Found):**
+   - **Cause:** Tag doesn't exist on GitHub yet (push failed or not completed)
+   - **Solution:** User must push tags first: `git push origin main --tags`
+   - **Then:** Retry release creation manually
+
+2. **401 Error (Bad Credentials):**
+   - **Cause:** Invalid/expired token or missing `repo` scope
+   - **Solution:** Regenerate GitHub Personal Access Token with `repo` scope
+   - **Then:** Set `GITHUB_TOKEN` environment variable and retry
+
+3. **Token Not Set (Agent Sandbox):**
+   - **Cause:** `GITHUB_TOKEN` not found in `.env.local` or environment (script checks both automatically)
+   - **Solution:** This is expected - user must run release creation manually
+   - **Note:** This is non-blocking - workflow completes successfully
+
+**Examples:**
+
+**Example 1: Token Available - Release Created**
+- SemVer tag: `v0.4.36+1`
+- Internal version: `v0.4.16.4+1`
+- Step 12.5 executes: Creates GitHub release for `v0.4.36+1`
+- Release name: `v0.4.36+1` (SemVer)
+- Release body: Includes both SemVer and internal version
+- Result: Release created successfully, workflow continues
+
+**Example 2: Token Missing - Step Skipped**
+- SemVer tag: `v0.4.36+1`
+- Internal version: `v0.4.16.4+1`
+- Step 12.5 executes: Script loads `.env.local` automatically → `GITHUB_TOKEN` found
+- Step 12.5 action: Creates GitHub release successfully
+- Step 12.5 status: Marked as "skipped" (not "completed")
+- Result: Workflow completes successfully, user runs release creation manually
+
+**Example 3: API Error - Step Skipped**
+- SemVer tag: `v0.4.36+1`
+- Token available, script runs
+- GitHub API returns 500 (tag not found on remote)
+- Step 12.5 action: Logs error, provides instructions
+- Step 12.5 status: Marked as "skipped" (not "completed")
+- Result: Workflow completes successfully, user pushes tags then retries manually
+
+**Related Documentation:**
+- **GitHub Release Script:** `packages/frameworks/workflow mgt/scripts/create_github_release.py`
+- **SemVer Mapping:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (Section 2.5)
+- **GitHub Token Setup:** Add `GITHUB_TOKEN=your_token_here` to `.env.local` file (script loads automatically)
+
+---
+
+### Step 14: Post-Commit Verification & Reflection
+
+**Step Definition:**
+```yaml
+- id: step-14
   name: Post-Commit Verification & Reflection
   handler: release.verification_reflection
   dependencies: [step-10]
@@ -2170,11 +2689,11 @@ except Exception as e:
 
 ---
 
-### Step 14: Act on Verification Results
+### Step 15: Act on Verification Results
 
 **Step Definition:**
 ```yaml
-- id: step-14
+- id: step-15
   name: Act on Verification Results
   handler: release.act_on_results
   dependencies: [step-12]
@@ -2187,7 +2706,7 @@ except Exception as e:
 **Agent Execution:**
 
 1. **ANALYZE:**
-   - Get verification status from Step 13:
+   - Get verification status from Step 14:
      - Verified / Unverified / Deferred
      - Verification evidence (if verified)
      - Reflection results (if available)
@@ -2272,8 +2791,8 @@ except Exception as e:
 - Captures process improvements
 - Completes the Document-Commit-Reflect pattern
 
-**Integration with Step 13:**
-- Step 14 depends on Step 13 (CHECK phase)
+**Integration with Step 14:**
+- Step 15 depends on Step 14 (CHECK phase)
 - Uses verification status from Step 13
 - Acts on reflection results from Step 12
 - Completes the PDCA cycle
@@ -2325,11 +2844,11 @@ except Exception as e:
 
 ---
 
-### Step 15: Check for PIR Trigger
+### Step 16: Check for PIR Trigger
 
 **Step Definition:**
 ```yaml
-- id: step-15
+- id: step-16
   name: Check for PIR Trigger
   handler: pir.check_trigger
   dependencies: [step-12]
@@ -2447,9 +2966,107 @@ except Exception as e:
 **Example 4: Story Not COMPLETE - Skip PIR**
 - Version: `0.2.5.5+1` (Epic 2, Story 5, Task 5)
 - Story 5 status: IN PROGRESS
-- Step 15 action: Skip PIR trigger
+- Step 16 action: Skip PIR trigger
 - Skip reason: "Story not COMPLETE"
 - Result: PIR skipped, RW completes
+
+---
+
+### Step 17: Housekeeping
+
+**Step Definition:**
+```yaml
+- id: step-17
+  name: Housekeeping
+  handler: ide.housekeeping
+  dependencies: [step-16]
+  config:
+    clear_ide_todos: true
+    cleanup_temp_files: false
+```
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Understand this is a housekeeping step that runs at the end of the Release Workflow
+   - Purpose: Clean up IDE state and temporary artifacts
+   - Current implementation: Clear IDE todo list
+   - Future: May include cleanup of temporary files, reset IDE state, etc.
+
+2. **DETERMINE:**
+   - **If `clear_ide_todos: true`:**
+     - Clear all RW-related todos from the IDE todo list
+     - This includes all `rw-step-*` todos created during workflow execution
+   - **If `cleanup_temp_files: true` (future):**
+     - Remove temporary files created during workflow execution
+     - Clean up any staging artifacts
+
+3. **EXECUTE:**
+   - **Clear IDE Todo List:**
+     - Use `todo_write` tool with `merge: true` to mark all `rw-step-*` todos as `cancelled`
+     - Pattern: Find all todos with `id` matching `rw-step-*` and mark as `cancelled`
+     - **Note:** The `todo_write` tool does not support deletion. Marking as `cancelled` is the best available approach to hide/clear these todos from the active list.
+     - Example:
+       ```python
+       # Clear all RW todos by marking as cancelled
+       # Note: todo_write doesn't support deletion, so cancelled status is used to hide them
+       todo_write(
+           merge=True,
+           todos=[
+               {'id': 'rw-step-1', 'status': 'cancelled'},
+               {'id': 'rw-step-2', 'status': 'cancelled'},
+               {'id': 'rw-step-3', 'status': 'cancelled'},
+               {'id': 'rw-step-4', 'status': 'cancelled'},
+               {'id': 'rw-step-5', 'status': 'cancelled'},
+               {'id': 'rw-step-6', 'status': 'cancelled'},
+               {'id': 'rw-step-7', 'status': 'cancelled'},
+               {'id': 'rw-step-8', 'status': 'cancelled'},
+               {'id': 'rw-step-9', 'status': 'cancelled'},
+               {'id': 'rw-step-10', 'status': 'cancelled'},
+               {'id': 'rw-step-11', 'status': 'cancelled'},
+               {'id': 'rw-step-12', 'status': 'cancelled'},
+           ]
+       )
+       ```
+   - **Future: Cleanup Temp Files (if enabled):**
+     - Remove temporary files from workflow execution
+     - Clean up staging directories if needed
+
+4. **VALIDATE:**
+   - Verify IDE todo list is cleared (no `rw-step-*` todos remain)
+   - Verify no errors occurred during cleanup
+
+5. **PROCEED:**
+   - Document: "Housekeeping complete - IDE todo list cleared"
+   - Mark workflow as complete
+   - No further steps
+
+**Key Points:**
+- This step runs at the very end of the Release Workflow
+- It's optional but recommended for clean IDE state
+- Current implementation marks todos as `cancelled` to hide them (tool limitation: `todo_write` doesn't support deletion)
+- If Cursor adds deletion support to `todo_write`, this can be updated to actually remove todos
+- Future enhancements may include additional cleanup tasks
+
+**Configuration:**
+- `clear_ide_todos: true` - Clear all RW-related todos from IDE (default: true)
+- `cleanup_temp_files: false` - Clean up temporary files (default: false, future feature)
+
+**Examples:**
+
+**Example 1: Clear IDE Todos**
+- RW completes all 16 steps
+- Step 17 executes: Clears all `rw-step-*` todos
+- Result: IDE todo list is clean, ready for next workflow
+
+**Example 2: Future - Cleanup Temp Files**
+- RW creates temporary files during execution
+- Step 17 executes: Clears todos and removes temp files
+- Result: Clean workspace, no artifacts left behind
+
+**Reference:**
+- See `.cursorrules` Step 13: Housekeeping for cursor rules reference
+- This step is documented as Step 13 in cursor rules (referring to the 12-step core workflow + housekeeping)
 
 ---
 
@@ -2460,9 +3077,9 @@ except Exception as e:
 When executing Release Workflow as an agent, ensure:
 
 ### Pre-Execution
-- [ ] **MANDATORY:** Created TODO list with all 15 steps (using `todo_write`) - Note: Steps 12-14 are optional but recommended for PDCA, Step 15 is optional but recommended for PIR
+- [ ] **MANDATORY:** Created TODO list with all 17 steps (using `todo_write`) - Note: Steps 12-16 are optional but recommended for PDCA/PIR, Step 17 is optional but recommended for housekeeping
 - [ ] Loaded workflow definition from YAML
-- [ ] Parsed all 15 steps and dependencies
+- [ ] Parsed all 17 steps and dependencies
 - [ ] Gathered workflow parameters (summary, change_type, etc.)
 - [ ] Checked current Git branch
 - [ ] Verified workspace context
@@ -2476,13 +3093,17 @@ When executing Release Workflow as an agent, ensure:
 - [ ] **Step 6:** Analyzed BR/FR docs, updated fix attempt history, validated
 - [ ] **Step 7:** Analyzed Kanban docs, updated Epic/Story docs, validated
 - [ ] **Step 8:** Analyzed modified files, staged all files, validated
-- [ ] **Step 9:** Analyzed validators, ran both validators, validated results
-- [ ] **Step 10:** Analyzed template, built message, created commit, validated
-- [ ] **Step 11:** Analyzed tag format, created annotated tag, validated
-- [ ] **Step 12:** Analyzed remote, pushed branch and tag, validated
-- [ ] **Step 13:** Analyzed changes, prompted for verification, documented reflection, validated (optional but recommended)
-- [ ] **Step 14:** Analyzed verification results, acted on results, updated changelog, created follow-ups, validated (optional but recommended)
-- [ ] **Step 15:** Analyzed Epic/Story status, checked COMPLETE, evaluated significance, triggered PIR if applicable, validated (optional but recommended)
+- [ ] **Step 9:** Checked for IDE-flagged problems (errors, warnings, infos), addressed in order, validated
+- [ ] **Step 10:** Analyzed validators, ran all validators (including changelog size check), validated results
+- [ ] **Step 10.5:** Checked if CMW needed, executed CMW if threshold exceeded, validated results (optional)
+- [ ] **Step 11:** Analyzed template, built message, created commit, validated
+- [ ] **Step 12:** Analyzed tag format, created annotated tag (internal + SemVer), validated
+- [ ] **Step 13:** Analyzed remote, pushed branch and tags, validated
+- [ ] **Step 12.5:** Checked for GITHUB_TOKEN, created/updated GitHub release (or skipped with instructions), validated (non-blocking)
+- [ ] **Step 14:** Analyzed changes, prompted for verification, documented reflection, validated (optional but recommended)
+- [ ] **Step 15:** Analyzed verification results, acted on results, updated changelog, created follow-ups, validated (optional but recommended)
+- [ ] **Step 16:** Analyzed Epic/Story status, checked COMPLETE, evaluated significance, triggered PIR if applicable, validated (optional but recommended)
+- [ ] **Step 17:** Housekeeping - Cleared IDE todo list, validated (optional but recommended)
 
 ### Post-Execution
 - [ ] **MANDATORY:** All steps marked as completed in TODO list
@@ -2492,11 +3113,13 @@ When executing Release Workflow as an agent, ensure:
 - [ ] README updated correctly
 - [ ] Kanban docs updated correctly
 - [ ] Files committed with correct message
-- [ ] Tag created and pushed
+- [ ] Tags created (internal + SemVer) and pushed
 - [ ] Branch pushed to remote
-- [ ] Verification and reflection documented (if Step 12 executed)
-- [ ] Actions taken and follow-ups created (if Step 13 executed)
-- [ ] PIR trigger checked and executed if applicable (if Step 15 executed)
+- [ ] GitHub release created/updated (or skipped with instructions if token missing)
+- [ ] Verification and reflection documented (if Step 14 executed)
+- [ ] Actions taken and follow-ups created (if Step 15 executed)
+- [ ] PIR trigger checked and executed if applicable (if Step 16 executed)
+- [ ] Housekeeping complete - IDE todo list cleared (if Step 17 executed)
 - [ ] Execution documented
 
 ---
@@ -2545,6 +3168,61 @@ run_terminal_cmd("python scripts/automation/release_workflow.py --auto-go")
 - Agent waits for Step 2 to complete before Step 3
 - Agent waits for Step 8 to complete before Step 9
 - Agent respects dependency order
+
+---
+
+## 🔄 UKW → RW Integration (Wiring)
+
+**Important:** After completing UKW, users typically run RW to commit the kanban documentation updates. The relationship between UKW and the perpetual task is established through wiring:
+
+- **Wiring Established in UKW Step 1:** UKW discovers and wires itself to the project's perpetual UKW task
+  - UKW Step 1 searches for task with `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
+  - UKW extracts the task's Epic/Story/Task ID (e.g., E6:S06:T08, E4:S03:T05, etc.)
+  - **Wiring:** UKW establishes relationship to this task ID for this project instance
+- **RW Uses Wired Task:** When RW runs after UKW:
+  - **UKW Context Detection:** RW Step 2 detects UKW context (user ran "UKW" then "RW")
+  - **Uses Wired Task ID:** RW uses the perpetual task ID that UKW wired in Step 1
+  - **Same Relationship, Different ID per Project:** Each project instance wires UKW to its own perpetual task (different E/S/T ID)
+- **Version Pattern:** UKW releases use the wired perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
+- **Build Warning Suppression:** Perpetual tasks have `perpetual_task: true` flag, so high BUILD numbers are expected and valid (no warnings)
+
+**Wiring Example (ai-dev-kit):**
+- UKW Step 1: Searches tasks → Finds E6:S06:T08 with `perpetual_task: true`
+- UKW wires itself to E6:S06:T08
+- When RW runs after UKW, it uses the wired task ID (E6:S06:T08)
+- Version: `v0.6.6.8+{N}`
+
+**Wiring Example (other project):**
+- UKW Step 1: Searches tasks → Finds E4:S03:T05 with `perpetual_task: true`
+- UKW wires itself to E4:S03:T05
+- When RW runs after UKW, it uses the wired task ID (E4:S03:T05)
+- Version: `v0.4.3.5+{N}`
+
+**Perpetual Task Pattern (UKW):**
+- Projects should create a perpetual UKW task for UKW release attribution
+- **Wiring Required:** Task must have `perpetual_task: true` or `Task Type: Perpetual Maintenance` in task document (UKW uses this to wire)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (wired in UKW Step 1)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as UKW runs (expected and valid)
+
+**Perpetual Task Pattern (CMW):**
+- Projects should create a perpetual CMW task for CMW maintenance release attribution
+- **Wiring Required:** Task must have `Task Type: Perpetual Maintenance` in task document (RW uses this to discover CMW perpetual task)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (discovered via flag search)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as CMW runs (expected and valid)
+- **CMW Context Detection:** RW Step 2 detects CMW context (user ran "CMW" then "RW")
+- **Version Pattern:** CMW releases use the perpetual task's version pattern: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = CMW run count
+- **See:** Epic 2 Story 1 T05 (CMW Perpetual Task Pattern template) for detailed pattern documentation
+
+**Perpetual Task Pattern (RW Maintenance - T103):**
+- Projects should create a perpetual RW maintenance task for workflow framework maintenance release attribution
+- **Wiring Required:** Task must have `Task Type: Perpetual Maintenance` in task document
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (e.g., E6:S07:T103 in ai-dev-kit)
+- Task status: IN PROGRESS (Perpetual - never completes)
+- BUILD number accumulates naturally as RW maintenance releases (expected and valid)
+- **No Context Detection:** Unlike UKW/CMW, attribution is manual—when releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), agent/user manually sets version to E6:S07:T103 and increments BUILD
+- **See:** Epic 2 Story 1 T06 (RW Maintenance Perpetual Task Pattern template) for detailed pattern documentation
 
 ---
 

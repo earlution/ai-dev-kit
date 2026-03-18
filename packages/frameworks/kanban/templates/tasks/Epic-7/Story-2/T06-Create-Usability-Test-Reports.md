@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 2, Task 6: Create Usability Test Reports
+# Epic 7, Story 2, Task 6: Create usability test reports
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.7.2.6+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.2.6+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.2.6+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S2:T6`)
+**Format:** `E7:S2:T6` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S02:T06`
 
@@ -28,89 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Create usability test reports for the {PROJECT_NAME} project. Develop comprehensive reports that document testing process, findings, and outcomes for stakeholders and team members.
+Create usability test reports for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Usability test scenarios (from E7:S2:T01)
-- Test results analysis (from E7:S2:T04)
-- Identified usability issues (from E7:S2:T05)
-- Testing session data (from E7:S2:T03)
-- Report format requirements
-- ai-dev-kit UXR report practices (if adopting)
+- Requirements and specifications
+- create usability test reports requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Usability test reports created
-- Report structure defined
-- Report content documented
-- Report visualizations (if applicable)
-- Report documentation
+- create usability test reports completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Usability test reports created
-- [ ] Report structure defined and consistent
-- [ ] Report content comprehensive and clear
-- [ ] Reports include test scenarios and methodology
-- [ ] Reports include findings and analysis
-- [ ] Reports include identified issues
-- [ ] Report visualizations created (if applicable)
-- [ ] Reports are accessible to stakeholders
+- [ ] Create usability test reports completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review all testing components
-2. Design report structure
-3. Organize report content
-4. Document testing methodology and scenarios
-5. Document test results and analysis
-6. Document identified issues
-7. Create report visualizations (if applicable)
-8. Write report sections
-9. Review and refine reports
+1. Analyze requirements for create usability test reports
+2. Design approach and plan
+3. Implement create usability test reports
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S2:T01: Design usability test scenarios (reports reference scenarios)
-- E7:S2:T04: Analyze usability test results (reports include analysis)
-- E7:S2:T05: Identify usability issues and pain points (reports include issues)
+- E7:S2:T05
 
 **Blocks:**
-- E7:S2:T07: Document usability recommendations (recommendations may reference reports)
+- E7:S2:T07
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T04, T05)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S2:T01: Design usability test scenarios (reports reference scenarios)
-- E7:S2:T04: Analyze usability test results (reports include analysis)
-- E7:S2:T05: Identify usability issues and pain points (reports include issues)
-- E7:S2:T07: Document usability recommendations (recommendations may reference reports)
+- [E07:S02:T06: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S2: Usability Testing and Validation (this story)
-- E7:S5: UX Insights and Recommendations (reports inform insights)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.2.6+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -119,3 +108,27 @@ Create usability test reports for the {PROJECT_NAME} project. Develop comprehens
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

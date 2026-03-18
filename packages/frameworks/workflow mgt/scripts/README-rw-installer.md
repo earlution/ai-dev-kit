@@ -140,7 +140,7 @@ kanban_root: docs/project-management/kanban
 ### `.cursorrules` RW Trigger Section
 Updated RW trigger section with paths substituted from config.
 
-### `workflows/release-workflow.yaml`
+### `workflows/release-workflow/release-workflow.yaml`
 Patched to use config values instead of hardcoded paths.
 
 ---
@@ -168,7 +168,7 @@ Ensure you're running from the workflow mgt package directory, or adjust paths.
 The installer skips updating `.cursorrules` if it already contains the RW trigger. Manually review and update if needed.
 
 ### "Workflow file not found"
-Copy `workflows/release-workflow.yaml` to your project, or create it from a template.
+Copy `workflows/release-workflow/release-workflow.yaml` to your project, or create it from a template.
 
 ---
 

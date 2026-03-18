@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 1, Task 2: Recruit Research Participants
+# Epic 7, Story 1, Task 2: Recruit research participants
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.7.1.2+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.7.1.2+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.7.1.2+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E7:S1:T2`)
+**Format:** `E7:S1:T2` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E07:S01:T02`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Recruit research participants for the {PROJECT_NAME} project. Identify, screen, and recruit appropriate participants for user research activities to ensure representative and relevant research outcomes.
+Recruit research participants for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Research objectives and questions (from E7:S1:T01)
-- Target user characteristics
-- Participant criteria and screening requirements
-- Recruitment channels and methods
-- Recruitment resources and budget
-- ai-dev-kit UXR recruitment practices (if adopting)
+- Requirements and specifications
+- recruit research participants requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Participant recruitment plan
-- Participant screening criteria
-- Recruited participants
-- Recruitment documentation
-- Participant database/contact list
+- recruit research participants completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Participant recruitment plan created
-- [ ] Participant screening criteria defined
-- [ ] Appropriate participants recruited
-- [ ] Participants meet screening criteria
-- [ ] Sufficient number of participants recruited
-- [ ] Recruitment documentation complete
-- [ ] Participant database/contact list maintained
-- [ ] Participants represent target user base
+- [ ] Recruit research participants completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review research objectives and questions
-2. Define target user characteristics
-3. Establish participant screening criteria
-4. Identify recruitment channels and methods
-5. Create participant recruitment plan
-6. Recruit participants through selected channels
-7. Screen participants against criteria
-8. Maintain participant database/contact list
-9. Document recruitment process and outcomes
-10. Review and refine recruitment approach
+1. Analyze requirements for recruit research participants
+2. Design approach and plan
+3. Implement recruit research participants
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E7:S1:T01: Define research objectives and questions (recruitment aligns with objectives)
+- E7:S1:T01
 
 **Blocks:**
-- E7:S1:T03: Conduct user interviews (interviews require participants)
-- E7:S1:T04: Conduct user surveys/questionnaires (surveys require participants)
+- E7:S1:T03
 
-**Parallel Development Candidacy:** Blocked (depends on T01)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E7:S1:T01: Define research objectives and questions (recruitment aligns with objectives)
-- E7:S1:T03: Conduct user interviews (interviews require participants)
-- E7:S1:T04: Conduct user surveys/questionnaires (surveys require participants)
+- [E07:S01:T02: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E7:S1: User Research and Discovery (this story)
-- E7:S2: Usability Testing and Validation (testing may require participants)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.2+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Recruit research participants for the {PROJECT_NAME} project. Identify, screen, 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

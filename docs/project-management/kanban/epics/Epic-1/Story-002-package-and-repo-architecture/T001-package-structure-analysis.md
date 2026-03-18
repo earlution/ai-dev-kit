@@ -53,6 +53,7 @@ packages/frameworks/
   - `cursorrules-rw-trigger-section.md` (Cursor rules section)
   - `README.md` (package documentation)
 
+
 #### Numbering & Versioning (`numbering & versioning/`)
 - **Purpose:** Semantic versioning and numbering strategies
 - **Key Files:**
@@ -64,6 +65,7 @@ packages/frameworks/
   - `kanban-governance-policy.md` (Kanban governance with versioning)
   - `README.md` (package documentation)
 
+
 #### Kanban (`kanban/`)
 - **Purpose:** Kanban governance, templates, and integration
 - **Key Files:**
@@ -74,6 +76,7 @@ packages/frameworks/
   - `integration/workflow-management-integration.md` (workflow integration)
   - `FR_BR_INTAKE_GUIDE.md`, `FR_BR_INTAKE_AGENT_GUIDE.md`, etc. (intake guides)
   - `README.md` (package documentation)
+
 
 ---
 
@@ -87,6 +90,7 @@ packages/frameworks/
 - **Documentation:** Explicitly stated in `workflow mgt/README.md`:
   > **Soft / optional companions:**
   > - `packages/frameworks/numbering & versioning/` — provides a portable policy set for the version schema that this package uses
+
 
 #### Kanban → Numbering & Versioning
 - **Type:** Integration (not hard dependency)
@@ -136,6 +140,7 @@ packages/frameworks/
 - **Examples:**
   - Numbering & Versioning doesn't explicitly state it's standalone
   - Kanban doesn't clearly state it can work without other packages
+
 - **Impact:** Users may think they need all packages when they only need one
 - **Recommendation:** Add explicit "Standalone Usage" and "Dependencies" sections to all package READMEs
 
@@ -145,6 +150,7 @@ packages/frameworks/
   - Workflow Management has explicit "Modularity & Dependencies" section
   - Numbering & Versioning mentions portability but not modularity
   - Kanban mentions compatibility but not standalone usage
+
 - **Impact:** Confusion about package independence
 - **Recommendation:** Standardize modularity documentation across all packages
 
@@ -155,6 +161,7 @@ packages/frameworks/
 - **Location:**
   - `workflow mgt/docs/architecture/standards-and-adrs/versioning-policy.md`
   - `numbering & versioning/versioning-policy.md`
+
 - **Impact:** Potential confusion about which is authoritative
 - **Recommendation:** Document which package's versioning policy should be used when using both packages together
 

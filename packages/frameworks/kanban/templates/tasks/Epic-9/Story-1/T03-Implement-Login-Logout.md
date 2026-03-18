@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 1, Task 3: Implement Login/Logout
+# Epic 9, Story 1, Task 3: Implement login/logout
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.1.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.1.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.1.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S1:T3`)
+**Format:** `E9:S1:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S01:T03`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement login/logout for the {PROJECT_NAME} project. Build the authentication system that allows users to securely log in and log out, managing user sessions and authentication state.
+Implement login/logout for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Authentication architecture (from E9:S1:T01)
-- User registration implementation (from E9:S1:T02)
-- Login/logout requirements
-- Session management requirements
-- Security requirements
-- ai-dev-kit login/logout patterns (if adopting)
+- Requirements and specifications
+- implement login/logout requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Login functionality implemented
-- Logout functionality implemented
-- Login/logout UI
-- Authentication API endpoints
-- Session management integration
+- implement login/logout completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Login functionality implemented
-- [ ] Logout functionality implemented
-- [ ] Login/logout UI created
-- [ ] Authentication API endpoints created
-- [ ] Login/logout integrates with authentication architecture
-- [ ] Login/logout handles errors appropriately
-- [ ] Login/logout is secure
-- [ ] Login/logout is tested and functional
+- [ ] Implement login/logout completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review authentication architecture
-2. Review login/logout requirements
-3. Design login/logout flow
-4. Implement login UI
-5. Implement logout UI
-6. Implement authentication API endpoints
-7. Integrate with session management (from E9:S1:T07, if available)
-8. Test login/logout functionality
-9. Review and refine implementation
+1. Analyze requirements for implement login/logout
+2. Design approach and plan
+3. Implement implement login/logout
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S1:T01: Design authentication architecture (login/logout uses architecture)
-- E9:S1:T02: Implement user registration (login uses registered users)
+- E9:S1:T02
 
 **Blocks:**
-- E9:S1:T07: Implement session management (session management supports login/logout)
+- E9:S1:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01 and T02)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S1:T01: Design authentication architecture (login/logout uses architecture)
-- E9:S1:T02: Implement user registration (login uses registered users)
-- E9:S1:T07: Implement session management (session management supports login/logout)
-- E9:S1:T08: Add authentication security measures (security measures protect login/logout)
+- [E09:S01:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S1: User Authentication System (this story)
-- E9:S2: User Authorization and Permissions (authorization occurs after login)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.1.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Implement login/logout for the {PROJECT_NAME} project. Build the authentication 
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

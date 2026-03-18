@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 2, Task 4: Document Automation Usage
+# Epic 2, Story 2, Task 4: Document automation usage
 
-**Status:** TODO  
-**Priority:** MEDIUM  
-**Last updated:** [YYYY-MM-DD] (v0.2.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.2.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.2.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E2:S2:T4`)
+**Format:** `E2:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E02:S02:T04`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Document automation usage for the {PROJECT_NAME} project. Create comprehensive documentation that explains how to use workflow automation scripts and tools, enabling team members to effectively leverage automation capabilities.
+Document automation usage for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Workflow automation scripts (from E2:S2:T02)
-- Workflow execution tools (from E2:S2:T03)
-- Workflow templates (from E2:S1:T02)
-- Workflow execution guidelines (from E2:S1:T03)
-- Automation usage examples
-- Documentation requirements
+- Requirements and specifications
+- document automation usage requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Automation usage documentation
-- Script usage guide
-- Tool usage guide
-- Automation examples and tutorials
-- Troubleshooting guide
-- Best practices documentation
+- document automation usage completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Automation usage documentation created
-- [ ] Script usage guide created with examples
-- [ ] Tool usage guide created with examples
-- [ ] Automation examples and tutorials provided
-- [ ] Troubleshooting guide created
-- [ ] Best practices documented
-- [ ] Documentation is clear and accessible
-- [ ] Documentation supports effective automation usage
+- [ ] Document automation usage completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review automation scripts and tools
-2. Identify documentation needs
-3. Create script usage guide
-4. Create tool usage guide
-5. Develop automation examples and tutorials
-6. Create troubleshooting guide
-7. Document best practices
-8. Review and refine documentation
+1. Analyze requirements for document automation usage
+2. Design approach and plan
+3. Implement document automation usage
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E2:S2:T02: Implement workflow automation scripts (documentation covers scripts)
-- E2:S2:T03: Create workflow execution tools (documentation covers tools)
-- E2:S1:T02: Define standard workflow templates (documentation references templates)
-- E2:S1:T03: Create workflow execution guidelines (documentation references guidelines)
+- E2:S2:T03
 
 **Blocks:**
-- None (documentation task)
+- E2:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T02 and T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E2:S2:T02: Implement workflow automation scripts (documentation covers scripts)
-- E2:S2:T03: Create workflow execution tools (documentation covers tools)
+- [E02:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E2:S2: Workflow Automation (this story)
-- E2:S1: Workflow Definitions and Patterns (documentation references patterns)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Document automation usage for the {PROJECT_NAME} project. Create comprehensive d
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

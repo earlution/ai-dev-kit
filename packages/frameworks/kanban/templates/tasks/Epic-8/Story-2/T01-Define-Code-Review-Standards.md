@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 2, Task 1: Define Code Review Standards
+# Epic 8, Story 2, Task 1: Define code review standards
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.8.2.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.2.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.2.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S2:T1`)
+**Format:** `E8:S2:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S02:T01`
 
@@ -28,91 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Define code review standards for the {PROJECT_NAME} project. Establish comprehensive standards and criteria for code reviews to ensure code quality, consistency, security, and maintainability.
+Define code review standards for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Project requirements and coding standards
-- Code quality requirements
-- Security requirements
-- Best practices and industry standards
-- Team preferences and guidelines
-- ai-dev-kit code review standards (if adopting)
+- Requirements and specifications
+- define code review standards requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Code review standards defined
-- Standards documentation
-- Review criteria established
-- Quality thresholds defined
-- Standards framework
+- define code review standards completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Code review standards defined and documented
-- [ ] Standards cover code quality aspects
-- [ ] Standards cover security aspects
-- [ ] Standards cover maintainability aspects
-- [ ] Review criteria clearly established
-- [ ] Quality thresholds defined
-- [ ] Standards framework created
-- [ ] Standards documentation complete
+- [ ] Define code review standards completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review project requirements and coding standards
-2. Review code quality and security requirements
-3. Identify code review focus areas
-4. Define code review standards for each area
-5. Establish review criteria
-6. Define quality thresholds
-7. Create standards framework
-8. Document code review standards
-9. Review and refine standards
+1. Analyze requirements for define code review standards
+2. Design approach and plan
+3. Implement define code review standards
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- Project requirements and coding standards
-- Maintenance task workflow (from E8:S1:T02, if available - optional)
+- None
 
 **Blocks:**
-- E8:S2:T02: Create code review checklist (checklist implements standards)
-- E8:S2:T03: Set up code review automation (automation enforces standards)
-- E8:S2:T04: Document code review process (process uses standards)
+- E8:S2:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently, benefits from maintenance workflow)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S2:T02: Create code review checklist (checklist implements standards)
-- E8:S2:T03: Set up code review automation (automation enforces standards)
-- E8:S2:T04: Document code review process (process uses standards)
+- [E08:S02:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S2: Code Review Standards and Processes (this story)
-- E8:S1: Codebase Maintenance Tasks (standards guide maintenance work)
-- E8:S3: Code Quality Metrics and Monitoring (standards inform quality metrics)
-- E13:S2: Test Implementation (standards may include test requirements)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.2.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -121,3 +108,27 @@ Define code review standards for the {PROJECT_NAME} project. Establish comprehen
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 8, Story 1, Task 1: Set Up IDE Issue Tracking
+# Epic 8, Story 1, Task 1: Set up IDE issue tracking
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.8.1.1+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.8.1.1+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.8.1.1+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E8:S1:T1`)
+**Format:** `E8:S1:T1` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E08:S01:T01`
 
@@ -28,87 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Set up IDE issue tracking for the {PROJECT_NAME} project. Establish a systematic approach for tracking, managing, and addressing IDE-flagged issues (errors, warnings, info-level problems) to maintain code quality and reduce technical debt.
+Set up IDE issue tracking for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- IDE configuration and setup
-- Issue tracking requirements
-- IDE issue categories (errors, warnings, info)
-- Integration requirements
-- ai-dev-kit maintenance tracking practices (if adopting)
+- Requirements and specifications
+- set up ide issue tracking requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- IDE issue tracking set up
-- Issue tracking workflow established
-- Issue categorization system
-- Issue tracking documentation
-- Integration with Kanban/workflow system (if applicable)
+- set up ide issue tracking completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] IDE issue tracking set up and configured
-- [ ] Issue tracking workflow established
-- [ ] Issue categorization system defined
-- [ ] IDE-flagged issues are trackable
-- [ ] Issue tracking documentation created
-- [ ] Integration with workflow system complete (if applicable)
-- [ ] Issue tracking system is actionable and maintainable
+- [ ] Set up IDE issue tracking completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review IDE configuration and capabilities
-2. Define issue tracking requirements
-3. Set up IDE issue tracking system
-4. Establish issue tracking workflow
-5. Define issue categorization (errors, warnings, info)
-6. Integrate with Kanban/workflow system (if applicable)
-7. Document issue tracking setup and process
-8. Test issue tracking functionality
-9. Review and refine issue tracking setup
+1. Analyze requirements for set up ide issue tracking
+2. Design approach and plan
+3. Implement set up ide issue tracking
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- IDE configuration and setup
-- Kanban/workflow system (if integrating)
+- None
 
 **Blocks:**
-- E8:S1:T02: Create maintenance task workflow (workflow uses issue tracking)
-- E8:S1:T03: Define maintenance priorities (priorities apply to tracked issues)
+- E8:S1:T02
 
-**Parallel Development Candidacy:** Safe (can proceed independently)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E8:S1:T02: Create maintenance task workflow (workflow uses issue tracking)
-- E8:S1:T03: Define maintenance priorities (priorities apply to tracked issues)
-- E8:S1:T04: Document maintenance process (documentation includes issue tracking)
+- [E08:S01:T01: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E8:S1: Codebase Maintenance Tasks (this story)
-- E8:S2: Code Review Standards and Processes (issue tracking supports code review)
-- E8:S3: Code Quality Metrics and Monitoring (issue tracking provides metrics data)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.8.1.1+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -117,3 +108,27 @@ Set up IDE issue tracking for the {PROJECT_NAME} project. Establish a systematic
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

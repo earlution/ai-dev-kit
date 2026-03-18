@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 2, Task 3: Integrate Prioritization with Kanban Board
+# Epic 6, Story 2, Task 3: Integrate prioritization with Kanban board
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.6.2.3+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.6.2.3+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.6.2.3+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E6:S2:T3`)
+**Format:** `E6:S2:T3` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E06:S02:T03`
 
@@ -28,92 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Integrate BR (Bug Report) prioritization with Kanban board for the {PROJECT_NAME} project. Ensure that prioritization information is visible and actionable within the Kanban board, enabling efficient prioritization-based workflow management.
+Integrate prioritization with Kanban board for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- BR prioritization framework (from E6:S2:T01)
-- BR assignment templates (from E6:S2:T02)
-- Kanban board structure (from E4:S1)
-- Kanban workflow configuration (from E4:S2)
-- Integration requirements
+- Requirements and specifications
+- integrate prioritization with kanban board requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Prioritization-Kanban integration implemented
-- Prioritization fields in Kanban cards
-- Assignment fields in Kanban cards
-- Prioritization-based sorting/filtering
-- Integration configuration
-- Integration documentation
+- integrate prioritization with kanban board completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Prioritization integrated with Kanban board
-- [ ] Prioritization fields visible in Kanban cards
-- [ ] Assignment fields visible in Kanban cards
-- [ ] Prioritization-based sorting/filtering implemented
-- [ ] Integration configuration documented
-- [ ] Integration supports efficient prioritization workflow
-- [ ] Integration is reliable and maintainable
-- [ ] Integration examples provided
-- [ ] Integration documentation complete
+- [ ] Integrate prioritization with Kanban board completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review BR prioritization framework and assignment templates
-2. Review Kanban board structure and workflow
-3. Design prioritization-Kanban integration points
-4. Add prioritization fields to Kanban cards
-5. Add assignment fields to Kanban cards
-6. Implement prioritization-based sorting/filtering
-7. Configure integration settings
-8. Write integration documentation
-9. Create integration examples
-10. Review and refine integration
+1. Analyze requirements for integrate prioritization with kanban board
+2. Design approach and plan
+3. Implement integrate prioritization with kanban board
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E6:S2:T01: Design BR prioritization framework (integration uses framework)
-- E6:S2:T02: Create BR assignment templates (integration may use templates)
-- E4:S1: Kanban Board Setup (integration uses Kanban board)
-- E4:S2: Kanban Workflow Configuration (integration uses workflow configuration)
+- E6:S2:T02
 
 **Blocks:**
-- E6:S2:T04: Document prioritization and assignment process (documentation covers integration)
+- E6:S2:T04
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, and E4 tasks)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E6:S2:T01: Design BR prioritization framework (integration uses framework)
-- E6:S2:T02: Create BR assignment templates (integration may use templates)
-- E6:S2:T04: Document prioritization and assignment process (documentation covers integration)
+- [E06:S02:T03: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E6:S2: BR Prioritization and Assignment (this story)
-- E4:S1: Kanban Board Setup (integration uses Kanban board)
-- E4:S2: Kanban Workflow Configuration (integration uses workflow configuration)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.6.2.3+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -122,3 +108,27 @@ Integrate BR (Bug Report) prioritization with Kanban board for the {PROJECT_NAME
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

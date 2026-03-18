@@ -6,11 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 9, Story 2, Task 4: Implement Access Control Middleware
+# Epic 9, Story 2, Task 4: Implement access control middleware
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Last updated:** [YYYY-MM-DD] (v0.9.2.4+0 – Template created)  
+> **Example:** See `packages/frameworks/kanban/examples/Task-001-Example-Separate-File.md` for a complete example of this template in use.
+
+**Status:** [TODO/IN PROGRESS/COMPLETE]  
+**Priority:** [HIGH/MEDIUM/LOW]  
+**Last updated:** [YYYY-MM-DD] (v0.9.2.4+0 – [summary])  
 **Started:** [YYYY-MM-DD]  
 **Completed:** [YYYY-MM-DD]  
 **Version:** v0.9.2.4+0  
@@ -20,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E9:S2:T4`)
+**Format:** `E9:S2:T4` (e.g., `E4:S11:T01`)
 
 **Full Task ID:** `E09:S02:T04`
 
@@ -28,88 +30,76 @@ housekeeping_policy: keep
 
 ## Scope
 
-Implement access control middleware for the {PROJECT_NAME} project. Build middleware that intercepts requests, evaluates user permissions, and enforces access control policies based on RBAC and permission systems.
+Implement access control middleware for the {PROJECT_NAME} project.
 
 ---
 
 ## Input
 
-- Authorization architecture (from E9:S2:T01)
-- RBAC implementation (from E9:S2:T02)
-- Permission system (from E9:S2:T03)
-- Middleware requirements
-- Framework and routing requirements
-- ai-dev-kit middleware patterns (if adopting)
+- Requirements and specifications
+- implement access control middleware requirements
+- {PROJECT_NAME} project context
 
 ---
 
 ## Deliverable
 
-- Access control middleware implemented
-- Middleware integration with framework
-- Permission evaluation logic
-- Access control enforcement
-- Middleware configuration
+- implement access control middleware completed
+- Documentation and artifacts
+- Verification and validation
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Access control middleware implemented
-- [ ] Middleware integrates with framework/routing
-- [ ] Permission evaluation logic implemented
-- [ ] Access control enforcement implemented
-- [ ] Middleware uses RBAC and permission system
-- [ ] Middleware handles unauthorized access appropriately
-- [ ] Middleware is secure and tested
-- [ ] Middleware is functional and performant
+- [ ] Implement access control middleware completed successfully
+- [ ] Documentation and artifacts created
+- [ ] Verification and validation completed
 
 ---
 
 ## Approach
 
-1. Review authorization architecture, RBAC, and permission system
-2. Review middleware requirements and framework integration
-3. Design access control middleware
-4. Implement middleware permission evaluation logic
-5. Implement access control enforcement
-6. Integrate middleware with framework/routing
-7. Configure middleware
-8. Test middleware functionality
-9. Review and refine implementation
+1. Analyze requirements for implement access control middleware
+2. Design approach and plan
+3. Implement implement access control middleware
+4. Test and validate
+5. Document and deliver
 
 ---
 
 ## Dependencies
 
 **Depends On:**
-- E9:S2:T01: Design authorization architecture (middleware implements architecture)
-- E9:S2:T02: Implement role-based access control (RBAC) (middleware uses RBAC)
-- E9:S2:T03: Create permission system (middleware uses permission system)
+- E9:S2:T03
 
 **Blocks:**
-- E9:S2:T05: Add permission checking utilities (utilities may use middleware patterns)
+- E9:S2:T05
 
-**Parallel Development Candidacy:** Blocked (depends on T01, T02, T03)
+**Blocked By:**
+- [What blocks this task]
+
+**Parallel Development Candidacy:** [Safe / Blocked] because [reason]
 
 ---
 
 ## Related Work
 
+**Related BR/FR Links:**
+- [BR-XXX: Bug Report Title](path/to/BR-XXX.md)
+- [FR-XXX: Feature Request Title](path/to/FR-XXX.md)
+
 **Related Tasks:**
-- E9:S2:T01: Design authorization architecture (middleware implements architecture)
-- E9:S2:T02: Implement role-based access control (RBAC) (middleware uses RBAC)
-- E9:S2:T03: Create permission system (middleware uses permission system)
-- E9:S2:T05: Add permission checking utilities (utilities may use middleware patterns)
+- [E09:S02:T04: Related Task Title](path/to/task.md)
 
 **Related Stories:**
-- E9:S2: User Authorization and Permissions (this story)
+- [EXX:SYY: Related Story Title](path/to/story.md)
 
 ---
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.9.2.4+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document
@@ -118,3 +108,27 @@ Implement access control middleware for the {PROJECT_NAME} project. Build middle
 - Update changelog with task completion
 
 ---
+
+## Notes
+
+[Additional notes, context, or considerations for this task.]
+
+---
+
+## Completion Summary
+
+[To be filled when task is complete. What was delivered? Lessons learned? Metrics achieved?]
+
+---
+
+## References
+
+- [Related docs, PRs, commits, diagrams]
+- [External resources, documentation, standards]
+
+---
+
+## Next Actions
+
+- [ ] Action one (if task is blocked or requires follow-up)
+- [ ] Action two

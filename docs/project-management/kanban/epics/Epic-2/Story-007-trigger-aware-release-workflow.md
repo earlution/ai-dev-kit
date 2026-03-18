@@ -231,10 +231,12 @@ Create a trigger-aware RW system that:
   - Extracts FR/BR/UXR files from commit changed files
   - Processes each file using the agentic task workflow
   - Returns deliverables in the format expected by the deliverable processor
+
 - Updated `trigger_integration.py` to:
   - Register the actual agentic task workflow (replacing placeholder)
   - Pass changed files and project context to the workflow
   - Process deliverables from workflow execution
+
 - Added test coverage for FR/BR file extraction and integration
 
 ---

@@ -1,276 +1,174 @@
 ---
 lifecycle: evergreen
 ttl_days: null
-created_at: 2026-02-26T00:00:00Z
+created_at: 2026-03-05T00:00:00Z
 expires_at: null
 housekeeping_policy: keep
 ---
 
-# Bug Report: Kanban Install Delivers Mixed Dev Kit Backlog and Templates into Consumer Boards
-
-**Type:** Bug Report (BR)  
-**Submitted:** 2026-02-26  
-**Submitted By:** XOforge (consumer project)  
-**Priority:** HIGH  
-**Severity:** HIGH  
-**Status:** PENDING  
-**GitHub Issue:** [#20](https://github.com/earlution/ai-dev-kit/issues/20)
-
----
+# BR-037 – Kanban Install Consumer Board Contamination
 
 ## Summary
 
-When a consumer project installs the Kanban framework from AI Dev Kit, the resulting Kanban board and epics contain a **mixture of abstract/template stories and AI Dev Kit’s own live stories/tasks**, leaving adopters with a board that still looks like “AI Dev Kit – Kanban Board” instead of a clean, project-specific Kanban.
+**Problem:** Early versions of the Kanban framework installer allowed consumer projects to accidentally import `ai-dev-kit`’s own Kanban backlog (epics/stories/tasks) instead of a clean, project-agnostic template tree. This led to **contaminated consumer boards** where:
 
----
+- `AI Dev Kit – Kanban Board` appeared as the board title.
+- Dev-kit specific epics (e.g., **Epic 24: Book Related Work**) and BR/FR repositories showed up in consumer projects.
+- Consumer tasks and dev-kit’s internal backlog were mixed in the same tree, making forensic tracking and project management unreliable.
 
-## Description
+BR-037 tracks both **prevention** (fresh installs) and **remediation** (clean-up for already‑contaminated boards).
 
-### What is the bug?
+## Context and Impact
 
-The Kanban install path for consumer projects currently:
+- Affected consumer projects (e.g. `xoforge`) ended up with:
+  - Dev-kit epics and stories mixed into their own Kanban trees.
+  - Dev-kit FR/BR repo documents under `docs/project-management/kanban/fr-br/`.
+  - Confusing status signals on boards and stories, breaking the Epic/Story/Task coordination model.
 
-- Copies or exposes **AI Dev Kit’s own backlog** (epics, stories, tasks, FR/BR links, dev-kit policies) into the consumer project.
-- Mixes that live backlog with more **abstract or template-style content** intended as canonical examples.
-- Produces a board that is labelled and structured as the AI Dev Kit board, requiring significant manual clean-up and rescoping by adopters (as experienced in XOforge).
+- This violated the design goal that **framework templates** must be clearly separated from **consumer project content**.
+- It also undermined the forensic guarantees of the Kanban + RW stack (version markers, BR/FR traceability, etc.).
 
-This goes beyond earlier epic-only issues (e.g. BR-004) and affects **board title, stories, tasks, and FR/BR wiring**, making it unclear what is:
+## Expected Behaviour (Post-Fix)
 
-- Canonical framework/template content meant for adopters, vs.
-- AI Dev Kit’s own project backlog that should stay in the source repo.
+After the full BR-037 resolution:
 
-### What should happen vs. what actually happens?
+1. **Fresh installs** of the Kanban framework:
+   - Produce a **clean, project-agnostic** Kanban tree rooted at `docs/project-management/kanban/`.
+   - Never claim the board title `AI Dev Kit – Kanban Board` in consumer projects.
+   - Install only the canonical epic skeleton and guidance, not dev-kit’s live backlog.
+   - Emit structured install logs (via FR-047) with `[KANBAN_*]` markers for validation.
 
-**Expected:**
+2. **Detection and remediation** for existing projects:
+   - A **contamination detector** can scan a consumer Kanban tree and classify each file as:
+     - `template` – expected consumer template/structure.
+     - `devkit_reference` – legitimate reference material (when present in dev-kit itself).
+     - `contaminated` – dev-kit backlog artefacts that must not live in consumer boards.
+     - `unknown` – files that don’t match any known rule.
+   - A **remediation tool** can:
+     - Run in **dry-run** mode to show exactly what would be archived or deleted.
+     - Run in **archive** mode to move contaminated files into a `.contaminated/` subtree, preserving structure.
+     - Optionally run in **delete** mode for irreversible clean-up once archived copies are confirmed safe to remove.
 
-- A new consumer project that installs the Kanban framework should receive:
-  - A **clean, project-agnostic Kanban skeleton** (board + epics/stories/tasks) suitable for that project.
-  - Any example or reference content clearly isolated and labelled as **AI Dev Kit reference**, not part of the live board.
-- The resulting board should read as **“<Project Name> – Kanban Board”**, with epics/stories/tasks that either:
-  - Are generic and obviously intended to be customised, or
-  - Are minimal placeholders clearly marked as such.
+3. **Validators**:
+   - The Kanban installation validator fails when contamination is detected and points to the remediation tool as the recovery path.
 
-**Actual:**
+## Current Behaviour (Fixed)
 
-- The installed Kanban structure still reads as the **AI Dev Kit board**:
-  - Board title and overview are dev-kit-specific.
-  - Epics/stories/tasks include AI Dev Kit’s real backlog and references to its FR/BRs and policies.
-  - Abstract/template content is intermixed with live dev-kit work.
-- Consumer projects (e.g. XOforge) must:
-  - Manually separate framework templates from dev-kit-specific backlog.
-  - Rescope or delete many imported stories/tasks.
-  - Rewrite board/epic/story docs to reflect their own project.
+As of the remediation work for **E6:S01:T37**:
 
-### When does it occur?
+- **Fresh installs**:
+  - The installer’s `--mode fresh` path now generates a clean consumer tree and has tests asserting:
+    - No Epic 24 contamination in the consumer epics directory.
+    - Consumer boards do **not** advertise `AI Dev Kit – Kanban Board` as the title.
+  - Install runs are logged via FR-047, including Kanban-specific markers (`[KANBAN_FRESH_INSTALL]`, etc.).
 
-- When installing Kanban from AI Dev Kit into a new consumer project (e.g. XOforge) using the documented installation steps.
-- When copying or initialising `docs/project-management/kanban/` and related structures from AI Dev Kit.
 
-### Who is affected?
+- **Contamination detection**:
+  - A dedicated contamination detector walks `docs/project-management/kanban/` and:
+    - Flags dev-kit boards and BR/FR repo docs that appear in consumer trees.
+    - Flags non-canonical epics (e.g. dev-kit project epics copied into consumers).
+    - Produces a machine-readable classification (`template`, `devkit_reference`, `contaminated`, `unknown`) along with reasons.
 
-- Any **consumer project** that:
-  - Installs Kanban from AI Dev Kit expecting a clean, template-only starting point.
-  - Uses AI Dev Kit as a base/template repository for its own work.
 
----
+- **Remediation tooling**:
+  - A remediation script:
+    - Runs a detector scan and prints a CSV-style summary of all findings.
+    - Supports a **dry-run** mode that only prints planned actions (archive/delete) with no filesystem changes.
+    - In **archive** mode, moves contaminated files under `.contaminated/` beneath the Kanban root.
+    - In **delete** mode, removes contaminated files outright.
+    - Is tested for **idempotency**: running it multiple times on the same tree is a no-op after the first clean-up.
 
-## Affected Component
 
-**Primary Component:** Kanban Framework – Installation/Initialization & Templates  
-**Affected Areas:**
+- **Validator integration**:
+  - The Kanban installation validator invokes the detector and:
+    - Fails validation if any `contaminated` files are found.
+    - Emits an explicit message instructing users to run the remediation tool to clean up their Kanban tree.
 
-- [x] Documentation (board/epic/story content, naming)
-- [x] Installation / scaffolding behaviour
-- [ ] Backend/API
-- [ ] Frontend/UI
-- [ ] Database/Schema
-- [ ] Integration/External Service
-- [ ] Other: 
 
-**Root Cause (suspected):**
+## Symptoms & Diagnosis
 
-- The current Kanban install/scaffolding behaviour does not clearly separate:
-  - **Canonical, abstract templates** (to be shipped to consumers), from
-  - **AI Dev Kit’s own epics/stories/tasks and FR/BR wiring** (which should remain in the source repo).
-- Prior fixes (e.g. BR-004) addressed epic-level issues but **did not fully resolve** contamination at the board/story/task level.
+**Historical symptoms:**
 
----
+- Board titled `AI Dev Kit – Kanban Board` in a consumer repository.
+- Presence of dev-kit specific epics (e.g., `Epic-24/Epic-24.md – Book Related Work`) in a consumer project.
+- Dev-kit FR/BR repo structure (`docs/project-management/kanban/fr-br/FR-0xx-*.md`) inside consumer trees.
+- Kanban install logs (before FR-047) lacking enough detail to reconstruct what happened.
 
-## Steps to Reproduce
+**Post-fix diagnosis path:**
 
-1. Create a new consumer project repository.
-2. Install AI Dev Kit frameworks and run the documented Kanban install steps (e.g. copying or initialising `docs/project-management/kanban/` from AI Dev Kit).
-3. Open `docs/project-management/kanban/kanban-board.md` in the consumer project.
-4. Inspect epics, stories, and tasks under `docs/project-management/kanban/epics/`.
-5. Observe:
-   - Board title and narrative still refer to AI Dev Kit.
-   - Epics/stories/tasks reference AI Dev Kit-specific paths, FR/BRs, and policy docs.
-   - Abstract/template content is mixed with dev-kit-specific backlog.
+1. **Check install logs** (FR-047) under `logs/ai-dev-kit/install/` for Kanban runs and markers.
+2. **Run the contamination detector** over `docs/project-management/kanban/`.
+3. **Review findings** by classification and reason to understand the scope of contamination.
+4. **Run remediation** in dry-run mode first, then archive/delete as appropriate.
 
-**Expected result:**  
-Board and epics reflect a clean, consumer-specific or clearly template-based Kanban, not AI Dev Kit’s live backlog.
+## Proposed Fixes (Implemented)
 
-**Actual result:**  
-Board and epics reflect a hybrid of templates and AI Dev Kit’s own backlog, requiring significant manual clean-up.
+### F1 – Fix fresh Kanban installs (PREVENTION)
 
----
+- Introduce a **fresh install** path that:
+  - Creates only the canonical consumer epics and board skeleton.
+  - Avoids copying dev-kit’s live backlog or project-specific epics.
+  - Asserts via tests that canonical invariants hold (no Epic 24 in consumer epics, board title not `AI Dev Kit – Kanban Board`).
 
-## Environment
+- Integrate with FR-047 logging to make fresh install behaviour observable.
 
-**Environment:** Development  
-**Version (Dev Kit):** Current as of 2026-02-26  
-**Consumer Example:** XOforge project (Crossout crafting calculator)  
-**OS:** Any (observed on macOS)
+**Status:** Implemented and covered by tests.
 
----
+### F2 – Contamination detector (DETECTION)
 
-## Impact
+- Implement a detector that:
+  - Walks the Kanban tree and classifies each file with a clear reason.
+  - Encodes rules for:
+    - Dev-kit board titles.
+    - Dev-kit FR/BR repo docs leaking into consumer trees.
+    - Non-canonical epic numbers/content copied from dev-kit.
+  - Exposes a simple API for use by validators and tooling.
 
-**User Impact:**
 
-- [ ] Critical - System unusable
-- [x] High - Major functionality/UX broken for adopters
-- [ ] Medium - Some functionality affected
-- [ ] Low - Minor issue, workaround available
+**Status:** Implemented, with unit tests for classification rules.
 
-**Business Impact:**
+### F3 – Remediation engine (CLEAN-UP)
 
-- Blocks **clean adoption** of the Kanban framework.
-- Requires extensive manual Kanban clean-up and rescoping for each new consumer project.
-- Causes confusion about what is canonical framework template vs. AI Dev Kit’s own backlog.
-- Increases cognitive load for both humans and agents trying to follow governance rules.
+- Implement a remediation tool that:
+  - Uses the detector to find contaminated files.
+  - Supports **dry-run**, **archive**, and **delete** workflows.
+  - Preserves structure when archiving, under `.contaminated/`.
+  - Is explicitly tested for idempotency.
 
-**Workaround:**
 
-- Manually:
-  - Delete or archive AI Dev Kit-specific epics/stories/tasks from the consumer project.
-  - Rewrite board/epic/story docs to align with the consumer project.
-  - Recreate a minimal, project-specific Kanban structure.
-- This workaround is **time-consuming, error-prone, and undocumented**.
+**Status:** Implemented with both unit and end-to-end tests.
 
----
+### F4 – Validator integration and docs
 
-## Acceptance Criteria (Fix Requirements)
+- Wire the detector into the Kanban installation validator so that:
+  - Validation fails when contamination is present.
+  - The validator output clearly points to the remediation command as the next step.
 
-- [ ] **Criterion 1:** Kanban install/scaffolding for consumer projects ships **only canonical, project-agnostic templates** and/or clearly labelled example content, not AI Dev Kit’s live backlog.
-- [ ] **Criterion 2:** The default board and epic/story docs in consumer projects do **not** present as “AI Dev Kit – Kanban Board”; they are either:
-  - Neutral templates, or
-  - Cleanly scoped to the consumer project.
-- [ ] **Criterion 3:** Any AI Dev Kit-specific examples or reference materials are:
-  - Located in clearly separated paths (e.g. `templates/` or `reference/`), and
-  - Explicitly marked as **upstream reference**, not part of the consumer’s live board.
-- [ ] **Criterion 4:** Documentation clearly explains:
-  - What Kanban content is installed into consumer projects.
-  - How to customise epics/stories/tasks for a new project.
-- [ ] **Criterion 5:** Regression tests or scripted checks exist to ensure dev-kit-specific backlog is not reintroduced into the install payload.
+- Update:
+  - Task document `E6:S01:T37` with the final remediation design and acceptance criteria.
+  - Kanban board and guide with a short pointer to the detection/remediation tools and their relationship to install logs (FR-047).
 
-**Verification Method:**
 
-- [ ] Manual testing in at least one fresh consumer project (e.g. XOforge-like repo).
-- [ ] (Optional) Automated checks over installed Kanban content for dev-kit-specific markers.
+**Status:** Implemented in code; docs and Kanban entries updated as part of this BR.
 
-**Fix Verification Status:**
+## Non-Functional Requirements
 
-- [ ] Verified (test suite passed / manual test passed)
-- [ ] Attempted Fix (pending verification)
+- **Safety-first operation**:
+  - Default to **dry-run** for remediation; require an explicit flag to mutate files.
+  - Archive before delete to allow manual inspection/recovery where needed.
 
----
+- **Idempotency**:
+  - Multiple remediation runs should be safe and converge quickly (no repeated archives or inconsistent states).
 
-## Fix Attempt History
+- **Forensic traceability**:
+  - Detection and remediation should integrate with install logging (FR-047) to support end-to-end troubleshooting of installs.
 
-**Purpose:** Document all fix attempts so future builds can learn from previous work.
+- **Consumer focus**:
+  - Tooling should be safe to run in real consumer projects and never introduce new dev-kit artefacts.
 
-### Attempt 1: _TBD_ – _TBD_
 
-**Fix Description:**
-- _TBD_
+## Status
 
-**Changes Made:**
-- _TBD_
-
-**Verification Status:**
-- [ ] Verified (test suite passed / manual test passed)
-- [ ] Attempted Fix (pending verification)
-- [ ] Fix Failed (bug still present)
-
-**Verification Method:**
-- [ ] Test suite execution
-- [ ] Manual testing
-- [ ] Both
-
-**Verification Evidence:**
-- _TBD_
-
-**Result:**
-- [ ] Bug Fixed
-- [ ] Bug Partially Fixed
-- [ ] Bug Not Fixed
-
-**Lessons Learned:**
-- _TBD_
-
-**Next Steps:**
-- _TBD_
-
----
-
-## Dependencies
-
-**Blocks:**
-
-- Clean, low-friction Kanban framework adoption in new consumer projects.
-
-**Blocked By:**
-
-- Design decisions about how to split **canonical templates** vs **AI Dev Kit backlog** in the Kanban package and installer.
-
-**Related Work:**
-
-- [BR-004 – Kanban Installation Includes Project-Specific Epics from Template](BR-004-kanban-installation-includes-project-specific-epics.md)
-- [BR-007 – Multiple Bugs in Kanban Package Installation Process](BR-007-multiple-bugs-kanban-package-installation.md)
-- XOforge internal task: Epic 2, Story 3 – XOforge-centric review of all Kanban docs.
-
----
-
-## Intake Decision
-
-**Intake Status:** PENDING  
-**Intake Date:** 2026-02-26  
-**Intake By:** [TBD]
-
-**Decision Flow Results:**
-
-- [ ] Story Match Found: [Epic X, Story Y] → Task [T]
-- [ ] New Story Created: [Epic X, Story Y] → Task 1
-- [ ] New Epic Created: [Epic X, Story 1, Task 1]
-
-**Assigned To:**
-
-- Epic: [TBD – likely Kanban Framework epic]
-- Story: [TBD – Kanban install/consumer adoption behaviour]
-- Task: [TBD]
-- Version: `[RC.EPIC.STORY.TASK+BUILD]`
-
-**Kanban Links:**
-
-- Epic: [`docs/project-management/kanban/epics/Epic-6/Epic-6.md`](../epics/Epic-6/Epic-6.md)
-- Story: [`docs/project-management/kanban/epics/Epic-6/Story-001-br-repo.md`](../epics/Epic-6/Story-001-br-repo.md)
-- Task: _TBD (implementation task once created)_
-
----
-
-## Notes
-
-- This BR is informed by XOforge’s real-world adoption experience and aims to prevent future consumers from needing to perform the same large manual clean-up.
-
----
-
-## References
-
-- GitHub Issue [#20](https://github.com/earlution/ai-dev-kit/issues/20) – original report.
-- XOforge Kanban review: `docs/project-management/kanban/epics/Epic-2/Story-003-xoforge-centric-review-all-kanban-docs.md` (in XOforge repo; referenced here conceptually).
-
----
-
-_This bug report follows the AI Dev Kit Kanban Framework BR template and is anchored as BR-037 in the BR repository story (E6:S01:T37)._
+- **Status:** CHANGE IMPLEMENTED – AWAITING VERIFICATION  
+- **Primary Task:** E6:S01:T37 – Kanban Install Consumer Board Contamination (detector + remediation implemented, pending release RW and consumer verification)  
 

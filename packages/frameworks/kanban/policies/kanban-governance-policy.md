@@ -219,7 +219,103 @@ If work doesn't map to a task, the Kanban needs updating.
 
 ## Board Structure
 
-Five columns, left to right:
+The Kanban board provides a comprehensive view of all work items organized hierarchically and prioritized for visibility.
+
+### Board Layout
+
+The board serves as the **parent document** to Story documents, similar to how Story documents are parents of Task documents:
+
+- **Board → Story:** The board links to and tracks all Story documents
+- **Story → Task:** Story documents link to and track all Task documents
+- This creates a clear hierarchy: **Board (parent) → Story (child) → Task (grandchild)**
+
+### MoSCOW Prioritized Task View
+
+**Purpose:** The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows all in-progress tasks (status: IN PROGRESS or TODO) organized by priority and ordered chronologically.
+
+**MoSCOW Priority Levels:**
+
+1. **Must Have (M) – Critical Tasks**
+   - Critical in-progress tasks that must be completed
+   - Highest priority items requiring immediate attention
+   - Tasks that block other work or are on critical path
+
+2. **Should Have (S) – Important Tasks**
+   - Important in-progress tasks that should be completed
+   - High-value items that contribute significantly to goals
+   - Tasks that are important but not blocking
+
+3. **Could Have (C) – Nice-to-Have Tasks**
+   - Nice-to-have in-progress tasks that could be completed
+   - Lower priority items that add value but are not essential
+   - Tasks that can be deferred if needed
+
+4. **Ongoing (O) – Perpetual Tasks**
+   - Ongoing maintenance tasks that never complete
+   - Perpetual tasks that are tracked but don't block other work
+   - Tasks that require continuous attention (e.g., workflow maintenance, changelog management)
+   - These tasks are visible but don't interfere with prioritization of completable work
+
+5. **Won't Have (W) – Deferred Tasks**
+   - Tasks that are deferred or not being actively worked on
+   - Items explicitly marked as out of scope for current cycle
+   - Tasks that may be revisited in future iterations
+
+**Chronological Ordering:**
+
+- For **Should Have (S), Could Have (C), Ongoing (O), and Won't Have (W):** Tasks within each section are ordered **chronologically** (most recently updated first)
+- For **Must Have (M):** Use stack/queue ordering as defined in the "Task prioritisation and MUST HAVE ordering" section below
+- Ordering is based on the task document's `Last updated` field (for S/C/O/W) or stack/queue rule (for M)
+
+### Task prioritisation and MUST HAVE ordering
+
+**Initial prioritisation:** Every new task must be placed in one MoSCOW category (M, S, C, O, or W). No task is added directly to COMPLETE. Projects may define their own criteria for M vs S vs C (e.g. critical path = M, high value = S, nice-to-have = C); the framework does not prescribe domain-specific rules.
+
+**MUST HAVE ordering:** Within the MUST HAVE (M) section, use two ordering behaviours:
+
+- **Stack (for bug-based or breaking work):** Treat M as a stack. Add new items to the **top** of the MUST HAVE list. Work **top-first** so the most recently added urgent item is done first. Use this for tasks that fix critical bugs or address breaking issues.
+- **Queue (for all other MUST HAVE work):** Treat M as a queue. Add new items to the **end** of the MUST HAVE list. Work **front-first** so the first item in the list is done first. Use this for planned feature work and non-urgent M tasks.
+
+**Rule:** For each new MUST HAVE task, classify it as either *bug-based/breaking* (stack) or *other* (queue) and add it to the top or end of the M section accordingly.
+
+**Scripts and processes:** Scripts and processes that update the MoSCOW section (e.g. UKW, Release Workflow) must either respect stack vs queue when inserting or ordering tasks, or document that ordering is manual or agent-defined.
+
+**Definition of COMPLETE:** A task is COMPLETE only when **fully implemented** (work done, code or docs delivered, released in a version) **and** **signed off** (validated, accepted by the responsible party). Tasks move from a MoSCOW column into COMPLETE only when both conditions are met. Do not mark a task COMPLETE solely because a version exists—only when implementation is done and signed off.
+
+**Discoverability:** For "how to prioritise" and queue/stack behaviour, see the Kanban board guide (e.g. `KANBAN_BOARD_GUIDE_TEMPLATE.md` or project-specific `kanban-board-guide.md`).
+
+**Task Entry Format:**
+
+Each task entry in the MoSCOW sections includes:
+- **Task ID:** `E{epic}:S{story}:T{task}` format (e.g., `E4:S13:T02`)
+- **Task Description:** Brief description of the task
+- **Last Updated:** Date when task was last updated
+- **Links:** Links to Task document and parent Story document
+
+**Example Format:**
+```markdown
+- **E4:S13:T02** – Update Kanban governance policy  
+  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+```
+
+### Story Checklist
+
+After the MoSCOW sections, the board includes a **Story Checklist** section that lists all stories in a compact format (one line per story):
+
+- **Format:** One line per story with status indicator
+- **Purpose:** Provides quick overview of all stories and their completion status
+- **Forensic Markers:** Includes version markers for completed stories (e.g., `✅ COMPLETE (v0.4.13.1+1)`)
+
+**Example Format:**
+```markdown
+- [x] **E4:S13 – Kanban Board Enhancement - MoSCOW Prioritized Task View** - IN PROGRESS (v0.4.13.4+3 – T04 COMPLETE: Packaged RW updated)
+  - Story: [`Story-013-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view.md)
+  - Tasks: T01 ✅ COMPLETE (v0.4.13.1+1), T04 ✅ COMPLETE (v0.4.13.4+3), T02-T03 TODO, T05-T06 TODO
+```
+
+### Traditional Column Structure (Optional)
+
+Projects may also use a traditional column-based board structure with five columns, left to right:
 
 1. **Backlog** – Groomed but unscheduled
 2. **Ready** – Fully specified, awaiting prioritisation
@@ -231,6 +327,8 @@ Five columns, left to right:
 - Move strictly left → right (no skipping)
 - WIP limits per swimlane
 - Every card links to KB doc and branch/tag
+
+**Note:** The MoSCOW prioritized task view can be used alongside or instead of the traditional column structure, depending on project needs.
 
 ---
 
@@ -263,6 +361,55 @@ Decompose epic scope into releasable slices.
 - **Template (example):** `docs/project-management/stories/templates/STORY_TEMPLATE.md` or `docs/project-management/kanban/epics/templates/STORY_TEMPLATE.md`
 
 **Story Directories:** In consolidated structures, Stories live in `Epic-X/stories/` directories, allowing for associated files (diagrams, notes, etc.) alongside the Story document.
+
+#### PERPETUAL State for Repository Stories
+
+**Purpose:** Repository stories (S01) serve as canonical homes for Feature Requests (FRs), Bug Reports (BRs), and User Experience Research reports (UXRs). These stories are PERPETUAL and never complete.
+
+**PERPETUAL State Definition:**
+
+Repository stories are marked with **Status: IN PROGRESS (PERPETUAL)** and have the following characteristics:
+
+- **Never Complete:** Repository stories never transition to COMPLETE status
+- **Excluded from Completion Analytics:** Repository stories are excluded from epic completion calculations
+- **Omitted from Board Displays:** Repository stories (E5:S01, E6:S01, E7:S01) are omitted from epic checklist displays in board views (UX optimization)
+- **Still Tracked Internally:** Repository stories are still tracked in Epic documents' internal Story Checklists
+- **Story-Level Abstract Space Versioning:** Repository stories use story-level abstract space versioning (e.g., v0.5.1.0+0 for E5:S01)
+
+**Repository Story Pattern (S01):**
+
+- **Epic 5, Story 1:** "FR Repo" - canonical home for all Feature Requests
+- **Epic 6, Story 1:** "BR Repo" - canonical home for all Bug Reports
+- **Epic 7, Story 1:** "UXR Repo" - canonical home for all User Experience Research reports
+
+**Note:** S00 is Epic-level abstract space only (no tasks). Repository stories migrated from S00 to S01 as part of repository story abstract space resolution (E9:S01:T08).
+
+**Traceability Pattern:**
+
+- FR-001 = E5:S01:T01 (story-level abstract space: v0.5.1.1+0)
+- BR-001 = E6:S01:T01 (story-level abstract space: v0.6.1.1+0)
+- UXR-001 = E7:S01:T01 (story-level abstract space: v0.7.1.1+0)
+
+**Board Display Rules:**
+
+- Epic Story Checklists in board views: S01 stories omitted (reduce clutter)
+- Epic documents: S01 stories included in internal Story Checklist
+- Kanban board: S01 stories not shown in epic sections
+- Quick view board: S01 stories not shown in epic sections
+
+**Rationale:**
+
+- Repository stories are containers, not work units
+- They grow indefinitely (FR-001 through FR-999+)
+- Completion is not meaningful for repositories
+- Board display omission reduces clutter (100+ tasks in S01)
+- Still tracked internally for traceability and versioning
+
+**Abstract Space Separation:**
+
+- **S00 (Epic-Level Abstract Space):** `0.{EPIC}.0.0+0` - Epic-level abstract space only, no tasks
+- **S01 (Repository Story):** `0.{EPIC}.1.0+0` - Story-level abstract space, contains repository tasks
+- **Repository Tasks:** `0.{EPIC}.1.{TASK}+0` - Concrete tasks in repository story
 
 ### Tasks
 
@@ -300,7 +447,7 @@ Every Task document MUST include the following fields:
 - **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
 - **Scope:** Clear description of what the task accomplishes
 - **Acceptance Criteria:** Measurable criteria for task completion
-- **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
+- **Status:** Current status (TODO, IN PROGRESS, COMPLETE, or IN PROGRESS (PERPETUAL) for repository stories)
 - **Version Anchor:** Version marker when task is complete (e.g., `✅ COMPLETE (v0.4.11.1+1)`)
 - **Completion Date:** Date when task was completed (if applicable)
 - **Related BR/FR Links:** Links to related Bug Reports or Feature Requests
@@ -321,11 +468,33 @@ The following patterns are **explicitly prohibited**:
 
 **Task Numbering and Format:**
 
-- **Numbering (example):** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)
-- **Format:** `E{epic}:S{story}:T{task}` where task is 2-digit (01-99)
-- **Example:** `E20:S07:T10` = Epic 20, Story 7, Task 10
-- **Example:** `E1:S01:T01` = Epic 1, Story 1, Task 1
+- **Numbering (example):** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit or 3-digit zero padding)
+- **Format:** `E{epic}:S{story}:T{task}` where task is:
+  - **Regular tasks:** 2-digit (01-99)
+  - **Perpetual tasks:** 3-digit (101+)
+- **Example (regular):** `E20:S07:T10` = Epic 20, Story 7, Task 10
+- **Example (regular):** `E1:S01:T01` = Epic 1, Story 1, Task 1
+- **Example (perpetual):** `E6:S07:T101` = Epic 6, Story 7, Task 101 (UKW - perpetual task)
+- **Example (perpetual):** `E6:S07:T102` = Epic 6, Story 7, Task 102 (CMW - perpetual task)
 - **Tracked:** Git commits reference task ID (or equivalent in your VCS)
+
+**Perpetual Task Range (T101+):**
+
+- **Purpose:** Perpetual tasks are ongoing maintenance/synchronization tasks that never complete
+- **Range:** T101+ (3-digit task numbers starting at 101)
+- **Examples:** UKW (Update Kanban Workflow), CMW (Changelog Management Workflow)
+- **Characteristics:**
+  - Status: IN PROGRESS (Perpetual) - never transitions to COMPLETE
+  - Build Warning Suppression: Enabled (high BUILD numbers expected and valid)
+  - BUILD number = workflow run count (not feature iteration)
+  - Task Type: Perpetual Maintenance
+- **Rationale:**
+  - Clear differentiation from regular tasks (3-digit vs 2-digit)
+  - Unlimited capacity (no upper bound)
+  - No conflicts with regular task range (T01-T99)
+  - Visual clarity in task lists
+- **Migration Note:** Perpetual tasks were migrated from regular task numbers (e.g., T08→T101, T12→T102) as part of repository story abstract space resolution (E9:S01:T08)
+- **Required — Update task document per run:** For each run of a perpetual task, the **task document itself MUST be updated** with a brief record of: what was changed (files, scope), why (purpose, trigger), and the version of this release. This ensures forensic traceability for every run (not only in changelogs). Example: add an "Update History" or inline note in the task doc per release.
 
 **Validation Requirements:**
 
@@ -406,6 +575,8 @@ The following validations MUST be enforced:
    - Release workflow Step 2 validates task/version alignment after update
    - Validators check task/version alignment
    - Pre-commit hooks enforce alignment (if implemented)
+
+5. **Implementation Cycle (adoptable):** Projects may require a mandatory Implementation Cycle (spec + TDD) for all task implementations: Requirement doc → Task creation → Specification & Test Creation (blocking) → Implementation (Red-Green-Refactor) → Release Workflow. When adopted, tests must exist and be failing before implementation starts. **Reference:** `.cursorrules` (Implementation Cycle section), `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md`.
 
 **Common Mistakes to Avoid:**
 - ❌ **DON'T:** Keep `VERSION_TASK = 1` and increment `VERSION_BUILD` when moving to Task 2
