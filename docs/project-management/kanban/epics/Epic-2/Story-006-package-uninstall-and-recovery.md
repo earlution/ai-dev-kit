@@ -33,12 +33,14 @@ Provide safe uninstall, cleanup, recovery, and rollback capabilities for ai-dev-
   - **Linked FR:** `FR-008-package-uninstall-capabilities.md` (GitHub issue #5)  
   - **Acceptance:** ✅ AC-1..AC-5 of FR-008 satisfied; backup/validation/confirmation documented.
 
+
 - [x] **E2:S06:T02 – Recovery and rollback flows** ✅ COMPLETE (v0.2.6.2+1)
   - Implemented recovery mode (`--recover`) - detects failed installations, cleans up partial installations, restores project to working state
   - Implemented rollback mode (`--rollback`) - restores from backup or removes package entirely, supports restoring previous version from timestamped backups
   - Backend-specific uninstall paths supported (Git submodule, npm, pip)
   - **Linked FR:** FR-008 (AC-6..AC-8).  
   - **Acceptance:** ✅ Recovery/rollback implemented and verified; ready for testing across backends.
+
 
 - [x] **E2:S06:T03 – Documentation and verification** ✅ COMPLETE (v0.2.6.3+1)
   - Updated troubleshooting guide with comprehensive uninstall section (uninstall issues, orphaned files, dependency conflicts)
@@ -47,6 +49,7 @@ Provide safe uninstall, cleanup, recovery, and rollback capabilities for ai-dev-
   - Added examples for standard uninstall, recovery mode, rollback mode, and manual uninstall
   - **Linked FR:** FR-008 (AC-9..AC-10).  
   - **Acceptance:** ✅ Docs updated; uninstall scenarios documented with examples.
+
 
 ---
 

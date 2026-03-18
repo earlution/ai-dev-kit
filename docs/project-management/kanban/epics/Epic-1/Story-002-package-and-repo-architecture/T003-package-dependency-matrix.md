@@ -116,11 +116,13 @@ This document provides a **visual dependency matrix** for the three framework pa
   - **Alternative:** Use Workflow Management's included versioning policy or swap in custom policy
   - **Integration:** RW uses version schema from Numbering & Versioning (if available)
 
+
 **Integration Points:**
 - **Kanban Package** (optional)
   - **Purpose:** RW can update Kanban docs automatically
   - **Impact if Missing:** Can use RW without Kanban, just skip Kanban update steps
   - **Alternative:** Manually update Kanban docs or use custom workflow
+
 
 **Breaking Dependencies:**
 - To use without Numbering & Versioning: Use included versioning policy or swap in custom policy
@@ -146,11 +148,13 @@ This document provides a **visual dependency matrix** for the three framework pa
   - **Alternative:** Use Workflow Management's included versioning policy
   - **Integration:** Workflow Management references Numbering & Versioning schema (if available)
 
+
 - **Kanban Package** (optional)
   - **Purpose:** Kanban uses version markers from Numbering & Versioning schema
   - **Impact if Missing:** Kanban can work without versioning, just skip version markers
   - **Alternative:** Use custom versioning or skip version markers
   - **Integration:** Kanban references version schema for version markers
+
 
 **Breaking Dependencies:**
 - No dependencies to break (fully independent)
@@ -172,11 +176,13 @@ This document provides a **visual dependency matrix** for the three framework pa
   - **Alternative:** Use custom versioning or skip version markers
   - **Integration:** Kanban uses version markers (e.g., `✅ COMPLETE (v0.1.2.1+1)`)
 
+
 - **Workflow Management Package** (integration)
   - **Purpose:** RW can update Kanban docs automatically
   - **Impact if Missing:** Can use Kanban without RW, just update docs manually
   - **Alternative:** Use custom workflow or update Kanban docs manually
   - **Integration:** RW updates Kanban docs with version markers
+
 
 **Breaking Dependencies:**
 - To use without Numbering & Versioning: Skip version markers or use custom versioning

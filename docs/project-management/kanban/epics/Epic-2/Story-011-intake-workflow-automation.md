@@ -37,6 +37,7 @@ housekeeping_policy: keep
   - Task: [`T12-github-actions-workflow-bug-resolution.md`](T12-github-actions-workflow-bug-resolution.md)
   - **Related BR:** [BR-053](../../../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 
+
 > **Format:** `E2:S11:Txx` (Epic 2, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.2.11.1+1)`)  
 

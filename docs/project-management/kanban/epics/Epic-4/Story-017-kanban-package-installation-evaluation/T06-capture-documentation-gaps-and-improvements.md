@@ -108,10 +108,12 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Document that `install_package_from_release.py` is in Workflow Management package
   - [ ] Add explicit post-install step: "Run `python3 scripts/install_kanban_framework.py --mode fresh`"
   - [ ] Document dependency on Workflow Management package or create Kanban-specific installer
+
 - **Files to Update:**
   - `INSTALL_IN_YOUR_PROJECT.md`
   - `packages/frameworks/kanban/README.md`
   - `packages/frameworks/workflow mgt/docs/PACKAGE_INSTALLATION_GUIDE.md`
+
 
 ---
 
@@ -136,10 +138,12 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Document current version and target version in update process
   - [ ] Create update changelog or version history
   - [ ] Update documentation with version tracking information
+
 - **Files to Update:**
   - `packages/frameworks/kanban/scripts/migrate_structure.py`
   - `packages/frameworks/kanban/scripts/install_kanban_framework.py`
   - `packages/frameworks/kanban/README.md`
+
 
 ---
 
@@ -165,9 +169,11 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Add prominent "Coming Soon" notice to CLI tool documentation
   - [ ] Provide timeline or alternative methods
   - [ ] Ensure CLI implementation follows same patterns as Path 1 and Path 2
+
 - **Files to Update:**
   - `INSTALL_IN_YOUR_PROJECT.md`
   - `docs/documentation/user-docs/framework-dependency-cli-reference.md`
+
 
 ---
 
@@ -191,10 +197,12 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Add `--version-file-path` option to validator
   - [ ] Support configuration via `rw-config.yaml`
   - [ ] Update documentation with version file path examples
+
 - **Files to Update:**
   - `packages/frameworks/kanban/scripts/validate_installation.py`
   - `packages/frameworks/kanban/README.md`
   - Post-install checklist documentation
+
 
 ---
 
@@ -218,10 +226,12 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Make confidence scores more visible in migration reports
   - [ ] Display confidence scores in migration summary
   - [ ] Update documentation to highlight confidence scores
+
 - **Files to Update:**
   - `packages/frameworks/kanban/scripts/migrate_structure.py`
   - `packages/frameworks/kanban/scripts/analyze_structure.py`
   - `packages/frameworks/kanban/README.md`
+
 
 ---
 
@@ -245,9 +255,11 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Add example version file paths for common project structures
   - [ ] Clarify version file integration step
   - [ ] Make checklist more actionable with specific commands
+
 - **Files to Update:**
   - `packages/frameworks/kanban/README.md`
   - T04 task document (post-install checklist)
+
 
 ---
 
@@ -273,9 +285,11 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Add "Installation Quick Start" section with all paths
   - [ ] Add "Migration/Update Quick Start" section
   - [ ] Add "Post-Install Verification" quick start section
+
 - **Files to Update:**
   - `packages/frameworks/kanban/README.md`
   - `INSTALL_IN_YOUR_PROJECT.md`
+
 
 ---
 
@@ -299,9 +313,11 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Add troubleshooting section for installation issues
   - [ ] Add troubleshooting section for migration issues
   - [ ] Add troubleshooting section for configuration issues
+
 - **Files to Update:**
   - `packages/frameworks/kanban/README.md`
   - `INSTALL_IN_YOUR_PROJECT.md`
+
 
 ---
 
@@ -325,9 +341,11 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Create "Choosing the Right Installation Path" guide
   - [ ] Create "Choosing the Right Mode" guide
   - [ ] Include decision trees or flowcharts
+
 - **Files to Create/Update:**
   - `packages/frameworks/kanban/docs/INSTALLATION_DECISION_GUIDE.md` (new)
   - `packages/frameworks/kanban/README.md`
+
 
 ---
 
@@ -351,9 +369,11 @@ Capture and consolidate all documentation gaps and improvements identified durin
   - [ ] Add installation examples to documentation
   - [ ] Add migration/update examples
   - [ ] Create installation test suite for automated validation
+
 - **Files to Create/Update:**
   - `packages/frameworks/kanban/docs/INSTALLATION_EXAMPLES.md` (new)
   - `packages/frameworks/kanban/tests/test_installation.py` (new)
+
 
 ---
 

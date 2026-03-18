@@ -23,14 +23,19 @@ housekeeping_policy: keep
 - [x] **E4:S17:T01 – Enumerate supported installation paths for Kanban** ✅ COMPLETE (v0.4.17.1+1)
 - [x] **E4:S17:T02 – Validate fresh install steps for each path** - ✅ COMPLETE (v0.4.17.2+1)
   - Task Doc: [`T02-validate-fresh-install-steps-for-each-path.md`](Story-017-kanban-package-installation-evaluation/T02-validate-fresh-install-steps-for-each-path.md)
+
 - [x] **E4:S17:T03 – Validate migration/update paths (if supported)** - ✅ COMPLETE (v0.4.17.3+1)
   - Task Doc: [`T03-validate-migration-update-paths.md`](Story-017-kanban-package-installation-evaluation/T03-validate-migration-update-paths.md)
+
 - [x] **E4:S17:T04 – Verify post-install configuration and validation steps** - ✅ COMPLETE (v0.4.17.4+1)
   - Task Doc: [`T04-verify-post-install-configuration-and-validation-steps.md`](Story-017-kanban-package-installation-evaluation/T04-verify-post-install-configuration-and-validation-steps.md)
+
 - [x] **E4:S17:T05 – Document failure modes and rollback guidance** - ✅ COMPLETE (v0.4.17.5+1)
   - Task Doc: [`T05-document-failure-modes-and-rollback-guidance.md`](Story-017-kanban-package-installation-evaluation/T05-document-failure-modes-and-rollback-guidance.md)
+
 - [x] **E4:S17:T06 – Capture documentation gaps and improvements** - ✅ COMPLETE (v0.4.17.6+1)
   - Task Doc: [`T06-capture-documentation-gaps-and-improvements.md`](Story-017-kanban-package-installation-evaluation/T06-capture-documentation-gaps-and-improvements.md)
+
 
 ---
 

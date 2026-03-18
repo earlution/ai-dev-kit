@@ -51,10 +51,12 @@ Create awareness documentation and update framework guidance for Cursor IDE perf
 - **Feature Request:** [`FR-028-cursor-ide-performance-considerations-awareness.md`](../../fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)
   - Problem statement and proposed solution
   - Acceptance criteria
+
 - **External Investigation:** Confidentia project (Epic 20, Story 5, Task 16)
   - Bug Report: `KB/PM_and_Portfolio/kanban/Epic 20/Story-5-BR-Cursor-IDE-Crashes.md`
   - Investigation Report: `KB/Documentation/Developer_Docs/cursor-crash-investigation.md`
   - Article: `KB/Documentation/Developer_Docs/cursor-crash-investigation-article.md`
+
 - **Framework Documentation:** `packages/frameworks/numbering & versioning/IMPLEMENTATION_GUIDE.md`
 - **Current File Counts:** ai-dev-kit statistics (1,021 markdown files, 266 changelog archive files, 181 Kanban files)
 
@@ -162,6 +164,7 @@ Create awareness documentation and update framework guidance for Cursor IDE perf
   - Bug Report: `KB/PM_and_Portfolio/kanban/Epic 20/Story-5-BR-Cursor-IDE-Crashes.md`
   - Investigation Report: `KB/Documentation/Developer_Docs/cursor-crash-investigation.md`
   - Article: `KB/Documentation/Developer_Docs/cursor-crash-investigation-article.md`
+
 
 **Related Stories:**
 - **E6:S07:** ADK Implementation Analysis and Package Management (parent story, migrated from S06 to S07)

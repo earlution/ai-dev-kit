@@ -20,6 +20,8 @@ from typing import Dict, List, Optional, Any
 from enum import Enum
 from dataclasses import dataclass
 
+import logging
+
 # Import canonical steps loader
 from canonical_steps import (
     get_canonical_steps, get_execution_path, should_execute_step,
@@ -32,18 +34,37 @@ from workflow_executor import WorkflowExecutor, WorkflowDefinition, WorkflowResu
 from deliverable_processor import DeliverableProcessor, Deliverable, DeliverableType
 
 
+class ExecutionPlanStatus(Enum):
+    """Status of an execution plan."""
+    PENDING = "pending"
+    VALIDATED = "validated"
+    EXECUTING = "executing"
+    COMPLETED = "completed"
+    FAILED = "failed"
+
+
+@dataclass
+class ExecutionPlan:
+    """Execution plan for chaining multiple workflows."""
+    
+    workflows: List[str]
+    dependencies: Dict[str, List[str]]
+    status: ExecutionPlanStatus
+    results: Optional[Dict[str, WorkflowResult]] = None
+
+
 class TriggerType(Enum):
     """RW trigger types - now loaded from canonical definition."""
-    def __init__(self, value):
-        self._value_ = value
+    RW = "RW"
+    RW_K = "RW -k"
+    RW_D = "RW -d"
     
     @classmethod
     def from_string(cls, trigger_str: str):
         """Create TriggerType from string trigger."""
-        # Map trigger strings to enum values using canonical definition
-        available_triggers = list_triggers()
-        if trigger_str in available_triggers:
-            return cls(trigger_str)
+        for member in cls:
+            if member.value == trigger_str:
+                return member
         raise ValueError(f"Unknown trigger: {trigger_str}")
 
 
@@ -203,7 +224,11 @@ class WorkflowOrchestrator:
         # Build dependency map
         deps = {}
         for wf_id in workflow_ids:
-            deps[wf_id] = self.dependency_graph[wf_id].get('depends_on', [])
+            if wf_id in self.dependency_graph:
+                deps[wf_id] = self.dependency_graph[wf_id].get('depends_on', [])
+            else:
+                # Unknown workflows (like release-step-X) have no dependencies
+                deps[wf_id] = []
         
         # Topological sort
         execution_order = []
@@ -517,12 +542,14 @@ def execute_rw_with_trigger(trigger_input: str, **kwargs) -> ExecutionPlan:
         # Create workflow list based on execution path
         workflow_ids = [f"release-step-{step}" for step in execution_path]
         
-        # Prepare RW context with trigger information
+        # Prepare RW context with trigger information and task ID
         rw_context = kwargs.get('rw_context', {})
         rw_context.update({
             'trigger_type': trigger_type.value,
             'trigger_input': trigger_input,
-            'execution_path': execution_path
+            'execution_path': execution_path,
+            'task_id': kwargs.get('task_id'),
+            'user_request': kwargs.get('user_request')
         })
         
         # Execute workflows
@@ -555,6 +582,11 @@ if __name__ == "__main__":
         help="RW trigger type (RW, RW -k, RW -d)"
     )
     parser.add_argument(
+        "--task",
+        type=str,
+        help="Task ID for RW execution (optional, will infer if not provided)"
+    )
+    parser.add_argument(
         "--user-request",
         type=str,
         help="User request context"
@@ -566,7 +598,8 @@ if __name__ == "__main__":
         # Execute RW with specific trigger
         plan = execute_rw_with_trigger(
             trigger_input=args.trigger,
-            user_request=args.user_request
+            user_request=args.user_request,
+            task_id=args.task
         )
         
         if plan.status == ExecutionPlanStatus.COMPLETED:

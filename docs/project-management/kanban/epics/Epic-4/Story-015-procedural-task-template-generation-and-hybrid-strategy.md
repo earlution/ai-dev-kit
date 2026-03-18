@@ -28,6 +28,7 @@ This story implements the **hybrid task template system** for the Kanban framewo
   - Be used by framework maintainers for regeneration after structural changes.
   - Be run by adopting projects for client-side template generation.
 
+
 The goal is to balance high-quality, human-authored templates with low-friction maintenance and distribution.
 
 ---
@@ -96,6 +97,7 @@ Deliver a robust, documented hybrid template system where:
   - Template placeholders and how they are populated.
   - Safety/overwrite behavior and CLI interface (if any).
 
+
 **Acceptance Criteria:**
 - [x] Generator responsibilities, inputs, and outputs clearly defined. ✅
 - [x] Mapping rules from canonical structure → files documented. ✅
@@ -123,12 +125,14 @@ Deliver a robust, documented hybrid template system where:
     - File paths.
     - Core structural sections (frontmatter, main headings).
 
+
 **Acceptance Criteria:**
 - [x] Generator can create all canonical task templates in a clean environment. ✅
 - [x] Generator output matches the existing concrete templates for:
   - [x] Task coverage. ✅
   - [x] File paths and names. ✅
   - [x] Core structural sections. ✅
+
 - [x] Validation routine exists and can be run as part of maintenance checks. ✅
 
 ---
@@ -147,6 +151,7 @@ Deliver a robust, documented hybrid template system where:
 - Generator wired into the Kanban framework in a discoverable way:
   - Script placed under `packages/frameworks/kanban/scripts/` (or equivalent).
   - Optional CLI entry point or documented invocation pattern.
+
 - Basic guidance for maintainers on when/how to run it.
 
 **Acceptance Criteria:**
@@ -155,6 +160,7 @@ Deliver a robust, documented hybrid template system where:
   - [x] Run a dry-run. ✅
   - [x] Generate missing templates. ✅
   - [x] Regenerate templates (with explicit overwrite option). ✅
+
 - [x] Validation routine can be included in maintenance or CI checks (optional but preferred). ✅
 
 ---
@@ -179,11 +185,13 @@ Deliver a robust, documented hybrid template system where:
     - Use pre-generated templates, or
     - Run the generator in their own repo.
 
+
 **Acceptance Criteria:**
 - [x] Documentation clearly explains:
   - [x] What the hybrid strategy is. ✅
   - [x] How to use the generator as a maintainer. ✅
   - [x] How to use or generate templates as a client. ✅
+
 - [x] References to ADR and FR-029 are included for traceability. ✅
 
 ---
@@ -194,6 +202,7 @@ Deliver a robust, documented hybrid template system where:
 - Future Kanban framework improvements that assume:
   - Canonical task templates can be regenerated cheaply.
   - Structure changes can be propagated across all tasks with minimal effort.
+
 
 **Blocked By:**
 - E4:S06:T04 – Create task template files for each typical task (for complete reference coverage).

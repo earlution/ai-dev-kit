@@ -126,6 +126,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 - **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md)
 - **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
+- **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and establish UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 
 ### Medium Priority (Could Have - C)
 
@@ -136,44 +137,47 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 ## Summary Statistics
 
-**Total Items:** 70 FR/BR/UXR documents
+**Total Items:** 71 FR/BR/UXR documents
 
-### By Type:
+#### Type Breakdown
+
 - **Feature Requests:** 51 (1 completed: FR-051)
 - **Bug Reports:** 15 (1 in progress: BR-037)
-- **User Experience Research:** 4
+- **User Experience Research:** 5
 
-### By Status:
+#### Status Breakdown
+
 - **TODO:** 68
 - **IN PROGRESS:** 1 (BR-037)
 - **COMPLETED:** 1 (FR-051 - tracked in fr-br-uxr-completed.md)
 
-### By MoSCOW Priority:
+#### MoSCOW Breakdown
+
 - **Must Have (M):** 2 (BR-038, BR-037)
 - **Should Have (S):** 6 (FR-045, FR-047, FR-046, UXR-001, UXR-002, FR-051)
 - **Could Have (C):** 62
 - **Won't Have (W):** 0
 - **Ongoing (O):** 0
 
----
-
 ## Usage Instructions
 
-### For Stakeholders:
+### For Stakeholders
+
 1. **Type-based review** - Use this document to see all items of a specific type
 2. **Complete inventory** - Get full picture of all FR/BR/UXR items
 3. **Status tracking** - Monitor status changes within each type
 
-### For Developers:
+### For Developers
+
 1. **Type selection** - Choose items based on type preference and priority
 2. **Complete listing** - See all available items in each category
 3. **Cross-reference** - Link to individual documents for details
 
-### For Product Management:
+### For Product Management
+
 1. **Type analysis** - Analyze distribution of work across types
 2. **Resource planning** - Plan resources based on type-specific needs
 3. **Trend monitoring** - Track patterns in FR/BR/UXR submissions
 
 ---
-
 *This structure document provides comprehensive FR/BR/UXR inventory organized by type, complementing the MoSCOW prioritization in the main board.*

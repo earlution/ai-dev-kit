@@ -92,6 +92,7 @@ under Story      that matches problem domain
   - **For FR:** Desired functionality, use case, scope
   - **For BR:** Affected component, symptoms, severity
 
+
 **Output:** Classified FR/BR with extracted information
 
 ---
@@ -366,6 +367,7 @@ An Epic matches if **ALL** of the following are true:
   - Backend API (Epic 2, Story 1) → Task 5
   - Frontend UI (Epic 3, Story 2) → Task 3
   - Documentation (Epic 1, Story 3) → Task 2
+
 - Versions: `0.2.1.5+1`, `0.3.2.3+1`, `0.1.3.2+1`
 
 ---
@@ -443,6 +445,7 @@ An Epic matches if **ALL** of the following are true:
   - Data processing (Epic 5) → Task 1
   - UI components (Epic 6) → Task 1
   - API endpoints (Epic 2) → Task 8
+
 - Versions: `0.5.1.1+1`, `0.6.1.1+1`, `0.2.1.8+1`
 
 ---

@@ -94,6 +94,7 @@ Define the implementation expectations baseline for the Workflow Management fram
   - ✅ **CAN customize:** File paths, project names, branch naming conventions, version file location
   - ❌ **MUST keep:** Workflow steps (1-13), validation logic, agent execution pattern, atomicity requirements, PDCA integration
 
+
 **Version Schema:**
 - Default schema: `RC.EPIC.STORY.TASK+BUILD` (e.g., `0.15.1.4+2`)
 - Designed to be universal but customizable
@@ -367,6 +368,7 @@ Define the implementation expectations baseline for the Workflow Management fram
   - Mode A: Simple RW (no Kanban)
   - Mode B: RW + Dev-Kit Versioning
   - Mode C: Full Stack (RW + Versioning + Kanban)
+
 - **Dry-Run Support:** Preview changes before applying
 - **Config Generation:** Creates `rw-config.yaml` automatically
 - **Cursor Rules Update:** Adds RW trigger section automatically

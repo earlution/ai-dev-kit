@@ -39,24 +39,29 @@ Review and validate the integration points and dependency alignment between the 
   - `packages/frameworks/numbering & versioning/integration/integration-examples-external-projects.md`
   - `packages/frameworks/numbering & versioning/integration/integration-troubleshooting-guide.md`
 
+
 - **Workflow Management Integration:**
   - `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`
   - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
   - `packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py`
   - `.cursorrules` (RW section – version schema usage, SemVer integration)
 
+
 - **Kanban Integration:**
   - `packages/frameworks/kanban/integration/numbering-versioning-integration.md`
   - `packages/frameworks/kanban/integration/workflow-management-integration.md`
 
+
 - **Expectations Baseline (T01):**
   - `T01-expectations-baseline.md` (Integration Expectations section)
+
 
 - **Dev-Kit Implementation:**
   - `src/fynd_deals/version.py` (version file)
   - `CHANGELOG.md` (main changelog)
   - `docs/changelog-and-release-notes/changelog-archive/` (detailed changelogs)
   - `docs/project-management/kanban/` (Kanban docs)
+
 
 ---
 
@@ -108,6 +113,7 @@ An **integration alignment report** confirming:
   - New task: `VERSION_TASK = completed, BUILD = 1`
   - Same task: `BUILD = current + 1`
   - Out-of-order: `VERSION_TASK = completed, BUILD = 1`
+
 - ✅ Handles doc-init builds (`+0`) per FR-020
 - ✅ Validates task document presence and alignment
 

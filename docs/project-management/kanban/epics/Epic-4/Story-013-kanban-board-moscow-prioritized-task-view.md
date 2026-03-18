@@ -23,16 +23,22 @@ housekeeping_policy: keep
 
 - [x] **E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board** ✅ COMPLETE (v0.4.13.1+1)
   - Task: [`T01-kanban-board-moscow-prioritized-task-view.md`](T01-kanban-board-moscow-prioritized-task-view.md)
+
 - [x] **E4:S13:T02 – Update Kanban governance policy** ✅ COMPLETE (v0.4.13.2+1)
   - Task: [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
+
 - [x] **E4:S13:T03 – Update Kanban board template** ✅ COMPLETE (v0.4.13.3+1)
   - Task: [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
+
 - [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+3)
   - Task: [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
+
 - [x] **E4:S13:T05 – Update Kanban package** ✅ COMPLETE (v0.4.13.5+1)
   - Task: [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
+
 - [x] **E4:S13:T06 – Update other affected packages** ✅ COMPLETE (v0.4.13.6+1)
   - Task: [`T06-update-other-affected-packages.md`](T06-update-other-affected-packages.md)
+
 
 > **Format:** `E4:S13:Txx` (Epic 4, Story 13, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.13.1+1)`)

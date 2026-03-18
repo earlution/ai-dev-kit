@@ -178,6 +178,7 @@ This document provides a comprehensive migration plan to convert **784 embedded 
 
 - [x] **E4:S11:T01 – Update Kanban Governance Policy** ✅ COMPLETE (v0.4.11.1+0)
   - Task: [`T01-update-kanban-policy.md`](T01-update-kanban-policy.md)
+
 ```
 
 **Update Rules:**

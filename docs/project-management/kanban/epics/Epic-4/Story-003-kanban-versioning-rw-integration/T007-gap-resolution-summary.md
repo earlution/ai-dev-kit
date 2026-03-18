@@ -114,6 +114,7 @@ The gaps were systematically identified during **E4:S03:T04** validation (comple
   2. Read the authoritative Story document file to get correct state
   3. Use grep/search to find ALL sections referencing the story/task
   4. Update ALL of them to match the Story file's state
+
 - Added explicit Epic Story Checklist update requirement
 - Enhanced validation with consistency checks
 

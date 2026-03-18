@@ -38,12 +38,14 @@ Validate migration and update paths for the Kanban framework package to ensure u
   - `update` - Update existing framework installation
   - `hybrid` - Preserve project epics, install framework epics
   - `canonical_adoption` - Adopt canonical structure with intelligent task mapping
+
 - Migration/update documentation:
   - `packages/frameworks/kanban/scripts/README.md`
   - `packages/frameworks/kanban/README.md`
   - `packages/frameworks/kanban/scripts/migrate_structure.py`
   - `packages/frameworks/kanban/scripts/analyze_structure.py`
   - `packages/frameworks/kanban/scripts/detect_existing_structure.py`
+
 - Fresh install validation from T02 (baseline for comparison)
 
 ---

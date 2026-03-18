@@ -73,6 +73,7 @@ The RW installer script (`install_release_workflow.py`) was looking for the `cur
   - Changed `CURSORRULES_TEMPLATE = PACKAGE_ROOT / "cursorrules-rw-trigger-section.md"` to `FRAMEWORK_ROOT / "cursorrules-rw-trigger-section.md"`
   - Changed `SCHEMA_DOC = PACKAGE_ROOT / "config" / "rw-config-schema.md"` to `FRAMEWORK_ROOT / "config" / "rw-config-schema.md"`
 
+
 **Verification:**
 - ✅ Template file exists at: `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md`
 - ✅ Schema file exists at: `packages/frameworks/workflow mgt/config/rw-config-schema.md`
@@ -114,9 +115,11 @@ Created `CANONICAL_STORIES.md` document in the Kanban framework templates direct
   - Documented Bug Reports pattern (purpose, characteristics, template references, example location)
   - Documented Feature Requests pattern (purpose, characteristics, template references, example location)
   - Added usage instructions and guidelines for adding new patterns
+
 - `packages/frameworks/kanban/README.md`:
   - Added `CANONICAL_STORIES.md` to Package Contents section (templates)
   - Added `CANONICAL_STORIES.md` to Documentation section with description
+
 
 **Verification:**
 - ✅ Canonical stories document created with Bug Reports and Feature Requests patterns

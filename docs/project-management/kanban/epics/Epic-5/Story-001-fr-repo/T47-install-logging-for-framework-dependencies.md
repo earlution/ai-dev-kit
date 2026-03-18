@@ -43,9 +43,11 @@ Concrete implementation work (CLI changes, tests, docs) will be carried out unde
   - `cli/commands/install.py`
   - `cli/backends/*`
   - `docs/documentation/user-docs/framework-dependency-*.md`
+
 - Kanban / RW integration docs:
   - `docs/architecture/standards-and-adrs/framework-dependency-architecture.md`
   - `docs/architecture/standards-and-adrs/framework-update-cli-design.md`
+
 
 ---
 

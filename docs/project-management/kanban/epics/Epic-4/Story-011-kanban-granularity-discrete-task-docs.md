@@ -31,6 +31,7 @@ housekeeping_policy: keep
 - [ ] **E4:S11:T07 – Migrate Embedded Tasks to Discrete Task Documents** - TODO (v0.4.11.7+0 – Migration plan and implementation)
   - Task: [`T07-migrate-embedded-tasks-to-discrete-documents.md`](T07-migrate-embedded-tasks-to-discrete-documents.md)
 
+
 > **Format:** `E4:S11:Txx` (Epic 4, Story 11, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.4.11.1+1)`)  
 > **Coordination:** This story coordinates with E2:S09 (Workflow Management) for RW integration

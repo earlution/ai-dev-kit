@@ -185,11 +185,13 @@ Establish `ai-dev-kit` as the canonical source for Kanban framework policies, te
   - Added "ALL sections" update requirement reminder
   - Added consistency check reminder
   - Added forensic marker format note in detailed story sections
+
 - **STORY_TEMPLATE.md:**
   - Added comprehensive notes in Task Checklist section
   - Added "ALL sections" update requirement reminder
   - Added consistency check reminder
   - Added forensic marker format note
+
 
 **Files Updated:**
 - ✅ `packages/frameworks/kanban/templates/EPIC_TEMPLATE.md` (enhanced with governance notes)
@@ -233,6 +235,7 @@ Establish `ai-dev-kit` as the canonical source for Kanban framework policies, te
 - **Customization Boundaries:** 
   - ✅ CAN customize: File paths, project names, terminology, Epic ranges, branch conventions, board structure
   - ❌ MUST NOT customize: Operational principles, forensic marker format, Story Checklist as SoT, governance rules, version schema structure
+
 - **Update Process:** Step-by-step workflow for syncing with framework updates
 - **SoT Relationship:** `ai-dev-kit` is canonical source, projects are adaptations
 

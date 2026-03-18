@@ -76,11 +76,13 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
   - `templates/epics/Epic-5-FR-Implementation.md`
   - `templates/epics/Epic-6-BR-Implementation.md`
   - `templates/epics/Epic-7-UXR.md`
+
 - Each template includes:
   - Purpose, scope, key characteristics
   - Typical stories list
   - Placeholders for contextualization (`{PROJECT_NAME}`, `{DOMAIN}`, etc.)
   - Integration points with other epics
+
 
 **Approach:**
 1. Extract epic definitions from `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
@@ -126,6 +128,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
   - `templates/epics/Epic-19-Analytics.md`
   - `templates/epics/Epic-20-Mobile.md`
   - `templates/epics/Epic-21-Internationalization.md`
+
 - Each template includes same structure as T01 templates
 
 **Approach:**
@@ -168,12 +171,14 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
   - `templates/stories/Epic-1/Story-2-Core-Infrastructure.md`
   - `templates/stories/Epic-1/Story-3-Initial-Features.md`
   - ... (for all epics and their typical stories)
+
 - Each story template includes:
   - Purpose and goal
   - Typical tasks list
   - Key deliverables
   - Integration points
   - Placeholders for contextualization
+
 
 **Approach:**
 1. Extract story definitions from comprehensive structure
@@ -219,6 +224,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
   - Acceptance criteria
   - Dependencies
   - Placeholders for contextualization
+
 - ✅ Filename sanitization implemented (handles special characters)
 - ✅ Duplicates cleaned up
 - ✅ Validation complete
@@ -262,11 +268,13 @@ All 378 canonical task templates have been successfully generated, validated, an
   - ✅ `examples/contextualized/tiny-project/` - Core Epics only (1-7, 8, 10, 18, 22, 23)
   - ✅ `examples/contextualized/small-project/` - Core Epics + Epic 11 (API), Epic 12 (UI)
   - ✅ `examples/contextualized/ambitious-project/` - Core Epics + Epics 9, 11-17, 19-21
+
 - ✅ Guide includes:
   - ✅ Placeholder replacement instructions
   - ✅ Customization guidelines
   - ✅ Scalability guidance
   - ✅ Examples for different project types
+
 
 **Approach:**
 1. Document placeholder system (`{PROJECT_NAME}`, `{DOMAIN}`, etc.)
@@ -283,18 +291,22 @@ All 378 canonical task templates have been successfully generated, validated, an
   - Customization guidelines (Epic, Story, Task levels)
   - Troubleshooting section
   - Integration with installer
+
 - ✅ `packages/frameworks/kanban/templates/examples/contextualized/tiny-project/` - Tiny project example
   - PersonalBlog example
   - Core Epics only
   - Minimal customization
+
 - ✅ `packages/frameworks/kanban/templates/examples/contextualized/small-project/` - Small project example
   - SaaSMVP example
   - Core Epics + Epic 11 (API), Epic 12 (UI)
   - Moderate customization
+
 - ✅ `packages/frameworks/kanban/templates/examples/contextualized/ambitious-project/` - Ambitious project example
   - EnterprisePlatform example
   - Core Epics + Epics 9, 11-17, 19-21
   - Full customization
+
 
 **Acceptance Criteria:**
 - [x] Contextualization guide created
@@ -329,6 +341,7 @@ All 378 canonical task templates have been successfully generated, validated, an
   - Links to individual epic templates
   - Updates epic ordering rationale with chronological adoption sequence
   - Includes contextualization guidance
+
 
 **Approach:**
 1. **Fix Epic 7:** Update Epic 7 section to UXR (User Experience Research) with complete description
@@ -399,10 +412,12 @@ All 378 canonical task templates have been successfully generated, validated, an
   - Provides step-by-step contextualization process
   - Includes examples for different project types
   - Integrates with Kanban installer (when created)
+
 - Installation workflow integration:
   - Kanban installer uses canonical templates
   - Installation process contextualizes templates
   - Clear separation from project-specific content
+
 
 **Approach:**
 1. Update template setup guide Step 4 (Kanban Board customization)
@@ -444,6 +459,7 @@ All 378 canonical task templates have been successfully generated, validated, an
   - Feedback and improvements identified
   - Recommendations for refinement
 
+
 **Approach:**
 1. Create test project scenarios
 2. Contextualize templates for each scenario
@@ -482,13 +498,16 @@ All 378 canonical task templates have been successfully generated, validated, an
     - Canonical epic templates (for reference)
     - ai-dev-kit's actual Kanban (example only, not for copying)
   - Includes clear examples of what users should expect after installation
+
 - Enhanced installation documentation:
   - Step-by-step guide using the installer
   - Examples of installation results
   - Troubleshooting guide
+
 - Warning mechanism (if possible):
   - Warning if users manually copy files (direct to installer)
   - Or clear documentation warning against manual copying
+
 
 **Approach:**
 1. Update README installation section to emphasize installer
@@ -527,6 +546,7 @@ All 378 canonical task templates have been successfully generated, validated, an
   - Only installs canonical core epics (1-8, 10, 18, 22, 23) by default
   - Contextualizes Epic 1 with project name (replaces `{PROJECT_NAME}` placeholder)
   - Excludes ai-dev-kit project-specific epics (5-9 in ai-dev-kit)
+
 - Updated migration script to use templates
 - Verification that fresh installs only get canonical templates
 

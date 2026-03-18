@@ -144,6 +144,7 @@ def fix_changelog_ordering(content: str, format_type: str = None) -> str:
     detect_format: true
     preserve_content: true
     validate_after_fix: true
+
 ```
 
 **Update Step 4 dependencies:**
@@ -151,6 +152,7 @@ def fix_changelog_ordering(content: str, format_type: str = None) -> str:
 - id: step-4
   dependencies:
     - step-3.5  # Changed from step-3
+
 ```
 
 ### Phase 3: Update CMW Main Script

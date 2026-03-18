@@ -23,8 +23,10 @@ housekeeping_policy: keep
 
 - [ ] **E10:S01 – Document Lifecycle Package Implementation Review** - TODO (v0.10.1.0+0)
   - Story: [`Story-001-document-lifecycle-package-implementation-review.md`](Story-001-document-lifecycle-package-implementation-review.md)
+
 - [ ] **E10:S02 – Document Lifecycle Package Installation Evaluation** - TODO (v0.10.2.0+0)
   - Story: [`Story-002-document-lifecycle-package-installation-evaluation.md`](Story-002-document-lifecycle-package-installation-evaluation.md)
+
 
 ---
 

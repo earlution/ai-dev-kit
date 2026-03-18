@@ -36,12 +36,14 @@ Validate fresh install steps for each supported installation path to ensure each
   1. **GitHub Releases:** `install_package_from_release.py`
   2. **Git Submodule:** copy framework package, then run installer (`install_kanban_framework.py --mode fresh`)
   3. **CLI Tool (coming soon):** `ai-dev-kit install kanban@<version>` (placeholder path)
+
 - Installation documentation:
   - `INSTALL_IN_YOUR_PROJECT.md`
   - `packages/frameworks/kanban/scripts/README.md`
   - `packages/frameworks/kanban/README.md`
   - `packages/frameworks/workflow mgt/docs/PACKAGE_INSTALLATION_GUIDE.md`
   - `docs/documentation/user-docs/framework-dependency-installation-guide.md`
+
 
 ---
 
@@ -176,6 +178,7 @@ Validate fresh install steps for each supported installation path to ensure each
   - Example commands provided: `ai-dev-kit install kanban@2.1.0`
   - Status: Not yet implemented
   - Notes: CLI tool is planned but not available
+
 
 **Recommendations:**
 - Document "Coming Soon" status more clearly

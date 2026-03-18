@@ -60,6 +60,7 @@ Implement all critical and high-priority hardening actions:
   - Installer scripts in `packages/frameworks/kanban/scripts/`
   - Installation documentation
 
+
 ---
 
 ## Deliverable

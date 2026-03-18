@@ -49,6 +49,7 @@ This board provides **centralized visibility and prioritization** for all open F
 - **FR-046** – RW SemVer Tag When task_touch Enabled - TODO (HIGH, RW tagging behaviour when task_touch is enabled) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)
 - **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md)
 - **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
+- **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 - **FR-051** – FR/BR/UXR Prioritization Board - ✅ COMPLETED (HIGH, Create prioritization board for FRs, BRs, and UXRs) - [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) | [E6:S06:T01](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTED - BOARD CREATED*
 
 ---
@@ -118,24 +119,27 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Ongoing (O) - Perpetual Items
 
-*No ongoing FR/BR/UXR items currently*
+No ongoing FR/BR/UXR items currently.
 
 ---
 
 ## Board Statistics
 
-**Total Items:** 69 FR/BR/UXR documents
+**Total Items:** 70 FR/BR/UXR documents
+
 - **Feature Requests:** 51
 - **Bug Reports:** 14  
-- **User Experience Research:** 4
+- **User Experience Research:** 5
 
 **By Priority:**
+
 - **Critical:** 1 (BR-037)
-- **High:** 6 (FR-045, FR-047, FR-046, UXR-001, UXR-002, FR-051)
+- **High:** 7 (FR-045, FR-047, FR-046, UXR-001, UXR-002, UXR-005, FR-051)
 - **Medium:** 10 (FR-031, FR-035, FR-034, FR-032, FR-030, FR-021, BR-036, BR-035, BR-034, BR-033, UXR-003, UXR-004)
 - **Low:** 52 (remaining items)
 
 **By Status:**
+
 - **TODO:** 68
 - **IN PROGRESS:** 1 (BR-037)
 - **COMPLETED:** 0 (tracked in fr-br-uxr-completed.md)

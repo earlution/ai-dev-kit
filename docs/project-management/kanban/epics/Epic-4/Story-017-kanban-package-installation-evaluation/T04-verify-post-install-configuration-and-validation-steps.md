@@ -38,6 +38,7 @@ Verify post-install configuration and validation steps for the Kanban framework 
   - `packages/frameworks/kanban/scripts/README.md`
   - `packages/frameworks/kanban/scripts/validate_installation.py`
   - `packages/frameworks/kanban/scripts/install_kanban_framework.py`
+
 - Installation validation from T02 and T03 (baseline for comparison)
 - Configuration examples and templates
 

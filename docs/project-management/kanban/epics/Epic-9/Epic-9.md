@@ -23,14 +23,19 @@ housekeeping_policy: keep
 
 - [ ] **E9:S01 – RC Readiness Gap Analysis** - IN PROGRESS (v0.9.1.8+9 – T08 COMPLETE: Final validation complete - Kanban board S00→S01 references fixed, versioning policy E6:S06→E6:S07 corrected, acceptance criteria marked complete)
   - Story: [`Story-001-rc-readiness-gap-analysis.md`](Story-001-rc-readiness-gap-analysis.md)
+
 - [ ] **E9:S02 – Kanban Framework RC Readiness Review** - TODO
   - Story: [`Story-002-kanban-framework-rc-readiness-review.md`](Story-002-kanban-framework-rc-readiness-review.md)
+
 - [ ] **E9:S03 – Workflow Management Framework RC Readiness Review** - TODO
   - Story: [`Story-003-workflow-management-framework-rc-readiness-review.md`](Story-003-workflow-management-framework-rc-readiness-review.md)
+
 - [ ] **E9:S04 – Numbering & Versioning Framework RC Readiness Review** - TODO
   - Story: [`Story-004-numbering-versioning-framework-rc-readiness-review.md`](Story-004-numbering-versioning-framework-rc-readiness-review.md)
+
 - [ ] **E9:S05 – Canonical E/S/T Review and Refinement** - TODO
   - Story: [`Story-005-canonical-est-review-and-refinement.md`](Story-005-canonical-est-review-and-refinement.md)
+
 
 ---
 
@@ -49,6 +54,7 @@ This epic addresses the critical gap between current project state (RC=0, develo
   - Package management (how packages are managed)
   - Package maintenance (how packages are maintained)
   - Package installation (how packages are installed, including all scenarios)
+
 - Canonical E/S/T structure review and refinement
 - Strategic prioritization and roadmap creation
 

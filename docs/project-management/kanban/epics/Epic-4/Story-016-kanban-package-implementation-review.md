@@ -108,30 +108,38 @@ Provide a complete implementation review, evidence, and remediation plan to supp
   - `README.md` (package overview, install modes, usage expectations)
   - `CHANGELOG.md` (version history)
   - `MIGRATION_GUIDE_TASK_DOCS.md` (task doc migration guidance)
+
 - **Governance & Policy**
   - `policies/kanban-governance-policy.md` (rules and lifecycle)
+
 - **Integration Guidance**
   - `integration/numbering-versioning-integration.md`
   - `integration/workflow-management-integration.md`
+
 - **FR/BR Intake Guides**
   - `FR_BR_INTAKE_AGENT_GUIDE.md`
   - `FR_BR_INTAKE_GUIDE.md`
   - `FR_BR_INTAKE_QUICK_REFERENCE.md`
   - `FR_BR_INTAKE_USER_GUIDE.md`
   - `FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md`
+
 - **Guides & Design Notes**
   - `guides/portfolio-kanban-alignment-playbook.md`
   - `docs/agentic-task-creation-workflow-documentation.md`
   - `design/agentic-fr-br-analysis-workflow-design.md`
+
 - **Scripts (Installer, Migration, Agentic Tools)**
   - `scripts/install_kanban_framework.py`, `scripts/migrate_structure.py`, `scripts/validate_installation.py`
   - `scripts/agentic_mapper.py`, `scripts/agentic_task_workflow.py`, `scripts/fr_br_analyzer.py`
   - `scripts/semantic_matcher.py`, `scripts/reference_updater.py`, `scripts/analyze_structure.py`
   - `scripts/README.md` (script usage)
+
 - **Templates**
   - `templates/` (epic/story/task templates and canonical structures; 900+ files)
+
 - **Examples**
   - `examples/` (epic, story, task example documents)
+
 
 **Input:** Package directory inventory  
 **Deliverable:** Component map with expected vs actual coverage  

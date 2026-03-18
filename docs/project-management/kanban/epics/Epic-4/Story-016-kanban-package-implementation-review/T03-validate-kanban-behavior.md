@@ -32,6 +32,7 @@ Validate that the Kanban framework package's actual behavior matches the documen
 - **Integration Guides:** 
   - `packages/frameworks/kanban/integration/numbering-versioning-integration.md`
   - `packages/frameworks/kanban/integration/workflow-management-integration.md`
+
 - **Templates:** `packages/frameworks/kanban/templates/`
 - **Actual Implementation:** `docs/project-management/kanban/` (dev-kit's Kanban implementation)
 - **Expectations Baseline:** From E4:S16:T01
@@ -157,9 +158,11 @@ This validation compares documented guidance against actual implementation behav
 - `BR-035-rw-housekeeping-step-not-working.md` contains:
   - Kanban Links section with task reference
   - Status: FIXED
+
 - `T35-rw-housekeeping-step-not-working.md` contains:
   - Input section referencing BR-035
   - Related section with BR link
+
 
 **Compliance:** ✅ **FULLY COMPLIANT**
 

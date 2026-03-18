@@ -145,6 +145,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
   - Added new story/epic progression rules
   - Added dev-kit epic ranges (Epic 1-4+)
   - Clarified no legacy range in dev-kit
+
 - **Version Calculation Examples:** Added dev-kit-specific examples for all progression scenarios
 - **Key Principles:** Added canonical ordering, forensic traceability, and immutability principles
 - **Changelog Steps:** Enhanced with immutability notes (detailed changelog timestamps are immutable)
@@ -378,6 +379,7 @@ The `validate_changelog_format.py` validator checks for canonical ordering (vers
 - **Documentation:** 
   - [REOPENING_BR_AND_TASKS_GUIDE.md](../../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Guide for reopening BRs/tasks
   - [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Principle for bidirectional linking (this task demonstrates the pattern)
+
 - Previous attempt: E2:S01:T06 (v0.2.1.6+2) - marked complete but bug persists
 
 ---

@@ -28,88 +28,18 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-- **E7:S01:T06** – Implement Update Changelog Workflow (UCW) - IN PROGRESS  
-  (HIGH priority, RW-k scope: deliver deterministic UCW enforcing latest-only  
-  changelog policy, archival automation, RW integration per FR-057)  
-  - [Task Document](epics/Epic-7/Story-001-codebase-maintenance-tasks/T06-update-changelog-workflow.md)  
-  - [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)  
-  - [FR-057](fr-br/FR-057-update-changelog-workflow.md)
+- **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](../../../fr-br/FR-060-rw-task-argument-requirement.md)
 
-- **E7:S01:T07** – Markdown Maintenance Workflow (MMW) - TODO  
-  (HIGH priority, RW-d scope: implement FR-058, scoped/baseline validator split, MMW logs + CI hook so release lint debt can be managed deterministically)  
-  - [Task Document](epics/Epic-7/Story-001-codebase-maintenance-tasks/T07-markdown-maintenance-workflow.md)  
-  - [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)  
-  - [FR-058](fr-br/FR-058-markdown-maintenance-workflow.md)
-
-- **E7:S01:T08** – Task Doc Naming Standardization - IN PROGRESS  
-  (HIGH priority, RW-d scope: scaffold Docusaurus portal, refine documentation validator, and establish `EddSddTdd-[Task Title].md` canonical naming with migration plan)  
-  - [Task Document](epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T08-task-doc-naming-standardization.md)  
-  - [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)  
-  - [Release Notes](../../../CHANGELOG.md)
-
-- **E7:S01:T09** – Kanban Template Governance & UXR Ownership - TODO  
-  (HIGH priority, Implements UXR-005: codify single-blank-line rule across Kanban docs, assign UXR ownership, add validator coverage, and produce RW evidence bundle)  
-  - [Task Document](epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)  
-  - [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md)  
-  - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
-
+- **E5:S01:T38** – README Workflow Section - IN PROGRESS (MEDIUM priority, Add comprehensive Workflow section to project README.md documenting all workflows with principle operations and argument forms) - [Task Document](epics/Epic-5/Story-001-fr-repo/T38-rw-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](../../../fr-br/FR-061-readme-workflow-section.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 
 - **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - IN PROGRESS (LOW priority) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 
----
-
-### Completed Tasks
-
-- **E4:S14:T03** – Add Missing Implementation Cycle Workflow (ICW) - COMPLETE  
-  (HIGH priority, Added ICW to workflow management framework package; includes  
-  workflow generator support, comprehensive documentation, and testing. ICW now  
-  available as standard workflow type following agent-driven execution pattern)  
-  - [Task Document](epics/Epic-4/Story-014-kanban-framework-maintenance/T03-add-missing-implementation-cycle-workflow-icw.md)  
-  - [Story](epics/Epic-4/Story-014-kanban-framework-maintenance.md)  
-  - [BR-055](fr-br/BR-055-missing-implementation-cycle-workflow-icw.md)  
-  - [GitHub Issue #22](https://github.com/earlution/ai-dev-kit/issues/22)
-
-
-- **E5:S01:T40** – Implementation Cycle Workflow (ICW) - COMPLETE (HIGH priority, Structured three-phase workflow with specification definition, test design, and implementation planning; complete workflow engine, templates, validation, and comprehensive test suite implemented) - [Task Document](epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) | [FR-040](fr-br/FR-040-implementation-cycle-workflow-icw.md)
-
-- **E6:S07:T105** – Release Runbook Creation - COMPLETE (HIGH priority, Comprehensive release procedures with exact commands for both registry and task-touch SemVer modes; supplementary materials include quick reference, checklists, configuration examples, and integration guides) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md) | [Release Runbook](../../maintenance/release-runbook.md)
-
-- **E6:S07:T104** – Release Automation Audit - COMPLETE (HIGH priority, Audit and fix release automation for task-touch SemVer compatibility; critical fixes implemented, release automation restored) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md) | [Audit Report](../../implementation-cycles/E6S07T104-release-automation-audit-report.md) | [Remediation Implementation](../../implementation-cycles/E6S07T104-remediation-implementation.md)
-
-- **E5:S01:T45** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - COMPLETE  
-  (HIGH priority, SemVer mapping for task_touch and Kanban integration; docs-only  
-  FR repo anchor, implementation in versioning framework stories)  
-  - [Task Document](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)  
-  - [FR-045](fr-br/FR-045-adr-002-task-touch-derived-mapping.md)  
-  - [Validation Report](epics/Epic-5/Story-001-fr-repo/E5S01T45-implementation-validation-report.md)
-
-
-- **E4:S06:T07** – Kanban Template Integration - COMPLETE (HIGH, Integrate with template setup guide and installation workflow) - [Task Document](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system/E4S06T07-integration-validation-report.md) | [Validation Report](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system/E4S06T07-integration-validation-report.md)
-
-### Could Have Tasks Resolved (2026-03-12)
-
-- **E5:S01:T31** – Multi-Agent Coordination Feasibility Investigation - COMPLETE  
-  (C priority, Full ICW implementation with feasibility analysis, framework design,  
-  implementation planning, and comprehensive documentation)  
-  - [Resolution Report](../../implementation-cycles/ICW-AGENT-001-E5S01T31-RESOLUTION.md)  
-  - [FR-031](fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
-
-
-- **E5:S03:T01-T03** – Documentation Automation - ARCHIVED (MEDIUM priority story, Proper archival with comprehensive documentation preserving automation knowledge and future implementation requirements) - [Resolution Report](../../implementation-cycles/DOC-AGENT-001-E5S03T01-03-RESOLUTION.md) | [Story](epics/Epic-5/Story-004-documentation-automation.md)
-
-- **E8:S03:T01-T03** – Automation Scripts - ARCHIVED (MEDIUM priority story, Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements) - [Resolution Report](../../implementation-cycles/ICW-AGENT-001-E8S03T01-03-RESOLUTION.md) | [Story](epics/Epic-8/Story-003-automation-scripts.md)
-
-- **E24:S01:T01-T04** – Book Content Development - COMPLETED AND ARCHIVED (MEDIUM priority story, Current work completed to high standards with comprehensive documentation and proper archival) - [Resolution Report](../../implementation-cycles/DOC-AGENT-001-E24S01T01-04-RESOLUTION.md) | [Story](epics/Epic-24/Story-001-book-content-development.md)
-
-- **E24:S02:T01-T03** – Book Integration with Dev-Kit - ARCHIVED (MEDIUM priority story, Proper archival with comprehensive documentation preserving integration enhancement knowledge and future implementation requirements) - [Resolution Report](../../implementation-cycles/ARCHIVE-AGENT-001-E24S02T01-03-RESOLUTION.md) | [Story](epics/Epic-24/Story-002-book-integration-with-dev-kit.md)
-
 ### Ongoing (O) - Perpetual Tasks
 
 - **E6:S05** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic)  
   - [Story](epics/Epic-6/Story-005-bug-reports.md)
-
 
 - **E6:S06** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-006-feature-requests.md)
 

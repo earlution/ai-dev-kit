@@ -89,6 +89,7 @@ Create a README template based on the excellent [Best-README-Template](https://g
   - Keep a Changelog
   - Shields.io
   - ai-dev-kit
+
 - Framework-specific sections and references
 
 **Dependencies:** E7:S04:T01  
@@ -319,6 +320,7 @@ Create a README template based on the excellent [Best-README-Template](https://g
   - [ ] Keep a Changelog
   - [ ] Shields.io
   - [ ] ai-dev-kit
+
 - [ ] Customization guide provides clear instructions for adopting projects
 - [ ] Template is ready to use and can be customized for any project
 - [ ] Dependency tracking guide explains why adopting projects should track dependencies directly

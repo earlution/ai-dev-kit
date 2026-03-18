@@ -25,6 +25,7 @@ housekeeping_policy: keep
 - [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.7.0.0+0 – Repository story created)
   - Story: [`Story-000-uxr-repo.md`](Story-000-uxr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
+
 - [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.5+6 – Story reopened: filed T06 Update Changelog Workflow to implement UCW tooling and documentation)
 - [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete)
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
@@ -224,6 +225,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
   - **Linked UXR:** `docs/project-management/kanban/fr-br/UXR-001-migration-user-experience-research.md` (GitHub issue #4).  
   - **Acceptance:** Findings synthesized; UX requirements fed into Epic 4 Story 7 tasks; recap documented in this story.
 
+
 > Full story: `docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research.md`
 
 ---
@@ -251,10 +253,13 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 - **Risk:** Maintenance tasks may be deprioritized if not systematically tracked  
   **Mitigation:** Establish perpetual task for IDE-flagged issues and integrate with Kanban framework
+
 - **Risk:** Lack of code review standards may lead to inconsistent code quality  
   **Mitigation:** Establish code review standards early (Story 2) and integrate with development workflow
+
 - **Risk:** Code quality metrics may not be actionable without proper tooling  
   **Mitigation:** Develop automation and tooling (Story 4) to make metrics actionable
+
 
 ---
 

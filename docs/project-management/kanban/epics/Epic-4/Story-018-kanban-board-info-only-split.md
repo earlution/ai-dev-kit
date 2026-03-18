@@ -22,8 +22,10 @@ housekeeping_policy: keep
 
 - [x] **E4:S18:T01 – Implement Kanban Board Info-Only Split** - ✅ COMPLETE (v0.4.18.1+1)
   - Task Doc: [`T1-implement-kanban-board-info-only-split.md`](Story-018-kanban-board-info-only-split/T1-implement-kanban-board-info-only-split.md)
+
 - [x] **E4:S18:T02 – Upgrade Packaged Kanban Framework Board Split** - ✅ COMPLETE (v0.4.18.2+1)
   - Task Doc: [`T2-upgrade-packaged-kanban-framework-board-split.md`](Story-018-kanban-board-info-only-split/T2-upgrade-packaged-kanban-framework-board-split.md)
+
 
 ---
 

@@ -82,15 +82,29 @@ housekeeping_policy: keep
 ---
 
 #### **Epic 7: Codebase Maintenance and Review**
-- **[E7:S01:T05](epics/Epic-7/Story-001-codebase-maintenance-tasks/T05-markdown-maintenance-perpetual-task.md)** – Markdown Maintenance: UXR Enhancement for kanban-completed.md  
-  **Completed:** `2026-03-12T11:05:00Z` | **Version:** `v0.7.1.5+3` | **Agent:** `RW Agent`
+- **[E7:S01:T06](epics/Epic-7/Story-001-codebase-maintenance-tasks/T06-update-changelog-workflow.md)** – Implement Update Changelog Workflow (UCW)  
+  **Completed:** `2026-03-16T17:00:00Z` | **Version:** `v0.7.1.7+4` | **Agent:** `RW Agent`
 
 
 ---
 
-#### **Epic 5: Framework Management and FR Repository**
-- **[E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-release-workflow-uses-semver-tag-when-task-touch-enabled.md)** – Release Workflow Uses SemVer Tag When task_touch Enabled  
-  **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.5.1.46+2` | **Agent:** `PM-AGENT-001`
+#### **Epic 7: Codebase Maintenance and Review**
+- **[E7:S01:T07](epics/Epic-7/Story-001-codebase-maintenance-tasks/T07-markdown-maintenance-workflow.md)** – Markdown Maintenance Workflow (MMW)  
+  **Completed:** `2026-03-16T17:30:00Z` | **Version:** `v0.7.1.7+4` | **Agent:** `RW Agent`
+
+
+---
+
+#### **Epic 7: Codebase Maintenance and Review**
+- **[E7:S01:T08](epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T08-task-doc-naming-standardization.md)** – Task Doc Naming Standardization  
+  **Completed:** `2026-03-16T17:45:00Z` | **Version:** `v0.7.1.8+4` | **Agent:** `RW Agent`
+
+
+---
+
+#### **Epic 7: Codebase Maintenance and Review**
+- **[E7:S01:T09](epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)** – Kanban Template Governance & UXR Ownership  
+  **Completed:** `2026-03-16T17:45:00Z` | **Version:** `v0.7.1.9+4` | **Agent:** `RW Agent`
 
 
 ---
@@ -217,6 +231,9 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 - **E1:S01:T01** – Create Kanban board structure - ✅ COMPLETE (v0.1.1.1+1)
 - **E1:S01:T02** – Implement versioning schema - ✅ COMPLETE (v0.1.1.2+1)
 - **E1:S01:T03** – Create governance policies - ✅ COMPLETE (v0.1.1.3+1)
+- **E1:S01:T04** – Create task tracking system - ✅ COMPLETE (v0.1.1.4+1)
+- **E1:S01:T05** – Create documentation framework - ✅ COMPLETE (v0.1.1.5+1)
+- **E1:S01:T06** – Integrate with versioning - ✅ COMPLETE (v0.1.1.6+1)
 
 #### Story 002: Package and Repo Architecture ✅ COMPLETE
 - **E1:S02:T01** – Analyze current package structure - ✅ COMPLETE (v0.1.2.1+1)
@@ -432,6 +449,11 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 - **E7:S01:T03** – Document maintenance workflows - ✅ COMPLETE (v0.7.1.3+1)
 - **E7:S01:T04** – Integrate with Kanban - ✅ COMPLETE (v0.7.1.4+1)
 - **E7:S01:T05** – PERPETUAL: Markdown maintenance - 🔄 ONGOING
+- **E7:S01:T06** – Implement Update Changelog Workflow (UCW) - ✅ COMPLETE (v0.7.1.7+4)
+- **E7:S01:T07** – Markdown Maintenance Workflow (MMW) - ✅ COMPLETE (v0.7.1.7+4)
+- **E7:S01:T08** – Task Doc Naming Standardization - ✅ COMPLETE (v0.7.1.8+4)
+- **E7:S01:T09** – Kanban Template Governance & UXR Ownership - ✅ COMPLETE (v0.7.1.9+4)
+- **E7:S01:T10** – Enhanced Workflow Logging System Implementation - ✅ COMPLETE (v0.7.1.10+1, 2026-03-17T12:00:00Z)
 
 #### Story 002: Code Review Standards and Processes ✅ COMPLETE
 - **E7:S02:T01** – Create review standards - ✅ COMPLETE (v0.7.2.1+1)

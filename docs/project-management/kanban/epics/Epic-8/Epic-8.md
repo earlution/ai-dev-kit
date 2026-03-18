@@ -23,14 +23,19 @@ housekeeping_policy: keep
 
 - [x] **E8:S01 – Code Generators** - ✅ COMPLETE (v0.8.1.3+1 – All tasks complete)
   - Story: [`Story-001-code-generators.md`](Story-001-code-generators.md)
+
 - [x] **E8:S02 – Additional Validators** - ✅ COMPLETE (v0.8.2.3+1 – All tasks complete)
   - Story: [`Story-002-additional-validators.md`](Story-002-additional-validators.md)
+
 - [ ] **E8:S03 – Automation Scripts** - TODO
   - Story: [`Story-003-automation-scripts.md`](Story-003-automation-scripts.md)
+
 - [ ] **E8:S04 – Tooling & Automation Package Implementation Review** - TODO (v0.8.4.0+0)
   - Story: [`Story-004-tooling-automation-package-implementation-review.md`](Story-004-tooling-automation-package-implementation-review.md)
+
 - [ ] **E8:S05 – Tooling & Automation Package Installation Evaluation** - TODO (v0.8.5.0+0)
   - Story: [`Story-005-tooling-automation-package-installation-evaluation.md`](Story-005-tooling-automation-package-installation-evaluation.md)
+
 
 ---
 

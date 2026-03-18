@@ -99,6 +99,7 @@ Define the implementation expectations baseline for the Numbering & Versioning f
   - ✅ **CAN customize:** Epic ranges, file paths, project names, terminology, work item structure, CI/CD integration points
   - ❌ **MUST keep:** Schema format (`RC.EPIC.STORY.TASK+BUILD`), validation rules, core principles (canonical ordering, immutability, traceability), date formats (`DD-MM-YY` for main changelog, `YYYY-MM-DD HH:MM:SS UTC` for detailed changelog)
 
+
 **Version Schema:**
 - Default schema: `RC.EPIC.STORY.TASK+BUILD` (e.g., `0.15.1.4+2`)
 - Designed to be universal but customizable

@@ -39,6 +39,7 @@ This includes:
   - **Kanban framework implementation gaps**, and
   - **External workflow behavior gaps** (e.g., UKW behavior) that are tracked elsewhere.
 
+
 ---
 
 ## Input
@@ -50,6 +51,7 @@ This includes:
 - **Known BRs/FRs related to Kanban workflows:**
   - `BR-034-ukw-moscow-prioritization-missing` (UKW MoSCOW behavior)
   - `BR-035-rw-housekeeping-step-not-working` (RW housekeeping, now fixed)
+
 
 ---
 
@@ -65,6 +67,7 @@ A **gap log and risk assessment** that:
   - RC Impact (BLOCKER / NON-BLOCKING / INFORMATIONAL)
   - Ownership (Kanban package vs external workflow)
   - Tracking reference (BR/FR/Task)
+
 - Summarises overall RC risk posture for the **Kanban framework package**.
 
 ---
@@ -104,19 +107,24 @@ A **gap log and risk assessment** that:
 - **Description:**  
   - UKW does not always maintain the **MoSCOW Prioritized In-Progress Tasks** section of the Kanban board in the way described by governance and board documentation.  
   - Newly added or recently updated tasks are not consistently surfaced or re-prioritized in the MoSCOW sections after UKW runs.
+
 - **Source:**  
   - `BR-034-ukw-moscow-prioritization-missing.md`  
   - E6:S01:T34 – UKW MoSCOW prioritization missing  
   - Observations during UKW execution and Kanban board review.
+
 - **Ownership:**  
   - **Workflow Management / UKW behavior**, **not** the Kanban framework package itself.
+
 - **Severity:** MEDIUM  
 - **Likelihood:** HIGH (reproducible with current UKW implementation)  
 - **RC Impact:** NON-BLOCKING for Kanban package RC  
   - Reason: Kanban governance, structure, and integration points are compliant; the gap is in how UKW chooses to prioritize tasks, not in Kanban’s ability to represent them.
+
 - **Tracking:**  
   - BR: `BR-034`  
   - Task: `E6:S01:T34` ✅ COMPLETE (v0.6.1.34+2)  
+
 
 ---
 
@@ -126,19 +134,24 @@ A **gap log and risk assessment** that:
 - **Category:** Process / Workflow Behavior  
 - **Description:**  
   - Historical gap where RW’s housekeeping step did not correctly clear `rw-step-*` TODOs in the IDE, leaving visual noise after RW completion.
+
 - **Source:**  
   - `BR-035-rw-housekeeping-step-not-working.md`  
   - E6:S01:T35 – RW housekeeping step not working.
+
 - **Ownership:**  
   - **Workflow Management / RW behavior**, not Kanban package implementation.
+
 - **Severity:** LOW (usability / hygiene issue)  
 - **Likelihood:** LOW (fixed)  
 - **RC Impact:** INFORMATIONAL  
   - Reason: Fix implemented and documented; no ongoing RC risk for Kanban package.
+
 - **Status:** ✅ FIXED (as of v0.6.1.35+1)  
 - **Tracking:**  
   - BR: `BR-035`  
   - Task: `E6:S01:T35` ✅ COMPLETE  
+
 
 ---
 
@@ -149,19 +162,24 @@ A **gap log and risk assessment** that:
 - **Description:**  
   - Environment variables required for release workflows (e.g., `GITHUB_TOKEN`, `GITHUB_REPOSITORY`) were not governed by a consistent SOP.  
   - This caused friction and transient failures (e.g., missing `GITHUB_TOKEN` during RW Step 12.5 or package upload workflows).
+
 - **Source:**  
   - Recent issues encountered when creating GitHub releases via `create_github_release.py`.  
   - Need for explicit SOP and `.env.local` pattern identified during SemVer + GitHub release work.
+
 - **Ownership:**  
   - **Operational / Workflow tooling**, adjacent to Workflow Management and Release Workflow; not a Kanban framework defect.
+
 - **Severity:** LOW (operational friction, not correctness)  
 - **Likelihood:** MEDIUM (until SOP and `.env` pattern are fully adopted)  
 - **RC Impact:** NON-BLOCKING for Kanban package RC  
   - Reason: Affects automation convenience and reliability of release workflows, but not Kanban package correctness or governance behavior.
+
 - **Status:** MITIGATED (SOP + `.env.local` pattern introduced)  
 - **Tracking:**  
   - SOP: `environment-variables-sop.md`  
   - `.env.local` pattern and `.gitignore` updated.
+
 
 ---
 
@@ -189,12 +207,16 @@ and are **tracked and/or mitigated outside the Kanban package**.
 
 - **Structural Risk:** LOW  
   - Package structure, templates, and governance policy are aligned with expectations.
+
 - **Behavioral Risk:** LOW  
   - Behavioral validation (T03) found no discrepancies in Kanban’s own behavior.
+
 - **Integration Risk:** LOW  
   - Integrations with Numbering & Versioning and Workflow Management (RW + UKW wiring) are aligned; UKW behavior gap is external.
+
 - **Operational Risk (Env/Tooling):** LOW–MEDIUM (mitigated)  
   - Environment variable SOP and `.env.local` pattern reduce likelihood and impact.
+
 
 **RC Impact Conclusion:**  
 - There are **no RC-blocking risks** attributable to the **Kanban framework package** implementation.  
@@ -210,7 +232,9 @@ and are **tracked and/or mitigated outside the Kanban package**.
   - [x] Update Story 016 acceptance criteria to reflect completion of the gap log. ✅  
   - [x] Mark task as COMPLETE and anchor version via RW when this analysis is finalized. ✅ (Ready for RW)  
 
+
 - **For Follow-On Work (Outside This Task):**
   - Continue remediation for UKW MoSCOW behavior under existing BR/Task (BR-034 / E6:S01:T34).  
   - Continue to harden env-var SOP and `.env` usage as part of workflow/operational improvements.  
+
 

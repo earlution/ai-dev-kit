@@ -98,6 +98,7 @@ Analyze RW Step 7 (Auto-update Kanban Docs) to decompose it into atomic sub-step
   - Rationale for each classification
   - Reliability confidence estimates
 
+
 **Acceptance Criteria:**
 - [x] ✅ All atomic steps identified and documented
 - [x] ✅ Each step classified as deterministic or agentic with rationale
@@ -132,12 +133,14 @@ Created comprehensive analysis document (`packages/frameworks/workflow mgt/docs/
   - Version marker insertion (if format is standardized)
   - Status field updates (if status values are known)
   - Simple pattern matching and replacement
+
 - **Agentic intelligence required for:**
   - Detecting which docs need updating (complex logic, multiple factors)
   - Handling edge cases (missing files, permission errors, malformed docs)
   - Ambiguous situations (multiple possible interpretations)
   - Providing intelligent error recovery guidance
   - Context-aware decision making
+
 
 ---
 
@@ -161,10 +164,12 @@ Create a framework-agnostic Python script implementing the deterministic pipelin
 - Hybrid implementation:
   - Deterministic functions for high-confidence steps
   - Agentic intelligence for complex steps
+
 - Support for:
   - Story document updates (version marker, task status, completion status)
   - Epic document updates (story status, last updated version, completion status)
   - Kanban board updates (epic/story status, version markers)
+
 - Auto-detection of which docs need updating
 
 **Acceptance Criteria:**
@@ -286,6 +291,7 @@ Formalize Steps 12-14 from T01 analysis as a comprehensive post-update validatio
   - Updates were successful (files exist, format correct)
   - Version markers are correct
   - Status fields are correct
+
 - Validation step (Step 7.5 or integrated into Step 7)
 - Workflow blocks if validation fails
 
@@ -363,6 +369,7 @@ Encode deterministic detection of error types (Step 15) and create a library of 
   - Permission errors
   - Format/malformed doc errors
   - Missing required fields
+
 - Recovery guidance for each error type
 - Override mechanism with explicit confirmation (for edge cases)
 - Clear error messages with actionable steps
@@ -390,6 +397,7 @@ Enhanced `update_kanban_docs.py` with comprehensive error handling and recovery 
   - Step-by-step recovery instructions
   - Auto-repairable flag (indicates if error can be auto-fixed)
   - Override allowed flag (indicates if override is permitted)
+
 - `get_recovery_guidance()` function generates human-readable recovery guidance
 - Recovery guidance displayed for each unique error type when validation fails
 

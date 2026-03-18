@@ -69,6 +69,7 @@ After this task:
   - Produces a consumer board that does **not** claim `AI Dev Kit – Kanban Board` as the title.
   - Emits structured install logs with `[KANBAN_*]` markers (FR-047).
 
+
 Tests assert:
 
 - No `Epic-24` contamination in consumer epics after a fresh install.
@@ -83,13 +84,16 @@ Implement a detector that:
   - `devkit_reference` – legitimate dev-kit reference material (where applicable in the dev-kit repo itself).
   - `contaminated` – dev-kit backlog artefacts in consumer trees (board, epics, FR/BR repo docs, etc.).
   - `unknown` – not covered by rules.
+
 - Encodes explicit rules for:
   - Board title contamination (`AI Dev Kit – Kanban Board`).
   - Dev-kit FR/BR repo documents under `docs/project-management/kanban/fr-br/`.
   - Dev-kit repository stories and specific epics known to be framework-internal.
+
 - Returns a list of findings `(path, classification, reason)` suitable for:
   - Standalone inspection.
   - Use in validators and remediation tooling.
+
 
 ### 3. Remediation engine (CLEAN-UP)
 
@@ -99,6 +103,7 @@ Implement a remediation tool that:
   - `--kanban-root` (default: `docs/project-management/kanban`).
   - `--no-dry-run` (default is dry-run).
   - `--delete` (otherwise archive).
+
 - Behaviour:
   - **Dry-run (default):**
     - Runs detector and prints a CSV-style summary of all findings.
@@ -110,8 +115,10 @@ Implement a remediation tool that:
   - **Delete mode (`--no-dry-run --delete`):**
     - Deletes `contaminated` files instead of archiving them.
     - Intended for use only after an archived copy has been inspected/committed, or in ephemeral test repos.
+
 - **Idempotency:**
   - Re-running remediation on an already cleaned tree should be effectively a no-op, with no new archives or errors.
+
 
 ### 4. Validator integration
 
@@ -121,6 +128,7 @@ Implement a remediation tool that:
     - Mark validation as failed.
     - Emit a clear message instructing the user to run the remediation tool (with dry-run recommended first).
 
+
 ### 5. Documentation updates
 
 - **BR-037:** Describe:
@@ -128,13 +136,16 @@ Implement a remediation tool that:
   - The prevention behaviour for fresh installs.
   - The contamination detector/remediator and how they are used.
   - The validator integration and operational playbook.
+
 - **Kanban board:** Update the E6:S01:T37 entry to:
   - Reflect that prevention + remediation tooling now exist.
   - Keep the task in IN PROGRESS until the release RW is run and verified.
+
 - **Kanban board guide:** Add a short note linking:
   - Install logs (FR-047).
   - Contamination detection + remediation tools.
   - The expected workflow for consumer projects that suspect contamination.
+
 
 ---
 
@@ -147,10 +158,12 @@ Implement a remediation tool that:
     - Produces install logs with `[KANBAN_*]` markers.
   - Verified by automated tests.
 
+
 - **AC2 – Detector coverage:**
   - The detector correctly classifies:
     - A clean, fresh install as having no `contaminated` files.
     - A synthetic contaminated tree (board title and known dev-kit epics/FR/BR docs) as having `contaminated` findings with clear reasons.
+
 
 - **AC3 – Remediation behaviour:**
   - Dry-run mode prints planned archive/delete actions with no filesystem changes.
@@ -158,16 +171,19 @@ Implement a remediation tool that:
   - Delete mode removes contaminated files entirely when requested.
   - Remediation is idempotent (second run reports no new work, tests pass).
 
+
 - **AC4 – Validator integration:**
   - The Kanban validation script:
     - Passes on a fresh, uncontaminated install.
     - Fails when contamination is present and points explicitly to the remediation tool.
+
 
 - **AC5 – Documentation:**
   - BR-037, this task doc, and the Kanban board/guide describe:
     - The contamination problem.
     - The detection and remediation workflow.
     - How this ties into install logging (FR-047).
+
 
 ---
 

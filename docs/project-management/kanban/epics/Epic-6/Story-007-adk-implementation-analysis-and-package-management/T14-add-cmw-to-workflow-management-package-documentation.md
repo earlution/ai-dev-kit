@@ -52,15 +52,19 @@ Add Changelog Management Workflow (CMW) to the workflow management package docum
 - **Feature Request:** [`FR-027-add-cmw-to-workflow-management-package-documentation.md`](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)
   - Problem statement and proposed solution
   - Acceptance criteria
+
 - **Package README:** `packages/frameworks/workflow mgt/README.md`
   - Current documentation structure
   - Existing workflow documentation patterns
+
 - **CMW Files:**
   - Workflow definition: `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
   - Scripts: `packages/frameworks/workflow mgt/scripts/changelog/`
   - Documentation: `packages/frameworks/workflow mgt/scripts/changelog/README.md`
+
 - **Reference:**
   - Other workflow documentation (RW, UKW, Intake Workflow) for consistency
+
 
 ---
 

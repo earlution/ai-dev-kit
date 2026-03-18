@@ -51,6 +51,7 @@ Update the Kanban governance policy documents to document the new board structur
 - Current Kanban governance policy documents:
   - `packages/frameworks/kanban/policies/kanban-governance-policy.md` (canonical)
   - `docs/project-management/rituals/policy/kanban-governance-policy.md` (local)
+
 - Enhanced Kanban board document (`docs/project-management/kanban/kanban-board.md`)
 
 **Dependencies:**

@@ -36,6 +36,7 @@ Document failure modes and rollback guidance for the Kanban framework package in
   - `packages/frameworks/kanban/scripts/install_kanban_framework.py`
   - `packages/frameworks/kanban/scripts/migrate_structure.py`
   - `packages/frameworks/kanban/scripts/validate_installation.py`
+
 - Backup and recovery mechanisms
 - Error messages and validation outputs
 - Installation validation from T02-T04 (baseline for comparison)

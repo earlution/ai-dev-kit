@@ -44,6 +44,7 @@ Repository anchor task for **FR-038: RW Step 7 – Scoped Kanban Sync (UKW Mode)
 - **Existing RW/UKW docs:**
   - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
   - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md` (UKW)
+
 - **Kanban Governance:** `packages/frameworks/kanban/policies/kanban-governance-policy.md`
 
 ---

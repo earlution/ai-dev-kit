@@ -158,10 +158,12 @@ Validate that actual versioning behavior in the codebase matches the documented 
   - Establishes canonical version anchor before functional work
   - Must be docs-only changes (no code changes)
   - Subsequent functional work starts at `+1`
+
 - **Normal Builds (`+1` or higher):** For functional work and subsequent releases
   - Starts at 1 for first functional release of task (or after doc-init)
   - Increments with each subsequent release (`+2`, `+3`, etc.)
   - Resets to 1 when moving to new task
+
 
 **Actual Implementation:**
 - ✅ Version file: `VERSION_BUILD = 1` (normal build)

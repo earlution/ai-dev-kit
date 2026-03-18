@@ -73,11 +73,13 @@ Create a system for capturing and storing unstructured book material (text dumps
   - Include metadata header: source, date, type, purpose
   - Material will be processed later for structured book content
   - No structure required at capture time - just capture
+
 - **Types Supported:**
   - Case study reports (like Starborn Legacy Zombie Story)
   - Text dumps and raw notes
   - Ideas and research snippets
   - Any unstructured book-related material
+
 
 **3. Storage and Organization:**
 - **Storage:** Tasks themselves are the storage (no separate storage system needed)

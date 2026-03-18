@@ -46,6 +46,7 @@ This work is motivated by the SemVer tag collision incident and is dependent on 
   - Compute SemVer via task-touch converter
   - Create tag `v{semver}` for the release commit
   - Ensure tag alignment (SemVer tag and internal tag point to same commit)
+
 - Documentation updates describing this behavior
 - Validation improvements (optional/desired): detect and block or remediate SemVer tag collisions/misalignments before push
 

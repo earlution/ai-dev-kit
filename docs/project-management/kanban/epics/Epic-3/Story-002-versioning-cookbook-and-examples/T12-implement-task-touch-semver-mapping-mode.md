@@ -43,11 +43,13 @@ This task is prompted by a real SemVer tag collision incident (see incident log)
   - **MINOR = count of epics signed off (per RC)** (as per ADR-002)
   - **PATCH = global task-touch counter** (increments once per RW release when a task is touched)
   - Optional `+BUILD` mirroring internal BUILD for traceability
+
 - Canonical storage for task-touch counter and mapping history (file-based, version controlled)
 - Converter implementation and tests demonstrating:
   - Strictly monotonic external SemVer
   - No collisions across tasks or perpetual tasks
   - Deterministic mapping for a given repository history
+
 
 ---
 

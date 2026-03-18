@@ -41,6 +41,7 @@ Repository anchor task for **FR-039: AI Dev Kit Project Review and Legacy Clean-
   - Duplication findings between framework and dev-kit-local docs/scripts.
   - A consolidated review report and ordered clean-up checklist.
 
+
 Actual clean-up (archiving/removal/moves) will be handled by a **separate implementation task** once the review is approved.
 
 ---
@@ -75,6 +76,7 @@ Actual clean-up (archiving/removal/moves) will be handled by a **separate implem
   - Kanban and workflow doc review notes.
   - Versioning/changelog consistency notes.
   - Scripts/helpers catalogue at a high level.
+
 - [ ] Clean-up checklist is present at the end of the review report and can be used to define a follow-up implementation task.
 
 ---

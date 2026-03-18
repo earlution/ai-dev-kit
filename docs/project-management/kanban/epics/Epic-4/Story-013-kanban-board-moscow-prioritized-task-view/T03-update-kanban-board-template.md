@@ -227,6 +227,7 @@ Update the Kanban board template in the framework package to reflect the new boa
   - Should Have (S) section with example
   - Could Have (C) section with example
   - Won't Have (W) section with example
+
 - Story Checklist section (1 line per story format)
 - Usage Instructions section:
   - MoSCOW priority guidelines
@@ -234,6 +235,7 @@ Update the Kanban board template in the framework package to reflect the new boa
   - Task entry format
   - Story checklist format
   - Parent-child relationship documentation
+
 - References section
 
 **Template Features:**

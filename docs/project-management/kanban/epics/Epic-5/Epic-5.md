@@ -24,41 +24,50 @@ housekeeping_policy: keep
   - Story: [`Story-000-fr-repo.md`](Story-000-fr-repo.md)
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
 
+
 - [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.44+1 – T44: FR-044 task created)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 
+
 - [ ] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)
   - Story: [`Story-002-documentation-maintenance-framework.md`](Story-002-documentation-maintenance-framework.md)
   - **Note:** Renumbered from S01 to S02 as part of repository story migration (E9:S01:T08)
+
 
 - [x] **E5:S03 – Documentation Quality Assurance** - COMPLETE ✅ (v0.5.3.3+1, migrated from v0.5.2.3+1)
   - Story: [`Story-003-documentation-quality-assurance.md`](Story-003-documentation-quality-assurance.md)
   - Tasks: T01 ✅, T02 ✅, T03 ✅
   - **Note:** Renumbered from S02 to S03 as part of repository story migration (E9:S01:T08)
 
+
 - [ ] **E5:S04 – Documentation Automation** - IN PROGRESS (T01 complete, T02-T03 TODO)
   - Story: [`Story-004-documentation-automation.md`](Story-004-documentation-automation.md)
   - **Note:** Renumbered from S03 to S04 as part of repository story migration (E9:S01:T08)
+
 
 - [ ] **E5:S05 – Framework Documentation Management** - IN PROGRESS
   - Story: [`Story-005-framework-documentation-management.md`](Story-005-framework-documentation-management.md)
   - Tasks: T01 TODO, T02 TODO, T03 TODO, T04 TODO, T05 ✅, T06 TODO, T07 ✅
   - **Note:** Renumbered from S04 to S05 as part of repository story migration (E9:S01:T08)
 
+
 - [ ] **E5:S06 – Legacy Repository Incorporation** - IN PROGRESS
   - Story: [`Story-006-legacy-repository-incorporation.md`](Story-006-legacy-repository-incorporation.md)
   - Tasks: T01 ✅, T02-T25 TODO (25 tasks across 4 phases)
   - **Note:** Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08)
+
 
 - [ ] **E5:S07 – Policy Documentation Structure** - IN PROGRESS (v0.5.7.1+1, migrated from v0.5.6.1+1 – Task 1 complete: Policy salience implementation)
   - Story: [`Story-007-policy-documentation-structure.md`](Story-007-policy-documentation-structure.md)
   - Tasks: T01 ✅ COMPLETE (FR-022)
   - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08)
 
+
 - [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+8 – T02 ✅ E4:S16:T05 gap log spec, validator)
   - Story: [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
+
 
 ---
 

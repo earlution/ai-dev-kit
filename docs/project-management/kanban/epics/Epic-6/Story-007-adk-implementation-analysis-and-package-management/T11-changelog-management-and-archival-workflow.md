@@ -56,10 +56,12 @@ Implement automated changelog management workflow (CMW) with:
   - Industry research on best practices and SOPs
   - Proposed solution architecture
   - Acceptance criteria
+
 - **Current Changelog:** `CHANGELOG.md` (~9,500 lines)
 - **Changelog Archive Directory:** `docs/changelog-and-release-notes/changelog-archive/`
 - **Existing Validators:**
   - `packages/frameworks/workflow mgt/scripts/validation/validate_changelog_format.py`
+
 - **Reference Workflow:** Update Kanban Workflow (UKW) - Similar workflow pattern
 - **Release Workflow:** `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`
 

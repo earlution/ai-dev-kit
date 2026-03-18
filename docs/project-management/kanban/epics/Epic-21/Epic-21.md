@@ -24,15 +24,19 @@ housekeeping_policy: keep
 - [ ] **E21:S00 – Language Selection at Setup (UK/US English)** - TODO (v0.21.0.0+0)
   - Story: [`Story-000-language-selection-at-setup.md`](Story-000-language-selection-at-setup.md)
   - Tasks: T01-T07 TODO
+
 - [ ] **E21:S01 – Internationalization Infrastructure** - TODO (v0.21.0.0+0)
   - Story: [`Story-001-internationalization-infrastructure.md`](Story-001-internationalization-infrastructure.md)
   - Tasks: T01-T07 TODO
+
 - [ ] **E21:S02 – Translation and Localization** - TODO (v0.21.0.0+0)
   - Story: [`Story-002-translation-and-localization.md`](Story-002-translation-and-localization.md)
   - Tasks: T01-T07 TODO
+
 - [ ] **E21:S03 – Cultural Adaptation** - TODO (v0.21.0.0+0)
   - Story: [`Story-003-cultural-adaptation.md`](Story-003-cultural-adaptation.md)
   - Tasks: T01-T07 TODO
+
 
 ---
 

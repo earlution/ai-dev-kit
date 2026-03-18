@@ -22,6 +22,7 @@ housekeeping_policy: keep
 
 - [x] **E2:S13:T01 – Establish expectations baseline for Workflow Management package** - ✅ COMPLETE (v0.2.13.1+2)
   - Task Doc: [`T01-expectations-baseline.md`](Story-013-workflow-management-package-implementation-review/T01-expectations-baseline.md)
+
 - [ ] **E2:S13:T02 – Inventory package components and map to expectations** - TODO
 - [ ] **E2:S13:T03 – Validate workflow behavior against documented guidance** - TODO
 - [ ] **E2:S13:T04 – Review integrations and dependency alignment** - TODO
@@ -29,6 +30,7 @@ housekeeping_policy: keep
 - [ ] **E2:S13:T06 – Define RC sign-off criteria and remediation tasks** - TODO
 - [x] **E2:S13:T07 – RW Uses SemVer Tag When `task_touch` Enabled** ✅ COMPLETE (v0.2.13.7+1)
   - Task Doc: [`T07-rw-semver-tag-when-task-touch-enabled.md`](Story-013-workflow-management-package-implementation-review/T07-rw-semver-tag-when-task-touch-enabled.md)
+
 
 ---
 

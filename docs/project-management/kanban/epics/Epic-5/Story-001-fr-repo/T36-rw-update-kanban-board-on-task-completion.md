@@ -33,13 +33,10 @@ Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kan
 - Task completion status not reflected on board immediately after release
 
 **Solution:**
-- Extend `update_kanban_docs.py` script to update Kanban board
-- Add board parsing and update functions
-- Update epic/story status in board sections
-- Update "Last updated" date and version in board metadata
-- Update task completion markers in epic/story listings
-- Detect story/epic completion and update status on board
-- Add validation for board updates
+- Modify RW Step 7 to execute UKW in mode 1 (MoSCOW Prioritization Update) instead of implementing kanban board update logic directly
+- UKW mode 1 handles: moving completed tasks to kanban-completed.md, adding newly created tasks to MoSCOW prioritized sections, and applying agentic prioritization
+- Eliminates code duplication by leveraging existing UKW functionality
+- RW Step 7 focuses on story/epic document updates, delegates board updates to UKW
 
 ---
 

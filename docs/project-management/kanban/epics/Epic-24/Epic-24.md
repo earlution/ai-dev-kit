@@ -24,12 +24,16 @@ housekeeping_policy: keep
 
 - [ ] **E24:S01 – Book Content Development** - IN PROGRESS
   - Story: [`Story-001-book-content-development.md`](Story-001-book-content-development.md)
+
 - [ ] **E24:S02 – Book Integration with Dev-Kit** - TODO
   - Story: [`Story-002-book-integration-with-dev-kit.md`](Story-002-book-integration-with-dev-kit.md)
+
 - [ ] **E24:S03 – Book Publishing Support** - TODO
   - Story: [`Story-003-book-publishing-support.md`](Story-003-book-publishing-support.md)
+
 - [ ] **E24:S04 – Book Material Capture** - TODO (v0.24.4.0+0 – Story created for unstructured material capture)
   - Story: [`Story-004-book-material-capture.md`](Story-004-book-material-capture.md)
+
 
 ---
 

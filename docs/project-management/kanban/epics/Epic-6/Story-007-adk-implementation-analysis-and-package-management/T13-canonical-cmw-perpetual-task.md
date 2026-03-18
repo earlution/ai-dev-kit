@@ -52,19 +52,25 @@ Include the CMW perpetual task (T102, migrated from T12) in the canonical framew
   - Problem statement and proposed solution
   - Acceptance criteria
   - Implementation considerations
+
 - **Task T102:** [`T102-changelog-maintenance-workflow-cmw.md`](T102-changelog-maintenance-workflow-cmw.md) (migrated from T12)
   - Perpetual task document (reference pattern)
+
 - **Task T101:** [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md) (migrated from T08)
   - UKW perpetual task pattern (reference implementation)
+
 - **Framework Templates:**
   - `packages/frameworks/kanban/templates/COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
   - `packages/frameworks/kanban/templates/tasks/` (task templates)
+
 - **RW Documentation:**
   - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
   - `.cursorrules` (RW trigger section)
   - `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`
+
 - **Versioning Policy:**
   - `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
+
 
 ---
 

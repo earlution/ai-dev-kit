@@ -23,8 +23,10 @@ housekeeping_policy: keep
 
 - [ ] **E11:S01 – Debug Path Package Implementation Review** - TODO (v0.11.1.0+0)
   - Story: [`Story-001-debug-path-package-implementation-review.md`](Story-001-debug-path-package-implementation-review.md)
+
 - [ ] **E11:S02 – Debug Path Package Installation Evaluation** - TODO (v0.11.2.0+0)
   - Story: [`Story-002-debug-path-package-installation-evaluation.md`](Story-002-debug-path-package-installation-evaluation.md)
+
 
 ---
 
