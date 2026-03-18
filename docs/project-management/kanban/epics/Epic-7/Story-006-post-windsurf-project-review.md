@@ -10,19 +10,26 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-18 (v0.7.6.9+0 – Kanban documentation setup)
+**Last updated:** 2026-03-18 (v0.7.6.10+1 – Kanban documentation setup)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.7.6.9+0
+**Version:** v0.7.6.10+1
 **Code:** E7S06
 
 ---
 
 ## Task Checklist
 
-- [ ] **E7:S06:T01 – Windsurf artifact cleanup** - TODO (Remove `.windsurf/` and any Windsurf-specific config/references)
+- [ ] **E7:S06:T10 – Review RW workflow (Windsurf impact)** - TODO (Can run in parallel)
+- [ ] **E7:S06:T11 – Review UKW workflow (Windsurf impact)** - TODO (Can run in parallel)
+- [ ] **E7:S06:T12 – Review CMW workflow (Windsurf impact)** - TODO (Can run in parallel)
+- [ ] **E7:S06:T13 – Review PVW workflow (Windsurf impact)** - TODO (Can run in parallel)
+- [ ] **E7:S06:T14 – Review ICW workflow (Windsurf impact)** - TODO (Can run in parallel)
+- [ ] **E7:S06:T15 – Review Intake workflow (Windsurf impact)** - TODO (Can run in parallel)
+- [ ] **E7:S06:T16 – Review PIR workflow (Windsurf impact)** - TODO (Can run in parallel)
+- [ ] **E7:S06:T01 – Windsurf artifact cleanup** - TODO (Blocked until T10–T16 complete; then remove `.windsurf/`, migrate skills)
 - [ ] **E7:S06:T02 – Version and changelog alignment** - TODO (Reconcile version.py, kanban board, CHANGELOG, branch context)
 - [ ] **E7:S06:T03 – Kanban documentation consistency** - TODO (E9↔E18 renumbering fallout, cross-references, structure)
 - [ ] **E7:S06:T04 – Recent commit review** - TODO (Last ~15 commits: RW compliance, batch scope, quality)
@@ -60,12 +67,18 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 
 ## Tasks
 
+### E7:S06:T10–T16 – Workflow Windsurf impact reviews (parallel)
+
+Seven review tasks, one per workflow: RW, UKW, CMW, PVW, ICW, Intake, PIR. Each produces: Windsurf impact assessment; .windsurf skill mappings; migration plan for T01. **Can run in parallel.** See individual task docs in `Story-006-post-windsurf-project-review/`.
+
+---
+
 ### E7:S06:T01 – Windsurf artifact cleanup
 
-**Input:** Repo filesystem  
-**Deliverable:** `.windsurf/` removed (or moved to .gitignore if needed); no Windsurf-specific references in tracked files  
-**Dependencies:** None  
-**Blocker:** None
+**Input:** Repo filesystem; review outputs from T10–T16  
+**Deliverable:** `.windsurf/` removed (or moved to .gitignore if needed); skills migrated to `.cursor/skills/`; no Windsurf-specific references in tracked files  
+**Dependencies:** T10, T11, T12, T13, T14, T15, T16  
+**Blocker:** T01 blocked until T10–T16 complete
 
 ---
 

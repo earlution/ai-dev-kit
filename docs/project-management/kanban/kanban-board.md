@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-18 (RW: E7:S6:T9)
-**Version:** v0.7.6.9+0
+**Last Updated:** 2026-03-18 (RW: E7:S6:T10)
+**Version:** v0.7.6.10+1
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE . Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO.
 
@@ -28,7 +28,7 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-- **E7:S06** – Post-Windsurf Project Review - TODO (HIGH priority, Systematic review of project state after Windsurf evaluation; tasks T01–T09 by dimension) - [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+- **E7:S06** – Post-Windsurf Project Review - TODO (HIGH priority, Systematic review of project state after Windsurf evaluation; T10–T16 workflow reviews run in parallel, T01 cleanup blocked until complete) - [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
 - **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](../../../fr-br/FR-060-rw-task-argument-requirement.md)
 
