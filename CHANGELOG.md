@@ -69,6 +69,13 @@ E7:S06:T15+1 – Kanban init: Review Intake workflow (Windsurf impact). Task doc
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.15+1.md)
 
 ---
+## [0.7.6.14+3] - 18-03-26
+
+E7:S06:T14+3 – T14 ICW workflow Windsurf impact review deliverable.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.14+3.md)
+
+---
 ## [0.7.6.14+2] - 18-03-26
 
 E7:S06:T14+2 – RW -d: Documentation update for T14.
