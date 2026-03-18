@@ -46,6 +46,20 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.7.6.8+0] - 18-03-26
+
+📋 Doc Init: E7:S06:T08 - Dependency and tooling audit
+
+### Doc Init
+**New E/S/T Documentation:**
+- ✅ T08 task document for Post-Windsurf Project Review
+
+### Notes
+- See `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.8+0.md` for full details
+- **This is a doc-init build (+0).** No functional changes are included.
+
+---
+
 ## [0.7.6.7+0] - 18-03-26
 
 📋 Doc Init: E7:S06:T07 - General documentation integrity
