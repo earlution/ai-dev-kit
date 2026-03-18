@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [0.7.6.15+1] - 18-03-26
+
+E7:S06:T15+1 – Kanban init: Review Intake workflow (Windsurf impact). Task document kanban documentation setup.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.15+1.md)
+
+---
 ## [0.7.6.14+1] - 18-03-26
 
 E7:S06:T14+1 – Kanban init: Review ICW workflow (Windsurf impact). Task document kanban documentation setup.
