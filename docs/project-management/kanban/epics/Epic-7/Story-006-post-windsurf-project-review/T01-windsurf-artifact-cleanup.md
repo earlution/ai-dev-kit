@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Status:** COMPLETE
 **Priority:** HIGH
 **Last updated:** 2026-03-18
-**Version:** v0.7.6.1+1
-**Version Anchor:** ✅ COMPLETE (v0.7.6.1+1)
+**Version:** v0.7.6.1+2
+**Version Anchor:** ✅ COMPLETE (v0.7.6.1+2)
 
 ---
 

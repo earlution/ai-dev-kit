@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [0.7.6.1+2] - 18-03-26
+
+E7:S06:T01+2 – RW E7S6T1.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.1+2.md)
+
+---
 ## [0.7.6.1+1] - 18-03-26
 
 E7:S06:T01+1 – Windsurf artifact cleanup: Skills migrated to .cursor/skills/; .windsurf/ removed.
