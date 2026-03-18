@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [0.7.6.13+1] - 18-03-26
+
+E7:S06:T13+1 – Kanban init: Review PVW workflow (Windsurf impact). Task document kanban documentation setup.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.13+1.md)
+
+---
 ## [0.7.6.12+1] - 18-03-26
 
 E7:S06:T12+1 – Kanban init: Review CMW workflow (Windsurf impact). Task document kanban documentation setup.
