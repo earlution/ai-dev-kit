@@ -8,8 +8,9 @@ housekeeping_policy: keep
 
 # FR-041: Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows
 
-**Status:** TODO  
+**Status:** CLOSED (migration complete)  
 **Priority:** HIGH  
+**Migration:** E7:S06:T01 completed Windsurf artifact cleanup. Skills migrated to `.cursor/skills/`; `.windsurf/` removed. Cursor is primary; AGENTS.md/SKILL.md patterns applied via .cursor/skills/.  
 **Created:** 2026-03-11  
 **Last updated:** 2026-03-11 (v0.6.6.3+2 - FR created)  
 **Started:** [TBD]  

@@ -9,8 +9,9 @@ housekeeping_policy: keep
 # E6:S07:T106 – Windsurf Migration: .cursorrules to Workflow Equivalents
 
 **Task ID:** E6:S07:T106
-**Status:** TODO
-**Priority:** MEDIUM
+**Status:** SUPERSEDED  
+**Priority:** MEDIUM  
+**Superseded by:** E7:S06:T01 (Windsurf artifact cleanup). Project moved to Cursor; `.windsurf/` removed; skills migrated to `.cursor/skills/`. T106's Windsurf workflow direction no longer applies.
 **Estimated Effort:** Medium
 **Created:** 2026-03-07
 **Last updated:** 2026-03-07

@@ -3,6 +3,8 @@ name: readme-update
 description: Update README with new version info
 ---
 
+> **Use with agent reasoning; do not treat as deterministic script.** Apply procedure via intelligent analysis; adapt to context and agent-driven execution.
+
 ## README Update Procedure
 
 ### Step 1: Version Information Update

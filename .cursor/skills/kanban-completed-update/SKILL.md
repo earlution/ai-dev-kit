@@ -1,17 +1,14 @@
 ---
-lifecycle: evergreen
-ttl_days: null
-created_at: 2026-03-11T16:30:00Z
-expires_at: null
-housekeeping_policy: keep
+name: kanban-completed-update
+description: Maintain and update kanban-completed.md with completion timestamps
 ---
+
+> **Interface/format guidance.** Use as document update interface; apply with agent reasoning, not as rigid step sequence.
 
 # kanban_completed_update Skill
 
-**Skill ID:** kanban_completed_update  
-**Agent:** Documentation Agent  
-**Version:** v0.5.1.49+1  
-**Created:** 2026-03-11  
+**Skill ID:** kanban-completed-update
+**Agent:** Documentation Agent
 
 ---
 
@@ -106,28 +103,6 @@ Documentation Agent.update_kanban_completed({
 
 ---
 
-## Error Handling
-
-### **Validation Errors**
-- Missing required parameters
-- Invalid task ID format
-- Invalid timestamp format
-- Invalid version format
-
-### **Document Errors**
-- Duplicate task entries
-- Inconsistent formatting
-- Table structure issues
-- Missing sections
-
-### **Recovery Actions**
-- Log validation failures
-- Provide clear error messages
-- Suggest corrective actions
-- Maintain document integrity
-
----
-
 ## Integration Points
 
 ### **RW Agent Integration**
@@ -145,11 +120,6 @@ Documentation Agent.update_kanban_completed({
 - Updates task status changes
 - Maintains completion tracking
 
-### **Self-Updates**
-- Documentation Agent can directly invoke
-- Handles manual updates and corrections
-- Maintains document consistency
-
 ---
 
 ## Quality Assurance
@@ -158,84 +128,3 @@ Documentation Agent.update_kanban_completed({
 - ISO 8601 timestamp format: `YYYY-MM-DDTHH:MM:SSZ`
 - Version format: `vRC.EPIC.STORY.TASK+BUILD`
 - Task ID format: `E{epic}:S{story}:T{task}`
-
-### **Consistency Checks**
-- Uniform formatting across all entries
-- Proper table structure and alignment
-- Consistent metadata and versioning
-- Valid markdown syntax
-
-### **Performance Considerations**
-- Efficient document parsing and updates
-- Minimal impact on existing workflows
-- Scalable for large task volumes
-- Fast validation and error reporting
-
----
-
-## Backward Compatibility
-
-### **Transition Support**
-- Support both old and new formats during migration
-- Gradual update of existing entries
-- Format detection and conversion
-- Validation without breaking existing functionality
-
-### **Migration Strategy**
-- Update existing entries with estimated timestamps
-- Maintain original version information
-- Preserve task descriptions and metadata
-- Ensure no data loss during transition
-
----
-
-## Usage Examples
-
-### **Basic Task Completion**
-```python
-Documentation Agent.update_kanban_completed({
-  task_id: "E5:S01:T48",
-  status: "COMPLETE",
-  version: "v0.5.1.48+1",
-  timestamp: "2026-03-11T16:20:00Z",
-  completing_agent: "RW Agent"
-})
-```
-
-### **Task Status Update**
-```python
-Documentation Agent.update_kanban_completed({
-  task_id: "E5:S01:T47",
-  status: "IN PROGRESS",
-  version: "v0.5.1.47+3",
-  timestamp: "2026-03-11T15:30:00Z",
-  completing_agent: "Documentation Agent"
-})
-```
-
-### **Batch Updates**
-```python
-for task in completed_tasks:
-  Documentation Agent.update_kanban_completed({
-    task_id: task.id,
-    status: "COMPLETE",
-    version: task.version,
-    timestamp: task.completion_time,
-    completing_agent: task.agent
-  })
-```
-
----
-
-## Success Metrics
-
-- All task entries include completion timestamps
-- Recent tasks dashboard updates automatically
-- Document formatting remains consistent
-- No data loss during updates
-- Fast validation and error handling
-- Seamless integration with all agents
-
----
-
-**Ultimate Responsibility:** Documentation Agent maintains kanban-completed.md integrity and provides standard update interface for all workflow agents.

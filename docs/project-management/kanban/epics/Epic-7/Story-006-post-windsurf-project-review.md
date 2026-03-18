@@ -10,26 +10,26 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-18 (v0.7.6.16+3 – Kanban documentation setup)
+**Last updated:** 2026-03-18 (v0.7.6.1+1 – Kanban documentation setup)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.7.6.16+3
+**Version:** v0.7.6.1+1
 **Code:** E7S06
 
 ---
 
 ## Task Checklist
 
-- [ ] **E7:S06:T10 – Review RW workflow (Windsurf impact)** - TODO (Can run in parallel)
-- [ ] **E7:S06:T11 – Review UKW workflow (Windsurf impact)** - TODO (Can run in parallel)
-- [ ] **E7:S06:T12 – Review CMW workflow (Windsurf impact)** - TODO (Can run in parallel)
-- [ ] **E7:S06:T13 – Review PVW workflow (Windsurf impact)** - TODO (Can run in parallel)
-- [ ] **E7:S06:T14 – Review ICW workflow (Windsurf impact)** - TODO (Can run in parallel)
-- [ ] **E7:S06:T15 – Review Intake workflow (Windsurf impact)** - TODO (Can run in parallel)
-- [ ] **E7:S06:T16 – Review PIR workflow (Windsurf impact)** - TODO (Can run in parallel)
-- [ ] **E7:S06:T01 – Windsurf artifact cleanup** - TODO (Blocked until T10–T16 complete; then remove `.windsurf/`, migrate skills)
+- [x] **E7:S06:T10 – Review RW workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.10+4)
+- [x] **E7:S06:T11 – Review UKW workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.11+3)
+- [x] **E7:S06:T12 – Review CMW workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.12+3)
+- [x] **E7:S06:T13 – Review PVW workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.13+3)
+- [x] **E7:S06:T14 – Review ICW workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.14+3)
+- [x] **E7:S06:T15 – Review Intake workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.15+3)
+- [x] **E7:S06:T16 – Review PIR workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.16+3)
+- [x] **E7:S06:T01 – Windsurf artifact cleanup** ✅ COMPLETE (v0.7.6.1+1)
 - [ ] **E7:S06:T02 – Version and changelog alignment** - TODO (Reconcile version.py, kanban board, CHANGELOG, branch context)
 - [ ] **E7:S06:T03 – Kanban documentation consistency** - TODO (E9↔E18 renumbering fallout, cross-references, structure)
 - [ ] **E7:S06:T04 – Recent commit review** - TODO (Last ~15 commits: RW compliance, batch scope, quality)

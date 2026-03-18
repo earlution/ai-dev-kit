@@ -3,6 +3,8 @@ name: version-bump
 description: Updates version files following RC.EPIC.STORY.TASK+BUILD schema
 ---
 
+> **Use with agent reasoning; do not treat as deterministic script.** Apply schema and integration points via intelligent analysis; adapt to context.
+
 ## Version Bump Procedure
 
 ### Step 1: Update Version File

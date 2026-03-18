@@ -8,3 +8,6 @@
 # Local environment configuration (untracked)
 .env
 .env.local
+
+# Windsurf (migrated to .cursor/skills/)
+.windsurf/
