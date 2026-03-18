@@ -62,6 +62,13 @@ E7:S06:T14+1 – Kanban init: Review ICW workflow (Windsurf impact). Task docume
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.14+1.md)
 
 ---
+## [0.7.6.13+2] - 18-03-26
+
+E7:S06:T13+2 – RW -d: Documentation update for T13.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.13+2.md)
+
+---
 ## [0.7.6.13+1] - 18-03-26
 
 E7:S06:T13+1 – Kanban init: Review PVW workflow (Windsurf impact). Task document kanban documentation setup.
