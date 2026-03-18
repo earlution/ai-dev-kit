@@ -41,6 +41,13 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
 
 ---
+## [0.7.6.16+3] - 18-03-26
+
+E7:S06:T16+3 – T16 PIR workflow Windsurf impact review deliverable.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.16+3.md)
+
+---
 ## [0.7.6.16+2] - 18-03-26
 
 E7:S06:T16+2 – RW -d: Documentation update for T16.
