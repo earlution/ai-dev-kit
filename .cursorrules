@@ -356,6 +356,7 @@ For each step, follow this pattern:
 - ❌ **Never Assume Same Task:** Always compare completed task number to current VERSION_TASK
 
 **File Paths (ai-dev-kit):**
+- RW skills (optional): `.cursor/skills/version-bump`, `.cursor/skills/readme-update` – schema/procedure guidance; use with agent reasoning, not as deterministic scripts
 - Version file: `src/fynd_deals/version.py`
 - Changelog: `CHANGELOG.md`
 - Notion project hub: `rw-config.yaml` → `notion_hub_url` (single entry point for project context; RMS Teamspace)
