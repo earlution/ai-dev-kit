@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-18 (v0.7.6.1+2 – Kanban documentation setup)
+**Last updated:** 2026-03-19 (v0.7.6.16+3 – T10–T16 complete)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.7.6.1+2
+**Version:** v0.7.6.16+3
 **Code:** E7S06
 
 ---
@@ -53,7 +53,7 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 
 ## Goals
 
-- [ ] Remove Windsurf artifacts and restore Cursor-native state
+- [x] Remove Windsurf artifacts and restore Cursor-native state (T01 complete)
 - [ ] Align version, changelog, and kanban to a single coherent state
 - [ ] Validate kanban documentation after E9↔E18 renumbering
 - [ ] Review recent commits for RW compliance and quality

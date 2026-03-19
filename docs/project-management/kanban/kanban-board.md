@@ -8,10 +8,10 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-18 (RW: E7:S6:T1)
-**Version:** v0.7.6.1+2
+**Last Updated:** 2026-03-19 (RW: E6:S7:T101)
+**Version:** v0.6.7.101+35
 
-**Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE . Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO.
+**Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **Board shows tasks (not stories)**—story-level reporting obfuscates actual state.
 
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)  
@@ -28,7 +28,21 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-- **E7:S06** – Post-Windsurf Project Review - TODO (HIGH priority, Systematic review of project state after Windsurf evaluation; T10–T16 workflow reviews run in parallel, T01 cleanup blocked until complete) - [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+- **E7:S06:T02** – Version and changelog alignment - TODO (HIGH priority, Reconcile version.py, kanban board, CHANGELOG, branch context) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T02-version-and-changelog-alignment.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+
+- **E7:S06:T03** – Kanban documentation consistency - TODO (HIGH priority, E9↔E18 renumbering fallout, cross-references, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+
+- **E7:S06:T04** – Recent commit review - TODO (MEDIUM priority, Last ~15 commits: RW compliance, batch scope, quality) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T04-recent-commit-review.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+
+- **E7:S06:T05** – Workflow script integrity - TODO (MEDIUM priority, ukw_syntax_parser, task_inference, orchestrator changes) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T05-workflow-script-integrity.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+
+- **E7:S06:T06** – FR/BR/UXR intake documentation quality - TODO (MEDIUM priority, Batch intake doc updates consistency) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T06-fr-br-uxr-intake-documentation-quality.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+
+- **E7:S06:T07** – General documentation and cross-reference integrity - TODO (MEDIUM priority, README, links, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T07-general-documentation-integrity.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+
+- **E7:S06:T08** – Dependency and tooling audit - TODO (MEDIUM priority, pyproject.toml, requirements, tests, CI/CD, build scripts) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T08-dependency-and-tooling-audit.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
+
+- **E7:S06:T09** – Config and git state validation - TODO (MEDIUM priority, rw-config vs paths, git state, .cursorrules alignment) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
 - **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](../../../fr-br/FR-060-rw-task-argument-requirement.md)
 
@@ -40,12 +54,11 @@ No critical tasks currently in progress
 
 ### Ongoing (O) - Perpetual Tasks
 
-- **E6:S05** – Bug Reports - IN PROGRESS (Perpetual, HIGH priority epic)  
-  - [Story](epics/Epic-6/Story-005-bug-reports.md)
+- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS (CRITICAL priority, User pain with tool discovery, pattern matching; blocked on Cascade whitelist root cause) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
-- **E6:S06** – Feature Requests - IN PROGRESS (Perpetual, MEDIUM priority epic) - [Story](epics/Epic-6/Story-006-feature-requests.md)
+- **E6:S06:T56** – RW Ambiguous Task Identifier Typo Risk - TODO (HIGH priority, RW accepts task identifiers without validation; single-digit typo causes wrong attribution) - [Task Document](epics/Epic-6/Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-056](fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
 
-- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+34, Last updated: 2026-03-09) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+35, Last updated: 2026-03-19) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+6, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 

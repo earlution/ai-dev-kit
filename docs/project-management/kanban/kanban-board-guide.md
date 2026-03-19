@@ -40,6 +40,16 @@ This Kanban board serves as the **parent document** to Story documents, similar 
 
 ---
 
+## Task-Level Display (Not Story-Level)
+
+**The board MUST show tasks, not stories.** Story-level reporting obfuscates the actual state—you cannot see which tasks are complete vs TODO vs in progress. Each board entry should link to a **Task document**.
+
+**Exception:** Show a story only when its tasks have not yet been filed (e.g. epics with placeholder T01–T07 but no discrete task documents). Once tasks are filed, replace the story entry with the individual task entries.
+
+UKW and RW agents must follow this when updating the board.
+
+---
+
 ## MoSCOW Prioritized In-Progress Tasks
 
 The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows all in-progress tasks (status: IN PROGRESS or TODO) organized by MoSCOW priority and ordered chronologically (most recently updated first).

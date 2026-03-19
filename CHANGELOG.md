@@ -7,6 +7,14 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.7.101+35] - 19-03-26
+
+E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 documents for v0.6.7.101+35 (perpetual UKW task).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+35.md)
+
+---
+
 ## [0.7.1.6+2] - 16-03-26
 
 E7:S01:T08 – Task Doc Naming Standardization & Doc Portal Foundation: Scaffolded the new Docusaurus-based documentation portal (classic template, npm wiring) to prepare lifecycle-driven publishing. Filed FR-058 and T07 assets for the Markdown Maintenance Workflow, refined the documentation validator to honor canonical terminology conventions, and established the `EddSddTdd-[Task Title].md` naming standard (with migration task artifacts) so Release Workflow automation can rely on deterministic file identities.

@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-18 (v0.7.6.1+2 – Story 6 Task 1 complete)
+**Last updated:** 2026-03-19 (v0.7.6.16+3 – Story 6 T10–T16 complete)
 **Branch:** `epic/7-codebase-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -31,7 +31,7 @@ housekeeping_policy: keep
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
 - [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete)
-- [ ] **E7:S06 – Post-Windsurf Project Review** - TODO (v0.7.6.0+0 – Story filed: systematic review of project state after Windsurf evaluation period)
+- [ ] **E7:S06 – Post-Windsurf Project Review** - IN PROGRESS (v0.7.6.16+3 – T10–T16 workflow reviews complete, T01 complete; T02–T09 remain)
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
@@ -233,16 +233,23 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ### Story 6: Post-Windsurf Project Review
 
-**Status:** TODO  
-**Priority:** HIGH  
-**Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-18 (v0.7.6.1+2 – Story 6 Task 1 complete)
+**Status:** IN PROGRESS
+**Priority:** HIGH
+**Estimated Effort:** [TBD]
+**Last updated:** 2026-03-19 (v0.7.6.16+3 – T10–T16 workflow reviews complete)
 
 **Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
 
 **Tasks:**
 
-- [ ] **E7:S06:T01** – Windsurf artifact cleanup
+- [x] **E7:S06:T01** – Windsurf artifact cleanup ✅ COMPLETE (v0.7.6.1+1)
+- [x] **E7:S06:T10** – Review RW workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.10+4)
+- [x] **E7:S06:T11** – Review UKW workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.11+3)
+- [x] **E7:S06:T12** – Review CMW workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.12+3)
+- [x] **E7:S06:T13** – Review PVW workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.13+3)
+- [x] **E7:S06:T14** – Review ICW workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.14+3)
+- [x] **E7:S06:T15** – Review Intake workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.15+3)
+- [x] **E7:S06:T16** – Review PIR workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.16+3)
 - [ ] **E7:S06:T02** – Version and changelog alignment
 - [ ] **E7:S06:T03** – Kanban documentation consistency (E9↔E18 renumbering fallout)
 - [ ] **E7:S06:T04** – Recent commit review
