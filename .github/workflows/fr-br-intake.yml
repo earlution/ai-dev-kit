@@ -128,14 +128,14 @@ jobs:
               repo: context.repo.repo,
               body: `✅ This ${prefix === 'BR' ? 'Bug Report' : prefix === 'FR' ? 'Feature Request' : prefix === 'UXR' ? 'UX Research' : 'Feedback'} has been automatically converted to a Kanban document.
 
-📄 **Document:** \`${docPath}\`
-🔗 **Path:** \`docs/project-management/kanban/fr-br/${docPath}\`
+            📄 **Document:** \`${docPath}\`
+            🔗 **Path:** \`docs/project-management/kanban/fr-br/${docPath}\`
 
-This will be processed through our FR/BR intake workflow. A Kanban task will be created and linked back to this issue.
+            This will be processed through our FR/BR intake workflow. A Kanban task will be created and linked back to this issue.
 
-**Next Steps:**
-- The document will be reviewed and assigned to an Epic/Story/Task
-- You'll be notified when a task is created
-- Status updates will be synced between GitHub and Kanban`
+            **Next Steps:**
+            - The document will be reviewed and assigned to an Epic/Story/Task
+            - You'll be notified when a task is created
+            - Status updates will be synced between GitHub and Kanban`
             });
 
