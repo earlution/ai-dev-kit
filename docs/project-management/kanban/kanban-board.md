@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-19 (RW: E6:S7:T101)
-**Version:** v0.6.7.101+35
+**Last Updated:** 2026-03-20 (RW: E6:S7:T101)
+**Version:** v0.6.7.101+36
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **Board shows tasks (not stories)**—story-level reporting obfuscates actual state.
 
@@ -58,7 +58,7 @@ No critical tasks currently in progress
 
 - **E6:S06:T56** – RW Ambiguous Task Identifier Typo Risk - TODO (HIGH priority, RW accepts task identifiers without validation; single-digit typo causes wrong attribution) - [Task Document](epics/Epic-6/Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-056](fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
 
-- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+35, Last updated: 2026-03-19) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+36, Last updated: 2026-03-20) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+6, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 

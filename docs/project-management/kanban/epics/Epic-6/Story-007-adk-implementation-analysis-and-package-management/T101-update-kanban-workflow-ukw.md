@@ -10,16 +10,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-03-19 (v0.6.7.101+35 – RW -k: Kanban init)  
+**Last updated:** 2026-03-20 (v0.6.7.101+36 – RW -k: Kanban init)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+35
+**Version:** v0.6.7.101+36
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High BUILD numbers are expected and valid.
 
-**Progress:** RW -k (v0.6.7.101+35) - Kanban init: Version markers updated in Story 7 and Epic 6 for v0.6.7.101+35. UKW execution (v0.6.7.101+34) - Documented Cascade whitelist security prompt issues as critical usability blocker. Identified that Cascade's whitelist feature is non-functional - security prompts appear for every command despite previous approvals. This creates constant micromanagement friction that prevents productive workflow execution. User focus shifted from project work to tool management. Created BR-039 with comprehensive documentation and video evidence. Added BR-039 to Must Have priority on FR/BR/UXR board.  
+**Progress:** RW -k (v0.6.7.101+36) - Kanban init: Version markers updated in Story 7 and Epic 6 for v0.6.7.101+36. UKW execution (v0.6.7.101+34) - Documented Cascade whitelist security prompt issues as critical usability blocker. Identified that Cascade's whitelist feature is non-functional - security prompts appear for every command despite previous approvals. This creates constant micromanagement friction that prevents productive workflow execution. User focus shifted from project work to tool management. Created BR-039 with comprehensive documentation and video evidence. Added BR-039 to Must Have priority on FR/BR/UXR board.  
 **Code:** E6S06T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).

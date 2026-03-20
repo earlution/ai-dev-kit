@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-03-19 (v0.6.7.101+35 – Kanban documentation setup)
-**Version:** v0.6.7.101+35
+**Last updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
+**Version:** v0.6.7.101+36
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -73,7 +73,7 @@ housekeeping_policy: keep
   - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
 
 
-- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+35 – RW -k: Kanban init)
+- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+36 – RW -k: Kanban init)
   - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
   - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)
@@ -179,7 +179,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** HIGH
 **Dependencies:** None
 **Estimated Effort:** Small
-**Version:** v0.6.7.101+35
+**Version:** v0.6.7.101+36
 
 **Input:** User requirements, existing comprehensive project analysis framework
 
@@ -207,7 +207,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T00
 **Estimated Effort:** VERY LARGE
-**Version:** v0.6.7.101+35
+**Version:** v0.6.7.101+36
 
 **Input:**
 
@@ -1128,6 +1128,6 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2026-03-19 (v0.6.7.101+35 – Kanban documentation setup)
-**Version:** v0.6.7.101+35
+**Last Updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
+**Version:** v0.6.7.101+36
 **Status:** IN PROGRESS
