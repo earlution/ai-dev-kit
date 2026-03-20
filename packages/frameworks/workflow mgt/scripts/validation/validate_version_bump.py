@@ -298,8 +298,9 @@ def get_completed_task(story_file: Path, version_task: Optional[int] = None) -> 
             completed_tasks.append(task_num)
     
     if not completed_tasks:
-        # Perpetual tasks (T101+) are never COMPLETE; return version_task if provided
-        if version_task is not None and version_task >= 100:
+        # No checklist row matches [x] … ✅ COMPLETE — use version hint (in-progress work,
+        # RW -k kanban init, or perpetual T101+ that is never marked COMPLETE in Story).
+        if version_task is not None:
             return version_task
         return None
     

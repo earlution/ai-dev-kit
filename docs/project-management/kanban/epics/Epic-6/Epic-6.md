@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
+**Last updated:** 2026-03-20 (v0.6.6.56+2 – Kanban documentation setup)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -74,7 +74,7 @@ housekeeping_policy: keep
 
 - [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.3+2 – Apple SDK License Blocking Issue Investigation Complete)
   - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
-  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument)
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 TODO (BR-056 – RW ambiguous task ID; kanban init v0.6.6.56+2)
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
 
@@ -133,7 +133,7 @@ Epic 6 owns the **Framework Management and Maintenance** processes for the ai-de
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
+**Last updated:** 2026-03-20 (v0.6.6.56+2 – Kanban documentation setup)
 
 **Goal:**  
 Establish version management processes for framework packages.
@@ -154,7 +154,7 @@ Establish version management processes for framework packages.
 **Status:** TODO  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
+**Last updated:** 2026-03-20 (v0.6.6.56+2 – Kanban documentation setup)
 
 **Goal:**  
 Implement processes for updating and migrating framework packages.
@@ -175,7 +175,7 @@ Implement processes for updating and migrating framework packages.
 **Status:** COMPLETE  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
+**Last updated:** 2026-03-20 (v0.6.6.56+2 – Kanban documentation setup)
 
 **Goal:**  
 Build monitoring and health tracking for framework packages.

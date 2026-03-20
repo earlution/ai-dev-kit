@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-20 (RW: E6:S7:T101)
-**Version:** v0.6.7.101+36
+**Last Updated:** 2026-03-20 (RW: E6:S6:T56)
+**Version:** v0.6.6.56+2
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **Board shows tasks (not stories)**—story-level reporting obfuscates actual state.
 
