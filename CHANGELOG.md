@@ -14,6 +14,14 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.7.6.2+2] - 20-03-26
+
+E7:S06:T02 – Kanban MoSCOW task-level display: Board lists E7:S06:T03–T09 (not story-level E7:S06); guide adds Task-Level Display rule; T02 doc markers updated.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.2+2.md)
+
+---
+
 ## [0.7.6.2+1] - 19-03-26
 
 E7:S06:T02 – Version and changelog alignment: Reconciled version.py, CHANGELOG (Keep a Changelog order, CMW archival), kanban board, and branch context to a single coherent state.

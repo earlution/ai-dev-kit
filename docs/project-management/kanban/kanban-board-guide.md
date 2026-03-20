@@ -72,6 +72,10 @@ The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows
 
 Tasks within each MoSCOW section are ordered chronologically, with most recently updated tasks at the top.
 
+### Task-Level Display (not story-level)
+
+**MoSCOW rows must reference tasks** (`E7:S06:T03`, etc.), not whole stories (`E7:S06`). Story-level lines collapse many tasks into one line and **obfuscate actual state** (e.g. T02 complete while the story still reads TODO). Use [`kanban-structure.md`](kanban-structure.md) for epic/story hierarchy; use [`kanban-board.md`](kanban-board.md) for actionable, task-granular work.
+
 ---
 
 ## How to Add Work
