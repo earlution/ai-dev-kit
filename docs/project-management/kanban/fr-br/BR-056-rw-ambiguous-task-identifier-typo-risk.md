@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Task ID:** E6:S06:T56
 **Priority:** HIGH
 **Severity:** MEDIUM (wrong attribution, requires manual rollback)
-**Status:** NEW
+**Status:** PENDING_VERIFICATION
 **Created:** 2026-03-18
 **Classification:** Bug + UX gap
 
@@ -68,10 +68,22 @@ Implement **Option A** as primary fix; consider **Option C** as defense-in-depth
 
 ## Acceptance Criteria
 
-- [ ] RW detects when user-supplied task identifier differs from current version's Epic/Story/Task
-- [ ] RW prompts for confirmation (or requires explicit override) before proceeding when mismatch detected
-- [ ] Documentation updated: .cursorrules RW section describes confirmation behavior
-- [ ] Test case: `RW E7S5T1` when current is E7:S06:T01 → prompt shown
+- [x] RW detects when user-supplied task identifier differs from current version's Epic/Story/Task (`validate_rw_task_intent.py`; story/epic mismatch blocks)
+- [x] RW prompts for confirmation path: agent **RW ABORTED** on validator exit 1; resume with `--confirmed-override` after explicit user confirm (`.cursorrules` Step 1b)
+- [x] Documentation updated: `.cursorrules`, packaged RW trigger template, `release-workflow-agent-execution.md` Step 1.5
+- [x] Regression scenarios: `run_validate_rw_task_intent_scenarios.sh` (story typo, new-task T999 vs T998, `RW -k` exemption)
+
+**User verification pending:** Run `RW E7S5T1` on a branch where `version.py` is `E7:S06:T01` and confirm the agent stops before edits.
+
+---
+
+### Attempted resolution (implementation complete; verify manually)
+
+- **Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py` — compares parsed `--requested` id to `version.py`; `--mode rw-k`; `--confirmed-override`.
+- **Rules:** `.cursorrules` Step 1b; exception to continuous execution when guard fails.
+- **Template:** `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md` (adopters).
+- **Guide:** Step 1.5 in `release-workflow-agent-execution.md`.
+- **UKW parser fix:** removed duplicate empty `normalize_task_id` stub in `ukw_syntax_parser.py` (blocked imports).
 
 ---
 

@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Task T56 – RW Ambiguous Task Identifier Typo Risk (BR-056)
 
 **Task ID:** E6:S06:T56
-**Status:** TODO
+**Status:** IN PROGRESS (implementation landed; user verification pending)
 **Priority:** HIGH
 **Estimated Effort:** Medium (1–2 days)
 **Created:** 2026-03-18
@@ -53,10 +53,12 @@ Address BR-056: RW accepts user-supplied task identifiers (e.g. `RW E7S5T1`) wit
 
 ## Acceptance Criteria
 
-- [ ] RW detects when user-supplied task identifier differs from current version's Epic/Story/Task
-- [ ] RW prompts for confirmation (or requires explicit override) before proceeding when mismatch detected
-- [ ] Documentation updated: .cursorrules RW section describes confirmation behavior
-- [ ] Test case: `RW E7S5T1` when current is E7:S06:T01 → prompt shown
+- [x] RW detects mismatch (validator + `.cursorrules` Step 1b)
+- [x] Confirmation / `--confirmed-override` path documented
+- [x] `.cursorrules` + RW template + Step 1.5 execution guide
+- [x] Automated scenarios: `run_validate_rw_task_intent_scenarios.sh`
+
+**Pending:** Live agent test `RW E7S5T1` vs `version.py` `E7:S06:T01`.
 
 ---
 

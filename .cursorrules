@@ -23,6 +23,14 @@
    - **CRITICAL:** If Step 1 fails (non-zero exit code), **DO NOT PROCEED** to Step 2
    - **CRITICAL:** If Step 1 fails, mark all steps as `cancelled` and stop workflow immediately
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
+6b. **🚨 MANDATORY: Step 1b — RW Task Intent Guard (BR-056 / E6:S06:T56)** — Run **after Step 1 passes**, **before any RW file modifications** (before Step 2)
+   - **CRITICAL:** If the user message includes an optional task identifier (e.g. `RW E7S5T1`, `RW E7:S06:T01`, `RW -k E6S6T56`), parse it and run:
+     `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>" [--mode rw-k]`
+   - **Use `--mode rw-k`** when the trigger is **`RW -k`** (kanban init): comparison against `version.py` is skipped so explicit init target does not false-block.
+   - **If the script exits non-zero:** **RW ABORTED** — same severity as Step 1 failure. **Do not** bump version, edit changelogs, or touch kanban. Print the script output. Tell the user to verify the intended Epic/Story/Task.
+   - **After explicit user confirmation** that the mismatch is intentional (e.g. they meant Story 5, not 6), re-invoke RW and pass **`--confirmed-override`** on the script (only after the user clearly confirms).
+   - **If no task identifier** is present in the user message, run: `validate_rw_task_intent.py` with **no** `--requested` (script exits 0 — nothing to compare).
+   - **Exception to “never stop”:** This guardrail **requires** stopping the workflow when exit code is non-zero; the user must confirm or use a new message. This overrides generic “continuous execution” until intent is resolved.
 7. **EXECUTE INTELLIGENTLY** - Use your AI capabilities to solve problems, don't just follow rigid steps
 8. **ADAPT AND RECOVER** - When scripts fail, find alternative approaches or implement manual workarounds
 9. **Document** each step's analysis, actions, and results
@@ -50,6 +58,8 @@
 
 - **DO** handle failures intelligently and continue the workflow
 
+- **EXCEPTION (BR-056):** If **Step 1b** (`validate_rw_task_intent.py`) fails, **stop immediately** (RW ABORTED); do not continue to Step 2 until the user confirms intent or re-runs with override as documented in Step 1b
+
 ### 🔄 CONTINUOUS EXECUTION PATTERN
 
 **When user types "RW":**
@@ -58,19 +68,21 @@
 
 2. **EXECUTE STEP 1** - Branch safety check (find validation script intelligently)
 
-3. **IF STEP 1 PASSES** - Continue immediately to Step 2 (version bump)
+3. **IF STEP 1 PASSES** - **EXECUTE STEP 1b** — Task intent guard (`validate_rw_task_intent.py`); if it fails, **RW ABORTED** (no file edits)
 
-4. **EXECUTE STEP 2** - Increment version and update files
+4. **IF STEP 1b PASSES** - Continue immediately to Step 2 (version bump)
 
-5. **EXECUTE STEP 3** - Update changelog
+5. **EXECUTE STEP 2** - Increment version and update files
 
-6. **EXECUTE STEP 4** - Run kanban documentation updates
+6. **EXECUTE STEP 3** - Update changelog
 
-7. **EXECUTE STEP 5** - Git operations (add, commit, tag, push)
+7. **EXECUTE STEP 4** - Run kanban documentation updates
 
-8. **EXECUTE STEP 6** - Final validation and reporting
+8. **EXECUTE STEP 5** - Git operations (add, commit, tag, push)
 
-9. **COMPLETE** - Report success and stop
+9. **EXECUTE STEP 6** - Final validation and reporting
+
+10. **COMPLETE** - Report success and stop
 
 **If any step fails:**
 
@@ -99,6 +111,7 @@
 - Git operations (add, commit, tag, push)
 - Simple text replacements
 - File existence checks
+- **RW task intent:** `validate_rw_task_intent.py` (BR-056 — user-supplied task id vs `version.py`; use `--mode rw-k` for `RW -k`)
 
 **HANDLE WITH INTELLIGENCE (Adaptive):**
 - Pattern matching failures (find files manually)
