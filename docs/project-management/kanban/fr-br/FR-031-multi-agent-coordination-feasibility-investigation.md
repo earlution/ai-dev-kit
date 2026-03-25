@@ -294,9 +294,9 @@ Investigate and assess feasibility of multi-agent coordination patterns for enha
 - Version: `v0.5.1.31+0` (story-level abstract space, migrated from v0.5.0.31+0)
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](epics/Epic-5/Epic-5.md)
-- Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](epics/Epic-5/Story-001-fr-repo.md) (migrated from Story-000-fr-repo)
-- Task: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md`](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md)
+- Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](../epics/Epic-5/Epic-5.md)
+- Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](../epics/Epic-5/Story-001-fr-repo.md) (migrated from Story-000-fr-repo)
+- Task: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md`](../epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md)
 
 **Note:** This FR is assigned to the FR Repository (E5:S01, migrated from E5:S00) as Task 31. After the feasibility investigation is complete, implementation work (if approved) will be assigned to an appropriate Epic/Story based on the investigation findings.
 

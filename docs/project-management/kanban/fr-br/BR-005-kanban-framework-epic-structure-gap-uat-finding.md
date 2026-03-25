@@ -415,8 +415,8 @@ Added detailed comment on GitHub issue #1 with full traceability to internal Kan
 - Version: `v0.4.6.6+0` (to be assigned when task starts)
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)
-- Story: [`docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+- Epic: [`docs/project-management/kanban/epics/Epic-4/Epic-4.md`](../epics/Epic-4/Epic-4.md)
+- Story: [`docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](../epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
 - Task: E4:S06:T06 (Update CANONICAL_EPICS.md - enhanced scope to address BR-005)
 
 ---

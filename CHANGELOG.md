@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.5+1] - 25-03-26
+## [0.7.6.6+1] - 25-03-26
 
-E7:S06:T05+1 – Workflow script integrity: reviewed ukw_syntax_parser, task_inference, workflow_orchestrator, workflow_executor; fixed `test_rw_triggers` vs `canonical_steps` API; fixed YAML int keys for RW `-k` step modifications; doc clarifications; `test_rw_triggers` passes; optional governance validator passed.
+E7:S06:T06+1 – FR/BR/UXR intake documentation quality: audit of aggregate FR/BR/UXR index docs; fixed broken `epics/` relative links from `fr-br/` (nine files); aligned structure/board/completed version headers; cross-linked `kanban-completed` and `fr-br-uxr-completed`; findings in T06 task doc.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.5+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.6+1.md)

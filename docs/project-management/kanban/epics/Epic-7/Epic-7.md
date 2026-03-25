@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-25 (v0.7.6.5+1 – E7:S06:T05 workflow script integrity)
+**Last updated:** 2026-03-25 (v0.7.6.6+1 – E7:S06:T06 FR/BR/UXR intake documentation quality)
 **Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -236,7 +236,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-25 (v0.7.6.5+1 – E7:S06:T05 workflow script integrity)
+**Last updated:** 2026-03-25 (v0.7.6.6+1 – E7:S06:T06 FR/BR/UXR intake documentation quality)
 
 **Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
 
@@ -255,7 +255,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - [x] **E7:S06:T03** – Kanban documentation consistency ✅ COMPLETE (v0.7.6.3+1 – live SoT; E9/E18 template narrative disambiguation)
 - [x] **E7:S06:T04** – Recent commit review ✅ COMPLETE (v0.7.6.4+1)
 - [x] **E7:S06:T05** – Workflow script integrity ✅ COMPLETE (v0.7.6.5+1)
-- [ ] **E7:S06:T06** – FR/BR/UXR intake documentation quality
+- [x] **E7:S06:T06** – FR/BR/UXR intake documentation quality ✅ COMPLETE (v0.7.6.6+1)
 - [ ] **E7:S06:T07** – General documentation and cross-reference integrity
 - [ ] **E7:S06:T08** – Dependency and tooling audit
 - [ ] **E7:S06:T09** – Config and git state validation

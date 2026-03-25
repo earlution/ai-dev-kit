@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
 **Last Updated:** 2026-03-25 (FR-063: CMW Epic 5 execution context intake)
-**Version:** v0.6.7.107+1
+**Version:** v0.7.6.6+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  

@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Structure
 
-**Last Updated:** 2026-03-09 (T01: FR/BR/UXR Prioritization Board Implementation)
-**Version:** v0.6.7.107+1
+**Last Updated:** 2026-03-25 (E7:S06:T06 intake doc audit; align with board inventory)
+**Version:** v0.7.6.6+1
 
 > **For MoSCOW prioritized FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For completed FR/BR/UXRs, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  

@@ -158,8 +158,8 @@ The `find_story_file()` function in `validate_version_bump.py` uses content-base
 **Verification Status:** Verified (manual test passed)
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-2.md`](epics/Epic-2.md)
-- Story: [`docs/project-management/kanban/epics/Epic-2/stories/Story-001-rw-agent-execution-and-docs.md`](epics/Epic-2/stories/Story-001-rw-agent-execution-and-docs.md)
+- Epic: [`docs/project-management/kanban/epics/Epic-2.md`](../epics/Epic-2.md)
+- Story: [`docs/project-management/kanban/epics/Epic-2/stories/Story-001-rw-agent-execution-and-docs.md`](../epics/Epic-2/stories/Story-001-rw-agent-execution-and-docs.md)
 - Task: [To be created]
 
 ---

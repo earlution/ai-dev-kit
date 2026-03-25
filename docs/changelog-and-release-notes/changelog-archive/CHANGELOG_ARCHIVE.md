@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.6.6+1] - 25-03-26
+
+E7:S06:T06+1 – FR/BR/UXR intake doc quality: fr-br epic link fixes; aggregate doc headers; kanban cross-links; T06 findings.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.6+1.md)
+
+---
+---
+---
 ## [0.7.6.5+1] - 25-03-26
 
 E7:S06:T05+1 – Workflow script integrity: parser/orchestrator/canonical_steps fixes and docs; tests; kanban closure.
