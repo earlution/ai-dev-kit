@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management — branch epic/5-documentation-management)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 38     # Task number (E5:S01:T38 — FR-038 RW Step 7 Scoped Kanban Sync UKW Mode)
-VERSION_BUILD = 1     # Build number (E5:S01:T38+1)
+VERSION_TASK = 64     # Task number (E5:S01:T64 — FR-061 README Workflows section)
+VERSION_BUILD = 1     # Build number (E5:S01:T64+1)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.38+1 — FR-038 RW Step 7 Scoped UKW + invocation_context docs; FR-061 → T64
+# Current: 0.5.1.64+1 — FR-061 README Workflows section + README body restoration
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

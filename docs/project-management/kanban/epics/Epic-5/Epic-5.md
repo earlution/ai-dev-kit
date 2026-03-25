@@ -25,7 +25,7 @@ housekeeping_policy: keep
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
 
 
-- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.38+1 – T38: FR-038 RW Step 7 Scoped Kanban Sync / UKW; T64: FR-061 README workflow section)
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.64+1 – T64: FR-061 README Workflows; T38: FR-038 complete)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 

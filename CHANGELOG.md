@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.38+1] - 25-03-25
+## [0.5.1.64+1] - 25-03-25
 
-E5:S01:T38+1 – FR-038: RW Step 7 **Scoped Kanban Sync (UKW Mode)**; UKW `invocation_context` (`rw_step_7` vs `standalone`); RW/UKW cross-links; Kanban governance §1.1 + board guide; `cursorrules-rw-trigger-section` Step 7 TODO alignment; **FR-061 → E5:S01:T64** (T38 collision fix).
+E5:S01:T64+1 – FR-061: README **Workflows** section (11 registry workflows, Cursor triggers, vwmp links); README body restored (Features through Acknowledgments); Quick Start aligned to `workflow-registry.yaml`; T64 / FR-061 / board closure.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.38+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.64+1.md)

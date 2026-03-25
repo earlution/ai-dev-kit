@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-25 (RW v0.5.1.63+1 — E5:S01:T63 FR-060 mandatory RW task id)
-**Version:** v0.5.1.63+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-25 (RW v0.5.1.64+1 — E5:S01:T64 FR-061 README Workflows)
+**Version:** v0.5.1.64+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -28,8 +28,7 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-
-- **E5:S01:T64** – README Workflow Section - IN PROGRESS (MEDIUM priority, FR-061: Workflow section in README; task renumbered from T38) - [Task Document](epics/Epic-5/Story-001-fr-repo/T64-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](fr-br/FR-061-readme-workflow-section.md)
+No important tasks currently in progress
 
 ### Could Have (C) - Nice-to-Have Tasks
 

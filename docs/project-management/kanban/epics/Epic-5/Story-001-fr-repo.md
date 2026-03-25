@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (v0.5.1.38+1 – FR-038 / E5:S01:T38 RW Step 7 Scoped Kanban Sync UKW Mode)
+**Last updated:** 2026-03-25 (v0.5.1.64+1 – FR-061 / E5:S01:T64 README Workflows section)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
@@ -47,7 +47,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T49 – Enhanced kanban-completed.md with Timestamps and Recent Tasks Tracking** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T49-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md) | [FR-049](../../fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)
 - [ ] **E5:S01:T62 – GitHub Release Installation Experience** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T62-github-release-installation-experience.md) | [FR-062](../../fr-br/FR-062-github-release-installation-experience.md)
 - [x] **E5:S01:T63 – RW Task Argument Requirement** - ✅ COMPLETE (v0.5.1.63+1 – FR-060: strict mandatory task token, validate_rw_task_complete.py, .cursorrules + docs) - [Task Document](Story-001-fr-repo/T63-rw-task-argument-requirement.md) | [FR-060](../../fr-br/FR-060-rw-task-argument-requirement.md)
-- [ ] **E5:S01:T64 – Add Workflow Section to Project README** - IN PROGRESS (MEDIUM priority, FR-061; renumbered from T38 collision with FR-038) - [Task Document](Story-001-fr-repo/T64-readme-workflow-section.md) | [FR-061](../../fr-br/FR-061-readme-workflow-section.md)
+- [x] **E5:S01:T64 – Add Workflow Section to Project README** - ✅ COMPLETE (v0.5.1.64+1 – FR-061: README Workflows section, 11 registry workflows, Cursor triggers, vwmp links; README body restored) - [Task Document](Story-001-fr-repo/T64-readme-workflow-section.md) | [FR-061](../../fr-br/FR-061-readme-workflow-section.md)
 
 ---
 
