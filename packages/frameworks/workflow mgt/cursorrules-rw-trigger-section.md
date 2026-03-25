@@ -37,7 +37,14 @@ housekeeping_policy: keep
    - **CRITICAL:** If Step 1 fails (non-zero exit code), **DO NOT PROCEED** to Step 2
    - **CRITICAL:** If Step 1 fails, mark all steps as `cancelled` and stop workflow immediately
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
-6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 passes)
+5b. **🚨 MANDATORY: Step 1b — RW Task Intent Guard (BR-056)** — **After Step 1 passes**, **before any file modifications**
+   - If the user message includes a task identifier (`RW E7S5T1`, `RW E7:S06:T01`, `RW -k E6S6T56`, etc.), run:  
+     `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
+     For **`RW -k`**, add **`--mode rw-k`**.
+   - **Non-zero exit:** **RW ABORTED** (same severity as Step 1). No version/changelog/kanban edits. User must confirm intent or re-run with `--confirmed-override` after explicit confirmation.
+   - **No task token:** run the script **without** `--requested` (exits 0).
+   - **Overrides** generic “never stop” until intent is resolved (documented exception).
+6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 and Step 1b pass)
 7. **Document** each step's analysis, actions, and results
 8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking the steps for the selected path
 
@@ -103,6 +110,7 @@ kanban_root = config.get('kanban_root', 'docs/project-management/kanban') if con
 ```python
 todo_write(merge=False, todos=[
     {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: RW Task Intent Guard (BR-056) - validate_rw_task_intent.py; --mode rw-k for RW -k; stop if fails'},
     {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Read Story file, identify completed task number, compare to current VERSION_TASK, determine if new task or same task, update version file, validate'},
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG with full timestamp'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
@@ -127,6 +135,7 @@ todo_write(merge=False, todos=[
 ```python
 todo_write(merge=False, todos=[
     {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: validate_rw_task_intent.py --mode rw-k when task id present'},
     {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for Kanban documentation setup'},
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for Kanban init'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for Kanban init'},
@@ -140,6 +149,7 @@ todo_write(merge=False, todos=[
 ```python
 todo_write(merge=False, todos=[
     {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
+    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: RW Task Intent Guard - validate_rw_task_intent.py'},
     {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for documentation release'},
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for documentation updates'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for documentation release'},

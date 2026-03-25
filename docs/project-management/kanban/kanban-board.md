@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-20 (merge: epic/6 + epic/7 → main; HEAD v0.7.6.17+1)
+**Last Updated:** 2026-03-20 (main: v0.7.6.17+1; BR-056 tooling cherry-picked from E6:S06:T56+3)
 **Version:** v0.7.6.17+1
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
@@ -54,7 +54,7 @@ No critical tasks currently in progress
 
 - **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS (CRITICAL priority, User pain with tool discovery, pattern matching; blocked on Cascade whitelist root cause) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
-- **E6:S06:T56** – RW Ambiguous Task Identifier Typo Risk - TODO (HIGH priority, RW accepts task identifiers without validation; single-digit typo causes wrong attribution) - [Task Document](epics/Epic-6/Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-056](fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
+- **E6:S06:T56** – RW Ambiguous Task Identifier Typo Risk - IN PROGRESS (HIGH priority; BR-056 fix landed v0.6.6.56+3 — verify agent `RW E7S5T1` vs `E7:S06:T01` before closing) - [Task Document](epics/Epic-6/Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-056](fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
 
 - **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+36, Last updated: 2026-03-20) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 

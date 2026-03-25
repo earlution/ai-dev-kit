@@ -403,7 +403,7 @@ story_doc_pattern = config.get('story_doc_pattern') if config and config.get('us
    - **If PASS (exit code 0):**
      - Document: "✅ Branch safety check passed - work aligns with current branch"
      - Mark Step 1 TODO as `completed`
-     - Move to Step 2
+     - Move to **Step 1.5** (RW Task Intent Guard), then Step 2
    
    - **If FAIL (exit code 1 or non-zero):**
      - **MANDATORY ACTIONS:**
@@ -518,6 +518,41 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 
 ---
 
+### Step 1.5: RW Task Intent Guard (BR-056 / E6:S06:T56)
+
+**🚨 MANDATORY BLOCKING STEP (when user supplies a task id) — DO NOT BYPASS**
+
+**Purpose:** Prevent silent wrong attribution when the user types a shorthand task id (e.g. `RW E7S5T1` meaning Story 5) while `version.py` still reflects Story 6 — a one-character typo in story number.
+
+**When:** Run **immediately after Step 1 passes**, **before any file modifications** (before Step 2).
+
+**Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py` (also: `{scripts_path}/validation/validate_rw_task_intent.py` when config exists)
+
+**Agent execution:**
+
+1. **Parse** the user message for an optional task token: `E{epic}S{story}T{task}` or `E{epic}:S{story}:T{task}` (same flexibility as UKW).
+2. **If no token:** run `python {validator_path}` with **no** `--requested` → exit 0 (skip).
+3. **If token present:**
+   - Full RW / RW -d:  
+     `python {validator_path} --requested "<token>"`
+   - **RW -k:**  
+     `python {validator_path} --requested "<token>" --mode rw-k`  
+     (skips comparison to `version.py` so kanban-init targets do not false-block.)
+4. **Exit codes:** `0` = proceed; `1` = **RW ABORTED** (print script output; no version/changelog/kanban edits); `2` = invalid parse/path — treat as blocking.
+5. **Override:** Only after the user **explicitly confirms** the mismatched intent, re-run RW and invoke the script with **`--confirmed-override`**.
+
+**Relation to FR-060:** FR-060 asks for mandatory task arguments and validation; this step adds **context comparison to `version.py`** and **story-typo detection** specifically (BR-056).
+
+**Verification scenarios (manual):**
+
+| Scenario | Expected |
+|----------|----------|
+| `version.py` = `E7:S06:T01`, user `RW E7S5T1` | Exit 1, RW ABORTED |
+| Same story, new completed task `T2`, version file still `T1`, user `RW E7S6T2` | Exit 0 if `T2` is highest ✅ COMPLETE in Story checklist |
+| `RW -k E6S6T56` while `version.py` differs | Exit 0 (`--mode rw-k`) |
+
+---
+
 ### Step 2: Bump Version
 
 **Step Definition:**
@@ -525,7 +560,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 - id: step-2
   name: Bump Version
   handler: release.version_bump
-  dependencies: [step-1]
+  dependencies: [step-1, step-1.5]
   config:
     version_file: src/confidentia/version.py  # [Example: Confidentia] Use {version_file_path} template placeholder
     # [Example: ai-dev-kit] version_file: src/fynd_deals/version.py
