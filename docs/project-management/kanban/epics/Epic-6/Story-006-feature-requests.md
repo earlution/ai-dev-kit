@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-03-20 (v0.6.6.56+3 – Kanban documentation setup)
-**Version:** v0.6.6.56+3
+**Last updated:** 2026-03-25 (v0.6.6.56+4 – BR-056 verified; T56 complete)
+**Version:** v0.6.6.56+4
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -41,7 +41,7 @@ housekeeping_policy: keep
 - [x] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - ✅ COMPLETED (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
   - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
 
-- [ ] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - TODO (HIGH priority, RW accepts user-supplied task identifiers without validation; single-digit typo causes wrong attribution. Implement context-aware confirmation.)
+- [x] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - ✅ COMPLETE (v0.6.6.56+4) (HIGH priority, BR-056: validate_rw_task_intent + Step 1b; live verification 2026-03-25)
   - Task: [`T56-rw-ambiguous-task-identifier-typo-risk.md`](T56-rw-ambiguous-task-identifier-typo-risk.md) | [BR-056](../../../fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)

@@ -361,6 +361,13 @@ E6:S07:T18+1 – Workflow Step Tracking: Tool-Agnostic Workflow Step Tracking + 
 ---
 ---
 ---
+## [0.6.6.56+4] - 25-03-26
+
+E6:S06:T56+4 – BR-056 verified: RW task-intent guard (Step 1b) confirmed in live runs (story mismatch + epic mismatch abort before edits). Realigned `version.py` on `epic/6-framework-management` to Epic 6 after merge drift. T56 and BR-056 closed out in Kanban.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.56+4.md)
+
+---
 ## [0.6.6.56+3] - 20-03-26
 
 E6:S06:T56+3 – BR-056: `validate_rw_task_intent.py`, RW Step 1b / Step 1.5 docs, `RW -k` exemption; UKW parser stub fix. User verification pending before closing BR.

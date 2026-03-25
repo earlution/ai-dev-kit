@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Task ID:** E6:S06:T56
 **Priority:** HIGH
 **Severity:** MEDIUM (wrong attribution, requires manual rollback)
-**Status:** PENDING_VERIFICATION
+**Status:** VERIFIED_FIXED
 **Created:** 2026-03-18
 **Classification:** Bug + UX gap
 
@@ -73,9 +73,13 @@ Implement **Option A** as primary fix; consider **Option C** as defense-in-depth
 - [x] Documentation updated: `.cursorrules`, packaged RW trigger template, `release-workflow-agent-execution.md` Step 1.5
 - [x] Regression scenarios: `run_validate_rw_task_intent_scenarios.sh` (story typo, new-task T999 vs T998, `RW -k` exemption)
 
-**User verification pending:** Run `RW E7S5T1` on a branch where `version.py` is `E7:S06:T01` and confirm the agent stops before edits.
+**User verification (2026-03-25):** On `epic/7-codebase-maintenance`, `RW E7S5T1` with `version.py` at E7:S06:T17 — Step 1b abort (story mismatch / BR-056). On same branch, `RW E6S6T56` — Step 1b abort (epic mismatch). Guard behaves as designed.
 
 ---
+
+### Fixed (verified)
+
+- **BR-056:** RW task-intent validation blocks wrong story and wrong epic before Step 2 file edits; `RW -k` and `--confirmed-override` paths documented.
 
 ### Attempted resolution (implementation complete; verify manually)
 

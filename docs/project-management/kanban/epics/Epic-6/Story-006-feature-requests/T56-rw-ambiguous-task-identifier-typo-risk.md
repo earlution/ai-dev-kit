@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Task T56 – RW Ambiguous Task Identifier Typo Risk (BR-056)
 
 **Task ID:** E6:S06:T56
-**Status:** IN PROGRESS (implementation landed; user verification pending)
+**Status:** ✅ COMPLETE (user verified live guard: story typo + epic mismatch abort before edits)
 **Priority:** HIGH
 **Estimated Effort:** Medium (1–2 days)
 **Created:** 2026-03-18
@@ -58,7 +58,13 @@ Address BR-056: RW accepts user-supplied task identifiers (e.g. `RW E7S5T1`) wit
 - [x] `.cursorrules` + RW template + Step 1.5 execution guide
 - [x] Automated scenarios: `run_validate_rw_task_intent_scenarios.sh`
 
-**Pending:** Live agent test `RW E7S5T1` vs `version.py` `E7:S06:T01`.
+**Verified (2026-03-25):** `RW E7S5T1` on `epic/7` with `version.py` at E7:S06:T17 — Step 1b abort (story mismatch). `RW E6S6T56` on `epic/7` — Step 1b abort (epic mismatch). `RW E6S6T56` on `epic/6` — proceeds after branch/version alignment.
+
+---
+
+## Version Anchor
+
+**Forensic Marker:** ✅ COMPLETE (v0.6.6.56+4)
 
 ---
 
