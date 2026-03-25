@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-25 (RW v0.7.6.6+1 — E7:S06:T06 FR/BR/UXR intake documentation quality)
-**Version:** v0.7.6.6+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-25 (RW v0.7.6.7+1 — E7:S06:T07 General documentation and cross-reference integrity)
+**Version:** v0.7.6.7+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -27,8 +27,6 @@ housekeeping_policy: keep
 No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
-
-- **E7:S06:T07** – General documentation and cross-reference integrity - TODO (MEDIUM priority, README, links, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T07-general-documentation-integrity.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
 - **E7:S06:T08** – Dependency and tooling audit - TODO (MEDIUM priority, pyproject.toml, requirements, tests, CI/CD, build scripts) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T08-dependency-and-tooling-audit.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 

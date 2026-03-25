@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-25 (E7:S06:T06 FR/BR/UXR intake docs + E6:S06:T56 BR-056)
-**Version:** v0.7.6.6+1
+**Last Updated:** 2026-03-25 (E7:S06:T07 general documentation integrity + E6:S06:T56 BR-056)
+**Version:** v0.7.6.7+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -21,6 +21,9 @@ housekeeping_policy: keep
 ## 20 Most Recently Completed Tasks
 
 #### **Epic 7: Codebase Maintenance**
+- **[E7:S06:T07](epics/Epic-7/Story-006-post-windsurf-project-review/T07-general-documentation-integrity.md)** – General documentation and cross-reference integrity (README path spot-check; docs tree; fr-br `(epics/` re-scan clean; audit in T07 doc)  
+  **Completed:** `2026-03-25T14:34:13Z` | **Version:** `v0.7.6.7+1` | **Agent:** `RW Agent`
+
 - **[E7:S06:T06](epics/Epic-7/Story-006-post-windsurf-project-review/T06-fr-br-uxr-intake-documentation-quality.md)** – FR/BR/UXR intake documentation quality (aggregate doc audit; `../epics/` link fixes in nine fr-br files; cross-links kanban vs FR/BR/UXR completed)  
   **Completed:** `2026-03-25T14:30:53Z` | **Version:** `v0.7.6.6+1` | **Agent:** `RW Agent`
 
