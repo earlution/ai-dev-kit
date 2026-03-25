@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.66+1] - 25-03-25
+## [0.5.1.67+1] - 25-03-25
 
-E5:S01:T66+1 – **RW -k** kanban marker: task **T66** (`.cursorrules` vs packaged RW trigger parity for adopters); Story, Epic S01, board metadata.
+E5:S01:T67+1 – **RW -k** kanban marker: task **T67** (adopter install / bootstrap docs for **FR-060** RW task token); Story, Epic S01, board metadata.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.66+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.67+1.md)
