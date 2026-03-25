@@ -1,4 +1,81 @@
 # Changelog Archive
+## [0.6.6.56+2] - 20-03-26
+
+E6:S06:T56+2 – RW -k completion: kanban markers, main changelog + restored v0.6.6.56+1 archive; MoSCOW T56 TODO; `validate_version_bump` in-progress checklist fix.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.56+2.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.56+3] - 20-03-26
+
+E6:S06:T56+3 – BR-056: `validate_rw_task_intent.py`, RW Step 1b / Step 1.5 docs, `RW -k` exemption; UKW parser stub fix. User verification pending before closing BR.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.56+3.md)
+
+---
+---
+---
+---
+## [0.6.7.101+35] - 19-03-26
+
+E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 documents for v0.6.7.101+35 (perpetual UKW task).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+35.md)
+
+---
+---
+---
+---
+---
+---
+---
+## [0.6.7.101+36] - 19-03-26
+
+E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 for v0.6.7.101+36 (perpetual UKW task).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+36.md)
+
+---
+---
+---
+---
+---
+---
+---
+## [0.7.6.2+1] - 19-03-26
+
+E7:S06:T02 – Version and changelog alignment: Reconciled version.py, CHANGELOG (Keep a Changelog order, CMW archival), kanban board, and branch context to a single coherent state.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.2+1.md)
+
+---
+---
+---
+---
+## [0.7.6.2+2] - 20-03-26
+
+E7:S06:T02 – Kanban MoSCOW task-level display: Board lists E7:S06:T03–T09 (not story-level E7:S06); guide adds Task-Level Display rule; T02 doc markers updated.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.2+2.md)
+
+---
+---
+---
+---
+## [0.7.6.17+1] - 20-03-26
+
+E7:S06:T17 — BR-057 retrospective: fix `fr-br-intake.yml` YAML (`script: |` indentation), kanban traceability, `ukw_syntax_parser` duplicate stub fix, RW task-intent validator script on branch.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.17+1.md)
+
+---
+---
+---
+---
 ## [0.1.1.1+1] - 02-12-25
 
 🏗️ Foundation: First proper release with Epic 1–4 structure, dev-kit versioning policy, and Kanban FR/BR → Task flow

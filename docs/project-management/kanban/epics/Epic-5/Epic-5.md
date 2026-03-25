@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-02-26 (v0.5.1.47+3 – E5:S01:T47: tests, docs, consumer-vs-framework clarity)  
+**Last updated:** 2026-03-25 (v0.5.2.6+1 – E5:S02:T06 FR-063 intake + CMW)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -30,7 +30,7 @@ housekeeping_policy: keep
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 
 
-- [ ] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T01 and T05 TODO)
+- [ ] **E5:S02 – Documentation Maintenance Framework** - IN PROGRESS (T02-T04 complete, T06 intake ✅ v0.5.2.6+1; T01, T05 TODO — FR-063 impl pending)
   - Story: [`Story-002-documentation-maintenance-framework.md`](Story-002-documentation-maintenance-framework.md)
   - **Note:** Renumbered from S01 to S02 as part of repository story migration (E9:S01:T08)
 

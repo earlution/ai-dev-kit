@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
-VERSION_STORY = 6     # Story number (Story 6: Post-Windsurf Project Review)
-VERSION_TASK = 17     # Task number (T17: BR-057 fr-br-intake YAML + retrospective)
-VERSION_BUILD = 1     # Build number (E7:S06:T17+1 – RW)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
+VERSION_STORY = 2     # Story number (Story 2: Documentation Maintenance Framework)
+VERSION_TASK = 6      # Task number (T6: FR-063 intake + CMW latest_only; impl follow-up)
+VERSION_BUILD = 1     # Build number (E5:S02:T06+1 – RW)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.6.17+1 = Development, Epic 7, Story 6, Task 17 (E7:S06:T17+1: BR-057 / fr-br-intake.yml)
+# Current: 0.5.2.6+1 = Development, Epic 5, Story 2, Task 6 (E5:S02:T06+1: FR-063 + CMW)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

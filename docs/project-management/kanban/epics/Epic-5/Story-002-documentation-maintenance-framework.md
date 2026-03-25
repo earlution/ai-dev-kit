@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-01-16 (v0.5.2.5+1, migrated from v0.5.2.5+1 – Story renumbered from S01 to S02 as part of repository story migration)  
-**Version:** v0.5.2.5+1  
+**Last updated:** 2026-03-25 (v0.5.2.6+1 – E5:S02:T06 FR-063 intake + CMW)  
+**Version:** v0.5.2.6+1  
 **Code:** E5S02
 
 **Note:** This story was renumbered from S01 to S02 as part of the repository story abstract space resolution (E9:S01:T08). S01 is now reserved for the FR Repo repository story.
@@ -27,6 +27,8 @@ housekeeping_policy: keep
 - [x] **E5:S02:T03 – Create documentation review cadences** - COMPLETE ✅ (migrated from E5:S02:T03)
 - [x] **E5:S02:T04 – Establish documentation update triggers** - COMPLETE ✅ (migrated from E5:S02:T04)
 - [ ] **E5:S02:T05 – Explore and evaluate KB platform/tooling options** - TODO (migrated from E5:S02:T05)
+- [x] **E5:S02:T06 – CMW Epic 5 execution context (FR-063)** - ✅ COMPLETE (v0.5.2.6+1) (MEDIUM — intake: FR-063 + task + board + CMW archival on E5 branch; **FR-063 implementation** still open per FR checklist)
+  - Task: [`T006-cmw-epic-5-execution-context-fr-063.md`](Story-002/T006-cmw-epic-5-execution-context-fr-063.md) | [FR-063](../../fr-br/FR-063-cmw-epic-5-execution-context.md)
 
 ---
 
@@ -541,6 +543,17 @@ The current KB is Git-based (Markdown files in `docs/` directory), which works w
 - Epic 1: Story 3 - Core KB Structure (current structure baseline)
 - Epic 6: Framework Management (KB as framework package)
 - Epic 9: Book Content Development (book reader requirements)
+
+---
+
+### E5:S02:T06 – CMW Epic 5 execution context (FR-063)
+
+**Input:** [FR-063](../../fr-br/FR-063-cmw-epic-5-execution-context.md); `cmw.py`; `validate_branch_context.py`; Epic 5 branch `epic/5-documentation-management`  
+**Deliverable:** Per FR-063: docs + standalone CMW precondition + RW Step 9.5 escape hatch + config  
+**Dependencies:** None  
+**Blocker:** None
+
+Discrete task doc: [`Story-002/T006-cmw-epic-5-execution-context-fr-063.md`](Story-002/T006-cmw-epic-5-execution-context-fr-063.md)
 
 ---
 
