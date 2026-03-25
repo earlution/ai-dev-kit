@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.6.4+1] - 25-03-26
+
+E7:S06:T04+1 – Recent commit review: RW/batch/quality findings in T04; kanban updates; no BR/FR filed.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.4+1.md)
+
+---
+---
+---
 ## [0.7.6.3+1] - 25-03-26
 
 E7:S06:T03+1 – Kanban documentation consistency: live SoT, E9/E18 disambiguation, kanban links, Epic-9 S05 stub.

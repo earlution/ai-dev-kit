@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.3+1] - 25-03-26
+## [0.7.6.4+1] - 25-03-26
 
-E7:S06:T03+1 – Kanban documentation consistency: live SoT, E9/E18 disambiguation, critical kanban links, Epic-9 S05 story stub, board/completed updates; `main` merged into epic/7-documentation-maintenance.
+E7:S06:T04+1 – Recent commit review: last ~15 commits on `epic/7-documentation-maintenance` scored for RW compliance, batch scope, and quality; findings and summary in T04 task doc; kanban closure (board MoSCOW, completed, Story/Epic); no BR/FR filed.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.3+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.4+1.md)

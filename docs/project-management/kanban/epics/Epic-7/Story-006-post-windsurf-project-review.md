@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (v0.7.6.3+1 – E7:S06:T03 kanban documentation consistency)
+**Last updated:** 2026-03-25 (v0.7.6.4+1 – E7:S06:T04 recent commit review)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.7.6.3+1
+**Version:** v0.7.6.4+1
 **Code:** E7S06
 
 ---
@@ -57,7 +57,7 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 - [x] Remove Windsurf artifacts and restore Cursor-native state (T01 complete)
 - [ ] Align version, changelog, and kanban to a single coherent state
 - [x] Validate kanban documentation against live SoT (E7:S06:T03 v0.7.6.3+1)
-- [ ] Review recent commits for RW compliance and quality
+- [x] Review recent commits for RW compliance and quality (E7:S06:T04 v0.7.6.4+1)
 - [ ] Verify workflow script changes are correct and coherent
 - [ ] Audit FR/BR/UXR intake documentation consistency
 - [ ] Ensure general documentation and cross-references are intact
