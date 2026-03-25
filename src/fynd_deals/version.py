@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
-VERSION_STORY = 6     # Story number (Story 6: Post-Windsurf Project Review)
-VERSION_TASK = 9      # Task number (T09: Config and git state validation)
-VERSION_BUILD = 1     # Build number (E7:S06:T09+1 – RW)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management — branch epic/5-documentation-management)
+VERSION_STORY = 1     # Story number (Story 1: FR Repo)
+VERSION_TASK = 63     # Task number (E5:S01:T63 — FR-060 strict RW task token)
+VERSION_BUILD = 1     # Build number (E5:S01:T63+1)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.6.9+1 = Development, Epic 7, Story 6, Task 9 (E7:S06:T09+1: Config and git state validation)
+# Current: 0.5.1.63+1 — FR-060 mandatory RW task id + validate_rw_task_complete + kanban T63
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

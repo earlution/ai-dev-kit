@@ -139,7 +139,7 @@ Add a comprehensive "Workflows" section to the project README.md that documents 
 - **FR-061:** Add Workflow Section to Project README (this task)
 
 **Related Tasks:**
-- **E5:S01:T37:** RW Task Argument Requirement (related workflow enhancement)
+- **E5:S01:T63:** RW Task Argument Requirement / FR-060 (related workflow enhancement)
 - **E7:S01:T10:** Enhanced Workflow Logging System (UKW implementation)
 
 **Related Stories:**

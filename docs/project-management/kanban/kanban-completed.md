@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-25 (E7:S06:T09 config/git validation + E6:S06:T56 BR-056)
-**Version:** v0.7.6.9+1
+**Last Updated:** 2026-03-25 (E5:S01:T63 FR-060 RW task token + E7:S06:T09 + E6:S06:T56)
+**Version:** v0.5.1.63+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -19,6 +19,10 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 5: Documentation Management**
+- **[E5:S01:T63](epics/Epic-5/Story-001-fr-repo/T63-rw-task-argument-requirement.md)** – RW Task Argument Requirement / FR-060 (strict task token; `validate_rw_task_complete.py`; docs; T63 renumber; `find_story_file` fr-repo preference)  
+  **Completed:** `2026-03-25T16:26:47Z` | **Version:** `v0.5.1.63+1` | **Agent:** `RW Agent`
 
 #### **Epic 7: Codebase Maintenance**
 - **[E7:S06:T09](epics/Epic-7/Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md)** – Config and git state validation (rw-config path matrix; version vs branch; git baseline; `.cursorrules` vs config; `.cursorignore` absent; Story 6 COMPLETE)  

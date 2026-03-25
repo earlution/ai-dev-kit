@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-02-26 (v0.5.1.47+3 – FR-047: tests, docs, consumer-vs-framework clarity)
+**Last updated:** 2026-03-25 (v0.5.1.63+1 – FR-060 / E5:S01:T63 RW mandatory task token)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.47+3
+**Version:** v0.5.1.63+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -46,6 +46,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T48 – ICW Task Identifier Argument** - ✅ COMPLETE (v0.5.1.48+1 – Implementation complete: ICW requires task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../../fr-br/FR-048-icw-task-identifier-argument.md)
 - [ ] **E5:S01:T49 – Enhanced kanban-completed.md with Timestamps and Recent Tasks Tracking** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T49-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md) | [FR-049](../../fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)
 - [ ] **E5:S01:T62 – GitHub Release Installation Experience** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T62-github-release-installation-experience.md) | [FR-062](../../fr-br/FR-062-github-release-installation-experience.md)
+- [x] **E5:S01:T63 – RW Task Argument Requirement** - ✅ COMPLETE (v0.5.1.63+1 – FR-060: strict mandatory task token, validate_rw_task_complete.py, .cursorrules + docs) - [Task Document](Story-001-fr-repo/T63-rw-task-argument-requirement.md) | [FR-060](../../fr-br/FR-060-rw-task-argument-requirement.md)
 
 ---
 

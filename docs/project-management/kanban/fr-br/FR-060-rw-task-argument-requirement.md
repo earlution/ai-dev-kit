@@ -13,7 +13,8 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** N/A  
-**Status:** ACTIVE  
+**Status:** IMPLEMENTED (v0.5.1.63+1)  
+**Assigned Task:** E5:S01:T63 — [Task document](../epics/Epic-5/Story-001-fr-repo/T63-rw-task-argument-requirement.md)
 
 ---
 
@@ -57,13 +58,13 @@ This feature is needed:
 
 ### Functional Requirements
 
-- [ ] **FR-060:R01** - RW must accept task argument in format `RW <task_id>`
-- [ ] **FR-060:R02** - Support both colon-separated `E<Epic>:S<Story>:T<Task>` and concatenated `E<Epic>S<Story>T<Task>` formats
-- [ ] **FR-060:R03** - Validate task exists and is in COMPLETE status before proceeding
-- [ ] **FR-060:R04** - Use specified task for version schema generation (RC.EPIC.STORY.TASK+BUILD)
-- [ ] **FR-060:R05** - Provide clear error message for missing/invalid task arguments
-- [ ] **FR-060:R06** - Update RW documentation with new argument requirement
-- [ ] **FR-060:R07** - Update workflow scripts to enforce task argument requirement
+- [x] **FR-060:R01** - RW must accept task argument in format `RW <task_id>`
+- [x] **FR-060:R02** - Support both colon-separated `E<Epic>:S<Story>:T<Task>` and concatenated `E<Epic>S<Story>T<Task>` formats
+- [x] **FR-060:R03** - Validate task exists and is in COMPLETE status before proceeding
+- [x] **FR-060:R04** - Use specified task for version schema generation (RC.EPIC.STORY.TASK+BUILD)
+- [x] **FR-060:R05** - Provide clear error message for missing/invalid task arguments
+- [x] **FR-060:R06** - Update RW documentation with new argument requirement
+- [x] **FR-060:R07** - Update workflow scripts to enforce task argument requirement
 
 ### Non-Functional Requirements
 

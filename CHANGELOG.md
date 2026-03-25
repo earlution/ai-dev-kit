@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.9+1] - 25-03-26
+## [0.5.1.63+1] - 25-03-25
 
-E7:S06:T09+1 – Config and git state validation: rw-config path matrix OK; `version.py` epic vs branch OK; git baseline documented; `.cursorrules` File Paths aligned with `rw-config`; no root `.cursorignore` (documented); Story 6 Post-Windsurf review marked complete; findings in T09 task doc.
+E5:S01:T63+1 – FR-060: mandatory RW task id in user message; `validate_rw_task_complete.py`; `.cursorrules` / packaged RW section Steps 1b–1d; agent execution + reference + README updates; FR-060 renumbered to T63 (FR-037 retains T37); `find_story_file` prefers `*fr-repo*` when Epic 5 has multiple Story-001 files.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.9+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.63+1.md)

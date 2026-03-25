@@ -37,14 +37,19 @@ housekeeping_policy: keep
    - **CRITICAL:** If Step 1 fails (non-zero exit code), **DO NOT PROCEED** to Step 2
    - **CRITICAL:** If Step 1 fails, mark all steps as `cancelled` and stop workflow immediately
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
-5b. **🚨 MANDATORY: Step 1b — RW Task Intent Guard (BR-056)** — **After Step 1 passes**, **before any file modifications**
-   - If the user message includes a task identifier (`RW E7S5T1`, `RW E7:S06:T01`, `RW -k E6S6T56`, etc.), run:  
-     `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
-     For **`RW -k`**, add **`--mode rw-k`**.
-   - **Non-zero exit:** **RW ABORTED** (same severity as Step 1). No version/changelog/kanban edits. User must confirm intent or re-run with `--confirmed-override` after explicit confirmation.
-   - **No task token:** run the script **without** `--requested` (exits 0).
+5b. **🚨 MANDATORY: Step 1b — RW task token required (FR-060)** — **After Step 1 passes**, **before any file modifications**
+   - Parse the **same user message** as the RW trigger for `E…S…T…` (`RW E7S5T1`, `RW E7:S06:T01`, `RW -d E7S01T10`, `RW -k E6S6T56`, etc.).
+   - **If no parseable token:** **RW ABORTED**. User must re-send with explicit task id (e.g. `RW E7:S01:T10`).
+5c. **🚨 MANDATORY: Step 1c — RW task document releasable (FR-060)** — **After Step 1b passes**
+   - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested "<parsed_id>"`  
+   - For **`RW -k`**, add **`--mode rw-k`**.
+   - **Non-zero exit:** **RW ABORTED** (same severity as Step 1).
+5d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056)** — **After Step 1c passes**
+   - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
+   - For **`RW -k`**, add **`--mode rw-k`**.
+   - **Non-zero exit:** **RW ABORTED**. User may re-run with `--confirmed-override` on this script after explicit confirmation.
    - **Overrides** generic “never stop” until intent is resolved (documented exception).
-6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 and Step 1b pass)
+6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Steps 1, 1b, 1c, and 1d pass)
 7. **Document** each step's analysis, actions, and results
 8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking the steps for the selected path
 
