@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (v0.7.6.7+1 – E7:S06:T07 General documentation and cross-reference integrity)
+**Last updated:** 2026-03-25 (v0.7.6.8+1 – E7:S06:T08 Dependency and tooling audit)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.7.6.6+1
+**Version:** v0.7.6.8+1
 **Code:** E7S06
 
 ---
@@ -37,7 +37,7 @@ housekeeping_policy: keep
 - [x] **E7:S06:T05 – Workflow script integrity** ✅ COMPLETE (v0.7.6.5+1)
 - [x] **E7:S06:T06 – FR/BR/UXR intake documentation quality** ✅ COMPLETE (v0.7.6.6+1)
 - [x] **E7:S06:T07 – General documentation and cross-reference integrity** ✅ COMPLETE (v0.7.6.7+1)
-- [ ] **E7:S06:T08 – Dependency and tooling audit** - TODO (pyproject.toml, requirements, tests, CI/CD, build scripts)
+- [x] **E7:S06:T08 – Dependency and tooling audit** ✅ COMPLETE (v0.7.6.8+1)
 - [ ] **E7:S06:T09 – Config and git state validation** - TODO (rw-config vs paths, git state, .cursorrules alignment)
 
 > **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)  
@@ -61,7 +61,7 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 - [x] Verify workflow script changes are correct and coherent (E7:S06:T05 v0.7.6.5+1)
 - [x] Audit FR/BR/UXR intake documentation consistency (E7:S06:T06 v0.7.6.6+1)
 - [x] Ensure general documentation and cross-references are intact (E7:S06:T07 v0.7.6.7+1)
-- [ ] Audit dependencies, tests, CI/CD, and build scripts
+- [x] Audit dependencies, tests, CI/CD, and build scripts (E7:S06:T08 v0.7.6.8+1)
 - [ ] Validate config drift and git state
 
 ---

@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.6.8+1] - 25-03-26
+
+E7:S06:T08+1 – Dependency/tooling audit; validation tests aligned; BR-058 (CI Tests workflow + pytest drift).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.8+1.md)
+
+---
+---
+---
 ## [0.7.6.7+1] - 25-03-26
 
 E7:S06:T07+1 – General documentation integrity: README path spot-check; docs tree; fr-br cross-ref re-scan; T07 audit doc.

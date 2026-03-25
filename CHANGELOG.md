@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.7+1] - 25-03-26
+## [0.7.6.8+1] - 25-03-26
 
-E7:S06:T07+1 – General documentation and cross-reference integrity: verified README primary relative paths; confirmed `docs/` top-level layout; re-checked `fr-br/*.md` for stale `(epics/...)` links (none after T06); documented scope and limits in T07 task doc.
+E7:S06:T08+1 – Dependency and tooling audit: packaging matrix (`setup.py`, requirements, no root `pyproject.toml`); pytest 85/92 pass after aligning `tests/test_validation.py` with `cli.validation`; CI gap (`update-badges.yml` references missing `Tests` workflow); build script notes; **BR-058** filed; findings in T08 task doc.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.7+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.8+1.md)
