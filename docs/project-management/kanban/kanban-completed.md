@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-25 (E7:S06:T08 dependency audit + E6:S06:T56 BR-056)
-**Version:** v0.7.6.8+1
+**Last Updated:** 2026-03-25 (E7:S06:T09 config/git validation + E6:S06:T56 BR-056)
+**Version:** v0.7.6.9+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -21,6 +21,9 @@ housekeeping_policy: keep
 ## 20 Most Recently Completed Tasks
 
 #### **Epic 7: Codebase Maintenance**
+- **[E7:S06:T09](epics/Epic-7/Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md)** – Config and git state validation (rw-config path matrix; version vs branch; git baseline; `.cursorrules` vs config; `.cursorignore` absent; Story 6 COMPLETE)  
+  **Completed:** `2026-03-25T15:15:34Z` | **Version:** `v0.7.6.9+1` | **Agent:** `RW Agent`
+
 - **[E7:S06:T08](epics/Epic-7/Story-006-post-windsurf-project-review/T08-dependency-and-tooling-audit.md)** – Dependency and tooling audit (setup.py vs requirements; pytest 85/92; CI `Tests` gap; BR-058; `test_validation` aligned)  
   **Completed:** `2026-03-25T15:00:00Z` | **Version:** `v0.7.6.8+1` | **Agent:** `RW Agent`
 

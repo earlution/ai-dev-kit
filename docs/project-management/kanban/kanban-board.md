@@ -8,10 +8,10 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-25 (RW v0.7.6.8+1 — E7:S06:T08 Dependency and tooling audit)
-**Version:** v0.7.6.8+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-25 (RW v0.7.6.9+1 — E7:S06:T09 Config and git state validation; Story 6 complete)
+**Version:** v0.7.6.9+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
-**Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
+**Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)  
@@ -27,8 +27,6 @@ housekeeping_policy: keep
 No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
-
-- **E7:S06:T09** – Config and git state validation - TODO (MEDIUM priority, rw-config vs paths, git state, .cursorrules alignment) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
 - **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](fr-br/FR-060-rw-task-argument-requirement.md)
 

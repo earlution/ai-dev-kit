@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.8+1] - 25-03-26
+## [0.7.6.9+1] - 25-03-26
 
-E7:S06:T08+1 – Dependency and tooling audit: packaging matrix (`setup.py`, requirements, no root `pyproject.toml`); pytest 85/92 pass after aligning `tests/test_validation.py` with `cli.validation`; CI gap (`update-badges.yml` references missing `Tests` workflow); build script notes; **BR-058** filed; findings in T08 task doc.
+E7:S06:T09+1 – Config and git state validation: rw-config path matrix OK; `version.py` epic vs branch OK; git baseline documented; `.cursorrules` File Paths aligned with `rw-config`; no root `.cursorignore` (documented); Story 6 Post-Windsurf review marked complete; findings in T09 task doc.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.8+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.9+1.md)

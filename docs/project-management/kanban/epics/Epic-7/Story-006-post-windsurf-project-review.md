@@ -8,14 +8,14 @@ housekeeping_policy: keep
 
 # Epic 7, Story 6: Post-Windsurf Project Review
 
-**Status:** IN PROGRESS
+**Status:** COMPLETE
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (v0.7.6.8+1 – E7:S06:T08 Dependency and tooling audit)
+**Last updated:** 2026-03-25 (v0.7.6.9+1 – E7:S06:T09 Config and git state validation)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
-**Completed:** [TBD]  
-**Version:** v0.7.6.8+1
+**Completed:** 2026-03-25  
+**Version:** v0.7.6.9+1
 **Code:** E7S06
 
 ---
@@ -55,14 +55,14 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 ## Goals
 
 - [x] Remove Windsurf artifacts and restore Cursor-native state (T01 complete)
-- [ ] Align version, changelog, and kanban to a single coherent state
+- [x] Align version, changelog, and kanban to a single coherent state (E7:S06:T02–T09 + RW discipline)
 - [x] Validate kanban documentation against live SoT (E7:S06:T03 v0.7.6.3+1)
 - [x] Review recent commits for RW compliance and quality (E7:S06:T04 v0.7.6.4+1)
 - [x] Verify workflow script changes are correct and coherent (E7:S06:T05 v0.7.6.5+1)
 - [x] Audit FR/BR/UXR intake documentation consistency (E7:S06:T06 v0.7.6.6+1)
 - [x] Ensure general documentation and cross-references are intact (E7:S06:T07 v0.7.6.7+1)
 - [x] Audit dependencies, tests, CI/CD, and build scripts (E7:S06:T08 v0.7.6.8+1)
-- [ ] Validate config drift and git state
+- [x] Validate config drift and git state (E7:S06:T09 v0.7.6.9+1)
 
 ---
 
@@ -166,10 +166,10 @@ Seven review tasks, one per workflow: RW, UKW, CMW, PVW, ICW, Intake, PIR. Each 
 
 ## Acceptance Criteria
 
-- All review tasks completed with findings documented
-- Critical issues (artifacts, version drift) remediated
-- Non-critical findings filed as BR/FR where appropriate
-- Project in known-good state before new feature work
+- [x] All review tasks completed with findings documented (through T09; Story COMPLETE v0.7.6.9+1)
+- [x] Critical issues (artifacts, version drift) remediated
+- [x] Non-critical findings filed as BR/FR where appropriate
+- [x] Project in known-good state before new feature work
 
 ---
 

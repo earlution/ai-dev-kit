@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.6.9+1] - 25-03-26
+
+E7:S06:T09+1 – Config/git validation; rw-config vs disk; cursorrules alignment; Story 6 complete.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.9+1.md)
+
+---
+---
+---
 ## [0.7.6.8+1] - 25-03-26
 
 E7:S06:T08+1 – Dependency/tooling audit; validation tests aligned; BR-058 (CI Tests workflow + pytest drift).
