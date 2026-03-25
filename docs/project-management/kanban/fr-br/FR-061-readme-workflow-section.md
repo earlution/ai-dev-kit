@@ -14,6 +14,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Severity:** N/A  
 **Status:** ACTIVE  
+**Assigned Task:** E5:S01:T64 — [Task document](../epics/Epic-5/Story-001-fr-repo/T64-readme-workflow-section.md)
 
 ---
 

@@ -6,18 +6,18 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 1, Task 38: Add Workflow Section to Project README
+# Epic 5, Story 1, Task 64: Add Workflow Section to Project README
 
-**Task ID:** E5:S01:T38
+**Task ID:** E5:S01:T64
 **Status:** IN PROGRESS
 **Priority:** MEDIUM
 **Estimated Effort:** Medium
 **Created:** 2026-03-17
-**Last updated:** 2026-03-17 (v0.7.1.10+1 – Task filed and implementation planning started)
+**Last updated:** 2026-03-25 (Renumbered from colliding T38 — FR-061 now E5:S01:T64; E5:S01:T38 reserved for FR-038)
 **Version:** v0.7.1.10+1
-**Code:** E5S01T38
+**Code:** E5S01T64
 
-**Repository Pattern:** FR-061 = E5:S01:T38 (abstract space: v0.7.1.38+0)
+**Repository Pattern:** FR-061 = E5:S01:T64 (abstract space: v0.5.1.64+0)
 
 ---
 
@@ -70,7 +70,7 @@ Add a comprehensive "Workflows" section to the project README.md that documents 
    - Plus 7 additional workflows with full coverage
 
 3. **Command Reference:**
-   - All argument forms (e.g., `RW E7:S01:T10`, `UKW -m`, `ICW plan E5:S01:T38`)
+   - All argument forms (e.g., `RW E7:S01:T10`, `UKW -u`, `ICW plan E5:S01:T64`)
    - Usage examples for common scenarios
    - Clear syntax documentation
 
@@ -149,7 +149,7 @@ Add a comprehensive "Workflows" section to the project README.md that documents 
 
 ## Version Anchor
 
-**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.38+1)`)
+**Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.5.1.64+1)`)
 
 **When Task is Complete:**
 - Add forensic marker to Task document

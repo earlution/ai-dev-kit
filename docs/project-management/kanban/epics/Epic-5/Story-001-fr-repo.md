@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (v0.5.1.63+1 – FR-060 / E5:S01:T63 RW mandatory task token)
+**Last updated:** 2026-03-25 (v0.5.1.38+1 – FR-038 / E5:S01:T38 RW Step 7 Scoped Kanban Sync UKW Mode)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.63+1
+**Version:** v0.5.1.38+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -36,7 +36,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
 - [x] **E5:S01:T36 – RW Update Kanban Board on Task Completion** - ✅ COMPLETE (v0.5.1.36+1 – Implementation complete: Kanban board updates added to RW Step 7) - [Task Document](Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) | [FR-040](../../fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)
 - [x] **E5:S01:T37 – Kanban Policy Task Prioritisation and Queue/Stack** ✅ COMPLETE (v0.5.1.37+3 – Policy alignment: implementation cycle, changelog/IDE/git reminders) - [Task Document](Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
-- [ ] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
+- [x] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - ✅ COMPLETE (v0.5.1.38+1 – FR-038 documentation: scoped UKW Step 7, invocation_context, governance; FR-061 → T64 collision fix) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 - [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
 - [ ] **E5:S01:T43 – UKW Gap Discovery (TODO Tasks and Unfiled FR/BR)** - TODO (HIGH priority, v0.5.1.43+1 – Task created) - [Task Document](Story-001-fr-repo/T43-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) | [FR-043](../../fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
 - [ ] **E5:S01:T44 – RW Temporary Execution Log for Recovery and Forensics** - TODO (MEDIUM priority, v0.5.1.44+1 – Task created) - [Task Document](Story-001-fr-repo/T44-rw-temporary-execution-log-for-recovery-and-forensics.md) | [FR-044](../../fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)
@@ -47,6 +47,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T49 – Enhanced kanban-completed.md with Timestamps and Recent Tasks Tracking** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T49-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md) | [FR-049](../../fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)
 - [ ] **E5:S01:T62 – GitHub Release Installation Experience** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T62-github-release-installation-experience.md) | [FR-062](../../fr-br/FR-062-github-release-installation-experience.md)
 - [x] **E5:S01:T63 – RW Task Argument Requirement** - ✅ COMPLETE (v0.5.1.63+1 – FR-060: strict mandatory task token, validate_rw_task_complete.py, .cursorrules + docs) - [Task Document](Story-001-fr-repo/T63-rw-task-argument-requirement.md) | [FR-060](../../fr-br/FR-060-rw-task-argument-requirement.md)
+- [ ] **E5:S01:T64 – Add Workflow Section to Project README** - IN PROGRESS (MEDIUM priority, FR-061; renumbered from T38 collision with FR-038) - [Task Document](Story-001-fr-repo/T64-readme-workflow-section.md) | [FR-061](../../fr-br/FR-061-readme-workflow-section.md)
 
 ---
 

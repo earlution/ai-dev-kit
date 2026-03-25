@@ -29,7 +29,7 @@ No critical tasks currently in progress
 ### Should Have (S) - Important Tasks
 
 
-- **E5:S01:T38** – README Workflow Section - IN PROGRESS (MEDIUM priority, Add comprehensive Workflow section to project README.md documenting all workflows with principle operations and argument forms) - [Task Document](epics/Epic-5/Story-001-fr-repo/T38-rw-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](fr-br/FR-061-readme-workflow-section.md)
+- **E5:S01:T64** – README Workflow Section - IN PROGRESS (MEDIUM priority, FR-061: Workflow section in README; task renumbered from T38) - [Task Document](epics/Epic-5/Story-001-fr-repo/T64-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](fr-br/FR-061-readme-workflow-section.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 

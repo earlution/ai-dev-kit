@@ -316,7 +316,7 @@ For each step, follow this pattern:
 
 6. **Update BR/FR Docs** - Update Bug Reports and Feature Requests with fix attempt information. Use config path. Document flaws, attempted fixes, and verification status.
 
-7. **Auto-update Kanban Docs** - Update epic documentation and story documentation with version markers. Use config path. **CRITICAL: Check Story file existence, create from template if missing, then update.** Update Story file FIRST, then Epic file to match.
+7. **Scoped Kanban Sync (UKW Mode)** — RW Step 7 is a **scoped, UKW-style** agentic kanban update for the **current release Epic/Story/Task**, not a full standalone UKW run. Update Task (then Story, then Epic) docs with version markers and forensic consistency; update board entries tied to this release; apply **limited** MoSCOW / prioritisation only for **new or newly significant** items per Kanban governance (do not re-prioritise the whole board). Prefer `update_kanban_docs.py` when applicable; otherwise follow the same bottom-up scope. Use config paths. **CRITICAL: Check Story file existence, create from template if missing, then update.** Update Story file FIRST, then Epic file to match. See [update-kanban-workflow-agent-execution.md](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md) for `invocation_context` (`rw_step_7` vs `standalone`).
 
 8. **Stage Files** - Run `git add -A` to stage all modified files
 
@@ -713,7 +713,7 @@ Documents in `docs/` directory must have lifecycle metadata in frontmatter:
 
 **Enforcement when adopted:** Step 3 is BLOCKING — implementation (Step 4) cannot start until tests exist and fail as expected. Pre-implementation checklist: requirement documented, task created, spec ascertained, tests created and failing, tests compile.
 
-**Integration:** Task creation aligns with `packages/frameworks/kanban/policies/kanban-governance-policy.md`; RW updates Kanban (RW Step 7). Projects may make this cycle mandatory for all task implementations.
+**Integration:** Task creation aligns with `packages/frameworks/kanban/policies/kanban-governance-policy.md`; RW updates Kanban via **Step 7 — Scoped Kanban Sync (UKW Mode)**. Projects may make this cycle mandatory for all task implementations.
 
 ---
 

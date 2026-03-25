@@ -181,7 +181,7 @@ For each step, the agent follows this pattern:
        {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
        {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
        {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Document flaws and fix attempts in Bug Reports and Feature Requests'},
-       {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
+       {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) - Scoped kanban update for release E/S/T'},
       {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
       {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
       {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Run Validators - Execute branch context, changelog format, and changelog size validators'},
@@ -1611,14 +1611,16 @@ The Versioning Policy requires that:
 
 ---
 
-### Step 7: Auto-update Kanban Docs
+### Step 7: Scoped Kanban Sync (UKW Mode)
+
+**Canonical name (FR-038):** Step 7 is **Scoped Kanban Sync (UKW Mode)** — a **scoped invocation** of the same kanban intelligence model as [UKW](update-kanban-workflow-agent-execution.md) with `invocation_context: rw_step_7` (see that guide). It is **not** a full standalone UKW run (`standalone`). Agents scope work to the **release’s E/S/T** and directly related board/docs; MoSCOW changes are **conservative** (new or newly significant items only).
 
 **🚨 MANDATORY BLOCKING STEP - DO NOT BYPASS**
 
 **Step Definition:**
 ```yaml
 - id: step-7
-  name: Auto-update Kanban Docs
+  name: Scoped Kanban Sync (UKW Mode)
   handler: framework.kanban_update  # Framework-agnostic handler
   required: true
   mandatory: true
@@ -1636,7 +1638,9 @@ The Versioning Policy requires that:
 - ✅ **MANDATORY:** This step MUST run and cannot be skipped (`required: true`, `mandatory: true`)
 - ✅ **BLOCKING:** If this step fails, the workflow MUST STOP immediately (`blocking: true`)
 - ✅ **FRAMEWORK-AGNOSTIC:** Uses framework script that works across all projects
-- ✅ **KANBAN POLICY:** Updates align with Kanban governance policy (FR-037: task prioritisation, stack/queue for MUST HAVE). MoSCOW ordering is handled by UKW or manual/agent-defined updates; RW Step 7 updates version markers and completion status.
+- ✅ **KANBAN POLICY:** Updates align with Kanban governance policy (FR-037: task prioritisation, stack/queue for MUST HAVE). In **scoped** mode, prefer **limited** MoSCOW/board edits for the active release; full-board MoSCOW reshuffles belong in **standalone UKW** (`UKW`, `-p`, `-a`, etc.).
+- ✅ **AGENTIC RESPONSIBILITIES (FR-038:R03):** Task-level updates (status, version markers, narrative where needed); Story/Epic checklist and overview consistency; Kanban board updates for the active epic/story; **limited** prioritisation of new or newly significant tasks only.
+- ✅ **UKW RELATIONSHIP (FR-038:R05):** UKW agent guide: [Update Kanban Workflow — invocation context](update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7).
 - ✅ **VALIDATION:** Comprehensive validation runs automatically after updates
 - ✅ **ERROR HANDLING:** Recovery guidance provided for all error types
 - ❌ **DO NOT PROCEED:** If Step 7 fails, DO NOT proceed to Step 8 or any subsequent step

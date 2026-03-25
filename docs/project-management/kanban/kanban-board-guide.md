@@ -48,6 +48,8 @@ This Kanban board serves as the **parent document** to Story documents, similar 
 
 UKW and RW agents must follow this when updating the board.
 
+**RW Step 7 vs UKW (FR-038):** During a release, **RW Step 7 — Scoped Kanban Sync (UKW Mode)** updates the board and docs for the **release task** only (scoped). **Standalone UKW** is for **board-wide** MoSCOW and housekeeping. See Kanban governance policy §1.1.
+
 ---
 
 ## MoSCOW Prioritized In-Progress Tasks

@@ -140,7 +140,8 @@ The Release Workflow consists of **14 steps** organized into 3 phases. Each step
   - Documents flaws and fix attempts in Bug Reports and Feature Requests
   - Maintains fix attempt history for knowledge transfer between builds
 
-- **Step 7:** Auto-update Kanban Docs
+- **Step 7:** Scoped Kanban Sync (UKW Mode) (FR-038; formerly “Auto-update Kanban Docs”)
+  - Scoped, UKW-style agentic kanban update for the **release E/S/T**; not a full standalone UKW run. See [UKW agent guide — Invocation context](update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7).
   - Implements [Kanban Governance Policy](../../project-management/rituals/policy/kanban-governance-policy.md) requirement for forensic markers
   - Updates Epic/Story documentation with version numbers and task completion status
   - Maintains traceability grid (version ↔ epic/story/task ↔ changelogs ↔ kanban markers)

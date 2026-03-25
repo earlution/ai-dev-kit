@@ -73,6 +73,19 @@ This workflow **requires significant agentic intelligence** at every step. This 
 - **UKW:** Comprehensive sync regardless of release status
 - Both workflows should be used together for complete kanban accuracy
 
+### Invocation context (FR-038 / RW Step 7)
+
+UKW behaviour depends on **how** it is invoked. Use this conceptual flag when reasoning about scope (there is no separate CLI flag yet; context is implicit).
+
+| Context | When | Scope and behaviour |
+|--------|------|---------------------|
+| **`rw_step_7`** | Release Workflow **Step 7 — Scoped Kanban Sync (UKW Mode)** (agent-driven) | **Scoped** to the release’s Epic/Story/Task and directly related docs/board lines. **Conservative** MoSCOW: only **new or newly significant** tasks get priority churn; do **not** re-sort the entire board. Bottom-up: Task → Story → Epic → board for that slice. |
+| **`standalone`** | User types **`UKW`** / **`ukw`** with optional **`-u`**, **`-p`**, **`-a`** (see [.cursorrules](../../../../../../.cursorrules) UKW section) | **Full** UKW: bookkeeping, narrative synthesis, and MoSCOW as defined for the chosen flags — may touch the whole board and all relevant docs. |
+
+**FR-038:R04:** In `rw_step_7`, treat MoSCOW and board-wide prioritisation as **narrow**; reserve whole-board reprioritisation for `standalone` **`-p`** / comprehensive runs.
+
+**Cross-reference:** RW Step 7 specification: [Release Workflow Agent Execution — Step 7](release-workflow-agent-execution.md#step-7-scoped-kanban-sync-ukw-mode).
+
 **🔄 UKW → RW Integration (Wiring):**
 
 After completing UKW, users typically run RW to commit the kanban documentation updates. The relationship between UKW and the perpetual task is established through wiring:

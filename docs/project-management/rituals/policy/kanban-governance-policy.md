@@ -33,6 +33,11 @@ The implementation in this repo starts simple:
 - Uses a **simple board view** in `docs/project-management/kanban/_index.md`
 - Can be evolved later to add Epics, swimlanes, WIP limits, etc.
 
+### 1.1 RW Step 7 vs standalone UKW (FR-038)
+
+- **Per-release kanban sync:** [Release Workflow](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) **Step 7 — Scoped Kanban Sync (UKW Mode)** aligns Task/Story/Epic docs and related board lines for the **current release** in a **scoped** manner (conservative MoSCOW; no whole-board reshuffle).
+- **Board-wide kanban sync:** [Update Kanban Workflow (UKW)](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md) in **standalone** mode handles full-board housekeeping, prioritisation, and narrative updates per UKW flags.
+
 ---
 
 ## 2. Board Structure (This Repo)

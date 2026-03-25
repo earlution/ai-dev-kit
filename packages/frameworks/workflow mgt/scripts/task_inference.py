@@ -41,7 +41,7 @@ class TaskInferenceEngine:
             user_request: Optional user request context
 
         Returns:
-            Task ID string (e.g., 'E5:S01:T38') or None if no clear inference
+            Task ID string (e.g., 'E5:S01:T64') or None if no clear inference
         """
         self.logger.info("Analyzing context for task inference...")
 

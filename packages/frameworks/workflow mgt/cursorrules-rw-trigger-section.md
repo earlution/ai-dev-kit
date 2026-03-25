@@ -120,14 +120,16 @@ todo_write(merge=False, todos=[
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG with full timestamp'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
     {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
-    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
-    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
-    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Fix history, FR intake decisions, linked items'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) - Task/Story/Epic/board for release E/S/T; UKW invocation_context rw_step_7 (FR-038)'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - git add -A'},
+    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - branch, changelog, version bump, RW task complete, etc.'},
     {'id': 'rw-step-9.5', 'status': 'pending', 'content': 'Step 9.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
+    {'id': 'rw-step-9.6', 'status': 'pending', 'content': 'Step 9.6: Check IDE-Flagged Problems - errors, warnings, infos in modified files (recommended, non-blocking)'},
     {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
-    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Internal + SemVer annotated tags'},
     {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags (with network permissions)'},
+    {'id': 'rw-step-12.5', 'status': 'pending', 'content': 'Step 12.5: Create/Update GitHub Release (SemVer tag)'},
     {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification, Housekeeping & Reflection - Verify release, perform housekeeping tasks, and reflect on process'},
     {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found during verification'},
     {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Check for PIR Trigger - Determine if Post-Implementation Review is needed'},
@@ -144,7 +146,7 @@ todo_write(merge=False, todos=[
     {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for Kanban documentation setup'},
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for Kanban init'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for Kanban init'},
-    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Kanban Documentation Update - Update changelog, version number, and Kanban docs only'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) / Kanban init - Update changelog, version number, and Kanban docs only'},
     {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Commit Changes - Create git commit for Kanban documentation setup'},
     {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Create Git Tag - Create tag for Kanban documentation setup'},
 ])
@@ -159,10 +161,11 @@ todo_write(merge=False, todos=[
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for documentation updates'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for documentation release'},
     {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
-    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
-    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs (if applicable)'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) - Kanban docs for this release'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
     {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-9.6', 'status': 'pending', 'content': 'Step 9.6: Check IDE-Flagged Problems (recommended, non-blocking)'},
     {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
     {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Post-Commit Verification & Reflection - Verify documentation release'},
     {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found (optional, agent-determined)'},
@@ -373,7 +376,7 @@ For each step, follow this pattern:
        - Add verification status: `**Verification Status:** {Verified/Attempted Fix (pending verification)}`
    - **If no BR/FR linked:** Skip this step (no BR/FR to update)
    - **See:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 6 for complete procedure
-7. **Auto-update Kanban Docs** - Update epic documentation and story documentation with version markers. **Use config:** If `rw-config.yaml` exists and `use_kanban: true`, read `kanban_root`, `epic_doc_pattern`, and `story_doc_pattern` from config. Otherwise, use `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md` and `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` as fallback. **CRITICAL: Check Story file existence, create from template if missing, then update:**
+7. **Scoped Kanban Sync (UKW Mode)** (FR-038) — A **scoped UKW-style** agentic kanban update for the **current release E/S/T**, not a full standalone UKW run. Treat UKW **`invocation_context` = `rw_step_7`**: update Task/Story/Epic docs and related board lines; **conservative MoSCOW** (new or newly significant items only); do **not** reshuffle the whole board. See [`update-kanban-workflow-agent-execution.md`](KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7). **Use config:** If `rw-config.yaml` exists and `use_kanban: true`, read `kanban_root`, `epic_doc_pattern`, and `story_doc_pattern` from config. Otherwise, use `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md` and `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` as fallback. **CRITICAL: Check Story file existence, create from template if missing, then update:**
    - **MANDATORY: Check Story file existence:**
      - Read Epic file Story Checklist to verify Story is referenced
      - Check if Story file exists at expected path
