@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.6.5+1] - 25-03-26
+
+E7:S06:T05+1 – Workflow script integrity: parser/orchestrator/canonical_steps fixes and docs; tests; kanban closure.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.5+1.md)
+
+---
+---
+---
 ## [0.7.6.4+1] - 25-03-26
 
 E7:S06:T04+1 – Recent commit review: RW/batch/quality findings in T04; kanban updates; no BR/FR filed.

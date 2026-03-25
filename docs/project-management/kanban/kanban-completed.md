@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-25 (E7:S06:T04 recent commit review + E6:S06:T56 BR-056)
-**Version:** v0.7.6.4+1
+**Last Updated:** 2026-03-25 (E7:S06:T05 workflow script integrity + E6:S06:T56 BR-056)
+**Version:** v0.7.6.5+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -20,6 +20,9 @@ housekeeping_policy: keep
 ## 20 Most Recently Completed Tasks
 
 #### **Epic 7: Codebase Maintenance**
+- **[E7:S06:T05](epics/Epic-7/Story-006-post-windsurf-project-review/T05-workflow-script-integrity.md)** – Workflow script integrity (ukw_syntax_parser, task_inference, orchestrator/executor; canonical_steps + test fixes; no BR filed)  
+  **Completed:** `2026-03-25T14:25:32Z` | **Version:** `v0.7.6.5+1` | **Agent:** `RW Agent`
+
 - **[E7:S06:T04](epics/Epic-7/Story-006-post-windsurf-project-review/T04-recent-commit-review.md)** – Recent commit review (last ~15 commits: RW compliance, batch scope, quality; no BR/FR filed)  
   **Completed:** `2026-03-25T14:17:31Z` | **Version:** `v0.7.6.4+1` | **Agent:** `RW Agent`
 

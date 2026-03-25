@@ -141,8 +141,14 @@ class CanonicalStepsLoader:
         path = self.get_execution_path(trigger)
         if not path or not path.step_modifications:
             return {}
-        
-        return path.step_modifications.get(str(step_number), {})
+
+        mods = path.step_modifications
+        # YAML may load step keys as int; callers may pass int or float (e.g. 7 vs 7.0)
+        if step_number in mods:
+            return mods[step_number]
+        if step_number == int(step_number) and int(step_number) in mods:
+            return mods[int(step_number)]
+        return mods.get(str(step_number), {})
     
     def get_metadata(self) -> Dict[str, Any]:
         """Get metadata from the canonical file."""

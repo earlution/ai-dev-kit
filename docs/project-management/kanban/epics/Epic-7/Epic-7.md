@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-25 (v0.7.6.4+1 – E7:S06:T04 recent commit review)
+**Last updated:** 2026-03-25 (v0.7.6.5+1 – E7:S06:T05 workflow script integrity)
 **Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -31,7 +31,7 @@ housekeeping_policy: keep
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
 - [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete)
-- [ ] **E7:S06 – Post-Windsurf Project Review** - IN PROGRESS (v0.7.6.4+1 – T01–T04 + T10–T17 complete; T05–T09 open)
+- [ ] **E7:S06 – Post-Windsurf Project Review** - IN PROGRESS (v0.7.6.5+1 – T01–T05 + T10–T17 complete; T06–T09 open)
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
@@ -236,7 +236,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-25 (v0.7.6.4+1 – E7:S06:T04 recent commit review)
+**Last updated:** 2026-03-25 (v0.7.6.5+1 – E7:S06:T05 workflow script integrity)
 
 **Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
 
@@ -254,7 +254,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - [x] **E7:S06:T02** – Version and changelog alignment ✅ COMPLETE (v0.7.6.2+2)
 - [x] **E7:S06:T03** – Kanban documentation consistency ✅ COMPLETE (v0.7.6.3+1 – live SoT; E9/E18 template narrative disambiguation)
 - [x] **E7:S06:T04** – Recent commit review ✅ COMPLETE (v0.7.6.4+1)
-- [ ] **E7:S06:T05** – Workflow script integrity
+- [x] **E7:S06:T05** – Workflow script integrity ✅ COMPLETE (v0.7.6.5+1)
 - [ ] **E7:S06:T06** – FR/BR/UXR intake documentation quality
 - [ ] **E7:S06:T07** – General documentation and cross-reference integrity
 - [ ] **E7:S06:T08** – Dependency and tooling audit

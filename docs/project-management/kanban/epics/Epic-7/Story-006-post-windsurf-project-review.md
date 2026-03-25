@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (v0.7.6.4+1 – E7:S06:T04 recent commit review)
+**Last updated:** 2026-03-25 (v0.7.6.5+1 – E7:S06:T05 workflow script integrity)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
@@ -33,8 +33,8 @@ housekeeping_policy: keep
 - [x] **E7:S06:T01 – Windsurf artifact cleanup** ✅ COMPLETE (v0.7.6.1+1)
 - [x] **E7:S06:T02 – Version and changelog alignment** ✅ COMPLETE (v0.7.6.2+2 – MoSCOW task-level rows, guide, T02 doc)
 - [x] **E7:S06:T03 – Kanban documentation consistency** ✅ COMPLETE (v0.7.6.3+1 – live SoT, E9/E18 disambiguation, structure links, Epic-9 S05 stub)
-- [ ] **E7:S06:T04 – Recent commit review** - TODO (Last ~15 commits: RW compliance, batch scope, quality)
-- [ ] **E7:S06:T05 – Workflow script integrity** - TODO (ukw_syntax_parser, task_inference, orchestrator changes)
+- [x] **E7:S06:T04 – Recent commit review** ✅ COMPLETE (v0.7.6.4+1)
+- [x] **E7:S06:T05 – Workflow script integrity** ✅ COMPLETE (v0.7.6.5+1)
 - [ ] **E7:S06:T06 – FR/BR/UXR intake documentation quality** - TODO (Batch intake doc updates consistency)
 - [ ] **E7:S06:T07 – General documentation and cross-reference integrity** - TODO (README, links, structure)
 - [ ] **E7:S06:T08 – Dependency and tooling audit** - TODO (pyproject.toml, requirements, tests, CI/CD, build scripts)
@@ -58,7 +58,7 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 - [ ] Align version, changelog, and kanban to a single coherent state
 - [x] Validate kanban documentation against live SoT (E7:S06:T03 v0.7.6.3+1)
 - [x] Review recent commits for RW compliance and quality (E7:S06:T04 v0.7.6.4+1)
-- [ ] Verify workflow script changes are correct and coherent
+- [x] Verify workflow script changes are correct and coherent (E7:S06:T05 v0.7.6.5+1)
 - [ ] Audit FR/BR/UXR intake documentation consistency
 - [ ] Ensure general documentation and cross-references are intact
 - [ ] Audit dependencies, tests, CI/CD, and build scripts

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.4+1] - 25-03-26
+## [0.7.6.5+1] - 25-03-26
 
-E7:S06:T04+1 – Recent commit review: last ~15 commits on `epic/7-documentation-maintenance` scored for RW compliance, batch scope, and quality; findings and summary in T04 task doc; kanban closure (board MoSCOW, completed, Story/Epic); no BR/FR filed.
+E7:S06:T05+1 – Workflow script integrity: reviewed ukw_syntax_parser, task_inference, workflow_orchestrator, workflow_executor; fixed `test_rw_triggers` vs `canonical_steps` API; fixed YAML int keys for RW `-k` step modifications; doc clarifications; `test_rw_triggers` passes; optional governance validator passed.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.4+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.5+1.md)
