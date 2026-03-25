@@ -13,27 +13,14 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
 
 ---
----
----
----
----
----
----
----
-## [0.11.1.1+1] - 12-03-26
+## [0.5.2.6+1] - 25-03-26
 
-E11:S01:T01+1 – Debug Path: Debug path expectations baseline: Established comprehensive debug path framework with standardized debugging workflows. Added troubleshooting processes, diagnostic tooling, and issue resolution systems achieving 70% faster debugging and 60% reduction in resolution time.
+E5:S02:T06+1 – FR-063 intake: Epic 5 execution context for standalone CMW (docs + task); CMW `latest_only` archival on `epic/5-documentation-management`; board and Epic 5 story updates. FR-063 implementation (enforcement, packaged docs) still pending.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.11.1.1+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.2.6+1.md)
 
 ---
 
----
----
----
----
----
----
 ## [0.10.1.1+1] - 12-03-26
 
 E10:S01:T01+1 – Documentation Lifecycle: Doc lifecycle expectations baseline: Established comprehensive documentation lifecycle management framework. Added documentation standards, knowledge preservation systems, and quality assurance frameworks with 85% automation coverage.
