@@ -1,4 +1,32 @@
 # Changelog Archive
+## [0.6.7.101+37] - 25-03-26
+
+E6:S07:T101+37 – UKW perpetual: Kanban sync after main merge on epic/6; board and T101 markers; Epic 7 Story 6 UKW updates.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+37.md)
+
+---
+---
+---
+## [0.24.2.1+1] - 12-03-26
+
+E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
+
+---
+## [0.5.2.6+1] - 25-03-26
+
+E5:S02:T06+1 – FR-063 intake: Epic 5 execution context for standalone CMW (docs + task); CMW `latest_only` archival on `epic/5-documentation-management`; board and Epic 5 story updates. FR-063 implementation (enforcement, packaged docs) still pending.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.2.6+1.md)
+
+---
+
+---
+---
+---
+
 ## [0.6.6.56+2] - 20-03-26
 
 E6:S06:T56+2 – RW -k completion: kanban markers, main changelog + restored v0.6.6.56+1 archive; MoSCOW T56 TODO; `validate_version_bump` in-progress checklist fix.

@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-20 (v0.7.6.17+1 – E7:S06:T17 BR-057 / fr-br-intake YAML)
+**Last updated:** 2026-03-25 (UKW: MoSCOW/board cross-check; last release marker unchanged v0.7.6.17+1)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  

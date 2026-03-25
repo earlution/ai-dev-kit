@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
-**Version:** v0.6.7.101+36
+**Last updated:** 2026-03-25 (v0.6.7.101+37 – UKW perpetual RW)
+**Version:** v0.6.7.101+37
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).

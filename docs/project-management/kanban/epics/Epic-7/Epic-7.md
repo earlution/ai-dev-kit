@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-20 (v0.7.6.17+1 – Story 6 E7:S06:T17 BR-057 / fr-br-intake YAML)
+**Last updated:** 2026-03-25 (UKW: board/story sync pass; last epic release ref v0.7.6.17+1)
 **Branch:** `epic/7-codebase-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
