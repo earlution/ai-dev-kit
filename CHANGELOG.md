@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.65+1] - 25-03-25
+## [0.5.1.66+1] - 25-03-25
 
-E5:S01:T65+1 – **RW -k** kanban marker: task **T65** (align workflow mgt README with **11** registry workflows); Story, Epic S01, board metadata.
+E5:S01:T66+1 – **RW -k** kanban marker: task **T66** (`.cursorrules` vs packaged RW trigger parity for adopters); Story, Epic S01, board metadata.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.65+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.66+1.md)

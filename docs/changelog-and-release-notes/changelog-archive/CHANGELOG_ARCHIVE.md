@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.65+1] - 25-03-25
+
+E5:S01:T65+1 – **RW -k** kanban marker: task **T65** (align workflow mgt README with **11** registry workflows); Story, Epic S01, board metadata.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.65+1.md)
+
+---
+---
+---
 ## [0.5.1.64+1] - 25-03-25
 
 E5:S01:T64+1 – FR-061: README **Workflows** section (11 registry workflows, Cursor triggers, vwmp links); README body restored (Features through Acknowledgments); Quick Start aligned to `workflow-registry.yaml`; T64 / FR-061 / board closure.
