@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (RW -k E5S01T67 — v0.5.1.67+1; T68 pending follow-on RW -k)
+**Last updated:** 2026-03-25 (RW -k E5S01T68 — v0.5.1.68+1; T65–T68 scaffold releases complete)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.67+1
+**Version:** v0.5.1.68+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  

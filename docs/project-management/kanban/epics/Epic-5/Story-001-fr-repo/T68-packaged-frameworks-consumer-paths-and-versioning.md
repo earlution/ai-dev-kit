@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-03-25  
-**Last updated:** 2026-03-25 (Task filed — scaffold after main merge)  
-**Version:** _TBD (abstract space v0.5.1.68+0)_  
+**Last updated:** 2026-03-25 (RW -k kanban marker v0.5.1.68+1)  
+**Version:** v0.5.1.68+1  
 **Code:** E5S01T68
 
 **Repository Pattern:** Internal scaffold (no FR yet).

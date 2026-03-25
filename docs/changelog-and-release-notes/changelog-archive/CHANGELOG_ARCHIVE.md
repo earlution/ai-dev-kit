@@ -1,4 +1,22 @@
 # Changelog Archive
+## [0.5.1.68+1] - 25-03-25
+
+E5:S01:T68+1 – **RW -k** kanban marker: task **T68** (packaged frameworks consumer paths + versioning hygiene); Story, Epic S01, board metadata.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.68+1.md)
+
+---
+---
+---
+## [0.5.1.67+1] - 25-03-25
+
+E5:S01:T67+1 – **RW -k** kanban marker: task **T67** (adopter install / bootstrap docs for **FR-060** RW task token); Story, Epic S01, board metadata.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.67+1.md)
+
+---
+---
+---
 ## [0.5.1.66+1] - 25-03-25
 
 E5:S01:T66+1 – **RW -k** kanban marker: task **T66** (`.cursorrules` vs packaged RW trigger parity for adopters); Story, Epic S01, board metadata.
