@@ -8,10 +8,10 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-20 (RW: E6:S6:T56)
-**Version:** v0.6.6.56+2
+**Last Updated:** 2026-03-20 (merge: epic/6 + epic/7 → main; HEAD v0.7.6.17+1)
+**Version:** v0.7.6.17+1
 
-**Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **Board shows tasks (not stories)**—story-level reporting obfuscates actual state.
+**Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)  
@@ -27,8 +27,6 @@ housekeeping_policy: keep
 No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
-
-- **E7:S06:T02** – Version and changelog alignment - TODO (HIGH priority, Reconcile version.py, kanban board, CHANGELOG, branch context) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T02-version-and-changelog-alignment.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
 - **E7:S06:T03** – Kanban documentation consistency - TODO (HIGH priority, E9↔E18 renumbering fallout, cross-references, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 

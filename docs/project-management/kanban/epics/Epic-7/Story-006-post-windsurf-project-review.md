@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-19 (v0.7.6.16+3 – T10–T16 complete)
+**Last updated:** 2026-03-20 (v0.7.6.17+1 – E7:S06:T17 BR-057 / fr-br-intake YAML)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.7.6.16+3
+**Version:** v0.7.6.17+1
 **Code:** E7S06
 
 ---
@@ -29,8 +29,9 @@ housekeeping_policy: keep
 - [x] **E7:S06:T14 – Review ICW workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.14+3)
 - [x] **E7:S06:T15 – Review Intake workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.15+3)
 - [x] **E7:S06:T16 – Review PIR workflow (Windsurf impact)** ✅ COMPLETE (v0.7.6.16+3)
+- [x] **E7:S06:T17 – Retrospective BR-057 / fr-br-intake.yml YAML block scalar fix** ✅ COMPLETE (v0.7.6.17+1)
 - [x] **E7:S06:T01 – Windsurf artifact cleanup** ✅ COMPLETE (v0.7.6.1+1)
-- [ ] **E7:S06:T02 – Version and changelog alignment** - TODO (Reconcile version.py, kanban board, CHANGELOG, branch context)
+- [x] **E7:S06:T02 – Version and changelog alignment** ✅ COMPLETE (v0.7.6.2+2 – MoSCOW task-level rows, guide, T02 doc)
 - [ ] **E7:S06:T03 – Kanban documentation consistency** - TODO (E9↔E18 renumbering fallout, cross-references, structure)
 - [ ] **E7:S06:T04 – Recent commit review** - TODO (Last ~15 commits: RW compliance, batch scope, quality)
 - [ ] **E7:S06:T05 – Workflow script integrity** - TODO (ukw_syntax_parser, task_inference, orchestrator changes)
@@ -70,6 +71,15 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 ### E7:S06:T10–T16 – Workflow Windsurf impact reviews (parallel)
 
 Seven review tasks, one per workflow: RW, UKW, CMW, PVW, ICW, Intake, PIR. Each produces: Windsurf impact assessment; .windsurf skill mappings; migration plan for T01. **Can run in parallel.** See individual task docs in `Story-006-post-windsurf-project-review/`.
+
+---
+
+### E7:S06:T17 – Retrospective BR-057: fr-br-intake workflow YAML
+
+**Input:** GitHub “Invalid workflow file” on `fr-br-intake.yml`; prior agent fix to `script: |` indentation  
+**Deliverable:** [BR-057](../../fr-br/BR-057-fr-br-intake-workflow-yaml-block-scalar-indentation.md); task doc [`T17-BR057-fr-br-intake-yaml-retrospective.md`](Story-006-post-windsurf-project-review/T17-BR057-fr-br-intake-yaml-retrospective.md); traceability for RW  
+**Dependencies:** None  
+**Blocker:** None
 
 ---
 

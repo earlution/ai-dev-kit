@@ -253,9 +253,6 @@ def create_missing_task_docs(missing_tasks: List[dict], kanban_root: Path) -> Li
 
 
 def normalize_task_id(epic: int, story: int, task: int) -> str:
-
-
-def normalize_task_id(epic: int, story: int, task: int) -> str:
     """
     Normalize task ID to canonical format: E{epic:02d}:S{story:03d}:T{task:02d}
     
