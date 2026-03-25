@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.6.3+1] - 25-03-26
+
+E7:S06:T03+1 – Kanban documentation consistency: live SoT, E9/E18 disambiguation, kanban links, Epic-9 S05 stub.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.3+1.md)
+
+---
+---
+---
 ## [0.6.7.101+37] - 25-03-26
 
 E6:S07:T101+37 – UKW perpetual: Kanban sync after main merge on epic/6; board and T101 markers; Epic 7 Story 6 UKW updates.

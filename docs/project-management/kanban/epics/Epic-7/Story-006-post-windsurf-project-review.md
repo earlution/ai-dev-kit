@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (UKW: MoSCOW/board cross-check; last release marker unchanged v0.7.6.17+1)
+**Last updated:** 2026-03-25 (v0.7.6.3+1 – E7:S06:T03 kanban documentation consistency)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [TBD]  
-**Version:** v0.7.6.17+1
+**Version:** v0.7.6.3+1
 **Code:** E7S06
 
 ---
@@ -32,7 +32,7 @@ housekeeping_policy: keep
 - [x] **E7:S06:T17 – Retrospective BR-057 / fr-br-intake.yml YAML block scalar fix** ✅ COMPLETE (v0.7.6.17+1)
 - [x] **E7:S06:T01 – Windsurf artifact cleanup** ✅ COMPLETE (v0.7.6.1+1)
 - [x] **E7:S06:T02 – Version and changelog alignment** ✅ COMPLETE (v0.7.6.2+2 – MoSCOW task-level rows, guide, T02 doc)
-- [ ] **E7:S06:T03 – Kanban documentation consistency** - TODO (E9↔E18 renumbering fallout, cross-references, structure)
+- [x] **E7:S06:T03 – Kanban documentation consistency** ✅ COMPLETE (v0.7.6.3+1 – live SoT, E9/E18 disambiguation, structure links, Epic-9 S05 stub)
 - [ ] **E7:S06:T04 – Recent commit review** - TODO (Last ~15 commits: RW compliance, batch scope, quality)
 - [ ] **E7:S06:T05 – Workflow script integrity** - TODO (ukw_syntax_parser, task_inference, orchestrator changes)
 - [ ] **E7:S06:T06 – FR/BR/UXR intake documentation quality** - TODO (Batch intake doc updates consistency)
@@ -56,7 +56,7 @@ Systematic review of project state after the Windsurf evaluation period. Decompo
 
 - [x] Remove Windsurf artifacts and restore Cursor-native state (T01 complete)
 - [ ] Align version, changelog, and kanban to a single coherent state
-- [ ] Validate kanban documentation after E9↔E18 renumbering
+- [x] Validate kanban documentation against live SoT (E7:S06:T03 v0.7.6.3+1)
 - [ ] Review recent commits for RW compliance and quality
 - [ ] Verify workflow script changes are correct and coherent
 - [ ] Audit FR/BR/UXR intake documentation consistency
@@ -103,8 +103,8 @@ Seven review tasks, one per workflow: RW, UKW, CMW, PVW, ICW, Intake, PIR. Each 
 
 ### E7:S06:T03 – Kanban documentation consistency
 
-**Input:** Epic/Story/Task docs, E9↔E18 renumbering history  
-**Deliverable:** No broken cross-references; consistent Epic-X/ structure; E9 = Documentation, E18 = User Management  
+**Input:** `docs/project-management/kanban/**`, [`kanban-structure.md`](../../kanban-structure.md), historical/adopter docs that mention E9/E18 swaps  
+**Deliverable:** Live kanban narrative matches SoT; critical broken links fixed; template/UAT docs disambiguated where they imply ADK live numbering  
 **Dependencies:** None  
 **Blocker:** None
 

@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-25 (RW v0.6.7.101+37 — UKW perpetual)
-**Version:** v0.6.7.101+37 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-25 (RW v0.7.6.3+1 — E7:S06:T03 kanban consistency)
+**Version:** v0.7.6.3+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -28,8 +28,6 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-- **E7:S06:T03** – Kanban documentation consistency - TODO (HIGH priority, E9↔E18 renumbering fallout, cross-references, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
-
 - **E7:S06:T04** – Recent commit review - TODO (MEDIUM priority, Last ~15 commits: RW compliance, batch scope, quality) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T04-recent-commit-review.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
 - **E7:S06:T05** – Workflow script integrity - TODO (MEDIUM priority, ukw_syntax_parser, task_inference, orchestrator changes) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T05-workflow-script-integrity.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
@@ -42,9 +40,9 @@ No critical tasks currently in progress
 
 - **E7:S06:T09** – Config and git state validation - TODO (MEDIUM priority, rw-config vs paths, git state, .cursorrules alignment) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
-- **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](../../../fr-br/FR-060-rw-task-argument-requirement.md)
+- **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](fr-br/FR-060-rw-task-argument-requirement.md)
 
-- **E5:S01:T38** – README Workflow Section - IN PROGRESS (MEDIUM priority, Add comprehensive Workflow section to project README.md documenting all workflows with principle operations and argument forms) - [Task Document](epics/Epic-5/Story-001-fr-repo/T38-rw-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](../../../fr-br/FR-061-readme-workflow-section.md)
+- **E5:S01:T38** – README Workflow Section - IN PROGRESS (MEDIUM priority, Add comprehensive Workflow section to project README.md documenting all workflows with principle operations and argument forms) - [Task Document](epics/Epic-5/Story-001-fr-repo/T38-rw-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](fr-br/FR-061-readme-workflow-section.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 

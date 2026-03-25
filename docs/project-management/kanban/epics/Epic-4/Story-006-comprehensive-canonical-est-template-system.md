@@ -131,6 +131,10 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 
 - Each template includes same structure as T01 templates
 
+### ADK live kanban vs package templates
+
+Epic numbers in the template list above follow **adopter-oriented** canonical numbering (e.g. `Epic-18-Documentation.md` under `packages/frameworks/kanban/templates/`). The **ai-dev-kit** live board under [`docs/project-management/kanban/`](../../) does not use the same epic-to-role map: **Epic 9** is **Release Candidate Readiness** (see [`kanban-structure.md`](../../kanban-structure.md)); there is no live `epics/Epic-18/` directory in this repo.
+
 **Approach:**
 1. Extract epic definitions from comprehensive structure
 2. Use same template structure as T01

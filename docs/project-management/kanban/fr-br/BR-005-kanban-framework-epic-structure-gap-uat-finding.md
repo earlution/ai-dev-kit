@@ -6,6 +6,8 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
+> **ai-dev-kit live kanban:** This BR reflects framework/UAT canonical expectations. The installed **ai-dev-kit** repo uses a different live epic map (e.g. **Epic 9 = Release Candidate Readiness**, not Documentation). See [`kanban-structure.md`](../kanban-structure.md).
+
 # Bug Report: Kanban Framework Epic Structure Gap (UAT Finding)
 
 **Type:** Bug Report (BR)  

@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-25 (UKW: board/story sync pass; last epic release ref v0.7.6.17+1)
-**Branch:** `epic/7-codebase-maintenance`  
+**Last updated:** 2026-03-25 (v0.7.6.3+1 – E7:S06:T03 kanban documentation consistency)
+**Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
 
@@ -252,7 +252,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - [x] **E7:S06:T16** – Review PIR workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.16+3)
 - [x] **E7:S06:T17** – Retrospective BR-057 / fr-br-intake.yml YAML fix ✅ COMPLETE (v0.7.6.17+1)
 - [x] **E7:S06:T02** – Version and changelog alignment ✅ COMPLETE (v0.7.6.2+2)
-- [ ] **E7:S06:T03** – Kanban documentation consistency (E9↔E18 renumbering fallout)
+- [x] **E7:S06:T03** – Kanban documentation consistency ✅ COMPLETE (v0.7.6.3+1 – live SoT; E9/E18 template narrative disambiguation)
 - [ ] **E7:S06:T04** – Recent commit review
 - [ ] **E7:S06:T05** – Workflow script integrity
 - [ ] **E7:S06:T06** – FR/BR/UXR intake documentation quality

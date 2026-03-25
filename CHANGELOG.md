@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+37] - 25-03-26
+## [0.7.6.3+1] - 25-03-26
 
-E6:S07:T101+37 – UKW perpetual: Kanban sync after `origin/main` merge into `epic/6-framework-management` (E5 FR-063 artifacts); board metadata, T101/Epic 6/Story 7 markers; Epic 7 Story 6 UKW touch-ups.
+E7:S06:T03+1 – Kanban documentation consistency: live SoT, E9/E18 disambiguation, critical kanban links, Epic-9 S05 story stub, board/completed updates; `main` merged into epic/7-documentation-maintenance.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+37.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.3+1.md)

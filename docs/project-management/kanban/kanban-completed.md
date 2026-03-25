@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-25 (E6:S06:T56 BR-056 verified complete)
-**Version:** v0.6.6.56+4
+**Last Updated:** 2026-03-25 (E7:S06:T03 kanban consistency + E6:S06:T56 BR-056)
+**Version:** v0.7.6.3+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -18,6 +18,12 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 7: Codebase Maintenance**
+- **[E7:S06:T03](epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency.md)** – Kanban documentation consistency (live SoT, E9/E18 disambiguation, cross-refs, Epic-9 S05 stub)  
+  **Completed:** `2026-03-25T12:00:00Z` | **Version:** `v0.7.6.3+1` | **Agent:** `Cursor-Agent`
+
+---
 
 #### **Epic 6: Framework Management and Maintenance**
 - **[E6:S06:T56](epics/Epic-6/Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md)** – RW ambiguous task identifier typo risk (BR-056 verified)  

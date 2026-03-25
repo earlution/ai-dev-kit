@@ -27,7 +27,7 @@ housekeeping_policy: keep
 
 **Stories:**
 - [x] **E1:S01 – Dev Kit Versioning & RW Behaviour** - COMPLETE ✅ (v0.1.1.1+1, E2:S01:T02, E2:S01:T03)
-  - Story: [`epics/Epic-1/Story-001-ai-dev-kit-kanban-and-versioning.md`](epics/Epic-1/Story-001-ai-dev-kit-kanban-and-versioning.md)
+  - Story: [`epics/Epic-1/Story-001-vibe-dev-kit-kanban-and-versioning.md`](epics/Epic-1/Story-001-vibe-dev-kit-kanban-and-versioning.md)
 
 
 - [x] **E1:S02 – Package & Repo Architecture** - COMPLETE ✅ (v0.1.2.5+1)
