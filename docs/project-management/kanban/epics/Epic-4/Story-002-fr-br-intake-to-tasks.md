@@ -369,7 +369,7 @@ External contributors, automated evaluation methods, UX researchers, and project
 - `.github/ISSUE_TEMPLATE/feature_request.yml` (GitHub Issue Form)
 - `.github/ISSUE_TEMPLATE/ux_research.yml` (GitHub Issue Form)
 - `.github/ISSUE_TEMPLATE/feedback.yml` (GitHub Issue Form for UAT Reports)
-- `.github/workflows/fr-br-intake.yml` (GitHub Action for conversion)
+- `.github/workflows/fr-br-intake.yml.DISABLED` (reference YAML; intake GH Action disabled — BR-053 / E2:S11:T12)
 - `packages/frameworks/kanban/templates/UXR_TEMPLATE.md` (UXR template)
 - `packages/frameworks/kanban/templates/FB_TEMPLATE.md` (UAT Report template)
 - `packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md` (documentation)

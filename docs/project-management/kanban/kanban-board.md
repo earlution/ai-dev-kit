@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-30 (E5:S01:T68 complete — v0.5.1.68+2)
+**Last Updated:** 2026-03-30 (FR-064 / E5:S01:T69 intake — shields branch retirement)
 **Version:** v0.5.1.68+2 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
@@ -28,11 +28,11 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-No important tasks currently in progress
+- **E5:S01:T69** – Retire `shields` branch (FR-064, private repo badges) - TODO (MEDIUM priority) - [Task](epics/Epic-5/Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-064](fr-br/FR-064-shields-branch-private-repo-badges.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 
-- **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - IN PROGRESS (LOW priority) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
+- **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - ✅ COMPLETE (v0.2.11.12+1) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 
 ### Ongoing (O) - Perpetual Tasks
 

@@ -76,7 +76,7 @@ None
 
 | Workflow | Triggers | Notes |
 |----------|----------|--------|
-| [`fr-br-intake.yml`](../../../../../../.github/workflows/fr-br-intake.yml) | Issues (opened/edited) with triage labels | Checkout, bash-driven intake; no Python test job. |
+| [`fr-br-intake.yml.DISABLED`](../../../../../../.github/workflows/fr-br-intake.yml.DISABLED) | *(disabled)* Was issues-only; GitHub fired on push (BR-053). | Reference YAML only; not active. |
 | [`update-badges.yml`](../../../../../../.github/workflows/update-badges.yml) | Push (paths), `workflow_dispatch`, **`workflow_run: workflows: ["Tests"]`** | **No workflow named `Tests` exists** — trigger is ineffective. No workflow runs pytest on PR/push. |
 
 ### Build / release scripts (spot review)

@@ -258,3 +258,15 @@ jobs:
 ---
 
 *This bug report documents a critical GitHub Actions platform issue that prevents core repository functionality. Comprehensive testing has confirmed this is not a configuration or caching issue, but a platform-level bug requiring GitHub Support intervention.*
+
+---
+
+## Resolution / current status (2026-03-30)
+
+**Verified behavior (post–BR-057 valid YAML):** Using `gh run list --workflow fr-br-intake.yml` on `earlution/ai-dev-kit`, every sampled run through 2026-03-25 used **`event: push`** (including after `on: issues` only was restored on `main` and `epic/6-framework-management`). **No `issues` events appeared** in the recent run window. Example run IDs: `23541602524` (push to `epic/6-framework-management`), `23352483560`, `23352364482`, consistent with the 2026-03-12 push-only pattern in the evidence table above.
+
+**BR-057 relationship:** Invalid YAML could explain **failed parses** (“Invalid workflow file”), not **incorrect trigger types** while the workflow is accepted. Push scheduling with `on: issues` only remains reproducible with syntactically valid workflow definitions.
+
+**Repository action (E2:S11:T12):** The active workflow file was removed from GitHub’s workflow file set by renaming **`.github/workflows/fr-br-intake.yml`** to **[`.github/workflows/fr-br-intake.yml.DISABLED`](../../../../.github/workflows/fr-br-intake.yml.DISABLED)** (extension not `.yml`/`.yaml`). Canonical YAML is preserved in that file for a future re-enable. **Manual intake** is documented in [`FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md`](../../../../packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md) and the intake skill.
+
+**Acceptance criteria adjustment:** “GitHub Bug Fixed” is **not** satisfied by vendor confirmation; **evidence-based** closure is: no spurious workflow runs after a future re-enable test, or continued disablement with documented manual process.
