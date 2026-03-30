@@ -17,6 +17,8 @@ housekeeping_policy: keep
 
 **Canonical workflow list:** The authoritative machine-readable set is [`workflows/workflow-registry.yaml`](workflows/workflow-registry.yaml) — **11** entries under `workflows:`. Agent execution guides under `KB/Documentation/Developer_Docs/vwmp/` describe methodology and step counts; they are not additional registry workflows.
 
+**RW trigger dual-source (maintainers):** The repo root [`.cursorrules`](../../../.cursorrules) and the portable excerpt [`cursorrules-rw-trigger-section.md`](cursorrules-rw-trigger-section.md) must stay aligned on **FR-060 / FR-038 / BR-056** guardrails. See [RW trigger dual-source parity](docs/rw-trigger-dual-source-parity.md) for the checklist and merge order.
+
 ---
 
 ## 📋 What's Included

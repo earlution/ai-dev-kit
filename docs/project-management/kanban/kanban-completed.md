@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-30 (E5:S01:T65 workflow mgt README / registry SoT)
-**Version:** v0.5.1.65+2
+**Last Updated:** 2026-03-30 (E5:S01:T66 RW dual-source parity)
+**Version:** v0.5.1.66+2
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -21,6 +21,9 @@ housekeeping_policy: keep
 ## 20 Most Recently Completed Tasks
 
 #### **Epic 5: Documentation Management**
+- **[E5:S01:T66](epics/Epic-5/Story-001-fr-repo/T66-cursorrules-vs-packaged-rw-trigger-parity.md)** – `.cursorrules` vs packaged RW trigger parity (parity doc; excerpt **1b/1c/1d** todos; FR citations; root dual-source link)  
+  **Completed:** `2026-03-30T10:48:54Z` | **Version:** `v0.5.1.66+2` | **Agent:** `RW Agent`
+
 - **[E5:S01:T65](epics/Epic-5/Story-001-fr-repo/T65-align-workflow-mgt-readme-with-workflow-registry-count.md)** – Align workflow mgt README with registry count (**11** + `workflow-registry.yaml` SoT; Specialized (4); no phantom Documentation Workflow)  
   **Completed:** `2026-03-30T10:40:14Z` | **Version:** `v0.5.1.65+2` | **Agent:** `RW Agent`
 

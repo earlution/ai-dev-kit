@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.65+2] - 30-03-26
+## [0.5.1.66+2] - 30-03-26
 
-E5:S01:T65+2 – Workflow mgt [README](packages/frameworks/workflow%20mgt/README.md): **11** YAML-defined workflows, [`workflow-registry.yaml`](packages/frameworks/workflow%20mgt/workflows/workflow-registry.yaml) SoT; Specialized **(4)**; documentation standards note (no phantom Documentation Workflow).
+E5:S01:T66+2 – RW **dual-source parity**: [`rw-trigger-dual-source-parity.md`](packages/frameworks/workflow%20mgt/docs/rw-trigger-dual-source-parity.md); [`cursorrules-rw-trigger-section.md`](packages/frameworks/workflow%20mgt/cursorrules-rw-trigger-section.md) **1b/1c/1d** `todo_write` fixes + FR-060/E5:S01:T63 & BR-056/E6:S06:T56 citations; root [`.cursorrules`](.cursorrules) maintainer link.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.65+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.66+2.md)

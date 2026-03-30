@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management — branch epic/5-documentation-management)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 65     # Task number (E5:S01:T65 — workflow mgt README vs registry count)
-VERSION_BUILD = 2     # Build number (E5:S01:T65+2 — README alignment release)
+VERSION_TASK = 66     # Task number (E5:S01:T66 — .cursorrules vs packaged RW trigger parity)
+VERSION_BUILD = 2     # Build number (E5:S01:T66+2 — parity doc + excerpt; +1 was RW -k)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.65+2 — E5:S01:T65: workflow mgt README 11 + workflow-registry.yaml SoT
+# Current: 0.5.1.66+2 — E5:S01:T66: RW dual-source parity (excerpt + root link)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

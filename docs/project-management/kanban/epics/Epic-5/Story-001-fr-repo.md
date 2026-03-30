@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-30 (E5:S01:T65 ✅ v0.5.1.65+2 — workflow mgt README / registry SoT)
+**Last updated:** 2026-03-30 (E5:S01:T66 ✅ v0.5.1.66+2 — RW dual-source parity)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.65+2
+**Version:** v0.5.1.66+2
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -49,7 +49,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T63 – RW Task Argument Requirement** - ✅ COMPLETE (v0.5.1.63+1 – FR-060: strict mandatory task token, validate_rw_task_complete.py, .cursorrules + docs) - [Task Document](Story-001-fr-repo/T63-rw-task-argument-requirement.md) | [FR-060](../../fr-br/FR-060-rw-task-argument-requirement.md)
 - [x] **E5:S01:T64 – Add Workflow Section to Project README** - ✅ COMPLETE (v0.5.1.64+1 – FR-061: README Workflows section, 11 registry workflows, Cursor triggers, vwmp links; README body restored) - [Task Document](Story-001-fr-repo/T64-readme-workflow-section.md) | [FR-061](../../fr-br/FR-061-readme-workflow-section.md)
 - [x] **E5:S01:T65 – Align Workflow Mgt README With Registry Workflow Count** - ✅ COMPLETE (v0.5.1.65+2 — workflow mgt README **11** + `workflow-registry.yaml` SoT; removes phantom Documentation Workflow) - [Task Document](Story-001-fr-repo/T65-align-workflow-mgt-readme-with-workflow-registry-count.md)
-- [ ] **E5:S01:T66 – Cursorrules vs Packaged RW Trigger Section Parity** - TODO (**MoSCOW M** / HIGH priority, scaffold — dual RW rule sources for adopters) - [Task Document](Story-001-fr-repo/T66-cursorrules-vs-packaged-rw-trigger-parity.md)
+- [x] **E5:S01:T66 – Cursorrules vs Packaged RW Trigger Section Parity** - ✅ COMPLETE (v0.5.1.66+2 — parity doc, excerpt 1b/1c/1d todos + FR citations, root `.cursorrules` link; +1 was RW-k) - [Task Document](Story-001-fr-repo/T66-cursorrules-vs-packaged-rw-trigger-parity.md)
 - [ ] **E5:S01:T67 – Adopter Install Docs — RW Task Token (FR-060)** - TODO (**MoSCOW M** / HIGH priority, scaffold — INSTALL / bootstrap examples) - [Task Document](Story-001-fr-repo/T67-adopter-install-docs-rw-task-token.md)
 - [ ] **E5:S01:T68 – Packaged Frameworks — Consumer Paths and Versioning Hygiene** - TODO (**MoSCOW M** / HIGH priority, scaffold — cross-package README + semver policy) - [Task Document](Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning.md)
 

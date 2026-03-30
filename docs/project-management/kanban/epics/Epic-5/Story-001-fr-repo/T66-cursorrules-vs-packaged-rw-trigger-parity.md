@@ -9,12 +9,13 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 66: Cursorrules vs Packaged RW Trigger Section Parity
 
 **Task ID:** E5:S01:T66  
-**Status:** TODO  
+**Status:** COMPLETE (2026-03-30 — dual-source parity doc + excerpt fix + root `.cursorrules` link)  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
 **Created:** 2026-03-25  
-**Last updated:** 2026-03-25 (RW -k kanban marker v0.5.1.66+1)  
-**Version:** v0.5.1.66+1  
+**Last updated:** 2026-03-30 — released v0.5.1.66+2 (RW-k used +1)  
+**Version:** v0.5.1.66+2  
+**Version Anchor:** v0.5.1.66+2  
 **Code:** E5S01T66
 
 **Repository Pattern:** Internal scaffold (no FR yet).
@@ -46,9 +47,9 @@ Define and implement a **parity discipline**: checklist doc, merge procedure, or
 
 ## Acceptance Criteria
 
-- [ ] Written **parity checklist** or maintenance note listing sections that must match (or intentional deltas documented).
-- [ ] Post-change **procedure** for contributors (e.g. “edit `.cursorrules` first, then port to `cursorrules-rw-trigger-section.md`”).
-- [ ] One **explicit pass** after this task: document current known deltas (if any) or confirm none.
+- [x] Written **parity checklist** or maintenance note listing sections that must match (or intentional deltas documented).
+- [x] Post-change **procedure** for contributors (e.g. “edit `.cursorrules` first, then port to `cursorrules-rw-trigger-section.md`”).
+- [x] One **explicit pass** after this task: document current known deltas (if any) or confirm none.
 
 ---
 

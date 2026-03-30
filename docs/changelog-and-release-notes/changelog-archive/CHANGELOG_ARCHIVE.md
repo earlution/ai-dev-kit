@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.66+2] - 30-03-26
+
+E5:S01:T66+2 – RW dual-source parity doc; packaged RW excerpt **1b/1c/1d** todos and citations; root `.cursorrules` dual-source link.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.66+2.md)
+
+---
+---
+---
 ## [0.5.1.65+2] - 30-03-26
 
 E5:S01:T65+2 – Workflow mgt README: **11** YAML-defined workflows, `workflow-registry.yaml` SoT; Specialized (4); documentation standards note.
