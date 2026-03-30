@@ -53,6 +53,12 @@ Implement **FR-071**: add **Algolia DocSearch** (or self-serve) **or** **local/o
 
 ---
 
+## Evidence
+
+- **RW -k:** v0.5.9.7+1 — kanban marker (sequenced release).
+
+---
+
 ## Dependencies
 
 - **E5:S09:T06** (FR-070) for production verification.
