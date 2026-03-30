@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-30 (E5:S01:T68 consumer paths + semver policy)
-**Version:** v0.5.1.68+2
+**Last Updated:** 2026-03-30 (E5:S01:T69 retire `shields` / FR-064)
+**Version:** v0.5.1.69+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -21,6 +21,9 @@ housekeeping_policy: keep
 ## 20 Most Recently Completed Tasks
 
 #### **Epic 5: Documentation Management**
+- **[E5:S01:T69](epics/Epic-5/Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md)** – Retire **`shields`** branch (FR-064): delete `update-badges.yml` BYOB; README static-badge policy; `git push origin --delete shields`  
+  **Completed:** `2026-03-30T12:44:00Z` | **Version:** `v0.5.1.69+1` | **Agent:** `RW Agent`
+
 - **[E5:S01:T68](epics/Epic-5/Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning.md)** – Packaged frameworks — `rw-config`/`scripts_path` consumer doc; packages README semver policy; numbering + kanban README (FR-060 triggers / paths)  
   **Completed:** `2026-03-30T12:15:00Z` | **Version:** `v0.5.1.68+2` | **Agent:** `RW Agent`
 

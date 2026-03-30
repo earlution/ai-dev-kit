@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-30 (E5:S01:T68 ✅ v0.5.1.68+2 — packaged frameworks consumer paths + semver hygiene)
+**Last updated:** 2026-03-30 (T69 ✅ v0.5.1.69+1 — FR-064 shields branch retired; T68 ✅ v0.5.1.68+2)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
@@ -52,6 +52,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T66 – Cursorrules vs Packaged RW Trigger Section Parity** - ✅ COMPLETE (v0.5.1.66+2 — parity doc, excerpt 1b/1c/1d todos + FR citations, root `.cursorrules` link; +1 was RW-k) - [Task Document](Story-001-fr-repo/T66-cursorrules-vs-packaged-rw-trigger-parity.md)
 - [x] **E5:S01:T67 – Adopter Install Docs — RW Task Token (FR-060)** - ✅ COMPLETE (v0.5.1.67+2 — INSTALL + installation/usage/FAQ/troubleshooting; workflow mgt README; PACKAGE_INSTALLATION_GUIDE; +1 was RW-k) - [Task Document](Story-001-fr-repo/T67-adopter-install-docs-rw-task-token.md)
 - [x] **E5:S01:T68 – Packaged Frameworks — Consumer Paths and Versioning Hygiene** - ✅ COMPLETE (v0.5.1.68+2 — `rw-validators-consumer-layout.md`; workflow mgt + packages README; numbering + kanban README; +1 was RW-k) - [Task Document](Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning.md)
+- [x] **E5:S01:T69 – Retire `shields` branch (private repo badges, FR-064)** - ✅ COMPLETE (v0.5.1.69+1 — removed `update-badges.yml` BYOB; README static badges; deleted `origin/shields`) - [Task Document](Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md) | [FR-064](../../fr-br/FR-064-shields-branch-private-repo-badges.md)
 
 ---
 

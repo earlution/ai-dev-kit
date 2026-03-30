@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-03-25 (BR-056 verified fixed, E6:S06:T56)
-**Version:** v0.7.6.6+1
+**Last Updated:** 2026-03-30 (FR-064 via E5:S01:T69)
+**Version:** v0.5.1.69+1
 
 > **For open FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -34,6 +34,7 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| FR-064 | FR | Retire `shields` branch — static README badges; removed `update-badges.yml` BYOB; deleted `origin/shields` | 2026-03-30 | v0.5.1.69+1 | RW Agent |
 | BR-056 | BR | RW ambiguous task identifier typo risk | 2026-03-25T12:55:31Z | v0.6.6.56+4 | RW Agent |
 | BR-055 | BR | Missing Implementation Cycle Workflow (ICW) | 2026-03-12T15:35:00Z | v0.4.14.3+2 | ICW Agent |
 | BR-054 | BR | Kanban Package Migration/Installation Completely Broken | 2026-03-12T13:20:00Z | v0.24.2.1+1 | Documentation Agent |

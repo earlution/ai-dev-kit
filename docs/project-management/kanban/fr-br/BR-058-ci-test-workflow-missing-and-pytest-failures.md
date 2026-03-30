@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Bug Summary
 
-`.github/workflows/update-badges.yml` declares `workflow_run` on a workflow named **`Tests`**, but **no workflow with that name exists** under `.github/workflows/` (only disabled intake reference `fr-br-intake.yml.DISABLED` and `update-badges.yml`). The badge workflow’s test-completion trigger never fires as intended.
+**Update (2026-03-30, E5:S01:T69 / FR-064):** `update-badges.yml` was **removed** from this repo (BYOB / orphan `shields` branch retirement). The former **`workflow_run: ["Tests"]`** dead trigger is therefore **moot**; only disabled intake reference files remain under `.github/workflows/` aside from any future workflows.
 
 Separately, **`pytest`** at repo root reports **7 failing tests** (85 passed, 92 collected after fixing import drift in `tests/test_validation.py`). Failures indicate outdated tests relative to current CLI/backend APIs and environment-specific path expectations.
 

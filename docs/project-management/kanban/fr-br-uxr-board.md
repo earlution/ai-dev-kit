@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-25 (FR-063: CMW Epic 5 execution context intake)
-**Version:** v0.7.6.6+1
+**Last Updated:** 2026-03-30 (FR-064 ✅ — E5:S01:T69 / v0.5.1.69+1)
+**Version:** v0.5.1.69+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -52,7 +52,6 @@ This board provides **centralized visibility and prioritization** for all open F
 - **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 - **FR-051** – FR/BR/UXR Prioritization Board - ✅ COMPLETED (HIGH, Create prioritization board for FRs, BRs, and UXRs) - [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) | [E6:S06:T01](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTED - BOARD CREATED*
 - **FR-063** – CMW Epic 5 execution context - TODO (MEDIUM, Document and enforce Epic 5 branch/version for standalone CMW; RW Step 9.5 inherits RW epic) - [FR-063](fr-br/FR-063-cmw-epic-5-execution-context.md) | [E5:S02:T06](epics/Epic-5/Story-002/T006-cmw-epic-5-execution-context-fr-063.md)
-
 ---
 
 ### Could Have (C) - Nice-to-Have Items

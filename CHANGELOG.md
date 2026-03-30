@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.11.12+2] - 30-03-26
+## [0.5.1.69+1] - 30-03-26
 
-E2:S11:T12+2 — **Kanban:** **E2:S11:T12** workaround row uses **`<sup>*</sup>`** + **footnote** on [kanban-board](docs/project-management/kanban/kanban-board.md); Story-011 / Epic-2 / T12 task markers aligned to **v0.2.11.12+2**.
+E5:S01:T69 — **FR-064:** Removed `update-badges.yml` (BYOB / `shields`); README static-badge policy; [badge guide](docs/knowledge/guides/badge-setup-for-private-repos.md) monorepo note; **`origin/shields`** deleted post-push; boards + FR **COMPLETE**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.12+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.69+1.md)

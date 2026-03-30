@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 11    # Story number (Story 11: Intake Workflow Automation)
-VERSION_TASK = 12     # Task number (E2:S11:T12 — BR-053 intake GHA disabled, documentation)
-VERSION_BUILD = 2     # Build number (+2: kanban <sup>*</sup> workaround label + footnote on E2:S11:T12)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
+VERSION_STORY = 1     # Story number (Story 1: FR Repo — perpetual)
+VERSION_TASK = 69     # Task number (E5:S01:T69 — FR-064 retire shields / remove BYOB workflow)
+VERSION_BUILD = 1     # Build number (first release on T69)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.11.12+2 — E2:S11:T12: Board/story/epic clarity — workaround marker <sup>*</sup> + footnote
+# Current: 0.5.1.69+1 — E5:S01:T69: Static README badges; delete update-badges.yml; origin/shields removed
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

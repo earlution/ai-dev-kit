@@ -2,14 +2,14 @@
 
 <div align="center">
 
-<!-- Badges: Version is shown in text below, other badges use static Shields.io -->
+<!-- Badges: Static Shields.io only (private repo–safe). Version line updated by RW. No `shields` branch or BYOB in this repo — see FR-064 / E5:S01:T69. -->
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-**Version (SemVer):** `v0.4.647+2` | **Internal:** `v0.2.11.12+2` (see detailed changelog) | **Last Updated:** 2026-03-30
+**Version (SemVer):** `v0.4.648+1` | **Internal:** `v0.5.1.69+1` (see detailed changelog) | **Last Updated:** 2026-03-30
 
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Workflows](#workflows) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 

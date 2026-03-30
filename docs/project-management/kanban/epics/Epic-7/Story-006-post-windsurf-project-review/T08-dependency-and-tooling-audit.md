@@ -77,7 +77,7 @@ None
 | Workflow | Triggers | Notes |
 |----------|----------|--------|
 | [`fr-br-intake.yml.DISABLED`](../../../../../../.github/workflows/fr-br-intake.yml.DISABLED) | *(disabled)* Was issues-only; GitHub fired on push (BR-053). | Reference YAML only; not active. |
-| [`update-badges.yml`](../../../../../../.github/workflows/update-badges.yml) | Push (paths), `workflow_dispatch`, **`workflow_run: workflows: ["Tests"]`** | **No workflow named `Tests` exists** — trigger is ineffective. No workflow runs pytest on PR/push. |
+| *(removed)* ~~`update-badges.yml`~~ | — | **E5:S01:T69 / FR-064:** workflow **deleted** (BYOB / `shields`); see [T69](../../Epic-5/Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md). |
 
 ### Build / release scripts (spot review)
 
@@ -94,7 +94,7 @@ None
 
 1. **No root `pyproject.toml`** — setuptools-only; document for adopters; migration optional FR.  
 2. **`requirements.txt` vs `setup.py`** — extra packages (`markdownlint-cli2`, `requests`) are **repo/tooling**, not CLI install_requires; intentional split but undocumented until this audit.  
-3. **No automated test workflow**; **`update-badges.yml` references missing `Tests` workflow**.  
+3. **No automated test workflow**; ~~`update-badges.yml`~~ removed (FR-064); historical **`Tests` workflow_run** note was BR-058.  
 4. **Seven pytest failures** — stale tests / platform paths, not blocked on this release.  
 5. **`tests/test_validation.py`** — **Change implemented:** updated to match current validation API so collection succeeds and module is regression-tested.
 

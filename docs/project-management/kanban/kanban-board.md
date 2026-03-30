@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-30 (RW E2:S11:T12+2 — E2:S11:T12<sup>*</sup> workaround label + footnote on board/story/epic)
-**Version:** v0.2.11.12+2 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-30 (RW E5:S01:T69 — FR-064 shields branch retired)
+**Version:** v0.5.1.69+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -28,7 +28,7 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-- **E5:S01:T69** – Retire `shields` branch (FR-064, private repo badges) - TODO (MEDIUM priority) - [Task](epics/Epic-5/Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-064](fr-br/FR-064-shields-branch-private-repo-badges.md)
+No important tasks currently in progress
 
 ### Could Have (C) - Nice-to-Have Tasks
 
