@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.67+2] - 30-03-26
+## [0.5.1.68+2] - 30-03-26
 
-E5:S01:T67+2 – **Adopter install docs — FR-060 / RW task token**: [`INSTALL_IN_YOUR_PROJECT.md`](INSTALL_IN_YOUR_PROJECT.md); installation + usage/integration/FAQ/troubleshooting/rollout guides; workflow mgt README + installer adjacency; [`PACKAGE_INSTALLATION_GUIDE.md`](packages/frameworks/workflow%20mgt/docs/PACKAGE_INSTALLATION_GUIDE.md) cross-ref; T004 consumption patterns.
+E5:S01:T68+2 – **Packaged frameworks consumer paths**: [`rw-validators-consumer-layout.md`](packages/frameworks/workflow%20mgt/docs/rw-validators-consumer-layout.md); [`packages/README.md`](packages/README.md) framework README version policy; workflow mgt **2.2.1**; **kanban** + **numbering** README alignment (FR-060 / consumer `scripts_path`).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.67+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.68+2.md)

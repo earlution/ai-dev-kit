@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.68+2] - 30-03-26
+
+E5:S01:T68+2 – Consumer `rw-config` / validator paths doc; packages README semver policy; kanban + numbering README updates.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.68+2.md)
+
+---
+---
+---
 ## [0.5.1.67+2] - 30-03-26
 
 E5:S01:T67+2 – Adopter install docs: mandatory **RW** + **E…S…T…** same message (FR-060); INSTALL + user-docs + workflow mgt README + package install cross-ref.

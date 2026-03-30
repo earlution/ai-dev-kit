@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management — branch epic/5-documentation-management)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 67     # Task number (E5:S01:T67 — adopter install docs FR-060 / RW task token)
-VERSION_BUILD = 2     # Build number (E5:S01:T67+2 — install + user-docs + workflow mgt README; +1 was RW -k)
+VERSION_TASK = 68     # Task number (E5:S01:T68 — packaged frameworks consumer paths + semver hygiene)
+VERSION_BUILD = 2     # Build number (E5:S01:T68+2 — consumer doc + READMEs; +1 was RW -k)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.67+2 — E5:S01:T67: Adopter install docs mandatory RW task token (FR-060)
+# Current: 0.5.1.68+2 — E5:S01:T68: Consumer RW layout + framework README semver policy
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

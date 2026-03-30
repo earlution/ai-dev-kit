@@ -9,12 +9,13 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 68: Packaged Frameworks — Consumer Paths and Versioning Hygiene
 
 **Task ID:** E5:S01:T68  
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-03-25  
-**Last updated:** 2026-03-25 (RW -k kanban marker v0.5.1.68+1)  
-**Version:** v0.5.1.68+1  
+**Last updated:** 2026-03-30 (Release v0.5.1.68+2 — consumer RW layout doc; kanban/numbering README; packages semver policy)  
+**Version:** v0.5.1.68+2  
+**Version Anchor:** Forensic release `v0.5.1.68+2` — `rw-validators-consumer-layout.md`; workflow mgt + packages README; numbering + kanban cross-links  
 **Code:** E5S01T68
 
 **Repository Pattern:** Internal scaffold (no FR yet).
@@ -51,9 +52,9 @@ This task is **scoping + documentation + checklist**, not a full dependency arch
 
 ## Acceptance Criteria
 
-- [ ] Single **entry-point doc** (new or existing) that answers: “I copied `workflow mgt/` — what do I configure for RW validators?”
-- [ ] At least **two** non–workflow-mgt framework READMEs updated if they reference RW/install without token or config caveats.
-- [ ] **Explicit decision** recorded: framework semver bump policy (even if “manual, on release tag”).
+- [x] Single **entry-point doc** ([`rw-validators-consumer-layout.md`](../../../../../../packages/frameworks/workflow%20mgt/docs/rw-validators-consumer-layout.md)) that answers: “I copied `workflow mgt/` — what do I configure for RW validators?”
+- [x] At least **two** non–workflow-mgt framework READMEs updated (**kanban**, **numbering**) for FR-060 triggers and consumer-relative validator paths.
+- [x] **Explicit decision** recorded: [packages/README.md — Framework README version fields](../../../../../../packages/README.md#framework-readme-version-fields) (manual bump policy).
 
 ---
 

@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # Workflow Management Framework
 
-**Version:** 2.2.0  
+**Version:** 2.2.1  
 **Last Updated:** 2026-03-30  
 **Purpose:** Complete workflow management framework with **11** YAML-defined workflows (see registry below), documentation standards, and automated validation  
 **Key Features:** **11** registry workflows with full READMEs, standardized templates, style guide, validation tools, and automated quality assurance; agent methodology guides (`KB`/`vwmp`) are separate from registry rows
@@ -18,6 +18,8 @@ housekeeping_policy: keep
 **Canonical workflow list:** The authoritative machine-readable set is [`workflows/workflow-registry.yaml`](workflows/workflow-registry.yaml) — **11** entries under `workflows:`. Agent execution guides under `KB/Documentation/Developer_Docs/vwmp/` describe methodology and step counts; they are not additional registry workflows.
 
 **RW trigger dual-source (maintainers):** The repo root [`.cursorrules`](../../../.cursorrules) and the portable excerpt [`cursorrules-rw-trigger-section.md`](cursorrules-rw-trigger-section.md) must stay aligned on **FR-060 / FR-038 / BR-056** guardrails. See [RW trigger dual-source parity](docs/rw-trigger-dual-source-parity.md) for the checklist and merge order.
+
+**Consumers (vendored copy of this folder):** Configure `rw-config.yaml` paths for **your** tree and run RW validators from **`scripts_path`** — see [RW validators and consumer layout](docs/rw-validators-consumer-layout.md).
 
 ---
 
