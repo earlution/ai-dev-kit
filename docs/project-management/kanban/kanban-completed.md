@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-30 (RW E5:S09:T04 / FR-068)
-**Version:** v0.5.9.4+1
+**Last Updated:** 2026-03-30 (RW E5:S09:T05 / FR-069)
+**Version:** v0.5.9.5+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -25,6 +25,9 @@ housekeeping_policy: keep
   **Completed:** `2026-03-30T16:00:00Z` | **Version:** `v0.2.11.12+2` | **Agent:** `UKW / Maintainer`
 
 #### **Epic 5: Documentation Management**
+- **[E5:S09:T05](epics/Epic-5/Story-009-docusaurus-documentation-portal/T05-docusaurus-ci-fr-069.md)** – Docusaurus CI build gate (**FR-069**): [`.github/workflows/docusaurus-build.yml`](../../../.github/workflows/docusaurus-build.yml), `tests/test_portal_fr069_ci.py`, portal README CI pointer  
+  **Completed:** `2026-03-30T15:52:14Z` | **Version:** `v0.5.9.5+1` | **Agent:** `RW Agent`
+
 - **[E5:S09:T04](epics/Epic-5/Story-009-docusaurus-documentation-portal/T04-docusaurus-navigation-fr-068.md)** – Docusaurus navigation / sidebar IA / landing (**FR-068**): `portal/sidebars.js`, `portal/docusaurus.config.js`, homepage, `tests/test_portal_fr068_navigation.py`, portal README mapping + `--no-minify` build workaround  
   **Completed:** `2026-03-30T15:27:28Z` | **Version:** `v0.5.9.4+1` | **Agent:** `RW Agent`
 

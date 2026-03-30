@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.5+1] - 30-03-26
+
+E5:S09:T05 — **FR-069:** Docusaurus CI workflow, contract tests, portal README CI pointer.
+
+[Detailed changelog](CHANGELOG_v0.5.9.5+1.md)
+
+---
+---
+---
 ## [0.5.9.4+1] - 30-03-26
 
 E5:S09:T04 — **FR-068:** Sidebar IA, landing, navigation tests, portal `--no-minify` build workaround.

@@ -44,6 +44,8 @@ This directory (`portal/`) is the **[Docusaurus](https://docusaurus.io/)** site 
 
 Canonical structure reference: [Ultimate Canonical KB Structure](../docs/architecture/standards-and-adrs/ultimate-canonical-kb-structure.md).
 
+**CI (FR-069):** GitHub Actions runs `npm ci` and `npm run build` in this directory when `portal/`, `docs/`, or [`.github/workflows/docusaurus-build.yml`](../.github/workflows/docusaurus-build.yml) change on pull requests and on pushes to `main`.
+
 ## Installation
 
 ```bash
