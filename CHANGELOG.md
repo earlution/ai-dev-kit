@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.5+1] - 30-03-26
+## [0.5.9.6+1] - 30-03-26
 
-E5:S09:T05 — **FR-069:** GitHub Actions **Docusaurus site build** workflow ([`.github/workflows/docusaurus-build.yml`](.github/workflows/docusaurus-build.yml)) — path-filtered `pull_request` / `push` to `main`, Node 20, **`npm ci`** and **`npm run build`** in `portal/`; [`tests/test_portal_fr069_ci.py`](tests/test_portal_fr069_ci.py) contract tests; [`portal/README.md`](portal/README.md) CI pointer. **AC2** (simulated failure) remains optional manual verification.
+E5:S09:T06 — **FR-070:** **GitHub Pages** deployment — [`.github/workflows/docusaurus-deploy.yml`](.github/workflows/docusaurus-deploy.yml) (`peaceiris/actions-gh-pages`, `publish_dir: ./portal/build`, `GITHUB_TOKEN`); [`portal/README.md`](portal/README.md) hosting / secrets / **rollback**; root [`README.md`](README.md) live doc link; [`tests/test_portal_fr070_deployment.py`](tests/test_portal_fr070_deployment.py).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.5+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.6+1.md)
