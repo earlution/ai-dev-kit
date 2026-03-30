@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-03-30 (v0.2.11.12+1 – T12 complete: intake GHA disabled, BR-053 resolution, docs)  
+**Last updated:** 2026-03-30 (v0.2.11.12+2 – T12 board/story/epic: <sup>*</sup> workaround marker + footnote)  
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
 **Completed:** 2025-12-16 (core story); **T12** completed 2026-03-30 (GitHub Actions intake workaround — see task doc)
@@ -35,7 +35,7 @@ housekeeping_policy: keep
 - [x] **E2:S11:T09 – Documentation and Testing** ✅ COMPLETE (v0.2.11.9+3)
 - [x] **E2:S11:T10 – Investigate CHANGELOG Entry Removal and Harden Processes** - ✅ COMPLETE (v0.2.11.10+1 – Root cause identified, safeguards implemented)
 - [x] **E2:S11:T11 – Fix CHANGELOG Ordering Violations** - ✅ COMPLETE (v0.2.11.11+1 – All ordering violations fixed, duplicates removed, validator passes)
-- [x] **E2:S11:T12 – GitHub Actions Workflow Bug Resolution** - ✅ COMPLETE (v0.2.11.12+1 – intake workflow `.DISABLED`; BR-053 resolution; manual intake documented)
+- [x] **E2:S11:T12**<sup>*</sup> **– GitHub Actions Workflow Bug Resolution** – ✅ **COMPLETE (workaround, v0.2.11.12+2)** — intake workflow `.DISABLED`; BR-053 resolution; manual intake documented (**<sup>*</sup>** = workaround, not vendor fix — [kanban board footnote](../kanban-board.md))
   - Task: [`T12-github-actions-workflow-bug-resolution.md`](Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md)
   - **Related BR:** [BR-053](../../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 

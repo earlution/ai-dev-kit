@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Epic 2, Story 11, Task 12: GitHub Actions Workflow Bug Resolution
 
 **Task ID:** E2:S11:T12  
-**Status:** ✅ COMPLETE (v0.2.11.12+1)  
+**Status:** ✅ COMPLETE (v0.2.11.12+2)  
 **Priority:** CRITICAL  
 **Last updated:** 2026-03-30  
 **Started:** 2026-03-12  
 **Completed:** 2026-03-30  
-**Version:** v0.2.11.12+1  
+**Version:** v0.2.11.12+2  
 **Related BR:** [BR-053](../../../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)  
 **GitHub Issue:** [#21](https://github.com/earlution/ai-dev-kit/issues/21)
 
@@ -44,7 +44,7 @@ Resolve the critical GitHub Actions behavior where the FR/BR/UXR intake workflow
 
 - `.github/workflows/fr-br-intake.yml.DISABLED` (renamed from `fr-br-intake.yml`) with header comment  
 - BR-053 “Resolution / current status” + updated cross-links (submission guide, audit docs, BR-058, E4:S02)  
-- Closed task and board entries with version **v0.2.11.12+1**  
+- Closed task and board entries with version **v0.2.11.12+2** (build +2: <sup>*</sup> board label + footnote)  
 
 ---
 

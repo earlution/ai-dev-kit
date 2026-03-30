@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-30 (FR-064 / E5:S01:T69 intake — shields branch retirement)
-**Version:** v0.5.1.68+2 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-30 (RW E2:S11:T12+2 — E2:S11:T12<sup>*</sup> workaround label + footnote on board/story/epic)
+**Version:** v0.2.11.12+2 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -32,7 +32,9 @@ No critical tasks currently in progress
 
 ### Could Have (C) - Nice-to-Have Tasks
 
-- **E2:S11:T12** – GitHub Actions Workflow Bug Resolution - ✅ COMPLETE (v0.2.11.12+1) - [Task Document](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
+- **E2:S11:T12**<sup>*</sup> – GitHub Actions intake (BR-053) – **COMPLETE (workaround, v0.2.11.12+2)** — GHA still fired on `push` under `on: issues` only; intake workflow **unregistered** (`fr-br-intake.yml.DISABLED`); **manual intake** until re-enable validated - [Task](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
+
+<sup>*</sup> **E2:S11:T12 marker:** Asterisk means closure is a **documented workaround**, not “GitHub fixed the trigger engine.” See BR-053 *Resolution / current status* and T12 *Re-enable procedure*.
 
 ### Ongoing (O) - Perpetual Tasks
 

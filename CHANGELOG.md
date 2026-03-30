@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.11.12+1] - 30-03-26
+## [0.2.11.12+2] - 30-03-26
 
-E2:S11:T12 — **GitHub Actions intake (BR-053):** Workflow reference moved to [`fr-br-intake.yml.DISABLED`](.github/workflows/fr-br-intake.yml.DISABLED); push-triggered runs persisted with `on: issues` only (`gh` audit). Resolution and manual intake path in [BR-053](docs/project-management/kanban/fr-br/BR-053-github-actions-workflow-push-trigger-bug.md) and [FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md](packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md).
+E2:S11:T12+2 — **Kanban:** **E2:S11:T12** workaround row uses **`<sup>*</sup>`** + **footnote** on [kanban-board](docs/project-management/kanban/kanban-board.md); Story-011 / Epic-2 / T12 task markers aligned to **v0.2.11.12+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.12+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.11.12+2.md)
