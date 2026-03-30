@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-25 (v0.5.2.6+1 – E5:S02:T06 FR-063 intake + CMW)  
+**Last updated:** 2026-03-30 (v0.5.9.1+1 – E5:S09:T01 Story 009 Docusaurus portal + T01–T07 filed)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -67,6 +67,11 @@ housekeeping_policy: keep
 - [ ] **E5:S08 – Knowledge Base** - IN PROGRESS (v0.5.8.2+8 – T02 ✅ E4:S16:T05 gap log spec, validator)
   - Story: [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
+
+
+- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (v0.5.9.1+1 — RW -k T01; tasks T01–T07 filed)
+  - Story: [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
+  - **Note:** Atomic FR chain for full Docusaurus adoption (`portal/` → `docs/` publish, CI, deploy, search).
 
 
 ---
@@ -193,6 +198,29 @@ Investigate the ramifications of the persistent knowledge base concept, includin
 - [x] E5:S08:T02 – Notion hub, Knowledge Base container, and KB index ✅
 
 **Story:** [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
+
+---
+
+### Story 9: Docusaurus Documentation Portal
+
+**Status:** IN PROGRESS  
+**Priority:** HIGH  
+**Estimated Effort:** [TBD]  
+**Last updated:** 2026-03-30
+
+**Goal:**  
+Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), green builds, IA, CI, hosting, and search—tracked via **FR-065** through **FR-071** (E5:S09:T01–T07).
+
+**Tasks:**
+- [ ] E5:S09:T01 – Docusaurus site identity and config (FR-065)
+- [ ] E5:S09:T02 – Canonical docs path and publish scope (FR-066)
+- [ ] E5:S09:T03 – Production build corpus triage (FR-067)
+- [ ] E5:S09:T04 – Navigation, sidebar IA, and landing (FR-068)
+- [ ] E5:S09:T05 – CI build gate (FR-069)
+- [ ] E5:S09:T06 – Deployment and hosting (FR-070)
+- [ ] E5:S09:T07 – Site search (FR-071)
+
+**Story:** [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
 
 ---
 

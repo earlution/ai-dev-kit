@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-30 (RW E5:S01:T69 — FR-064 shields branch retired)
-**Version:** v0.5.1.69+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-30 (RW -k E5:S09:T01 — Story 009 Docusaurus portal tasks filed)
+**Version:** v0.5.9.1+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 

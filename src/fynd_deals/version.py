@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
-VERSION_STORY = 1     # Story number (Story 1: FR Repo — perpetual)
-VERSION_TASK = 69     # Task number (E5:S01:T69 — FR-064 retire shields / remove BYOB workflow)
-VERSION_BUILD = 1     # Build number (first release on T69)
+VERSION_STORY = 9     # Story number (Story 9: Docusaurus Documentation Portal)
+VERSION_TASK = 1      # Task number (E5:S09:T01 — FR-065 identity; Story 009 + tasks T01–T07 filed)
+VERSION_BUILD = 1     # Build number (RW -k kanban filing; BUILD >= 1 per task doc validation)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.69+1 — E5:S01:T69: Static README badges; delete update-badges.yml; origin/shields removed
+# Current: 0.5.9.1+1 — E5:S09:T01: RW -k; Story 009; tasks T01–T07; FR-065–071 assigned
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
