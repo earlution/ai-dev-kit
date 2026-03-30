@@ -53,6 +53,12 @@ Implement **FR-069**: GitHub Actions workflow running `npm ci` and `npm run buil
 
 ---
 
+## Evidence
+
+- **RW -k:** v0.5.9.5+1 — kanban marker (sequenced release).
+
+---
+
 ## Dependencies
 
 - **E5:S09:T03** recommended so default-branch build is meaningful.
