@@ -53,6 +53,12 @@ Implement **FR-067**: after FR-066, achieve **`npm run build` = 0** for the agre
 
 ---
 
+## Evidence
+
+- **RW -k:** v0.5.9.3+1 — kanban marker (sequenced release).
+
+---
+
 ## Dependencies
 
 - **E5:S09:T02** (FR-066) complete.

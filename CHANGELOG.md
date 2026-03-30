@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.2+1] - 30-03-26
+## [0.5.9.3+1] - 30-03-26
 
-E5:S09:T02 — **RW -k:** Kanban init marker for **FR-066** / canonical `docs/` path task (Story 009).
+E5:S09:T03 — **RW -k:** Kanban marker **FR-067** (Docusaurus production build corpus triage).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.2+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.3+1.md)
