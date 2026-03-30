@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-03-30  
-**Last updated:** 2026-03-30 (v0.5.9.3+1 — T03 FR-067 complete)  
-**Version:** v0.5.9.3+1  
+**Last updated:** 2026-03-30 (v0.5.9.8+1 — T08 RW -k init; T03 FR-067 complete)  
+**Version:** v0.5.9.8+1  
 **Code:** E5S09
 
 ---
@@ -27,6 +27,7 @@ housekeeping_policy: keep
 - [ ] **E5:S09:T05 – CI build gate (FR-069)** - TODO
 - [ ] **E5:S09:T06 – Deployment and hosting (FR-070)** - TODO
 - [ ] **E5:S09:T07 – Site search (FR-071)** - TODO
+- [ ] **E5:S09:T08 – Strict broken-link checking post–FR-067 (warn → throw)** - TODO — [task file](Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md); **FU-1** on [FR-067](../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
 
 > **Forensic marker format:** `✅ COMPLETE (vRC.E.S.T+B)` when done.
 

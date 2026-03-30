@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.3+1] - 30-03-26
+## [0.5.9.8+1] - 30-03-26
 
-E5:S09:T03 — **FR-067:** Green Docusaurus **`npm run build`**, documented link-check **`warn`** policy, MDX/placeholder triage, **`scripts/escape_mdx_placeholders.py`**, **`tests/test_portal_fr067_build_triage.py`**, **`docs/maintenance/docusaurus-corpus-triage-fr-067.md`**.
+E5:S09:T08 — **RW -k:** **FR-067** follow-up tracking — new **T08** (strict links post-warn), **FU-1**/**FU-2** on FR-067, triage note + **portal/README** pointers, Story 009 / T03 links.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.3+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.8+1.md)

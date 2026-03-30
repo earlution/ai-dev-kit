@@ -20,6 +20,7 @@ This directory (`portal/`) is the **[Docusaurus](https://docusaurus.io/)** site 
 
 - **`docusaurus.config.js`:** `onBrokenLinks: 'warn'` and `onBrokenMarkdownLinks: 'warn'`.
 - **Rationale:** Many legacy markdown paths link to `packages/`, old epic/story layouts, or missing anchors; the production **build still completes** while warnings list remediation targets.
+- **Follow-up (strict mode):** Tracked as **Kanban [E5:S09:T08](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)** and **FR-067 → Follow-up work → FU-1** (coordinate markdown hygiene with **FR-058**). Do not rely on chat for this — those are the SoT.
 - **Target state:** tighten to `'throw'` after batch link hygiene (follow-up; coordinate with [FR-058](../docs/project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md)).
 - **Detail:** [Docusaurus corpus triage (FR-067)](../docs/maintenance/docusaurus-corpus-triage-fr-067.md).
 

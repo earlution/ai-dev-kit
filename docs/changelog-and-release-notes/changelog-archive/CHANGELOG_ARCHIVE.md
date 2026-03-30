@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.8+1] - 30-03-26
+
+E5:S09:T08 — **RW -k:** FR-067 follow-up tracking (T08, FU table); portal/triage/README wiring.
+
+[Detailed changelog](CHANGELOG_v0.5.9.8+1.md)
+
+---
+---
+---
 ## [0.5.9.3+1] - 30-03-26
 
 E5:S09:T03 — **FR-067:** Docusaurus production build triage; link policy; MDX escapes; triage note; FR-067 tests.

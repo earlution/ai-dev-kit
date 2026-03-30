@@ -81,6 +81,19 @@ Repo `docs/` has hundreds of markdown files, mixed frontmatter, and links that a
 
 ---
 
+## Follow-up work (explicit tracking — do not rely on memory)
+
+Anything “to be done later” from FR-067 must have an **FR and/or Kanban task** below so maintainers are not expected to recall chat context.
+
+| ID | Outcome | Purpose | Tracked as |
+|----|---------|---------|------------|
+| **FU-1** | Restore **strict** broken-link checking (`onBrokenLinks` / `onBrokenMarkdownLinks` → **`throw`**) | Interim **`warn`** was intentional (FR-067 Problem Statement + portal README); strict mode enforces zero broken links in build/CI once corpus is repaired. | **Task:** [E5:S09:T08](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md). **Coordinate:** [FR-058](./FR-058-markdown-maintenance-workflow.md) for systemic link/path hygiene. |
+| **FU-2** | **GitHub Release** page for published **SemVer** tags (optional ops) | Tags exist on `git push`; Releases UI is populated only if RW Step 12.5 runs with token. | **Process:** [Release Workflow Step 12.5](../../../../.cursorrules) in project `.cursorrules` — [`create_github_release.py`](../../../../packages/frameworks/workflow%20mgt/scripts/create_github_release.py). Not a portal FR; no separate Kanban task unless RW adoption gaps are filed elsewhere. |
+
+**Docs that echo this table:** [docusaurus corpus triage note](../../../maintenance/docusaurus-corpus-triage-fr-067.md) (Deferred outcomes), [portal README](../../../../portal/README.md) (Broken links section).
+
+---
+
 ## References
 
 - `portal/docusaurus.config.js` (`onBrokenLinks`, MDX options)
