@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-30 (v0.5.9.5+1 – E5:S09:T05 RW -k marker)  
+**Last updated:** 2026-03-30 (v0.5.9.6+1 – E5:S09:T06 RW -k marker)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]

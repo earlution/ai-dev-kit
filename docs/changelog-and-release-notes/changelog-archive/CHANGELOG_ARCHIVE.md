@@ -35,6 +35,15 @@ E5:S09:T04 — **RW -k:** Kanban marker **FR-068** (Docusaurus sidebar / landing
 ---
 ---
 ---
+## [0.5.9.5+1] - 30-03-26
+
+E5:S09:T05 — **RW -k:** Kanban marker **FR-069** (Docusaurus CI build gate).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.5+1.md)
+
+---
+---
+---
 ## [0.5.1.69+1] - 30-03-26
 
 E5:S01:T69 — **FR-064:** Removed `update-badges.yml` (BYOB / `shields`); README static-badge policy; [badge guide](docs/knowledge/guides/badge-setup-for-private-repos.md) monorepo note; **`origin/shields`** deleted post-push; boards + FR **COMPLETE**.

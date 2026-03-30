@@ -53,6 +53,12 @@ Implement **FR-070**: choose hosting (e.g. GitHub Pages, Netlify, Cloudflare Pag
 
 ---
 
+## Evidence
+
+- **RW -k:** v0.5.9.6+1 — kanban marker (sequenced release).
+
+---
+
 ## Dependencies
 
 - **E5:S09:T03**–**T05** strongly recommended (green build + CI).
