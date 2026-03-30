@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-25 (v0.6.7.101+37 – E6:S07:T101 UKW perpetual RW; main merged into epic/6)
+**Last updated:** 2026-03-30 (v0.6.7.103+4 – E6:S07:T103 RW -d FU-2 documentation)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]

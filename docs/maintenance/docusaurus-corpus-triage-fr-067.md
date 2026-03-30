@@ -44,7 +44,7 @@ Do **not** rely on conversation memory. Later work is on **FR / task**:
 | Item | Owner |
 |------|--------|
 | Switch link check from **`warn` → `throw`** after corpus link repair | **[E5:S09:T08](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)** — coordinate **[FR-058](../project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md)**; summary table **FU-1** on **[FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)** |
-| Populate **GitHub Releases** for SemVer tags when desired | **RW Step 12.5** — `create_github_release.py` (see project `.cursorrules`); **FU-2** on **[FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)** |
+| Populate **GitHub Releases** for SemVer tags | **[E6:S07:T103](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)** (RW Step 12.5); **[FR-041](../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)**; **FU-2** on **[FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)** |
 
 ## Verification
 

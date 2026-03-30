@@ -12,16 +12,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-02-22 (v0.6.7.103+3 – FR-042 bidirectional wiring, T07 plan wiring)  
+**Last updated:** 2026-03-30 (v0.6.7.103+4 – FR-067 FU-2 traceability T103/FR-041; RW -d)  
 **Started:** 2026-02-22  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.103+3
+**Version:** v0.6.7.103+4
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing Release Workflow and workflow framework maintenance work. High build numbers are expected and valid.
 
-**Progress:** v0.6.7.103+3 – FR-042 bidirectional wiring requirement clarified; T07 plan doc wired to host task.  
+**Progress:** v0.6.7.103+4 – **FR-067 FU-2** (GitHub Releases / RW Step 12.5) Kanban-anchored on **T103** + **FR-041**; prior: FR-042 bidirectional wiring (+3).  
 **Code:** E6S07T103
 
 **Note:** Perpetual tasks use 3-digit task numbers (T101+) to differentiate from regular tasks (T01-T99).
@@ -94,6 +94,7 @@ This is a **perpetual task** dedicated to Release Workflow (RW) and workflow fra
 - Validator updates (e.g., validate_version_bump improvements)
 - Workflow doc corrections (RW guide, cursor rules)
 - Framework hardening (non-feature framework improvements)
+- Cross-FR / consumer traceability for RW outcomes (e.g. **FR-067 FU-2** ↔ GitHub Releases)
 
 **Manual attribution** (no context detection like UKW/CMW): Agent or user selects T103 when releasing RW maintenance work.
 
@@ -116,3 +117,14 @@ This is a **perpetual task** dedicated to Release Workflow (RW) and workflow fra
 - **Feature Request:** [FR-041](../../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
 - **T101:** UKW Perpetual Task (pattern reference)
 - **T102:** CMW Perpetual Task (pattern reference)
+
+---
+
+## Downstream traceability (GitHub Releases / FU-2)
+
+**RW Step 12.5** — create or update the **GitHub Release** for the **SemVer** tag after push — is part of the Release Workflow, not Epic 5 / Docusaurus. Consumer documentation:
+
+- **[FR-067](../../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md)** — follow-up **FU-2** names this expectation so portal-related releases do not “forget” the Releases UI.
+- **Script:** `packages/frameworks/workflow mgt/scripts/create_github_release.py` (see project `.cursorrules` Step 12.5).
+
+**This task (T103)** is the **Kanban anchor** for that outcome: maintenance and adoption questions about “who owns GitHub Releases for RW” resolve here and **[FR-041](../../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)**, not under Story 009 alone.

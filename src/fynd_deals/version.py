@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
-VERSION_STORY = 9     # Story number (Story 9: Docusaurus Documentation Portal)
-VERSION_TASK = 8      # Task number (E5:S09:T08 — strict broken-link mode post-FR-067; doc init RW -k)
-VERSION_BUILD = 1     # Build number (RW -k kanban init for T08; +1 — task file already present)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 7     # Story number (Story 7: ADK implementation analysis and package management)
+VERSION_TASK = 103    # Task number (E6:S07:T103 — RW maintenance perpetual; FR-067 FU-2 wiring RW -d)
+VERSION_BUILD = 4     # Build number (perpetual T103 release count)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.9.8+1 — E5:S09:T08: FR-067 follow-up tracking (T08, FU table); portal/triage/README wiring
+# Current: 0.6.7.103+4 — E6:S07:T103: FR-067 FU-2 wired to T103/FR-041; triage + FR-067 (RW -d)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
