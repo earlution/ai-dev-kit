@@ -53,6 +53,12 @@ Implement **FR-068**: sidebar information architecture aligned to **canonical KB
 
 ---
 
+## Evidence
+
+- **RW -k:** v0.5.9.4+1 — kanban marker (sequenced release).
+
+---
+
 ## Dependencies
 
 - **E5:S09:T03** recommended (stable routes).

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.3+1] - 30-03-26
+## [0.5.9.4+1] - 30-03-26
 
-E5:S09:T03 — **RW -k:** Kanban marker **FR-067** (Docusaurus production build corpus triage).
+E5:S09:T04 — **RW -k:** Kanban marker **FR-068** (Docusaurus sidebar / landing).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.3+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.4+1.md)
