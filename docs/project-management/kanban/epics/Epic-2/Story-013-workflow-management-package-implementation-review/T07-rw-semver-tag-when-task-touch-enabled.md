@@ -44,7 +44,7 @@ This work is motivated by the SemVer tag collision incident and is dependent on 
 - Configuration-driven RW tagging behavior:
   - Detect `task_touch` mapping mode (via `rw-config.yaml` or equivalent)
   - Compute SemVer via task-touch converter
-  - Create tag `v{semver}` for the release commit
+  - Create tag `v\{semver\}` for the release commit
   - Ensure tag alignment (SemVer tag and internal tag point to same commit)
 
 - Documentation updates describing this behavior
@@ -55,7 +55,7 @@ This work is motivated by the SemVer tag collision incident and is dependent on 
 ## Acceptance Criteria
 
 - [ ] RW detects `task_touch` mapping mode via configuration.
-- [ ] RW creates SemVer tag `v{semver}` when enabled.
+- [ ] RW creates SemVer tag `v\{semver\}` when enabled.
 - [ ] RW still supports default behavior when `task_touch` is not enabled.
 - [ ] Documentation updated to reflect behavior.
 - [ ] Collision/misalignment behavior is defined (block with guidance vs automated correction).

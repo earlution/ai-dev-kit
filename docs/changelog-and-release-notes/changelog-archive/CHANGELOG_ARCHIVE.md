@@ -1,4 +1,22 @@
 # Changelog Archive
+## [0.5.9.3+1] - 30-03-26
+
+E5:S09:T03 — **FR-067:** Docusaurus production build triage; link policy; MDX escapes; triage note; FR-067 tests.
+
+[Detailed changelog](CHANGELOG_v0.5.9.3+1.md)
+
+---
+---
+---
+## [0.5.9.2+2] - 30-03-26
+
+E5:S09:T02 — **FR-066:** Canonical `docs/` path, publish scope, FR-066 tests, portal index doc.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.2+2.md)
+
+---
+---
+---
 ## [0.5.9.1+2] - 30-03-26
 
 E5:S09:T01 — **FR-065:** Docusaurus portal identity, `tests/test_portal_fr065_identity.py`, `portal/README.md`.

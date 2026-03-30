@@ -35,7 +35,7 @@ Despite FR-040/E5:S01:T36 implementing board update functionality, the implement
 
 1. **Story Document Path Resolution Fails:**
    - Script fails to find story documents using glob patterns
-   - Error: "Story doc not found for Epic {epic}, Story {story}"
+   - Error: "Story doc not found for Epic \{epic\}, Story \{story\}"
    - Root cause: Incorrect path construction for absolute kanban_root in glob patterns
 
 2. **Board Path Resolution Fails:**

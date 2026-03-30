@@ -101,7 +101,7 @@ Define the implementation expectations baseline for the Workflow Management fram
 - Provides forensic traceability, parallel development, task-level granularity
 
 **Epic Branch Workflow:**
-- **ALWAYS work on epic branches** (`epic/{n}-{description}`)
+- **ALWAYS work on epic branches** (`epic/\{n\}-\{description\}`)
 - **NEVER commit directly to `main`** during development
 - **ONLY merge to `main`** when ready to deploy (prevents unnecessary auto-deployments)
 
@@ -453,8 +453,8 @@ Define the implementation expectations baseline for the Workflow Management fram
 - Any other references to story/task
 
 **Systematic Process:**
-1. Read FULL Epic-{epic}.md file
-2. Read authoritative Story-{N}-{Name}.md file
+1. Read FULL Epic-\{epic\}.md file
+2. Read authoritative `Story-\{N\}-\{Name\}.md` file
 3. Find ALL sections referencing story/task (use grep/search)
 4. Update ALL of them
 5. Validate consistency
@@ -472,7 +472,7 @@ Define the implementation expectations baseline for the Workflow Management fram
 - BUILD number = UKW run count (high BUILD numbers expected and valid)
 - RW detects UKW context and auto-attributes to perpetual task
 
-**Version Pattern:** `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = UKW run count
+**Version Pattern:** `v0.\{EPIC\}.\{STORY\}.\{PERPETUAL_TASK\}+\{BUILD\}` where BUILD = UKW run count
 
 ---
 
@@ -485,7 +485,7 @@ Define the implementation expectations baseline for the Workflow Management fram
 - BUILD number = CMW run count (high BUILD numbers expected and valid)
 - RW detects CMW context and auto-attributes to perpetual task
 
-**Version Pattern:** `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where BUILD = CMW run count
+**Version Pattern:** `v0.\{EPIC\}.\{STORY\}.\{PERPETUAL_TASK\}+\{BUILD\}` where BUILD = CMW run count
 
 ---
 
@@ -551,8 +551,8 @@ Define the implementation expectations baseline for the Workflow Management fram
 - GitHub releases use SemVer tags
 
 **Dual Tagging:**
-- Internal tag: `v{internal_version}` (e.g., `v0.6.7.101+26`)
-- SemVer tag: `v{semver}` (e.g., `v0.6.52+26`)
+- Internal tag: `v\{internal_version\}` (e.g., `v0.6.7.101+26`)
+- SemVer tag: `v\{semver\}` (e.g., `v0.6.52+26`)
 - Both tags reference same commit
 - Internal tag for tracking, SemVer tag for GitHub releases
 

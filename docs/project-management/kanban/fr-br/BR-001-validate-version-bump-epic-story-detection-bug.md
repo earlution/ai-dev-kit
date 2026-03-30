@@ -107,8 +107,8 @@ The `find_story_file()` function in `validate_version_bump.py` uses content-base
 
 ## Acceptance Criteria (Fix Requirements)
 
-- [ ] Criterion 1: Validator should extract Epic/Story from file path (`Epic-{N}/stories/Story-{NNN}`)
-- [ ] Criterion 2: Validator should use Code field (`E{epic}S{story}`) as fallback if path extraction fails
+- [ ] Criterion 1: Validator should extract Epic/Story from file path (`Epic-\{N\}/stories/Story-{NNN}`)
+- [ ] Criterion 2: Validator should use Code field (`E\{epic\}S\{story\}`) as fallback if path extraction fails
 - [ ] Criterion 3: Validator should only use content-based regex as last resort, and prefer path/Code field
 - [ ] Criterion 4: Validator should correctly identify Epic 3, Story 3 from `Story-003-versioning-integration-with-kanban-and-rw.md`
 
@@ -179,8 +179,8 @@ The `find_story_file()` function in `validate_version_bump.py` uses content-base
 
 **Fix Description:**
 Updated `find_story_file()` function in `validate_version_bump.py` to use a three-tier detection strategy:
-1. **Primary:** Extract Epic/Story from file path (`Epic-{N}/stories/Story-{NNN}`)
-2. **Secondary:** Extract from Code field (`**Code:** E{epic}S{story}`)
+1. **Primary:** Extract Epic/Story from file path (`Epic-\{N\}/stories/Story-{NNN}`)
+2. **Secondary:** Extract from Code field (`**Code:** E\{epic\}S\{story\}`)
 3. **Tertiary:** Content-based regex (only in header section, not References)
 
 **Changes Made:**
@@ -211,7 +211,7 @@ Updated `find_story_file()` function in `validate_version_bump.py` to use a thre
 
 **Lessons Learned:**
 - File path extraction is most reliable method (doesn't depend on file content)
-- Code field (`E{epic}S{story}`) is reliable fallback (explicit metadata)
+- Code field (`E\{epic\}S\{story\}`) is reliable fallback (explicit metadata)
 - Content-based regex should be last resort and more specific (avoid References sections)
 
 **Next Steps:**

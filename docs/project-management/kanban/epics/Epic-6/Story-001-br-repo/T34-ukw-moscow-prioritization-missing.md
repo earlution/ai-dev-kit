@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E6:S01:T34`
 
@@ -125,7 +125,7 @@ Fix UKW (Update Kanban Workflow) bug where the MoSCOW Prioritized In-Progress Ta
 ```
 
 **Task Format:**
-- **E{epic}:S{story}:T{task}** – Task Title - Status (Version, Last updated) - [Links]
+- **E\{epic\}:S\{story\}:T\{task\}** – Task Title - Status (Version, Last updated) - [Links]
 
 ### Step 4: Integrate into UKW Step 6
 

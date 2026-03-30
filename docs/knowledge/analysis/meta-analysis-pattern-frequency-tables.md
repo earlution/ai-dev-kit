@@ -38,34 +38,34 @@ This document provides **pattern frequency tables** extracted from all granular 
 
 | Format | Projects Using | Frequency | Examples |
 |--------|---------------|-----------|----------|
-| `Epic-{N}` (hyphen) | been-there, dev-toolkit, agentic-ide-rules, ai-dev-kit | 4/10 (40%) | `Epic-9`, `Epic-20` |
-| `Epic {N}` (space) | confidentia, starborn_legacy | 2/10 (20%) | `Epic 9`, `Epic 20` |
-| `Epic-{NN}` (zero-padded) | starborn_legacy | 1/10 (10%) | `Epic-09`, `Epic-20` |
-| `E{N}` (abbreviated) | free-party-promoter, vwmp, qa-kb | 3/10 (30%) | `E01`, `E10` |
-| `Epic {NN}` (zero-padded space) | confidentia (some) | 1/10 (10%) | `Epic 09` |
+| `Epic-\{N\}` (hyphen) | been-there, dev-toolkit, agentic-ide-rules, ai-dev-kit | 4/10 (40%) | `Epic-9`, `Epic-20` |
+| `Epic \{N\}` (space) | confidentia, starborn_legacy | 2/10 (20%) | `Epic 9`, `Epic 20` |
+| `Epic-\{NN\}` (zero-padded) | starborn_legacy | 1/10 (10%) | `Epic-09`, `Epic-20` |
+| `E\{N\}` (abbreviated) | free-party-promoter, vwmp, qa-kb | 3/10 (30%) | `E01`, `E10` |
+| `Epic \{NN\}` (zero-padded space) | confidentia (some) | 1/10 (10%) | `Epic 09` |
 
-**Convergence:** `Epic-{N}` (hyphen) is most common in ADK projects (4/10), but `E{N}` is also common in newer projects (3/10).
+**Convergence:** `Epic-\{N\}` (hyphen) is most common in ADK projects (4/10), but `E\{N\}` is also common in newer projects (3/10).
 
 ### 1.2 Story Naming Formats
 
 | Format | Projects Using | Frequency | Examples |
 |--------|---------------|-----------|----------|
-| `Story-{NNN}-{description}` | ai-dev-kit, been-there, dev-toolkit | 3/10 (30%) | `Story-006-adk-implementation-analysis.md` |
-| `Story {N}` (space) | confidentia, starborn_legacy | 2/10 (20%) | `Story 1`, `Story 2` |
-| `S{N}` (abbreviated) | free-party-promoter, vwmp, qa-kb | 3/10 (30%) | `S01`, `S10` |
-| `Story-{N}-{description}` | agentic-ide-rules | 1/10 (10%) | `Story-1-framework-version.md` |
+| `Story-{NNN}-\{description\}` | ai-dev-kit, been-there, dev-toolkit | 3/10 (30%) | `Story-006-adk-implementation-analysis.md` |
+| `Story \{N\}` (space) | confidentia, starborn_legacy | 2/10 (20%) | `Story 1`, `Story 2` |
+| `S\{N\}` (abbreviated) | free-party-promoter, vwmp, qa-kb | 3/10 (30%) | `S01`, `S10` |
+| `Story-\{N\}-\{description\}` | agentic-ide-rules | 1/10 (10%) | `Story-1-framework-version.md` |
 
-**Convergence:** Mixed patterns. `Story-{NNN}-{description}` is ADK canonical (3/10), but abbreviated `S{N}` is also common (3/10).
+**Convergence:** Mixed patterns. `Story-{NNN}-\{description\}` is ADK canonical (3/10), but abbreviated `S\{N\}` is also common (3/10).
 
 ### 1.3 Task Naming Formats
 
 | Format | Projects Using | Frequency | Examples |
 |--------|---------------|-----------|----------|
-| `E{epic}:S{story}:T{task}` (full context) | been-there, confidentia, fynd.deals, starborn_legacy, dev-toolkit, ai-dev-kit | 6/10 (60%) | `E20:S08:T01`, `E16:S01:T001` |
-| `T{task}` (standalone) | fynd.deals (mixed) | 1/10 (10%) | `T001`, `T002` |
-| `E{epic}S{story}:T{task}` (no separators) | free-party-promoter, vwmp | 2/10 (20%) | `E01S1:T01` |
+| `E\{epic\}:S\{story\}:T\{task\}` (full context) | been-there, confidentia, fynd.deals, starborn_legacy, dev-toolkit, ai-dev-kit | 6/10 (60%) | `E20:S08:T01`, `E16:S01:T001` |
+| `T\{task\}` (standalone) | fynd.deals (mixed) | 1/10 (10%) | `T001`, `T002` |
+| `E\{epic\}S\{story\}:T\{task\}` (no separators) | free-party-promoter, vwmp | 2/10 (20%) | `E01S1:T01` |
 
-**Convergence:** `E{epic}:S{story}:T{task}` (full context) is most common (6/10 = 60%), indicating strong convergence on full context requirement.
+**Convergence:** `E\{epic\}:S\{story\}:T\{task\}` (full context) is most common (6/10 = 60%), indicating strong convergence on full context requirement.
 
 ### 1.4 Task Number Padding
 
@@ -110,8 +110,8 @@ This document provides **pattern frequency tables** extracted from all granular 
 
 | Pattern | Projects Using | Frequency | Examples |
 |---------|---------------|-----------|----------|
-| `{name}-workflow.yaml` | ai-dev-kit, been-there, dev-toolkit | 3/10 (30%) | `release-workflow.yaml` |
-| `{name}.yaml` | starborn_legacy, confidentia | 2/10 (20%) | `release.yaml` |
+| `\{name\}-workflow.yaml` | ai-dev-kit, been-there, dev-toolkit | 3/10 (30%) | `release-workflow.yaml` |
+| `\{name\}.yaml` | starborn_legacy, confidentia | 2/10 (20%) | `release.yaml` |
 | Script-based (`.py`/`.sh`) | starborn_legacy, confidentia | 2/10 (20%) | `release_workflow.py` |
 | Embedded in `.cursorrules` | All projects (except ai-dev-kit) | 9/10 (90%) | RW trigger section |
 
@@ -207,12 +207,12 @@ This document provides **pattern frequency tables** extracted from all granular 
 
 | Location | Projects Using | Frequency | Examples |
 |----------|----------------|-----------|----------|
-| `src/{project}/version.py` | been-there, dev-toolkit, agentic-ide-rules | 3/10 (30%) | Standard ADK pattern |
+| `src/\{project\}/version.py` | been-there, dev-toolkit, agentic-ide-rules | 3/10 (30%) | Standard ADK pattern |
 | `src/fynd_deals/version.py` (legacy) | ai-dev-kit, dev-toolkit (incorrect) | 2/10 (20%) | Legacy path (ai-dev-kit source), copy-paste error (dev-toolkit) |
 | `VERSION` (file) | vwmp | 1/10 (10%) | Simple file |
 | No version file | confidentia, starborn_legacy, free-party-promoter, qa-kb | 4/10 (40%) | No explicit version file |
 
-**Convergence:** `src/{project}/version.py` is ADK pattern (3/10 = 30%), but many projects have no version file (4/10 = 40%). Note: ai-dev-kit uses legacy path `src/fynd_deals/version.py`.
+**Convergence:** `src/\{project\}/version.py` is ADK pattern (3/10 = 30%), but many projects have no version file (4/10 = 40%). Note: ai-dev-kit uses legacy path `src/fynd_deals/version.py`.
 
 ---
 
@@ -222,12 +222,12 @@ This document provides **pattern frequency tables** extracted from all granular 
 
 | Pattern | Projects Using | Frequency | Examples |
 |---------|---------------|-----------|----------|
-| `epic/{N}-{description}` | ai-dev-kit, been-there, dev-toolkit, agentic-ide-rules | 4/10 (40%) | `epic/4-kanban-framework` |
-| `epic/{N}` | ai-dev-kit (some) | 1/10 (10%) | `epic/4` |
+| `epic/\{N\}-\{description\}` | ai-dev-kit, been-there, dev-toolkit, agentic-ide-rules | 4/10 (40%) | `epic/4-kanban-framework` |
+| `epic/\{N\}` | ai-dev-kit (some) | 1/10 (10%) | `epic/4` |
 | `{branch}` (numeric) | confidentia | 1/10 (10%) | `03`, `04`, `19`, `20`, `21` |
 | No explicit mapping | starborn_legacy, free-party-promoter, vwmp, qa-kb, fynd.deals | 5/10 (50%) | No explicit branch mapping |
 
-**Convergence:** `epic/{N}-{description}` is ADK pattern (4/10 = 40%), but many projects have no explicit branch mapping (5/10 = 50%).
+**Convergence:** `epic/\{N\}-\{description\}` is ADK pattern (4/10 = 40%), but many projects have no explicit branch mapping (5/10 = 50%).
 
 ---
 
@@ -240,18 +240,18 @@ This document provides **pattern frequency tables** extracted from all granular 
 | `docs/` directory naming | 10/10 (100%) | ✅ Perfect convergence |
 | `.cursorrules` file naming | 9/10 (90%) | ⚠️ Near-perfect (ai-dev-kit source has no cursorrules) |
 | `RC.EPIC.STORY.TASK+BUILD` version schema | 5/10 (50%) | ⚠️ Moderate convergence |
-| `E{epic}:S{story}:T{task}` task naming | 6/10 (60%) | ✅ Strong convergence |
+| `E\{epic\}:S\{story\}:T\{task\}` task naming | 6/10 (60%) | ✅ Strong convergence |
 
 ### 7.2 Moderate Convergence Patterns (33-66% adoption)
 
 | Pattern | Frequency | Status |
 |---------|-----------|--------|
 | ADK Canonical KB structure (5 pillars) | 4/10 (40%) | ⚠️ Moderate convergence |
-| `epic/{N}-{description}` branch naming | 4/10 (40%) | ⚠️ Moderate convergence |
-| `src/{project}/version.py` version file | 3/10 (30%) | ⚠️ Low convergence (ai-dev-kit uses legacy path) |
+| `epic/\{N\}-\{description\}` branch naming | 4/10 (40%) | ⚠️ Moderate convergence |
+| `src/\{project\}/version.py` version file | 3/10 (30%) | ⚠️ Low convergence (ai-dev-kit uses legacy path) |
 | 11-step or 12-step RW | 5/10 (50%) | ⚠️ Moderate convergence |
 
-### 7.3 Low Convergence Patterns (<33% adoption)
+### 7.3 Low Convergence Patterns (&lt;33% adoption)
 
 | Pattern | Frequency | Status |
 |---------|-----------|--------|
@@ -270,7 +270,7 @@ This document provides **pattern frequency tables** extracted from all granular 
 - **`.cursorrules` file naming:** Nearly universal (9/10 = 90%, ai-dev-kit source has no cursorrules)
 
 ### 8.3 Strong Convergence
-- **Task naming (`E{epic}:S{story}:T{task}`):** 6/10 (60%)
+- **Task naming (`E\{epic\}:S\{story\}:T\{task\}`):** 6/10 (60%)
 - **Version schema (`RC.EPIC.STORY.TASK+BUILD`):** 5/10 (50%)
 
 ### 8.4 Areas Needing Improvement
@@ -281,7 +281,7 @@ This document provides **pattern frequency tables** extracted from all granular 
 ### 8.4 Recommendations
 
 1. **Enforce `docs/` naming:** Already universal, maintain as canonical
-2. **Promote `E{epic}:S{story}:T{task}` format:** Strong convergence (67%), make canonical
+2. **Promote `E\{epic\}:S\{story\}:T\{task\}` format:** Strong convergence (67%), make canonical
 3. **Promote `rw-config.yaml`:** Low adoption (33%), needs promotion
 4. **Promote comprehensive RW trigger:** Low adoption (22%), needs promotion
 5. **Support version schema flexibility:** 56% adoption is good, but support legacy formats

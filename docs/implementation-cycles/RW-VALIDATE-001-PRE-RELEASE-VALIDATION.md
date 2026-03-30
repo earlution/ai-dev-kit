@@ -40,7 +40,7 @@ Epic alignment: CORRECT
 
 **Validation Criteria:**
 - Exit code must be 0 (PASS)
-- Current branch must be in epic/{n} format
+- Current branch must be in epic/\{n\} format
 - Working directory must be clean
 - Git remote must be properly configured
 

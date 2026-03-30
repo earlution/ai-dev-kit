@@ -66,7 +66,7 @@ All paths resolved from repository root; **all OK**.
 
 - `epics/Epic-7/Epic-7.md` — exists  
 - `epics/Epic-7/Story-006-*.md` — matches `Story-006-post-windsurf-project-review.md`  
-- Task doc `Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md` — matches `T{task}-*.md` convention under story folder  
+- Task doc `Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md` — matches `T\{task\}-*.md` convention under story folder  
 
 **Semantics:** `changelog_archival.mode: latest_only` matches [CHANGELOG.md](../../../../../../CHANGELOG.md) header and practice. `semver_mapping_strategy: task_touch` matches README / `semver_converter.py` usage. `use_kanban: true` matches RW Step 7 behavior.
 

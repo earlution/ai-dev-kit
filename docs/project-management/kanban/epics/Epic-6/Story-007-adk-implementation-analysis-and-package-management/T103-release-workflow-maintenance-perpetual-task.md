@@ -30,7 +30,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 **Value:** `E6:S07:T103`
 
 ---
@@ -58,7 +58,7 @@ This is a **perpetual task** dedicated to Release Workflow (RW) and workflow fra
 
 ## Deliverable
 
-- Version attributed to E6:S07:T103+{N} for RW maintenance releases
+- Version attributed to E6:S07:T103+\{N\} for RW maintenance releases
 - Perpetual task pattern available in packaged Kanban framework for adoption
 
 ---
@@ -85,7 +85,7 @@ This is a **perpetual task** dedicated to Release Workflow (RW) and workflow fra
 - Status: IN PROGRESS (never changes to COMPLETE)
 - Task Type: Perpetual Maintenance
 - Build Warning Suppression: Enabled
-- Version Pattern: `v0.6.7.103+{N}` where N = RW maintenance release count
+- Version Pattern: `v0.6.7.103+\{N\}` where N = RW maintenance release count
 
 ### Attribution Logic
 

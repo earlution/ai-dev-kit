@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-30  
 **Submitted By:** User (via agent)  
 **Priority:** HIGH  
-**Status:** PROPOSED  
+**Status:** IMPLEMENTED (pending RW forensic close — config + scope **2026-03-30**)  
 **Assigned Task:** E5:S09:T02 — [`T02-docusaurus-canonical-docs-path-fr-066.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T02-docusaurus-canonical-docs-path-fr-066.md)
 
 ---
@@ -50,25 +50,25 @@ The canonical KB and documentation live under repo root `docs/`. The portal curr
 
 ## Functional Requirements
 
-- [ ] **FR-066:R01** – Docs plugin reads from repo `docs/` per config (not ambiguous copy-paste).
-- [ ] **FR-066:R02** – Exclude list (or equivalent) for at least **changelog archive** mass paths if they are not intended for v1 publish—**or** explicit decision “include all” with performance caveat documented.
-- [ ] **FR-066:R03** – Publish scope is **reviewable in git** (committed markdown).
-- [ ] **FR-066:R04** – `editUrl` aligns with paths under `docs/` once FR-065 policy is applied (update if FR-065 landed first).
+- [x] **FR-066:R01** – Docs plugin reads from repo **`docs/`** (`path: '../docs'` in `portal/docusaurus.config.js`, **2026-03-30**).
+- [x] **FR-066:R02** – `exclude` globs for `changelog-and-release-notes/changelog-archive/**` and mirror under `knowledge/`.
+- [x] **FR-066:R03** – Publish scope in **`portal/README.md`** (committed).
+- [x] **FR-066:R04** – Docs **`editUrl`** → `https://github.com/earlution/ai-dev-kit/tree/main/docs/`.
 
 ---
 
 ## Non-Functional Requirements
 
-- [ ] **FR-066:NF01** – **Traceability:** Scope doc references `ultimate-canonical-kb-structure.md` where pillars are named.
-- [ ] **FR-066:NF02** – Build **may fail** after this FR; FR-067 owns green build.
+- [x] **FR-066:NF01** – `portal/README.md` links **`ultimate-canonical-kb-structure.md`**; entry doc `docs/documentation/docusaurus-portal-index.md`.
+- [x] **FR-066:NF02** – `npm run build` fails on **MDX** in corpus (e.g. `fr-br/FR-009`, `FR-014`, `FR-059`); **FR-067** owns green build.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] AC1: Config points Docusaurus docs at the repository `docs/` tree (or documented hybrid with no duplicate slugs).
-- [ ] AC2: Publish scope (include/exclude + rationale) is committed.
-- [ ] AC3: Team can run `npm run build` and see **actionable** failures for FR-067 (not silent misconfiguration).
+- [x] AC1: Config points Docusaurus docs at repository `docs/` tree; `portal/docs` scaffold removed.
+- [x] AC2: Publish scope (include/exclude + rationale) in `portal/README.md`.
+- [x] AC3: `npm run build` yields **actionable** MDX errors (sample paths documented on **E5:S09:T02**).
 
 ---
 

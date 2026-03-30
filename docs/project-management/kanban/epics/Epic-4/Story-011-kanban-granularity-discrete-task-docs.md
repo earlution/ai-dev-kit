@@ -90,7 +90,7 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 2. Add explicit requirement for 3-tier structure (Epic → Story → Task)
 3. Mandate discrete Task documents (or clearly delimited sections using Task ID)
 4. Define required Task doc fields:
-   - Task ID (`E{epic}:S{story}:T{task}`)
+   - Task ID (`E\{epic\}:S\{story\}:T\{task\}`)
    - Scope
    - Acceptance criteria
    - Status
@@ -203,7 +203,7 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 2. Add section to Kanban Governance Policy:
    - Section: "Abstract Spaces for Forensic Traceability"
    - Subsection: "Zero-Numbered E/S/T Documentation"
-   - Define Epic-level (`0.{EPIC}.0.0+0`), Story-level (`0.{EPIC}.{STORY}.0+0`), Task-level (`0.{EPIC}.{STORY}.{TASK}+0`) abstract spaces
+   - Define Epic-level (`0.\{EPIC\}.0.0+0`), Story-level (`0.\{EPIC\}.\{STORY\}.0+0`), Task-level (`0.\{EPIC\}.\{STORY\}.\{TASK\}+0`) abstract spaces
    - Subsection: "SOP for Committing Initial E/S/T Docs"
    - Specify when, where, and how to commit initial E/S/T documentation
    - Cross-reference to Numbering Policy

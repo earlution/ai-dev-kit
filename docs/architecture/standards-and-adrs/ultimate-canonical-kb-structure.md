@@ -116,7 +116,7 @@ docs/
 
 **3. project-management/**
 - Project management documentation
-- Kanban structure (`kanban/epics/Epic-{N}/`)
+- Kanban structure (`kanban/epics/Epic-\{N\}/`)
 - Governance documents
 
 **4. guides/** (User-Facing)

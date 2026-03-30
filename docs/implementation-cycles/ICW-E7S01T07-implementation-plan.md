@@ -306,7 +306,7 @@ Detailed implementation roadmap for the Markdown Maintenance Workflow (MMW) with
 ### Performance Metrics
 - **Test Coverage:** >90% code coverage for new functionality
 - **Performance:** Scoped validation >50% faster than baseline for small changes
-- **Reliability:** <1% false positive/negative rate in production
+- **Reliability:** &lt;1% false positive/negative rate in production
 
 ### Adoption Metrics
 - **Usage Rate:** MMW executed for >80% of releases with baseline debt

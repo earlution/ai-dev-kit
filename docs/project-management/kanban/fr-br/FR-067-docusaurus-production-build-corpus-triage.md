@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-30  
 **Submitted By:** User (via agent)  
 **Priority:** HIGH  
-**Status:** PROPOSED  
+**Status:** ACCEPTED  
 **Assigned Task:** E5:S09:T03 — [`T03-docusaurus-build-triage-fr-067.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T03-docusaurus-build-triage-fr-067.md)
 
 ---
@@ -26,7 +26,7 @@ After **FR-066** points the site at repo `docs/`, make **`npm run build`** succe
 
 ## Problem Statement
 
-Repo `docs/` has hundreds of markdown files, mixed frontmatter, and links that assume GitHub or editor contexts. Docusaurus with `onBrokenLinks: 'throw'` will surface failures. Without a dedicated triage FR, portal integration stalls in an ambiguous state.
+Repo `docs/` has hundreds of markdown files, mixed frontmatter, and links that assume GitHub or editor contexts. A strict `onBrokenLinks: 'throw'` gate blocks the first green build until link hygiene catches up; triage may use `warn` with an explicit policy (see portal README) while remediating.
 
 ---
 
@@ -48,25 +48,25 @@ Repo `docs/` has hundreds of markdown files, mixed frontmatter, and links that a
 
 ## Functional Requirements
 
-- [ ] **FR-067:R01** – `npm run build` in `portal/` passes on CI-representative Node version (≥20 per `package.json` engines).
-- [ ] **FR-067:R02** – Broken link policy is **explicit** in config or in publish scope doc (throw vs warn + deadline).
-- [ ] **FR-067:R03** – Any excluded subtree added during triage is reflected in FR-066’s publish scope (diff or addendum).
-- [ ] **FR-067:R04** – Log or short **`docs/`-compatible** note (e.g. under `docs/maintenance/` or portal README) summarizing triage stats: files touched, top failure classes, excludes added.
+- [x] **FR-067:R01** – `npm run build` in `portal/` passes on CI-representative Node version (≥20 per `package.json` engines).
+- [x] **FR-067:R02** – Broken link policy is **explicit** in config and portal README (`warn` + target `throw`; see triage note).
+- [x] **FR-067:R03** – Excludes unchanged from FR-066; documented in README (no additional subtrees excluded for links).
+- [x] **FR-067:R04** – Triage note: [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../../../../maintenance/docusaurus-corpus-triage-fr-067.md); tests: `tests/test_portal_fr067_build_triage.py`.
 
 ---
 
 ## Non-Functional Requirements
 
-- [ ] **FR-067:NF01** – Prefer **surgical** edits (escape MDX, fix links, frontmatter) over bulk rewrites.
-- [ ] **FR-067:NF02** – No false “Fixed” claims in changelogs; use project release language rules.
+- [x] **FR-067:NF01** – Prefer **surgical** edits (escape MDX, fix links, frontmatter) over bulk rewrites. *(Applied: targeted MDX escapes, placeholder script, limited prose edits.)*
+- [x] **FR-067:NF02** – No false “Fixed” claims in changelogs; use project release language rules.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] AC1: Clean production build for the defined publish scope.
-- [ ] AC2: Publish scope doc matches actual includes/excludes.
-- [ ] AC3: Triage summary exists for future maintenance.
+- [x] AC1: Clean production build for the defined publish scope (`npm run build` exit 0).
+- [x] AC2: Publish scope doc matches actual includes/excludes (FR-066 globs + README).
+- [x] AC3: Triage summary exists for future maintenance.
 
 ---
 

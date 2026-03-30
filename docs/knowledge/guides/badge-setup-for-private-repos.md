@@ -107,7 +107,7 @@ We use [BYOB](https://github.com/RubbaBoy/BYOB) to create dynamic badges that wo
    - Updates automatically when coverage is calculated
    - Extracts coverage percentage from pytest-cov output
    - Status: Coverage percentage (e.g., "85%") or "not configured"
-   - Color: Success (≥80%), Important (≥60%), Critical (<60%), Grey (not configured)
+   - Color: Success (≥80%), Important (≥60%), Critical (&lt;60%), Grey (not configured)
    - Icon: Shield
 
 6. **Code Quality Badge**

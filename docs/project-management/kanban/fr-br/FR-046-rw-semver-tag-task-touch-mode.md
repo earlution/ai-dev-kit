@@ -30,7 +30,7 @@ When a project uses **ADR-002 Task-Touch Derived Mapping** (SemVer from internal
 - For projects configured with `semver_mapping_strategy: task_touch` (or equivalent):
   - RW should:
     - Compute SemVer for the current internal version using the **task-touch mapping**.
-    - Create a Git tag named `v{semver}` (e.g. `v0.1.22`).
+    - Create a Git tag named `v\{semver\}` (e.g. `v0.1.22`).
     - Use that SemVer tag as the primary reference for GitHub releases and package publishing.
   - Optionally, RW may:
     - Also create an internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability.
@@ -74,7 +74,7 @@ Using SemVer tags when task_touch is enabled ensures:
 - [ ] **FR-046:R01** – RW Step 11 detects when `task_touch` SemVer mapping is enabled (e.g. via `rw-config.yaml`).
 - [ ] **FR-046:R02** – When enabled, RW Step 11:
   - Calls the task-touch SemVer converter (e.g. `get_semver_task_touch(include_build=False)`).
-  - Creates a Git tag `v{semver}` (e.g. `v0.1.22`) pointing to the release commit.
+  - Creates a Git tag `v\{semver\}` (e.g. `v0.1.22`) pointing to the release commit.
 
 - [ ] **FR-046:R03** – RW Step 11 may create an internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability, but SemVer is the **primary external tag**.
 - [ ] **FR-046:R04** – `create_github_release.py` (or equivalent tooling) uses the SemVer tag as the primary release name and includes the internal version in the body/metadata.

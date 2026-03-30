@@ -235,7 +235,7 @@ System logic that determines state based on incomplete information, leading to i
 
 **Recommended Location:** `docs/knowledge/analysis/abstract-anti-patterns/`
 
-**File Naming:** `abstract-anti-pattern-{category}-{name}.md`
+**File Naming:** `abstract-anti-pattern-{category}-\{name\}.md`
 
 **Example:** `abstract-anti-patterns-state-detection-logic.md`
 

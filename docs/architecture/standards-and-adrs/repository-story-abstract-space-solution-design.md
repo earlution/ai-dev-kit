@@ -25,7 +25,7 @@ This document provides the **definitive solution design** for resolving the arch
 2. **S01 becomes repository story** (concrete story for FR/BR/UXR repositories)
 3. **T101+ reserved for perpetual tasks** (3-digit range, unlimited capacity, clear differentiation)
 4. **Versioning system extended** to support 3-digit task numbers
-5. **Epic-level perpetual tasks** follow same pattern (E{X}:S{Y}:T101+)
+5. **Epic-level perpetual tasks** follow same pattern (E&lbrace;X&rbrace;:S&lbrace;Y&rbrace;:T101+)
 
 ---
 
@@ -50,7 +50,7 @@ This document provides the **definitive solution design** for resolving the arch
 ### 1. Abstract Space Separation
 
 **S00 Becomes Purely Abstract (Epic-Level Only):**
-- S00 = `v0.{EPIC}.0.0+0` (Epic-level abstract space)
+- S00 = `v0.\{EPIC\}.0.0+0` (Epic-level abstract space)
 - **No tasks** in S00 (abstract space cannot contain concrete work)
 - Purpose: Forensic traceability anchor for entire Epic
 - Only updated if Epic's core definition changes (rarely)
@@ -59,8 +59,8 @@ This document provides the **definitive solution design** for resolving the arch
 - E5:S01 = FR Repo (concrete story with tasks)
 - E6:S01 = BR Repo (concrete story with tasks)
 - E7:S01 = UXR Repo (concrete story with tasks)
-- S01 abstract space: `v0.{EPIC}.1.0+0` (Story-level abstract space)
-- Repository tasks: `v0.{EPIC}.1.{TASK}+0` (concrete work)
+- S01 abstract space: `v0.\{EPIC\}.1.0+0` (Story-level abstract space)
+- Repository tasks: `v0.\{EPIC\}.1.\{TASK\}+0` (concrete work)
 
 **Version Schema:**
 - Epic abstract space: `0.5.0.0+0` (Epic 5)
@@ -115,7 +115,7 @@ This document provides the **definitive solution design** for resolving the arch
 
 **Validation:**
 - TASK must be >= 1
-- TASK <= 99 (regular tasks) OR TASK >= 101 (perpetual tasks)
+- TASK &lt;= 99 (regular tasks) OR TASK >= 101 (perpetual tasks)
 - TASK 100 is invalid (reserved for future use, if needed)
 
 **Version Comparison:**
@@ -209,7 +209,7 @@ This document provides the **definitive solution design** for resolving the arch
 **Section: Task Number Format**
 - **Current:** TASK is 2-digit (01-99)
 - **Updated:** TASK is 2-digit (01-99) for regular tasks, 3-digit (101+) for perpetual tasks
-- **Validation:** TASK >= 1, TASK <= 99 (regular) OR TASK >= 101 (perpetual), TASK 100 is invalid
+- **Validation:** TASK >= 1, TASK &lt;= 99 (regular) OR TASK >= 101 (perpetual), TASK 100 is invalid
 
 **Section: Abstract Space**
 - **Current:** S00 is abstract space with tasks

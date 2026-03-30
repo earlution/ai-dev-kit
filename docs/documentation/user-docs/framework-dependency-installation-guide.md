@@ -593,8 +593,8 @@ If you prefer to set it up manually:
    ```
 
 4. **Update file paths in the section:**
-   - Replace `{project}` with your project name
-   - Update version file path: `src/{project}/version.py` → `src/yourproject/version.py`
+   - Replace `\{project\}` with your project name
+   - Update version file path: `src/\{project\}/version.py` → `src/yourproject/version.py`
    - Update Kanban paths if using Kanban framework
    - Update validator script paths to match your framework location
 
@@ -642,7 +642,7 @@ python3 frameworks/kanban/scripts/install_kanban_framework.py --mode fresh
 ```
 
 **What You Get After Installation:**
-- ✅ Canonical epic templates installed in `docs/project-management/kanban/epics/Epic-{N}/`
+- ✅ Canonical epic templates installed in `docs/project-management/kanban/epics/Epic-\{N\}/`
 - ✅ Epic 1 contextualized with your project name (e.g., "MyProject Core", not "AI Dev Kit Core")
 - ✅ Only canonical core epics (1-8, 10, 18, 22, 23) installed
 - ✅ No ai-dev-kit project-specific epics
@@ -776,8 +776,8 @@ If you prefer to set it up manually:
    ```
 
 4. **Update file paths in the section:**
-   - Replace `{project}` with your project name
-   - Update version file path: `src/{project}/version.py` → `src/yourproject/version.py`
+   - Replace `\{project\}` with your project name
+   - Update version file path: `src/\{project\}/version.py` → `src/yourproject/version.py`
    - Update Kanban paths if using Kanban framework
    - Update validator script paths to match your framework location
 

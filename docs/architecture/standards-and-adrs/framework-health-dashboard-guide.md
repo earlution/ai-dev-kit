@@ -121,7 +121,7 @@ python3 scripts/frameworks/framework-health-monitor.py --json | \
 - **🟡 Good (70-84%):** Framework is healthy with minor improvements possible
 - **🟠 Fair (55-69%):** Framework needs attention and improvements
 - **🔴 Poor (40-54%):** Framework requires significant improvements
-- **⚫ Critical (<40%):** Framework is in critical condition, immediate action required
+- **⚫ Critical (&lt;40%):** Framework is in critical condition, immediate action required
 
 **Dimension Scores:**
 - Each dimension (Usage & Adoption, Maintenance Activity, etc.) has its own score

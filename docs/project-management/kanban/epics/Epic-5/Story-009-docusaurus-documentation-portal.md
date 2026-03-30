@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-03-30  
-**Last updated:** 2026-03-30 (v0.5.9.1+2 — T01 FR-065 complete)  
-**Version:** v0.5.9.1+2  
+**Last updated:** 2026-03-30 (v0.5.9.3+1 — T03 FR-067 complete)  
+**Version:** v0.5.9.3+1  
 **Code:** E5S09
 
 ---
@@ -21,8 +21,8 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E5:S09:T01 – Docusaurus site identity and config (FR-065)** - ✅ COMPLETE (v0.5.9.1+2)
-- [ ] **E5:S09:T02 – Canonical docs path and publish scope (FR-066)** - TODO
-- [ ] **E5:S09:T03 – Production build corpus triage (FR-067)** - TODO
+- [x] **E5:S09:T02 – Canonical docs path and publish scope (FR-066)** - ✅ COMPLETE (v0.5.9.2+2)
+- [x] **E5:S09:T03 – Production build corpus triage (FR-067)** - ✅ COMPLETE (v0.5.9.3+1)
 - [ ] **E5:S09:T04 – Navigation, sidebar IA, and landing page (FR-068)** - TODO
 - [ ] **E5:S09:T05 – CI build gate (FR-069)** - TODO
 - [ ] **E5:S09:T06 – Deployment and hosting (FR-070)** - TODO

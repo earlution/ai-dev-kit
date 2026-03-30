@@ -30,7 +30,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 **Value:** `E6:S07:T102`
 
 ---
@@ -59,7 +59,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 
 ## Deliverable
 
-- Version attributed to E6:S07:T102+{N}; changelog validated/archived as per CMW; release committed and tagged.
+- Version attributed to E6:S07:T102+\{N\}; changelog validated/archived as per CMW; release committed and tagged.
 
 ## Problem Statement
 
@@ -86,7 +86,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 - Status: IN PROGRESS (never changes to COMPLETE)
 - Task Type: Maintenance/Synchronization
 - Build Warning Suppression: Enabled
-- Version Pattern: `v0.6.7.102+{N}` where N = CMW run number
+- Version Pattern: `v0.6.7.102+\{N\}` where N = CMW run number
 
 ### RW Attribution Logic
 
@@ -138,7 +138,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 
 ## Version Anchor
 
-**Forensic marker:** Perpetual task; version pattern `v0.6.7.102+{N}`. Latest: v0.6.7.102+6 (perpetual docs update: runbooks, policy).
+**Forensic marker:** Perpetual task; version pattern `v0.6.7.102+\{N\}`. Latest: v0.6.7.102+6 (perpetual docs update: runbooks, policy).
 
 ---
 

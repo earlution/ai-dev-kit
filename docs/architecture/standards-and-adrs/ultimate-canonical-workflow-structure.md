@@ -144,7 +144,7 @@ python packages/frameworks/workflow mgt/scripts/validation/validate_branch_conte
 **Agentic Intelligence Required:**
 - **ANALYZE:** Examine staged changes and current version
 - **DETERMINE:** Identify if work corresponds to a Kanban task
-- **VALIDATE:** Check if Task document exists for current version (E{epic}:S{story}:T{task})
+- **VALIDATE:** Check if Task document exists for current version (E\{epic\}:S\{story\}:T\{task\})
 - **DECIDE:** If no task exists → BLOCK workflow, provide feedback to user
 
 **Implementation:**
@@ -238,10 +238,10 @@ python packages/frameworks/workflow mgt/scripts/validation/validate_branch_conte
 - Execute: `python packages/frameworks/workflow mgt/scripts/validation/validate_changelog_format.py`
 
 **Step 12: Commit Changes**
-- Execute: `git commit -m "Release v0.N.NNN.T+B: {description}"`
+- Execute: `git commit -m "Release v0.N.NNN.T+B: \{description\}"`
 
 **Step 13: Create Git Tag**
-- Execute: `git tag -a "v0.N.NNN.T+B" -m "Release v0.N.NNN.T+B: {description}"`
+- Execute: `git tag -a "v0.N.NNN.T+B" -m "Release v0.N.NNN.T+B: \{description\}"`
 
 **Step 14: Push to Remote**
 - Execute: `git push origin {branch} --tags`
@@ -356,7 +356,7 @@ python packages/frameworks/workflow mgt/scripts/validation/validate_branch_conte
 **CANONICAL:** Agent validates work is task-driven before proceeding
 
 **Implementation:**
-- Agent analyzes current version (E{epic}:S{story}:T{task})
+- Agent analyzes current version (E\{epic\}:S\{story\}:T\{task\})
 - Agent constructs expected Task document path using `task_doc_pattern`
 - Agent checks if Task document exists
 - If no task: BLOCK workflow, provide feedback

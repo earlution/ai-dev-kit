@@ -25,7 +25,7 @@ RW-AGENT-001 will coordinate multiple sub-agents to execute the 17-step Release 
 
 ### Release Configuration
 - **SemVer Strategy:** task_touch
-- **Expected Tag Format:** v{MAJOR.MINOR.PATCH+BUILD}
+- **Expected Tag Format:** v&lbrace;MAJOR.MINOR.PATCH+BUILD&rbrace;
 - **Release Type:** Consolidated release for all 5 tasks
 - **Configuration File:** rw-config.yaml
 
@@ -139,7 +139,7 @@ RW-AGENT-001 will coordinate multiple sub-agents to execute the 17-step Release 
 ## Expected Deliverables
 
 ### Primary Deliverables
-1. **Release Tag**: v{current_version}+1 (consolidated release)
+1. **Release Tag**: v&lbrace;current_version&rbrace;+1 (consolidated release)
 2. **Changelog**: Comprehensive changelog with all 5 task completions
 3. **Updated Documentation**: README, BR/FR docs, kanban docs
 4. **Git Commit**: Single commit with all release changes

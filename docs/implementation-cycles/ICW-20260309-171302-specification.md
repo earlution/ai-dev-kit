@@ -85,7 +85,7 @@ The implementation of task-touch SemVer tagging (FR-046) and ADR-002 Task-Touch 
 |----------|-------------|----------|-------------|
 | Compatibility | Backward compatibility | High | Existing releases work unchanged |
 | Security | Security validation | High | Zero new vulnerabilities |
-| Performance | Performance impact | Medium | <5% regression |
+| Performance | Performance impact | Medium | &lt;5% regression |
 | Reliability | Release reliability | High | 99%+ success rate |
 
 ---
@@ -207,7 +207,7 @@ The implementation of task-touch SemVer tagging (FR-046) and ADR-002 Task-Touch 
 ### Non-Functional Acceptance
 - [ ] Backward compatibility maintained for existing releases
 - [ ] Security requirements met with no new vulnerabilities
-- [ ] Performance requirements met with <5% regression
+- [ ] Performance requirements met with &lt;5% regression
 - [ ] Reliability requirements met with 99%+ success rate
 
 ### Business Acceptance

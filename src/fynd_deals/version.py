@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management)
 VERSION_STORY = 9     # Story number (Story 9: Docusaurus Documentation Portal)
-VERSION_TASK = 1      # Task number (E5:S09:T01 — FR-065 Docusaurus site identity)
-VERSION_BUILD = 2     # Build number (v0.5.9.1+1 was RW -k; +2 is FR-065 implementation release)
+VERSION_TASK = 3      # Task number (E5:S09:T03 — FR-067 Docusaurus production build triage)
+VERSION_BUILD = 1     # Build number (first release for T03)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.9.1+2 — E5:S09:T01: FR-065 portal identity, tests, README
+# Current: 0.5.9.3+1 — E5:S09:T03: FR-067 corpus triage, link policy, MDX escapes, tests
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
@@ -40,5 +40,4 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py
 # - Abstract space awareness: FR-020 (validator recognizes +0 as valid)
-
 

@@ -171,7 +171,7 @@ The KB follows a clear hierarchy:
 - Always use uppercase `CHANGELOG` prefix
 
 **Task Deliverable Files:**
-- Use `T{NN}-{descriptive-name}.md` format (2-digit zero padding)
+- Use `T\{NN\}-{descriptive-name}.md` format (2-digit zero padding)
 - Examples: `T01-kb-structure-analysis.md`, `T02-kb-structure-principles.md`
 - Use zero-padded task numbers (T01, T02, etc.)
 - Use descriptive kebab-case names
@@ -184,7 +184,7 @@ The KB follows a clear hierarchy:
 - Use descriptive kebab-case names
 
 **Epic Files:**
-- Use `Epic-{N}.md` format (or `Epic-{N}-{name}.md` if needed)
+- Use `Epic-\{N\}.md` format (or `Epic-\{N\}-\{name\}.md` if needed)
 - Examples: `Epic-1.md`, `Epic-4.md`
 - Use numeric epic numbers without zero-padding
 
@@ -312,7 +312,7 @@ The KB follows a clear hierarchy:
 - Use consistent link text for same target
 
 **Version References:**
-- Reference versions using format: `v{RC}.{EPIC}.{STORY}.{TASK}+{BUILD}`
+- Reference versions using format: `v{RC}.\{EPIC\}.\{STORY\}.\{TASK\}+\{BUILD\}`
 - Example: `v0.1.3.1+1`
 - Link to changelog: `[v0.1.3.1+1](../changelog-and-release-notes/changelog-archive/CHANGELOG_v0.1.3.1+1.md)`
 

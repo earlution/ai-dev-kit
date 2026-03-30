@@ -20,7 +20,7 @@ This specification defines the implementation requirements for enabling Release 
 
 **FR-1: SemVer Tag Generation**
 - RW Step 11 must generate SemVer tags when `semver_mapping_strategy: task_touch` is configured
-- SemVer tags follow the format `v{MAJOR}.{MINOR}.{PATCH}` derived from internal version
+- SemVer tags follow the format `v\{MAJOR\}.\{MINOR\}.\{PATCH\}` derived from internal version
 - Internal version tags `v{RC.EPIC.STORY.TASK+BUILD}` must also be created for traceability
 
 **FR-2: Configuration Integration**
@@ -292,7 +292,7 @@ def create_git_tag(self, version_info):
 - [ ] Zero regression in existing RW functionality
 - [ ] Comprehensive test coverage (>90%)
 - [ ] Clear documentation and examples
-- [ ] Performance impact <5% increase in RW time
+- [ ] Performance impact &lt;5% increase in RW time
 
 ### Integration Success
 
@@ -357,7 +357,7 @@ def create_git_tag(self, version_info):
 
 ## Rollback Procedures
 
-### Immediate Rollback (<5 minutes)
+### Immediate Rollback (&lt;5 minutes)
 
 **Trigger:** Configuration errors or tag creation failures
 
@@ -483,7 +483,7 @@ def create_git_tag(self, version_info):
 ### Release Criteria
 
 - Zero critical bugs
-- Performance impact <5%
+- Performance impact &lt;5%
 - 100% backward compatibility
 - Complete documentation coverage
 - Successful rollback testing

@@ -103,7 +103,7 @@ Tasks within each MoSCOW section are ordered chronologically, with most recently
    - Update `kanban-board.md` and `_index.md`
 
 3. **Create Task**:
-   - Add `epics/Epic-X/Story-XXX/T{task}-description.md` (separate file format) OR
+   - Add `epics/Epic-X/Story-XXX/T\{task\}-description.md` (separate file format) OR
    - Add delimited section in Story document using Task ID as header
    - Update Story document with Task reference
 

@@ -69,7 +69,7 @@ This report reviews the existing integration documentation in the Kanban framewo
 - **Gap:** Need dev-kit specific path examples
 
 **Epic/Story Structure:**
-- Framework docs reference: `Epic-{epic}.md`, `Story-{N}-{Name}.md`
+- Framework docs reference: `Epic-\{epic\}.md`, `Story-\{N\}-\{Name\}.md`
 - Dev-kit uses: `docs/project-management/kanban/epics/Epic-X.md`, `docs/project-management/kanban/epics/Epic-X/stories/Story-XXX-*.md`
 - **Gap:** Need dev-kit specific path examples
 
@@ -128,8 +128,8 @@ This report reviews the existing integration documentation in the Kanban framewo
 - Introduced in VWMP v2.0.0
 - Purpose: Prevent documentation inconsistencies
 - Systematic process:
-  1. Read the FULL Epic-{epic}.md file
-  2. Read the authoritative Story-{N}-{Name}.md file
+  1. Read the FULL Epic-\{epic\}.md file
+  2. Read the authoritative `Story-\{N\}-\{Name\}.md` file
   3. Find ALL sections referencing the story/task (grep/search)
   4. Update ALL of them to match the Story file's state
   5. Validate consistency
@@ -144,12 +144,12 @@ This report reviews the existing integration documentation in the Kanban framewo
 - **Note:** This is a documentation lag issue, not a functional gap
 
 **Path References:**
-- Framework docs reference: `docs/project-management/epics/overview/Epic {epic}/Epic-{epic}.md`
+- Framework docs reference: `docs/project-management/epics/overview/Epic \{epic\}/Epic-\{epic\}.md`
 - Dev-kit uses: `docs/project-management/kanban/epics/Epic-X.md`
 - **Gap:** Path structure differs (dev-kit uses consolidated `kanban/` structure)
 
 **Story Document Paths:**
-- Framework docs reference: `docs/project-management/kanban/Epic {epic}/Story-{N}-{Name}.md`
+- Framework docs reference: `docs/project-management/kanban/Epic \{epic\}/Story-\{N\}-\{Name\}.md`
 - Dev-kit uses: `docs/project-management/kanban/epics/Epic-X/stories/Story-XXX-*.md`
 - **Gap:** Path structure differs (dev-kit uses `epics/Epic-X/stories/` structure)
 

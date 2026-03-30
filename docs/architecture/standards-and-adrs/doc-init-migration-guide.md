@@ -154,7 +154,7 @@ Use this checklist when validating your doc-init migration:
 When migrating:
 
 1. **Changelogs**
-   - Use `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]` for `+0` entries in `CHANGELOG.md`
+   - Use `📋 Doc Init: E\{epic\}:S\{story\}:T\{task\} - [Description]` for `+0` entries in `CHANGELOG.md`
    - In detailed changelog archive (`CHANGELOG_vX.Y.Z.T+0.md`), include:
      - `**Build Type:** Doc-Init (+0)`
      - `**Type:** 📋 Doc Init`

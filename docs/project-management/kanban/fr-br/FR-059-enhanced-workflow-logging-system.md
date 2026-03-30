@@ -90,7 +90,7 @@ Key gaps identified:
 
 ### **Performance Requirements**
 
-- [ ] **Minimal Overhead**: Logging adds <5% execution time overhead
+- [ ] **Minimal Overhead**: Logging adds &lt;5% execution time overhead
 - [ ] **Storage Efficient**: Logs compressed and optimized for forensic analysis
 - [ ] **Scalable**: System handles 100+ concurrent workflow executions
 
@@ -145,10 +145,10 @@ Key gaps identified:
 
 ### **Quantitative**
 
-- **Diagnosis Time**: <5 minutes for any workflow failure diagnosis
+- **Diagnosis Time**: &lt;5 minutes for any workflow failure diagnosis
 - **Rollback Success**: 100% success rate for deterministic rollbacks
-- **Storage Growth**: <10% monthly growth in log storage
-- **Performance Impact**: <5% execution time overhead
+- **Storage Growth**: &lt;10% monthly growth in log storage
+- **Performance Impact**: &lt;5% execution time overhead
 
 ### **Qualitative**
 

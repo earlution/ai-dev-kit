@@ -446,7 +446,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
   - **Should Have (S):** High Priority (3.0-3.9)
   - **Could Have (C):** Medium Priority (2.0-2.9)
   - **Ongoing (O):** Perpetual maintenance tasks (not scored, tracked separately)
-  - **Won't Have (W):** Low/Minimal Priority (<2.0)
+  - **Won't Have (W):** Low/Minimal Priority (&lt;2.0)
 
 **Track Progress:**
 - Update task status as work progresses

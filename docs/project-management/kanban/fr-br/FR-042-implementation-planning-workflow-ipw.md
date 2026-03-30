@@ -91,8 +91,8 @@ Define and implement an **Implementation Planning Workflow (IPW)** – a formal 
 ### 3. Plan Doc Template (Proposed)
 
 **Header (required):**
-- Task title (E{epic}:S{story}:T{task} – Planning: Spec, Tests, Implementation Plan)
-- **Host Task:** [link](path) (E{epic}:S{story}:T{task})
+- Task title (`E{epic}:S{story}:T{task}` – Planning: Spec, Tests, Implementation Plan)
+- **Host Task:** [link](path) (`E{epic}:S{story}:T{task}`)
 - Status
 - Planning doc created date
 

@@ -33,7 +33,7 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 ### 1.1 Naming Format Patterns
 
 **Pattern 1: Full Context Format (Most Common)**
-- **Format:** `E{epic}:S{story}:T{task}`
+- **Format:** `E\{epic\}:S\{story\}:T\{task\}`
 - **Examples:**
   - `E20:S08:T01` (been-there - 2-digit task)
   - `E20:S04:T20` (confidentia - 2-digit task)
@@ -43,7 +43,7 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 - **Frequency:** Most common pattern
 
 **Pattern 2: Standalone Task Format (Less Common)**
-- **Format:** `T{task}` or `T{task}-{description}`
+- **Format:** `T\{task\}` or `T\{task\}-\{description\}`
 - **Examples:**
   - `T001`, `T002` (fynd.deals - in some contexts)
   - `T01`, `T02` (standalone references)
@@ -51,7 +51,7 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 - **Frequency:** Less common, often in checklist contexts
 
 **Pattern 3: File Naming Format**
-- **Format:** `Task-{task}-{description}.md` or `T{task}-{description}.md`
+- **Format:** `Task-\{task\}-\{description\}.md` or `T\{task\}-\{description\}.md`
 - **Examples:**
   - `Task-001-update-kanban-policy.md` (ADK templates)
   - `T01-Define-Project-Structure.md` (ADK templates)
@@ -84,13 +84,13 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 ### 1.3 Task ID Context Requirements
 
 **Full Context Required (ADK Policy):**
-- **Format:** `E{epic}:S{story}:T{task}` (always include Epic and Story)
+- **Format:** `E\{epic\}:S\{story\}:T\{task\}` (always include Epic and Story)
 - **Policy:** Tasks are NEVER referenced as standalone `Txxx` or `Txx`
 - **Rationale:** Ensures traceability and prevents ambiguity
 - **Projects Following:** ai-dev-kit (policy), been-there (mostly), confidentia (mostly)
 
 **Standalone Allowed:**
-- **Format:** `T{task}` (within Story context)
+- **Format:** `T\{task\}` (within Story context)
 - **Usage:** In checklists within Story documents
 - **Projects Using:** fynd.deals (mixed), starborn_legacy (in some contexts)
 - **Rationale:** Shorter format when context is clear
@@ -106,7 +106,7 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 | dev-toolkit | `E1:S05:T01` | 2-digit | Yes | Follows ADK policy |
 | ai-dev-kit | `E4:S11:T01` | 2-digit | Yes | Policy: always full context |
 
-**Recommendation:** Use 2-digit padding with full context (`E{epic}:S{story}:T{task}`) as canonical format.
+**Recommendation:** Use 2-digit padding with full context (`E\{epic\}:S\{story\}:T\{task\}`) as canonical format.
 
 ---
 
@@ -136,7 +136,7 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 
 **Pattern: Tasks Embedded in Story Documents**
 - **Location:** Within Story markdown file, using Task ID as header
-- **Structure:** `### E{epic}:S{story}:T{task} – Task Name` followed by task content
+- **Structure:** `### E\{epic\}:S\{story\}:T\{task\} – Task Name` followed by task content
 - **Projects Using:** been-there, confidentia, fynd.deals, starborn_legacy, dev-toolkit (most common)
 - **Example:** Tasks listed in Story document with detailed sections
 - **Frequency:** Most common pattern in practice
@@ -211,7 +211,7 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 ### 3.1 Required Task Fields
 
 **ADK Policy Required Fields:**
-1. **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
+1. **Task ID:** `E\{epic\}:S\{story\}:T\{task\}` (e.g., `E4:S11:T01`)
 2. **Scope:** Clear description of what the task accomplishes
 3. **Acceptance Criteria:** Measurable criteria for task completion
 4. **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
@@ -629,12 +629,12 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 ### 9.1 Task Naming Convention
 
 **Recommended:**
-- Format: `E{epic}:S{story}:T{task}` (always full context)
+- Format: `E\{epic\}:S\{story\}:T\{task\}` (always full context)
 - Padding: 2-digit (`T01`, `T02`, `T10`, `T20`)
 - Rationale: Ensures traceability, prevents ambiguity, supports up to 99 tasks per story
 
 **File Naming:**
-- Format: `T{task}-{description}.md` (for separate files)
+- Format: `T\{task\}-\{description\}.md` (for separate files)
 - Example: `T01-Configure-Firebase.md`
 - Rationale: Shorter file names, task number first for sorting
 
@@ -642,7 +642,7 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 
 **Recommended: Hybrid Approach**
 - **Small/Simple Tasks:** Embedded in Story document
-- **Large/Complex Tasks:** Separate files in `Story-XXX/T{task}-*.md`
+- **Large/Complex Tasks:** Separate files in `Story-XXX/T\{task\}-*.md`
 - **Always:** Task checklist in Story document for quick overview
 
 **Rationale:**
@@ -737,12 +737,12 @@ This document provides **detailed task-level analysis** of Kanban structures acr
 ## 10. Summary: "Ultimate" Canonical Task Structure
 
 ### 10.1 Naming Convention
-- **Format:** `E{epic}:S{story}:T{task}` (always full context, 2-digit padding)
-- **File Naming:** `T{task}-{description}.md` (for separate files)
+- **Format:** `E\{epic\}:S\{story\}:T\{task\}` (always full context, 2-digit padding)
+- **File Naming:** `T\{task\}-\{description\}.md` (for separate files)
 
 ### 10.2 Organization
 - **Small Tasks:** Embedded in Story document
-- **Large Tasks:** Separate files in `Story-XXX/T{task}-*.md`
+- **Large Tasks:** Separate files in `Story-XXX/T\{task\}-*.md`
 - **Always:** Task checklist in Story document
 
 ### 10.3 Structure

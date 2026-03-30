@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-30 (RW E5:S09:T01 v0.5.9.1+2 — T01 complete, off Should)
-**Version:** v0.5.9.1+2 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-30 (RW E5:S09:T03 v0.5.9.3+1 — T03 complete, off Should)
+**Version:** v0.5.9.3+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -28,8 +28,6 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-- **E5:S09:T02** – Canonical docs path and publish scope (FR-066) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T02-docusaurus-canonical-docs-path-fr-066.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-066](fr-br/FR-066-docusaurus-canonical-docs-path-and-publish-scope.md)
-- **E5:S09:T03** – Production build corpus triage (FR-067) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T03-docusaurus-build-triage-fr-067.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-067](fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
 - **E5:S09:T04** – Navigation, sidebar IA, landing (FR-068) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T04-docusaurus-navigation-fr-068.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-068](fr-br/FR-068-docusaurus-navigation-sidebar-and-landing.md)
 - **E5:S09:T05** – CI build gate (FR-069) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T05-docusaurus-ci-fr-069.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-069](fr-br/FR-069-docusaurus-ci-build-gate.md)
 - **E5:S09:T06** – Deployment and hosting (FR-070) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-070](fr-br/FR-070-docusaurus-deployment-and-hosting.md)

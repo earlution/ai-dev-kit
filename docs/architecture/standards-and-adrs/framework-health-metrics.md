@@ -92,7 +92,7 @@ Framework health is measured across **six primary dimensions**, each contributin
 - **Good (60-79%):** Moderate adoption, some active usage
 - **Fair (40-59%):** Low adoption, limited active usage
 - **Poor (20-39%):** Very low adoption, minimal usage
-- **Critical (<20%):** No adoption or usage
+- **Critical (&lt;20%):** No adoption or usage
 
 ---
 
@@ -152,7 +152,7 @@ Framework health is measured across **six primary dimensions**, each contributin
 - **Good (60-79%):** Regular updates, recent activity
 - **Fair (40-59%):** Occasional updates, some activity
 - **Poor (20-39%):** Infrequent updates, limited activity
-- **Critical (<20%):** No updates, stale framework
+- **Critical (&lt;20%):** No updates, stale framework
 
 ---
 
@@ -212,7 +212,7 @@ Framework health is measured across **six primary dimensions**, each contributin
 - **Good (60-79%):** Mostly complete, mostly current documentation
 - **Fair (40-59%):** Some gaps, some outdated documentation
 - **Poor (20-39%):** Significant gaps, outdated documentation
-- **Critical (<20%):** Missing or severely outdated documentation
+- **Critical (&lt;20%):** Missing or severely outdated documentation
 
 ---
 
@@ -272,7 +272,7 @@ Framework health is measured across **six primary dimensions**, each contributin
 - **Good (60-79%):** Mostly up-to-date, secure dependencies
 - **Fair (40-59%):** Some outdated or insecure dependencies
 - **Poor (20-39%):** Many outdated or insecure dependencies
-- **Critical (<20%):** Critical dependency issues
+- **Critical (&lt;20%):** Critical dependency issues
 
 ---
 
@@ -324,7 +324,7 @@ Framework health is measured across **six primary dimensions**, each contributin
 - **Good (60-79%):** Good compatibility, mostly verified
 - **Fair (40-59%):** Some compatibility issues
 - **Poor (20-39%):** Significant compatibility issues
-- **Critical (<20%):** Critical compatibility problems
+- **Critical (&lt;20%):** Critical compatibility problems
 
 ---
 
@@ -384,7 +384,7 @@ Framework health is measured across **six primary dimensions**, each contributin
 - **Good (60-79%):** Stable, mostly reliable
 - **Fair (40-59%):** Some stability issues
 - **Poor (20-39%):** Significant stability problems
-- **Critical (<20%):** Critical stability issues
+- **Critical (&lt;20%):** Critical stability issues
 
 ---
 
@@ -408,7 +408,7 @@ Overall Health Score =
 - **Good (70-84%):** 🟡 Framework is in good health, minor improvements possible
 - **Fair (55-69%):** 🟠 Framework needs attention, improvements recommended
 - **Poor (40-54%):** 🔴 Framework requires significant improvements
-- **Critical (<40%):** ⚫ Framework is in critical condition, immediate action required
+- **Critical (&lt;40%):** ⚫ Framework is in critical condition, immediate action required
 
 ---
 

@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-30 (RW E5:S09:T01 / FR-065)
-**Version:** v0.5.9.1+2
+**Last Updated:** 2026-03-30 (RW E5:S09:T03 / FR-067)
+**Version:** v0.5.9.3+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -25,6 +25,12 @@ housekeeping_policy: keep
   **Completed:** `2026-03-30T16:00:00Z` | **Version:** `v0.2.11.12+2` | **Agent:** `UKW / Maintainer`
 
 #### **Epic 5: Documentation Management**
+- **[E5:S09:T03](epics/Epic-5/Story-009-docusaurus-documentation-portal/T03-docusaurus-build-triage-fr-067.md)** – Docusaurus production build corpus triage (**FR-067**): MDX/placeholder escapes, `onBrokenLinks`/`onBrokenMarkdownLinks` policy, `scripts/escape_mdx_placeholders.py`, `tests/test_portal_fr067_build_triage.py`, `docs/maintenance/docusaurus-corpus-triage-fr-067.md`  
+  **Completed:** `2026-03-30T22:30:00Z` | **Version:** `v0.5.9.3+1` | **Agent:** `RW Agent`
+
+- **[E5:S09:T02](epics/Epic-5/Story-009-docusaurus-documentation-portal/T02-docusaurus-canonical-docs-path-fr-066.md)** – Canonical **`docs/`** path and publish scope (**FR-066**): `portal/docusaurus.config.js`, `portal/README.md`, `tests/test_portal_fr066_docs_path.py`, `docs/documentation/docusaurus-portal-index.md`  
+  **Completed:** `2026-03-30T21:45:00Z` | **Version:** `v0.5.9.2+2` | **Agent:** `RW Agent`
+
 - **[E5:S09:T01](epics/Epic-5/Story-009-docusaurus-documentation-portal/T01-docusaurus-site-identity-fr-065.md)** – Docusaurus site identity (**FR-065**): `portal/docusaurus.config.js`, `portal/README.md`, `tests/test_portal_fr065_identity.py`  
   **Completed:** `2026-03-30T20:35:00Z` | **Version:** `v0.5.9.1+2` | **Agent:** `RW Agent`
 

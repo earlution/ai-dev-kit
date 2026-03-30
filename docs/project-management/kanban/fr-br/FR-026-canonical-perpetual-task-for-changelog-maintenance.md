@@ -47,7 +47,7 @@ Create a perpetual maintenance task for CMW runs:
 - **Task Type:** Perpetual Maintenance
 - **Status:** IN PROGRESS (never changes to COMPLETE)
 - **Build Warning Suppression:** Enabled
-- **Version Pattern:** `v0.6.6.12+{N}` where N = CMW run number
+- **Version Pattern:** `v0.6.6.12+\{N\}` where N = CMW run number
 - **RW Attribution:** All CMW-triggered RWs use T12
 
 ### 2. Include in Canonical Framework

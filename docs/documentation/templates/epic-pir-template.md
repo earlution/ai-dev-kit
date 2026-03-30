@@ -6,13 +6,13 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Post-Implementation Review: Epic {N}
+# Post-Implementation Review: Epic &lbrace;N&rbrace;
 
-**Epic:** {Epic Name}  
+**Epic:** &lbrace;Epic Name&rbrace;  
 **Status:** COMPLETE  
-**Review Date:** {YYYY-MM-DD}  
-**Reviewer:** {Name/Username}  
-**Version Range:** {Start Version} to {End Version}  
+**Review Date:** &lbrace;YYYY-MM-DD&rbrace;  
+**Reviewer:** &lbrace;Name/Username&rbrace;  
+**Version Range:** &lbrace;Start Version&rbrace; to &lbrace;End Version&rbrace;  
 **PIR Version:** 1.0.0
 
 ---
@@ -25,20 +25,20 @@ housekeeping_policy: keep
 
 ## Goals Assessment
 
-- [ ] **Goal 1:** {Goal Description}
-  - **Status:** {Achieved/Partially Achieved/Not Achieved}
-  - **Assessment:** {Detailed assessment of goal achievement}
-  - **Evidence:** {Supporting evidence or metrics}
+- [ ] **Goal 1:** &lbrace;Goal Description&rbrace;
+  - **Status:** &lbrace;Achieved/Partially Achieved/Not Achieved&rbrace;
+  - **Assessment:** &lbrace;Detailed assessment of goal achievement&rbrace;
+  - **Evidence:** &lbrace;Supporting evidence or metrics&rbrace;
 
-- [ ] **Goal 2:** {Goal Description}
-  - **Status:** {Achieved/Partially Achieved/Not Achieved}
-  - **Assessment:** {Detailed assessment of goal achievement}
-  - **Evidence:** {Supporting evidence or metrics}
+- [ ] **Goal 2:** &lbrace;Goal Description&rbrace;
+  - **Status:** &lbrace;Achieved/Partially Achieved/Not Achieved&rbrace;
+  - **Assessment:** &lbrace;Detailed assessment of goal achievement&rbrace;
+  - **Evidence:** &lbrace;Supporting evidence or metrics&rbrace;
 
-- [ ] **Goal 3:** {Goal Description}
-  - **Status:** {Achieved/Partially Achieved/Not Achieved}
-  - **Assessment:** {Detailed assessment of goal achievement}
-  - **Evidence:** {Supporting evidence or metrics}
+- [ ] **Goal 3:** &lbrace;Goal Description&rbrace;
+  - **Status:** &lbrace;Achieved/Partially Achieved/Not Achieved&rbrace;
+  - **Assessment:** &lbrace;Detailed assessment of goal achievement&rbrace;
+  - **Evidence:** &lbrace;Supporting evidence or metrics&rbrace;
 
 ---
 
@@ -46,16 +46,16 @@ housekeeping_policy: keep
 
 [Review each Story in the Epic]
 
-### Story {N}: {Story Name}
+### Story &lbrace;N&rbrace;: &lbrace;Story Name&rbrace;
 
 - **Status:** COMPLETE
-- **Version:** {Version}
-- **Goals Achieved:** {Yes/No/Partial}
-- **Quality:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Key Findings:** {Summary of story outcomes}
-- **Tasks Completed:** {Count} / {Total}
-- **Notable Achievements:** {List key achievements}
-- **Issues Encountered:** {List any issues or blockers}
+- **Version:** &lbrace;Version&rbrace;
+- **Goals Achieved:** &lbrace;Yes/No/Partial&rbrace;
+- **Quality:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Key Findings:** &lbrace;Summary of story outcomes&rbrace;
+- **Tasks Completed:** &lbrace;Count&rbrace; / &lbrace;Total&rbrace;
+- **Notable Achievements:** &lbrace;List key achievements&rbrace;
+- **Issues Encountered:** &lbrace;List any issues or blockers&rbrace;
 
 ---
 
@@ -63,36 +63,36 @@ housekeeping_policy: keep
 
 ### Architecture Decisions
 
-{Key architecture decisions made during Epic execution}
+&lbrace;Key architecture decisions made during Epic execution&rbrace;
 
-- **Decision 1:** {Description}
-  - **Rationale:** {Why this decision was made}
-  - **Impact:** {Impact on project}
+- **Decision 1:** &lbrace;Description&rbrace;
+  - **Rationale:** &lbrace;Why this decision was made&rbrace;
+  - **Impact:** &lbrace;Impact on project&rbrace;
 
-- **Decision 2:** {Description}
-  - **Rationale:** {Why this decision was made}
-  - **Impact:** {Impact on project}
+- **Decision 2:** &lbrace;Description&rbrace;
+  - **Rationale:** &lbrace;Why this decision was made&rbrace;
+  - **Impact:** &lbrace;Impact on project&rbrace;
 
 ### Code Quality
 
-- **Overall Assessment:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Code Review Coverage:** {Percentage or description}
-- **Technical Debt Introduced:** {Description of any technical debt}
-- **Code Quality Metrics:** {Any metrics available}
+- **Overall Assessment:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Code Review Coverage:** &lbrace;Percentage or description&rbrace;
+- **Technical Debt Introduced:** &lbrace;Description of any technical debt&rbrace;
+- **Code Quality Metrics:** &lbrace;Any metrics available&rbrace;
 
 ### Documentation
 
-- **Completeness:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Documentation Created:** {List key documents}
-- **Documentation Gaps:** {Any gaps identified}
-- **Documentation Quality:** {Assessment}
+- **Completeness:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Documentation Created:** &lbrace;List key documents&rbrace;
+- **Documentation Gaps:** &lbrace;Any gaps identified&rbrace;
+- **Documentation Quality:** &lbrace;Assessment&rbrace;
 
 ### Testing
 
-- **Test Coverage:** {Percentage or description}
-- **Test Quality:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Test Types:** {Unit/Integration/E2E/etc.}
-- **Test Results:** {Summary of test outcomes}
+- **Test Coverage:** &lbrace;Percentage or description&rbrace;
+- **Test Quality:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Test Types:** &lbrace;Unit/Integration/E2E/etc.&rbrace;
+- **Test Results:** &lbrace;Summary of test outcomes&rbrace;
 
 ---
 
@@ -100,39 +100,39 @@ housekeeping_policy: keep
 
 ### What Went Well
 
-- {Item 1: Description of what worked well and why}
-- {Item 2: Description of what worked well and why}
-- {Item 3: Description of what worked well and why}
+- &lbrace;Item 1: Description of what worked well and why&rbrace;
+- &lbrace;Item 2: Description of what worked well and why&rbrace;
+- &lbrace;Item 3: Description of what worked well and why&rbrace;
 
 ### What Could Be Improved
 
-- {Item 1: Description of what could be improved and how}
-- {Item 2: Description of what could be improved and how}
-- {Item 3: Description of what could be improved and how}
+- &lbrace;Item 1: Description of what could be improved and how&rbrace;
+- &lbrace;Item 2: Description of what could be improved and how&rbrace;
+- &lbrace;Item 3: Description of what could be improved and how&rbrace;
 
 ### Patterns Identified
 
-- **Pattern 1:** {Description of pattern}
-  - **Context:** {When/where this pattern appears}
-  - **Value:** {Why this pattern is valuable}
-  - **Recommendation:** {How to leverage this pattern}
+- **Pattern 1:** &lbrace;Description of pattern&rbrace;
+  - **Context:** &lbrace;When/where this pattern appears&rbrace;
+  - **Value:** &lbrace;Why this pattern is valuable&rbrace;
+  - **Recommendation:** &lbrace;How to leverage this pattern&rbrace;
 
-- **Pattern 2:** {Description of pattern}
-  - **Context:** {When/where this pattern appears}
-  - **Value:** {Why this pattern is valuable}
-  - **Recommendation:** {How to leverage this pattern}
+- **Pattern 2:** &lbrace;Description of pattern&rbrace;
+  - **Context:** &lbrace;When/where this pattern appears&rbrace;
+  - **Value:** &lbrace;Why this pattern is valuable&rbrace;
+  - **Recommendation:** &lbrace;How to leverage this pattern&rbrace;
 
 ### Anti-Patterns Identified
 
-- **Anti-Pattern 1:** {Description of anti-pattern}
-  - **Context:** {When/where this anti-pattern appears}
-  - **Impact:** {Negative impact of this anti-pattern}
-  - **Recommendation:** {How to avoid this anti-pattern}
+- **Anti-Pattern 1:** &lbrace;Description of anti-pattern&rbrace;
+  - **Context:** &lbrace;When/where this anti-pattern appears&rbrace;
+  - **Impact:** &lbrace;Negative impact of this anti-pattern&rbrace;
+  - **Recommendation:** &lbrace;How to avoid this anti-pattern&rbrace;
 
-- **Anti-Pattern 2:** {Description of anti-pattern}
-  - **Context:** {When/where this anti-pattern appears}
-  - **Impact:** {Negative impact of this anti-pattern}
-  - **Recommendation:** {How to avoid this anti-pattern}
+- **Anti-Pattern 2:** &lbrace;Description of anti-pattern&rbrace;
+  - **Context:** &lbrace;When/where this anti-pattern appears&rbrace;
+  - **Impact:** &lbrace;Negative impact of this anti-pattern&rbrace;
+  - **Recommendation:** &lbrace;How to avoid this anti-pattern&rbrace;
 
 ---
 
@@ -140,15 +140,15 @@ housekeeping_policy: keep
 
 [Actions identified during review that should be tracked as Kanban tasks]
 
-- [ ] **Action 1:** {Description}
-  - **Priority:** {High/Medium/Low}
-  - **Owner:** {Assigned to}
-  - **Related Work:** {Link to related Epic/Story/Task}
+- [ ] **Action 1:** &lbrace;Description&rbrace;
+  - **Priority:** &lbrace;High/Medium/Low&rbrace;
+  - **Owner:** &lbrace;Assigned to&rbrace;
+  - **Related Work:** &lbrace;Link to related Epic/Story/Task&rbrace;
 
-- [ ] **Action 2:** {Description}
-  - **Priority:** {High/Medium/Low}
-  - **Owner:** {Assigned to}
-  - **Related Work:** {Link to related Epic/Story/Task}
+- [ ] **Action 2:** &lbrace;Description&rbrace;
+  - **Priority:** &lbrace;High/Medium/Low&rbrace;
+  - **Owner:** &lbrace;Assigned to&rbrace;
+  - **Related Work:** &lbrace;Link to related Epic/Story/Task&rbrace;
 
 ---
 
@@ -158,37 +158,37 @@ housekeeping_policy: keep
 
 ### Best Practices
 
-- {Best practice 1: Description and context}
-- {Best practice 2: Description and context}
+- &lbrace;Best practice 1: Description and context&rbrace;
+- &lbrace;Best practice 2: Description and context&rbrace;
 
 ### Lessons for Future Epics
 
-- {Lesson 1: Description and application}
-- {Lesson 2: Description and application}
+- &lbrace;Lesson 1: Description and application&rbrace;
+- &lbrace;Lesson 2: Description and application&rbrace;
 
 ### Documentation Recommendations
 
-- {Recommendation 1: What documentation should be created/updated}
-- {Recommendation 2: What documentation should be created/updated}
+- &lbrace;Recommendation 1: What documentation should be created/updated&rbrace;
+- &lbrace;Recommendation 2: What documentation should be created/updated&rbrace;
 
 ---
 
 ## Metrics
 
-- **Duration:** {Start Date} to {End Date}
-- **Stories Completed:** {Count} / {Total}
-- **Tasks Completed:** {Count} / {Total}
-- **Versions Released:** {Count} (Range: {Start Version} to {End Version})
-- **Time to Completion:** {Duration in days/weeks}
+- **Duration:** &lbrace;Start Date&rbrace; to &lbrace;End Date&rbrace;
+- **Stories Completed:** &lbrace;Count&rbrace; / &lbrace;Total&rbrace;
+- **Tasks Completed:** &lbrace;Count&rbrace; / &lbrace;Total&rbrace;
+- **Versions Released:** &lbrace;Count&rbrace; (Range: &lbrace;Start Version&rbrace; to &lbrace;End Version&rbrace;)
+- **Time to Completion:** &lbrace;Duration in days/weeks&rbrace;
 
 ---
 
 ## Related Work
 
-- **Epic:** [Epic {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Epic-{N}.md)
-- **Stories:** {Links to all stories in Epic}
-- **Related PIRs:** {Links to any related PIR reports}
-- **Follow-Up Tasks:** {Links to Kanban tasks created from this PIR}
+- **Epic:** [Epic &lbrace;N&rbrace; Documentation](../../project-management/kanban/epics/Epic-&lbrace;N&rbrace;/Epic-&lbrace;N&rbrace;.md)
+- **Stories:** &lbrace;Links to all stories in Epic&rbrace;
+- **Related PIRs:** &lbrace;Links to any related PIR reports&rbrace;
+- **Follow-Up Tasks:** &lbrace;Links to Kanban tasks created from this PIR&rbrace;
 
 ---
 

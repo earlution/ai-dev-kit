@@ -111,8 +111,8 @@ This document analyzes **framework drift** - the divergence of client project im
 ### 2.1 Kanban Structure Drift
 
 **Epic Naming Drift:**
-- **Canonical:** `Epic-{N}` (hyphen)
-- **Drift:** `Epic {N}` (space) - 22%, `E{N}` (abbreviated) - 33%
+- **Canonical:** `Epic-\{N\}` (hyphen)
+- **Drift:** `Epic \{N\}` (space) - 22%, `E\{N\}` (abbreviated) - 33%
 - **Severity:** Minor (legacy support needed)
 
 **Epic Mashup Drift:**
@@ -122,8 +122,8 @@ This document analyzes **framework drift** - the divergence of client project im
 - **Root Cause:** Epic 9 mismatch in source
 
 **Task Naming Drift:**
-- **Canonical:** `E{epic}:S{story}:T{task}` (full context)
-- **Drift:** `T{task}` (standalone) - 11%
+- **Canonical:** `E\{epic\}:S\{story\}:T\{task\}` (full context)
+- **Drift:** `T\{task\}` (standalone) - 11%
 - **Severity:** Minor (acceptable in checklists)
 
 **Task Padding Drift:**

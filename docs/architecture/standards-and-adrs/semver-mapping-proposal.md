@@ -262,7 +262,7 @@ rc_1:
 3. **MINOR:** Lookup `(0, 6)` in registry → Not found? Assign 1, store it → MINOR=1
 4. **PATCH:** Lookup `(0, 6, 7)` in registry → Not found? Assign 1, store it → PATCH=1
 5. **BUILD:** Use B=3 directly
-6. Return `f"{RC}.{MINOR}.{PATCH}+{B}"` = `"0.1.1+3"`
+6. Return `f"{RC}.{MINOR}.{PATCH}+\{B\}"` = `"0.1.1+3"`
 7. Save updated registry to `semver-registry.yaml`
 
 ### Integration with Release Workflow

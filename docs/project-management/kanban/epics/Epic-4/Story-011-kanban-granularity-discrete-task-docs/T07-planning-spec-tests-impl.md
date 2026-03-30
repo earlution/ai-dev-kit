@@ -25,20 +25,20 @@ Convert all 784 embedded task references in Story documents into discrete Task d
 | FR-6 | RW Step 1 can locate all Task documents | FR-016:R03 |
 | FR-7 | Validators pass for all migrated tasks | Task doc |
 | FR-8 | Migration preserves information (no loss) | Migration plan |
-| FR-9 | Task document naming: `T{task}-{slug}.md` (e.g., `T01-task-name.md`) | Migration plan |
-| FR-10 | Story checklist format: `- [x] **E{epic}:S{story}:T{task}** – Name - [Link](path)` | Existing pattern |
+| FR-9 | Task document naming: `T\{task\}-\{slug\}.md` (e.g., `T01-task-name.md`) | Migration plan |
+| FR-10 | Story checklist format: `- [x] **E\{epic\}:S\{story\}:T\{task\}** – Name - [Link](path)` | Existing pattern |
 
 ### 1.3 Embedded Task Detection Spec
 
 **Task boundary patterns:**
-- Header: `### E{epic}:S{story}:T{task} – Task Name` or `## E{epic}:S{story}:T{task}`
-- Variants: `**E{epic}:S{story}:T{task}**`, `T{task} – Name`
+- Header: `### E\{epic\}:S\{story\}:T\{task\} – Task Name` or `## E\{epic\}:S\{story\}:T\{task\}`
+- Variants: `**E\{epic\}:S\{story\}:T\{task\}**`, `T\{task\} – Name`
 - Content: From header until next task header or `## ` section
 - Edge cases: Nested sections, incomplete tasks, tasks spanning multiple blocks
 
 **Task ID extraction:**
-- Canonical: `E{epic}:S{story}:T{task}` (e.g., E4:S11:T07)
-- Abbreviated in context: `T{task}` when Epic/Story known from Story doc path
+- Canonical: `E\{epic\}:S\{story\}:T\{task\}` (e.g., E4:S11:T07)
+- Abbreviated in context: `T\{task\}` when Epic/Story known from Story doc path
 
 ### 1.4 Task Document Structure (Canonical)
 
@@ -84,7 +84,7 @@ Per `TASK_TEMPLATE.md` and FR-016:
 | T3 | `test_extract_handles_nested_sections` | Task with `####` subsections: content captured until next task |
 | T4 | `test_extract_handles_missing_fields` | Task with minimal content: extract with placeholder/TODO for missing fields |
 | T5 | `test_generate_task_doc_required_fields` | Generated Task doc has all required sections populated |
-| T6 | `test_generate_task_doc_naming` | File name follows `T{task}-{slug}.md` convention |
+| T6 | `test_generate_task_doc_naming` | File name follows `T\{task\}-\{slug\}.md` convention |
 | T7 | `test_story_update_replaces_embedded` | Story after update has checklist items with links, no embedded body |
 | T8 | `test_story_update_preserves_non_task` | Overview, other sections unchanged |
 | T9 | `test_validation_no_embedded_remaining` | Post-migration scan finds zero embedded tasks in migrated Story |

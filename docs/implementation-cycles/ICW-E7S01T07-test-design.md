@@ -174,7 +174,7 @@ Comprehensive test design for the Markdown Maintenance Workflow (MMW) covering v
 2. Measure execution time
 3. Verify accuracy of violation detection
 **Expected Result:** Completes within 5 minutes  
-**Pass Criteria:** <5min execution, 100% accuracy
+**Pass Criteria:** &lt;5min execution, 100% accuracy
 
 #### Test Case: PERF-002 Scoped Mode Efficiency
 **Objective:** Scoped validation faster than baseline for limited changes  

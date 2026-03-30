@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E1:S06:T01`)
+**Format:** `E\{epic\}:S\{story\}:T\{task\}` (e.g., `E1:S06:T01`)
 
 **Full Task ID:** `E1:S06:T01`
 
@@ -142,7 +142,7 @@ Set up BYOB (Bring Your Own Badge) to enable dynamic badge rendering for private
    - ✅ Added test status extraction from pytest runs
    - ✅ Added coverage percentage extraction from pytest-cov output
    - ✅ Configured test status badge (passing/failing/not configured)
-   - ✅ Configured coverage badge with color coding (≥80% green, ≥60% yellow, <60% red)
+   - ✅ Configured coverage badge with color coding (≥80% green, ≥60% yellow, &lt;60% red)
    - ✅ Added workflow triggers for test completion
    - ✅ Updated README with test and coverage badge URLs
 

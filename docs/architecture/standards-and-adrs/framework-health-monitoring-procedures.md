@@ -176,7 +176,7 @@ python3 scripts/frameworks/framework-health-monitor.py \
 5. Create tasks for health improvements
 
 **Action Thresholds:**
-- **Critical (<40%):** Immediate action required
+- **Critical (&lt;40%):** Immediate action required
 - **Poor (40-54%):** Significant improvements needed
 - **Fair (55-69%):** Improvements recommended
 - **Good (70-84%):** Minor improvements possible

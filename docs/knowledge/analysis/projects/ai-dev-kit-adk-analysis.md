@@ -76,7 +76,7 @@ housekeeping_policy: keep
 
 **Epic 1 Naming:**
 - **ai-dev-kit's actual Epic 1:** "AI Dev Kit Core" (project-specific name)
-- **Canonical template Epic 1:** "{PROJECT_NAME} Core" (generic placeholder)
+- **Canonical template Epic 1:** "\{PROJECT_NAME\} Core" (generic placeholder)
 - **Impact:** Projects copying ai-dev-kit's structure get "AI Dev Kit Core" instead of generic "Project Core"
 
 **Story Structure:** ✅ **MATCHES**
@@ -94,7 +94,7 @@ housekeeping_policy: keep
 **Naming Conventions:** ✅ **MOSTLY MATCHES**
 - Epic naming: `Epic-X/Epic-X.md` ✅
 - Story naming: `Story-XXX-description.md` ✅
-- Task naming: `E{epic}:S{story}:T{task}` ✅ (full context)
+- Task naming: `E\{epic\}:S\{story\}:T\{task\}` ✅ (full context)
 - Task padding: 2-digit (`T01`, `T02`) ✅
 
 **File Organization:** ✅ **MATCHES**
@@ -155,7 +155,7 @@ housekeeping_policy: keep
 
 2. **Epic 1 Naming Too Specific**
    - **Issue:** Epic 1 named "AI Dev Kit Core" (project-specific name)
-   - **Canonical:** Should be "{PROJECT_NAME} Core" (generic placeholder)
+   - **Canonical:** Should be "\{PROJECT_NAME\} Core" (generic placeholder)
    - **Impact:** Projects copying structure get project-specific name
    - **Recommendation:** Rename Epic 1 to generic name or document customization requirement
 
@@ -282,7 +282,7 @@ docs/
 **Comparison to ADK Canonical:**
 
 **Workflow File Structure:** ✅ **MATCHES**
-- Format: `{name}-workflow.yaml` ✅
+- Format: `\{name\}-workflow.yaml` ✅
 - Location: `packages/frameworks/workflow mgt/workflows/` ✅
 - YAML structure: Proper structure with steps ✅
 
@@ -458,7 +458,7 @@ docs/
 - Proper schema definition ✅
 
 **Version File Location:** ⚠️ **LEGACY PATH**
-- **Expected:** `src/ai_dev_kit/version.py` (or `src/{project}/version.py`)
+- **Expected:** `src/ai_dev_kit/version.py` (or `src/\{project\}/version.py`)
 - **Actual:** `src/fynd_deals/version.py` (legacy path from fynd.deals)
 - **Impact:** Legacy path, not following own canonical structure
 - **Recommendation:** Migrate to `src/ai_dev_kit/version.py`

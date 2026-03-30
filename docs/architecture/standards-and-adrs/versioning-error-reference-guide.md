@@ -81,7 +81,7 @@ This document serves as a **comprehensive reference** for the versioning error a
 1. **No mandatory Story file check:**
    - Instruction doesn't require reading Story file
    - Story file is the source of truth for completed tasks
-   - Task numbers are clearly visible in Story file: `E{epic}:S{story}:T{task}`
+   - Task numbers are clearly visible in Story file: `E\{epic\}:S\{story\}:T\{task\}`
 
 2. **No task number extraction step:**
    - No instruction to extract task number from completed task identifier

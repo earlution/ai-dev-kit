@@ -205,7 +205,7 @@ docs/README.md
 **Examples:**
 - New ADR → `docs/architecture/standards-and-adrs/adr-XXX-title.md`
 - New guide → `docs/guides/getting-started/guide-name.md`
-- New epic → `docs/project-management/kanban/epics/epic-{N}.md`
+- New epic → `docs/project-management/kanban/epics/epic-\{N\}.md`
 
 ### 4.2 Updating Existing Documents
 

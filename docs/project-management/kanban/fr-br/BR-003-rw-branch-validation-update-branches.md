@@ -26,7 +26,7 @@ The Release Workflow (RW) branch validation script (`validate_branch_context.py`
 ## Description
 
 **What is the bug?**
-The `validate_branch_context.py` script only recognizes `main` branch and `epic/{n}` pattern branches. When running RW on an `update/ai-dev-kit` branch (or similar update/maintenance branches), the validator issues a warning: "Branch 'update/ai-dev-kit' not in known mapping - cannot validate version".
+The `validate_branch_context.py` script only recognizes `main` branch and `epic/\{n\}` pattern branches. When running RW on an `update/ai-dev-kit` branch (or similar update/maintenance branches), the validator issues a warning: "Branch 'update/ai-dev-kit' not in known mapping - cannot validate version".
 
 **What should happen vs. what actually happens?**
 - **Expected:** The validator should recognize `update/*` branch patterns and either:
@@ -58,7 +58,7 @@ This occurs whenever RW Step 1 (Branch Safety Check) runs on a branch that match
 - [x] Other: Workflow validation scripts
 
 **Root Cause (if known):**
-The `parse_branch_epic()` function in `validate_branch_context.py` only matches `epic/{n}` patterns. The validation logic at line 242-243 only handles `main` branch as a special case, and all other non-`epic/*` branches trigger the warning.
+The `parse_branch_epic()` function in `validate_branch_context.py` only matches `epic/\{n\}` patterns. The validation logic at line 242-243 only handles `main` branch as a special case, and all other non-`epic/*` branches trigger the warning.
 
 ---
 
@@ -115,7 +115,7 @@ The `parse_branch_epic()` function in `validate_branch_context.py` only matches 
 **Workaround:**
 - Ignore the warning (validation still passes)
 - Use `main` branch for framework updates (not recommended)
-- Use `epic/{n}` pattern with a dummy epic number (not recommended)
+- Use `epic/\{n\}` pattern with a dummy epic number (not recommended)
 
 ---
 

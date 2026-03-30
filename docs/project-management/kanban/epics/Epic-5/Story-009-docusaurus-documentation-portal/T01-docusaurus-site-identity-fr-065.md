@@ -63,7 +63,7 @@ Implement **FR-065**: replace template branding and placeholder deployment metad
 
 ## Specification (E5:S09:T01 / FR-065)
 
-Testable behaviors **S1–S8** are enforced by [`tests/test_portal_fr065_identity.py`](../../../../../../tests/test_portal_fr065_identity.py). **S9** is enforced when `PORTAL_BUILD=1 pytest -m portal_build` runs `npm run build` in `portal/`.
+Testable behaviors **S1–S8** are enforced by [`tests/test_portal_fr065_identity.py`](../../../../../../tests/test_portal_fr065_identity.py). **S9** (green `npm run build`): `PORTAL_BUILD_STRICT=1 pytest -m portal_build` after **FR-067**.
 
 | ID | Behavior | FR map |
 |----|----------|--------|

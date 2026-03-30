@@ -164,7 +164,7 @@ An **integration alignment report** confirming:
 
 **Version Schema Usage:**
 - ✅ Kanban documents reference version schema: `RC.EPIC.STORY.TASK+BUILD`
-- ✅ Task naming follows format: `E{epic}:S{story}:T{task}`
+- ✅ Task naming follows format: `E\{epic\}:S\{story\}:T\{task\}`
 - ✅ Version markers use consistent format: `(vRC.EPIC.STORY.TASK+BUILD)`
 
 **Kanban Governance:**

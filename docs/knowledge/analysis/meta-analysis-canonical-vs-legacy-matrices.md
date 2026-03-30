@@ -38,37 +38,37 @@ This document provides **canonical vs legacy matrices** comparing ADK's canonica
 
 | Aspect | ADK Canonical | Real-World Pattern | Gap/Over-Engineering | Legacy Support Needed |
 |--------|---------------|-------------------|---------------------|----------------------|
-| **Epic Naming** | `Epic-{N}` (hyphen) | `Epic-{N}` (44%), `Epic {N}` (22%), `E{N}` (33%) | ⚠️ Gap: Support `Epic {N}` and `E{N}` | ✅ Yes - Support `Epic {N}` (space) |
+| **Epic Naming** | `Epic-\{N\}` (hyphen) | `Epic-\{N\}` (44%), `Epic \{N\}` (22%), `E\{N\}` (33%) | ⚠️ Gap: Support `Epic \{N\}` and `E\{N\}` | ✅ Yes - Support `Epic \{N\}` (space) |
 | **Epic Numbering** | 1-23 (canonical) | 1-23 + project-specific (24+) | ✅ Good - Canonical supports extension | ✅ Yes - Support project-specific epics |
 | **Epic Mashup Prevention** | ❌ Not enforced | 30% projects have mashup (root cause: Epic 9 mismatch in ai-dev-kit source) | ❌ CRITICAL GAP: No prevention + source has Epic 9 mismatch | ✅ Yes - Add installer validation + fix Epic 9 in source |
-| **Epic Directory** | `epics/Epic-{N}/` | `epics/Epic-{N}/` (67%), `epics/Epic {N}/` (22%) | ⚠️ Gap: Support space format | ✅ Yes - Support `Epic {N}` format |
+| **Epic Directory** | `epics/Epic-\{N\}/` | `epics/Epic-\{N\}/` (67%), `epics/Epic \{N\}/` (22%) | ⚠️ Gap: Support space format | ✅ Yes - Support `Epic \{N\}` format |
 | **Epic Template** | Required | Present (67%) | ✅ Good - Template adoption | ✅ Yes - Support template customization |
 
 **Key Findings:**
 - **Gap:** Epic mashup prevention is CRITICAL (33% of projects affected)
-- **Legacy Support:** Need to support `Epic {N}` (space) format (22% of projects)
+- **Legacy Support:** Need to support `Epic \{N\}` (space) format (22% of projects)
 - **Over-Engineering:** None identified
 
 ### 1.2 Story Structure Comparison
 
 | Aspect | ADK Canonical | Real-World Pattern | Gap/Over-Engineering | Legacy Support Needed |
 |--------|---------------|-------------------|---------------------|----------------------|
-| **Story Naming** | `Story-{NNN}-{description}` | `Story-{NNN}-{desc}` (33%), `Story {N}` (22%), `S{N}` (33%) | ⚠️ Gap: Support `S{N}` format | ✅ Yes - Support abbreviated format |
+| **Story Naming** | `Story-{NNN}-\{description\}` | `Story-{NNN}-{desc}` (33%), `Story \{N\}` (22%), `S\{N\}` (33%) | ⚠️ Gap: Support `S\{N\}` format | ✅ Yes - Support abbreviated format |
 | **Story Numbering** | Zero-padded (3-digit) | 2-digit (33%), 3-digit (33%), mixed (33%) | ⚠️ Gap: Support 2-digit | ✅ Yes - Support 2-digit padding |
-| **Story Directory** | `Story-{NNN}-*/` | `Story-{NNN}-*/` (33%), `Story {N}/` (22%) | ⚠️ Gap: Support space format | ✅ Yes - Support `Story {N}` format |
+| **Story Directory** | `Story-{NNN}-*/` | `Story-{NNN}-*/` (33%), `Story \{N\}/` (22%) | ⚠️ Gap: Support space format | ✅ Yes - Support `Story \{N\}` format |
 | **Story Checklist** | Required | Present (89%) | ✅ Good - Checklist adoption | ✅ Yes - Support checklist customization |
 | **Story Template** | Required | Present (67%) | ✅ Good - Template adoption | ✅ Yes - Support template customization |
 
 **Key Findings:**
-- **Gap:** Story naming format needs flexibility (support `S{N}` format)
-- **Legacy Support:** Need to support `Story {N}` (space) format (22% of projects)
+- **Gap:** Story naming format needs flexibility (support `S\{N\}` format)
+- **Legacy Support:** Need to support `Story \{N\}` (space) format (22% of projects)
 - **Over-Engineering:** None identified
 
 ### 1.3 Task Structure Comparison
 
 | Aspect | ADK Canonical | Real-World Pattern | Gap/Over-Engineering | Legacy Support Needed |
 |--------|---------------|-------------------|---------------------|----------------------|
-| **Task Naming** | `E{epic}:S{story}:T{task}` (full context) | `E{epic}:S{story}:T{task}` (67%), `T{task}` (11%) | ✅ Good - Full context enforced | ✅ Yes - Support standalone `T{task}` in checklists |
+| **Task Naming** | `E\{epic\}:S\{story\}:T\{task\}` (full context) | `E\{epic\}:S\{story\}:T\{task\}` (67%), `T\{task\}` (11%) | ✅ Good - Full context enforced | ✅ Yes - Support standalone `T\{task\}` in checklists |
 | **Task Padding** | 2-digit (`T01`) | 2-digit (33%), 3-digit (33%), mixed (33%) | ⚠️ Gap: Support 3-digit | ✅ Yes - Support 3-digit padding |
 | **Task Organization** | Separate files (recommended) | Separate files (67%), embedded (33%) | ✅ Good - Separate files preferred | ✅ Yes - Support embedded format |
 | **Task Structure** | Required fields | Present (78%) | ✅ Good - Structure adoption | ✅ Yes - Support optional fields |
@@ -132,12 +132,12 @@ This document provides **canonical vs legacy matrices** comparing ADK's canonica
 
 | Aspect | ADK Canonical | Real-World Pattern | Gap/Over-Engineering | Legacy Support Needed |
 |--------|---------------|-------------------|---------------------|----------------------|
-| **File Naming** | `{name}-workflow.yaml` | `{name}-workflow.yaml` (33%), `{name}.yaml` (22%) | ⚠️ Gap: Support `{name}.yaml` | ✅ Yes - Support `.yaml` without `-workflow` |
+| **File Naming** | `\{name\}-workflow.yaml` | `\{name\}-workflow.yaml` (33%), `\{name\}.yaml` (22%) | ⚠️ Gap: Support `\{name\}.yaml` | ✅ Yes - Support `.yaml` without `-workflow` |
 | **File Location** | `workflows/` directory | `workflows/` (33%), `packages/frameworks/workflow mgt/workflows/` (33%) | ⚠️ Gap: Support framework location | ✅ Yes - Support framework package location |
 | **Script-Based** | Not recommended | `.py`/`.sh` scripts (22%) | ⚠️ Gap: Support script-based workflows | ✅ Yes - Support legacy script workflows |
 
 **Key Findings:**
-- **Gap:** Need to support alternative file naming (`{name}.yaml`)
+- **Gap:** Need to support alternative file naming (`\{name\}.yaml`)
 - **Legacy Support:** Need to support script-based workflows (22% of projects)
 - **Over-Engineering:** None identified
 
@@ -221,7 +221,7 @@ This document provides **canonical vs legacy matrices** comparing ADK's canonica
 | Aspect | ADK Canonical | Real-World Pattern | Gap/Over-Engineering | Legacy Support Needed |
 |--------|---------------|-------------------|---------------------|----------------------|
 | **Schema Format** | `RC.EPIC.STORY.TASK+BUILD` | `RC.EPIC.STORY.TASK+BUILD` (56%), `RC.MAJOR.MINOR.PATCH+BUILD` (11%), `RC.EPIC.STORY.PATCH` (11%) | ⚠️ Gap: Support legacy formats | ✅ Yes - Support `RC.EPIC.STORY.PATCH` (grandfathered) |
-| **Version File** | `src/{project}/version.py` | `src/{project}/version.py` (44%), `VERSION` file (11%), none (44%) | ⚠️ Gap: Support `VERSION` file | ✅ Yes - Support `VERSION` file format |
+| **Version File** | `src/\{project\}/version.py` | `src/\{project\}/version.py` (44%), `VERSION` file (11%), none (44%) | ⚠️ Gap: Support `VERSION` file | ✅ Yes - Support `VERSION` file format |
 | **Version Bumping** | In RW | In RW (56%), manual (44%) | ⚠️ Gap: Promote RW version bumping | ✅ Yes - Support manual version bumping |
 
 **Key Findings:**
@@ -257,7 +257,7 @@ This document provides **canonical vs legacy matrices** comparing ADK's canonica
 
 | Legacy Pattern | Projects Using | Support Strategy |
 |---------------|----------------|------------------|
-| `Epic {N}` (space format) | 22% | ✅ Support both `Epic-{N}` and `Epic {N}` |
+| `Epic \{N\}` (space format) | 22% | ✅ Support both `Epic-\{N\}` and `Epic \{N\}` |
 | `knowledge/` directory | 22% | ✅ Support `docs/` and `knowledge/` during migration |
 | `docs/` secondary directory | 33% | ✅ Support `docs/` + `docs/` hybrid structure |
 | `_index.md` navigation | 22% | ✅ Support both `README.md` and `_index.md` |
@@ -303,8 +303,8 @@ This document provides **canonical vs legacy matrices** comparing ADK's canonica
 ### 7.2 Support Legacy Patterns
 
 1. **Naming Flexibility**
-   - Support `Epic {N}` (space) format
-   - Support `S{N}` (abbreviated) format
+   - Support `Epic \{N\}` (space) format
+   - Support `S\{N\}` (abbreviated) format
    - Support 2-digit and 3-digit task padding
 
 2. **KB Structure Flexibility**

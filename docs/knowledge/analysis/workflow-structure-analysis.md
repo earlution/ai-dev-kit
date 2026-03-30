@@ -105,7 +105,7 @@ workflows/
 | Script files (`*.py`, `*.sh`) | starborn_legacy, confidentia | Low (2/9) | ⚠️ Legacy pattern |
 | Embedded in `.cursorrules` | All projects | Universal | ✅ Standard for triggers |
 
-**Recommendation:** Use YAML files (`{name}-workflow.yaml`) in `workflows/` directory as canonical format.
+**Recommendation:** Use YAML files (`\{name\}-workflow.yaml`) in `workflows/` directory as canonical format.
 
 ---
 

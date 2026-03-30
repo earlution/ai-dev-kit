@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.1+2] - 30-03-26
+## [0.5.9.3+1] - 30-03-26
 
-E5:S09:T01 — **FR-065:** Docusaurus **portal** site identity (`docusaurus.config.js`, `portal/README.md`) and **`tests/test_portal_fr065_identity.py`** regressions.
+E5:S09:T03 — **FR-067:** Green Docusaurus **`npm run build`**, documented link-check **`warn`** policy, MDX/placeholder triage, **`scripts/escape_mdx_placeholders.py`**, **`tests/test_portal_fr067_build_triage.py`**, **`docs/maintenance/docusaurus-corpus-triage-fr-067.md`**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.1+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.3+1.md)

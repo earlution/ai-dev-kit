@@ -138,7 +138,7 @@ Implement tar.gz archive creation from framework source directory.
 - ✅ tar.gz archives created correctly for all frameworks
 - ✅ Directory structure preserved
 - ✅ File permissions preserved
-- ✅ Package file naming correct (`{name}-{version}.tar.gz`)
+- ✅ Package file naming correct (`\{name\}-{version}.tar.gz`)
 - ✅ Archives extract correctly (test with tar -xzf)
 
 **Files to Modify:**

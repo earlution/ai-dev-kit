@@ -67,7 +67,7 @@ Implement intelligent epic matching with semantic analysis and AI-assisted task 
 
 - [x] **E4:S08:T04 – FR-009: Automatic reference updating** ✅ COMPLETE (v0.4.8.4+1)
   - Created `reference_updater.py` for automatic task ID reference updating
-  - Updates references in changelogs, docs, and story files (E{epic}:S{story}:T{task} pattern)
+  - Updates references in changelogs, docs, and story files (E\{epic\}:S\{story\}:T\{task\} pattern)
   - Generates migration reports showing all changes and un-updatable references
   - Integrated into `migrate_structure.py` migration workflow
   - **Linked FR:** FR-009  

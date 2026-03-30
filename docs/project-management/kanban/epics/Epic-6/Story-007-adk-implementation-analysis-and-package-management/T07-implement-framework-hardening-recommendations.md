@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E6:S07:T07`
 
@@ -133,8 +133,8 @@ Implement all critical and high-priority hardening actions:
    - Ensure no conflicts with existing epics
 
 2. **Rename Epic 9 to Epic 24+:**
-   - Rename Epic directory: `Epic-9/` → `Epic-{N}/` (where N >= 24)
-   - Rename Epic document: `Epic-9.md` → `Epic-{N}.md`
+   - Rename Epic directory: `Epic-9/` → `Epic-\{N\}/` (where N >= 24)
+   - Rename Epic document: `Epic-9.md` → `Epic-\{N\}.md`
    - Update Epic document content (Epic number, title, references)
 
 3. **Update All References:**

@@ -572,7 +572,7 @@ VERSION_STRING = f"{VERSION_MAJOR}.{VERSION_MINOR}.{VERSION_PATCH}"
 
 ### 5.2 Custom Branch Naming
 
-**Scenario:** You use `feature/epic-{n}` instead of `epic/{n}`.
+**Scenario:** You use `feature/epic-\{n\}` instead of `epic/\{n\}`.
 
 **Steps:**
 1. Copy Workflow Management package

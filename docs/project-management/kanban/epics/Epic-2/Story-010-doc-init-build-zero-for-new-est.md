@@ -176,7 +176,7 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
    - `CHANGELOG.md` (main summary)
    - `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md` (detailed)
 2. Add "Doc Init" section/format:
-   - Main changelog: `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]`
+   - Main changelog: `📋 Doc Init: E\{epic\}:S\{story\}:T\{task\} - [Description]`
    - Detailed changelog: Include "Doc Init" type and description
 3. Update changelog generation logic:
    - Detect doc-init builds (`+0`)
@@ -197,7 +197,7 @@ Introduce a formal **doc-init build `+0`** for newly created Epic/Story/Task (E/
 - ✅ Updated `dev-kit-versioning-policy.md` with doc-init format for both main and detailed changelogs
 - ✅ Updated `IMPLEMENTATION_GUIDE.md` with doc-init format templates and examples
 - ✅ Documented format characteristics:
-  - Main changelog: `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]` for `+0` builds
+  - Main changelog: `📋 Doc Init: E\{epic\}:S\{story\}:T\{task\} - [Description]` for `+0` builds
   - Detailed changelog: Includes `**Build Type:** Doc-Init (`+0`)` and `**Type:** 📋 Doc Init`
   - Clear distinction between doc-init (`+0`) and normal builds (`+1` or higher)
 

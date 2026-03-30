@@ -62,7 +62,7 @@ We will adopt a **hybrid task template system**:
    - Implement a generator that:
      - Reads `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` (and any successor structure docs).
      - Uses `TASK_TEMPLATE.md` as the structural template.
-     - Emits per-task `.md` files following the canonical paths under `templates/tasks/Epic-{n}/Story-{m}/T{xx}-*.md`.
+     - Emits per-task `.md` files following the canonical paths under `templates/tasks/Epic-\{n\}/Story-{m}/T{xx}-*.md`.
    - Make the generator suitable for:
      - **Client-side generation** in adopting projects.
      - **Framework maintenance** (regenerating the reference templates if/when structure changes).
@@ -190,7 +190,7 @@ This ADR is implemented via:
      - `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
      - `TASK_TEMPLATE.md`
    - Outputs:
-     - Task template files under `templates/tasks/Epic-{n}/Story-{m}/T{xx}-*.md`.
+     - Task template files under `templates/tasks/Epic-\{n\}/Story-{m}/T{xx}-*.md`.
 
 3. **Validation and tests.**
    - Diff generated templates against existing concrete templates (by path and structure).

@@ -38,11 +38,11 @@ docs/Reviews/pir/
 ## PIR Report Naming Convention
 
 **Epic PIR Reports:**
-- Format: `PIR-Epic-{N}-v{version}.md`
+- Format: `PIR-Epic-\{N\}-v{version}.md`
 - Example: `PIR-Epic-2-v0.2.11.9+3.md`
 
 **Story PIR Reports:**
-- Format: `PIR-Story-{N}-v{version}.md`
+- Format: `PIR-Story-\{N\}-v{version}.md`
 - Example: `PIR-Story-001-v0.2.1.6+4.md`
 
 **Version Format:**
@@ -58,12 +58,12 @@ docs/Reviews/pir/
 1. **Epic-Level PIR:**
    - **Trigger:** Auto-triggered when Epic is marked COMPLETE
    - **Frequency:** Always (every Epic receives a PIR)
-   - **Location:** `docs/Reviews/pir/Epic-{N}/`
+   - **Location:** `docs/Reviews/pir/Epic-\{N\}/`
 
 2. **Story-Level PIR:**
    - **Trigger:** Auto-triggered when Story is marked COMPLETE (only for significant Stories)
    - **Frequency:** Selective (only significant Stories)
-   - **Location:** `docs/Reviews/pir/Story-{N}/`
+   - **Location:** `docs/Reviews/pir/Story-\{N\}/`
 
 ### PIR Report Contents
 
@@ -85,7 +85,7 @@ Each PIR report includes:
 ### Finding PIR Reports
 
 1. **By Epic/Story:**
-   - Navigate to `Epic-{N}/` or `Story-{N}/` directory
+   - Navigate to `Epic-\{N\}/` or `Story-\{N\}/` directory
    - Find PIR report by version number
 
 2. **By Version:**

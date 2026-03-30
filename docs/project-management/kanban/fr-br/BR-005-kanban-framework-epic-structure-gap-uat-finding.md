@@ -234,7 +234,7 @@ The `CANONICAL_EPICS.md` file was never updated to include all 21 epics. The fra
 **Fix 2: Create Epic Template Files**
 
 - [ ] **Criterion 7:** Epic template files created for all 21 epics in `templates/epics/` directory
-- [ ] **Criterion 8:** Template files follow naming convention: `Epic-{NN}-{Name}.md`
+- [ ] **Criterion 8:** Template files follow naming convention: `Epic-\{NN\}-{Name}.md`
 - [ ] **Criterion 9:** Template files include all required sections per `EPIC_TEMPLATE.md`
 - [ ] **Criterion 10:** Template files are properly formatted and ready for use
 

@@ -274,7 +274,7 @@ Before any versioning can occur for a Task, the Task MUST have a corresponding T
    - **Delimited Section:** Within Story document using Task ID header (`### EXX:SYY:TZZ – Task Name`)
 
 4. **Required Task Document Fields:** Task documents MUST include:
-   - Task ID (`E{epic}:S{story}:T{task}`)
+   - Task ID (`E\{epic\}:S\{story\}:T\{task\}`)
    - Scope
    - Acceptance Criteria
    - Status
@@ -358,7 +358,7 @@ Rules:
 1. **Task Document Prerequisite:**
    - **MUST:** Create Task document before updating version file
    - **MUST:** Task document must exist (separate file OR delimited section)
-   - **MUST:** Task document must have correct Task ID format (`E{epic}:S{story}:T{task}`)
+   - **MUST:** Task document must have correct Task ID format (`E\{epic\}:S\{story\}:T\{task\}`)
    - **MUST:** Task document must include all required fields (see Section 4)
 
 2. **Update `VERSION_TASK`:**
@@ -436,7 +436,7 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 **Version Pattern:**
 - Perpetual tasks use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99)
-- Version format: `v0.{EPIC}.{STORY}.{PERPETUAL_TASK}+{BUILD}` where PERPETUAL_TASK >= 101
+- Version format: `v0.\{EPIC\}.\{STORY\}.\{PERPETUAL_TASK\}+\{BUILD\}` where PERPETUAL_TASK >= 101
 - BUILD number accumulates naturally as the workflow runs
 - Example: UKW runs → `v0.6.7.101+1`, `v0.6.7.101+2`, `v0.6.7.101+3`, etc.
 - Example: CMW runs → `v0.6.7.102+1`, `v0.6.7.102+2`, `v0.6.7.102+3`, etc.
@@ -488,7 +488,7 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 #### Epic-Level Abstract Spaces
 
-**Format:** `0.{EPIC}.0.0+0`
+**Format:** `0.\{EPIC\}.0.0+0`
 
 **Examples:**
 - `0.3.0.0+0` = Epic 3's abstract space
@@ -501,12 +501,12 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Precedes all functional work for that Epic
 
 **Usage:**
-- Epic document creation → Commit with `0.{EPIC}.0.0+0`
-- Subsequent functional work starts at `0.{EPIC}.1.1+1` (first Story, first Task, first build)
+- Epic document creation → Commit with `0.\{EPIC\}.0.0+0`
+- Subsequent functional work starts at `0.\{EPIC\}.1.1+1` (first Story, first Task, first build)
 
 #### Story-Level Abstract Spaces
 
-**Format:** `0.{EPIC}.{STORY}.0+0`
+**Format:** `0.\{EPIC\}.\{STORY\}.0+0`
 
 **Examples:**
 - `0.2.5.0+0` = Epic 2 Story 5's abstract space
@@ -519,12 +519,12 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Precedes all functional work for that Story
 
 **Usage:**
-- Story document creation → Commit with `0.{EPIC}.{STORY}.0+0`
-- Subsequent functional work starts at `0.{EPIC}.{STORY}.1+1` (first Task, first build)
+- Story document creation → Commit with `0.\{EPIC\}.\{STORY\}.0+0`
+- Subsequent functional work starts at `0.\{EPIC\}.\{STORY\}.1+1` (first Task, first build)
 
 #### Task-Level Abstract Spaces
 
-**Format:** `0.{EPIC}.{STORY}.{TASK}+0`
+**Format:** `0.\{EPIC\}.\{STORY\}.\{TASK\}+0`
 
 **Examples:**
 - `0.10.4.6+0` = Epic 10 Story 4 Task 6's abstract space
@@ -537,8 +537,8 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Precedes all functional work for that Task
 
 **Usage:**
-- Task document creation → Commit with `0.{EPIC}.{STORY}.{TASK}+0`
-- Subsequent functional work starts at `0.{EPIC}.{STORY}.{TASK}+1` (first build)
+- Task document creation → Commit with `0.\{EPIC\}.\{STORY\}.\{TASK\}+0`
+- Subsequent functional work starts at `0.\{EPIC\}.\{STORY\}.\{TASK\}+1` (first build)
 
 #### Relationship Between Abstract Space and Functional Work
 
@@ -565,7 +565,7 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 #### S00 Abstract Space for Repository Stories
 
-**Format:** `0.{EPIC}.0.0+0` (repository story abstract space)
+**Format:** `0.\{EPIC\}.0.0+0` (repository story abstract space)
 
 **Examples:**
 - `0.5.0.0+0` = Epic 5, Story 0 (FR Repo) abstract space
@@ -590,8 +590,8 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - UXR-001 = E7:S00:T01 = v0.7.0.1+0 (abstract space)
 
 **Usage:**
-- Repository story creation → Commit with `0.{EPIC}.0.0+0`
-- Repository task creation → Commit with `0.{EPIC}.0.{TASK}+0` (abstract space)
+- Repository story creation → Commit with `0.\{EPIC\}.0.0+0`
+- Repository task creation → Commit with `0.\{EPIC\}.0.\{TASK\}+0` (abstract space)
 - Repository tasks use `+0` build (abstract space) as they are documentation anchors
 - Implementation tasks use `+1` and beyond (functional work)
 
@@ -604,15 +604,15 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 1. **Create E/S/T document** with required structure and fields
 2. **Set version to abstract space** (`+0` build):
-   - Epic: `0.{EPIC}.0.0+0`
-   - Story: `0.{EPIC}.{STORY}.0+0`
-   - Task: `0.{EPIC}.{STORY}.{TASK}+0`
+   - Epic: `0.\{EPIC\}.0.0+0`
+   - Story: `0.\{EPIC\}.\{STORY\}.0+0`
+   - Task: `0.\{EPIC\}.\{STORY\}.\{TASK\}+0`
 3. **Commit via Release Workflow (RW)** with doc-init path (see FR-017)
    - RW Step 1 detects docs-only change
    - RW Step 2 sets version to `+0` (abstract space)
    - RW Step 3 creates changelog entry with "Doc Init" type
 4. **Alternative:** Manual commit with explicit version annotation
-   - Commit message: `📋 Doc Init (Abstract Space): E{epic}:S{story}:T{task} - [Description]`
+   - Commit message: `📋 Doc Init (Abstract Space): E\{epic\}:S\{story\}:T\{task\} - [Description]`
    - Version: Explicitly set to abstract space (`+0`)
 
 **Related:**
@@ -633,9 +633,9 @@ This section summarizes how to use **doc-init / abstract space builds (`+0`)** i
   - Creating initial Epic/Story docs before any implementation starts.
 
 **Patterns:**
-- **Epic doc creation:** `0.{EPIC}.0.0+0`
-- **Story doc creation:** `0.{EPIC}.{STORY}.0+0`
-- **Task doc creation:** `0.{EPIC}.{STORY}.{TASK}+0`
+- **Epic doc creation:** `0.\{EPIC\}.0.0+0`
+- **Story doc creation:** `0.\{EPIC\}.\{STORY\}.0+0`
+- **Task doc creation:** `0.\{EPIC\}.\{STORY\}.\{TASK\}+0`
 
 **What `+0` means:**
 - Documentation-only anchor (no code / behavior changes).
@@ -697,7 +697,7 @@ This repo uses a **two-layer changelog system** aligned with the framework patte
 **Key Characteristics:**
 - Version: `[RC.EPIC.STORY.TASK+BUILD]`
 - Date: `DD-MM-YY` (short date format for merge-to-main)
-- **Doc-Init builds (`+0`):** Use `📋 Doc Init: E{epic}:S{story}:T{task} - [Description]` format
+- **Doc-Init builds (`+0`):** Use `📋 Doc Init: E\{epic\}:S\{story\}:T\{task\} - [Description]` format
 - **Normal builds (`+1` or higher):** Use standard emoji prefixes (🚀 Feature, 🐞 Fix, 📚 Documentation, etc.)
 - Link to detailed changelog archive
 - Can be updated if merge date changes

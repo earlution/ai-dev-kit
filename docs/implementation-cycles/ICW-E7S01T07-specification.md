@@ -153,7 +153,7 @@ Validator fails?
 ## Success Metrics
 
 ### Quantitative Metrics
-- **Release Velocity:** Percentage of releases proceeding with baseline debt (target: <20%)
+- **Release Velocity:** Percentage of releases proceeding with baseline debt (target: &lt;20%)
 - **Maintenance Cycle Frequency:** MMW executions per quarter (target: 4-6)
 - **Issue Reduction:** Net markdown violations reduced per maintenance cycle (target: >10%)
 

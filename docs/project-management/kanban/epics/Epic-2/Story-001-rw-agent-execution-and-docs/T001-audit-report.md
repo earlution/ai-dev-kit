@@ -48,9 +48,9 @@ This audit identified **15 project-specific assumptions** in the Release Workflo
 
 #### 1.3 Epic Document Pattern
 **Location:** Step 6 (Auto-update Kanban Docs), lines 459, 469  
-**Current:** `docs/project-management/epics/overview/Epic {epic}/Epic-{epic}.md`  
+**Current:** `docs/project-management/epics/overview/Epic \{epic\}/Epic-\{epic\}.md`  
 **Issue:** Project-specific Kanban structure (uses "overview" subdirectory)  
-**Recommendation:** Replace with template placeholder `{epic_doc_pattern}` or `{kanban_path}/epics/Epic-{epic}.md`  
+**Recommendation:** Replace with template placeholder `{epic_doc_pattern}` or `\{kanban_path\}/epics/Epic-\{epic\}.md`  
 **Impact:** HIGH - Kanban structure varies significantly by project
 
 #### 1.4 Kanban Board Path
@@ -64,7 +64,7 @@ This audit identified **15 project-specific assumptions** in the Release Workflo
 **Location:** Step 6 (Auto-update Kanban Docs), line 470  
 **Current:** `docs/project-management/kanban/Epic 4/Story-3-*.md`  
 **Issue:** Project-specific Kanban structure and hardcoded epic/story numbers  
-**Recommendation:** Replace with template placeholder `{story_doc_pattern}` or `{kanban_path}/epics/Epic-{epic}/stories/Story-{story}-*.md`  
+**Recommendation:** Replace with template placeholder `{story_doc_pattern}` or `\{kanban_path\}/epics/Epic-\{epic\}/stories/Story-\{story\}-*.md`  
 **Impact:** HIGH - Story structure varies by project
 
 #### 1.6 Validation Script Paths
@@ -92,14 +92,14 @@ This audit identified **15 project-specific assumptions** in the Release Workflo
 **Location:** Step 6 (Auto-update Kanban Docs), line 456  
 **Current:** `confidentia.kanban_update`  
 **Issue:** Project-specific handler namespace  
-**Recommendation:** Replace with generic `kanban.update` or template placeholder `{project}.kanban_update`  
+**Recommendation:** Replace with generic `kanban.update` or template placeholder `\{project\}.kanban_update`  
 **Impact:** HIGH - Handler names are project-specific
 
 #### 2.2 Validators Handler
 **Location:** Step 8 (Run Validators), line 544  
 **Current:** `confidentia.run_validators`  
 **Issue:** Project-specific handler namespace  
-**Recommendation:** Replace with generic `validation.run_validators` or template placeholder `{project}.run_validators`  
+**Recommendation:** Replace with generic `validation.run_validators` or template placeholder `\{project\}.run_validators`  
 **Impact:** HIGH - Handler names are project-specific
 
 ---
@@ -117,14 +117,14 @@ This audit identified **15 project-specific assumptions** in the Release Workflo
 **Location:** Throughout document (multiple locations)  
 **Current:** `0.4.3.2+9`, `0.4.3.2+8`, etc.  
 **Issue:** Uses specific version numbers as examples  
-**Recommendation:** Use generic pattern `0.{epic}.{story}.{task}+{build}` or clearly tag as example  
+**Recommendation:** Use generic pattern `0.\{epic\}.\{story\}.\{task\}+\{build\}` or clearly tag as example  
 **Impact:** MEDIUM - Examples should be clearly marked
 
 #### 3.3 Branch Examples
 **Location:** Throughout document (multiple locations)  
 **Current:** `epic/4`, `epic/5`, etc.  
 **Issue:** Uses specific branch names as examples  
-**Recommendation:** Use generic pattern `epic/{n}` or `epic/{n}-{slug}` and clearly tag as example  
+**Recommendation:** Use generic pattern `epic/\{n\}` or `epic/\{n\}-\{slug\}` and clearly tag as example  
 **Impact:** MEDIUM - Examples should be clearly marked
 
 ---
@@ -135,21 +135,21 @@ This audit identified **15 project-specific assumptions** in the Release Workflo
 **Location:** Throughout document (multiple locations)  
 **Current:** References to "Epic 4", "Epic 5", etc.  
 **Issue:** Uses specific epic numbers  
-**Recommendation:** Use generic `Epic {n}` or `Epic {epic_number}` pattern  
+**Recommendation:** Use generic `Epic \{n\}` or `Epic {epic_number}` pattern  
 **Impact:** MEDIUM - Examples should be generic
 
 #### 4.2 Story Number Examples
 **Location:** Throughout document (multiple locations)  
 **Current:** References to "Story 3", etc.  
 **Issue:** Uses specific story numbers  
-**Recommendation:** Use generic `Story {n}` or `Story {story_number}` pattern  
+**Recommendation:** Use generic `Story \{n\}` or `Story {story_number}` pattern  
 **Impact:** MEDIUM - Examples should be generic
 
 #### 4.3 Task Number Examples
 **Location:** Throughout document (multiple locations)  
 **Current:** References to specific task numbers  
 **Issue:** Uses specific task numbers  
-**Recommendation:** Use generic `Task {n}` or `Task {task_number}` pattern  
+**Recommendation:** Use generic `Task \{n\}` or `Task {task_number}` pattern  
 **Impact:** MEDIUM - Examples should be generic
 
 ---
@@ -180,8 +180,8 @@ This audit identified **15 project-specific assumptions** in the Release Workflo
    - `{validation_scripts_path}` for validation scripts
 
 2. **Replace project-specific handler names:**
-   - `confidentia.kanban_update` → `{project}.kanban_update` or `kanban.update`
-   - `confidentia.run_validators` → `{project}.run_validators` or `validation.run_validators`
+   - `confidentia.kanban_update` → `\{project\}.kanban_update` or `kanban.update`
+   - `confidentia.run_validators` → `\{project\}.run_validators` or `validation.run_validators`
 
 3. **Add configuration section** at the beginning of the document listing all template placeholders and their meanings
 
@@ -189,7 +189,7 @@ This audit identified **15 project-specific assumptions** in the Release Workflo
 
 4. **Tag all examples clearly:**
    - Add `[Example: ...]` tags to all specific version numbers, branch names, epic/story/task numbers
-   - Or replace with generic patterns like `0.{epic}.{story}.{task}+{build}`
+   - Or replace with generic patterns like `0.\{epic\}.\{story\}.\{task\}+\{build\}`
 
 5. **Add "Customization Guide" section** explaining how to replace template placeholders with project-specific values
 

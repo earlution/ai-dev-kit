@@ -49,7 +49,7 @@ Create a perpetual maintenance task (e.g., T103 in E6:S07, or in Epic 2) for RW 
 - **Task Type:** Perpetual Maintenance
 - **Status:** IN PROGRESS (never changes to COMPLETE)
 - **Build Warning Suppression:** Enabled
-- **Version Pattern:** `v0.{EPIC}.{STORY}.{TASK}+{N}` where N = RW maintenance release count
+- **Version Pattern:** `v0.\{EPIC\}.\{STORY\}.\{TASK\}+\{N\}` where N = RW maintenance release count
 - **Attribution:** RW maintenance releases (framework fixes, Step 7 improvements, validator updates, doc corrections) attribute here when not tied to a specific feature task
 
 ### 2. Include in Packaged Kanban Framework

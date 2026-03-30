@@ -310,7 +310,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 **Deliverables:**
 
-- **Per-Project Reports:** `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` - Comprehensive analysis for each project
+- **Per-Project Reports:** `docs/Analysis/projects/\{PROJECT_NAME\}-adk-analysis.md` - Comprehensive analysis for each project
 - **Synthesis Reports:**
 
   - `docs/Analysis/adk-implementation-analysis-report.md` - Overall analysis report
@@ -343,7 +343,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 **Files to Create:**
 
-- `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` (one per project with ADK implementation)
+- `docs/Analysis/projects/\{PROJECT_NAME\}-adk-analysis.md` (one per project with ADK implementation)
 - `docs/Analysis/adk-implementation-analysis-report.md`
 - `docs/Analysis/adk-implementation-patterns.md`
 - `docs/Analysis/adk-drift-analysis.md`

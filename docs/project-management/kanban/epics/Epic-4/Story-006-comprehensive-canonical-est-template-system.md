@@ -80,7 +80,7 @@ This enables projects to adopt ai-dev-kit with zero cognitive load for E/S/T str
 - Each template includes:
   - Purpose, scope, key characteristics
   - Typical stories list
-  - Placeholders for contextualization (`{PROJECT_NAME}`, `{DOMAIN}`, etc.)
+  - Placeholders for contextualization (`\{PROJECT_NAME\}`, `\{DOMAIN\}`, etc.)
   - Integration points with other epics
 
 
@@ -195,7 +195,7 @@ Epic numbers in the template list above follow **adopter-oriented** canonical nu
 **Acceptance Criteria:**
 - [x] Story templates created for all typical stories (62 stories total: Epic 1-21)
 - [x] Templates organized by epic in directory structure (`templates/stories/Epic-X/`)
-- [x] Templates use placeholders for contextualization (`{PROJECT_NAME}`, `{DOMAIN}`)
+- [x] Templates use placeholders for contextualization (`\{PROJECT_NAME\}`, `\{DOMAIN\}`)
 - [x] Templates reference typical tasks
 - [x] Templates follow consistent structure
 
@@ -281,7 +281,7 @@ All 378 canonical task templates have been successfully generated, validated, an
 
 
 **Approach:**
-1. Document placeholder system (`{PROJECT_NAME}`, `{DOMAIN}`, etc.)
+1. Document placeholder system (`\{PROJECT_NAME\}`, `\{DOMAIN\}`, etc.)
 2. Create step-by-step contextualization process
 3. Create example contextualized templates for different project types
 4. Document customization best practices
@@ -548,7 +548,7 @@ All 378 canonical task templates have been successfully generated, validated, an
 - Fixed installer that:
   - Uses canonical epic templates from `packages/frameworks/kanban/templates/epics/` instead of ai-dev-kit's actual epics
   - Only installs canonical core epics (1-8, 10, 18, 22, 23) by default
-  - Contextualizes Epic 1 with project name (replaces `{PROJECT_NAME}` placeholder)
+  - Contextualizes Epic 1 with project name (replaces `\{PROJECT_NAME\}` placeholder)
   - Excludes ai-dev-kit project-specific epics (5-9 in ai-dev-kit)
 
 - Updated migration script to use templates
@@ -556,8 +556,8 @@ All 378 canonical task templates have been successfully generated, validated, an
 
 **Approach:**
 1. Update `migrate_structure.py` `_install_canonical_epics()` to:
-   - Copy from `packages/frameworks/kanban/templates/epics/Epic-{N}-*.md` templates
-   - NOT copy from `docs/project-management/kanban/epics/Epic-{N}/` (ai-dev-kit's actual epics)
+   - Copy from `packages/frameworks/kanban/templates/epics/Epic-\{N\}-*.md` templates
+   - NOT copy from `docs/project-management/kanban/epics/Epic-\{N\}/` (ai-dev-kit's actual epics)
    - Contextualize Epic 1 template with project name
 2. Ensure installer only installs canonical core epics (1-8, 10, 18, 22, 23)
 3. Test fresh install to verify no project-specific epics are included

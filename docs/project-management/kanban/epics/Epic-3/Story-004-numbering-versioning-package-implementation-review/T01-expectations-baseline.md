@@ -107,7 +107,7 @@ Define the implementation expectations baseline for the Numbering & Versioning f
 - Supports epic renumbering strategy (Epic 1-9 legacy, Epic 10+ new format)
 
 **Epic Branch Workflow:**
-- **ALWAYS work on epic branches** (`epic/{n}-{description}`)
+- **ALWAYS work on epic branches** (`epic/\{n\}-\{description\}`)
 - **NEVER commit directly to `main`** during development
 - **ONLY merge to `main`** when ready to deploy (prevents unnecessary auto-deployments)
 
@@ -407,7 +407,7 @@ rc_0:
 
 #### Version File Structure
 
-**Location:** `src/{project}/version.py` (configurable)
+**Location:** `src/\{project\}/version.py` (configurable)
 
 **Structure:**
 ```python
@@ -449,11 +449,11 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 - Epic/Story/Task alignment MUST be verified before version bump
 
 **Task Document Formats:**
-- **Separate File:** `Task-{task}-*.md` or `T{task}-*.md` in Story directory
-- **Delimited Section:** Section within Story file using Task ID header (`### E{epic}:S{story}:T{task} –`)
+- **Separate File:** `Task-\{task\}-*.md` or `T\{task\}-*.md` in Story directory
+- **Delimited Section:** Section within Story file using Task ID header (`### E\{epic\}:S\{story\}:T\{task\} –`)
 
 **Required Task Document Fields:**
-- Task ID (`E{epic}:S{story}:T{task}`)
+- Task ID (`E\{epic\}:S\{story\}:T\{task\}`)
 - Scope
 - Acceptance Criteria
 - Status

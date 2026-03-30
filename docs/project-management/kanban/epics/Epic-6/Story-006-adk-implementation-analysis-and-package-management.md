@@ -220,7 +220,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Synthesize ADK learning per project
 
 **Deliverables:**
-- **Per-Project Reports:** `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` - Comprehensive analysis for each project
+- **Per-Project Reports:** `docs/Analysis/projects/\{PROJECT_NAME\}-adk-analysis.md` - Comprehensive analysis for each project
 - **Synthesis Reports:**
   - `docs/Analysis/adk-implementation-analysis-report.md` - Overall analysis report
   - `docs/Analysis/adk-implementation-patterns.md` - Pattern catalog (good and bad) across all projects
@@ -248,7 +248,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [ ] Hardening recommendations provided (pending meta-analysis T06)
 
 **Files to Create:**
-- `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` (one per project with ADK implementation)
+- `docs/Analysis/projects/\{PROJECT_NAME\}-adk-analysis.md` (one per project with ADK implementation)
 - `docs/Analysis/adk-implementation-analysis-report.md`
 - `docs/Analysis/adk-implementation-patterns.md`
 - `docs/Analysis/adk-drift-analysis.md`

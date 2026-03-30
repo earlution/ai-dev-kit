@@ -1080,7 +1080,7 @@ This section documents known edge cases, common mistakes, and anti-patterns when
 
 **Corrective Pattern:**
 1. Read Story file to identify completed Task number
-2. Extract Task number from task identifier (`E{epic}:S{story}:T{task}`)
+2. Extract Task number from task identifier (`E\{epic\}:S\{story\}:T\{task\}`)
 3. Compare completed Task number to current `VERSION_TASK`
 4. If Task number > current `VERSION_TASK`: Update `VERSION_TASK` and reset `VERSION_BUILD` to 1
 5. If Task number == current `VERSION_TASK`: Increment `VERSION_BUILD` only

@@ -61,9 +61,9 @@ This document provides a comprehensive migration plan to convert **784 embedded 
 ### 1.2 Task Patterns
 
 **Naming Patterns:**
-- Full context: `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
-- Abbreviated: `T{task}` (e.g., `T01`)
-- Variants: `Task {task}`, `T{task}-{description}`
+- Full context: `E\{epic\}:S\{story\}:T\{task\}` (e.g., `E4:S11:T01`)
+- Abbreviated: `T\{task\}` (e.g., `T01`)
+- Variants: `Task \{task\}`, `T\{task\}-\{description\}`
 
 **Structure Patterns:**
 - Well-structured: Full task details (Input, Deliverable, Acceptance Criteria, etc.)
@@ -72,7 +72,7 @@ This document provides a comprehensive migration plan to convert **784 embedded 
 
 **Location Patterns:**
 - Embedded in Story document as delimited sections
-- Format: `### E{epic}:S{story}:T{task} – Task Name` followed by task content
+- Format: `### E\{epic\}:S\{story\}:T\{task\} – Task Name` followed by task content
 - Some tasks have associated files in Story directory
 
 ### 1.3 Completeness Analysis
@@ -145,8 +145,8 @@ This document provides a comprehensive migration plan to convert **784 embedded 
 ### 2.3 Task Document Naming Convention
 
 **Canonical Format:**
-- `T{task}-{description}.md` (e.g., `T01-update-kanban-policy.md`)
-- Location: `docs/project-management/kanban/epics/Epic-{N}/Story-{NNN}-{description}/T{task}-{description}.md`
+- `T\{task\}-\{description\}.md` (e.g., `T01-update-kanban-policy.md`)
+- Location: `docs/project-management/kanban/epics/Epic-\{N\}/Story-{NNN}-\{description\}/T\{task\}-\{description\}.md`
 
 **Naming Rules:**
 - Use 2-digit padding for task number (`T01`, `T02`, not `T1`, `T2`)
@@ -197,7 +197,7 @@ This document provides a comprehensive migration plan to convert **784 embedded 
 **Output:** Extracted task data structure
 
 **Extraction Logic:**
-1. Find task section markers: `### E{epic}:S{story}:T{task}`
+1. Find task section markers: `### E\{epic\}:S\{story\}:T\{task\}`
 2. Extract task header (Task ID, name)
 3. Extract task content (until next task or section)
 4. Parse task fields (Input, Deliverable, Acceptance Criteria, etc.)
@@ -222,7 +222,7 @@ This document provides a comprehensive migration plan to convert **784 embedded 
 5. Preserve original formatting where possible
 
 **Required Fields:**
-- Task ID (`E{epic}:S{story}:T{task}`)
+- Task ID (`E\{epic\}:S\{story\}:T\{task\}`)
 - Scope
 - Input
 - Deliverable

@@ -72,7 +72,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 - **3 version/branch examples** need generic patterns
 
 **Recommendations:**
-- Replace hardcoded paths with template placeholders (`{version_file_path}`, `{kanban_path}`, etc.)
+- Replace hardcoded paths with template placeholders (`{version_file_path}`, `\{kanban_path\}`, etc.)
 - Replace handler names with generic or templated versions
 - Tag all examples clearly or use generic patterns
 - Add configuration section listing all template placeholders
@@ -401,7 +401,7 @@ The `validate_changelog_format.py` validator checks for canonical ordering (vers
 **Blocker:** None
 
 **Problem Statement:**
-The `validate_branch_context.py` script only recognizes `main` branch and `epic/{n}` pattern branches. When running RW on an `update/ai-dev-kit` branch (or similar update/maintenance branches), the validator issues a warning: "Branch 'update/ai-dev-kit' not in known mapping - cannot validate version". The `update/*` branch pattern is a good practice for incorporating framework updates, and the RW should recognize and support this pattern.
+The `validate_branch_context.py` script only recognizes `main` branch and `epic/\{n\}` pattern branches. When running RW on an `update/ai-dev-kit` branch (or similar update/maintenance branches), the validator issues a warning: "Branch 'update/ai-dev-kit' not in known mapping - cannot validate version". The `update/*` branch pattern is a good practice for incorporating framework updates, and the RW should recognize and support this pattern.
 
 **Approach:**
 1. **Extend branch pattern recognition:**
@@ -412,7 +412,7 @@ The `validate_branch_context.py` script only recognizes `main` branch and `epic/
 2. **Update `parse_branch_epic()` function:**
    - Add pattern matching for `update/*` branches
    - Return appropriate epic context (None for skip, or extract from config)
-   - Maintain backward compatibility with existing `epic/{n}` pattern
+   - Maintain backward compatibility with existing `epic/\{n\}` pattern
 
 3. **Add configuration support (optional enhancement):**
    - Extend `rw-config.yaml` schema to support custom branch mappings
@@ -435,7 +435,7 @@ The `validate_branch_context.py` script only recognizes `main` branch and `epic/
 - [x] No warnings issued for valid `update/*` branches ✅
 - [x] Update branches handled appropriately (skip validation similar to `main` branch) ✅
 - [ ] Documentation updated to explain update branch handling (pending)
-- [x] Backward compatibility maintained with existing `epic/{n}` pattern ✅
+- [x] Backward compatibility maintained with existing `epic/\{n\}` pattern ✅
 - [ ] Optional: Configuration support for custom branch patterns (future enhancement)
 
 **Files to Update:**

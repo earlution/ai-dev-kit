@@ -189,8 +189,8 @@ Generate:
 
 After LLM generation, templates are post-processed to:
 
-1. **Replace Placeholders:** Ensure `{PROJECT_NAME}`, `{PROJECT_TYPE}` are preserved
-2. **Format Task IDs:** Ensure proper `E{epic}:S{story}:T{task}` format
+1. **Replace Placeholders:** Ensure `\{PROJECT_NAME\}`, `\{PROJECT_TYPE\}` are preserved
+2. **Format Task IDs:** Ensure proper `E\{epic\}:S\{story\}:T\{task\}` format
 3. **Add Frontmatter:** Ensure proper YAML frontmatter
 4. **Validate Structure:** Ensure template structure matches expected format
 

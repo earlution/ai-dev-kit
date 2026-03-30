@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-30 (v0.5.9.1+2 — E5:S09:T01 FR-065 complete)  
+**Last updated:** 2026-03-30 (v0.5.9.3+1 — E5:S09:T03 FR-067 complete)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -69,7 +69,7 @@ housekeeping_policy: keep
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
 
 
-- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (v0.5.9.1+2 — T01 ✅ FR-065; T02–T07 TODO)
+- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (v0.5.9.3+1 — T01–T03 ✅; T04–T07 TODO)
   - Story: [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
   - **Note:** Atomic FR chain for full Docusaurus adoption (`portal/` → `docs/` publish, CI, deploy, search).
 
@@ -213,8 +213,8 @@ Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), gre
 
 **Tasks:**
 - [x] E5:S09:T01 – Docusaurus site identity and config (FR-065) ✅ v0.5.9.1+2
-- [ ] E5:S09:T02 – Canonical docs path and publish scope (FR-066)
-- [ ] E5:S09:T03 – Production build corpus triage (FR-067)
+- [x] E5:S09:T02 – Canonical docs path and publish scope (FR-066) ✅ v0.5.9.2+2
+- [x] E5:S09:T03 – Production build corpus triage (FR-067) ✅ v0.5.9.3+1
 - [ ] E5:S09:T04 – Navigation, sidebar IA, and landing (FR-068)
 - [ ] E5:S09:T05 – CI build gate (FR-069)
 - [ ] E5:S09:T06 – Deployment and hosting (FR-070)

@@ -37,14 +37,14 @@ This catalog documents **implementation patterns** identified across all 10 anal
 
 ### 1.1 Good Patterns ✅
 
-#### Pattern 1.1: Full-Context Task Naming (`E{epic}:S{story}:T{task}`)
+#### Pattern 1.1: Full-Context Task Naming (`E\{epic\}:S\{story\}:T\{task\}`)
 
 **Frequency:** 60% (6/10 projects)  
 **Impact:** HIGH - Excellent traceability  
 **Status:** ✅ **CANONICAL PATTERN**
 
 **Description:**
-- Tasks use full context format: `E{epic}:S{story}:T{task}` (e.g., `E6:S06:T01`)
+- Tasks use full context format: `E\{epic\}:S\{story\}:T\{task\}` (e.g., `E6:S06:T01`)
 - Provides complete context without navigation
 - Enables easy cross-referencing
 
@@ -72,7 +72,7 @@ This catalog documents **implementation patterns** identified across all 10 anal
 
 **Description:**
 - All projects use Epic → Story → Task hierarchy
-- Consistent nesting: `epics/Epic-{N}/Story-{NNN}/Task-{YYY}.md`
+- Consistent nesting: `epics/Epic-\{N\}/Story-{NNN}/Task-{YYY}.md`
 - Clear parent-child relationships
 
 **Why It's a Pattern:**
@@ -350,7 +350,7 @@ This catalog documents **implementation patterns** identified across all 10 anal
 | Story checklist pattern | Kanban | 90% | ✅ Strong |
 | Document frontmatter | docs/documentation | 90% | ✅ Strong |
 
-### 5.3 Recommended Patterns (<60% but Best Practice)
+### 5.3 Recommended Patterns (&lt;60% but Best Practice)
 
 | Pattern | Framework | Frequency | Status |
 |---------|-----------|-----------|--------|

@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}` (e.g., `E4:S13:T01`)
+**Format:** `E\{epic\}:S\{story\}:T\{task\}` (e.g., `E4:S13:T01`)
 
 **Full Task ID:** `E4:S13:T01`
 
@@ -121,7 +121,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 3. **Gather In-Progress Tasks:**
    - Scan all Epic and Story documents for in-progress tasks
    - Extract task information:
-     - Task ID (E{epic}:S{story}:T{task})
+     - Task ID (E\{epic\}:S\{story\}:T\{task\})
      - Task title
      - Last updated timestamp
      - Task document path

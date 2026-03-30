@@ -60,7 +60,7 @@ Complete the **critical framework work** that directly impacts canonical structu
   - Typical tasks list
   - Key deliverables
   - Integration points
-  - Placeholders for contextualization (`{PROJECT_NAME}`, `{DOMAIN}`, etc.)
+  - Placeholders for contextualization (`\{PROJECT_NAME\}`, `\{DOMAIN\}`, etc.)
 
 **Approach:**
 1. Extract story definitions from `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`
@@ -159,7 +159,7 @@ Complete the **critical framework work** that directly impacts canonical structu
   - Examples for different project types
 
 **Approach:**
-1. Document placeholder system (`{PROJECT_NAME}`, `{DOMAIN}`, etc.)
+1. Document placeholder system (`\{PROJECT_NAME\}`, `\{DOMAIN\}`, etc.)
 2. Create step-by-step contextualization process
 3. Create example contextualized templates for different project types
 4. Document customization best practices
@@ -174,7 +174,7 @@ Complete the **critical framework work** that directly impacts canonical structu
 
 **Files to Create:**
 - `packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md`
-- `packages/frameworks/kanban/templates/examples/contextualized/tiny-project/Epic-1-{PROJECT_NAME}-Core.md`
+- `packages/frameworks/kanban/templates/examples/contextualized/tiny-project/Epic-1-\{PROJECT_NAME\}-Core.md`
 - `packages/frameworks/kanban/templates/examples/contextualized/small-project/...`
 - `packages/frameworks/kanban/templates/examples/contextualized/ambitious-project/...`
 

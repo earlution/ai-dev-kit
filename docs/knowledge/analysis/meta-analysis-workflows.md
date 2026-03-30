@@ -44,9 +44,9 @@ This document provides **comprehensive meta-analysis** of workflow structures ac
 ### 1.1 File Naming Convergence
 
 **YAML Workflow Files:**
-- **Format:** `{name}-workflow.yaml` (canonical)
+- **Format:** `\{name\}-workflow.yaml` (canonical)
 - **Frequency:** 30% (3/10 projects)
-- **Alternative:** `{name}.yaml` - 20% (2/10 projects)
+- **Alternative:** `\{name\}.yaml` - 20% (2/10 projects)
 - **Status:** ⚠️ Moderate convergence
 
 **Script-Based Workflows:**
@@ -236,7 +236,7 @@ This document provides **comprehensive meta-analysis** of workflow structures ac
 **Recommended: YAML Workflow Files**
 - **Format:** `{workflow-name}-workflow.yaml`
 - **Location:** `workflows/` directory (project root) or `packages/frameworks/workflow mgt/workflows/` (framework)
-- **Legacy Support:** Support `{name}.yaml` format, script-based workflows (`.py`/`.sh`)
+- **Legacy Support:** Support `\{name\}.yaml` format, script-based workflows (`.py`/`.sh`)
 
 **Rationale:**
 - YAML workflow files are canonical (33%)
@@ -349,7 +349,7 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 ### 6.1 File Structure
 - **Format:** `{workflow-name}-workflow.yaml`
 - **Location:** `workflows/` directory (project root) or framework location
-- **Legacy Support:** `{name}.yaml`, script-based workflows
+- **Legacy Support:** `\{name\}.yaml`, script-based workflows
 
 ### 6.2 Release Workflow
 - **Step Count:** 12 steps (canonical) + 2 optional steps

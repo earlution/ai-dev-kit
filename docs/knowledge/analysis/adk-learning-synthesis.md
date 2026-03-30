@@ -36,7 +36,7 @@ This document synthesizes **what ADK can learn** from comprehensive analysis of 
 
 ## 1. What to Implement (Good Practices to Adopt)
 
-### 1.1 Full-Context Task Naming (`E{epic}:S{story}:T{task}`)
+### 1.1 Full-Context Task Naming (`E\{epic\}:S\{story\}:T\{task\}`)
 
 **Current Adoption:** 60% (6/10 projects)  
 **Target:** 100% (canonical pattern)
@@ -49,7 +49,7 @@ This document synthesizes **what ADK can learn** from comprehensive analysis of 
 
 **How to Implement:**
 - Make full-context naming required in templates
-- Update task templates to use `E{epic}:S{story}:T{task}` format
+- Update task templates to use `E\{epic\}:S\{story\}:T\{task\}` format
 - Document as canonical pattern
 - Enforce in validators
 

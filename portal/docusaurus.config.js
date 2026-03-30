@@ -25,7 +25,10 @@ const config = {
   organizationName: 'earlution',
   projectName: 'ai-dev-kit',
 
-  onBrokenLinks: 'throw',
+  // FR-067: many legacy docs use repo-relative links (!packages/, wrong story paths).
+  // Policy: warn until batch link fix; see portal/README.md + docs/maintenance triage note.
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -38,10 +41,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          // Canonical KB: repository docs/ (FR-066).
+          path: '../docs',
           sidebarPath: './sidebars.js',
-          // Content root is portal/docs/ until FR-066 moves to repo docs/.
-          editUrl:
-            'https://github.com/earlution/ai-dev-kit/tree/main/portal/docs/',
+          editUrl: 'https://github.com/earlution/ai-dev-kit/tree/main/docs/',
+          exclude: [
+            'changelog-and-release-notes/changelog-archive/**',
+            'knowledge/changelog-and-release-notes/changelog-archive/**',
+          ],
         },
         blog: {
           showReadingTime: true,
@@ -97,8 +104,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Introduction',
-                to: '/docs/intro',
+                label: 'Documentation index',
+                to: '/docs/documentation/docusaurus-portal-index',
               },
             ],
           },

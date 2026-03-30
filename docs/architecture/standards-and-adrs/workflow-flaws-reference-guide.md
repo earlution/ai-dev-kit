@@ -91,8 +91,8 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 **Solution:** Explicit order requirement in RW Step 7:
 
-1. **FIRST:** Update Story file (`Story-{N}-{Name}.md`) task checklist with forensic markers
-2. **THEN:** Update Epic-{epic}.md to match the updated Story file
+1. **FIRST:** Update Story file (`Story-\{N\}-\{Name\}.md`) task checklist with forensic markers
+2. **THEN:** Update Epic-\{epic\}.md to match the updated Story file
 
 **Implementation:**
 - Updated `release-workflow-agent-execution.md` Step 6 EXECUTE phase
@@ -411,7 +411,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
      - Story name from Epic file reference
      - Default status (TODO)
      - Default priority (from Epic or MEDIUM)
-     - Proper file naming: `Story-{N}-{Name}.md`
+     - Proper file naming: `Story-\{N\}-\{Name\}.md`
    - Create file in correct location (from config or fallback pattern)
 
 3. **Substep Generation:**

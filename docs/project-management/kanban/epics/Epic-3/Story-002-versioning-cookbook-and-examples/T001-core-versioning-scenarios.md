@@ -284,7 +284,7 @@ Working on multiple epics or stories simultaneously, where work happens in paral
 - No conflicts between parallel epic versions
 
 **Branch Strategy:**
-- Each epic uses its own branch: `epic/{N}-{epic-title}`
+- Each epic uses its own branch: `epic/\{N\}-{epic-title}`
 - Branches merge to `main` independently
 - Version ordering in changelog is independent of merge order
 
