@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-03-30  
-**Last updated:** 2026-03-30 (v0.5.9.1+1 — RW -k E5:S09:T01 Story 009 + tasks T01–T07 filed)  
-**Version:** v0.5.9.1+1  
+**Last updated:** 2026-03-30 (v0.5.9.2+1 — RW -k E5:S09:T02)  
+**Version:** v0.5.9.2+1  
 **Code:** E5S09
 
 ---

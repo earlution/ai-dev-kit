@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.1+1] - 30-03-26
+## [0.5.9.2+1] - 30-03-26
 
-E5:S09:T01 — **RW -k:** Filed **Story 009** (Docusaurus Documentation Portal), tasks **T01–T07** for **FR-065–FR-071**; Epic-5 checklist; FR assigned-task links; task template fields for validators.
+E5:S09:T02 — **RW -k:** Kanban init marker for **FR-066** / canonical `docs/` path task (Story 009).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.1+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.2+1.md)

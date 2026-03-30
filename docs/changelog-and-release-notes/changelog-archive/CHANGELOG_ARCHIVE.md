@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.1+1] - 30-03-26
+
+E5:S09:T01 — **RW -k:** Filed **Story 009** (Docusaurus Documentation Portal), tasks **T01–T07** for **FR-065–FR-071**; Epic-5 checklist; FR assigned-task links; task template fields for validators.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.1+1.md)
+
+---
+---
+---
 ## [0.5.1.69+1] - 30-03-26
 
 E5:S01:T69 — **FR-064:** Removed `update-badges.yml` (BYOB / `shields`); README static-badge policy; [badge guide](docs/knowledge/guides/badge-setup-for-private-repos.md) monorepo note; **`origin/shields`** deleted post-push; boards + FR **COMPLETE**.

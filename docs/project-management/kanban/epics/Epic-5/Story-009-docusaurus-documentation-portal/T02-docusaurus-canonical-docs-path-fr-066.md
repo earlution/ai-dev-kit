@@ -54,6 +54,12 @@ Implement **FR-066**: point the Docusaurus docs plugin at repository **`docs/`**
 
 ---
 
+## Evidence
+
+- **RW -k:** v0.5.9.2+1 — task T02 version marker (kanban init sequencing per user request).
+
+---
+
 ## Dependencies
 
 - **FR-065** / E5:S09:T01 recommended first.
