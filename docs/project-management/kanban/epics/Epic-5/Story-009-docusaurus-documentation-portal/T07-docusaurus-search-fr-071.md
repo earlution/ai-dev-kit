@@ -9,11 +9,11 @@ housekeeping_policy: keep
 # Epic 5, Story 9, Task 07: Docusaurus site search (FR-071)
 
 **Task ID:** E5:S09:T07  
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** LOW  
 **Estimated Effort:** Medium  
 **Created:** 2026-03-30  
-**Last updated:** 2026-03-30  
+**Last updated:** 2026-03-30 — **v0.5.9.7+1** (RW E5:S09:T07 — FR-071)  
 **Code:** E5S09T07
 
 **Feature Request:** [FR-071 – Site search](../../../fr-br/FR-071-docusaurus-site-search.md)
@@ -47,15 +47,34 @@ Implement **FR-071**: add **Algolia DocSearch** (or self-serve) **or** **local/o
 
 ---
 
+## Specification (executable — FR-071)
+
+| ID | Source | Statement |
+| --- | --- | --- |
+| **S1** | R01 | Search UI enabled: `@easyops-cn/docusaurus-search-local` theme registers **navbar** search (config + dependency in repo). |
+| **S2** | R02 / AC1 | [`portal/README.md`](../../../../../../portal/README.md) lists ≥3 **smoke-test queries** with expected hits vs the **deployed** site ([FR-070 canonical URL](https://earlution.github.io/ai-dev-kit/)). |
+| **S3** | R03 / AC2 | README documents **local** provider, index updates on each **static build/deploy**, **no CI secrets** for search. |
+| **S4** | NF01 | README **Privacy** subsection: offline index only; no third-party search API. |
+| **S5** | NF02 | README notes **build time** with local search (observed or CI reference). |
+| **S6** | AC3 | `package.json` **build** script remains `docusaurus build --no-minify`; FR-069 workflow unchanged in intent. |
+
+**Tests:** [`tests/test_portal_fr071_search.py`](../../../../../../tests/test_portal_fr071_search.py)
+
+**Provider decision:** **Local / offline** search (`@easyops-cn/docusaurus-search-local`) — no Algolia DocSearch queue, index ships with `build/`, fits GitHub Pages and NF01.
+
+---
+
 ## Version Anchor
 
-**Forensic marker (when complete):** `✅ COMPLETE (v0.5.9.7+N)` after FR-071 ACs are met.
+**Forensic marker:** `✅ COMPLETE (v0.5.9.7+1)` — **RW E5:S09:T07**.
 
 ---
 
 ## Evidence
 
-- **RW -k:** v0.5.9.7+1 — kanban marker (sequenced release).
+- [`portal/docusaurus.config.js`](../../../../../../portal/docusaurus.config.js) — `themes` + `@easyops-cn/docusaurus-search-local`
+- [`portal/README.md`](../../../../../../portal/README.md) — Site search (FR-071)
+- [`tests/test_portal_fr071_search.py`](../../../../../../tests/test_portal_fr071_search.py)
 
 ---
 

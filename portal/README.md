@@ -54,6 +54,7 @@ Canonical structure reference: [Ultimate Canonical KB Structure](../docs/archite
 - **`docusaurus.config.js`:** `url` = `https://earlution.github.io`, `baseUrl` = `/ai-dev-kit/` (must stay aligned with this path).
 - **Published artifact:** static files from `npm run build` are pushed to the **`gh-pages`** branch by [`.github/workflows/docusaurus-deploy.yml`](../.github/workflows/docusaurus-deploy.yml) (`peaceiris/actions-gh-pages`, `publish_dir: ./portal/build`).
 - **Triggers:** push to `main` when `portal/`, `docs/`, or the deploy workflow changes; **`workflow_dispatch`** for a manual redeploy.
+- **Repo visibility:** Repository is **public** — matches **GitHub Free** expectations for this **project** Pages URL (no paid-tier workaround for “private repo + Pages”).
 - **Repo settings:** GitHub → **Settings → Pages**: source **Deploy from a branch**, branch **`gh-pages`**, folder **`/ (root)`**. First run may require admin enablement; until then the URL can 404.
 - **Secrets / permissions (NF01):** Deploy uses only the default **`GITHUB_TOKEN`** (`github_token: ${{ secrets.GITHUB_TOKEN }}` in the workflow) — **no PAT in the repo**. Workflow sets `permissions: contents: write` so the action can push to `gh-pages`. If your org restricts token permissions, add an org-approved alternative (e.g. fine-grained PAT in **`GH_PAGES_TOKEN`** only if documented here — not committed).
 
@@ -61,6 +62,26 @@ Canonical structure reference: [Ultimate Canonical KB Structure](../docs/archite
 
 - **Redeploy prior `main`:** revert or reset `main` to the last known-good commit, push (or run **Docusaurus deploy to GitHub Pages** via `workflow_dispatch` after checking out that commit in a branch — preferred: fix `main` and push to trigger deploy).
 - **Or** restore `gh-pages` to a previous tree via git (maintainer) and force-push that branch — use only if you understand impact on live site.
+
+## Site search (FR-071)
+
+**Provider:** **Local / offline** — [`@easyops-cn/docusaurus-search-local`](https://github.com/easyops-cn/docusaurus-search-local) is registered as a **theme** in [`docusaurus.config.js`](docusaurus.config.js). The search index is generated during **`npm run build`** and shipped with the static site; each **deploy** refreshes the index. **No Algolia / DocSearch** application and **no CI secrets** for search.
+
+### Privacy
+
+Queries run **only in the browser** against the downloaded index. **No third-party search API** receives query text. (Contrast: Algolia DocSearch would send queries to Algolia’s servers — not used here.)
+
+### Build time (NF02)
+
+Local indexing adds work to the build. On a reference run (developer machine, full `docs/` corpus as of FR-071), **`npm run build`** completed in **~2 minutes**; CI duration may vary. If builds approach workflow timeouts, narrow `docs/` scope (FR-066 excludes) or split CI concerns in a future task.
+
+### Smoke-test queries
+
+On the **deployed** site ([canonical URL](https://earlution.github.io/ai-dev-kit/) — FR-070), open the **search** control (navbar), run:
+
+- `release workflow` → expect hits mentioning **Release Workflow** / RW docs.
+- `kanban` → expect **Kanban** / project-management content.
+- `versioning policy` → expect **versioning** / ADK policy docs.
 
 ## Installation
 

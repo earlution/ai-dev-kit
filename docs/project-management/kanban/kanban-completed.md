@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-30 (RW E5:S09:T06 / FR-070)
-**Version:** v0.5.9.6+1
+**Last Updated:** 2026-03-30 (RW E5:S09:T07 / FR-071)
+**Version:** v0.5.9.7+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -25,6 +25,9 @@ housekeeping_policy: keep
   **Completed:** `2026-03-30T16:00:00Z` | **Version:** `v0.2.11.12+2` | **Agent:** `UKW / Maintainer`
 
 #### **Epic 5: Documentation Management**
+- **[E5:S09:T07](epics/Epic-5/Story-009-docusaurus-documentation-portal/T07-docusaurus-search-fr-071.md)** – Docusaurus site search (**FR-071**): `@easyops-cn/docusaurus-search-local` in [`portal/docusaurus.config.js`](../../../portal/docusaurus.config.js), [`portal/README.md`](../../../portal/README.md) (smoke queries, privacy, build time), [`tests/test_portal_fr071_search.py`](../../../tests/test_portal_fr071_search.py)  
+  **Completed:** `2026-03-30T16:59:05Z` | **Version:** `v0.5.9.7+1` | **Agent:** `RW Agent`
+
 - **[E5:S09:T06](epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070.md)** – Docusaurus GitHub Pages deployment (**FR-070**): [`.github/workflows/docusaurus-deploy.yml`](../../../.github/workflows/docusaurus-deploy.yml), portal hosting README, root README link, `tests/test_portal_fr070_deployment.py`  
   **Completed:** `2026-03-30T16:11:41Z` | **Version:** `v0.5.9.6+1` | **Agent:** `RW Agent`
 

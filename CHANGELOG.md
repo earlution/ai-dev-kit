@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.6+1] - 30-03-26
+## [0.5.9.7+1] - 30-03-26
 
-E5:S09:T06 — **FR-070:** **GitHub Pages** deployment — [`.github/workflows/docusaurus-deploy.yml`](.github/workflows/docusaurus-deploy.yml) (`peaceiris/actions-gh-pages`, `publish_dir: ./portal/build`, `GITHUB_TOKEN`); [`portal/README.md`](portal/README.md) hosting / secrets / **rollback**; root [`README.md`](README.md) live doc link; [`tests/test_portal_fr070_deployment.py`](tests/test_portal_fr070_deployment.py).
+E5:S09:T07 — **FR-071:** Docusaurus **local / offline site search** — `@easyops-cn/docusaurus-search-local` in [`portal/docusaurus.config.js`](portal/docusaurus.config.js); [`portal/README.md`](portal/README.md) (privacy, build time, smoke queries); [`tests/test_portal_fr071_search.py`](tests/test_portal_fr071_search.py).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.6+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.7+1.md)

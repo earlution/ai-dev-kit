@@ -8,6 +8,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+import {createRequire} from 'module';
+
+const require = createRequire(import.meta.url);
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'AI Dev Kit',
@@ -66,6 +70,17 @@ const config = {
           customCss: './src/css/custom.css',
         },
       }),
+    ],
+  ],
+
+  // FR-071: offline search index generated at build time (no Algolia / third-party queries).
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['en'],
+      },
     ],
   ],
 

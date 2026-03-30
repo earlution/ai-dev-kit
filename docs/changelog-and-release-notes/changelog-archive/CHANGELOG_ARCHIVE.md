@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.7+1] - 30-03-26
+
+E5:S09:T07 — **FR-071:** Local offline Docusaurus search, portal README, contract tests.
+
+[Detailed changelog](CHANGELOG_v0.5.9.7+1.md)
+
+---
+---
+---
 ## [0.5.9.6+1] - 30-03-26
 
 E5:S09:T06 — **FR-070:** GitHub Pages deploy workflow, hosting README, root README link, contract tests.
