@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.4+1] - 30-03-26
+
+E5:S09:T04 — **FR-068:** Sidebar IA, landing, navigation tests, portal `--no-minify` build workaround.
+
+[Detailed changelog](CHANGELOG_v0.5.9.4+1.md)
+
+---
+---
+---
 ## [0.6.7.103+4] - 30-03-26
 
 E6:S07:T103 — **RW -d:** FR-067 FU-2 → T103/FR-041; triage + FR-067. (Doc-only — no tag/push.)

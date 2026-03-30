@@ -13,4 +13,4 @@ This file is the **default entry** for the Docusaurus docs plugin, which reads t
 
 **Canonical structure** follows the [Ultimate Canonical docs/documentation Structure](../architecture/standards-and-adrs/ultimate-canonical-kb-structure.md): architecture standards, changelogs (summaries — not the versioned archive excluded from publish), project management references, guides, developer documentation, and knowledge base content.
 
-Use the **sidebar** (auto-generated until **FR-068** refines IA) to browse. **Broken links and MDX issues** are triaged under **FR-067**.
+Use the **sidebar** (pillar-aligned categories per **FR-068** / `portal/sidebars.js`) to browse. **Broken links and MDX issues** are triaged under **FR-067**.

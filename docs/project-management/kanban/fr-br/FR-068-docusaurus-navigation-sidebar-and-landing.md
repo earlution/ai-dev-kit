@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-30  
 **Submitted By:** User (via agent)  
 **Priority:** MEDIUM  
-**Status:** PROPOSED  
+**Status:** ACCEPTED  
 **Assigned Task:** E5:S09:T04 — [`T04-docusaurus-navigation-fr-068.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T04-docusaurus-navigation-fr-068.md)
 
 ---
@@ -48,25 +48,25 @@ Even with a green build, a flat or auto-generated sidebar is hard to navigate fo
 
 ## Functional Requirements
 
-- [ ] **FR-068:R01** – Sidebar top-level group labels map to **named pillars** (or explicitly documented mapping table in `portal/README.md`).
-- [ ] **FR-068:R02** – Homepage lists **primary entry points** (e.g. versioning policy, user guides, Kanban governance) as links to built routes.
-- [ ] **FR-068:R03** – No dead sidebar entries (valid doc IDs or category paths).
-- [ ] **FR-068:R04** – `npm run build` remains green after IA changes.
+- [x] **FR-068:R01** – Sidebar top-level group labels map to **named pillars** (mapping table in `portal/README.md` — **E5:S09:T04** / **S1–S2**).
+- [x] **FR-068:R02** – Homepage lists **primary entry points** (portal index, versioning policy, framework adoption guide, Kanban governance) as links to built routes — **S3**.
+- [x] **FR-068:R03** – No dead sidebar entries (valid autogen `dirName` paths under `docs/`) — **S5**.
+- [x] **FR-068:R04** – `npm run build` remains green after IA changes — **S6** / `PORTAL_BUILD_STRICT`.
 
 ---
 
 ## Non-Functional Requirements
 
-- [ ] **FR-068:NF01** – **Maintainability:** Comment in `sidebars.js` explains ordering philosophy (pillar order vs alphabetical).
-- [ ] **FR-068:NF02** – **Accessible:** Landing page keeps semantic headings and sensible link text.
+- [x] **FR-068:NF01** – **Maintainability:** Comment in `sidebars.js` explains ordering philosophy (canonical pillars first, then extension folders) — **S1**.
+- [x] **FR-068:NF02** – **Accessible:** Landing page keeps semantic headings and sensible link text — **S4**.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] AC1: Reviewer can reach each pillar’s docs within **two clicks** from home or sidebar root (for included scope).
-- [ ] AC2: Homepage does not present “Docusaurus Tutorial” as primary CTA.
-- [ ] AC3: Build passes.
+- [x] AC1: Reviewer can reach each pillar’s docs within **two clicks** from home or sidebar root — **S7** surrogate + manual spot-check.
+- [x] AC2: Homepage does not present “Docusaurus Tutorial” as primary CTA — **S3**.
+- [x] AC3: Build passes — **S6**.
 
 ---
 

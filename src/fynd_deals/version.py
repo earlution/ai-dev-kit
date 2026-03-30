@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 7     # Story number (Story 7: ADK implementation analysis and package management)
-VERSION_TASK = 103    # Task number (E6:S07:T103 — RW maintenance perpetual; FR-067 FU-2 wiring RW -d)
-VERSION_BUILD = 4     # Build number (perpetual T103 release count)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
+VERSION_STORY = 9     # Story number (Story 9: Docusaurus documentation portal)
+VERSION_TASK = 4      # Task number (E5:S09:T04 — FR-068 navigation / sidebar IA / landing)
+VERSION_BUILD = 1     # Build number (first release for T04)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.103+4 — E6:S07:T103: FR-067 FU-2 wired to T103/FR-041; triage + FR-067 (RW -d)
+# Current: 0.5.9.4+1 — E5:S09:T04: FR-068 Docusaurus sidebar IA, landing, navigation tests; portal build `--no-minify`
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
@@ -40,4 +40,3 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py
 # - Abstract space awareness: FR-020 (validator recognizes +0 as valid)
-

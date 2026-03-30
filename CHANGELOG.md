@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.103+4] - 30-03-26
+## [0.5.9.4+1] - 30-03-26
 
-E6:S07:T103 — **RW -d:** **FR-067 FU-2** wired to **T103** / **FR-041** (GitHub Releases / Step 12.5 traceability); triage note + FR-067 follow-up table. **No tag / no push.**
+E5:S09:T04 — **FR-068:** Docusaurus **sidebar information architecture** aligned to KB pillars, **homepage** wayfinding (no tutorial CTA), **`tests/test_portal_fr068_navigation.py`**, portal README mapping table; **`npm run build`** uses **`docusaurus build --no-minify`** as a **workaround** for client-bundle Terser minify failure.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.4+1.md)

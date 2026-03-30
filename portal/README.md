@@ -24,7 +24,25 @@ This directory (`portal/`) is the **[Docusaurus](https://docusaurus.io/)** site 
 - **Target state:** tighten to `'throw'` after batch link hygiene (follow-up; coordinate with [FR-058](../docs/project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md)).
 - **Detail:** [Docusaurus corpus triage (FR-067)](../docs/maintenance/docusaurus-corpus-triage-fr-067.md).
 
-**FR-068** addresses navigation and sidebar information architecture.
+**FR-068** addresses navigation and sidebar information architecture (implemented in `sidebars.js` and the site homepage).
+
+### Sidebar ↔ `docs/` mapping (FR-068)
+
+| Sidebar label (nav) | `docs/` folder | Notes |
+| ------------------- | -------------- | ----- |
+| Architecture | `architecture/` | Canonical pillar |
+| Changelog & release notes | `changelog-and-release-notes/` | Canonical pillar; archive globs still excluded per FR-066 |
+| Project management | `project-management/` | Canonical pillar (Kanban, FR/BR, rituals) |
+| Guides | `guides/` | Canonical pillar |
+| Documentation (developer & user) | `documentation/` | Canonical pillar |
+| Knowledge base | `knowledge/` | Canonical pillar |
+| Maintenance (portal triage) | `maintenance/` | **Extension** (e.g. FR-067 triage notes) |
+| Analysis | `analysis/` | **Extension** |
+| Implementation cycles | `implementation-cycles/` | **Extension** |
+| Developer tools | `developer-tools/` | **Extension** |
+| Changelog (legacy root) | `changelog/` | **Extension** (legacy alongside `changelog-and-release-notes/`) |
+
+Canonical structure reference: [Ultimate Canonical KB Structure](../docs/architecture/standards-and-adrs/ultimate-canonical-kb-structure.md).
 
 ## Installation
 
@@ -49,6 +67,8 @@ yarn build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+**Minification (FR-068):** `npm run build` runs `docusaurus build --no-minify`. On this stack (Docusaurus 3.9.x + current client bundle), the default Terser pass can fail with `Unexpected token: operator (<)` while the server bundle succeeds. **Attempted workaround:** skip JS minify until the pipeline is fixed or upgraded; the site is still a fully linked production build.
 
 ## Deployment
 

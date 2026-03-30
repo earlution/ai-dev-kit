@@ -16,11 +16,19 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <Heading as="h2" className="margin-top--md text--light">
+          Start here
+        </Heading>
+        <div className={clsx(styles.buttons, 'margin-top--md')}>
           <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            className="button button--secondary button--lg margin-horiz--sm"
+            to="/docs/documentation/docusaurus-portal-index">
+            Browse the documentation index
+          </Link>
+          <Link
+            className="button button--outline button--secondary button--lg margin-horiz--sm"
+            to="/docs/architecture/standards-and-adrs/dev-kit-versioning-policy">
+            Versioning policy
           </Link>
         </div>
       </div>
@@ -32,8 +40,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={siteConfig.title}
+      description="AI Dev Kit monorepo documentation — architecture, workflows, Kanban, and framework packages.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
