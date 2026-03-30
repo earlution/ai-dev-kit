@@ -177,7 +177,7 @@ Copy `workflows/release-workflow/release-workflow.yaml` to your project, or crea
 1. **Review `rw-config.yaml`** - Verify all paths are correct
 2. **Review `.cursorrules`** - Check RW trigger section
 3. **Copy Validation Scripts** - Ensure scripts are in your `scripts_path`
-4. **Test RW** - Type "RW" in your AI assistant to test the workflow
+4. **Test RW** - e.g. `RW E5S01T01` or `RW E5:S01:T01` in your AI assistant (**FR-060**)
 
 ---
 

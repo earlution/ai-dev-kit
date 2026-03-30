@@ -168,8 +168,7 @@ cp .backup/frameworks/workflow-mgmt/scripts/custom-*.py \
 cd frameworks/workflow-mgmt
 python3 scripts/validation/validate_branch_context.py
 
-# Test Release Workflow
-# Type "RW" in AI assistant
+# Test Release Workflow (FR-060: RW + task id in same message, e.g. RW E5S01T01)
 # Verify all steps complete
 
 # Test Kanban
@@ -256,7 +255,7 @@ cp frameworks/kanban/templates/epic-template.md \
 
 # Test Release Workflow
 git checkout -b epic/1-setup
-# Type "RW" in AI assistant
+# e.g. RW E1S01T01 or RW E1:S01:T01 in AI assistant
 ```
 
 ---

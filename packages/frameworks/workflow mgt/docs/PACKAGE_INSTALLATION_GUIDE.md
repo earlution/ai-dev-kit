@@ -16,6 +16,8 @@ AI Dev Kit frameworks are distributed as tar.gz packages via GitHub Releases. Ea
 
 This guide covers manual installation of framework packages.
 
+**Workflow Management / RW:** After install, invoke Release Workflow with a **task id in the same message** as `RW` (**FR-060**); see repository [`INSTALL_IN_YOUR_PROJECT.md`](../../../../INSTALL_IN_YOUR_PROJECT.md) and [`framework-dependency-installation-guide.md`](../../../../docs/documentation/user-docs/framework-dependency-installation-guide.md).
+
 ---
 
 ## Prerequisites

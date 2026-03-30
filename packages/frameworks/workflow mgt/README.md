@@ -253,9 +253,9 @@ python scripts/install_release_workflow.py
 # Mode B: RW + Dev-Kit Versioning
 # Mode C: Full Stack (RW + Versioning + Kanban)
 
-# 4. Test RW
+# 4. Test RW (FR-060: task id in same message as RW)
 git checkout -b epic/1-test
-# Type "RW" in your AI assistant
+# e.g. RW E1S01T01 or RW E1:S01:T01 in your AI assistant
 ```
 
 **That's it!** The installer generates `rw-config.yaml`, updates `.cursorrules`, and patches workflow files automatically.
@@ -282,7 +282,7 @@ python scripts/install_release_workflow.py --mode c --dry-run
 1. **Review `rw-config.yaml`** - Verify paths are correct
 2. **Create version file** - At the path specified in config
 3. **Copy validation scripts** - If not already present
-4. **Test RW** - Type "RW" on an epic branch
+4. **Test RW** - On an epic branch, send e.g. `RW E1S01T01` or `RW E1:S01:T01` (same message; **FR-060**)
 
 ### 📖 Detailed Guides
 
@@ -374,8 +374,8 @@ If using different branch naming conventions:
 
 1. Ensure you have a version file (e.g., `src/yourproject/version.py` with `VERSION_STRING = "0.1.1.1+1"`)
 2. Create an epic branch (e.g., `git checkout -b epic/1-first-epic`)
-3. Type "RW" in your AI assistant (Cursor)
-4. Verify all 13 steps execute correctly:
+3. In your AI assistant (Cursor), send **`RW` with a task id** in the same message, e.g. `RW E1S01T01` or `RW E1:S01:T01` (**FR-060**)
+4. Verify the workflow steps execute correctly for your `.cursorrules` path:
    - Step 1: Branch Safety Check
    - Step 2: Version bumped
    - Step 3: CHANGELOG + archive updated
@@ -711,9 +711,9 @@ After implementation, verify:
 - [ ] Version file exists and is accessible
 - [ ] Changelog directory exists
 - [ ] Validation scripts are executable
-- [ ] RW trigger responds to "RW" or "rw" in AI assistant (17 steps)
-- [ ] RW trigger responds to "RW -k" or "rw -k" in AI assistant (7 steps)
-- [ ] RW trigger responds to "RW -d" or "rw -d" in AI assistant (13 steps)
+- [ ] Full RW runs when the message includes `RW`/`rw` **and** a parseable `E…S…T…` token (e.g. `RW E7S01T10`, `RW E7:S01:T10`)—**FR-060**
+- [ ] `RW -k` / `rw -k` with task id behaves as configured (short path)
+- [ ] `RW -d` / `rw -d` with task id behaves as configured (doc-only path)
 - [ ] All steps execute in correct order for each trigger type
 - [ ] Version file updates correctly
 - [ ] Changelogs created with full timestamps
@@ -758,8 +758,9 @@ docs/
 ### RW Trigger Not Responding
 
 1. **Check `.cursorrules`:** Ensure the RW trigger section is properly added
-2. **Check File Paths:** Verify all file path references in `.cursorrules` are correct
-3. **Check Documentation:** Ensure referenced documentation files exist at specified paths
+2. **FR-060:** Bare `RW` without a task id aborts before version bump—use e.g. `RW E5S01T67` in one message
+3. **Check File Paths:** Verify all file path references in `.cursorrules` are correct
+4. **Check Documentation:** Ensure referenced documentation files exist at specified paths
 
 ### Validation Failures
 

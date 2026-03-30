@@ -910,9 +910,9 @@ ai-dev-kit install workflow-mgmt@2.0.0
 ### Issue: RW Trigger Not Working
 
 **Symptoms:**
-- Typing "RW" in Cursor doesn't trigger Release Workflow
-- Agent doesn't recognize "RW" command
-- No response when typing "RW"
+- Invoking Release Workflow fails, or the agent stops with **RW ABORTED** / no version bump
+- Agent doesn't act on the RW trigger section
+- **FR-060:** Sending only `RW` with no `E…S…T…` token in the **same** message always aborts before Step 2 — this is expected, not a broken trigger
 
 **Causes:**
 - `.cursorrules` file doesn't exist
@@ -980,10 +980,11 @@ grep -E "version_file|changelog|kanban" .cursorrules
 **6. Test the trigger:**
 
 ```bash
-# In Cursor chat, type:
-RW
+# In Cursor chat, use FR-060 form (task id in same message as RW), e.g.:
+# RW E5S01T01
+# RW E5:S01:T01
 
-# The agent should recognize the trigger and start executing the Release Workflow
+# The agent should recognize the trigger and proceed past Step 1b (not RW ABORTED for missing token)
 ```
 
 **7. Check for syntax errors:**
@@ -1001,8 +1002,8 @@ cat .cursorrules
 **Prevention:**
 - Always run the RW installer after installing Workflow Management framework
 - Verify `.cursorrules` exists and contains RW trigger section
-- Test "RW" command after installation
-- Document `.cursorrules` setup in project README
+- After installation, test with `RW <your_completed_task_id>` (not bare `RW`)
+- Document `.cursorrules` setup and FR-060 in project README
 
 ---
 

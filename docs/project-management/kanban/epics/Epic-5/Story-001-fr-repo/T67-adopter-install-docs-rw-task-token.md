@@ -9,12 +9,13 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 67: Adopter Install Docs — RW Task Token (FR-060)
 
 **Task ID:** E5:S01:T67  
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
 **Created:** 2026-03-25  
-**Last updated:** 2026-03-25 (RW -k kanban marker v0.5.1.67+1)  
-**Version:** v0.5.1.67+1  
+**Last updated:** 2026-03-30 (Release v0.5.1.67+2 — adopter install docs FR-060 / RW task token)  
+**Version:** v0.5.1.67+2  
+**Version Anchor:** Forensic release `v0.5.1.67+2` — INSTALL + user-docs + workflow mgt README; PACKAGE_INSTALLATION_GUIDE cross-ref  
 **Code:** E5S01T67
 
 **Repository Pattern:** Internal scaffold (no FR yet). Traceability: **FR-060** behavior.
@@ -44,9 +45,9 @@ Ensure **[`INSTALL_IN_YOUR_PROJECT.md`](../../../../../../INSTALL_IN_YOUR_PROJEC
 
 ## Acceptance Criteria
 
-- [ ] `INSTALL_IN_YOUR_PROJECT.md` (or linked install guide) documents **mandatory task token** with at least two example forms (`RW E5S01T64`, `RW E5:S01:T64`).
-- [ ] Link to RW agent execution doc (Step 1 / intent / complete validators as applicable).
-- [ ] Optional: note **`rw-config.yaml`** + `use_kanban` for validator behavior.
+- [x] `INSTALL_IN_YOUR_PROJECT.md` (or linked install guide) documents **mandatory task token** with at least two example forms (`RW E5S01T67`, `RW E5:S01:T67`).
+- [x] Link to RW agent execution doc (Step 1 / intent / complete validators as applicable).
+- [x] Note **`rw-config.yaml`** + `use_kanban` for validator behavior (install + installation guide).
 
 ---
 

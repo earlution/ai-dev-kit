@@ -119,7 +119,7 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 **Purpose:** Version, document, commit, tag, and push changes.
 
 **Actions:**
-- Run the Release Workflow (trigger: e.g. type "RW")
+- Run the Release Workflow (trigger: e.g. `RW E5S01T01` / `RW E5:S01:T01` in the same message — **FR-060**)
 - RW handles: version bump, changelog creation/update, README/Kanban updates, staging, validation, commit, tag, push (per project RW definition)
 
 **Validation:**

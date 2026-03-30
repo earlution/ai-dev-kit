@@ -93,8 +93,8 @@ EOF
 # Create an epic branch
 git checkout -b epic/1-first-epic
 
-# Type "RW" in your AI assistant (Cursor)
-# The workflow should execute all 11 steps
+# e.g. RW E1S01T01 or RW E1:S01:T01 in AI assistant (FR-060; task id same message)
+# The workflow should execute per your .cursorrules
 ```
 
 **Expected outcome:**
@@ -194,7 +194,7 @@ cp /path/to/ai-dev-kit/packages/frameworks/workflow\ mgt/scripts/validation/*.py
 # Ensure you're on an epic branch (not main)
 git checkout -b epic/1-test-rw
 
-# Type "RW" in your AI assistant
+# e.g. RW E1S01T01 or RW E1:S01:T01 in your AI assistant (FR-060)
 # Verify all steps execute correctly
 ```
 
@@ -280,7 +280,7 @@ mkdir -p docs/kanban/epics/Epic-1
 
 # 7. Test RW
 git checkout -b epic/1-setup
-# Type "RW" in Cursor
+# e.g. RW E1S01T01 or RW E1:S01:T01 in Cursor (FR-060)
 ```
 
 **Result:** RW fully configured and ready to use.
@@ -321,7 +321,7 @@ cp -r /path/to/ai-dev-kit/packages/frameworks/workflow\ mgt/scripts/validation t
 
 # 7. Test RW
 git checkout -b epic/1-add-rw
-# Type "RW" in Cursor
+# e.g. RW E1S01T01 or RW E1:S01:T01 in Cursor (FR-060)
 ```
 
 **Result:** RW added to existing project with minimal disruption.

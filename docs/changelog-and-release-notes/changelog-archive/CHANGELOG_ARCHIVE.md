@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.67+2] - 30-03-26
+
+E5:S01:T67+2 – Adopter install docs: mandatory **RW** + **E…S…T…** same message (FR-060); INSTALL + user-docs + workflow mgt README + package install cross-ref.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.67+2.md)
+
+---
+---
+---
 ## [0.5.1.66+2] - 30-03-26
 
 E5:S01:T66+2 – RW dual-source parity doc; packaged RW excerpt **1b/1c/1d** todos and citations; root `.cursorrules` dual-source link.

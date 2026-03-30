@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.66+2] - 30-03-26
+## [0.5.1.67+2] - 30-03-26
 
-E5:S01:T66+2 – RW **dual-source parity**: [`rw-trigger-dual-source-parity.md`](packages/frameworks/workflow%20mgt/docs/rw-trigger-dual-source-parity.md); [`cursorrules-rw-trigger-section.md`](packages/frameworks/workflow%20mgt/cursorrules-rw-trigger-section.md) **1b/1c/1d** `todo_write` fixes + FR-060/E5:S01:T63 & BR-056/E6:S06:T56 citations; root [`.cursorrules`](.cursorrules) maintainer link.
+E5:S01:T67+2 – **Adopter install docs — FR-060 / RW task token**: [`INSTALL_IN_YOUR_PROJECT.md`](INSTALL_IN_YOUR_PROJECT.md); installation + usage/integration/FAQ/troubleshooting/rollout guides; workflow mgt README + installer adjacency; [`PACKAGE_INSTALLATION_GUIDE.md`](packages/frameworks/workflow%20mgt/docs/PACKAGE_INSTALLATION_GUIDE.md) cross-ref; T004 consumption patterns.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.66+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.67+2.md)

@@ -138,7 +138,13 @@ When installing frameworks in a project, follow these steps:
    - Test framework functionality
    - Check configuration files
 
-6. **Reference Documentation:**
+6. **Release Workflow (RW) and FR-060 (task token):**
+   - In Cursor (or any assistant using your `.cursorrules` RW trigger), **do not** send `RW` alone. The same message must include a parseable **Epic/Story/Task** id (**FR-060**).
+   - Examples: `RW E5S01T67`, `RW E5:S01:T67`; Kanban-init: `RW -k E5S01T01`; doc-only: `RW -d E5S01T02`.
+   - Without a task token, the agent must **RW ABORTED** before any version bump. See [Release Workflow (agent execution)](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5 task token, releasable task, intent guard).
+   - If `rw-config.yaml` has **`use_kanban: true`**, validators expect a real Kanban task document that matches the id you pass (e.g. `validate_rw_task_complete.py`).
+
+7. **Reference Documentation:**
    - Use Cases: `framework-dependency-use-cases.md`
    - Integration: `framework-dependency-integration-guide.md`
    - Troubleshooting: `framework-dependency-troubleshooting-guide.md`
@@ -154,6 +160,7 @@ When installing frameworks in a project, follow these steps:
 - [ ] Configure framework settings
 - [ ] Run validation scripts
 - [ ] Test framework functionality
+- [ ] Know that **RW** requires a task id in the same message (e.g. `RW E5S01T01`; **FR-060**)
 - [ ] Update project documentation
 
 ---
@@ -177,8 +184,8 @@ After installation, verify everything works:
 cd frameworks/workflow-mgmt
 python3 scripts/validation/validate_branch_context.py
 
-# Test Release Workflow
-# Type "RW" in your AI assistant
+# Test Release Workflow (same message must include E…S…T… — FR-060)
+# Example: RW E5:S01:T01 or RW E5S01T01 in your AI assistant
 
 # Test Kanban
 cd ../kanban
@@ -187,7 +194,7 @@ python3 scripts/install_kanban_framework.py --help
 
 ---
 
-**Last Updated:** 2025-12-18  
+**Last Updated:** 2026-03-30  
 **Repository:** https://github.com/earlution/ai-dev-kit  
 **Documentation:** `docs/documentation/user-docs/`
 

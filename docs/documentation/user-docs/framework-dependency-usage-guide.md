@@ -167,7 +167,7 @@ cp frameworks/kanban/templates/epic-template.md docs/project-management/kanban/e
 
 #### Using the Release Workflow (RW)
 
-The Release Workflow is triggered by typing "RW" in your AI assistant (Cursor, GitHub Copilot, etc.).
+The Release Workflow is invoked in your AI assistant (Cursor, GitHub Copilot, etc.) with **`RW` and a mandatory task id in the same message** (**FR-060**), e.g. `RW E5S01T01` or `RW E5:S01:T01`. A bare `RW` must **RW ABORTED** before any version bump.
 
 **Basic RW Execution:**
 
@@ -184,8 +184,8 @@ The Release Workflow is triggered by typing "RW" in your AI assistant (Cursor, G
    ```
 
 3. **Trigger RW:**
-   - Type "RW" in your AI assistant
-   - The assistant will execute the 14-step release workflow
+   - Send e.g. `RW E5S01T01` or `RW E5:S01:T01` (your completed task id). Optional: `RW -k …`, `RW -d …`
+   - The assistant runs the Release Workflow steps defined in your `.cursorrules`
 
 **RW Steps (automated):**
 1. Validate branch context
@@ -352,7 +352,7 @@ VERSION_TASK = 1
 
 **3. Execute Release Workflow:**
 ```bash
-# Type "RW" in AI assistant
+# e.g. RW E1S01T01 or RW E1:S01:T01 in AI assistant (FR-060; same message as task id)
 # RW automatically:
 # - Updates Kanban docs
 # - Updates version

@@ -221,8 +221,8 @@ If using different branch naming:
 
 5. **Test the Workflow:**
    - Create a test version file
-   - Type "RW" in your AI assistant
-   - Verify all 10 steps execute correctly
+   - Send e.g. `RW E1S01T01` or `RW E1:S01:T01` in your AI assistant (**FR-060**)
+   - Verify the configured steps execute correctly
 
 6. **Set Up Pre-commit Hooks (optional):**
    - Add validators to pre-commit hooks

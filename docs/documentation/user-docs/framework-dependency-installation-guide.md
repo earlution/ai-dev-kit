@@ -550,7 +550,7 @@ pip install --upgrade ai-dev-kit-workflow-mgmt==2.1.0
 
 ### Enable RW Trigger in `.cursorrules` (Workflow Management Framework)
 
-**⚠️ IMPORTANT:** If you installed the Workflow Management framework, you need to add the RW trigger section to your `.cursorrules` file to enable the "RW" command in Cursor.
+**⚠️ IMPORTANT:** If you installed the Workflow Management framework, add the RW trigger section to your `.cursorrules` so Cursor can run the Release Workflow. **FR-060:** You must send **`RW` and a parseable Epic/Story/Task id in the same message** (e.g. `RW E5S01T01`, `RW E5:S01:T01`). A bare `RW` is not sufficient—the agent must **RW ABORTED** before any version bump.
 
 **Option A: Use the RW Installer (Recommended)**
 
@@ -581,7 +581,7 @@ If you prefer to set it up manually:
 
 2. **Copy the RW trigger section:**
    - Copy everything from `### 🚀 RELEASE WORKFLOW (RW) TRIGGER` to the end of the file
-   - This is the section that enables the "RW" command
+   - This is the section that enables the RW trigger (always with a task id per FR-060)
 
 3. **Add to your `.cursorrules` file:**
    ```bash
@@ -600,20 +600,20 @@ If you prefer to set it up manually:
 
 5. **Verify the trigger works:**
    - Restart Cursor to reload `.cursorrules`
-   - Type "RW" in Cursor chat
-   - The agent should recognize the trigger and execute the Release Workflow
+   - In chat, use the trigger **plus** a task id, e.g. `RW E5S01T01` or `RW E5:S01:T01` (substitute a completed task from your Kanban). Short paths: `RW -k E5S01T01`, `RW -d E5S01T01`
+   - Full procedure and guardrails: [Release Workflow (agent execution)](../../../packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
+   - If **`rw-config.yaml`** sets **`use_kanban: true`**, validators (e.g. `validate_rw_task_complete.py`) expect a real task document matching the id you pass
 
 **What the RW Trigger Does:**
 
-When you type "RW" or "rw" in Cursor, the AI assistant will:
-- Execute the complete 14-step Release Workflow
-- Bump version, update changelogs, commit, tag, and push
-- Update Kanban documentation automatically
-- Validate everything before committing
+When you send **`RW` / `rw` with a mandatory task token** in the same message, the AI assistant will:
+- Execute the Release Workflow steps defined in your `.cursorrules` (version bump, changelogs, validators, commit/tag/push as applicable)
+- Update Kanban documentation when configured
+- Validate branch context and task alignment before mutating release files
 
-**Without `.cursorrules`:** The "RW" command won't work - you'll need to manually run the workflow steps.
+**Without `.cursorrules`:** The RW trigger is not active—run workflow steps manually or add the excerpt.
 
-**With `.cursorrules`:** The "RW" command triggers intelligent agent-driven execution of the complete workflow.
+**With `.cursorrules`:** The trigger runs agent-driven RW when the message includes a parseable `E…S…T…` id (**FR-060**).
 
 ---
 
@@ -733,7 +733,7 @@ vim frameworks/workflow-mgmt/rw-config.yaml
 
 ### 4. Enable RW Trigger in `.cursorrules` (Workflow Management Framework Only)
 
-**⚠️ IMPORTANT:** If you installed the Workflow Management framework, you need to add the RW trigger section to your `.cursorrules` file to enable the "RW" command in Cursor.
+**⚠️ IMPORTANT:** If you installed the Workflow Management framework, add the RW trigger section to your `.cursorrules` so Cursor can run the Release Workflow. **FR-060:** You must send **`RW` and a parseable Epic/Story/Task id in the same message** (e.g. `RW E5S01T01`, `RW E5:S01:T01`). A bare `RW` is not sufficient—the agent must **RW ABORTED** before any version bump.
 
 **Option A: Use the RW Installer (Recommended)**
 
@@ -764,7 +764,7 @@ If you prefer to set it up manually:
 
 2. **Copy the RW trigger section:**
    - Copy everything from `### 🚀 RELEASE WORKFLOW (RW) TRIGGER` to the end of the file
-   - This is the section that enables the "RW" command
+   - This is the section that enables the RW trigger (always with a task id per FR-060)
 
 3. **Add to your `.cursorrules` file:**
    ```bash
@@ -783,20 +783,20 @@ If you prefer to set it up manually:
 
 5. **Verify the trigger works:**
    - Restart Cursor to reload `.cursorrules`
-   - Type "RW" in Cursor chat
-   - The agent should recognize the trigger and execute the Release Workflow
+   - In chat, use the trigger **plus** a task id, e.g. `RW E5S01T01` or `RW E5:S01:T01` (substitute a completed task from your Kanban). Short paths: `RW -k E5S01T01`, `RW -d E5S01T01`
+   - Full procedure and guardrails: [Release Workflow (agent execution)](../../../packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
+   - If **`rw-config.yaml`** sets **`use_kanban: true`**, validators (e.g. `validate_rw_task_complete.py`) expect a real task document matching the id you pass
 
 **What the RW Trigger Does:**
 
-When you type "RW" or "rw" in Cursor, the AI assistant will:
-- Execute the complete 14-step Release Workflow
-- Bump version, update changelogs, commit, tag, and push
-- Update Kanban documentation automatically
-- Validate everything before committing
+When you send **`RW` / `rw` with a mandatory task token** in the same message, the AI assistant will:
+- Execute the Release Workflow steps defined in your `.cursorrules` (version bump, changelogs, validators, commit/tag/push as applicable)
+- Update Kanban documentation when configured
+- Validate branch context and task alignment before mutating release files
 
-**Without `.cursorrules`:** The "RW" command won't work - you'll need to manually run the workflow steps.
+**Without `.cursorrules`:** The RW trigger is not active—run workflow steps manually or add the excerpt.
 
-**With `.cursorrules`:** The "RW" command triggers intelligent agent-driven execution of the complete workflow.
+**With `.cursorrules`:** The trigger runs agent-driven RW when the message includes a parseable `E…S…T…` id (**FR-060**).
 
 **Location of Template:**
 - `frameworks/workflow-mgmt/cursorrules-rw-trigger-section.md`
@@ -978,14 +978,15 @@ After installation:
 2. **Follow the implementation guide:** `frameworks/<framework-name>/IMPLEMENTATION_GUIDE.md`
 3. **Configure for your project:** Update paths, version schema, and settings
 4. **Set up `.cursorrules` for RW trigger (Workflow Management Framework only):**
-   - If you installed the Workflow Management framework, you need to add the RW trigger section to your `.cursorrules` file
+   - If you installed the Workflow Management framework, add the RW trigger section to your `.cursorrules` file
+   - **FR-060:** After setup, invoke RW with a task id in the **same** message (e.g. `RW E5S01T01`, `RW E5:S01:T01`); not `RW` alone
    - **Location:** `frameworks/workflow-mgmt/cursorrules-rw-trigger-section.md`
    - **Instructions:** Copy the section from that file into your project's `.cursorrules` file
    - **Alternative:** Use the RW installer script which can generate it automatically:
      ```bash
      python frameworks/workflow-mgmt/scripts/install_release_workflow.py
      ```
-   - **Note:** Without the `.cursorrules` section, the "RW" trigger won't work in Cursor
+   - **Note:** Without the `.cursorrules` section, the RW trigger is not active in Cursor
 5. **Test the framework:** Run validation scripts and test workflows
 6. **Set up update notifications:** Configure automatic update checking
 
