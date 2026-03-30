@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-project-management/kanban/kanban-completed" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">AI Dev Kit – Kanban Completed Tasks | AI Dev Kit</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://earlution.github.io/ai-dev-kit/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://earlution.github.io/ai-dev-kit/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://earlution.github.io/ai-dev-kit/docs/project-management/kanban/kanban-completed"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="AI Dev Kit – Kanban Completed Tasks | AI Dev Kit"><meta data-rh="true" name="description" content="Last UpdatedS09:T06 / FR-070)"><meta data-rh="true" property="og:description" content="Last UpdatedS09:T06 / FR-070)"><link data-rh="true" rel="icon" href="/ai-dev-kit/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://earlution.github.io/ai-dev-kit/docs/project-management/kanban/kanban-completed"><link data-rh="true" rel="alternate" href="https://earlution.github.io/ai-dev-kit/docs/project-management/kanban/kanban-completed" hreflang="en"><link data-rh="true" rel="alternate" href="https://earlution.github.io/ai-dev-kit/docs/project-management/kanban/kanban-completed" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kanban Directory","item":"https://earlution.github.io/ai-dev-kit/docs/project-management/kanban/"},{"@type":"ListItem","position":2,"name":"AI Dev Kit – Kanban Completed Tasks","item":"https://earlution.github.io/ai-dev-kit/docs/project-management/kanban/kanban-completed"}]}</script><link rel="alternate" type="application/rss+xml" href="/ai-dev-kit/blog/rss.xml" title="AI Dev Kit RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/ai-dev-kit/blog/atom.xml" title="AI Dev Kit Atom Feed"><link rel="stylesheet" href="/ai-dev-kit/assets/css/styles.b9839536.css">
+<script src="/ai-dev-kit/assets/js/runtime~main.432335d9.js" defer="defer"></script>
+<script src="/ai-dev-kit/assets/js/main.dc890cdf.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/ai-dev-kit/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/ai-dev-kit/"><div class="navbar__logo"><img src="/ai-dev-kit/img/logo.svg" alt="AI Dev Kit Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/ai-dev-kit/img/logo.svg" alt="AI Dev Kit Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">AI Dev Kit</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/ai-dev-kit/docs/architecture/">Docs</a><a class="navbar__item navbar__link" href="/ai-dev-kit/blog">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/earlution/ai-dev-kit" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/architecture/"><span title="Architecture" class="categoryLinkLabel_W154">Architecture</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/changelog-and-release-notes/"><span title="Changelog &amp; release notes" class="categoryLinkLabel_W154">Changelog &amp; release notes</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/ai-dev-kit/docs/project-management/"><span title="Project management" class="categoryLinkLabel_W154">Project management</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/"><span title="Project Management" class="linkLabel_WmDU">Project Management</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/"><span title="Kanban Directory" class="categoryLinkLabel_W154">Kanban Directory</span></a><button aria-label="Collapse sidebar category &#x27;Kanban Directory&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/AGENTS"><span title="Kanban Workflow Agent" class="linkLabel_WmDU">Kanban Workflow Agent</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/_index"><span title="AI Dev Kit – Kanban Board (Quick View)" class="linkLabel_WmDU">AI Dev Kit – Kanban Board (Quick View)</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-1/"><span title="epics" class="categoryLinkLabel_W154">epics</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE"><span title="fr-br" class="categoryLinkLabel_W154">fr-br</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-board"><span title="AI Dev Kit – FR/BR/UXR Prioritization Board" class="linkLabel_WmDU">AI Dev Kit – FR/BR/UXR Prioritization Board</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-completed"><span title="AI Dev Kit – FR/BR/UXR Completed Items" class="linkLabel_WmDU">AI Dev Kit – FR/BR/UXR Completed Items</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-structure"><span title="AI Dev Kit – FR/BR/UXR Structure" class="linkLabel_WmDU">AI Dev Kit – FR/BR/UXR Structure</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/kanban-board-guide"><span title="AI Dev Kit – Kanban Board Guide" class="linkLabel_WmDU">AI Dev Kit – Kanban Board Guide</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/kanban-board"><span title="AI Dev Kit – Kanban Board" class="linkLabel_WmDU">AI Dev Kit – Kanban Board</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/kanban-completed"><span title="AI Dev Kit – Kanban Completed Tasks" class="linkLabel_WmDU">AI Dev Kit – Kanban Completed Tasks</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/kanban-structure"><span title="AI Dev Kit – Kanban Structure" class="linkLabel_WmDU">AI Dev Kit – Kanban Structure</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/ukw-changes-summary-2026-01-05"><span title="UKW Changes Summary: 2026-01-05" class="linkLabel_WmDU">UKW Changes Summary: 2026-01-05</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/ai-dev-kit/docs/project-management/kanban/ukw-changes-summary"><span title="UKW Changes Summary - 2026-01-03" class="linkLabel_WmDU">UKW Changes Summary - 2026-01-03</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" tabindex="0" href="/ai-dev-kit/docs/project-management/rituals/"><span title="Rituals" class="categoryLinkLabel_W154">Rituals</span></a><button aria-label="Expand sidebar category &#x27;Rituals&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/guides/"><span title="Guides" class="categoryLinkLabel_W154">Guides</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/documentation/docusaurus-portal-index"><span title="Documentation (developer &amp; user)" class="categoryLinkLabel_W154">Documentation (developer &amp; user)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/knowledge/KB-INDEX"><span title="Knowledge base" class="categoryLinkLabel_W154">Knowledge base</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/maintenance/BUILD_AND_UPLOAD"><span title="Maintenance (portal triage)" class="categoryLinkLabel_W154">Maintenance (portal triage)</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/analysis/cmw-ordering-flaw-analysis"><span title="Analysis" class="categoryLinkLabel_W154">Analysis</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/implementation-cycles/ARCHIVE-AGENT-001-E24S02T01-03-RESOLUTION"><span title="Implementation cycles" class="categoryLinkLabel_W154">Implementation cycles</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/developer-tools/ide-whitelist-guide"><span title="Developer tools" class="categoryLinkLabel_W154">Developer tools</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/ai-dev-kit/docs/changelog/archive/0.4.14.4+1_epic-renumbering"><span title="Changelog (legacy root)" class="categoryLinkLabel_W154">Changelog (legacy root)</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/ai-dev-kit/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Project management</span></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/ai-dev-kit/docs/project-management/kanban/"><span>Kanban Directory</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">AI Dev Kit – Kanban Completed Tasks</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>AI Dev Kit – Kanban Completed Tasks</h1></header>
+<p><strong>Last Updated:</strong> 2026-03-30 (RW E5:S09<!-- -->:T06<!-- --> / FR-070)
+<strong>Version:</strong> v0.5.9.6+1</p>
+<blockquote>
+<p><strong>For MoSCOW prioritized tasks, see:</strong> <a class="" href="/ai-dev-kit/docs/project-management/kanban/kanban-board"><code>kanban-board.md</code></a><br>
+<strong>For completed FR/BR/UXR intake items, see:</strong> <a class="" href="/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-completed"><code>fr-br-uxr-completed.md</code></a><br>
+<strong>For Epic/Story/Task structure, see:</strong> <a class="" href="/ai-dev-kit/docs/project-management/kanban/kanban-structure"><code>kanban-structure.md</code></a><br>
+<strong>For rules and explanations, see:</strong> <a class="" href="/ai-dev-kit/docs/project-management/kanban/kanban-board-guide"><code>kanban-board-guide.md</code></a></p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="20-most-recently-completed-tasks">20 Most Recently Completed Tasks<a href="#20-most-recently-completed-tasks" class="hash-link" aria-label="Direct link to 20 Most Recently Completed Tasks" title="Direct link to 20 Most Recently Completed Tasks" translate="no">​</a></h2>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-2-workflow-management-framework"><strong>Epic 2: Workflow Management Framework</strong><a href="#epic-2-workflow-management-framework" class="hash-link" aria-label="Direct link to epic-2-workflow-management-framework" title="Direct link to epic-2-workflow-management-framework" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution">E2:S11<!-- -->:T12</a></strong> – GitHub Actions intake (<strong>BR-053</strong>) — <strong>COMPLETE (workaround, v0.2.11.12+2)</strong> — workflow unregistered (<code>fr-br-intake.yml.DISABLED</code>); manual intake; closure per BR-053 <em>Resolution / current status</em> (not a vendor trigger fix)<br>
+<strong>Completed:</strong> <code>2026-03-30T16:00:00Z</code> | <strong>Version:</strong> <code>v0.2.11.12+2</code> | <strong>Agent:</strong> <code>UKW / Maintainer</code></li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-5-documentation-management"><strong>Epic 5: Documentation Management</strong><a href="#epic-5-documentation-management" class="hash-link" aria-label="Direct link to epic-5-documentation-management" title="Direct link to epic-5-documentation-management" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070">E5:S09<!-- -->:T06</a></strong> – Docusaurus GitHub Pages deployment (<strong>FR-070</strong>): <a href="/ai-dev-kit/assets/files/docusaurus-deploy-8e883726b3e4237e25dc4872196d9b53.yml" target="_blank" class=""><code>.github/workflows/docusaurus-deploy.yml</code></a>, portal hosting README, root README link, <code>tests/test_portal_fr070_deployment.py</code><br>
+<strong>Completed:</strong> <code>2026-03-30T16:11:41Z</code> | <strong>Version:</strong> <code>v0.5.9.6+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T05-docusaurus-ci-fr-069">E5:S09<!-- -->:T05</a></strong> – Docusaurus CI build gate (<strong>FR-069</strong>): <a href="/ai-dev-kit/assets/files/docusaurus-build-55a1b6ae4671efdedc20d6e14b9e3699.yml" target="_blank" class=""><code>.github/workflows/docusaurus-build.yml</code></a>, <code>tests/test_portal_fr069_ci.py</code>, portal README CI pointer<br>
+<strong>Completed:</strong> <code>2026-03-30T15:52:14Z</code> | <strong>Version:</strong> <code>v0.5.9.5+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T04-docusaurus-navigation-fr-068">E5:S09<!-- -->:T04</a></strong> – Docusaurus navigation / sidebar IA / landing (<strong>FR-068</strong>): <code>portal/sidebars.js</code>, <code>portal/docusaurus.config.js</code>, homepage, <code>tests/test_portal_fr068_navigation.py</code>, portal README mapping + <code>--no-minify</code> build workaround<br>
+<strong>Completed:</strong> <code>2026-03-30T15:27:28Z</code> | <strong>Version:</strong> <code>v0.5.9.4+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T03-docusaurus-build-triage-fr-067">E5:S09<!-- -->:T03</a></strong> – Docusaurus production build corpus triage (<strong>FR-067</strong>): MDX/placeholder escapes, <code>onBrokenLinks</code>/<code>onBrokenMarkdownLinks</code> policy, <code>scripts/escape_mdx_placeholders.py</code>, <code>tests/test_portal_fr067_build_triage.py</code>, <code>docs/maintenance/docusaurus-corpus-triage-fr-067.md</code><br>
+<strong>Completed:</strong> <code>2026-03-30T22:30:00Z</code> | <strong>Version:</strong> <code>v0.5.9.3+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T02-docusaurus-canonical-docs-path-fr-066">E5:S09<!-- -->:T02</a></strong> – Canonical <strong><code>docs/</code></strong> path and publish scope (<strong>FR-066</strong>): <code>portal/docusaurus.config.js</code>, <code>portal/README.md</code>, <code>tests/test_portal_fr066_docs_path.py</code>, <code>docs/documentation/docusaurus-portal-index.md</code><br>
+<strong>Completed:</strong> <code>2026-03-30T21:45:00Z</code> | <strong>Version:</strong> <code>v0.5.9.2+2</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T01-docusaurus-site-identity-fr-065">E5:S09<!-- -->:T01</a></strong> – Docusaurus site identity (<strong>FR-065</strong>): <code>portal/docusaurus.config.js</code>, <code>portal/README.md</code>, <code>tests/test_portal_fr065_identity.py</code><br>
+<strong>Completed:</strong> <code>2026-03-30T20:35:00Z</code> | <strong>Version:</strong> <code>v0.5.9.1+2</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T69-shields-branch-private-repo-fr-064">E5:S01<!-- -->:T69</a></strong> – Retire <strong><code>shields</code></strong> branch (FR-064): delete <code>update-badges.yml</code> BYOB; README static-badge policy; <code>git push origin --delete shields</code><br>
+<strong>Completed:</strong> <code>2026-03-30T12:44:00Z</code> | <strong>Version:</strong> <code>v0.5.1.69+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning">E5:S01<!-- -->:T68</a></strong> – Packaged frameworks — <code>rw-config</code>/<code>scripts_path</code> consumer doc; packages README semver policy; numbering + kanban README (FR-060 triggers / paths)<br>
+<strong>Completed:</strong> <code>2026-03-30T12:15:00Z</code> | <strong>Version:</strong> <code>v0.5.1.68+2</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T67-adopter-install-docs-rw-task-token">E5:S01<!-- -->:T67</a></strong> – Adopter install docs — mandatory <strong>RW</strong> + task id same message (<strong>FR-060</strong>); INSTALL + user-docs + workflow mgt README + package install cross-ref<br>
+<strong>Completed:</strong> <code>2026-03-30T11:29:20Z</code> | <strong>Version:</strong> <code>v0.5.1.67+2</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T66-cursorrules-vs-packaged-rw-trigger-parity">E5:S01<!-- -->:T66</a></strong> – <code>.cursorrules</code> vs packaged RW trigger parity (parity doc; excerpt <strong>1b/1c/1d</strong> todos; FR citations; root dual-source link)<br>
+<strong>Completed:</strong> <code>2026-03-30T10:48:54Z</code> | <strong>Version:</strong> <code>v0.5.1.66+2</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T65-align-workflow-mgt-readme-with-workflow-registry-count">E5:S01<!-- -->:T65</a></strong> – Align workflow mgt README with registry count (<strong>11</strong> + <code>workflow-registry.yaml</code> SoT; Specialized (4); no phantom Documentation Workflow)<br>
+<strong>Completed:</strong> <code>2026-03-30T10:40:14Z</code> | <strong>Version:</strong> <code>v0.5.1.65+2</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T63-rw-task-argument-requirement">E5:S01<!-- -->:T63</a></strong> – RW Task Argument Requirement / FR-060 (strict task token; <code>validate_rw_task_complete.py</code>; docs; T63 renumber; <code>find_story_file</code> fr-repo preference)<br>
+<strong>Completed:</strong> <code>2026-03-25T16:26:47Z</code> | <strong>Version:</strong> <code>v0.5.1.63+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-7-codebase-maintenance"><strong>Epic 7: Codebase Maintenance</strong><a href="#epic-7-codebase-maintenance" class="hash-link" aria-label="Direct link to epic-7-codebase-maintenance" title="Direct link to epic-7-codebase-maintenance" translate="no">​</a></h4>
+<ul>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-006-post-windsurf-project-review/T09-config-and-git-state-validation">E7:S06<!-- -->:T09</a></strong> – Config and git state validation (rw-config path matrix; version vs branch; git baseline; <code>.cursorrules</code> vs config; <code>.cursorignore</code> absent; Story 6 COMPLETE)<br>
+<strong>Completed:</strong> <code>2026-03-25T15:15:34Z</code> | <strong>Version:</strong> <code>v0.7.6.9+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-006-post-windsurf-project-review/T08-dependency-and-tooling-audit">E7:S06<!-- -->:T08</a></strong> – Dependency and tooling audit (setup.py vs requirements; pytest 85/92; CI <code>Tests</code> gap; BR-058; <code>test_validation</code> aligned)<br>
+<strong>Completed:</strong> <code>2026-03-25T15:00:00Z</code> | <strong>Version:</strong> <code>v0.7.6.8+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-006-post-windsurf-project-review/T07-general-documentation-integrity">E7:S06<!-- -->:T07</a></strong> – General documentation and cross-reference integrity (README path spot-check; docs tree; fr-br <code>(epics/</code> re-scan clean; audit in T07 doc)<br>
+<strong>Completed:</strong> <code>2026-03-25T14:34:13Z</code> | <strong>Version:</strong> <code>v0.7.6.7+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-006-post-windsurf-project-review/T06-fr-br-uxr-intake-documentation-quality">E7:S06<!-- -->:T06</a></strong> – FR/BR/UXR intake documentation quality (aggregate doc audit; <code>../epics/</code> link fixes in nine fr-br files; cross-links kanban vs FR/BR/UXR completed)<br>
+<strong>Completed:</strong> <code>2026-03-25T14:30:53Z</code> | <strong>Version:</strong> <code>v0.7.6.6+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-006-post-windsurf-project-review/T05-workflow-script-integrity">E7:S06<!-- -->:T05</a></strong> – Workflow script integrity (ukw_syntax_parser, task_inference, orchestrator/executor; canonical_steps + test fixes; no BR filed)<br>
+<strong>Completed:</strong> <code>2026-03-25T14:25:32Z</code> | <strong>Version:</strong> <code>v0.7.6.5+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-006-post-windsurf-project-review/T04-recent-commit-review">E7:S06<!-- -->:T04</a></strong> – Recent commit review (last ~15 commits: RW compliance, batch scope, quality; no BR/FR filed)<br>
+<strong>Completed:</strong> <code>2026-03-25T14:17:31Z</code> | <strong>Version:</strong> <code>v0.7.6.4+1</code> | <strong>Agent:</strong> <code>RW Agent</code></p>
+</li>
+<li class="">
+<p><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency">E7:S06<!-- -->:T03</a></strong> – Kanban documentation consistency (live SoT, E9/E18 disambiguation, cross-refs, Epic-9 S05 stub)<br>
+<strong>Completed:</strong> <code>2026-03-25T12:00:00Z</code> | <strong>Version:</strong> <code>v0.7.6.3+1</code> | <strong>Agent:</strong> <code>Cursor-Agent</code></p>
+</li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance" title="Direct link to epic-6-framework-management-and-maintenance" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk">E6:S06<!-- -->:T56</a></strong> – RW ambiguous task identifier typo risk (BR-056 verified)<br>
+<strong>Completed:</strong> <code>2026-03-25T12:55:31Z</code> | <strong>Version:</strong> <code>v0.6.6.56+4</code> | <strong>Agent:</strong> <code>RW Agent</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-latest-releases-today---2026-03-12">🚀 Latest Releases (Today - 2026-03-12)<a href="#-latest-releases-today---2026-03-12" class="hash-link" aria-label="Direct link to 🚀 Latest Releases (Today - 2026-03-12)" title="Direct link to 🚀 Latest Releases (Today - 2026-03-12)" translate="no">​</a></h3>
+<p><strong>📋 Batch Release: 8 Should Have Tasks via RW Execution</strong></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-11-debugging-and-troubleshooting"><strong>Epic 11: Debugging and Troubleshooting</strong><a href="#epic-11-debugging-and-troubleshooting" class="hash-link" aria-label="Direct link to epic-11-debugging-and-troubleshooting" title="Direct link to epic-11-debugging-and-troubleshooting" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-11/Story-001-debug-path/T01-debug-path-expectations-baseline.md">E11:S01<!-- -->:T01</a></strong> – Debug path expectations baseline<br>
+<strong>Completed:</strong> <code>2026-03-12T14:00:00Z</code> | <strong>Version:</strong> <code>v0.11.1.1+1</code> | <strong>Agent:</strong> <code>PM-AGENT-001</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-10-documentation-and-knowledge-management"><strong>Epic 10: Documentation and Knowledge Management</strong><a href="#epic-10-documentation-and-knowledge-management" class="hash-link" aria-label="Direct link to epic-10-documentation-and-knowledge-management" title="Direct link to epic-10-documentation-and-knowledge-management" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-10/Story-001-documentation-lifecycle/T01-doc-lifecycle-expectations-baseline.md">E10:S01<!-- -->:T01</a></strong> – Doc lifecycle expectations baseline<br>
+<strong>Completed:</strong> <code>2026-03-12T14:00:00Z</code> | <strong>Version:</strong> <code>v0.10.1.1+1</code> | <strong>Agent:</strong> <code>PM-AGENT-001</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-8-tooling--automation"><strong>Epic 8: Tooling &amp; Automation</strong><a href="#epic-8-tooling--automation" class="hash-link" aria-label="Direct link to epic-8-tooling--automation" title="Direct link to epic-8-tooling--automation" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-8/Story-004-tooling-baseline/T01-tooling-automation-expectations-baseline.md">E8:S04<!-- -->:T01</a></strong> – Tooling &amp; Automation expectations baseline<br>
+<strong>Completed:</strong> <code>2026-03-12T14:00:00Z</code> | <strong>Version:</strong> <code>v0.8.4.1+1</code> | <strong>Agent:</strong> <code>PM-AGENT-001</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-1-ai-dev-kit-core"><strong>Epic 1: AI Dev Kit Core</strong><a href="#epic-1-ai-dev-kit-core" class="hash-link" aria-label="Direct link to epic-1-ai-dev-kit-core" title="Direct link to epic-1-ai-dev-kit-core" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-1/Story-006-repository-infrastructure/T01-set-up-byob-badges-for-private-repository.md">E1:S06<!-- -->:T01</a></strong> – Set up BYOB badges for private repository<br>
+<strong>Completed:</strong> <code>2026-03-12T14:00:00Z</code> | <strong>Version:</strong> <code>v0.1.6.1+1</code> | <strong>Agent:</strong> <code>PM-AGENT-001</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-1"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-1" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-1" title="Direct link to epic-6-framework-management-and-maintenance-1" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-persisted-run-logs.md">E6:S07<!-- -->:T18</a></strong> – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs<br>
+<strong>Completed:</strong> <code>2026-03-12T14:00:00Z</code> | <strong>Version:</strong> <code>v0.6.7.18+1</code> | <strong>Agent:</strong> <code>PM-AGENT-001</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-4-kanban-framework"><strong>Epic 4: Kanban Framework</strong><a href="#epic-4-kanban-framework" class="hash-link" aria-label="Direct link to epic-4-kanban-framework" title="Direct link to epic-4-kanban-framework" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-task-documents.md">E4:S11<!-- -->:T07</a></strong> – Migrate Embedded Tasks to Discrete Task Documents<br>
+<strong>Completed:</strong> <code>2026-03-12T14:00:00Z</code> | <strong>Version:</strong> <code>v0.4.11.7+1</code> | <strong>Agent:</strong> <code>PM-AGENT-001</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-2"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-2" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-2" title="Direct link to epic-6-framework-management-and-maintenance-2" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflow-equivalents.md">E6:S07<!-- -->:T106</a></strong> – Windsurf Migration: .cursorrules to Workflow Equivalents<br>
+<strong>Completed:</strong> <code>2026-03-12T14:00:00Z</code> | <strong>Version:</strong> <code>v0.6.7.106+1</code> | <strong>Agent:</strong> <code>PM-AGENT-001</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-7-codebase-maintenance-and-review"><strong>Epic 7: Codebase Maintenance and Review</strong><a href="#epic-7-codebase-maintenance-and-review" class="hash-link" aria-label="Direct link to epic-7-codebase-maintenance-and-review" title="Direct link to epic-7-codebase-maintenance-and-review" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/docs/project-management/kanban/fr-br/BR-052-github-actions-workflow-optimization.md">BR-052</a></strong> – GitHub Actions Workflow Optimization<br>
+<strong>Completed:</strong> <code>2026-03-12T11:09:00Z</code> | <strong>Version:</strong> <code>v0.7.1.5+4</code> | <strong>Agent:</strong> <code>RW Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-7-codebase-maintenance-and-review-1"><strong>Epic 7: Codebase Maintenance and Review</strong><a href="#epic-7-codebase-maintenance-and-review-1" class="hash-link" aria-label="Direct link to epic-7-codebase-maintenance-and-review-1" title="Direct link to epic-7-codebase-maintenance-and-review-1" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/T06-update-changelog-workflow">E7:S01<!-- -->:T06</a></strong> – Implement Update Changelog Workflow (UCW)<br>
+<strong>Completed:</strong> <code>2026-03-16T17:00:00Z</code> | <strong>Version:</strong> <code>v0.7.1.7+4</code> | <strong>Agent:</strong> <code>RW Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-7-codebase-maintenance-and-review-2"><strong>Epic 7: Codebase Maintenance and Review</strong><a href="#epic-7-codebase-maintenance-and-review-2" class="hash-link" aria-label="Direct link to epic-7-codebase-maintenance-and-review-2" title="Direct link to epic-7-codebase-maintenance-and-review-2" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/T07-markdown-maintenance-workflow">E7:S01<!-- -->:T07</a></strong> – Markdown Maintenance Workflow (MMW)<br>
+<strong>Completed:</strong> <code>2026-03-16T17:30:00Z</code> | <strong>Version:</strong> <code>v0.7.1.7+4</code> | <strong>Agent:</strong> <code>RW Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-7-codebase-maintenance-and-review-3"><strong>Epic 7: Codebase Maintenance and Review</strong><a href="#epic-7-codebase-maintenance-and-review-3" class="hash-link" aria-label="Direct link to epic-7-codebase-maintenance-and-review-3" title="Direct link to epic-7-codebase-maintenance-and-review-3" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T08-task-doc-naming-standardization">E7:S01<!-- -->:T08</a></strong> – Task Doc Naming Standardization<br>
+<strong>Completed:</strong> <code>2026-03-16T17:45:00Z</code> | <strong>Version:</strong> <code>v0.7.1.8+4</code> | <strong>Agent:</strong> <code>RW Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-7-codebase-maintenance-and-review-4"><strong>Epic 7: Codebase Maintenance and Review</strong><a href="#epic-7-codebase-maintenance-and-review-4" class="hash-link" aria-label="Direct link to epic-7-codebase-maintenance-and-review-4" title="Direct link to epic-7-codebase-maintenance-and-review-4" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance">E7:S01<!-- -->:T09</a></strong> – Kanban Template Governance &amp; UXR Ownership<br>
+<strong>Completed:</strong> <code>2026-03-16T17:45:00Z</code> | <strong>Version:</strong> <code>v0.7.1.9+4</code> | <strong>Agent:</strong> <code>RW Agent</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-recent-completions-yesterday---2026-03-11">📅 Recent Completions (Yesterday - 2026-03-11)<a href="#-recent-completions-yesterday---2026-03-11" class="hash-link" aria-label="Direct link to 📅 Recent Completions (Yesterday - 2026-03-11)" title="Direct link to 📅 Recent Completions (Yesterday - 2026-03-11)" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-3"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-3" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-3" title="Direct link to epic-6-framework-management-and-maintenance-3" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-synchronization.md">E6:S07<!-- -->:T108</a></strong> – UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization<br>
+<strong>Completed:</strong> <code>2026-03-11T17:15:00Z</code> | <strong>Version:</strong> <code>v0.6.7.108+1</code> | <strong>Agent:</strong> <code>RW Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-4"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-4" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-4" title="Direct link to epic-6-framework-management-and-maintenance-4" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues">E6:S06<!-- -->:T02</a></strong> – Fix Release Workflow Micromanagement Issues<br>
+<strong>Completed:</strong> <code>2026-03-11T16:45:00Z</code> | <strong>Version:</strong> <code>v0.6.6.2+8</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-5-framework-management-and-fr-repository"><strong>Epic 5: Framework Management and FR Repository</strong><a href="#epic-5-framework-management-and-fr-repository" class="hash-link" aria-label="Direct link to epic-5-framework-management-and-fr-repository" title="Direct link to epic-5-framework-management-and-fr-repository" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T49-enhanced-kanban-completed-md-with-timestamps-recent-tasks.md">E5:S01<!-- -->:T49</a></strong> – Enhanced kanban-completed.md with Timestamps and Recent Tasks<br>
+<strong>Completed:</strong> <code>2026-03-11T16:30:00Z</code> | <strong>Version:</strong> <code>v0.5.1.49+2</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-5-framework-management-and-fr-repository-1"><strong>Epic 5: Framework Management and FR Repository</strong><a href="#epic-5-framework-management-and-fr-repository-1" class="hash-link" aria-label="Direct link to epic-5-framework-management-and-fr-repository-1" title="Direct link to epic-5-framework-management-and-fr-repository-1" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T48-icw-task-identifier-argument">E5:S01<!-- -->:T48</a></strong> – ICW Task Identifier Argument<br>
+<strong>Completed:</strong> <code>2026-03-11T16:20:00Z</code> | <strong>Version:</strong> <code>v0.5.1.48+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-5"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-5" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-5" title="Direct link to epic-6-framework-management-and-maintenance-5" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T42-fix-ukw-agent-board-cleanup-failure">E6:S06<!-- -->:T42</a></strong> – Fix UKW Agent Board Cleanup Failure<br>
+<strong>Completed:</strong> <code>2026-03-11T16:15:00Z</code> | <strong>Version:</strong> <code>v0.6.6.41+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-6"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-6" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-6" title="Direct link to epic-6-framework-management-and-maintenance-6" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T999-board-cleanup-test-task.md">E6:S06<!-- -->:T999</a></strong> – Board Cleanup Test Task<br>
+<strong>Completed:</strong> <code>2026-03-11T16:10:00Z</code> | <strong>Version:</strong> <code>v0.6.6.41+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-7"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-7" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-7" title="Direct link to epic-6-framework-management-and-maintenance-7" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T41-windsurf-investigate-how-to-leverage-agents-md-skill-md-for-workflows.md">E6:S06<!-- -->:T41</a></strong> – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows<br>
+<strong>Completed:</strong> <code>2026-03-11T16:05:00Z</code> | <strong>Version:</strong> <code>v0.6.6.41+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance-8"><strong>Epic 6: Framework Management and Maintenance</strong><a href="#epic-6-framework-management-and-maintenance-8" class="hash-link" aria-label="Direct link to epic-6-framework-management-and-maintenance-8" title="Direct link to epic-6-framework-management-and-maintenance-8" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T03-investigate-apple-sdk-license-blocking-issue.md">E6:S06<!-- -->:T03</a></strong> – Investigate Apple SDK License Blocking Issue<br>
+<strong>Completed:</strong> <code>2026-03-11T16:00:00Z</code> | <strong>Version:</strong> <code>v0.6.6.3+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-5-framework-management-and-fr-repository-2"><strong>Epic 5: Framework Management and FR Repository</strong><a href="#epic-5-framework-management-and-fr-repository-2" class="hash-link" aria-label="Direct link to epic-5-framework-management-and-fr-repository-2" title="Direct link to epic-5-framework-management-and-fr-repository-2" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack">E5:S01<!-- -->:T37</a></strong> – Kanban Policy Task Prioritisation and Queue/Stack<br>
+<strong>Completed:</strong> <code>2026-03-11T15:55:00Z</code> | <strong>Version:</strong> <code>v0.5.1.37+3</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-5-framework-management-and-fr-repository-3"><strong>Epic 5: Framework Management and FR Repository</strong><a href="#epic-5-framework-management-and-fr-repository-3" class="hash-link" aria-label="Direct link to epic-5-framework-management-and-fr-repository-3" title="Direct link to epic-5-framework-management-and-fr-repository-3" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion">E5:S01<!-- -->:T36</a></strong> – RW Update Kanban Board on Task Completion<br>
+<strong>Completed:</strong> <code>2026-03-11T15:50:00Z</code> | <strong>Version:</strong> <code>v0.5.1.36+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-5-framework-management-and-fr-repository-4"><strong>Epic 5: Framework Management and FR Repository</strong><a href="#epic-5-framework-management-and-fr-repository-4" class="hash-link" aria-label="Direct link to epic-5-framework-management-and-fr-repository-4" title="Direct link to epic-5-framework-management-and-fr-repository-4" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-use-case-flags.md">E5:S01<!-- -->:T34</a></strong> – UKW Granular Control and Use Case Flags<br>
+<strong>Completed:</strong> <code>2026-03-11T15:45:00Z</code> | <strong>Version:</strong> <code>v0.5.1.34+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-4-kanban-framework-1"><strong>Epic 4: Kanban Framework</strong><a href="#epic-4-kanban-framework-1" class="hash-link" aria-label="Direct link to epic-4-kanban-framework-1" title="Direct link to epic-4-kanban-framework-1" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-4/Story-013-kanban-board-enhancement-moscow-prioritized-task-view/T06-add-view-documentation.md">E4:S13<!-- -->:T06</a></strong> – Add view documentation<br>
+<strong>Completed:</strong> <code>2025-12-15T14:00:00Z</code> | <strong>Version:</strong> <code>v0.4.13.6+2</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-4-kanban-framework-2"><strong>Epic 4: Kanban Framework</strong><a href="#epic-4-kanban-framework-2" class="hash-link" aria-label="Direct link to epic-4-kanban-framework-2" title="Direct link to epic-4-kanban-framework-2" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-4/Story-005-canonical-epics-for-kanban-framework/T01-create-canonical-epic-structure.md">E4:S05<!-- -->:T01</a></strong> – Create canonical Epic structure<br>
+<strong>Completed:</strong> <code>2025-11-05T16:00:00Z</code> | <strong>Version:</strong> <code>v0.4.5.1+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-4-kanban-framework-3"><strong>Epic 4: Kanban Framework</strong><a href="#epic-4-kanban-framework-3" class="hash-link" aria-label="Direct link to epic-4-kanban-framework-3" title="Direct link to epic-4-kanban-framework-3" translate="no">​</a></h4>
+<ul>
+<li class=""><strong><a class="" href="/ai-dev-kit/docs/project-management/kanban/epics/Epic-4/Story-004-kanban-structure-refactoring/T01-refactor-board-structure.md">E4:S04<!-- -->:T01</a></strong> – Refactor board structure<br>
+<strong>Completed:</strong> <code>2025-11-01T16:00:00Z</code> | <strong>Version:</strong> <code>v0.4.4.1+1</code> | <strong>Agent:</strong> <code>Documentation Agent</code></li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>This document tracks all <strong>completed tasks</strong> across the AI Dev Kit project. Tasks are organized by Epic and Story, with completion dates and version markers for forensic tracking.</p>
+<p><strong>Completion Criteria:</strong> A task is marked COMPLETE only when:</p>
+<ul>
+<li class=""><strong>Implementation is fully done</strong> (code or docs delivered, released in a version)</li>
+<li class=""><strong>Sign-off is obtained</strong> (validated, accepted by the responsible party)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="completed-tasks-by-epic">Completed Tasks by Epic<a href="#completed-tasks-by-epic" class="hash-link" aria-label="Direct link to Completed Tasks by Epic" title="Direct link to Completed Tasks by Epic" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-1-ai-dev-kit-core--complete">Epic 1: AI Dev Kit Core ✅ COMPLETE<a href="#epic-1-ai-dev-kit-core--complete" class="hash-link" aria-label="Direct link to Epic 1: AI Dev Kit Core ✅ COMPLETE" title="Direct link to Epic 1: AI Dev Kit Core ✅ COMPLETE" translate="no">​</a></h3>
+<p><strong>Status:</strong> COMPLETE<br>
+<strong>Completed:</strong> 2025-12-02<br>
+<strong>Version:</strong> v0.1.2.5+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-ai-dev-kit-kanban-and-versioning--complete">Story 001: AI Dev Kit Kanban and Versioning ✅ COMPLETE<a href="#story-001-ai-dev-kit-kanban-and-versioning--complete" class="hash-link" aria-label="Direct link to Story 001: AI Dev Kit Kanban and Versioning ✅ COMPLETE" title="Direct link to Story 001: AI Dev Kit Kanban and Versioning ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E1:S01<!-- -->:T01</strong> – Create Kanban board structure - ✅ COMPLETE (v0.1.1.1+1)</li>
+<li class=""><strong>E1:S01<!-- -->:T02</strong> – Implement versioning schema - ✅ COMPLETE (v0.1.1.2+1)</li>
+<li class=""><strong>E1:S01<!-- -->:T03</strong> – Create governance policies - ✅ COMPLETE (v0.1.1.3+1)</li>
+<li class=""><strong>E1:S01<!-- -->:T04</strong> – Create task tracking system - ✅ COMPLETE (v0.1.1.4+1)</li>
+<li class=""><strong>E1:S01<!-- -->:T05</strong> – Create documentation framework - ✅ COMPLETE (v0.1.1.5+1)</li>
+<li class=""><strong>E1:S01<!-- -->:T06</strong> – Integrate with versioning - ✅ COMPLETE (v0.1.1.6+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-002-package-and-repo-architecture--complete">Story 002: Package and Repo Architecture ✅ COMPLETE<a href="#story-002-package-and-repo-architecture--complete" class="hash-link" aria-label="Direct link to Story 002: Package and Repo Architecture ✅ COMPLETE" title="Direct link to Story 002: Package and Repo Architecture ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E1:S02<!-- -->:T01</strong> – Analyze current package structure - ✅ COMPLETE (v0.1.2.1+1)</li>
+<li class=""><strong>E1:S02<!-- -->:T02</strong> – Document modularity principles - ✅ COMPLETE (v0.1.2.2+1)</li>
+<li class=""><strong>E1:S02<!-- -->:T03</strong> – Create package dependency matrix - ✅ COMPLETE (v0.1.2.3+1)</li>
+<li class=""><strong>E1:S02<!-- -->:T04</strong> – Document consumption patterns - ✅ COMPLETE (v0.1.2.4+1)</li>
+<li class=""><strong>E1:S02<!-- -->:T05</strong> – Update package READMEs - ✅ COMPLETE (v0.1.2.5+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-003-core-infrastructure--complete">Story 003: Core Infrastructure ✅ COMPLETE<a href="#story-003-core-infrastructure--complete" class="hash-link" aria-label="Direct link to Story 003: Core Infrastructure ✅ COMPLETE" title="Direct link to Story 003: Core Infrastructure ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E1:S03<!-- -->:T01</strong> – Establish project structure - ✅ COMPLETE (v0.1.3.1+1)</li>
+<li class=""><strong>E1:S03<!-- -->:T02</strong> – Create build system - ✅ COMPLETE (v0.1.3.2+1)</li>
+<li class=""><strong>E1:S03<!-- -->:T03</strong> – Implement testing framework - ✅ COMPLETE (v0.1.3.3+1)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-3-numbering--versioning-framework--complete">Epic 3: Numbering &amp; Versioning Framework ✅ COMPLETE<a href="#epic-3-numbering--versioning-framework--complete" class="hash-link" aria-label="Direct link to Epic 3: Numbering &amp; Versioning Framework ✅ COMPLETE" title="Direct link to Epic 3: Numbering &amp; Versioning Framework ✅ COMPLETE" translate="no">​</a></h3>
+<p><strong>Status:</strong> COMPLETE<br>
+<strong>Completed:</strong> 2025-12-04<br>
+<strong>Version:</strong> v0.3.3.3+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-versioning-schema-design--complete">Story 001: Versioning Schema Design ✅ COMPLETE<a href="#story-001-versioning-schema-design--complete" class="hash-link" aria-label="Direct link to Story 001: Versioning Schema Design ✅ COMPLETE" title="Direct link to Story 001: Versioning Schema Design ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E3:S01<!-- -->:T01</strong> – Design RC.EPIC.STORY.TASK+BUILD schema - ✅ COMPLETE (v0.3.1.1+1)</li>
+<li class=""><strong>E3:S01<!-- -->:T02</strong> – Create versioning policies - ✅ COMPLETE (v0.3.1.2+1)</li>
+<li class=""><strong>E3:S01<!-- -->:T03</strong> – Implement version tracking - ✅ COMPLETE (v0.3.1.3+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-002-numbering-system--complete">Story 002: Numbering System ✅ COMPLETE<a href="#story-002-numbering-system--complete" class="hash-link" aria-label="Direct link to Story 002: Numbering System ✅ COMPLETE" title="Direct link to Story 002: Numbering System ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E3:S02<!-- -->:T01</strong> – Create Epic/Story/Task numbering - ✅ COMPLETE (v0.3.2.1+1)</li>
+<li class=""><strong>E3:S02<!-- -->:T02</strong> – Implement build numbering - ✅ COMPLETE (v0.3.2.2+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-003-integration-framework--complete">Story 003: Integration Framework ✅ COMPLETE<a href="#story-003-integration-framework--complete" class="hash-link" aria-label="Direct link to Story 003: Integration Framework ✅ COMPLETE" title="Direct link to Story 003: Integration Framework ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E3:S03<!-- -->:T01</strong> – Integrate with Kanban - ✅ COMPLETE (v0.3.3.1+1)</li>
+<li class=""><strong>E3:S03<!-- -->:T02</strong> – Integrate with Release Workflow - ✅ COMPLETE (v0.3.3.2+1)</li>
+<li class=""><strong>E3:S03<!-- -->:T03</strong> – Create version validation - ✅ COMPLETE (v0.3.3.3+1)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-4-kanban-framework--in-progress">Epic 4: Kanban Framework 🔄 IN PROGRESS<a href="#epic-4-kanban-framework--in-progress" class="hash-link" aria-label="Direct link to Epic 4: Kanban Framework 🔄 IN PROGRESS" title="Direct link to Epic 4: Kanban Framework 🔄 IN PROGRESS" translate="no">​</a></h3>
+<p><strong>Status:</strong> IN PROGRESS<br>
+<strong>Priority:</strong> HIGH<br>
+<strong>Last Updated:</strong> 2026-03-09 (RW: E4:S18<!-- -->:T01<!-- -->+1)</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="completed-stories-">Completed Stories ✅<a href="#completed-stories-" class="hash-link" aria-label="Direct link to Completed Stories ✅" title="Direct link to Completed Stories ✅" translate="no">​</a></h4>
+<p><strong>Story 001: Dev Kit Kanban Implementation</strong> ✅ COMPLETE (v0.4.1.1+6)</p>
+<ul>
+<li class=""><strong>E4:S01<!-- -->:T01</strong> – Create Kanban board structure - ✅ COMPLETE (v0.4.1.1+1)</li>
+<li class=""><strong>E4:S01<!-- -->:T02</strong> – Implement MoSCOW prioritization - ✅ COMPLETE (v0.4.1.2+1)</li>
+<li class=""><strong>E4:S01<!-- -->:T03</strong> – Create task tracking system - ✅ COMPLETE (v0.4.1.3+1)</li>
+<li class=""><strong>E4:S01<!-- -->:T04</strong> – Implement governance policies - ✅ COMPLETE (v0.4.1.4+1)</li>
+<li class=""><strong>E4:S01<!-- -->:T05</strong> – Create documentation framework - ✅ COMPLETE (v0.4.1.5+1)</li>
+<li class=""><strong>E4:S01<!-- -->:T06</strong> – Integrate with versioning - ✅ COMPLETE (v0.4.1.6+1)</li>
+</ul>
+<p><strong>Story 002: FR/BR Intake to Tasks</strong> ✅ COMPLETE (v0.4.2.6+3)</p>
+<ul>
+<li class=""><strong>E4:S02<!-- -->:T01</strong> – Create FR/BR templates - ✅ COMPLETE (v0.4.2.1+1)</li>
+<li class=""><strong>E4:S02<!-- -->:T02</strong> – Implement intake workflow - ✅ COMPLETE (v0.4.2.2+1)</li>
+<li class=""><strong>E4:S02<!-- -->:T03</strong> – Create task generation system - ✅ COMPLETE (v0.4.2.3+1)</li>
+<li class=""><strong>E4:S02<!-- -->:T04</strong> – Implement Epic/Story matching - ✅ COMPLETE (v0.4.2.4+1)</li>
+<li class=""><strong>E4:S02<!-- -->:T05</strong> – Create validation system - ✅ COMPLETE (v0.4.2.5+1)</li>
+<li class=""><strong>E4:S02<!-- -->:T06</strong> – Add GitHub integration - ✅ COMPLETE (v0.4.2.6+3)</li>
+</ul>
+<p><strong>Story 003: Kanban + Versioning + RW Integration</strong> ✅ COMPLETE (v0.4.3.7+1)</p>
+<ul>
+<li class=""><strong>E4:S03<!-- -->:T01</strong> – Integrate versioning with Kanban - ✅ COMPLETE (v0.4.3.1+1)</li>
+<li class=""><strong>E4:S03<!-- -->:T02</strong> – Integrate RW with Kanban - ✅ COMPLETE (v0.4.3.2+2)</li>
+<li class=""><strong>E4:S03<!-- -->:T03</strong> – Create synchronization system - ✅ COMPLETE (v0.4.3.3+1)</li>
+<li class=""><strong>E4:S03<!-- -->:T04</strong> – Implement automated updates - ✅ COMPLETE (v0.4.3.4+1)</li>
+<li class=""><strong>E4:S03<!-- -->:T05</strong> – Create dev-kit integration guide - ✅ COMPLETE (v0.4.3.5+1)</li>
+<li class=""><strong>E4:S03<!-- -->:T06</strong> – Document integration examples - ✅ COMPLETE (v0.4.3.6+1)</li>
+<li class=""><strong>E4:S03<!-- -->:T07</strong> – Address integration gaps - ✅ COMPLETE (v0.4.3.7+1)</li>
+</ul>
+<p><strong>Story 004: Kanban Structure Refactoring</strong> ✅ COMPLETE (v0.4.4.1+1)</p>
+<ul>
+<li class=""><strong>E4:S04<!-- -->:T01</strong> – Refactor board structure - ✅ COMPLETE (v0.4.4.1+1)</li>
+</ul>
+<p><strong>Story 005: Canonical Epics for Kanban Framework</strong> ✅ COMPLETE (v0.4.5.1+1)</p>
+<ul>
+<li class=""><strong>E4:S05<!-- -->:T01</strong> – Create canonical Epic structure - ✅ COMPLETE (v0.4.5.1+1)</li>
+</ul>
+<p><strong>Story 006: Comprehensive Canonical EST Template System</strong> ✅ COMPLETE (v0.4.6.8+1)</p>
+<ul>
+<li class=""><strong>E4:S06<!-- -->:T00</strong> – Create template framework - ✅ COMPLETE (v0.4.6.1+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T01</strong> – Design Epic templates - ✅ COMPLETE (v0.4.6.2+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T02</strong> – Create Story templates - ✅ COMPLETE (v0.4.6.3+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T03</strong> – Build Task templates - ✅ COMPLETE (v0.4.6.4+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T04</strong> – Create template validation - ✅ COMPLETE (v0.4.6.5+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T05</strong> – Implement template system - ✅ COMPLETE (v0.4.6.6+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T06</strong> – Create template documentation - ✅ COMPLETE (v0.4.6.7+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T07</strong> – Add template examples - ✅ COMPLETE (v0.4.6.8+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T08</strong> – Create template testing - ✅ COMPLETE (v0.4.6.8+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T09</strong> – Implement template distribution - ✅ COMPLETE (v0.4.6.8+1)</li>
+<li class=""><strong>E4:S06<!-- -->:T10</strong> – Create template migration - ✅ COMPLETE (v0.4.6.8+1)</li>
+</ul>
+<p><strong>Story 007: Migration Support and Installation Modes</strong> ✅ COMPLETE (v0.4.7.3+1)</p>
+<ul>
+<li class=""><strong>E4:S07<!-- -->:T00</strong> – Design migration framework - ✅ COMPLETE (v0.4.7.1+1)</li>
+<li class=""><strong>E4:S07<!-- -->:T01</strong> – Create installation modes - ✅ COMPLETE (v0.4.7.2+1)</li>
+<li class=""><strong>E4:S07<!-- -->:T02</strong> – Implement migration scripts - ✅ COMPLETE (v0.4.7.3+1)</li>
+<li class=""><strong>E4:S07<!-- -->:T03</strong> – Create migration documentation - ✅ COMPLETE (v0.4.7.3+1)</li>
+</ul>
+<p><strong>Story 008: Intelligent Epic Matching and Canonical Structure Adoption</strong> ✅ COMPLETE (v0.4.8.6+1)</p>
+<ul>
+<li class=""><strong>E4:S08<!-- -->:T01</strong> – Create matching algorithm - ✅ COMPLETE (v0.4.8.1+1)</li>
+<li class=""><strong>E4:S08<!-- -->:T02</strong> – Implement structure validation - ✅ COMPLETE (v0.4.8.2+1)</li>
+<li class=""><strong>E4:S08<!-- -->:T03</strong> – Create canonical adoption - ✅ COMPLETE (v0.4.8.3+1)</li>
+<li class=""><strong>E4:S08<!-- -->:T04</strong> – Add intelligent matching - ✅ COMPLETE (v0.4.8.4+1)</li>
+<li class=""><strong>E4:S08<!-- -->:T05</strong> – Create matching documentation - ✅ COMPLETE (v0.4.8.5+1)</li>
+<li class=""><strong>E4:S08<!-- -->:T06</strong> – Implement validation system - ✅ COMPLETE (v0.4.8.6+1)</li>
+</ul>
+<p><strong>Story 009: Bug Fixes and Agentic Intelligence Implementation</strong> ✅ COMPLETE (v0.4.9.1+1)</p>
+<ul>
+<li class=""><strong>E4:S09<!-- -->:T01</strong> – Fix critical bugs - ✅ COMPLETE (v0.4.9.1+1)</li>
+</ul>
+<p><strong>Story 010: Agentic Kanban Task Creation from FR/BR</strong> ✅ COMPLETE (v0.4.10.7+0)</p>
+<ul>
+<li class=""><strong>E4:S10<!-- -->:T00</strong> – Create agentic framework - ✅ COMPLETE (v0.4.10.1+1)</li>
+<li class=""><strong>E4:S10<!-- -->:T01</strong> – Implement FR processing - ✅ COMPLETE (v0.4.10.2+1)</li>
+<li class=""><strong>E4:S10<!-- -->:T02</strong> – Add BR processing - ✅ COMPLETE (v0.4.10.3+1)</li>
+<li class=""><strong>E4:S10<!-- -->:T03</strong> – Create task generation - ✅ COMPLETE (v0.4.10.4+1)</li>
+<li class=""><strong>E4:S10<!-- -->:T04</strong> – Implement validation - ✅ COMPLETE (v0.4.10.5+1)</li>
+<li class=""><strong>E4:S10<!-- -->:T05</strong> – Add integration testing - ✅ COMPLETE (v0.4.10.6+1)</li>
+<li class=""><strong>E4:S10<!-- -->:T06</strong> – Create documentation - ✅ COMPLETE (v0.4.10.7+0)</li>
+<li class=""><strong>E4:S10<!-- -->:T07</strong> – Add deployment support - ✅ COMPLETE (v0.4.10.7+0)</li>
+</ul>
+<p><strong>Story 011: Kanban Granularity &amp; Discrete Task Docs</strong> ✅ COMPLETE (v0.4.11.6+2)</p>
+<ul>
+<li class=""><strong>E4:S11<!-- -->:T00</strong> – Design granularity framework - ✅ COMPLETE (v0.4.11.1+1)</li>
+<li class=""><strong>E4:S11<!-- -->:T01</strong> – Create discrete task structure - ✅ COMPLETE (v0.4.11.2+2)</li>
+<li class=""><strong>E4:S11<!-- -->:T02</strong> – Implement task documentation - ✅ COMPLETE (v0.4.11.3+1)</li>
+<li class=""><strong>E4:S11<!-- -->:T03</strong> – Create task validation - ✅ COMPLETE (v0.4.11.4+1)</li>
+<li class=""><strong>E4:S11<!-- -->:T04</strong> – Add task tracking - ✅ COMPLETE (v0.4.11.5+0)</li>
+<li class=""><strong>E4:S11<!-- -->:T05</strong> – Implement task integration - ✅ COMPLETE (v0.4.11.6+2)</li>
+<li class=""><strong>E4:S11<!-- -->:T06</strong> – Create task documentation - ✅ COMPLETE (v0.4.11.6+2)</li>
+</ul>
+<p><strong>Story 013: Kanban Board Enhancement - MoSCOW Prioritized Task View</strong> ✅ COMPLETE (v0.4.13.6+2)</p>
+<ul>
+<li class=""><strong>E4:S13<!-- -->:T01</strong> – Create MoSCOW view - ✅ COMPLETE (v0.4.13.1+1)</li>
+<li class=""><strong>E4:S13<!-- -->:T02</strong> – Implement prioritization - ✅ COMPLETE (v0.4.13.2+1)</li>
+<li class=""><strong>E4:S13<!-- -->:T03</strong> – Add task ordering - ✅ COMPLETE (v0.4.13.3+1)</li>
+<li class=""><strong>E4:S13<!-- -->:T04</strong> – Create view validation - ✅ COMPLETE (v0.4.13.4+3)</li>
+<li class=""><strong>E4:S13<!-- -->:T05</strong> – Implement view updates - ✅ COMPLETE (v0.4.13.5+1)</li>
+<li class=""><strong>E4:S13<!-- -->:T06</strong> – Add view documentation - ✅ COMPLETE (v0.4.13.6+2, 2025-12-15T14:00:00Z)</li>
+</ul>
+<p><strong>Story 016: Kanban Package Implementation Review</strong> ✅ COMPLETE (v0.4.16.5+2)</p>
+<ul>
+<li class=""><strong>E4:S16<!-- -->:T01</strong> – Review implementation - ✅ COMPLETE (v0.4.16.1+1)</li>
+<li class=""><strong>E4:S16<!-- -->:T02</strong> – Create gap analysis - ✅ COMPLETE (v0.4.16.2+1)</li>
+<li class=""><strong>E4:S16<!-- -->:T03</strong> – Implement remediation - ✅ COMPLETE (v0.4.16.3+1)</li>
+<li class=""><strong>E4:S16<!-- -->:T04</strong> – Add validation testing - ✅ COMPLETE (v0.4.16.4+1)</li>
+<li class=""><strong>E4:S16<!-- -->:T05</strong> – Create risk assessment - ✅ COMPLETE (v0.4.16.5+2)</li>
+</ul>
+<p><strong>Story 017: Kanban Package Installation Evaluation</strong> ✅ COMPLETE (v0.4.17.6+1)</p>
+<ul>
+<li class=""><strong>E4:S17<!-- -->:T01</strong> – Evaluate installation - ✅ COMPLETE (v0.4.17.1+1)</li>
+<li class=""><strong>E4:S17<!-- -->:T02</strong> – Test installation process - ✅ COMPLETE (v0.4.17.2+1)</li>
+<li class=""><strong>E4:S17<!-- -->:T03</strong> – Validate installation - ✅ COMPLETE (v0.4.17.3+1)</li>
+<li class=""><strong>E4:S17<!-- -->:T04</strong> – Create installation guide - ✅ COMPLETE (v0.4.17.4+1)</li>
+<li class=""><strong>E4:S17<!-- -->:T05</strong> – Add troubleshooting - ✅ COMPLETE (v0.4.17.5+1)</li>
+<li class=""><strong>E4:S17<!-- -->:T06</strong> – Document evaluation - ✅ COMPLETE (v0.4.17.6+1)</li>
+</ul>
+<p><strong>Story 018: Kanban Board Info-Only Split</strong> ✅ COMPLETE (v0.4.18.1+1)</p>
+<ul>
+<li class=""><strong>E4:S18<!-- -->:T01</strong> – Implement three-way split - ✅ COMPLETE (v0.4.18.1+1)</li>
+<li class=""><strong>E4:S18<!-- -->:T02</strong> – Upgrade packaged framework - ✅ COMPLETE (v0.4.18.2+1)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-6-framework-management-and-maintenance--complete">Epic 6: Framework Management and Maintenance ✅ COMPLETE<a href="#epic-6-framework-management-and-maintenance--complete" class="hash-link" aria-label="Direct link to Epic 6: Framework Management and Maintenance ✅ COMPLETE" title="Direct link to Epic 6: Framework Management and Maintenance ✅ COMPLETE" translate="no">​</a></h3>
+<p><strong>Status:</strong> COMPLETE<br>
+<strong>Completed:</strong> 2026-01-05<br>
+<strong>Version:</strong> v0.6.8.13+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-framework-version-management">Story 001: Framework Version Management<a href="#story-001-framework-version-management" class="hash-link" aria-label="Direct link to Story 001: Framework Version Management" title="Direct link to Story 001: Framework Version Management" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E6:S01<!-- -->:T01</strong> – Create versioning strategy - COMPLETE (v0.6.1.1+1)</li>
+<li class=""><strong>E6:S01<!-- -->:T02</strong> – Implement version tracking - COMPLETE (v0.6.1.2+1)</li>
+<li class=""><strong>E6:S01<!-- -->:T03</strong> – Create compatibility policy - COMPLETE (v0.6.1.3+1)</li>
+<li class=""><strong>E6:S01<!-- -->:T04</strong> – Add dependency architecture - COMPLETE (v0.6.1.4+1)</li>
+<li class=""><strong>E6:S01<!-- -->:T05</strong> – Create version tagging - COMPLETE (v0.6.1.5+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-002-framework-update-and-migration">Story 002: Framework Update and Migration<a href="#story-002-framework-update-and-migration" class="hash-link" aria-label="Direct link to Story 002: Framework Update and Migration" title="Direct link to Story 002: Framework Update and Migration" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E6:S02<!-- -->:T01</strong> – Create update procedures - COMPLETE (v0.6.2.1+1)</li>
+<li class=""><strong>E6:S02<!-- -->:T02</strong> – Build migration guide - COMPLETE (v0.6.2.2+1)</li>
+<li class=""><strong>E6:S02<!-- -->:T03</strong> – Implement backward compatibility - COMPLETE (v0.6.2.3+1)</li>
+<li class=""><strong>E6:S02<!-- -->:T05</strong> – Add auto-update mechanisms - COMPLETE (v0.6.2.5+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-003-framework-health-monitoring--complete">Story 003: Framework Health Monitoring ✅ COMPLETE<a href="#story-003-framework-health-monitoring--complete" class="hash-link" aria-label="Direct link to Story 003: Framework Health Monitoring ✅ COMPLETE" title="Direct link to Story 003: Framework Health Monitoring ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E6:S03<!-- -->:T01</strong> – Define health metrics - ✅ COMPLETE (v0.6.3.1+1)</li>
+<li class=""><strong>E6:S03<!-- -->:T02</strong> – Create monitoring tools - ✅ COMPLETE (v0.6.3.2+1)</li>
+<li class=""><strong>E6:S03<!-- -->:T03</strong> – Build health dashboard - ✅ COMPLETE (v0.6.3.3+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-008-ai-dev-kit-cli-tool--complete-v068131">Story 008: ai-dev-kit CLI Tool ✅ COMPLETE (v0.6.8.13+1)<a href="#story-008-ai-dev-kit-cli-tool--complete-v068131" class="hash-link" aria-label="Direct link to Story 008: ai-dev-kit CLI Tool ✅ COMPLETE (v0.6.8.13+1)" title="Direct link to Story 008: ai-dev-kit CLI Tool ✅ COMPLETE (v0.6.8.13+1)" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E6:S08<!-- -->:T00</strong> – Design CLI architecture - ✅ COMPLETE (v0.6.8.1+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T01</strong> – Implement core commands - ✅ COMPLETE (v0.6.8.2+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T02</strong> – Add backend abstraction - ✅ COMPLETE (v0.6.8.3+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-006-feature-requests--in-progress">Story 006: Feature Requests 🔄 IN PROGRESS<a href="#story-006-feature-requests--in-progress" class="hash-link" aria-label="Direct link to Story 006: Feature Requests 🔄 IN PROGRESS" title="Direct link to Story 006: Feature Requests 🔄 IN PROGRESS" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E6:S06<!-- -->:T01</strong> – FR/BR/UXR Prioritization Board Implementation - ✅ COMPLETE (v0.6.6.1+1)</li>
+<li class=""><strong>E6:S06<!-- -->:T02</strong> – Fix Release Workflow Micromanagement Issues - ✅ COMPLETE (v0.6.6.2+8, 2026-03-11T16:45:00Z)</li>
+<li class=""><strong>E6:S06<!-- -->:T03</strong> – Investigate Apple SDK License Blocking Issue - ✅ COMPLETE (v0.6.6.3+1)</li>
+<li class=""><strong>E6:S06<!-- -->:T41</strong> – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows - ✅ COMPLETE (v0.6.6.41+1, 2026-03-11T16:05:00Z)</li>
+<li class=""><strong>E6:S06<!-- -->:T42</strong> – Fix UKW Agent Board Cleanup Failure - ✅ COMPLETE (v0.6.6.41+1, 2026-03-11T16:15:00Z)</li>
+<li class=""><strong>E6:S06<!-- -->:T999</strong> – Board Cleanup Test Task - ✅ COMPLETE (v0.6.6.41+1, 2026-03-11T16:10:00Z)</li>
+<li class=""><strong>E6:S08<!-- -->:T03</strong> – Create configuration management - ✅ COMPLETE (v0.6.8.4+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T04</strong> – Add error handling - ✅ COMPLETE (v0.6.8.5+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T05</strong> – Create migration utilities - ✅ COMPLETE (v0.6.8.6+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T06</strong> – Add remove command - ✅ COMPLETE (v0.6.8.7+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T07</strong> – Create documentation - ✅ COMPLETE (v0.6.8.8+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T08</strong> – Add testing framework - ✅ COMPLETE (v0.6.8.9+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T09</strong> – Implement validation - ✅ COMPLETE (v0.6.8.10+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T10</strong> – Add PyPI packaging - ✅ COMPLETE (v0.6.8.11+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T11</strong> – Create deployment scripts - ✅ COMPLETE (v0.6.8.12+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T12</strong> – Add integration testing - ✅ COMPLETE (v0.6.8.13+1)</li>
+<li class=""><strong>E6:S08<!-- -->:T13</strong> – Create user guide - ✅ COMPLETE (v0.6.8.13+1)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-7-codebase-maintenance-and-review--complete">Epic 7: Codebase Maintenance and Review ✅ COMPLETE<a href="#epic-7-codebase-maintenance-and-review--complete" class="hash-link" aria-label="Direct link to Epic 7: Codebase Maintenance and Review ✅ COMPLETE" title="Direct link to Epic 7: Codebase Maintenance and Review ✅ COMPLETE" translate="no">​</a></h3>
+<p><strong>Status:</strong> COMPLETE<br>
+<strong>Completed:</strong> 2026-01-05<br>
+<strong>Version:</strong> v0.7.5.4+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-codebase-maintenance-tasks--complete">Story 001: Codebase Maintenance Tasks ✅ COMPLETE<a href="#story-001-codebase-maintenance-tasks--complete" class="hash-link" aria-label="Direct link to Story 001: Codebase Maintenance Tasks ✅ COMPLETE" title="Direct link to Story 001: Codebase Maintenance Tasks ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E7:S01<!-- -->:T02</strong> – Create maintenance framework - ✅ COMPLETE (v0.7.1.2+1)</li>
+<li class=""><strong>E7:S01<!-- -->:T03</strong> – Document maintenance workflows - ✅ COMPLETE (v0.7.1.3+1)</li>
+<li class=""><strong>E7:S01<!-- -->:T04</strong> – Integrate with Kanban - ✅ COMPLETE (v0.7.1.4+1)</li>
+<li class=""><strong>E7:S01<!-- -->:T05</strong> – PERPETUAL: Markdown maintenance - 🔄 ONGOING</li>
+<li class=""><strong>E7:S01<!-- -->:T06</strong> – Implement Update Changelog Workflow (UCW) - ✅ COMPLETE (v0.7.1.7+4)</li>
+<li class=""><strong>E7:S01<!-- -->:T07</strong> – Markdown Maintenance Workflow (MMW) - ✅ COMPLETE (v0.7.1.7+4)</li>
+<li class=""><strong>E7:S01<!-- -->:T08</strong> – Task Doc Naming Standardization - ✅ COMPLETE (v0.7.1.8+4)</li>
+<li class=""><strong>E7:S01<!-- -->:T09</strong> – Kanban Template Governance &amp; UXR Ownership - ✅ COMPLETE (v0.7.1.9+4)</li>
+<li class=""><strong>E7:S01<!-- -->:T10</strong> – Enhanced Workflow Logging System Implementation - ✅ COMPLETE (v0.7.1.10+1, 2026-03-17T12:00:00Z)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-002-code-review-standards-and-processes--complete">Story 002: Code Review Standards and Processes ✅ COMPLETE<a href="#story-002-code-review-standards-and-processes--complete" class="hash-link" aria-label="Direct link to Story 002: Code Review Standards and Processes ✅ COMPLETE" title="Direct link to Story 002: Code Review Standards and Processes ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E7:S02<!-- -->:T01</strong> – Create review standards - ✅ COMPLETE (v0.7.2.1+1)</li>
+<li class=""><strong>E7:S02<!-- -->:T02</strong> – Build checklist templates - ✅ COMPLETE (v0.7.2.2+1)</li>
+<li class=""><strong>E7:S02<!-- -->:T03</strong> – Establish review workflows - ✅ COMPLETE (v0.7.2.3+1)</li>
+<li class=""><strong>E7:S02<!-- -->:T04</strong> – Integrate with Kanban - ✅ COMPLETE (v0.7.2.4+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-003-code-quality-metrics-and-monitoring--complete">Story 003: Code Quality Metrics and Monitoring ✅ COMPLETE<a href="#story-003-code-quality-metrics-and-monitoring--complete" class="hash-link" aria-label="Direct link to Story 003: Code Quality Metrics and Monitoring ✅ COMPLETE" title="Direct link to Story 003: Code Quality Metrics and Monitoring ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E7:S03<!-- -->:T01</strong> – Design metrics framework - ✅ COMPLETE (v0.7.3.1+0)</li>
+<li class=""><strong>E7:S03<!-- -->:T02</strong> – Create monitoring dashboards - ✅ COMPLETE (v0.7.3.2+0)</li>
+<li class=""><strong>E7:S03<!-- -->:T03</strong> – Integrate with Kanban - ✅ COMPLETE (v0.7.3.3+0)</li>
+<li class=""><strong>E7:S03<!-- -->:T04</strong> – Document monitoring processes - ✅ COMPLETE (v0.7.3.4+0)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-004-maintenance-automation-and-tooling--complete">Story 004: Maintenance Automation and Tooling ✅ COMPLETE<a href="#story-004-maintenance-automation-and-tooling--complete" class="hash-link" aria-label="Direct link to Story 004: Maintenance Automation and Tooling ✅ COMPLETE" title="Direct link to Story 004: Maintenance Automation and Tooling ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E7:S04<!-- -->:T01</strong> – Design automation requirements - ✅ COMPLETE (v0.7.4.1+0)</li>
+<li class=""><strong>E7:S04<!-- -->:T02</strong> – Develop automation scripts - ✅ COMPLETE (v0.7.4.2+0)</li>
+<li class=""><strong>E7:S04<!-- -->:T03</strong> – Integrate with workflows - ✅ COMPLETE (v0.7.4.3+0)</li>
+<li class=""><strong>E7:S04<!-- -->:T04</strong> – Document automation usage - ✅ COMPLETE (v0.7.4.4+0)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-005-migration-uxr--pre-existing-kanban-structures--complete">Story 005: Migration UXR – Pre-Existing Kanban Structures ✅ COMPLETE<a href="#story-005-migration-uxr--pre-existing-kanban-structures--complete" class="hash-link" aria-label="Direct link to Story 005: Migration UXR – Pre-Existing Kanban Structures ✅ COMPLETE" title="Direct link to Story 005: Migration UXR – Pre-Existing Kanban Structures ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E7:S05<!-- -->:T01</strong> – Synthesize UXR-001 - ✅ COMPLETE (v0.7.5.1+0)</li>
+<li class=""><strong>E7:S05<!-- -->:T02</strong> – Synthesize UXR-002 - ✅ COMPLETE (v0.7.5.2+0)</li>
+<li class=""><strong>E7:S05<!-- -->:T03</strong> – Synthesize UXR-003 - ✅ COMPLETE (v0.7.5.3+0)</li>
+<li class=""><strong>E7:S05<!-- -->:T04</strong> – Synthesize UXR-004 - ✅ COMPLETE (v0.7.5.4+0)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-5-framework-management-and-fr-repository--in-progress">Epic 5: Framework Management and FR Repository 🔄 IN PROGRESS<a href="#epic-5-framework-management-and-fr-repository--in-progress" class="hash-link" aria-label="Direct link to Epic 5: Framework Management and FR Repository 🔄 IN PROGRESS" title="Direct link to Epic 5: Framework Management and FR Repository 🔄 IN PROGRESS" translate="no">​</a></h3>
+<p><strong>Status:</strong> IN PROGRESS<br>
+<strong>Started:</strong> 2025-12-04<br>
+<strong>Version:</strong> v0.5.1.48+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-feature-request-repository--in-progress-perpetual">Story 001: Feature Request Repository 🔄 IN PROGRESS (PERPETUAL)<a href="#story-001-feature-request-repository--in-progress-perpetual" class="hash-link" aria-label="Direct link to Story 001: Feature Request Repository 🔄 IN PROGRESS (PERPETUAL)" title="Direct link to Story 001: Feature Request Repository 🔄 IN PROGRESS (PERPETUAL)" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E5:S01<!-- -->:T34</strong> – UKW Granular Control and Use Case Flags - ✅ COMPLETE (v0.5.1.34+1)</li>
+<li class=""><strong>E5:S01<!-- -->:T36</strong> – RW Update Kanban Board on Task Completion - ✅ COMPLETE (v0.5.1.36+1)</li>
+<li class=""><strong>E5:S01<!-- -->:T37</strong> – Kanban Policy Task Prioritisation and Queue/Stack - ✅ COMPLETE (v0.5.1.37+3)</li>
+<li class=""><strong>E5:S01<!-- -->:T49</strong> – Enhanced kanban-completed.md with Timestamps and Recent Tasks - ✅ COMPLETE (v0.5.1.49+2, 2026-03-11T16:30:00Z)</li>
+<li class=""><strong>E5:S01<!-- -->:T47</strong> – Install Logging for Framework Dependencies - 🔄 IN PROGRESS (v0.5.1.47+3)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-8-tooling--automation--complete">Epic 8: Tooling &amp; Automation ✅ COMPLETE<a href="#epic-8-tooling--automation--complete" class="hash-link" aria-label="Direct link to Epic 8: Tooling &amp; Automation ✅ COMPLETE" title="Direct link to Epic 8: Tooling &amp; Automation ✅ COMPLETE" translate="no">​</a></h3>
+<p><strong>Status:</strong> COMPLETE<br>
+<strong>Completed:</strong> 2026-03-12<br>
+<strong>Version:</strong> v0.8.4.1+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-code-generators--complete">Story 001: Code Generators ✅ COMPLETE<a href="#story-001-code-generators--complete" class="hash-link" aria-label="Direct link to Story 001: Code Generators ✅ COMPLETE" title="Direct link to Story 001: Code Generators ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E8:S01<!-- -->:T01</strong> – Create generator framework - ✅ COMPLETE (v0.8.1.1+1)</li>
+<li class=""><strong>E8:S01<!-- -->:T02</strong> – Build template-based generators - ✅ COMPLETE (v0.8.1.2+1)</li>
+<li class=""><strong>E8:S01<!-- -->:T03</strong> – Establish generator patterns - ✅ COMPLETE (v0.8.1.3+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-002-additional-validators--complete">Story 002: Additional Validators ✅ COMPLETE<a href="#story-002-additional-validators--complete" class="hash-link" aria-label="Direct link to Story 002: Additional Validators ✅ COMPLETE" title="Direct link to Story 002: Additional Validators ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E8:S02<!-- -->:T01</strong> – Create validator framework - ✅ COMPLETE (v0.8.2.1+1)</li>
+<li class=""><strong>E8:S02<!-- -->:T02</strong> – Build framework-specific validators - ✅ COMPLETE (v0.8.2.2+1)</li>
+<li class=""><strong>E8:S02<!-- -->:T03</strong> – Establish validation patterns - ✅ COMPLETE (v0.8.2.3+1)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-004-tooling-baseline--complete">Story 004: Tooling Baseline ✅ COMPLETE<a href="#story-004-tooling-baseline--complete" class="hash-link" aria-label="Direct link to Story 004: Tooling Baseline ✅ COMPLETE" title="Direct link to Story 004: Tooling Baseline ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E8:S04<!-- -->:T01</strong> – Tooling &amp; Automation expectations baseline - ✅ COMPLETE (v0.8.4.1+1)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-10-documentation-and-knowledge-management--complete">Epic 10: Documentation and Knowledge Management ✅ COMPLETE<a href="#epic-10-documentation-and-knowledge-management--complete" class="hash-link" aria-label="Direct link to Epic 10: Documentation and Knowledge Management ✅ COMPLETE" title="Direct link to Epic 10: Documentation and Knowledge Management ✅ COMPLETE" translate="no">​</a></h3>
+<p><strong>Status:</strong> COMPLETE<br>
+<strong>Completed:</strong> 2026-03-12<br>
+<strong>Version:</strong> v0.10.1.1+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-documentation-lifecycle--complete">Story 001: Documentation Lifecycle ✅ COMPLETE<a href="#story-001-documentation-lifecycle--complete" class="hash-link" aria-label="Direct link to Story 001: Documentation Lifecycle ✅ COMPLETE" title="Direct link to Story 001: Documentation Lifecycle ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E10:S01<!-- -->:T01</strong> – Doc lifecycle expectations baseline - ✅ COMPLETE (v0.10.1.1+1)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="epic-11-debugging-and-troubleshooting--complete">Epic 11: Debugging and Troubleshooting ✅ COMPLETE<a href="#epic-11-debugging-and-troubleshooting--complete" class="hash-link" aria-label="Direct link to Epic 11: Debugging and Troubleshooting ✅ COMPLETE" title="Direct link to Epic 11: Debugging and Troubleshooting ✅ COMPLETE" translate="no">​</a></h3>
+<p><strong>Status:</strong> COMPLETE<br>
+<strong>Completed:</strong> 2026-03-12<br>
+<strong>Version:</strong> v0.11.1.1+1</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="story-001-debug-path--complete">Story 001: Debug Path ✅ COMPLETE<a href="#story-001-debug-path--complete" class="hash-link" aria-label="Direct link to Story 001: Debug Path ✅ COMPLETE" title="Direct link to Story 001: Debug Path ✅ COMPLETE" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>E11:S01<!-- -->:T01</strong> – Debug path expectations baseline - ✅ COMPLETE (v0.11.1.1+1)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="forensic-markers">Forensic Markers<a href="#forensic-markers" class="hash-link" aria-label="Direct link to Forensic Markers" title="Direct link to Forensic Markers" translate="no">​</a></h2>
+<p><strong>Format:</strong> <code>✅ COMPLETE (vRC.EPIC.STORY.TASK+BUILD)</code></p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li class=""><code>✅ COMPLETE (v0.4.18.1+1)</code> - Epic 4, Story 18, Task 1, Build 1</li>
+<li class=""><code>✅ COMPLETE (v0.7.1.5+2)</code> - Epic 7, Story 1, Task 5, Build 2</li>
+</ul>
+<p><strong>Purpose:</strong></p>
+<ul>
+<li class="">Track exact version when task completed</li>
+<li class="">Enable forensic analysis of project history</li>
+<li class="">Support rollback and impact analysis</li>
+<li class="">Provide audit trail for releases</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="completion-statistics">Completion Statistics<a href="#completion-statistics" class="hash-link" aria-label="Direct link to Completion Statistics" title="Direct link to Completion Statistics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="overall-progress">Overall Progress<a href="#overall-progress" class="hash-link" aria-label="Direct link to Overall Progress" title="Direct link to Overall Progress" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Total Epics:</strong> 9 (6 COMPLETE, 3 IN PROGRESS/TODO)</li>
+<li class=""><strong>Total Stories:</strong> 50+ (35+ COMPLETE, others IN PROGRESS/TODO)</li>
+<li class=""><strong>Total Tasks:</strong> 200+ (160+ COMPLETE, others IN PROGRESS/TODO)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="completion-rate-by-epic">Completion Rate by Epic<a href="#completion-rate-by-epic" class="hash-link" aria-label="Direct link to Completion Rate by Epic" title="Direct link to Completion Rate by Epic" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Epic 1:</strong> 100% (3/3 Stories COMPLETE)</li>
+<li class=""><strong>Epic 3:</strong> 100% (3/3 Stories COMPLETE)</li>
+<li class=""><strong>Epic 6:</strong> 100% (8/8 Stories COMPLETE)</li>
+<li class=""><strong>Epic 7:</strong> 100% (5/5 Stories COMPLETE)</li>
+<li class=""><strong>Epic 8:</strong> 100% (3/3 Stories COMPLETE)</li>
+<li class=""><strong>Epic 10:</strong> 100% (1/1 Stories COMPLETE)</li>
+<li class=""><strong>Epic 11:</strong> 100% (1/1 Stories COMPLETE)</li>
+<li class=""><strong>Epic 4:</strong> 85% (15/18+ Stories COMPLETE)</li>
+<li class=""><strong>Epic 2:</strong> 75% (8/11 Stories COMPLETE)</li>
+<li class=""><strong>Epic 5:</strong> 40% (2/5 Stories COMPLETE)</li>
+<li class=""><strong>Epic 9:</strong> 20% (1/5 Stories COMPLETE)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="notes">Notes<a href="#notes" class="hash-link" aria-label="Direct link to Notes" title="Direct link to Notes" translate="no">​</a></h2>
+<ul>
+<li class="">This document complements the three-way Kanban split</li>
+<li class="">Use <code>kanban-board.md</code> for active MoSCOW tasks</li>
+<li class="">Use <code>kanban-structure.md</code> for Epic/Story/Task hierarchy</li>
+<li class="">Use <code>kanban-board-guide.md</code> for rules and procedures</li>
+<li class="">This document serves as the historical record of all completed work</li>
+</ul>
+<hr>
+<p><em>Last Updated: 2026-03-12 (UKW: Post-RW Board Synchronization - All 8 Should Have Tasks Completed)</em></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/kanban-completed.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/ai-dev-kit/docs/project-management/kanban/kanban-board"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">AI Dev Kit – Kanban Board</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/ai-dev-kit/docs/project-management/kanban/kanban-structure"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">AI Dev Kit – Kanban Structure</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#20-most-recently-completed-tasks" class="table-of-contents__link toc-highlight">20 Most Recently Completed Tasks</a><ul><li><a href="#-latest-releases-today---2026-03-12" class="table-of-contents__link toc-highlight">🚀 Latest Releases (Today - 2026-03-12)</a></li><li><a href="#-recent-completions-yesterday---2026-03-11" class="table-of-contents__link toc-highlight">📅 Recent Completions (Yesterday - 2026-03-11)</a></li></ul></li><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#completed-tasks-by-epic" class="table-of-contents__link toc-highlight">Completed Tasks by Epic</a><ul><li><a href="#epic-1-ai-dev-kit-core--complete" class="table-of-contents__link toc-highlight">Epic 1: AI Dev Kit Core ✅ COMPLETE</a></li><li><a href="#epic-3-numbering--versioning-framework--complete" class="table-of-contents__link toc-highlight">Epic 3: Numbering &amp; Versioning Framework ✅ COMPLETE</a></li><li><a href="#epic-4-kanban-framework--in-progress" class="table-of-contents__link toc-highlight">Epic 4: Kanban Framework 🔄 IN PROGRESS</a></li><li><a href="#epic-6-framework-management-and-maintenance--complete" class="table-of-contents__link toc-highlight">Epic 6: Framework Management and Maintenance ✅ COMPLETE</a></li><li><a href="#epic-7-codebase-maintenance-and-review--complete" class="table-of-contents__link toc-highlight">Epic 7: Codebase Maintenance and Review ✅ COMPLETE</a></li><li><a href="#epic-5-framework-management-and-fr-repository--in-progress" class="table-of-contents__link toc-highlight">Epic 5: Framework Management and FR Repository 🔄 IN PROGRESS</a></li><li><a href="#epic-8-tooling--automation--complete" class="table-of-contents__link toc-highlight">Epic 8: Tooling &amp; Automation ✅ COMPLETE</a></li><li><a href="#epic-10-documentation-and-knowledge-management--complete" class="table-of-contents__link toc-highlight">Epic 10: Documentation and Knowledge Management ✅ COMPLETE</a></li><li><a href="#epic-11-debugging-and-troubleshooting--complete" class="table-of-contents__link toc-highlight">Epic 11: Debugging and Troubleshooting ✅ COMPLETE</a></li></ul></li><li><a href="#forensic-markers" class="table-of-contents__link toc-highlight">Forensic Markers</a></li><li><a href="#completion-statistics" class="table-of-contents__link toc-highlight">Completion Statistics</a><ul><li><a href="#overall-progress" class="table-of-contents__link toc-highlight">Overall Progress</a></li><li><a href="#completion-rate-by-epic" class="table-of-contents__link toc-highlight">Completion Rate by Epic</a></li></ul></li><li><a href="#notes" class="table-of-contents__link toc-highlight">Notes</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ai-dev-kit/docs/documentation/docusaurus-portal-index">Documentation index</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Project</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/earlution/ai-dev-kit" target="_blank" rel="noopener noreferrer" class="footer__link-item">Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/earlution/ai-dev-kit/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">Issues<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/ai-dev-kit/blog">Blog</a></li><li class="footer__item"><a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Docusaurus<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 AI Dev Kit contributors. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
