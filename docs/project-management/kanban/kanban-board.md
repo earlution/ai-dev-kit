@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-25 (RW -k E5S01T68 — v0.5.1.68+1)
-**Version:** v0.5.1.68+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-30 (E5:S01:T65 complete — v0.5.1.65+2)
+**Version:** v0.5.1.65+2 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -24,7 +24,6 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E5:S01:T65** – Align workflow mgt README with registry count (11 vs 12) - TODO (**M** / HIGH priority, packaged framework consistency) - [Task](epics/Epic-5/Story-001-fr-repo/T65-align-workflow-mgt-readme-with-workflow-registry-count.md) | [Story](epics/Epic-5/Story-001-fr-repo.md)
 - **E5:S01:T66** – `.cursorrules` vs packaged RW trigger parity - TODO (**M** / HIGH priority) - [Task](epics/Epic-5/Story-001-fr-repo/T66-cursorrules-vs-packaged-rw-trigger-parity.md) | [Story](epics/Epic-5/Story-001-fr-repo.md)
 - **E5:S01:T67** – Adopter install docs — RW task token (FR-060) - TODO (**M** / HIGH priority) - [Task](epics/Epic-5/Story-001-fr-repo/T67-adopter-install-docs-rw-task-token.md) | [Story](epics/Epic-5/Story-001-fr-repo.md)
 - **E5:S01:T68** – Packaged frameworks consumer paths + versioning hygiene - TODO (**M** / HIGH priority) - [Task](epics/Epic-5/Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning.md) | [Story](epics/Epic-5/Story-001-fr-repo.md)

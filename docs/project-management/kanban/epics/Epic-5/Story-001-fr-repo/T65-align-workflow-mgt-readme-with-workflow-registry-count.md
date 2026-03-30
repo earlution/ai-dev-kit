@@ -9,12 +9,13 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 65: Align Workflow Mgt README With Registry Workflow Count
 
 **Task ID:** E5:S01:T65  
-**Status:** TODO  
+**Status:** COMPLETE (2026-03-30 — workflow mgt README aligned to **11** + registry SoT)  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
 **Created:** 2026-03-25  
-**Last updated:** 2026-03-25 (RW -k kanban marker v0.5.1.65+1)  
-**Version:** v0.5.1.65+1  
+**Last updated:** 2026-03-30 — released v0.5.1.65+2 (README + kanban closure)  
+**Version:** v0.5.1.65+2  
+**Version Anchor:** v0.5.1.65+2  
 **Code:** E5S01T65
 
 **Repository Pattern:** Internal scaffold (no FR yet). Complements **E5:S01:T56** / **FR-056** (broader standardization).
@@ -44,9 +45,9 @@ Remove **stale “12 workflows”** claims in [`packages/frameworks/workflow mgt
 
 ## Acceptance Criteria
 
-- [ ] No remaining **“12 comprehensive / standardized workflows”** (or equivalent) where it implies YAML registry count ≠ 11 without explanation.
-- [ ] README states **11** registry entries **or** defines an unambiguous alternate count with cited source (not invented).
-- [ ] Link or path reference to `workflow-registry.yaml` appears in the opening or overview.
+- [x] No remaining **“12 comprehensive / standardized workflows”** (or equivalent) where it implies YAML registry count ≠ 11 without explanation.
+- [x] README states **11** registry entries **or** defines an unambiguous alternate count with cited source (not invented).
+- [x] Link or path reference to `workflow-registry.yaml` appears in the opening or overview.
 
 ---
 

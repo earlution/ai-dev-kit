@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-25 (E5:S01:T63 FR-060 RW task token + E7:S06:T09 + E6:S06:T56)
-**Version:** v0.5.1.63+1
+**Last Updated:** 2026-03-30 (E5:S01:T65 workflow mgt README / registry SoT)
+**Version:** v0.5.1.65+2
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -21,6 +21,9 @@ housekeeping_policy: keep
 ## 20 Most Recently Completed Tasks
 
 #### **Epic 5: Documentation Management**
+- **[E5:S01:T65](epics/Epic-5/Story-001-fr-repo/T65-align-workflow-mgt-readme-with-workflow-registry-count.md)** – Align workflow mgt README with registry count (**11** + `workflow-registry.yaml` SoT; Specialized (4); no phantom Documentation Workflow)  
+  **Completed:** `2026-03-30T10:40:14Z` | **Version:** `v0.5.1.65+2` | **Agent:** `RW Agent`
+
 - **[E5:S01:T63](epics/Epic-5/Story-001-fr-repo/T63-rw-task-argument-requirement.md)** – RW Task Argument Requirement / FR-060 (strict task token; `validate_rw_task_complete.py`; docs; T63 renumber; `find_story_file` fr-repo preference)  
   **Completed:** `2026-03-25T16:26:47Z` | **Version:** `v0.5.1.63+1` | **Agent:** `RW Agent`
 

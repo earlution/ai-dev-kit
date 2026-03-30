@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.68+1] - 25-03-25
+## [0.5.1.65+2] - 30-03-26
 
-E5:S01:T68+1 – **RW -k** kanban marker: task **T68** (packaged frameworks consumer paths + versioning hygiene); Story, Epic S01, board metadata.
+E5:S01:T65+2 – Workflow mgt [README](packages/frameworks/workflow%20mgt/README.md): **11** YAML-defined workflows, [`workflow-registry.yaml`](packages/frameworks/workflow%20mgt/workflows/workflow-registry.yaml) SoT; Specialized **(4)**; documentation standards note (no phantom Documentation Workflow).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.68+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.65+2.md)

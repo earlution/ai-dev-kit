@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.65+2] - 30-03-26
+
+E5:S01:T65+2 – Workflow mgt README: **11** YAML-defined workflows, `workflow-registry.yaml` SoT; Specialized (4); documentation standards note.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.65+2.md)
+
+---
+---
+---
 ## [0.5.1.68+1] - 25-03-25
 
 E5:S01:T68+1 – **RW -k** kanban marker: task **T68** (packaged frameworks consumer paths + versioning hygiene); Story, Epic S01, board metadata.

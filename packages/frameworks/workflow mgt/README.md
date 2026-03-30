@@ -9,17 +9,19 @@ housekeeping_policy: keep
 # Workflow Management Framework
 
 **Version:** 2.2.0  
-**Last Updated:** 2026-03-12  
-**Purpose:** Complete workflow management framework with 12 comprehensive workflows, documentation standards, and automated validation  
-**Key Features:** 12 fully documented workflows, standardized templates, style guide, validation tools, and automated quality assurance
+**Last Updated:** 2026-03-30  
+**Purpose:** Complete workflow management framework with **11** YAML-defined workflows (see registry below), documentation standards, and automated validation  
+**Key Features:** **11** registry workflows with full READMEs, standardized templates, style guide, validation tools, and automated quality assurance; agent methodology guides (`KB`/`vwmp`) are separate from registry rows
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
+
+**Canonical workflow list:** The authoritative machine-readable set is [`workflows/workflow-registry.yaml`](workflows/workflow-registry.yaml) — **11** entries under `workflows:`. Agent execution guides under `KB/Documentation/Developer_Docs/vwmp/` describe methodology and step counts; they are not additional registry workflows.
 
 ---
 
 ## 📋 What's Included
 
-This package contains a comprehensive workflow management framework with 12 fully documented workflows, standardized templates, and automated validation tools. The framework enables AI assistants to execute various workflows using intelligent agent-driven execution with support for multiple workflow types:
+This package contains a comprehensive workflow management framework with **11** YAML-defined workflows (per [`workflow-registry.yaml`](workflows/workflow-registry.yaml)), standardized templates, and automated validation tools. The framework enables AI assistants to execute various workflows using intelligent agent-driven execution with support for multiple workflow types:
 
 ### Core Workflows (4)
 - **Testing Workflow (TESTING)** - Quality assurance and coverage analysis
@@ -32,12 +34,13 @@ This package contains a comprehensive workflow management framework with 12 full
 - **Update Kanban Workflow (UKW)** - Project tracking and status management
 - **Post-Implementation Review (PIR)** - Implementation evaluation
 
-### Specialized Workflows (5)
+### Specialized Workflows (4)
 - **Intake Workflow** - FR/BR/UXR automation and processing
 - **Package Version Workflow (PKG-VERSION)** - Version management and updates
 - **Framework Health Monitoring Workflow (FHM)** - System health monitoring
 - **Implementation Cycle Workflow (ICW)** - Structured implementation process
-- **Documentation Workflow** - Documentation generation and maintenance
+
+_Documentation quality_ (templates, style guide, per-workflow READMEs) is governed by the [Workflow Documentation Style Guide](docs/workflow-documentation-style-guide.md) and the **Documentation Standards** subsection later in this README; there is no separate “Documentation Workflow” in the registry.
 
 ### Core Methodology Documents
 - `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md` - General methodology for agent-driven workflow execution
@@ -53,7 +56,7 @@ This package contains a comprehensive workflow management framework with 12 full
 
 ### 🚀 Workflow Overview
 
-The AI Dev Kit workflow management framework provides **12 standardized workflows** for systematic development operations. Each workflow follows consistent documentation standards and includes comprehensive usage instructions.
+The AI Dev Kit workflow management framework provides **11** YAML-defined workflows (see [`workflows/workflow-registry.yaml`](workflows/workflow-registry.yaml)) for systematic development operations. Each registry workflow follows consistent documentation standards and includes comprehensive usage instructions.
 
 #### 📋 Available Workflows
 
