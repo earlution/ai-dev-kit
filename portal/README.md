@@ -1,12 +1,14 @@
-# Website
+# AI Dev Kit — documentation site
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This directory (`portal/`) is the **[Docusaurus](https://docusaurus.io/)** site for **AI Dev Kit**. The monorepo overview, installation, and workflows live in the repository root [README.md](../README.md).
 
 ## Installation
 
 ```bash
 yarn
 ```
+
+(or `npm install` in `portal/`.)
 
 ## Local Development
 
@@ -38,4 +40,4 @@ Not using SSH:
 GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

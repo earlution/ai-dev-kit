@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-01-21 (v0.2.13.1+2 – E2:S13:T01: Fixed .env.local loading in GitHub release script)
+**Last updated:** 2026-03-30 (UKW — E2:S11:T12 MoSCOW → kanban-completed; cross-refs cleaned)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -65,7 +65,7 @@ housekeeping_policy: keep
 
 - [x] **E2:S11 – Intake Workflow Automation** - COMPLETE ✅ (v0.2.11.11+1 – All tasks complete: Intake workflow automation, CHANGELOG protection, and ordering fixes)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03 ✅ COMPLETE (v0.2.11.3+1), T04 ✅ COMPLETE (v0.2.11.4+1), T05 ✅ COMPLETE (v0.2.11.5+1), T06 ✅ COMPLETE (v0.2.11.6+1), T07 ✅ COMPLETE (v0.2.11.7+1), T08 ✅ COMPLETE (v0.2.11.8+1), T09 ✅ COMPLETE (v0.2.11.9+3), T10 ✅ COMPLETE (v0.2.11.10+1), T11 ✅ COMPLETE (v0.2.11.11+1 – CHANGELOG ordering violations fixed), T12<sup>*</sup> ✅ COMPLETE — workaround (v0.2.11.12+2 – intake GHA `.DISABLED`; manual intake; BR-053; <sup>*</sup> label on board; see [kanban-board](../kanban-board.md) footnote)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03 ✅ COMPLETE (v0.2.11.3+1), T04 ✅ COMPLETE (v0.2.11.4+1), T05 ✅ COMPLETE (v0.2.11.5+1), T06 ✅ COMPLETE (v0.2.11.6+1), T07 ✅ COMPLETE (v0.2.11.7+1), T08 ✅ COMPLETE (v0.2.11.8+1), T09 ✅ COMPLETE (v0.2.11.9+3), T10 ✅ COMPLETE (v0.2.11.10+1), T11 ✅ COMPLETE (v0.2.11.11+1 – CHANGELOG ordering violations fixed), T12<sup>*</sup> ✅ COMPLETE — workaround (v0.2.11.12+2 – intake GHA `.DISABLED`; manual intake; BR-053; see [kanban-completed](../../kanban-completed.md))
 
 - [x] **E2:S12 – RW Step 17: Housekeeping** - ✅ COMPLETE (v0.2.12.1+1 – All tasks complete: Step 17 added to RW)
   - Story: [`Story-012-rw-step-17-housekeeping.md`](Story-012-rw-step-17-housekeeping.md)

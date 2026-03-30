@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.1+2] - 30-03-26
+
+E5:S09:T01 — **FR-065:** Docusaurus portal identity, `tests/test_portal_fr065_identity.py`, `portal/README.md`.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.1+2.md)
+
+---
+---
+---
 ## [0.5.9.1+1] - 30-03-26
 
 E5:S09:T01 — **RW -k:** Filed **Story 009** (Docusaurus Documentation Portal), tasks **T01–T07** for **FR-065–FR-071**; Epic-5 checklist; FR assigned-task links; task template fields for validators.

@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (RW v0.6.7.101+37 — UKW perpetual after main↔epic/6 sync)  
+**Last updated:** 2026-03-30 (UKW — MoSCOW: E2:S11:T12 → completed log; E5:S09:T01 Should)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
 **Version:** v0.6.7.101+37
@@ -19,7 +19,7 @@ housekeeping_policy: keep
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High BUILD numbers are expected and valid.
 
-**Progress:** RW 2026-03-25 (v0.6.7.101+37): Released UKW bookkeeping after merging `origin/main` into `epic/6-framework-management` (E5 FR-063 changelog/kanban carryover) and resolving board conflicts (T56 off MoSCOW per epic/6 upstream). Prior: UKW 2026-03-25 — board metadata + T101 progress; RW -k (v0.6.7.101+36).  
+**Progress:** UKW 2026-03-30: Board MoSCOW — archived **E2:S11:T12** (BR-053 workaround, v0.2.11.12+2) to [`kanban-completed.md`](../../../kanban-completed.md); promoted **E5:S09:T01** only to **Should** (incomplete vs Story 009 checklist). **Corrected:** [`kanban-board.md`](../../../kanban-board.md) now lists **E5:S09:T01–T07**; filed [**BR-059**](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md) (UKW must enumerate all open story tasks or fail loud). FR board: **FR-065** + **BR-059**. Prior: RW 2026-03-25 (v0.6.7.101+37) after main↔epic/6 sync and T56 board cleanup.  
 **Code:** E6S07T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).
@@ -152,7 +152,7 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 
 ---
 
-**Last Updated:** 2026-01-22 (v0.6.7.101+29 – UKW: E3:S04:T06 completion synced, kanban docs updated)  
-**Version:** v0.6.7.101+29  
+**Last Updated:** 2026-03-30 (UKW — MoSCOW + FR-065 board row)  
+**Version:** v0.6.7.101+37  
 **Status:** IN PROGRESS (Perpetual)
 

@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-30 (E5:S01:T69 retire `shields` / FR-064)
-**Version:** v0.5.1.69+1
+**Last Updated:** 2026-03-30 (RW E5:S09:T01 / FR-065)
+**Version:** v0.5.9.1+2
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -20,7 +20,14 @@ housekeeping_policy: keep
 
 ## 20 Most Recently Completed Tasks
 
+#### **Epic 2: Workflow Management Framework**
+- **[E2:S11:T12](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md)** – GitHub Actions intake (**BR-053**) — **COMPLETE (workaround, v0.2.11.12+2)** — workflow unregistered (`fr-br-intake.yml.DISABLED`); manual intake; closure per BR-053 *Resolution / current status* (not a vendor trigger fix)  
+  **Completed:** `2026-03-30T16:00:00Z` | **Version:** `v0.2.11.12+2` | **Agent:** `UKW / Maintainer`
+
 #### **Epic 5: Documentation Management**
+- **[E5:S09:T01](epics/Epic-5/Story-009-docusaurus-documentation-portal/T01-docusaurus-site-identity-fr-065.md)** – Docusaurus site identity (**FR-065**): `portal/docusaurus.config.js`, `portal/README.md`, `tests/test_portal_fr065_identity.py`  
+  **Completed:** `2026-03-30T20:35:00Z` | **Version:** `v0.5.9.1+2` | **Agent:** `RW Agent`
+
 - **[E5:S01:T69](epics/Epic-5/Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md)** – Retire **`shields`** branch (FR-064): delete `update-badges.yml` BYOB; README static-badge policy; `git push origin --delete shields`  
   **Completed:** `2026-03-30T12:44:00Z` | **Version:** `v0.5.1.69+1` | **Agent:** `RW Agent`
 

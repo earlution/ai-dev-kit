@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-30  
 **Submitted By:** User (via agent)  
 **Priority:** HIGH  
-**Status:** PROPOSED  
+**Status:** IMPLEMENTED (v0.5.9.1+2 / E5:S09:T01)  
 **Assigned Task:** E5:S09:T01 — [`T01-docusaurus-site-identity-fr-065.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T01-docusaurus-site-identity-fr-065.md)
 
 ---
@@ -48,25 +48,25 @@ The `portal/` app builds, but presents “My Site,” example.com URLs, and Face
 
 ## Functional Requirements
 
-- [ ] **FR-065:R01** – No remaining placeholder identities: “My Site,” “Dinosaurs are cool,” `your-docusaurus-site.example.com`, or template `organizationName`/`projectName` in committed config.
-- [ ] **FR-065:R02** – `editUrl` either targets the **ai-dev-kit** repo tree at the path that will hold published markdown **or** is removed with a short comment explaining the policy until FR-066 lands.
-- [ ] **FR-065:R03** – Navbar/footer do not point to Docusaurus community URLs as primary support paths unless intentionally retained as “built with” secondary links.
-- [ ] **FR-065:R04** – `npm run build` in `portal/` still exits zero after changes.
+- [x] **FR-065:R01** – No remaining placeholder identities (verified **v0.5.9.1+2** / `tests/test_portal_fr065_identity.py`).
+- [x] **FR-065:R02** – `editUrl` targets `portal/docs/` and `portal/blog/` under **earlution/ai-dev-kit** (until FR-066 moves tree).
+- [x] **FR-065:R03** – Navbar/footer cleaned; secondary Docusaurus link under “More” only (**v0.5.9.1+2**).
+- [x] **FR-065:R04** – `npm run build` in `portal/` exits zero (**v0.5.9.1+2**).
 
 ---
 
 ## Non-Functional Requirements
 
-- [ ] **FR-065:NF01** – **Single PR concern:** Identity + config only; minimize diff outside `portal/` and one optional asset swap (e.g. logo alt text).
+- [x] **FR-065:NF01** – Scope limited to `portal/` + pytest marker/tests + kanban/FR touch for release traceability (**v0.5.9.1+2**).
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] AC1: Template placeholder strings are gone from `docusaurus.config.js` (verified by search).
-- [ ] AC2: GitHub org/repo fields match the canonical ai-dev-kit repository.
-- [ ] AC3: `portal/README.md` describes purpose and relation to repo root.
-- [ ] AC4: Production build succeeds unchanged in scope of current `portal/docs` content.
+- [x] AC1: Template placeholders gone (**v0.5.9.1+2**, tests + search).
+- [x] AC2: `organizationName` / `projectName` = **earlution** / **ai-dev-kit** (**v0.5.9.1+2**).
+- [x] AC3: `portal/README.md` — AI Dev Kit + link to repo root README (**v0.5.9.1+2**).
+- [x] AC4: Production build green for current `portal/docs` content (**v0.5.9.1+2**).
 
 ---
 

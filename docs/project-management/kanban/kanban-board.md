@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-30 (RW -k E5:S09:T07)
-**Version:** v0.5.9.7+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-30 (RW E5:S09:T01 v0.5.9.1+2 — T01 complete, off Should)
+**Version:** v0.5.9.1+2 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -28,19 +28,22 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
-No important tasks currently in progress
+- **E5:S09:T02** – Canonical docs path and publish scope (FR-066) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T02-docusaurus-canonical-docs-path-fr-066.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-066](fr-br/FR-066-docusaurus-canonical-docs-path-and-publish-scope.md)
+- **E5:S09:T03** – Production build corpus triage (FR-067) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T03-docusaurus-build-triage-fr-067.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-067](fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
+- **E5:S09:T04** – Navigation, sidebar IA, landing (FR-068) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T04-docusaurus-navigation-fr-068.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-068](fr-br/FR-068-docusaurus-navigation-sidebar-and-landing.md)
+- **E5:S09:T05** – CI build gate (FR-069) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T05-docusaurus-ci-fr-069.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-069](fr-br/FR-069-docusaurus-ci-build-gate.md)
+- **E5:S09:T06** – Deployment and hosting (FR-070) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-070](fr-br/FR-070-docusaurus-deployment-and-hosting.md)
+- **E5:S09:T07** – Site search (FR-071) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T07-docusaurus-search-fr-071.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-071](fr-br/FR-071-docusaurus-site-search.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 
-- **E2:S11:T12**<sup>*</sup> – GitHub Actions intake (BR-053) – **COMPLETE (workaround, v0.2.11.12+2)** — GHA still fired on `push` under `on: issues` only; intake workflow **unregistered** (`fr-br-intake.yml.DISABLED`); **manual intake** until re-enable validated - [Task](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md) | [Story](epics/Epic-2/Story-011-intake-workflow-automation.md) | [BR-053](fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
-
-<sup>*</sup> **E2:S11:T12 marker:** Asterisk means closure is a **documented workaround**, not “GitHub fixed the trigger engine.” See BR-053 *Resolution / current status* and T12 *Re-enable procedure*.
+No nice-to-have tasks currently in progress
 
 ### Ongoing (O) - Perpetual Tasks
 
 - **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS (CRITICAL priority, User pain with tool discovery, pattern matching; blocked on Cascade whitelist root cause) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
-- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+37, Last updated: 2026-03-25) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+37, Last updated: 2026-03-30 UKW) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+6, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 

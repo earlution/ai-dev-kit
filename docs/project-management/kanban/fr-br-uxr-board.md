@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-30 (FR-064 ✅ — E5:S01:T69 / v0.5.1.69+1)
-**Version:** v0.5.1.69+1
+**Last Updated:** 2026-03-30 (BR-059 — UKW incomplete E5:S09 MoSCOW coverage)
+**Version:** v0.5.9.7+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -38,6 +38,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 - **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+- **BR-059** – UKW MoSCOW omits open story tasks (E5:S09 listed T01 only; checklist T01–T07) - TODO (HIGH, board SoT vs story checklist; investigation + UKW/rule fix) - [BR-059](fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
 
 ---
 
@@ -52,6 +53,7 @@ This board provides **centralized visibility and prioritization** for all open F
 - **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 - **FR-051** – FR/BR/UXR Prioritization Board - ✅ COMPLETED (HIGH, Create prioritization board for FRs, BRs, and UXRs) - [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) | [E6:S06:T01](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTED - BOARD CREATED*
 - **FR-063** – CMW Epic 5 execution context - TODO (MEDIUM, Document and enforce Epic 5 branch/version for standalone CMW; RW Step 9.5 inherits RW epic) - [FR-063](fr-br/FR-063-cmw-epic-5-execution-context.md) | [E5:S02:T06](epics/Epic-5/Story-002/T006-cmw-epic-5-execution-context-fr-063.md)
+- **FR-065** – Docusaurus site identity and config - TODO (HIGH, first in FR-065–FR-071 adoption chain; `portal/` branding and config) - [FR-065](fr-br/FR-065-docusaurus-site-identity-and-config.md) | [E5:S09:T01](epics/Epic-5/Story-009-docusaurus-documentation-portal/T01-docusaurus-site-identity-fr-065.md)
 ---
 
 ### Could Have (C) - Nice-to-Have Items
