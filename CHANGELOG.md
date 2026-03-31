@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.47+6] - 31-03-26
+## [0.5.1.72+0] - 31-03-26
 
-E5:S01:T47 — **FR-047** intake: **`Implementing Task`** wiring + Kanban task link; [T47](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md); [FR-047](docs/project-management/kanban/fr-br/FR-047-install-logging-for-framework-dependencies.md).
+E5:S01:T72 — **FR-072** (RW -k): uniform repository vs abstract-space Kanban rules — task + FR intake; [T72](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md); [FR-072](docs/project-management/kanban/fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.47+6.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.72+0.md)

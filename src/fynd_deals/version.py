@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo — PERPETUAL)
-VERSION_TASK = 47     # Task number (E5:S01:T47 — FR-047 install logging; intake wiring)
-VERSION_BUILD = 6     # Build number (FR-047 **Implementing Task** line + Kanban Links task pointer)
+VERSION_TASK = 72     # Task number (E5:S01:T72 — FR-072 uniform repository / abstract-space Kanban rules; intake)
+VERSION_BUILD = 0     # Build number (RW -k: task + FR intake / doc-init)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.47+6 — E5:S01:T47: FR-047 bidirectional intake (**Implementing Task** in FR; T47 version marker)
+# Current: 0.5.1.72+0 — E5:S01:T72: FR-072 intake (task doc, FR-072, Story-001 checklist; Kanban doc-init)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
