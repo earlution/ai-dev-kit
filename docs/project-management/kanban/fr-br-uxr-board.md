@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-25 (FR-063: CMW Epic 5 execution context intake)
-**Version:** v0.7.6.6+1
+**Last Updated:** 2026-03-31 (**UXR-001/002/005** → **E7:S00:T01**, **T02**, **T05** + **E7:S01:T09**; **FR-063** intake 2026-03-25)
+**Version:** v0.7.1.9+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -47,9 +47,9 @@ This board provides **centralized visibility and prioritization** for all open F
 - **FR-045** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH, SemVer mapping for task_touch and Kanban integration) - [FR-045](fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [E5:S01:T45](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)
 - **FR-047** – Install Logging for Framework Dependencies - TODO (HIGH, Enables detailed post-install analysis and debugging) - [FR-047](fr-br/FR-047-install-logging-for-framework-dependencies.md) | [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 - **FR-046** – RW SemVer Tag When task_touch Enabled - TODO (HIGH, RW tagging behaviour when task_touch is enabled) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)
-- **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md)
-- **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
-- **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
+- **UXR-001** – Migration User Experience Research - ✅ COMPLETE (HIGH, Registry **E7:S00:T01**; synthesis **E7:S05:T01**) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md) | [E7:S00:T01](epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001.md)
+- **UXR-002** – Comprehensive UAT Migration Utilities - ✅ COMPLETE (HIGH, Registry **E7:S00:T02**; synthesis **E7:S05:T02**; UAT PASS) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md) | [E7:S00:T02](epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md)
+- **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Implementation **E7:S01:T09**; registry **E7:S00:T05**) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md) | [E7:S00:T05](epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md) | [E7:S01:T09](epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)
 - **FR-051** – FR/BR/UXR Prioritization Board - ✅ COMPLETED (HIGH, Create prioritization board for FRs, BRs, and UXRs) - [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) | [E6:S06:T01](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTED - BOARD CREATED*
 - **FR-063** – CMW Epic 5 execution context - TODO (MEDIUM, Document and enforce Epic 5 branch/version for standalone CMW; RW Step 9.5 inherits RW epic) - [FR-063](fr-br/FR-063-cmw-epic-5-execution-context.md) | [E5:S02:T06](epics/Epic-5/Story-002/T006-cmw-epic-5-execution-context-fr-063.md)
 

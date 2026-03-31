@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.9+1] - 25-03-26
+## [0.7.1.9+1] - 31-03-26
 
-E7:S06:T09+1 – Config and git state validation: rw-config path matrix OK; `version.py` epic vs branch OK; git baseline documented; `.cursorrules` File Paths aligned with `rw-config`; no root `.cursorignore` (documented); Story 6 Post-Windsurf review marked complete; findings in T09 task doc.
+E7:S01:T09 — **RW -k:** Kanban documentation setup for **UXR-005** / template governance; **E7:S00** registry tasks for **UXR-001/002/005**; restore **`validate_rw_task_complete.py`** on **epic/7-documentation-maintenance**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.9+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.9+1.md)

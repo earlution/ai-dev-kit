@@ -332,15 +332,16 @@ Research findings from migrating dev-toolkit's pre-existing Kanban structure to 
 - [ ] New Epic Created: [Epic X, Story 1, Task 1]
 
 **Assigned To:**
-- Epic: Epic 7 (UXR - User Experience Research)
-- Story: Story 1 (UXR Research and Analysis) - TO BE CREATED OR EXISTING
-- Task: Task 1 (UXR-001: Migration user experience research)
-- Version: `[TBD]`
+- Epic: Epic 7 (UXR repo + maintenance epic)
+- Story: **E7:S00** (UXR repository story)
+- Task: **E7:S00:T01** (UXR-001 registry task)
+- Version: `v0.7.0.1+1` (task filed 2026-03-31)
 
 **Kanban Links:**
 - Epic: [`Epic-7.md`](../epics/Epic-7/Epic-7.md)
-- Story: [TBD]
-- Task: [TBD]
+- Story: [`Story-000-uxr-repo.md`](../epics/Epic-7/Story-000-uxr-repo.md)
+- Task: [`T01-migration-user-experience-research-uxr-001.md`](../epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001.md)
+- Synthesis (historical): [`Story-005-migration-uxr-research.md`](../epics/Epic-7/Story-005-migration-uxr-research.md) (**E7:S05:T01**)
 
 ---
 

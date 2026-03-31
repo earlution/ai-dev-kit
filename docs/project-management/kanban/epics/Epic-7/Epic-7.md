@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-25 (v0.7.6.9+1 – E7:S06:T09 Config and git state validation; Story 6 complete)
+**Last updated:** 2026-03-31 (v0.7.1.9+1 – **RW -k E7:S01:T09**; **E7:S00** UXR registry; **UXR-005** wiring)
 **Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -22,11 +22,11 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.7.0.0+0 – Repository story created)
+- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.7.0.5+1 – Registry **E7:S00:T01**, **T02**, **T05** for **UXR-001/002/005** filed)
   - Story: [`Story-000-uxr-repo.md`](Story-000-uxr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
 
-- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.5+6 – Story reopened: filed T06 Update Changelog Workflow to implement UCW tooling and documentation)
+- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.9+1 – **RW -k:** **T09** kanban init / **UXR-005**; UCW **T06** still open)
 - [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete)
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
@@ -236,7 +236,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-25 (v0.7.6.9+1 – E7:S06:T09 Config and git state validation; Story 6 complete)
+**Last updated:** 2026-03-31 (v0.7.1.9+1 – **RW -k E7:S01:T09**; **E7:S00** UXR registry; **UXR-005** wiring)
 
 **Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
 
