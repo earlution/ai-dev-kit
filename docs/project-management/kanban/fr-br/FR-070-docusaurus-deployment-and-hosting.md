@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-30  
 **Submitted By:** User (via agent)  
 **Priority:** MEDIUM  
-**Status:** IMPLEMENTED (v0.5.9.6+1 — GitHub Pages + deploy workflow; verify Pages settings + E2E run on GitHub)  
-**Assigned Task:** E5:S09:T06 — [`T06-docusaurus-deployment-fr-070.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070.md)
+**Status:** IMPLEMENTED (**live URL verified** — v0.5.9.9+2 / **E5:S09:T09**; canonical site **200**; see Follow-up)  
+**Assigned Task:** E5:S09:T06 — [`T06-docusaurus-deployment-fr-070.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070.md); go-live closure **E5:S09:T09** — [`T09-github-pages-go-live-verification.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
 
 ---
 
@@ -75,7 +75,7 @@ A green local build does not help adopters if no public URL exists. `baseUrl` fo
 
 ## Follow-up work
 
-- **E5:S09:T09** — [GitHub Pages go-live verification](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md): repo **Pages** source, **200** on canonical URL, Actions confirmation, optional README troubleshooting.
+- **E5:S09:T09** — **COMPLETE** (v0.5.9.9+2): [GitHub Pages go-live verification](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md) — **`main`** merged, Actions **23796236180** green, Pages legacy source **`gh-pages`/`/`**, canonical **200**, [portal README](../../../../../portal/README.md) go-live notes.
 
 ## Related FRs
 

@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-03-30  
-**Last updated:** 2026-03-31 (RW -k **v0.5.9.9+1** — T09 kanban init)  
-**Version:** v0.5.9.9+1  
+**Last updated:** 2026-03-31 (T09 go-live **v0.5.9.9+2** — **RW E5:S09:T09**)  
+**Version:** v0.5.9.9+2  
 **Code:** E5S09
 
 ---
@@ -28,7 +28,7 @@ housekeeping_policy: keep
 - [x] **E5:S09:T06 – Deployment and hosting (FR-070)** - ✅ COMPLETE (v0.5.9.6+1)
 - [x] **E5:S09:T07 – Site search (FR-071)** - ✅ COMPLETE (v0.5.9.7+1)
 - [ ] **E5:S09:T08 – Strict broken-link checking post–FR-067 (warn → throw)** - TODO — [task file](Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md); **FU-1** on [FR-067](../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
-- [ ] **E5:S09:T09 – GitHub Pages go-live verification (FR-070 follow-up)** - IN PROGRESS — RW -k **v0.5.9.9+1** (task filed); go-live ACs TODO — [task file](Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
+- [x] **E5:S09:T09 – GitHub Pages go-live verification (FR-070 follow-up)** - ✅ COMPLETE (v0.5.9.9+2 — **RW E5:S09:T09**) — [task file](Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
 
 > **Forensic marker format:** `✅ COMPLETE (vRC.E.S.T+B)` when done.
 

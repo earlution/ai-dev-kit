@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.9+2] - 31-03-26
+
+E5:S09:T09 — GitHub Pages go-live verification (operational close-out for FR-070).
+
+[Detailed changelog](CHANGELOG_v0.5.9.9+2.md)
+
+---
+---
+---
 ## [0.5.9.9+1] - 31-03-26
 
 E5:S09:T09 — **RW -k:** T09 GitHub Pages go-live verification (kanban + FR-070 follow-up).

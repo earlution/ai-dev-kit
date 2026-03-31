@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.9+1] - 31-03-26
+## [0.5.9.9+2] - 31-03-26
 
-E5:S09:T09 — **RW -k:** **GitHub Pages go-live verification** task (FR-070 follow-up) — [T09](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md); Story / Epic / board / [FR-070](docs/project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting.md) follow-up.
+E5:S09:T09 — **GitHub Pages go-live verification** (FR-070 **R01**): merge **`epic/5` → `main`**, green **Actions** deploy, Pages **`gh-pages`/root**, canonical URL **200**; [T09](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md); portal README go-live/troubleshooting; [FR-070](docs/project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting.md) validation note.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.9+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.9+2.md)

@@ -63,6 +63,17 @@ Canonical structure reference: [Ultimate Canonical KB Structure](../docs/archite
 - **Redeploy prior `main`:** revert or reset `main` to the last known-good commit, push (or run **Docusaurus deploy to GitHub Pages** via `workflow_dispatch` after checking out that commit in a branch — preferred: fix `main` and push to trigger deploy).
 - **Or** restore `gh-pages` to a previous tree via git (maintainer) and force-push that branch — use only if you understand impact on live site.
 
+### Go-live and troubleshooting (E5:S09:T09)
+
+If **`gh-pages`** is updating but **https://earlution.github.io/ai-dev-kit/** still returns **404**, the repo likely has **no Pages site** published yet:
+
+1. **UI:** GitHub → **Settings → Pages** → **Build and deployment** → **Deploy from a branch** → branch **`gh-pages`**, folder **`/ (root)`** → Save. Wait a few minutes and hard-refresh.
+2. **API (repo admin, `repo` scope):** One-time create legacy Pages from `gh-pages` / root, e.g. with [GitHub CLI](https://cli.github.com/):  
+   `gh api --method POST repos/<owner>/<repo>/pages -f build_type=legacy -f 'source[branch]=gh-pages' -f 'source[path]=/'`  
+   Then confirm: `curl -sI https://earlution.github.io/ai-dev-kit/` → **200**.
+
+**Verify deploy:** **Actions** → workflow **Docusaurus deploy to GitHub Pages** should be green after pushes to **`main`** that touch `portal/`, `docs/`, or the deploy workflow (or run **`workflow_dispatch`**).
+
 ## Site search (FR-071)
 
 **Provider:** **Local / offline** — [`@easyops-cn/docusaurus-search-local`](https://github.com/easyops-cn/docusaurus-search-local) is registered as a **theme** in [`docusaurus.config.js`](docusaurus.config.js). The search index is generated during **`npm run build`** and shipped with the static site; each **deploy** refreshes the index. **No Algolia / DocSearch** application and **no CI secrets** for search.

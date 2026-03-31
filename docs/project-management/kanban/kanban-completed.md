@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-31 (RW -k E5:S09:T09 / kanban init)
-**Version:** v0.5.9.9+1
+**Last Updated:** 2026-03-31 (**RW E5:S09:T09** v0.5.9.9+2 — Pages go-live)
+**Version:** v0.5.9.9+2
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -25,8 +25,8 @@ housekeeping_policy: keep
   **Completed:** `2026-03-30T16:00:00Z` | **Version:** `v0.2.11.12+2` | **Agent:** `UKW / Maintainer`
 
 #### **Epic 5: Documentation Management**
-- **[E5:S09:T09](epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)** – **RW -k:** Kanban init for GitHub Pages **go-live verification** task (FR-070 follow-up): discrete T09, Story/Epic/board, FR-070 Follow-up — *implementation (HTTP 200) still TODO on task*  
-  **Completed:** `2026-03-31T11:57:33Z` | **Version:** `v0.5.9.9+1` | **Agent:** `RW Agent (-k)`
+- **[E5:S09:T09](epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)** – GitHub Pages **go-live** (**FR-070** follow-up): `epic/5` → **`main`**, Actions run **23796236180** green, Pages legacy **`gh-pages`/`/`**, canonical **HTTP 200**, [portal/README.md](../../../portal/README.md) go-live/troubleshooting; task doc **`Task ID`** for RW validators; *init* **v0.5.9.9+1** (`RW -k`), *release* **v0.5.9.9+2** (**RW E5:S09:T09**).  
+  **Completed:** `2026-03-31T12:10:00Z` | **Version:** `v0.5.9.9+2` | **Agent:** `RW Agent`
 
 - **[E5:S09:T07](epics/Epic-5/Story-009-docusaurus-documentation-portal/T07-docusaurus-search-fr-071.md)** – Docusaurus site search (**FR-071**): `@easyops-cn/docusaurus-search-local` in [`portal/docusaurus.config.js`](../../../portal/docusaurus.config.js), [`portal/README.md`](../../../portal/README.md) (smoke queries, privacy, build time), [`tests/test_portal_fr071_search.py`](../../../tests/test_portal_fr071_search.py)  
   **Completed:** `2026-03-30T16:59:05Z` | **Version:** `v0.5.9.7+1` | **Agent:** `RW Agent`

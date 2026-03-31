@@ -8,11 +8,11 @@ housekeeping_policy: keep
 
 # Epic 5, Story 9, Task 09: GitHub Pages go-live verification (FR-070 follow-up)
 
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
 **Created:** 2026-03-31  
-**Last updated:** 2026-03-31 (RW -k **v0.5.9.9+1** — discrete task + kanban wiring)  
+**Last updated:** 2026-03-31 — **v0.5.9.9+2** go-live verified (merge `main`, Actions, Pages API, `curl` **200**)  
 **Code:** E5S09T09
 
 **Upstream:** [FR-070 – Deployment and hosting](../../../fr-br/FR-070-docusaurus-deployment-and-hosting.md) (automation shipped in **T06**); this task **closes the operational gap** between “`gh-pages` branch updated by Actions” and “canonical URL returns **200** for readers.”
@@ -21,7 +21,19 @@ housekeeping_policy: keep
 
 ## Task ID
 
+**Task ID:** E5:S09:T09  
 **Full Task ID:** `E5:S09:T09`
+
+---
+
+## Specification (executable)
+
+| ID | Source | Statement |
+| --- | --- | --- |
+| **S1** | AC1 | Canonical URL in [portal/README.md](../../../../../../portal/README.md) returns **HTTP 2xx** (verified `curl -sI`). |
+| **S2** | Deliverable | [Docusaurus deploy to GitHub Pages](https://github.com/earlution/ai-dev-kit/actions/workflows/docusaurus-deploy.yml) on **`main`** succeeds (run **23796236180**, 2026-03-31). |
+| **S3** | AC2 | This **Evidence** lists commands, run id, Pages enablement. |
+| **S4** | AC3 | [FR-070](../../../fr-br/FR-070-docusaurus-deployment-and-hosting.md) **R01** validated live (**200**). |
 
 ---
 
@@ -43,18 +55,18 @@ The **Docusaurus deploy to GitHub Pages** workflow can succeed and **`gh-pages`*
 
 ## Deliverable
 
-- **Repo configuration** — GitHub Pages source matches FR-070 docs: branch **`gh-pages`**, folder **`/ (root)`** (or documented alternative).
-- **Verification** — Canonical URL **HTTP 200**; spot-check home + one docs path; optional FR-071 search smoke on production.
-- **Actions** — Green **Docusaurus deploy to GitHub Pages** on `main` (or fix + **`workflow_dispatch`** redeploy).
-- **Documentation** — Optional **Troubleshooting** / go-live notes under **Production hosting (FR-070)** in `portal/README.md` if gaps found.
+- **Repo configuration** — GitHub Pages source **`gh-pages`** / **`/(root)`** (legacy branch publish; enabled 2026-03-31 via GitHub API).
+- **Verification** — Canonical URL **HTTP 200**; docs path returns **301** to trailing-slash URL (expected).
+- **Actions** — Green **Docusaurus deploy to GitHub Pages** on `main` after merge from `epic/5-documentation-management`.
+- **Documentation** — **Go-live and troubleshooting** under [portal/README.md](../../../../../../portal/README.md) (FR-070).
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] AC1: **`https://earlution.github.io/ai-dev-kit/`** returns success (not 404) after configuration/propagation.
-- [ ] AC2: Evidence recorded; **Evidence** section lists verification command/date or Actions narrative.
-- [ ] AC3: [FR-070](../../../fr-br/FR-070-docusaurus-deployment-and-hosting.md) **R01** “reachable” **validated** or residual blockers documented with owner/next step.
+- [x] AC1: **`https://earlution.github.io/ai-dev-kit/`** returns success (not 404) after configuration/propagation. *(HTTP 200, 2026-03-31.)*
+- [x] AC2: Evidence recorded; **Evidence** lists verification command/date or Actions narrative.
+- [x] AC3: [FR-070](../../../fr-br/FR-070-docusaurus-deployment-and-hosting.md) **R01** “reachable” **validated** for the deployed site.
 
 ---
 
@@ -73,12 +85,15 @@ The **Docusaurus deploy to GitHub Pages** workflow can succeed and **`gh-pages`*
 
 ## Version Anchor
 
-**Forensic marker (when implementation complete):** `✅ COMPLETE (v0.5.9.9+N)` — **RW** (non `-k`) when ACs are met.  
-**Kanban init:** `v0.5.9.9+1` — **RW -k E5:S09:T09** (discrete task filed + board/Story/Epic/FR-070 follow-up).
+**Forensic marker:** `✅ COMPLETE (v0.5.9.9+2)` — **RW E5:S09:T09** (implementation).  
+**Kanban init:** `v0.5.9.9+1` — **RW -k E5:S09:T09**.
 
 ---
 
 ## Evidence
 
-- **v0.5.9.9+1 (RW -k):** Task document; Story 009 / Epic 5 / `kanban-board` / FR-070 Follow-up section.
-- *(Post go-live: Settings confirmation, `curl`/browser, Actions run, README edits.)*
+- **Merge:** `epic/5-documentation-management` → **`main`** (fast-forward **`4314cd36`**) pushed 2026-03-31 — brings `v0.5.9.9+1` RW -k + T09 task on default branch.
+- **Actions:** [Workflow run 23796236180](https://github.com/earlution/ai-dev-kit/actions/runs/23796236180) — **success** (~3m29s); **Deploy to gh-pages** completed.
+- **Pages:** Site created via `gh api POST .../pages` with `build_type=legacy`, `source[branch]=gh-pages`, `source[path]=/`. Response `html_url`: `https://earlution.github.io/ai-dev-kit/`.
+- **HTTP:** `curl -sI https://earlution.github.io/ai-dev-kit/` → **200** (2026-03-31 UTC). `curl -sI` docs path → **301** to trailing-slash.
+- **Docs:** [portal/README.md](../../../../../../portal/README.md) — **Go-live and troubleshooting (E5:S09:T09)**.
