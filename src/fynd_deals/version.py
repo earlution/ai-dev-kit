@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
 VERSION_STORY = 0     # Story number (Story 0: UXR Repo — PERPETUAL)
-VERSION_TASK = 1      # Task number (E7:S00:T01 — UXR-001 migration research registry anchor)
-VERSION_BUILD = 2     # Build number (UXR-001 **Implementing Task** header wiring)
+VERSION_TASK = 2      # Task number (E7:S00:T02 — UXR-002 UAT migration utilities registry anchor)
+VERSION_BUILD = 2     # Build number (UXR-002 **Implementing Task** header wiring)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.0.1+2 — E7:S00:T01: UXR-001 ↔ T01 bidirectional intake (**Implementing Task** in UXR doc)
+# Current: 0.7.0.2+2 — E7:S00:T02: UXR-002 ↔ T02 bidirectional intake (**Implementing Task** in UXR doc)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

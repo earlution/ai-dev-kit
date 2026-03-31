@@ -10,8 +10,8 @@ housekeeping_policy: keep
 
 **Status:** COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (v0.7.0.2+1 – Task filed in UXR repository story)  
-**Version:** v0.7.0.2+1  
+**Last updated:** 2026-03-31 (v0.7.0.2+2 – UXR-002 **Implementing Task** header wiring)  
+**Version:** v0.7.0.2+2  
 **Code:** E7S00T02
 
 **Task ID:** E7:S00:T02
@@ -53,6 +53,18 @@ Follow-up recommendations (mode recommendation logic, validation messaging, veri
 - [x] UXR-002 accepted; UAT **PASS** documented  
 - [x] Findings synthesized under **E7:S05:T02**  
 - [x] Kanban task document filed under **E7:S00** per repository pattern
+
+---
+
+## Deliverable
+
+- Registry task for **UXR-002** under **E7:S00:T02** with bidirectional link from the UXR document (**Implementing Task**).
+
+---
+
+## Version Anchor
+
+- **v0.7.0.2+2** — UXR-002 **`Implementing Task:`** header wiring (documentation-only).
 
 ---
 

@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (v0.7.0.1+2 — UXR-001 **Implementing Task** wiring; prior T01/T02/T05 registry filings)  
+**Last updated:** 2026-03-31 (v0.7.0.2+2 — UXR-002 **Implementing Task** wiring; UXR-001 **v0.7.0.1+2**; **T05** UXR-005 registry)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-05  
 **Completed:** N/A (Perpetual - never completes)  
