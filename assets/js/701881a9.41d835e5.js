@@ -70,6 +70,10 @@ const toc = [{
   "id": "dependencies--ordering",
   "level": 2
 }, {
+  "value": "Follow-up work",
+  "id": "follow-up-work",
+  "level": 2
+}, {
   "value": "Related FRs",
   "id": "related-frs",
   "level": 2
@@ -321,6 +325,22 @@ function _createMdxContent(props) {
         }), " (correct config + green build); ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "FR-069"
         }), " strongly recommended before or with deploy to avoid broken releases."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "follow-up-work",
+      children: "Follow-up work"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E5:S09", ":T09"]
+        }), " — ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification",
+          children: "GitHub Pages go-live verification"
+        }), ": repo ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Pages"
+        }), " source, ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "200"
+        }), " on canonical URL, Actions confirmation, optional README troubleshooting."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "related-frs",

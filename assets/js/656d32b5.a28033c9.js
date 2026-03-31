@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-epics-epic-5-story-009-docusaurus-documentation-portal-md-656.json
-const site_docs_project_management_kanban_epics_epic_5_story_009_docusaurus_documentation_portal_md_656_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal","title":"Story 009 – Docusaurus Documentation Portal","description":"Status: IN PROGRESS","source":"@site/../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal.md","sourceDirName":"project-management/kanban/epics/Epic-5","slug":"/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-30T18:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Epic 5, Story 9, Task 08: Strict broken-link checking (post–FR-067 warn mode)","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067"},"next":{"title":"Epic 6: Framework Management and Maintenance","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/"}}');
+const site_docs_project_management_kanban_epics_epic_5_story_009_docusaurus_documentation_portal_md_656_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal","title":"Story 009 – Docusaurus Documentation Portal","description":"Status: IN PROGRESS","source":"@site/../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal.md","sourceDirName":"project-management/kanban/epics/Epic-5","slug":"/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-30T18:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Epic 5, Story 9, Task 09: GitHub Pages go-live verification (FR-070 follow-up)","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification"},"next":{"title":"Epic 6: Framework Management and Maintenance","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -107,9 +107,11 @@ function _createMdxContent(props) {
         children: "Created:"
       }), " 2026-03-30", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-30 (v0.5.9.7+1 — T07 FR-071 RW)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (RW -k ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.5.9.9+1"
+      }), " — T09 kanban init)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.5.9.7+1", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " v0.5.9.9+1", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Code:"
       }), " E5S09"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -195,6 +197,19 @@ function _createMdxContent(props) {
         }), " on ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage",
           children: "FR-067"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: [(0,jsx_runtime.jsx)(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E5:S09", ":T09", " – GitHub Pages go-live verification (FR-070 follow-up)"]
+        }), " - IN PROGRESS — RW -k ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "v0.5.9.9+1"
+        }), " (task filed); go-live ACs TODO — ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification",
+          children: "task file"
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
@@ -350,6 +365,19 @@ function _createMdxContent(props) {
               href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-071-docusaurus-site-search",
               children: (0,jsx_runtime.jsx)(_components.code, {
                 children: "FR-071-docusaurus-site-search.md"
+              })
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "T09"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "FR-070 (follow-up)"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting",
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "FR-070-docusaurus-deployment-and-hosting.md"
               })
             })
           })]

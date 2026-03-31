@@ -126,7 +126,11 @@ function _createMdxContent(props) {
         children: "Created:"
       }), " 2025-12-05", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-30 (v0.5.9.7+1 — E5:S09", ":T07", " FR-071 RW)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (RW -k E5:S09", ":T09", " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.5.9.9+1"
+      }), " on ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "epic/5-documentation-management"
+      }), ")", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Branch:"
       }), " ", (0,jsx_runtime.jsx)(_components.code, {
         children: "epic/5-documentation-management"
@@ -368,7 +372,9 @@ function _createMdxContent(props) {
             disabled: true
           }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
             children: ["E5", ":S09", " – Docusaurus Documentation Portal"]
-          }), " - IN PROGRESS (T01–T07 ✅ v0.5.9.7+1; T08 TODO)"]
+          }), " - IN PROGRESS (T01–T07 ✅; T09 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "RW -k v0.5.9.9+1"
+          }), " filed; go-live ACs TODO; T08 strict links TODO)"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["Story: ", (0,jsx_runtime.jsx)(_components.a, {
@@ -714,11 +720,15 @@ function _createMdxContent(props) {
         children: "Goal:"
       }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", "Complete Docusaurus adoption: canonical ", (0,jsx_runtime.jsx)(_components.code, {
         children: "docs/"
-      }), " ingest (with publish scope), green builds, IA, CI, hosting, and search—tracked via ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " ingest (with publish scope), green builds, IA, CI, hosting, search, and ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "production URL go-live"
+      }), "—tracked via ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "FR-065"
-      }), " through ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), "–", (0,jsx_runtime.jsx)(_components.strong, {
         children: "FR-071"
-      }), " (E5:S09", ":T01", "–T07)."]
+      }), " plus ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E5:S09", ":T09"]
+      }), " (Pages verification)."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: "Tasks:"
@@ -774,6 +784,17 @@ function _createMdxContent(props) {
           checked: true,
           disabled: true
         }), " ", "E5:S09", ":T07", " – Site search (FR-071) ✅ v0.5.9.7+1"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: [(0,jsx_runtime.jsx)(_components.input, {
+          type: "checkbox",
+          disabled: true
+        }), " ", "E5:S09", ":T09", " – GitHub Pages go-live verification (FR-070 follow-up) — ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "RW -k v0.5.9.9+1"
+        }), "; implementation TODO — ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification",
+          children: "T09"
+        })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {

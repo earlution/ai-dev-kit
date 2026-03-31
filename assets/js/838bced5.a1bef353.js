@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-kanban-completed-md-838.json
-const site_docs_project_management_kanban_kanban_completed_md_838_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/kanban-completed","title":"AI Dev Kit – Kanban Completed Tasks","description":"Last UpdatedS09:T07 / FR-071)","source":"@site/../docs/project-management/kanban/kanban-completed.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/kanban-completed","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-completed","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/kanban-completed.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T00:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"AI Dev Kit – Kanban Board","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board"},"next":{"title":"AI Dev Kit – Kanban Structure","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-structure"}}');
+const site_docs_project_management_kanban_kanban_completed_md_838_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/kanban-completed","title":"AI Dev Kit – Kanban Completed Tasks","description":"Last UpdatedS09:T09 / kanban init)","source":"@site/../docs/project-management/kanban/kanban-completed.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/kanban-completed","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-completed","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/kanban-completed.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T00:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"AI Dev Kit – Kanban Board","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board"},"next":{"title":"AI Dev Kit – Kanban Structure","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-structure"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -359,9 +359,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Last Updated:"
-      }), " 2026-03-30 (RW E5:S09", ":T07", " / FR-071)\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (RW -k E5:S09", ":T09", " / kanban init)\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.5.9.7+1"]
+      }), " v0.5.9.9+1"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -438,6 +438,33 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: (0,jsx_runtime.jsxs)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification",
+              children: ["E5:S09", ":T09"]
+            })
+          }), " – ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "RW -k:"
+          }), " Kanban init for GitHub Pages ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "go-live verification"
+          }), " task (FR-070 follow-up): discrete T09, Story/Epic/board, FR-070 Follow-up — ", (0,jsx_runtime.jsx)(_components.em, {
+            children: "implementation (HTTP 200) still TODO on task"
+          }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Completed:"
+          }), " ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "2026-03-31T11:57:33Z"
+          }), " | ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Version:"
+          }), " ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "v0.5.9.9+1"
+          }), " | ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Agent:"
+          }), " ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "RW Agent (-k)"
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
           children: [(0,jsx_runtime.jsx)(_components.strong, {
             children: (0,jsx_runtime.jsxs)(_components.a, {
