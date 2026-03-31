@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+38] - 31-03-26
+## [0.6.7.101+39] - 31-03-26
 
-E6:S07:T101 — **UKW** kanban sync (**Story-001-fr-repo** MoSCOW vs checklist, **FR-060/FR-061** hygiene); **T101** canonical **Task ID:** header for FR-060 task-doc discovery; FR-040 / board stubs staged with kanban tree.
+E6:S07:T101 — **Kanban:** add **`fr-br-uxr-open-taskless-queue.md`** (MoSCOW-ordered working queue, per-item agentic intake checklist, multi-epic / stale-board notes; `RW -k` guidance per epic branch).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+38.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+39.md)

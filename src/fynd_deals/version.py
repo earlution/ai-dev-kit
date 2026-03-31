@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis and Package Management)
 VERSION_TASK = 101   # Task number (E6:S07:T101 — perpetual UKW; RW after comprehensive UKW)
-VERSION_BUILD = 38   # Build number (UKW MoSCOW vs Story-001-fr-repo; T101 **Task ID:** for validators)
+VERSION_BUILD = 39   # Build number (fr-br-uxr open∧taskless intake queue doc; T101)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.101+38 — E6:S07:T101: UKW kanban sync + FR-060 task-doc header (epic/6)
+# Current: 0.6.7.101+39 — E6:S07:T101: fr-br-uxr open/taskless intake queue (epic/6)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
