@@ -21,8 +21,10 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
-**Value:** `E5:S01:T40`
+**Task ID:** E5:S01:T40
+
+**Format:** `E{epic}:S{story}:T{task}`  
+**Full Task ID:** `E5:S01:T40`
 
 ---
 
@@ -328,15 +330,4 @@ Implement a complete Implementation Cycle Workflow (ICW) that provides structure
 
 ## Next Steps
 
-1. **Begin Phase 1:** Start workflow infrastructure implementation
-2. **Create Templates:** Design and implement document templates
-3. **Agent Enhancement:** Begin agent guidance capability development
-4. **Integration Planning:** Plan system integration approach
-5. **Testing Strategy:** Develop comprehensive testing plan
-
----
-
-**Status:** TODO - Ready for implementation
-**Priority:** HIGH - Critical for development discipline and quality
-**Estimated Completion:** 2-3 weeks
-**Dependencies:** Workflow framework, agent capabilities, integration systems
+Maintenance and adoption (e.g. **.cursorrules** ICW trigger, template drift, adopter docs) are tracked via normal FR/task flow; core ICW implementation is treated as **COMPLETE** per header (2026-03-10).

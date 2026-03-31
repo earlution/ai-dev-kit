@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-02-26 (v0.5.1.47+3 – FR-047: tests, docs, consumer-vs-framework clarity)
+**Last updated:** 2026-03-31 (UKW — `kanban-board` MoSCOW vs checklist, **T47** narrative = COMPLETE, **FR-060/FR-061** ID hygiene noted)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
@@ -26,25 +26,36 @@ housekeeping_policy: keep
 ---
 
 ## Task Checklist
-
-> **Repository Pattern:** Each Feature Request becomes a task in this repository story.
-> **Traceability:** FR-001 = E5:S01:T01, FR-002 = E5:S01:T02, etc.
-> **Abstract Space:** v0.5.1.0+0 (repository story), v0.5.1.1+0 (first FR), v0.5.1.2+0 (second FR), etc.
-
 - [ ] **E5:S01:T31 – Multi-Agent Coordination Feasibility Investigation** - TODO (C priority) - [Task Document](Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
+
 - [x] **E5:S01:T34 – UKW Granular Control and Use Case Flags** - ✅ COMPLETE (v0.5.1.34+1 – Implementation complete: UKW granular control via flags and syntax parser) - [Task Document](Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
+
 - [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
+
 - [x] **E5:S01:T36 – RW Update Kanban Board on Task Completion** - ✅ COMPLETE (v0.5.1.36+1 – Implementation complete: Kanban board updates added to RW Step 7) - [Task Document](Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) | [FR-040](../../fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)
+
 - [x] **E5:S01:T37 – Kanban Policy Task Prioritisation and Queue/Stack** ✅ COMPLETE (v0.5.1.37+3 – Policy alignment: implementation cycle, changelog/IDE/git reminders) - [Task Document](Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
+
 - [ ] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
+
 - [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
+
+- [x] **E5:S01:T40 – Implementation Cycle Workflow (ICW)** - ✅ COMPLETE (per [task doc](Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) — core workflow delivered 2026-03-10; **FR-040** product status may lag until explicit verification) - [Task Document](Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) | [FR-040 (ICW)](../../fr-br/FR-040-implementation-cycle-workflow-icw.md)
+
 - [ ] **E5:S01:T43 – UKW Gap Discovery (TODO Tasks and Unfiled FR/BR)** - TODO (HIGH priority, v0.5.1.43+1 – Task created) - [Task Document](Story-001-fr-repo/T43-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) | [FR-043](../../fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
+
 - [ ] **E5:S01:T44 – RW Temporary Execution Log for Recovery and Forensics** - TODO (MEDIUM priority, v0.5.1.44+1 – Task created) - [Task Document](Story-001-fr-repo/T44-rw-temporary-execution-log-for-recovery-and-forensics.md) | [FR-044](../../fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)
+
 - [ ] **E5:S01:T45 – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
+
 - [ ] **E5:S01:T46 – Release Workflow Uses SemVer Tag When `task_touch` Enabled** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
-- [x] **E5:S01:T47 – Install Logging for Framework Dependencies** - IN PROGRESS (HIGH priority, v0.5.1.47+3 – tests, docs, consumer-vs-framework clarity) - [Task Document](Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../../fr-br/FR-047-install-logging-for-framework-dependencies.md)
+
+- [x] **E5:S01:T47 – Install Logging for Framework Dependencies** - ✅ COMPLETE (v0.5.1.47+3 – CLI logging, install-history, tests, docs) - [Task Document](Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../../fr-br/FR-047-install-logging-for-framework-dependencies.md)
+
 - [x] **E5:S01:T48 – ICW Task Identifier Argument** - ✅ COMPLETE (v0.5.1.48+1 – Implementation complete: ICW requires task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../../fr-br/FR-048-icw-task-identifier-argument.md)
+
 - [ ] **E5:S01:T49 – Enhanced kanban-completed.md with Timestamps and Recent Tasks Tracking** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T49-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md) | [FR-049](../../fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)
+
 - [ ] **E5:S01:T62 – GitHub Release Installation Experience** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T62-github-release-installation-experience.md) | [FR-062](../../fr-br/FR-062-github-release-installation-experience.md)
 
 ---

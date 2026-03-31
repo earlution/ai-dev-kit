@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Status:** TODO  
 **Priority:** HIGH  
 **Created:** 2026-03-09  
-**Last updated:** 2026-03-09  
+**Last updated:** 2026-03-31 — Checklist wiring: [E5:S01:T40 on FR repo story](../epics/Epic-5/Story-001-fr-repo.md); task doc claims **COMPLETE** (verify before closing FR).  
 **Code:** FR-040  
 **Implementation Task:** [E5:S01:T40](../epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md)
 

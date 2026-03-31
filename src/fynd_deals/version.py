@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 109   # Task number (E6:S07:T109 — BR-059 UKW MoSCOW full story task coverage)
-VERSION_BUILD = 1    # Build number (RW -k kanban init for T109)
+VERSION_TASK = 101   # Task number (E6:S07:T101 — perpetual UKW; RW after comprehensive UKW)
+VERSION_BUILD = 38   # Build number (UKW MoSCOW vs Story-001-fr-repo; T101 **Task ID:** for validators)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.109+1 — E6:S07:T109: RW -k BR-059 / UKW MoSCOW coverage task (epic/6)
+# Current: 0.6.7.101+38 — E6:S07:T101: UKW kanban sync + FR-060 task-doc header (epic/6)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
