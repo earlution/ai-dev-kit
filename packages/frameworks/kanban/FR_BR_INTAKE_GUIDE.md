@@ -8,24 +8,25 @@ housekeeping_policy: keep
 
 # FR/BR Intake Process Guide
 
-**Version:** 1.0  
-**Last Updated:** 2025-12-02  
+**Version:** 1.1  
+**Last Updated:** 2026-03-31  
 **Framework:** Kanban Framework  
-**Related:** `T002-decision-flow-design.md`, `FR_TEMPLATE.md`, `BR_TEMPLATE.md`
+**Related:** `kanban-governance-policy.md`, `T002-decision-flow-design.md`, `FR_TEMPLATE.md`, `BR_TEMPLATE.md`, `UXR_TEMPLATE.md` (if used)
 
 ---
 
 ## Overview
 
-This guide provides a step-by-step process for converting Feature Requests (FRs) and Bug Reports (BRs) into Kanban Tasks, Stories, and Epics. It operationalizes the decision flow design and demonstrates how to use the FR/BR templates.
+This guide provides a step-by-step process for converting **Feature Requests (FRs)**, **Bug Reports (BRs)**, and **User Experience Research (UXR)** items into Kanban Tasks, Stories, and Epics. It operationalizes the decision flow design and demonstrates how to use the FR/BR/UXR templates.
 
-**Key Principles:**
+**Key principles**
 
-- All work is **Task/FR-driven**
-- FRs/BRs must generate a Kanban Task on the appropriate Story
-- If no Story exists, create one under the appropriate Epic
-- If no Epic exists, create a broad abstract Epic for the new Story
-- Version numbers follow `RC.EPIC.STORY.TASK+BUILD` schema
+- All substantive work is **task-driven**.
+- Every **FR / BR / UXR** MUST have **at least one** **Kanban task** with **bidirectional** links (report ↔ task).
+- **Atomic intake (mandatory):** The **task document** and **wiring** are created **in the same session** as the new FR/BR/UXR file. Do **not** commit or hand off a report with **“task TODO”**.
+- Place the **primary** task under the **story that matches delivery semantics** (e.g. framework bugs → Epic 6 story; docs site → Epic 5). **FR/BR/UXR number ≠ task number** is allowed; symmetric ids (e.g. FR-047 → …:T47) are **optional**, not required—see **KG-R6** in `kanban-governance-policy.md`.
+- If no Story exists, create one under the appropriate Epic; if no Epic exists, create a broad epic for the new story.
+- Version numbers follow `RC.EPIC.STORY.TASK+BUILD` schema (typically via **RW** / **RW -k** after intake artifacts exist).
 
 ---
 
@@ -42,35 +43,37 @@ This guide provides a step-by-step process for converting Feature Requests (FRs)
 
 ## Intake Process Overview
 
-### High-Level Flow
+### High-Level Flow (**atomic intake**)
 
 ```
-FR/BR Arrives
+FR / BR / UXR arrives
     ↓
-1. Capture FR/BR Details (use template)
+1. Capture report (template) — single new markdown file
     ↓
-2. Analyze Scope and Impact
+2. Analyze scope, impact, priority (Feature / Bug / Research)
     ↓
-3. Determine Work Type (Feature/Bug)
+3. Find or Create Epic → Story that fits **delivery** (not only “repo” story)
     ↓
-4. Find or Create Epic
+4. Create **Task document** under that story (same session)
     ↓
-5. Find or Create Story
+5. **Wire now:** report `Implementing Task:` (or equivalent) ↔ task “Associated …” section
     ↓
-6. Create Task with Version
+6. Add story checklist row (or explicit follow-up with owner—exceptional)
     ↓
-7. Update Kanban Board
+7. Update prioritization / kanban boards as needed
     ↓
-8. Link FR/BR to Task
+8. Run **RW -k** / **RW** on appropriate epic branch to version when ready
 ```
+
+**Anti-pattern:** Steps 1–3 without Step 4–5 in the **same** change set → orphan reports and board drift (forbidden by **KG-R2**).
 
 ---
 
 ## Step-by-Step Intake Process
 
-### Step 1: Receive and Capture FR/BR
+### Step 1: Receive and Capture FR / BR / UXR
 
-**Action:** Create a new FR or BR document using the appropriate template.
+**Action:** Create a new report document using the appropriate template (same session will add the task—do not stop here).
 
 **For Feature Requests:**
 - Use `FR_TEMPLATE.md`
@@ -80,12 +83,17 @@ FR/BR Arrives
 - Use `BR_TEMPLATE.md`
 - Location: `docs/project-management/kanban/fr-br/BR-XXX-[title].md` (or project-specific location)
 
+**For UXR (where used):**
+- Location: `docs/project-management/kanban/fr-br/UXR-XXX-[title].md` (or project-specific location)
+
 **Required Information:**
 - Summary (one sentence)
 - Description (detailed)
 - Priority/Severity
 - Scope Analysis (for FR) or Affected Component (for BR)
 - Acceptance Criteria
+
+**Before leaving this intake:** populate **`Implementing Task:`** (or project equivalent) with a **real** task path—may be stub text until Step 4–5 completes in the same session.
 
 ---
 

@@ -56,12 +56,13 @@ This board provides **centralized visibility and prioritization** for all open F
 | **UXR-005** | UXR | **E7:S00:T05** (repo) · **E7:S01:T09** (impl — exists) | **Mixed** | `epic/7-documentation-maintenance` | **S00:T05** = repository anchor for the UXR record; **S01:T09** already operationalizes template/MoSCOW governance—intake wires both in headers + board. |
 | **FR-073** | FR | **E5:S01:T73** | **Exists** (**`v0.5.1.73+0`** doc-init) | `epic/5-documentation-management` | Meta-FR for this intake plan; **E5:S01** is FR Repo PERPETUAL. |
 
-**Housing policy (how story choice is decided)**
+**Housing policy (how story choice is decided)** — canonical rules: **`kanban-governance-policy.md`** (**KG-R2** atomic intake, **KG-R6** semantics vs numbering).
 
-1. **FR-xxx (request record)** → default **E5:S01:Txx** when **xx** matches the FR number and the change is intake/traceability/docs for that FR (**repository story** pattern).  
-2. **BR-xxx targeting RW/agent execution** → default **E6:S06** for net-new implementation tasks unless the bug is explicitly **UKW/CMW definition** → then **E6:S07**.  
-3. **UXR-xxx** → always reserve **E7:S00:Tnn** (**nn** = UXR number) for the **repository** task doc; Implementation may also reference **E7:S01** / **E7:S05** / etc. when work already landed there.  
-4. **Epic branch** in the table = where **`validate_branch_context.py --strict`** must pass for the **task’s epic digit** on `RW` / `RW -k`.  
+1. **Primary task** SHOULD sit under the **story that matches delivery** (where work is understood and versioned), not only under a repository story. **FR/BR/UXR id = task number** is **optional**; symmetric **E5:S01:Tnn** for FR-nnn is a **convenience**, not a requirement.  
+2. **Every** new FR/BR/UXR MUST get **≥1 task + bidirectional links in the same intake session** (no orphan `fr-br/*.md`).  
+3. **BR-xxx** targeting RW/agent tooling → often **E6:S06**; **UKW/CMW/RW-definition** defects → often **E6:S07** (examples, not laws).  
+4. **UXR-xxx** → may use **E7:S00** repository slot **and/or** implementation tasks under **E7:S01** / **E7:S05**—link both when both exist.  
+5. **Epic branch** in the mapping table = where **`validate_branch_context.py --strict`** must pass for **`RW` / `RW -k`** on that task’s epic.  
 
 ### Recently completed (reference)
 
@@ -85,7 +86,7 @@ Examples: **FR-045**→E5:S01:T45, **FR-046**→T46, **FR-047**→T47, **FR-063*
 
 ### Source-of-truth and hygiene (read before filing)
 
-1. **Sparse FR headers:** Many FRs do **not** include **`Implementing Task:`**; wiring may exist only on this board or in story checklists. When executing intake, add the header field for traceability.
+1. **Atomic intake:** New FR/BR/UXR **must** ship with a **task doc + `Implementing Task:`** (or equivalent) in the **same change set**—see **KG-R2** in **`packages/frameworks/kanban/policies/kanban-governance-policy.md`**. Older sparse headers are **legacy debt** to burn down.
 2. **UXR drift:** **UXR-001** / **UXR-002** / **UXR-005** appear taskless here but may already map to Epic 7 work (e.g. maintenance or synthesis tasks). **Reconcile** under [`epics/Epic-7/`](epics/Epic-7) before creating net-new **E7:S00:Txx** repo tasks.
 3. **Board freshness:** **Statistics** (below) and some MoSCOW rows can lag (e.g. completed items still counted in priority buckets; **FR-072** not yet listed in MoSCOW). After each **`RW -k`**, update rows here and use **UKW** for a broad consistency pass.
 

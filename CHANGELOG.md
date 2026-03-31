@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.73+0] - 31-03-26
+## [0.5.1.74+1] - 31-03-26
 
-E5:S01:T73 — **FR-073** (RW -k): FR/BR/UXR board intake plan — pre-identified task mapping, housing policy; [T73](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md); [FR-073](docs/project-management/kanban/fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md).
+E5:S01:T74 — **FR-074**: Kanban intake hardening — **KG-R2** (atomic filing), **KG-R6** (semantic placement); governance, guides, skill, workflow YAML, rituals §1.2, kanban README, board/T73 alignment; [T74](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md); [FR-074](docs/project-management/kanban/fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.73+0.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.74+1.md)

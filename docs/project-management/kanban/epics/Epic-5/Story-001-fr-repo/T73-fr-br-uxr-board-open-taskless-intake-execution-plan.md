@@ -54,10 +54,12 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 ### Story-choice policy (shortcut)
 
-- **E5:S01** — FR **repository** tasks and doc-init for **FR-xxx** where **Txx** aligns with filing convention.  
-- **E6:S06** — Framework **delivery** tasks for BRs about RW/agent tooling (cluster with other feature-request work).  
-- **E6:S07** — BRs/FRs that change **UKW / CMW / RW maintenance** semantics or agent steps.  
-- **E7:S00** — UXR **repository** **Tnn** for **UXR-n**; implementation may remain on **E7:S01**, **E7:S05**, etc.
+**Governance:** **KG-R6** — prefer **semantic** story placement; **FR-nnn ↔ Tnn** in **E5:S01** is **optional**, not mandatory.
+
+- **E5:S01** — Often used for FR **repository** rows and **RW -k** doc-init; primary **delivery** task may still live under another epic/story with links.  
+- **E6:S06** — Typical **framework / RW–adjacent** BR and FR **implementation**.  
+- **E6:S07** — **UKW / CMW / RW maintenance** defects and perpetual workflow tasks.  
+- **E7:S00** / **E7:S01** / **E7:S05** — UXR **repository** slot vs **implementation** per project `Story-000` / charter; **link both** when both exist.
 
 ---
 

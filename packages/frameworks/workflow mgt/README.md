@@ -488,6 +488,8 @@ This ensures the workflow adapts to your project's specific context and handles 
 
 The **Intake Workflow** automates the process of converting Feature Requests (FRs), Bug Reports (BRs), and User Experience Research (UXR) documents into structured Kanban tasks. It integrates with the Release Workflow's trigger-aware system to automatically execute when FR/BR/UXR commits are detected.
 
+**Governance alignment:** Intake MUST satisfy **KG-R2** (every FR/BR/UXR resolves to ≥1 task **in the same session**) and **KG-R6** (task under semantically appropriate story; FR/BR/UXR id ↔ task number symmetry optional). See `packages/frameworks/kanban/policies/kanban-governance-policy.md`.
+
 ### Key Features
 
 - **Automated Decision Flow:** Analyzes FR/BR/UXR content to determine appropriate Epic/Story/Task assignment
