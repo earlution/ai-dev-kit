@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.9+2] - 31-03-26
+## [0.7.0.2+2] - 31-03-26
 
-E5:S09:T09 — **GitHub Pages go-live verification** (FR-070 **R01**): merge **`epic/5` → `main`**, green **Actions** deploy, Pages **`gh-pages`/root**, canonical URL **200**; [T09](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md); portal README go-live/troubleshooting; [FR-070](docs/project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting.md) validation note.
+E7:S00:T02 — **UXR-002** intake: **`Implementing Task`** in [UXR-002](docs/project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities.md) → [T02](docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md). *(**main:** merged `epic/7-documentation-maintenance`; Epic 5 Docusaurus go-live **v0.5.9.9+2** retained in [archive](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md).)*
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.9+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.0.2+2.md)

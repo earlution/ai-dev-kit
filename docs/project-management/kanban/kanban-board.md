@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-31 (**RW E5:S09:T09** v0.5.9.9+2 — Pages go-live on `main`)
-**Version:** v0.5.9.9+2 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-31 (**merge** `epic/7-documentation-maintenance` → **`main`**; tip **v0.7.0.2+2**; **E5:S09** go-live **v0.5.9.9+2** in archive)
+**Version:** v0.7.0.2+2 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 

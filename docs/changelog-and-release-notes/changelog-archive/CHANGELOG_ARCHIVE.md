@@ -1,4 +1,31 @@
 # Changelog Archive
+## [0.7.0.2+2] - 31-03-26
+
+E7:S00:T02 — **UXR-002** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.0.2+2.md)
+
+---
+---
+---
+## [0.7.0.1+2] - 31-03-26
+
+E7:S00:T01 — **UXR-001** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.0.1+2.md)
+
+---
+---
+---
+## [0.7.1.9+3] - 31-03-26
+
+E7:S01:T09 — **UXR-005** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.1.9+3.md)
+
+---
+---
+---
 ## [0.5.9.9+2] - 31-03-26
 
 E5:S09:T09 — GitHub Pages go-live verification (operational close-out for FR-070).
@@ -13,231 +40,6 @@ E5:S09:T09 — GitHub Pages go-live verification (operational close-out for FR-0
 E5:S09:T09 — **RW -k:** T09 GitHub Pages go-live verification (kanban + FR-070 follow-up).
 
 [Detailed changelog](CHANGELOG_v0.5.9.9+1.md)
-
----
----
----
-## [0.5.9.7+1] - 30-03-26
-
-E5:S09:T07 — **FR-071:** Local offline Docusaurus search, portal README, contract tests.
-
-[Detailed changelog](CHANGELOG_v0.5.9.7+1.md)
-
----
----
----
-## [0.5.9.6+1] - 30-03-26
-
-E5:S09:T06 — **FR-070:** GitHub Pages deploy workflow, hosting README, root README link, contract tests.
-
-[Detailed changelog](CHANGELOG_v0.5.9.6+1.md)
-
----
----
----
-## [0.5.9.5+1] - 30-03-26
-
-E5:S09:T05 — **FR-069:** Docusaurus CI workflow, contract tests, portal README CI pointer.
-
-[Detailed changelog](CHANGELOG_v0.5.9.5+1.md)
-
----
----
----
-## [0.5.9.4+1] - 30-03-26
-
-E5:S09:T04 — **FR-068:** Sidebar IA, landing, navigation tests, portal `--no-minify` build workaround.
-
-[Detailed changelog](CHANGELOG_v0.5.9.4+1.md)
-
----
----
----
-## [0.6.7.103+4] - 30-03-26
-
-E6:S07:T103 — **RW -d:** FR-067 FU-2 → T103/FR-041; triage + FR-067. (Doc-only — no tag/push.)
-
-[Detailed changelog](CHANGELOG_v0.6.7.103+4.md)
-
----
----
----
-## [0.5.9.8+1] - 30-03-26
-
-E5:S09:T08 — **RW -k:** FR-067 follow-up tracking (T08, FU table); portal/triage/README wiring.
-
-[Detailed changelog](CHANGELOG_v0.5.9.8+1.md)
-
----
----
----
-## [0.5.9.3+1] - 30-03-26
-
-E5:S09:T03 — **FR-067:** Docusaurus production build triage; link policy; MDX escapes; triage note; FR-067 tests.
-
-[Detailed changelog](CHANGELOG_v0.5.9.3+1.md)
-
----
----
----
-## [0.5.9.2+2] - 30-03-26
-
-E5:S09:T02 — **FR-066:** Canonical `docs/` path, publish scope, FR-066 tests, portal index doc.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.2+2.md)
-
----
----
----
-## [0.5.9.1+2] - 30-03-26
-
-E5:S09:T01 — **FR-065:** Docusaurus portal identity, `tests/test_portal_fr065_identity.py`, `portal/README.md`.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.1+2.md)
-
----
----
----
-## [0.5.9.1+1] - 30-03-26
-
-E5:S09:T01 — **RW -k:** Filed **Story 009** (Docusaurus Documentation Portal), tasks **T01–T07** for **FR-065–FR-071**; Epic-5 checklist; FR assigned-task links; task template fields for validators.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.1+1.md)
-
----
----
----
-## [0.5.9.2+1] - 30-03-26
-
-E5:S09:T02 — **RW -k:** Kanban init marker for **FR-066** / canonical `docs/` path task (Story 009).
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.2+1.md)
-
----
----
----
-## [0.5.9.3+1] - 30-03-26
-
-E5:S09:T03 — **RW -k:** Kanban marker **FR-067** (Docusaurus production build corpus triage).
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.3+1.md)
-
----
----
----
-## [0.5.9.4+1] - 30-03-26
-
-E5:S09:T04 — **RW -k:** Kanban marker **FR-068** (Docusaurus sidebar / landing).
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.4+1.md)
-
----
----
----
-## [0.5.9.5+1] - 30-03-26
-
-E5:S09:T05 — **RW -k:** Kanban marker **FR-069** (Docusaurus CI build gate).
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.5+1.md)
-
----
----
----
-## [0.5.9.6+1] - 30-03-26
-
-E5:S09:T06 — **RW -k:** Kanban marker **FR-070** (Docusaurus deployment / hosting).
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.6+1.md)
-
----
----
----
-## [0.5.1.69+1] - 30-03-26
-
-E5:S01:T69 — **FR-064:** Removed `update-badges.yml` (BYOB / `shields`); README static-badge policy; [badge guide](docs/knowledge/guides/badge-setup-for-private-repos.md) monorepo note; **`origin/shields`** deleted post-push; boards + FR **COMPLETE**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.69+1.md)
-
----
----
----
-## [0.5.1.68+2] - 30-03-26
-
-E5:S01:T68+2 – Consumer `rw-config` / validator paths doc; packages README semver policy; kanban + numbering README updates.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.68+2.md)
-
----
----
----
-## [0.5.1.67+2] - 30-03-26
-
-E5:S01:T67+2 – Adopter install docs: mandatory **RW** + **E…S…T…** same message (FR-060); INSTALL + user-docs + workflow mgt README + package install cross-ref.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.67+2.md)
-
----
----
----
-## [0.5.1.66+2] - 30-03-26
-
-E5:S01:T66+2 – RW dual-source parity doc; packaged RW excerpt **1b/1c/1d** todos and citations; root `.cursorrules` dual-source link.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.66+2.md)
-
----
----
----
-## [0.5.1.65+2] - 30-03-26
-
-E5:S01:T65+2 – Workflow mgt README: **11** YAML-defined workflows, `workflow-registry.yaml` SoT; Specialized (4); documentation standards note.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.65+2.md)
-
----
----
----
-## [0.5.1.68+1] - 25-03-25
-
-E5:S01:T68+1 – **RW -k** kanban marker: task **T68** (packaged frameworks consumer paths + versioning hygiene); Story, Epic S01, board metadata.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.68+1.md)
-
----
----
----
-## [0.5.1.67+1] - 25-03-25
-
-E5:S01:T67+1 – **RW -k** kanban marker: task **T67** (adopter install / bootstrap docs for **FR-060** RW task token); Story, Epic S01, board metadata.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.67+1.md)
-
----
----
----
-## [0.5.1.66+1] - 25-03-25
-
-E5:S01:T66+1 – **RW -k** kanban marker: task **T66** (`.cursorrules` vs packaged RW trigger parity for adopters); Story, Epic S01, board metadata.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.66+1.md)
-
----
----
----
-## [0.5.1.65+1] - 25-03-25
-
-E5:S01:T65+1 – **RW -k** kanban marker: task **T65** (align workflow mgt README with **11** registry workflows); Story, Epic S01, board metadata.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.65+1.md)
-
----
----
----
-## [0.5.1.64+1] - 25-03-25
-
-E5:S01:T64+1 – FR-061: README **Workflows** section (11 registry workflows, Cursor triggers, vwmp links); README body restored (Features through Acknowledgments); Quick Start aligned to `workflow-registry.yaml`; T64 / FR-061 / board closure.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.64+1.md)
 
 ---
 ---
