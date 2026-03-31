@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.74+3] - 31-03-26
+## [0.5.1.21+0] - 31-03-26
 
-E5:S01:T74 **+3** — Intake **reconciliation:** **`fr-br-uxr-board`** + **T73** + **BR-039/059** aligned to **epic/6** **E6:S06:T57** / **E6:S07:T109** (remove draft **T43** / duplicate **T109**); Epic‑6 Story‑006/007 checklist + task files on this branch; [T74](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md); [FR-074](docs/project-management/kanban/fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md).
+E5:S01:T21 **`RW -k`** (**+0**) — **FR-021** ↔ **T21** doc-init; **FR-034** **`Implementing Task:`**; **fr-br-uxr-board** + **T73** slice for this intake wave (**T32** / **E7:S00** anchors → follow-on **`RW -k`**). [T21](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md); [FR-021](docs/project-management/kanban/fr-br/FR-021-fr-br-uxr-repository-stories.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.74+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.21+0.md)

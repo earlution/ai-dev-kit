@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.21+0] - 31-03-26
+
+E5:S01:T21 **`RW -k`** — FR-021/T21 doc-init + FR-034 implementing link + board/T73 slice.
+
+[Detailed changelog](CHANGELOG_v0.5.1.21+0.md)
+
+---
+---
+---
 ## [0.5.1.74+3] - 31-03-26
 
 E5:S01:T74 **+3** — Intake reconciliation: board + T73 + BRs ↔ epic/6 **T57** / **T109-br059**; drop draft T43/dup T109.

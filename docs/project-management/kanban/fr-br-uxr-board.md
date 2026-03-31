@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-31 (intake plan reconciled: **BR-039**→**E6:S06:T57** **`v0.6.6.57+1`**, **BR-059**→**T109** **`v0.6.7.109+1`** on `epic/6`; **E7:S00** UXR repo tasks on `epic/7`; intake plan **T73**)
+**Last Updated:** 2026-03-31 (**RW -k** wave: **FR-021**→**T21** `v0.5.1.21+0` first; then **T32**; **E7:S00** **T03/T04** on `epic/7`; **FR-034** **Implementing Task**; prior **T73**/**T74**)
 **Version:** *(documentation — align releases with `version.py`; board text may trail **`RW`** on other epics)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -55,6 +55,7 @@ This board provides **centralized visibility and prioritization** for all open F
 | **UXR-002** | UXR | **E7:S00:T02** (repo) · **E7:S05:T02** (impl — exists) | **Released** **`v0.7.0.2+2`** on **`epic/7`** | `epic/7-documentation-maintenance` | **`epic/7`:** `T02-comprehensive-uat-migration-utilities-uxr-002.md`; **epic/5** copy: [T02 anchor](epics/Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md). |
 | **UXR-005** | UXR | **E7:S00:T05** (repo) · **E7:S01:T09** (impl — exists) | Task doc **`v0.7.0.5+1`** on **`epic/7`** | `epic/7-documentation-maintenance` | **`epic/7`:** `T05-kanban-board-formatting-governance-uxr-005.md`; **epic/5** copy: [T05 anchor](epics/Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md). |
 | **FR-073** | FR | **E5:S01:T73** | **Exists** (**`v0.5.1.73+0`** doc-init) | `epic/5-documentation-management` | Meta-FR for this intake plan; **E5:S01** is FR Repo PERPETUAL. |
+| **FR-021** | FR | **E5:S01:T21** | **Released** **`v0.5.1.21+0`** (`RW -k` on `epic/5`) | `epic/5-documentation-management` | Repository-story pattern; reconcile with **E7:S00** / **T72**. |
 
 **Housing policy (how story choice is decided)** — canonical rules: **`kanban-governance-policy.md`** (**KG-R2** atomic intake, **KG-R6** semantics vs numbering).
 
@@ -127,10 +128,10 @@ Examples: **FR-045**→E5:S01:T45, **FR-046**→T46, **FR-047**→T47, **FR-063*
 
 - **FR-031** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority, Investigate multi-agent coordination possibilities) - [FR-031](fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md) | [E5:S01:T31](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md)
 - **FR-035** – Task Template Cross-Wiring Section - TODO (MEDIUM, Cross-wiring section in task templates) - [FR-035](fr-br/FR-035-task-template-cross-wiring-section.md) | [E5:S01:T35](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md)
-- **FR-034** – UKW Granular Control and Use Case Flags - TODO (MEDIUM, Granular control for Update Kanban Workflow) - [FR-034](fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
+- **FR-034** – UKW Granular Control and Use Case Flags - ✅ IMPLEMENTED (**v0.5.1.34+1**) — board link for traceability - [FR-034](fr-br/FR-034-ukw-granular-control-and-use-case-flags.md) | [E5:S01:T34](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md)
 - **FR-032** – Release Candidate Readiness Gap Analysis - TODO (MEDIUM, Analyze gaps in release candidate readiness) - [FR-032](fr-br/FR-032-release-candidate-readiness-gap-analysis.md)
 - **FR-030** – AI Dev Kit CLI Tool - TODO (MEDIUM, Command-line interface tool) - [FR-030](fr-br/FR-030-ai-dev-kit-cli-tool.md) | [E6:S08](epics/Epic-6/Story-008-ai-dev-kit-cli-tool.md)
-- **FR-021** – FR/BR/UXR Repository Stories - TODO (MEDIUM, Repository stories for FR/BR/UXR management) - [FR-021](fr-br/FR-021-fr-br-uxr-repository-stories.md)
+- **FR-021** – FR/BR/UXR Repository Stories - TODO (MEDIUM, Repository stories for FR/BR/UXR management) - [FR-021](fr-br/FR-021-fr-br-uxr-repository-stories.md) | [E5:S01:T21](epics/Epic-5/Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md)
 - **BR-036** – RW Step 7 Board Update Bugs - TODO (MEDIUM, Bugs in Release Workflow Step 7 board updates) - [BR-036](fr-br/BR-036-rw-step-7-board-update-bugs.md)
 - **BR-035** – RW Housekeeping Step Not Working - TODO (MEDIUM, Release Workflow housekeeping step issues) - [BR-035](fr-br/BR-035-rw-housekeeping-step-not-working.md)
 - **BR-034** – UKW MoSCoW Prioritization Missing - TODO (MEDIUM, Missing MoSCoW prioritization in UKW) - [BR-034](fr-br/BR-034-ukw-moscow-prioritization-missing.md)

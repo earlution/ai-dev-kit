@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (RW **v0.5.1.74+3** — **T74** intake vs **epic/6** **T57**/**T109** + **T73**/**board**; prior **v0.5.1.74+2** FR-073)
+**Last updated:** 2026-03-31 (RW **v0.5.1.21+0** **RW -k** **E5:S01:T21**; **FR-034** **Implementing Task**; **T32**/**E7:S00** anchors in follow-on **`RW -k`**)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
@@ -31,6 +31,7 @@ housekeeping_policy: keep
 > **Traceability:** FR-001 = E5:S01:T01, FR-002 = E5:S01:T02, etc.
 > **Abstract Space:** v0.5.1.0+0 (repository story), v0.5.1.1+0 (first FR), v0.5.1.2+0 (second FR), etc.
 
+- [ ] **E5:S01:T21 – FR/BR/UXR Repository Stories (S01 pattern)** - TODO (MEDIUM — **v0.5.1.21+0** intake; reconcile **FR-021** with **E7:S00** via **T72**) - [Task Document](Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md) | [FR-021](../../fr-br/FR-021-fr-br-uxr-repository-stories.md)
 - [ ] **E5:S01:T31 – Multi-Agent Coordination Feasibility Investigation** - TODO (C priority) - [Task Document](Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - [x] **E5:S01:T34 – UKW Granular Control and Use Case Flags** - ✅ COMPLETE (v0.5.1.34+1 – Implementation complete: UKW granular control via flags and syntax parser) - [Task Document](Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
 - [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
