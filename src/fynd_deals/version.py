@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
-VERSION_STORY = 9     # Story number (Story 9: Docusaurus documentation portal)
-VERSION_TASK = 9      # Task number (E5:S09:T09 — GitHub Pages go-live verification)
-VERSION_BUILD = 2     # Build number (go-live verification + RW release)
+VERSION_STORY = 1     # Story number (Story 1: FR Repo — PERPETUAL)
+VERSION_TASK = 46     # Task number (E5:S01:T46 — FR-046 RW SemVer tag when task_touch)
+VERSION_BUILD = 3     # Build number (FR-046 **Implementing Task** wiring; intake traceability)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.9.9+2 — E5:S09:T09: GitHub Pages go-live verified; portal README troubleshooting; full RW
+# Current: 0.5.1.46+3 — E5:S01:T46: FR-046 bidirectional intake (**Implementing Task** in FR; T46 AC refresh)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

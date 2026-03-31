@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.46+3] - 31-03-26
+
+E5:S01:T46 — **FR-046** intake: **Implementing Task** wiring and T46 traceability refresh.
+
+[Detailed changelog](CHANGELOG_v0.5.1.46+3.md)
+
+---
+---
+---
 ## [0.5.9.9+2] - 31-03-26
 
 E5:S09:T09 — GitHub Pages go-live verification (operational close-out for FR-070).

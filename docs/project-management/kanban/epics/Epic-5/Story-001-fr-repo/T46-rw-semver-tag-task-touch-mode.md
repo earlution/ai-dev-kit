@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-26  
-**Last updated:** 2026-02-26 (v0.5.1.46+1 – First FR-046 documentation build)  
-**Version:** v0.5.1.46+1  
+**Last updated:** 2026-03-31 (v0.5.1.46+3 – FR-046 **Implementing Task** wiring; intake traceability)  
+**Version:** v0.5.1.46+3  
 **Code:** E5S01T46
 
 **Repository Pattern:** FR-046 = E5:S01:T46 (first build: v0.5.1.46+1)
@@ -51,8 +51,8 @@ This task:
 
 ## Acceptance Criteria
 
-- [ ] Task document exists and is linked from the FR Repo story checklist as **E5:S01:T46**.
-- [ ] FR-046 is created and explicitly assigned to E5:S01:T46.
+- [x] Task document exists and is linked from the FR Repo story checklist as **E5:S01:T46**.
+- [x] FR-046 includes **Implementing Task:** E5:S01:T46 (bidirectional intake wiring).
 - [ ] The RW SemVer-tag behaviour is described clearly enough here and in FR-046 to support separate implementation tasks.
 
 ---

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.9+2] - 31-03-26
+## [0.5.1.46+3] - 31-03-26
 
-E5:S09:T09 — **GitHub Pages go-live verification** (FR-070 **R01**): merge **`epic/5` → `main`**, green **Actions** deploy, Pages **`gh-pages`/root**, canonical URL **200**; [T09](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md); portal README go-live/troubleshooting; [FR-070](docs/project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting.md) validation note.
+E5:S01:T46 — **FR-046** intake: **`Implementing Task`** wiring (bidirectional traceability); [T46](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md); [FR-046](docs/project-management/kanban/fr-br/FR-046-rw-semver-tag-task-touch-mode.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.9+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+3.md)
