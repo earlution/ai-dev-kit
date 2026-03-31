@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.46+3] - 31-03-26
+## [0.5.1.47+6] - 31-03-26
 
-E5:S01:T46 — **FR-046** intake: **`Implementing Task`** wiring (bidirectional traceability); [T46](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md); [FR-046](docs/project-management/kanban/fr-br/FR-046-rw-semver-tag-task-touch-mode.md).
+E5:S01:T47 — **FR-047** intake: **`Implementing Task`** wiring + Kanban task link; [T47](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md); [FR-047](docs/project-management/kanban/fr-br/FR-047-install-logging-for-framework-dependencies.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.47+6.md)

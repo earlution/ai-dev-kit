@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-31 (E5:S01:T46 **v0.5.1.46+3** — FR-046 **Implementing Task** intake wiring)  
+**Last updated:** 2026-03-31 (E5:S01:T47 **v0.5.1.47+6** — FR-047 **Implementing Task** intake; prior **T46 v0.5.1.46+3** FR-046)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]

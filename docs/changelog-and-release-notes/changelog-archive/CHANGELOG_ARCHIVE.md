@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.47+6] - 31-03-26
+
+E5:S01:T47 — **FR-047** intake: **Implementing Task** wiring and task link in FR.
+
+[Detailed changelog](CHANGELOG_v0.5.1.47+6.md)
+
+---
+---
+---
 ## [0.5.1.46+3] - 31-03-26
 
 E5:S01:T46 — **FR-046** intake: **Implementing Task** wiring and T46 traceability refresh.

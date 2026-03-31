@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (RW **v0.5.1.46+3** — FR-046 **Implementing Task** wiring; prior: T69 ✅ v0.5.1.69+1 FR-064 shields; T68 ✅ v0.5.1.68+2)
+**Last updated:** 2026-03-31 (RW **v0.5.1.47+6** — FR-047 **Implementing Task** wiring; prior **v0.5.1.46+3** FR-046; T69 ✅ v0.5.1.69+1 FR-064; T68 ✅ v0.5.1.68+2)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.46+3
+**Version:** v0.5.1.47+6
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
