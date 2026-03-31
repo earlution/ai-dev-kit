@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.6.6.2+9] - 31-03-26
+
+E6:S06:T02 — **RW -k:** BR-038 / T02 kanban alignment on epic/6.
+
+[Detailed changelog](CHANGELOG_v0.6.6.2+9.md)
+
+---
+---
+---
 ## [0.6.6.57+1] - 31-03-26
 
 E6:S06:T57 — **RW -k:** BR-039 / T57 traceability on epic/6.

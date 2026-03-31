@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-03-31 (**RW -k E6:S06:T57** v0.6.6.57+1 — BR-039 / **T57**)
+**Last updated:** 2026-03-31 (**RW -k E6:S06:T02** v0.6.6.2+9 — BR-038 / **T02**)
 **Version:** v0.6.6.56+4
 **Code:** E6S06
 

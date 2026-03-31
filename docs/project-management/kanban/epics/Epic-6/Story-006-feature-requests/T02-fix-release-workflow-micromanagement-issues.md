@@ -13,13 +13,27 @@ housekeeping_policy: keep
 **Estimated Effort:** Large (5-7 days)  
 **Created:** 2026-03-09  
 **Completed:** 2026-03-11  
-**Last updated:** 2026-03-11 (ROOT CAUSE RESOLVED: Terminal hang issues fixed - autonomous execution achieved)  
+**Last updated:** 2026-03-31 — **RW -k** v0.6.6.2+9 (BR-038 implementing-task / kanban alignment on **epic/6**; task doc historically **COMPLETE** at v0.6.6.2+8)  
 **Version:** v0.6.6.2+8  
 **Task ID:** E6:S06:T02  
 **Code:** E6:S06:T02  
 **Associated BR:** [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) — **canonical implementing task** for **BR-038**
 
 **Progress:** Phase 1 ✅ COMPLETED - Phase 2 ✅ COMPLETED - Phase 3 ✅ COMPLETED - Terminal hang issues resolved, autonomous execution achieved
+
+---
+
+## Input
+
+- [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md); RW execution evidence (videos in repo root); `.cursorrules` and workflow framework docs.
+
+## Deliverable
+
+- Autonomous RW agent execution pattern, clearer tool discovery/fallbacks, and documentation (implementation closed **v0.6.6.2+8**). **RW -k** releases (e.g. **v0.6.6.2+9**) are kanban/BR traceability only.
+
+## Version Anchor
+
+✅ **COMPLETE (v0.6.6.2+8)** — implementation verified 2026-03-11. Kanban alignment release: **RW -k** **v0.6.6.2+9** (2026-03-31).
 
 ---
 

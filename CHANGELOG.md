@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.57+1] - 31-03-26
+## [0.6.6.2+9] - 31-03-26
 
-E6:S06:T57 — **RW -k:** **BR-039** implementing task **T57** (Cascade whitelist / vendor); merged intake on **epic/6**; boards + FR links; `validate_rw_task_complete.py` restored from **main**.
+E6:S06:T02 — **RW -k:** **BR-038** ↔ **E6:S06:T02** (`Task ID`, boards); perpetual **Ongoing** row cross-links **BR-039**/**T57** on **epic/6**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.2+9.md)
