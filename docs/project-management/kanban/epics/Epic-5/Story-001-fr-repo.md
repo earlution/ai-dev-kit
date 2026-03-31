@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (RW **v0.5.1.72+0** — FR-072 / **T72** intake; prior **v0.5.1.47+6** FR-047; T69 ✅ v0.5.1.69+1 FR-064)
+**Last updated:** 2026-03-31 (RW **v0.5.1.73+0** — FR-073 / **T73** intake + board mapping; prior **v0.5.1.72+0** FR-072 / T72)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.72+0
+**Version:** v0.5.1.73+0
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -54,6 +54,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T68 – Packaged Frameworks — Consumer Paths and Versioning Hygiene** - ✅ COMPLETE (v0.5.1.68+2 — `rw-validators-consumer-layout.md`; workflow mgt + packages README; numbering + kanban README; +1 was RW-k) - [Task Document](Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning.md)
 - [x] **E5:S01:T69 – Retire `shields` branch (private repo badges, FR-064)** - ✅ COMPLETE (v0.5.1.69+1 — removed `update-badges.yml` BYOB; README static badges; deleted `origin/shields`) - [Task Document](Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md) | [FR-064](../../fr-br/FR-064-shields-branch-private-repo-badges.md)
 - [ ] **E5:S01:T72 – Uniform Repository vs Abstract-Space Kanban Rules** - TODO (HIGH priority — **v0.5.1.72+0** intake; governance: evaluate approaches, decide **S00**/repository model, reconcile **FR-021** vs **E7:S00** UXR) - [Task Document](Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md) | [FR-072](../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md)
+- [ ] **E5:S01:T73 – FR/BR/UXR Board: Open ∧ Taskless Intake Execution Plan** - TODO (MEDIUM — **v0.5.1.73+0** intake; **FR-073**; pre-identified mapping + Phases B/C) - [Task Document](Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [FR-073](../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
 
 ---
 

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.72+0] - 31-03-26
+## [0.5.1.73+0] - 31-03-26
 
-E5:S01:T72 — **FR-072** (RW -k): uniform repository vs abstract-space Kanban rules — task + FR intake; [T72](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md); [FR-072](docs/project-management/kanban/fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md).
+E5:S01:T73 — **FR-073** (RW -k): FR/BR/UXR board intake plan — pre-identified task mapping, housing policy; [T73](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md); [FR-073](docs/project-management/kanban/fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.72+0.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.73+0.md)

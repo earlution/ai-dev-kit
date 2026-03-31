@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Structure
 
-**Last Updated:** 2026-03-25 (E7:S06:T06 intake doc audit; align with board inventory)
+**Last Updated:** 2026-03-31 (pointer: intake execution plan on board — open ∧ taskless, `RW -k`)
 **Version:** v0.7.6.6+1
 
 > **For MoSCOW prioritized FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Overview
 
-This document provides **complete listings of all FRs, BRs, and UXRs** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FR/BR/UXR board.
+This document provides **complete listings of all FRs, BRs, and UXRs** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FR/BR/UXR board. For the **operational intake plan** (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes), see **Intake plan** on [`fr-br-uxr-board.md`](fr-br-uxr-board.md).
 
 **Document Purpose:**
 

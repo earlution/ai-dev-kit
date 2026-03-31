@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-30 (BR-059 — UKW incomplete E5:S09 MoSCOW coverage)
-**Version:** v0.5.9.7+1
+**Last Updated:** 2026-03-31 (intake plan: pre-identified FR/BR/UXR→task mapping + housing policy; FR-072/T72 ref)
+**Version:** v0.5.1.73+0 *(FR/BR/UXR board doc alignment; not E5:S09 portal release)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -32,6 +32,71 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ---
 
+## Intake plan: open ∧ taskless (epic branch + `RW -k`)
+
+**Kanban anchor:** **[FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)** / **[E5:S01:T73](epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)** — concrete phased plan, acceptance criteria, and maintenance checklists live in the task doc; this section is the operator-facing summary.
+
+**Working definition — “open ∧ taskless”:** The item is still **active** on this board (or in [`fr-br/`](fr-br)) but lacks full Kanban wiring: no task document (or no stable **E#:S#:T#**), missing **`Implementing Task:`** in the FR/BR/UXR header, and/or no story checklist row.
+
+**Execution loop:** Check out the **owning epic branch** (per **Primary epic branch** below) → create/link the task doc and bidirectional **`Implementing Task`** ↔ task → run **`RW -k E#:S#:T#`** so `version.py`, changelog, and SemVer registry match the intake.
+
+### Pre-identified task mapping (MoSCOW Must / Should)
+
+**Purpose:** Every high-priority *taskless* row has a **reserved target E/S/T** before intake runs—no ad hoc task numbers during `RW -k`.  
+**Canonical detail:** Expanded rationale and deltas live in **[E5:S01:T73](epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)**; this table is the operator view.
+
+| FR/BR/UXR | Type | Primary task ID | Status | Primary epic branch | Why this story / epic |
+|-----------|------|-----------------|--------|---------------------|------------------------|
+| **BR-038** | BR | **E6:S06:T02** | **Exists** | `epic/6-framework-management` | **E6:S06** is the framework *Feature Requests/stories* home for RW reliability work; T02 already owns BR-038. **Action:** add **`| E6:S06:T02`…** to this board line (refresh, not new task). |
+| **BR-039** | BR | **E6:S06:T43** | **Plan — create** | `epic/6-framework-management` | Cascade whitelist / security prompt root cause is **execution behavior** tied to RW/agent tooling; same epic/story cluster as BR-038/T02 but **isolates** product fix + versioning from T02’s broader “micromanagement” umbrella. |
+| **BR-059** | BR | **E6:S07:T109** | **Plan — create** | `epic/6-framework-management` | Failure mode is **UKW MoSCOW completeness** vs story checklists; **E6:S07** hosts perpetual **T101 UKW** and workflow maintenance—new T109 keeps UKW defects with UKW lineage. |
+| **FR-040** (ICW) | FR | **E5:S01:T40** | **Exists** | `epic/5-documentation-management` (FR anchor) / work may trace via **Epic 6** merges as needed | [FR-040 ICW](fr-br/FR-040-implementation-cycle-workflow-icw.md) → **T40** per FR repo pattern (**E5:S01** = canonical FR record + doc-init). **Action:** board refresh + FR header sync; **do not** mint a second ICW task. *Known debt:* duplicate `FR-040-*.md` slug for RW Step 7 FR ([FR-040 rw-update…](fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)) uses **E5:S01:T36** — reconcile under **FR-072** governance, not here. |
+| **UXR-001** | UXR | **E7:S00:T01** (repo) · **E7:S05:T01** (impl — exists) | **Mixed** | `epic/7-documentation-maintenance` | **E7:S00** = UXR repository abstract space (**UXR-n → Tnn** per [`Story-000-uxr-repo`](epics/Epic-7/Story-000-uxr-repo.md)). **E7:S05** already carries synthesis/implementation for migration UX—keep **dual** IDs: repo task doc for intake/version anchors; S05 for delivery history. |
+| **UXR-002** | UXR | **E7:S00:T02** (repo) | **Plan — create** (reconcile impl) | `epic/7-documentation-maintenance` | Same **S00** repository rule as UXR-001. Filing **T02** completes the registry slot; link out to any existing implementation story task after audit. |
+| **UXR-005** | UXR | **E7:S00:T05** (repo) · **E7:S01:T09** (impl — exists) | **Mixed** | `epic/7-documentation-maintenance` | **S00:T05** = repository anchor for the UXR record; **S01:T09** already operationalizes template/MoSCOW governance—intake wires both in headers + board. |
+| **FR-073** | FR | **E5:S01:T73** | **Exists** (**`v0.5.1.73+0`** doc-init) | `epic/5-documentation-management` | Meta-FR for this intake plan; **E5:S01** is FR Repo PERPETUAL. |
+
+**Housing policy (how story choice is decided)**
+
+1. **FR-xxx (request record)** → default **E5:S01:Txx** when **xx** matches the FR number and the change is intake/traceability/docs for that FR (**repository story** pattern).  
+2. **BR-xxx targeting RW/agent execution** → default **E6:S06** for net-new implementation tasks unless the bug is explicitly **UKW/CMW definition** → then **E6:S07**.  
+3. **UXR-xxx** → always reserve **E7:S00:Tnn** (**nn** = UXR number) for the **repository** task doc; Implementation may also reference **E7:S01** / **E7:S05** / etc. when work already landed there.  
+4. **Epic branch** in the table = where **`validate_branch_context.py --strict`** must pass for the **task’s epic digit** on `RW` / `RW -k`.  
+
+### Recently completed (reference)
+
+| Item | Task | Notes |
+|------|------|--------|
+| **FR-072** | **E5:S01:T72** | Uniform repository vs abstract-space Kanban rules — doc-init **`v0.5.1.72+0`** on `epic/5-documentation-management`. |
+
+### MoSCOW queue — taskless *on board lines* (no `| E…:S…:T…` in this file)
+
+These rows still need intake **or** a board-line refresh once a task already exists elsewhere in the tree.
+
+| Priority | Items |
+|----------|--------|
+| **Must** | **BR-039**, **BR-038**, **BR-059** |
+| **Should** | **FR-040** (ICW), **UXR-001**, **UXR-002**, **UXR-005** |
+| **Could** | Large backlog (e.g. **FR-034**, **FR-032**, **FR-021**, many lower-section **BR**/**FR**) — drain **after** Must / Should |
+
+### Already linked on MoSCOW rows (intake at board level)
+
+Examples: **FR-045**→E5:S01:T45, **FR-046**→T46, **FR-047**→T47, **FR-063**→E5:S02:T06, **FR-065**→E5:S09:T01 (non-exhaustive).
+
+### Source-of-truth and hygiene (read before filing)
+
+1. **Sparse FR headers:** Many FRs do **not** include **`Implementing Task:`**; wiring may exist only on this board or in story checklists. When executing intake, add the header field for traceability.
+2. **UXR drift:** **UXR-001** / **UXR-002** / **UXR-005** appear taskless here but may already map to Epic 7 work (e.g. maintenance or synthesis tasks). **Reconcile** under [`epics/Epic-7/`](epics/Epic-7) before creating net-new **E7:S00:Txx** repo tasks.
+3. **Board freshness:** **Statistics** (below) and some MoSCOW rows can lag (e.g. completed items still counted in priority buckets; **FR-072** not yet listed in MoSCOW). After each **`RW -k`**, update rows here and use **UKW** for a broad consistency pass.
+
+### Suggested execution order
+
+1. **Must:** Board refresh **BR-038** → **T02**; **`RW -k E6:S06:T43`** (BR-039), **`RW -k E6:S07:T109`** (BR-059) after task docs exist on `epic/6-framework-management`.
+2. **Should:** Board + FR header refresh for **FR-040** ICW → **T40** (no new ID); **`RW -k E7:S00:T01`**, **T02**, **T05** for UXR repo anchors once reconciled with **E7:S01** / **E7:S05** implementation tasks.
+3. **Could:** batch lower-priority intake after Must / Should pressure drops; follow **E5:S01:Txx** for FR-0xx filings per [`Story-001-fr-repo`](epics/Epic-5/Story-001-fr-repo.md).
+
+---
+
 ## MoSCOW Prioritized FR/BR/UXR Items
 
 ### Must Have (M) - Critical Items
@@ -44,6 +109,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Should Have (S) - Important Items
 
+- **FR-073** – FR/BR/UXR board: open ∧ taskless intake execution plan (Kanban task) - TODO (MEDIUM, **`v0.5.1.73+0`** intake shipped; **T73** — Phases B/C queue execution + hygiene) - [FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [E5:S01:T73](epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
 - **FR-040** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [FR-040](fr-br/FR-040-implementation-cycle-workflow-icw.md)
 - **FR-045** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH, SemVer mapping for task_touch and Kanban integration) - [FR-045](fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [E5:S01:T45](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)
 - **FR-047** – Install Logging for Framework Dependencies - TODO (HIGH, Enables detailed post-install analysis and debugging) - [FR-047](fr-br/FR-047-install-logging-for-framework-dependencies.md) | [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
