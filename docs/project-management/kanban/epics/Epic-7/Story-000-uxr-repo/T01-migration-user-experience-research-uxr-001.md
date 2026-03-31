@@ -10,8 +10,8 @@ housekeeping_policy: keep
 
 **Status:** COMPLETE  
 **Priority:** MEDIUM  
-**Last updated:** 2026-03-31 (v0.7.0.1+1 – Task filed in UXR repository story)  
-**Version:** v0.7.0.1+1  
+**Last updated:** 2026-03-31 (v0.7.0.1+2 – UXR-001 **Implementing Task** header wiring)  
+**Version:** v0.7.0.1+2  
 **Code:** E7S00T01
 
 **Task ID:** E7:S00:T01
@@ -53,6 +53,18 @@ Downstream implementation (utilities, BR-006 / FR-007, etc.) is tracked outside 
 - [x] UXR-001 accepted and documented  
 - [x] Findings synthesized under **E7:S05:T01**  
 - [x] Kanban task document filed under **E7:S00** per repository pattern
+
+---
+
+## Deliverable
+
+- Registry task for **UXR-001** under **E7:S00:T01** with bidirectional link from the UXR document (**Implementing Task**).
+
+---
+
+## Version Anchor
+
+- **v0.7.0.1+2** — UXR-001 **`Implementing Task:`** header wiring (documentation-only).
 
 ---
 

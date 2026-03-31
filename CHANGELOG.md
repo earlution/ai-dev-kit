@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.1.9+3] - 31-03-26
+## [0.7.0.1+2] - 31-03-26
 
-E7:S01:T09 — **UXR-005** intake: **`Implementing Task`** in [UXR-005](docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance.md) → [T09](docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md).
+E7:S00:T01 — **UXR-001** intake: **`Implementing Task`** in [UXR-001](docs/project-management/kanban/fr-br/UXR-001-migration-user-experience-research.md) → [T01](docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.9+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.0.1+2.md)

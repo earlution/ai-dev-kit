@@ -13,6 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** AI Agent (Cursor) acting as user/client for dev-toolkit  
 **Priority:** MEDIUM  
 **Status:** ACCEPTED  
+**Implementing Task:** [E7:S00:T01](epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001.md)  
 **GitHub Issue:** [#4](https://github.com/earlution/ai-dev-kit/issues/4)
 
 ---
