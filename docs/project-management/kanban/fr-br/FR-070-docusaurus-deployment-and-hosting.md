@@ -73,6 +73,10 @@ A green local build does not help adopters if no public URL exists. `baseUrl` fo
 
 - **FR-065**–**FR-067** (correct config + green build); **FR-069** strongly recommended before or with deploy to avoid broken releases.
 
+## Follow-up work
+
+- **E5:S09:T09** — [GitHub Pages go-live verification](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md): repo **Pages** source, **200** on canonical URL, Actions confirmation, optional README troubleshooting.
+
 ## Related FRs
 
 - **FR-069** – CI build gate.

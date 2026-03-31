@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.9.9+1] - 31-03-26
+
+E5:S09:T09 — **RW -k:** T09 GitHub Pages go-live verification (kanban + FR-070 follow-up).
+
+[Detailed changelog](CHANGELOG_v0.5.9.9+1.md)
+
+---
+---
+---
 ## [0.5.9.7+1] - 30-03-26
 
 E5:S09:T07 — **FR-071:** Local offline Docusaurus search, portal README, contract tests.

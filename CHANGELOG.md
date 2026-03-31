@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.7+1] - 30-03-26
+## [0.5.9.9+1] - 31-03-26
 
-E5:S09:T07 — **FR-071:** Docusaurus **local / offline site search** — `@easyops-cn/docusaurus-search-local` in [`portal/docusaurus.config.js`](portal/docusaurus.config.js); [`portal/README.md`](portal/README.md) (privacy, build time, smoke queries); [`tests/test_portal_fr071_search.py`](tests/test_portal_fr071_search.py).
+E5:S09:T09 — **RW -k:** **GitHub Pages go-live verification** task (FR-070 follow-up) — [T09](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md); Story / Epic / board / [FR-070](docs/project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting.md) follow-up.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.7+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.9+1.md)

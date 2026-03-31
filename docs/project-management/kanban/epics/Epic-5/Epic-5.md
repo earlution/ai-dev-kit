@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-30 (v0.5.9.7+1 — E5:S09:T07 FR-071 RW)  
+**Last updated:** 2026-03-31 (RW -k E5:S09:T09 **v0.5.9.9+1** on `epic/5-documentation-management`)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -69,7 +69,7 @@ housekeeping_policy: keep
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
 
 
-- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (T01–T07 ✅ v0.5.9.7+1; T08 TODO)
+- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (T01–T07 ✅; T09 **RW -k v0.5.9.9+1** filed; go-live ACs TODO; T08 strict links TODO)
   - Story: [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
   - **Note:** Atomic FR chain for full Docusaurus adoption (`portal/` → `docs/` publish, CI, deploy, search).
 
@@ -209,7 +209,7 @@ Investigate the ramifications of the persistent knowledge base concept, includin
 **Last updated:** 2026-03-30 (v0.5.9.7+1 T07)
 
 **Goal:**  
-Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), green builds, IA, CI, hosting, and search—tracked via **FR-065** through **FR-071** (E5:S09:T01–T07).
+Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), green builds, IA, CI, hosting, search, and **production URL go-live**—tracked via **FR-065**–**FR-071** plus **E5:S09:T09** (Pages verification).
 
 **Tasks:**
 - [x] E5:S09:T01 – Docusaurus site identity and config (FR-065) ✅ v0.5.9.1+2
@@ -219,6 +219,7 @@ Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), gre
 - [x] E5:S09:T05 – CI build gate (FR-069) ✅ v0.5.9.5+1
 - [x] E5:S09:T06 – Deployment and hosting (FR-070) ✅ v0.5.9.6+1
 - [x] E5:S09:T07 – Site search (FR-071) ✅ v0.5.9.7+1
+- [ ] E5:S09:T09 – GitHub Pages go-live verification (FR-070 follow-up) — **RW -k v0.5.9.9+1**; implementation TODO — [T09](Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
 
 **Story:** [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
 

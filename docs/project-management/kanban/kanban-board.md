@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-30 (RW E5:S09:T07 v0.5.9.7+1 — FR-071 local search)
-**Version:** v0.5.9.7+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-31 (RW -k E5:S09:T09 v0.5.9.9+1 — kanban init on `epic/5-documentation-management`)
+**Version:** v0.5.9.9+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -28,6 +28,7 @@ No critical tasks currently in progress
 
 ### Should Have (S) - Important Tasks
 
+- **E5:S09:T09** – GitHub Pages go-live verification (FR-070 follow-up) – TODO — [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-070](fr-br/FR-070-docusaurus-deployment-and-hosting.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 
