@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-25 (v0.6.7.101+37 – E6:S07:T101 UKW perpetual RW; main merged into epic/6)
+**Last updated:** 2026-03-31 — **RW -k E6:S06:T57** v0.6.6.57+1; pending **RW -k** T02 + T109; baseline UKW **v0.6.7.101+37** (2026-03-25)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -72,9 +72,9 @@ housekeeping_policy: keep
 
 
 
-- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.56+4 – T56 BR-056 verified complete)
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.56+4 – T56 BR-056 verified complete; **T57** BR-039 filed)
   - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
-  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4)
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), **T57 TODO (BR-039 Cascade whitelist / vendor)**
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
 
@@ -83,7 +83,7 @@ housekeeping_policy: keep
 
 - [ ] **E6:S07 – ADK Implementation Analysis and Package Management** - IN PROGRESS (v0.6.7.101+35)
   - Story: [`Story-007-adk-implementation-analysis-and-package-management.md`](Story-007-adk-implementation-analysis-and-package-management.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.7.1+1), T02 ✅ COMPLETE (v0.6.7.2+1), T03 ✅ COMPLETE (v0.6.7.3+1 - Feedback mechanism design, user guide, and template created), T06 ✅ COMPLETE (v0.6.7.6+20), T07 ✅ COMPLETE (v0.6.7.7+6), T09 ✅ COMPLETE (v0.6.7.9+1), T04 ✅ COMPLETE (v0.6.7.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.7.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T13 ✅ COMPLETE (v0.6.7.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 ✅ COMPLETE (v0.6.7.14+1 - CMW documentation added to package README), T15 ✅ COMPLETE (v0.6.7.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T16 ✅ COMPLETE (v0.6.7.16+1 - All phases complete: Step 3.5 added to CMW, ordering fixed before archival), T05 ✅ COMPLETE (v0.6.7.5+1 - Feedback mechanism implementation complete), T101 IN PROGRESS (Perpetual - v0.6.7.101+36 – RW -k: Kanban init), T102 IN PROGRESS (Perpetual - v0.6.7.102+6 – Perpetual docs update: runbooks, policy), T103 IN PROGRESS (Perpetual - v0.6.7.103+4 – UKW comprehensive-by-default, workflow docs)
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.6.7.1+1), T02 ✅ COMPLETE (v0.6.7.2+1), T03 ✅ COMPLETE (v0.6.7.3+1 - Feedback mechanism design, user guide, and template created), T06 ✅ COMPLETE (v0.6.7.6+20), T07 ✅ COMPLETE (v0.6.7.7+6), T09 ✅ COMPLETE (v0.6.7.9+1), T04 ✅ COMPLETE (v0.6.7.10+17 - FR-024 IDE/Linter check), T11 ✅ COMPLETE (v0.6.7.11+4 - Phase 6 complete: Initial archival, ALL PHASES COMPLETE), T13 ✅ COMPLETE (v0.6.7.13+2 - All phases complete: CMW perpetual task pattern canonicalized), T14 ✅ COMPLETE (v0.6.7.14+1 - CMW documentation added to package README), T15 ✅ COMPLETE (v0.6.7.15+1 - Implementation complete: Awareness documentation created and framework guidance updated), T16 ✅ COMPLETE (v0.6.7.16+1 - All phases complete: Step 3.5 added to CMW, ordering fixed before archival), T05 ✅ COMPLETE (v0.6.7.5+1 - Feedback mechanism implementation complete), T101 IN PROGRESS (Perpetual - v0.6.7.101+36 – RW -k: Kanban init), T102 IN PROGRESS (Perpetual - v0.6.7.102+6 – Perpetual docs update: runbooks, policy), T103 IN PROGRESS (Perpetual - v0.6.7.103+4 – UKW comprehensive-by-default, workflow docs), **T109 TODO (BR-059 UKW MoSCOW full story task rows)**
   - **Note:** Renumbered from S06 to S07 as part of repository story migration (E9:S01:T08).
 
 

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-03-25 (v0.6.7.101+37 – UKW perpetual RW)
+**Last updated:** 2026-03-31 (**E6:S07:T109** BR-059 intake; UKW perpetual **v0.6.7.101+37**)
 **Version:** v0.6.7.101+37
 **Code:** E6S07
 
@@ -110,6 +110,11 @@ housekeeping_policy: keep
 - [x] **E6:S07:T107 – Workflows Directory Structure Reorganization** ✅ COMPLETE
   - Task: [`T107-workflows-directory-structure-reorganization.md`](T107-workflows-directory-structure-reorganization.md)
   - **Scope:** Reorganize workflows directory into named subdirectories for better organization and maintainability
+
+
+- [ ] **E6:S07:T109 – BR-059: UKW MoSCOW full open-task coverage per in-progress story** - TODO (HIGH, board must list all open story tasks or explicit **Won’t** deferrals; fail loud on partial enumeration)
+  - Task: [`T109-br059-ukw-moscow-full-story-task-coverage.md`](T109-br059-ukw-moscow-full-story-task-coverage.md) | [BR-059](../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
+  - **Coordinates:** [E6:S07:T101](T101-update-kanban-workflow-ukw.md) (UKW perpetual)
 
 
 ---

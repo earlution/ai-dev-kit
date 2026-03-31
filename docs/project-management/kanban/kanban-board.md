@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-25 (RW v0.6.7.101+37 — UKW perpetual)
-**Version:** v0.6.7.101+37 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-03-31 (**RW -k E6:S06:T57** v0.6.6.57+1 — BR-039 / T57 on `epic/6-framework-management`)
+**Version:** v0.6.6.57+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -24,9 +24,11 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-No critical tasks currently in progress
+- **E6:S06:T57** – **BR-039:** Cascade whitelist / security prompt usability (**vendor**; repo: escalation + evidence + re-verification) - TODO (CRITICAL) - [Task](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
 
 ### Should Have (S) - Important Tasks
+
+- **E6:S07:T109** – **BR-059:** UKW MoSCOW must enumerate **all** open tasks per in-progress story (or **Won’t** + reason) — TODO (HIGH) - [Task](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | [BR-059](fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
 
 - **E7:S06:T03** – Kanban documentation consistency - TODO (HIGH priority, E9↔E18 renumbering fallout, cross-references, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
@@ -42,9 +44,9 @@ No critical tasks currently in progress
 
 - **E7:S06:T09** – Config and git state validation - TODO (MEDIUM priority, rw-config vs paths, git state, .cursorrules alignment) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T09-config-and-git-state-validation.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md)
 
-- **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](../../../fr-br/FR-060-rw-task-argument-requirement.md)
+- **E5:S01:T37** – RW Task Argument Requirement - IN PROGRESS (HIGH priority, Implement FR-060: mandate explicit task arguments for all RW invocations to prevent context inference errors and ensure version schema accuracy) - [Task Document](epics/Epic-5/Story-001-fr-repo/T37-rw-task-argument-requirement.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-060](fr-br/FR-060-rw-task-argument-requirement.md)
 
-- **E5:S01:T38** – README Workflow Section - IN PROGRESS (MEDIUM priority, Add comprehensive Workflow section to project README.md documenting all workflows with principle operations and argument forms) - [Task Document](epics/Epic-5/Story-001-fr-repo/T38-rw-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](../../../fr-br/FR-061-readme-workflow-section.md)
+- **E5:S01:T38** – README Workflow Section - IN PROGRESS (MEDIUM priority, Add comprehensive Workflow section to project README.md documenting all workflows with principle operations and argument forms) - [Task Document](epics/Epic-5/Story-001-fr-repo/T38-rw-readme-workflow-section.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | [FR-061](fr-br/FR-061-readme-workflow-section.md)
 
 ### Could Have (C) - Nice-to-Have Tasks
 
@@ -52,7 +54,7 @@ No critical tasks currently in progress
 
 ### Ongoing (O) - Perpetual Tasks
 
-- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS (CRITICAL priority, User pain with tool discovery, pattern matching; blocked on Cascade whitelist root cause) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+- **E6:S06:T02** – Fix Release Workflow Micromanagement Issues - IN PROGRESS (CRITICAL priority, User pain with tool discovery, pattern matching; root cause tracked under **BR-039** / **E6:S06:T57**) - [Task Document](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
 - **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+37, Last updated: 2026-03-25) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 

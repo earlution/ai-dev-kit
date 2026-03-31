@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-03-25 (v0.6.6.56+4 – BR-056 verified; T56 complete)
+**Last updated:** 2026-03-31 (**RW -k E6:S06:T57** v0.6.6.57+1 — BR-039 / **T57**)
 **Version:** v0.6.6.56+4
 **Code:** E6S06
 
@@ -43,6 +43,9 @@ housekeeping_policy: keep
 
 - [x] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - ✅ COMPLETE (v0.6.6.56+4) (HIGH priority, BR-056: validate_rw_task_intent + Step 1b; live verification 2026-03-25)
   - Task: [`T56-rw-ambiguous-task-identifier-typo-risk.md`](T56-rw-ambiguous-task-identifier-typo-risk.md) | [BR-056](../../../fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
+
+- [ ] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - TODO (CRITICAL, **BR-039**: whitelist persistence / prompt fatigue in Windsurf Cascade; repo tracks escalation, evidence, re-verification — product fix is vendor-side)
+  - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](T57-br039-cascade-whitelist-security-prompt-blocker.md) | [BR-039](../../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
   - Task: [`T999-board-cleanup-test.md`](T999-board-cleanup-test.md)

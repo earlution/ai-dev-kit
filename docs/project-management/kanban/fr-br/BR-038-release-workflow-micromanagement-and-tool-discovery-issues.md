@@ -12,7 +12,11 @@ housekeeping_policy: keep
 **Status:** TODO  
 **Priority:** HIGH  
 **Created:** 2026-03-09  
-**Last Updated:** 2026-03-09  
+**Last Updated:** 2026-03-31 — Intake: **Implementing Task** wired to **E6:S06:T02**
+
+**Implementing Task:** [E6:S06:T02](../epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md)
+
+**Note:** **Cascade / whitelist** productivity blockers that worsen RW friction are tracked under **[BR-039](BR-039-cascade-whitelist-security-prompt-usability-blocker.md)** / **[E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)** (vendor-side).
 
 ---
 

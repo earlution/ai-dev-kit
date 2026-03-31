@@ -1,9 +1,18 @@
 # Changelog Archive
+## [0.6.6.57+1] - 31-03-26
+
+E6:S06:T57 — **RW -k:** BR-039 / T57 traceability on epic/6.
+
+[Detailed changelog](CHANGELOG_v0.6.6.57+1.md)
+
+---
+---
+---
 ## [0.6.7.101+37] - 25-03-26
 
 E6:S07:T101+37 – UKW perpetual: Kanban sync after main merge on epic/6; board and T101 markers; Epic 7 Story 6 UKW updates.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+37.md)
+[Detailed changelog](CHANGELOG_v0.6.7.101+37.md)
 
 ---
 ---

@@ -15,8 +15,9 @@ housekeeping_policy: keep
 **Completed:** 2026-03-11  
 **Last updated:** 2026-03-11 (ROOT CAUSE RESOLVED: Terminal hang issues fixed - autonomous execution achieved)  
 **Version:** v0.6.6.2+8  
+**Task ID:** E6:S06:T02  
 **Code:** E6:S06:T02  
-**Associated BR:** [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+**Associated BR:** [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) — **canonical implementing task** for **BR-038**
 
 **Progress:** Phase 1 ✅ COMPLETED - Phase 2 ✅ COMPLETED - Phase 3 ✅ COMPLETED - Terminal hang issues resolved, autonomous execution achieved
 
