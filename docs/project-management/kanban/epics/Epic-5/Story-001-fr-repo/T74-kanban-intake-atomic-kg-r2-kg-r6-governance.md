@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Task ID:** E5:S01:T74  
 **Status:** COMPLETE  
 **Priority:** HIGH  
-**Version Anchor:** v0.5.1.74+1  
+**Version Anchor:** v0.5.1.74+3 *(+1 FR-074 KG-R2/KG-R6; +2/+3 FR-073 board / epic/6 reconciliation)*  
 **Feature Request:** [FR-074 – Kanban intake governance](../../../fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md)
 
 ---

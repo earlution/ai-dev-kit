@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-31 (Phase B/C: **T43**/**T109** task docs + wiring; **E7:S00** repo anchors **T01/T02/T05**; MoSCOW **`| E:S:T`** refresh; intake plan **T73**)
+**Last Updated:** 2026-03-31 (intake plan reconciled: **BR-039**→**E6:S06:T57** **`v0.6.6.57+1`**, **BR-059**→**T109** **`v0.6.7.109+1`** on `epic/6`; **E7:S00** UXR repo tasks on `epic/7`; intake plan **T73**)
 **Version:** *(documentation — align releases with `version.py`; board text may trail **`RW`** on other epics)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -48,12 +48,12 @@ This board provides **centralized visibility and prioritization** for all open F
 | FR/BR/UXR | Type | Primary task ID | Status | Primary epic branch | Why this story / epic |
 |-----------|------|-----------------|--------|---------------------|------------------------|
 | **BR-038** | BR | **E6:S06:T02** | **Linked** (board + MoSCOW) | `epic/6-framework-management` | **E6:S06** is the framework *Feature Requests/stories* home for RW reliability work; T02 owns BR-038. |
-| **BR-039** | BR | **E6:S06:T43** | **Filed** — task doc + BR header; run **`RW -k E6:S06:T43`** on `epic/6` | `epic/6-framework-management` | Cascade whitelist / security prompt — **isolated** from T02’s BR-038 umbrella (**KG-R6** semantic placement). |
-| **BR-059** | BR | **E6:S07:T109** | **Filed** — task doc + BR header; run **`RW -k E6:S07:T109`** on `epic/6` | `epic/6-framework-management` | UKW MoSCOW completeness vs story checklists; lineage under **E6:S07** adjacent **T101**. |
+| **BR-039** | BR | **E6:S06:T57** | **Released** **`v0.6.6.57+1`** on `epic/6` (**RW -k**; supersedes draft **T43** id) | `epic/6-framework-management` | [T57](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md). |
+| **BR-059** | BR | **E6:S07:T109** | **Released** **`v0.6.7.109+1`** on `epic/6` (**RW -k**) | `epic/6-framework-management` | [T109-br059](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md). |
 | **FR-040** (ICW) | FR | **E5:S01:T40** | **Linked** (FR header + MoSCOW) | `epic/5-documentation-management` (FR anchor) / work may trace via **Epic 6** merges as needed | [FR-040 ICW](fr-br/FR-040-implementation-cycle-workflow-icw.md) → **T40**. *Known debt:* duplicate `FR-040-*.md` slug ([FR-040 rw-update…](fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)) **E5:S01:T36** — reconcile under **FR-072**, not here. |
-| **UXR-001** | UXR | **E7:S00:T01** (repo) · **E7:S05:T01** (impl — exists) | **Filed** — repo task doc + UXR header; `RW -k` when versioning S00 slot | `epic/7-documentation-maintenance` | Repo: [`T01`](epics/Epic-7/Story-000-uxr-repo/T01-uxr-001-repository-anchor.md). Impl synthesis: **E7:S05:T01** (complete). |
-| **UXR-002** | UXR | **E7:S00:T02** (repo) · **E7:S05:T02** (impl — exists) | **Filed** — repo task doc + UXR header | `epic/7-documentation-maintenance` | Repo: [`T02`](epics/Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md). Impl synthesis: **E7:S05:T02** (complete). |
-| **UXR-005** | UXR | **E7:S00:T05** (repo) · **E7:S01:T09** (impl — exists) | **Filed** — repo task doc + UXR header | `epic/7-documentation-maintenance` | Repo: [`T05`](epics/Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md). Impl: [`E07S01T09`](epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md). |
+| **UXR-001** | UXR | **E7:S00:T01** (repo) · **E7:S05:T01** (impl — exists) | **Released** on **`epic/7`** (**`v0.7.0.1+2`**); [repo anchor on **epic/5** copy](epics/Epic-7/Story-000-uxr-repo/T01-uxr-001-repository-anchor.md) | `epic/7-documentation-maintenance` | On **`epic/7`** branch, registry task filename is **`T01-migration-user-experience-research-uxr-001.md`** (merge for single canonical name). |
+| **UXR-002** | UXR | **E7:S00:T02** (repo) · **E7:S05:T02** (impl — exists) | **Released** **`v0.7.0.2+2`** on **`epic/7`** | `epic/7-documentation-maintenance` | **`epic/7`:** `T02-comprehensive-uat-migration-utilities-uxr-002.md`; **epic/5** copy: [T02 anchor](epics/Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md). |
+| **UXR-005** | UXR | **E7:S00:T05** (repo) · **E7:S01:T09** (impl — exists) | Task doc **`v0.7.0.5+1`** on **`epic/7`** | `epic/7-documentation-maintenance` | **`epic/7`:** `T05-kanban-board-formatting-governance-uxr-005.md`; **epic/5** copy: [T05 anchor](epics/Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md). |
 | **FR-073** | FR | **E5:S01:T73** | **Exists** (**`v0.5.1.73+0`** doc-init) | `epic/5-documentation-management` | Meta-FR for this intake plan; **E5:S01** is FR Repo PERPETUAL. |
 
 **Housing policy (how story choice is decided)** — canonical rules: **`kanban-governance-policy.md`** (**KG-R2** atomic intake, **KG-R6** semantics vs numbering).
@@ -76,7 +76,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 | Priority | Items |
 |----------|--------|
-| **Must** | *— plan slice linked; execute **`RW -k`** for **E6:S06:T43**, **E6:S07:T109** on `epic/6`.* |
+| **Must** | *— **Epic/6:** **BR-039**/**BR-059** versioned (**T57+1**, **T109+1**); remaining work is **product/UKW fix**, not intake.* |
 | **Should** | *— **FR-040** / **UXR** repo slots filed; epic 7 `RW -k` for **E7:S00:T01/T02/T05** when first version needed.* |
 | **Could** | Large backlog (e.g. **FR-034**, **FR-032**, **FR-021**, many lower-section **BR**/**FR**) — drain **after** Must / Should |
 
@@ -92,8 +92,8 @@ Examples: **FR-045**→E5:S01:T45, **FR-046**→T46, **FR-047**→T47, **FR-063*
 
 ### Suggested execution order
 
-1. **Must:** **`RW -k E6:S06:T43`** (BR-039) and **`RW -k E6:S07:T109`** (BR-059) on `epic/6-framework-management` — task docs + **BR** headers **filed** 2026-03-31. **BR-038** remains **E6:S06:T02** (linked).
-2. **Should:** **`RW -k`** on `epic/7-documentation-maintenance` for **E7:S00:T01**, **T02**, **T05** when repo anchors need version markers; **FR-040** ICW already **E5:S01:T40**.
+1. **Must:** **Done (epic/6):** **E6:S06:T57** **`v0.6.6.57+1`**, **E6:S07:T109** **`v0.6.7.109+1`**. **BR-038**→**E6:S06:T02** linked.
+2. **Should:** **`epic/7`** — **E7:S00:T01/T02** already versioned; **T05** at **`v0.7.0.5+1`** in task doc; optional **`RW -k`** only if registry slot needs **+0** doc-init reset per policy. **FR-040**→**E5:S01:T40** linked.
 3. **Could:** batch lower-priority intake after Must / Should pressure drops; follow **E5:S01:Txx** for FR-0xx filings per [`Story-001-fr-repo`](epics/Epic-5/Story-001-fr-repo.md).
 
 ---
@@ -102,9 +102,9 @@ Examples: **FR-045**→E5:S01:T45, **FR-046**→T46, **FR-047**→T47, **FR-063*
 
 ### Must Have (M) - Critical Items
 
-- **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | [E6:S06:T43](epics/Epic-6/Story-006-feature-requests/T43-cascade-whitelist-security-prompt-usability-blocker.md)
+- **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | [E6:S06:T57](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | [E6:S06:T02](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md)
-- **BR-059** – UKW MoSCOW omits open story tasks (E5:S09 listed T01 only; checklist T01–T07) - TODO (HIGH, board SoT vs story checklist; investigation + UKW/rule fix) - [BR-059](fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md) | [E6:S07:T109](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-ukw-moscow-complete-open-task-coverage-br059.md)
+- **BR-059** – UKW MoSCOW omits open story tasks (E5:S09 listed T01 only; checklist T01–T07) - TODO (HIGH, board SoT vs story checklist; investigation + UKW/rule fix) - [BR-059](fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md) | [E6:S07:T109](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md)
 
 ---
 

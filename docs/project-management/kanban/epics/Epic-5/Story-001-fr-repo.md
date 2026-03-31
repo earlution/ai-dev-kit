@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (RW **v0.5.1.74+2** — **FR-073** / **T73** Phase B/C intake filing + board; prior **v0.5.1.74+1** FR-074 / **T74**)
+**Last updated:** 2026-03-31 (RW **v0.5.1.74+3** — **T74** intake vs **epic/6** **T57**/**T109** + **T73**/**board**; prior **v0.5.1.74+2** FR-073)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
@@ -55,7 +55,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T69 – Retire `shields` branch (private repo badges, FR-064)** - ✅ COMPLETE (v0.5.1.69+1 — removed `update-badges.yml` BYOB; README static badges; deleted `origin/shields`) - [Task Document](Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md) | [FR-064](../../fr-br/FR-064-shields-branch-private-repo-badges.md)
 - [ ] **E5:S01:T72 – Uniform Repository vs Abstract-Space Kanban Rules** - TODO (HIGH priority — **v0.5.1.72+0** intake; governance: evaluate approaches, decide **S00**/repository model, reconcile **FR-021** vs **E7:S00** UXR) - [Task Document](Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md) | [FR-072](../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md)
 - [x] **E5:S01:T73 – FR/BR/UXR Board: Open ∧ Taskless Intake Execution Plan** ✅ COMPLETE (v0.5.1.74+2 narrative closure) — **FR-073**; Phase B/C filed (**T43**, **T109**, **E7:S00** anchors, board MoSCOW) - [Task Document](Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [FR-073](../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
-- [x] **E5:S01:T74 – Kanban Intake: Atomic KG-R2 & Semantic KG-R6** ✅ COMPLETE (v0.5.1.74+1) — **FR-074**; governance + guides + skill + workflow + board alignment - [Task Document](Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md) | [FR-074](../../fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md)
+- [x] **E5:S01:T74 – Kanban Intake: Atomic KG-R2 & Semantic KG-R6** ✅ COMPLETE (v0.5.1.74+1 … **+3** reconciliation) — **FR-074**; governance + guides + skill + workflow + board + **epic/6** canonical **T57**/**T109** alignment - [Task Document](Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md) | [FR-074](../../fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md)
 
 ---
 

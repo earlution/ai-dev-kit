@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.74+3] - 31-03-26
+
+E5:S01:T74 **+3** — Intake reconciliation: board + T73 + BRs ↔ epic/6 **T57** / **T109-br059**; drop draft T43/dup T109.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+3.md)
+
+---
+---
+---
 ## [0.5.1.74+2] - 31-03-26
 
 E5:S01:T74 **+2** — **FR-073** Phase B/C: T43/T109 filing, E7:S00 UXR anchors, fr-br-uxr-board MoSCOW links; T73 narrative closure.

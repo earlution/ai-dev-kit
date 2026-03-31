@@ -44,8 +44,8 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 | FR/BR/UXR | Type | Primary task ID | Status | Primary epic branch | Housing rationale |
 |-----------|------|-----------------|--------|---------------------|-------------------|
 | **BR-038** | BR | **E6:S06:T02** | **Linked** (MoSCOW **`| T02`** 2026-03-31) | `epic/6-framework-management` | [T02](../../../Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md). |
-| **BR-039** | BR | **E6:S06:T43** | **Filed** (2026-03-31) — `RW -k` on `epic/6` | `epic/6-framework-management` | [T43](../../Epic-6/Story-006-feature-requests/T43-cascade-whitelist-security-prompt-usability-blocker.md); isolated SemVer vs T02/BR-038. |
-| **BR-059** | BR | **E6:S07:T109** | **Filed** (2026-03-31) — `RW -k` on `epic/6` | `epic/6-framework-management` | [T109](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-ukw-moscow-complete-open-task-coverage-br059.md). |
+| **BR-039** | BR | **E6:S06:T57** | **Released** **`v0.6.6.57+1`** on `epic/6` (supersedes planning alias **T43** on older board drafts) | `epic/6-framework-management` | Canonical task doc: [T57](../../Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md). |
+| **BR-059** | BR | **E6:S07:T109** | **Released** **`v0.6.7.109+1`** on `epic/6` (**RW -k**) | `epic/6-framework-management` | [T109-br059](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md). |
 | **FR-040** (ICW) | FR | **E5:S01:T40** | **Linked** | `epic/5-documentation-management` | [T40](T40-implementation-cycle-workflow-icw.md); board MoSCOW pipe added 2026-03-31. |
 | **UXR-001** | UXR | **E7:S00:T01** · **E7:S05:T01** | **Filed** | `epic/7-documentation-maintenance` | [T01 repo](../../Epic-7/Story-000-uxr-repo/T01-uxr-001-repository-anchor.md); **S05:T01** synthesis complete. |
 | **UXR-002** | UXR | **E7:S00:T02** · **E7:S05:T02** | **Filed** | `epic/7-documentation-maintenance` | [T02 repo](../../Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md); **S05:T02** synthesis complete. |
@@ -78,7 +78,7 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 | Step | Action | Done |
 |------|--------|------|
-| B1 | For each **Must** item: implementation epic branch → task doc → **`RW -k`** → update board line with **`| E…`** | [x] **Filed 2026-03-31:** **E6:S06:T43**, **E6:S07:T109** task docs; **BR-038**→**T02** link on board; **`RW -k`** on `epic/6` still required for version anchors. |
+| B1 | For each **Must** item: implementation epic branch → task doc → **`RW -k`** → update board line with **`| E…`** | [x] **Epic/6:** **BR-039**→**E6:S06:T57** (**`v0.6.6.57+1`**), **BR-059**→**E6:S07:T109** (**`v0.6.7.109+1`**); **BR-038**→**T02** linked. |
 | B2 | **Should:** **FR-040** (ICW), **UXR** reconciliation per board table | [x] **FR-040** MoSCOW **T40** link; **E7:S00:T01/T02/T05** repo task docs + UXR headers + **Story-000** checklist. |
 | B3 | After each intake: refresh **taskless** table if the item moved to linked | [x] Board **MoSCOW queue** subsection + MoSCOW bullets updated. |
 

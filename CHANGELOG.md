@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.74+2] - 31-03-26
+## [0.5.1.74+3] - 31-03-26
 
-E5:S01:T74 **+2** — **FR-073** Phase **B/C** intake filing: **T43** / **T109** task docs, **E7:S00** UXR repo anchors, BR/UXR board MoSCOW links, **T73** plan closure (**narrative**; version **T74+2** preserves monotonicity vs **0.5.1.74+1**); [T73](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md); [FR-073](docs/project-management/kanban/fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md).
+E5:S01:T74 **+3** — Intake **reconciliation:** **`fr-br-uxr-board`** + **T73** + **BR-039/059** aligned to **epic/6** **E6:S06:T57** / **E6:S07:T109** (remove draft **T43** / duplicate **T109**); Epic‑6 Story‑006/007 checklist + task files on this branch; [T74](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md); [FR-074](docs/project-management/kanban/fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.74+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.74+3.md)
