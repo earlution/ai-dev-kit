@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo — PERPETUAL)
 VERSION_TASK = 74     # Task number (E5:S01:T74 — FR-074 Kanban intake: KG-R2 atomic + KG-R6 semantic placement)
-VERSION_BUILD = 1     # Build number (first substantive RW on T74; docs/policy/guide/skill)
+VERSION_BUILD = 2     # Build number (T74+2: FR-073 Phase B/C intake queue filing on FR/BR/UXR board + E6/E7 wiring)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.74+1 — E5:S01:T74: FR-074 intake hardening (KG-R2, KG-R6; governance, guides, rituals, board)
+# Current: 0.5.1.74+2 — E5:S01:T74 build 2: FR-073/T73 Phase B/C (task docs T43/T109, E7:S00 anchors, board MoSCOW pipes)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

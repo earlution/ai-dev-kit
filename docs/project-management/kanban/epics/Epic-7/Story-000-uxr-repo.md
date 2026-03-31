@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-05 (v0.7.0.0+0 – Repository story created)  
+**Last updated:** 2026-03-31 (repository anchor task docs **T01/T02/T05** + checklist rows — Phase C1)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-05  
 **Completed:** N/A (Perpetual - never completes)  
@@ -28,6 +28,10 @@ housekeeping_policy: keep
 > **Repository Pattern:** Each User Experience Research report becomes a task in this repository story.
 > **Traceability:** UXR-001 = E7:S00:T01, UXR-002 = E7:S00:T02, etc.
 > **Abstract Space:** v0.7.0.0+0 (repository story), v0.7.0.1+0 (first UXR), v0.7.0.2+0 (second UXR), etc.
+
+- [ ] **E7:S00:T01 – UXR-001 repository anchor** — [Task doc](Story-000-uxr-repo/T01-uxr-001-repository-anchor.md) | [UXR-001](../fr-br/UXR-001-migration-user-experience-research.md) | Impl: [E7:S05:T01](Story-005-migration-uxr-research.md)
+- [ ] **E7:S00:T02 – UXR-002 repository anchor** — [Task doc](Story-000-uxr-repo/T02-uxr-002-repository-anchor.md) | [UXR-002](../fr-br/UXR-002-comprehensive-uat-migration-utilities.md) | Impl: [E7:S05:T02](Story-005-migration-uxr-research.md)
+- [ ] **E7:S00:T05 – UXR-005 repository anchor** — [Task doc](Story-000-uxr-repo/T05-uxr-005-repository-anchor.md) | [UXR-005](../fr-br/UXR-005-kanban-board-formatting-and-governance.md) | Impl: [E7:S01:T09](Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)
 
 ---
 

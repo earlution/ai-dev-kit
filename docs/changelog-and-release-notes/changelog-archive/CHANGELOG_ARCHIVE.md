@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.74+2] - 31-03-26
+
+E5:S01:T74 **+2** — **FR-073** Phase B/C: T43/T109 filing, E7:S00 UXR anchors, fr-br-uxr-board MoSCOW links; T73 narrative closure.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+2.md)
+
+---
+---
+---
 ## [0.5.1.74+1] - 31-03-26
 
 E5:S01:T74 — **FR-074** intake hardening: KG-R2 atomic intake, KG-R6 semantic placement; governance, guides, skill, workflow, board alignment.

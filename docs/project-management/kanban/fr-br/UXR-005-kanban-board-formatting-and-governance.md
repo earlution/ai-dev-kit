@@ -13,7 +13,9 @@ housekeeping_policy: keep
 **Submitted By:** User (request) documented by Cascade  
 **Priority:** HIGH  
 **Status:** OPEN  
-**GitHub Issue:** _TBD_
+**GitHub Issue:** _TBD_  
+**Repository Task:** [E7:S00:T05](../epics/Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md)  
+**Implementation Task:** [E7:S01:T09](../epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)
 
 ---
 

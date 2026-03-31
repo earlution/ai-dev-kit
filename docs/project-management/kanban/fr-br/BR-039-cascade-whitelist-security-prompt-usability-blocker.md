@@ -14,7 +14,8 @@ housekeeping_policy: keep
 **Created:** 2026-03-09  
 **Last updated:** 2026-03-09  
 **Version:** v0.6.7.101+34  
-**Code:** BR-039
+**Code:** BR-039  
+**Implementing Task:** [E6:S06:T43](../epics/Epic-6/Story-006-feature-requests/T43-cascade-whitelist-security-prompt-usability-blocker.md)
 
 ---
 

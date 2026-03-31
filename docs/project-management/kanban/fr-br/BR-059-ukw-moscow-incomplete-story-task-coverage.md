@@ -9,7 +9,8 @@ housekeeping_policy: keep
 # Bug Report BR-059: UKW MoSCOW Update Omits In-Progress Story Tasks (Incomplete Coverage)
 
 **Bug ID:** BR-059  
-**Task ID:** *(none — investigation / fix task TBD)*  
+**Task ID:** E6:S07:T109  
+**Implementing Task:** [E6:S07:T109](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-ukw-moscow-complete-open-task-coverage-br059.md)  
 **Priority:** HIGH  
 **Severity:** MEDIUM (board SoT diverges from story checklist; planners lose visibility)  
 **Status:** OPEN  
@@ -80,4 +81,4 @@ A **comprehensive UKW** run promoted **E5:S09:T01** to the MoSCOW **Should** sec
 
 ## Resolution / current status
 
-- **OPEN** — Board manually corrected to list **E5:S09:T01–T07**; root cause (UKW agent/rules) still to be addressed under this BR.
+- **OPEN** — Board manually corrected to list **E5:S09:T01–T07**; root cause (UKW agent/rules) tracked under **[E6:S07:T109](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-ukw-moscow-complete-open-task-coverage-br059.md)** (filed 2026-03-31). Close BR after T109 deliverable is verified.

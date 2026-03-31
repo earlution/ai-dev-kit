@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-31  
 **Submitted By:** User  
 **Priority:** MEDIUM  
-**Status:** PENDING  
+**Status:** PENDING *(Phase B/C filed **v0.5.1.74+2** — verify UKW/statistics ACs in production use)*  
 
 **Implementing Task:** [E5:S01:T73](../epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
 
@@ -57,10 +57,10 @@ The **Intake plan** prose on [`fr-br-uxr-board.md`](../fr-br-uxr-board.md) (open
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** **RW -k** (or full RW) released for **E5:S01:T73** so version/changelog reflect filing.  
-- [ ] **AC2:** Intake plan section and **T73** stay in sync when queue/hygiene rules change.  
+- [x] **AC1:** **RW** released with **T73** narrative closure — **`v0.5.1.74+2`** (internal **T74** build 2; see detailed changelog for monotonicity note).  
+- [x] **AC2:** Intake plan section and **T73** updated together for Phase B/C (2026-03-31).  
 - [ ] **AC3:** At least one **UKW** or scoped pass updates **MoSCOW taskless table** + **Board Statistics** using **T73** as the reference epic/story task where doc-only.  
-- [ ] **AC4:** **Pre-identified task mapping** stays consistent across [`fr-br-uxr-board.md`](../fr-br-uxr-board.md), **T73**, and **FR-073:R04** whenever a reserved **E/S/T** changes.
+- [x] **AC4:** **Pre-identified task mapping** consistent across [`fr-br-uxr-board.md`](../fr-br-uxr-board.md), **T73**, and **FR-073:R04** for Phase B/C filing pass.
 
 ---
 
@@ -74,13 +74,13 @@ The **Intake plan** prose on [`fr-br-uxr-board.md`](../fr-br-uxr-board.md) (open
 
 ## Intake Decision
 
-**Intake Status:** FILED — released **v0.5.1.73+0** (SemVer **v0.4.684+0**); Phase B/C execution remains open per **T73**.
+**Intake Status:** FILED — **Phase B/C** documented under **`v0.5.1.74+2`** (SemVer **`v0.4.686+2`**); **AC3** UKW/statistics pass still open.
 
 **Assigned To:**
 
 - **Epic / Story:** Epic 5, Story 1 (FR Repo)  
 - **Task:** E5:S01:T73  
-- **Version (abstract):** **`0.5.1.73+0`** released (doc-init); further doc updates use **`+1`…**  
+- **Version:** **`0.5.1.73+0`** doc-init + **`0.5.1.74+2`** Phase B/C narrative closure *(see changelog)*  
 
 **Kanban Links:**
 

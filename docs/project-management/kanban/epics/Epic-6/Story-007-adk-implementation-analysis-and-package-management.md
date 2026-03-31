@@ -112,6 +112,10 @@ housekeeping_policy: keep
   - **Scope:** Reorganize workflows directory into named subdirectories for better organization and maintainability
 
 
+- [ ] **E6:S07:T109 – UKW MoSCOW: full open-task coverage (BR-059)** - TODO
+  - Task: [`T109-ukw-moscow-complete-open-task-coverage-br059.md`](T109-ukw-moscow-complete-open-task-coverage-br059.md) | [BR-059](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
+
+
 ---
 
 ## Overview

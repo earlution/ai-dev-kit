@@ -9,9 +9,9 @@ housekeeping_policy: keep
 # Task E5:S01:T73 – FR/BR/UXR Board: Open ∧ Taskless Intake Execution Plan
 
 **Task ID:** E5:S01:T73  
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** MEDIUM  
-**Version Anchor:** v0.5.1.73+0 (RW -k doc-init — **Released** 2026-03-31)  
+**Version Anchor:** v0.5.1.73+0 (doc-init) · **Phase B/C closed** v0.5.1.74+2 *(internal `VERSION_TASK` stays **T74** for monotonicity; see detailed changelog)*  
 **Feature Request:** [FR-073 – FR/BR/UXR board intake execution plan](../../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
 
 ---
@@ -43,13 +43,13 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 | FR/BR/UXR | Type | Primary task ID | Status | Primary epic branch | Housing rationale |
 |-----------|------|-----------------|--------|---------------------|-------------------|
-| **BR-038** | BR | **E6:S06:T02** | Exists | `epic/6-framework-management` | [T02](../../../Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) already owns BR-038; board line was missing link. |
-| **BR-039** | BR | **E6:S06:T43** | **Create** | `epic/6-framework-management` | Cascade/whitelist is **agent+RW execution**; stays under **E6:S06** with T02 but **separate** task for isolated SemVer and acceptance criteria. |
-| **BR-059** | BR | **E6:S07:T109** | **Create** | `epic/6-framework-management` | UKW MoSCOW coverage bug → **E6:S07** perpetual workflow story adjacent to **T101** UKW. |
-| **FR-040** (ICW) | FR | **E5:S01:T40** | Exists | `epic/5-documentation-management` | FR Repo **1:1** pattern for ICW FR record; [T40](T40-implementation-cycle-workflow-icw.md). |
-| **UXR-001** | UXR | **E7:S00:T01** · **E7:S05:T01** | Mixed | `epic/7-documentation-maintenance` | **S00:T01** = repository slot per `Story-000-uxr-repo`; **S05:T01** = existing implementation/synthesis. |
-| **UXR-002** | UXR | **E7:S00:T02** | **Create** (reconcile impl) | `epic/7-documentation-maintenance` | Repository slot **T02**; audit Epic 7 for parallel impl task before filing. |
-| **UXR-005** | UXR | **E7:S00:T05** · **E7:S01:T09** | Mixed | `epic/7-documentation-maintenance` | **S00:T05** registry + **S01:T09** governance implementation per [kanban-board-guide](../../../kanban-board-guide.md). |
+| **BR-038** | BR | **E6:S06:T02** | **Linked** (MoSCOW **`| T02`** 2026-03-31) | `epic/6-framework-management` | [T02](../../../Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md). |
+| **BR-039** | BR | **E6:S06:T43** | **Filed** (2026-03-31) — `RW -k` on `epic/6` | `epic/6-framework-management` | [T43](../../Epic-6/Story-006-feature-requests/T43-cascade-whitelist-security-prompt-usability-blocker.md); isolated SemVer vs T02/BR-038. |
+| **BR-059** | BR | **E6:S07:T109** | **Filed** (2026-03-31) — `RW -k` on `epic/6` | `epic/6-framework-management` | [T109](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-ukw-moscow-complete-open-task-coverage-br059.md). |
+| **FR-040** (ICW) | FR | **E5:S01:T40** | **Linked** | `epic/5-documentation-management` | [T40](T40-implementation-cycle-workflow-icw.md); board MoSCOW pipe added 2026-03-31. |
+| **UXR-001** | UXR | **E7:S00:T01** · **E7:S05:T01** | **Filed** | `epic/7-documentation-maintenance` | [T01 repo](../../Epic-7/Story-000-uxr-repo/T01-uxr-001-repository-anchor.md); **S05:T01** synthesis complete. |
+| **UXR-002** | UXR | **E7:S00:T02** · **E7:S05:T02** | **Filed** | `epic/7-documentation-maintenance` | [T02 repo](../../Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md); **S05:T02** synthesis complete. |
+| **UXR-005** | UXR | **E7:S00:T05** · **E7:S01:T09** | **Filed** | `epic/7-documentation-maintenance` | [T05 repo](../../Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md); [E07S01T09](../../Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md). |
 | **FR-073** | FR | **E5:S01:T73** | This task | `epic/5-documentation-management` | Meta intake-plan FR; FR Repo. |
 
 ### Story-choice policy (shortcut)
@@ -78,17 +78,17 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 | Step | Action | Done |
 |------|--------|------|
-| B1 | For each **Must** item: implementation epic branch → task doc → **`RW -k`** → update board line with **`| E…`** | [ ] |
-| B2 | **Should:** **FR-040** (ICW), **UXR** reconciliation per board table | [ ] |
-| B3 | After each intake: refresh **taskless** table if the item moved to linked | [ ] |
+| B1 | For each **Must** item: implementation epic branch → task doc → **`RW -k`** → update board line with **`| E…`** | [x] **Filed 2026-03-31:** **E6:S06:T43**, **E6:S07:T109** task docs; **BR-038**→**T02** link on board; **`RW -k`** on `epic/6` still required for version anchors. |
+| B2 | **Should:** **FR-040** (ICW), **UXR** reconciliation per board table | [x] **FR-040** MoSCOW **T40** link; **E7:S00:T01/T02/T05** repo task docs + UXR headers + **Story-000** checklist. |
+| B3 | After each intake: refresh **taskless** table if the item moved to linked | [x] Board **MoSCOW queue** subsection + MoSCOW bullets updated. |
 
 ### Phase C — Hygiene passes (scheduled / UKW)
 
 | Step | Action | Done |
 |------|--------|------|
-| C1 | Reconcile **UXR-001 / 002 / 005** board lines vs [`epics/Epic-7/`](../../Epic-7) (no duplicate **E7:S00:Txx** without decision) | [ ] |
-| C2 | Update **Board Statistics** (counts, priority buckets) when MoSCOW changes | [ ] |
-| C3 | Batch-add **`Implementing Task:`** to high-traffic FRs when touching them (optional stretch) | [ ] |
+| C1 | Reconcile **UXR-001 / 002 / 005** board lines vs [`epics/Epic-7/`](../../Epic-7) (no duplicate **E7:S00:Txx** without decision) | [x] Repo anchors created under [`Story-000-uxr-repo/`](../../Epic-7/Story-000-uxr-repo); impl pointers **E7:S05** / **E7:S01:T09** documented. |
+| C2 | Update **Board Statistics** (counts, priority buckets) when MoSCOW changes | [x] **Note** added under statistics (full recount deferred to UKW). |
+| C3 | Batch-add **`Implementing Task:`** to high-traffic FRs when touching them (optional stretch) | [ ] *Deferred* |
 
 ---
 
@@ -102,12 +102,12 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** **FR-073** ↔ **T73** bidirectional; **Story-001** checklist includes **T73**.  
-- [ ] **AC2:** [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) Intake plan references **FR-073** / **E5:S01:T73**.  
-- [ ] **AC3:** At least one **`RW -k`:** **`0.5.1.73+0`** (or subsequent **+n**) attributes filing to **T73**.  
-- [ ] **AC4:** **MoSCOW** lists **FR-073** with task link.  
-- [ ] **AC5:** Phase B/C checklists in this doc updated when major queue milestones complete (honor clause — update table dates in board footer).  
-- [ ] **AC6:** **Pre-identified mapping** in this doc matches [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) **Intake plan** table whenever either changes.
+- [x] **AC1:** **FR-073** ↔ **T73** bidirectional; **Story-001** checklist includes **T73**.  
+- [x] **AC2:** [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) Intake plan references **FR-073** / **E5:S01:T73**.  
+- [x] **AC3:** At least one **`RW -k`:** **`0.5.1.73+0`** (or subsequent **+n**) attributes filing to **T73**.  
+- [x] **AC4:** **MoSCOW** lists **FR-073** with task link.  
+- [x] **AC5:** Phase B/C checklists in this doc updated when major queue milestones complete (honor clause — update table dates in board footer).  
+- [x] **AC6:** **Pre-identified mapping** in this doc matches [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) **Intake plan** table whenever either changes. *(Aligned 2026-03-31 Phase B/C pass.)*
 
 ---
 
