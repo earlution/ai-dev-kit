@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-31 (**RW -k** **v0.7.0.3+0** **E7:S00:T03** **UXR-003**; prior **T02** **v0.7.0.2+2**)
+**Last updated:** 2026-03-31 (**RW -k** **v0.7.0.4+0** **E7:S00:T04** **UXR-004**; prior **T03** **v0.7.0.3+0**)
 **Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - **v0.7.0.3+0** **RW -k** **T03** **UXR-003**; **T02** v0.7.0.2+2; **T01** v0.7.0.1+2; **T05** UXR-005)
+- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - **v0.7.0.4+0** **RW -k** **T04** **UXR-004**; **T03** v0.7.0.3+0; **T02** v0.7.0.2+2; **T01** v0.7.0.1+2; **T05** UXR-005)
   - Story: [`Story-000-uxr-repo.md`](Story-000-uxr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
 

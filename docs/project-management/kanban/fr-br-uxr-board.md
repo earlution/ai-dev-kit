@@ -58,6 +58,7 @@ This board provides **centralized visibility and prioritization** for all open F
 | **FR-021** | FR | **E5:S01:T21** | **Released** **`v0.5.1.21+0`** (`RW -k` on `epic/5`) | `epic/5-documentation-management` | Repository-story pattern; reconcile with **E7:S00** / **T72**. |
 | **FR-032** | FR | **E5:S01:T32** | **Released** **`v0.5.1.32+0`** (`RW -k` on `epic/5`) | `epic/5-documentation-management` | RC readiness gap analysis. |
 | **UXR-003** | UXR | **E7:S00:T03** · **E7:S05:T03** | **Linked** (synthesis ✅; repo anchor → **`RW -k`** `epic/7`) | `epic/7-documentation-maintenance` | [T03](epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor.md). |
+| **UXR-004** | UXR | **E7:S00:T04** · **E7:S05:T04** | **Linked** (synthesis ✅; UXR **COMPLETE**; **`RW -k`** `epic/7`) | `epic/7-documentation-maintenance` | [T04](epics/Epic-7/Story-000-uxr-repo/T04-uxr-004-repository-anchor.md). |
 
 **Housing policy (how story choice is decided)** — canonical rules: **`kanban-governance-policy.md`** (**KG-R2** atomic intake, **KG-R6** semantics vs numbering).
 
@@ -139,7 +140,7 @@ Examples: **FR-045**→E5:S01:T45, **FR-046**→T46, **FR-047**→T47, **FR-063*
 - **BR-034** – UKW MoSCoW Prioritization Missing - TODO (MEDIUM, Missing MoSCoW prioritization in UKW) - [BR-034](fr-br/BR-034-ukw-moscow-prioritization-missing.md)
 - **BR-033** – UKW Board Disorganization - TODO (MEDIUM, Disorganization in Update Kanban Workflow board) - [BR-033](fr-br/BR-033-ukw-board-disorganization.md)
 - **UXR-003** – Intelligent Epic Matching Canonical Adoption UAT - TODO (MEDIUM, UAT synthesis **E7:S05:T03** ✅; repository anchor **`RW -k`** **E7:S00:T03**) - [UXR-003](fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md) | [E7:S00:T03](epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor.md) · [E7:S05:T03](epics/Epic-7/Story-005-migration-uxr-research.md)
-- **UXR-004** – Kanban Package Installation UAT - COMPLETE (synthesis **E7:S05:T04** ✅; repository anchor → next **`RW -k`** **E7:S00:T04**) - [UXR-004](fr-br/UXR-004-kanban-package-installation-uat.md)
+- **UXR-004** – Kanban Package Installation UAT - COMPLETE (synthesis **E7:S05:T04** ✅; repository anchor **E7:S00:T04**) - [UXR-004](fr-br/UXR-004-kanban-package-installation-uat.md) | [E7:S00:T04](epics/Epic-7/Story-000-uxr-repo/T04-uxr-004-repository-anchor.md) · [E7:S05:T04](epics/Epic-7/Story-005-migration-uxr-research.md)
 - **FR-043** – UKW Gap Discovery TODO Tasks and Unfiled FR/BR - TODO (LOW, Discover gaps in UKW and unfiled items) - [FR-043](fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
 - **FR-042** – Implementation Planning Workflow (IPW) - TODO (LOW, Workflow for implementation planning) - [FR-042](fr-br/FR-042-implementation-planning-workflow-ipw.md)
 - **FR-041** – Perpetual Task for Release Workflow Maintenance - TODO (LOW, Ongoing maintenance for Release Workflow) - [FR-041](fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)

@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.0.4+0] - 31-03-26
+
+E7:S00:T04 **`RW -k`** — UXR-004 repository anchor + board row restore.
+
+[Detailed changelog](CHANGELOG_v0.7.0.4+0.md)
+
+---
+---
+---
 ## [0.7.0.3+0] - 31-03-26
 
 E7:S00:T03 **`RW -k`** — UXR-003 repository anchor + board/Story-000 slice.
