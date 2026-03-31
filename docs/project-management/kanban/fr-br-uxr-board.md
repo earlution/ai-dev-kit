@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
 **Last Updated:** 2026-03-31 (**UXR-001/002/005** → **E7:S00:T01**, **T02**, **T05** + **E7:S01:T09**; **FR-063** intake 2026-03-25)
-**Version:** v0.7.1.9+1
+**Version:** v0.7.1.9+2
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  

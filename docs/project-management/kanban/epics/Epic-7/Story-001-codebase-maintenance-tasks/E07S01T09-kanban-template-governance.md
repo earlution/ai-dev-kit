@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Task ID:** E7:S01:T09  
 **Status:** TODO  
 **Priority:** HIGH  
-**Version Marker:** v0.7.1.9+1 (RW -k kanban init 2026-03-31)  
+**Version Marker:** v0.7.1.9+2 (RW -k 2026-03-31 — validate_branch_context parity)  
 **Related UXR:** [UXR-005 – Kanban Board Formatting & Governance](../../../fr-br/UXR-005-kanban-board-formatting-and-governance.md)  
 **UXR registry (E7:S00):** [E7:S00:T05](../Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md)  
 **Story:** [E7:S01 – Codebase Maintenance Tasks](../Story-001-codebase-maintenance-tasks.md)
@@ -86,3 +86,5 @@ Operationalize UXR-005 by codifying and enforcing the “one blank line between 
 ## Kanban documentation setup (RW -k)
 
 **v0.7.1.9+1 (2026-03-31):** Registry wiring for **UXR-005** via **E7:S00:T05**; **Task ID** header for RW validators; **`validate_rw_task_complete.py`** restored on **epic/7-documentation-maintenance**. Implementation scope (spacing rule, validators, ACs) remains **TODO**.
+
+**v0.7.1.9+2 (2026-03-31):** **`validate_branch_context.py`** `locate_task_doc_for_version` — same discovery patterns as **`validate_version_bump`** (no false “task doc not found” for **E07S01T09** layout).
