@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.32+0] - 31-03-26
+
+E5:S01:T32 **`RW -k`** — FR-032/T32 doc-init + fr-br-uxr-board reconciliation.
+
+[Detailed changelog](CHANGELOG_v0.5.1.32+0.md)
+
+---
+---
+---
 ## [0.5.1.21+0] - 31-03-26
 
 E5:S01:T21 **`RW -k`** — FR-021/T21 doc-init + FR-034 implementing link + board/T73 slice.

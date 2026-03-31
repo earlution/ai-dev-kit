@@ -88,7 +88,7 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 |------|--------|------|
 | C1 | Reconcile **UXR-001 / 002 / 005** board lines vs [`epics/Epic-7/`](../../Epic-7) (no duplicate **E7:S00:Txx** without decision) | [x] Repo anchors created under [`Story-000-uxr-repo/`](../../Epic-7/Story-000-uxr-repo); impl pointers **E7:S05** / **E7:S01:T09** documented. |
 | C2 | Update **Board Statistics** (counts, priority buckets) when MoSCOW changes | [x] **Note** added under statistics (full recount deferred to UKW). |
-| C3 | Batch-add **`Implementing Task:`** to high-traffic FRs when touching them (optional stretch) | [ ] **In progress (2026-03-31):** **`RW -k`** **E5:S01:T21** then **T32**; **`RW -k`** **E7:S00:T03/T04** on `epic/7`; residual **Could** rows backlog |
+| C3 | Batch-add **`Implementing Task:`** to high-traffic FRs when touching them (optional stretch) | [x] **2026-03-31:** **`RW -k`** **E5:S01:T21**/**T32**; **`RW -k`** **E7:S00:T03/T04** on `epic/7`; residual **Could** rows backlog |
 
 ---
 

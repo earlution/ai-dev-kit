@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.21+0] - 31-03-26
+## [0.5.1.32+0] - 31-03-26
 
-E5:S01:T21 **`RW -k`** (**+0**) — **FR-021** ↔ **T21** doc-init; **FR-034** **`Implementing Task:`**; **fr-br-uxr-board** + **T73** slice for this intake wave (**T32** / **E7:S00** anchors → follow-on **`RW -k`**). [T21](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md); [FR-021](docs/project-management/kanban/fr-br/FR-021-fr-br-uxr-repository-stories.md).
+E5:S01:T32 **`RW -k`** (**+0**) — **FR-032** ↔ **T32** doc-init; **fr-br-uxr-board** reconciled (**FR-032**, **UXR-003/004** pointers); **T73** C3. [T32](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T32-release-candidate-readiness-gap-analysis.md); [FR-032](docs/project-management/kanban/fr-br/FR-032-release-candidate-readiness-gap-analysis.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.21+0.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.32+0.md)
