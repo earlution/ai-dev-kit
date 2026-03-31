@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.1.9+2] - 31-03-26
+## [0.7.1.9+3] - 31-03-26
 
-E7:S01:T09 — **RW -k:** **`validate_branch_context`** task-doc discovery aligned with **`validate_version_bump`** (`E07S01T09`-style paths, `Story-*` `rglob` fallback).
+E7:S01:T09 — **UXR-005** intake: **`Implementing Task`** in [UXR-005](docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance.md) → [T09](docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.9+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.1.9+3.md)

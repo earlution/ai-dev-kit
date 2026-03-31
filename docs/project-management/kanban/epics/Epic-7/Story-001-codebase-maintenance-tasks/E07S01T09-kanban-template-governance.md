@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Task ID:** E7:S01:T09  
 **Status:** TODO  
 **Priority:** HIGH  
-**Version Marker:** v0.7.1.9+2 (RW -k 2026-03-31 — validate_branch_context parity)  
+**Version Marker:** v0.7.1.9+3 (UXR-005 **Implementing Task** header wiring)  
 **Related UXR:** [UXR-005 – Kanban Board Formatting & Governance](../../../fr-br/UXR-005-kanban-board-formatting-and-governance.md)  
 **UXR registry (E7:S00):** [E7:S00:T05](../Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md)  
 **Story:** [E7:S01 – Codebase Maintenance Tasks](../Story-001-codebase-maintenance-tasks.md)

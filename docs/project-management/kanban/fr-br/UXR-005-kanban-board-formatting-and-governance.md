@@ -13,6 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** User (request) documented by Cascade  
 **Priority:** HIGH  
 **Status:** ACCEPTED (registry **E7:S00:T05** filed 2026-03-31; implementation **E7:S01:T09** — UXR ACs still open)  
+**Implementing Task:** [E7:S01:T09](epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)  
 **GitHub Issue:** _TBD_
 
 ---
