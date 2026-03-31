@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-epics-epic-7-epic-7-md-bcf.json
-const site_docs_project_management_kanban_epics_epic_7_epic_7_md_bcf_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-7/Epic-7","title":"Epic 7: Codebase Maintenance and Review","description":"Status: IN PROGRESS","source":"@site/../docs/project-management/kanban/epics/Epic-7/Epic-7.md","sourceDirName":"project-management/kanban/epics/Epic-7","slug":"/project-management/kanban/epics/Epic-7/","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-7/Epic-7.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2025-12-09T02:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Story 008 – ai-dev-kit CLI Tool","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-008-ai-dev-kit-cli-tool"},"next":{"title":"Epic 7, Story 0: UXR Repo (PERPETUAL)","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo"}}');
+const site_docs_project_management_kanban_epics_epic_7_epic_7_md_bcf_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-7/Epic-7","title":"Epic 7: Codebase Maintenance and Review","description":"Status: IN PROGRESS","source":"@site/../docs/project-management/kanban/epics/Epic-7/Epic-7.md","sourceDirName":"project-management/kanban/epics/Epic-7","slug":"/project-management/kanban/epics/Epic-7/","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-7/Epic-7.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2025-12-09T02:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Story 008 – ai-dev-kit CLI Tool","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-008-ai-dev-kit-cli-tool"},"next":{"title":"Epic 7, Story 0, Task 1: UXR-001 Migration User Experience Research","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -134,7 +134,9 @@ function _createMdxContent(props) {
         children: "Completed:"
       }), " [Reopened – TBD]", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-25 (v0.7.6.9+1 – E7:S06", ":T09", " Config and git state validation; Story 6 complete)\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (v0.7.0.2+2 — UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task"
+      }), " wiring; E7:S00", ":T02", ")\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Branch:"
       }), " ", (0,jsx_runtime.jsx)(_components.code, {
         children: "epic/7-documentation-maintenance"
@@ -159,7 +161,15 @@ function _createMdxContent(props) {
             disabled: true
           }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
             children: ["E7", ":S00", " – UXR Repo (PERPETUAL)"]
-          }), " - IN PROGRESS (PERPETUAL - v0.7.0.0+0 – Repository story created)"]
+          }), " - IN PROGRESS (PERPETUAL - v0.7.0.2+2 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "T02"
+          }), " UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Implementing Task"
+          }), " wired; ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "T01"
+          }), " v0.7.0.1+2; ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "T05"
+          }), " UXR-005)"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["Story: ", (0,jsx_runtime.jsx)(_components.a, {
@@ -182,7 +192,15 @@ function _createMdxContent(props) {
             disabled: true
           }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
             children: ["E7", ":S01", " – Codebase Maintenance Tasks"]
-          }), " - IN PROGRESS (v0.7.1.5+6 – Story reopened: filed T06 Update Changelog Workflow to implement UCW tooling and documentation)"]
+          }), " - IN PROGRESS (v0.7.1.9+3 — UXR-005 ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Implementing Task"
+          }), " on ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "T09"
+          }), "; UCW ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "T06"
+          }), " still open; latest epic release ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "v0.7.0.2+2"
+          }), " is S00)"]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         className: "task-list-item",
@@ -750,7 +768,9 @@ function _createMdxContent(props) {
         children: "Estimated Effort:"
       }), " [TBD]", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-25 (v0.7.6.9+1 – E7:S06", ":T09", " Config and git state validation; Story 6 complete)"]
+      }), " 2026-03-31 (v0.7.0.2+2 — UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task"
+      }), " wiring; E7:S00", ":T02", ")"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Goal:"

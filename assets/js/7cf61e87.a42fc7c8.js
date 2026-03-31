@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-epics-epic-7-story-001-codebase-maintenance-tasks-e-07-s-01-t-09-kanban-template-governance-md-7cf.json
-const site_docs_project_management_kanban_epics_epic_7_story_001_codebase_maintenance_tasks_e_07_s_01_t_09_kanban_template_governance_md_7cf_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance","title":"Task E7:S01:T09 – Kanban Template Governance & UXR Ownership","description":"Status: TODO","source":"@site/../docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md","sourceDirName":"project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks","slug":"/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-16T14:20:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Task: Task Doc Naming Standardization","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T08-task-doc-naming-standardization"},"next":{"title":"Epic 7, Story 1, Task 10: Enhanced Workflow Logging System Implementation","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T10-enhanced-workflow-logging-system"}}');
+const site_docs_project_management_kanban_epics_epic_7_story_001_codebase_maintenance_tasks_e_07_s_01_t_09_kanban_template_governance_md_7cf_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance","title":"Task E7:S01:T09 – Kanban Template Governance & UXR Ownership","description":"Task IDS01:T09","source":"@site/../docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md","sourceDirName":"project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks","slug":"/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-16T14:20:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Task: Task Doc Naming Standardization","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T08-task-doc-naming-standardization"},"next":{"title":"Epic 7, Story 1, Task 10: Enhanced Workflow Logging System Implementation","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T10-enhanced-workflow-logging-system"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -50,8 +50,12 @@ const toc = [{
   "id": "scope",
   "level": 2
 }, {
-  "value": "Deliverables",
-  "id": "deliverables",
+  "value": "Input",
+  "id": "input",
+  "level": 2
+}, {
+  "value": "Deliverable",
+  "id": "deliverable",
   "level": 2
 }, {
   "value": "Acceptance Criteria",
@@ -64,6 +68,10 @@ const toc = [{
 }, {
   "value": "Notes",
   "id": "notes",
+  "level": 2
+}, {
+  "value": "Kanban documentation setup (RW -k)",
+  "id": "kanban-documentation-setup-rw--k",
   "level": 2
 }];
 function _createMdxContent(props) {
@@ -92,16 +100,25 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Task ID:"
+      }), " E7:S01", ":T09", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Status:"
       }), " TODO", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Priority:"
       }), " HIGH", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version Marker:"
-      }), " v0.7.1.7+0 (UXR-005 filing)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " v0.7.1.9+3 (UXR-005 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task"
+      }), " header wiring)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Related UXR:"
       }), " ", (0,jsx_runtime.jsx)(_components.a, {
         href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance",
         children: "UXR-005 – Kanban Board Formatting & Governance"
+      }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["UXR registry (E7", ":S00", "):"]
+      }), " ", (0,jsx_runtime.jsxs)(_components.a, {
+        href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005",
+        children: ["E7:S00", ":T05"]
       }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Story:"
       }), " ", (0,jsx_runtime.jsxs)(_components.a, {
@@ -167,8 +184,31 @@ function _createMdxContent(props) {
         }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "deliverables",
-      children: "Deliverables"
+      id: "input",
+      children: "Input"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance",
+            children: "UXR-005"
+          })
+        }), " — Kanban board formatting & governance findings and acceptance criteria."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Registry:"
+        }), " ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005",
+          children: ["E7:S00", ":T05"]
+        }), "; kanban boards, ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "kanban-board-guide.md"
+        }), ", validators under ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "scripts/documentation/"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "deliverable",
+      children: "Deliverable"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "Updated Kanban documentation and templates reflecting spacing rule + ownership statement."
@@ -221,7 +261,11 @@ function _createMdxContent(props) {
       id: "dependencies",
       children: "Dependencies"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T05"]
+        }), " — UXR-005 kanban registry task (traceability anchor)."]
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "UXR-005 findings and recommendations."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "Documentation validator infrastructure."
@@ -237,6 +281,43 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "Future RW cycles should update this task’s version marker whenever spacing enforcement work occurs."
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "kanban-documentation-setup-rw--k",
+      children: "Kanban documentation setup (RW -k)"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.7.1.9+1 (2026-03-31):"
+      }), " Registry wiring for ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "UXR-005"
+      }), " via ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E7:S00", ":T05"]
+      }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Task ID"
+      }), " header for RW validators; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "validate_rw_task_complete.py"
+        })
+      }), " restored on ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "epic/7-documentation-maintenance"
+      }), ". Implementation scope (spacing rule, validators, ACs) remains ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "TODO"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.7.1.9+2 (2026-03-31):"
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "validate_branch_context.py"
+        })
+      }), " ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "locate_task_doc_for_version"
+      }), " — same discovery patterns as ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "validate_version_bump"
+        })
+      }), " (no false “task doc not found” for ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "E07S01T09"
+      }), " layout)."]
     })]
   });
 }

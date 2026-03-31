@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-epics-epic-7-story-000-uxr-repo-md-521.json
-const site_docs_project_management_kanban_epics_epic_7_story_000_uxr_repo_md_521_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-7/Story-000-uxr-repo","title":"Epic 7, Story 0: UXR Repo (PERPETUAL)","description":"Status: IN PROGRESS (PERPETUAL)","source":"@site/../docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo.md","sourceDirName":"project-management/kanban/epics/Epic-7","slug":"/project-management/kanban/epics/Epic-7/Story-000-uxr-repo","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-01-05T18:10:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Epic 7: Codebase Maintenance and Review","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/"},"next":{"title":"Task: Task Doc Naming Standardization","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T08-task-doc-naming-standardization"}}');
+const site_docs_project_management_kanban_epics_epic_7_story_000_uxr_repo_md_521_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-7/Story-000-uxr-repo","title":"Epic 7, Story 0: UXR Repo (PERPETUAL)","description":"Status: IN PROGRESS (PERPETUAL)","source":"@site/../docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo.md","sourceDirName":"project-management/kanban/epics/Epic-7","slug":"/project-management/kanban/epics/Epic-7/Story-000-uxr-repo","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-01-05T18:10:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Epic 7, Story 0, Task 5: UXR-005 Kanban Board Formatting & Governance","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005"},"next":{"title":"Task: Task Doc Naming Standardization","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T08-task-doc-naming-standardization"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -88,7 +88,7 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
-    blockquote: "blockquote",
+    a: "a",
     br: "br",
     code: "code",
     h1: "h1",
@@ -117,7 +117,13 @@ function _createMdxContent(props) {
         children: "Priority:"
       }), " HIGH", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-01-05 (v0.7.0.0+0 – Repository story created)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (v0.7.0.2+2 — UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task"
+      }), " wiring; UXR-001 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.7.0.1+2"
+      }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "T05"
+      }), " UXR-005 registry)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Estimated Effort:"
       }), " N/A (Perpetual repository)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Started:"
@@ -139,15 +145,64 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "task-checklist",
       children: "Task Checklist"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Repository Pattern:"
-        }), " Each User Experience Research report becomes a task in this repository story.\n", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Traceability:"
-        }), " UXR-001 = E7:S00", ":T01", ", UXR-002 = E7:S00", ":T02", ", etc.\n", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "Abstract Space:"
-        }), " v0.7.0.0+0 (repository story), v0.7.0.1+0 (first UXR), v0.7.0.2+0 (second UXR), etc."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      className: "contains-task-list",
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.input, {
+            type: "checkbox",
+            checked: true,
+            disabled: true
+          }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S00", ":T01", " – UXR-001 Migration User Experience Research"]
+          }), " - ✅ COMPLETE (v0.7.0.1+1 – Registry task filed; synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S05", ":T01"]
+          }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001",
+            children: "Task Document"
+          }), " | ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-001-migration-user-experience-research",
+            children: "UXR-001"
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.input, {
+            type: "checkbox",
+            checked: true,
+            disabled: true
+          }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S00", ":T02", " – UXR-002 Comprehensive UAT Migration Utilities"]
+          }), " - ✅ COMPLETE (v0.7.0.2+1 – Registry task filed; synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S05", ":T02"]
+          }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002",
+            children: "Task Document"
+          }), " | ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities",
+            children: "UXR-002"
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.input, {
+            type: "checkbox",
+            disabled: true
+          }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S00", ":T05", " – UXR-005 Kanban Board Formatting & Governance"]
+          }), " - TODO (v0.7.0.5+1 – Registry task filed; implementation ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S01", ":T09"]
+          }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005",
+            children: "Task Document"
+          }), " | ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance",
+            children: "UXR-005"
+          })]
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "overview",

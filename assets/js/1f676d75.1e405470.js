@@ -130,7 +130,11 @@ function _createMdxContent(props) {
         children: "Priority:"
       }), " HIGH", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-16 (v0.7.1.6+2 – Docusaurus portal scaffold + task doc naming standardization)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (v0.7.1.9+3 — UXR-005 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task"
+      }), " wiring; prior BUILD 2 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "validate_branch_context"
+      }), ")", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Estimated Effort:"
       }), " [TBD]", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Actual Effort:"
@@ -140,7 +144,7 @@ function _createMdxContent(props) {
         children: "Completed:"
       }), " [Reopened – TBD]", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.7.1.6+2", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " v0.7.1.9+1", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Code:"
       }), " E7S01"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -224,7 +228,9 @@ function _createMdxContent(props) {
           disabled: true
         }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
           children: ["E7:S01", ":T09", " – Kanban Template Governance & UXR Ownership"]
-        }), " - TODO (v0.7.1.7+0 – Implements UXR-005 spacing rule enforcement, validator updates, and assigns UXR ownership for Kanban templates; see task doc for RW anchoring)"]
+        }), " - TODO (v0.7.1.9+3 – UXR-005 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Implementing Task"
+        }), " in UXR doc; UXR-005 ACs still open — see task doc)"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {

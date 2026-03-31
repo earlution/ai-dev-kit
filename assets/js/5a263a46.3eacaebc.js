@@ -164,6 +164,11 @@ function _createMdxContent(props) {
       }), " HIGH", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Status:"
       }), " ACCEPTED", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task:"
+      }), " ", (0,jsx_runtime.jsxs)(_components.a, {
+        href: "epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md",
+        children: ["E7:S00", ":T02"]
+      }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "GitHub Issue:"
       }), " ", (0,jsx_runtime.jsx)(_components.a, {
         href: "https://github.com/earlution/ai-dev-kit/issues/6",
@@ -705,15 +710,21 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Epic: Epic 7 (UXR - User Experience Research)"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Story: Story 5 (Migration UXR Research)"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Task: Task 1 (UXR-002: Comprehensive UAT synthesis)"
+        children: "Epic: Epic 7"
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Story: ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S00"]
+        }), " (UXR repository story) — registry; synthesis remains ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S05"]
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Task: ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T02"]
+        }), " (UXR-002 registry task)"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["Version: ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "[TBD]"
-        })]
+          children: "v0.7.0.2+1"
+        }), " (task filed 2026-03-31)"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
@@ -728,14 +739,28 @@ function _createMdxContent(props) {
           })
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Story: ", (0,jsx_runtime.jsx)(_components.a, {
+        children: ["Story (registry): ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "Story-000-uxr-repo.md"
+          })
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Task: ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "T02-comprehensive-uat-migration-utilities-uxr-002.md"
+          })
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Synthesis (historical): ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
           children: (0,jsx_runtime.jsx)(_components.code, {
             children: "Story-005-migration-uxr-research.md"
           })
-        })]
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Task: [TBD]"
+        }), " (", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S05", ":T02"]
+        }), ")"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "references",

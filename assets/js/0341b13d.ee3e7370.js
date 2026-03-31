@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-fr-br-uxr-board-md-034.json
-const site_docs_project_management_kanban_fr_br_uxr_board_md_034_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/fr-br-uxr-board","title":"AI Dev Kit – FR/BR/UXR Prioritization Board","description":"Last UpdatedS09 MoSCOW coverage)","source":"@site/../docs/project-management/kanban/fr-br-uxr-board.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/fr-br-uxr-board","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-board","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/fr-br-uxr-board.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T15:15:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"User Experience Research: Kanban Board Formatting & Governance","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance"},"next":{"title":"AI Dev Kit – FR/BR/UXR Completed Items","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-completed"}}');
+const site_docs_project_management_kanban_fr_br_uxr_board_md_034_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/fr-br-uxr-board","title":"AI Dev Kit – FR/BR/UXR Prioritization Board","description":"Last UpdatedS09 coverage noted 2026-03-30)","source":"@site/../docs/project-management/kanban/fr-br-uxr-board.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/fr-br-uxr-board","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-board","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/fr-br-uxr-board.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T15:15:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"User Experience Research: Kanban Board Formatting & Governance","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance"},"next":{"title":"AI Dev Kit – FR/BR/UXR Completed Items","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-completed"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -115,9 +115,17 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Last Updated:"
-      }), " 2026-03-30 (BR-059 — UKW incomplete E5", ":S09", " MoSCOW coverage)\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "merge"
+      }), " epic/7 → ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "main"
+      }), "; UXR ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task"
+      }), " wiring; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "BR-059"
+      }), " MoSCOW / E5", ":S09", " coverage noted 2026-03-30)\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.5.9.7+1"]
+      }), " v0.7.0.2+2"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -259,23 +267,47 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-001"
-        }), " – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Migration User Experience Research - ✅ COMPLETE (HIGH, Registry ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T01"]
+        }), "; synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S05", ":T01"]
+        }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-001-migration-user-experience-research",
           children: "UXR-001"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001",
+          children: ["E7:S00", ":T01"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-002"
-        }), " – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Comprehensive UAT Migration Utilities - ✅ COMPLETE (HIGH, Registry ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T02"]
+        }), "; synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S05", ":T02"]
+        }), "; UAT PASS) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities",
           children: "UXR-002"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002",
+          children: ["E7:S00", ":T02"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-005"
-        }), " – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Kanban Board Formatting & Governance - TODO (HIGH, Implementation ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S01", ":T09"]
+        }), "; registry ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T05"]
+        }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance",
           children: "UXR-005"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005",
+          children: ["E7:S00", ":T05"]
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance",
+          children: ["E7:S01", ":T09"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {

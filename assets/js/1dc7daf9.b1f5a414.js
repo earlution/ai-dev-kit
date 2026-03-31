@@ -96,6 +96,7 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     br: "br",
     code: "code",
     em: "em",
@@ -130,7 +131,16 @@ function _createMdxContent(props) {
         children: "Priority:"
       }), " HIGH", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Status:"
-      }), " OPEN", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " ACCEPTED (registry ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E7:S00", ":T05"]
+      }), " filed 2026-03-31; implementation ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E7:S01", ":T09"]
+      }), " — UXR ACs still open)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementing Task:"
+      }), " ", (0,jsx_runtime.jsxs)(_components.a, {
+        href: "epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md",
+        children: ["E7:S01", ":T09"]
+      }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "GitHub Issue:"
       }), " ", (0,jsx_runtime.jsx)(_components.em, {
         children: "TBD"
@@ -334,11 +344,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Intake Status:"
-      }), " PENDING", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " ACCEPTED", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Intake Date:"
-      }), " 2026-03-16", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (registry task filed; implementation was already ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E7:S01", ":T09"]
+      }), ")", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Intake By:"
-      }), " Cascade on behalf of User"]
+      }), " AI Agent (Cursor)"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: "Decision Flow Results:"
@@ -349,32 +361,39 @@ function _createMdxContent(props) {
         className: "task-list-item",
         children: [(0,jsx_runtime.jsx)(_components.input, {
           type: "checkbox",
+          checked: true,
           disabled: true
-        }), " ", "Story Match Found: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
-        })]
+        }), " ", "Story Match Found: ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S00"]
+        }), " (UXR repository) + ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S01"]
+        }), " (implementation)"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: "Assigned To:"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Epic: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Epic: Epic 7"
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Story (registry): ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S00"]
+        }), " — ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T05"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Story: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
+        children: ["Story (implementation): ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S01"]
+        }), " — ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S01", ":T09"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Task: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Version: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
-        })]
+        children: ["Version: ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "v0.7.0.5+1"
+        }), " (registry filed); implementation versions follow ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S01"]
+        }), " RW"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {
@@ -382,16 +401,32 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Epic: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
+        children: ["Epic: ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "Epic-7.md"
+          })
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Story: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
+        children: ["Story (registry): ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "Story-000-uxr-repo.md"
+          })
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Task: ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "TBD"
+        children: ["Task (registry): ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "T05-kanban-board-formatting-governance-uxr-005.md"
+          })
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Task (implementation): ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "E07S01T09-kanban-template-governance.md"
+          })
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
