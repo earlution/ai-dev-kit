@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.2+9] - 31-03-26
+## [0.6.7.109+1] - 31-03-26
 
-E6:S06:T02 — **RW -k:** **BR-038** ↔ **E6:S06:T02** (`Task ID`, boards); perpetual **Ongoing** row cross-links **BR-039**/**T57** on **epic/6**.
+E6:S07:T109 — **RW -k:** **BR-059** implementing task (**UKW** MoSCOW must list all open story tasks); task template + boards on **epic/6-framework-management**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.2+9.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.109+1.md)

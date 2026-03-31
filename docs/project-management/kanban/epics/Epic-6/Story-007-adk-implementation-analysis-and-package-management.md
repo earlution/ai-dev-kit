@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-03-31 (**E6:S07:T109** BR-059 intake; UKW perpetual **v0.6.7.101+37**)
-**Version:** v0.6.7.101+37
+**Last updated:** 2026-03-31 (**RW -k E6:S07:T109** v0.6.7.109+1 — BR-059; UKW baseline **v0.6.7.101+37**)
+**Version:** v0.6.7.109+1
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).

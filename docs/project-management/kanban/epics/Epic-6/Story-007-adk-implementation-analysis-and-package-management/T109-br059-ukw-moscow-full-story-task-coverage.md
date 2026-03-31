@@ -13,12 +13,26 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-03-31  
-**Last updated:** 2026-03-31 — Intake from **BR-059**  
+**Last updated:** 2026-03-31 — **RW -k** v0.6.7.109+1 (kanban task release on **epic/6**)  
 **Code:** E6S07T109
 
 **Upstream:** [BR-059 – UKW MoSCOW incomplete story task coverage](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
 
 **Coordinates:** Perpetual UKW task [E6:S07:T101](T101-update-kanban-workflow-ukw.md); related [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md), [BR-034](../../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
+
+---
+
+## Input
+
+- [BR-059](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md); [Story-009](../../../Epic-5/Story-009-docusaurus-documentation-portal.md) checklist vs **kanban-board** MoSCOW history.
+
+## Deliverable
+
+- Updated UKW / agent guidance and (optional) automation so **all** open story tasks appear on MoSCOW or are explicitly deferred; **BR-059** resolution text. **RW -k** v0.6.7.109+1: kanban task/traceability only (implementation still TODO).
+
+## Version Anchor
+
+**Forensic marker:** **RW -k** v0.6.7.109+1 — task doc + boards (**work remains TODO** per **AC1–AC3**).
 
 ---
 
