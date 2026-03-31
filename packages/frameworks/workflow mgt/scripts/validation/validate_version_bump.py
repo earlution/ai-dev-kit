@@ -222,7 +222,8 @@ def find_story_file(config: Optional[Dict] = None, epic: int = None, story: int 
     for pattern in fallback_patterns:
         candidate_files.extend(project_root.glob(pattern))
     
-    if not epic or not story:
+    # Use explicit None check: story 0 (e.g. E7:S00) is valid; `not story` would wrongly skip.
+    if epic is None or story is None:
         # Return first match if no epic/story specified
         if candidate_files:
             return candidate_files[0]

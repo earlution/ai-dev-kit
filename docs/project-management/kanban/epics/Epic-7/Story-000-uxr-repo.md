@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (v0.7.0.2+2 — UXR-002 **Implementing Task** wiring; UXR-001 **v0.7.0.1+2**; **T05** UXR-005 registry)  
+**Last updated:** 2026-03-31 (**`RW -k`** **E7:S00:T03** **`v0.7.0.3+0`**; **T04** in follow-on **`RW -k`**; **T02** **v0.7.0.2+2**)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-05  
 **Completed:** N/A (Perpetual - never completes)  
@@ -27,6 +27,8 @@ housekeeping_policy: keep
 - [x] **E7:S00:T01 – UXR-001 Migration User Experience Research** - ✅ COMPLETE (v0.7.0.1+1 – Registry task filed; synthesis **E7:S05:T01**) - [Task Document](Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001.md) | [UXR-001](../../fr-br/UXR-001-migration-user-experience-research.md)
 
 - [x] **E7:S00:T02 – UXR-002 Comprehensive UAT Migration Utilities** - ✅ COMPLETE (v0.7.0.2+1 – Registry task filed; synthesis **E7:S05:T02**) - [Task Document](Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md) | [UXR-002](../../fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
+
+- [ ] **E7:S00:T03 – UXR-003 repository anchor** — [Task doc](Story-000-uxr-repo/T03-uxr-003-repository-anchor.md) | [UXR-003](../../fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md) | Impl: [E7:S05:T03](Story-005-migration-uxr-research.md)
 
 - [ ] **E7:S00:T05 – UXR-005 Kanban Board Formatting & Governance** - TODO (v0.7.0.5+1 – Registry task filed; implementation **E7:S01:T09**) - [Task Document](Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md) | [UXR-005](../../fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 

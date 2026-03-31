@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.0.2+2] - 31-03-26
+## [0.7.0.3+0] - 31-03-26
 
-E7:S00:T02 — **UXR-002** intake: **`Implementing Task`** in [UXR-002](docs/project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities.md) → [T02](docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md).
+E7:S00:T03 **`RW -k`** (**+0**) — **UXR-003** repository anchor [T03](docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor.md); **fr-br-uxr-board** + **Story-000** slice (**T04** → next **`RW -k`**). [UXR-003](docs/project-management/kanban/fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.0.2+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.0.3+0.md)
