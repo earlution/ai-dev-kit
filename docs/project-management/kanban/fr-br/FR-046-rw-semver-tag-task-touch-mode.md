@@ -13,6 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** XOforge (contributing to AI Dev Kit)  
 **Priority:** HIGH  
 **Status:** PENDING  
+**Implementing Task:** [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)  
 **GitHub Issue:** [#19](https://github.com/earlution/ai-dev-kit/issues/19)
 
 ---
@@ -184,7 +185,7 @@ Using SemVer tags when task_touch is enabled ensures:
 
 - Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](../epics/Epic-5/Epic-5.md)
 - Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](../epics/Epic-5/Story-001-fr-repo.md)
-- Task: _TBD (implementation task once created)_
+- Task: [`T46 – RW SemVer tag when task_touch`](../epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)
 
 ---
 

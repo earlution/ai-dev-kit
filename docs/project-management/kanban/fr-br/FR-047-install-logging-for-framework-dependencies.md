@@ -13,7 +13,8 @@ housekeeping_policy: keep
 **Submitted:** 2026-02-27  
 **Submitted By:** earlution  
 **Priority:** HIGH  
-**Status:** IN PROGRESS
+**Status:** IN PROGRESS  
+**Implementing Task:** [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 
 ---
 
@@ -174,6 +175,7 @@ This FR proposes adding **structured install logging** so that each invocation o
 - Version: `0.5.1.47+0` (abstract space, to be set when first implementation task runs RW)
 
 **Kanban Links:**
-- Epic: `docs/project-management/kanban/epics/Epic-5/Epic-5.md`  
-- Story: `docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`  
+- Epic: [`Epic-5.md`](../epics/Epic-5/Epic-5.md)  
+- Story: [`Story-001-fr-repo.md`](../epics/Epic-5/Story-001-fr-repo.md)  
+- Task: [`T47 – Install logging`](../epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 

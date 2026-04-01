@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-03-30 (v0.6.7.103+4 – T103 RW -d FU-2 wiring)
-**Version:** v0.6.7.103+4
+**Last updated:** 2026-03-31 (**RW -k E6:S07:T109** v0.6.7.109+1 — BR-059; UKW baseline **v0.6.7.101+37**)
+**Version:** v0.6.7.109+1
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -110,6 +110,10 @@ housekeeping_policy: keep
 - [x] **E6:S07:T107 – Workflows Directory Structure Reorganization** ✅ COMPLETE
   - Task: [`T107-workflows-directory-structure-reorganization.md`](T107-workflows-directory-structure-reorganization.md)
   - **Scope:** Reorganize workflows directory into named subdirectories for better organization and maintainability
+
+
+- [ ] **E6:S07:T109 – BR-059: UKW MoSCOW full open-task coverage per in-progress story** - TODO (HIGH, board must list all open story tasks or explicit **Won’t** deferrals; fail loud on partial enumeration)
+  - Task: [`T109-br059-ukw-moscow-full-story-task-coverage.md`](T109-br059-ukw-moscow-full-story-task-coverage.md) | [BR-059](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
 
 
 ---

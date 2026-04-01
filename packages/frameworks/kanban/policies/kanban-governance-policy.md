@@ -44,20 +44,34 @@ policy_salience:
         - "check task is linked to story and epic"
         - "ensure version matches task"
     - id: KG-R2
-      summary: "Every Feature Request (FR) and Bug Report (BR) MUST result in at least one Kanban Task."
+      summary: "Every Feature Request (FR), Bug Report (BR), and User Experience Research item (UXR) MUST resolve to at least one Kanban Task with bidirectional links; task creation MUST complete in the same intake session as the FR/BR/UXR document (no orphan FR/BR/UXR files)."
       must_level: MUST
       when_applies:
         - "fr-br-intake"
         - "fr-br-committed"
+        - "uxr-intake"
       enforcement:
         owner: ["fr-br-intake-workflow"]
         mechanisms:
           - "fr-br-intake-validation"
           - "task-creation-workflow"
       validation_hints:
-        - "check FR/BR document has assigned task"
-        - "verify task document exists"
-        - "ensure task links back to FR/BR"
+        - "check FR/BR/UXR document has Implementing Task or explicit primary task link before intake ends"
+        - "verify task document exists on disk in the same change set"
+        - "ensure task links back to FR/BR/UXR"
+    - id: KG-R6
+      summary: "Primary implementing tasks SHOULD live under the semantically appropriate Story (delivery context). FR/BR/UXR id MUST NOT be required to match task number (E/S/T); numeric 1:1 (e.g. FR-047 → E5:S01:T47) is an optional filing convention, not a global rule."
+      must_level: SHOULD
+      when_applies:
+        - "fr-br-intake"
+        - "task-creation"
+      enforcement:
+        owner: ["fr-br-intake-workflow", "story-owners"]
+        mechanisms:
+          - "intake-decision-flow"
+          - "code-review"
+      validation_hints:
+        - "if using repository story for intake-only RW, add pointer row or Implementing Task to real delivery task when they differ"
     - id: KG-R3
       summary: "Tasks must always live under a Story, which must always live under an Epic (once epics are in use)."
       must_level: MUST
@@ -153,7 +167,7 @@ policy_salience:
 # Kanban Governance Policy
 
 **Owner:** Product Ops / Project Leadership  
-**Last Updated:** 2025-12-02  
+**Last Updated:** 2026-03-31  
 **Applies To:** All work streams that adopt this Kanban system (project-agnostic)  
 **Source Example:** Confidentia project (original implementation), fynd.deals Epic 15 (operational patterns)
 
@@ -196,15 +210,17 @@ Task (Kanban)
 **Principle:** All substantive work MUST be task-driven.
 If work doesn't map to a task, the Kanban needs updating.
 
-**FR/BR Source of Truth:**  
-- Every **Feature Request (FR)** and **Bug Report (BR)** MUST result in at least one **Kanban Task**.  
+**FR/BR/UXR source of truth:**  
+- Every **FR**, **BR**, and **UXR** MUST resolve to **at least one** **Kanban Task** (the **primary implementing** task may be shared across multiple reports if scope is intentionally combined—then every doc MUST cite that task).  
 - Tasks must always live **under a Story**, which must always live **under an Epic** (once epics are in use for the project).
 
-**FR/BR → Task → Story → Epic flow (canonical rule):**
+**Atomic intake (blocking):** Creating or materially filing an FR/BR/UXR **without** creating/linking its task **in the same working session** is **forbidden**. Agents and humans MUST finish: (1) FR/BR/UXR markdown, (2) task markdown under the chosen story, (3) bidirectional **`Implementing Task:`** / **Associated BR/FR/UXR** links, (4) story checklist row (or explicit note when checklist update is deferred with owner). **RW / RW -k** may follow but MUST NOT be the first time the task appears.
 
-1. **FR/BR arrives** (issue tracker, support channel, notes, etc.).
-2. **Check for existing Story** that matches the FR/BR scope:
-   - If found → create a **new Task document** under that Story.
+**FR/BR/UXR → Task → Story → Epic flow (canonical rule):**
+
+1. **FR/BR/UXR arrives** (issue tracker, support channel, notes, etc.).
+2. **Check for existing Story** that matches the **delivery** scope (semantic fit—not only repository story):
+   - If found → create a **new Task document** under that Story when scope is new; or attach to an existing task if the report truly duplicates that work.
 3. **If no Story exists** for this area:
    - Create a new Story under the **appropriate Epic**.
    - Then create the **Task document** under that Story.
@@ -212,8 +228,11 @@ If work doesn't map to a task, the Kanban needs updating.
    - Create a new, conceptually broad **Epic** to host the new Story.
    - Then create the Story under that Epic.
    - Then create the **Task document** under that Story.
+5. **Immediately** wire the FR/BR/UXR header to the task and the task doc back to the FR/BR/UXR.
 
-**CRITICAL:** No FR/BR should exist without a corresponding **Task document** anchored to a Story (and, once epics are in use, an Epic). This keeps Kanban, versioning, and release workflow aligned.
+**CRITICAL:** No FR/BR/UXR should exist without a corresponding **Task document** anchored to a Story (and Epic). This keeps Kanban, versioning, and release workflow aligned.
+
+**Traceability vs story semantics (KG-R6):** Many projects use a **repository story** (e.g. perpetual FR/BR/UXR repo) plus optional **numeric symmetry** (FR-047 → …:T47) for quick audits. That symmetry is **optional**. The **primary** task SHOULD sit under the story that matches **where work actually happens** (e.g. framework fixes under Epic 6, docs portal under Epic 5). Do **not** create a second “shadow” task solely to preserve id symmetry unless policy explicitly requires it—use links and checklist pointers instead.
 
 ---
 
@@ -384,11 +403,11 @@ Repository stories are marked with **Status: IN PROGRESS (PERPETUAL)** and have 
 
 **Note:** S00 is Epic-level abstract space only (no tasks). Repository stories migrated from S00 to S01 as part of repository story abstract space resolution (E9:S01:T08).
 
-**Traceability Pattern:**
+**Traceability pattern (conventional, not mandatory):**
 
-- FR-001 = E5:S01:T01 (story-level abstract space: v0.5.1.1+0)
-- BR-001 = E6:S01:T01 (story-level abstract space: v0.6.1.1+0)
-- UXR-001 = E7:S01:T01 (story-level abstract space: v0.7.1.1+0)
+- Some **adopter** layouts use **symmetric ids**: e.g. FR-001 ↔ E5:S01:T01, BR-001 ↔ E6:S01:T01, UXR-001 ↔ repository slot in Epic 7 (`Story-000` / `S00` or `S01` per epic charter).
+- **ai-dev-kit:** Epic 7 UXR **repository** pattern is documented in **`E7:S00`** (see project Story-000); Epic 5 FR repo commonly uses **E5:S01:Tnn** aligned with FR number—**convenient, optional**.
+- **Regardless of numbering,** every FR/BR/UXR MUST still satisfy **KG-R2** (≥1 task, same-session creation, bidirectional links). Prefer **one** primary delivery task in a **semantically correct** story over id pattern purity.
 
 **Board Display Rules:**
 

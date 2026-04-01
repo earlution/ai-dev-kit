@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.7.1.9+3] - 31-03-26
+
+E7:S01:T09 — **UXR-005** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.1.9+3.md)
+
+---
+---
+---
 ## [0.7.0.4+1] - 31-03-26
 
 Merge **`epic/7-documentation-maintenance`** into **`main`** (E7:S00:T04 + integration).
@@ -44,11 +53,74 @@ E7:S00:T01 — **UXR-001** **Implementing Task** wiring.
 ---
 ---
 ---
-## [0.7.1.9+3] - 31-03-26
+## [0.5.1.74+3] - 31-03-26
 
-E7:S01:T09 — **UXR-005** **Implementing Task** wiring.
+E5:S01:T74 **+3** — Intake reconciliation: board + T73 + BRs ↔ epic/6 **T57** / **T109-br059**; drop draft T43/dup T109.
 
-[Detailed changelog](CHANGELOG_v0.7.1.9+3.md)
+[Detailed changelog](CHANGELOG_v0.5.1.74+3.md)
+
+---
+---
+---
+## [0.5.1.74+2] - 31-03-26
+
+E5:S01:T74 **+2** — **FR-073** Phase B/C: T43/T109 filing, E7:S00 UXR anchors, fr-br-uxr-board MoSCOW links; T73 narrative closure.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+2.md)
+
+---
+---
+---
+## [0.5.1.74+1] - 31-03-26
+
+E5:S01:T74 — **FR-074** intake hardening: KG-R2 atomic intake, KG-R6 semantic placement; governance, guides, skill, workflow, board alignment.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+1.md)
+
+---
+---
+---
+## [0.5.1.47+6] - 31-03-26
+
+E5:S01:T47 — **FR-047** intake: **Implementing Task** wiring and task link in FR.
+
+[Detailed changelog](CHANGELOG_v0.5.1.47+6.md)
+
+---
+---
+---
+## [0.5.1.46+3] - 31-03-26
+
+E5:S01:T46 — **FR-046** intake: **Implementing Task** wiring and T46 traceability refresh.
+
+[Detailed changelog](CHANGELOG_v0.5.1.46+3.md)
+
+---
+---
+---
+## [0.5.1.32+1] - 31-03-26
+
+Merge **`epic/5-documentation-management`** into **`main`** (E5:S01:T32 + Epic 7 / intake history retained).
+
+[Detailed changelog](CHANGELOG_v0.5.1.32+1.md)
+
+---
+---
+---
+## [0.5.1.32+0] - 31-03-26
+
+E5:S01:T32 **`RW -k`** — FR-032/T32 doc-init + fr-br-uxr-board reconciliation.
+
+[Detailed changelog](CHANGELOG_v0.5.1.32+0.md)
+
+---
+---
+---
+## [0.5.1.21+0] - 31-03-26
+
+E5:S01:T21 **`RW -k`** — FR-021/T21 doc-init + FR-034 implementing link + board/T73 slice.
+
+[Detailed changelog](CHANGELOG_v0.5.1.21+0.md)
 
 ---
 ---

@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-30 (T69 ✅ v0.5.1.69+1 — FR-064 shields branch retired; T68 ✅ v0.5.1.68+2)
+**Last updated:** 2026-03-31 (RW **v0.5.1.32+0** **`RW -k`** **E5:S01:T32**; prior **`v0.5.1.21+0`** **T21**)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.68+2
+**Version:** v0.5.1.73+0
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -31,7 +31,9 @@ housekeeping_policy: keep
 > **Traceability:** FR-001 = E5:S01:T01, FR-002 = E5:S01:T02, etc.
 > **Abstract Space:** v0.5.1.0+0 (repository story), v0.5.1.1+0 (first FR), v0.5.1.2+0 (second FR), etc.
 
+- [ ] **E5:S01:T21 – FR/BR/UXR Repository Stories (S01 pattern)** - TODO (MEDIUM — **v0.5.1.21+0** intake; reconcile **FR-021** with **E7:S00** via **T72**) - [Task Document](Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md) | [FR-021](../../fr-br/FR-021-fr-br-uxr-repository-stories.md)
 - [ ] **E5:S01:T31 – Multi-Agent Coordination Feasibility Investigation** - TODO (C priority) - [Task Document](Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
+- [ ] **E5:S01:T32 – Release Candidate Readiness Gap Analysis** - TODO (MEDIUM — **v0.5.1.32+0** **`RW -k`**) - [Task Document](Story-001-fr-repo/T32-release-candidate-readiness-gap-analysis.md) | [FR-032](../../fr-br/FR-032-release-candidate-readiness-gap-analysis.md)
 - [x] **E5:S01:T34 – UKW Granular Control and Use Case Flags** - ✅ COMPLETE (v0.5.1.34+1 – Implementation complete: UKW granular control via flags and syntax parser) - [Task Document](Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
 - [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
 - [x] **E5:S01:T36 – RW Update Kanban Board on Task Completion** - ✅ COMPLETE (v0.5.1.36+1 – Implementation complete: Kanban board updates added to RW Step 7) - [Task Document](Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) | [FR-040](../../fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)
@@ -53,6 +55,9 @@ housekeeping_policy: keep
 - [x] **E5:S01:T67 – Adopter Install Docs — RW Task Token (FR-060)** - ✅ COMPLETE (v0.5.1.67+2 — INSTALL + installation/usage/FAQ/troubleshooting; workflow mgt README; PACKAGE_INSTALLATION_GUIDE; +1 was RW-k) - [Task Document](Story-001-fr-repo/T67-adopter-install-docs-rw-task-token.md)
 - [x] **E5:S01:T68 – Packaged Frameworks — Consumer Paths and Versioning Hygiene** - ✅ COMPLETE (v0.5.1.68+2 — `rw-validators-consumer-layout.md`; workflow mgt + packages README; numbering + kanban README; +1 was RW-k) - [Task Document](Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning.md)
 - [x] **E5:S01:T69 – Retire `shields` branch (private repo badges, FR-064)** - ✅ COMPLETE (v0.5.1.69+1 — removed `update-badges.yml` BYOB; README static badges; deleted `origin/shields`) - [Task Document](Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md) | [FR-064](../../fr-br/FR-064-shields-branch-private-repo-badges.md)
+- [ ] **E5:S01:T72 – Uniform Repository vs Abstract-Space Kanban Rules** - TODO (HIGH priority — **v0.5.1.72+0** intake; governance: evaluate approaches, decide **S00**/repository model, reconcile **FR-021** vs **E7:S00** UXR) - [Task Document](Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md) | [FR-072](../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md)
+- [x] **E5:S01:T73 – FR/BR/UXR Board: Open ∧ Taskless Intake Execution Plan** ✅ COMPLETE (v0.5.1.74+2 narrative closure) — **FR-073**; Phase B/C filed (**T43**, **T109**, **E7:S00** anchors, board MoSCOW) - [Task Document](Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [FR-073](../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
+- [x] **E5:S01:T74 – Kanban Intake: Atomic KG-R2 & Semantic KG-R6** ✅ COMPLETE (v0.5.1.74+1 … **+3** reconciliation) — **FR-074**; governance + guides + skill + workflow + board + **epic/6** canonical **T57**/**T109** alignment - [Task Document](Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md) | [FR-074](../../fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md)
 
 ---
 

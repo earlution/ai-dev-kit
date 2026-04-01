@@ -9,11 +9,12 @@ housekeeping_policy: keep
 # Bug Report BR-059: UKW MoSCOW Update Omits In-Progress Story Tasks (Incomplete Coverage)
 
 **Bug ID:** BR-059  
-**Task ID:** *(none — investigation / fix task TBD)*  
+**Task ID:** [E6:S07:T109](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md)  
 **Priority:** HIGH  
 **Severity:** MEDIUM (board SoT diverges from story checklist; planners lose visibility)  
 **Status:** OPEN  
 **Created:** 2026-03-30  
+**Last updated:** 2026-03-31 — Implementing task **E6:S07:T109** filed  
 **Classification:** UKW + Kanban board accuracy
 
 ---
@@ -71,6 +72,7 @@ A **comprehensive UKW** run promoted **E5:S09:T01** to the MoSCOW **Should** sec
 
 ## Related work
 
+- **Implementing task:** [E6:S07:T109](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md)
 - **Story:** [E5:S09 – Docusaurus Documentation Portal](../epics/Epic-5/Story-009-docusaurus-documentation-portal.md)  
 - **Related BR:** [BR-042](BR-042-ukw-agent-board-cleanup-failure.md) (completed tasks left on board — opposite failure mode)  
 - **Related BR:** [BR-034](BR-034-ukw-moscow-prioritization-missing.md)  

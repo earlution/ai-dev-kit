@@ -1,7 +1,10 @@
 name: Intake Workflow
 version: 1.0.0
 type: intake
-description: Automated intake workflow for FR/BR/UXR reports into Kanban system
+description: >
+  Automated intake for FR/BR/UXR into Kanban. Policy: atomic intake (KG-R2)—task
+  document + bidirectional links in the same session as the report; KG-R6—primary
+  task under delivery-appropriate story; optional FR-nnn↔Tnn symmetry.
 
 config:
   fr_br_dir: docs/project-management/kanban/fr-br

@@ -16,6 +16,8 @@ housekeeping_policy: keep
 **GitHub Issue:** [TBD]  
 **Version:** v0.5.1.34+1 (Internal) | v0.5.39+1 (SemVer)
 
+**Implementing Task:** [E5:S01:T34](../epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md)
+
 ---
 
 ## Summary

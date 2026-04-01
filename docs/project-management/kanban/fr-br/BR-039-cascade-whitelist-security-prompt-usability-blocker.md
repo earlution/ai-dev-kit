@@ -12,9 +12,10 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-03-09  
-**Last updated:** 2026-03-09  
+**Last updated:** 2026-03-31 — Implementing task **E6:S06:T57** filed (kanban intake)  
 **Version:** v0.6.7.101+34  
-**Code:** BR-039
+**Code:** BR-039  
+**Implementing Task:** [E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
 
 ---
 
@@ -119,6 +120,7 @@ Cascade's whitelist feature is non-functional, creating constant security prompt
 
 - **BR-038:** Release Workflow Micromanagement and Tool Discovery Issues (symptom of this root cause)
 - **E6:S06:T02:** Fix Release Workflow Micromanagement Issues (attempted to fix symptoms, not root cause)
+- **E6:S06:T57:** Implementing task — [T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
 
 ## Priority Justification
 

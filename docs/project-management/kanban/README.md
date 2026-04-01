@@ -103,14 +103,16 @@ The **FR/BR/UXR Prioritization Board** provides centralized visibility and prior
 3. **Update Board views:** `_index.md` (quick view), `kanban-board.md` (tasks), `kanban-structure.md` (epics), `kanban-board-guide.md` (guide), `kanban-completed.md` (completed tasks)
 4. **Track Progress:** Update Epic and Story docs as work progresses
 
-### FR/BR/UXR Workflow
+### FR/BR/UXR Workflow (atomic intake — **KG-R2**)
 
-1. **Create FR/BR/UXR:** Add document to `fr-br/` directory with appropriate prefix (FR/BR/UXR)
-2. **Prioritize:** Add item to `fr-br-uxr-board.md` under appropriate MoSCOW section
-3. **Update Structure:** Add item to `fr-br-uxr-structure.md` in type-specific section
-4. **Update templates/docs:** UXR owns Kanban template/document updates across `kanban-board*.md`, `kanban-structure.md`, and related templates to keep formatting/terminology aligned
-5. **Track Progress:** Update status and move to `fr-br-uxr-completed.md` when implemented
-6. **Create Tasks:** Convert FR/BR/UXRs to Kanban tasks following intake process
+1. **Create FR/BR/UXR:** Add document to `fr-br/` with prefix **FR-** / **BR-** / **UXR-**
+2. **Same session — create task:** Add task doc under the **semantically appropriate** story; set **`Implementing Task:`** on the report and link back from the task (**no orphan reports**)
+3. **Story checklist / boards:** Update story checklist row; add to `fr-br-uxr-board.md` (MoSCOW) and `fr-br-uxr-structure.md` as needed
+4. **Templates/docs:** UXR/governance owns template and board formatting rules where applicable
+5. **Track progress:** Status updates; move to `fr-br-uxr-completed.md` when done
+6. **Version:** Run **RW** / **RW -k** on the correct epic branch when releasing
+
+See `docs/project-management/rituals/policy/kanban-governance-policy.md` § **1.2** and `packages/frameworks/kanban/policies/kanban-governance-policy.md` (**KG-R2**, **KG-R6**).
 
 ### Integration Points
 

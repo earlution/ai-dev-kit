@@ -41,6 +41,9 @@ housekeeping_policy: keep
 - [x] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - ✅ COMPLETED (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
   - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
 
+- [ ] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - TODO (CRITICAL, **BR-039**: whitelist persistence / prompt fatigue in Windsurf Cascade; repo tracks escalation, evidence, re-verification — product fix is vendor-side)
+  - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](T57-br039-cascade-whitelist-security-prompt-blocker.md) | [BR-039](../../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
+
 - [x] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - ✅ COMPLETE (v0.6.6.56+4) (HIGH priority, BR-056: validate_rw_task_intent + Step 1b; live verification 2026-03-25)
   - Task: [`T56-rw-ambiguous-task-identifier-typo-risk.md`](T56-rw-ambiguous-task-identifier-typo-risk.md) | [BR-056](../../../fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
 
