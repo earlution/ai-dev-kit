@@ -134,9 +134,19 @@ function _createMdxContent(props) {
         children: "Completed:"
       }), " [Reopened – TBD]", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-31 (v0.7.0.2+2 — UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Implementing Task"
-      }), " wiring; E7:S00", ":T02", ")\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-03-31 (", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "RW -k"
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.7.0.4+0"
+      }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E7:S00", ":T04"]
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "UXR-004"
+      }), "; prior ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "T03"
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.7.0.3+0"
+      }), ")\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Branch:"
       }), " ", (0,jsx_runtime.jsx)(_components.code, {
         children: "epic/7-documentation-maintenance"
@@ -161,11 +171,19 @@ function _createMdxContent(props) {
             disabled: true
           }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
             children: ["E7", ":S00", " – UXR Repo (PERPETUAL)"]
-          }), " - IN PROGRESS (PERPETUAL - v0.7.0.2+2 ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " - IN PROGRESS (PERPETUAL - ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "v0.7.0.4+0"
+          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "RW -k"
+          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "T04"
+          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "UXR-004"
+          }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "T03"
+          }), " v0.7.0.3+0; ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "T02"
-          }), " UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Implementing Task"
-          }), " wired; ", (0,jsx_runtime.jsx)(_components.strong, {
+          }), " v0.7.0.2+2; ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "T01"
           }), " v0.7.0.1+2; ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "T05"
@@ -768,9 +786,7 @@ function _createMdxContent(props) {
         children: "Estimated Effort:"
       }), " [TBD]", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-31 (v0.7.0.2+2 — UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Implementing Task"
-      }), " wiring; E7:S00", ":T02", ")"]
+      }), " 2026-03-20 (v0.7.6.9+1 – Story 6 T01–T17 + T10–T17 review tasks complete)"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Goal:"

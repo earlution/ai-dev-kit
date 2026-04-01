@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-fr-br-uxr-board-md-034.json
-const site_docs_project_management_kanban_fr_br_uxr_board_md_034_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/fr-br-uxr-board","title":"AI Dev Kit – FR/BR/UXR Prioritization Board","description":"Last UpdatedS09 coverage noted 2026-03-30)","source":"@site/../docs/project-management/kanban/fr-br-uxr-board.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/fr-br-uxr-board","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-board","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/fr-br-uxr-board.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T15:15:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"User Experience Research: Kanban Board Formatting & Governance","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance"},"next":{"title":"AI Dev Kit – FR/BR/UXR Completed Items","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-completed"}}');
+const site_docs_project_management_kanban_fr_br_uxr_board_md_034_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/fr-br-uxr-board","title":"AI Dev Kit – FR/BR/UXR Prioritization Board","description":"Last Updated merged epic/7-documentation-maintenance; v0.7.0.4+1 E7T04; Epic/5 RW -k T21 / T32; BR-059 / E5:S09 MoSCOW context)","source":"@site/../docs/project-management/kanban/fr-br-uxr-board.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/fr-br-uxr-board","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-board","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/fr-br-uxr-board.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T15:15:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"User Experience Research: Kanban Board Formatting & Governance","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance"},"next":{"title":"AI Dev Kit – FR/BR/UXR Completed Items","permalink":"/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-completed"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -45,6 +45,34 @@ const toc = [{
   "value": "Overview",
   "id": "overview",
   "level": 2
+}, {
+  "value": "Intake plan: open ∧ taskless (epic branch + <code>RW -k</code>)",
+  "id": "intake-plan-open--taskless-epic-branch--rw--k",
+  "level": 2
+}, {
+  "value": "Pre-identified task mapping (MoSCOW Must / Should)",
+  "id": "pre-identified-task-mapping-moscow-must--should",
+  "level": 3
+}, {
+  "value": "Recently completed (reference)",
+  "id": "recently-completed-reference",
+  "level": 3
+}, {
+  "value": "MoSCOW queue — remaining taskless <em>on board lines</em>",
+  "id": "moscow-queue--remaining-taskless-on-board-lines",
+  "level": 3
+}, {
+  "value": "Already linked on MoSCOW rows (intake at board level)",
+  "id": "already-linked-on-moscow-rows-intake-at-board-level",
+  "level": 3
+}, {
+  "value": "Source-of-truth and hygiene (read before filing)",
+  "id": "source-of-truth-and-hygiene-read-before-filing",
+  "level": 3
+}, {
+  "value": "Suggested execution order",
+  "id": "suggested-execution-order",
+  "level": 3
 }, {
   "value": "MoSCOW Prioritized FR/BR/UXR Items",
   "id": "moscow-prioritized-frbruxr-items",
@@ -102,6 +130,12 @@ function _createMdxContent(props) {
     ol: "ol",
     p: "p",
     strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.R)(),
     ...props.components
@@ -116,16 +150,32 @@ function _createMdxContent(props) {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Last Updated:"
       }), " 2026-03-31 (", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "merge"
-      }), " epic/7 → ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "main"
-      }), "; UXR ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Implementing Task"
-      }), " wiring; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "main:"
+      }), " merged ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "epic/7-documentation-maintenance"
+      }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.7.0.4+1"
+      }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E7:S00", ":T04"]
+      }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Epic/5"
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "RW -k"
+        })
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "T21"
+      }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "T32"
+      }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "BR-059"
-      }), " MoSCOW / E5", ":S09", " coverage noted 2026-03-30)\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " / E5", ":S09", " MoSCOW context)\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.7.0.2+2"]
+      }), " v0.7.0.4+1 ", (0,jsx_runtime.jsxs)(_components.em, {
+        children: ["(documentation board; see ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "version.py"
+        }), " for SoT)"]
+      })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -194,6 +244,864 @@ function _createMdxContent(props) {
           children: "Integration"
         }), " - Links to individual documents and implementing tasks"]
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
+      id: "intake-plan-open--taskless-epic-branch--rw--k",
+      children: ["Intake plan: open ∧ taskless (epic branch + ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "RW -k"
+      }), ")"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Kanban anchor:"
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md",
+          children: "FR-073"
+        })
+      }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsxs)(_components.a, {
+          href: "epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md",
+          children: ["E5:S01", ":T73"]
+        })
+      }), " — concrete phased plan, acceptance criteria, and maintenance checklists live in the task doc; this section is the operator-facing summary."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Working definition — “open ∧ taskless”:"
+      }), " The item is still ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "active"
+      }), " on this board (or in ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "fr-br",
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "fr-br/"
+        })
+      }), ") but lacks full Kanban wiring: no task document (or no stable ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E#", ":S", "#", ":T", "#"]
+      }), "), missing ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "Implementing Task:"
+        })
+      }), " in the FR/BR/UXR header, and/or no story checklist row."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Execution loop:"
+      }), " Check out the ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "owning epic branch"
+      }), " (per ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Primary epic branch"
+      }), " below) → create/link the task doc and bidirectional ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "Implementing Task"
+        })
+      }), " ↔ task → run ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "RW -k E#:S#:T#"
+        })
+      }), " so ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "version.py"
+      }), ", changelog, and SemVer registry match the intake."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "pre-identified-task-mapping-moscow-must--should",
+      children: "Pre-identified task mapping (MoSCOW Must / Should)"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Purpose:"
+      }), " Every high-priority ", (0,jsx_runtime.jsx)(_components.em, {
+        children: "taskless"
+      }), " row has a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "reserved target E/S/T"
+      }), " before intake runs—no ad hoc task numbers during ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "RW -k"
+      }), ".", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Canonical detail:"
+      }), " Expanded rationale and deltas live in ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsxs)(_components.a, {
+          href: "epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md",
+          children: ["E5:S01", ":T73"]
+        })
+      }), "; this table is the operator view."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "FR/BR/UXR"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Type"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Primary task ID"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Status"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Primary epic branch"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Why this story / epic"
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BR-038"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "BR"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E6:S06", ":T02"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Linked"
+            }), " (board + MoSCOW)"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/6-framework-management"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E6", ":S06"]
+            }), " is the framework ", (0,jsx_runtime.jsx)(_components.em, {
+              children: "Feature Requests/stories"
+            }), " home for RW reliability work; T02 owns BR-038."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BR-039"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "BR"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E6:S06", ":T57"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Released"
+            }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.6.6.57+1"
+              })
+            }), " on ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/6"
+            }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "RW -k"
+            }), "; supersedes draft ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "T43"
+            }), " id)"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/6-framework-management"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.a, {
+              href: "epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md",
+              children: "T57"
+            }), "."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BR-059"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "BR"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E6:S07", ":T109"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Released"
+            }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.6.7.109+1"
+              })
+            }), " on ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/6"
+            }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "RW -k"
+            }), ")"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/6-framework-management"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.a, {
+              href: "epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md",
+              children: "T109-br059"
+            }), "."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-040"
+            }), " (ICW)"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "FR"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S01", ":T40"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Linked"
+            }), " (FR header + MoSCOW)"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/5-documentation-management"
+            }), " (FR anchor) / work may trace via ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Epic 6"
+            }), " merges as needed"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-040-implementation-cycle-workflow-icw",
+              children: "FR-040 ICW"
+            }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "T40"
+            }), ". ", (0,jsx_runtime.jsx)(_components.em, {
+              children: "Known debt:"
+            }), " duplicate ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "FR-040-*.md"
+            }), " slug (", (0,jsx_runtime.jsx)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-040-rw-update-kanban-board-on-task-completion",
+              children: "FR-040 rw-update…"
+            }), ") ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S01", ":T36"]
+            }), " — reconcile under ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-072"
+            }), ", not here."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "UXR-001"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "UXR"
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S00", ":T01"]
+            }), " (repo) · ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S05", ":T01"]
+            }), " (impl — exists)"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Released"
+            }), " on ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "epic/7"
+              })
+            }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.7.0.1+2"
+              })
+            }), "); ", (0,jsx_runtime.jsxs)(_components.a, {
+              href: "epics/Epic-7/Story-000-uxr-repo/T01-uxr-001-repository-anchor.md",
+              children: ["repo anchor on ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "epic/5"
+              }), " copy"]
+            })]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/7-documentation-maintenance"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["On ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "epic/7"
+              })
+            }), " branch, registry task filename is ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "T01-migration-user-experience-research-uxr-001.md"
+              })
+            }), " (merge for single canonical name)."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "UXR-002"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "UXR"
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S00", ":T02"]
+            }), " (repo) · ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S05", ":T02"]
+            }), " (impl — exists)"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Released"
+            }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.7.0.2+2"
+              })
+            }), " on ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "epic/7"
+              })
+            })]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/7-documentation-maintenance"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: [(0,jsx_runtime.jsx)(_components.code, {
+                children: "epic/7"
+              }), ":"]
+            }), " ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "T02-comprehensive-uat-migration-utilities-uxr-002.md"
+            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "epic/5"
+            }), " copy: ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "epics/Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md",
+              children: "T02 anchor"
+            }), "."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "UXR-005"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "UXR"
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S00", ":T05"]
+            }), " (repo) · ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S01", ":T09"]
+            }), " (impl — exists)"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Task doc ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.7.0.5+1"
+              })
+            }), " on ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "epic/7"
+              })
+            })]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/7-documentation-maintenance"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: [(0,jsx_runtime.jsx)(_components.code, {
+                children: "epic/7"
+              }), ":"]
+            }), " ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "T05-kanban-board-formatting-governance-uxr-005.md"
+            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "epic/5"
+            }), " copy: ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "epics/Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md",
+              children: "T05 anchor"
+            }), "."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-073"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "FR"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S01", ":T73"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Exists"
+            }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.5.1.73+0"
+              })
+            }), " doc-init)"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/5-documentation-management"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Meta-FR for this intake plan; ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5", ":S01"]
+            }), " is FR Repo PERPETUAL."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-021"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "FR"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S01", ":T21"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Released"
+            }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.5.1.21+0"
+              })
+            }), " (", (0,jsx_runtime.jsx)(_components.code, {
+              children: "RW -k"
+            }), " on ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/5"
+            }), ")"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/5-documentation-management"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Repository-story pattern; reconcile with ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7", ":S00"]
+            }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "T72"
+            }), "."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-032"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "FR"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S01", ":T32"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Released"
+            }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.5.1.32+0"
+              })
+            }), " (", (0,jsx_runtime.jsx)(_components.code, {
+              children: "RW -k"
+            }), " on ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/5"
+            }), ")"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/5-documentation-management"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "RC readiness gap analysis."
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "UXR-003"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "UXR"
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S00", ":T03"]
+            }), " · ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S05", ":T03"]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Linked"
+            }), " (synthesis ✅; repo anchor → ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "RW -k"
+              })
+            }), " ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/7"
+            }), ")"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/7-documentation-maintenance"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor",
+              children: "T03"
+            }), "."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "UXR-004"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "UXR"
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S00", ":T04"]
+            }), " · ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E7:S05", ":T04"]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Linked"
+            }), " (synthesis ✅; UXR ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "COMPLETE"
+            }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "RW -k"
+              })
+            }), " ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/7"
+            }), ")"]
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/7-documentation-maintenance"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T04-uxr-004-repository-anchor",
+              children: "T04"
+            }), "."]
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Housing policy (how story choice is decided)"
+      }), " — canonical rules: ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "kanban-governance-policy.md"
+        })
+      }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "KG-R2"
+      }), " atomic intake, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "KG-R6"
+      }), " semantics vs numbering)."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Primary task"
+        }), " SHOULD sit under the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "story that matches delivery"
+        }), " (where work is understood and versioned), not only under a repository story. ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "FR/BR/UXR id = task number"
+        }), " is ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "optional"
+        }), "; symmetric ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E5:S01", ":Tnn"]
+        }), " for FR-nnn is a ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "convenience"
+        }), ", not a requirement."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Every"
+        }), " new FR/BR/UXR MUST get ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "≥1 task + bidirectional links in the same intake session"
+        }), " (no orphan ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "fr-br/*.md"
+        }), ")."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "BR-xxx"
+        }), " targeting RW/agent tooling → often ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E6", ":S06"]
+        }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "UKW/CMW/RW-definition"
+        }), " defects → often ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E6", ":S07"]
+        }), " (examples, not laws)."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "UXR-xxx"
+        }), " → may use ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S00"]
+        }), " repository slot ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "and/or"
+        }), " implementation tasks under ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S01"]
+        }), " / ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7", ":S05"]
+        }), "—link both when both exist."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Epic branch"
+        }), " in the mapping table = where ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "validate_branch_context.py --strict"
+          })
+        }), " must pass for ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: [(0,jsx_runtime.jsx)(_components.code, {
+            children: "RW"
+          }), " / ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "RW -k"
+          })]
+        }), " on that task’s epic."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "recently-completed-reference",
+      children: "Recently completed (reference)"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "Item"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Task"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Notes"
+          })]
+        })
+      }), (0,jsx_runtime.jsx)(_components.tbody, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-072"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S01", ":T72"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Uniform repository vs abstract-space Kanban rules — doc-init ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.5.1.72+0"
+              })
+            }), " on ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "epic/5-documentation-management"
+            }), "."]
+          })]
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
+      id: "moscow-queue--remaining-taskless-on-board-lines",
+      children: ["MoSCOW queue — remaining taskless ", (0,jsx_runtime.jsx)(_components.em, {
+        children: "on board lines"
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "2026-03-31 (Phase B/C):"
+      }), " Intake-plan ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Must"
+      }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Should"
+      }), " slice now has ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "task documents"
+      }), " and ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "| E:S:T"
+        })
+      }), " links in the MoSCOW sections below. Outstanding work is ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "implementation"
+      }), " (", (0,jsx_runtime.jsx)(_components.code, {
+        children: "RW -k"
+      }), " on owning epic branches) and draining ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Could"
+      }), " / legacy rows."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "Priority"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Items"
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Must"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.em, {
+              children: ["— ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Epic/6:"
+              }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "BR-039"
+              }), "/", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "BR-059"
+              }), " versioned (", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "T57+1"
+              }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "T109+1"
+              }), "); remaining work is ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "product/UKW fix"
+              }), ", not intake."]
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Should"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.em, {
+              children: ["— ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "FR-040"
+              }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "UXR"
+              }), " repo slots filed; epic 7 ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "RW -k"
+              }), " for ", (0,jsx_runtime.jsxs)(_components.strong, {
+                children: ["E7:S00", ":T01", "/T02/T05"]
+              }), " when first version needed."]
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Could"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Large backlog (e.g. ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-034"
+            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-032"
+            }), ", ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-021"
+            }), ", many lower-section ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "BR"
+            }), "/", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR"
+            }), ") — drain ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "after"
+            }), " Must / Should"]
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "already-linked-on-moscow-rows-intake-at-board-level",
+      children: "Already linked on MoSCOW rows (intake at board level)"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Examples: ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FR-045"
+      }), "→E5:S01", ":T45", ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FR-046"
+      }), "→T46, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FR-047"
+      }), "→T47, ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FR-063"
+      }), "→E5:S02", ":T06", ", ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FR-065"
+      }), "→E5:S09", ":T01", " (non-exhaustive)."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "source-of-truth-and-hygiene-read-before-filing",
+      children: "Source-of-truth and hygiene (read before filing)"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Atomic intake:"
+        }), " New FR/BR/UXR ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "must"
+        }), " ship with a ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["task doc + ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "Implementing Task:"
+          })]
+        }), " (or equivalent) in the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "same change set"
+        }), "—see ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "KG-R2"
+        }), " in ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "packages/frameworks/kanban/policies/kanban-governance-policy.md"
+          })
+        }), ". Older sparse headers are ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "legacy debt"
+        }), " to burn down."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "UXR drift:"
+        }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "UXR-001"
+        }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "UXR-002"
+        }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "UXR-005"
+        }), " appear taskless here but may already map to Epic 7 work (e.g. maintenance or synthesis tasks). ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Reconcile"
+        }), " under ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "epics/Epic-7",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "epics/Epic-7/"
+          })
+        }), " before creating net-new ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":Txx"]
+        }), " repo tasks."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Board freshness:"
+        }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Statistics"
+        }), " (below) and some MoSCOW rows can lag (e.g. completed items still counted in priority buckets; ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "FR-072"
+        }), " not yet listed in MoSCOW). After each ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "RW -k"
+          })
+        }), ", update rows here and use ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "UKW"
+        }), " for a broad consistency pass."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "suggested-execution-order",
+      children: "Suggested execution order"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Must:"
+        }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Done (epic/6):"
+        }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E6:S06", ":T57"]
+        }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "v0.6.6.57+1"
+          })
+        }), ", ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E6:S07", ":T109"]
+        }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "v0.6.7.109+1"
+          })
+        }), ". ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "BR-038"
+        }), "→", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E6:S06", ":T02"]
+        }), " linked."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Should:"
+        }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "epic/7"
+          })
+        }), " — ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T01", "/T02"]
+        }), " already versioned; ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "T05"
+        }), " at ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "v0.7.0.5+1"
+          })
+        }), " in task doc; optional ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "RW -k"
+          })
+        }), " only if registry slot needs ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "+0"
+        }), " doc-init reset per policy. ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "FR-040"
+        }), "→", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E5:S01", ":T40"]
+        }), " linked."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Could:"
+        }), " batch lower-priority intake after Must / Should pressure drops; follow ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E5:S01", ":Txx"]
+        }), " for FR-0xx filings per ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "Story-001-fr-repo"
+          })
+        }), "."]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "moscow-prioritized-frbruxr-items",
       children: "MoSCOW Prioritized FR/BR/UXR Items"
@@ -207,6 +1115,9 @@ function _createMdxContent(props) {
         }), " – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker",
           children: "BR-039"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md",
+          children: ["E6:S06", ":T57"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -214,6 +1125,9 @@ function _createMdxContent(props) {
         }), " – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues",
           children: "BR-038"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues",
+          children: ["E6:S06", ":T02"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -221,6 +1135,9 @@ function _createMdxContent(props) {
         }), " – UKW MoSCOW omits open story tasks (E5", ":S09", " listed T01 only; checklist T01–T07) - TODO (HIGH, board SoT vs story checklist; investigation + UKW/rule fix) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage",
           children: "BR-059"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md",
+          children: ["E6:S07", ":T109"]
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -229,10 +1146,29 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "FR-073"
+        }), " – FR/BR/UXR board: open ∧ taskless intake execution plan (Kanban task) - TODO (MEDIUM, ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "v0.5.1.73+0"
+          })
+        }), " intake shipped; ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "T73"
+        }), " — Phases B/C queue execution + hygiene) - ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md",
+          children: "FR-073"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md",
+          children: ["E5:S01", ":T73"]
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "FR-040"
         }), " – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-040-implementation-cycle-workflow-icw",
           children: "FR-040"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw",
+          children: ["E5:S01", ":T40"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -267,45 +1203,39 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-001"
-        }), " – Migration User Experience Research - ✅ COMPLETE (HIGH, Registry ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E7:S00", ":T01"]
-        }), "; synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E7:S05", ":T01"]
-        }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-001-migration-user-experience-research",
           children: "UXR-001"
         }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
-          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001",
+          href: "epics/Epic-7/Story-000-uxr-repo/T01-uxr-001-repository-anchor.md",
           children: ["E7:S00", ":T01"]
+        }), " · ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
+          children: ["E7:S05", ":T01"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-002"
-        }), " – Comprehensive UAT Migration Utilities - ✅ COMPLETE (HIGH, Registry ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E7:S00", ":T02"]
-        }), "; synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E7:S05", ":T02"]
-        }), "; UAT PASS) - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities",
           children: "UXR-002"
         }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
-          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002",
+          href: "epics/Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md",
           children: ["E7:S00", ":T02"]
+        }), " · ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
+          children: ["E7:S05", ":T02"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-005"
-        }), " – Kanban Board Formatting & Governance - TODO (HIGH, Implementation ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E7:S01", ":T09"]
-        }), "; registry ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E7:S00", ":T05"]
-        }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-005-kanban-board-formatting-and-governance",
           children: "UXR-005"
         }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
-          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005",
+          href: "epics/Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md",
           children: ["E7:S00", ":T05"]
-        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+        }), " · ", (0,jsx_runtime.jsxs)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance",
           children: ["E7:S01", ":T09"]
         })]
@@ -371,9 +1301,14 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "FR-034"
-        }), " – UKW Granular Control and Use Case Flags - TODO (MEDIUM, Granular control for Update Kanban Workflow) - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – UKW Granular Control and Use Case Flags - ✅ IMPLEMENTED (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "v0.5.1.34+1"
+        }), ") — board link for traceability - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-034-ukw-granular-control-and-use-case-flags",
           children: "FR-034"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags",
+          children: ["E5:S01", ":T34"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -381,6 +1316,9 @@ function _createMdxContent(props) {
         }), " – Release Candidate Readiness Gap Analysis - TODO (MEDIUM, Analyze gaps in release candidate readiness) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-032-release-candidate-readiness-gap-analysis",
           children: "FR-032"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "epics/Epic-5/Story-001-fr-repo/T32-release-candidate-readiness-gap-analysis.md",
+          children: ["E5:S01", ":T32"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -398,6 +1336,9 @@ function _createMdxContent(props) {
         }), " – FR/BR/UXR Repository Stories - TODO (MEDIUM, Repository stories for FR/BR/UXR management) - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-021-fr-br-uxr-repository-stories",
           children: "FR-021"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "epics/Epic-5/Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md",
+          children: ["E5:S01", ":T21"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -430,16 +1371,40 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-003"
-        }), " – Intelligent Epic Matching Canonical Adoption UAT - TODO (MEDIUM, User acceptance testing for intelligent epic matching) - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Intelligent Epic Matching Canonical Adoption UAT - TODO (MEDIUM, UAT synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S05", ":T03"]
+        }), " ✅; repository anchor ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "RW -k"
+          })
+        }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T03"]
+        }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat",
           children: "UXR-003"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor",
+          children: ["E7:S00", ":T03"]
+        }), " · ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
+          children: ["E7:S05", ":T03"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "UXR-004"
-        }), " – Kanban Package Installation UAT - TODO (MEDIUM, User acceptance testing for kanban package installation) - ", (0,jsx_runtime.jsx)(_components.a, {
+        }), " – Kanban Package Installation UAT - COMPLETE (synthesis ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S05", ":T04"]
+        }), " ✅; repository anchor ", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E7:S00", ":T04"]
+        }), ") - ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-004-kanban-package-installation-uat",
           children: "UXR-004"
+        }), " | ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T04-uxr-004-repository-anchor",
+          children: ["E7:S00", ":T04"]
+        }), " · ", (0,jsx_runtime.jsxs)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
+          children: ["E7:S05", ":T04"]
         })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -775,7 +1740,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Total Items:"
-      }), " 70 FR/BR/UXR documents"]
+      }), " 70 FR/BR/UXR documents ", (0,jsx_runtime.jsx)(_components.em, {
+        children: "(file count — not re-audited this pass)"
+      })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -829,6 +1796,23 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "COMPLETED:"
         }), " 0 (tracked in fr-br-uxr-completed.md)"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Phase C hygiene:"
+        }), " Bucket counts above are ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "legacy snapshots"
+        }), "; a full recount + sync with ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/fr-br-uxr-completed",
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "fr-br-uxr-completed.md"
+          })
+        }), " is a separate ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "UKW"
+        }), " pass (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "T73"
+        }), " C2)."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "usage-instructions",

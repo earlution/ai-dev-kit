@@ -119,6 +119,18 @@ function _createMdxContent(props) {
       }), " ", (0,jsx_runtime.jsx)(_components.a, {
         href: "https://github.com/earlution/ai-dev-kit/issues/8",
         children: "#8"
+      }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Repository Task:"
+      }), " ", (0,jsx_runtime.jsxs)(_components.a, {
+        href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor",
+        children: ["E7:S00", ":T03"]
+      }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Implementation (synthesis):"
+      }), " ", (0,jsx_runtime.jsxs)(_components.a, {
+        href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
+        children: ["E7:S05", ":T03"]
+      }), " — see Story 5 ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "T03"
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "summary",

@@ -117,13 +117,27 @@ function _createMdxContent(props) {
         children: "Priority:"
       }), " HIGH", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-03-31 (v0.7.0.2+2 — UXR-002 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Implementing Task"
-      }), " wiring; UXR-001 ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "v0.7.0.1+2"
+      }), " 2026-03-31 (", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "RW -k"
+        })
+      }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E7:S00", ":T04"]
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "v0.7.0.4+0"
+        })
+      }), "; prior ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "T03"
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          children: "v0.7.0.3+0"
+        })
       }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "T05"
-      }), " UXR-005 registry)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "T02"
+      }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "v0.7.0.2+2"
+      }), ")", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Estimated Effort:"
       }), " N/A (Perpetual repository)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Started:"
@@ -183,6 +197,44 @@ function _createMdxContent(props) {
           }), " | ", (0,jsx_runtime.jsx)(_components.a, {
             href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities",
             children: "UXR-002"
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.input, {
+            type: "checkbox",
+            disabled: true
+          }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S00", ":T03", " – UXR-003 repository anchor"]
+          }), " — ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor",
+            children: "Task doc"
+          }), " | ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat",
+            children: "UXR-003"
+          }), " | Impl: ", (0,jsx_runtime.jsxs)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
+            children: ["E7:S05", ":T03"]
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.input, {
+            type: "checkbox",
+            disabled: true
+          }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["E7:S00", ":T04", " – UXR-004 repository anchor"]
+          }), " — ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T04-uxr-004-repository-anchor",
+            children: "Task doc"
+          }), " | ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/fr-br/UXR-004-kanban-package-installation-uat",
+            children: "UXR-004"
+          }), " | Impl: ", (0,jsx_runtime.jsxs)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research",
+            children: ["E7:S05", ":T04"]
           })]
         }), "\n"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
