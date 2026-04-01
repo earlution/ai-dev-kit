@@ -20,7 +20,7 @@ This directory (`portal/`) is the **[Docusaurus](https://docusaurus.io/)** site 
 
 - **`docusaurus.config.js`:** `onBrokenLinks: 'throw'` and `onBrokenMarkdownLinks: 'throw'` — a **broken in-scope link fails `npm run build`** (strict mode; **FR-067 FU-1** complete).
 - **Corpus hygiene:** Ongoing markdown path discipline stays aligned with [FR-058](../docs/project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md); out-of-tree targets should use repository or GitHub URLs, not bogus relative paths.
-- **Anchors:** Docusaurus may still **warn** on broken in-page anchors without failing the build unless `onBrokenAnchors` is tightened separately.
+- **Anchors:** Docusaurus may still **warn** on broken in-page anchors without failing the build unless `onBrokenAnchors` is tightened separately. **Tracked:** [E5:S09:T10](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md) / **FR-067 FU-3**.
 - **Detail / history:** [Docusaurus corpus triage (FR-067)](../docs/maintenance/docusaurus-corpus-triage-fr-067.md); task **[E5:S09:T08](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)**.
 
 **FR-068** addresses navigation and sidebar information architecture (implemented in `sidebars.js` and the site homepage).

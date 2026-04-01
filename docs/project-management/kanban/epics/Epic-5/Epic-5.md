@@ -69,7 +69,7 @@ housekeeping_policy: keep
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
 
 
-- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (T01–T08 ✅ **v0.5.9.8+2**; T09 go-live ✅ **v0.5.9.9+2**)
+- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (T01–T08 ✅ **v0.5.9.8+2**; T09 go-live ✅ **v0.5.9.9+2**; T10 anchors TODO)
   - Story: [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
   - **Note:** Atomic FR chain for full Docusaurus adoption (`portal/` → `docs/` publish, CI, deploy, search).
 
@@ -221,6 +221,7 @@ Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), gre
 - [x] E5:S09:T07 – Site search (FR-071) ✅ v0.5.9.7+1
 - [x] E5:S09:T08 – Strict broken links (FR-067 FU-1) ✅ **v0.5.9.8+2** — [T08](Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)
 - [x] E5:S09:T09 – GitHub Pages go-live verification (FR-070 follow-up) ✅ **v0.5.9.9+2** — [T09](Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
+- [ ] E5:S09:T10 – Strict broken anchors (FR-067 FU-3) — [T10](Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)
 
 **Story:** [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
 

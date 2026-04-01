@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
 VERSION_STORY = 9     # Story number (Story 9: Docusaurus documentation portal)
-VERSION_TASK = 8      # Task number (E5:S09:T08 — strict broken links post–FR-067)
-VERSION_BUILD = 2     # Build number (+1 was RW-k task doc; +2 implements strict throw + corpus)
+VERSION_TASK = 10     # Task number (E5:S09:T10 — strict broken anchors follow-up)
+VERSION_BUILD = 1     # Build number (Kanban + FR-067 FU-3 + triage; task doc canonical ID section)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.9.8+2 — E5:S09:T08; merged `epic/5-documentation-management` → **main**
+# Current: 0.5.9.10+1 — E5:S09:T10 filed (**FR-067 FU-3**); BUILD>=1 (task doc present pre-commit per validator)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

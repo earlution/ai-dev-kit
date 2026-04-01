@@ -45,6 +45,7 @@ Do **not** rely on conversation memory. Later work is on **FR / task**:
 |------|--------|
 | ~~Switch link check from **`warn` → `throw`** after corpus link repair~~ | **Done — E5:S09:T08** at **`v0.5.9.8+2`**. Ongoing hygiene: **[FR-058](../project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md)**. **FU-1** closed on **[FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)**. |
 | Populate **GitHub Releases** for SemVer tags | **[E6:S07:T103](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)** (RW Step 12.5); **[FR-041](../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)**; **FU-2** on **[FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)** |
+| **Strict broken anchors** (`onBrokenAnchors` → **`throw`**) | **[E5:S09:T10](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)**; **FR-067 FU-3** |
 
 ## Verification
 

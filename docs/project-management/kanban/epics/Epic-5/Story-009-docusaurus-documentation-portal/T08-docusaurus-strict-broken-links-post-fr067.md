@@ -85,3 +85,4 @@ housekeeping_policy: keep
 
 - **E5:S09:T03** — completed warn-mode triage.
 - **E5:S09:T05** — CI should run the same strict build.
+- **E5:S09:T10** — optional **strict broken anchors** (`onBrokenAnchors`) — [T10](./T10-docusaurus-strict-broken-anchors-post-t08.md); **FR-067 FU-3**.
