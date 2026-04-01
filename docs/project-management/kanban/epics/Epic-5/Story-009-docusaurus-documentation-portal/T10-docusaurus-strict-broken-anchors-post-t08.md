@@ -9,12 +9,13 @@ housekeeping_policy: keep
 # Epic 5, Story 9, Task 10: Strict broken-anchor checking (post–E5:S09:T08)
 
 **Task ID:** E5:S09:T10  
-**Status:** TODO  
+**Status:** ✅ COMPLETE  
 **Priority:** LOW  
 **Estimated Effort:** Medium (corpus sweep; anchor slug alignment across MDX)  
 **Created:** 2026-04-01  
-**Last updated:** 2026-04-01 — **`v0.5.9.10+1`** Kanban filing (**FR-067 FU-3**)  
-**Code:** E5S09T10
+**Last updated:** 2026-04-01 — **`v0.5.9.10+2`** implementation (**RW E5:S09:T10**); **FR-067 FU-3** closed  
+**Code:** E5S09T10  
+**Version anchor:** ✅ COMPLETE (v0.5.9.10+2)
 
 ---
 
@@ -24,14 +25,12 @@ housekeeping_policy: keep
 
 ---
 
-**Origin:** **[E5:S09:T08](./T08-docusaurus-strict-broken-links-post-fr067.md)** enabled **`onBrokenLinks` / `onBrokenMarkdownLinks` → `throw`**. Docusaurus still **warns** on **broken in-page anchors** (`#fragment`) while the production build exits **0** unless **`onBrokenAnchors`** is set to **`throw`**. **FR-067 FU-3** tracks this optional hardening.
-
----
-
-## Purpose
+## Scope
 
 - Align published docs with **zero false `#heading` / cross-doc anchor** references (or justified exceptions).
 - Make **CI / `npm run build`** fail when a new broken anchor is introduced (**strict** mode), mirroring T08 for hrefs.
+
+**Origin:** **[E5:S09:T08](./T08-docusaurus-strict-broken-links-post-fr067.md)** enabled **`onBrokenLinks` / `onBrokenMarkdownLinks` → `throw`**. Docusaurus still **warned** on **broken in-page anchors** (`#fragment`) until **`onBrokenAnchors`** was set to **`throw`** (**FR-067 FU-3**).
 
 ---
 
@@ -44,33 +43,36 @@ housekeeping_policy: keep
 
 ---
 
-## Inventory (known warnings as of T08 verification)
+## Inventory (resolved for **`v0.5.9.10+2`**)
 
-Re-run `cd portal && npm run build` and refresh this list before implementation:
+Build verification: `cd portal && npm run build` exits **0** with `onBrokenAnchors: 'throw'`.
 
-- `workflow-flaws-reference-guide` — `#wf-001` … `#wf-004`
-- `framework-dependency-installation-guide` / `troubleshooting-guide` / `use-cases` — install/integration anchor slugs
-- `building-persistent-knowledge` — SOP anchor slug
-- `UC-D-001` / `UC-D-002` / `UC-D-003`, **BR-002** — Story-001 changelog-validator anchor
-- `kanban-completed` — Epic 4/8/10/11 story anchors
-
----
-
-## Deliverables
-
-1. **`portal/docusaurus.config.js`:** `onBrokenAnchors: 'throw'` (or project-equivalent) after corpus is clean.
-2. **Corpus:** Fix or retarget headings / links so anchors resolve (Docusaurus slug rules; MDX quirks).
-3. **`portal/README.md`:** Document anchor policy next to link policy.
-4. **Tests:** Extend [tests/test_portal_fr067_build_triage.py](../../../../../tests/test_portal_fr067_build_triage.py) (or successor) to assert strict anchors when enabled.
-5. **Traceability:** Close **FR-067 FU-3** with version marker via **RW** on **`epic/5-documentation-management`** when implemented.
+| Area | Change |
+|------|--------|
+| `workflow-flaws-reference-guide` | Explicit `{#wf-00x-…}` IDs on **WF-001…WF-004** section headings |
+| Framework dependency guides | Stable IDs for template/selective/monorepo/migration/gradual sections; **Uninstall Issues** in troubleshooting; **`## Uninstalling frameworks`** anchor in installation guide |
+| `building-persistent-knowledge` | SoP heading as `##` + `{#standard-operating-procedure-sop-…}` |
+| UC-D-* / **BR-002** → Story-001 | `{#e2s01t06--fix-changelog-validator-ordering-bug--reopened}` on T06 heading |
+| `kanban-completed` → Epic stories | Explicit task heading IDs on E4/E8/E10/E11 story docs |
+| This task doc | Replaced invalid relative link to `tests/` (out of publish tree) with repo-path text |
 
 ---
 
-## Acceptance criteria
+## Deliverable
 
-1. `npm run build` exits **0** with **`onBrokenAnchors: 'throw'`**.
-2. **FR-067 FU-3** marked done with pointer to this task and release version.
-3. Maintenance triage / portal README updated for anchor policy.
+1. **`portal/docusaurus.config.js`:** `onBrokenAnchors: 'throw'` after corpus is clean.
+2. **Corpus:** Headings / links updated so anchors resolve (Docusaurus slug rules; explicit `{#ids}` where needed).
+3. **`portal/README.md`:** Anchor policy documented next to link policy.
+4. **Tests:** `tests/test_portal_fr067_build_triage.py` — `test_fr067_s5_anchor_policy_strict`.
+5. **Traceability:** **FR-067 FU-3** closed with **`v0.5.9.10+2`**; maintenance triage, Story/Epic/kanban updated.
+
+---
+
+## Acceptance Criteria
+
+- [x] `npm run build` exits **0** with **`onBrokenAnchors: 'throw'`**.
+- [x] **FR-067 FU-3** marked done with pointer to this task and release version.
+- [x] Maintenance triage / portal README updated for anchor policy.
 
 ---
 

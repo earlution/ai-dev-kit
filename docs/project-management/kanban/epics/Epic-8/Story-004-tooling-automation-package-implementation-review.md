@@ -43,7 +43,7 @@ Provide a complete implementation review, evidence, and remediation plan to supp
 
 ## Tasks
 
-### E8:S04:T01 – Establish expectations baseline for Tooling & Automation package
+### E8:S04:T01 – Establish expectations baseline for Tooling & Automation package {#e8s04t01--establish-expectations-baseline-for-tooling--automation-package}
 
 **Input:** Package README, validators, and generator docs  
 **Deliverable:** Expectations baseline document  

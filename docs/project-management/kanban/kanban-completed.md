@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-03-31 (**RW E5:S09:T09** v0.5.9.9+2 — Pages go-live)
-**Version:** v0.5.9.9+2
+**Last Updated:** 2026-04-01 (**E5:S09:T10** v0.5.9.10+2 — strict anchors / **FR-067 FU-3**)
+**Version:** v0.5.9.10+2
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -20,6 +20,10 @@ housekeeping_policy: keep
 
 ## 20 Most Recently Completed Tasks
 
+#### **Epic 5: Documentation Management**
+- **[E5:S09:T10](epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)** – Docusaurus **strict broken anchors** (`onBrokenAnchors: 'throw'`) post–**T08** (**FR-067 FU-3**): corpus anchor/heading alignment, `portal/docusaurus.config.js`, `portal/README.md`, `tests/test_portal_fr067_build_triage.py`; filing **v0.5.9.10+1**; implementation **v0.5.9.10+2** (**RW E5:S09:T10**).  
+  **Completed:** `2026-04-01T15:17:58Z` | **Version:** `v0.5.9.10+2` | **Agent:** `RW Agent`
+
 #### **Epic 2: Workflow Management Framework**
 - **[E2:S11:T12](epics/Epic-2/Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md)** – GitHub Actions intake (**BR-053**) — **COMPLETE (workaround, v0.2.11.12+2)** — workflow unregistered (`fr-br-intake.yml.DISABLED`); manual intake; closure per BR-053 *Resolution / current status* (not a vendor trigger fix)  
   **Completed:** `2026-03-30T16:00:00Z` | **Version:** `v0.2.11.12+2` | **Agent:** `UKW / Maintainer`
@@ -27,6 +31,9 @@ housekeeping_policy: keep
 #### **Epic 5: Documentation Management**
 - **[E5:S09:T09](epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)** – GitHub Pages **go-live** (**FR-070** follow-up): `epic/5` → **`main`**, Actions run **23796236180** green, Pages legacy **`gh-pages`/`/`**, canonical **HTTP 200**, [portal/README.md](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md) go-live/troubleshooting; task doc **`Task ID`** for RW validators; *init* **v0.5.9.9+1** (`RW -k`), *release* **v0.5.9.9+2** (**RW E5:S09:T09**).  
   **Completed:** `2026-03-31T12:10:00Z` | **Version:** `v0.5.9.9+2` | **Agent:** `RW Agent`
+
+- **[E5:S09:T08](epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)** – Docusaurus **strict** broken **links** (**`throw`**) post–**FR-067** (**FU-1** closed): corpus link remediation, `portal/docusaurus.config.js`, `portal/README.md`, `tests/test_portal_fr067_build_triage.py`; *init* **v0.5.9.8+1** (`RW -k`), implementation **v0.5.9.8+2**; merged **epic/5** → **`main`**.  
+  **Completed:** `2026-04-01T14:30:00Z` | **Version:** `v0.5.9.8+2` | **Agent:** `RW Agent`
 
 - **[E5:S09:T07](epics/Epic-5/Story-009-docusaurus-documentation-portal/T07-docusaurus-search-fr-071.md)** – Docusaurus site search (**FR-071**): `@easyops-cn/docusaurus-search-local` in [`portal/docusaurus.config.js`](https://github.com/earlution/ai-dev-kit/blob/main/portal/docusaurus.config.js), [`portal/README.md`](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md) (smoke queries, privacy, build time), [`tests/test_portal_fr071_search.py`](https://github.com/earlution/ai-dev-kit/blob/main/tests/test_portal_fr071_search.py)  
   **Completed:** `2026-03-30T16:59:05Z` | **Version:** `v0.5.9.7+1` | **Agent:** `RW Agent`

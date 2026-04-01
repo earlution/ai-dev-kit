@@ -298,7 +298,7 @@ All subsequent steps have been cancelled.
 
 ---
 
-### E2:S01:T06 – Fix changelog validator ordering bug 🔄 REOPENED
+### E2:S01:T06 – Fix changelog validator ordering bug 🔄 REOPENED {#e2s01t06--fix-changelog-validator-ordering-bug--reopened}
 
 **Input:**  
 - **Bug Report:** [BR-002: Changelog Validator Ordering Bug](../../fr-br/BR-002-changelog-validator-ordering-bug.md) (REOPENED)

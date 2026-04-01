@@ -45,7 +45,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 ---
 
-## WF-001: Story File Not Updated First (Step 7)
+## WF-001: Story File Not Updated First (Step 7) {#wf-001-story-file-not-updated-first}
 
 **Status:** ✅ FIXED  
 **Date Discovered:** 2025-12-04  
@@ -117,7 +117,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 ---
 
-## WF-002: Version Bump Logic Error (Step 2)
+## WF-002: Version Bump Logic Error (Step 2) {#wf-002-version-bump-logic-error}
 
 **Status:** ✅ FIXED  
 **Date Discovered:** 2025-12-03  
@@ -259,7 +259,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 ---
 
-## WF-003: BR/FR Fix Attempts Not Documented
+## WF-003: BR/FR Fix Attempts Not Documented {#wf-003-br-fr-fix-attempts-not-documented}
 
 **Status:** ✅ FIXED  
 **Date Discovered:** 2025-12-05  
@@ -347,7 +347,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 ---
 
-## WF-004: Story File Missing During RW Update (Step 7)
+## WF-004: Story File Missing During RW Update (Step 7) {#wf-004-story-file-missing-during-rw-update}
 
 **Status:** 🔧 TO FIX  
 **Date Discovered:** 2025-12-05  

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.10+1] - 01-04-26
+## [0.5.9.10+2] - 01-04-26
 
-E5:S09:T10 — Kanban + **FR-067 FU-3** for strict **broken anchors** (`onBrokenAnchors`), post–**T08**; triage/story/epic/portal README cross-links. [T10](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md); [FR-067](docs/project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md).
+E5:S09:T10 — **Strict broken anchors** (`onBrokenAnchors: 'throw'`), corpus heading/fragment fixes, portal README + pytest, **FR-067 FU-3** closed. [T10](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md); [FR-067](docs/project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.10+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.10+2.md)
