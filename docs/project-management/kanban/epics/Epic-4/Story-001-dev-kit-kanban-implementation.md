@@ -66,7 +66,7 @@ Establish `ai-dev-kit` as the canonical source for Kanban framework policies, te
 - **Template gaps:** Missing "ALL sections" update requirement notes, forensic marker format standardization notes, consistency check reminders
 - **Dev-kit policy gaps:** Missing framework principles (Harmonious Cycle, detailed FR/BR flow, Task-Level Requirements, Release Workflow documentation)
 
-**Deliverable:** See [`T001-gap-analysis-report.md`](T001-gap-analysis-report.md) for complete gap analysis report.
+**Deliverable:** See [`T001-gap-analysis-report.md`](Story-001-dev-kit-kanban-implementation/T001-gap-analysis-report.md) for complete gap analysis report.
 
 **Files Reviewed:**
 - ✅ `packages/frameworks/kanban/policies/kanban-governance-policy.md`
@@ -105,7 +105,7 @@ Establish `ai-dev-kit` as the canonical source for Kanban framework policies, te
 - **Patterns already in framework:** Atomic RW, "ALL sections", TODO tracking are in workflow package
 - **Patterns missing from policy:** All 7 patterns need explicit documentation in Kanban governance policy
 
-**Deliverable:** See [`T002-fynd-deals-epic15-kanban-findings.md`](T002-fynd-deals-epic15-kanban-findings.md) for complete findings and recommendations.
+**Deliverable:** See [`T002-fynd-deals-epic15-kanban-findings.md`](Story-001-dev-kit-kanban-implementation/T002-fynd-deals-epic15-kanban-findings.md) for complete findings and recommendations.
 
 **Files Reviewed:**
 - ✅ `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`

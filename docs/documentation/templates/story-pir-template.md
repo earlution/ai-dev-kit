@@ -164,8 +164,8 @@ housekeeping_policy: keep
 
 ## Related Work
 
-- **Epic:** [Epic &lbrace;N&rbrace; Documentation](../../project-management/kanban/epics/Epic-&lbrace;N&rbrace;/Epic-&lbrace;N&rbrace;.md)
-- **Story:** [Story &lbrace;N&rbrace; Documentation](../../project-management/kanban/epics/Epic-&lbrace;N&rbrace;/Story-&lbrace;N&rbrace;-&lbrace;name&rbrace;.md)
+- **Epic:** Template path under `docs/`: `project-management/kanban/epics/Epic-{N}/Epic-{N}.md` (replace `{N}`).
+- **Story:** Template path: `project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md` (replace placeholders; avoid raw `{N}` in link targets).
 - **Tasks:** &lbrace;Links to all tasks in Story&rbrace;
 - **Related PIRs:** &lbrace;Links to any related PIR reports&rbrace;
 - **Follow-Up Tasks:** &lbrace;Links to Kanban tasks created from this PIR&rbrace;
@@ -174,9 +174,9 @@ housekeeping_policy: keep
 
 ## References
 
-- [PIR Workflow Planning](../../Analysis/PIR-workflow-planning.md)
-- [PIR Workflow Reference](../../Documentation/Developer_Docs/vwmp/pir-workflow-reference.md)
-- [Release Workflow](../../Documentation/Developer_Docs/vwmp/release-workflow-reference.md)
+- [PIR Workflow Planning (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Analysis/PIR-workflow-planning.md)
+- [PIR Workflow Reference (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-reference.md)
+- [Release Workflow (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md)
 
 ---
 

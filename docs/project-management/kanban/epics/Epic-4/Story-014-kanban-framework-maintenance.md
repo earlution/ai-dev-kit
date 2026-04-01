@@ -28,7 +28,7 @@ housekeeping_policy: keep
 
 - [x] **E4:S14:T03 – Add Missing Implementation Cycle Workflow (ICW)** ✅ COMPLETE (v0.4.14.3+1)
   - Task: [`T03-add-missing-implementation-cycle-workflow-icw.md`](Story-014-kanban-framework-maintenance/T03-add-missing-implementation-cycle-workflow-icw.md)
-  - BR Reference: [BR-055](../fr-br/BR-055-missing-implementation-cycle-workflow-icw.md)
+  - BR Reference: [BR-055](../../fr-br/BR-055-missing-implementation-cycle-workflow-icw.md)
   - GitHub Issue: #22
 
 

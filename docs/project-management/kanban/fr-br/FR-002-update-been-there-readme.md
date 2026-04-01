@@ -167,7 +167,7 @@ This FR creates a concrete README template based on Best-README-Template, buildi
 - Keep a Changelog: https://keepachangelog.com/
 - Shields.io: https://shields.io/
 - Epic 7: [`docs/project-management/kanban/epics/Epic-7/Epic-7.md`](../epics/Epic-7/Epic-7.md)
-- Story 4: [`docs/project-management/kanban/epics/Epic-7/Story-004-been-there-readme-update.md`](../epics/Epic-7/Story-004-been-there-readme-update.md)
+- Story 4: [`Story-004-maintenance-automation-and-tooling.md`](../epics/Epic-7/Story-004-maintenance-automation-and-tooling.md) *(successor path; “been there README” work consolidated here)*
 
 ---
 

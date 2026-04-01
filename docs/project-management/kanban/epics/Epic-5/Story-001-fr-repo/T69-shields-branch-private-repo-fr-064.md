@@ -54,7 +54,7 @@ Implement FR-064: **private-repo-safe** badges on `main` (static Shields.io), re
 ## Deliverable
 
 - No runnable `update-badges.yml` on `main`.  
-- README + [badge-setup-for-private-repos.md](../../../../knowledge/guides/badge-setup-for-private-repos.md) aligned with decision.  
+- README + [badge-setup-for-private-repos.md](../../../../../knowledge/guides/badge-setup-for-private-repos.md) aligned with decision.  
 - **`origin/shields`** deleted (see Evidence).  
 - FR-064 and boards updated.
 
@@ -93,4 +93,4 @@ Implement FR-064: **private-repo-safe** badges on `main` (static Shields.io), re
 
 ## Related
 
-_Story:_ [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+_Story:_ [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)

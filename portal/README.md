@@ -16,13 +16,12 @@ This directory (`portal/`) is the **[Docusaurus](https://docusaurus.io/)** site 
 - **`changelog-and-release-notes/changelog-archive/**`** — mass per-release changelog files (1000+); not intended for v1 static publish; summaries remain under `changelog-and-release-notes/` where present.
 - **`knowledge/changelog-and-release-notes/changelog-archive/**`** — duplicate archive mirror under `knowledge/`.
 
-### Broken links and anchors (FR-067)
+### Broken links (FR-067 / E5:S09:T08)
 
-- **`docusaurus.config.js`:** `onBrokenLinks: 'warn'` and `onBrokenMarkdownLinks: 'warn'`.
-- **Rationale:** Many legacy markdown paths link to `packages/`, old epic/story layouts, or missing anchors; the production **build still completes** while warnings list remediation targets.
-- **Follow-up (strict mode):** Tracked as **Kanban [E5:S09:T08](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)** and **FR-067 → Follow-up work → FU-1** (coordinate markdown hygiene with **FR-058**). Do not rely on chat for this — those are the SoT.
-- **Target state:** tighten to `'throw'` after batch link hygiene (follow-up; coordinate with [FR-058](../docs/project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md)).
-- **Detail:** [Docusaurus corpus triage (FR-067)](../docs/maintenance/docusaurus-corpus-triage-fr-067.md).
+- **`docusaurus.config.js`:** `onBrokenLinks: 'throw'` and `onBrokenMarkdownLinks: 'throw'` — a **broken in-scope link fails `npm run build`** (strict mode; **FR-067 FU-1** complete).
+- **Corpus hygiene:** Ongoing markdown path discipline stays aligned with [FR-058](../docs/project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md); out-of-tree targets should use repository or GitHub URLs, not bogus relative paths.
+- **Anchors:** Docusaurus may still **warn** on broken in-page anchors without failing the build unless `onBrokenAnchors` is tightened separately.
+- **Detail / history:** [Docusaurus corpus triage (FR-067)](../docs/maintenance/docusaurus-corpus-triage-fr-067.md); task **[E5:S09:T08](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)**.
 
 **FR-068** addresses navigation and sidebar information architecture (implemented in `sidebars.js` and the site homepage).
 

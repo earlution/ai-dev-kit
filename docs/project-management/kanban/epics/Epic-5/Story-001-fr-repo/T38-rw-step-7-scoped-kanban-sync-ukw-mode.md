@@ -87,6 +87,6 @@ Repository anchor task for **FR-038: RW Step 7 – Scoped Kanban Sync (UKW Mode)
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-038:** [`docs/project-management/kanban/fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md`](../../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 

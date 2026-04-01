@@ -51,7 +51,7 @@ Repo `docs/` has hundreds of markdown files, mixed frontmatter, and links that a
 - [x] **FR-067:R01** – `npm run build` in `portal/` passes on CI-representative Node version (≥20 per `package.json` engines).
 - [x] **FR-067:R02** – Broken link policy is **explicit** in config and portal README (`warn` + target `throw`; see triage note).
 - [x] **FR-067:R03** – Excludes unchanged from FR-066; documented in README (no additional subtrees excluded for links).
-- [x] **FR-067:R04** – Triage note: [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../../../../maintenance/docusaurus-corpus-triage-fr-067.md); tests: `tests/test_portal_fr067_build_triage.py`.
+- [x] **FR-067:R04** – Triage note: [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../../../maintenance/docusaurus-corpus-triage-fr-067.md); tests: `tests/test_portal_fr067_build_triage.py`.
 
 ---
 
@@ -87,10 +87,10 @@ Anything “to be done later” from FR-067 must have an **FR and/or Kanban task
 
 | ID | Outcome | Purpose | Tracked as |
 |----|---------|---------|------------|
-| **FU-1** | Restore **strict** broken-link checking (`onBrokenLinks` / `onBrokenMarkdownLinks` → **`throw`**) | Interim **`warn`** was intentional (FR-067 Problem Statement + portal README); strict mode enforces zero broken links in build/CI once corpus is repaired. | **Task:** [E5:S09:T08](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md). **Coordinate:** [FR-058](./FR-058-markdown-maintenance-workflow.md) for systemic link/path hygiene. |
-| **FU-2** | **GitHub Release** page for published **SemVer** tags | Tags reach GitHub on push; the **Releases** UI entry is created/updated only when RW **Step 12.5** runs (token present). Same version stream as all RW releases—not a portal-only concern. | **Task (SoT):** [E6:S07:T103](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md). **FR:** [FR-041](./FR-041-perpetual-task-for-release-workflow-maintenance.md). **Mechanism:** [RW Step 12.5](../../../../.cursorrules); [`create_github_release.py`](../../../../packages/frameworks/workflow%20mgt/scripts/create_github_release.py). |
+| **FU-1** | ~~Restore **strict** broken-link checking (`onBrokenLinks` / `onBrokenMarkdownLinks` → **`throw`**)~~ **DONE** | Shipped with **E5:S09:T08** after corpus link remediation; build fails on broken in-scope links. Ongoing hygiene: [FR-058](./FR-058-markdown-maintenance-workflow.md). | **Task (complete):** [E5:S09:T08](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md). |
+| **FU-2** | **GitHub Release** page for published **SemVer** tags | Tags reach GitHub on push; the **Releases** UI entry is created/updated only when RW **Step 12.5** runs (token present). Same version stream as all RW releases—not a portal-only concern. | **Task (SoT):** [E6:S07:T103](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md). **FR:** [FR-041](./FR-041-perpetual-task-for-release-workflow-maintenance.md). **Mechanism:** [RW Step 12.5](https://github.com/earlution/ai-dev-kit/blob/main/.cursorrules); [`create_github_release.py` (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/scripts/create_github_release.py). |
 
-**Docs that echo this table:** [docusaurus corpus triage note](../../../maintenance/docusaurus-corpus-triage-fr-067.md) (Deferred outcomes — **FU-1** / **FU-2**), [portal README](../../../../portal/README.md) (**FU-1** / strict links); **FU-2** (GitHub Releases) → [E6:S07:T103](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) / [FR-041](./FR-041-perpetual-task-for-release-workflow-maintenance.md).
+**Docs that echo this table:** [docusaurus corpus triage note](../../../maintenance/docusaurus-corpus-triage-fr-067.md) (Deferred outcomes — **FU-1** / **FU-2**), [portal README (repository root)](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md) (**FU-1** / strict links); **FU-2** (GitHub Releases) → [E6:S07:T103](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) / [FR-041](./FR-041-perpetual-task-for-release-workflow-maintenance.md).
 
 ---
 

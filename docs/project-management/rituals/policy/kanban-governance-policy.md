@@ -35,12 +35,12 @@ The implementation in this repo starts simple:
 
 ### 1.1 RW Step 7 vs standalone UKW (FR-038)
 
-- **Per-release kanban sync:** [Release Workflow](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) **Step 7 — Scoped Kanban Sync (UKW Mode)** aligns Task/Story/Epic docs and related board lines for the **current release** in a **scoped** manner (conservative MoSCOW; no whole-board reshuffle).
-- **Board-wide kanban sync:** [Update Kanban Workflow (UKW)](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md) in **standalone** mode handles full-board housekeeping, prioritisation, and narrative updates per UKW flags.
+- **Per-release kanban sync:** [Release Workflow](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) **Step 7 — Scoped Kanban Sync (UKW Mode)** aligns Task/Story/Epic docs and related board lines for the **current release** in a **scoped** manner (conservative MoSCOW; no whole-board reshuffle).
+- **Board-wide kanban sync:** [Update Kanban Workflow (UKW)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md) in **standalone** mode handles full-board housekeeping, prioritisation, and narrative updates per UKW flags.
 
 ### 1.2 FR / BR / UXR intake (**KG-R2**, **KG-R6**)
 
-Normative detail lives in the **framework** policy (single SoT): [`packages/frameworks/kanban/policies/kanban-governance-policy.md`](../../../../packages/frameworks/kanban/policies/kanban-governance-policy.md) — **key_rules** **KG-R2** and **KG-R6**.
+Normative detail lives in the **framework** policy (single SoT): [`kanban-governance-policy.md` (framework package)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/policies/kanban-governance-policy.md) — **key_rules** **KG-R2** and **KG-R6**.
 
 **In short (this repo):**
 
@@ -48,7 +48,7 @@ Normative detail lives in the **framework** policy (single SoT): [`packages/fram
 - **≥1 task per report:** Every **FR**, **BR**, and **UXR** resolves to at least one Kanban task (shared task allowed if explicitly cited by every report).
 - **Story semantics over id symmetry:** The **primary** task SHOULD live under the story that matches **delivery**. Matching FR-047 to E5:S01:T47 is **optional**, not required.
 
-Operational guide: [`packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md`](../../../../packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md). Agent skill: [`.cursor/skills/intake-process`](../../../../.cursor/skills/intake-process/SKILL.md).
+Operational guide: [`FR_BR_INTAKE_GUIDE.md` (framework package)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md). Agent skill: [`intake-process` skill](https://github.com/earlution/ai-dev-kit/blob/main/.cursor/skills/intake-process/SKILL.md).
 
 ---
 

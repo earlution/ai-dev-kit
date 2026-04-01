@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.32+0] - 31-03-26
+## [0.5.9.8+2] - 01-04-26
 
-E5:S01:T32 **`RW -k`** (**+0**) — **FR-032** ↔ **T32** doc-init; **fr-br-uxr-board** reconciled (**FR-032**, **UXR-003/004** pointers); **T73** C3. [T32](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T32-release-candidate-readiness-gap-analysis.md); [FR-032](docs/project-management/kanban/fr-br/FR-032-release-candidate-readiness-gap-analysis.md).
+E5:S09:T08 — Docusaurus **strict** broken-link checking (**`throw`**), corpus link fixes, **FR-067 FU-1** closed; portal README + triage tests updated. [T08](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md); [FR-067](docs/project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.32+0.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.8+2.md)

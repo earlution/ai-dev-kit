@@ -214,4 +214,4 @@ Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kan
 
 ---
 
-_This Task is part of Epic 5: Documentation Management and Maintenance, Story 1: FR Repo (PERPETUAL). See [`Story-001-fr-repo.md`](Story-001-fr-repo.md) for story-level context._
+_This Task is part of Epic 5: Documentation Management and Maintenance, Story 1: FR Repo (PERPETUAL). See [`Story-001-fr-repo.md`](../Story-001-fr-repo.md) for story-level context._

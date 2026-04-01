@@ -279,8 +279,8 @@ Updated `detect_first_time_est_doc` function in `validate_version_bump.py` to ch
 - **Design Flaw:** The bug represents a "State Detection Logic Flaw" pattern (checking creation events instead of object existence)
 
 **Related Knowledge:**
-- **Use Case:** [UC-D-004 – Story + Task Docs Batch Creation](../../knowledge/use-cases/discovered/UC-D-004-story-task-docs-batch-creation.md)
-- **Abstract Anti-Pattern:** [Use Case Exposed Design Flaw](../../knowledge/analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md)
+- **Use Case:** [UC-D-004 – Story + Task Docs Batch Creation](../../../knowledge/use-cases/discovered/UC-D-004-story-task-docs-batch-creation.md)
+- **Abstract Anti-Pattern:** [Use Case Exposed Design Flaw](../../../knowledge/analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md)
 - **Task Document:** [E4:S13:T04 – Assess system impacts](../epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T04-assess-system-impacts.md)
 
 ---

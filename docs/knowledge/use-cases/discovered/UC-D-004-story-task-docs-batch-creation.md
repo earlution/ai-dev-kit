@@ -165,7 +165,7 @@ This use case represents an **abstract anti-pattern**: **Use Case Exposed Design
 ## Related Documentation
 
 - **Canonical Source:** [BR-010 – RW Doc-Init Detection Bug](../../../project-management/kanban/fr-br/BR-010-rw-doc-init-detection-bug-story-task-docs-batch-creation.md) - **PRIMARY ANCHOR** - Authoritative bug report
-- **Abstract Anti-Pattern:** [Use Case Exposed Design Flaw](../analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md) - General pattern derived from this bug (anchored to BR-010)
+- **Abstract Anti-Pattern:** [Use Case Exposed Design Flaw](../../analysis/abstract-anti-patterns-use-case-exposed-design-flaw.md) - General pattern derived from this bug (anchored to BR-010)
 - **Task Document:** [E4:S13:T04 – Assess system impacts](../../../project-management/kanban/epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T04-assess-system-impacts.md) - Where the bug was fixed
 - **RW Documentation:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **Bug Fix:** `packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py`

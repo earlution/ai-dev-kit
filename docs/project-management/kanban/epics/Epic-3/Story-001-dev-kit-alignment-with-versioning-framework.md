@@ -66,7 +66,7 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
 - ⚠️ Version file location uses legacy path (`src/fynd_deals/version.py`)
 - ✅ Dev-kit correctly avoids legacy complexity (clean Epic 1+ start)
 
-**Deliverable:** See [`T001-gap-analysis-report.md`](T001-gap-analysis-report.md) for complete gap analysis.
+**Deliverable:** See [`T001-gap-analysis-report.md`](Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md) for complete gap analysis.
 
 ---
 
@@ -98,7 +98,7 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
 - ✅ Forensic traceability: Multi-dimensional grid
 - ✅ Immutability rules: Historical metadata preservation
 
-**Deliverable:** See [`T002-fynd-deals-epic15-findings.md`](T002-fynd-deals-epic15-findings.md) for complete findings document.
+**Deliverable:** See [`T002-fynd-deals-epic15-findings.md`](Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md) for complete findings document.
 
 ---
 
@@ -297,8 +297,8 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
 - `packages/frameworks/numbering & versioning/versioning-policy.md`
 - `packages/frameworks/numbering & versioning/versioning-strategy.md`
 - `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
-- **T001 Gap Analysis:** [`T001-gap-analysis-report.md`](T001-gap-analysis-report.md)
-- **T002 Findings:** [`T002-fynd-deals-epic15-findings.md`](T002-fynd-deals-epic15-findings.md)
+- **T001 Gap Analysis:** [`T001-gap-analysis-report.md`](Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md)
+- **T002 Findings:** [`T002-fynd-deals-epic15-findings.md`](Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md)
 - Source: `fynd.deals/docs/fynd_deals/_design/versioning/versioning-*.md` (findings already ingested into framework package)
 
 ---

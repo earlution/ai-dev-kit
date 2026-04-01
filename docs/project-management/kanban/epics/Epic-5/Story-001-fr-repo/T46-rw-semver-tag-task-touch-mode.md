@@ -73,5 +73,5 @@ This task:
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-046:** [`docs/project-management/kanban/fr-br/FR-046-rw-semver-tag-task-touch-mode.md`](../../../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)

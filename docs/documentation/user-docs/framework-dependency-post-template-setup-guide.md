@@ -496,8 +496,8 @@ After completing setup:
 - [Installation Guide](framework-dependency-installation-guide.md) - Framework installation
 - [Usage Guide](framework-dependency-usage-guide.md) - Using installed frameworks
 - [Integration Guide](framework-dependency-integration-guide.md) - Integrating frameworks
-- [Contextualization Guide](../../../packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md) - Customizing canonical templates for your project
-- [Contextualization Examples](../../../packages/frameworks/kanban/templates/examples/contextualized/) - Example projects (tiny, small, ambitious)
+- [Contextualization Guide (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md) - Customizing canonical templates for your project
+- [Contextualization Examples (source)](https://github.com/earlution/ai-dev-kit/tree/main/packages/frameworks/kanban/templates/examples/contextualized) - Example projects (tiny, small, ambitious)
 
 ---
 

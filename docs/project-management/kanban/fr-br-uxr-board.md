@@ -36,7 +36,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 **Kanban anchor:** **[FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)** / **[E5:S01:T73](epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)** — concrete phased plan, acceptance criteria, and maintenance checklists live in the task doc; this section is the operator-facing summary.
 
-**Working definition — “open ∧ taskless”:** The item is still **active** on this board (or in [`fr-br/`](fr-br)) but lacks full Kanban wiring: no task document (or no stable **E#:S#:T#**), missing **`Implementing Task:`** in the FR/BR/UXR header, and/or no story checklist row.
+**Working definition — “open ∧ taskless”:** The item is still **active** on this board (or in the [`fr-br/`](https://github.com/earlution/ai-dev-kit/tree/main/docs/project-management/kanban/fr-br) document tree) but lacks full Kanban wiring: no task document (or no stable **E#:S#:T#**), missing **`Implementing Task:`** in the FR/BR/UXR header, and/or no story checklist row.
 
 **Execution loop:** Check out the **owning epic branch** (per **Primary epic branch** below) → create/link the task doc and bidirectional **`Implementing Task`** ↔ task → run **`RW -k E#:S#:T#`** so `version.py`, changelog, and SemVer registry match the intake.
 

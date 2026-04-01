@@ -220,8 +220,8 @@ Comprehensive review of Numbering & Versioning Framework for RC readiness, cover
 - [E9:S05: Canonical E/S/T Review and Refinement](Story-005-canonical-est-review-and-refinement.md) (coordination)
 
 **Related Epics:**
-- [Epic 3: Numbering & Versioning Framework](../../Epic-3/Epic-3.md) - Framework being reviewed
-- [Epic 6: Framework Management](../../Epic-6/Epic-6.md) - Framework management context
+- [Epic 3: Numbering & Versioning Framework](../Epic-3/Epic-3.md) - Framework being reviewed
+- [Epic 6: Framework Management](../Epic-6/Epic-6.md) - Framework management context
 
 ---
 

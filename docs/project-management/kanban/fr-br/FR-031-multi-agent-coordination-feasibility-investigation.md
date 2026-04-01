@@ -168,7 +168,7 @@ Investigate and assess feasibility of multi-agent coordination patterns for enha
 - None (investigation phase)
 
 **Related Work:**
-- **Source Material:** [`cursor-scaling-long-running-autonomous-coding-agents.md`](../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post on multi-agent coordination
+- **Source Material:** [`cursor-scaling-long-running-autonomous-coding-agents.md`](../../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post on multi-agent coordination
 - **Workflow Framework:** `packages/frameworks/workflow mgt/` - Existing workflow infrastructure
 - **Release Workflow:** RW implementation and documentation
 - **Update Kanban Workflow:** UKW implementation and documentation
@@ -335,7 +335,7 @@ Investigate and assess feasibility of multi-agent coordination patterns for enha
 
 ## References
 
-- **Primary Source:** [`cursor-scaling-long-running-autonomous-coding-agents.md`](../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post by Wilson Lin (Jan 14, 2026)
+- **Primary Source:** [`cursor-scaling-long-running-autonomous-coding-agents.md`](../../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post by Wilson Lin (Jan 14, 2026)
 - **Source URL:** [cursor.com/blog/scaling-agents](https://cursor.com/blog/scaling-agents)
 - **Workflow Management Framework:** `packages/frameworks/workflow mgt/`
 - **Release Workflow Documentation:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`

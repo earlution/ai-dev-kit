@@ -42,11 +42,14 @@ def _docs_exclude_globs(config_text: str) -> list[str]:
 
 
 def test_fr067_s2_link_policy_explicit(config_text: str, readme_text: str):
-    """S2 — broken link policy explicit in config + README."""
+    """S2 — broken link policy strict (`throw`) in config + README (E5:S09:T08 / FR-067 FU-1)."""
     assert "onBrokenLinks:" in config_text
-    assert "warn" in config_text
+    assert re.search(r"onBrokenLinks:\s*['\"]throw['\"]", config_text)
     assert "onBrokenMarkdownLinks:" in config_text
-    assert "Broken links" in readme_text or "broken link" in readme_text.lower()
+    assert re.search(r"onBrokenMarkdownLinks:\s*['\"]throw['\"]", config_text)
+    lowered = readme_text.lower()
+    assert "throw" in lowered or "strict" in lowered
+    assert "broken link" in lowered
     assert "FR-067" in readme_text
 
 

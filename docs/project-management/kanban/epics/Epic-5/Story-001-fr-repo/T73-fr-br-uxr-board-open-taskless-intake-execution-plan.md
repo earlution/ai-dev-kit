@@ -33,7 +33,7 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 - [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) — MoSCOW **Must / Should** rows and Intake plan block.  
 - [`FR-073`](../../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) — feature request and acceptance criteria.  
 - [`Story-000-uxr-repo.md`](../../Epic-7/Story-000-uxr-repo.md) — **UXR-n → E7:S00:Tnn** repository convention.  
-- [`TASK_TEMPLATE.md`](../../../../../../packages/frameworks/kanban/templates/TASK_TEMPLATE.md) — required headings for `validate_version_bump.py`.  
+- [`TASK_TEMPLATE.md` (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/templates/TASK_TEMPLATE.md) — required headings for `validate_version_bump.py`.  
 
 ---
 
@@ -43,7 +43,7 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 | FR/BR/UXR | Type | Primary task ID | Status | Primary epic branch | Housing rationale |
 |-----------|------|-----------------|--------|---------------------|-------------------|
-| **BR-038** | BR | **E6:S06:T02** | **Linked** (MoSCOW **`| T02`** 2026-03-31) | `epic/6-framework-management` | [T02](../../../Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md). |
+| **BR-038** | BR | **E6:S06:T02** | **Linked** (MoSCOW **`| T02`** 2026-03-31) | `epic/6-framework-management` | [T02](../../Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md). |
 | **BR-039** | BR | **E6:S06:T57** | **Released** **`v0.6.6.57+1`** on `epic/6` (supersedes planning alias **T43** on older board drafts) | `epic/6-framework-management` | Canonical task doc: [T57](../../Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md). |
 | **BR-059** | BR | **E6:S07:T109** | **Released** **`v0.6.7.109+1`** on `epic/6` (**RW -k**) | `epic/6-framework-management` | [T109-br059](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md). |
 | **FR-040** (ICW) | FR | **E5:S01:T40** | **Linked** | `epic/5-documentation-management` | [T40](T40-implementation-cycle-workflow-icw.md); board MoSCOW pipe added 2026-03-31. |
@@ -114,5 +114,5 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 ## References
 
 - [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md)  
-- [`intake-process`](../../../../../../.cursor/skills/intake-process/SKILL.md) skill  
+- [`intake-process` skill (source)](https://github.com/earlution/ai-dev-kit/blob/main/.cursor/skills/intake-process/SKILL.md)  
 - [FR-072](../../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md) (precedent: governance intake on same story)

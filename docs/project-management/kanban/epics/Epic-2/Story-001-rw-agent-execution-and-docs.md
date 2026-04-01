@@ -80,7 +80,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 **Files Created:**
 - ✅ `docs/project-management/kanban/Story-001-rw-agent-execution-and-docs/T001-audit-report.md` (comprehensive audit report)
 
-**Deliverable:** See [`T001-audit-report.md`](T001-audit-report.md) for complete audit findings and recommendations.
+**Deliverable:** See [`T001-audit-report.md`](Story-001-rw-agent-execution-and-docs/T001-audit-report.md) for complete audit findings and recommendations.
 
 ---
 

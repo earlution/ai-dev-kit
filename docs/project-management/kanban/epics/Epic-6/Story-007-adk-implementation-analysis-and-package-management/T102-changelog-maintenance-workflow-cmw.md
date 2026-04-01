@@ -122,7 +122,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 - **Workflow:** CMW (Changelog Management Workflow)
 - **Workflow:** RW (Release Workflow)
 - **Related Task:** T11 - Changelog Management and Archival Workflow (implementation task, now COMPLETE)
-- **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Include CMW perpetual task in canonical set
+- **Feature Request:** [FR-026](../../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Include CMW perpetual task in canonical set
 
 ---
 

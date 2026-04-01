@@ -94,9 +94,9 @@ Articles are typically **evergreen** (permanent documentation):
 ## Related Documentation
 
 - [Knowledge Base README](../README.md) - Complete KB structure
-- [Analysis Documents](../analysis/) - Analysis reports and investigations
-- [Guides](../guides/) - How-to guides and tutorials
-- [Use Cases](../use-cases/) - Canonical and discovered use cases
+- [Analysis Documents](../analysis/meta-analysis-executive-summary.md) - Analysis reports and investigations
+- [Guides](../guides/README.md) - How-to guides and tutorials
+- [Use Cases](../use-cases/discovered/README.md) - Discovered use cases (see also [architecture canonical use cases](../../architecture/use-cases/canonical/README.md))
 
 ---
 

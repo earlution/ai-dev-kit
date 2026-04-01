@@ -99,8 +99,8 @@ _None yet_
 
 ## Related Documentation
 
-- [USE_CASE_METHODOLOGY.md](../USE_CASE_METHODOLOGY.md) - Methodology guide
-- [Canonical Use Case Template](../templates/CANONICAL_USE_CASE_TEMPLATE.md) - Template for creating canonical use cases
+- [USE_CASE_METHODOLOGY.md](../../../knowledge/USE_CASE_METHODOLOGY.md) - Methodology guide
+- [Canonical Use Case Template](../CANONICAL_USE_CASE_TEMPLATE.md) - Template for creating canonical use cases
 
 ---
 

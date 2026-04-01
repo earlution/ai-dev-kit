@@ -181,11 +181,11 @@ Add granular control to UKW (Update Kanban Workflow) via use case flags and flex
 - [BR-033: UKW Board Disorganization](../../../fr-br/BR-033-ukw-board-disorganization.md) (related bug report)
 
 **Related Tasks:**
-- [E6:S00:T33: UKW Board Disorganization](../../../Epic-6/Story-000-br-repo/T33-ukw-board-disorganization.md) - Related bug fix
-- [E6:S06:T08: Update Kanban Workflow (UKW)](../../Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) - Perpetual task
+- [E6:S00:T33: UKW Board Disorganization](../../Epic-6/Story-000-br-repo/T33-ukw-board-disorganization.md) - Related bug fix
+- [E6:S07:T101: Update Kanban Workflow (UKW)](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) - Perpetual task
 
 **Related Stories:**
-- [E5:S01: FR Repo](../../Story-001-fr-repo.md) - Repository story
+- [E5:S01: FR Repo](../Story-001-fr-repo.md) - Repository story
 - [E6:S06: ADK Implementation Analysis and Package Management](../../Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ---
@@ -278,5 +278,5 @@ Priority operations (UC2/UC3) require significant agentic intelligence and are c
 
 ---
 
-_This Task is part of Epic 5, Story 1: FR Repo. See [`Story-001-fr-repo.md`](Story-001-fr-repo.md) for repository context._
+_This Task is part of Epic 5, Story 1: FR Repo. See [`Story-001-fr-repo.md`](../Story-001-fr-repo.md) for repository context._
 

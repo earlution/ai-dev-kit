@@ -26,13 +26,13 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 ## Quick Navigation
 
 - **[Methodology](USE_CASE_METHODOLOGY.md)** - How to organize and manage use cases
-- **[Canonical Use Cases](use-cases/canonical/)** - Design-phase use cases
-- **[Discovered Use Cases](use-cases/discovered/)** - Implementation-phase use cases
-- **[Templates](use-cases/templates/)** - Use case templates
-- **[Articles](articles/)** - Blog posts and in-depth articles
-- **[Analysis](analysis/)** - Analysis documents and reports
-- **[Guides](guides/)** - How-to guides and tutorials
-- **[Reviews](reviews/)** - Post-implementation reviews (PIRs)
+- **[Canonical Use Cases](../architecture/use-cases/canonical/README.md)** - Design-phase use cases (architecture KB)
+- **[Discovered Use Cases](use-cases/discovered/README.md)** - Implementation-phase use cases
+- **[Templates](use-cases/templates/DISCOVERED_USE_CASE_TEMPLATE.md)** - Discovered use case template (see also architecture canonical template)
+- **[Articles](articles/README.md)** - Blog posts and in-depth articles
+- **[Analysis](analysis/meta-analysis-executive-summary.md)** - Analysis documents and reports (entry index)
+- **[Guides](guides/README.md)** - How-to guides and tutorials
+- **[Reviews](reviews/pir/README.md)** - Post-implementation reviews (PIRs)
 
 ---
 
@@ -40,7 +40,7 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 
 ### Articles
 
-**Location:** [`articles/`](articles/)
+**Location:** [`articles/README.md`](articles/README.md)
 
 **Definition:** In-depth blog posts, articles, and comprehensive write-ups on framework topics, patterns, and lessons learned.
 
@@ -59,7 +59,7 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 
 ### Canonical Use Cases
 
-**Location:** [`use-cases/canonical/`](use-cases/canonical/)
+**Location:** [Architecture canonical use cases](../architecture/use-cases/canonical/README.md)
 
 **Definition:** Use cases identified and documented during the design/planning phase, before implementation.
 
@@ -79,7 +79,7 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 
 ### Discovered Use Cases
 
-**Location:** [`use-cases/discovered/`](use-cases/discovered/)
+**Location:** [`use-cases/discovered/README.md`](use-cases/discovered/README.md)
 
 **Definition:** Use cases, patterns, or practices discovered during actual work, implementation, or problem-solving.
 
@@ -100,7 +100,7 @@ This section contains all use cases for the ai-dev-kit framework and related pat
 
 ### Canonical Use Cases Index
 
-See [`use-cases/canonical/README.md`](use-cases/canonical/README.md) for complete index of canonical use cases.
+See [canonical use cases index](../architecture/use-cases/canonical/README.md) for complete index of canonical use cases.
 
 ### Discovered Use Cases Index
 
@@ -155,8 +155,8 @@ See [`use-cases/discovered/README.md`](use-cases/discovered/README.md) for compl
 ## Related Documentation
 
 - [USE_CASE_METHODOLOGY.md](USE_CASE_METHODOLOGY.md) - Complete methodology guide
-- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Example discovered use case
-- [REOPENING_BR_AND_TASKS_GUIDE.md](../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Example discovered use case
+- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Example discovered use case
+- [REOPENING_BR_AND_TASKS_GUIDE.md](../project-management/kanban/fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Example discovered use case
 
 ---
 

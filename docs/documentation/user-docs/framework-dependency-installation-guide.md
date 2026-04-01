@@ -601,7 +601,7 @@ If you prefer to set it up manually:
 5. **Verify the trigger works:**
    - Restart Cursor to reload `.cursorrules`
    - In chat, use the trigger **plus** a task id, e.g. `RW E5S01T01` or `RW E5:S01:T01` (substitute a completed task from your Kanban). Short paths: `RW -k E5S01T01`, `RW -d E5S01T01`
-   - Full procedure and guardrails: [Release Workflow (agent execution)](../../../packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
+   - Full procedure and guardrails: [Release Workflow (agent execution)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
    - If **`rw-config.yaml`** sets **`use_kanban: true`**, validators (e.g. `validate_rw_task_complete.py`) expect a real task document matching the id you pass
 
 **What the RW Trigger Does:**
@@ -784,7 +784,7 @@ If you prefer to set it up manually:
 5. **Verify the trigger works:**
    - Restart Cursor to reload `.cursorrules`
    - In chat, use the trigger **plus** a task id, e.g. `RW E5S01T01` or `RW E5:S01:T01` (substitute a completed task from your Kanban). Short paths: `RW -k E5S01T01`, `RW -d E5S01T01`
-   - Full procedure and guardrails: [Release Workflow (agent execution)](../../../packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
+   - Full procedure and guardrails: [Release Workflow (agent execution)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
    - If **`rw-config.yaml`** sets **`use_kanban: true`**, validators (e.g. `validate_rw_task_complete.py`) expect a real task document matching the id you pass
 
 **What the RW Trigger Does:**
@@ -996,8 +996,8 @@ See the [Usage Guide](framework-dependency-usage-guide.md) for detailed usage in
 
 ## References
 
-- [Framework Dependency Architecture](../../Architecture/standards-and-adrs/framework-dependency-architecture.md)
-- [CLI Tool Design](../../Architecture/standards-and-adrs/framework-update-cli-design.md)
+- [Framework Dependency Architecture](../../architecture/standards-and-adrs/framework-dependency-architecture.md)
+- [CLI Tool Design](../../architecture/standards-and-adrs/framework-update-cli-design.md)
 - [Update Guide](framework-dependency-update-guide.md)
 - [Troubleshooting Guide](framework-dependency-troubleshooting-guide.md)
 
