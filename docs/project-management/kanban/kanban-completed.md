@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-01 (**E5:S09:T10** v0.5.9.10+2 — strict anchors / **FR-067 FU-3**)
-**Version:** v0.5.9.10+2
+**Last Updated:** 2026-04-01 (**E5:S01:T75** v0.5.1.75+1 — **FR-075** ICW durable planning artifacts)
+**Version:** v0.5.1.75+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -19,6 +19,10 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 5: FR Repo (repository story)**
+- **[E5:S01:T75](epics/Epic-5/Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md)** — **ICW durable planning artifacts** in repo documentation (**FR-075**): `specification-and-planning-artifacts-policy.md`, `docs/implementation-cycles/README.md`, ICW framework README + guide, `icw-workflow.yaml` comment, `.cursorrules`; intake **FR-075** + board row.  
+  **Completed:** `2026-04-01T15:46:20Z` | **Version:** `v0.5.1.75+1` | **Agent:** `RW Agent`
 
 #### **Epic 5: Documentation Management**
 - **[E5:S09:T10](epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)** – Docusaurus **strict broken anchors** (`onBrokenAnchors: 'throw'`) post–**T08** (**FR-067 FU-3**): corpus anchor/heading alignment, `portal/docusaurus.config.js`, `portal/README.md`, `tests/test_portal_fr067_build_triage.py`; filing **v0.5.9.10+1**; implementation **v0.5.9.10+2** (**RW E5:S09:T10**).  

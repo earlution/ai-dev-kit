@@ -601,6 +601,7 @@ The workflow definition is located at:
 8. **EXECUTE INTELLIGENTLY** - Use your AI capabilities to guide through specification, test design, and implementation planning
 9. **GUIDE THE USER** - Ask relevant questions and provide intelligent assistance throughout the three phases
 10. **Document** each phase's analysis, decisions, and results
+11. **Durable artifacts (ICW responsibility):** Do **not** leave the specification package only in IDE-local plan folders (e.g. `~/.cursor/plans/`). Persist the three-phase outputs under the project **`docs/implementation-cycles/`** tree (or the `output_dir` in `icw-workflow.yaml`), use the **`ICW-E…S…T…-*`** naming convention where applicable, and **link those paths from the Kanban task** (and mirror key acceptance bullets into the task doc when helpful). **Policy:** `docs/architecture/standards-and-adrs/specification-and-planning-artifacts-policy.md`.
 
 **🔍 MODE DETECTION AND VALIDATION:**
 - **Planning Mode:** ✅ ALLOWED - ICW requires intelligent agent guidance
@@ -631,7 +632,7 @@ If ICW detects implementation mode:
 3. **PHASE 2: TEST DESIGN** - Guide through comprehensive test design based on specifications
 4. **PHASE 3: IMPLEMENTATION PLANNING** - Guide through detailed implementation planning
 5. **GENERATE PACKAGE** - Create complete implementation package with all three phases
-6. **INTEGRATE WITH KANBAN** - Update kanban system with implementation task and artifacts
+6. **INTEGRATE WITH KANBAN** - Update kanban system with implementation task and artifacts; ensure the **task doc lists Planning artifact / ICW file links** under `docs/implementation-cycles/` (repo SoT per policy in `docs/architecture/standards-and-adrs/specification-and-planning-artifacts-policy.md`)
 7. **COMPLETE** - Report success and provide next steps
 
 **Agent Guidance for Each Phase:**

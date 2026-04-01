@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (RW **v0.5.1.32+0** **`RW -k`** **E5:S01:T32**; prior **`v0.5.1.21+0`** **T21**)
+**Last updated:** 2026-04-01 (**RW E5:S01:T75** **`v0.5.1.75+1`** — **FR-075** ICW durable artifacts policy)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.73+0
+**Version:** v0.5.1.75+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -58,6 +58,7 @@ housekeeping_policy: keep
 - [ ] **E5:S01:T72 – Uniform Repository vs Abstract-Space Kanban Rules** - TODO (HIGH priority — **v0.5.1.72+0** intake; governance: evaluate approaches, decide **S00**/repository model, reconcile **FR-021** vs **E7:S00** UXR) - [Task Document](Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md) | [FR-072](../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md)
 - [x] **E5:S01:T73 – FR/BR/UXR Board: Open ∧ Taskless Intake Execution Plan** ✅ COMPLETE (v0.5.1.74+2 narrative closure) — **FR-073**; Phase B/C filed (**T43**, **T109**, **E7:S00** anchors, board MoSCOW) - [Task Document](Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [FR-073](../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
 - [x] **E5:S01:T74 – Kanban Intake: Atomic KG-R2 & Semantic KG-R6** ✅ COMPLETE (v0.5.1.74+1 … **+3** reconciliation) — **FR-074**; governance + guides + skill + workflow + board + **epic/6** canonical **T57**/**T109** alignment - [Task Document](Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md) | [FR-074](../../fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md)
+- [x] **E5:S01:T75 – ICW durable planning artifacts in the documentation system** - ✅ COMPLETE (**v0.5.1.75+1** — **RW E5:S01:T75**; **FR-075**) — policy + ICW docs + `.cursorrules` + `implementation-cycles` README - [Task Document](Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md) | [FR-075](../../fr-br/FR-075-icw-durable-planning-artifacts-documentation-system.md)
 
 ---
 

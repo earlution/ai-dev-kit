@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-31 (E5:S01:T32 **RW -k** **v0.5.1.32+0** — **FR-032**/T32; prior **T21** **v0.5.1.21+0**; milestone **T74** **v0.5.1.74+3**)  
+**Last updated:** 2026-04-01 (**E5:S01:T75** **`v0.5.1.75+1`** — **FR-075** ICW durable artifacts; prior **T74** **v0.5.1.74+3**)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -25,7 +25,7 @@ housekeeping_policy: keep
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
 
 
-- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - **v0.5.1.32+0** **RW -k** T32/FR-032; **v0.5.1.21+0** T21; **v0.5.1.74+3** T74; T73 FR-073)
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - **`v0.5.1.75+1` T75/FR-075**; **v0.5.1.32+0** T32; **v0.5.1.74+3** T74; T73 FR-073)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 
