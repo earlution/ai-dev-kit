@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase Maintenance and Review)
 VERSION_STORY = 0     # Story number (Story 0: UXR Repo — PERPETUAL)
-VERSION_TASK = 2      # Task number (E7:S00:T02 — UXR-002 UAT migration utilities registry anchor)
-VERSION_BUILD = 2     # Build number (UXR-002 **Implementing Task** header wiring; post-merge main tip)
+VERSION_TASK = 4      # Task number (E7:S00:T04 — UXR-004 Kanban package installation UAT; repository anchor)
+VERSION_BUILD = 1     # Build number (merge `epic/7-documentation-maintenance` → **main**; post doc-init **T04**)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.0.2+2 — E7:S00:T02 (main includes merged epic/7 UXR intake + Epic 5 Docusaurus **v0.5.9.9+2** in archive)
+# Current: 0.7.0.4+1 — E7:S00:T04 (merge **main** includes **RW -k** **T04** work from epic/7 + integration commits; Epic 5 Docusaurus **v0.5.9.9+2** in archive)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

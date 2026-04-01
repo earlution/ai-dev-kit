@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-31 (v0.7.0.2+2 — UXR-002 **Implementing Task** wiring; E7:S00:T02)
+**Last updated:** 2026-03-31 (**RW -k** **v0.7.0.4+0** **E7:S00:T04** **UXR-004**; prior **T03** **v0.7.0.3+0**)
 **Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.7.0.2+2 **T02** UXR-002 **Implementing Task** wired; **T01** v0.7.0.1+2; **T05** UXR-005)
+- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - **v0.7.0.4+0** **RW -k** **T04** **UXR-004**; **T03** v0.7.0.3+0; **T02** v0.7.0.2+2; **T01** v0.7.0.1+2; **T05** UXR-005)
   - Story: [`Story-000-uxr-repo.md`](Story-000-uxr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
 
@@ -236,7 +236,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-31 (v0.7.0.2+2 — UXR-002 **Implementing Task** wiring; E7:S00:T02)
+**Last updated:** 2026-03-20 (v0.7.6.9+1 – Story 6 T01–T17 + T10–T17 review tasks complete)
 
 **Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
 

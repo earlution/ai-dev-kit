@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.0.2+2] - 31-03-26
+## [0.7.0.4+1] - 31-03-26
 
-E7:S00:T02 — **UXR-002** intake: **`Implementing Task`** in [UXR-002](docs/project-management/kanban/fr-br/UXR-002-comprehensive-uat-migration-utilities.md) → [T02](docs/project-management/kanban/epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md). *(**main:** merged `epic/7-documentation-maintenance`; Epic 5 Docusaurus go-live **v0.5.9.9+2** retained in [archive](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md).)*
+**Merge** `epic/7-documentation-maintenance` → **`main`**: Epic 7 **E7:S00:T04** **UXR-004** anchor/board work, **`validate_version_bump.py`** story-`0` guard, archive slices; Epic 5 Docusaurus **v0.5.9.9+2** retained in [archive](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md). Prior **RW -k** detail: [CHANGELOG_v0.7.0.4+0](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.0.4+0.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.0.2+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.0.4+1.md)
