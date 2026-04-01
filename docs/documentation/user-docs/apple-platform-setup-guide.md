@@ -330,7 +330,7 @@ Include the following information when reporting issues:
 
 - [ai-dev-kit Installation Guide](framework-dependency-installation-guide.md)
 - [Framework Dependency CLI Reference](framework-dependency-cli-reference.md)
-- [Troubleshooting Guide](../troubleshooting/troubleshooting-guide.md)
+- [Framework dependency troubleshooting](framework-dependency-troubleshooting-guide.md)
 
 ---
 

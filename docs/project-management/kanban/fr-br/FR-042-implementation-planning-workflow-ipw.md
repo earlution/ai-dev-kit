@@ -92,7 +92,7 @@ Define and implement an **Implementation Planning Workflow (IPW)** – a formal 
 
 **Header (required):**
 - Task title (`E{epic}:S{story}:T{task}` – Planning: Spec, Tests, Implementation Plan)
-- **Host Task:** [link](path) (`E{epic}:S{story}:T{task}`)
+- **Host Task:** relative path to the host task doc (`E{epic}:S{story}:T{task}`) — link to the task markdown file (bidirectional wiring)
 - Status
 - Planning doc created date
 

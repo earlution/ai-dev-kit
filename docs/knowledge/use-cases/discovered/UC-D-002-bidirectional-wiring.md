@@ -101,9 +101,9 @@ Every link between work items (BR/FR, Tasks, Documentation) must be bidirectiona
 ## Implementation
 
 **Related Work:**
-- **Task:** [E2:S01:T06 - Fix changelog validator ordering bug](../../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug--reopened)
-- **BR:** [BR-002: Changelog Validator Ordering Bug](../../fr-br/BR-002-changelog-validator-ordering-bug.md)
-- **Documentation:** [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md)
+- **Task:** [E2:S01:T06 - Fix changelog validator ordering bug](../../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug--reopened)
+- **BR:** [BR-002: Changelog Validator Ordering Bug](../../../project-management/kanban/fr-br/BR-002-changelog-validator-ordering-bug.md)
+- **Documentation:** [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../../project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md)
 - **Epic/Story:** Epic 2, Story 1
 
 **Wiring:**
@@ -169,9 +169,9 @@ Every link between work items (BR/FR, Tasks, Documentation) must be bidirectiona
 
 ## References
 
-- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Complete principle document
-- [BR-002: Changelog Validator Ordering Bug](../../fr-br/BR-002-changelog-validator-ordering-bug.md) - Example BR
-- [Task E2:S01:T06](../../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug--reopened) - Example task
+- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../../project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Complete principle document
+- [BR-002: Changelog Validator Ordering Bug](../../../project-management/kanban/fr-br/BR-002-changelog-validator-ordering-bug.md) - Example BR
+- [Task E2:S01:T06](../../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug--reopened) - Example task
 
 ---
 

@@ -225,10 +225,10 @@ AI Dev Kit succeeds when:
 
 ## 📖 Related Documentation
 
-- **[Getting Started Guide](Guides/getting-started/README.md)** — How to start using AI Dev Kit
-- **[Framework Consumption Guide](Guides/framework-consumption/README.md)** — How to adopt frameworks
-- **[Architecture Overview](Architecture/README.md)** — Technical architecture and standards
-- **[Kanban Governance](project-management/rituals/policy/kanban-governance-policy.md)** — Kanban framework policies
+- **[Getting Started Guide](../guides/getting-started/README.md)** — How to start using AI Dev Kit
+- **[Framework Consumption Guide](../guides/framework-consumption/README.md)** — How to adopt frameworks
+- **[Architecture Overview](../architecture/README.md)** — Technical architecture and standards
+- **[Kanban Governance](../project-management/rituals/policy/kanban-governance-policy.md)** — Kanban framework policies
 
 ---
 

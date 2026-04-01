@@ -305,9 +305,5 @@ This feature request is part of the Kanban Framework. See `packages/frameworks/k
 
 ## Related Tasks
 
-- [E2:S1:T01](kanban/epics/Epic-2/Story-01/T01-Feature-Request-Intake-Workflow-Automation-Impleme.md) - Feature Request: Intake Workflow Automation - Implementation (Part 1)
-- [E2:S1:T02](kanban/epics/Epic-2/Story-01/T02-Feature-Request-Intake-Workflow-Automation-Impleme.md) - Feature Request: Intake Workflow Automation - Implementation (Part 2)
-- [E2:S1:T03](kanban/epics/Epic-2/Story-01/T03-Feature-Request-Intake-Workflow-Automation-Impleme.md) - Feature Request: Intake Workflow Automation - Implementation (Part 3)
-- [E2:S1:T04](kanban/epics/Epic-2/Story-01/T04-Feature-Request-Intake-Workflow-Automation-Testing.md) - Feature Request: Intake Workflow Automation - Testing (Part 4)
-- [E2:S1:T05](kanban/epics/Epic-2/Story-01/T05-Feature-Request-Intake-Workflow-Automation-Documen.md) - Feature Request: Intake Workflow Automation - Documentation (Part 5)
+Legacy numbered links were removed (paths no longer exist on disk). Intake automation work lives under **E2:S11** — see [`Story-011-intake-workflow-automation.md`](../epics/Epic-2/Story-011-intake-workflow-automation.md) and its task documents.
 

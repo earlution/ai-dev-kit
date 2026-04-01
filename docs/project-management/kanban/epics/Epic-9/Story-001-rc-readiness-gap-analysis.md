@@ -66,7 +66,7 @@ This gap analysis must be aware of the comprehensive framework review scope defi
 
 **Brief Summary:** Catalog all epics, stories, tasks, priorities, and statuses to create comprehensive current state baseline.
 
-**Task Document:** [`Story-001-rc-readiness-gap-analysis/T01-current-state-inventory.md`](Story-001-rc-readiness-gap-analysis/T01-current-state-inventory.md)
+**Task Document:** [Task 1 (this story — detached file not yet created)](#task-1-current-state-inventory)
 
 ### Task 2: RC=1 Criteria Definition
 
@@ -80,7 +80,7 @@ This gap analysis must be aware of the comprehensive framework review scope defi
 - Book project integration opportunities
 - Quality gates and validation requirements
 
-**Task Document:** [`Story-001-rc-readiness-gap-analysis/T02-rc1-criteria-definition.md`](Story-001-rc-readiness-gap-analysis/T02-rc1-criteria-definition.md)
+**Task Document:** [Task 2 (this story — detached file not yet created)](#task-2-rc1-criteria-definition)
 
 ### Task 3: Gap Analysis
 
@@ -94,19 +94,19 @@ This gap analysis must be aware of the comprehensive framework review scope defi
 - Missing work identification across all dimensions
 - Blocker identification and resolution strategies
 
-**Task Document:** [`Story-001-rc-readiness-gap-analysis/T03-gap-analysis.md`](Story-001-rc-readiness-gap-analysis/T03-gap-analysis.md)
+**Task Document:** [Task 3 (this story — detached file not yet created)](#task-3-gap-analysis)
 
 ### Task 4: Task Prioritization Review
 
 **Brief Summary:** Analyze all active tasks to identify which should be M/S priority but are currently C/W, with evidence-based recommendations.
 
-**Task Document:** [`Story-001-rc-readiness-gap-analysis/T04-task-prioritization-review.md`](Story-001-rc-readiness-gap-analysis/T04-task-prioritization-review.md)
+**Task Document:** [Task 4 (this story — detached file not yet created)](#task-4-task-prioritization-review)
 
 ### Task 5: Missing Work Identification
 
 **Brief Summary:** Discover critical work that doesn't have tasks yet but is required for RC=1 state, with task creation recommendations.
 
-**Task Document:** [`Story-001-rc-readiness-gap-analysis/T05-missing-work-identification.md`](Story-001-rc-readiness-gap-analysis/T05-missing-work-identification.md)
+**Task Document:** [Task 5 (this story — detached file not yet created)](#task-5-missing-work-identification)
 
 ### Task 6: RC Readiness Checklist Creation
 
@@ -120,13 +120,13 @@ This gap analysis must be aware of the comprehensive framework review scope defi
 - Quality gates and validation requirements
 - Per-framework checklist templates
 
-**Task Document:** [`Story-001-rc-readiness-gap-analysis/T06-rc-readiness-checklist-creation.md`](Story-001-rc-readiness-gap-analysis/T06-rc-readiness-checklist-creation.md)
+**Task Document:** [Task 6 (this story — detached file not yet created)](#task-6-rc-readiness-checklist-creation)
 
 ### Task 7: Roadmap to RC=1
 
 **Brief Summary:** Develop actionable roadmap showing prioritized path from current state to RC=1, with milestones, dependencies, and timeline estimates.
 
-**Task Document:** [`Story-001-rc-readiness-gap-analysis/T07-roadmap-to-rc1.md`](Story-001-rc-readiness-gap-analysis/T07-roadmap-to-rc1.md)
+**Task Document:** [Task 7 (this story — detached file not yet created)](#task-7-roadmap-to-rc1)
 
 ---
 

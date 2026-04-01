@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-03-30  
-**Last updated:** 2026-03-31 (T09 go-live **v0.5.9.9+2** — **RW E5:S09:T09**)  
-**Version:** v0.5.9.9+2  
+**Last updated:** 2026-04-01 (T08 strict links **v0.5.9.8+2** — **RW E5:S09:T08**)  
+**Version:** v0.5.9.8+2  
 **Code:** E5S09
 
 ---
@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [x] **E5:S09:T05 – CI build gate (FR-069)** - ✅ COMPLETE (v0.5.9.5+1)
 - [x] **E5:S09:T06 – Deployment and hosting (FR-070)** - ✅ COMPLETE (v0.5.9.6+1)
 - [x] **E5:S09:T07 – Site search (FR-071)** - ✅ COMPLETE (v0.5.9.7+1)
-- [ ] **E5:S09:T08 – Strict broken-link checking post–FR-067 (warn → throw)** - TODO — [task file](Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md); **FU-1** on [FR-067](../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
+- [x] **E5:S09:T08 – Strict broken-link checking post–FR-067 (warn → throw)** - ✅ COMPLETE (**v0.5.9.8+2** — **RW E5:S09:T08**); **FU-1** on [FR-067](../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md) — [task file](Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)
 - [x] **E5:S09:T09 – GitHub Pages go-live verification (FR-070 follow-up)** - ✅ COMPLETE (v0.5.9.9+2 — **RW E5:S09:T09**) — [task file](Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
 
 > **Forensic marker format:** `✅ COMPLETE (vRC.E.S.T+B)` when done.
@@ -59,6 +59,7 @@ Deliver a **complete Docusaurus adoption path** for the AI Dev Kit: the `portal/
 | T05 | FR-069 | [`FR-069-docusaurus-ci-build-gate.md`](../../fr-br/FR-069-docusaurus-ci-build-gate.md) |
 | T06 | FR-070 | [`FR-070-docusaurus-deployment-and-hosting.md`](../../fr-br/FR-070-docusaurus-deployment-and-hosting.md) |
 | T07 | FR-071 | [`FR-071-docusaurus-site-search.md`](../../fr-br/FR-071-docusaurus-site-search.md) |
+| T08 | FR-067 (FU-1) | [`FR-067-docusaurus-production-build-corpus-triage.md`](../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md) |
 | T09 | FR-070 (follow-up) | [`FR-070-docusaurus-deployment-and-hosting.md`](../../fr-br/FR-070-docusaurus-deployment-and-hosting.md) |
 
 ---

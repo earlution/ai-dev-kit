@@ -25,16 +25,16 @@ housekeeping_policy: keep
   **Completed:** `2026-03-30T16:00:00Z` | **Version:** `v0.2.11.12+2` | **Agent:** `UKW / Maintainer`
 
 #### **Epic 5: Documentation Management**
-- **[E5:S09:T09](epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)** – GitHub Pages **go-live** (**FR-070** follow-up): `epic/5` → **`main`**, Actions run **23796236180** green, Pages legacy **`gh-pages`/`/`**, canonical **HTTP 200**, [portal/README.md](../../../portal/README.md) go-live/troubleshooting; task doc **`Task ID`** for RW validators; *init* **v0.5.9.9+1** (`RW -k`), *release* **v0.5.9.9+2** (**RW E5:S09:T09**).  
+- **[E5:S09:T09](epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)** – GitHub Pages **go-live** (**FR-070** follow-up): `epic/5` → **`main`**, Actions run **23796236180** green, Pages legacy **`gh-pages`/`/`**, canonical **HTTP 200**, [portal/README.md](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md) go-live/troubleshooting; task doc **`Task ID`** for RW validators; *init* **v0.5.9.9+1** (`RW -k`), *release* **v0.5.9.9+2** (**RW E5:S09:T09**).  
   **Completed:** `2026-03-31T12:10:00Z` | **Version:** `v0.5.9.9+2` | **Agent:** `RW Agent`
 
-- **[E5:S09:T07](epics/Epic-5/Story-009-docusaurus-documentation-portal/T07-docusaurus-search-fr-071.md)** – Docusaurus site search (**FR-071**): `@easyops-cn/docusaurus-search-local` in [`portal/docusaurus.config.js`](../../../portal/docusaurus.config.js), [`portal/README.md`](../../../portal/README.md) (smoke queries, privacy, build time), [`tests/test_portal_fr071_search.py`](../../../tests/test_portal_fr071_search.py)  
+- **[E5:S09:T07](epics/Epic-5/Story-009-docusaurus-documentation-portal/T07-docusaurus-search-fr-071.md)** – Docusaurus site search (**FR-071**): `@easyops-cn/docusaurus-search-local` in [`portal/docusaurus.config.js`](https://github.com/earlution/ai-dev-kit/blob/main/portal/docusaurus.config.js), [`portal/README.md`](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md) (smoke queries, privacy, build time), [`tests/test_portal_fr071_search.py`](https://github.com/earlution/ai-dev-kit/blob/main/tests/test_portal_fr071_search.py)  
   **Completed:** `2026-03-30T16:59:05Z` | **Version:** `v0.5.9.7+1` | **Agent:** `RW Agent`
 
-- **[E5:S09:T06](epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070.md)** – Docusaurus GitHub Pages deployment (**FR-070**): [`.github/workflows/docusaurus-deploy.yml`](../../../.github/workflows/docusaurus-deploy.yml), portal hosting README, root README link, `tests/test_portal_fr070_deployment.py`  
+- **[E5:S09:T06](epics/Epic-5/Story-009-docusaurus-documentation-portal/T06-docusaurus-deployment-fr-070.md)** – Docusaurus GitHub Pages deployment (**FR-070**): [`.github/workflows/docusaurus-deploy.yml`](https://github.com/earlution/ai-dev-kit/blob/main/.github/workflows/docusaurus-deploy.yml), portal hosting README, root README link, `tests/test_portal_fr070_deployment.py`  
   **Completed:** `2026-03-30T16:11:41Z` | **Version:** `v0.5.9.6+1` | **Agent:** `RW Agent`
 
-- **[E5:S09:T05](epics/Epic-5/Story-009-docusaurus-documentation-portal/T05-docusaurus-ci-fr-069.md)** – Docusaurus CI build gate (**FR-069**): [`.github/workflows/docusaurus-build.yml`](../../../.github/workflows/docusaurus-build.yml), `tests/test_portal_fr069_ci.py`, portal README CI pointer  
+- **[E5:S09:T05](epics/Epic-5/Story-009-docusaurus-documentation-portal/T05-docusaurus-ci-fr-069.md)** – Docusaurus CI build gate (**FR-069**): [`.github/workflows/docusaurus-build.yml`](https://github.com/earlution/ai-dev-kit/blob/main/.github/workflows/docusaurus-build.yml), `tests/test_portal_fr069_ci.py`, portal README CI pointer  
   **Completed:** `2026-03-30T15:52:14Z` | **Version:** `v0.5.9.5+1` | **Agent:** `RW Agent`
 
 - **[E5:S09:T04](epics/Epic-5/Story-009-docusaurus-documentation-portal/T04-docusaurus-navigation-fr-068.md)** – Docusaurus navigation / sidebar IA / landing (**FR-068**): `portal/sidebars.js`, `portal/docusaurus.config.js`, homepage, `tests/test_portal_fr068_navigation.py`, portal README mapping + `--no-minify` build workaround  
@@ -104,56 +104,56 @@ housekeeping_policy: keep
 ---
 
 #### **Epic 11: Debugging and Troubleshooting**
-- **[E11:S01:T01](epics/Epic-11/Story-001-debug-path/T01-debug-path-expectations-baseline.md)** – Debug path expectations baseline  
+- **[E11:S01:T01](epics/Epic-11/Story-001-debug-path-package-implementation-review.md#e11s01t01--establish-expectations-baseline-for-debug-path-package)** – Debug path expectations baseline  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.11.1.1+1` | **Agent:** `PM-AGENT-001`
 
 
 ---
 
 #### **Epic 10: Documentation and Knowledge Management**
-- **[E10:S01:T01](epics/Epic-10/Story-001-documentation-lifecycle/T01-doc-lifecycle-expectations-baseline.md)** – Doc lifecycle expectations baseline  
+- **[E10:S01:T01](epics/Epic-10/Story-001-document-lifecycle-package-implementation-review.md#e10s01t01--establish-expectations-baseline-for-document-lifecycle-package)** – Doc lifecycle expectations baseline  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.10.1.1+1` | **Agent:** `PM-AGENT-001`
 
 
 ---
 
 #### **Epic 8: Tooling & Automation**
-- **[E8:S04:T01](epics/Epic-8/Story-004-tooling-baseline/T01-tooling-automation-expectations-baseline.md)** – Tooling & Automation expectations baseline  
+- **[E8:S04:T01](epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md#e8s04t01--establish-expectations-baseline-for-tooling--automation-package)** – Tooling & Automation expectations baseline  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.8.4.1+1` | **Agent:** `PM-AGENT-001`
 
 
 ---
 
 #### **Epic 1: AI Dev Kit Core**
-- **[E1:S06:T01](epics/Epic-1/Story-006-repository-infrastructure/T01-set-up-byob-badges-for-private-repository.md)** – Set up BYOB badges for private repository  
+- **[E1:S06:T01](epics/Epic-1/Story-006-repository-ci-cd-setup/T01-setup-byob-badges-for-private-repository.md)** – Set up BYOB badges for private repository  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.1.6.1+1` | **Agent:** `PM-AGENT-001`
 
 
 ---
 
 #### **Epic 6: Framework Management and Maintenance**
-- **[E6:S07:T18](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-persisted-run-logs.md)** – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs  
+- **[E6:S07:T18](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)** – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.6.7.18+1` | **Agent:** `PM-AGENT-001`
 
 
 ---
 
 #### **Epic 4: Kanban Framework**
-- **[E4:S11:T07](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-task-documents.md)** – Migrate Embedded Tasks to Discrete Task Documents  
+- **[E4:S11:T07](epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)** – Migrate Embedded Tasks to Discrete Task Documents  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.4.11.7+1` | **Agent:** `PM-AGENT-001`
 
 
 ---
 
 #### **Epic 6: Framework Management and Maintenance**
-- **[E6:S07:T106](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflow-equivalents.md)** – Windsurf Migration: .cursorrules to Workflow Equivalents  
+- **[E6:S07:T106](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflows.md)** – Windsurf Migration: .cursorrules to Workflow Equivalents  
   **Completed:** `2026-03-12T14:00:00Z` | **Version:** `v0.6.7.106+1` | **Agent:** `PM-AGENT-001`
 
 
 ---
 
 #### **Epic 7: Codebase Maintenance and Review**
-- **[BR-052](docs/project-management/kanban/fr-br/BR-052-github-actions-workflow-optimization.md)** – GitHub Actions Workflow Optimization  
+- **[BR-052](fr-br/BR-052-github-actions-workflow-optimization.md)** – GitHub Actions Workflow Optimization  
   **Completed:** `2026-03-12T11:09:00Z` | **Version:** `v0.7.1.5+4` | **Agent:** `RW Agent`
 
 
@@ -190,7 +190,7 @@ housekeeping_policy: keep
 ### 📅 Recent Completions (Yesterday - 2026-03-11)
 
 #### **Epic 6: Framework Management and Maintenance**
-- **[E6:S07:T108](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-synchronization.md)** – UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization  
+- **[E6:S07:T108](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)** – UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization  
   **Completed:** `2026-03-11T17:15:00Z` | **Version:** `v0.6.7.108+1` | **Agent:** `RW Agent`
 
 
@@ -204,7 +204,7 @@ housekeeping_policy: keep
 ---
 
 #### **Epic 5: Framework Management and FR Repository**
-- **[E5:S01:T49](epics/Epic-5/Story-001-fr-repo/T49-enhanced-kanban-completed-md-with-timestamps-recent-tasks.md)** – Enhanced kanban-completed.md with Timestamps and Recent Tasks  
+- **[E5:S01:T49](epics/Epic-5/Story-001-fr-repo/T49-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)** – Enhanced kanban-completed.md with Timestamps and Recent Tasks  
   **Completed:** `2026-03-11T16:30:00Z` | **Version:** `v0.5.1.49+2` | **Agent:** `Documentation Agent`
 
 
@@ -225,21 +225,21 @@ housekeeping_policy: keep
 ---
 
 #### **Epic 6: Framework Management and Maintenance**
-- **[E6:S06:T999](epics/Epic-6/Story-006-feature-requests/T999-board-cleanup-test-task.md)** – Board Cleanup Test Task  
+- **[E6:S06:T999](epics/Epic-6/Story-006-feature-requests/T999-board-cleanup-test.md)** – Board Cleanup Test Task  
   **Completed:** `2026-03-11T16:10:00Z` | **Version:** `v0.6.6.41+1` | **Agent:** `Documentation Agent`
 
 
 ---
 
 #### **Epic 6: Framework Management and Maintenance**
-- **[E6:S06:T41](epics/Epic-6/Story-006-feature-requests/T41-windsurf-investigate-how-to-leverage-agents-md-skill-md-for-workflows.md)** – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows  
+- **[E6:S06:T41](epics/Epic-6/Story-006-feature-requests/T41-windsurf-investigate-agents-skills-for-workflows.md)** – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows  
   **Completed:** `2026-03-11T16:05:00Z` | **Version:** `v0.6.6.41+1` | **Agent:** `Documentation Agent`
 
 
 ---
 
 #### **Epic 6: Framework Management and Maintenance**
-- **[E6:S06:T03](epics/Epic-6/Story-006-feature-requests/T03-investigate-apple-sdk-license-blocking-issue.md)** – Investigate Apple SDK License Blocking Issue  
+- **[E6:S06:T03](epics/Epic-6/Story-006-feature-requests/T03-apple-sdk-license-blocking-issue.md)** – Investigate Apple SDK License Blocking Issue  
   **Completed:** `2026-03-11T16:00:00Z` | **Version:** `v0.6.6.3+1` | **Agent:** `Documentation Agent`
 
 
@@ -260,28 +260,28 @@ housekeeping_policy: keep
 ---
 
 #### **Epic 5: Framework Management and FR Repository**
-- **[E5:S01:T34](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-use-case-flags.md)** – UKW Granular Control and Use Case Flags  
+- **[E5:S01:T34](epics/Epic-5/Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md)** – UKW Granular Control and Use Case Flags  
   **Completed:** `2026-03-11T15:45:00Z` | **Version:** `v0.5.1.34+1` | **Agent:** `Documentation Agent`
 
 
 ---
 
 #### **Epic 4: Kanban Framework**
-- **[E4:S13:T06](epics/Epic-4/Story-013-kanban-board-enhancement-moscow-prioritized-task-view/T06-add-view-documentation.md)** – Add view documentation  
+- **[E4:S13:T06](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T06-update-other-affected-packages.md)** – Update other affected packages (MoSCOW board workstream)  
   **Completed:** `2025-12-15T14:00:00Z` | **Version:** `v0.4.13.6+2` | **Agent:** `Documentation Agent`
 
 
 ---
 
 #### **Epic 4: Kanban Framework**
-- **[E4:S05:T01](epics/Epic-4/Story-005-canonical-epics-for-kanban-framework/T01-create-canonical-epic-structure.md)** – Create canonical Epic structure  
+- **[E4:S05:T01](epics/Epic-4/Story-005-canonical-epics-for-kanban-framework.md#e4s05t01--add-canonical-epics-to-kanban-framework-package)** – Create canonical Epic structure  
   **Completed:** `2025-11-05T16:00:00Z` | **Version:** `v0.4.5.1+1` | **Agent:** `Documentation Agent`
 
 
 ---
 
 #### **Epic 4: Kanban Framework**
-- **[E4:S04:T01](epics/Epic-4/Story-004-kanban-structure-refactoring/T01-refactor-board-structure.md)** – Refactor board structure  
+- **[E4:S04:T01](epics/Epic-4/Story-004-kanban-structure-refactoring.md#e4s04t01--refactor-kanban-file-structure-epic-xmd--epic-xepic-xmd-remove-stories-subdirectory)** – Refactor board structure  
   **Completed:** `2025-11-01T16:00:00Z` | **Version:** `v0.4.4.1+1` | **Agent:** `Documentation Agent`
 
 

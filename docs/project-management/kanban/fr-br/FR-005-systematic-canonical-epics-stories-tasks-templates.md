@@ -261,8 +261,8 @@ A developer starts a new project using ai-dev-kit as a template:
 - Version: `v0.4.6.0+1`
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-4/Epic-4.md`](docs/project-management/kanban/epics/Epic-4/Epic-4.md)
-- Story: [`docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+- Epic: [`Epic-4.md`](../epics/Epic-4/Epic-4.md)
+- Story: [`Story-006-comprehensive-canonical-est-template-system.md`](../epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
 - Task: Task 0 in Story 6 document
 
 ---

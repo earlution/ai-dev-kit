@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 ## Input
 
-- [BR-059](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md); [Story-009](../../../Epic-5/Story-009-docusaurus-documentation-portal.md) checklist vs **kanban-board** MoSCOW history.
+- [BR-059](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md); [Story-009](../../Epic-5/Story-009-docusaurus-documentation-portal.md) checklist vs **kanban-board** MoSCOW history.
 
 ## Deliverable
 
@@ -67,4 +67,4 @@ Comprehensive **UKW** can promote **one** task from an in-progress story (e.g. *
 ## References
 
 - [BR-059](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
-- [Story-009-docusaurus-documentation-portal.md](../../../Epic-5/Story-009-docusaurus-documentation-portal.md)
+- [Story-009-docusaurus-documentation-portal.md](../../Epic-5/Story-009-docusaurus-documentation-portal.md)

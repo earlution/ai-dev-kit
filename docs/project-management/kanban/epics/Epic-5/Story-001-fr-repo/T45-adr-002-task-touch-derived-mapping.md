@@ -83,7 +83,7 @@ This task:
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-045:** [`docs/project-management/kanban/fr-br/FR-045-adr-002-task-touch-derived-mapping.md`](../../../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
 
 ---

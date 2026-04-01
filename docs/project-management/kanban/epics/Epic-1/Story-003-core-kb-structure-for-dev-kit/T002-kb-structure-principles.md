@@ -490,7 +490,7 @@ This section contains technical standards, ADRs, and framework integration docum
 
 - [KB Structure Analysis](T001-kb-structure-analysis.md) - Current and target structure analysis
 - [KB Structure Migration Guide](T003-kb-structure-migration-guide.md) - Step-by-step migration (TBD)
-- [KB Structure Documentation](T005-kb-structure-documentation.md) - User-facing docs (TBD)
+- KB Structure Documentation (TBD — no `T005` task doc filed; see [T006 scalable KB pattern](T006-scalable-kb-pattern.md))
 
 ---
 

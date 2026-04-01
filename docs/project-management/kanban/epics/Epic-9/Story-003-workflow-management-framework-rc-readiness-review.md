@@ -220,8 +220,8 @@ Comprehensive review of Workflow Management Framework for RC readiness, covering
 - [E9:S05: Canonical E/S/T Review and Refinement](Story-005-canonical-est-review-and-refinement.md) (coordination)
 
 **Related Epics:**
-- [Epic 2: Workflow Management Framework](../../Epic-2/Epic-2.md) - Framework being reviewed
-- [Epic 6: Framework Management](../../Epic-6/Epic-6.md) - Framework management context
+- [Epic 2: Workflow Management Framework](../Epic-2/Epic-2.md) - Framework being reviewed
+- [Epic 6: Framework Management](../Epic-6/Epic-6.md) - Framework management context
 
 ---
 

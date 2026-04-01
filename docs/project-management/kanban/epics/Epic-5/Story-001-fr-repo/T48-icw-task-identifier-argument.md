@@ -145,7 +145,7 @@ This task:
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-048:** [`docs/project-management/kanban/fr-br/FR-048-icw-task-identifier-argument.md`](../../../fr-br/FR-048-icw-task-identifier-argument.md)
 - **ICW Handler:** `packages/frameworks/workflow mgt/scripts/icw/icw_handler.py`
 - **ICW Configuration:** `packages/frameworks/workflow mgt/workflows/implementation-cycle-workflow/`

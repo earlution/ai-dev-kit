@@ -18,7 +18,7 @@ Agents and Multi-Agent Systems, paired with appropriate web and file tools, can 
 
 **Video:** [Building a Persistent Local Knowledgebase with CrewAI for Cursor (YouTube)](https://www.youtube.com/watch?v=wuSoM0DlXXk)
 
-[Transcript: Building a Persistent Local Knowledgebase with CrewAI for Cursor](./Building%20a%20Persistent%20Local%20Knowledgebase%20with%20CrewAI%20for%20Cursor.txt)
+*Transcript: not stored in this repository; use captions on the video if needed.*
 
 ## GitHub Repo: cursor-knowledge
 https://github.com/philippe-page/cursor-knowledge
@@ -118,7 +118,7 @@ knowledge/fynd_deals/
 
 ## Key Knowledge Artifacts
 
-- [Disciplined Debugging & Type Checking Workflow](./disciplined-debugging-type-checking-workflow.md): Canonical process and retrospective for debugging and type checking in fynd.deals.
+- **Disciplined Debugging & Type Checking Workflow** *(legacy fynd.deals artifact; no in-corpus doc — add a guide under `docs/knowledge/guides/` if revived)*.
 - [Standard Operating Procedure (SoP): Taxonomical Standards for Structuring Knowledge](#standard-operating-procedure-sop-taxonomical-standards-for-structuring-knowledge): Canonical standards for structuring and organizing knowledge in the KB.
 
 ---

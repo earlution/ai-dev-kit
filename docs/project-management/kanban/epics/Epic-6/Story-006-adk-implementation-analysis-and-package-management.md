@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T04 – Create package management implementation plan** - TODO
 - [ ] **E6:S06:T05 – Implement feedback mechanism** - TODO
 - [x] **E6:S06:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.6.6+20 – All deliverables verified complete: 7 meta-analyses, executive summary, all 4 canonical framework designs)
-  - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
+  - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](Story-006-adk-implementation-analysis-and-package-management/T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 
 ---
 

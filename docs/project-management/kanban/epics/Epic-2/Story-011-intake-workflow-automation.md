@@ -94,7 +94,7 @@ Create an automated intake workflow in the workflow management package that form
 - [x] RW documentation updated with protection guidelines
 - [x] Prevention mechanisms validated
 
-**Task Document:** [`Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md`](Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md)
+**Task Document:** [`Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md`](Story-011-intake-workflow-automation/Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md)
 
 ---
 
@@ -126,7 +126,7 @@ Create an automated intake workflow in the workflow management package that form
 - [ ] All version references remain correct
 - [ ] All links to detailed changelogs remain valid
 
-**Task Document:** [`Task-011-Fix-CHANGELOG-Ordering-Violations.md`](Task-011-Fix-CHANGELOG-Ordering-Violations.md)
+**Task Document:** [`Task-011-Fix-CHANGELOG-Ordering-Violations.md`](Story-011-intake-workflow-automation/Task-011-Fix-CHANGELOG-Ordering-Violations.md)
 
 **Related:**
 - E2:S01:T06 - Validator format support (COMPLETE)

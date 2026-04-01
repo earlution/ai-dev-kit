@@ -76,5 +76,5 @@ Establish the AI Dev Kit project hub and Knowledge Base container in Notion (RMS
 ## References
 
 - Notion hub (RMS Teamspace): URL in `rw-config.yaml` → `notion_hub_url`
-- KB structure: [kb-structure-overview.md](../../../architecture/standards-and-adrs/kb-structure-overview.md), [ultimate-canonical-kb-structure.md](../../../architecture/standards-and-adrs/ultimate-canonical-kb-structure.md)
-- Doc lifecycle: [doc-lifecycle-policy.md](../../../architecture/standards-and-adrs/doc-lifecycle-policy.md)
+- KB structure: [kb-structure-overview.md](../../../../../architecture/standards-and-adrs/kb-structure-overview.md), [ultimate-canonical-kb-structure.md](../../../../../architecture/standards-and-adrs/ultimate-canonical-kb-structure.md)
+- Doc lifecycle: [doc-lifecycle-policy.md](../../../../../architecture/standards-and-adrs/doc-lifecycle-policy.md)

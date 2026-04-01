@@ -153,7 +153,7 @@ User wraps up a sprint/cycle and needs all kanban documentation synchronized to 
 
 **Kanban Links:**
 - Epic: [`docs/project-management/kanban/epics/Epic-2/Epic-2.md`](../epics/Epic-2/Epic-2.md)
-- Story: [`docs/project-management/kanban/epics/Epic-2/Story-014-update-kanban-workflow-ukw.md`](../epics/Epic-2/Story-014-update-kanban-workflow-ukw.md)
+- Story: [`Story-014-workflow-management-package-installation-evaluation.md`](../epics/Epic-2/Story-014-workflow-management-package-installation-evaluation.md) *(historical FR target name differed; live story file is this path)*
 - Task: [Link to Task in Story document]
 
 ---

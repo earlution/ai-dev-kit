@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.32+1] - 31-03-26
+## [0.5.9.8+2] - 01-04-26
 
-**Merge** `epic/5-documentation-management` → **`main`**: **E5:S01:T32** **FR-032**/board intake from epic/5; **main** retains Epic 7 merge, **`validate_version_bump.py`** story-`0` guard, and [archive](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md). Epic/5 **`RW -k`**: [CHANGELOG_v0.5.1.32+0](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.32+0.md).
+E5:S09:T08 — Docusaurus **strict** broken-link checking (**`throw`**), corpus link fixes, **FR-067 FU-1** closed; portal README + triage tests updated. **Merge:** `epic/5-documentation-management` → **`main`**. [T08](docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md); [FR-067](docs/project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.32+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.8+2.md)

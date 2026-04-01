@@ -125,7 +125,7 @@ Implement comprehensive processes for updating and migrating framework packages.
 ### E6:S03:T04 – Build framework update CLI tool
 
 **Status:** SUPERSEDED  
-**Note:** This task has been expanded into a full Story: **E6:S07 – ai-dev-kit CLI Tool**. See [`Story-007-ai-dev-kit-cli-tool.md`](Story-007-ai-dev-kit-cli-tool.md) for complete implementation plan.
+**Note:** This task has been expanded into a full Story: **E6:S07 – ADK implementation analysis and package management**. See [`Story-007-adk-implementation-analysis-and-package-management.md`](Story-007-adk-implementation-analysis-and-package-management.md) for the active story anchor (CLI scope absorbed there).
 
 **Input:** Framework dependency architecture, update procedures  
 **Deliverable:** `ai-dev-kit` CLI tool for framework management  

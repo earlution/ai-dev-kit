@@ -56,4 +56,4 @@ Separately, **`pytest`** at repo root reports **7 failing tests** (85 passed, 92
 
 - **Audit:** [T08-dependency-and-tooling-audit.md](../epics/Epic-7/Story-006-post-windsurf-project-review/T08-dependency-and-tooling-audit.md)  
   
-- **Workflow:** [.github/workflows/update-badges.yml](../../../.github/workflows/update-badges.yml)
+- **Workflow:** `update-badges.yml` was **removed** from this repo (see **Bug Summary**); historical file: [update-badges.yml (last known commit search)](https://github.com/earlution/ai-dev-kit/commits/main/.github/workflows)

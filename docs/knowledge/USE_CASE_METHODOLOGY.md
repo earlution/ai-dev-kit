@@ -642,9 +642,9 @@ docs/use-cases/
 
 ## Related Documentation
 
-- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Example of discovered use case
-- [REOPENING_BR_AND_TASKS_GUIDE.md](../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Example of discovered use case
-- [FR_BR_INTAKE_GUIDE.md](../../packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md) - Intake process (includes use case references)
+- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Example of discovered use case
+- [REOPENING_BR_AND_TASKS_GUIDE.md](../project-management/kanban/fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Example of discovered use case
+- [FR_BR_INTAKE_GUIDE.md (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md) - Intake process (includes use case references)
 
 ---
 

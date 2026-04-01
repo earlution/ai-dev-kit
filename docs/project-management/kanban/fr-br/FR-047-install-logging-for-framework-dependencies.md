@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** earlution  
 **Priority:** HIGH  
 **Status:** IN PROGRESS  
-**Implementing Task:** [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
+**Implementing Task:** [E5:S01:T47](../epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 
 ---
 

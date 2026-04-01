@@ -192,8 +192,8 @@ grep "Epic 1:" docs/project-management/kanban/epics/Epic-1/Epic-1.md
 - [Post-Template Setup Guide](framework-dependency-post-template-setup-guide.md) - Customization steps
 
 **Framework READMEs:**
-- [Workflow Management README](../../../packages/frameworks/workflow mgt/README.md) - RW quickstart and details
-- [Kanban README](../../../packages/frameworks/kanban/README.md) - Kanban quickstart and details
+- [Workflow Management README (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/README.md) - RW quickstart and details
+- [Kanban README (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/README.md) - Kanban quickstart and details
 
 **Quick References:**
 - RW Installer: `scripts/install_release_workflow.py --help`

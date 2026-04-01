@@ -33,87 +33,87 @@ housekeeping_policy: keep
 - [x] **E6:S07:T05 – Implement feedback mechanism** - ✅ COMPLETE (v0.6.7.5+1)
 
 - [x] **E6:S07:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.7.6+20 – All deliverables verified complete: 7 meta-analyses, executive summary, all 4 canonical framework designs)
-  - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
+  - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](Story-007-adk-implementation-analysis-and-package-management/T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 
 
 - [x] **E6:S07:T07 – Implement framework hardening recommendations** - ✅ COMPLETE (v0.6.7.7+6 – All phases complete: Epic 9→Epic 24, installer validation, rw-config.yaml, .cursorrules, installation instructions)
-  - Task: [`T07-implement-framework-hardening-recommendations.md`](T07-implement-framework-hardening-recommendations.md)
+  - Task: [`T07-implement-framework-hardening-recommendations.md`](Story-007-adk-implementation-analysis-and-package-management/T07-implement-framework-hardening-recommendations.md)
 
 
 - [x] **E6:S07:T09 – Review and Prioritize Package Management Investigation Findings** - ✅ COMPLETE (v0.6.7.9+1 – Prioritization review complete: findings reviewed, recommendations validated and prioritized, roadmap created)
-  - Task: [`T09-review-and-prioritize-package-management-investigation.md`](T09-review-and-prioritize-package-management-investigation.md)
+  - Task: [`T09-review-and-prioritize-package-management-investigation.md`](Story-007-adk-implementation-analysis-and-package-management/T09-review-and-prioritize-package-management-investigation.md)
 
 
 - [x] **E6:S07:T11 – Changelog Management and Archival Workflow** - ✅ COMPLETE (v0.6.7.11+4 – Phase 6 complete: Initial archival, ALL PHASES COMPLETE)
-  - Task: [`T11-changelog-management-and-archival-workflow.md`](T11-changelog-management-and-archival-workflow.md)
+  - Task: [`T11-changelog-management-and-archival-workflow.md`](Story-007-adk-implementation-analysis-and-package-management/T11-changelog-management-and-archival-workflow.md)
   - **Feature Request:** [FR-025](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
 
 
 - [x] **E6:S07:T13 – Canonical CMW Perpetual Task** - ✅ COMPLETE (v0.6.7.13+2 – All phases complete: CMW perpetual task pattern canonicalized)
-  - Task: [`T13-canonical-cmw-perpetual-task.md`](T13-canonical-cmw-perpetual-task.md)
+  - Task: [`T13-canonical-cmw-perpetual-task.md`](Story-007-adk-implementation-analysis-and-package-management/T13-canonical-cmw-perpetual-task.md
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
 
 
 - [x] **E6:S07:T14 – Add CMW to Workflow Management Package Documentation** - ✅ COMPLETE (v0.6.7.14+1 – CMW documentation added to package README, all acceptance criteria met)
-  - Task: [`T14-add-cmw-to-workflow-management-package-documentation.md`](T14-add-cmw-to-workflow-management-package-documentation.md)
+  - Task: [`T14-add-cmw-to-workflow-management-package-documentation.md`](Story-007-adk-implementation-analysis-and-package-management/T14-add-cmw-to-workflow-management-package-documentation.md
   - **Feature Request:** [FR-027](../../fr-br/FR-027-add-cmw-to-workflow-management-package-documentation.md)
 
 
 - [x] **E6:S07:T15 – Cursor IDE Performance Considerations Awareness** - ✅ COMPLETE (v0.6.7.15+1 – Implementation complete: Awareness documentation created and framework guidance updated)
-  - Task: [`T15-cursor-ide-performance-considerations-awareness.md`](T15-cursor-ide-performance-considerations-awareness.md)
+  - Task: [`T15-cursor-ide-performance-considerations-awareness.md`](Story-007-adk-implementation-analysis-and-package-management/T15-cursor-ide-performance-considerations-awareness.md
   - **Feature Request:** [FR-028](../../fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)
 
 
 - [x] **E6:S07:T16 – Harden CMW Ordering Before Archival** - ✅ COMPLETE (v0.6.7.16+1 – All phases complete: Step 3.5 added to CMW, ordering fixed before archival)
-  - Task: [`T16-harden-cmw-ordering-before-archival.md`](T16-harden-cmw-ordering-before-archival.md)
+  - Task: [`T16-harden-cmw-ordering-before-archival.md`](Story-007-adk-implementation-analysis-and-package-management/T16-harden-cmw-ordering-before-archival.md
   - **Analysis Document:** [`docs/analysis/cmw-ordering-flaw-analysis.md`](../../../../analysis/cmw-ordering-flaw-analysis.md)
 
 
 - [ ] **E6:S07:T18 – Tool-Agnostic Workflow Step Tracking + Persisted Run Logs (Cursor TODO Migration)** - TODO
-  - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
+  - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-and-runlogs.md
 
 
 - [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+36 – RW -k: Kanban init)
-  - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
+  - Task: [`T101-update-kanban-workflow-ukw.md`](Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
   - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)
 
 
 - [ ] **E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.102+6 – Perpetual docs update: runbooks, policy)
-  - Task: [`T102-changelog-maintenance-workflow-cmw.md`](T102-changelog-maintenance-workflow-cmw.md)
+  - Task: [`T102-changelog-maintenance-workflow-cmw.md`](Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md
   - **Note:** This is a perpetual maintenance task. All CMW-triggered RWs are attributed to T102 (3-digit perpetual task). BUILD number = CMW run count.
   - **Migration:** Task migrated from T12 to T102 as part of repository story abstract space resolution (E9:S01:T08)
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
 
 
 - [ ] **E6:S07:T103 – Release Workflow (RW) Maintenance - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.103+4 – FR-067 FU-2 → T103/FR-041; RW -d)
-  - Task: [`T103-release-workflow-maintenance-perpetual-task.md`](T103-release-workflow-maintenance-perpetual-task.md)
+  - Task: [`T103-release-workflow-maintenance-perpetual-task.md`](Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md
   - **Note:** This is a perpetual maintenance task. RW maintenance releases (Step 7 fixes, validator updates, doc corrections) are attributed to T103 when not tied to a specific feature task.
   - **Feature Request:** [FR-041](../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
 
 
 - [ ] **E6:S07:T104 – Release Automation Audit** - TODO
-  - Task: [`T104-release-automation-audit.md`](T104-release-automation-audit.md)
+  - Task: [`T104-release-automation-audit.md`](Story-007-adk-implementation-analysis-and-package-management/T104-release-automation-audit.md
   - **Scope:** Audit RW/PVW validators, GitHub Actions, badge workflow, GitHub Release script, and required secrets for compatibility with task-touch SemVer tagging
 
 
 - [ ] **E6:S07:T105 – Release Runbook Creation** - TODO
-  - Task: [`T105-release-runbook-creation.md`](T105-release-runbook-creation.md)
+  - Task: [`T105-release-runbook-creation.md`](Story-007-adk-implementation-analysis-and-package-management/T105-release-runbook-creation.md
   - **Scope:** Create comprehensive runbook with exact commands and order, respecting "no manual commit/push" policy
 
 
 - [ ] **E6:S07:T106 – Windsurf Migration: .cursorrules to Workflow Equivalents** - TODO
-  - Task: [`T106-windsurf-migration-cursorrules-to-workflows.md`](T106-windsurf-migration-cursorrules-to-workflows.md)
+  - Task: [`T106-windsurf-migration-cursorrules-to-workflows.md`](Story-007-adk-implementation-analysis-and-package-management/T106-windsurf-migration-cursorrules-to-workflows.md
   - **Scope:** Map key policies/workflows to Windsurf/Cascade equivalents, including system instructions and developer workflows
 
 
 - [x] **E6:S07:T107 – Workflows Directory Structure Reorganization** ✅ COMPLETE
-  - Task: [`T107-workflows-directory-structure-reorganization.md`](T107-workflows-directory-structure-reorganization.md)
+  - Task: [`T107-workflows-directory-structure-reorganization.md`](Story-007-adk-implementation-analysis-and-package-management/T107-workflows-directory-structure-reorganization.md
   - **Scope:** Reorganize workflows directory into named subdirectories for better organization and maintainability
 
 
 - [ ] **E6:S07:T109 – BR-059: UKW MoSCOW full open-task coverage per in-progress story** - TODO (HIGH, board must list all open story tasks or explicit **Won’t** deferrals; fail loud on partial enumeration)
-  - Task: [`T109-br059-ukw-moscow-full-story-task-coverage.md`](T109-br059-ukw-moscow-full-story-task-coverage.md) | [BR-059](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
+  - Task: [`T109-br059-ukw-moscow-full-story-task-coverage.md`](Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md | [BR-059](../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
 
 
 ---

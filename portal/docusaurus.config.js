@@ -29,10 +29,9 @@ const config = {
   organizationName: 'earlution',
   projectName: 'ai-dev-kit',
 
-  // FR-067: many legacy docs use repo-relative links (!packages/, wrong story paths).
-  // Policy: warn until batch link fix; see portal/README.md + docs/maintenance triage note.
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  // E5:S09:T08 / FR-067 FU-1: strict link checking (corpus must be clean).
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
 
   i18n: {
     defaultLocale: 'en',

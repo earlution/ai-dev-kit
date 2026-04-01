@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** XOforge (contributing to AI Dev Kit)  
 **Priority:** HIGH  
 **Status:** PENDING  
-**Implementing Task:** [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)  
+**Implementing Task:** [E5:S01:T46](../epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)  
 **GitHub Issue:** [#19](https://github.com/earlution/ai-dev-kit/issues/19)
 
 ---

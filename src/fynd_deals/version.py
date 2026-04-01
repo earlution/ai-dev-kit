@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
-VERSION_STORY = 1     # Story number (Story 1: FR Repo — PERPETUAL)
-VERSION_TASK = 32     # Task number (E5:S01:T32 — FR-032 release-candidate readiness gap analysis)
-VERSION_BUILD = 1     # Build number (merge `epic/5-documentation-management` → **main**; post **RW -k** **+0** doc-init)
+VERSION_STORY = 9     # Story number (Story 9: Docusaurus documentation portal)
+VERSION_TASK = 8      # Task number (E5:S09:T08 — strict broken links post–FR-067)
+VERSION_BUILD = 2     # Build number (+1 was RW-k task doc; +2 implements strict throw + corpus)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.32+1 — E5:S01:T32 (`epic/5` **RW -k** **+0** + merge to **main**; FR-032/T32 + board reconciliation; retains **main** Epic 7 / validator slices)
+# Current: 0.5.9.8+2 — E5:S09:T08; merged `epic/5-documentation-management` → **main**
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

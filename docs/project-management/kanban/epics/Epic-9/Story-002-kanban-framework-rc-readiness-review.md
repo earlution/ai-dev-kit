@@ -220,8 +220,8 @@ Comprehensive review of Kanban Framework for RC readiness, covering:
 - [E9:S05: Canonical E/S/T Review and Refinement](Story-005-canonical-est-review-and-refinement.md) (coordination)
 
 **Related Epics:**
-- [Epic 4: Kanban Framework](../../Epic-4/Epic-4.md) - Framework being reviewed
-- [Epic 6: Framework Management](../../Epic-6/Epic-6.md) - Framework management context
+- [Epic 4: Kanban Framework](../Epic-4/Epic-4.md) - Framework being reviewed
+- [Epic 6: Framework Management](../Epic-6/Epic-6.md) - Framework management context
 
 ---
 
