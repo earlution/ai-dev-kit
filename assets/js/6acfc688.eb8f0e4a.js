@@ -59,7 +59,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "E4:S05 – Add canonical epics to kanban framework package",
-  "id": "e4s05--add-canonical-epics-to-kanban-framework-package",
+  "id": "e4s05t01--add-canonical-epics-to-kanban-framework-package",
   "level": 3
 }, {
   "value": "Acceptance Criteria",
@@ -140,7 +140,7 @@ function _createMdxContent(props) {
       id: "tasks",
       children: "Tasks"
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e4s05--add-canonical-epics-to-kanban-framework-package",
+      id: "e4s05t01--add-canonical-epics-to-kanban-framework-package",
       children: ["E4:S05", ":T01", " – Add canonical epics to kanban framework package"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {

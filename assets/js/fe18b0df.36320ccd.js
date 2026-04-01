@@ -79,7 +79,7 @@ const toc = [{
   "level": 3
 }, {
   "value": "E2:S01 – Fix changelog validator ordering bug 🔄 REOPENED",
-  "id": "e2s01--fix-changelog-validator-ordering-bug--reopened",
+  "id": "e2s01t06--fix-changelog-validator-ordering-bug--reopened",
   "level": 3
 }, {
   "value": "E2:S01 – Add support for update/maintenance branch patterns in branch validation",
@@ -887,7 +887,7 @@ function _createMdxContent(props) {
         children: "Agent execution patterns (mandatory validation)"
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e2s01--fix-changelog-validator-ordering-bug--reopened",
+      id: "e2s01t06--fix-changelog-validator-ordering-bug--reopened",
       children: ["E2:S01", ":T06", " – Fix changelog validator ordering bug 🔄 REOPENED"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: (0,jsx_runtime.jsx)(_components.strong, {

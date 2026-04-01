@@ -492,6 +492,19 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsxs)(_components.strong, {
           children: ["E5:S09", ":T05"]
         }), " — CI should run the same strict build."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["E5:S09", ":T10"]
+        }), " — optional ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "strict broken anchors"
+        }), " (", (0,jsx_runtime.jsx)(_components.code, {
+          children: "onBrokenAnchors"
+        }), ") — ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08",
+          children: "T10"
+        }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "FR-067 FU-3"
+        }), "."]
       }), "\n"]
     })]
   });
@@ -529,7 +542,7 @@ function MDXContent(props = {}) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/files/test_portal_fr067_build_triage-97775ed4d82006511fb9efe654e7496a.py");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/files/test_portal_fr067_build_triage-1403523ee7c0688ee6c445e7eac9c647.py");
 
 /***/ },
 

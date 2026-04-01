@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-kanban-board-md-877.json
-const site_docs_project_management_kanban_kanban_board_md_877_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/kanban-board","title":"AI Dev Kit – Kanban Board","description":"Last UpdatedS09 go-live v0.5.9.9+2 in archive)","source":"@site/../docs/project-management/kanban/kanban-board.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/kanban-board","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/kanban-board.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2025-12-04T12:02:50.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"AI Dev Kit – Kanban Board Guide","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board-guide"},"next":{"title":"AI Dev Kit – Kanban Completed Tasks","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-completed"}}');
+const site_docs_project_management_kanban_kanban_board_md_877_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/kanban-board","title":"AI Dev Kit – Kanban Board","description":"Last Updated E5T10 completed — strict anchors / FU-3; Could cleared)","source":"@site/../docs/project-management/kanban/kanban-board.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/kanban-board","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/kanban-board.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2025-12-04T12:02:50.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"AI Dev Kit – Kanban Board Guide","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board-guide"},"next":{"title":"AI Dev Kit – Kanban Completed Tasks","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-completed"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -94,23 +94,15 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Last Updated:"
-      }), " 2026-03-31 (", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "merge"
-      }), " ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "epic/7-documentation-maintenance"
-      }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          children: "main"
-        })
-      }), "; tip ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "v0.7.0.2+2"
-      }), "; ", (0,jsx_runtime.jsxs)(_components.strong, {
-        children: ["E5", ":S09"]
-      }), " go-live ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "v0.5.9.9+2"
-      }), " in archive)\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-04-01 (MoSCOW: ", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E5:S09", ":T10"]
+      }), " completed — strict anchors / ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FU-3"
+      }), "; ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Could"
+      }), " cleared)\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.7.0.2+2 ", (0,jsx_runtime.jsxs)(_components.em, {
+      }), " v0.5.9.10+2 ", (0,jsx_runtime.jsxs)(_components.em, {
         children: ["(from ", (0,jsx_runtime.jsx)(_components.code, {
           children: "src/fynd_deals/version.py"
         }), " at board refresh)"]
@@ -169,27 +161,8 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "could-have-c---nice-to-have-tasks",
       children: "Could Have (C) - Nice-to-Have Tasks"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E5:S09", ":T08"]
-        }), " – Strict broken-link checking post–FR-067 (", (0,jsx_runtime.jsx)(_components.code, {
-          children: "warn"
-        }), " → ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "throw"
-        }), ") – TODO - ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067",
-          children: "Task"
-        }), " | ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal",
-          children: "Story"
-        }), " | ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage",
-          children: "FR-067"
-        }), " (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "FU-1"
-        }), ")"]
-      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "No nice-to-have tasks currently in progress"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "ongoing-o---perpetual-tasks",
       children: "Ongoing (O) - Perpetual Tasks"

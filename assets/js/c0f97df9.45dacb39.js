@@ -446,6 +446,49 @@ function _createMdxContent(props) {
               }), " (source)"]
             }), "."]
           })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FU-3"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.del, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "Strict broken-anchor checking"
+              }), " (", (0,jsx_runtime.jsx)(_components.code, {
+                children: "onBrokenAnchors"
+              }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "throw"
+                })
+              }), ")"]
+            }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "DONE"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Shipped with ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S09", ":T10"]
+            }), " at ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.5.9.10+2"
+              })
+            }), ": corpus anchor/heading alignment, ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "onBrokenAnchors: 'throw'"
+            }), ", README + pytest; CI ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "npm run build"
+              })
+            }), " fails on bad ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "#fragment"
+            }), " links."]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Task (complete):"
+            }), " ", (0,jsx_runtime.jsxs)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08",
+              children: ["E5:S09", ":T10"]
+            }), "."]
+          })]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -458,12 +501,18 @@ function _createMdxContent(props) {
         children: "FU-1"
       }), " / ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "FU-2"
+      }), " / ", (0,jsx_runtime.jsx)(_components.del, {
+        children: (0,jsx_runtime.jsx)(_components.strong, {
+          children: "FU-3"
+        })
       }), "), ", (0,jsx_runtime.jsx)(_components.a, {
         href: "https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md",
         children: "portal README (repository root)"
       }), " (", (0,jsx_runtime.jsx)(_components.strong, {
         children: "FU-1"
-      }), " / strict links); ", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " / strict links / ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FU-3"
+      }), " anchors); ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "FU-2"
       }), " (GitHub Releases) → ", (0,jsx_runtime.jsxs)(_components.a, {
         href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task",

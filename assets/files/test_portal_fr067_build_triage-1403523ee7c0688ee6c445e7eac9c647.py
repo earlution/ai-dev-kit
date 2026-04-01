@@ -72,3 +72,13 @@ def test_fr067_s4_triage_note(readme_text: str, triage_text: str):
     assert "failure class" in lowered or "failure classes" in lowered
     assert "exclude" in lowered
     assert "fr-067" in lowered
+
+
+def test_fr067_s5_anchor_policy_strict(config_text: str, readme_text: str):
+    """S5 — broken anchor policy strict (`throw`) in config + README (E5:S09:T10 / FR-067 FU-3)."""
+    assert "onBrokenAnchors:" in config_text
+    assert re.search(r"onBrokenAnchors:\s*['\"]throw['\"]", config_text)
+    lowered = readme_text.lower()
+    assert "anchor" in lowered
+    assert "throw" in lowered or "strict" in lowered
+    assert "e5:s09:t10" in lowered or "t10" in lowered

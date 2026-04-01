@@ -54,6 +54,10 @@ const toc = [{
   "id": "setting-up-a-git-repository",
   "level": 3
 }, {
+  "value": "Alternative: Use ai-dev-kit as a GitHub template",
+  "id": "alternative-use-ai-dev-kit-as-a-github-template",
+  "level": 3
+}, {
   "value": "Use Cases",
   "id": "use-cases",
   "level": 2
@@ -72,6 +76,14 @@ const toc = [{
 }, {
   "value": "Use Case 4: Existing Project → Some Packages",
   "id": "use-case-4-existing-project--some-packages",
+  "level": 3
+}, {
+  "value": "Selective framework installation",
+  "id": "selective-framework-installation",
+  "level": 3
+}, {
+  "value": "Monorepo setup",
+  "id": "monorepo-setup",
   "level": 3
 }, {
   "value": "Installation Methods",
@@ -214,7 +226,7 @@ const toc = [{
   "id": "issue-version-conflicts",
   "level": 3
 }, {
-  "value": "Uninstalling Frameworks",
+  "value": "Uninstalling frameworks",
   "id": "uninstalling-frameworks",
   "level": 2
 }, {
@@ -356,10 +368,9 @@ function _createMdxContent(props) {
         className: "language-bash",
         children: "# Check Git is working\ngit --version\n\n# Check repository is initialized\ngit status\n\n# Check remote (if configured)\ngit remote -v\n"
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Alternative: Use ai-dev-kit as a GitHub Template"
-      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "alternative-use-ai-dev-kit-as-a-github-template",
+      children: "Alternative: Use ai-dev-kit as a GitHub template"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Instead of creating a repository from scratch, you can use ", (0,jsx_runtime.jsx)(_components.code, {
         children: "ai-dev-kit"
@@ -536,6 +547,25 @@ function _createMdxContent(props) {
           children: "Use Cases Guide"
         })]
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "selective-framework-installation",
+      children: "Selective framework installation"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Install only the packages you need (CLI, submodule copy, or template trim). See ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/ai-dev-kit/docs/documentation/user-docs/framework-dependency-use-cases#use-case-2-template--some-packages",
+        children: "Use Case 2: Template → Some Packages"
+      }), " and ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/ai-dev-kit/docs/documentation/user-docs/framework-dependency-use-cases#use-case-4-existing-project--some-packages",
+        children: "Use Case 4: Existing Project → Some Packages"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "monorepo-setup",
+      children: "Monorepo setup"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Share one ai-dev-kit installation across multiple packages. See ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/ai-dev-kit/docs/documentation/user-docs/framework-dependency-use-cases#use-case-6-monorepomulti-project-setup",
+        children: "Use Case 6: Monorepo/Multi-Project Setup"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "installation-methods",
       children: "Installation Methods"
@@ -1603,7 +1633,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "uninstalling-frameworks",
-      children: "Uninstalling Frameworks"
+      children: "Uninstalling frameworks"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "If you need to remove a framework:"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {

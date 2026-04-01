@@ -18,7 +18,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-kanban-completed-md-838.json
-const site_docs_project_management_kanban_kanban_completed_md_838_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/kanban-completed","title":"AI Dev Kit – Kanban Completed Tasks","description":"Last UpdatedS09:T09 v0.5.9.9+2 — Pages go-live)","source":"@site/../docs/project-management/kanban/kanban-completed.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/kanban-completed","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-completed","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/kanban-completed.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T00:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"AI Dev Kit – Kanban Board","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board"},"next":{"title":"AI Dev Kit – Kanban Structure","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-structure"}}');
+const site_docs_project_management_kanban_kanban_completed_md_838_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/kanban-completed","title":"AI Dev Kit – Kanban Completed Tasks","description":"Last UpdatedS09:T10 v0.5.9.10+2 — strict anchors / FR-067 FU-3)","source":"@site/../docs/project-management/kanban/kanban-completed.md","sourceDirName":"project-management/kanban","slug":"/project-management/kanban/kanban-completed","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-completed","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/kanban-completed.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-03-09T00:00:00.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"AI Dev Kit – Kanban Board","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-board"},"next":{"title":"AI Dev Kit – Kanban Structure","permalink":"/ai-dev-kit/docs/project-management/kanban/kanban-structure"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -46,12 +46,16 @@ const toc = [{
   "id": "20-most-recently-completed-tasks",
   "level": 2
 }, {
+  "value": "<strong>Epic 5: Documentation Management</strong>",
+  "id": "epic-5-documentation-management",
+  "level": 4
+}, {
   "value": "<strong>Epic 2: Workflow Management Framework</strong>",
   "id": "epic-2-workflow-management-framework",
   "level": 4
 }, {
   "value": "<strong>Epic 5: Documentation Management</strong>",
-  "id": "epic-5-documentation-management",
+  "id": "epic-5-documentation-management-1",
   "level": 4
 }, {
   "value": "<strong>Epic 7: Codebase Maintenance</strong>",
@@ -359,11 +363,13 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Last Updated:"
-      }), " 2026-03-31 (", (0,jsx_runtime.jsxs)(_components.strong, {
-        children: ["RW E5:S09", ":T09"]
-      }), " v0.5.9.9+2 — Pages go-live)\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-04-01 (", (0,jsx_runtime.jsxs)(_components.strong, {
+        children: ["E5:S09", ":T10"]
+      }), " v0.5.9.10+2 — strict anchors / ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "FR-067 FU-3"
+      }), ")\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.5.9.9+2"]
+      }), " v0.5.9.10+2"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -400,6 +406,52 @@ function _createMdxContent(props) {
       id: "20-most-recently-completed-tasks",
       children: "20 Most Recently Completed Tasks"
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
+      id: "epic-5-documentation-management",
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Epic 5: Documentation Management"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: (0,jsx_runtime.jsxs)(_components.a, {
+            href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08",
+            children: ["E5:S09", ":T10"]
+          })
+        }), " – Docusaurus ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "strict broken anchors"
+        }), " (", (0,jsx_runtime.jsx)(_components.code, {
+          children: "onBrokenAnchors: 'throw'"
+        }), ") post–", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "T08"
+        }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "FR-067 FU-3"
+        }), "): corpus anchor/heading alignment, ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "portal/docusaurus.config.js"
+        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "portal/README.md"
+        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "tests/test_portal_fr067_build_triage.py"
+        }), "; filing ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "v0.5.9.10+1"
+        }), "; implementation ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "v0.5.9.10+2"
+        }), " (", (0,jsx_runtime.jsxs)(_components.strong, {
+          children: ["RW E5:S09", ":T10"]
+        }), ").", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Completed:"
+        }), " ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "2026-04-01T15:17:58Z"
+        }), " | ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Version:"
+        }), " ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "v0.5.9.10+2"
+        }), " | ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Agent:"
+        }), " ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "RW Agent"
+        })]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
       id: "epic-2-workflow-management-framework",
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: "Epic 2: Workflow Management Framework"
@@ -434,7 +486,7 @@ function _createMdxContent(props) {
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "epic-5-documentation-management",
+      id: "epic-5-documentation-management-1",
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: "Epic 5: Documentation Management"
       })
@@ -493,6 +545,59 @@ function _createMdxContent(props) {
             children: "Version:"
           }), " ", (0,jsx_runtime.jsx)(_components.code, {
             children: "v0.5.9.9+2"
+          }), " | ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Agent:"
+          }), " ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "RW Agent"
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: (0,jsx_runtime.jsxs)(_components.a, {
+              href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067",
+              children: ["E5:S09", ":T08"]
+            })
+          }), " – Docusaurus ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "strict"
+          }), " broken ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "links"
+          }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "throw"
+            })
+          }), ") post–", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "FR-067"
+          }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "FU-1"
+          }), " closed): corpus link remediation, ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "portal/docusaurus.config.js"
+          }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "portal/README.md"
+          }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "tests/test_portal_fr067_build_triage.py"
+          }), "; ", (0,jsx_runtime.jsx)(_components.em, {
+            children: "init"
+          }), " ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "v0.5.9.8+1"
+          }), " (", (0,jsx_runtime.jsx)(_components.code, {
+            children: "RW -k"
+          }), "), implementation ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "v0.5.9.8+2"
+          }), "; merged ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "epic/5"
+          }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "main"
+            })
+          }), ".", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Completed:"
+          }), " ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "2026-04-01T14:30:00Z"
+          }), " | ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "Version:"
+          }), " ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "v0.5.9.8+2"
           }), " | ", (0,jsx_runtime.jsx)(_components.strong, {
             children: "Agent:"
           }), " ", (0,jsx_runtime.jsx)(_components.code, {

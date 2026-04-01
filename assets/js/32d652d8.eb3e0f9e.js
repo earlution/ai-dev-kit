@@ -51,7 +51,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "WF-001: Story File Not Updated First (Step 7)",
-  "id": "wf-001-story-file-not-updated-first-step-7",
+  "id": "wf-001-story-file-not-updated-first",
   "level": 2
 }, {
   "value": "Quick Reference: The Flaw",
@@ -71,7 +71,7 @@ const toc = [{
   "level": 3
 }, {
   "value": "WF-002: Version Bump Logic Error (Step 2)",
-  "id": "wf-002-version-bump-logic-error-step-2",
+  "id": "wf-002-version-bump-logic-error",
   "level": 2
 }, {
   "value": "Quick Reference: The Flaw",
@@ -139,7 +139,7 @@ const toc = [{
   "level": 3
 }, {
   "value": "WF-003: BR/FR Fix Attempts Not Documented",
-  "id": "wf-003-brfr-fix-attempts-not-documented",
+  "id": "wf-003-br-fr-fix-attempts-not-documented",
   "level": 2
 }, {
   "value": "Quick Reference: The Flaw",
@@ -155,7 +155,7 @@ const toc = [{
   "level": 3
 }, {
   "value": "WF-004: Story File Missing During RW Update (Step 7)",
-  "id": "wf-004-story-file-missing-during-rw-update-step-7",
+  "id": "wf-004-story-file-missing-during-rw-update",
   "level": 2
 }, {
   "value": "Quick Reference: The Flaw",
@@ -355,7 +355,7 @@ function _createMdxContent(props) {
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "wf-001-story-file-not-updated-first-step-7",
+      id: "wf-001-story-file-not-updated-first",
       children: "WF-001: Story File Not Updated First (Step 7)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -534,7 +534,7 @@ function _createMdxContent(props) {
         children: "Epic file matches Story file, so Story must be updated first"
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "wf-002-version-bump-logic-error-step-2",
+      id: "wf-002-version-bump-logic-error",
       children: "WF-002: Version Bump Logic Error (Step 2)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -920,7 +920,7 @@ function _createMdxContent(props) {
         }), " Show your work, explain choices"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "wf-003-brfr-fix-attempts-not-documented",
+      id: "wf-003-br-fr-fix-attempts-not-documented",
       children: "WF-003: BR/FR Fix Attempts Not Documented"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -1161,7 +1161,7 @@ function _createMdxContent(props) {
         }), " - \"Fix Attempt History\" section"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "wf-004-story-file-missing-during-rw-update-step-7",
+      id: "wf-004-story-file-missing-during-rw-update",
       children: "WF-004: Story File Missing During RW Update (Step 7)"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {

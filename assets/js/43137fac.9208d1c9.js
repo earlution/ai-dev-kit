@@ -390,11 +390,9 @@ function _createMdxContent(props) {
             disabled: true
           }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
             children: ["E5", ":S09", " – Docusaurus Documentation Portal"]
-          }), " - IN PROGRESS (T01–T08 ✅ ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "v0.5.9.8+2"
-          }), "; T09 go-live ✅ ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: "v0.5.9.9+2"
-          }), ")"]
+          }), " - IN PROGRESS (T01–T10 ✅ ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "v0.5.9.10+2"
+          }), "; portal story tasks complete)"]
         }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["Story: ", (0,jsx_runtime.jsx)(_components.a, {
@@ -827,6 +825,18 @@ function _createMdxContent(props) {
         }), " — ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification",
           children: "T09"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        className: "task-list-item",
+        children: [(0,jsx_runtime.jsx)(_components.input, {
+          type: "checkbox",
+          checked: true,
+          disabled: true
+        }), " ", "E5:S09", ":T10", " – Strict broken anchors (FR-067 FU-3) ✅ ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "v0.5.9.10+2"
+        }), " — ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/ai-dev-kit/docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08",
+          children: "T10"
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {

@@ -183,6 +183,26 @@ function _createMdxContent(props) {
               children: "npm run build"
             })]
           })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Broken anchors (", (0,jsx_runtime.jsx)(_components.code, {
+              children: "#fragment"
+            }), ")"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Policy (post–T10):"
+            }), " ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "onBrokenAnchors: 'throw'"
+            }), " — corpus anchor/heading alignment with ", (0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["E5:S09", ":T10"]
+            }), " (", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-067 FU-3"
+            }), " done at ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.5.9.10+2"
+              })
+            }), ")"]
+          })]
         })]
       })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -230,7 +250,7 @@ function _createMdxContent(props) {
           children: "Config:"
         }), " ", (0,jsx_runtime.jsx)(_components.code, {
           children: "portal/docusaurus.config.js"
-        }), " — link check mode ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), " — link + anchor check mode ", (0,jsx_runtime.jsx)(_components.strong, {
           children: (0,jsx_runtime.jsx)(_components.code, {
             children: "throw"
           })
@@ -311,6 +331,35 @@ function _createMdxContent(props) {
                 children: "FR-067"
               })
             })]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsxs)(_components.del, {
+              children: [(0,jsx_runtime.jsx)(_components.strong, {
+                children: "Strict broken anchors"
+              }), " (", (0,jsx_runtime.jsx)(_components.code, {
+                children: "onBrokenAnchors"
+              }), " → ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "throw"
+                })
+              }), ")"]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsxs)(_components.strong, {
+              children: ["Done — E5:S09", ":T10"]
+            }), " at ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "v0.5.9.10+2"
+              })
+            }), ". ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "FR-067 FU-3"
+            }), " closed on ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: (0,jsx_runtime.jsx)(_components.a, {
+                href: "/ai-dev-kit/docs/project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage",
+                children: "FR-067"
+              })
+            }), "."]
           })]
         })]
       })]

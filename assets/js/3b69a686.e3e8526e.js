@@ -59,7 +59,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "E4:S04 – Refactor Kanban file structure (Epic-X.md → Epic-X/Epic-X.md, remove stories/ subdirectory)",
-  "id": "e4s04--refactor-kanban-file-structure-epic-xmd--epic-xepic-xmd-remove-stories-subdirectory",
+  "id": "e4s04t01--refactor-kanban-file-structure-epic-xmd--epic-xepic-xmd-remove-stories-subdirectory",
   "level": 3
 }, {
   "value": "Dependencies",
@@ -161,7 +161,7 @@ function _createMdxContent(props) {
       id: "tasks",
       children: "Tasks"
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e4s04--refactor-kanban-file-structure-epic-xmd--epic-xepic-xmd-remove-stories-subdirectory",
+      id: "e4s04t01--refactor-kanban-file-structure-epic-xmd--epic-xepic-xmd-remove-stories-subdirectory",
       children: ["E4:S04", ":T01", " – Refactor Kanban file structure (Epic-X.md → Epic-X/Epic-X.md, remove stories/ subdirectory)"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {

@@ -78,6 +78,10 @@ const toc = [{
   "id": "issue-update-breaks-functionality",
   "level": 3
 }, {
+  "value": "Uninstall Issues",
+  "id": "uninstall-issues",
+  "level": 2
+}, {
   "value": "Configuration Issues",
   "id": "configuration-issues",
   "level": 2
@@ -680,6 +684,26 @@ function _createMdxContent(props) {
         className: "language-bash",
         children: "# Verify dependency versions\nai-dev-kit check-compatibility\n\n# Update dependencies if needed\nai-dev-kit update numbering-versioning\n"
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "uninstall-issues",
+      children: "Uninstall Issues"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Commands, safety flags (", (0,jsx_runtime.jsx)(_components.code, {
+        children: "--recover"
+      }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "--rollback"
+      }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "--dry-run"
+      }), "), and cleanup patterns for removing frameworks live in the Installation guide: ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/ai-dev-kit/docs/documentation/user-docs/framework-dependency-installation-guide#uninstalling-frameworks",
+        children: "Uninstalling frameworks"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["If uninstall fails after a partial run, retry with ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "--recover"
+      }), " or use ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "--dry-run"
+      }), " first to preview changes (see Installation guide)."]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "configuration-issues",
       children: "Configuration Issues"

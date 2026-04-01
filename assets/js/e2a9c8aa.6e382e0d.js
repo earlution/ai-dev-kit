@@ -59,7 +59,7 @@ const toc = [{
   "level": 2
 }, {
   "value": "E10:S01 – Establish expectations baseline for Document Lifecycle package",
-  "id": "e10s01--establish-expectations-baseline-for-document-lifecycle-package",
+  "id": "e10s01t01--establish-expectations-baseline-for-document-lifecycle-package",
   "level": 3
 }, {
   "value": "E10:S01 – Inventory package components and map to expectations",
@@ -205,7 +205,7 @@ function _createMdxContent(props) {
       id: "tasks",
       children: "Tasks"
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e10s01--establish-expectations-baseline-for-document-lifecycle-package",
+      id: "e10s01t01--establish-expectations-baseline-for-document-lifecycle-package",
       children: ["E10:S01", ":T01", " – Establish expectations baseline for Document Lifecycle package"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {

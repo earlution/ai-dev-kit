@@ -46,8 +46,8 @@ const toc = [{
   "id": "overview",
   "level": 2
 }, {
-  "value": "Migration from Copy-Paste to Dependencies",
-  "id": "migration-from-copy-paste-to-dependencies",
+  "value": "Migration from copy-paste to dependencies",
+  "id": "migration-from-copy-paste",
   "level": 2
 }, {
   "value": "Assessment",
@@ -89,6 +89,18 @@ const toc = [{
   "value": "Multiple Framework Management",
   "id": "multiple-framework-management",
   "level": 2
+}, {
+  "value": "Selective framework adoption",
+  "id": "selective-framework-adoption",
+  "level": 3
+}, {
+  "value": "Monorepo integration",
+  "id": "monorepo-integration",
+  "level": 3
+}, {
+  "value": "Gradual adoption",
+  "id": "gradual-adoption",
+  "level": 3
 }, {
   "value": "Framework Dependencies",
   "id": "framework-dependencies",
@@ -210,8 +222,8 @@ function _createMdxContent(props) {
         children: "Managing multiple frameworks together"
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "migration-from-copy-paste-to-dependencies",
-      children: "Migration from Copy-Paste to Dependencies"
+      id: "migration-from-copy-paste",
+      children: "Migration from copy-paste to dependencies"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "assessment",
       children: "Assessment"
@@ -501,6 +513,30 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "multiple-framework-management",
       children: "Multiple Framework Management"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "selective-framework-adoption",
+      children: "Selective framework adoption"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Adopt frameworks incrementally (existing projects or trimmed templates). See ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/ai-dev-kit/docs/documentation/user-docs/framework-dependency-use-cases#use-case-4-existing-project--some-packages",
+        children: "Use Case 4"
+      }), " in the Use Cases guide."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "monorepo-integration",
+      children: "Monorepo integration"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Centralize installs and updates for multiple packages. See ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/ai-dev-kit/docs/documentation/user-docs/framework-dependency-use-cases#use-case-6-monorepomulti-project-setup",
+        children: "Use Case 6"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "gradual-adoption",
+      children: "Gradual adoption"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Add frameworks over time or finish migrating from copy-paste. See ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/ai-dev-kit/docs/documentation/user-docs/framework-dependency-use-cases#use-case-7-gradualmigratory-adoption",
+        children: "Use Case 7"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "framework-dependencies",
       children: "Framework Dependencies"

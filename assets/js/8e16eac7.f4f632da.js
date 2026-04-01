@@ -1,7 +1,7 @@
 "use strict";
-(globalThis["webpackChunkportal"] = globalThis["webpackChunkportal"] || []).push([[94471],{
+(globalThis["webpackChunkportal"] = globalThis["webpackChunkportal"] || []).push([[34107],{
 
-/***/ 39065
+/***/ 3631
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -13,17 +13,17 @@ __webpack_require__.d(__webpack_exports__, {
   contentTitle: () => (/* binding */ contentTitle),
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_project_management_kanban_epics_epic_11_story_001_debug_path_package_implementation_review_md_46e_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_project_management_kanban_epics_epic_8_story_004_tooling_automation_package_implementation_review_md_8e1_namespaceObject),
   toc: () => (/* binding */ toc)
 });
 
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-epics-epic-11-story-001-debug-path-package-implementation-review-md-46e.json
-const site_docs_project_management_kanban_epics_epic_11_story_001_debug_path_package_implementation_review_md_46e_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-11/Story-001-debug-path-package-implementation-review","title":"Story 001 – Debug Path Package Implementation Review","description":"Status: TODO","source":"@site/../docs/project-management/kanban/epics/Epic-11/Story-001-debug-path-package-implementation-review.md","sourceDirName":"project-management/kanban/epics/Epic-11","slug":"/project-management/kanban/epics/Epic-11/Story-001-debug-path-package-implementation-review","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-11/Story-001-debug-path-package-implementation-review","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-11/Story-001-debug-path-package-implementation-review.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-01-18T16:44:08.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Epic 11: Debug Path Framework","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-11/"},"next":{"title":"Story 002 – Debug Path Package Installation Evaluation","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-11/Story-002-debug-path-package-installation-evaluation"}}');
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-project-management-kanban-epics-epic-8-story-004-tooling-automation-package-implementation-review-md-8e1.json
+const site_docs_project_management_kanban_epics_epic_8_story_004_tooling_automation_package_implementation_review_md_8e1_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"project-management/kanban/epics/Epic-8/Story-004-tooling-automation-package-implementation-review","title":"Story 004 – Tooling & Automation Package Implementation Review","description":"Status: TODO","source":"@site/../docs/project-management/kanban/epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md","sourceDirName":"project-management/kanban/epics/Epic-8","slug":"/project-management/kanban/epics/Epic-8/Story-004-tooling-automation-package-implementation-review","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-8/Story-004-tooling-automation-package-implementation-review","draft":false,"unlisted":false,"editUrl":"https://github.com/earlution/ai-dev-kit/tree/main/docs/../docs/project-management/kanban/epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md","tags":[],"version":"current","frontMatter":{"lifecycle":"evergreen","ttl_days":null,"created_at":"2026-01-18T16:44:08.000Z","expires_at":null,"housekeeping_policy":"keep"},"sidebar":"docsSidebar","previous":{"title":"Story 003 – Automation Scripts","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-8/Story-003-automation-scripts"},"next":{"title":"Story 005 – Tooling & Automation Package Installation Evaluation","permalink":"/ai-dev-kit/docs/project-management/kanban/epics/Epic-8/Story-005-tooling-automation-package-installation-evaluation"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(74848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(28453);
-;// ../docs/project-management/kanban/epics/Epic-11/Story-001-debug-path-package-implementation-review.md
+;// ../docs/project-management/kanban/epics/Epic-8/Story-004-tooling-automation-package-implementation-review.md
 
 
 const frontMatter = {
@@ -33,7 +33,7 @@ const frontMatter = {
 	expires_at: null,
 	housekeeping_policy: 'keep'
 };
-const contentTitle = 'Story 001 – Debug Path Package Implementation Review';
+const contentTitle = 'Story 004 – Tooling & Automation Package Implementation Review';
 
 const assets = {
 
@@ -58,28 +58,28 @@ const toc = [{
   "id": "tasks",
   "level": 2
 }, {
-  "value": "E11:S01 – Establish expectations baseline for Debug Path package",
-  "id": "e11s01--establish-expectations-baseline-for-debug-path-package",
+  "value": "E8:S04 – Establish expectations baseline for Tooling &amp; Automation package",
+  "id": "e8s04t01--establish-expectations-baseline-for-tooling--automation-package",
   "level": 3
 }, {
-  "value": "E11:S01 – Inventory package components and map to expectations",
-  "id": "e11s01--inventory-package-components-and-map-to-expectations",
+  "value": "E8:S04 – Inventory package components and map to expectations",
+  "id": "e8s04--inventory-package-components-and-map-to-expectations",
   "level": 3
 }, {
-  "value": "E11:S01 – Validate methodology behavior against documented guidance",
-  "id": "e11s01--validate-methodology-behavior-against-documented-guidance",
+  "value": "E8:S04 – Validate tooling behavior against documented guidance",
+  "id": "e8s04--validate-tooling-behavior-against-documented-guidance",
   "level": 3
 }, {
-  "value": "E11:S01 – Review integrations and dependency alignment",
-  "id": "e11s01--review-integrations-and-dependency-alignment",
+  "value": "E8:S04 – Review integrations and dependency alignment",
+  "id": "e8s04--review-integrations-and-dependency-alignment",
   "level": 3
 }, {
-  "value": "E11:S01 – Create gap log and risk assessment",
-  "id": "e11s01--create-gap-log-and-risk-assessment",
+  "value": "E8:S04 – Create gap log and risk assessment",
+  "id": "e8s04--create-gap-log-and-risk-assessment",
   "level": 3
 }, {
-  "value": "E11:S01 – Define RC sign-off criteria and remediation tasks",
-  "id": "e11s01--define-rc-sign-off-criteria-and-remediation-tasks",
+  "value": "E8:S04 – Define RC sign-off criteria and remediation tasks",
+  "id": "e8s04--define-rc-sign-off-criteria-and-remediation-tasks",
   "level": 3
 }, {
   "value": "Acceptance Criteria",
@@ -114,8 +114,8 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(_components.header, {
       children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "story-001--debug-path-package-implementation-review",
-        children: "Story 001 – Debug Path Package Implementation Review"
+        id: "story-004--tooling--automation-package-implementation-review",
+        children: "Story 004 – Tooling & Automation Package Implementation Review"
       })
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -128,11 +128,11 @@ function _createMdxContent(props) {
         children: "Created:"
       }), " 2026-01-18", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Last updated:"
-      }), " 2026-01-18 (v0.11.1.0+0 – Story created)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " 2026-01-18 (v0.8.4.0+0 – Story created)", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Version:"
-      }), " v0.11.1.0+0", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " v0.8.4.0+0", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Code:"
-      }), " E11S01"]
+      }), " E8S04"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "task-checklist",
       children: "Task Checklist"
@@ -144,7 +144,7 @@ function _createMdxContent(props) {
           type: "checkbox",
           disabled: true
         }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E11:S01", ":T01", " – Establish expectations baseline for Debug Path package"]
+          children: ["E8:S04", ":T01", " – Establish expectations baseline for Tooling & Automation package"]
         }), " - TODO"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         className: "task-list-item",
@@ -152,7 +152,7 @@ function _createMdxContent(props) {
           type: "checkbox",
           disabled: true
         }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E11:S01", ":T02", " – Inventory package components and map to expectations"]
+          children: ["E8:S04", ":T02", " – Inventory package components and map to expectations"]
         }), " - TODO"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         className: "task-list-item",
@@ -160,7 +160,7 @@ function _createMdxContent(props) {
           type: "checkbox",
           disabled: true
         }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E11:S01", ":T03", " – Validate methodology behavior against documented guidance"]
+          children: ["E8:S04", ":T03", " – Validate tooling behavior against documented guidance"]
         }), " - TODO"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         className: "task-list-item",
@@ -168,7 +168,7 @@ function _createMdxContent(props) {
           type: "checkbox",
           disabled: true
         }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E11:S01", ":T04", " – Review integrations and dependency alignment"]
+          children: ["E8:S04", ":T04", " – Review integrations and dependency alignment"]
         }), " - TODO"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         className: "task-list-item",
@@ -176,7 +176,7 @@ function _createMdxContent(props) {
           type: "checkbox",
           disabled: true
         }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E11:S01", ":T05", " – Create gap log and risk assessment"]
+          children: ["E8:S04", ":T05", " – Create gap log and risk assessment"]
         }), " - TODO"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         className: "task-list-item",
@@ -184,7 +184,7 @@ function _createMdxContent(props) {
           type: "checkbox",
           disabled: true
         }), " ", (0,jsx_runtime.jsxs)(_components.strong, {
-          children: ["E11:S01", ":T06", " – Define RC sign-off criteria and remediation tasks"]
+          children: ["E8:S04", ":T06", " – Define RC sign-off criteria and remediation tasks"]
         }), " - TODO"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
@@ -193,31 +193,31 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["This story performs the RC readiness ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "implementation review"
-      }), " for the Debug Path framework package (", (0,jsx_runtime.jsx)(_components.code, {
-        children: "packages/frameworks/debug-path/"
+      }), " for the Tooling & Automation framework package (", (0,jsx_runtime.jsx)(_components.code, {
+        children: "packages/frameworks/tooling & automation/"
       }), ")."]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "goal",
       children: "Goal"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Provide a complete implementation review, evidence, and remediation plan to support RC sign-off for the Debug Path framework."
+      children: "Provide a complete implementation review, evidence, and remediation plan to support RC sign-off for the Tooling & Automation framework."
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "tasks",
       children: "Tasks"
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e11s01--establish-expectations-baseline-for-debug-path-package",
-      children: ["E11:S01", ":T01", " – Establish expectations baseline for Debug Path package"]
+      id: "e8s04t01--establish-expectations-baseline-for-tooling--automation-package",
+      children: ["E8:S04", ":T01", " – Establish expectations baseline for Tooling & Automation package"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Input:"
-      }), " Package README, methodology, and integration guides", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " Package README, validators, and generator docs", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Deliverable:"
       }), " Expectations baseline document", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Approach:"
-      }), " Extract expected behaviors and usage patterns."]
+      }), " Extract expected behaviors for tooling and validators."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e11s01--inventory-package-components-and-map-to-expectations",
-      children: ["E11:S01", ":T02", " – Inventory package components and map to expectations"]
+      id: "e8s04--inventory-package-components-and-map-to-expectations",
+      children: ["E8:S04", ":T02", " – Inventory package components and map to expectations"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Input:"
@@ -225,21 +225,21 @@ function _createMdxContent(props) {
         children: "Deliverable:"
       }), " Component map with expected vs actual coverage", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Approach:"
-      }), " Map templates, guides, and examples to expectations."]
+      }), " Map generators, validators, and docs to expectations."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e11s01--validate-methodology-behavior-against-documented-guidance",
-      children: ["E11:S01", ":T03", " – Validate methodology behavior against documented guidance"]
+      id: "e8s04--validate-tooling-behavior-against-documented-guidance",
+      children: ["E8:S04", ":T03", " – Validate tooling behavior against documented guidance"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Input:"
-      }), " DRW methodology docs and examples", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
+      }), " Tooling documentation and scripts", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Deliverable:"
       }), " Behavior validation notes and discrepancies", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Approach:"
-      }), " Validate methodology steps and required artifacts."]
+      }), " Validate tooling outputs against documentation."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e11s01--review-integrations-and-dependency-alignment",
-      children: ["E11:S01", ":T04", " – Review integrations and dependency alignment"]
+      id: "e8s04--review-integrations-and-dependency-alignment",
+      children: ["E8:S04", ":T04", " – Review integrations and dependency alignment"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Input:"
@@ -247,10 +247,10 @@ function _createMdxContent(props) {
         children: "Deliverable:"
       }), " Integration alignment report", (0,jsx_runtime.jsx)(_components.br, {}), "\n", (0,jsx_runtime.jsx)(_components.strong, {
         children: "Approach:"
-      }), " Verify alignment with Kanban and Workflow frameworks."]
+      }), " Verify ties to other framework validators and workflows."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e11s01--create-gap-log-and-risk-assessment",
-      children: ["E11:S01", ":T05", " – Create gap log and risk assessment"]
+      id: "e8s04--create-gap-log-and-risk-assessment",
+      children: ["E8:S04", ":T05", " – Create gap log and risk assessment"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Input:"
@@ -260,8 +260,8 @@ function _createMdxContent(props) {
         children: "Approach:"
       }), " Consolidate gaps and categorize by RC impact."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "e11s01--define-rc-sign-off-criteria-and-remediation-tasks",
-      children: ["E11:S01", ":T06", " – Define RC sign-off criteria and remediation tasks"]
+      id: "e8s04--define-rc-sign-off-criteria-and-remediation-tasks",
+      children: ["E8:S04", ":T06", " – Define RC sign-off criteria and remediation tasks"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Input:"
@@ -317,7 +317,7 @@ function _createMdxContent(props) {
       children: "Dependencies"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "None (RC readiness prerequisite for Epic 11 package sign-off)."
+        children: "None (RC readiness prerequisite for Epic 8 package sign-off)."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "references",
@@ -325,7 +325,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["Package: ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "packages/frameworks/debug-path/"
+          children: "packages/frameworks/tooling & automation/"
         })]
       }), "\n"]
     })]

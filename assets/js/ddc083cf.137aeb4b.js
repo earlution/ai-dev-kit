@@ -66,6 +66,10 @@ const toc = [{
   "id": "expansion",
   "level": 2
 }, {
+  "value": "Standard Operating Procedure (SoP): Taxonomical Standards for Structuring Knowledge",
+  "id": "standard-operating-procedure-sop-taxonomical-standards-for-structuring-knowledge",
+  "level": 2
+}, {
   "value": "Purpose",
   "id": "purpose",
   "level": 2
@@ -218,7 +222,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.em, {
         children: "(Figures: cursor_crew_graph_lg, network_lg — diagrams from source article; images not bundled in this repo.)"
       })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h1, {
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "standard-operating-procedure-sop-taxonomical-standards-for-structuring-knowledge",
       children: "Standard Operating Procedure (SoP): Taxonomical Standards for Structuring Knowledge"
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
