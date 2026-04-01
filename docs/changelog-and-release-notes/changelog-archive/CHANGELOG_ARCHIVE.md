@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.42+1] - 01-04-26
+
+E5:S01:T42 — FR-042 IPW / ICW consolidation kanban + FR §7, T42 task doc, fr-br board.
+
+[Detailed changelog](CHANGELOG_v0.5.1.42+1.md)
+
+---
+---
+---
 ## [0.5.1.32+0] - 31-03-26
 
 E5:S01:T32 **`RW -k`** — FR-032/T32 doc-init + fr-br-uxr-board reconciliation.

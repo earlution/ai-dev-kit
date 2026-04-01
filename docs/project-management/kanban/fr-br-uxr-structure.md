@@ -53,7 +53,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 ### Low Priority (Could Have - C)
 
 - **FR-043** – UKW Gap Discovery TODO Tasks and Unfiled FR/BR - TODO (LOW, Discover gaps in UKW and unfiled items) - [FR-043](fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
-- **FR-042** – Implementation Planning Workflow (IPW) - TODO (LOW, Workflow for implementation planning) - [FR-042](fr-br/FR-042-implementation-planning-workflow-ipw.md)
+- **FR-042** – Implementation Planning Workflow (IPW) — ICW consolidation - TODO (HIGH, **E5:S01:T42**) - [FR-042](fr-br/FR-042-implementation-planning-workflow-ipw.md)
 - **FR-041** – Perpetual Task for Release Workflow Maintenance - TODO (LOW, Ongoing maintenance for Release Workflow) - [FR-041](fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
 - **FR-040** – RW Update Kanban Board on Task Completion - TODO (LOW, Automatic Kanban board updates in Release Workflow) - [FR-040](fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)
 - **FR-044** – RW Temporary Execution Log for Recovery and Forensics - TODO (LOW, Temporary execution logs for Release Workflow) - [FR-044](fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)

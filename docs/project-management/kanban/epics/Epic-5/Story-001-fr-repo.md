@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (RW **v0.5.1.32+0** **`RW -k`** **E5:S01:T32**; prior **`v0.5.1.21+0`** **T21**)
+**Last updated:** 2026-04-01 (RW **v0.5.1.42+1** **E5:S01:T42** — **FR-042** IPW + ICW consolidation; prior **v0.5.1.32+0** **T32** **`RW -k`**; **v0.5.1.21+0** **T21**)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.73+0
+**Version:** v0.5.1.42+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -40,6 +40,9 @@ housekeeping_policy: keep
 - [x] **E5:S01:T37 – Kanban Policy Task Prioritisation and Queue/Stack** ✅ COMPLETE (v0.5.1.37+3 – Policy alignment: implementation cycle, changelog/IDE/git reminders) - [Task Document](Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
 - [x] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - ✅ COMPLETE (v0.5.1.38+1 – FR-038 documentation: scoped UKW Step 7, invocation_context, governance; FR-061 → T64 collision fix) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 - [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
+
+- [ ] **E5:S01:T42 – Implementation Planning Workflow (IPW) — ICW consolidation** - IN PROGRESS (v0.5.1.42+1 — FR-042 §7 + T42 doc + board; full IPW delivery still TODO) - [Task Document](Story-001-fr-repo/T42-implementation-planning-workflow-ipw.md) | [FR-042](../../fr-br/FR-042-implementation-planning-workflow-ipw.md)
+
 - [ ] **E5:S01:T43 – UKW Gap Discovery (TODO Tasks and Unfiled FR/BR)** - TODO (HIGH priority, v0.5.1.43+1 – Task created) - [Task Document](Story-001-fr-repo/T43-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) | [FR-043](../../fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
 - [ ] **E5:S01:T44 – RW Temporary Execution Log for Recovery and Forensics** - TODO (MEDIUM priority, v0.5.1.44+1 – Task created) - [Task Document](Story-001-fr-repo/T44-rw-temporary-execution-log-for-recovery-and-forensics.md) | [FR-044](../../fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)
 - [ ] **E5:S01:T45 – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
