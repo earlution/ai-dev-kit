@@ -57,6 +57,26 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 
 ---
 
+## Step 2.5: Implementation Planning Workflow (IPW) — Recommended
+
+**Purpose:** For non-trivial work, produce a **single durable plan document** (spec + test design + implementation plan) **before** Step 3, with **mandatory bidirectional wiring** between the plan doc and the host task doc (**FR-042**).
+
+**When to use:** Tasks where discovery, test strategy, or sequencing benefits from a written plan; required when **IPW** is invoked for an `E:S:T`.
+
+**Actions:**
+- Trigger **`IPW`** or **`IPW E:S:T`** (see project `.cursorrules`).
+- Follow [implementation-planning-workflow-agent-execution.md](implementation-planning-workflow-agent-execution.md).
+- Template: `packages/frameworks/kanban/templates/PLAN_DOC_TEMPLATE.md`.
+- Wire plan doc **Host Task** ↔ task doc **Input** and **References**.
+
+**Validation:** Plan doc and host task cross-link.
+
+**Output:** Wired IPW plan feeding Step 3a/3b.
+
+**Note:** **IPW** is canonical for planning; legacy **ICW** is an alias (**FR-042** §7).
+
+---
+
 ## Step 3: Specification & Test Creation (TDD) — BLOCKING
 
 **Purpose:** Ascertain specification and create tests **before** implementation (TDD).
@@ -66,7 +86,7 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 ### Step 3a: Ascertain Specification
 
 **Actions:**
-- Read task requirements, BR/FR, and acceptance criteria
+- Read task requirements, BR/FR, acceptance criteria, and **IPW plan doc** if present
 - Identify all testable behaviors: success paths, failure paths, edge cases, error conditions
 - Document the specification in the task description if unclear
 - Consider UAT scenarios if applicable
@@ -139,6 +159,7 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 Before starting Step 4, verify:
 - [ ] Step 1: Requirement documented
 - [ ] Step 2: Task created in Epic/Story
+- [ ] Step 2.5 (if used): IPW plan doc created and bidirectionally wired to task doc
 - [ ] Step 3a: Specification ascertained
 - [ ] Step 3b: Tests created and failing (Red phase)
 - [ ] Tests compile
@@ -157,5 +178,6 @@ Before starting Step 4, verify:
 ## Integration
 
 - **Kanban:** Task creation and status align with Kanban Governance Policy; RW updates Kanban docs.
+- **IPW:** Step 2.5; [implementation-planning-workflow-agent-execution.md](implementation-planning-workflow-agent-execution.md) (**FR-042**).
 - **Release Workflow:** Step 5 invokes the project's RW; see Release Workflow Agent Execution Guide.
-- **.cursorrules:** When the pattern is adopted, project .cursorrules should reference this SoP and enforce Step 3 as blocking.
+- **.cursorrules:** Reference this SoP, **IPW** for planning, and enforce Step 3 as blocking.

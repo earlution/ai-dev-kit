@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """
-Implementation Cycle Workflow (ICW) Handler
-Provides three-phase implementation workflow: Specification Definition, Test Design, Implementation Planning
+Implementation Planning Workflow — optional Python helper (legacy package name: ICW).
 
-REQUIRES PLAN MODE: ICW must be executed in planning mode for proper intelligent agent guidance.
-REQUIRES TASK IDENTIFIER: ICW must be bound to a specific Kanban task.
+Canonical agent-facing workflow is IPW (Implementation Planning Workflow, FR-042 / E5:S01:T42).
+The Cursor/agent trigger ICW is a deprecated alias of IPW — same phases. Prefer documenting IPW;
+this handler remains for CLI/tests and adopters. See:
+  KB: .../vwmp/implementation-planning-workflow-agent-execution.md
+
+REQUIRES PLAN MODE: Planning must run in planning mode for proper agent-guided elicitation.
+REQUIRES TASK IDENTIFIER: Sessions must be bound to a specific Kanban task.
 """
 
 import os

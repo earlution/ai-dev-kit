@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.42+2] - 01-04-26
+
+E5:S01:T42 **+2** — IPW/FR-042: SoP, template, .cursorrules, Implementation Cycle SoP 2.5, registry, consolidation docs, README, planning artifact.
+
+[Detailed changelog](CHANGELOG_v0.5.1.42+2.md)
+
+---
+---
+---
 ## [0.5.1.42+1] - 01-04-26
 
 E5:S01:T42 — FR-042 IPW / ICW consolidation kanban + FR §7, T42 task doc, fr-br board.

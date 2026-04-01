@@ -116,12 +116,12 @@ workflow_registry:
     implementation-cycle-workflow:
       name: "Implementation Cycle Workflow"
       abbreviation: "ICW"
-      description: "Structured three-phase implementation workflow: Specification Definition, Test Design, and Implementation Planning"
+      description: "Planning workflow (spec, test design, impl plan). Canonical Cursor/agent trigger is IPW (Implementation Planning Workflow, FR-042 / E5:S01:T42). ICW is a deprecated alias — same steps. See KB vwmp implementation-planning-workflow-agent-execution.md."
       directory: "implementation-cycle-workflow/"
       main_file: "icw-workflow.yaml"
       config_file: "icw-config.yaml"
       documentation: "README.md"
-      triggers: ["ICW"]
+      triggers: ["IPW", "ICW"]
       steps: 8
       
   common_components:

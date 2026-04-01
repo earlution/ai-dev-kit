@@ -19,7 +19,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-Extend the Implementation Cycle Workflow (ICW) to require a task identifier argument when called, ensuring the workflow is explicitly bound to a specific Kanban task with clear Epic/Story/Task numbering.
+Extend the planning workflow (**IPW**; historically **ICW**) to require a **task identifier** when invoked, binding sessions to a Kanban task (**E:S:T**). The implemented **`icw_handler.py`** behavior applies to the same planning process; the canonical agent trigger is **IPW** (**FR-042** §7).
 
 ---
 

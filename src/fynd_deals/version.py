@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
 VERSION_STORY = 1     # Story number (Story 1: FR Repo perpetual)
 VERSION_TASK = 42     # Task number (E5:S01:T42 — FR-042 IPW / ICW consolidation kanban + FR)
-VERSION_BUILD = 1     # Build number (first release on T42)
+VERSION_BUILD = 2     # Build number (+2 IPW deliverables: SoP, template, .cursorrules, SoP 2.5, registry, docs)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.42+1 — E5:S01:T42 FR-042 §7 ICW→IPW merge; task doc + checklist + FR/board alignment
+# Current: 0.5.1.42+2 — E5:S01:T42 IPW/FR-042: planning artifact, PLAN_DOC_TEMPLATE, IPW agent doc, SoP 2.5, rules, registry
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

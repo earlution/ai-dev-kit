@@ -79,7 +79,7 @@ icw_handler.py --task T47 initialize
 ### 🚀 Next Steps
 
 1. **Integration Testing:** Test with real Kanban tasks
-2. **Documentation Updates:** Update ICW usage documentation
+2. **Documentation Updates:** Update **IPW** usage docs (**FR-042**); `icw_handler` remains backward-compatible; **ICW** = deprecated alias
 3. **User Training:** Provide examples and guidance for new functionality
 4. **Performance Testing:** Validate minimal impact on ICW startup time
 

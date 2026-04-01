@@ -1,8 +1,14 @@
 # Implementation Cycle Workflow (ICW)
 
+## Consolidation with IPW (FR-042)
+
+**Canonical planning trigger:** **`IPW`** (Implementation Planning Workflow). **`ICW`** is a **deprecated alias** — same three phases and agent behavior. Product requirements and wiring rules live in **FR-042**; agent execution guide: `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md`. This package keeps `icw-workflow.yaml`, `icw_handler.py`, and templates for backward compatibility; new documentation should say **IPW** first.
+
+---
+
 ## Overview
 
-The Implementation Cycle Workflow (ICW) provides a structured three-phase approach to implementation work, ensuring disciplined planning and execution of complex tasks.
+The packaged workflow (historically **ICW**) provides a structured three-phase approach to **planning** (specification, test design, implementation planning) before coding. For TDD and release, use the **Implementation Cycle SoP** and **RW** separately.
 
 ## 🚨 Critical Requirement: Planning Mode Only
 

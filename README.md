@@ -9,7 +9,7 @@
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-**Version (SemVer):** `v0.4.693+1` | **Internal:** `v0.5.1.42+1` (see detailed changelog) | **Last Updated:** 2026-04-01
+**Version (SemVer):** `v0.4.694+2` | **Internal:** `v0.5.1.42+2` (see detailed changelog) | **Last Updated:** 2026-04-01
 
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • **Browsing docs (published site):** [https://earlution.github.io/ai-dev-kit/](https://earlution.github.io/ai-dev-kit/) • [Workflows](#workflows) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
@@ -122,7 +122,7 @@ These are the main **user-typed** triggers documented in `.cursorrules`:
 | **RW** | Release Workflow | Version bump, changelogs, kanban markers, commit, tag, push | **`RW E5:S01:T64`** (examples: `RW E7S01T10`, `RW E7:S01:T10`). The **task id must appear in the same message** as `RW`, `RW -d`, or `RW -k`. See [FR-060](docs/project-management/kanban/fr-br/FR-060-rw-task-argument-requirement.md) and [Release Workflow agent execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md). |
 | **UKW** | Update Kanban Workflow | Bookkeeping, priorities, board sync | `UKW` (full run), or `UKW -u`, `UKW -p`, `UKW -a <target>`. See [UKW agent execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md). |
 | **PVW** | Package Version Workflow | Package-level version analysis/bumps | `PVW` (often RW Step 2.5). See [PVW agent execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/package-version-workflow-agent-execution.md). |
-| **ICW** | Implementation Cycle Workflow | Spec → tests → implementation planning | `ICW` — **planning mode** only; task identifier required per project rules. See [Implementation Cycle SOP](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md). |
+| **IPW** | Implementation Planning Workflow | Durable plan doc (spec → test design → impl plan); bidirectional task↔plan wiring | **`IPW`** or **`IPW E:S:T`** — **planning mode** only; **`ICW`** is a **deprecated alias**. See [IPW agent execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md) and [Implementation Cycle SOP](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md) (**FR-042**). |
 
 **CMW** (Changelog Management Workflow) usually runs as **RW Step 9.5** when changelog size exceeds policy, or via the maintainer skill under [`.cursor/skills/cmw-maintain/`](.cursor/skills/cmw-maintain/SKILL.md). Package entry: [changelog-management-workflow README](packages/frameworks/workflow%20mgt/workflows/changelog-management-workflow/README.md).
 
@@ -140,7 +140,7 @@ These are the main **user-typed** triggers documented in `.cursorrules`:
 | Testing Workflow | TESTING | `TESTING` | [testing-workflow](packages/frameworks/workflow%20mgt/workflows/testing-workflow/README.md) |
 | Package Version Workflow | PKG-VERSION / PVW | `PKG-VERSION` (Cursor: **PVW**) | [package-version-workflow](packages/frameworks/workflow%20mgt/workflows/package-version-workflow/README.md) |
 | Framework Health Monitoring | FHM | `FHM` | [framework-health-monitoring-workflow](packages/frameworks/workflow%20mgt/workflows/framework-health-monitoring-workflow/README.md) |
-| Implementation Cycle Workflow | ICW | `ICW` | [implementation-cycle-workflow](packages/frameworks/workflow%20mgt/workflows/implementation-cycle-workflow/README.md) |
+| Implementation Cycle Workflow (planning) | ICW (legacy abbrev.) | **`IPW`**, `ICW` (alias) | [implementation-cycle-workflow](packages/frameworks/workflow%20mgt/workflows/implementation-cycle-workflow/README.md) |
 
 ### Agent execution guides (deep dives)
 
@@ -150,6 +150,7 @@ These are the main **user-typed** triggers documented in `.cursorrules`:
 - [Intake Workflow](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md)
 - [Migration](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/migration-workflow-agent-execution.md) · [Refactor](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/refactor-workflow-agent-execution.md) · [Testing](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/testing-workflow-agent-execution.md)
 - [PIR](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-agent-execution.md)
+- [Implementation Planning Workflow (IPW)](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md)
 
 For the full framework overview and validation tooling, see **[Workflow Management README](packages/frameworks/workflow%20mgt/README.md)**.
 
