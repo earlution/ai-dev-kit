@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-31 — **RW -k triplet:** **T57** v0.6.6.57+1, **T02** v0.6.6.2+9, **T109** v0.6.7.109+1; baseline UKW **v0.6.7.101+37** (2026-03-25)
+**Last updated:** 2026-04-02 — **RW E6:S06:T60** v0.6.6.60+1 (**BR-060**); prior **RW -k** slice 2026-03-31 (**T57** v0.6.6.57+1, **T02** v0.6.6.2+9, **T109** v0.6.7.109+1)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -72,9 +72,9 @@ housekeeping_policy: keep
 
 
 
-- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.56+4 – T56 BR-056 verified complete; **T57** BR-039 filed)
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.60+1 – **T60** BR-060 change implemented; T56 BR-056 complete; **T57** BR-039 filed)
   - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
-  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), **T57 TODO (BR-039 Cascade whitelist / vendor)**
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), **T60 IN PROGRESS (v0.6.6.60+1 — BR-060)**, **T57 TODO (BR-039 Cascade whitelist / vendor)**
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
 

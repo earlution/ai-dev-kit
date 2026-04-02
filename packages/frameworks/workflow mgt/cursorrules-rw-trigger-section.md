@@ -42,7 +42,8 @@ housekeeping_policy: keep
    - **If no parseable token:** **RW ABORTED**. Do not run `validate_rw_task_intent.py` without `--requested` as a substitute. User must re-send with explicit task id (e.g. `RW E7:S01:T10`).
 5c. **🚨 MANDATORY: Step 1c — RW task document releasable (FR-060)** — **After Step 1b passes**, **before any file modifications**
    - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested "<parsed_id>"`  
-   - For **`RW -k`**, add **`--mode rw-k`** (task doc must exist; skips full COMPLETE check per mode).
+   - **Full RW releasable statuses:** `IN PROGRESS`, `COMPLETE`, or perpetual maintenance task.
+   - For **`RW -k`**, add **`--mode rw-k`** (task doc must exist; status releasability checks are skipped in rw-k mode).
    - **Non-zero exit:** **RW ABORTED** (same severity as Step 1).
 5d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056 / E6:S06:T56)** — **After Step 1c passes**, **before any file modifications**
    - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  

@@ -425,6 +425,36 @@ def locate_task_doc(
                 section_content = remaining[:end_pos]
                 return (None, section_content, "delimited_section")
     
+    # Format 3: Global fallback by canonical Task ID match (handles duplicate Story-XXX names)
+    task_id_regex = re.compile(
+        rf'^\*\*Task ID:\*\*\s*E0*{epic}:S0*{story}:T0*{task}\b',
+        re.MULTILINE | re.IGNORECASE,
+    )
+    search_roots: List[Path] = []
+    if config and config.get("use_kanban") and "kanban_root" in config:
+        kr = Path(config["kanban_root"])
+        search_roots.append(project_root / kr if not kr.is_absolute() else kr)
+    search_roots.append(project_root / "docs/project-management/kanban")
+
+    seen: set = set()
+    for root in search_roots:
+        try:
+            root = root.resolve()
+        except Exception:
+            pass
+        if root in seen or not root.exists():
+            continue
+        seen.add(root)
+        for candidate in (root / "epics").rglob("*.md") if (root / "epics").exists() else []:
+            if candidate.name.startswith("_"):
+                continue
+            try:
+                head = candidate.read_text(encoding="utf-8", errors="replace")[:12000]
+            except OSError:
+                continue
+            if task_id_regex.search(head):
+                return (candidate, candidate.read_text(encoding="utf-8", errors="replace"), "separate_file")
+
     return (None, None, "not_found")
 
 

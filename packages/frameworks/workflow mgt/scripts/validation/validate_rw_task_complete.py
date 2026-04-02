@@ -3,7 +3,14 @@
 validate_rw_task_complete.py — FR-060
 
 Given a user-supplied RW task id, locate the task markdown under kanban_root and verify
-the task is releasable: COMPLETE status, or perpetual maintenance (UKW/CMW/RW perpetual).
+the task is releasable for RW.
+
+Full mode allows:
+- IN PROGRESS (iterative +BUILD releases for active tasks)
+- COMPLETE
+- perpetual maintenance tasks
+
+Full mode denies TODO or unrecognized status values.
 
 Usage:
   python validate_rw_task_complete.py --requested E7S01T10
@@ -11,7 +18,7 @@ Usage:
 
 Exit codes:
   0 — OK (or rw-k mode: doc exists only)
-  1 — task doc missing or not COMPLETE / not perpetual (full mode)
+  1 — task doc missing or not releasable in full mode
   2 — invalid args or config
 """
 
@@ -113,7 +120,8 @@ def _status_line(content: str) -> Optional[str]:
 
 def task_is_releasable(content: str) -> Tuple[bool, str]:
     """
-    Full RW: COMPLETE (and not a non-perpetual IN PROGRESS), or perpetual maintenance.
+    Full RW: IN PROGRESS, COMPLETE, or perpetual maintenance.
+    TODO remains non-releasable in full mode.
     """
     if _is_perpetual_task(content):
         return True, "perpetual maintenance task"
@@ -122,8 +130,8 @@ def task_is_releasable(content: str) -> Tuple[bool, str]:
     if not status:
         return False, "no **Status:** line found"
 
-    if re.search(r"IN\s+PROGRESS", status, re.IGNORECASE) and "perpetual" not in status.lower():
-        return False, f"status still in progress: {status!r}"
+    if re.search(r"IN\s+PROGRESS", status, re.IGNORECASE):
+        return True, f"IN PROGRESS: {status!r}"
 
     if re.search(r"\bCOMPLETE\b", status, re.IGNORECASE):
         return True, f"COMPLETE: {status!r}"
@@ -131,11 +139,13 @@ def task_is_releasable(content: str) -> Tuple[bool, str]:
     if re.search(r"\bTODO\b", status, re.IGNORECASE):
         return False, f"status TODO: {status!r}"
 
-    return False, f"status not recognized as COMPLETE: {status!r}"
+    return False, f"status not releasable: {status!r}"
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate RW task doc exists and is COMPLETE (FR-060).")
+    parser = argparse.ArgumentParser(
+        description="Validate RW task doc exists and is releasable (FR-060)."
+    )
     parser.add_argument(
         "--requested",
         required=True,

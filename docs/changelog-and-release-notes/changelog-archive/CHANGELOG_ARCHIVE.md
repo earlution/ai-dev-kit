@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.75+1] - 01-04-26
+
+E5:S01:T75 — **ICW durable planning artifacts** in repo docs (**FR-075**): policy, `implementation-cycles` README, ICW framework docs, `.cursorrules`. [T75](../../project-management/kanban/epics/Epic-5/Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md); [FR-075](../../project-management/kanban/fr-br/FR-075-icw-durable-planning-artifacts-documentation-system.md).
+
+[Detailed changelog](CHANGELOG_v0.5.1.75+1.md)
+
+---
+---
+---
 ## [0.7.1.9+3] - 31-03-26
 
 E7:S01:T09 — **UXR-005** **Implementing Task** wiring.

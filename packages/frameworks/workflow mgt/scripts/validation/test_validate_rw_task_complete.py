@@ -44,14 +44,14 @@ def test_full_mode_passes_complete(minimal_complete_task: Path):
     assert r.returncode == 0, r.stderr + r.stdout
 
 
-def test_full_mode_fails_in_progress(minimal_complete_task: Path):
+def test_full_mode_passes_in_progress(minimal_complete_task: Path):
     task = list(minimal_complete_task.rglob("T01-foo.md"))[0]
     task.write_text(
         "---\n---\n\n**Task ID:** E9:S01:T01\n**Status:** IN PROGRESS\n",
         encoding="utf-8",
     )
     r = _run(["--requested", "E9:S01:T01"], cwd=minimal_complete_task)
-    assert r.returncode == 1, r.stderr + r.stdout
+    assert r.returncode == 0, r.stderr + r.stdout
 
 
 def test_full_mode_perpetual_in_progress_ok(minimal_complete_task: Path):
@@ -63,6 +63,16 @@ def test_full_mode_perpetual_in_progress_ok(minimal_complete_task: Path):
     )
     r = _run(["--requested", "E9S01T01"], cwd=minimal_complete_task)
     assert r.returncode == 0, r.stderr + r.stdout
+
+
+def test_full_mode_fails_todo(minimal_complete_task: Path):
+    task = list(minimal_complete_task.rglob("T01-foo.md"))[0]
+    task.write_text(
+        "---\n---\n\n**Task ID:** E9:S01:T01\n**Status:** TODO\n",
+        encoding="utf-8",
+    )
+    r = _run(["--requested", "E9:S01:T01"], cwd=minimal_complete_task)
+    assert r.returncode == 1, r.stderr + r.stdout
 
 
 def test_rw_k_skips_complete_check(minimal_complete_task: Path):

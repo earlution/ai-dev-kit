@@ -29,9 +29,10 @@
    - **CRITICAL:** Parse the **same user message** as the RW trigger for a task identifier (`E7:S01:T10`, `E7S01T10`, `RW -d E7S01T10`, `RW -k E6S6T56`, etc.). Same flexibility as UKW/Step 1d parsing.
    - **If no parseable `E…S…T…` token:** **RW ABORTED** — same severity as Step 1 failure. **Do not** run `validate_rw_task_intent.py` without `--requested` as a substitute. Tell the user to re-send with an explicit task id, e.g. `RW E7:S01:T10` or `RW E7S01T10`.
 6c. **🚨 MANDATORY: Step 1c — RW task document releasable (FR-060)** — **After Step 1b passes**, **before any RW file modifications**
-   - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested "<parsed_id>"`  
-   - For **`RW -k`**, add **`--mode rw-k`** (requires task doc to exist; skips COMPLETE / perpetual status check).
-   - **Non-zero exit:** **RW ABORTED** — same severity as Step 1. Print script output.
+ - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested "<parsed_id>"` 
+ - **Full RW releasable statuses:** `IN PROGRESS`, `COMPLETE`, or perpetual maintenance task.
+ - For **`RW -k`**, add **`--mode rw-k`** (requires task doc to exist; status releasability checks are skipped in rw-k mode).
+ - **Non-zero exit:** **RW ABORTED** — same severity as Step 1. Print script output.
 6d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056 / E6:S06:T56)** — **After Step 1c passes**, **before any RW file modifications** (before Step 2)
    - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
    - **Use `--mode rw-k`** when the trigger is **`RW -k`**: comparison against `version.py` is skipped so explicit init target does not false-block.
