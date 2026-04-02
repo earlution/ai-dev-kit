@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-03-09  
-**Last updated:** 2026-04-02 — **RW** v0.6.6.57+2 — IPW + re-verification / evidence schema (product behavior **not** verified fixed)  
-**Version:** v0.6.6.57+2  
+**Last updated:** 2026-04-02 — **RW** v0.6.6.57+3 — **E1**/**E2** + maintainer **Cursor-only** disposition (**not** verified Cascade fix)  
+**Version:** v0.6.6.57+3  
 **Code:** BR-039  
 **Implementing Task:** [E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
 **Planning Artifact (IPW):** [IPW-E6S06T57-br039-vendor-blocker-planning.md](../../../implementation-cycles/IPW-E6S06T57-br039-vendor-blocker-planning.md)
@@ -126,6 +126,26 @@ Use append-only entries with these fields:
 - `observed`
 - `result` (`pass` | `fail` | `blocked`)
 - `notes` (workaround, escalation, owner)
+
+### Log entry E1 — 2026-04-02
+
+- **date_utc:** 2026-04-02 14:44 UTC  
+- **tool_version:** Windsurf **1.9577.27** (`/Applications/Windsurf.app` plist); executor shell Cursor **2.6.20** (validators only).  
+- **scenario:** (1) BR-039 interactive repro — not run (UI). (2) `validate_branch_context.py --strict`; `validate_rw_task_complete.py --requested E6:S06:T57` on `epic/6-framework-management`.  
+- **expected:** (1) Whitelist persists, no repeat prompt. (2) Validator exit 0.  
+- **observed:** (1) Not executed here. (2) Exit 0 for both.  
+- **result:** **`blocked`** for (1); auxiliary **`pass`** for (2) — does not prove Cascade fixed.  
+- **notes:** Mirror of [T57 — Evidence § E1](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md). *(Superseded for this maintainer by **E2**: optional Windsurf retest **waived** — Cursor-only.)*
+
+### Log entry E2 — 2026-04-02 (reporter Cursor-only)
+
+- **date_utc:** 2026-04-02 (maintainer follow-up)  
+- **tool_version:** Primary: **Cursor**. Windsurf retest **waived** (reference build **1.9577.27** from **E1** only).  
+- **scenario:** Optional BR-039 repro in Windsurf — **declined** by implementing maintainer.  
+- **expected:** N/A (waived).  
+- **observed:** Maintainer **switched back to Cursor**; no Windsurf verification planned.  
+- **result:** **`blocked` / waived (reporter)** — product behavior **not** re-tested; **not** “fixed”.  
+- **notes:** Mirror of [T57 — Evidence § E2](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md). BR-039 text remains **accurate for Cascade**; closure needs vendor fix or third-party retest.
 
 ## Success Criteria
 

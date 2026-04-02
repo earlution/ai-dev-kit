@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-04-02 (**RW E6:S06:T57** v0.6.6.57+2 — **BR-039** / IPW + re-verification docs)
-**Version:** v0.6.6.57+2
+**Last updated:** 2026-04-02 (**RW E6:S06:T57** v0.6.6.57+3 — **BR-039** evidence **E1**/**E2**, Cursor-only disposition)
+**Version:** v0.6.6.57+3
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -41,7 +41,7 @@ housekeeping_policy: keep
 - [x] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - ✅ COMPLETED (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
   - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](Story-006-feature-requests/T42-fix-ukw-agent-board-cleanup-failure.md | [BR-042](../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
 
-- [ ] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - TODO (CRITICAL, **BR-039**: whitelist persistence / prompt fatigue in Windsurf Cascade; repo tracks escalation, evidence, re-verification — product fix is vendor-side)
+- [ ] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - IN PROGRESS (v0.6.6.57+3 — evidence **E1**/**E2**; maintainer **Cursor-only**; Windsurf retest **waived**; product unverified)
   - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md | [BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
 
 - [x] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - ✅ COMPLETE (v0.6.6.56+4) (HIGH priority, BR-056: validate_rw_task_intent + Step 1b; live verification 2026-03-25)

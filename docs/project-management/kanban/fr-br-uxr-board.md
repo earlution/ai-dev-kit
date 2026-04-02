@@ -36,7 +36,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Must Have (M) - Critical Items
 
-- **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - IN PROGRESS (CRITICAL, vendor product issue; repo: **IPW** + re-verification docs **v0.6.6.57+2** — product fix unverified) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | [E6:S06:T57](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
+- **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - IN PROGRESS (CRITICAL, vendor product issue; maintainer **Cursor-only** — Windsurf retest **waived**; **RW** **v0.6.6.57+3** Evidence **E1**/**E2**) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | [E6:S06:T57](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | [E6:S06:T02](epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md)
 - **BR-059** – UKW MoSCOW omits open story tasks (E5:S09 listed T01 only; checklist T01–T07) - TODO (HIGH, board SoT vs story checklist; investigation + UKW/rule fix) - [BR-059](fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md) | [E6:S07:T109](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md)
 

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.57+2] - 02-04-26
+## [0.6.6.57+3] - 02-04-26
 
-E6:S06:T57 — **BR-039** (change implemented in repo): Durable **IPW** package, task↔BR↔plan wiring, re-verification protocol and evidence schema; no vendor product fix claimed. [T57](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](docs/project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md); [IPW](docs/implementation-cycles/IPW-E6S06T57-br039-vendor-blocker-planning.md).
+E6:S06:T57 — **BR-039** (change implemented in repo): Evidence **E1**/**E2** (agent checklist + **Cursor-only** maintainer; Windsurf retest **waived**); BR-039 **Maintainer disposition**; board row — **not** a verified Cascade fix. [T57](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](docs/project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+3.md)
