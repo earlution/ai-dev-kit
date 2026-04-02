@@ -29,7 +29,7 @@ This guide explains how to integrate AI Dev Kit frameworks into existing project
 
 ---
 
-## Migration from Copy-Paste to Dependencies
+## Migration from copy-paste to dependencies {#migration-from-copy-paste}
 
 ### Assessment
 
@@ -410,6 +410,18 @@ pipeline {
 ---
 
 ## Multiple Framework Management
+
+### Selective framework adoption {#selective-framework-adoption}
+
+Adopt frameworks incrementally (existing projects or trimmed templates). See [Use Case 4](framework-dependency-use-cases.md#use-case-4-existing-project--some-packages) in the Use Cases guide.
+
+### Monorepo integration {#monorepo-integration}
+
+Centralize installs and updates for multiple packages. See [Use Case 6](framework-dependency-use-cases.md#use-case-6-monorepomulti-project-setup).
+
+### Gradual adoption {#gradual-adoption}
+
+Add frameworks over time or finish migrating from copy-paste. See [Use Case 7](framework-dependency-use-cases.md#use-case-7-gradualmigratory-adoption).
 
 ### Framework Dependencies
 

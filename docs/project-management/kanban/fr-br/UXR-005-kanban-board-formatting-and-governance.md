@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-16  
 **Submitted By:** User (request) documented by Cascade  
 **Priority:** HIGH  
-**Status:** OPEN  
+**Status:** ACCEPTED (registry **E7:S00:T05** filed 2026-03-31; implementation **E7:S01:T09** — UXR ACs still open)  
 **GitHub Issue:** _TBD_  
 **Repository Task:** [E7:S00:T05](../epics/Epic-7/Story-000-uxr-repo/T05-uxr-005-repository-anchor.md)  
 **Implementation Task:** [E7:S01:T09](../epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)
@@ -108,26 +108,27 @@ Readers reported poor readability on Kanban boards because multi-line task entri
 
 ## Intake Decision
 
-**Intake Status:** PENDING  
-**Intake Date:** 2026-03-16  
-**Intake By:** Cascade on behalf of User  
+**Intake Status:** ACCEPTED  
+**Intake Date:** 2026-03-31 (registry task filed; implementation was already **E7:S01:T09**)  
+**Intake By:** AI Agent (Cursor)  
 
 **Decision Flow Results:**
 
-- [ ] Story Match Found: _TBD_
+- [x] Story Match Found: **E7:S00** (UXR repository) + **E7:S01** (implementation)
 
 **Assigned To:**
 
-- Epic: _TBD_  
-- Story: _TBD_  
-- Task: _TBD_  
-- Version: _TBD_
+- Epic: Epic 7  
+- Story (registry): **E7:S00** — **E7:S00:T05**  
+- Story (implementation): **E7:S01** — **E7:S01:T09**  
+- Version: `v0.7.0.5+1` (registry filed); implementation versions follow **E7:S01** RW  
 
 **Kanban Links:**
 
-- Epic: _TBD_  
-- Story: _TBD_  
-- Task: _TBD_
+- Epic: [`Epic-7.md`](../epics/Epic-7/Epic-7.md)  
+- Story (registry): [`Story-000-uxr-repo.md`](../epics/Epic-7/Story-000-uxr-repo.md)  
+- Task (registry): [`T05-kanban-board-formatting-governance-uxr-005.md`](../epics/Epic-7/Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md)  
+- Task (implementation): [`E07S01T09-kanban-template-governance.md`](../epics/Epic-7/Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)
 
 ---
 

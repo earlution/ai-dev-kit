@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
-**Last updated:** 2026-03-16 (v0.7.1.6+2 – Docusaurus portal scaffold + task doc naming standardization)  
+**Last updated:** 2026-03-31 (v0.7.1.9+3 — UXR-005 **Implementing Task** wiring; prior BUILD 2 **validate_branch_context**)  
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Version:** v0.7.1.6+2  
+**Version:** v0.7.1.9+1  
 **Code:** E7S01
 
 ---
@@ -30,7 +30,7 @@ housekeeping_policy: keep
 - [ ] **E7:S01:T06 – Implement Update Changelog Workflow (UCW)** - TODO (v0.7.1.5+6 – FR-057 defines UCW scope for latest-only changelog policy, archival automation, and RW integration)
 - [ ] **E7:S01:T07 – Markdown Maintenance Workflow (MMW)** - TODO (v0.7.1.6+2 – FR-058 defines workflow for resolving markdown lint blockers and coordinating perpetual maintenance cycles)
 - [ ] **E7:S01:T08 – Task Doc Naming Standardization** - IN PROGRESS (v0.7.1.6+2 – Establishes `EddSddTdd-[title].md` canonical naming and migration plan)
-- [ ] **E7:S01:T09 – Kanban Template Governance & UXR Ownership** - TODO (v0.7.1.7+0 – Implements UXR-005 spacing rule enforcement, validator updates, and assigns UXR ownership for Kanban templates; see task doc for RW anchoring)
+- [ ] **E7:S01:T09 – Kanban Template Governance & UXR Ownership** - TODO (v0.7.1.9+3 – UXR-005 **Implementing Task** in UXR doc; UXR-005 ACs still open — see task doc)
 
 > **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding, e.g., `E7:S01:T01`, `E7:S01:T02`)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  

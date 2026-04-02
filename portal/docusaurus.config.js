@@ -30,8 +30,10 @@ const config = {
   projectName: 'ai-dev-kit',
 
   // E5:S09:T08 / FR-067 FU-1: strict link checking (corpus must be clean).
+  // E5:S09:T10 / FR-067 FU-3: strict in-page / cross-doc anchor checking.
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
+  onBrokenAnchors: 'throw',
 
   i18n: {
     defaultLocale: 'en',

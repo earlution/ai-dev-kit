@@ -222,7 +222,8 @@ def find_story_file(config: Optional[Dict] = None, epic: int = None, story: int 
     for pattern in fallback_patterns:
         candidate_files.extend(project_root.glob(pattern))
     
-    if not epic or not story:
+    # Use explicit None check: story 0 (e.g. E7:S00) is valid; `not story` would wrongly skip.
+    if epic is None or story is None:
         # Return first match if no epic/story specified
         if candidate_files:
             return candidate_files[0]
@@ -374,6 +375,9 @@ def locate_task_doc(
         if not task_files:
             # Try T{task}-*.md pattern (no padding, e.g. T37-*.md)
             task_files = list(story_dir.glob(f"T{task}-*.md"))
+        if not task_files:
+            # E07S01T09-*.md style (E/S/T two-digit — canonical task-doc naming on some epics)
+            task_files = list(story_dir.glob(f"E{epic:02d}S{story:02d}T{task:02d}-*.md"))
         if task_files:
             task_file = task_files[0]
             return (task_file, task_file.read_text(), "separate_file")

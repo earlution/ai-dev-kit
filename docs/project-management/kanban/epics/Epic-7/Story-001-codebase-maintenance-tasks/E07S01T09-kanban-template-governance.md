@@ -8,10 +8,12 @@ housekeeping_policy: keep
 
 # Task E7:S01:T09 – Kanban Template Governance & UXR Ownership
 
+**Task ID:** E7:S01:T09  
 **Status:** TODO  
 **Priority:** HIGH  
-**Version Marker:** v0.7.1.7+0 (UXR-005 filing)  
+**Version Marker:** v0.7.1.9+3 (UXR-005 **Implementing Task** header wiring)  
 **Related UXR:** [UXR-005 – Kanban Board Formatting & Governance](../../../fr-br/UXR-005-kanban-board-formatting-and-governance.md)  
+**UXR registry (E7:S00):** [E7:S00:T05](../Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md)  
 **Story:** [E7:S01 – Codebase Maintenance Tasks](../Story-001-codebase-maintenance-tasks.md)
 
 ---
@@ -39,7 +41,14 @@ Operationalize UXR-005 by codifying and enforcing the “one blank line between 
 
 ---
 
-## Deliverables
+## Input
+
+- **[UXR-005](../../../fr-br/UXR-005-kanban-board-formatting-and-governance.md)** — Kanban board formatting & governance findings and acceptance criteria.
+- **Registry:** [E7:S00:T05](../Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md); kanban boards, `kanban-board-guide.md`, validators under `scripts/documentation/`.
+
+---
+
+## Deliverable
 
 - Updated Kanban documentation and templates reflecting spacing rule + ownership statement.
 - Validator enhancement or documented backlog item referencing this task if deferred.
@@ -60,6 +69,7 @@ Operationalize UXR-005 by codifying and enforcing the “one blank line between 
 
 ## Dependencies
 
+- **E7:S00:T05** — UXR-005 kanban registry task (traceability anchor).
 - UXR-005 findings and recommendations.
 - Documentation validator infrastructure.
 - Coordination with Documentation Agent for template updates.
@@ -70,3 +80,11 @@ Operationalize UXR-005 by codifying and enforcing the “one blank line between 
 
 - Treat this as a fast-follow to the already completed formatting sweep so the rule becomes durable, automated, and RW-trackable.
 - Future RW cycles should update this task’s version marker whenever spacing enforcement work occurs.
+
+---
+
+## Kanban documentation setup (RW -k)
+
+**v0.7.1.9+1 (2026-03-31):** Registry wiring for **UXR-005** via **E7:S00:T05**; **Task ID** header for RW validators; **`validate_rw_task_complete.py`** restored on **epic/7-documentation-maintenance**. Implementation scope (spacing rule, validators, ACs) remains **TODO**.
+
+**v0.7.1.9+2 (2026-03-31):** **`validate_branch_context.py`** `locate_task_doc_for_version` — same discovery patterns as **`validate_version_bump`** (no false “task doc not found” for **E07S01T09** layout).

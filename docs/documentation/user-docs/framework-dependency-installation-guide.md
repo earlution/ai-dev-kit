@@ -92,7 +92,7 @@ git status
 git remote -v
 ```
 
-**Alternative: Use ai-dev-kit as a GitHub Template**
+### Alternative: Use ai-dev-kit as a GitHub template {#alternative-use-ai-dev-kit-as-a-github-template}
 
 Instead of creating a repository from scratch, you can use `ai-dev-kit` as a template:
 
@@ -174,6 +174,14 @@ Before installing, identify which use case matches your needs:
 - See [Use Cases Guide](framework-dependency-use-cases.md#use-case-4-existing-project--some-packages) for details
 
 **📖 For complete use case details and additional scenarios, see the [Use Cases Guide](framework-dependency-use-cases.md)**
+
+### Selective framework installation {#selective-framework-installation}
+
+Install only the packages you need (CLI, submodule copy, or template trim). See [Use Case 2: Template → Some Packages](framework-dependency-use-cases.md#use-case-2-template--some-packages) and [Use Case 4: Existing Project → Some Packages](framework-dependency-use-cases.md#use-case-4-existing-project--some-packages).
+
+### Monorepo setup {#monorepo-setup}
+
+Share one ai-dev-kit installation across multiple packages. See [Use Case 6: Monorepo/Multi-Project Setup](framework-dependency-use-cases.md#use-case-6-monorepomulti-project-setup).
 
 ---
 
@@ -941,7 +949,7 @@ ai-dev-kit install workflow-mgmt@2.0.0
 
 ---
 
-## Uninstalling Frameworks
+## Uninstalling frameworks {#uninstalling-frameworks}
 
 If you need to remove a framework:
 

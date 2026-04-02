@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-03-31 (**RW E5:S09:T09** v0.5.9.9+2 — Pages go-live on `main`)
-**Version:** v0.5.9.9+2 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-04-01 (version refresh: **E5:S01:T75** **`v0.5.1.75+1`** — **FR-075**; MoSCOW unchanged)
+**Version:** v0.5.1.75+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 7, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -32,7 +32,7 @@ No important tasks currently in progress
 
 ### Could Have (C) - Nice-to-Have Tasks
 
-- **E5:S09:T08** – Strict broken-link checking post–FR-067 (`warn` → `throw`) – TODO - [Task](epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md) | [Story](epics/Epic-5/Story-009-docusaurus-documentation-portal.md) | [FR-067](fr-br/FR-067-docusaurus-production-build-corpus-triage.md) (**FU-1**)
+No nice-to-have tasks currently in progress
 
 ### Ongoing (O) - Perpetual Tasks
 

@@ -42,7 +42,7 @@ Consolidate Kanban file structure to:
 
 ## Tasks
 
-### E4:S04:T01 – Refactor Kanban file structure (Epic-X.md → Epic-X/Epic-X.md, remove stories/ subdirectory)
+### E4:S04:T01 – Refactor Kanban file structure (Epic-X.md → Epic-X/Epic-X.md, remove stories/ subdirectory) {#e4s04t01--refactor-kanban-file-structure-epic-xmd--epic-xepic-xmd-remove-stories-subdirectory}
 
 **Input:** Current Kanban structure with `epics/Epic-X.md` and `epics/Epic-X/stories/Story-XXX-*.md`  
 **Deliverable:** Refactored structure with `epics/Epic-X/Epic-X.md` and `epics/Epic-X/Story-XXX-*.md`  

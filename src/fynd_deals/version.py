@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
-VERSION_STORY = 1     # Story number (Story 1: FR Repo perpetual)
-VERSION_TASK = 42     # Task number (E5:S01:T42 — FR-042 IPW / ICW consolidation kanban + FR)
-VERSION_BUILD = 3     # Build number (+3 AC5/AC7 closure: retro wiring + validate_plan_wiring)
+VERSION_STORY = 1     # Story number (Story 1: FR Repo — perpetual)
+VERSION_TASK = 75     # Task number (E5:S01:T75 — ICW durable planning artifacts / FR-075)
+VERSION_BUILD = 1     # Build number (policy + ICW docs + cursorrules + implementation-cycles README)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.42+3 — E5:S01:T42 AC5/AC7 complete: retro plan wiring + validate_plan_wiring.py
+# Current: 0.5.1.75+1 — E5:S01:T75 **FR-075** ICW repo SoT for planning artifacts
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

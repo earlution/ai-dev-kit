@@ -585,43 +585,68 @@ The workflow definition is located at:
 
 ---
 
-### 🔄 IMPLEMENTATION PLANNING WORKFLOW (IPW) TRIGGER
+### 🔄 IMPLEMENTATION CYCLE WORKFLOW (ICW) TRIGGER
 
-**Canonical trigger:** **`IPW`** or **`ipw`** (case-insensitive), optionally with task id: **`IPW E5:S01:T42`**, **`IPW E5S01T42`**.
+**When the user types "ICW" or "icw" (case-insensitive), execute the Implementation Cycle Workflow as an intelligent agent:**
 
-**Deprecated alias:** **`ICW`** / **`icw`** — treat as **IPW** (identical agent steps and outputs). Do **not** maintain a second planning workflow. Legacy package name `implementation-cycle-workflow` and `icw_handler.py` remain for adopters; planning is **IPW** per **FR-042** / **E5:S01:T42**.
+**🚨 CRITICAL REQUIREMENT: ICW MUST BE EXECUTED IN PLANNING MODE**
 
-**🚨 CRITICAL REQUIREMENT: IPW MUST BE EXECUTED IN PLANNING MODE**
-
-1. **MODE VALIDATION (MANDATORY):** Require planning mode (`PLANNING_MODE=true` or equivalent). **Cancel** in implementation-only mode.
-2. **DO NOT** replace IPW with deterministic script-only runs for the creative planning steps; use agent-driven elicitation.
-3. **DO** follow **Implementation Planning Workflow (IPW)** agent execution: `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md`
-4. **THINK FIRST, ACT SECOND** — specification, test design, implementation plan; persist as **one plan doc** using `packages/frameworks/kanban/templates/PLAN_DOC_TEMPLATE.md`
-5. **MANDATORY WIRING:** Plan doc **Host Task** ↔ task doc **Input** and **References** (bidirectional, same session) — **FR-042**
-6. **Optional:** `icw-config.yaml` / templates under `implementation-cycle-workflow` may be loaded for compatibility; do not fork process from IPW.
+1. **MODE VALIDATION (MANDATORY):** ICW will detect execution mode and CANCEL if not in planning mode
+2. **DO NOT** run any deterministic scripts
+3. **DO** execute the Implementation Cycle Workflow using the **intelligent agent-driven execution pattern**
+4. **THINK FIRST, ACT SECOND** - Analyze the implementation requirements and guide through three phases
+5. **BE ADAPTIVE** - Provide intelligent guidance for specification, testing, and implementation planning
+6. **LOAD CONFIG FIRST (MANDATORY):** Before Step 1, load `icw-config.yaml` from workflow directory
+7. **🚨 MANDATORY: Start with Step 1: Initialize Implementation Cycle** - This is a **MANDATORY BLOCKING STEP**
+8. **EXECUTE INTELLIGENTLY** - Use your AI capabilities to guide through specification, test design, and implementation planning
+9. **GUIDE THE USER** - Ask relevant questions and provide intelligent assistance throughout the three phases
+10. **Document** each phase's analysis, decisions, and results
+11. **Durable artifacts (ICW responsibility):** Do **not** leave the specification package only in IDE-local plan folders (e.g. `~/.cursor/plans/`). Persist the three-phase outputs under the project **`docs/implementation-cycles/`** tree (or the `output_dir` in `icw-workflow.yaml`), use the **`ICW-E…S…T…-*`** naming convention where applicable, and **link those paths from the Kanban task** (and mirror key acceptance bullets into the task doc when helpful). **Policy:** `docs/architecture/standards-and-adrs/specification-and-planning-artifacts-policy.md`.
 
 **🔍 MODE DETECTION AND VALIDATION:**
-- **Planning Mode:** ✅ ALLOWED
-- **Implementation Mode:** 🚫 BLOCKED for IPW planning phases
-- **Unknown Mode:** 🚫 BLOCKED — require explicit planning mode
+- **Planning Mode:** ✅ ALLOWED - ICW requires intelligent agent guidance
+- **Implementation Mode:** 🚫 BLOCKED - ICW will cancel execution with error message
+- **Unknown Mode:** 🚫 BLOCKED - ICW requires explicit planning mode
 
-**📝 ERROR HANDLING FOR WRONG MODE:** Same as ICW legacy: explain planning mode; cancel; no partial plan without user alignment.
+**📝 ERROR HANDLING FOR WRONG MODE:**
+If ICW detects implementation mode:
+- Display clear error message explaining planning mode requirement
+- Provide instructions to switch to planning mode
+- Cancel execution gracefully
+- Do not proceed with any ICW steps
 
-**🧠 AGENT INTELLIGENCE:** Specification → Test Design → Implementation Planning; interactive questioning; quality checks; use project standards.
+**🧠 AGENT INTELLIGENCE REQUIREMENTS:**
 
-### 🔄 IPW EXECUTION PATTERN (replaces standalone ICW block)
+- **Three-Phase Guidance:** Guide through Specification Definition → Test Design → Implementation Planning
+- **Interactive Questioning:** Ask relevant questions to elicit complete requirements
+- **Template Processing:** Generate structured documents using ICW templates
+- **Quality Assurance:** Validate completeness and consistency across phases
+- **Context Awareness:** Understand project patterns and integration requirements
 
-**When user types `IPW` (or deprecated `ICW`):**
+### 🔄 THREE-PHASE EXECUTION PATTERN
 
-1. **START** — Identify host task (E:S:T); confirm task doc exists.
-2. **PHASE 1 — Specification** — Goals, requirements, constraints, acceptance.
-3. **PHASE 2 — Test design** — Cases, coverage, data (or doc-verification plan for doc-only work).
-4. **PHASE 3 — Implementation plan** — Steps, files, dependencies.
-5. **CREATE PLAN DOC** — From template; **Host Task** header with link to task file.
-6. **WIRE** — Task **Input** + **References** link to plan doc; validate bidirectional links.
-7. **COMPLETE** — Hand off to Implementation Cycle SoP Step 3 (TDD) / implementation.
+**When user types "ICW":**
 
-**🚨 CONTINUOUS GUIDANCE:** Do not stop between phases without reason; complete wiring before closing the session.
+1. **START IMMEDIATELY** - Begin Phase 1: Specification Definition
+2. **PHASE 1: SPECIFICATION DEFINITION** - Guide through requirements gathering and specification creation
+3. **PHASE 2: TEST DESIGN** - Guide through comprehensive test design based on specifications
+4. **PHASE 3: IMPLEMENTATION PLANNING** - Guide through detailed implementation planning
+5. **GENERATE PACKAGE** - Create complete implementation package with all three phases
+6. **INTEGRATE WITH KANBAN** - Update kanban system with implementation task and artifacts; ensure the **task doc lists Planning artifact / ICW file links** under `docs/implementation-cycles/` (repo SoT per policy in `docs/architecture/standards-and-adrs/specification-and-planning-artifacts-policy.md`)
+7. **COMPLETE** - Report success and provide next steps
+
+**Agent Guidance for Each Phase:**
+
+- **Phase 1:** Ask questions about problem, objectives, constraints, acceptance criteria
+- **Phase 2:** Review specifications and guide test design for coverage and completeness
+- **Phase 3:** Analyze tests and specifications to create detailed implementation plan
+
+**🚨 CONTINUOUS GUIDANCE REQUIRED:**
+
+- **DO NOT** stop after each phase and wait for user guidance
+- **DO** continue asking relevant questions and providing intelligent assistance
+- **DO** ensure each phase is complete before proceeding to next
+- **DO** validate quality and completeness at each step
 
 ---
 
@@ -685,8 +710,7 @@ Documents in `docs/` directory must have lifecycle metadata in frontmatter:
 **Steps (do not skip when pattern is adopted):**
 1. **Requirement Documentation** — Create or update BR/FR or document requirement in task.
 2. **Task Creation** — Create task in Epic/Story with deliverables, acceptance criteria, link to BR/FR; add to Story Task Checklist. Align with Kanban Governance.
-2.5. **Implementation Planning (IPW) — Recommended** — For non-trivial tasks, run **IPW** / **IPW E:S:T**; produce wired plan doc (task ↔ plan bidirectional links). **ICW** is a deprecated alias for the same workflow (**FR-042**).
-3. **Specification & Test Creation (TDD) — 🚨 BLOCKING** — Ascertain spec from task/BR/FR (**and IPW plan if present**); identify testable behaviors; write **failing tests** (Red phase). Cannot proceed to implementation without tests.
+3. **Specification & Test Creation (TDD) — 🚨 BLOCKING** — Ascertain spec from task/BR/FR; identify testable behaviors; write **failing tests** (Red phase). Cannot proceed to implementation without tests.
 4. **Implementation** — Red-Green-Refactor: implement to make tests pass, run tests after each change, refactor while keeping tests green.
 5. **Release Workflow (RW)** — Run RW for version, changelog, Kanban update, commit, tag, push.
 

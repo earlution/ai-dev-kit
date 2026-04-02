@@ -381,6 +381,14 @@ ai-dev-kit update numbering-versioning
 
 ---
 
+## Uninstall Issues {#uninstall-issues}
+
+Commands, safety flags (`--recover`, `--rollback`, `--dry-run`), and cleanup patterns for removing frameworks live in the Installation guide: [Uninstalling frameworks](framework-dependency-installation-guide.md#uninstalling-frameworks).
+
+If uninstall fails after a partial run, retry with `--recover` or use `--dry-run` first to preview changes (see Installation guide).
+
+---
+
 ## Configuration Issues
 
 ### Issue: Configuration Not Found

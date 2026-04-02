@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-31 (**Epic/5** **`RW -k`:** **T21** `v0.5.1.21+0`, **T32** `v0.5.1.32+0`; **Epic/7** **T03/T04** next; **T73**/**T74** prior milestones)
-**Version:** *(documentation — align releases with `version.py`; board text may trail **`RW`** on other epics)*
+**Last Updated:** 2026-03-31 (**main:** Epic 7 merge retained; merged **`epic/5-documentation-management`**; **`v0.5.1.32+1`** **E5:S01:T32** tip; **T21/T32** **`RW -k`**; **BR-059** / E5:S09 context)
+**Version:** v0.5.1.32+1 *(documentation board; see `version.py` for SoT)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -58,7 +58,7 @@ This board provides **centralized visibility and prioritization** for all open F
 | **FR-021** | FR | **E5:S01:T21** | **Released** **`v0.5.1.21+0`** (`RW -k` on `epic/5`) | `epic/5-documentation-management` | Repository-story pattern; reconcile with **E7:S00** / **T72**. |
 | **FR-032** | FR | **E5:S01:T32** | **Released** **`v0.5.1.32+0`** (`RW -k` on `epic/5`) | `epic/5-documentation-management` | RC readiness gap analysis. |
 | **UXR-003** | UXR | **E7:S00:T03** · **E7:S05:T03** | **Linked** (synthesis ✅; repo anchor → **`RW -k`** `epic/7`) | `epic/7-documentation-maintenance` | [T03](epics/Epic-7/Story-000-uxr-repo/T03-uxr-003-repository-anchor.md). |
-| **UXR-004** | UXR | **E7:S00:T04** · **E7:S05:T04** | **Linked** (synthesis ✅; UXR **COMPLETE**; repo anchor → **`RW -k`** `epic/7`) | `epic/7-documentation-maintenance` | [T04](epics/Epic-7/Story-000-uxr-repo/T04-uxr-004-repository-anchor.md). |
+| **UXR-004** | UXR | **E7:S00:T04** · **E7:S05:T04** | **Linked** (synthesis ✅; UXR **COMPLETE**; **`RW -k`** `epic/7`) | `epic/7-documentation-maintenance` | [T04](epics/Epic-7/Story-000-uxr-repo/T04-uxr-004-repository-anchor.md). |
 
 **Housing policy (how story choice is decided)** — canonical rules: **`kanban-governance-policy.md`** (**KG-R2** atomic intake, **KG-R6** semantics vs numbering).
 
@@ -116,6 +116,7 @@ Examples: **FR-045**→E5:S01:T45, **FR-046**→T46, **FR-047**→T47, **FR-063*
 
 - **FR-073** – FR/BR/UXR board: open ∧ taskless intake execution plan (Kanban task) - TODO (MEDIUM, **`v0.5.1.73+0`** intake shipped; **T73** — Phases B/C queue execution + hygiene) - [FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [E5:S01:T73](epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
 - **FR-040** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [FR-040](fr-br/FR-040-implementation-cycle-workflow-icw.md) | [E5:S01:T40](epics/Epic-5/Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md)
+- **FR-075** – ICW durable planning artifacts in the documentation system - ✅ COMPLETE (**`v0.5.1.75+1`**, **RW E5:S01:T75**) — repo SoT for ICW outputs under `docs/implementation-cycles/`, task links, policy - [FR-075](fr-br/FR-075-icw-durable-planning-artifacts-documentation-system.md) | [E5:S01:T75](epics/Epic-5/Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md)
 - **FR-045** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH, SemVer mapping for task_touch and Kanban integration) - [FR-045](fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [E5:S01:T45](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)
 - **FR-047** – Install Logging for Framework Dependencies - TODO (HIGH, Enables detailed post-install analysis and debugging) - [FR-047](fr-br/FR-047-install-logging-for-framework-dependencies.md) | [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 - **FR-046** – RW SemVer Tag When task_touch Enabled - TODO (HIGH, RW tagging behaviour when task_touch is enabled) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)

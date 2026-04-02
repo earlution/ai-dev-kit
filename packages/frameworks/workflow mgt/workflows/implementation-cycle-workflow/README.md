@@ -63,6 +63,18 @@ PLANNING_MODE=true python icw_handler.py
 - Resource requirements and timeline planning
 - Risk management and success metrics
 
+## Durable planning artifacts (ICW responsibility)
+
+ICW is responsible not only for **thinking** in three phases, but for leaving a **traceable, repo-local package** that teams and agents can find without opening an IDE-only plans directory.
+
+- **Write outputs** to the configured **`output_dir`** (default in `icw-workflow.yaml`: `docs/implementation-cycles/`).
+- **Name files predictably** (e.g. `ICW-E{epic}S{story}T{task}-specification.md` and siblings for test design + implementation plan) so inventory is grep-friendly.
+- **Link bidirectionally:** Each ICW file should cite the **Kanban task id**; the **task document** should list **Planning artifacts** paths under `docs/implementation-cycles/`.
+- **Do not** treat scratch plans under editor-local folders as the system of record once work is task-funded.
+
+**Reference policy (ai-dev-kit):** `docs/architecture/standards-and-adrs/specification-and-planning-artifacts-policy.md`  
+**Folder guide:** `docs/implementation-cycles/README.md`
+
 ## Usage
 
 ### Intelligent Agent Interface (Recommended)
