@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.61+1] - 02-04-26
+## [0.6.6.57+4] - 02-04-26
 
-E6:S06:T61 — **UXR-006** (change implemented): MoSCOW **`Last modified`** UTC field on task + FR/BR/UXR boards; **KG-R2** intake (**E7:S00:T06** + **T61**); guide and board notes. [T61](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md); [UXR-006](docs/project-management/kanban/fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md).
+**`RW -k` E6:S06:T57** — **BR-039** repo task **COMPLETE** (no Windsurf obligation; **BR-039** open for product); Kanban/board/BR alignment; **`dev-kit-kanban-versioning-rw-integration.md`** § **`RW -k`** (`v1.0.1`). *Ordering:* internal **T57+4** after prior **T61+1** on branch — explicit **`-k`** attribution. [T57](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](docs/project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.61+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+4.md)

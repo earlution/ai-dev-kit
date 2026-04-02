@@ -9,8 +9,8 @@ housekeeping_policy: keep
 # Dev-Kit: Kanban + Versioning + Release Workflow Integration Guide
 
 **Status:** Active  
-**Version:** 1.0.0  
-**Last Updated:** 2025-12-02  
+**Version:** 1.0.1  
+**Last Updated:** 2026-04-02  
 **Related:** Epic 4, Story 3, Task 5
 
 ---
@@ -166,6 +166,23 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 **Reference:** 
 - `docs/project-management/kanban/epics/Epic-4/Story-003-kanban-versioning-rw-integration/T004-rw-kanban-validation.md`
 - `docs/project-management/kanban/epics/Epic-4/Story-003-kanban-versioning-rw-integration/T007-gap-resolution-summary.md`
+
+---
+
+### 4. `RW -k` — Kanban / documentation commit (low-friction path)
+
+**Purpose:** Reduce friction when the main intent is to **ship Kanban and documentation updates** (board rows, story/epic markers, task doc alignment, FR/BR pointers) without fighting **full RW** guardrails that assume `version.py` already matches the task you are attributing.
+
+**Trigger:** Same message pattern as full **RW** (mandatory **`E…S…T…`** token per **FR-060**), e.g. **`RW -k E6:S06:T57`**.
+
+**How it connects:**
+
+- **Step 1c** — `validate_rw_task_complete.py --requested "<token>" --mode rw-k`: task file must **exist**; **COMPLETE** / releasability checks are **skipped** so **IN PROGRESS** or doc-hygiene targets do not false-block.
+- **Step 1d** — `validate_rw_task_intent.py --requested "<token>" --mode rw-k`: comparison against **`version.py`** is **skipped** so an explicit Kanban/doc target does not false-block when the repo version line is still on a different task (e.g. you already released **T61** but need a **`T57`** doc pass).
+
+**What it is not:** **`RW -k` does not mean “no commit”** — you still run the release workflow (version bump, changelog, staging, validators, commit, tags) per project rules; **`-k` relaxes the task/intent gates**, not Git hygiene.
+
+**Canonical procedure:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` (Steps **1.4** and **1.5**); portable trigger text: `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md`.
 
 ---
 
@@ -511,6 +528,7 @@ All three integration points have been validated in dev-kit:
 
 ## Version History
 
+- **v1.0.1** (2026-04-02): Added **§ Integration point 4 — `RW -k`** (Kanban/doc low-friction path, validator `--mode rw-k`, links to RW execution guide).
 - **v1.0.0** (2025-12-02): Initial version created (E4:S03:T05)
 
 ---

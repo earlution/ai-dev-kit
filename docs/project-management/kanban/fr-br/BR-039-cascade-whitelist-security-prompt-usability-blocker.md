@@ -8,14 +8,14 @@ housekeeping_policy: keep
 
 # Bug Report BR-039 – Cascade Whitelist Security Prompt Usability Blocker
 
-**Status:** IN PROGRESS (repo: IPW + re-verification workflow; **product** fix unverified)  
+**Status:** IN PROGRESS (**product** / Cascade fix **unverified** — maintainer **does not use Windsurf**; **no subscription**; **[E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)** = **✅ COMPLETE** for **repo** traceability + docs only)  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-03-09  
-**Last updated:** 2026-04-02 — **RW** v0.6.6.57+3 — **E1**/**E2** + maintainer **Cursor-only** disposition (**not** verified Cascade fix)  
-**Version:** v0.6.6.57+3  
+**Last updated:** 2026-04-02 — **`RW -k`** **E6:S06:T57** **v0.6.6.57+4**; **T57** repo **COMPLETE**; **BR-039** stays open for vendor/community verification  
+**Version:** v0.6.6.57+4  
 **Code:** BR-039  
-**Implementing Task:** [E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
+**Implementing Task (repo — COMPLETE):** [E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
 **Planning Artifact (IPW):** [IPW-E6S06T57-br039-vendor-blocker-planning.md](../../../implementation-cycles/IPW-E6S06T57-br039-vendor-blocker-planning.md)
 
 ---
@@ -95,14 +95,21 @@ Cascade's whitelist feature is non-functional, creating constant security prompt
 
 ## Workarounds
 
-### Current Workarounds (Ineffective)
-- **Manual Approval:** Continue manually approving every command (not sustainable)
-- **Tool Switching:** Switch back to Cursor (loses Windsurf benefits)
-- **Limited Usage:** Use Windsurf only for non-automated tasks (reduces value)
+### For this project (ai-dev-kit maintainer)
 
-### Potential Workarounds
+- **Standard IDE:** **Cursor** for all repo work, including **RW** and validator-driven workflows. **Windsurf is not used** (no subscription); there is **no** ongoing Cascade-in-Windsurf verification from this maintainer.
+- **BR-039** remains the **product** record for Cascade behavior if others (vendor, subscribers) re-test.
+
+### Original report context (historical)
+
+- **Manual Approval:** Continue manually approving every command (not sustainable for Cascade users)
+- **Tool Switching:** Use **Cursor** (or another IDE) when Cascade prompts block automation
+- **Limited Usage:** Use affected IDE only for non-automated tasks (reduces value)
+
+### Other mitigations (general)
+
 - **Batch Commands:** Combine multiple operations into single commands (limited effectiveness)
-- **External Scripts:** Move workflows outside of Windsurf (defeats purpose)
+- **External Scripts:** Run automation outside the affected agent UI where possible
 
 ## Re-verification Protocol
 
@@ -145,7 +152,7 @@ Use append-only entries with these fields:
 - **expected:** N/A (waived).  
 - **observed:** Maintainer **switched back to Cursor**; no Windsurf verification planned.  
 - **result:** **`blocked` / waived (reporter)** — product behavior **not** re-tested; **not** “fixed”.  
-- **notes:** Mirror of [T57 — Evidence § E2](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md). BR-039 text remains **accurate for Cascade**; closure needs vendor fix or third-party retest.
+- **notes:** Mirror of [T57 — Evidence § E2](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md). **Superseded** by maintainer policy: **no Windsurf subscription** — **T57** closed repo-side; **BR-039** remains for **Cascade** product state.
 
 ## Success Criteria
 
@@ -183,13 +190,11 @@ Use append-only entries with these fields:
 **Target Resolution:** ASAP - This is a blocking issue for tool adoption
 
 **Next Steps:**
-1. Document this bug report thoroughly
-2. Escalate to Cascade development team
-3. Provide reproduction steps and video evidence
-4. Track resolution progress and validation
+1. Document this bug report thoroughly *(done)*
+2. Escalate to Cascade development team / community
+3. Provide reproduction steps and video evidence *(historical assets in repo)*
+4. Track resolution via **BR-039** evidence log — **third-party or vendor** re-verification
 
-**User Impact Until Resolution:**
-- Limited Windsurf usage for non-automated tasks only
-- Continued reliance on alternative tools (Cursor)
-- Reduced productivity during trial period
-- Potential tool abandonment if not resolved quickly
+**Maintainer (this repo) until BR closed elsewhere:**
+- **Cursor-only** workflow; **no** Windsurf verification
+- **T57** **COMPLETE** = repo obligations met; does **not** close **BR-039**

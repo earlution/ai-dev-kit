@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-02 (**RW** **E6:S06:T61** v0.6.6.61+1 — **UXR-006**; prior **T57** **BR-039**)
-**Version:** v0.6.6.61+1 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-04-02 (**`RW -k` E6:S06:T57** v0.6.6.57+4 — **T57** COMPLETE repo-side; **BR-039** product open; prior **RW E6:S06:T61** v0.6.6.61+1 **UXR-006**)
+**Version:** v0.6.6.57+4 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -25,8 +25,6 @@ housekeeping_policy: keep
 ## MoSCOW Prioritized In-Progress Tasks
 
 ### Must Have (M) - Critical Tasks
-
-- **E6:S06:T57** – **BR-039:** Cascade whitelist / security prompt usability (**vendor**; repo: **E1**/**E2** **v0.6.6.57+3**; maintainer **Cursor-only**; Windsurf retest waived) - IN PROGRESS (CRITICAL) - [Task](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | Last modified: 2026-04-02 14:50 UTC
 
 - **E6:S06:T60** – **BR-060:** RW incorrectly blocked **`IN PROGRESS`** tasks at Step 1c — **change implemented** (v0.6.6.60+1); verification pending - IN PROGRESS (CRITICAL) - [Task](epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-060](fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md) | Last modified: 2026-04-02 13:43 UTC
 

@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-04-02 — **RW E6:S06:T61** v0.6.6.61+1 (**UXR-006** MoSCOW stamps + intake); **RW E6:S06:T57** v0.6.6.57+3 (**BR-039**); **RW E6:S06:T60** v0.6.6.60+1 (**BR-060**); prior **RW -k** 2026-03-31 (**T57** v0.6.6.57+1, **T02** v0.6.6.2+9, **T109** v0.6.7.109+1)
+**Last updated:** 2026-04-02 — **`RW -k` E6:S06:T57** v0.6.6.57+4 (**T57** COMPLETE repo / **BR-039** / § **`RW -k`** guide); **RW E6:S06:T61** v0.6.6.61+1 (**UXR-006**); **RW E6:S06:T60** v0.6.6.60+1 (**BR-060**); prior **RW -k** 2026-03-31 (**T02** v0.6.6.2+9, **T109** v0.6.7.109+1)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -72,9 +72,9 @@ housekeeping_policy: keep
 
 
 
-- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.57+3 — **T57** BR-039 evidence + Cursor-only disposition; **T60** v0.6.6.60+1 BR-060; T56 BR-056 complete)
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - **T57** ✅ COMPLETE repo-side **BR-039**; **T60** v0.6.6.60+1 BR-060; T56 BR-056 complete)
   - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
-  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), **T57 IN PROGRESS (v0.6.6.57+3 — BR-039 / vendor)**, **T60 IN PROGRESS (v0.6.6.60+1 — BR-060)**
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), **T57 ✅ COMPLETE (`RW -k` v0.6.6.57+4 — BR-039 repo; product on BR)**, **T60 IN PROGRESS (v0.6.6.60+1 — BR-060)**
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
 
