@@ -37,7 +37,7 @@ This catalog synthesizes **good practices** (what works well) and **bad practice
 
 ### 1.1 Good Practices ✅
 
-#### 1.1.1 Full-Context Task Naming (`E{epic}:S{story}:T{task}`)
+#### 1.1.1 Full-Context Task Naming (`E\{epic\}:S\{story\}:T\{task\}`)
 
 **Frequency:** 60% (6/10 projects)  
 **Impact:** HIGH - Excellent traceability and context  
@@ -60,7 +60,7 @@ This catalog synthesizes **good practices** (what works well) and **bad practice
 **Impact:** HIGH - Clear organization and structure  
 **Examples:**
 - All projects use Epic → Story → Task hierarchy
-- Consistent nesting: `epics/Epic-{N}/Story-{NNN}/Task-{YYY}.md`
+- Consistent nesting: `epics/Epic-\{N\}/Story-{NNN}/Task-{YYY}.md`
 - Clear parent-child relationships
 
 **Why It's Good:**
@@ -111,7 +111,7 @@ This catalog synthesizes **good practices** (what works well) and **bad practice
 **Impact:** MODERATE - Flexible for different task sizes  
 **Examples:**
 - Small tasks: Embedded in Story document (most common)
-- Large tasks: Separate files in `Story-XXX/T{task}-*.md`
+- Large tasks: Separate files in `Story-XXX/T\{task\}-*.md`
 - Always: Task checklist in Story document
 
 **Why It's Good:**
@@ -167,7 +167,7 @@ This catalog synthesizes **good practices** (what works well) and **bad practice
 
 #### 1.2.3 Inconsistent Epic Naming
 
-**Frequency:** 44% `Epic-{N}`, 22% `Epic {N}`, 33% `E{N}`  
+**Frequency:** 44% `Epic-\{N\}`, 22% `Epic \{N\}`, 33% `E\{N\}`  
 **Impact:** MODERATE - Reduces consistency  
 **Examples:**
 - Mixed usage across projects
@@ -182,7 +182,7 @@ This catalog synthesizes **good practices** (what works well) and **bad practice
 - Hinders cross-project collaboration
 
 **Prevention Strategy:**
-- Promote canonical `Epic-{N}` format
+- Promote canonical `Epic-\{N\}` format
 - Support legacy formats during migration
 - Document canonical format clearly
 

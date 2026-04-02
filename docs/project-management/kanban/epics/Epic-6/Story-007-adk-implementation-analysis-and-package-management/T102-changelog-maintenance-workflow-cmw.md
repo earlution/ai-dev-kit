@@ -30,7 +30,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 **Value:** `E6:S07:T102`
 
 ---
@@ -59,7 +59,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 
 ## Deliverable
 
-- Version attributed to E6:S07:T102+{N}; changelog validated/archived as per CMW; release committed and tagged.
+- Version attributed to E6:S07:T102+\{N\}; changelog validated/archived as per CMW; release committed and tagged.
 
 ## Problem Statement
 
@@ -86,7 +86,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 - Status: IN PROGRESS (never changes to COMPLETE)
 - Task Type: Maintenance/Synchronization
 - Build Warning Suppression: Enabled
-- Version Pattern: `v0.6.7.102+{N}` where N = CMW run number
+- Version Pattern: `v0.6.7.102+\{N\}` where N = CMW run number
 
 ### RW Attribution Logic
 
@@ -122,7 +122,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 - **Workflow:** CMW (Changelog Management Workflow)
 - **Workflow:** RW (Release Workflow)
 - **Related Task:** T11 - Changelog Management and Archival Workflow (implementation task, now COMPLETE)
-- **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Include CMW perpetual task in canonical set
+- **Feature Request:** [FR-026](../../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Include CMW perpetual task in canonical set
 
 ---
 
@@ -138,7 +138,7 @@ This is a **perpetual task** dedicated to the Changelog Management Workflow (CMW
 
 ## Version Anchor
 
-**Forensic marker:** Perpetual task; version pattern `v0.6.7.102+{N}`. Latest: v0.6.7.102+6 (perpetual docs update: runbooks, policy).
+**Forensic marker:** Perpetual task; version pattern `v0.6.7.102+\{N\}`. Latest: v0.6.7.102+6 (perpetual docs update: runbooks, policy).
 
 ---
 

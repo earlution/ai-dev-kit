@@ -325,7 +325,7 @@ cp packages/frameworks/workflow\ mgt/config/examples/rw-config-ai-dev-kit.yaml \
 echo "# Test" >> test.txt
 git add test.txt
 
-# Run RW (via AI assistant: type "RW")
+# Run RW (via AI assistant: e.g. RW E5S01T01 / RW E5:S01:T01 — FR-060)
 # Or manually:
 # 1. Bump version
 # 2. Update changelog
@@ -496,8 +496,8 @@ After completing setup:
 - [Installation Guide](framework-dependency-installation-guide.md) - Framework installation
 - [Usage Guide](framework-dependency-usage-guide.md) - Using installed frameworks
 - [Integration Guide](framework-dependency-integration-guide.md) - Integrating frameworks
-- [Contextualization Guide](../../../packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md) - Customizing canonical templates for your project
-- [Contextualization Examples](../../../packages/frameworks/kanban/templates/examples/contextualized/) - Example projects (tiny, small, ambitious)
+- [Contextualization Guide (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/templates/CONTEXTUALIZATION_GUIDE.md) - Customizing canonical templates for your project
+- [Contextualization Examples (source)](https://github.com/earlution/ai-dev-kit/tree/main/packages/frameworks/kanban/templates/examples/contextualized) - Example projects (tiny, small, ambitious)
 
 ---
 

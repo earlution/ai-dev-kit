@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 7     # Story number (Story 7: ADK Implementation Analysis and Package Management)
-VERSION_TASK = 101   # Task number (E6:S07:T101 — perpetual UKW; RW after comprehensive UKW)
-VERSION_BUILD = 39   # Build number (fr-br-uxr open∧taskless intake queue doc; T101)
+VERSION_EPIC = 5      # Epic number (Epic 5: Documentation Management and Maintenance)
+VERSION_STORY = 1     # Story number (Story 1: FR Repo — perpetual)
+VERSION_TASK = 75     # Task number (E5:S01:T75 — ICW durable planning artifacts / FR-075)
+VERSION_BUILD = 1     # Build number (policy + ICW docs + cursorrules + implementation-cycles README)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.101+39 — E6:S07:T101: fr-br-uxr open/taskless intake queue (epic/6)
+# Current: 0.5.1.75+1 — E5:S01:T75 **FR-075** ICW repo SoT for planning artifacts
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
@@ -40,5 +40,3 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py
 # - Abstract space awareness: FR-020 (validator recognizes +0 as valid)
-
-

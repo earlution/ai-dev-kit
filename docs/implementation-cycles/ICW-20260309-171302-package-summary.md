@@ -119,7 +119,7 @@ This Implementation Cycle Workflow (ICW) package provides a comprehensive three-
 - **Audit Coverage:** 100% component coverage
 - **Issue Detection:** ≥95% detection rate
 - **Security Compliance:** 100% security scan pass rate
-- **Performance Impact:** <5% regression target
+- **Performance Impact:** &lt;5% regression target
 - **Stakeholder Satisfaction:** ≥4.5/5 satisfaction rating
 
 ### Quality Gates
@@ -168,9 +168,9 @@ This Implementation Cycle Workflow (ICW) package provides a comprehensive three-
 ## Quality Assurance
 
 ### Standards Compliance
-- **Code Quality:** ≥85% coverage, <10 complexity, <3% duplication
+- **Code Quality:** ≥85% coverage, &lt;10 complexity, &lt;3% duplication
 - **Security:** 0 critical vulnerabilities
-- **Performance:** <5% regression target
+- **Performance:** &lt;5% regression target
 - **Documentation:** Complete and up-to-date
 
 ### Review Process

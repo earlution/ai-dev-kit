@@ -16,9 +16,9 @@ The issue is that its web search and indexing function is tied to individual cha
 
 Agents and Multi-Agent Systems, paired with appropriate web and file tools, can enhance UX and improve cursor's breadth of capacity. The @Web search is great for small and simple tasks, but why not curate and store the more important knowledge and simply import it into workspaces for recurring tasks?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wuSoM0DlXXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+**Video:** [Building a Persistent Local Knowledgebase with CrewAI for Cursor (YouTube)](https://www.youtube.com/watch?v=wuSoM0DlXXk)
 
-[Transcript: Building a Persistent Local Knowledgebase with CrewAI for Cursor](./Building%20a%20Persistent%20Local%20Knowledgebase%20with%20CrewAI%20for%20Cursor.txt)
+*Transcript: not stored in this repository; use captions on the video if needed.*
 
 ## GitHub Repo: cursor-knowledge
 https://github.com/philippe-page/cursor-knowledge
@@ -27,7 +27,7 @@ https://github.com/philippe-page/cursor-knowledge
 
 Cursor already has a super smooth and effective indexing, vectorization and search capabilities making it possible to manage whole directories of different files with LLMs. This allows Cursor to query and examine relevant code across multiple files.
 
-![Frame 819.png](./Frame%20819.png)
+*(Figure: Frame 819 — screenshot from source article; image not bundled in this repo.)*
 
 Context management is a major challenge in pair-programming with AI. I think there's a huge opportunity here to build in-editor knowledge management systems.
 
@@ -35,19 +35,19 @@ Context management is a major challenge in pair-programming with AI. I think the
 
 A multi-agent system with web search and file save capabilities would allow users to enter a query on which developer docs to search and study, and what specifically to focus on. Agents then can search the web for those docs, and scrape a few of the websites to build an understanding and save it as a local file, which can then be drawn in to a workspace and re-indexed to update the workspace with the new information in the knowledge file.
 
-![Frame 126.png](./Frame%20126.png)
+*(Figure: Frame 126 — screenshot from source article; image not bundled in this repo.)*
 
 When you ask a question across the codebase, Cursor can then see the file in its folder, and choose to read it based on its relevance.
 
 ## @knowledgebuilder 
 
-![Frame 870.png](./Frame%20870.png)
+*(Figure: Frame 870 — screenshot from source article; image not bundled in this repo.)*
 
 In the example video, I use this to demonstrate how to leverage Cursor to build or at least start a Crew file. Since this is recurring work I do, having this saved to my permanent files allows me to drag it into Cursor when necessary and add to the knowledge base's complexity. This enables users to bring in whatever existing research context they want whenever they need to.
 
 ## @knowledge 
 
-![Frame 871.png](./Frame%20871.png)
+*(Figure: Frame 871 — screenshot from source article; image not bundled in this repo.)*
 
 ## Expansion 
 
@@ -55,20 +55,19 @@ Programming, simply put, is really just a means to an end; people want to build!
 
 Over time, the knowledgebase becomes a curated asset that each Cursor user can curate and build to match what they need to use frequently. Game devs might cultivate a deep knowledgebase on game mechanics and add to it with any new updates, where other devs may be working on a smaller project that integrates with a few less common APIs. With this setup, Cursor can just search the local knowledgebase.
 
-![Frame 820.png](./Frame%20820.png)
+*(Figure: Frame 820 — screenshot from source article; image not bundled in this repo.)*
 
 These can be updated and refreshed whenever, effectively forming a small agentic library system, where agents search, acquire, collect, document, save, store, as well as cull and remove outdated or incorrect information.
 
-![Frame 821b.png](./Frame%20821b.png)
+*(Figure: Frame 821b — screenshot from source article; image not bundled in this repo.)*
 
 The overall idea is that these systems could be operating as a feature enabling a knowledge management system to make Cursor the smartest and best integrated code-editor that's always informed with high-quality and up to date contextual information.
 
 his feature makes knowledge expandable and more permanent rather than ephemeral, and enables users to curate a knowledge base that is best suited to their needs.
 
-![cursor_crew_graph_lg.png](./cursor_crew_graph_lg.png)
-![network_lg.png](./network_lg.png)
+*(Figures: cursor_crew_graph_lg, network_lg — diagrams from source article; images not bundled in this repo.)*
 
-# Standard Operating Procedure (SoP): Taxonomical Standards for Structuring Knowledge
+## Standard Operating Procedure (SoP): Taxonomical Standards for Structuring Knowledge {#standard-operating-procedure-sop-taxonomical-standards-for-structuring-knowledge}
 
 ## Purpose
 To ensure all knowledge in the fynd.deals knowledge base is organized, discoverable, maintainable, and process-compliant, this SoP defines canonical standards for taxonomy, directory structure, file naming, and update workflows.
@@ -119,7 +118,7 @@ knowledge/fynd_deals/
 
 ## Key Knowledge Artifacts
 
-- [Disciplined Debugging & Type Checking Workflow](./disciplined-debugging-type-checking-workflow.md): Canonical process and retrospective for debugging and type checking in fynd.deals.
+- **Disciplined Debugging & Type Checking Workflow** *(legacy fynd.deals artifact; no in-corpus doc — add a guide under `docs/knowledge/guides/` if revived)*.
 - [Standard Operating Procedure (SoP): Taxonomical Standards for Structuring Knowledge](#standard-operating-procedure-sop-taxonomical-standards-for-structuring-knowledge): Canonical standards for structuring and organizing knowledge in the KB.
 
 ---

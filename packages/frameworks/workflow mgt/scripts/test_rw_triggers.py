@@ -54,16 +54,19 @@ def test_execution_paths():
     """Test execution paths for all trigger types."""
     print("\n🧪 Testing execution paths...")
     
+    # Must match packages/frameworks/workflow mgt/canonical-rw-steps.yaml execution_paths
     expected_paths = {
-        "RW": list(range(1, 18)),  # Steps 1-17
-        "RW -k": [1, 2, 3, 4, 7, 11, 12],  # Documentation setup
-        "RW -d": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]  # Documentation only
+        "RW": [1, 2, 3, 4, 5, 6, 7, 8, 9, 9.5, 10, 11, 12, 13, 14, 15, 16, 17],
+        "RW -k": [1, 2, 3, 4, 7, 11, 12],
+        "RW -d": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14],
     }
-    
+
     for trigger, expected_path in expected_paths.items():
         try:
             trigger_type = parse_rw_trigger(trigger)
-            actual_path = get_execution_path(trigger_type)
+            # canonical_steps API expects trigger string, not TriggerType enum
+            path_obj = get_execution_path(trigger_type.value)
+            actual_path = path_obj.steps if path_obj else None
             assert actual_path == expected_path, f"Expected {expected_path}, got {actual_path}"
             print(f"  ✅ {trigger} -> {actual_path}")
         except Exception as e:
@@ -92,7 +95,7 @@ def test_step_filtering():
     for trigger, step, expected in test_cases:
         try:
             trigger_type = parse_rw_trigger(trigger)
-            actual = should_execute_step(step, trigger_type)
+            actual = should_execute_step(step, trigger_type.value)
             assert actual == expected, f"Expected {expected}, got {actual} for {trigger} step {step}"
             print(f"  ✅ {trigger} step {step} -> {actual}")
         except Exception as e:
@@ -109,7 +112,7 @@ def test_step_modifications():
     # Test kanban_init mode modifications for step 7
     try:
         trigger_type = parse_rw_trigger("RW -k")
-        modifications = get_step_modifications(7, trigger_type)
+        modifications = get_step_modifications(7, trigger_type.value)
         
         expected_mods = {
             "mode": "kanban_init",
@@ -125,7 +128,7 @@ def test_step_modifications():
     # Test that other steps have no modifications
     try:
         trigger_type = parse_rw_trigger("RW -k")
-        modifications = get_step_modifications(1, trigger_type)
+        modifications = get_step_modifications(1, trigger_type.value)
         assert modifications == {}, f"Expected empty modifications, got {modifications}"
         print(f"  ✅ RW -k step 1 -> {modifications}")
     except Exception as e:

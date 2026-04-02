@@ -50,8 +50,8 @@ Implement the enhanced workflow logging system with forensic capabilities and ro
 
 ### **Phase 4: Testing and Validation**
 
-- [ ] **Performance Testing**: Verify <5% execution time overhead
-- [ ] **Forensic Testing**: Logs enable <5 minute diagnosis of any workflow failure
+- [ ] **Performance Testing**: Verify &lt;5% execution time overhead
+- [ ] **Forensic Testing**: Logs enable &lt;5 minute diagnosis of any workflow failure
 - [ ] **Rollback Testing**: 100% success rate for deterministic rollbacks
 - [ ] **Integration Testing**: Full CI pipeline validation of log format and housekeeping
 
@@ -201,10 +201,10 @@ Implement the enhanced workflow logging system with forensic capabilities and ro
 
 ### **Quantitative**
 
-- **Performance**: <5% execution time overhead from logging
-- **Diagnosis**: <5 minutes for any workflow failure diagnosis
+- **Performance**: &lt;5% execution time overhead from logging
+- **Diagnosis**: &lt;5 minutes for any workflow failure diagnosis
 - **Rollback**: 100% success rate for deterministic rollbacks
-- **Storage**: <10% monthly growth in log storage
+- **Storage**: &lt;10% monthly growth in log storage
 - **Cleanup**: 100% of expired logs automatically deleted
 
 ### **Qualitative**
@@ -230,8 +230,8 @@ Implement the enhanced workflow logging system with forensic capabilities and ro
 **Task is COMPLETE when:**
 
 1. All phases implemented and tested successfully
-2. Performance benchmarks meet <5% overhead requirement
-3. Forensic analysis enables <5 minute diagnosis for any failure
+2. Performance benchmarks meet &lt;5% overhead requirement
+3. Forensic analysis enables &lt;5 minute diagnosis for any failure
 4. Rollback system provides 100% deterministic recovery
 5. All workflow logs integrated with automatic TTL cleanup
 6. Documentation Agent jurisdiction covers maintenance logs

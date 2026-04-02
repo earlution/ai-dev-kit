@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Governance Policy
 
 **Owner:** AI Dev Kit / Book Project Lead  
-**Last Updated:** 2025-12-18  
+**Last Updated:** 2026-03-31  
 **Applies To:** All work tracked in the `ai-dev-kit` repo  
 **Based On:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` (project-agnostic framework - **CANONICAL SOURCE OF TRUTH**)
 
@@ -32,6 +32,23 @@ The implementation in this repo starts simple:
 - Uses **Stories and Tasks** as the primary work items (Epics will be added as the work grows)
 - Uses a **simple board view** in `docs/project-management/kanban/_index.md`
 - Can be evolved later to add Epics, swimlanes, WIP limits, etc.
+
+### 1.1 RW Step 7 vs standalone UKW (FR-038)
+
+- **Per-release kanban sync:** [Release Workflow](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) **Step 7 — Scoped Kanban Sync (UKW Mode)** aligns Task/Story/Epic docs and related board lines for the **current release** in a **scoped** manner (conservative MoSCOW; no whole-board reshuffle).
+- **Board-wide kanban sync:** [Update Kanban Workflow (UKW)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md) in **standalone** mode handles full-board housekeeping, prioritisation, and narrative updates per UKW flags.
+
+### 1.2 FR / BR / UXR intake (**KG-R2**, **KG-R6**)
+
+Normative detail lives in the **framework** policy (single SoT): [`kanban-governance-policy.md` (framework package)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/policies/kanban-governance-policy.md) — **key_rules** **KG-R2** and **KG-R6**.
+
+**In short (this repo):**
+
+- **Atomic intake:** New `fr-br/*.md` **MUST** ship in the **same change set** as its **task document** and **bidirectional** links (`Implementing Task:` ↔ task body). No “file FR now, task later.”
+- **≥1 task per report:** Every **FR**, **BR**, and **UXR** resolves to at least one Kanban task (shared task allowed if explicitly cited by every report).
+- **Story semantics over id symmetry:** The **primary** task SHOULD live under the story that matches **delivery**. Matching FR-047 to E5:S01:T47 is **optional**, not required.
+
+Operational guide: [`FR_BR_INTAKE_GUIDE.md` (framework package)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md). Agent skill: [`intake-process` skill](https://github.com/earlution/ai-dev-kit/blob/main/.cursor/skills/intake-process/SKILL.md).
 
 ---
 
@@ -103,7 +120,7 @@ The board includes a **MoSCOW Prioritized In-Progress Tasks** section that shows
 **Task Entry Format:**
 
 Each task entry in the MoSCOW sections includes:
-- **Task ID:** `E{epic}:S{story}:T{task}` format (e.g., `E4:S13:T02`)
+- **Task ID:** `E\{epic\}:S\{story\}:T\{task\}` format (e.g., `E4:S13:T02`)
 - **Task Description:** Brief description of the task
 - **Last Updated:** Date when task was last updated
 - **Links:** Links to Task document and parent Story document
@@ -201,14 +218,14 @@ Every Task MUST have a discrete Task document (or clearly delimited section with
 
 2. **Delimited Section Format (Alternative):**
    - Location: Within the Story document, using Task ID as a clear header
-   - Format: `### E{epic}:S{story}:T{task} – Task Name` followed by task content
+   - Format: `### E\{epic\}:S\{story\}:T\{task\} – Task Name` followed by task content
    - Example: `### E4:S11:T01 – Update Kanban Governance Policy`
 
 **Required Task Document Fields:**
 
 Every Task document MUST include the following fields:
 
-- **Task ID:** `E{epic}:S{story}:T{task}` (e.g., `E4:S11:T01`)
+- **Task ID:** `E\{epic\}:S\{story\}:T\{task\}` (e.g., `E4:S11:T01`)
 - **Scope:** Clear description of what the task accomplishes
 - **Acceptance Criteria:** Measurable criteria for task completion
 - **Status:** Current status (TODO, IN PROGRESS, COMPLETE)
@@ -233,7 +250,7 @@ The following patterns are **explicitly prohibited**:
 **Task Numbering and Format:**
 
 - **Numbering:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)
-- **Format:** `E{epic}:S{story}:T{task}` where task is 2-digit (01-99)
+- **Format:** `E\{epic\}:S\{story\}:T\{task\}` where task is 2-digit (01-99)
 - **Example:** `E4:S11:T01` = Epic 4, Story 11, Task 1
 - **Example:** `E1:S01:T01` = Epic 1, Story 1, Task 1
 - **Tracked:** Git commits reference task ID
@@ -340,7 +357,7 @@ This dev-kit policy is a **project-specific adaptation** that:
 - Canonical board in `docs/project-management/kanban/_index.md`
 - All substantive work is Task/FR-driven
 - Epics for major areas of the dev kit
-- `E{epic}:S{story}:T{task}` numbering for Tasks (e.g., `E1:S01:T01`, `E2:S04:T05`)
+- `E\{epic\}:S\{story\}:T\{task\}` numbering for Tasks (e.g., `E1:S01:T01`, `E2:S04:T05`)
 - Full `RC.EPIC.STORY.TASK+BUILD` alignment between Kanban and versioning
 
 **Framework References:**
@@ -369,19 +386,19 @@ This dev-kit policy is a **project-specific adaptation** that:
 Abstract spaces use `+0` build number to indicate documentation-only anchor:
 
 **Epic-Level Abstract Space:**
-- Format: `0.{EPIC}.0.0+0`
+- Format: `0.\{EPIC\}.0.0+0`
 - Example: `0.3.0.0+0` = Epic 3's abstract space
 - Purpose: Establishes forensic traceability anchor for Epic 3
 - When: Created when Epic document is first committed
 
 **Story-Level Abstract Space:**
-- Format: `0.{EPIC}.{STORY}.0+0`
+- Format: `0.\{EPIC\}.\{STORY\}.0+0`
 - Example: `0.2.5.0+0` = Epic 2 Story 5's abstract space
 - Purpose: Establishes forensic traceability anchor for Story 5 within Epic 2
 - When: Created when Story document is first committed
 
 **Task-Level Abstract Space:**
-- Format: `0.{EPIC}.{STORY}.{TASK}+0`
+- Format: `0.\{EPIC\}.\{STORY\}.\{TASK\}+0`
 - Example: `0.10.4.6+0` = Epic 10 Story 4 Task 6's abstract space
 - Purpose: Establishes forensic traceability anchor for Task 6 within Story 4 within Epic 10
 - When: Created when Task document is first committed
@@ -411,15 +428,15 @@ Abstract spaces use `+0` build number to indicate documentation-only anchor:
 **How to Commit:**
 1. **Create E/S/T document** with required structure and fields
 2. **Set version to abstract space** (`+0` build):
-   - Epic: `0.{EPIC}.0.0+0`
-   - Story: `0.{EPIC}.{STORY}.0+0`
-   - Task: `0.{EPIC}.{STORY}.{TASK}+0`
+   - Epic: `0.\{EPIC\}.0.0+0`
+   - Story: `0.\{EPIC\}.\{STORY\}.0+0`
+   - Task: `0.\{EPIC\}.\{STORY\}.\{TASK\}+0`
 3. **Commit via Release Workflow (RW)** with doc-init path (see FR-017)
    - RW Step 1 detects docs-only change
    - RW Step 2 sets version to `+0` (abstract space)
    - RW Step 3 creates changelog entry with "Doc Init" type
 4. **Alternative:** Manual commit with explicit version annotation
-   - Commit message: `📋 Doc Init (Abstract Space): E{epic}:S{story}:T{task} - [Description]`
+   - Commit message: `📋 Doc Init (Abstract Space): E\{epic\}:S\{story\}:T\{task\} - [Description]`
    - Version: Explicitly set to abstract space (`+0`)
 
 **Validation:**

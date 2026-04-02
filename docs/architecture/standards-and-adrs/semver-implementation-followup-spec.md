@@ -91,7 +91,7 @@ These values should be:
 ### 4.2 Step 11 – Create Git Tag
 
 - For each release, create:
-  - **Internal tag:** `v{internal_version}` (unchanged behaviour).
+  - **Internal tag:** `v\{internal_version\}` (unchanged behaviour).
   - **SemVer tag:**
     - Base: `v{semver_core}`.
     - If `semver_metadata=full`: append metadata to the tag name: `v{semver_core}+rc.<RC>.e<EPIC>.s<STORY>.t<TASK>.b<BUILD>`.

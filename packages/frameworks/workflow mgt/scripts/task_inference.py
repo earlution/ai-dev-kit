@@ -4,6 +4,9 @@ Task Inference Engine for RW
 
 Analyzes recent context to infer the most likely task for RW execution when no explicit
 task argument is provided.
+
+Note: Not wired into validators or RW today. FR-060 / project policy prefer explicit task
+ids (e.g. E7S06T05) for RW; keep this module for experiments or future opt-in tooling only.
 """
 
 import subprocess
@@ -38,7 +41,7 @@ class TaskInferenceEngine:
             user_request: Optional user request context
 
         Returns:
-            Task ID string (e.g., 'E5:S01:T38') or None if no clear inference
+            Task ID string (e.g., 'E5:S01:T64') or None if no clear inference
         """
         self.logger.info("Analyzing context for task inference...")
 

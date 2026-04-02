@@ -27,9 +27,16 @@ The task template generator reads the canonical E/S/T structure document (`COMPR
 
 **Structure:**
 - Markdown document with hierarchical structure
-- Epic sections: `### Epic N: {Name}`
-- Story sections: `#### Story N: {Name}`
-- Task lists: `**Typical Tasks:**` followed by `- TNN: {Task Description}`
+- Epic sections: heading `### Epic N: …` with a placeholder name (see pattern below)
+- Story sections: heading `#### Story N: …` with a placeholder name
+- Task lists: `**Typical Tasks:**` followed by `- TNN: …` with task description
+
+```text
+### Epic N: {Name}
+#### Story N: {Name}
+**Typical Tasks:**
+- TNN: {Task Description}
+```
 
 **Example:**
 ```markdown
@@ -70,7 +77,7 @@ templates/tasks/Epic-1/Story-1/T01-Define-Project-Structure-and-Directory-Layout
 **File Structure:**
 - Follows `TASK_TEMPLATE.md` structure exactly
 - All sections populated with appropriate content
-- Placeholders preserved for contextualization (`{PROJECT_NAME}`, `{PROJECT_TYPE}`, etc.)
+- Placeholders preserved for contextualization (`\{PROJECT_NAME\}`, `\{PROJECT_TYPE\}`, etc.)
 
 ---
 
@@ -78,10 +85,10 @@ templates/tasks/Epic-1/Story-1/T01-Define-Project-Structure-and-Directory-Layout
 
 ### Epic/Story/Task → File Path
 
-1. **Epic Number:** Extract from `### Epic N:` → `Epic-{N}`
-2. **Story Number:** Extract from `#### Story N:` → `Story-{N}`
-3. **Task Number:** Extract from `- TNN:` → `T{NN:02d}` (zero-padded)
-4. **Task Description:** Extract from `- TNN: {Description}` → Convert to kebab-case for filename
+1. **Epic Number:** Extract from `### Epic N:` → `Epic-\{N\}`
+2. **Story Number:** Extract from `#### Story N:` → `Story-\{N\}`
+3. **Task Number:** Extract from `- TNN:` → `T` + two-digit task number (e.g. `T01`)
+4. **Task Description:** Extract from `- TNN: …` → Convert to kebab-case for filename
 
 **Example:**
 - Input: `- T01: Define project structure and directory layout`
@@ -99,24 +106,24 @@ templates/tasks/Epic-1/Story-1/T01-Define-Project-Structure-and-Directory-Layout
    - `housekeeping_policy: keep`
 
 2. **Header:**
-   - Title: `# Epic {epic}, Story {story}, Task {task}: {Task Description}`
+   - Title: task title line with epic/story/task numbers and human-readable description (see generator output)
    - Status: `TODO`
    - Priority: `HIGH` (default, can be customized)
-   - Version: `v0.{epic}.{story}.{task}+0` (template creation)
-   - Code: `E{epic:02d}S{story:02d}T{task:02d}`
+   - Version: internal `v0.E.S.T+0` pattern for template creation (zero abstract space)
+   - Code: zero-padded `E`/`S`/`T` code field
 
 3. **Task ID Section:**
-   - Format: `E{epic}:S{story}:T{task}`
-   - Full Task ID: `E{epic:02d}:S{story:02d}:T{task:02d}`
+   - Format: full `E:S:T` IDs with literal epic/story/task numbers
+   - Full Task ID: zero-padded numeric epic/story/task in `E..:S..:T..` form
 
 4. **Scope:**
    - Generate from task description
-   - Template: `{Task description} for the {PROJECT_NAME} project. {Contextual purpose based on story/epic}.`
+   - Template: prose combining task description, project name placeholder, and story/epic context
 
 5. **Input:**
    - Generate generic inputs based on task type/pattern
    - Include story/epic dependencies
-   - Include `{PROJECT_NAME}` placeholder
+   - Include `\{PROJECT_NAME\}` placeholder
 
 6. **Deliverable:**
    - Generate generic deliverables based on task description
@@ -131,8 +138,8 @@ templates/tasks/Epic-1/Story-1/T01-Define-Project-Structure-and-Directory-Layout
    - Use action verbs and clear steps
 
 9. **Dependencies:**
-   - **Depends On:** Previous tasks in same story (T{N-1}, etc.)
-   - **Blocks:** Next tasks in same story (T{N+1}, etc.)
+   - **Depends On:** Previous tasks in same story (e.g. prior `Txx` in checklist)
+   - **Blocks:** Next tasks in same story (e.g. subsequent `Txx`)
    - **Parallel Development Candidacy:** Determine based on dependencies
 
 10. **Related Work:**
@@ -153,14 +160,14 @@ templates/tasks/Epic-1/Story-1/T01-Define-Project-Structure-and-Directory-Layout
 ### Contextualization Placeholders
 
 **Preserved Placeholders:**
-- `{PROJECT_NAME}` - Project name (to be replaced during contextualization)
-- `{PROJECT_TYPE}` - Project type (to be replaced during contextualization)
-- `{DOMAIN}` - Domain/industry (to be replaced during contextualization)
+- `\{PROJECT_NAME\}` - Project name (to be replaced during contextualization)
+- `\{PROJECT_TYPE\}` - Project type (to be replaced during contextualization)
+- `\{DOMAIN\}` - Domain/industry (to be replaced during contextualization)
 - `[YYYY-MM-DD]` - Date placeholders (to be replaced when task is created)
 
 **Generated Content:**
 - Task descriptions use placeholders where appropriate
-- Scope, Input, Deliverable sections reference `{PROJECT_NAME}`
+- Scope, Input, Deliverable sections reference `\{PROJECT_NAME\}`
 
 ---
 

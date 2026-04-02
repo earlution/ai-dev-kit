@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-03-25 (v0.5.2.6+1 – E5:S02:T06 FR-063 intake + CMW)  
+**Last updated:** 2026-04-01 (**E5:S01:T75** **`v0.5.1.75+1`** — **FR-075** ICW durable artifacts; prior **T74** **v0.5.1.74+3**)  
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -25,7 +25,7 @@ housekeeping_policy: keep
   - **Note:** S00 is Epic-level abstract space only. Repository tasks migrated to S01 (E9:S01:T08).
 
 
-- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.5.1.44+1 – T44: FR-044 task created)
+- [x] **E5:S01 – FR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - **`v0.5.1.75+1` T75/FR-075**; **v0.5.1.32+0** T32; **v0.5.1.74+3** T74; T73 FR-073)
   - Story: [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
   - **Note:** S01 is the repository story (migrated from S00). S01 omitted from board displays (UX optimization).
 
@@ -69,6 +69,11 @@ housekeeping_policy: keep
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08)
 
 
+- [ ] **E5:S09 – Docusaurus Documentation Portal** - IN PROGRESS (T01–T10 ✅ **v0.5.9.10+2**; portal story tasks complete)
+  - Story: [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
+  - **Note:** Atomic FR chain for full Docusaurus adoption (`portal/` → `docs/` publish, CI, deploy, search).
+
+
 ---
 
 ## Overview
@@ -103,7 +108,7 @@ Epic 5 owns the **Documentation Management and Maintenance** framework for the a
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
 **Estimated Effort:** N/A (Perpetual repository)  
-**Last updated:** 2026-03-04 (v0.5.1.47+2)
+**Last updated:** 2026-03-25 (v0.5.1.63+1 — E5:S01:T63 FR-060)
 
 **Goal:**  
 Repository story for all Feature Requests. Provides 1:1 traceability between FR numbers and task numbers.
@@ -193,6 +198,32 @@ Investigate the ramifications of the persistent knowledge base concept, includin
 - [x] E5:S08:T02 – Notion hub, Knowledge Base container, and KB index ✅
 
 **Story:** [`Story-008-knowledge-base.md`](Story-008-knowledge-base.md)
+
+---
+
+### Story 9: Docusaurus Documentation Portal
+
+**Status:** IN PROGRESS  
+**Priority:** HIGH  
+**Estimated Effort:** [TBD]  
+**Last updated:** 2026-03-30 (v0.5.9.7+1 T07)
+
+**Goal:**  
+Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), green builds, IA, CI, hosting, search, and **production URL go-live**—tracked via **FR-065**–**FR-071** plus **E5:S09:T09** (Pages verification).
+
+**Tasks:**
+- [x] E5:S09:T01 – Docusaurus site identity and config (FR-065) ✅ v0.5.9.1+2
+- [x] E5:S09:T02 – Canonical docs path and publish scope (FR-066) ✅ v0.5.9.2+2
+- [x] E5:S09:T03 – Production build corpus triage (FR-067) ✅ v0.5.9.3+1
+- [x] E5:S09:T04 – Navigation, sidebar IA, and landing (FR-068) ✅ COMPLETE (v0.5.9.4+1)
+- [x] E5:S09:T05 – CI build gate (FR-069) ✅ v0.5.9.5+1
+- [x] E5:S09:T06 – Deployment and hosting (FR-070) ✅ v0.5.9.6+1
+- [x] E5:S09:T07 – Site search (FR-071) ✅ v0.5.9.7+1
+- [x] E5:S09:T08 – Strict broken links (FR-067 FU-1) ✅ **v0.5.9.8+2** — [T08](Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)
+- [x] E5:S09:T09 – GitHub Pages go-live verification (FR-070 follow-up) ✅ **v0.5.9.9+2** — [T09](Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
+- [x] E5:S09:T10 – Strict broken anchors (FR-067 FU-3) ✅ **v0.5.9.10+2** — [T10](Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)
+
+**Story:** [`Story-009-docusaurus-documentation-portal.md`](Story-009-docusaurus-documentation-portal.md)
 
 ---
 

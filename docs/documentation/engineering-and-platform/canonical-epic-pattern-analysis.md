@@ -335,7 +335,7 @@ This document analyzes Epic/Story/Task patterns across all projects in `/Users/r
 ## Updated Canonical Structure Recommendation
 
 ### Framework Epics (1-7): Unchanged
-- Epic 1: {PROJECT_NAME} Core
+- Epic 1: \{PROJECT_NAME\} Core
 - Epic 2: Workflow Management Framework
 - Epic 3: Numbering & Versioning Framework
 - Epic 4: Kanban Framework

@@ -103,7 +103,7 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 - Component-based (not single string) for easy manipulation
 - Composite string built from components
 - `+` character preserved in version string
-- Location: `src/{project}/version.py` (customizable)
+- Location: `src/\{project\}/version.py` (customizable)
 
 **Current Dev-Kit Implementation:** ✅ Matches pattern exactly (`src/fynd_deals/version.py`)
 
@@ -332,7 +332,7 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 
 **Source:** `packages/frameworks/numbering & versioning/versioning-policy.md` (line 119)
 
-**Standard Location:** `src/{project}/version.py`
+**Standard Location:** `src/\{project\}/version.py`
 
 **Examples:**
 - fynd.deals: `src/fynd_deals/version.py`
@@ -361,7 +361,7 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 
 1. **Epic Renumbering Strategy:** Each project defines its own epic ranges
 2. **Grandfathering Strategy:** Each project defines its own cutoff criteria
-3. **Version File Location:** `src/{project}/version.py` (customizable path)
+3. **Version File Location:** `src/\{project\}/version.py` (customizable path)
 
 ---
 

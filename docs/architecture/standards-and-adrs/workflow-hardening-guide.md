@@ -94,7 +94,7 @@ This template assumes a 10‑step RW. Adjust step names/paths for your project.
    - Update epic/story status, version, and task counts on the main board.
 
 4. **Update Epic Docs**  
-   - Update epic‑level doc (e.g. `Epic-{N}.md`) so header, story checklist, and detailed story sections all match the story file.
+   - Update epic‑level doc (e.g. `Epic-\{N\}.md`) so header, story checklist, and detailed story sections all match the story file.
 
 5. **Update README / Other Surface Docs (Optional)**  
    - Update any version badges or references if used.

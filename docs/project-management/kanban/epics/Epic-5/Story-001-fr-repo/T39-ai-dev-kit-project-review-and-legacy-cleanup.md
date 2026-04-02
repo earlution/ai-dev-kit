@@ -99,6 +99,6 @@ Actual clean-up (archiving/removal/moves) will be handled by a **separate implem
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-039:** [`docs/project-management/kanban/fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md`](../../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
 

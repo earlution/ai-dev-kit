@@ -127,7 +127,7 @@ Currently, ai-dev-kit uses US English throughout all documentation, templates, a
 ### Non-Functional Requirements
 
 - [ ] **Performance Considerations**
-  - Language selection adds minimal overhead (<100ms)
+  - Language selection adds minimal overhead (&lt;100ms)
   - Translation lookup is fast (cached, indexed)
   - No impact on framework performance
 

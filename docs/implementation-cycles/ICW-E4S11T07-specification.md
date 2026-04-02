@@ -407,7 +407,7 @@ class LinkManager:
 
 ## Rollback Procedures
 
-### Immediate Rollback (<5 minutes)
+### Immediate Rollback (&lt;5 minutes)
 
 **Trigger:** Content extraction errors
 

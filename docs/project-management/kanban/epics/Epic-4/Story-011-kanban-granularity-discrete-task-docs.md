@@ -29,7 +29,7 @@ housekeeping_policy: keep
 - [ ] **E4:S11:T05 – Dependency Wiring Cross-References** ✅ COMPLETE (v0.4.11.5+0)
 - [x] **E4:S11:T06 – Review and Optimize Template Structure for Tier Delegation** ✅ COMPLETE (v0.4.11.6+2 – All phases complete: templates optimized, guidelines created, compliance audit complete, migration guide created)
 - [ ] **E4:S11:T07 – Migrate Embedded Tasks to Discrete Task Documents** - TODO (v0.4.11.7+0 – Migration plan and implementation)
-  - Task: [`T07-migrate-embedded-tasks-to-discrete-documents.md`](T07-migrate-embedded-tasks-to-discrete-documents.md)
+  - Task: [`T07-migrate-embedded-tasks-to-discrete-documents.md`](Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md)
 
 
 > **Format:** `E4:S11:Txx` (Epic 4, Story 11, Task with 2-digit zero padding)  
@@ -90,7 +90,7 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 2. Add explicit requirement for 3-tier structure (Epic → Story → Task)
 3. Mandate discrete Task documents (or clearly delimited sections using Task ID)
 4. Define required Task doc fields:
-   - Task ID (`E{epic}:S{story}:T{task}`)
+   - Task ID (`E\{epic\}:S\{story\}:T\{task\}`)
    - Scope
    - Acceptance criteria
    - Status
@@ -203,7 +203,7 @@ Implement Kanban-specific components of FR-016: Kanban Granularity & Discrete Ta
 2. Add section to Kanban Governance Policy:
    - Section: "Abstract Spaces for Forensic Traceability"
    - Subsection: "Zero-Numbered E/S/T Documentation"
-   - Define Epic-level (`0.{EPIC}.0.0+0`), Story-level (`0.{EPIC}.{STORY}.0+0`), Task-level (`0.{EPIC}.{STORY}.{TASK}+0`) abstract spaces
+   - Define Epic-level (`0.\{EPIC\}.0.0+0`), Story-level (`0.\{EPIC\}.\{STORY\}.0+0`), Task-level (`0.\{EPIC\}.\{STORY\}.\{TASK\}+0`) abstract spaces
    - Subsection: "SOP for Committing Initial E/S/T Docs"
    - Specify when, where, and how to commit initial E/S/T documentation
    - Cross-reference to Numbering Policy

@@ -34,8 +34,8 @@ Critical fixes for Release Automation compatibility with task-touch SemVer taggi
 - Updated Step 12 (Create Git Tag) configuration
 - Added support for dual tag strategy detection
 - Added parameters:
-  - `tag_template: v{semver_version}`
-  - `internal_tag_template: v{internal_version}`
+  - `tag_template: v\{semver_version\}`
+  - `internal_tag_template: v\{internal_version\}`
   - `detect_semver_strategy: true`
   - `create_internal_tag: false`
   - `semver_mapping_strategy: auto`

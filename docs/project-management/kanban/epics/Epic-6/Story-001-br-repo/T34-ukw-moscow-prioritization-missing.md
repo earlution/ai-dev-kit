@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E6:S01:T34`
 
@@ -48,7 +48,7 @@ Fix UKW (Update Kanban Workflow) bug where the MoSCOW Prioritized In-Progress Ta
 
 ## Input
 
-**Bug Report:** [BR-034: UKW MoSCOW Prioritization Missing](../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
+**Bug Report:** [BR-034: UKW MoSCOW Prioritization Missing](../../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
 
 ---
 
@@ -125,7 +125,7 @@ Fix UKW (Update Kanban Workflow) bug where the MoSCOW Prioritized In-Progress Ta
 ```
 
 **Task Format:**
-- **E{epic}:S{story}:T{task}** – Task Title - Status (Version, Last updated) - [Links]
+- **E\{epic\}:S\{story\}:T\{task\}** – Task Title - Status (Version, Last updated) - [Links]
 
 ### Step 4: Integrate into UKW Step 6
 
@@ -181,7 +181,7 @@ Fix UKW (Update Kanban Workflow) bug where the MoSCOW Prioritized In-Progress Ta
 
 ## Related Work
 
-**Bug Report:** [BR-034: UKW MoSCOW Prioritization Missing](../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)  
+**Bug Report:** [BR-034: UKW MoSCOW Prioritization Missing](../../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)  
 **Story:** [E6:S01: BR Repo (PERPETUAL)](../Story-001-br-repo.md)  
 **Workflow:** [Update Kanban Workflow (UKW)](../Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md)
 

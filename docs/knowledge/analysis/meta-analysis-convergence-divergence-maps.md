@@ -36,7 +36,7 @@ This document provides **convergence/divergence maps** showing what patterns pro
 
 | Pattern | Convergence Rate | Projects | Status |
 |---------|------------------|----------|--------|
-| `E{epic}:S{story}:T{task}` task naming | 60% (6/10) | been-there, confidentia, fynd.deals, starborn_legacy, dev-toolkit, ai-dev-kit | ✅ Strong convergence |
+| `E\{epic\}:S\{story\}:T\{task\}` task naming | 60% (6/10) | been-there, confidentia, fynd.deals, starborn_legacy, dev-toolkit, ai-dev-kit | ✅ Strong convergence |
 | Epic/Story/Task hierarchy | 100% (10/10) | All projects | ✅ Perfect convergence |
 | Nested directory structure | 90% (9/10) | All except qa-kb | ✅ Strong convergence |
 | Story checklist pattern | 90% (9/10) | All except qa-kb | ✅ Strong convergence |
@@ -48,7 +48,7 @@ This document provides **convergence/divergence maps** showing what patterns pro
 | Pattern | Divergence Rate | Projects | Root Cause |
 |---------|----------------|-----------|------------|
 | **Epic Mashup** | 30% (3/10) | been-there, dev-toolkit, agentic-ide-rules | ❌ CRITICAL: Manual copy of ai-dev-kit's actual Kanban (root cause: Epic 9 mismatch in ai-dev-kit source) |
-| Epic naming (`Epic-{N}` vs `Epic {N}`) | 44% vs 22% | Mixed usage | ⚠️ Moderate divergence |
+| Epic naming (`Epic-\{N\}` vs `Epic \{N\}`) | 44% vs 22% | Mixed usage | ⚠️ Moderate divergence |
 | Task padding (2-digit vs 3-digit) | 33% vs 33% | Equal split | ⚠️ Moderate divergence |
 | Story file naming | 33% vs 33% | Mixed patterns | ⚠️ Moderate divergence |
 
@@ -58,13 +58,13 @@ This document provides **convergence/divergence maps** showing what patterns pro
 
 | Aspect | ADK Canonical | Converged Pattern | Diverged Pattern | Convergence Rate |
 |--------|---------------|-------------------|------------------|------------------|
-| **Task Naming** | `E{epic}:S{story}:T{task}` | `E{epic}:S{story}:T{task}` | `T{task}` (standalone) | 67% ✅ |
+| **Task Naming** | `E\{epic\}:S\{story\}:T\{task\}` | `E\{epic\}:S\{story\}:T\{task\}` | `T\{task\}` (standalone) | 67% ✅ |
 | **Task Padding** | 2-digit (`T01`) | Mixed (2-digit/3-digit) | 3-digit (`T001`) | 50% ⚠️ |
-| **Epic Naming** | `Epic-{N}` | `Epic-{N}` (44%) | `Epic {N}` (22%), `E{N}` (33%) | 44% ⚠️ |
+| **Epic Naming** | `Epic-\{N\}` | `Epic-\{N\}` (44%) | `Epic \{N\}` (22%), `E\{N\}` (33%) | 44% ⚠️ |
 | **Story Naming** | `Story-{NNN}-{desc}` | Mixed patterns | Various formats | 33% ⚠️ |
 | **Epic Mashup** | ❌ Never | ✅ No mashup (67%) | ❌ Epic mashup (33%) | 67% ⚠️ |
 
-**Recommendation:** Enforce `E{epic}:S{story}:T{task}` format (67% convergence), prevent Epic mashup (critical issue).
+**Recommendation:** Enforce `E\{epic\}:S\{story\}:T\{task\}` format (67% convergence), prevent Epic mashup (critical issue).
 
 ---
 
@@ -209,7 +209,7 @@ This document provides **convergence/divergence maps** showing what patterns pro
 | Aspect | ADK Canonical | Converged Pattern | Diverged Pattern | Convergence Rate |
 |--------|---------------|-------------------|------------------|------------------|
 | **Schema Format** | `RC.EPIC.STORY.TASK+BUILD` | Present (56%) | Different (33%), Missing (11%) | 56% ⚠️ |
-| **Version File** | `src/{project}/version.py` | Present (44%) | Missing (44%), Different (11%) | 44% ⚠️ |
+| **Version File** | `src/\{project\}/version.py` | Present (44%) | Missing (44%), Different (11%) | 44% ⚠️ |
 | **Version Bumping** | In RW | Present (56%) | Missing (44%) | 56% ⚠️ |
 
 **Recommendation:** Promote version schema adoption (56% is moderate), support legacy formats for migration.
@@ -252,7 +252,7 @@ This document provides **convergence/divergence maps** showing what patterns pro
 |------|------------------|--------|
 | `docs/` directory naming | 100% | ✅ Perfect |
 | `.cursorrules` file naming | 100% | ✅ Perfect |
-| Task naming (`E{epic}:S{story}:T{task}`) | 67% | ✅ Strong |
+| Task naming (`E\{epic\}:S\{story\}:T\{task\}`) | 67% | ✅ Strong |
 | Document frontmatter | 89% | ✅ Strong |
 | E/S/T hierarchy | 100% | ✅ Perfect |
 
@@ -266,7 +266,7 @@ This document provides **convergence/divergence maps** showing what patterns pro
 | Workflow configuration | 33% | ⚠️ Low |
 | Cursorrules structure | 33% | ⚠️ Low |
 
-### 7.3 Critical Divergence Areas (<33%)
+### 7.3 Critical Divergence Areas (&lt;33%)
 
 | Area | Divergence Rate | Status |
 |------|----------------|--------|
@@ -280,7 +280,7 @@ This document provides **convergence/divergence maps** showing what patterns pro
 
 ### 8.1 Enforce High Convergence Patterns
 - **`docs/` naming:** Already universal (100%), maintain as canonical
-- **Task naming:** Strong convergence (67%), enforce `E{epic}:S{story}:T{task}` format
+- **Task naming:** Strong convergence (67%), enforce `E\{epic\}:S\{story\}:T\{task\}` format
 - **E/S/T hierarchy:** Perfect convergence (100%), maintain as canonical
 
 ### 8.2 Promote Moderate Convergence Patterns

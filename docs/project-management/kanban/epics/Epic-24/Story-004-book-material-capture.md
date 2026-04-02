@@ -759,19 +759,13 @@ When mistakes, misses, and false positives compound, they create emergent anti-p
 
 ## References
 
-- [E15:S01 Scope Drift Analysis](e15-s01-scope-drift-analysis-2025-12-11.md)
+- **E15:S01 scope drift analysis (2025-12-11)** — *Legacy filename `e15-s01-scope-drift-analysis-2025-12-11.md` is not under `docs/`; keep as bibliographic reference only.*
 
-- [Versioning Policy](VERSIONING_POLICY.md)
+- [Dev-kit versioning policy (canonical)](../../../../architecture/standards-and-adrs/dev-kit-versioning-policy.md)
 
-- [Versioning Strategy](VERSIONING_STRATEGY.md)
+- [Kanban governance policy (this repo)](../../../../project-management/rituals/policy/kanban-governance-policy.md)
 
-- [Kanban Governance Policy](KANBAN_GOVERNANCE.md)
-
-- [E15:S01 Story (Retired)](../docs/project-management/epics/overview/Epic-15/stories/E15-S01.md)
-
-- [E15:S05 Story (Replacement)](../docs/project-management/epics/overview/Epic-15/stories/E15-S05.md)
-
-- [E15:S04 Story](../docs/project-management/epics/overview/Epic-15/stories/E15-S04.md)
+- **Historic Epic 15 book stories** — *Prior `../docs/project-management/epics/overview/Epic-15/...` paths were out of tree; reconcile via book repo / archive if needed.*
 
 ---
 

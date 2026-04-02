@@ -352,7 +352,7 @@ docs/                                    # Level 1: Root
 
 **Key Changes:**
 1. **Flatten Kanban structure:** Epics and stories become flat collections
-2. **Naming convention:** `epic-{N}-story-{M}.md` for stories
+2. **Naming convention:** `epic-\{N\}-story-{M}.md` for stories
 3. **Task deliverables:** Embedded in story files or separate `tasks/` collection
 4. **Policies:** Moved to 3-level depth
 
@@ -378,7 +378,7 @@ docs/
 
 **Strategy:**
 - **Default:** Stories in flat `stories/` collection (3 levels)
-- **Exception:** Epic-specific assets in `epic-{N}/` (5 levels, only when needed)
+- **Exception:** Epic-specific assets in `epic-\{N\}/` (5 levels, only when needed)
 - **Rule:** Use deep structure only when assets require organization
 
 **Depth Analysis:**
@@ -395,7 +395,7 @@ docs/
 **Changes:**
 1. Move all epic files to `docs/project-management/Kanban/epics/` (flat)
 2. Move all story files to `docs/project-management/Kanban/stories/` (flat)
-3. Rename stories: `epic-{N}-story-{M}.md`
+3. Rename stories: `epic-\{N\}-story-{M}.md`
 4. Embed task deliverables in story files or create `tasks/` collection
 5. Update all cross-references
 
@@ -414,8 +414,8 @@ docs/
 **Changes:**
 1. Keep epic files in `epics/` (flat, 3 levels)
 2. Keep most stories in `stories/` (flat, 3 levels)
-3. Use `epic-{N}/` directories **only** for epic-specific assets
-4. Rename stories: `epic-{N}-story-{M}.md` for flat collection
+3. Use `epic-\{N\}/` directories **only** for epic-specific assets
+4. Rename stories: `epic-\{N\}-story-{M}.md` for flat collection
 5. Update cross-references
 
 **Benefits:**
@@ -449,7 +449,7 @@ docs/
 
 1. **Adopt Pattern C (Flat Collection)** for Kanban structure
    - Flatten epics and stories to 3-level depth
-   - Use naming convention: `epic-{N}-story-{M}.md`
+   - Use naming convention: `epic-\{N\}-story-{M}.md`
    - Embed task deliverables in story files or separate `tasks/` collection
 
 2. **Flatten Policies** to 3-level depth

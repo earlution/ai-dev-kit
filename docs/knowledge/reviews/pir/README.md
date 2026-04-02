@@ -38,11 +38,11 @@ docs/Reviews/pir/
 ## PIR Report Naming Convention
 
 **Epic PIR Reports:**
-- Format: `PIR-Epic-{N}-v{version}.md`
+- Format: `PIR-Epic-\{N\}-v{version}.md`
 - Example: `PIR-Epic-2-v0.2.11.9+3.md`
 
 **Story PIR Reports:**
-- Format: `PIR-Story-{N}-v{version}.md`
+- Format: `PIR-Story-\{N\}-v{version}.md`
 - Example: `PIR-Story-001-v0.2.1.6+4.md`
 
 **Version Format:**
@@ -58,12 +58,12 @@ docs/Reviews/pir/
 1. **Epic-Level PIR:**
    - **Trigger:** Auto-triggered when Epic is marked COMPLETE
    - **Frequency:** Always (every Epic receives a PIR)
-   - **Location:** `docs/Reviews/pir/Epic-{N}/`
+   - **Location:** `docs/Reviews/pir/Epic-\{N\}/`
 
 2. **Story-Level PIR:**
    - **Trigger:** Auto-triggered when Story is marked COMPLETE (only for significant Stories)
    - **Frequency:** Selective (only significant Stories)
-   - **Location:** `docs/Reviews/pir/Story-{N}/`
+   - **Location:** `docs/Reviews/pir/Story-\{N\}/`
 
 ### PIR Report Contents
 
@@ -85,7 +85,7 @@ Each PIR report includes:
 ### Finding PIR Reports
 
 1. **By Epic/Story:**
-   - Navigate to `Epic-{N}/` or `Story-{N}/` directory
+   - Navigate to `Epic-\{N\}/` or `Story-\{N\}/` directory
    - Find PIR report by version number
 
 2. **By Version:**
@@ -103,8 +103,8 @@ Each PIR report includes:
    - Story PIR: `docs/documentation/templates/story-pir-template.md`
 
 2. **Follow Workflow:**
-   - See [PIR Workflow Reference](../../Documentation/Developer_Docs/vwmp/pir-workflow-reference.md)
-   - See [PIR Workflow Planning](../../Analysis/PIR-workflow-planning.md)
+   - See [PIR Workflow Reference (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-reference.md)
+   - See [PIR Workflow Planning (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Analysis/PIR-workflow-planning.md)
 
 3. **Link to Work Items:**
    - Link PIR report to Epic/Story document (bidirectional)
@@ -115,10 +115,10 @@ Each PIR report includes:
 
 ## Related Documentation
 
-- [PIR Workflow Planning](../../Analysis/PIR-workflow-planning.md) - Complete planning document
-- [PIR Workflow Reference](../../Documentation/Developer_Docs/vwmp/pir-workflow-reference.md) - Workflow reference (when available)
-- [PIR Templates](../../Documentation/templates/) - Epic and Story PIR templates
-- [Release Workflow](../../Documentation/Developer_Docs/vwmp/release-workflow-reference.md) - RW integration
+- [PIR Workflow Planning (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Analysis/PIR-workflow-planning.md) - Complete planning document
+- [PIR Workflow Reference (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-reference.md) - Workflow reference (when available)
+- [Epic PIR template](../../../documentation/templates/epic-pir-template.md) · [Story PIR template](../../../documentation/templates/story-pir-template.md)
+- [Release Workflow (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md) - RW integration
 
 ---
 

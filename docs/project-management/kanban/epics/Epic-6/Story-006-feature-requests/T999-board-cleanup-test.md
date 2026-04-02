@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E6:S06:T999`
 

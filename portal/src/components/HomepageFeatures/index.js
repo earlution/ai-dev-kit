@@ -1,46 +1,52 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Workflows (RW, UKW, CMW)',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Release Workflow, Update Kanban, and Changelog Maintenance are documented in{' '}
+        <strong>Documentation</strong> and <strong>Knowledge</strong>. Start from the{' '}
+        <Link to="/docs/documentation/docusaurus-portal-index">documentation portal index</Link>.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Versioning & Kanban',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Internal version schema and Kanban governance for this repo:{' '}
+        <Link to="/docs/architecture/standards-and-adrs/dev-kit-versioning-policy">
+          dev-kit versioning policy
+        </Link>
+        {' · '}
+        <Link to="/docs/project-management/rituals/policy/kanban-governance-policy">
+          Kanban governance policy
+        </Link>
+        .
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Framework adoption',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Install and use shipped frameworks from this monorepo:{' '}
+        <Link to="/docs/documentation/user-docs/framework-dependency-installation-guide">
+          framework dependency installation guide
+        </Link>
+        .
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>

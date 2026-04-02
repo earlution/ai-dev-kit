@@ -19,7 +19,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-New RW trigger. If the RW is being tasked to commit either a BR, FR, or UXR, then {new workflow delivered by FR-012} is triggered.
+New RW trigger. If the RW is being tasked to commit either a BR, FR, or UXR, then the new workflow delivered by FR-012 is triggered.
 
 ---
 

@@ -45,7 +45,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 ---
 
-## WF-001: Story File Not Updated First (Step 7)
+## WF-001: Story File Not Updated First (Step 7) {#wf-001-story-file-not-updated-first}
 
 **Status:** ✅ FIXED  
 **Date Discovered:** 2025-12-04  
@@ -91,8 +91,8 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 **Solution:** Explicit order requirement in RW Step 7:
 
-1. **FIRST:** Update Story file (`Story-{N}-{Name}.md`) task checklist with forensic markers
-2. **THEN:** Update Epic-{epic}.md to match the updated Story file
+1. **FIRST:** Update Story file (`Story-\{N\}-\{Name\}.md`) task checklist with forensic markers
+2. **THEN:** Update Epic-\{epic\}.md to match the updated Story file
 
 **Implementation:**
 - Updated `release-workflow-agent-execution.md` Step 6 EXECUTE phase
@@ -117,7 +117,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 ---
 
-## WF-002: Version Bump Logic Error (Step 2)
+## WF-002: Version Bump Logic Error (Step 2) {#wf-002-version-bump-logic-error}
 
 **Status:** ✅ FIXED  
 **Date Discovered:** 2025-12-03  
@@ -221,8 +221,8 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 ## Related Documentation
 
 ### Core Workflow Documents
-- **[Release Workflow Agent Execution](../../../packages/frameworks/workflow%20mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md)** - Complete step-by-step guide
-- **[Cursor Rules RW Trigger Section](../../../packages/frameworks/workflow%20mgt/cursorrules-rw-trigger-section.md)** - RW trigger instructions
+- **[Release Workflow Agent Execution (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md)** - Complete step-by-step guide
+- **[Cursor Rules RW Trigger Section (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/cursorrules-rw-trigger-section.md)** - RW trigger instructions
 - **[Workflow Hardening Guide](workflow-hardening-guide.md)** - Core principles for workflow design
 
 ### Versioning Documents
@@ -230,7 +230,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 - **[Versioning Policy](dev-kit-versioning-policy.md)** - Versioning schema definition
 
 ### Integration Documents
-- **[Integration Troubleshooting Guide](../../../packages/frameworks/numbering%20%26%20versioning/integration/integration-troubleshooting-guide.md)** - Integration issues and solutions
+- **[Integration Troubleshooting Guide (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/numbering%20%26%20versioning/integration/integration-troubleshooting-guide.md)** - Integration issues and solutions
 
 ---
 
@@ -259,7 +259,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 
 ---
 
-## WF-003: BR/FR Fix Attempts Not Documented
+## WF-003: BR/FR Fix Attempts Not Documented {#wf-003-br-fr-fix-attempts-not-documented}
 
 **Status:** ✅ FIXED  
 **Date Discovered:** 2025-12-05  
@@ -341,13 +341,13 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
 - Complete fix attempt history in BR documents
 
 **See:**
-- **[Release Workflow Agent Execution Guide](../../packages/frameworks/workflow%20mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md)** - Step 6 for the complete procedure
-- **[Cursor Rules RW Trigger Section](../../packages/frameworks/workflow%20mgt/cursorrules-rw-trigger-section.md)** - Step 6 for the updated agent execution rules
-- **[BR Template](../../packages/frameworks/kanban/templates/BR_TEMPLATE.md)** - "Fix Attempt History" section
+- **[Release Workflow Agent Execution Guide (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md)** - Step 6 for the complete procedure
+- **[Cursor Rules RW Trigger Section (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/cursorrules-rw-trigger-section.md)** - Step 6 for the updated agent execution rules
+- **[BR Template (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/templates/BR_TEMPLATE.md)** - "Fix Attempt History" section
 
 ---
 
-## WF-004: Story File Missing During RW Update (Step 7)
+## WF-004: Story File Missing During RW Update (Step 7) {#wf-004-story-file-missing-during-rw-update}
 
 **Status:** 🔧 TO FIX  
 **Date Discovered:** 2025-12-05  
@@ -411,7 +411,7 @@ This document serves as a **comprehensive reference** for all discovered flaws, 
      - Story name from Epic file reference
      - Default status (TODO)
      - Default priority (from Epic or MEDIUM)
-     - Proper file naming: `Story-{N}-{Name}.md`
+     - Proper file naming: `Story-\{N\}-\{Name\}.md`
    - Create file in correct location (from config or fallback pattern)
 
 3. **Substep Generation:**

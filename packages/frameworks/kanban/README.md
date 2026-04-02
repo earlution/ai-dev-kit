@@ -749,7 +749,7 @@ workflow_management_integration:
       purpose: "Update Kanban board (if exists)"
     3:
       action: "Test RW execution"
-      trigger: "Type 'RW' in AI assistant"
+      trigger: "RW with task id in same message (FR-060), e.g. RW E1S01T01"
       verify: "Kanban docs update automatically"
   see: "integration/workflow-management-integration.md"
 ```
@@ -1030,7 +1030,7 @@ compatibility: "v2.0.0"
 
 ```yaml
 release_workflow:
-  trigger: "User types 'RW' or 'rw' in AI assistant"
+  trigger: "User sends RW/rw with mandatory E…S…T… in same message (FR-060)"
 
   step_4:
     name: "Update KB Epic Docs"
@@ -1202,7 +1202,7 @@ steps:
 
   5_automated:
     action: "Use Release Workflow"
-    trigger: "Type 'RW'"
+    trigger: "RW <task_id> in same message (FR-060)"
     result: "Steps 3-4 happen automatically (ALL sections updated)"
 ```
 

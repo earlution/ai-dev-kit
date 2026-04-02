@@ -104,13 +104,13 @@ When work reveals a reusable pattern, document it and wire it bidirectionally to
 
 **Related Work:**
 - **Tasks:** 
-  - [E2:S01:T06 - Fix changelog validator ordering bug](../../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug--reopened)
-  - [E2:S11:T10 - Investigate CHANGELOG Entry Removal](../../epics/Epic-2/Story-011-intake-workflow-automation/Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md)
-- **BR:** [BR-002: Changelog Validator Ordering Bug](../../fr-br/BR-002-changelog-validator-ordering-bug.md)
+  - [E2:S01:T06 - Fix changelog validator ordering bug](../../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md#e2s01t06--fix-changelog-validator-ordering-bug--reopened)
+  - [E2:S11:T10 - Investigate CHANGELOG Entry Removal](../../../project-management/kanban/epics/Epic-2/Story-011-intake-workflow-automation/Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md)
+- **BR:** [BR-002: Changelog Validator Ordering Bug](../../../project-management/kanban/fr-br/BR-002-changelog-validator-ordering-bug.md)
 - **Documentation:** 
-  - [REOPENING_BR_AND_TASKS_GUIDE.md](../../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md)
-  - [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md)
-  - [USE_CASE_METHODOLOGY.md](../USE_CASE_METHODOLOGY.md)
+  - [REOPENING_BR_AND_TASKS_GUIDE.md](../../../project-management/kanban/fr-br/REOPENING_BR_AND_TASKS_GUIDE.md)
+  - [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../../project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md)
+  - [USE_CASE_METHODOLOGY.md](../../USE_CASE_METHODOLOGY.md)
 - **Epic/Story:** Epic 2, Stories 1 and 11
 
 **Wiring:**
@@ -183,9 +183,9 @@ When work reveals a reusable pattern, document it and wire it bidirectionally to
 
 ## References
 
-- [USE_CASE_METHODOLOGY.md](../USE_CASE_METHODOLOGY.md) - Methodology that includes this workflow
-- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Related principle
-- [REOPENING_BR_AND_TASKS_GUIDE.md](../../fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Example documentation created through this workflow
+- [USE_CASE_METHODOLOGY.md](../../USE_CASE_METHODOLOGY.md) - Methodology that includes this workflow
+- [BIDIRECTIONAL_WIRING_PRINCIPLE.md](../../../project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Related principle
+- [REOPENING_BR_AND_TASKS_GUIDE.md](../../../project-management/kanban/fr-br/REOPENING_BR_AND_TASKS_GUIDE.md) - Example documentation created through this workflow
 
 ---
 

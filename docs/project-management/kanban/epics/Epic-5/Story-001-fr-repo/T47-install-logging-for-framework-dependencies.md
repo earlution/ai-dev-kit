@@ -13,7 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-27  
-**Last updated:** 2026-03-10 (Install Logging COMPLETE - Comprehensive implementation with CLI integration, framework logging, install-history command, and full test coverage)
+**Last updated:** 2026-03-31 (v0.5.1.47+6 – FR-047 **Implementing Task** header wiring; implementation complete per Phase 1–2)
+**Version:** v0.5.1.47+6
 
 **Implementation Status:** ✅ COMPLETE
 **Progress:** All phases complete - CLI logging, JSON/text formats, framework installer integration, install-history command, comprehensive testing, and documentation fully implemented

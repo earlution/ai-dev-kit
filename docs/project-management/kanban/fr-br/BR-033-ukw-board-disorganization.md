@@ -168,9 +168,9 @@ After running UKW, the Kanban board's Epics section is not properly ordered. Cur
 - Version: `v0.6.1.33+0` (doc-init, migrated from v0.6.0.33+0)
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-6/Epic-6.md`](epics/Epic-6/Epic-6.md)
-- Story: [`docs/project-management/kanban/epics/Epic-6/Story-001-br-repo.md`](epics/Epic-6/Story-001-br-repo.md) (migrated from Story-000-br-repo)
-- Task: [`docs/project-management/kanban/epics/Epic-6/Story-001-br-repo/T33-ukw-board-disorganization.md`](epics/Epic-6/Story-001-br-repo/T33-ukw-board-disorganization.md)
+- Epic: [`docs/project-management/kanban/epics/Epic-6/Epic-6.md`](../epics/Epic-6/Epic-6.md)
+- Story: [`docs/project-management/kanban/epics/Epic-6/Story-001-br-repo.md`](../epics/Epic-6/Story-001-br-repo.md) (migrated from Story-000-br-repo)
+- Task: [`docs/project-management/kanban/epics/Epic-6/Story-001-br-repo/T33-ukw-board-disorganization.md`](../epics/Epic-6/Story-001-br-repo/T33-ukw-board-disorganization.md)
 
 ---
 

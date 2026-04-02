@@ -161,7 +161,7 @@ This document provides **detailed `.cursorrules` structure analysis** of cursorr
 - **RW Trigger:** `## 🚀 RELEASE WORKFLOW (RW) TRIGGER` or `## Release Workflow (RW) Trigger`
 - **PVW Trigger:** `## 📦 PACKAGE VERSION WORKFLOW (PVW) TRIGGER`
 - **Document Lifecycle:** `## 📄 DOCUMENT LIFECYCLE MANAGEMENT`
-- **Project Overview:** `## Project Overview` or `# Cursor Rules for {project}`
+- **Project Overview:** `## Project Overview` or `# Cursor Rules for \{project\}`
 - **Version Control:** `## Version Control and Release Process`
 - **Git Workflow:** `## Git Workflow` or `## 🚨 CRITICAL: GIT COMMIT/PUSH RESTRICTIONS`
 - **Code Style:** `## Code Style and Conventions`
@@ -302,7 +302,7 @@ When the user types "RW" (Release Workflow), you MUST execute the complete 13-st
    - Document current version: `RC.EPIC.STORY.TASK+BUILD`
    
    **B. IDENTIFY COMPLETED TASK (MANDATORY):**
-   - Read the Story file: `knowledge/fynd_deals/Kanban/Epic-{epic}/Story-{N}-{Name}.md`
+   - Read the Story file: `knowledge/fynd_deals/Kanban/Epic-{epic}/Story-\{N\}-\{Name\}.md`
    - Find the MOST RECENTLY COMPLETED task in the Task Checklist (marked `✅ COMPLETE`)
    - Extract the task number from the task identifier: `E{epic}:S{story}:T{task}` (e.g., `E11:S01:T010` → task number is `10`)
    - **CRITICAL:** If no task is marked complete, or you cannot identify which task was just completed, **STOP** and ask the user which task was completed
@@ -393,8 +393,8 @@ version_file = config['version_file'] if config and 'version_file' in config els
 - Changelog: `CHANGELOG.md`
 - Changelog Archive: `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md`
 - Kanban Board: `knowledge/fynd_deals/Kanban/Kanban Board.md`
-- Epic Docs: `knowledge/fynd_deals/Kanban/Epic-{epic}/Epic-{epic}.md`
-- Story Docs: `knowledge/fynd_deals/Kanban/Epic-{epic}/Story-{N}-{Name}.md`
+- Epic Docs: `knowledge/fynd_deals/Kanban/Epic-\{epic\}/Epic-\{epic\}.md`
+- Story Docs: `knowledge/fynd_deals/Kanban/Epic-\{epic\}/Story-\{N\}-\{Name\}.md`
 - Validators: `scripts/validation/validate_branch_context.py`, `scripts/validation/validate_changelog_format.py`
 ```
 
@@ -679,7 +679,7 @@ The Release Workflow configuration is located at:
 
 - Keep `CHANGELOG.md` up to date
 - Update Kanban board with release notes
-- Maintain epic documentation in `knowledge/fynd_deals/Kanban/Epic-{epic}/`
+- Maintain epic documentation in `knowledge/fynd_deals/Kanban/Epic-\{epic\}/`
 ```
 
 **Projects Using:** fynd.deals
@@ -753,13 +753,13 @@ The Release Workflow configuration is located at:
 **Pattern 1: Comprehensive Version Schema**
 ```markdown
 **Version Schema:**
-- Format: `RC.EPIC.STORY.TASK+BUILD` (e.g., `0.{epic}.{story}.{task}+{build}`)
+- Format: `RC.EPIC.STORY.TASK+BUILD` (e.g., `0.\{epic\}.\{story\}.\{task\}+\{build\}`)
 - **Schema Calculation:** Epic N, Story S, Task T → Version: `0.N.S.T+1` (first build)
 - **Build Increment:** Same Epic/Story/Task → Increment BUILD (e.g., `0.N.S.T+1` → `0.N.S.T+2`)
 - **New Task:** Different Task → Reset BUILD to 1 (e.g., `0.N.S.T+5` → `0.N.S.{T+1}+1`)
 - **New Story:** Different Story → Reset TASK to 1, BUILD to 1 (e.g., `0.N.S.T+B` → `0.N.{S+1}.1+1`)
 - **New Epic:** Different Epic → Reset STORY to 1, TASK to 1, BUILD to 1 (e.g., `0.N.S.T+B` → `0.{N+1}.1.1+1`)
-- **Epic Alignment:** Epic number should match current branch (if on `epic/{n}`, version should be `0.{n}.S.T+B`)
+- **Epic Alignment:** Epic number should match current branch (if on `epic/\{n\}`, version should be `0.\{n\}.S.T+B`)
 - **Epic Ranges:**
   - [Example: ai-dev-kit] Epic 1-4+ (Epic 1: AI Dev Kit Core, Epic 2: Workflow Management Framework, Epic 3: Numbering & Versioning Framework, Epic 4: Kanban Framework)
   - No legacy range in dev-kit - starts from Epic 1 with full schema
@@ -822,11 +822,11 @@ Examples:
 ```markdown
 **Branch Mapping (Customize for Your Project):**
 - `main` - **PRODUCTION BRANCH** - Only merge when ready to deploy. Auto-deploys trigger on every push!
-- `epic/{n}` - **DEVELOPMENT BRANCH** - All epic work should be done here. Should have version `0.{n}.S.T+B`
+- `epic/\{n\}` - **DEVELOPMENT BRANCH** - All epic work should be done here. Should have version `0.\{n\}.S.T+B`
 - Other branches - Validate against known patterns
 
 **🚨 CRITICAL: Epic Branch Workflow**
-- **ALWAYS work on epic branches** (`epic/{n}-{description}`, e.g., `epic/1-core`, `epic/3-versioning`, etc.)
+- **ALWAYS work on epic branches** (`epic/\{n\}-\{description\}`, e.g., `epic/1-core`, `epic/3-versioning`, etc.)
 - **NEVER commit directly to `main`** during epic development
 - **ONLY merge to `main`** when ready to deploy (triggers auto-deployment)
 - **Release Workflow (RW)** should be run on epic branch, then merge to main
@@ -956,7 +956,7 @@ After copying this section to your `.cursorrules`, you MUST:
 3. **Update Kanban paths** (currently shows `docs/project-management/kanban/...` as templates)
 4. **Update validator script paths** (currently shows `packages/frameworks/workflow mgt/scripts/...` as templates)
 5. **Reference your project's versioning policy** instead of dev-kit policy
-6. **Customize branch naming** if your project uses different conventions (e.g., `feature/epic-{n}` instead of `epic/{n}`)
+6. **Customize branch naming** if your project uses different conventions (e.g., `feature/epic-\{n\}` instead of `epic/\{n\}`)
 7. **Customize epic ranges** if your project uses different epic numbering (e.g., legacy range 1-9, new range 10+)
 ```
 

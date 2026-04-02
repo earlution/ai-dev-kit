@@ -27,7 +27,7 @@ Create a systematic, comprehensive template system for canonical epics, stories,
 **What functionality is desired?**
 A complete, systematic template system that defines abstract canonical epics, stories, and tasks. These templates should:
 - Be abstract and generic (not project-specific)
-- Include placeholders for contextualization (e.g., `{PROJECT_NAME}`, `{DOMAIN}`)
+- Include placeholders for contextualization (e.g., `\{PROJECT_NAME\}`, `\{DOMAIN\}`)
 - Cover all canonical epics (1-7) with their typical stories and tasks
 - Provide a clear structure for projects to adopt and customize
 - Enable automated or guided installation/initialization
@@ -58,7 +58,7 @@ A complete, systematic template system that defines abstract canonical epics, st
 
 - [ ] **FR-005-R1:** Complete template set for all canonical epics (1-7)
   - Each epic template includes: purpose, scope, key characteristics, typical stories
-  - Templates use placeholders for contextualization (e.g., `{PROJECT_NAME} Core`)
+  - Templates use placeholders for contextualization (e.g., `\{PROJECT_NAME\} Core`)
   - Templates stored in `packages/frameworks/kanban/templates/epics/`
 
 
@@ -137,7 +137,7 @@ A developer starts a new project using ai-dev-kit as a template:
 1. Copies ai-dev-kit template repository
 2. Runs Kanban initialization process (or follows manual guide)
 3. System provides canonical epic/story/task templates
-4. Developer contextualizes templates (replaces `{PROJECT_NAME}` with actual project name, customizes domain-specific content)
+4. Developer contextualizes templates (replaces `\{PROJECT_NAME\}` with actual project name, customizes domain-specific content)
 5. Project has clean, properly structured Kanban board with canonical epics/stories/tasks contextualized to the project
 
 **Additional Use Cases:**
@@ -161,7 +161,7 @@ A developer starts a new project using ai-dev-kit as a template:
 - [ ] **Criterion 1:** All canonical epics (1-7) have complete template files in `packages/frameworks/kanban/templates/epics/`
 - [ ] **Criterion 2:** Each canonical epic template includes at least 2-3 typical stories with complete story templates
 - [ ] **Criterion 3:** Each canonical story template includes at least 3-5 typical tasks with complete task templates
-- [ ] **Criterion 4:** All templates use placeholders (e.g., `{PROJECT_NAME}`, `{DOMAIN}`) for contextualization
+- [ ] **Criterion 4:** All templates use placeholders (e.g., `\{PROJECT_NAME\}`, `\{DOMAIN\}`) for contextualization
 - [ ] **Criterion 5:** Contextualization guide created with clear process and examples
 - [ ] **Criterion 6:** Systematic canonical addition process documented with criteria and review process
 - [ ] **Criterion 7:** Template usage guide created with examples of template → contextualized conversion
@@ -261,8 +261,8 @@ A developer starts a new project using ai-dev-kit as a template:
 - Version: `v0.4.6.0+1`
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-4/Epic-4.md`](docs/project-management/kanban/epics/Epic-4/Epic-4.md)
-- Story: [`docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+- Epic: [`Epic-4.md`](../epics/Epic-4/Epic-4.md)
+- Story: [`Story-006-comprehensive-canonical-est-template-system.md`](../epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
 - Task: Task 0 in Story 6 document
 
 ---

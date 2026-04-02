@@ -106,10 +106,22 @@ def find_story_file(config: Optional[Dict], epic: int, story: int) -> Optional[P
     ):
         candidate_files.extend(project_root.glob(pattern))
 
+    path_matches: List[Path] = []
     for story_file in candidate_files:
         ps = extract_epic_story_from_path(story_file)
         if ps and ps == (epic, story):
-            return story_file
+            path_matches.append(story_file)
+    if len(path_matches) == 1:
+        return path_matches[0]
+    if len(path_matches) > 1:
+        # Epic 5 (and similar): multiple Story-00N-* files under one epic can share path-derived S01;
+        # FR Repo story files use *fr-repo* in the filename — prefer that for E/S/T intent checks.
+        fr_repo = [p for p in path_matches if "fr-repo" in p.stem.lower()]
+        if len(fr_repo) == 1:
+            return fr_repo[0]
+        if len(fr_repo) > 1:
+            return sorted(fr_repo, key=lambda p: p.name)[0]
+        return sorted(path_matches, key=lambda p: p.name)[0]
     for story_file in candidate_files:
         try:
             content = story_file.read_text()

@@ -182,8 +182,8 @@ semver_mapping_strategy: registry
 |-------|-------------|---------|---------|
 | `use_kanban` | Enable Kanban integration | `false` | `true` |
 | `kanban_root` | Root directory for Kanban docs | `docs/project-management/kanban` | `docs/kanban` |
-| `epic_doc_pattern` | Pattern for Epic documents | `epics/Epic-{epic}/Epic-{epic}.md` | `epics/Epic-{epic}.md` |
-| `story_doc_pattern` | Pattern for Story documents | `epics/Epic-{epic}/Story-{story}-*.md` | `stories/Story-{story}.md` |
+| `epic_doc_pattern` | Pattern for Epic documents | `epics/Epic-\{epic\}/Epic-\{epic\}.md` | `epics/Epic-\{epic\}.md` |
+| `story_doc_pattern` | Pattern for Story documents | `epics/Epic-\{epic\}/Story-\{story\}-*.md` | `stories/Story-\{story\}.md` |
 | `create_internal_tag` | Create internal tags in task-touch mode | `false` | `true` |
 | `debug_mode` | Enable debug output | `false` | `true` |
 | `skip_github_release` | Skip GitHub release creation | `false` | `true` |

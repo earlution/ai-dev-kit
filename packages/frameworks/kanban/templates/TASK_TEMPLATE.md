@@ -38,6 +38,8 @@ housekeeping_policy: keep
 
 [What is required to start this task? Dependencies, prerequisites, inputs from other tasks or external sources.]
 
+**IPW planning artifact (when used):** If you ran **IPW** / **IPW E:S:T** for this task, link the plan doc here (and under **References**) using the **same relative path** in both places. The plan doc must link back to this task in its **Host Task** header (**FR-042**).
+
 ---
 
 ## Deliverable

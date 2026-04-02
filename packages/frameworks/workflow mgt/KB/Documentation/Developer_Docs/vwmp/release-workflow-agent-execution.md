@@ -181,7 +181,7 @@ For each step, the agent follows this pattern:
        {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
        {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
        {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Document flaws and fix attempts in Bug Reports and Feature Requests'},
-       {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
+       {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) - Scoped kanban update for release E/S/T'},
       {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
       {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
       {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Run Validators - Execute branch context, changelog format, and changelog size validators'},
@@ -403,7 +403,7 @@ story_doc_pattern = config.get('story_doc_pattern') if config and config.get('us
    - **If PASS (exit code 0):**
      - Document: "✅ Branch safety check passed - work aligns with current branch"
      - Mark Step 1 TODO as `completed`
-     - Move to **Step 1.5** (RW Task Intent Guard), then Step 2
+     - Move to **Steps 1.3–1.5** (mandatory task token → `validate_rw_task_complete.py` → `validate_rw_task_intent.py`), then Step 2
    
    - **If FAIL (exit code 1 or non-zero):**
      - **MANDATORY ACTIONS:**
@@ -518,38 +518,74 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 
 ---
 
+### Step 1.3: Mandatory RW task token (FR-060 / E5:S01:T63)
+
+**🚨 MANDATORY BLOCKING STEP — DO NOT BYPASS**
+
+**Purpose:** Require an explicit `E…S…T…` in the **same user message** as the RW trigger so the agent never proceeds with ambiguous release attribution.
+
+**When:** Run **immediately after Step 1 passes**, **before any file modifications** (before Step 2).
+
+**Agent execution:**
+
+1. **Parse** the user message for a task token: `E{epic}S{story}T{task}` or `E{epic}:S{story}:T{task}` (same flexibility as UKW).
+2. **If no parseable token:** **RW ABORTED** — print usage, e.g. `RW E7:S01:T10`, `RW E7S01T10`, `RW -d E7S01T10`, `RW -k E6S6T56`. Do **not** infer task from Story checklist for permission to continue.
+3. **If token present:** Proceed to Step 1.4.
+
+---
+
+### Step 1.4: RW task document releasable (FR-060)
+
+**🚨 MANDATORY BLOCKING STEP — DO NOT BYPASS**
+
+**Purpose:** Ensure the task markdown exists under `kanban_root` and (for full RW / `RW -d`) is **COMPLETE** or a **perpetual maintenance** task.
+
+**Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py` (also: `{scripts_path}/validation/validate_rw_task_complete.py` when config exists)
+
+**Agent execution:**
+
+1. Use the token from Step 1.3.
+2. Full RW / **RW -d:**  
+   `python {validator_path} --requested "<token>"`
+3. **RW -k:**  
+   `python {validator_path} --requested "<token>" --mode rw-k`  
+   (document must exist; COMPLETE check skipped for kanban-init style targets.)
+4. **Exit codes:** `0` = proceed; `1` = **RW ABORTED**; `2` = invalid args — blocking.
+
+---
+
 ### Step 1.5: RW Task Intent Guard (BR-056 / E6:S06:T56)
 
-**🚨 MANDATORY BLOCKING STEP (when user supplies a task id) — DO NOT BYPASS**
+**🚨 MANDATORY BLOCKING STEP — DO NOT BYPASS**
 
 **Purpose:** Prevent silent wrong attribution when the user types a shorthand task id (e.g. `RW E7S5T1` meaning Story 5) while `version.py` still reflects Story 6 — a one-character typo in story number.
 
-**When:** Run **immediately after Step 1 passes**, **before any file modifications** (before Step 2).
+**When:** Run **after Step 1.4 passes**, **before any file modifications** (before Step 2).
 
 **Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py` (also: `{scripts_path}/validation/validate_rw_task_intent.py` when config exists)
 
 **Agent execution:**
 
-1. **Parse** the user message for an optional task token: `E{epic}S{story}T{task}` or `E{epic}:S{story}:T{task}` (same flexibility as UKW).
-2. **If no token:** run `python {validator_path}` with **no** `--requested` → exit 0 (skip).
-3. **If token present:**
-   - Full RW / RW -d:  
-     `python {validator_path} --requested "<token>"`
-   - **RW -k:**  
-     `python {validator_path} --requested "<token>" --mode rw-k`  
-     (skips comparison to `version.py` so kanban-init targets do not false-block.)
+1. Use the token from Step 1.3 (mandatory after FR-060).
+2. Full RW / RW -d:  
+   `python {validator_path} --requested "<token>"`
+3. **RW -k:**  
+   `python {validator_path} --requested "<token>" --mode rw-k`  
+   (skips comparison to `version.py` so kanban-init targets do not false-block.)
 4. **Exit codes:** `0` = proceed; `1` = **RW ABORTED** (print script output; no version/changelog/kanban edits); `2` = invalid parse/path — treat as blocking.
 5. **Override:** Only after the user **explicitly confirms** the mismatched intent, re-run RW and invoke the script with **`--confirmed-override`**.
 
-**Relation to FR-060:** FR-060 asks for mandatory task arguments and validation; this step adds **context comparison to `version.py`** and **story-typo detection** specifically (BR-056).
+**Relation to FR-060:** Step 1.3–1.4 enforce **mandatory token** and **task doc / COMPLETE**; Step 1.5 adds **context comparison to `version.py`** and **story-typo detection** (BR-056).
 
 **Verification scenarios (manual):**
 
 | Scenario | Expected |
 |----------|----------|
-| `version.py` = `E7:S06:T01`, user `RW E7S5T1` | Exit 1, RW ABORTED |
-| Same story, new completed task `T2`, version file still `T1`, user `RW E7S6T2` | Exit 0 if `T2` is highest ✅ COMPLETE in Story checklist |
-| `RW -k E6S6T56` while `version.py` differs | Exit 0 (`--mode rw-k`) |
+| User sends `RW` with no `E…S…T…` | RW ABORTED at Step 1.3 |
+| Task doc `IN PROGRESS` (not perpetual), full RW | Exit 1 at Step 1.4 |
+| `version.py` = `E7:S06:T01`, user `RW E7S5T1` | Exit 1 at Step 1.5, RW ABORTED |
+| Same story, new completed task `T2`, version file still `T1`, user `RW E7S6T2` | Exit 0 at Step 1.5 if `T2` is highest ✅ COMPLETE in Story checklist |
+| `RW -k E6S6T56` while `version.py` differs | Exit 0 at Step 1.5 (`--mode rw-k`) |
 
 ---
 
@@ -560,7 +596,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 - id: step-2
   name: Bump Version
   handler: release.version_bump
-  dependencies: [step-1, step-1.5]
+  dependencies: [step-1, step-1.3, step-1.4, step-1.5]
   config:
     version_file: src/confidentia/version.py  # [Example: Confidentia] Use {version_file_path} template placeholder
     # [Example: ai-dev-kit] version_file: src/fynd_deals/version.py
@@ -1575,14 +1611,16 @@ The Versioning Policy requires that:
 
 ---
 
-### Step 7: Auto-update Kanban Docs
+### Step 7: Scoped Kanban Sync (UKW Mode)
+
+**Canonical name (FR-038):** Step 7 is **Scoped Kanban Sync (UKW Mode)** — a **scoped invocation** of the same kanban intelligence model as [UKW](update-kanban-workflow-agent-execution.md) with `invocation_context: rw_step_7` (see that guide). It is **not** a full standalone UKW run (`standalone`). Agents scope work to the **release’s E/S/T** and directly related board/docs; MoSCOW changes are **conservative** (new or newly significant items only).
 
 **🚨 MANDATORY BLOCKING STEP - DO NOT BYPASS**
 
 **Step Definition:**
 ```yaml
 - id: step-7
-  name: Auto-update Kanban Docs
+  name: Scoped Kanban Sync (UKW Mode)
   handler: framework.kanban_update  # Framework-agnostic handler
   required: true
   mandatory: true
@@ -1600,7 +1638,9 @@ The Versioning Policy requires that:
 - ✅ **MANDATORY:** This step MUST run and cannot be skipped (`required: true`, `mandatory: true`)
 - ✅ **BLOCKING:** If this step fails, the workflow MUST STOP immediately (`blocking: true`)
 - ✅ **FRAMEWORK-AGNOSTIC:** Uses framework script that works across all projects
-- ✅ **KANBAN POLICY:** Updates align with Kanban governance policy (FR-037: task prioritisation, stack/queue for MUST HAVE). MoSCOW ordering is handled by UKW or manual/agent-defined updates; RW Step 7 updates version markers and completion status.
+- ✅ **KANBAN POLICY:** Updates align with Kanban governance policy (FR-037: task prioritisation, stack/queue for MUST HAVE). In **scoped** mode, prefer **limited** MoSCOW/board edits for the active release; full-board MoSCOW reshuffles belong in **standalone UKW** (`UKW`, `-p`, `-a`, etc.).
+- ✅ **AGENTIC RESPONSIBILITIES (FR-038:R03):** Task-level updates (status, version markers, narrative where needed); Story/Epic checklist and overview consistency; Kanban board updates for the active epic/story; **limited** prioritisation of new or newly significant tasks only.
+- ✅ **UKW RELATIONSHIP (FR-038:R05):** UKW agent guide: [Update Kanban Workflow — invocation context](update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7).
 - ✅ **VALIDATION:** Comprehensive validation runs automatically after updates
 - ✅ **ERROR HANDLING:** Recovery guidance provided for all error types
 - ❌ **DO NOT PROCEED:** If Step 7 fails, DO NOT proceed to Step 8 or any subsequent step

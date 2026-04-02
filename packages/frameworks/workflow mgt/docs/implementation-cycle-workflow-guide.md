@@ -19,6 +19,10 @@ housekeeping_policy: keep
 
 The Implementation Cycle Workflow (ICW) provides a systematic approach to implementation work following the agent-driven execution pattern: **ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED**. This workflow is designed for disciplined implementation tasks that require comprehensive analysis, planning, execution, and validation.
 
+### Durable artifacts (ICW responsibility)
+
+ICW outputs must be **committed under `docs/`** (by default `docs/implementation-cycles/`, per `icw-workflow.yaml` `output_dir`), **linked from the Kanban task**, and **not left only** in IDE-local plan directories. See **[Specification and planning artifacts policy](../../../../docs/architecture/standards-and-adrs/specification-and-planning-artifacts-policy.md)** and **[implementation-cycles README](../../../../docs/implementation-cycles/README.md)**.
+
 ---
 
 ## 🔄 Agent-Driven Execution Pattern

@@ -240,7 +240,7 @@ Ensure that when projects copy the Kanban framework structure, they receive only
 1. **Create Canonical Epic Templates:**
    - Store canonical epic templates in `packages/frameworks/kanban/templates/epics/`
    - Generic epic templates for epics 1-7
-   - Epic 1 template with placeholder for project name (e.g., `{PROJECT_NAME} Core`)
+   - Epic 1 template with placeholder for project name (e.g., `&lbrace;PROJECT_NAME&rbrace; Core`)
 
 2. **Update Documentation:**
    - Update `CANONICAL_EPICS.md` to clarify Epic 1 naming
@@ -254,7 +254,7 @@ Ensure that when projects copy the Kanban framework structure, they receive only
 ### Files to Create/Update
 
 **New Files:**
-- `packages/frameworks/kanban/templates/epics/Epic-1-Project-Core.md` - Generic Epic 1 template (with {PROJECT_NAME} placeholder)
+- `packages/frameworks/kanban/templates/epics/Epic-1-Project-Core.md` - Generic Epic 1 template (with &lbrace;PROJECT_NAME&rbrace; placeholder)
 - `packages/frameworks/kanban/templates/epics/Epic-2-Workflow-Management.md` - Epic 2 template
 - `packages/frameworks/kanban/templates/epics/Epic-3-Versioning.md` - Epic 3 template
 - `packages/frameworks/kanban/templates/epics/Epic-4-Kanban-Framework.md` - Epic 4 template

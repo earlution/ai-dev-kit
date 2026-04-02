@@ -10,12 +10,14 @@ housekeeping_policy: keep
 
 **Status:** ✅ COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2025-12-16 (v0.2.11.11+1 – T11 complete: All CHANGELOG ordering violations fixed)  
+**Last updated:** 2026-03-30 (UKW — T12 off MoSCOW; archived to kanban-completed; * = workaround)  
 **Estimated Effort:** 2+ weeks  
 **Started:** 2025-12-15  
-**Completed:** 2025-12-16
-**Version:** v0.2.11.11+1
+**Completed:** 2025-12-16 (core story); **T12** completed 2026-03-30 (GitHub Actions intake workaround — see task doc)
+**Version:** v0.2.11.12+1
 **Code:** E2S11
+
+> **Note:** T12 (E2:S11:T12) is **post-story hardening** for BR-053 / GitHub Actions trigger behavior; the story’s original deliverables (T00–T11) were already complete when T12 was filed.
 
 ---
 
@@ -33,9 +35,9 @@ housekeeping_policy: keep
 - [x] **E2:S11:T09 – Documentation and Testing** ✅ COMPLETE (v0.2.11.9+3)
 - [x] **E2:S11:T10 – Investigate CHANGELOG Entry Removal and Harden Processes** - ✅ COMPLETE (v0.2.11.10+1 – Root cause identified, safeguards implemented)
 - [x] **E2:S11:T11 – Fix CHANGELOG Ordering Violations** - ✅ COMPLETE (v0.2.11.11+1 – All ordering violations fixed, duplicates removed, validator passes)
-- [ ] **E2:S11:T12 – GitHub Actions Workflow Bug Resolution** - IN PROGRESS (v0.2.11.12+0 – GitHub Actions platform bug investigation and resolution)
-  - Task: [`T12-github-actions-workflow-bug-resolution.md`](T12-github-actions-workflow-bug-resolution.md)
-  - **Related BR:** [BR-053](../../../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
+- [x] **E2:S11:T12 – GitHub Actions Workflow Bug Resolution** – ✅ **COMPLETE (workaround, v0.2.11.12+2)** — intake workflow `.DISABLED`; resolution documented; manual intake (* = workaround, not vendor fix — [kanban-completed](../../kanban-completed.md))
+  - Task: [`T12-github-actions-workflow-bug-resolution.md`](Story-011-intake-workflow-automation/T12-github-actions-workflow-bug-resolution.md)
+  - **Related BR:** [BR-053](../../fr-br/BR-053-github-actions-workflow-push-trigger-bug.md)
 
 
 > **Format:** `E2:S11:Txx` (Epic 2, Story 11, Task with 2-digit zero padding)  
@@ -92,7 +94,7 @@ Create an automated intake workflow in the workflow management package that form
 - [x] RW documentation updated with protection guidelines
 - [x] Prevention mechanisms validated
 
-**Task Document:** [`Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md`](Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md)
+**Task Document:** [`Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md`](Story-011-intake-workflow-automation/Task-010-Investigate-CHANGELOG-Entry-Removal-and-Harden-Processes.md)
 
 ---
 
@@ -124,7 +126,7 @@ Create an automated intake workflow in the workflow management package that form
 - [ ] All version references remain correct
 - [ ] All links to detailed changelogs remain valid
 
-**Task Document:** [`Task-011-Fix-CHANGELOG-Ordering-Violations.md`](Task-011-Fix-CHANGELOG-Ordering-Violations.md)
+**Task Document:** [`Task-011-Fix-CHANGELOG-Ordering-Violations.md`](Story-011-intake-workflow-automation/Task-011-Fix-CHANGELOG-Ordering-Violations.md)
 
 **Related:**
 - E2:S01:T06 - Validator format support (COMPLETE)

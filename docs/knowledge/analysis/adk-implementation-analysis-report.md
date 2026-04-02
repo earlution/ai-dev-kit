@@ -36,16 +36,16 @@ This report synthesizes comprehensive analysis of **10 projects** (9 client impl
 **Strong Convergence:**
 - **KB Directory Naming:** 100% convergence on `docs/` (perfect convergence)
 - **E/S/T Hierarchy:** 100% convergence on Epic → Story → Task structure (perfect convergence)
-- **Task Naming:** 60% convergence on full-context `E{epic}:S{story}:T{task}` format (strong convergence)
+- **Task Naming:** 60% convergence on full-context `E\{epic\}:S\{story\}:T\{task\}` format (strong convergence)
 - **Story Checklists:** 90% convergence on story checklist pattern (strong convergence)
 
 **Framework Drift:**
-- **Epic Naming:** 44% use canonical `Epic-{N}`, 22% use `Epic {N}`, 33% use abbreviated `E{N}`
+- **Epic Naming:** 44% use canonical `Epic-\{N\}`, 22% use `Epic \{N\}`, 33% use abbreviated `E\{N\}`
 - **Task Padding:** 33% use 2-digit, 33% use 3-digit, 33% mixed
 - **Workflow Config:** 30% use `rw-config.yaml`, 50% use hardcoded paths
 
 **Good Practices Identified:**
-- Full-context task naming (`E{epic}:S{story}:T{task}`)
+- Full-context task naming (`E\{epic\}:S\{story\}:T\{task\}`)
 - Proper E/S/T hierarchy
 - Story checklist pattern
 - Comprehensive template system (ai-dev-kit source)
@@ -117,7 +117,7 @@ This report synthesizes comprehensive analysis of **10 projects** (9 client impl
 - E/S/T hierarchy (Epic → Story → Task)
 
 **Strong Convergence (60-90%):**
-- Full-context task naming (`E{epic}:S{story}:T{task}`) - 60%
+- Full-context task naming (`E\{epic\}:S\{story\}:T\{task\}`) - 60%
 - Story checklist pattern - 90%
 - Document frontmatter - 90%
 
@@ -209,7 +209,7 @@ This report synthesizes comprehensive analysis of **10 projects** (9 client impl
 ### 5.1 What to Implement
 
 **Good Practices to Adopt:**
-- Full-context task naming (`E{epic}:S{story}:T{task}`) - 60% convergence
+- Full-context task naming (`E\{epic\}:S\{story\}:T\{task\}`) - 60% convergence
 - Story checklist pattern - 90% convergence
 - Document lifecycle metadata - 60% adoption
 - Config-driven workflow approach - 30% adoption (promote to 100%)

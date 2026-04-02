@@ -236,9 +236,9 @@ A comprehensive Standard Operating Procedure has been created based on web resea
 - Version: `v0.5.1.35+0` (doc-init, migrated from v0.5.0.35+0)
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](epics/Epic-5/Epic-5.md)
-- Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](epics/Epic-5/Story-001-fr-repo.md) (migrated from Story-000-fr-repo)
-- Task: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md`](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md)
+- Epic: [`docs/project-management/kanban/epics/Epic-5/Epic-5.md`](../epics/Epic-5/Epic-5.md)
+- Story: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo.md`](../epics/Epic-5/Story-001-fr-repo.md) (migrated from Story-000-fr-repo)
+- Task: [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md`](../epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md)
 
 ---
 

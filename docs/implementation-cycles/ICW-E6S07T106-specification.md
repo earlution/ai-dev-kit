@@ -418,7 +418,7 @@ cascade_agent.configure_workflow("release-workflow", {
 
 ## Rollback Procedures
 
-### Immediate Rollback (<5 minutes)
+### Immediate Rollback (&lt;5 minutes)
 
 **Trigger:** Workflow execution failures
 

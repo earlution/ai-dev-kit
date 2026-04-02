@@ -26,11 +26,11 @@ SoPs define standardized processes and procedures for consistent execution of wo
 
 ### Task Management & Cross-Wiring
 
-- **[Task Template Cross-Wiring SoP](../../../architecture/standards-and-adrs/task-template-cross-wiring-sop.md)** - Standard procedure for cross-wiring tasks, emphasizing bidirectional linking and contextual relationships between interconnected tasks.
+- **[Task Template Cross-Wiring SoP](../../architecture/standards-and-adrs/task-template-cross-wiring-sop.md)** - Standard procedure for cross-wiring tasks, emphasizing bidirectional linking and contextual relationships between interconnected tasks.
 
 ### Bug Report & Feature Request Management
 
-- **[Mixed BR/FR Scope Handling SoP](../../../architecture/standards-and-adrs/mixed-br-fr-scope-sop.md)** - Standard procedure for handling mixed-scope Bug Reports and Feature Requests, including when to split documents and how to maintain traceability.
+- **[Mixed BR/FR Scope Handling SoP](../../architecture/standards-and-adrs/mixed-br-fr-scope-sop.md)** - Standard procedure for handling mixed-scope Bug Reports and Feature Requests, including when to split documents and how to maintain traceability.
 
 ---
 
@@ -42,11 +42,11 @@ SoPs define standardized processes and procedures for consistent execution of wo
 
 ### Knowledge Management
 
-- **[Building Persistent Knowledge](../../../knowledge/guides/building-persistent-knowledge.md)** - Guide for building and maintaining persistent knowledge bases in Cursor.
+- **[Building Persistent Knowledge](./building-persistent-knowledge.md)** - Guide for building and maintaining persistent knowledge bases in Cursor.
 
 ### Repository Setup
 
-- **[Badge Setup for Private Repos](../../../knowledge/guides/badge-setup-for-private-repos.md)** - Guide for setting up badges in private repositories.
+- **[Badge Setup for Private Repos](./badge-setup-for-private-repos.md)** - Guide for setting up badges in private repositories.
 
 ---
 

@@ -75,7 +75,7 @@ The Release Workflow explains each step, its parameters, configuration options, 
 
 **⭐ Canonical Example:** The Release Workflow serves as the **canonical example** of intelligent agent-driven workflow execution. See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md) for detailed step-by-step agent execution patterns.
 
-**🚀 RW Trigger:** When users type "RW" or "rw" (case-insensitive), AI assistants execute this workflow using intelligent agent-driven execution as defined in [`.cursorrules`](../../../../.cursorrules). See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md) for the complete execution pattern.
+**🚀 RW Trigger:** When users send **`RW <task_id>`** in one message (case-insensitive; e.g. `RW E7:S01:T10`, `RW E7S01T10`; same for `RW -d` / `RW -k`), AI assistants execute this workflow per [`.cursorrules`](../../../../.cursorrules). A parseable `E…S…T…` token is **mandatory** (FR-060). After branch safety (Step 1), agents run `validate_rw_task_complete.py` then `validate_rw_task_intent.py` before Step 2. See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md).
 
 ### How This Workflow Implements Policy Requirements
 
@@ -97,7 +97,7 @@ The Release Workflow explains each step, its parameters, configuration options, 
 - ✅ **Version progression:** Step 1 handles BUILD increments and task transitions correctly
 
 **From [Cursor Rules](../../../../.cursorrules):**
-- ✅ **RW Trigger:** When users type "RW" or "rw" (case-insensitive), AI assistants execute this workflow using intelligent agent-driven execution
+- ✅ **RW Trigger:** `RW <task_id>` required in the same message; then agent-driven execution (FR-060 + BR-056 guard steps before version bump)
 - ✅ **Mandatory checklist:** Steps 1-10 implement the complete commit checklist
 - ✅ **Validation enforcement:** Step 7 runs validators that block invalid releases
 - ✅ **Branch isolation:** Step 7 validates branch/version alignment
@@ -140,7 +140,8 @@ The Release Workflow consists of **14 steps** organized into 3 phases. Each step
   - Documents flaws and fix attempts in Bug Reports and Feature Requests
   - Maintains fix attempt history for knowledge transfer between builds
 
-- **Step 7:** Auto-update Kanban Docs
+- **Step 7:** Scoped Kanban Sync (UKW Mode) (FR-038; formerly “Auto-update Kanban Docs”)
+  - Scoped, UKW-style agentic kanban update for the **release E/S/T**; not a full standalone UKW run. See [UKW agent guide — Invocation context](update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7).
   - Implements [Kanban Governance Policy](../../project-management/rituals/policy/kanban-governance-policy.md) requirement for forensic markers
   - Updates Epic/Story documentation with version numbers and task completion status
   - Maintains traceability grid (version ↔ epic/story/task ↔ changelogs ↔ kanban markers)

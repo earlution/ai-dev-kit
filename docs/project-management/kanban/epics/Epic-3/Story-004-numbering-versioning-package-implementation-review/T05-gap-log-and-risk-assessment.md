@@ -131,7 +131,7 @@ No **direct Numbering & Versioning framework implementation gaps** were identifi
 - **ID:** GAP-VERSIONING-CONFIG-001  
 - **Category:** Process / Documentation  
 - **Description:**  
-  - Projects using non-standard paths (different from `src/{project}/version.py`) need to configure `rw-config.yaml`
+  - Projects using non-standard paths (different from `src/\{project\}/version.py`) need to configure `rw-config.yaml`
   - This is an expected configuration requirement, not a gap in the package itself
   - Documentation exists in integration guides and `rw-config.yaml` schema
 

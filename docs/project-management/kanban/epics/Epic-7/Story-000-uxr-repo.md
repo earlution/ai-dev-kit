@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
-**Last updated:** 2026-01-05 (v0.7.0.0+0 – Repository story created)  
+**Last updated:** 2026-03-31 (**`RW -k`** **E7:S00:T04** **`v0.7.0.4+0`**; prior **T03** **`v0.7.0.3+0`**; **T02** **v0.7.0.2+2**; `epic/5` merge **main** preserves anchor docs **T01/T02/T05**)  
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-05  
 **Completed:** N/A (Perpetual - never completes)  
@@ -24,10 +24,19 @@ housekeeping_policy: keep
 ---
 
 ## Task Checklist
+- [x] **E7:S00:T01 – UXR-001 Migration User Experience Research** - ✅ COMPLETE (v0.7.0.1+1 – Registry task filed; synthesis **E7:S05:T01**) - [Task Document](Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001.md) | [UXR-001](../../fr-br/UXR-001-migration-user-experience-research.md)
 
-> **Repository Pattern:** Each User Experience Research report becomes a task in this repository story.
-> **Traceability:** UXR-001 = E7:S00:T01, UXR-002 = E7:S00:T02, etc.
-> **Abstract Space:** v0.7.0.0+0 (repository story), v0.7.0.1+0 (first UXR), v0.7.0.2+0 (second UXR), etc.
+- [x] **E7:S00:T02 – UXR-002 Comprehensive UAT Migration Utilities** - ✅ COMPLETE (v0.7.0.2+1 – Registry task filed; synthesis **E7:S05:T02**) - [Task Document](Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md) | [UXR-002](../../fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
+
+- [ ] **E7:S00:T03 – UXR-003 repository anchor** — [Task doc](Story-000-uxr-repo/T03-uxr-003-repository-anchor.md) | [UXR-003](../../fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md) | Impl: [E7:S05:T03](Story-005-migration-uxr-research.md)
+
+- [ ] **E7:S00:T04 – UXR-004 repository anchor** — [Task doc](Story-000-uxr-repo/T04-uxr-004-repository-anchor.md) | [UXR-004](../../fr-br/UXR-004-kanban-package-installation-uat.md) | Impl: [E7:S05:T04](Story-005-migration-uxr-research.md)
+
+- [ ] **E7:S00:T05 – UXR-005 Kanban Board Formatting & Governance** - TODO (v0.7.0.5+1 – Registry task filed; implementation **E7:S01:T09**) - [Task Document](Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md) | [UXR-005](../../fr-br/UXR-005-kanban-board-formatting-and-governance.md)
+
+- [ ] **E7:S00:T01 – UXR-001 repository anchor** — [Task doc](Story-000-uxr-repo/T01-uxr-001-repository-anchor.md) | [UXR-001](../../fr-br/UXR-001-migration-user-experience-research.md) | Impl: [E7:S05:T01](Story-005-migration-uxr-research.md)
+- [ ] **E7:S00:T02 – UXR-002 repository anchor** — [Task doc](Story-000-uxr-repo/T02-uxr-002-repository-anchor.md) | [UXR-002](../../fr-br/UXR-002-comprehensive-uat-migration-utilities.md) | Impl: [E7:S05:T02](Story-005-migration-uxr-research.md)
+- [ ] **E7:S00:T05 – UXR-005 repository anchor** — [Task doc](Story-000-uxr-repo/T05-uxr-005-repository-anchor.md) | [UXR-005](../../fr-br/UXR-005-kanban-board-formatting-and-governance.md) | Impl: [E7:S01:T09](Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)
 
 ---
 

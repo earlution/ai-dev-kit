@@ -8,18 +8,24 @@ housekeeping_policy: keep
 
 # Workflow Management Framework
 
-**Version:** 2.2.0  
-**Last Updated:** 2026-03-12  
-**Purpose:** Complete workflow management framework with 12 comprehensive workflows, documentation standards, and automated validation  
-**Key Features:** 12 fully documented workflows, standardized templates, style guide, validation tools, and automated quality assurance
+**Version:** 2.2.1  
+**Last Updated:** 2026-03-30  
+**Purpose:** Complete workflow management framework with **11** YAML-defined workflows (see registry below), documentation standards, and automated validation  
+**Key Features:** **11** registry workflows with full READMEs, standardized templates, style guide, validation tools, and automated quality assurance; agent methodology guides (`KB`/`vwmp`) are separate from registry rows
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
+
+**Canonical workflow list:** The authoritative machine-readable set is [`workflows/workflow-registry.yaml`](workflows/workflow-registry.yaml) — **11** entries under `workflows:`. Agent execution guides under `KB/Documentation/Developer_Docs/vwmp/` describe methodology and step counts; they are not additional registry workflows.
+
+**RW trigger dual-source (maintainers):** The repo root [`.cursorrules`](../../../.cursorrules) and the portable excerpt [`cursorrules-rw-trigger-section.md`](cursorrules-rw-trigger-section.md) must stay aligned on **FR-060 / FR-038 / BR-056** guardrails. See [RW trigger dual-source parity](docs/rw-trigger-dual-source-parity.md) for the checklist and merge order.
+
+**Consumers (vendored copy of this folder):** Configure `rw-config.yaml` paths for **your** tree and run RW validators from **`scripts_path`** — see [RW validators and consumer layout](docs/rw-validators-consumer-layout.md).
 
 ---
 
 ## 📋 What's Included
 
-This package contains a comprehensive workflow management framework with 12 fully documented workflows, standardized templates, and automated validation tools. The framework enables AI assistants to execute various workflows using intelligent agent-driven execution with support for multiple workflow types:
+This package contains a comprehensive workflow management framework with **11** YAML-defined workflows (per [`workflow-registry.yaml`](workflows/workflow-registry.yaml)), standardized templates, and automated validation tools. The framework enables AI assistants to execute various workflows using intelligent agent-driven execution with support for multiple workflow types:
 
 ### Core Workflows (4)
 - **Testing Workflow (TESTING)** - Quality assurance and coverage analysis
@@ -32,12 +38,13 @@ This package contains a comprehensive workflow management framework with 12 full
 - **Update Kanban Workflow (UKW)** - Project tracking and status management
 - **Post-Implementation Review (PIR)** - Implementation evaluation
 
-### Specialized Workflows (5)
+### Specialized Workflows (4)
 - **Intake Workflow** - FR/BR/UXR automation and processing
 - **Package Version Workflow (PKG-VERSION)** - Version management and updates
 - **Framework Health Monitoring Workflow (FHM)** - System health monitoring
 - **Implementation Cycle Workflow (ICW)** - Structured implementation process
-- **Documentation Workflow** - Documentation generation and maintenance
+
+_Documentation quality_ (templates, style guide, per-workflow READMEs) is governed by the [Workflow Documentation Style Guide](docs/workflow-documentation-style-guide.md) and the **Documentation Standards** subsection later in this README; there is no separate “Documentation Workflow” in the registry.
 
 ### Core Methodology Documents
 - `docs/documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md` - General methodology for agent-driven workflow execution
@@ -53,7 +60,7 @@ This package contains a comprehensive workflow management framework with 12 full
 
 ### 🚀 Workflow Overview
 
-The AI Dev Kit workflow management framework provides **12 standardized workflows** for systematic development operations. Each workflow follows consistent documentation standards and includes comprehensive usage instructions.
+The AI Dev Kit workflow management framework provides **11** YAML-defined workflows (see [`workflows/workflow-registry.yaml`](workflows/workflow-registry.yaml)) for systematic development operations. Each registry workflow follows consistent documentation standards and includes comprehensive usage instructions.
 
 #### 📋 Available Workflows
 
@@ -248,9 +255,9 @@ python scripts/install_release_workflow.py
 # Mode B: RW + Dev-Kit Versioning
 # Mode C: Full Stack (RW + Versioning + Kanban)
 
-# 4. Test RW
+# 4. Test RW (FR-060: task id in same message as RW)
 git checkout -b epic/1-test
-# Type "RW" in your AI assistant
+# e.g. RW E1S01T01 or RW E1:S01:T01 in your AI assistant
 ```
 
 **That's it!** The installer generates `rw-config.yaml`, updates `.cursorrules`, and patches workflow files automatically.
@@ -277,7 +284,7 @@ python scripts/install_release_workflow.py --mode c --dry-run
 1. **Review `rw-config.yaml`** - Verify paths are correct
 2. **Create version file** - At the path specified in config
 3. **Copy validation scripts** - If not already present
-4. **Test RW** - Type "RW" on an epic branch
+4. **Test RW** - On an epic branch, send e.g. `RW E1S01T01` or `RW E1:S01:T01` (same message; **FR-060**)
 
 ### 📖 Detailed Guides
 
@@ -369,8 +376,8 @@ If using different branch naming conventions:
 
 1. Ensure you have a version file (e.g., `src/yourproject/version.py` with `VERSION_STRING = "0.1.1.1+1"`)
 2. Create an epic branch (e.g., `git checkout -b epic/1-first-epic`)
-3. Type "RW" in your AI assistant (Cursor)
-4. Verify all 13 steps execute correctly:
+3. In your AI assistant (Cursor), send **`RW` with a task id** in the same message, e.g. `RW E1S01T01` or `RW E1:S01:T01` (**FR-060**)
+4. Verify the workflow steps execute correctly for your `.cursorrules` path:
    - Step 1: Branch Safety Check
    - Step 2: Version bumped
    - Step 3: CHANGELOG + archive updated
@@ -393,15 +400,17 @@ If using different branch naming conventions:
 
 ### The RW Trigger
 
-When a user types any RW trigger in their AI assistant (case-insensitive):
+When a user sends an RW trigger **with a mandatory task id** in the **same message** (case-insensitive; FR-060):
 
-- **"RW"** - Full Release Workflow (all 17 steps)
-- **"RW -k"** - Initial Kanban Documentation Commit (7 steps: 1,2,3,4,7,11,12)
-- **"RW -d"** - Documentation-Only Release (13 steps: 1,2,3,4,5,6,7,8,9,10,11,13,14)
+- **`RW <task_id>`** — e.g. `RW E7:S01:T10`, `RW E7S01T10` — Full Release Workflow (all 17 steps)
+- **`RW -k <task_id>`** — Kanban Documentation Commit (short path; use `--mode rw-k` on validators)
+- **`RW -d <task_id>`** — Documentation-Only Release (short path)
+
+Without a parseable `E…S…T…` token, the agent must **abort** (RW ABORTED) before version bump.
 
 The AI assistant:
 
-1. **AI Assistant Recognizes Trigger:** The `.cursorrules` file instructs the AI to execute the Release Workflow with the specified trigger type
+1. **AI Assistant Recognizes Trigger:** The `.cursorrules` file instructs the AI to parse the trigger variant **and** task id, then run `validate_rw_task_complete.py` and `validate_rw_task_intent.py` after branch safety (Step 1)
 2. **Parse Trigger Type:** Determines which workflow variant to execute based on the trigger
 3. **Select Execution Path:** Chooses appropriate step sequence based on trigger type
 4. **Intelligent Execution:** The AI follows the step-by-step guide for the selected path, analyzing each step before executing
@@ -478,6 +487,8 @@ This ensures the workflow adapts to your project's specific context and handles 
 ### Overview
 
 The **Intake Workflow** automates the process of converting Feature Requests (FRs), Bug Reports (BRs), and User Experience Research (UXR) documents into structured Kanban tasks. It integrates with the Release Workflow's trigger-aware system to automatically execute when FR/BR/UXR commits are detected.
+
+**Governance alignment:** Intake MUST satisfy **KG-R2** (every FR/BR/UXR resolves to ≥1 task **in the same session**) and **KG-R6** (task under semantically appropriate story; FR/BR/UXR id ↔ task number symmetry optional). See `packages/frameworks/kanban/policies/kanban-governance-policy.md`.
 
 ### Key Features
 
@@ -704,9 +715,9 @@ After implementation, verify:
 - [ ] Version file exists and is accessible
 - [ ] Changelog directory exists
 - [ ] Validation scripts are executable
-- [ ] RW trigger responds to "RW" or "rw" in AI assistant (17 steps)
-- [ ] RW trigger responds to "RW -k" or "rw -k" in AI assistant (7 steps)
-- [ ] RW trigger responds to "RW -d" or "rw -d" in AI assistant (13 steps)
+- [ ] Full RW runs when the message includes `RW`/`rw` **and** a parseable `E…S…T…` token (e.g. `RW E7S01T10`, `RW E7:S01:T10`)—**FR-060**
+- [ ] `RW -k` / `rw -k` with task id behaves as configured (short path)
+- [ ] `RW -d` / `rw -d` with task id behaves as configured (doc-only path)
 - [ ] All steps execute in correct order for each trigger type
 - [ ] Version file updates correctly
 - [ ] Changelogs created with full timestamps
@@ -751,8 +762,9 @@ docs/
 ### RW Trigger Not Responding
 
 1. **Check `.cursorrules`:** Ensure the RW trigger section is properly added
-2. **Check File Paths:** Verify all file path references in `.cursorrules` are correct
-3. **Check Documentation:** Ensure referenced documentation files exist at specified paths
+2. **FR-060:** Bare `RW` without a task id aborts before version bump—use e.g. `RW E5S01T67` in one message
+3. **Check File Paths:** Verify all file path references in `.cursorrules` are correct
+4. **Check Documentation:** Ensure referenced documentation files exist at specified paths
 
 ### Validation Failures
 

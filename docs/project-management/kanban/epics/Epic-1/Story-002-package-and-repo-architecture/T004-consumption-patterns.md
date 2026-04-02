@@ -90,8 +90,8 @@ Do you need all three?
 5. **Test the Workflow:**
    - Create a version file: `src/yourproject/version.py`
    - Create an epic branch: `git checkout -b epic/1-first-epic`
-   - Type "RW" in your AI assistant
-   - Verify all 11 steps execute correctly
+   - Send e.g. `RW E1S01T01` or `RW E1:S01:T01` in your AI assistant (**FR-060**)
+   - Verify the workflow steps execute per your configuration
 
 **What You Get:**
 - ✅ Automated 11-step Release Workflow
@@ -447,7 +447,7 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 **Example Complete Flow:**
 1. **Create Task in Kanban:** `E1:S01:T01 – Implement feature`
 2. **Work on Task:** Make code changes
-3. **Run RW:** Type "RW" in AI assistant
+3. **Run RW:** e.g. `RW E1S01T01` or `RW E1:S01:T01` in AI assistant (**FR-060**)
 4. **RW Executes:**
    - Bumps version: `0.1.1.1+1` → `0.1.1.1+2`
    - Generates changelog
@@ -572,7 +572,7 @@ VERSION_STRING = f"{VERSION_MAJOR}.{VERSION_MINOR}.{VERSION_PATCH}"
 
 ### 5.2 Custom Branch Naming
 
-**Scenario:** You use `feature/epic-{n}` instead of `epic/{n}`.
+**Scenario:** You use `feature/epic-\{n\}` instead of `epic/\{n\}`.
 
 **Steps:**
 1. Copy Workflow Management package

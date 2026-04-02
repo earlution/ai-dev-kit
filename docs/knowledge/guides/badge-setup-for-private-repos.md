@@ -3,6 +3,8 @@
 **Last Updated:** 2025-12-18  
 **Status:** Active
 
+> **ai-dev-kit monorepo (2026-03-30):** This repository uses **static** `img.shields.io/badge/...` badges in the root README only; there is **no** `update-badges.yml` or orphan `shields` branch here. See [FR-064](../../project-management/kanban/fr-br/FR-064-shields-branch-private-repo-badges.md). The rest of this guide remains useful for **adopters** who want BYOB with a **dedicated public badge repo** and explicit `repository` / `actor` in the workflow.
+
 ## Problem
 
 Private GitHub repositories cannot use standard Shields.io badges because the badge service cannot access private repo data. Badges that rely on GitHub API access (like version badges, build status, etc.) will not render.
@@ -105,7 +107,7 @@ We use [BYOB](https://github.com/RubbaBoy/BYOB) to create dynamic badges that wo
    - Updates automatically when coverage is calculated
    - Extracts coverage percentage from pytest-cov output
    - Status: Coverage percentage (e.g., "85%") or "not configured"
-   - Color: Success (≥80%), Important (≥60%), Critical (<60%), Grey (not configured)
+   - Color: Success (≥80%), Important (≥60%), Critical (&lt;60%), Grey (not configured)
    - Icon: Shield
 
 6. **Code Quality Badge**

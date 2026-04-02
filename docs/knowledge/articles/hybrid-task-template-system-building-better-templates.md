@@ -189,7 +189,7 @@ The generator script (`generate_task_templates.py`) includes:
 - Extracts Epic/Story/Task hierarchy
 - Generates task template files matching `TASK_TEMPLATE.md` structure
 - Populates sections (Scope, Input, Deliverable, Acceptance Criteria, Approach, Dependencies)
-- Preserves contextualization placeholders (`{PROJECT_NAME}`, `{PROJECT_TYPE}`, etc.)
+- Preserves contextualization placeholders (`\{PROJECT_NAME\}`, `\{PROJECT_TYPE\}`, etc.)
 
 **Safety Features:**
 - Default behavior skips existing files (requires `--overwrite` to regenerate)

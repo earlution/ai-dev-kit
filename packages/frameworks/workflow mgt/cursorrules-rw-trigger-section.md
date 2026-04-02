@@ -12,9 +12,9 @@ housekeeping_policy: keep
 
 **Location in `.cursorrules`:** Add this section in the "Version Control and Release Process" section (or equivalent).
 
-**Last Updated:** 2025-12-18  
+**Last Updated:** 2026-03-30  
 **Source Project:** Originally fynd.deals (Epic 15, Story 1), now maintained in ai-dev-kit as canonical SoT  
-**Version:** 2.3.1 (BR-010 fix: doc-init detection bug resolved)
+**Version:** 2.4.0 (E5:S01:T66: FR-060 todo chain parity with root `.cursorrules`; see [docs/rw-trigger-dual-source-parity.md](docs/rw-trigger-dual-source-parity.md))
 
 ---
 
@@ -37,14 +37,19 @@ housekeeping_policy: keep
    - **CRITICAL:** If Step 1 fails (non-zero exit code), **DO NOT PROCEED** to Step 2
    - **CRITICAL:** If Step 1 fails, mark all steps as `cancelled` and stop workflow immediately
    - **CRITICAL:** Do not skip, bypass, or ignore Step 1 validation
-5b. **🚨 MANDATORY: Step 1b — RW Task Intent Guard (BR-056)** — **After Step 1 passes**, **before any file modifications**
-   - If the user message includes a task identifier (`RW E7S5T1`, `RW E7:S06:T01`, `RW -k E6S6T56`, etc.), run:  
-     `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
-     For **`RW -k`**, add **`--mode rw-k`**.
-   - **Non-zero exit:** **RW ABORTED** (same severity as Step 1). No version/changelog/kanban edits. User must confirm intent or re-run with `--confirmed-override` after explicit confirmation.
-   - **No task token:** run the script **without** `--requested` (exits 0).
+5b. **🚨 MANDATORY: Step 1b — RW task token required (FR-060 / E5:S01:T63)** — **After Step 1 passes**, **before any file modifications**
+   - Parse the **same user message** as the RW trigger for `E…S…T…` (`RW E7S5T1`, `RW E7:S06:T01`, `RW -d E7S01T10`, `RW -k E6S6T03`, etc.).
+   - **If no parseable token:** **RW ABORTED**. Do not run `validate_rw_task_intent.py` without `--requested` as a substitute. User must re-send with explicit task id (e.g. `RW E7:S01:T10`).
+5c. **🚨 MANDATORY: Step 1c — RW task document releasable (FR-060)** — **After Step 1b passes**, **before any file modifications**
+   - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested "<parsed_id>"`  
+   - For **`RW -k`**, add **`--mode rw-k`** (task doc must exist; skips full COMPLETE check per mode).
+   - **Non-zero exit:** **RW ABORTED** (same severity as Step 1).
+5d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056 / E6:S06:T56)** — **After Step 1c passes**, **before any file modifications**
+   - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
+   - For **`RW -k`**, add **`--mode rw-k`**: comparison against `version.py` is skipped so explicit init target does not false-block.
+   - **Non-zero exit:** **RW ABORTED**. User may re-run with `--confirmed-override` on this script after explicit confirmation.
    - **Overrides** generic “never stop” until intent is resolved (documented exception).
-6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Step 1 and Step 1b pass)
+6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Steps 1, 1b, 1c, and 1d pass)
 7. **Document** each step's analysis, actions, and results
 8. **MUST USE Cursor TODOs:** Create and maintain a TODO list tracking the steps for the selected path
 
@@ -110,19 +115,23 @@ kanban_root = config.get('kanban_root', 'docs/project-management/kanban') if con
 ```python
 todo_write(merge=False, todos=[
     {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
-    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: RW Task Intent Guard (BR-056) - validate_rw_task_intent.py; --mode rw-k for RW -k; stop if fails'},
+    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: Parse mandatory RW task token (FR-060 / E5:S01:T63) from user message; if absent, RW ABORTED'},
+    {'id': 'rw-step-1c', 'status': 'pending', 'content': 'Step 1c: validate_rw_task_complete.py --requested "<parsed_id>" (add --mode rw-k only for RW -k trigger); stop if fails'},
+    {'id': 'rw-step-1d', 'status': 'pending', 'content': 'Step 1d: validate_rw_task_intent.py --requested "<parsed_id>" (add --mode rw-k only for RW -k trigger); stop if fails'},
     {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Read Story file, identify completed task number, compare to current VERSION_TASK, determine if new task or same task, update version file, validate'},
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG with full timestamp'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
     {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
-    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
-    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
-    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Fix history, FR intake decisions, linked items'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) - Task/Story/Epic/board for release E/S/T; UKW invocation_context rw_step_7 (FR-038)'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - git add -A'},
+    {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - branch, changelog, version bump, RW task complete, etc.'},
     {'id': 'rw-step-9.5', 'status': 'pending', 'content': 'Step 9.5: Changelog Management Workflow (CMW) - Trigger CMW if changelog size exceeds threshold (optional, non-blocking)'},
+    {'id': 'rw-step-9.6', 'status': 'pending', 'content': 'Step 9.6: Check IDE-Flagged Problems - errors, warnings, infos in modified files (recommended, non-blocking)'},
     {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
-    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Create annotated tag'},
+    {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Create Git Tag - Internal + SemVer annotated tags'},
     {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Push to Remote - Push branch and tags (with network permissions)'},
+    {'id': 'rw-step-12.5', 'status': 'pending', 'content': 'Step 12.5: Create/Update GitHub Release (SemVer tag)'},
     {'id': 'rw-step-13', 'status': 'pending', 'content': 'Step 13: Post-Commit Verification, Housekeeping & Reflection - Verify release, perform housekeeping tasks, and reflect on process'},
     {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found during verification'},
     {'id': 'rw-step-15', 'status': 'pending', 'content': 'Step 15: Check for PIR Trigger - Determine if Post-Implementation Review is needed'},
@@ -135,11 +144,13 @@ todo_write(merge=False, todos=[
 ```python
 todo_write(merge=False, todos=[
     {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
-    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: validate_rw_task_intent.py --mode rw-k when task id present'},
+    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: Parse mandatory RW task token (FR-060) from user message; if absent, RW ABORTED'},
+    {'id': 'rw-step-1c', 'status': 'pending', 'content': 'Step 1c: validate_rw_task_complete.py --requested "<parsed_id>" --mode rw-k; stop if fails'},
+    {'id': 'rw-step-1d', 'status': 'pending', 'content': 'Step 1d: validate_rw_task_intent.py --requested "<parsed_id>" --mode rw-k; stop if fails'},
     {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for Kanban documentation setup'},
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for Kanban init'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for Kanban init'},
-    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Kanban Documentation Update - Update changelog, version number, and Kanban docs only'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) / Kanban init - Update changelog, version number, and Kanban docs only'},
     {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Commit Changes - Create git commit for Kanban documentation setup'},
     {'id': 'rw-step-12', 'status': 'pending', 'content': 'Step 12: Create Git Tag - Create tag for Kanban documentation setup'},
 ])
@@ -149,15 +160,18 @@ todo_write(merge=False, todos=[
 ```python
 todo_write(merge=False, todos=[
     {'id': 'rw-step-1', 'status': 'pending', 'content': 'Step 1: Branch Safety Check - MANDATORY: Run validate_branch_context.py --strict, stop if fails'},
-    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: RW Task Intent Guard - validate_rw_task_intent.py'},
+    {'id': 'rw-step-1b', 'status': 'pending', 'content': 'Step 1b: Parse mandatory RW task token (FR-060) from user message; if absent, RW ABORTED'},
+    {'id': 'rw-step-1c', 'status': 'pending', 'content': 'Step 1c: validate_rw_task_complete.py --requested "<parsed_id>" (full mode for RW -d); stop if fails'},
+    {'id': 'rw-step-1d', 'status': 'pending', 'content': 'Step 1d: validate_rw_task_intent.py --requested "<parsed_id>" (full mode for RW -d); stop if fails'},
     {'id': 'rw-step-2', 'status': 'pending', 'content': 'Step 2: Bump Version - Update version file for documentation release'},
     {'id': 'rw-step-3', 'status': 'pending', 'content': 'Step 3: Create Detailed Changelog - Generate CHANGELOG for documentation updates'},
     {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry for documentation release'},
     {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
-    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Auto-update Kanban Docs - Update Epic/Story docs with version markers'},
-    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Stage Files - Stage all modified files'},
-    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
+    {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs (if applicable)'},
+    {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) - Kanban docs for this release'},
+    {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
     {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Run Validators - Execute branch context and changelog format validators'},
+    {'id': 'rw-step-9.6', 'status': 'pending', 'content': 'Step 9.6: Check IDE-Flagged Problems (recommended, non-blocking)'},
     {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Commit Changes - Create git commit with versioned message'},
     {'id': 'rw-step-11', 'status': 'pending', 'content': 'Step 11: Post-Commit Verification & Reflection - Verify documentation release'},
     {'id': 'rw-step-14', 'status': 'pending', 'content': 'Step 14: Act on Verification Results - Address any issues found (optional, agent-determined)'},
@@ -368,7 +382,7 @@ For each step, follow this pattern:
        - Add verification status: `**Verification Status:** {Verified/Attempted Fix (pending verification)}`
    - **If no BR/FR linked:** Skip this step (no BR/FR to update)
    - **See:** `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md` Step 6 for complete procedure
-7. **Auto-update Kanban Docs** - Update epic documentation and story documentation with version markers. **Use config:** If `rw-config.yaml` exists and `use_kanban: true`, read `kanban_root`, `epic_doc_pattern`, and `story_doc_pattern` from config. Otherwise, use `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md` and `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` as fallback. **CRITICAL: Check Story file existence, create from template if missing, then update:**
+7. **Scoped Kanban Sync (UKW Mode)** (FR-038) — A **scoped UKW-style** agentic kanban update for the **current release E/S/T**, not a full standalone UKW run. Treat UKW **`invocation_context` = `rw_step_7`**: update Task/Story/Epic docs and related board lines; **conservative MoSCOW** (new or newly significant items only); do **not** reshuffle the whole board. See [`update-kanban-workflow-agent-execution.md`](KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7). **Use config:** If `rw-config.yaml` exists and `use_kanban: true`, read `kanban_root`, `epic_doc_pattern`, and `story_doc_pattern` from config. Otherwise, use `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md` and `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` as fallback. **CRITICAL: Check Story file existence, create from template if missing, then update:**
    - **MANDATORY: Check Story file existence:**
      - Read Epic file Story Checklist to verify Story is referenced
      - Check if Story file exists at expected path

@@ -66,7 +66,7 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
 - ⚠️ Version file location uses legacy path (`src/fynd_deals/version.py`)
 - ✅ Dev-kit correctly avoids legacy complexity (clean Epic 1+ start)
 
-**Deliverable:** See [`T001-gap-analysis-report.md`](T001-gap-analysis-report.md) for complete gap analysis.
+**Deliverable:** See [`T001-gap-analysis-report.md`](Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md) for complete gap analysis.
 
 ---
 
@@ -98,7 +98,7 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
 - ✅ Forensic traceability: Multi-dimensional grid
 - ✅ Immutability rules: Historical metadata preservation
 
-**Deliverable:** See [`T002-fynd-deals-epic15-findings.md`](T002-fynd-deals-epic15-findings.md) for complete findings document.
+**Deliverable:** See [`T002-fynd-deals-epic15-findings.md`](Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md) for complete findings document.
 
 ---
 
@@ -239,8 +239,8 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
    - Hardcoded paths: `src/fynd_deals/version.py`, `knowledge/fynd_deals/Kanban/`
    - Hardcoded examples: `0.15.1.4+2`, `epic/15`, `epic/10-fastapi-migration`
 3. ✅ Replaced with abstract templates:
-   - File paths: `src/{project}/version.py`, `{kanban_path}/epics/Epic-{epic}.md`
-   - Generic examples: `0.{epic}.{story}.{task}+{build}`, `epic/{n}`
+   - File paths: `src/\{project\}/version.py`, `\{kanban_path\}/epics/Epic-\{epic\}.md`
+   - Generic examples: `0.\{epic\}.\{story\}.\{task\}+\{build\}`, `epic/\{n\}`
    - Schema calculation examples showing pattern (Epic N → `0.N.S.T+1`)
 4. ✅ Added version calculation examples section
 5. ✅ Added reference documentation section pointing to canonical policies
@@ -257,9 +257,9 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
 - ✅ `packages/frameworks/workflow mgt/README.md` - Updated with abstracted examples
 
 **Key Changes:**
-- ✅ File paths use template placeholders (`{project}`, `{kanban_path}`, `{scripts_path}`)
-- ✅ Version examples use generic schema calculation (`0.{epic}.{story}.{task}+{build}`)
-- ✅ Branch examples use generic patterns (`epic/{n}`, `epic/{n}-{description}`)
+- ✅ File paths use template placeholders (`\{project\}`, `\{kanban_path\}`, `{scripts_path}`)
+- ✅ Version examples use generic schema calculation (`0.\{epic\}.\{story\}.\{task\}+\{build\}`)
+- ✅ Branch examples use generic patterns (`epic/\{n\}`, `epic/\{n\}-\{description\}`)
 - ✅ Added version calculation examples showing pattern (Epic N → `0.N.S.T+1`)
 - ✅ References canonical policy documents (`docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`)
 - ✅ Added customization instructions for projects copying the template
@@ -297,8 +297,8 @@ Make sure the dev kit's versioning implementation demonstrates best practices an
 - `packages/frameworks/numbering & versioning/versioning-policy.md`
 - `packages/frameworks/numbering & versioning/versioning-strategy.md`
 - `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
-- **T001 Gap Analysis:** [`T001-gap-analysis-report.md`](T001-gap-analysis-report.md)
-- **T002 Findings:** [`T002-fynd-deals-epic15-findings.md`](T002-fynd-deals-epic15-findings.md)
+- **T001 Gap Analysis:** [`T001-gap-analysis-report.md`](Story-001-dev-kit-alignment-with-versioning-framework/T001-gap-analysis-report.md)
+- **T002 Findings:** [`T002-fynd-deals-epic15-findings.md`](Story-001-dev-kit-alignment-with-versioning-framework/T002-fynd-deals-epic15-findings.md)
 - Source: `fynd.deals/docs/fynd_deals/_design/versioning/versioning-*.md` (findings already ingested into framework package)
 
 ---

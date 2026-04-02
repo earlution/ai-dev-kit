@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E5:S01:T31`
 
@@ -48,7 +48,7 @@ Investigate the feasibility of incorporating multi-agent coordination patterns (
 
 ## Input
 
-- **Source Material:** [`cursor-scaling-long-running-autonomous-coding-agents.md`](../../../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post by Wilson Lin (Jan 14, 2026)
+- **Source Material:** [`cursor-scaling-long-running-autonomous-coding-agents.md`](../../../../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post by Wilson Lin (Jan 14, 2026)
 - **Source URL:** [cursor.com/blog/scaling-agents](https://cursor.com/blog/scaling-agents)
 - **FR-031:** [`FR-031-multi-agent-coordination-feasibility-investigation.md`](../../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 - **Workflow Framework:** `packages/frameworks/workflow mgt/` - Existing workflow infrastructure
@@ -165,7 +165,7 @@ Investigate the feasibility of incorporating multi-agent coordination patterns (
 - [FR-031: Multi-Agent Coordination Feasibility Investigation](../../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
 
 **Related Articles:**
-- [Scaling long-running autonomous coding](../../../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post
+- [Scaling long-running autonomous coding](../../../../../knowledge/articles/cursor-scaling-long-running-autonomous-coding-agents.md) - Cursor blog post
 
 **Related Workflows:**
 - Release Workflow (RW) - Potential integration point

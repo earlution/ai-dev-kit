@@ -16,7 +16,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-The Kanban Task naming policy has been updated to always use the full `Exx:Sxx:Txx` format with 2-digit task numbers (instead of 3-digit). Tasks are NEVER referenced as standalone `Txxx` or `Txx` - they must always include the Epic and Story context: `E{epic}:S{story}:T{task}`.
+The Kanban Task naming policy has been updated to always use the full `Exx:Sxx:Txx` format with 2-digit task numbers (instead of 3-digit). Tasks are NEVER referenced as standalone `Txxx` or `Txx` - they must always include the Epic and Story context: `E\{epic\}:S\{story\}:T\{task\}`.
 
 ---
 

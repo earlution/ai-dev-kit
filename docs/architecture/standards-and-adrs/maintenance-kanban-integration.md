@@ -129,7 +129,7 @@ Board Updates:
   - Minor inefficiencies
   - Informational IDE warnings
   - Low-priority improvements
-- **Minimal Priority (<1.0):** **Won't Have (W)**
+- **Minimal Priority (&lt;1.0):** **Won't Have (W)**
   - Best practice suggestions
   - Minor refactoring opportunities
   - Optional improvements

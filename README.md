@@ -2,16 +2,16 @@
 
 <div align="center">
 
-<!-- Badges: Version is shown in text below, other badges use static Shields.io -->
+<!-- Badges: Static Shields.io only (private repo–safe). Version line updated by RW. No `shields` branch or BYOB in this repo — see FR-064 / E5:S01:T69. -->
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-**Version (SemVer):** `v0.4.626+39` | **Internal:** `v0.6.7.101+39` (see detailed changelog) | **Last Updated:** 2026-03-31
+**Version (SemVer):** `v0.4.697+1` | **Internal:** `v0.5.1.75+1` (see detailed changelog) | **Last Updated:** 2026-04-01
 
-[Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
+[Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • **Browsing docs (published site):** [https://earlution.github.io/ai-dev-kit/](https://earlution.github.io/ai-dev-kit/) • [Workflows](#workflows) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
 </div>
 
@@ -71,7 +71,7 @@ python3 scripts/install_kanban_framework.py --mode fresh
 - [Architecture Documentation](docs/architecture)
 - [Framework Development Guides](packages/frameworks)
 - [Workflow Documentation](packages/frameworks/workflow mgt/docs)
-- **Complete Workflow Library** - 12 comprehensive workflows with documentation
+- **Workflow library** — [11 registered workflows](#workflows) in [`workflow-registry.yaml`](packages/frameworks/workflow%20mgt/workflows/workflow-registry.yaml) (see [Workflow Management README](packages/frameworks/workflow%20mgt/README.md) for tables and methodology)
 - **Maintainers:** [Build and upload runbooks](docs/maintenance/README.md) (package build/publish)
 
 ### 🔍 I'm looking for a specific framework
@@ -79,7 +79,7 @@ python3 scripts/install_kanban_framework.py --mode fresh
 **→ Jump to:** [Frameworks](#frameworks)
 
 **Available Frameworks:**
-- **Workflow Management** (`v2.1.3`) - 12 comprehensive workflows with full documentation
+- **Workflow Management** (`v2.1.3`) — [11 workflows](#workflows) in the package registry + agent execution guides
 - **Kanban** (`v2.1.0`) - Project management and task tracking
 - **Numbering & Versioning** (`v2.0.0`) - Version schema and policies
 - **Document Lifecycle** (`v1.0.0`) - Documentation management
@@ -92,6 +92,7 @@ Each framework includes installation guides, usage examples, and comprehensive d
 ## 📋 Table of Contents
 
 - [Quick Start / Bootstrap](#-quick-start--bootstrap)
+- [Workflows](#workflows)
 - [About The Project](#about-the-project)
   - [Features](#features)
   - [Built With](#built-with)
@@ -105,6 +106,52 @@ Each framework includes installation guides, usage examples, and comprehensive d
 - [License](#license)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
+
+---
+
+## Workflows
+
+**Canonical registry:** Eleven workflows are defined in [`packages/frameworks/workflow mgt/workflows/workflow-registry.yaml`](packages/frameworks/workflow%20mgt/workflows/workflow-registry.yaml). Some are invoked primarily through **Cursor agent rules** (see [`.cursorrules`](.cursorrules)); others are run via scripts or followed from package YAML/READMEs.
+
+### Primary Cursor triggers (this repo)
+
+These are the main **user-typed** triggers documented in `.cursorrules`:
+
+| Trigger | Workflow | What it does | Invocation |
+|--------|-----------|--------------|------------|
+| **RW** | Release Workflow | Version bump, changelogs, kanban markers, commit, tag, push | **`RW E5:S01:T64`** (examples: `RW E7S01T10`, `RW E7:S01:T10`). The **task id must appear in the same message** as `RW`, `RW -d`, or `RW -k`. See [FR-060](docs/project-management/kanban/fr-br/FR-060-rw-task-argument-requirement.md) and [Release Workflow agent execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md). |
+| **UKW** | Update Kanban Workflow | Bookkeeping, priorities, board sync | `UKW` (full run), or `UKW -u`, `UKW -p`, `UKW -a <target>`. See [UKW agent execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md). |
+| **PVW** | Package Version Workflow | Package-level version analysis/bumps | `PVW` (often RW Step 2.5). See [PVW agent execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/package-version-workflow-agent-execution.md). |
+| **ICW** | Implementation Cycle Workflow | Spec → tests → implementation planning | `ICW` — **planning mode** only; task identifier required per project rules. See [Implementation Cycle SOP](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md). |
+
+**CMW** (Changelog Management Workflow) usually runs as **RW Step 9.5** when changelog size exceeds policy, or via the maintainer skill under [`.cursor/skills/cmw-maintain/`](.cursor/skills/cmw-maintain/SKILL.md). Package entry: [changelog-management-workflow README](packages/frameworks/workflow%20mgt/workflows/changelog-management-workflow/README.md).
+
+### Packaged workflows (registry summary)
+
+| Workflow | Abbrev. | Reference triggers (YAML) | Package README |
+|----------|---------|----------------------------|----------------|
+| Release Workflow | RW | `RW`, `RW -k`, `RW -d` | [release-workflow](packages/frameworks/workflow%20mgt/workflows/release-workflow/README.md) |
+| Changelog Management Workflow | CMW | `CMW` | [changelog-management-workflow](packages/frameworks/workflow%20mgt/workflows/changelog-management-workflow/README.md) |
+| Update Kanban Workflow | UKW | `UKW` | [update-kanban-workflow](packages/frameworks/workflow%20mgt/workflows/update-kanban-workflow/README.md) |
+| Post-Implementation Review | PIR | `PIR` | [post-implementation-review](packages/frameworks/workflow%20mgt/workflows/post-implementation-review/README.md) |
+| Intake Workflow | INTAKE | `INTAKE` | [intake-workflow](packages/frameworks/workflow%20mgt/workflows/intake-workflow/README.md) |
+| Migration Workflow | MIGRATION | `MIGRATION` | [migration-workflow](packages/frameworks/workflow%20mgt/workflows/migration-workflow/README.md) |
+| Refactor Workflow | REFACTOR | `REFACTOR` | [refactor-workflow](packages/frameworks/workflow%20mgt/workflows/refactor-workflow/README.md) |
+| Testing Workflow | TESTING | `TESTING` | [testing-workflow](packages/frameworks/workflow%20mgt/workflows/testing-workflow/README.md) |
+| Package Version Workflow | PKG-VERSION / PVW | `PKG-VERSION` (Cursor: **PVW**) | [package-version-workflow](packages/frameworks/workflow%20mgt/workflows/package-version-workflow/README.md) |
+| Framework Health Monitoring | FHM | `FHM` | [framework-health-monitoring-workflow](packages/frameworks/workflow%20mgt/workflows/framework-health-monitoring-workflow/README.md) |
+| Implementation Cycle Workflow | ICW | `ICW` | [implementation-cycle-workflow](packages/frameworks/workflow%20mgt/workflows/implementation-cycle-workflow/README.md) |
+
+### Agent execution guides (deep dives)
+
+- [Agent-driven workflow execution](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/agent-driven-workflow-execution.md)
+- [Release Workflow](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) · [Reference](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md)
+- [Update Kanban Workflow](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md)
+- [Intake Workflow](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/intake-workflow-agent-execution.md)
+- [Migration](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/migration-workflow-agent-execution.md) · [Refactor](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/refactor-workflow-agent-execution.md) · [Testing](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/testing-workflow-agent-execution.md)
+- [PIR](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-agent-execution.md)
+
+For the full framework overview and validation tooling, see **[Workflow Management README](packages/frameworks/workflow%20mgt/README.md)**.
 
 ---
 
@@ -130,4 +177,80 @@ The toolkit is designed to be:
 - **Auto-updating:** Framework dependencies can receive automatic updates
 - **Agent-friendly:** Designed for AI-assisted development workflows
 
-... (rest of README unchanged)
+### Features
+
+- **Workflow management** — Release, Kanban sync, intake, testing, migration, and more ([Workflows](#workflows))
+- **Kanban** — Epics, stories, tasks, FR/BR/UXR intake patterns ([Kanban framework](packages/frameworks/kanban/README.md))
+- **Numbering and versioning** — `RC.EPIC.STORY.TASK+BUILD` and policies ([versioning framework](packages/frameworks/numbering%20%26%20versioning/README.md))
+- **Document lifecycle** — Metadata and housekeeping conventions ([doc lifecycle](packages/frameworks/doc-lifecycle/README.md))
+- **Debug path** — Structured debugging helpers ([debug path](packages/frameworks/debug-path/README.md))
+
+### Built With
+
+- Python 3.8+
+- Markdown-first documentation
+- GitHub (issues, Actions where enabled)
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- **Python** 3.8 or newer
+- **Git**
+
+### Installation
+
+Follow **[INSTALL_IN_YOUR_PROJECT.md](INSTALL_IN_YOUR_PROJECT.md)** and the [Quick Start](#-quick-start--bootstrap) section for submodule copy, installers, and framework layout.
+
+---
+
+## Usage
+
+- Day-to-day **agent workflows:** [Workflows](#workflows) and [`.cursorrules`](.cursorrules)
+- **Per-framework** usage: README files under [`packages/frameworks/`](packages/frameworks)
+- **CLI** (where applicable): [`cli/README.md`](cli/README.md)
+
+---
+
+## Frameworks
+
+| Area | Location |
+|------|-----------|
+| Packages index | [`packages/README.md`](packages/README.md) |
+| Workflow Management | [`packages/frameworks/workflow mgt/README.md`](packages/frameworks/workflow%20mgt/README.md) |
+| Kanban | [`packages/frameworks/kanban/README.md`](packages/frameworks/kanban/README.md) |
+| Numbering & Versioning | [`packages/frameworks/numbering & versioning/README.md`](packages/frameworks/numbering%20%26%20versioning/README.md) |
+| Document Lifecycle | [`packages/frameworks/doc-lifecycle/README.md`](packages/frameworks/doc-lifecycle/README.md) |
+| Debug Path | [`packages/frameworks/debug-path/README.md`](packages/frameworks/debug-path/README.md) |
+
+---
+
+## Roadmap
+
+Work is tracked in **[Kanban](docs/project-management/kanban/kanban-board.md)** and **[GitHub Issues](https://github.com/earlution/ai-dev-kit/issues)**.
+
+---
+
+## Contributing
+
+See **[CONTRIBUTING.md](CONTRIBUTING.md)** for bug reports, feature requests, and code contributions.
+
+---
+
+## License
+
+This project is distributed under the **MIT License** (see badge above). SPDX: `MIT`.
+
+---
+
+## Contact
+
+- **Issues:** [github.com/earlution/ai-dev-kit/issues](https://github.com/earlution/ai-dev-kit/issues)
+
+---
+
+## Acknowledgments
+
+Thanks to contributors and to the authors of tools and standards this kit builds on.

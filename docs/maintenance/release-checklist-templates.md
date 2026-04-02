@@ -19,7 +19,7 @@
   ```bash
   git branch --show-current
   ```
-  Expected: `epic/{n}` format
+  Expected: `epic/\{n\}` format
 
 - [ ] **Run branch safety validator**
   ```bash

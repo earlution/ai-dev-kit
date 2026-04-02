@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Structure
 
-**Last Updated:** 2026-03-09 (T01: FR/BR/UXR Prioritization Board Implementation)
-**Version:** v0.6.7.107+1
+**Last Updated:** 2026-03-31 (pointer: intake execution plan on board — open ∧ taskless, `RW -k`)
+**Version:** v0.7.6.6+1
 
 > **For MoSCOW prioritized FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For completed FR/BR/UXRs, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Overview
 
-This document provides **complete listings of all FRs, BRs, and UXRs** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FR/BR/UXR board.
+This document provides **complete listings of all FRs, BRs, and UXRs** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FR/BR/UXR board. For the **operational intake plan** (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes), see **Intake plan** on [`fr-br-uxr-board.md`](fr-br-uxr-board.md).
 
 **Document Purpose:**
 
@@ -53,12 +53,12 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 ### Low Priority (Could Have - C)
 
 - **FR-043** – UKW Gap Discovery TODO Tasks and Unfiled FR/BR - TODO (LOW, Discover gaps in UKW and unfiled items) - [FR-043](fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
-- **FR-042** – Implementation Planning Workflow (IPW) - TODO (LOW, Workflow for implementation planning) - [FR-042](fr-br/FR-042-implementation-planning-workflow-ipw.md)
+- **FR-042** – Implementation Planning Workflow (IPW) — ICW consolidation - TODO (HIGH, **E5:S01:T42**) - [FR-042](fr-br/FR-042-implementation-planning-workflow-ipw.md)
 - **FR-041** – Perpetual Task for Release Workflow Maintenance - TODO (LOW, Ongoing maintenance for Release Workflow) - [FR-041](fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
 - **FR-040** – RW Update Kanban Board on Task Completion - TODO (LOW, Automatic Kanban board updates in Release Workflow) - [FR-040](fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)
 - **FR-044** – RW Temporary Execution Log for Recovery and Forensics - TODO (LOW, Temporary execution logs for Release Workflow) - [FR-044](fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)
 - **FR-039** – AI Dev Kit Project Review and Legacy Clean-up - TODO (LOW, Review and clean up legacy project elements) - [FR-039](fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
-- **FR-038** – RW Step 7 Scoped Kanban Sync UKW Mode - TODO (LOW, Scoped Kanban sync in Release Workflow Step 7) - [FR-038](fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
+- **FR-038** – RW Step 7 Scoped Kanban Sync UKW Mode - IMPLEMENTED (v0.5.1.38+1, documentation alignment) - [FR-038](fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 - **FR-037** – Kanban Policy Task Prioritisation Queue Stack - TODO (LOW, Queue stack for task prioritization) - [FR-037](fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
 - **FR-029** – Procedural Task Template Generation Hybrid Strategy - TODO (LOW, Hybrid strategy for task template generation) - [FR-029](fr-br/FR-029-procedural-task-template-generation-hybrid-strategy.md)
 - **FR-028** – Cursor IDE Performance Considerations Awareness - TODO (LOW, Performance awareness for Cursor IDE) - [FR-028](fr-br/FR-028-cursor-ide-performance-considerations-awareness.md)

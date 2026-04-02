@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Portable Package:** This directory contains all policy documents relating to numbering and versioning strategies. These documents can be adapted for use in other projects.
 
 **Source:** Originally developed for the Confidentia project, refined and enhanced in fynd.deals (Epic 15, Story 1).  
-**Last Updated:** 2025-12-06  
+**Last Updated:** 2026-03-30  
 **Version:** 2.0.0 (includes Epic renumbering strategy, epic branch workflow)
 
 **📦 Dependency Architecture (Epic 6):** This framework is transitioning from copy-paste to **dependency-based installation** with automatic updates. See [Framework Dependency Architecture](../../../docs/architecture/standards-and-adrs/framework-dependency-architecture.md) for details on installing as a Git submodule, via CLI tool, or package manager.
@@ -46,6 +46,7 @@ This package is designed to be **fully modular** with maximum independence. It c
 - RW uses versioning schema from this package
 - Integration: RW reads version file and follows versioning policy
 - Optional: RW can work with custom versioning policies
+- **Consumer layout:** Validator and script paths in examples below use **ai-dev-kit** monorepo layout (`packages/frameworks/workflow mgt/...`). In your repo, paths come from **`rw-config.yaml`** (`scripts_path`, etc.) after you copy or install workflow mgt elsewhere — see [RW validators and consumer layout](../workflow%20mgt/docs/rw-validators-consumer-layout.md).
 
 **With Kanban Package:**
 - Kanban uses version markers from this package

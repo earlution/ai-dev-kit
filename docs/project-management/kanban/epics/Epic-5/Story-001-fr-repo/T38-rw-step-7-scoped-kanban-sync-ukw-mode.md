@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 38: RW Step 7 – Scoped Kanban Sync (UKW Mode)
 
 **Task ID:** E5:S01:T38  
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-19  
-**Last updated:** 2026-02-19 (v0.5.1.37+4 – FR created: RW Step 7 Scoped Kanban Sync (UKW Mode))  
-**Version:** _TBD (first functional implementation build)_  
+**Last updated:** 2026-03-25 (v0.5.1.38+1 – FR-038 documentation alignment: RW Step 7 Scoped UKW, invocation_context, governance)  
+**Version:** v0.5.1.38+1  
 **Code:** E5S01T38
 
 **Repository Pattern:** FR-038 = E5:S01:T38 (abstract space will be v0.5.1.38+0)
@@ -62,9 +62,9 @@ Repository anchor task for **FR-038: RW Step 7 – Scoped Kanban Sync (UKW Mode)
 
 ## Acceptance Criteria
 
-- [ ] Task document exists and is linked from the FR Repo story checklist.
-- [ ] FR-038 is created and assigned to E5:S01:T38.
-- [ ] The desired behaviour for RW Step 7 and its relationship to UKW is described clearly enough to support a separate implementation task.
+- [x] Task document exists and is linked from the FR Repo story checklist.
+- [x] FR-038 is created and assigned to E5:S01:T38.
+- [x] The desired behaviour for RW Step 7 and its relationship to UKW is described clearly enough to support a separate implementation task; **documentation AC** satisfied in v0.5.1.38+1 (orchestrator/YAML changes remain optional follow-up).
 
 ---
 
@@ -72,7 +72,7 @@ Repository anchor task for **FR-038: RW Step 7 – Scoped Kanban Sync (UKW Mode)
 
 **Forensic Marker:**  
 - Creation and wiring of this repository task and FR occur under **v0.5.1.37+4** (policy alignment and versioning doc updates).  
-- A dedicated **abstract space build** (v0.5.1.38+0) can be created later when an implementation epic/story/task is spun up to change RW/UKW behaviour.
+- **FR-038 documentation delivery:** **v0.5.1.38+1** (E5:S01:T38).
 
 ---
 
@@ -87,6 +87,6 @@ Repository anchor task for **FR-038: RW Step 7 – Scoped Kanban Sync (UKW Mode)
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-038:** [`docs/project-management/kanban/fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md`](../../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 

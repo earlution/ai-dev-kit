@@ -27,7 +27,7 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T04 – Create package management implementation plan** - TODO
 - [ ] **E6:S06:T05 – Implement feedback mechanism** - TODO
 - [x] **E6:S06:T06 – Cross-project meta-analysis and canonical framework design** ✅ COMPLETE (v0.6.6.6+20 – All deliverables verified complete: 7 meta-analyses, executive summary, all 4 canonical framework designs)
-  - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](T06-cross-project-meta-analysis-and-canonical-framework-design.md)
+  - Task: [`T06-cross-project-meta-analysis-and-canonical-framework-design.md`](Story-006-adk-implementation-analysis-and-package-management/T06-cross-project-meta-analysis-and-canonical-framework-design.md)
 
 ---
 
@@ -220,7 +220,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
    - Synthesize ADK learning per project
 
 **Deliverables:**
-- **Per-Project Reports:** `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` - Comprehensive analysis for each project
+- **Per-Project Reports:** `docs/Analysis/projects/\{PROJECT_NAME\}-adk-analysis.md` - Comprehensive analysis for each project
 - **Synthesis Reports:**
   - `docs/Analysis/adk-implementation-analysis-report.md` - Overall analysis report
   - `docs/Analysis/adk-implementation-patterns.md` - Pattern catalog (good and bad) across all projects
@@ -248,7 +248,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 - [ ] Hardening recommendations provided (pending meta-analysis T06)
 
 **Files to Create:**
-- `docs/Analysis/projects/{PROJECT_NAME}-adk-analysis.md` (one per project with ADK implementation)
+- `docs/Analysis/projects/\{PROJECT_NAME\}-adk-analysis.md` (one per project with ADK implementation)
 - `docs/Analysis/adk-implementation-analysis-report.md`
 - `docs/Analysis/adk-implementation-patterns.md`
 - `docs/Analysis/adk-drift-analysis.md`

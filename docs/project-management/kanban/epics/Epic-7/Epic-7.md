@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-03-25 (UKW: board/story sync pass; last epic release ref v0.7.6.17+1)
-**Branch:** `epic/7-codebase-maintenance`  
+**Last updated:** 2026-03-31 (**RW -k** **v0.7.0.4+0** **E7:S00:T04** **UXR-004**; prior **T03** **v0.7.0.3+0**)
+**Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
 
@@ -22,16 +22,16 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - v0.7.0.0+0 – Repository story created)
+- [x] **E7:S00 – UXR Repo (PERPETUAL)** - IN PROGRESS (PERPETUAL - **v0.7.0.4+0** **RW -k** **T04** **UXR-004**; **T03** v0.7.0.3+0; **T02** v0.7.0.2+2; **T01** v0.7.0.1+2; **T05** UXR-005)
   - Story: [`Story-000-uxr-repo.md`](Story-000-uxr-repo.md)
   - **Note:** S00 omitted from board displays (UX optimization)
 
-- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.5+6 – Story reopened: filed T06 Update Changelog Workflow to implement UCW tooling and documentation)
+- [ ] **E7:S01 – Codebase Maintenance Tasks** - IN PROGRESS (v0.7.1.9+3 — UXR-005 **Implementing Task** on **T09**; UCW **T06** still open; latest epic release **v0.7.0.2+2** is S00)
 - [x] **E7:S02 – Code Review Standards and Processes** - ✅ COMPLETE (v0.7.2.4+1 – All tasks complete)
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
 - [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete)
-- [ ] **E7:S06 – Post-Windsurf Project Review** - IN PROGRESS (v0.7.6.17+1 – T01–T02 + T10–T17 complete; T03–T09 open)
+- [x] **E7:S06 – Post-Windsurf Project Review** - ✅ COMPLETE (v0.7.6.9+1 – T01–T09 + T10–T17 complete)
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
@@ -233,10 +233,10 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ### Story 6: Post-Windsurf Project Review
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-20 (v0.7.6.17+1 – E7:S06:T17 complete)
+**Last updated:** 2026-03-20 (v0.7.6.9+1 – Story 6 T01–T17 + T10–T17 review tasks complete)
 
 **Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
 
@@ -252,13 +252,13 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - [x] **E7:S06:T16** – Review PIR workflow (Windsurf impact) ✅ COMPLETE (v0.7.6.16+3)
 - [x] **E7:S06:T17** – Retrospective BR-057 / fr-br-intake.yml YAML fix ✅ COMPLETE (v0.7.6.17+1)
 - [x] **E7:S06:T02** – Version and changelog alignment ✅ COMPLETE (v0.7.6.2+2)
-- [ ] **E7:S06:T03** – Kanban documentation consistency (E9↔E18 renumbering fallout)
-- [ ] **E7:S06:T04** – Recent commit review
-- [ ] **E7:S06:T05** – Workflow script integrity
-- [ ] **E7:S06:T06** – FR/BR/UXR intake documentation quality
-- [ ] **E7:S06:T07** – General documentation and cross-reference integrity
-- [ ] **E7:S06:T08** – Dependency and tooling audit
-- [ ] **E7:S06:T09** – Config and git state validation
+- [x] **E7:S06:T03** – Kanban documentation consistency ✅ COMPLETE (v0.7.6.3+1 – live SoT; E9/E18 template narrative disambiguation)
+- [x] **E7:S06:T04** – Recent commit review ✅ COMPLETE (v0.7.6.4+1)
+- [x] **E7:S06:T05** – Workflow script integrity ✅ COMPLETE (v0.7.6.5+1)
+- [x] **E7:S06:T06** – FR/BR/UXR intake documentation quality ✅ COMPLETE (v0.7.6.6+1)
+- [x] **E7:S06:T07** – General documentation and cross-reference integrity ✅ COMPLETE (v0.7.6.7+1)
+- [x] **E7:S06:T08** – Dependency and tooling audit ✅ COMPLETE (v0.7.6.8+1)
+- [x] **E7:S06:T09** – Config and git state validation ✅ COMPLETE (v0.7.6.9+1)
 
 **Acceptance Criteria:**
 

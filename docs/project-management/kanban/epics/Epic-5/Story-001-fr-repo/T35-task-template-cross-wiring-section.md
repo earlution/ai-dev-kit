@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E5:S01:T35`
 
@@ -53,7 +53,7 @@ Enhance the Task Template (`TASK_TEMPLATE.md`) to include an explicit "Cross-Wir
 ## Input
 
 - **FR-035:** [`FR-035-task-template-cross-wiring-section.md`](../../../fr-br/FR-035-task-template-cross-wiring-section.md)
-- **SoP:** [`task-template-cross-wiring-sop.md`](../../../../architecture/standards-and-adrs/task-template-cross-wiring-sop.md) - Standard Operating Procedure for cross-wiring tasks
+- **SoP:** [`task-template-cross-wiring-sop.md`](../../../../../architecture/standards-and-adrs/task-template-cross-wiring-sop.md) - Standard Operating Procedure for cross-wiring tasks
 - **Task Template:** `packages/frameworks/kanban/templates/TASK_TEMPLATE.md`
 - **Bidirectional Wiring Principle:** `docs/project-management/kanban/fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md`
 - **Epic 4:** Kanban Framework
@@ -147,12 +147,12 @@ Enhance the Task Template (`TASK_TEMPLATE.md`) to include an explicit "Cross-Wir
 - [E9:S01:T08: Repository Story Abstract Space Contradiction](../../Epic-9/Story-001-rc-readiness-gap-analysis/T08-repository-story-abstract-space-contradiction.md) - *Informs: Task template cross-wiring will help with task relationship documentation*
 
 **Related Stories:**
-- [E5:S01: FR Repo](../../Story-001-fr-repo.md) - *Part Of: This task is part of the FR repository*
+- [E5:S01: FR Repo](../Story-001-fr-repo.md) - *Part Of: This task is part of the FR repository*
 
 **Related Documentation:**
-- [Task Template Cross-Wiring SoP](../../../../architecture/standards-and-adrs/task-template-cross-wiring-sop.md) - *Provides Context: SoP defines the procedure for cross-wiring*
+- [Task Template Cross-Wiring SoP](../../../../../architecture/standards-and-adrs/task-template-cross-wiring-sop.md) - *Provides Context: SoP defines the procedure for cross-wiring*
 - [Bidirectional Wiring Principle](../../../fr-br/BIDIRECTIONAL_WIRING_PRINCIPLE.md) - *Provides Context: Core principle for bidirectional linking*
-- [Task Template](../../../../../packages/frameworks/kanban/templates/TASK_TEMPLATE.md) - *Detailed Specification: The template to be enhanced*
+- [Task Template (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/templates/TASK_TEMPLATE.md) - *Detailed Specification: The template to be enhanced*
 
 ---
 
@@ -190,5 +190,5 @@ Enhance the Task Template (`TASK_TEMPLATE.md`) to include an explicit "Cross-Wir
 
 ---
 
-_This Task is part of Epic 5: Documentation Management and Maintenance, Story 0: FR Repo (PERPETUAL). See [`Story-001-fr-repo.md`](Story-001-fr-repo.md) for story-level context._
+_This Task is part of Epic 5: Documentation Management and Maintenance, Story 0: FR Repo (PERPETUAL). See [`Story-001-fr-repo.md`](../Story-001-fr-repo.md) for story-level context._
 

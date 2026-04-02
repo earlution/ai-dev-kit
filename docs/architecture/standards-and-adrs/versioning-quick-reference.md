@@ -58,7 +58,7 @@ Starting new work?
 
 ### Scenario 2: New Story
 **If:** Starting a new story within current epic  
-**Then:** `0.{EPIC}.{NEW_STORY}.1+1`
+**Then:** `0.\{EPIC\}.{NEW_STORY}.1+1`
 
 **Example:**
 - Current: `0.3.1.6+1`
@@ -68,7 +68,7 @@ Starting new work?
 
 ### Scenario 3: New Task
 **If:** Starting a new task within current story  
-**Then:** `0.{EPIC}.{STORY}.{NEW_TASK}+1`
+**Then:** `0.\{EPIC\}.\{STORY\}.{NEW_TASK}+1`
 
 **Example:**
 - Current: `0.3.2.4+1`
@@ -78,7 +78,7 @@ Starting new work?
 
 ### Scenario 4: Same Task (Bugfix/Hotfix)
 **If:** Releasing another build of the same task  
-**Then:** `0.{EPIC}.{STORY}.{TASK}+{BUILD+1}`
+**Then:** `0.\{EPIC\}.\{STORY\}.\{TASK\}+{BUILD+1}`
 
 **Example:**
 - Current: `0.3.2.4+1`

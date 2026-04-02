@@ -14,6 +14,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** ACCEPTED  
 
+**Implementing Task:** [E5:S01:T21](../epics/Epic-5/Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md)
+
 ---
 
 ## Summary

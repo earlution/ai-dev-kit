@@ -72,7 +72,7 @@ This story operationalizes the FR/BR → Task → Story → Epic rule defined in
 **Files Created:**
 - ✅ `docs/project-management/kanban/Story-002-fr-br-intake-to-tasks/T001-intake-analysis-report.md` (comprehensive analysis)
 
-**Deliverable:** See [`T001-intake-analysis-report.md`](T001-intake-analysis-report.md) for complete analysis, requirements, use cases, and recommendations.
+**Deliverable:** See [`T001-intake-analysis-report.md`](Story-002-fr-br-intake-to-tasks/T001-intake-analysis-report.md) for complete analysis, requirements, use cases, and recommendations.
 
 ---
 
@@ -106,7 +106,7 @@ This story operationalizes the FR/BR → Task → Story → Epic rule defined in
 **Files Created:**
 - ✅ `docs/project-management/kanban/Story-002-fr-br-intake-to-tasks/T002-decision-flow-design.md` (comprehensive design)
 
-**Deliverable:** See [`T002-decision-flow-design.md`](T002-decision-flow-design.md) for complete decision flow, criteria, edge cases, and examples.
+**Deliverable:** See [`T002-decision-flow-design.md`](Story-002-fr-br-intake-to-tasks/T002-decision-flow-design.md) for complete decision flow, criteria, edge cases, and examples.
 
 ---
 
@@ -369,7 +369,7 @@ External contributors, automated evaluation methods, UX researchers, and project
 - `.github/ISSUE_TEMPLATE/feature_request.yml` (GitHub Issue Form)
 - `.github/ISSUE_TEMPLATE/ux_research.yml` (GitHub Issue Form)
 - `.github/ISSUE_TEMPLATE/feedback.yml` (GitHub Issue Form for UAT Reports)
-- `.github/workflows/fr-br-intake.yml` (GitHub Action for conversion)
+- `.github/workflows/fr-br-intake.yml.DISABLED` (reference YAML; intake GH Action disabled — BR-053 / E2:S11:T12)
 - `packages/frameworks/kanban/templates/UXR_TEMPLATE.md` (UXR template)
 - `packages/frameworks/kanban/templates/FB_TEMPLATE.md` (UAT Report template)
 - `packages/frameworks/kanban/FR_BR_UXR_FB_GITHUB_SUBMISSION_GUIDE.md` (documentation)

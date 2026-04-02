@@ -132,8 +132,8 @@ changelog_dir: docs/changelog-and-release-notes/changelog-archive
 ```
 
 ### Expected Release Tag Format
-- **Primary Tag:** v{MAJOR.MINOR.PATCH+BUILD} (task-touch SemVer)
-- **Internal Tag:** v{RC.EPIC.STORY.TASK+BUILD} (if enabled)
+- **Primary Tag:** v&lbrace;MAJOR.MINOR.PATCH+BUILD&rbrace; (task-touch SemVer)
+- **Internal Tag:** v&lbrace;RC.EPIC.STORY.TASK+BUILD&rbrace; (if enabled)
 - **Example:** v0.5.39+1 (Primary) / v0.5.1.48+1 (Internal)
 
 ---
@@ -204,7 +204,7 @@ changelog_dir: docs/changelog-and-release-notes/changelog-archive
 ## Expected Deliverables
 
 ### Primary Deliverables (Ready for Execution)
-1. **Release Tag:** v{current_version}+1 (task-touch SemVer)
+1. **Release Tag:** v&lbrace;current_version&rbrace;+1 (task-touch SemVer)
 2. **Changelog:** Comprehensive changelog with all 5 task completions
 3. **Updated Documentation:** README, BR/FR docs, kanban docs
 4. **Git Commit:** Single commit with all release changes

@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """
-UKW Enhanced - Update Kanban Workflow with 3 Operational Modes
+UKW-related helpers: task/story/epic ID parsing (used by validators and UKW -a targeting)
+plus legacy deterministic \"mode\" stubs (moscow / task_analysis / deep_analysis).
+
+Agentic UKW flags in .cursorrules (-u, -p, -a) differ from the historical mode names below;
+see .cursorrules \"UPDATE KANBAN WORKFLOW (UKW)\" for the supported command surface.
+
+Historical doc (legacy modes):
 
 Parses flexible task targeting syntax for UKW priority assignment operations.
 Supports 3 operational modes:

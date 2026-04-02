@@ -15,14 +15,14 @@ housekeeping_policy: keep
 **Completed:** 2025-12-21  
 **Version:** v0.6.7.13+2
 
-**Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)  
+**Feature Request:** [FR-026](../../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)  
 **Code:** E6S07T13
 
 ---
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E6:S07:T13`
 
@@ -48,7 +48,7 @@ Include the CMW perpetual task (T102, migrated from T12) in the canonical framew
 
 ## Input
 
-- **Feature Request:** [`FR-026-canonical-perpetual-task-for-changelog-maintenance.md`](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
+- **Feature Request:** [`FR-026-canonical-perpetual-task-for-changelog-maintenance.md`](../../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
   - Problem statement and proposed solution
   - Acceptance criteria
   - Implementation considerations
@@ -194,7 +194,7 @@ Include the CMW perpetual task (T102, migrated from T12) in the canonical framew
 - E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task (this task references it, migrated from T12)
 
 **Related Feature Requests:**
-- [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Canonical Perpetual Task for Changelog Maintenance
+- [FR-026](../../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Canonical Perpetual Task for Changelog Maintenance
 
 **Related Stories:**
 - E6:S07 - ADK Implementation Analysis and Package Management (parent story, migrated from S06)

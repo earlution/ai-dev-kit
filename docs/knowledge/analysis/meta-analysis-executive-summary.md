@@ -42,8 +42,8 @@ This document synthesizes findings from **comprehensive analysis of 10 projects*
 ### 1.1 Epic Structure
 
 **Naming:**
-- **Canonical:** `Epic-{N}` (hyphen, e.g., `Epic-1`, `Epic-9`)
-- **Legacy Support:** `Epic {N}` (space), `E{N}` (abbreviated)
+- **Canonical:** `Epic-\{N\}` (hyphen, e.g., `Epic-1`, `Epic-9`)
+- **Legacy Support:** `Epic \{N\}` (space), `E\{N\}` (abbreviated)
 - **Rationale:** 40% convergence on hyphen format, but support legacy formats for migration
 
 **Numbering:**
@@ -52,8 +52,8 @@ This document synthesizes findings from **comprehensive analysis of 10 projects*
 - **CRITICAL:** Fix Epic 9 mismatch in ai-dev-kit source (rename "Book Related Work" to Epic 24+)
 
 **Directory Structure:**
-- **Canonical:** `docs/project-management/kanban/epics/Epic-{N}/`
-- **File:** `Epic-{N}.md` (epic overview document)
+- **Canonical:** `docs/project-management/kanban/epics/Epic-\{N\}/`
+- **File:** `Epic-\{N\}.md` (epic overview document)
 
 **Prevention:**
 - Installer validation to prevent Epic mashup
@@ -63,43 +63,43 @@ This document synthesizes findings from **comprehensive analysis of 10 projects*
 ### 1.2 Story Structure
 
 **Naming:**
-- **Canonical:** `Story-{NNN}-{description}` (3-digit padding, e.g., `Story-001-project-setup.md`)
-- **Legacy Support:** `Story {N}` (space), `S{N}` (abbreviated)
+- **Canonical:** `Story-{NNN}-\{description\}` (3-digit padding, e.g., `Story-001-project-setup.md`)
+- **Legacy Support:** `Story \{N\}` (space), `S\{N\}` (abbreviated)
 - **Rationale:** 30% convergence on canonical format, but support legacy for migration
 
 **Directory Structure:**
-- **Canonical:** `docs/project-management/kanban/epics/Epic-{N}/Story-{NNN}-{description}/`
-- **File:** `Story-{NNN}-{description}.md` (story document)
+- **Canonical:** `docs/project-management/kanban/epics/Epic-\{N\}/Story-{NNN}-\{description\}/`
+- **File:** `Story-{NNN}-\{description\}.md` (story document)
 
 **Checklist:**
-- **Required:** Story checklist in Epic document (`Epic-{N}.md`)
-- **Format:** Markdown checklist with version markers: `- [x] **E{N}:S{NNN} – Description** - COMPLETE ✅ (v0.N.NNN.T+B)`
+- **Required:** Story checklist in Epic document (`Epic-\{N\}.md`)
+- **Format:** Markdown checklist with version markers: `- [x] **E\{N\}:S{NNN} – Description** - COMPLETE ✅ (v0.N.NNN.T+B)`
 
 ### 1.3 Task Structure
 
 **Naming:**
-- **Canonical:** `E{epic}:S{story}:T{task}` (full context, required, e.g., `E6:S06:T01`)
+- **Canonical:** `E\{epic\}:S\{story\}:T\{task\}` (full context, required, e.g., `E6:S06:T01`)
 - **Padding:** 2-digit (`T01`, `T02`) canonical, 3-digit (`T001`) legacy support
 - **Rationale:** 60% convergence on full-context format, strong convergence indicator
 
 **Organization:**
 - **Small Tasks:** Embedded in Story document (most common, 60% of projects)
-- **Large Tasks:** Separate files in `Story-{NNN}/T{task}-{description}.md`
+- **Large Tasks:** Separate files in `Story-{NNN}/T\{task\}-\{description\}.md`
 - **Always:** Task checklist in Story document
 
 **Structure:**
-- **Required Fields:** Task ID (`E{epic}:S{story}:T{task}`), Status, Input, Deliverable, Acceptance Criteria
+- **Required Fields:** Task ID (`E\{epic\}:S\{story\}:T\{task\}`), Status, Input, Deliverable, Acceptance Criteria
 - **Optional Fields:** Dependencies, Blocker, Approach, Files, Progress Notes, Version
 
 **File Naming (for separate files):**
-- **Canonical:** `T{task}-{description}.md` (e.g., `T01-project-setup.md`)
+- **Canonical:** `T\{task\}-\{description\}.md` (e.g., `T01-project-setup.md`)
 
 ### 1.4 Proposed Canonical E/S/T Template System
 
 **Epic Templates:**
 - 21 canonical epic templates (Epics 1-21)
 - Project-specific epics start at Epic 24+
-- Epic 1: `{PROJECT_NAME} Core` (generic placeholder, not "AI Dev Kit Core")
+- Epic 1: `\{PROJECT_NAME\} Core` (generic placeholder, not "AI Dev Kit Core")
 
 **Story Templates:**
 - 62+ story templates organized by epic
@@ -183,7 +183,7 @@ This document synthesizes findings from **comprehensive analysis of 10 projects*
 **Naming:**
 - **Canonical:** `{workflow-name}-workflow.yaml` (e.g., `release-workflow.yaml`)
 - **Location:** `packages/frameworks/workflow mgt/workflows/` (framework) or `workflows/` (project root)
-- **Legacy Support:** `{name}.yaml`, script-based workflows (`.py`/`.sh`)
+- **Legacy Support:** `\{name\}.yaml`, script-based workflows (`.py`/`.sh`)
 
 **Rationale:** 30% convergence on canonical format, but support legacy for migration
 
@@ -334,7 +334,7 @@ This document synthesizes findings from **comprehensive analysis of 10 projects*
 
 | Framework Dimension | Proposed Canonical Structure | Convergence Basis | Decision Required |
 |---------------------|------------------------------|-------------------|-------------------|
-| **Kanban E/S/T** | `Epic-{N}/Story-{NNN}/E{N}:S{NNN}:T{NN}` | 60% task naming, 100% hierarchy | ✅ **ADOPT** |
+| **Kanban E/S/T** | `Epic-\{N\}/Story-{NNN}/E\{N\}:S{NNN}:T\{NN\}` | 60% task naming, 100% hierarchy | ✅ **ADOPT** |
 | **docs/documentation** | 5-pillar `docs/` structure | 100% naming, 40% organization | ✅ **ADOPT** |
 | **Workflows** | 12-step RW, `rw-config.yaml` | 50% RW trigger, 30% config | ✅ **ADOPT** |
 | **Cursorrules** | Comprehensive 12-step RW trigger | 90% file naming, 20% comprehensive | ✅ **ADOPT** |
@@ -343,8 +343,8 @@ This document synthesizes findings from **comprehensive analysis of 10 projects*
 
 | Pattern | Canonical | Legacy Support | Rationale |
 |---------|-----------|----------------|-----------|
-| Epic naming | `Epic-{N}` | `Epic {N}`, `E{N}` | 22% use space, 30% use abbreviated |
-| Story naming | `Story-{NNN}` | `Story {N}`, `S{N}` | 20% use space, 30% use abbreviated |
+| Epic naming | `Epic-\{N\}` | `Epic \{N\}`, `E\{N\}` | 22% use space, 30% use abbreviated |
+| Story naming | `Story-{NNN}` | `Story \{N\}`, `S\{N\}` | 20% use space, 30% use abbreviated |
 | Task padding | 2-digit (`T01`) | 3-digit (`T001`) | 30% use 3-digit |
 | KB organization | 5-pillar | Multi-pillar, hybrid | 10% multi-pillar, 40% hybrid |
 | Workflow config | `rw-config.yaml` | Hardcoded paths | 50% don't use config |

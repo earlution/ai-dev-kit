@@ -151,7 +151,7 @@ Documentation Agent.update_kanban_completed({
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-049:** [`docs/project-management/kanban/fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md`](../../../fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)
 - **kanban-completed.md:** [`docs/project-management/kanban/kanban-completed.md`](../../../kanban-completed.md)
 - **AGENTS.md:** [`docs/project-management/kanban/AGENTS.md`](../../../AGENTS.md)

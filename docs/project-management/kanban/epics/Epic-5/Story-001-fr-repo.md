@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-31 (UKW — `kanban-board` MoSCOW vs checklist, **T47** narrative = COMPLETE, **FR-060/FR-061** ID hygiene noted)
+**Last updated:** 2026-04-01 (**RW E5:S01:T75** **`v0.5.1.75+1`** — **FR-075** ICW durable artifacts policy)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.47+3
+**Version:** v0.5.1.75+1
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -26,37 +26,39 @@ housekeeping_policy: keep
 ---
 
 ## Task Checklist
+
+> **Repository Pattern:** Each Feature Request becomes a task in this repository story.
+> **Traceability:** FR-001 = E5:S01:T01, FR-002 = E5:S01:T02, etc.
+> **Abstract Space:** v0.5.1.0+0 (repository story), v0.5.1.1+0 (first FR), v0.5.1.2+0 (second FR), etc.
+
+- [ ] **E5:S01:T21 – FR/BR/UXR Repository Stories (S01 pattern)** - TODO (MEDIUM — **v0.5.1.21+0** intake; reconcile **FR-021** with **E7:S00** via **T72**) - [Task Document](Story-001-fr-repo/T21-fr-br-uxr-repository-stories.md) | [FR-021](../../fr-br/FR-021-fr-br-uxr-repository-stories.md)
 - [ ] **E5:S01:T31 – Multi-Agent Coordination Feasibility Investigation** - TODO (C priority) - [Task Document](Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [FR-031](../../fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md)
-
+- [ ] **E5:S01:T32 – Release Candidate Readiness Gap Analysis** - TODO (MEDIUM — **v0.5.1.32+0** **`RW -k`**) - [Task Document](Story-001-fr-repo/T32-release-candidate-readiness-gap-analysis.md) | [FR-032](../../fr-br/FR-032-release-candidate-readiness-gap-analysis.md)
 - [x] **E5:S01:T34 – UKW Granular Control and Use Case Flags** - ✅ COMPLETE (v0.5.1.34+1 – Implementation complete: UKW granular control via flags and syntax parser) - [Task Document](Story-001-fr-repo/T34-ukw-granular-control-and-use-case-flags.md) | [FR-034](../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
-
 - [ ] **E5:S01:T35 – Task Template Cross-Wiring Section** - TODO (MEDIUM priority) - [Task Document](Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | [FR-035](../../fr-br/FR-035-task-template-cross-wiring-section.md)
-
 - [x] **E5:S01:T36 – RW Update Kanban Board on Task Completion** - ✅ COMPLETE (v0.5.1.36+1 – Implementation complete: Kanban board updates added to RW Step 7) - [Task Document](Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md) | [FR-040](../../fr-br/FR-040-rw-update-kanban-board-on-task-completion.md)
-
 - [x] **E5:S01:T37 – Kanban Policy Task Prioritisation and Queue/Stack** ✅ COMPLETE (v0.5.1.37+3 – Policy alignment: implementation cycle, changelog/IDE/git reminders) - [Task Document](Story-001-fr-repo/T37-kanban-policy-task-prioritisation-queue-stack.md) | [FR-037](../../fr-br/FR-037-kanban-policy-task-prioritisation-queue-stack.md)
-
-- [ ] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
-
+- [x] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - ✅ COMPLETE (v0.5.1.38+1 – FR-038 documentation: scoped UKW Step 7, invocation_context, governance; FR-061 → T64 collision fix) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 - [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
-
-- [x] **E5:S01:T40 – Implementation Cycle Workflow (ICW)** - ✅ COMPLETE (per [task doc](Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) — core workflow delivered 2026-03-10; **FR-040** product status may lag until explicit verification) - [Task Document](Story-001-fr-repo/T40-implementation-cycle-workflow-icw.md) | [FR-040 (ICW)](../../fr-br/FR-040-implementation-cycle-workflow-icw.md)
-
 - [ ] **E5:S01:T43 – UKW Gap Discovery (TODO Tasks and Unfiled FR/BR)** - TODO (HIGH priority, v0.5.1.43+1 – Task created) - [Task Document](Story-001-fr-repo/T43-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) | [FR-043](../../fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
-
 - [ ] **E5:S01:T44 – RW Temporary Execution Log for Recovery and Forensics** - TODO (MEDIUM priority, v0.5.1.44+1 – Task created) - [Task Document](Story-001-fr-repo/T44-rw-temporary-execution-log-for-recovery-and-forensics.md) | [FR-044](../../fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)
-
 - [ ] **E5:S01:T45 – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer)** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | [FR-045](../../fr-br/FR-045-adr-002-task-touch-derived-mapping.md)
-
 - [ ] **E5:S01:T46 – Release Workflow Uses SemVer Tag When `task_touch` Enabled** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | [FR-046](../../fr-br/FR-046-rw-semver-tag-task-touch-mode.md)
-
-- [x] **E5:S01:T47 – Install Logging for Framework Dependencies** - ✅ COMPLETE (v0.5.1.47+3 – CLI logging, install-history, tests, docs) - [Task Document](Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../../fr-br/FR-047-install-logging-for-framework-dependencies.md)
-
+- [x] **E5:S01:T47 – Install Logging for Framework Dependencies** - IN PROGRESS (HIGH priority, v0.5.1.47+3 – tests, docs, consumer-vs-framework clarity) - [Task Document](Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | [FR-047](../../fr-br/FR-047-install-logging-for-framework-dependencies.md)
 - [x] **E5:S01:T48 – ICW Task Identifier Argument** - ✅ COMPLETE (v0.5.1.48+1 – Implementation complete: ICW requires task identifier argument with clear E/S/T numbering when called in planning mode) - [Task Document](Story-001-fr-repo/T48-icw-task-identifier-argument.md) | [FR-048](../../fr-br/FR-048-icw-task-identifier-argument.md)
-
 - [ ] **E5:S01:T49 – Enhanced kanban-completed.md with Timestamps and Recent Tasks Tracking** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T49-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md) | [FR-049](../../fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md)
-
 - [ ] **E5:S01:T62 – GitHub Release Installation Experience** - TODO (HIGH priority) - [Task Document](Story-001-fr-repo/T62-github-release-installation-experience.md) | [FR-062](../../fr-br/FR-062-github-release-installation-experience.md)
+- [x] **E5:S01:T63 – RW Task Argument Requirement** - ✅ COMPLETE (v0.5.1.63+1 – FR-060: strict mandatory task token, validate_rw_task_complete.py, .cursorrules + docs) - [Task Document](Story-001-fr-repo/T63-rw-task-argument-requirement.md) | [FR-060](../../fr-br/FR-060-rw-task-argument-requirement.md)
+- [x] **E5:S01:T64 – Add Workflow Section to Project README** - ✅ COMPLETE (v0.5.1.64+1 – FR-061: README Workflows section, 11 registry workflows, Cursor triggers, vwmp links; README body restored) - [Task Document](Story-001-fr-repo/T64-readme-workflow-section.md) | [FR-061](../../fr-br/FR-061-readme-workflow-section.md)
+- [x] **E5:S01:T65 – Align Workflow Mgt README With Registry Workflow Count** - ✅ COMPLETE (v0.5.1.65+2 — workflow mgt README **11** + `workflow-registry.yaml` SoT; removes phantom Documentation Workflow) - [Task Document](Story-001-fr-repo/T65-align-workflow-mgt-readme-with-workflow-registry-count.md)
+- [x] **E5:S01:T66 – Cursorrules vs Packaged RW Trigger Section Parity** - ✅ COMPLETE (v0.5.1.66+2 — parity doc, excerpt 1b/1c/1d todos + FR citations, root `.cursorrules` link; +1 was RW-k) - [Task Document](Story-001-fr-repo/T66-cursorrules-vs-packaged-rw-trigger-parity.md)
+- [x] **E5:S01:T67 – Adopter Install Docs — RW Task Token (FR-060)** - ✅ COMPLETE (v0.5.1.67+2 — INSTALL + installation/usage/FAQ/troubleshooting; workflow mgt README; PACKAGE_INSTALLATION_GUIDE; +1 was RW-k) - [Task Document](Story-001-fr-repo/T67-adopter-install-docs-rw-task-token.md)
+- [x] **E5:S01:T68 – Packaged Frameworks — Consumer Paths and Versioning Hygiene** - ✅ COMPLETE (v0.5.1.68+2 — `rw-validators-consumer-layout.md`; workflow mgt + packages README; numbering + kanban README; +1 was RW-k) - [Task Document](Story-001-fr-repo/T68-packaged-frameworks-consumer-paths-and-versioning.md)
+- [x] **E5:S01:T69 – Retire `shields` branch (private repo badges, FR-064)** - ✅ COMPLETE (v0.5.1.69+1 — removed `update-badges.yml` BYOB; README static badges; deleted `origin/shields`) - [Task Document](Story-001-fr-repo/T69-shields-branch-private-repo-fr-064.md) | [FR-064](../../fr-br/FR-064-shields-branch-private-repo-badges.md)
+- [ ] **E5:S01:T72 – Uniform Repository vs Abstract-Space Kanban Rules** - TODO (HIGH priority — **v0.5.1.72+0** intake; governance: evaluate approaches, decide **S00**/repository model, reconcile **FR-021** vs **E7:S00** UXR) - [Task Document](Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md) | [FR-072](../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md)
+- [x] **E5:S01:T73 – FR/BR/UXR Board: Open ∧ Taskless Intake Execution Plan** ✅ COMPLETE (v0.5.1.74+2 narrative closure) — **FR-073**; Phase B/C filed (**T43**, **T109**, **E7:S00** anchors, board MoSCOW) - [Task Document](Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [FR-073](../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
+- [x] **E5:S01:T74 – Kanban Intake: Atomic KG-R2 & Semantic KG-R6** ✅ COMPLETE (v0.5.1.74+1 … **+3** reconciliation) — **FR-074**; governance + guides + skill + workflow + board + **epic/6** canonical **T57**/**T109** alignment - [Task Document](Story-001-fr-repo/T74-kanban-intake-atomic-kg-r2-kg-r6-governance.md) | [FR-074](../../fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md)
+- [x] **E5:S01:T75 – ICW durable planning artifacts in the documentation system** - ✅ COMPLETE (**v0.5.1.75+1** — **RW E5:S01:T75**; **FR-075**) — policy + ICW docs + `.cursorrules` + `implementation-cycles` README - [Task Document](Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md) | [FR-075](../../fr-br/FR-075-icw-durable-planning-artifacts-documentation-system.md)
 
 ---
 

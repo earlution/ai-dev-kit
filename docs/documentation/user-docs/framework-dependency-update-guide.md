@@ -664,8 +664,7 @@ python3 scripts/validation/validate_changelog_format.py
 **4. Test RW:**
 
 ```bash
-# Test Release Workflow
-# Type "RW" in AI assistant
+# Test Release Workflow (FR-060: same message must include E…S…T…, e.g. RW E5S01T01)
 # Verify all steps complete successfully
 ```
 

@@ -49,7 +49,7 @@ Create a perpetual maintenance task (e.g., T103 in E6:S07, or in Epic 2) for RW 
 - **Task Type:** Perpetual Maintenance
 - **Status:** IN PROGRESS (never changes to COMPLETE)
 - **Build Warning Suppression:** Enabled
-- **Version Pattern:** `v0.{EPIC}.{STORY}.{TASK}+{N}` where N = RW maintenance release count
+- **Version Pattern:** `v0.\{EPIC\}.\{STORY\}.\{TASK\}+\{N\}` where N = RW maintenance release count
 - **Attribution:** RW maintenance releases (framework fixes, Step 7 improvements, validator updates, doc corrections) attribute here when not tied to a specific feature task
 
 ### 2. Include in Packaged Kanban Framework
@@ -94,6 +94,7 @@ Add this perpetual task to the packaged Kanban framework:
 - **FR-026** – Canonical Perpetual Task for Changelog Maintenance (similar pattern)
 - **Epic 2** – Workflow Management Framework (RW package owner)
 - **Epic 6** – Framework Management and Maintenance (UKW/CMW perpetual tasks)
+- **FR-067 [FU-2](./FR-067-docusaurus-production-build-corpus-triage.md)** – Docusaurus/corpus work is still released via **RW**; **GitHub Releases** for SemVer tags (**Step 12.5**, `create_github_release.py`) are traced to **E6:S07:T103** (this FR), not as a standalone portal task.
 
 ---
 

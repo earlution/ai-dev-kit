@@ -28,8 +28,6 @@ from canonical_steps import (
     get_step_modifications, get_step_name, get_step_description,
     list_triggers
 )
-from enum import Enum
-from pathlib import Path
 from workflow_executor import WorkflowExecutor, WorkflowDefinition, WorkflowResult, WorkflowStatus
 from deliverable_processor import DeliverableProcessor, Deliverable, DeliverableType
 

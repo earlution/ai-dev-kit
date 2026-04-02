@@ -90,7 +90,7 @@ EOF
 ```bash
 # Test RW
 git checkout -b epic/1-test
-# Type "RW" in Cursor - should execute workflow
+# e.g. RW E1S01T01 or RW E1:S01:T01 in Cursor (FR-060 — task id same message as RW)
 
 # Test Kanban installer worked
 ls docs/project-management/kanban/epics/
@@ -136,7 +136,7 @@ python scripts/install_release_workflow.py --mode a
 
 ```bash
 git checkout -b epic/1-test
-# Type "RW" in Cursor
+# e.g. RW E1S01T01 or RW E1:S01:T01 in Cursor
 ```
 
 ---
@@ -192,8 +192,8 @@ grep "Epic 1:" docs/project-management/kanban/epics/Epic-1/Epic-1.md
 - [Post-Template Setup Guide](framework-dependency-post-template-setup-guide.md) - Customization steps
 
 **Framework READMEs:**
-- [Workflow Management README](../../../packages/frameworks/workflow mgt/README.md) - RW quickstart and details
-- [Kanban README](../../../packages/frameworks/kanban/README.md) - Kanban quickstart and details
+- [Workflow Management README (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/README.md) - RW quickstart and details
+- [Kanban README (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/README.md) - Kanban quickstart and details
 
 **Quick References:**
 - RW Installer: `scripts/install_release_workflow.py --help`
@@ -211,7 +211,7 @@ grep "Epic 1:" docs/project-management/kanban/epics/Epic-1/Epic-1.md
 - [ ] Canonical epics installed (not ai-dev-kit's epics)
 - [ ] Epic 1 contextualized with project name
 - [ ] Version file created at correct path
-- [ ] RW tested on epic branch (type "RW" in Cursor)
+- [ ] RW tested on epic branch (e.g. `RW E1S01T01` / `RW E1:S01:T01` in Cursor — FR-060)
 - [ ] Kanban board views updated (if needed)
 - [ ] All changes committed to Git
 
@@ -221,6 +221,7 @@ grep "Epic 1:" docs/project-management/kanban/epics/Epic-1/Epic-1.md
 
 **RW doesn't work:**
 - Check `.cursorrules` has RW trigger section
+- **FR-060:** Use `RW <task_id>` in one message (e.g. `RW E5S01T01`); bare `RW` aborts by design
 - Verify `rw-config.yaml` paths are correct
 - Ensure you're on an epic branch (not main)
 - Restart Cursor to reload `.cursorrules`

@@ -92,7 +92,7 @@ git status
 git remote -v
 ```
 
-**Alternative: Use ai-dev-kit as a GitHub Template**
+### Alternative: Use ai-dev-kit as a GitHub template {#alternative-use-ai-dev-kit-as-a-github-template}
 
 Instead of creating a repository from scratch, you can use `ai-dev-kit` as a template:
 
@@ -174,6 +174,14 @@ Before installing, identify which use case matches your needs:
 - See [Use Cases Guide](framework-dependency-use-cases.md#use-case-4-existing-project--some-packages) for details
 
 **📖 For complete use case details and additional scenarios, see the [Use Cases Guide](framework-dependency-use-cases.md)**
+
+### Selective framework installation {#selective-framework-installation}
+
+Install only the packages you need (CLI, submodule copy, or template trim). See [Use Case 2: Template → Some Packages](framework-dependency-use-cases.md#use-case-2-template--some-packages) and [Use Case 4: Existing Project → Some Packages](framework-dependency-use-cases.md#use-case-4-existing-project--some-packages).
+
+### Monorepo setup {#monorepo-setup}
+
+Share one ai-dev-kit installation across multiple packages. See [Use Case 6: Monorepo/Multi-Project Setup](framework-dependency-use-cases.md#use-case-6-monorepomulti-project-setup).
 
 ---
 
@@ -550,7 +558,7 @@ pip install --upgrade ai-dev-kit-workflow-mgmt==2.1.0
 
 ### Enable RW Trigger in `.cursorrules` (Workflow Management Framework)
 
-**⚠️ IMPORTANT:** If you installed the Workflow Management framework, you need to add the RW trigger section to your `.cursorrules` file to enable the "RW" command in Cursor.
+**⚠️ IMPORTANT:** If you installed the Workflow Management framework, add the RW trigger section to your `.cursorrules` so Cursor can run the Release Workflow. **FR-060:** You must send **`RW` and a parseable Epic/Story/Task id in the same message** (e.g. `RW E5S01T01`, `RW E5:S01:T01`). A bare `RW` is not sufficient—the agent must **RW ABORTED** before any version bump.
 
 **Option A: Use the RW Installer (Recommended)**
 
@@ -581,7 +589,7 @@ If you prefer to set it up manually:
 
 2. **Copy the RW trigger section:**
    - Copy everything from `### 🚀 RELEASE WORKFLOW (RW) TRIGGER` to the end of the file
-   - This is the section that enables the "RW" command
+   - This is the section that enables the RW trigger (always with a task id per FR-060)
 
 3. **Add to your `.cursorrules` file:**
    ```bash
@@ -593,27 +601,27 @@ If you prefer to set it up manually:
    ```
 
 4. **Update file paths in the section:**
-   - Replace `{project}` with your project name
-   - Update version file path: `src/{project}/version.py` → `src/yourproject/version.py`
+   - Replace `\{project\}` with your project name
+   - Update version file path: `src/\{project\}/version.py` → `src/yourproject/version.py`
    - Update Kanban paths if using Kanban framework
    - Update validator script paths to match your framework location
 
 5. **Verify the trigger works:**
    - Restart Cursor to reload `.cursorrules`
-   - Type "RW" in Cursor chat
-   - The agent should recognize the trigger and execute the Release Workflow
+   - In chat, use the trigger **plus** a task id, e.g. `RW E5S01T01` or `RW E5:S01:T01` (substitute a completed task from your Kanban). Short paths: `RW -k E5S01T01`, `RW -d E5S01T01`
+   - Full procedure and guardrails: [Release Workflow (agent execution)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
+   - If **`rw-config.yaml`** sets **`use_kanban: true`**, validators (e.g. `validate_rw_task_complete.py`) expect a real task document matching the id you pass
 
 **What the RW Trigger Does:**
 
-When you type "RW" or "rw" in Cursor, the AI assistant will:
-- Execute the complete 14-step Release Workflow
-- Bump version, update changelogs, commit, tag, and push
-- Update Kanban documentation automatically
-- Validate everything before committing
+When you send **`RW` / `rw` with a mandatory task token** in the same message, the AI assistant will:
+- Execute the Release Workflow steps defined in your `.cursorrules` (version bump, changelogs, validators, commit/tag/push as applicable)
+- Update Kanban documentation when configured
+- Validate branch context and task alignment before mutating release files
 
-**Without `.cursorrules`:** The "RW" command won't work - you'll need to manually run the workflow steps.
+**Without `.cursorrules`:** The RW trigger is not active—run workflow steps manually or add the excerpt.
 
-**With `.cursorrules`:** The "RW" command triggers intelligent agent-driven execution of the complete workflow.
+**With `.cursorrules`:** The trigger runs agent-driven RW when the message includes a parseable `E…S…T…` id (**FR-060**).
 
 ---
 
@@ -642,7 +650,7 @@ python3 frameworks/kanban/scripts/install_kanban_framework.py --mode fresh
 ```
 
 **What You Get After Installation:**
-- ✅ Canonical epic templates installed in `docs/project-management/kanban/epics/Epic-{N}/`
+- ✅ Canonical epic templates installed in `docs/project-management/kanban/epics/Epic-\{N\}/`
 - ✅ Epic 1 contextualized with your project name (e.g., "MyProject Core", not "AI Dev Kit Core")
 - ✅ Only canonical core epics (1-8, 10, 18, 22, 23) installed
 - ✅ No ai-dev-kit project-specific epics
@@ -733,7 +741,7 @@ vim frameworks/workflow-mgmt/rw-config.yaml
 
 ### 4. Enable RW Trigger in `.cursorrules` (Workflow Management Framework Only)
 
-**⚠️ IMPORTANT:** If you installed the Workflow Management framework, you need to add the RW trigger section to your `.cursorrules` file to enable the "RW" command in Cursor.
+**⚠️ IMPORTANT:** If you installed the Workflow Management framework, add the RW trigger section to your `.cursorrules` so Cursor can run the Release Workflow. **FR-060:** You must send **`RW` and a parseable Epic/Story/Task id in the same message** (e.g. `RW E5S01T01`, `RW E5:S01:T01`). A bare `RW` is not sufficient—the agent must **RW ABORTED** before any version bump.
 
 **Option A: Use the RW Installer (Recommended)**
 
@@ -764,7 +772,7 @@ If you prefer to set it up manually:
 
 2. **Copy the RW trigger section:**
    - Copy everything from `### 🚀 RELEASE WORKFLOW (RW) TRIGGER` to the end of the file
-   - This is the section that enables the "RW" command
+   - This is the section that enables the RW trigger (always with a task id per FR-060)
 
 3. **Add to your `.cursorrules` file:**
    ```bash
@@ -776,27 +784,27 @@ If you prefer to set it up manually:
    ```
 
 4. **Update file paths in the section:**
-   - Replace `{project}` with your project name
-   - Update version file path: `src/{project}/version.py` → `src/yourproject/version.py`
+   - Replace `\{project\}` with your project name
+   - Update version file path: `src/\{project\}/version.py` → `src/yourproject/version.py`
    - Update Kanban paths if using Kanban framework
    - Update validator script paths to match your framework location
 
 5. **Verify the trigger works:**
    - Restart Cursor to reload `.cursorrules`
-   - Type "RW" in Cursor chat
-   - The agent should recognize the trigger and execute the Release Workflow
+   - In chat, use the trigger **plus** a task id, e.g. `RW E5S01T01` or `RW E5:S01:T01` (substitute a completed task from your Kanban). Short paths: `RW -k E5S01T01`, `RW -d E5S01T01`
+   - Full procedure and guardrails: [Release Workflow (agent execution)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) (Step 1 branch safety; Steps 1.3–1.5: task token, releasable task, intent guard)
+   - If **`rw-config.yaml`** sets **`use_kanban: true`**, validators (e.g. `validate_rw_task_complete.py`) expect a real task document matching the id you pass
 
 **What the RW Trigger Does:**
 
-When you type "RW" or "rw" in Cursor, the AI assistant will:
-- Execute the complete 14-step Release Workflow
-- Bump version, update changelogs, commit, tag, and push
-- Update Kanban documentation automatically
-- Validate everything before committing
+When you send **`RW` / `rw` with a mandatory task token** in the same message, the AI assistant will:
+- Execute the Release Workflow steps defined in your `.cursorrules` (version bump, changelogs, validators, commit/tag/push as applicable)
+- Update Kanban documentation when configured
+- Validate branch context and task alignment before mutating release files
 
-**Without `.cursorrules`:** The "RW" command won't work - you'll need to manually run the workflow steps.
+**Without `.cursorrules`:** The RW trigger is not active—run workflow steps manually or add the excerpt.
 
-**With `.cursorrules`:** The "RW" command triggers intelligent agent-driven execution of the complete workflow.
+**With `.cursorrules`:** The trigger runs agent-driven RW when the message includes a parseable `E…S…T…` id (**FR-060**).
 
 **Location of Template:**
 - `frameworks/workflow-mgmt/cursorrules-rw-trigger-section.md`
@@ -941,7 +949,7 @@ ai-dev-kit install workflow-mgmt@2.0.0
 
 ---
 
-## Uninstalling Frameworks
+## Uninstalling frameworks {#uninstalling-frameworks}
 
 If you need to remove a framework:
 
@@ -978,14 +986,15 @@ After installation:
 2. **Follow the implementation guide:** `frameworks/<framework-name>/IMPLEMENTATION_GUIDE.md`
 3. **Configure for your project:** Update paths, version schema, and settings
 4. **Set up `.cursorrules` for RW trigger (Workflow Management Framework only):**
-   - If you installed the Workflow Management framework, you need to add the RW trigger section to your `.cursorrules` file
+   - If you installed the Workflow Management framework, add the RW trigger section to your `.cursorrules` file
+   - **FR-060:** After setup, invoke RW with a task id in the **same** message (e.g. `RW E5S01T01`, `RW E5:S01:T01`); not `RW` alone
    - **Location:** `frameworks/workflow-mgmt/cursorrules-rw-trigger-section.md`
    - **Instructions:** Copy the section from that file into your project's `.cursorrules` file
    - **Alternative:** Use the RW installer script which can generate it automatically:
      ```bash
      python frameworks/workflow-mgmt/scripts/install_release_workflow.py
      ```
-   - **Note:** Without the `.cursorrules` section, the "RW" trigger won't work in Cursor
+   - **Note:** Without the `.cursorrules` section, the RW trigger is not active in Cursor
 5. **Test the framework:** Run validation scripts and test workflows
 6. **Set up update notifications:** Configure automatic update checking
 
@@ -995,8 +1004,8 @@ See the [Usage Guide](framework-dependency-usage-guide.md) for detailed usage in
 
 ## References
 
-- [Framework Dependency Architecture](../../Architecture/standards-and-adrs/framework-dependency-architecture.md)
-- [CLI Tool Design](../../Architecture/standards-and-adrs/framework-update-cli-design.md)
+- [Framework Dependency Architecture](../../architecture/standards-and-adrs/framework-dependency-architecture.md)
+- [CLI Tool Design](../../architecture/standards-and-adrs/framework-update-cli-design.md)
 - [Update Guide](framework-dependency-update-guide.md)
 - [Troubleshooting Guide](framework-dependency-troubleshooting-guide.md)
 

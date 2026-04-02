@@ -13,7 +13,9 @@ housekeeping_policy: keep
 **Submitted By:** AI Agent (Cursor) acting as user/client for dev-toolkit  
 **Priority:** HIGH  
 **Status:** ACCEPTED  
-**GitHub Issue:** [#6](https://github.com/earlution/ai-dev-kit/issues/6)
+**GitHub Issue:** [#6](https://github.com/earlution/ai-dev-kit/issues/6)  
+**Repository Task:** [E7:S00:T02](../epics/Epic-7/Story-000-uxr-repo/T02-uxr-002-repository-anchor.md)  
+**Implementation (synthesis):** [E7:S05:T02](../epics/Epic-7/Story-005-migration-uxr-research.md) — see Story 5 **T02**
 
 ---
 
@@ -258,15 +260,16 @@ Comprehensive User Acceptance Testing (UAT) of ai-dev-kit migration utilities (v
 - [ ] New Epic Created: [N/A]
 
 **Assigned To:**
-- Epic: Epic 7 (UXR - User Experience Research)
-- Story: Story 5 (Migration UXR Research)
-- Task: Task 1 (UXR-002: Comprehensive UAT synthesis)
-- Version: `[TBD]`
+- Epic: Epic 7
+- Story: **E7:S00** (UXR repository story) — registry; synthesis remains **E7:S05**
+- Task: **E7:S00:T02** (UXR-002 registry task)
+- Version: `v0.7.0.2+1` (task filed 2026-03-31)
 
 **Kanban Links:**
 - Epic: [`Epic-7.md`](../epics/Epic-7/Epic-7.md)
-- Story: [`Story-005-migration-uxr-research.md`](../epics/Epic-7/Story-005-migration-uxr-research.md)
-- Task: [TBD]
+- Story (registry): [`Story-000-uxr-repo.md`](../epics/Epic-7/Story-000-uxr-repo.md)
+- Task: [`T02-comprehensive-uat-migration-utilities-uxr-002.md`](../epics/Epic-7/Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md)
+- Synthesis (historical): [`Story-005-migration-uxr-research.md`](../epics/Epic-7/Story-005-migration-uxr-research.md) (**E7:S05:T02**)
 
 ---
 

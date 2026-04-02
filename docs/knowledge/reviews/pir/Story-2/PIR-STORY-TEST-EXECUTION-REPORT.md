@@ -198,8 +198,8 @@ housekeeping_policy: keep
    - Story-level: ✅ Reviews Tasks
 
 4. **Report Naming:**
-   - Epic-level: `PIR-Epic-{N}-v{version}.md`
-   - Story-level: ✅ `PIR-Story-{N}-v{version}.md`
+   - Epic-level: `PIR-Epic-\{N\}-v{version}.md`
+   - Story-level: ✅ `PIR-Story-\{N\}-v{version}.md`
 
 ---
 

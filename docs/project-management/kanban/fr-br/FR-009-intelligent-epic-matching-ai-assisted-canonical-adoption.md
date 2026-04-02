@@ -124,7 +124,7 @@ The Kanban framework migration process needs intelligent capabilities to:
 
 - [ ] **AC-1:** Semantic analysis can detect epic matches based on content (title, description, stories, tasks)
 - [ ] **AC-2:** Match scores (0-100%) accurately reflect semantic similarity
-- [ ] **AC-3:** System can detect exact matches (90-100%), semantic matches (70-89%), partial matches (40-69%), and no matches (<40%)
+- [ ] **AC-3:** System can detect exact matches (90-100%), semantic matches (70-89%), partial matches (40-69%), and no matches (&lt;40%)
 - [ ] **AC-4:** Task mapping intelligently places user tasks in appropriate canonical epics/stories
 - [ ] **AC-5:** Migration plans include recommendations with clear rationale
 - [ ] **AC-6:** "Adopt Canonical Structure" is the recommended default mode
@@ -198,7 +198,7 @@ This feature request is based on comprehensive design decision analysis and UAT 
    - Exact match (90-100%) + number conflict → MERGE (preserve task IDs)
    - Semantic match (70-89%) + number conflict → MERGE or RENUMBER (depends on choice)
    - Partial match (40-69%) → USER DECIDES (split, merge, or keep both)
-   - No match (<40%) + number conflict → RENUMBER (task IDs change)
+   - No match (&lt;40%) + number conflict → RENUMBER (task IDs change)
 
 2. **Template Task Installation (Two-Phase Migration):**
    - **Phase 1:** Migrate user tasks FIRST (preserve IDs)

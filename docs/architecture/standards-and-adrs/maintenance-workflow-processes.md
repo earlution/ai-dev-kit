@@ -265,7 +265,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
 - High (3.0-3.9): Address within 1-2 cycles
 - Medium (2.0-2.9): Address within 2-4 cycles
 - Low (1.0-1.9): Address as time permits
-- Minimal (<1.0): Optional, when convenient
+- Minimal (&lt;1.0): Optional, when convenient
 
 #### Step 4: Kanban Assignment
 
@@ -273,7 +273,7 @@ Priority Score = (Severity × 0.4) + (Impact × 0.4) + ((6 - Effort) × 0.2)
 - **Must Have (M):** Critical Priority (4.0-5.0)
 - **Should Have (S):** High Priority (3.0-3.9)
 - **Could Have (C):** Medium Priority (2.0-2.9)
-- **Won't Have (W):** Low/Minimal Priority (<2.0)
+- **Won't Have (W):** Low/Minimal Priority (&lt;2.0)
 
 **Epic/Story Assignment:**
 - Assign to Epic 7 (Codebase Maintenance)

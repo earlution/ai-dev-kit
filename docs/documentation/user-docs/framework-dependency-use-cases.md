@@ -164,8 +164,8 @@ This document provides a comprehensive overview of all use cases for adopting ai
 
 **Documentation:**
 - See framework READMEs in `packages/frameworks/`
-- See [Integration Examples](../../Architecture/standards-and-adrs/)
-- See [Framework Templates](../../../packages/frameworks/)
+- See [Architecture overview](../../architecture/README.md) and [KB structure / integration pointers](../../architecture/standards-and-adrs/kb-structure-overview.md)
+- See [Framework Templates (repository)](https://github.com/earlution/ai-dev-kit/tree/main/packages/frameworks)
 
 ---
 
@@ -249,7 +249,7 @@ This document provides a comprehensive overview of all use cases for adopting ai
 
 **Documentation:**
 - See [GitHub Forking Guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-- See [Contributing Guidelines](../../../CONTRIBUTING.md) (if exists)
+- See [Contributing Guidelines](https://github.com/earlution/ai-dev-kit/blob/main/CONTRIBUTING.md) (if exists)
 
 ---
 
@@ -370,7 +370,7 @@ This document provides a comprehensive overview of all use cases for adopting ai
 
 **Documentation:**
 - See [Installation Guide - Template Usage](framework-dependency-installation-guide.md#alternative-use-ai-dev-kit-as-a-github-template)
-- See [Quick Start Guide](framework-dependency-quick-start-guide.md) (when available)
+- See [Installation Guide — getting started](framework-dependency-installation-guide.md) (closest quick-start coverage today)
 
 ---
 

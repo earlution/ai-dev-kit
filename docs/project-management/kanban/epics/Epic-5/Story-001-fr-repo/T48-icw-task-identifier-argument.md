@@ -79,7 +79,7 @@ icw_handler.py --task T47 initialize
 ### 🚀 Next Steps
 
 1. **Integration Testing:** Test with real Kanban tasks
-2. **Documentation Updates:** Update ICW usage documentation
+2. **Documentation Updates:** Update **IPW** usage docs (**FR-042**); `icw_handler` remains backward-compatible; **ICW** = deprecated alias
 3. **User Training:** Provide examples and guidance for new functionality
 4. **Performance Testing:** Validate minimal impact on ICW startup time
 
@@ -145,7 +145,7 @@ This task:
 
 ## References
 
-- **FR Repo Story:** [`Story-001-fr-repo.md`](Story-001-fr-repo.md)
+- **FR Repo Story:** [`Story-001-fr-repo.md`](../Story-001-fr-repo.md)
 - **FR-048:** [`docs/project-management/kanban/fr-br/FR-048-icw-task-identifier-argument.md`](../../../fr-br/FR-048-icw-task-identifier-argument.md)
 - **ICW Handler:** `packages/frameworks/workflow mgt/scripts/icw/icw_handler.py`
 - **ICW Configuration:** `packages/frameworks/workflow mgt/workflows/implementation-cycle-workflow/`

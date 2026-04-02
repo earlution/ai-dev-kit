@@ -168,7 +168,7 @@ This SoP defines the standard procedure for cross-wiring (interconnecting) tasks
 1. Add "Cross-Wiring" section to task document (after "Dependencies" section, before "Version Anchor")
 2. Use standardized format (see Template Structure below)
 3. For each related task:
-   - Include full task ID (E{epic}:S{story}:T{task})
+   - Include full task ID (E\{epic\}:S\{story\}:T\{task\})
    - Include task title
    - Include relationship type
    - Include context (why related)
@@ -402,7 +402,7 @@ This SoP defines the standard procedure for cross-wiring (interconnecting) tasks
 
 ### 2. Use Consistent Format
 
-**Guideline:** Always use full task ID format (E{epic}:S{story}:T{task}) and include task title.
+**Guideline:** Always use full task ID format (E\{epic\}:S\{story\}:T\{task\}) and include task title.
 
 **Rationale:**
 - Enables parsing and automation

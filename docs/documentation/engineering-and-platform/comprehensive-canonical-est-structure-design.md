@@ -45,7 +45,7 @@ The approach to adding canonical epics has been ad-hoc. There was no systematic 
 Created `COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md` with:
 
 1. **Framework Epics (1-7):** Always included in all projects
-   - Epic 1: {PROJECT_NAME} Core
+   - Epic 1: \{PROJECT_NAME\} Core
    - Epic 2: Workflow Management Framework
    - Epic 3: Numbering & Versioning Framework
    - Epic 4: Kanban Framework
@@ -140,9 +140,9 @@ The structure is designed to scale from tiny solo projects to ambitious enterpri
 ### Contextualization System
 
 **Placeholders:**
-- `{PROJECT_NAME}` → Your project name (e.g., "MyApp", "Confidentia", "fynd.deals")
-- `{DOMAIN}` → Your project domain (e.g., "e-commerce", "healthcare", "finance")
-- `{TECH_STACK}` → Your technology stack (e.g., "Python/Flask", "React/Node.js", "Flutter/Dart")
+- `\{PROJECT_NAME\}` → Your project name (e.g., "MyApp", "Confidentia", "fynd.deals")
+- `\{DOMAIN\}` → Your project domain (e.g., "e-commerce", "healthcare", "finance")
+- `\{TECH_STACK\}` → Your technology stack (e.g., "Python/Flask", "React/Node.js", "Flutter/Dart")
 - `{TEAM_SIZE}` → Team size context (e.g., "solo", "small-team", "large-team")
 
 **Process:**

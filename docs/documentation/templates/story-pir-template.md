@@ -6,14 +6,14 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Post-Implementation Review: Story {N}
+# Post-Implementation Review: Story &lbrace;N&rbrace;
 
-**Story:** {Story Name}  
-**Epic:** {Epic Name}  
+**Story:** &lbrace;Story Name&rbrace;  
+**Epic:** &lbrace;Epic Name&rbrace;  
 **Status:** COMPLETE  
-**Review Date:** {YYYY-MM-DD}  
-**Reviewer:** {Name/Username}  
-**Version:** {Version}  
+**Review Date:** &lbrace;YYYY-MM-DD&rbrace;  
+**Reviewer:** &lbrace;Name/Username&rbrace;  
+**Version:** &lbrace;Version&rbrace;  
 **PIR Version:** 1.0.0
 
 ---
@@ -26,15 +26,15 @@ housekeeping_policy: keep
 
 ## Goals Assessment
 
-- [ ] **Goal 1:** {Goal Description}
-  - **Status:** {Achieved/Partially Achieved/Not Achieved}
-  - **Assessment:** {Detailed assessment of goal achievement}
-  - **Evidence:** {Supporting evidence or metrics}
+- [ ] **Goal 1:** &lbrace;Goal Description&rbrace;
+  - **Status:** &lbrace;Achieved/Partially Achieved/Not Achieved&rbrace;
+  - **Assessment:** &lbrace;Detailed assessment of goal achievement&rbrace;
+  - **Evidence:** &lbrace;Supporting evidence or metrics&rbrace;
 
-- [ ] **Goal 2:** {Goal Description}
-  - **Status:** {Achieved/Partially Achieved/Not Achieved}
-  - **Assessment:** {Detailed assessment of goal achievement}
-  - **Evidence:** {Supporting evidence or metrics}
+- [ ] **Goal 2:** &lbrace;Goal Description&rbrace;
+  - **Status:** &lbrace;Achieved/Partially Achieved/Not Achieved&rbrace;
+  - **Assessment:** &lbrace;Detailed assessment of goal achievement&rbrace;
+  - **Evidence:** &lbrace;Supporting evidence or metrics&rbrace;
 
 ---
 
@@ -42,14 +42,14 @@ housekeeping_policy: keep
 
 [Review each Task in the Story]
 
-### Task {N}: {Task Name}
+### Task &lbrace;N&rbrace;: &lbrace;Task Name&rbrace;
 
 - **Status:** COMPLETE
-- **Version:** {Version}
-- **Quality:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Key Findings:** {Summary of task outcomes}
-- **Deliverables:** {List deliverables}
-- **Issues Encountered:** {List any issues or blockers}
+- **Version:** &lbrace;Version&rbrace;
+- **Quality:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Key Findings:** &lbrace;Summary of task outcomes&rbrace;
+- **Deliverables:** &lbrace;List deliverables&rbrace;
+- **Issues Encountered:** &lbrace;List any issues or blockers&rbrace;
 
 ---
 
@@ -57,32 +57,32 @@ housekeeping_policy: keep
 
 ### Implementation Approach
 
-{Description of the technical approach taken for this Story}
+&lbrace;Description of the technical approach taken for this Story&rbrace;
 
-- **Approach:** {Description}
-- **Rationale:** {Why this approach was chosen}
-- **Alternatives Considered:** {Other approaches considered}
+- **Approach:** &lbrace;Description&rbrace;
+- **Rationale:** &lbrace;Why this approach was chosen&rbrace;
+- **Alternatives Considered:** &lbrace;Other approaches considered&rbrace;
 
 ### Code Quality
 
-- **Overall Assessment:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Code Review Coverage:** {Percentage or description}
-- **Technical Debt Introduced:** {Description of any technical debt}
-- **Code Quality Metrics:** {Any metrics available}
+- **Overall Assessment:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Code Review Coverage:** &lbrace;Percentage or description&rbrace;
+- **Technical Debt Introduced:** &lbrace;Description of any technical debt&rbrace;
+- **Code Quality Metrics:** &lbrace;Any metrics available&rbrace;
 
 ### Documentation
 
-- **Completeness:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Documentation Created:** {List key documents}
-- **Documentation Gaps:** {Any gaps identified}
-- **Documentation Quality:** {Assessment}
+- **Completeness:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Documentation Created:** &lbrace;List key documents&rbrace;
+- **Documentation Gaps:** &lbrace;Any gaps identified&rbrace;
+- **Documentation Quality:** &lbrace;Assessment&rbrace;
 
 ### Testing
 
-- **Test Coverage:** {Percentage or description}
-- **Test Quality:** {Excellent/Good/Satisfactory/Needs Improvement}
-- **Test Types:** {Unit/Integration/E2E/etc.}
-- **Test Results:** {Summary of test outcomes}
+- **Test Coverage:** &lbrace;Percentage or description&rbrace;
+- **Test Quality:** &lbrace;Excellent/Good/Satisfactory/Needs Improvement&rbrace;
+- **Test Types:** &lbrace;Unit/Integration/E2E/etc.&rbrace;
+- **Test Results:** &lbrace;Summary of test outcomes&rbrace;
 
 ---
 
@@ -90,29 +90,29 @@ housekeeping_policy: keep
 
 ### What Went Well
 
-- {Item 1: Description of what worked well and why}
-- {Item 2: Description of what worked well and why}
-- {Item 3: Description of what worked well and why}
+- &lbrace;Item 1: Description of what worked well and why&rbrace;
+- &lbrace;Item 2: Description of what worked well and why&rbrace;
+- &lbrace;Item 3: Description of what worked well and why&rbrace;
 
 ### What Could Be Improved
 
-- {Item 1: Description of what could be improved and how}
-- {Item 2: Description of what could be improved and how}
-- {Item 3: Description of what could be improved and how}
+- &lbrace;Item 1: Description of what could be improved and how&rbrace;
+- &lbrace;Item 2: Description of what could be improved and how&rbrace;
+- &lbrace;Item 3: Description of what could be improved and how&rbrace;
 
 ### Patterns Identified
 
-- **Pattern 1:** {Description of pattern}
-  - **Context:** {When/where this pattern appears}
-  - **Value:** {Why this pattern is valuable}
-  - **Recommendation:** {How to leverage this pattern}
+- **Pattern 1:** &lbrace;Description of pattern&rbrace;
+  - **Context:** &lbrace;When/where this pattern appears&rbrace;
+  - **Value:** &lbrace;Why this pattern is valuable&rbrace;
+  - **Recommendation:** &lbrace;How to leverage this pattern&rbrace;
 
 ### Anti-Patterns Identified
 
-- **Anti-Pattern 1:** {Description of anti-pattern}
-  - **Context:** {When/where this anti-pattern appears}
-  - **Impact:** {Negative impact of this anti-pattern}
-  - **Recommendation:** {How to avoid this anti-pattern}
+- **Anti-Pattern 1:** &lbrace;Description of anti-pattern&rbrace;
+  - **Context:** &lbrace;When/where this anti-pattern appears&rbrace;
+  - **Impact:** &lbrace;Negative impact of this anti-pattern&rbrace;
+  - **Recommendation:** &lbrace;How to avoid this anti-pattern&rbrace;
 
 ---
 
@@ -120,15 +120,15 @@ housekeeping_policy: keep
 
 [Actions identified during review that should be tracked as Kanban tasks]
 
-- [ ] **Action 1:** {Description}
-  - **Priority:** {High/Medium/Low}
-  - **Owner:** {Assigned to}
-  - **Related Work:** {Link to related Epic/Story/Task}
+- [ ] **Action 1:** &lbrace;Description&rbrace;
+  - **Priority:** &lbrace;High/Medium/Low&rbrace;
+  - **Owner:** &lbrace;Assigned to&rbrace;
+  - **Related Work:** &lbrace;Link to related Epic/Story/Task&rbrace;
 
-- [ ] **Action 2:** {Description}
-  - **Priority:** {High/Medium/Low}
-  - **Owner:** {Assigned to}
-  - **Related Work:** {Link to related Epic/Story/Task}
+- [ ] **Action 2:** &lbrace;Description&rbrace;
+  - **Priority:** &lbrace;High/Medium/Low&rbrace;
+  - **Owner:** &lbrace;Assigned to&rbrace;
+  - **Related Work:** &lbrace;Link to related Epic/Story/Task&rbrace;
 
 ---
 
@@ -138,45 +138,45 @@ housekeeping_policy: keep
 
 ### Best Practices
 
-- {Best practice 1: Description and context}
-- {Best practice 2: Description and context}
+- &lbrace;Best practice 1: Description and context&rbrace;
+- &lbrace;Best practice 2: Description and context&rbrace;
 
 ### Lessons for Future Stories
 
-- {Lesson 1: Description and application}
-- {Lesson 2: Description and application}
+- &lbrace;Lesson 1: Description and application&rbrace;
+- &lbrace;Lesson 2: Description and application&rbrace;
 
 ### Documentation Recommendations
 
-- {Recommendation 1: What documentation should be created/updated}
-- {Recommendation 2: What documentation should be created/updated}
+- &lbrace;Recommendation 1: What documentation should be created/updated&rbrace;
+- &lbrace;Recommendation 2: What documentation should be created/updated&rbrace;
 
 ---
 
 ## Metrics
 
-- **Duration:** {Start Date} to {End Date}
-- **Tasks Completed:** {Count} / {Total}
-- **Versions Released:** {Count} (Range: {Start Version} to {End Version})
-- **Time to Completion:** {Duration in days/weeks}
+- **Duration:** &lbrace;Start Date&rbrace; to &lbrace;End Date&rbrace;
+- **Tasks Completed:** &lbrace;Count&rbrace; / &lbrace;Total&rbrace;
+- **Versions Released:** &lbrace;Count&rbrace; (Range: &lbrace;Start Version&rbrace; to &lbrace;End Version&rbrace;)
+- **Time to Completion:** &lbrace;Duration in days/weeks&rbrace;
 
 ---
 
 ## Related Work
 
-- **Epic:** [Epic {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Epic-{N}.md)
-- **Story:** [Story {N} Documentation](../../project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md)
-- **Tasks:** {Links to all tasks in Story}
-- **Related PIRs:** {Links to any related PIR reports}
-- **Follow-Up Tasks:** {Links to Kanban tasks created from this PIR}
+- **Epic:** Template path under `docs/`: `project-management/kanban/epics/Epic-{N}/Epic-{N}.md` (replace `{N}`).
+- **Story:** Template path: `project-management/kanban/epics/Epic-{N}/Story-{N}-{name}.md` (replace placeholders; avoid raw `{N}` in link targets).
+- **Tasks:** &lbrace;Links to all tasks in Story&rbrace;
+- **Related PIRs:** &lbrace;Links to any related PIR reports&rbrace;
+- **Follow-Up Tasks:** &lbrace;Links to Kanban tasks created from this PIR&rbrace;
 
 ---
 
 ## References
 
-- [PIR Workflow Planning](../../Analysis/PIR-workflow-planning.md)
-- [PIR Workflow Reference](../../Documentation/Developer_Docs/vwmp/pir-workflow-reference.md)
-- [Release Workflow](../../Documentation/Developer_Docs/vwmp/release-workflow-reference.md)
+- [PIR Workflow Planning (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Analysis/PIR-workflow-planning.md)
+- [PIR Workflow Reference (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/pir-workflow-reference.md)
+- [Release Workflow (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md)
 
 ---
 

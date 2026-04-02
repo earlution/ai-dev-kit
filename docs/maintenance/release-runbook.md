@@ -192,7 +192,7 @@ The Release Workflow will automatically execute all 17 steps:
 9. ✅ IDE Problem Check
 10. ✅ Run Validators
 11. ✅ Commit Changes
-12. ✅ Create Git Tag (v{internal_version})
+12. ✅ Create Git Tag (v&lbrace;internal_version&rbrace;)
 13. ✅ Push to Remote
 14. ✅ Post-Commit Verification
 15. ✅ Act on Results
@@ -233,7 +233,7 @@ The Release Workflow will automatically execute all 17 steps with task-touch Sem
 9. ✅ IDE Problem Check
 10. ✅ Run Validators
 11. ✅ Commit Changes
-12. ✅ Create Git Tag (v{semver_version} + optional internal tag)
+12. ✅ Create Git Tag (v&lbrace;semver_version&rbrace; + optional internal tag)
 13. ✅ Push to Remote
 14. ✅ Post-Commit Verification
 15. ✅ Act on Results
@@ -463,7 +463,7 @@ ls -la docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.48+1.
 **Error:** `Branch context validation FAILED`
 
 **Causes:**
-- Wrong branch (not epic/{n})
+- Wrong branch (not epic/\{n\})
 - Branch doesn't match version
 - Git state is dirty
 

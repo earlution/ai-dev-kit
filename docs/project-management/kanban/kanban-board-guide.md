@@ -48,6 +48,8 @@ This Kanban board serves as the **parent document** to Story documents, similar 
 
 UKW and RW agents must follow this when updating the board.
 
+**RW Step 7 vs UKW (FR-038):** During a release, **RW Step 7 — Scoped Kanban Sync (UKW Mode)** updates the board and docs for the **release task** only (scoped). **Standalone UKW** is for **board-wide** MoSCOW and housekeeping. See Kanban governance policy §1.1.
+
 ---
 
 ## MoSCOW Prioritized In-Progress Tasks
@@ -101,7 +103,7 @@ Tasks within each MoSCOW section are ordered chronologically, with most recently
    - Update `kanban-board.md` and `_index.md`
 
 3. **Create Task**:
-   - Add `epics/Epic-X/Story-XXX/T{task}-description.md` (separate file format) OR
+   - Add `epics/Epic-X/Story-XXX/T\{task\}-description.md` (separate file format) OR
    - Add delimited section in Story document using Task ID as header
    - Update Story document with Task reference
 

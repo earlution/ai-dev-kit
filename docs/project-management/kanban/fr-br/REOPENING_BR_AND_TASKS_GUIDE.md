@@ -249,8 +249,8 @@ See [`docs/project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-a
 ## Related Documentation
 
 - [BIDIRECTIONAL_WIRING_PRINCIPLE.md](BIDIRECTIONAL_WIRING_PRINCIPLE.md) - Principle for bidirectional linking between BR/FR, Tasks, and documentation
-- [USE_CASE_METHODOLOGY.md](../use-cases/USE_CASE_METHODOLOGY.md) - Use case methodology (includes discovered use cases)
-- [UC-D-001: Re-opening BRs/Tasks](../use-cases/discovered/UC-D-001-reopening-br-tasks.md) - Discovered use case for this pattern
+- [USE_CASE_METHODOLOGY.md](../../../knowledge/USE_CASE_METHODOLOGY.md) - Use case methodology (includes discovered use cases)
+- [UC-D-001: Re-opening BRs/Tasks](../../../knowledge/use-cases/discovered/UC-D-001-reopening-br-tasks.md) - Discovered use case for this pattern
 - `BR_TEMPLATE.md` - Bug Report template
 - `docs/project-management/kanban/fr-br/BR-002-changelog-validator-ordering-bug.md` - Example reopened BR
 - `docs/project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs.md` - Example reopened task

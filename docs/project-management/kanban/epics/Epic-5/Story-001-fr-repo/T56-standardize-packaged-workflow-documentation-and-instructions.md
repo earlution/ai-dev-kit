@@ -33,11 +33,11 @@ This task implements the standardization of documentation, instructions, and for
 ## Input
 
 - **FR-056:** [`FR-056-standardize-packaged-workflow-documentation-and-instructions.md`](../../../fr-br/FR-056-standardize-packaged-workflow-documentation-and-instructions.md)
-- Workflow registry: [`workflows/workflow-registry.yaml`](../../../packages/frameworks/workflow%20mgt/workflows/workflow-registry.yaml)
-- Framework README: [`packages/frameworks/workflow mgt/README.md`](../../../packages/frameworks/workflow%20mgt/README.md)
+- Workflow registry: [`workflow-registry.yaml` (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/workflows/workflow-registry.yaml)
+- Framework README: [`workflow mgt/README.md` (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/README.md)
 - Existing documentation examples:
-  - ICW documentation: [`workflows/implementation-cycle-workflow/README.md`](../../../packages/frameworks/workflow%20mgt/workflows/implementation-cycle-workflow/README.md)
-  - ICW guide: [`docs/implementation-cycle-workflow-guide.md`](../../../packages/frameworks/workflow%20mgt/docs/implementation-cycle-workflow-guide.md)
+  - ICW documentation: [`implementation-cycle-workflow/README.md` (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/workflows/implementation-cycle-workflow/README.md)
+  - ICW guide: [`implementation-cycle-workflow-guide.md` (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/docs/implementation-cycle-workflow-guide.md)
 
 
 ---

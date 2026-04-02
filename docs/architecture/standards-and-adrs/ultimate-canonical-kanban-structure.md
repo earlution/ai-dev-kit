@@ -599,7 +599,7 @@ docs/project-management/kanban/epics/
 
 ### Epic Naming
 
-**CANONICAL:** `Epic-{N}` (hyphen, e.g., `Epic-1`, `Epic-9`)
+**CANONICAL:** `Epic-\{N\}` (hyphen, e.g., `Epic-1`, `Epic-9`)
 
 **Epic Numbering:**
 - **Core Epics:** 1-9 (always installed)
@@ -608,7 +608,7 @@ docs/project-management/kanban/epics/
 
 ### Story Naming
 
-**CANONICAL:** `Story-{NNN}-{description}` (3-digit padding, kebab-case)
+**CANONICAL:** `Story-{NNN}-\{description\}` (3-digit padding, kebab-case)
 
 **Examples:**
 - `Story-001-project-foundation-and-setup.md`
@@ -616,7 +616,7 @@ docs/project-management/kanban/epics/
 
 ### Task Naming
 
-**CANONICAL:** `E{epic}:S{story}:T{task}` (full context, required, e.g., `E6:S06:T01`)
+**CANONICAL:** `E\{epic\}:S\{story\}:T\{task\}` (full context, required, e.g., `E6:S06:T01`)
 
 **Padding:** 2-digit (`T01`, `T02`, `T10`)
 
@@ -627,24 +627,24 @@ docs/project-management/kanban/epics/
 ### Epic Validation
 
 **Required:**
-- Epic naming: `Epic-{N}` format
+- Epic naming: `Epic-\{N\}` format
 - Epic numbering: 1-10 (canonical) or 11+ (project-specific)
-- Epic directory: `docs/project-management/kanban/epics/Epic-{N}/`
-- Epic document: `Epic-{N}.md` exists
+- Epic directory: `docs/project-management/kanban/epics/Epic-\{N\}/`
+- Epic document: `Epic-\{N\}.md` exists
 - Story checklist present in Epic document
 
 ### Story Validation
 
 **Required:**
-- Story naming: `Story-{NNN}-{description}` format (3-digit padding)
-- Story directory: `Story-{NNN}-{description}/` exists
-- Story document: `Story-{NNN}-{description}.md` exists
+- Story naming: `Story-{NNN}-\{description\}` format (3-digit padding)
+- Story directory: `Story-{NNN}-\{description\}/` exists
+- Story document: `Story-{NNN}-\{description\}.md` exists
 - Task checklist present in Story document
 
 ### Task Validation
 
 **Required:**
-- Task naming: `E{epic}:S{story}:T{task}` format (full context, 2-digit padding)
+- Task naming: `E\{epic\}:S\{story\}:T\{task\}` format (full context, 2-digit padding)
 - Task structure includes required fields (Status, Input, Deliverable, Acceptance Criteria)
 
 ---

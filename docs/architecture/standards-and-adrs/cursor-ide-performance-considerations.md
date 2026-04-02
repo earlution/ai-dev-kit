@@ -138,7 +138,7 @@ for file, content in updates:
 - Use `pass_filenames: true` when possible
 - Process only changed files by default
 - Provide `--all` flag for full validation when needed
-- Keep hooks fast (<2 seconds ideally)
+- Keep hooks fast (&lt;2 seconds ideally)
 
 **❌ DON'T:**
 - Use `pass_filenames: false` unless absolutely necessary
@@ -267,17 +267,17 @@ if __name__ == "__main__":
 Watch for these indicators of performance issues:
 
 1. **Commit Time:**
-   - Normal: <2 seconds
+   - Normal: &lt;2 seconds
    - Warning: 2-5 seconds
    - Critical: >5 seconds
 
 2. **Memory Usage:**
-   - Normal: <200 MB during commits
+   - Normal: &lt;200 MB during commits
    - Warning: 200-500 MB
    - Critical: >500 MB
 
 3. **File Count:**
-   - Normal: <500 markdown files
+   - Normal: &lt;500 markdown files
    - Warning: 500-1,000 files
    - Critical: >1,000 files
 

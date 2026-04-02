@@ -79,7 +79,7 @@ This document identifies **patterns** (recurring good practices) and **anti-patt
 
 **Description:**
 - All projects use Epic → Story → Task hierarchy
-- Consistent nesting: `epics/Epic-{N}/Story-{NNN}/Task-{YYY}.md`
+- Consistent nesting: `epics/Epic-\{N\}/Story-{NNN}/Task-{YYY}.md`
 - Clear parent-child relationships
 
 **Why It's a Pattern:**
@@ -89,9 +89,9 @@ This document identifies **patterns** (recurring good practices) and **anti-patt
 - Supports automated tooling
 
 **Examples:**
-- ai-dev-kit source: `docs/project-management/kanban/epics/Epic-{N}/Story-{NNN}/`
-- been-there: `docs/project-management/kanban/epics/Epic-{N}/Story-{NNN}/`
-- dev-toolkit: `docs/project-management/kanban/epics/Epic-{N}/Story-{NNN}/`
+- ai-dev-kit source: `docs/project-management/kanban/epics/Epic-\{N\}/Story-{NNN}/`
+- been-there: `docs/project-management/kanban/epics/Epic-\{N\}/Story-{NNN}/`
+- dev-toolkit: `docs/project-management/kanban/epics/Epic-\{N\}/Story-{NNN}/`
 - (all 10 projects)
 
 **Prevention Strategy:**
@@ -105,7 +105,7 @@ This document identifies **patterns** (recurring good practices) and **anti-patt
 
 ### 1.3 Full-Context Task Naming Pattern
 
-**Pattern:** Use `E{epic}:S{story}:T{task}` format for task naming  
+**Pattern:** Use `E\{epic\}:S\{story\}:T\{task\}` format for task naming  
 **Frequency:** 60% (6/10 projects)  
 **Impact:** HIGH - Excellent traceability  
 **Status:** ✅ **STRONG PATTERN**

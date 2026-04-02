@@ -222,17 +222,28 @@ def find_story_file(config: Optional[Dict] = None, epic: int = None, story: int 
     for pattern in fallback_patterns:
         candidate_files.extend(project_root.glob(pattern))
     
-    if not epic or not story:
+    # Use explicit None check: story 0 (e.g. E7:S00) is valid; `not story` would wrongly skip.
+    if epic is None or story is None:
         # Return first match if no epic/story specified
         if candidate_files:
             return candidate_files[0]
         return None
     
     # Method 1: Extract from file path (most reliable)
+    path_matches = []
     for story_file in candidate_files:
         path_epic_story = extract_epic_story_from_path(story_file)
         if path_epic_story and path_epic_story == (epic, story):
-            return story_file
+            path_matches.append(story_file)
+    if len(path_matches) == 1:
+        return path_matches[0]
+    if len(path_matches) > 1:
+        fr_repo = [p for p in path_matches if "fr-repo" in p.stem.lower()]
+        if len(fr_repo) == 1:
+            return fr_repo[0]
+        if len(fr_repo) > 1:
+            return sorted(fr_repo, key=lambda p: p.name)[0]
+        return sorted(path_matches, key=lambda p: p.name)[0]
     
     # Method 2: Extract from Code field
     for story_file in candidate_files:
@@ -282,11 +293,10 @@ def get_completed_task(story_file: Path, version_task: Optional[int] = None) -> 
     
     content = story_file.read_text()
     
-    # Pattern 1: [x] **E3:S02:T05 – Task description** ✅ COMPLETE (v0.3.2.5+1)
-    pattern1 = re.compile(r'\[x\]\s+\*\*E\d+:S\d+:T(\d+)[^\*]*\*\*\s+✅\s+COMPLETE', re.IGNORECASE)
-    
-    # Pattern 2: [x] **E3:S02:T05** ✅ COMPLETE
-    pattern2 = re.compile(r'\[x\]\s+\*\*E\d+:S\d+:T(\d+)\*\*\s+✅\s+COMPLETE', re.IGNORECASE)
+    # Pattern 1–2: allow optional " - " before ✅ (matches FR Repo checklist style)
+    done = r"(?:-\s*)?✅\s+COMPLETE(?:D)?"
+    pattern1 = re.compile(rf"\[x\]\s+\*\*E\d+:S\d+:T(\d+)[^\*]*\*\*\s+{done}", re.IGNORECASE)
+    pattern2 = re.compile(rf"\[x\]\s+\*\*E\d+:S\d+:T(\d+)\*\*\s+{done}", re.IGNORECASE)
     
     # Find all completed tasks
     completed_tasks = []
@@ -365,6 +375,9 @@ def locate_task_doc(
         if not task_files:
             # Try T{task}-*.md pattern (no padding, e.g. T37-*.md)
             task_files = list(story_dir.glob(f"T{task}-*.md"))
+        if not task_files:
+            # E07S01T09-*.md style (E/S/T two-digit — canonical task-doc naming on some epics)
+            task_files = list(story_dir.glob(f"E{epic:02d}S{story:02d}T{task:02d}-*.md"))
         if task_files:
             task_file = task_files[0]
             return (task_file, task_file.read_text(), "separate_file")

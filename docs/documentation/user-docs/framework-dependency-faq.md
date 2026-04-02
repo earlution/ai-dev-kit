@@ -472,8 +472,8 @@ python3 -m vibe_dev_kit install workflow-mgmt
 
 1. Ensure you're on correct branch: `git branch --show-current`
 2. Update version file: `vim src/yourproject/version.py`
-3. Type "RW" in your AI assistant (Cursor, GitHub Copilot, etc.)
-4. RW executes 14 steps automatically
+3. In your AI assistant, send **`RW` with a task id in the same message** (**FR-060**), e.g. `RW E5S01T01` or `RW E5:S01:T01` (not `RW` alone)
+4. RW runs its configured steps automatically (see your `.cursorrules` / agent execution guide)
 
 See the [Usage Guide](framework-dependency-usage-guide.md) for details.
 
@@ -510,9 +510,9 @@ python3 scripts/validation/validate_changelog_format.py
 
 3. **Restart Cursor** to reload `.cursorrules`
 
-4. **Test:** Type "RW" in Cursor chat - the agent should recognize the trigger
+4. **Test:** In Cursor chat, send e.g. `RW E5S01T01` or `RW E5:S01:T01` — the agent should recognize the trigger (**FR-060** requires a parseable `E…S…T…` in the same message as `RW`)
 
-**Without `.cursorrules`:** The "RW" command won't work. You'll need to manually run workflow steps.
+**Without `.cursorrules`:** The RW trigger is not active. You'll need to manually run workflow steps.
 
 **See:** [Installation Guide](framework-dependency-installation-guide.md#4-enable-rw-trigger-in-cursorrules-workflow-management-framework-only) for detailed instructions.
 
@@ -523,8 +523,8 @@ python3 scripts/validation/validate_changelog_format.py
 cd frameworks/kanban
 python3 scripts/update-kanban-docs.py
 
-# Or use RW (automatically updates Kanban)
-# Type "RW" in AI assistant
+# Or use RW (automatically updates Kanban when configured)
+# e.g. RW E5S01T01 or RW E5:S01:T01 in AI assistant (FR-060)
 ```
 
 ---

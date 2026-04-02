@@ -284,8 +284,8 @@ ai-dev-kit list --versions
 - Version: v0.6.7.13+1 (T13: Testing, validation, and PyPI packaging complete - Story E6:S07 COMPLETE)
 
 **Kanban Links:**
-- Epic: [`epics/Epic-6/Epic-6.md`](../../epics/Epic-6/Epic-6.md)
-- Story: [`epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md`](../../epics/Epic-6/Story-007-ai-dev-kit-cli-tool.md)
+- Epic: [`epics/Epic-6/Epic-6.md`](../epics/Epic-6/Epic-6.md)
+- Story: [`Story-007-adk-implementation-analysis-and-package-management.md`](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 - Tasks: E6:S07:T00-T13 (14 tasks covering complete CLI tool implementation)
 
 ---

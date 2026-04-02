@@ -1,34 +1,27 @@
-# Changelog: v0.6.7.103+4
+# Changelog v0.6.7.103+4
 
-**Release Date:** 2026-02-22 16:19:40 UTC  
-**Epic:** Epic 6 (Framework Management and Maintenance)  
-**Story:** Story 7 (ADK Implementation Analysis and Package Management)  
-**Task:** Task 103 (Release Workflow Maintenance - Perpetual Task)  
-**Build:** 4
-
----
+**Release Date:** 2026-03-30 16:45:00 UTC  
+**Epic:** 6 | **Story:** 7 | **Task:** 103  
+**Task doc:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)  
+**FR:** [FR-041](../../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md) | consumer ref [FR-067 FU-2](../../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
 
 ## Summary
 
-E6:S07:T103: UKW comprehensive-by-default behaviour, workflow documentation updates, kanban sync.
-
----
+**RW -d** (documentation-only): **FR-067 follow-up FU-2** (GitHub Releases / RW Step 12.5) is **Kanban- and FR-anchored** on **E6:S07:T103** and **FR-041**, not only as prose on FR-067. Bidirectional links: T103 ↔ FR-067/FR-041; triage note updated.
 
 ## Changes
 
-### UKW Behaviour Change
+### Kanban / FR / maintenance
 
-- **UKW without flags = comprehensive run** – Invoking UKW with no flags now executes all operations (bookkeeping + update priorities + assign priorities)
-- **Flags restrict scope** – `-u`, `-p`, `-a <target>` each limit focus to a specific sub-workflow
-- Updated `.cursorrules` and `update-kanban-workflow-agent-execution.md` with new command semantics
+- **T103** — section **Downstream traceability (GitHub Releases / FU-2)**; version/progress markers for this release.
+- **FR-067** — **FU-2** “Tracked as” column: **T103**, **FR-041**, Step 12.5, `create_github_release.py`; echo line for FU-2 owners.
+- **FR-041** — Related Work: **FR-067 FU-2** consumer traceability.
+- **`docs/maintenance/docusaurus-corpus-triage-fr-067.md`** — Deferred outcomes: FU-2 → T103 + FR-041.
 
-### Kanban Sync
+## Verification
 
-- Epic 6 S07 task summary synced (T101/T102/T103 build numbers)
-- Checklist sorting (Story 007, Epic 6, board)
+- `validate_branch_context.py --strict`; `validate_rw_task_complete.py` (perpetual **T103**); `validate_rw_task_intent.py --confirmed-override` (explicit **`RW -d E6:S07:T103`** — cross-epic attribution vs prior `version.py`).
 
----
+## RW -d
 
-## Related
-
-- **Perpetual Task:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
+**No git tag, no push** — local documentation release only; merge or full **RW** later for tags/remote if desired.

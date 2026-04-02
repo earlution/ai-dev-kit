@@ -235,7 +235,7 @@ The Changelog Management Workflow (CMW) performs automated archival:
 
 **Step 5: Commit**
 - Stage changes (CHANGELOG.md, CHANGELOG_ARCHIVE.md)
-- Commit with message: "Changelog archival: Archive entries older than {criteria}"
+- Commit with message: "Changelog archival: Archive entries older than &lbrace;criteria&rbrace;"
 
 ### 4.2 Manual Archival
 

@@ -12,7 +12,7 @@
 
 ### Step 1: Branch Safety Validation
 **Result:** ⚠️ **ATTENTION REQUIRED**
-- **Current Branch:** main (not epic/{n} format)
+- **Current Branch:** main (not epic/\{n\} format)
 - **Working Directory:** MODIFIED (has uncommitted changes)
 - **Git Remotes:** ✅ Properly configured
 - **Issue:** Branch safety validation will fail

@@ -29,7 +29,7 @@ These use cases inform system architecture, requirements engineering, and design
 
 ## Quick Navigation
 
-- **[Canonical Use Cases](Canonical/)** - Design-phase use cases
+- **[Canonical Use Cases](canonical/README.md)** - Design-phase use cases
 - **[Template](CANONICAL_USE_CASE_TEMPLATE.md)** - Template for creating canonical use cases
 - **[Methodology](../../knowledge/USE_CASE_METHODOLOGY.md)** - Complete use case methodology guide
 
@@ -39,7 +39,7 @@ These use cases inform system architecture, requirements engineering, and design
 
 ### Canonical Use Cases (This Directory)
 
-**Location:** [`Canonical/`](Canonical/)
+**Location:** [`canonical/`](canonical/README.md)
 
 **Definition:** Use cases identified and documented during the design/planning phase, before implementation.
 
@@ -60,9 +60,9 @@ These use cases inform system architecture, requirements engineering, and design
 
 ## Related Documentation
 
-- **[Discovered Use Cases](../../knowledge/use-cases/discovered/)** - Implementation-phase discovered use cases (in knowledge base)
+- **[Discovered Use Cases](../../knowledge/use-cases/discovered/README.md)** - Implementation-phase discovered use cases (in knowledge base)
 - **[Use Case Methodology](../../knowledge/USE_CASE_METHODOLOGY.md)** - Complete methodology guide
-- **[Architecture Standards](../standards-and-adrs/)** - Architecture decision records and standards
+- **[Architecture Standards (versioning policy)](../standards-and-adrs/dev-kit-versioning-policy.md)** - Architecture decision records and standards
 
 ---
 

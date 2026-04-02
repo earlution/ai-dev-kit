@@ -15,14 +15,14 @@ housekeeping_policy: keep
 **Completed:** 2025-12-21  
 **Version:** v0.6.7.11+4
 
-**Feature Request:** [FR-025](../fr-br/FR-025-changelog-management-and-archival-workflow.md)  
+**Feature Request:** [FR-025](../../../fr-br/FR-025-changelog-management-and-archival-workflow.md)  
 **Code:** E6S07T11
 
 ---
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E6:S07:T11`
 
@@ -51,7 +51,7 @@ Implement automated changelog management workflow (CMW) with:
 
 ## Input
 
-- **Feature Request:** [`FR-025-changelog-management-and-archival-workflow.md`](../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
+- **Feature Request:** [`FR-025-changelog-management-and-archival-workflow.md`](../../../fr-br/FR-025-changelog-management-and-archival-workflow.md)
   - Comprehensive problem statement
   - Industry research on best practices and SOPs
   - Proposed solution architecture

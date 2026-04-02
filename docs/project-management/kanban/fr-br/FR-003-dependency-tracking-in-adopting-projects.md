@@ -134,8 +134,8 @@ A project adopts ai-dev-kit and uses the README template. The project directly t
 - Version: `v0.7.4.1+2`
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-7/Epic-7.md`](epics/Epic-7/Epic-7.md)
-- Story: [`docs/project-management/kanban/epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md`](epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md)
+- Epic: [`docs/project-management/kanban/epics/Epic-7/Epic-7.md`](../epics/Epic-7/Epic-7.md)
+- Story: [`docs/project-management/kanban/epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md`](../epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md)
 
 ---
 
@@ -162,7 +162,7 @@ This FR reframes the approach from Story 4. Instead of ai-dev-kit tracking exter
 - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 - [Keep a Changelog](https://keepachangelog.com/)
 - [Shields.io](https://shields.io/)
-- Story 4: [`docs/project-management/kanban/epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md`](epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md)
+- Story 4: [`docs/project-management/kanban/epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md`](../epics/Epic-7/Story-04-readme-template-based-on-best-readme-template.md)
 
 ---
 

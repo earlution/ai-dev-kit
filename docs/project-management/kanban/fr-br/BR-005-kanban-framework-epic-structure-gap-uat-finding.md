@@ -6,6 +6,8 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
+> **ai-dev-kit live kanban:** This BR reflects framework/UAT canonical expectations. The installed **ai-dev-kit** repo uses a different live epic map (e.g. **Epic 9 = Release Candidate Readiness**, not Documentation). See [`kanban-structure.md`](../kanban-structure.md).
+
 # Bug Report: Kanban Framework Epic Structure Gap (UAT Finding)
 
 **Type:** Bug Report (BR)  
@@ -232,7 +234,7 @@ The `CANONICAL_EPICS.md` file was never updated to include all 21 epics. The fra
 **Fix 2: Create Epic Template Files**
 
 - [ ] **Criterion 7:** Epic template files created for all 21 epics in `templates/epics/` directory
-- [ ] **Criterion 8:** Template files follow naming convention: `Epic-{NN}-{Name}.md`
+- [ ] **Criterion 8:** Template files follow naming convention: `Epic-\{NN\}-{Name}.md`
 - [ ] **Criterion 9:** Template files include all required sections per `EPIC_TEMPLATE.md`
 - [ ] **Criterion 10:** Template files are properly formatted and ready for use
 
@@ -413,8 +415,8 @@ Added detailed comment on GitHub issue #1 with full traceability to internal Kan
 - Version: `v0.4.6.6+0` (to be assigned when task starts)
 
 **Kanban Links:**
-- Epic: [`docs/project-management/kanban/epics/Epic-4/Epic-4.md`](epics/Epic-4/Epic-4.md)
-- Story: [`docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+- Epic: [`docs/project-management/kanban/epics/Epic-4/Epic-4.md`](../epics/Epic-4/Epic-4.md)
+- Story: [`docs/project-management/kanban/epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md`](../epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
 - Task: E4:S06:T06 (Update CANONICAL_EPICS.md - enhanced scope to address BR-005)
 
 ---

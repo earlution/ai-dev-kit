@@ -137,7 +137,7 @@ Validate that actual versioning behavior in the codebase matches the documented 
 - Task number within story
 - Set when starting new task
 - Constant for all releases within that task
-- Format: `E{epic}:S{story}:T{task}` (e.g., `E9:S21:T03`)
+- Format: `E\{epic\}:S\{story\}:T\{task\}` (e.g., `E9:S21:T03`)
 - Task numbers are 2-digit (01-99)
 - **CRITICAL:** Task MUST have a discrete Task document before versioning
 - **CRITICAL:** Task document Task ID MUST align with version TASK component

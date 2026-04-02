@@ -1,27 +1,207 @@
 # Changelog Archive
-## [0.6.7.109+1] - 31-03-26
+## [0.7.1.9+3] - 31-03-26
 
-E6:S07:T109 — **RW -k:** BR-059 / T109 on epic/6.
+E7:S01:T09 — **UXR-005** **Implementing Task** wiring.
 
-[Detailed changelog](CHANGELOG_v0.6.7.109+1.md)
-
----
----
----
-## [0.6.6.2+9] - 31-03-26
-
-E6:S06:T02 — **RW -k:** BR-038 / T02 kanban alignment on epic/6.
-
-[Detailed changelog](CHANGELOG_v0.6.6.2+9.md)
+[Detailed changelog](CHANGELOG_v0.7.1.9+3.md)
 
 ---
 ---
 ---
-## [0.6.6.57+1] - 31-03-26
+## [0.7.0.4+1] - 31-03-26
 
-E6:S06:T57 — **RW -k:** BR-039 / T57 traceability on epic/6.
+Merge **`epic/7-documentation-maintenance`** into **`main`** (E7:S00:T04 + integration).
 
-[Detailed changelog](CHANGELOG_v0.6.6.57+1.md)
+[Detailed changelog](CHANGELOG_v0.7.0.4+1.md)
+
+---
+---
+---
+## [0.7.0.4+0] - 31-03-26
+
+E7:S00:T04 **`RW -k`** — UXR-004 repository anchor + board row restore.
+
+[Detailed changelog](CHANGELOG_v0.7.0.4+0.md)
+
+---
+---
+---
+## [0.7.0.3+0] - 31-03-26
+
+E7:S00:T03 **`RW -k`** — UXR-003 repository anchor + board/Story-000 slice.
+
+[Detailed changelog](CHANGELOG_v0.7.0.3+0.md)
+
+---
+---
+---
+## [0.7.0.2+2] - 31-03-26
+
+E7:S00:T02 — **UXR-002** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.0.2+2.md)
+
+---
+---
+---
+## [0.7.0.1+2] - 31-03-26
+
+E7:S00:T01 — **UXR-001** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.0.1+2.md)
+
+---
+---
+---
+## [0.5.1.74+3] - 31-03-26
+
+E5:S01:T74 **+3** — Intake reconciliation: board + T73 + BRs ↔ epic/6 **T57** / **T109-br059**; drop draft T43/dup T109.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+3.md)
+
+---
+---
+---
+## [0.5.1.74+2] - 31-03-26
+
+E5:S01:T74 **+2** — **FR-073** Phase B/C: T43/T109 filing, E7:S00 UXR anchors, fr-br-uxr-board MoSCOW links; T73 narrative closure.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+2.md)
+
+---
+---
+---
+## [0.5.1.74+1] - 31-03-26
+
+E5:S01:T74 — **FR-074** intake hardening: KG-R2 atomic intake, KG-R6 semantic placement; governance, guides, skill, workflow, board alignment.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+1.md)
+
+---
+---
+---
+## [0.5.1.47+6] - 31-03-26
+
+E5:S01:T47 — **FR-047** intake: **Implementing Task** wiring and task link in FR.
+
+[Detailed changelog](CHANGELOG_v0.5.1.47+6.md)
+
+---
+---
+---
+## [0.5.1.46+3] - 31-03-26
+
+E5:S01:T46 — **FR-046** intake: **Implementing Task** wiring and T46 traceability refresh.
+
+[Detailed changelog](CHANGELOG_v0.5.1.46+3.md)
+
+---
+---
+---
+## [0.5.1.32+1] - 31-03-26
+
+Merge **`epic/5-documentation-management`** into **`main`** (E5:S01:T32 + Epic 7 / intake history retained).
+
+[Detailed changelog](CHANGELOG_v0.5.1.32+1.md)
+
+---
+---
+---
+## [0.5.1.32+0] - 31-03-26
+
+E5:S01:T32 **`RW -k`** — FR-032/T32 doc-init + fr-br-uxr-board reconciliation.
+
+[Detailed changelog](CHANGELOG_v0.5.1.32+0.md)
+
+---
+---
+---
+## [0.5.1.21+0] - 31-03-26
+
+E5:S01:T21 **`RW -k`** — FR-021/T21 doc-init + FR-034 implementing link + board/T73 slice.
+
+[Detailed changelog](CHANGELOG_v0.5.1.21+0.md)
+
+---
+---
+---
+## [0.5.9.9+2] - 31-03-26
+
+E5:S09:T09 — GitHub Pages go-live verification (operational close-out for FR-070).
+
+[Detailed changelog](CHANGELOG_v0.5.9.9+2.md)
+
+---
+---
+---
+## [0.5.9.9+1] - 31-03-26
+
+E5:S09:T09 — **RW -k:** T09 GitHub Pages go-live verification (kanban + FR-070 follow-up).
+
+[Detailed changelog](CHANGELOG_v0.5.9.9+1.md)
+
+---
+---
+---
+## [0.7.6.9+1] - 25-03-26
+
+E7:S06:T09+1 – Config/git validation; rw-config vs disk; cursorrules alignment; Story 6 complete.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.9+1.md)
+
+---
+---
+---
+## [0.7.6.8+1] - 25-03-26
+
+E7:S06:T08+1 – Dependency/tooling audit; validation tests aligned; BR-058 (CI Tests workflow + pytest drift).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.8+1.md)
+
+---
+---
+---
+## [0.7.6.7+1] - 25-03-26
+
+E7:S06:T07+1 – General documentation integrity: README path spot-check; docs tree; fr-br cross-ref re-scan; T07 audit doc.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.7+1.md)
+
+---
+---
+---
+## [0.7.6.6+1] - 25-03-26
+
+E7:S06:T06+1 – FR/BR/UXR intake doc quality: fr-br epic link fixes; aggregate doc headers; kanban cross-links; T06 findings.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.6+1.md)
+
+---
+---
+---
+## [0.7.6.5+1] - 25-03-26
+
+E7:S06:T05+1 – Workflow script integrity: parser/orchestrator/canonical_steps fixes and docs; tests; kanban closure.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.5+1.md)
+
+---
+---
+---
+## [0.7.6.4+1] - 25-03-26
+
+E7:S06:T04+1 – Recent commit review: RW/batch/quality findings in T04; kanban updates; no BR/FR filed.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.4+1.md)
+
+---
+---
+---
+## [0.7.6.3+1] - 25-03-26
+
+E7:S06:T03+1 – Kanban documentation consistency: live SoT, E9/E18 disambiguation, kanban links, Epic-9 S05 stub.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.3+1.md)
 
 ---
 ---
@@ -30,7 +210,7 @@ E6:S06:T57 — **RW -k:** BR-039 / T57 traceability on epic/6.
 
 E6:S07:T101+37 – UKW perpetual: Kanban sync after main merge on epic/6; board and T101 markers; Epic 7 Story 6 UKW updates.
 
-[Detailed changelog](CHANGELOG_v0.6.7.101+37.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+37.md)
 
 ---
 ---

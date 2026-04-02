@@ -56,7 +56,7 @@ These sections are **fundamental** to any Kanban-driven project using the dev-ki
 - `rituals/` – Governance policies, cadences, Release Workflow (required)
 - `risk_and_dependencies/` – Risk tracking, dependency management (optional)
 
-**Depth:** 3-4 levels (`docs/project-management/kanban/epics/epic-{N}.md`)
+**Depth:** 3-4 levels (`docs/project-management/kanban/epics/epic-\{N\}.md`)
 
 #### `docs/changelog-and-release-notes/`
 **Purpose:** Release documentation, changelogs, version history  

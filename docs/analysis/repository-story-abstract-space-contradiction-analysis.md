@@ -28,8 +28,8 @@ housekeeping_policy: keep
 - Tasks use: `v0.5.0.31+0`, `v0.6.0.33+0` (STORY=0, TASK=31, 33, 34)
 
 **The Contradiction:**
-- Abstract space format: `0.{EPIC}.0.0+0` (STORY=0, TASK=0) - conceptual anchor
-- Task versions: `0.{EPIC}.0.{TASK}+0` (STORY=0, TASK=31+) - concrete work
+- Abstract space format: `0.\{EPIC\}.0.0+0` (STORY=0, TASK=0) - conceptual anchor
+- Task versions: `0.\{EPIC\}.0.\{TASK\}+0` (STORY=0, TASK=31+) - concrete work
 - S00 is simultaneously abstract space AND a concrete story with tasks
 
 ---
@@ -39,8 +39,8 @@ housekeeping_policy: keep
 ### Original Design Intent (FR-018, FR-021)
 
 **FR-018 (Abstract Space):**
-- Abstract space = `0.{EPIC}.{STORY}.{TASK}+0` for forensic traceability anchor
-- S00 abstract space = `0.{EPIC}.0.0+0` (STORY=0, TASK=0)
+- Abstract space = `0.\{EPIC\}.\{STORY\}.\{TASK\}+0` for forensic traceability anchor
+- S00 abstract space = `0.\{EPIC\}.0.0+0` (STORY=0, TASK=0)
 - Purpose: Establish canonical anchor before functional work
 
 **FR-021 (Repository Stories):**

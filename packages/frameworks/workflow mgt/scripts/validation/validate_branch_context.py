@@ -168,24 +168,47 @@ def locate_task_doc_for_version(
     """
     project_root = Path.cwd()
     
-    # Format 1: Separate file
     if config and config.get('use_kanban') and 'kanban_root' in config:
         kanban_root = Path(config['kanban_root'])
-        story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story:03d}"
-        if not story_dir.exists():
-            story_dir = kanban_root / f"epics/Epic-{epic}/Story-{story}"
+        if not kanban_root.is_absolute():
+            kanban_root = project_root / kanban_root
     else:
-        story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story:03d}"
-        if not story_dir.exists():
-            story_dir = project_root / f"docs/project-management/kanban/epics/Epic-{epic}/Story-{story}"
+        kanban_root = project_root / "docs/project-management/kanban"
     
+    epic_dir = kanban_root / f"epics/Epic-{epic}"
+    
+    # Format 1: Separate file under canonical or numeric Story-* dir
+    story_dir = epic_dir / f"Story-{story:03d}"
+    if not story_dir.exists():
+        story_dir = epic_dir / f"Story-{story}"
     if story_dir.exists():
         task_files = list(story_dir.glob(f"Task-{task:03d}-*.md"))
         if not task_files:
             task_files = list(story_dir.glob(f"T{task:03d}-*.md"))
+        if not task_files:
+            task_files = list(story_dir.glob(f"T{task:02d}-*.md"))
+        if not task_files:
+            task_files = list(story_dir.glob(f"T{task}-*.md"))
+        if not task_files:
+            task_files = list(story_dir.glob(f"E{epic:02d}S{story:02d}T{task:02d}-*.md"))
         if task_files:
             task_file = task_files[0]
             return (task_file, task_file.read_text(), "separate_file")
+    
+    # Format 1b: Task file under descriptive Story-* folder (e.g. Story-001-codebase-maintenance-tasks/)
+    if epic_dir.is_dir():
+        patterns = [
+            f"Task-{task:03d}-*.md",
+            f"T{task:03d}-*.md",
+            f"T{task:02d}-*.md",
+            f"T{task}-*.md",
+            f"E{epic:02d}S{story:02d}T{task:02d}-*.md",
+        ]
+        for pat in patterns:
+            hits = sorted(epic_dir.rglob(pat))
+            if hits:
+                task_file = hits[0]
+                return (task_file, task_file.read_text(), "separate_file")
     
     # Format 2: Delimited section (would need Story file, skip for now in branch context)
     return (None, None, "not_found")

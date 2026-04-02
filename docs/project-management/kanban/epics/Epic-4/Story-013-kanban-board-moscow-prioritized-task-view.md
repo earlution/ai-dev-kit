@@ -22,22 +22,22 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board** ✅ COMPLETE (v0.4.13.1+1)
-  - Task: [`T01-kanban-board-moscow-prioritized-task-view.md`](T01-kanban-board-moscow-prioritized-task-view.md)
+  - Task: [`T01-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view/T01-kanban-board-moscow-prioritized-task-view.md)
 
 - [x] **E4:S13:T02 – Update Kanban governance policy** ✅ COMPLETE (v0.4.13.2+1)
-  - Task: [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
+  - Task: [`T02-update-kanban-governance-policy.md`](Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md)
 
 - [x] **E4:S13:T03 – Update Kanban board template** ✅ COMPLETE (v0.4.13.3+1)
-  - Task: [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
+  - Task: [`T03-update-kanban-board-template.md`](Story-013-kanban-board-moscow-prioritized-task-view/T03-update-kanban-board-template.md)
 
 - [x] **E4:S13:T04 – Assess system impacts** ✅ COMPLETE (v0.4.13.4+3)
-  - Task: [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
+  - Task: [`T04-assess-system-impacts.md`](Story-013-kanban-board-moscow-prioritized-task-view/T04-assess-system-impacts.md)
 
 - [x] **E4:S13:T05 – Update Kanban package** ✅ COMPLETE (v0.4.13.5+1)
-  - Task: [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
+  - Task: [`T05-update-kanban-package.md`](Story-013-kanban-board-moscow-prioritized-task-view/T05-update-kanban-package.md)
 
 - [x] **E4:S13:T06 – Update other affected packages** ✅ COMPLETE (v0.4.13.6+1)
-  - Task: [`T06-update-other-affected-packages.md`](T06-update-other-affected-packages.md)
+  - Task: [`T06-update-other-affected-packages.md`](Story-013-kanban-board-moscow-prioritized-task-view/T06-update-other-affected-packages.md)
 
 
 > **Format:** `E4:S13:Txx` (Epic 4, Story 13, Task with 2-digit zero padding)  
@@ -81,7 +81,7 @@ Enhance the Kanban board to be more useful by:
 
 **Status:** ✅ COMPLETE
 
-**Task Document:** [`T01-kanban-board-moscow-prioritized-task-view.md`](T01-kanban-board-moscow-prioritized-task-view.md)
+**Task Document:** [`T01-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view/T01-kanban-board-moscow-prioritized-task-view.md)
 
 **Approach:**
 1. Analyze current Kanban board structure (`kanban-board.md`)
@@ -101,7 +101,7 @@ Enhance the Kanban board to be more useful by:
 
 **Status:** ✅ COMPLETE
 
-**Task Document:** [`T02-update-kanban-governance-policy.md`](T02-update-kanban-governance-policy.md)
+**Task Document:** [`T02-update-kanban-governance-policy.md`](Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md)
 
 **Approach:**
 1. Review enhanced board structure from T01
@@ -121,7 +121,7 @@ Enhance the Kanban board to be more useful by:
 
 **Status:** ✅ COMPLETE
 
-**Task Document:** [`T03-update-kanban-board-template.md`](T03-update-kanban-board-template.md)
+**Task Document:** [`T03-update-kanban-board-template.md`](Story-013-kanban-board-moscow-prioritized-task-view/T03-update-kanban-board-template.md)
 
 **Approach:**
 1. Locate or create Kanban board template in framework package
@@ -141,7 +141,7 @@ Enhance the Kanban board to be more useful by:
 
 **Status:** ✅ COMPLETE
 
-**Task Document:** [`T04-assess-system-impacts.md`](T04-assess-system-impacts.md)
+**Task Document:** [`T04-assess-system-impacts.md`](Story-013-kanban-board-moscow-prioritized-task-view/T04-assess-system-impacts.md)
 
 **Approach:**
 1. Identify all systems that interact with Kanban
@@ -162,7 +162,7 @@ Enhance the Kanban board to be more useful by:
 
 **Status:** ✅ COMPLETE
 
-**Task Document:** [`T05-update-kanban-package.md`](T05-update-kanban-package.md)
+**Task Document:** [`T05-update-kanban-package.md`](Story-013-kanban-board-moscow-prioritized-task-view/T05-update-kanban-package.md)
 
 **Approach:**
 1. Verify user verification obtained
@@ -183,7 +183,7 @@ Enhance the Kanban board to be more useful by:
 
 **Status:** ✅ COMPLETE
 
-**Task Document:** [`T06-update-other-affected-packages.md`](T06-update-other-affected-packages.md)
+**Task Document:** [`T06-update-other-affected-packages.md`](Story-013-kanban-board-moscow-prioritized-task-view/T06-update-other-affected-packages.md)
 
 **Approach:**
 1. Review system impact assessment from T04

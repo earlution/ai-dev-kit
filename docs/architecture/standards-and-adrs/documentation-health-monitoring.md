@@ -81,7 +81,7 @@ Documentation health monitoring provides comprehensive visibility into the quali
 - **Good (75-89%):** 🟡 Documentation is in good condition with minor improvements needed
 - **Fair (60-74%):** 🟠 Documentation needs attention and improvements
 - **Poor (40-59%):** 🔴 Documentation requires significant improvements
-- **Critical (<40%):** ⚫ Documentation is in critical condition
+- **Critical (&lt;40%):** ⚫ Documentation is in critical condition
 
 ---
 

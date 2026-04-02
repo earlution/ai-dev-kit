@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Task ID
 
-**Format:** `E{epic}:S{story}:T{task}`
+**Format:** `E\{epic\}:S\{story\}:T\{task\}`
 
 **Full Task ID:** `E6:S01:T33`
 
@@ -138,10 +138,10 @@ Fix UKW (Update Kanban Workflow) board disorganization bug where epics are not s
 - [FR-034: UKW Granular Control and Use Case Flags](../../../fr-br/FR-034-ukw-granular-control-and-use-case-flags.md) (enhancements split from original mixed-scope document)
 
 **Related Tasks:**
-- [E6:S06:T08: Update Kanban Workflow (UKW)](../../Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md) - Perpetual task
+- [E6:S06:T08: Update Kanban Workflow (UKW)](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) - Perpetual task
 
 **Related Stories:**
-- [E6:S01: BR Repo](../../Story-000-br-repo.md) - Repository story
+- [E6:S01: BR Repo](../Story-001-br-repo.md) - Repository story
 - [E6:S06: ADK Implementation Analysis and Package Management](../../Epic-6/Story-006-adk-implementation-analysis-and-package-management.md)
 
 ---

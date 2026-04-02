@@ -87,7 +87,7 @@ An **integration alignment report** confirming:
 **Key Expectations:**
 - Version schema: `RC.EPIC.STORY.TASK+BUILD` (RC=0 for development).
 - Story/Epic documents carry **forensic markers** in checklists and headers.
-- Tasks use `E{epic}:S{story}:T{task}` naming and record versions in completion lines.
+- Tasks use `E\{epic\}:S\{story\}:T\{task\}` naming and record versions in completion lines.
 - Epic headers record `Last updated` with version and short summary.
 
 **Dev-Kit Implementation:**
