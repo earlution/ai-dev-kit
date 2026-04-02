@@ -19,3 +19,7 @@
 
 - `validate_branch_context.py --strict`, `validate_rw_task_complete.py`, `validate_rw_task_intent.py` for **E6:S06:T57** prior to release prep.
 - `validate_changelog_format.py`, `validate_version_bump.py`, `check_changelog_size.py` after edits.
+
+## SemVer note
+
+Initial **task_touch** mapping collided with existing remote tag **`v0.4.700+3`**; registry **`task_touch_counter`** advanced to **`701`** so outward SemVer is **`v0.4.701+3`** for the same internal **`v0.6.6.57+3`** (dual tag: internal `v0.6.6.57+3` + SemVer `v0.4.701+3`).
