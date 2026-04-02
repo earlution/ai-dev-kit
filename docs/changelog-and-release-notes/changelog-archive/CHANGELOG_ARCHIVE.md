@@ -17,6 +17,15 @@ E6:S06:T60 — **BR-060** (change implemented): RW Step 1c allows **`IN PROGRESS
 ---
 ---
 ---
+## [0.6.6.57+5] - 02-04-26
+
+**`RW -k` repair (Option B) E6:S06:T57** — Outward **SemVer `v0.4.704+5`**; remote **`v0.4.703+4`** collision avoided. [T57](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
+
+[Detailed changelog](CHANGELOG_v0.6.6.57+5.md)
+
+---
+---
+---
 ## [0.6.6.57+4] - 02-04-26
 
 **`RW -k` E6:S06:T57** — **BR-039** repo task **COMPLETE** (no Windsurf obligation; **BR-039** open for product); boards + **BR-039** + **`dev-kit-kanban-versioning-rw-integration.md`** § **`RW -k`**. [T57](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](../../project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md).

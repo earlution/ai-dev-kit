@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.57+4] - 02-04-26
+## [0.6.6.57+5] - 02-04-26
 
-**`RW -k` E6:S06:T57** — **BR-039** repo task **COMPLETE** (no Windsurf obligation; **BR-039** open for product); Kanban/board/BR alignment; **`dev-kit-kanban-versioning-rw-integration.md`** § **`RW -k`** (`v1.0.1`). *Ordering:* internal **T57+4** after prior **T61+1** on branch — explicit **`-k`** attribution. [T57](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](docs/project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md).
+**`RW -k` repair (Option B) E6:S06:T57** — New outward **SemVer `v0.4.704+5`** (`task_touch` **704**); **avoids** ambiguous remote **`v0.4.703+4`**. Same **T57** closure work as **+4**; docs/version alignment only. [T57](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); prior [+4 detailed](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+4.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+5.md)
