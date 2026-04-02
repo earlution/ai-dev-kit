@@ -16,4 +16,4 @@
 
 ## SemVer note
 
-Outward: **`v0.4.704+5`** | Internal: **`v0.6.6.57+5`**. Prefer **`v0.4.704+5`** for GitHub Releases and consumers; treat **`v0.4.703+4`** on remote as **stale / ambiguous** unless force-fixed separately.
+Outward: **`v0.4.704+5`** | Internal: **`v0.6.6.57+5`**. **Update:** remote **`v0.4.704+5`** was **also** pre‑empty at **`ca98b578`** — use **`v0.4.705+6`** / **`0.6.6.57+6`** instead (see **`CHANGELOG_v0.6.6.57+6.md`**).

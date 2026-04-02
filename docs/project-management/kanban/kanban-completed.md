@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-02 (**`RW -k` E6:S06:T57** v0.6.6.57+5 — SemVer **v0.4.704+5**)
-**Version:** v0.6.6.57+5 *(from `version.py` at board refresh)*
+**Last Updated:** 2026-04-02 (**`RW -k` E6:S06:T57** v0.6.6.57+6 — **v0.4.705+6**)
+**Version:** v0.6.6.57+6 *(from `version.py` at board refresh)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 #### **Epic 6: Framework Management (Story 6 — feature requests)**
 - **[E6:S06:T57](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)** — **BR-039** **repo** implementation **COMPLETE**: traceability, evidence, **Cursor-only** maintainer policy, **no Windsurf** verification obligation (no subscription); **[BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)** stays **IN PROGRESS** for **Cascade** vendor/product.  
-  **Completed:** `2026-04-02T16:00:00Z` | **Version:** `v0.6.6.57+5` (`RW -k` repair) | **Agent:** `RW Agent`
+  **Completed:** `2026-04-02T16:00:00Z` | **Version:** `v0.6.6.57+6` (`RW -k` repair) | **Agent:** `RW Agent`
 
 #### **Epic 5: FR Repo (repository story)**
 - **[E5:S01:T75](epics/Epic-5/Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md)** — **ICW durable planning artifacts** in repo documentation (**FR-075**): `specification-and-planning-artifacts-policy.md`, `docs/implementation-cycles/README.md`, ICW framework README + guide, `icw-workflow.yaml` comment, `.cursorrules`; intake **FR-075** + board row.  

@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-03-09  
-**Last updated:** 2026-04-02 — **`RW -k`** **E6:S06:T57** **v0.6.6.57+5** (SemVer **v0.4.704+5**); **T57** repo **COMPLETE**; **BR-039** stays open for vendor/community verification  
-**Version:** v0.6.6.57+5  
+**Last updated:** 2026-04-02 — **`RW -k`** **E6:S06:T57** **v0.6.6.57+6** (SemVer **v0.4.705+6**); **T57** repo **COMPLETE**; **BR-039** stays open for vendor/community verification  
+**Version:** v0.6.6.57+6  
 **Code:** BR-039  
 **Implementing Task (repo — COMPLETE):** [E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
 **Planning Artifact (IPW):** [IPW-E6S06T57-br039-vendor-blocker-planning.md](../../../implementation-cycles/IPW-E6S06T57-br039-vendor-blocker-planning.md)

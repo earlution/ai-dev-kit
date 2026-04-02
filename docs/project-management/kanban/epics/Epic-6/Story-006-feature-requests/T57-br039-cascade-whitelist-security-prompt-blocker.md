@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Small (repo) / Unknown (vendor)  
 **Created:** 2026-03-31  
-**Last updated:** 2026-04-02 — **`RW -k`** repair **v0.6.6.57+5** (SemVer **v0.4.704+5** — Option B, remote **`v0.4.703+4`** collision)  
-**Version:** v0.6.6.57+5  
+**Last updated:** 2026-04-02 — **`RW -k`** repair **v0.6.6.57+6** (SemVer **v0.4.705+6** — **`v0.4.703+4`** / **`v0.4.704+5`** both stale on remote)  
+**Version:** v0.6.6.57+6  
 **Code:** E6S06T57
 
 **Upstream:** [BR-039 – Cascade Whitelist Security Prompt Usability Blocker](../../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
@@ -79,7 +79,8 @@ Closing **T57** as **COMPLETE** is therefore **repo-complete**, not “BR-039 re
 
 ## Version Anchor
 
-- **v0.6.6.57+5** (`RW -k` **repair** / Option B) — outward **`v0.4.704+5`**; **supersedes** **`v0.4.703+4`** tag attempt for **+4**.
+- **v0.6.6.57+6** (`RW -k` **repair**) — outward **`v0.4.705+6`**; **`+5` / `v0.4.704+5`** also blocked on remote.
+- **v0.6.6.57+5** (`RW -k` **repair** / Option B) — outward **`v0.4.704+5`** attempted; **supersedes** **`v0.4.703+4`** tag attempt for **+4**.
 - **v0.6.6.57+4** (`RW -k` **E6:S06:T57**) — **T57** **COMPLETE** repo-side; **§ Task closure policy**; **`dev-kit-kanban-versioning-rw-integration.md`** § **`RW -k`**.
 - **v0.6.6.57+3** — **E1** / **E2** historical evidence + **Cursor-only** note (prior full **RW** on **T57**).
 
