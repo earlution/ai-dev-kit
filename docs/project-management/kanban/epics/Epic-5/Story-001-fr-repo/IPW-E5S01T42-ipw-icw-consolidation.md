@@ -114,3 +114,38 @@ flowchart LR
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md`
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md`
 - `packages/frameworks/kanban/templates/PLAN_DOC_TEMPLATE.md`
+
+
+## 5. AC5/AC7 closure addendum
+
+### AC5 target list (retro wiring)
+
+- `docs/project-management/kanban/epics/Epic-4/Story-014-kanban-framework-maintenance/T01-planning-spec-tests-impl.md`
+  - Add `Host Task` header link to `T01-update-packaged-rw-ukw-perpetual-tasks.md`.
+  - Ensure host task has plan link in both `## Input` and `## References`.
+- `docs/project-management/kanban/epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-planning-spec-tests-impl.md`
+  - Verify existing bidirectional wiring remains valid.
+
+### AC7 validator specification
+
+- Script path: `packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py`
+- Inputs:
+  - Scan planning artifacts in `docs/project-management/kanban/epics/**` matching `*planning*.md` and `IPW-*.md`.
+- Checks:
+  1. Plan doc has `Host Task` markdown link.
+  2. Host task file exists.
+  3. Host task `## Input` section contains link to the plan doc.
+  4. Host task `## References` section contains link to the plan doc.
+- Output:
+  - PASS/FAIL summary with concrete file paths and missing requirement(s).
+
+### Definition of done (AC5/AC7)
+
+- AC5: All identified historical plan docs are bidirectionally wired.
+- AC7: Validator script exists, runs, and reports PASS on current repository state.
+
+
+### Validator result (AC7)
+
+- `python "packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py"`
+- Result: `PASS: all planning docs are bidirectionally wired`

@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 42: Implementation Planning Workflow (IPW) — ICW consolidation
 
 **Task ID:** E5:S01:T42  
-**Status:** ✅ COMPLETE (v0.5.1.42+2)  
+**Status:** ✅ COMPLETE (v0.5.1.42+3)  
 **Priority:** HIGH  
 **Estimated Effort:** Medium (documentation + framework alignment; optional handler/registry follow-up)  
 **Created:** 2026-03-31  
-**Last updated:** 2026-04-01 (v0.5.1.42+2 — IPW SoP, template, rules, SoP 2.5, registry, cross-refs; **FR-042** AC5/AC7 deferred)  
-**Version:** v0.5.1.42+2  
+**Last updated:** 2026-04-02 (v0.5.1.42+3 — AC5 retro wiring + AC7 validator complete; FR-042 closed).  
+**Version:** v0.5.1.42+3  
 **Code:** E5S01T42
 
 **Repository Pattern:** FR-042 = E5:S01:T42 (first implementation build when delivered: e.g. v0.5.1.42+1)
@@ -54,9 +54,9 @@ This task covers:
 
 ## Acceptance Criteria
 
-Aligned with **FR-042** acceptance criteria (AC1–AC12), with emphasis on:
+Aligned with **FR-042** acceptance criteria (AC1–AC12).
 
-- **AC10–AC12:** ICW deprecated or alias; registry/docs consistent; FR-040 notes IPW as planning successor
+- **AC5/AC7 complete:** historical plan docs wired; validator script implemented and passing.
 
 ---
 

@@ -10,11 +10,11 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-04-01 (RW **v0.5.1.42+2** **E5:S01:T42** — **FR-042** IPW deliverables; prior **v0.5.1.42+1**; **v0.5.1.32+0** **T32** **`RW -k`**; **v0.5.1.21+0** **T21**)
+**Last updated:** 2026-04-02 (RW **v0.5.1.42+3** **E5:S01:T42** — FR-042 AC5/AC7 closure complete)
 **Estimated Effort:** N/A (Perpetual repository)  
 **Started:** 2026-01-16  
 **Completed:** N/A (Perpetual - never completes)  
-**Version:** v0.5.1.42+2
+**Version:** v0.5.1.42+3
 **Code:** E5S01
 
 **Story Type:** Repository (PERPETUAL)  
@@ -41,7 +41,7 @@ housekeeping_policy: keep
 - [x] **E5:S01:T38 – RW Step 7 Scoped Kanban Sync (UKW Mode)** - ✅ COMPLETE (v0.5.1.38+1 – FR-038 documentation: scoped UKW Step 7, invocation_context, governance; FR-061 → T64 collision fix) - [Task Document](Story-001-fr-repo/T38-rw-step-7-scoped-kanban-sync-ukw-mode.md) | [FR-038](../../fr-br/FR-038-rw-step-7-scoped-kanban-sync-ukw-mode.md)
 - [ ] **E5:S01:T39 – AI Dev Kit Project Review and Legacy Clean-Up** - IN PROGRESS (v0.5.1.39+3 – Legacy clean-up: SoT refs, scripts, adopter docs) - [Task Document](Story-001-fr-repo/T39-ai-dev-kit-project-review-and-legacy-cleanup.md) | [FR-039](../../fr-br/FR-039-ai-dev-kit-project-review-and-legacy-clean-up.md)
 
-- [x] **E5:S01:T42 – Implementation Planning Workflow (IPW) — ICW consolidation** - ✅ COMPLETE (v0.5.1.42+2 — FR-042 core deliverables; **AC5/AC7** remain on FR) - [Task Document](T42-implementation-planning-workflow-ipw.md) | [FR-042](../../fr-br/FR-042-implementation-planning-workflow-ipw.md)
+- [x] **E5:S01:T42 – Implementation Planning Workflow (IPW) — ICW consolidation** - ✅ COMPLETE (v0.5.1.42+3 — AC5 retro wiring + AC7 validator script; FR-042 complete) - [Task Document](T42-implementation-planning-workflow-ipw.md) | [FR-042](../../fr-br/FR-042-implementation-planning-workflow-ipw.md)
 
 - [ ] **E5:S01:T43 – UKW Gap Discovery (TODO Tasks and Unfiled FR/BR)** - TODO (HIGH priority, v0.5.1.43+1 – Task created) - [Task Document](Story-001-fr-repo/T43-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) | [FR-043](../../fr-br/FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md)
 - [ ] **E5:S01:T44 – RW Temporary Execution Log for Recovery and Forensics** - TODO (MEDIUM priority, v0.5.1.44+1 – Task created) - [Task Document](Story-001-fr-repo/T44-rw-temporary-execution-log-for-recovery-and-forensics.md) | [FR-044](../../fr-br/FR-044-rw-temporary-execution-log-for-recovery-and-forensics.md)

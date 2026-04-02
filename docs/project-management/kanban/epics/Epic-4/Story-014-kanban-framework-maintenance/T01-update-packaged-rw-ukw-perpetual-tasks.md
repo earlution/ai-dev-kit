@@ -133,6 +133,7 @@ Update packaged RW to:
 
 ## Input
 
+- **Planning document:** [T01-planning-spec-tests-impl.md](T01-planning-spec-tests-impl.md) (Spec, Test Design, Implementation Plan)
 - Packaged RW framework: `packages/frameworks/workflow mgt/`
 - Source repo RW implementation: `.cursorrules` (UKW context detection)
 - UKW perpetual task: `E6:S07:T101` (ai-dev-kit example; pattern varies by project)
@@ -172,6 +173,7 @@ Update packaged RW to:
 
 ## References
 
+- [T01-planning-spec-tests-impl.md](T01-planning-spec-tests-impl.md) - Spec, Test Design, Implementation Plan
 - **RW Package:** `packages/frameworks/workflow mgt/`
 - **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **RW Workflow YAML:** `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`

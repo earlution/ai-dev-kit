@@ -1,6 +1,7 @@
 # E4:S14:T01 – Planning: Spec, Tests, Implementation Plan
 
 **Task:** Update Packaged RW to Handle UKW Context and Perpetual Tasks  
+**Host Task:** [T01-update-packaged-rw-ukw-perpetual-tasks.md](T01-update-packaged-rw-ukw-perpetual-tasks.md) (E4:S14:T01)  
 **Status:** COMPLETE (v0.4.14.1+1)  
 **Planning doc created:** 2026-02-22
 

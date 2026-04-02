@@ -14,8 +14,8 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** OPEN (AC5 retroactive wiring, AC7 validator still **TODO**)  
-**Last updated:** 2026-04-01 — **IPW** SoP, template, `.cursorrules`, SoP Step 2.5, registry, package README, FR-040/FR-048/T40/T48, `icw_handler` docstring delivered under **E5:S01:T42**.  
+**Status:** COMPLETE  
+**Last updated:** 2026-04-02 — AC5 (retro wiring) and AC7 (validator script) completed; FR-042 acceptance criteria satisfied under **E5:S01:T42**.  
 **Implementation Task:** [E5:S01:T42](../epics/Epic-5/Story-001-fr-repo/T42-implementation-planning-workflow-ipw.md)
 
 ---
@@ -186,7 +186,7 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 - [x] **FR-042:R05** - Plan doc MUST reference host task doc in header (Host Task link) – **bidirectional wiring is mandatory; both directions required**
 - [x] **FR-042:R05a** - Wiring is atomic: plan doc creation and task doc update happen in same IPW session
 - [x] **FR-042:R06** - IPW integrated with Implementation Cycle (reference from implementation-cycle-sop, .cursorrules)
-- [ ] **FR-042:R07** - Validation mechanism or checklist to detect unwired plan docs
+- [x] **FR-042:R07** - Validation mechanism or checklist to detect unwired plan docs
 - [x] **FR-042:R08** - Cursor rules/skills or documentation reference IPW for plan doc creation
 - [x] **FR-042:R09** - Instruction **`IPW`** (or `IPW ExxSxxTxx`) replaces "Plan ExxSxxTxx: Define spec, design tests, plan impl" as the canonical trigger
 - [x] **FR-042:R10** - **`ICW`** is **not** a parallel planning workflow: `.cursorrules` (and adopter equivalents) state **IPW canonical**; **`ICW`** is removed, folded into IPW wording, or documented as **deprecated alias** only (same steps as IPW)
@@ -210,9 +210,9 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 - [x] **AC3:** Task doc template or guidance updated to include plan doc in Input/References when plan exists
 - [x] **AC3a:** Bidirectional wiring requirement (task↔plan) documented clearly in IPW SoP and plan doc template
 - [x] **AC4:** Implementation Cycle SoP references IPW for plan doc creation
-- [ ] **AC5:** Existing unwired plan docs (e.g., T07-planning-spec-tests-impl.md) retroactively wired
+- [x] **AC5:** Existing unwired plan docs (e.g., T07-planning-spec-tests-impl.md) retroactively wired
 - [x] **AC6:** Cursor rules, create-rule skill, or equivalent references IPW
-- [ ] **AC7:** Validation checklist or script detects unwired plan docs
+- [x] **AC7:** Validation checklist or script detects unwired plan docs
 - [x] **AC8:** Plan doc template created at `packages/frameworks/kanban/templates/PLAN_DOC_TEMPLATE.md` (or equivalent) following proposed structure
 - [x] **AC9:** IPW instruction `IPW` documented as canonical trigger in .cursorrules or create-rule skill
 - [x] **AC10:** `.cursorrules` (ICW section) updated: **IPW** canonical for planning; **ICW** deprecated or alias-only, consistent with §7
@@ -229,7 +229,7 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 - [x] Implementation Cycle SoP (integration)
 - [x] Task Template (References/Input guidance)
 - [x] Plan Doc Template (new or enhanced)
-- [ ] Validation (optional script)
+- [x] Validation (optional script)
 - [x] Other: Cursor rules, create-rule/create-skill
 
 **Estimated Complexity:**
@@ -266,6 +266,7 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md` – IPW agent execution
 - `packages/frameworks/kanban/templates/PLAN_DOC_TEMPLATE.md` – Plan doc template
+- `packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py` – AC7 validator
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md` – Implementation Cycle
 - `docs/project-management/kanban/epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-planning-spec-tests-impl.md` – Example plan doc (unwired)
 - `docs/project-management/kanban/epics/Epic-4/Story-011-kanban-granularity-discrete-task-docs/T07-migrate-embedded-tasks-to-discrete-documents.md` – Host task for T07

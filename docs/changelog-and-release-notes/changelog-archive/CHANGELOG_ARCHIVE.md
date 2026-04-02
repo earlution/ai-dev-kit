@@ -1,4 +1,13 @@
 # Changelog Archive
+## [0.5.1.42+3] - 02-04-26
+
+E5:S01:T42 **+3** — FR-042 AC5/AC7 closure (retro wiring + validator).
+
+[Detailed changelog](CHANGELOG_v0.5.1.42+3.md)
+
+---
+---
+---
 ## [0.5.1.42+2] - 01-04-26
 
 E5:S01:T42 **+2** — IPW/FR-042: SoP, template, .cursorrules, Implementation Cycle SoP 2.5, registry, consolidation docs, README, planning artifact.

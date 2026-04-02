@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.42+2] - 01-04-26
+## [0.5.1.42+3] - 02-04-26
 
-E5:S01:T42 — **IPW** (**FR-042**): agent execution guide, **PLAN_DOC_TEMPLATE**, planning artifact **IPW-E5S01T42-ipw-icw-consolidation**; `.cursorrules` **IPW** + **ICW** alias; SoP Step 2.5; registry **IPW** trigger; package README consolidation; README tables; cross-refs **FR-040/FR-048**/T40/T48; `icw_handler` docstring. **FR-042** AC5/AC7 deferred.
+E5:S01:T42 — **FR-042 closure**: **AC5** retro plan wiring + **AC7** validator script (`validate_plan_wiring.py`) with pass result; T42/FR-042 marked complete.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.42+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.42+3.md)
