@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-04-02 (**RW E6:S06:T57** v0.6.6.57+3 — **BR-039** evidence **E1**/**E2**, Cursor-only disposition)
-**Version:** v0.6.6.57+3
+**Last updated:** 2026-04-02 (**RW E6:S06:T61** v0.6.6.61+1 — **UXR-006** MoSCOW `Last modified` + intake; prior **RW E6:S06:T57** v0.6.6.57+3 **BR-039**)
+**Version:** v0.6.6.61+1
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -49,6 +49,9 @@ housekeeping_policy: keep
 
 - [ ] **E6:S06:T60 – BR-060: RW Step 1c blocks IN PROGRESS tasks** - 🔄 IN PROGRESS (v0.6.6.60+1 — Step 1c releasable **`IN PROGRESS`**; **`validate_version_bump`** task-doc scan by Task ID; **BR-060** pending user verification)
   - Task: [`T60-rw-allow-in-progress-task-releases.md`](Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md) | [BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
+
+- [ ] **E6:S06:T61 – UXR-006: MoSCOW row last-modified UTC stamps** - 🔄 IN PROGRESS (v0.6.6.61+1 — **RW**; HIGH — drift / IPW; optional **AC-4** tooling open)
+  - Task: [`T61-uxr-006-kanban-moscow-last-modified-stamps.md`](Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md) | [UXR-006](../../fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md) | Registry [E7:S00:T06](../Epic-7/Story-000-uxr-repo/T06-uxr-006-repository-anchor.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
   - Task: [`T999-board-cleanup-test.md`](Story-006-feature-requests/T999-board-cleanup-test.md

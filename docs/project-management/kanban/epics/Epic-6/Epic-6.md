@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-04-02 — **RW E6:S06:T57** v0.6.6.57+3 (**BR-039** evidence **E1**/**E2**); **RW E6:S06:T60** v0.6.6.60+1 (**BR-060**); prior **RW -k** 2026-03-31 (**T57** v0.6.6.57+1, **T02** v0.6.6.2+9, **T109** v0.6.7.109+1)
+**Last updated:** 2026-04-02 — **RW E6:S06:T61** v0.6.6.61+1 (**UXR-006** MoSCOW stamps + intake); **RW E6:S06:T57** v0.6.6.57+3 (**BR-039**); **RW E6:S06:T60** v0.6.6.60+1 (**BR-060**); prior **RW -k** 2026-03-31 (**T57** v0.6.6.57+1, **T02** v0.6.6.2+9, **T109** v0.6.7.109+1)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]

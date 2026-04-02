@@ -34,9 +34,12 @@ housekeeping_policy: keep
 
 - [ ] **E7:S00:T05 – UXR-005 Kanban Board Formatting & Governance** - TODO (v0.7.0.5+1 – Registry task filed; implementation **E7:S01:T09**) - [Task Document](Story-000-uxr-repo/T05-kanban-board-formatting-governance-uxr-005.md) | [UXR-005](../../fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 
+- [ ] **E7:S00:T06 – UXR-006 MoSCOW row last-modified UTC stamps** - 🔄 IN PROGRESS (impl **E6:S06:T61**) - [Task Document](Story-000-uxr-repo/T06-uxr-006-repository-anchor.md) | [UXR-006](../../fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md) | Impl: [E6:S06:T61](../Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md)
+
 - [ ] **E7:S00:T01 – UXR-001 repository anchor** — [Task doc](Story-000-uxr-repo/T01-uxr-001-repository-anchor.md) | [UXR-001](../../fr-br/UXR-001-migration-user-experience-research.md) | Impl: [E7:S05:T01](Story-005-migration-uxr-research.md)
 - [ ] **E7:S00:T02 – UXR-002 repository anchor** — [Task doc](Story-000-uxr-repo/T02-uxr-002-repository-anchor.md) | [UXR-002](../../fr-br/UXR-002-comprehensive-uat-migration-utilities.md) | Impl: [E7:S05:T02](Story-005-migration-uxr-research.md)
 - [ ] **E7:S00:T05 – UXR-005 repository anchor** — [Task doc](Story-000-uxr-repo/T05-uxr-005-repository-anchor.md) | [UXR-005](../../fr-br/UXR-005-kanban-board-formatting-and-governance.md) | Impl: [E7:S01:T09](Story-001-codebase-maintenance-tasks/E07S01T09-kanban-template-governance.md)
+- [ ] **E7:S00:T06 – UXR-006 repository anchor** — [Task doc](Story-000-uxr-repo/T06-uxr-006-repository-anchor.md) | [UXR-006](../../fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md) | Impl: [E6:S06:T61](../Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md)
 
 ---
 

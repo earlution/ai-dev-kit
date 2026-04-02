@@ -50,6 +50,16 @@ UKW and RW agents must follow this when updating the board.
 
 **RW Step 7 vs UKW (FR-038):** During a release, **RW Step 7 — Scoped Kanban Sync (UKW Mode)** updates the board and docs for the **release task** only (scoped). **Standalone UKW** is for **board-wide** MoSCOW and housekeeping. See Kanban governance policy §1.1.
 
+### MoSCOW row `Last modified` (UTC)
+
+Each line in **MoSCOW Prioritized In-Progress Tasks** (`kanban-board.md`) and **MoSCOW Prioritized FR/BR/UXR Items** (`fr-br-uxr-board.md`) must end with a pipe-delimited field:
+
+`| Last modified: YYYY-MM-DD HH:MM UTC`
+
+- **Derivation (preferred):** UTC timestamp of the latest `git` commit touching the **first resolvable** linked `.md` on that row (typically the task or FR/BR/UXR doc).
+- **Manual / UKW:** When the board row changes without a doc commit, set the stamp to the current UTC time so drift checks and planning (e.g. IPW) see a fresh row touch.
+- **Same convention** applies to both boards for side-by-side parity.
+
 ---
 
 ## MoSCOW Prioritized In-Progress Tasks
