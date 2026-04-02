@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
 VERSION_STORY = 6     # Story number (Story 6: Feature requests)
-VERSION_TASK = 60     # Task number (E6:S06:T60 — RW IN PROGRESS release gate fix)
-VERSION_BUILD = 1     # Build number (first release build for T60)
+VERSION_TASK = 57     # Task number (E6:S06:T57 — BR-039 / IPW vendor blocker planning)
+VERSION_BUILD = 2     # Build number (follows v0.6.6.57+1 RW -k traceability)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.6.60+1 — T60 release context
+# Current: 0.6.6.57+2 — T57 IPW + BR-039 re-verification docs
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.60+1] - 02-04-26
+## [0.6.6.57+2] - 02-04-26
 
-E6:S06:T60 — **BR-060** (change implemented): RW Step 1c allows **`IN PROGRESS`** task releases; **`validate_version_bump`** task-doc lookup by **Task ID** across kanban when story pattern matches the wrong file; RW Step 1c wording in `.cursorrules` / portable RW excerpt. [T60](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md); [BR-060](docs/project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md).
+E6:S06:T57 — **BR-039** (change implemented in repo): Durable **IPW** package, task↔BR↔plan wiring, re-verification protocol and evidence schema; no vendor product fix claimed. [T57](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](docs/project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md); [IPW](docs/implementation-cycles/IPW-E6S06T57-br039-vendor-blocker-planning.md).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.60+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+2.md)

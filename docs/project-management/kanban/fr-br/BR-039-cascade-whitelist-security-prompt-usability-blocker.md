@@ -8,14 +8,15 @@ housekeeping_policy: keep
 
 # Bug Report BR-039 – Cascade Whitelist Security Prompt Usability Blocker
 
-**Status:** TODO  
+**Status:** IN PROGRESS (repo: IPW + re-verification workflow; **product** fix unverified)  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-03-09  
-**Last updated:** 2026-03-31 — Implementing task **E6:S06:T57** filed (kanban intake)  
-**Version:** v0.6.7.101+34  
+**Last updated:** 2026-04-02 — **RW** v0.6.6.57+2 — IPW + re-verification / evidence schema (product behavior **not** verified fixed)  
+**Version:** v0.6.6.57+2  
 **Code:** BR-039  
 **Implementing Task:** [E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
+**Planning Artifact (IPW):** [IPW-E6S06T57-br039-vendor-blocker-planning.md](../../../implementation-cycles/IPW-E6S06T57-br039-vendor-blocker-planning.md)
 
 ---
 
@@ -103,18 +104,43 @@ Cascade's whitelist feature is non-functional, creating constant security prompt
 - **Batch Commands:** Combine multiple operations into single commands (limited effectiveness)
 - **External Scripts:** Move workflows outside of Windsurf (defeats purpose)
 
+## Re-verification Protocol
+
+When vendor releases relevant changes, run this protocol before any closure claim:
+
+1. Capture vendor version/build under test.
+2. Re-run the BR-039 reproduction steps.
+3. Execute a terminal-heavy continuity sequence (RW-like command flow).
+4. Record results in evidence log format.
+5. Classify outcome as `pass`, `fail`, or `blocked`.
+6. Update T57 + BR status text using attempted/verified language only.
+
+## Evidence Log Format
+
+Use append-only entries with these fields:
+
+- `date_utc`
+- `tool_version`
+- `scenario`
+- `expected`
+- `observed`
+- `result` (`pass` | `fail` | `blocked`)
+- `notes` (workaround, escalation, owner)
+
 ## Success Criteria
 
 ### Resolution Criteria
-- ✅ Whitelisted commands do not prompt again
-- ✅ AI enable setting reduces security prompts appropriately
-- ✅ Users can execute workflows without constant interruption
-- ✅ Security model balances safety with usability
+- [ ] Whitelisted commands do not prompt again
+- [ ] AI enable setting reduces security prompts appropriately
+- [ ] Users can execute workflows without constant interruption
+- [ ] Security model balances safety with usability
 
 ### Validation Criteria
-- ✅ User can complete 10+ commands without security prompts for whitelisted items
-- ✅ Release workflows execute continuously without manual approval
-- ✅ Development focus remains on project work, not tool management
+- [ ] User can complete 10+ commands without security prompts for whitelisted items
+- [ ] Release workflows execute continuously without manual approval
+- [ ] Development focus remains on project work, not tool management
+
+**Language guardrail:** Until validation criteria are met on current vendor build, document updates as **attempted fix** or **change implemented**, not **fixed/resolved/completed**.
 
 ## Related Issues
 

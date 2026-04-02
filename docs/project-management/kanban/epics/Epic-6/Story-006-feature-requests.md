@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-04-02 (**RW E6:S06:T60** v0.6.6.60+1 — **BR-060** Step 1c / `validate_version_bump`)
-**Version:** v0.6.6.60+1
+**Last updated:** 2026-04-02 (**RW E6:S06:T57** v0.6.6.57+2 — **BR-039** / IPW + re-verification docs)
+**Version:** v0.6.6.57+2
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -49,9 +49,6 @@ housekeeping_policy: keep
 
 - [ ] **E6:S06:T60 – BR-060: RW Step 1c blocks IN PROGRESS tasks** - 🔄 IN PROGRESS (v0.6.6.60+1 — Step 1c releasable **`IN PROGRESS`**; **`validate_version_bump`** task-doc scan by Task ID; **BR-060** pending user verification)
   - Task: [`T60-rw-allow-in-progress-task-releases.md`](Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md) | [BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
-
-- [ ] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - TODO (CRITICAL, **BR-039**: whitelist persistence / prompt fatigue in Windsurf Cascade; repo tracks escalation, evidence, re-verification — product fix is vendor-side)
-  - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](T57-br039-cascade-whitelist-security-prompt-blocker.md) | [BR-039](../../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
   - Task: [`T999-board-cleanup-test.md`](Story-006-feature-requests/T999-board-cleanup-test.md
