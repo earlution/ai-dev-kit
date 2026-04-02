@@ -41,8 +41,16 @@ housekeeping_policy: keep
 - [x] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - ✅ COMPLETED (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
   - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
 
-- [ ] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - TODO (HIGH priority, RW accepts user-supplied task identifiers without validation; single-digit typo causes wrong attribution. Implement context-aware confirmation.)
-  - Task: [`T56-rw-ambiguous-task-identifier-typo-risk.md`](T56-rw-ambiguous-task-identifier-typo-risk.md) | [BR-056](../../../fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
+- [x] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - ✅ COMPLETE (**`RW -k`** v0.6.6.57+5 **v0.4.704+5** — Option B SemVer; **[BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)** **IN PROGRESS** for **product**)
+  - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md) | [BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
+
+- [x] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - ✅ COMPLETE (v0.6.6.56+4) (HIGH priority, BR-056: validate_rw_task_intent + Step 1b; live verification 2026-03-25)
+  - Task: [`T56-rw-ambiguous-task-identifier-typo-risk.md`](Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md) | [BR-056](../../fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)
+
+- **BR-060** — canonical implementing task **E2:S01:T09** (RW agent execution / validators); [task doc](../Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md) | [stub for old paths](Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md) | [BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
+
+- [ ] **E6:S06:T61 – UXR-006: MoSCOW row last-modified UTC stamps** - 🔄 IN PROGRESS (v0.6.6.61+1 — **RW**; HIGH — drift / IPW; optional **AC-4** tooling open)
+  - Task: [`T61-uxr-006-kanban-moscow-last-modified-stamps.md`](Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md) | [UXR-006](../../fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md) | Registry [E7:S00:T06](../Epic-7/Story-000-uxr-repo/T06-uxr-006-repository-anchor.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
   - Task: [`T999-board-cleanup-test.md`](T999-board-cleanup-test.md)

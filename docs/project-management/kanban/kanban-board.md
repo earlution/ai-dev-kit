@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-No critical tasks currently in progress
+- **E2:S01:T09** – **BR-060:** RW incorrectly blocked **`IN PROGRESS`** tasks at Step 1c — **change implemented** (v0.6.6.60+1); verification pending - IN PROGRESS (CRITICAL) - [Task](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md) | [Story](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md) | [stubs E6:S06:T60 / E4:S19:T01](epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md) | [BR-060](fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md) | Last modified: 2026-04-02 13:43 UTC
 
 ### Should Have (S) - Important Tasks
 

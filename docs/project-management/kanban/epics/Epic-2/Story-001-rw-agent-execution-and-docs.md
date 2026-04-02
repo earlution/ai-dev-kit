@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Story 001 – RW Agent Execution & Docs
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS (reopened 2026-04-02 — **E2:S01:T09** **BR-060**)
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Completed:** 2025-12-17
-**Last updated:** 2025-12-17 (v0.2.1.1+1 – T01 complete: Task)
-**Version:** v0.2.1.1+1
+**Completed:** N/A (story reopened for ongoing RW validation work)
+**Last updated:** 2026-04-02 — **RW** **v0.2.1.9+1** (**E2:S01:T09**); **BR-060** traceability + **BR-061** filed
+**Version:** v0.2.1.9+1
 **Code:** E2S01
 
 ---
@@ -41,6 +41,8 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 - [x] **E2:S01:T06 – Fix changelog validator ordering bug** ✅ COMPLETE (v0.2.1.6+4 – Validator now supports both Keep a Changelog and Canonical formats with auto-detection)
 - [x] **E2:S01:T07 – Add support for update/maintenance branch patterns in branch validation** ✅ COMPLETE (v0.2.1.7+1)
 - [x] **E2:S01:T08 – Add Step 9 - IDE problem checking to Release Workflow** ✅ COMPLETE (v0.2.1.8+1 – FR-024 implemented: Step 9 added for IDE/linter problem checking)
+
+- [ ] **E2:S01:T09 – BR-060: RW allow `IN PROGRESS` task releases (Step 1c)** - 🔄 IN PROGRESS (forensic **v0.6.6.60+1** / **E6:S06:T60** at release; canonical **E2:S01:T09**) — [Task doc](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md) | [BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
 
 ---
 
@@ -477,5 +479,5 @@ The `validate_branch_context.py` script only recognizes `main` branch and `epic/
 
 ---
 
-_Last updated: 2025-12-09 (v0.2.1.7+1 – Task 7 completed: Added support for update/maintenance branch patterns in branch validation)_
+_Last updated: 2026-04-02 — Story reopened; **E2:S01:T09** [BR-060](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md). Prior: 2025-12-09 (v0.2.1.7+1 – Task 7 completed)._
 

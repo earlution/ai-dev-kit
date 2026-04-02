@@ -1,4 +1,388 @@
 # Changelog Archive
+## [0.2.1.9+1] - 02-04-26
+
+E2:S01:T09+1 — **BR-060** kanban traceability (canonical **E2:S01:T09**); **E2:S01** reopened; stubs **E6:S06:T60** / **E4:S19:T01**; **BR-061** filed (**CRITICAL** — RW explicit `E:S:T` vs `version.py` / Step 1). [T09](../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md); [BR-060](../../project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md); [BR-061](../../project-management/kanban/fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md).
+
+[Detailed changelog](CHANGELOG_v0.2.1.9+1.md)
+
+---
+---
+---
+## [0.6.6.61+1] - 02-04-26
+
+E6:S06:T61 — **UXR-006** (change implemented): MoSCOW **`Last modified`** UTC on task + FR/BR/UXR boards; **KG-R2** intake (**E7:S00:T06** + **T61**); guide and board notes. [T61](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md); [UXR-006](../../project-management/kanban/fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md).
+
+[Detailed changelog](CHANGELOG_v0.6.6.61+1.md)
+
+---
+---
+---
+## [0.6.6.60+1] - 02-04-26
+
+E6:S06:T60 — **BR-060** (change implemented): RW Step 1c allows **`IN PROGRESS`** task releases; **`validate_version_bump`** task-doc lookup by **Task ID** across kanban when story pattern matches the wrong file; RW Step 1c wording in `.cursorrules` / portable RW excerpt. [T60 stub](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md); canonical task **[E2:S01:T09](../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)**; [BR-060](../../project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md).
+
+[Detailed changelog](CHANGELOG_v0.6.6.60+1.md)
+
+---
+---
+---
+## [0.6.6.57+5] - 02-04-26
+
+**`RW -k` repair (Option B) E6:S06:T57** — Outward **SemVer `v0.4.704+5`**; remote **`v0.4.703+4`** collision avoided. [T57](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
+
+[Detailed changelog](CHANGELOG_v0.6.6.57+5.md)
+
+---
+---
+---
+## [0.6.6.57+4] - 02-04-26
+
+**`RW -k` E6:S06:T57** — **BR-039** repo task **COMPLETE** (no Windsurf obligation; **BR-039** open for product); boards + **BR-039** + **`dev-kit-kanban-versioning-rw-integration.md`** § **`RW -k`**. [T57](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](../../project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md).
+
+[Detailed changelog](CHANGELOG_v0.6.6.57+4.md)
+
+---
+---
+---
+## [0.6.6.57+3] - 02-04-26
+
+E6:S06:T57 — **BR-039** (change implemented in repo): Evidence **E1**/**E2** (agent checklist + **Cursor-only** maintainer; Windsurf retest **waived**); BR-039 **Maintainer disposition**; board row — **not** a verified Cascade fix. [T57](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](../../project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md).
+
+[Detailed changelog](CHANGELOG_v0.6.6.57+3.md)
+
+---
+---
+---
+## [0.6.6.57+2] - 02-04-26
+
+E6:S06:T57 — **BR-039** (change implemented in repo): Durable **IPW** package, task↔BR↔plan wiring, re-verification protocol and evidence schema; no vendor product fix claimed. [T57](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); [BR-039](../../project-management/kanban/fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md); [IPW](../../implementation-cycles/IPW-E6S06T57-br039-vendor-blocker-planning.md).
+
+[Detailed changelog](CHANGELOG_v0.6.6.57+2.md)
+
+---
+---
+---
+## [0.5.1.75+1] - 01-04-26
+
+E5:S01:T75 — **ICW durable planning artifacts** in repo docs (**FR-075**): policy, `implementation-cycles` README, ICW framework docs, `.cursorrules`. [T75](../../project-management/kanban/epics/Epic-5/Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md); [FR-075](../../project-management/kanban/fr-br/FR-075-icw-durable-planning-artifacts-documentation-system.md).
+
+[Detailed changelog](CHANGELOG_v0.5.1.75+1.md)
+
+---
+---
+---
+## [0.7.1.9+3] - 31-03-26
+
+E7:S01:T09 — **UXR-005** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.1.9+3.md)
+
+---
+---
+---
+## [0.7.0.4+1] - 31-03-26
+
+Merge **`epic/7-documentation-maintenance`** into **`main`** (E7:S00:T04 + integration).
+
+[Detailed changelog](CHANGELOG_v0.7.0.4+1.md)
+
+---
+---
+---
+## [0.7.0.4+0] - 31-03-26
+
+E7:S00:T04 **`RW -k`** — UXR-004 repository anchor + board row restore.
+
+[Detailed changelog](CHANGELOG_v0.7.0.4+0.md)
+
+---
+---
+---
+## [0.7.0.3+0] - 31-03-26
+
+E7:S00:T03 **`RW -k`** — UXR-003 repository anchor + board/Story-000 slice.
+
+[Detailed changelog](CHANGELOG_v0.7.0.3+0.md)
+
+---
+---
+---
+## [0.7.0.2+2] - 31-03-26
+
+E7:S00:T02 — **UXR-002** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.0.2+2.md)
+
+---
+---
+---
+## [0.7.0.1+2] - 31-03-26
+
+E7:S00:T01 — **UXR-001** **Implementing Task** wiring.
+
+[Detailed changelog](CHANGELOG_v0.7.0.1+2.md)
+
+---
+---
+---
+## [0.5.1.74+3] - 31-03-26
+
+E5:S01:T74 **+3** — Intake reconciliation: board + T73 + BRs ↔ epic/6 **T57** / **T109-br059**; drop draft T43/dup T109.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+3.md)
+
+---
+---
+---
+## [0.5.1.74+2] - 31-03-26
+
+E5:S01:T74 **+2** — **FR-073** Phase B/C: T43/T109 filing, E7:S00 UXR anchors, fr-br-uxr-board MoSCOW links; T73 narrative closure.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+2.md)
+
+---
+---
+---
+## [0.5.1.74+1] - 31-03-26
+
+E5:S01:T74 — **FR-074** intake hardening: KG-R2 atomic intake, KG-R6 semantic placement; governance, guides, skill, workflow, board alignment.
+
+[Detailed changelog](CHANGELOG_v0.5.1.74+1.md)
+
+---
+---
+---
+## [0.5.1.47+6] - 31-03-26
+
+E5:S01:T47 — **FR-047** intake: **Implementing Task** wiring and task link in FR.
+
+[Detailed changelog](CHANGELOG_v0.5.1.47+6.md)
+
+---
+---
+---
+## [0.5.1.46+3] - 31-03-26
+
+E5:S01:T46 — **FR-046** intake: **Implementing Task** wiring and T46 traceability refresh.
+
+[Detailed changelog](CHANGELOG_v0.5.1.46+3.md)
+
+---
+---
+---
+## [0.5.1.32+1] - 31-03-26
+
+Merge **`epic/5-documentation-management`** into **`main`** (E5:S01:T32 + Epic 7 / intake history retained).
+
+[Detailed changelog](CHANGELOG_v0.5.1.32+1.md)
+
+---
+---
+---
+## [0.5.1.32+0] - 31-03-26
+
+E5:S01:T32 **`RW -k`** — FR-032/T32 doc-init + fr-br-uxr-board reconciliation.
+
+[Detailed changelog](CHANGELOG_v0.5.1.32+0.md)
+
+---
+---
+---
+## [0.5.1.21+0] - 31-03-26
+
+E5:S01:T21 **`RW -k`** — FR-021/T21 doc-init + FR-034 implementing link + board/T73 slice.
+
+[Detailed changelog](CHANGELOG_v0.5.1.21+0.md)
+
+---
+---
+---
+## [0.5.9.9+2] - 31-03-26
+
+E5:S09:T09 — GitHub Pages go-live verification (operational close-out for FR-070).
+
+[Detailed changelog](CHANGELOG_v0.5.9.9+2.md)
+
+---
+---
+---
+## [0.5.9.9+1] - 31-03-26
+
+E5:S09:T09 — **RW -k:** T09 GitHub Pages go-live verification (kanban + FR-070 follow-up).
+
+[Detailed changelog](CHANGELOG_v0.5.9.9+1.md)
+
+---
+---
+---
+## [0.7.6.9+1] - 25-03-26
+
+E7:S06:T09+1 – Config/git validation; rw-config vs disk; cursorrules alignment; Story 6 complete.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.9+1.md)
+
+---
+---
+---
+## [0.7.6.8+1] - 25-03-26
+
+E7:S06:T08+1 – Dependency/tooling audit; validation tests aligned; BR-058 (CI Tests workflow + pytest drift).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.8+1.md)
+
+---
+---
+---
+## [0.7.6.7+1] - 25-03-26
+
+E7:S06:T07+1 – General documentation integrity: README path spot-check; docs tree; fr-br cross-ref re-scan; T07 audit doc.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.7+1.md)
+
+---
+---
+---
+## [0.7.6.6+1] - 25-03-26
+
+E7:S06:T06+1 – FR/BR/UXR intake doc quality: fr-br epic link fixes; aggregate doc headers; kanban cross-links; T06 findings.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.6+1.md)
+
+---
+---
+---
+## [0.7.6.5+1] - 25-03-26
+
+E7:S06:T05+1 – Workflow script integrity: parser/orchestrator/canonical_steps fixes and docs; tests; kanban closure.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.5+1.md)
+
+---
+---
+---
+## [0.7.6.4+1] - 25-03-26
+
+E7:S06:T04+1 – Recent commit review: RW/batch/quality findings in T04; kanban updates; no BR/FR filed.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.4+1.md)
+
+---
+---
+---
+## [0.7.6.3+1] - 25-03-26
+
+E7:S06:T03+1 – Kanban documentation consistency: live SoT, E9/E18 disambiguation, kanban links, Epic-9 S05 stub.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.3+1.md)
+
+---
+---
+---
+## [0.6.7.101+37] - 25-03-26
+
+E6:S07:T101+37 – UKW perpetual: Kanban sync after main merge on epic/6; board and T101 markers; Epic 7 Story 6 UKW updates.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+37.md)
+
+---
+---
+---
+## [0.24.2.1+1] - 12-03-26
+
+E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
+
+---
+## [0.5.2.6+1] - 25-03-26
+
+E5:S02:T06+1 – FR-063 intake: Epic 5 execution context for standalone CMW (docs + task); CMW `latest_only` archival on `epic/5-documentation-management`; board and Epic 5 story updates. FR-063 implementation (enforcement, packaged docs) still pending.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.2.6+1.md)
+
+---
+
+---
+---
+---
+
+## [0.6.6.56+2] - 20-03-26
+
+E6:S06:T56+2 – RW -k completion: kanban markers, main changelog + restored v0.6.6.56+1 archive; MoSCOW T56 TODO; `validate_version_bump` in-progress checklist fix.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.56+2.md)
+
+---
+---
+---
+---
+---
+## [0.6.6.56+3] - 20-03-26
+
+E6:S06:T56+3 – BR-056: `validate_rw_task_intent.py`, RW Step 1b / Step 1.5 docs, `RW -k` exemption; UKW parser stub fix. User verification pending before closing BR.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.56+3.md)
+
+---
+---
+---
+---
+## [0.6.7.101+35] - 19-03-26
+
+E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 documents for v0.6.7.101+35 (perpetual UKW task).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+35.md)
+
+---
+---
+---
+---
+---
+---
+---
+## [0.6.7.101+36] - 19-03-26
+
+E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 for v0.6.7.101+36 (perpetual UKW task).
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+36.md)
+
+---
+---
+---
+---
+---
+---
+---
+## [0.7.6.2+1] - 19-03-26
+
+E7:S06:T02 – Version and changelog alignment: Reconciled version.py, CHANGELOG (Keep a Changelog order, CMW archival), kanban board, and branch context to a single coherent state.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.2+1.md)
+
+---
+---
+---
+---
+## [0.7.6.2+2] - 20-03-26
+
+E7:S06:T02 – Kanban MoSCOW task-level display: Board lists E7:S06:T03–T09 (not story-level E7:S06); guide adds Task-Level Display rule; T02 doc markers updated.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.2+2.md)
+
+---
+---
+---
+---
+## [0.7.6.17+1] - 20-03-26
+
+E7:S06:T17 — BR-057 retrospective: fix `fr-br-intake.yml` YAML (`script: |` indentation), kanban traceability, `ukw_syntax_parser` duplicate stub fix, RW task-intent validator script on branch.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.17+1.md)
+
+---
+---
+---
+---
 ## [0.1.1.1+1] - 02-12-25
 
 🏗️ Foundation: First proper release with Epic 1–4 structure, dev-kit versioning policy, and Kanban FR/BR → Task flow

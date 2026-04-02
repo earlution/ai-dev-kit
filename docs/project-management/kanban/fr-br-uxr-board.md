@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-03-09 (T01: FR/BR/UXR Prioritization Board Implementation)
+**Last Updated:** 2026-04-02 (BR-061 intake: RW explicit E:S:T vs version.py alignment)
 **Version:** v0.6.7.107+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -37,6 +37,7 @@ This board provides **centralized visibility and prioritization** for all open F
 ### Must Have (M) - Critical Items
 
 - **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
+- **BR-061** – RW explicit `E:S:T` blocked by Step 1 when `version.py` epic ≠ branch epic - TODO (**CRITICAL**, **release blocker** — manual `version.py` alignment required before `RW E:S:T`; undermines single-command intent) - [BR-061](fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md)
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
 ---

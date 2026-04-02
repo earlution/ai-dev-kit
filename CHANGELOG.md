@@ -9780,6 +9780,13 @@ Coordination between E4:S11 (Kanban Framework) and E2:S09 (RW Integration) is co
 
 ---
 
+## [0.2.1.9+1] - 02-04-26
+
+E2:S01:T09+1 — Kanban traceability for **BR-060** (canonical **E2:S01:T09**), **E2:S01** reopened, legacy stubs, **BR-061** filed (CRITICAL — RW Step 1 / `version.py` alignment). SemVer **v0.4.621+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.9+1.md)
+
+---
 ---
 ---
 ---
