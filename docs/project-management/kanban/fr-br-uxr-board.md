@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-02 (**`RW -k` E6:S06:T57** v0.6.6.57+5 **v0.4.704+5** — SemVer repair)
-**Version:** v0.6.6.57+5 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-04-02 (**`RW -k` E3:S02:T12** v0.3.2.12+1 **v0.4.706+1**)
+**Version:** v0.3.2.12+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -50,6 +50,7 @@ This board provides **centralized visibility and prioritization** for all open F
 - **FR-045** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH, SemVer mapping for task_touch and Kanban integration) - [FR-045](fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [E5:S01:T45](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md) | Last modified: 2026-03-16 16:31 UTC
 - **FR-047** – Install Logging for Framework Dependencies - TODO (HIGH, Enables detailed post-install analysis and debugging) - [FR-047](fr-br/FR-047-install-logging-for-framework-dependencies.md) | [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md) | Last modified: 2026-04-01 14:15 UTC
 - **FR-046** – RW SemVer Tag When task_touch Enabled - TODO (HIGH, RW tagging behaviour when task_touch is enabled) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | Last modified: 2026-04-01 14:15 UTC
+- **BR-061** – Task-touch SemVer: `task_touch_counter` / PATCH bumps on every `semver_converter` run (not intake) - TODO (HIGH, **E3:S02:T12** — versioning / ADR-002; investigate script vs RW call sites) - [BR-061](fr-br/BR-061-semver-task-touch-counter-increments-too-often.md) | [E3:S02:T12](epics/Epic-3/Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md) | Last modified: 2026-04-02 18:45 UTC
 - **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md) | Last modified: 2026-04-01 13:30 UTC
 - **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md) | Last modified: 2026-04-01 13:30 UTC
 - **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md) | Last modified: 2026-04-01 13:30 UTC

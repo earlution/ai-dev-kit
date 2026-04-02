@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-02 (**`RW -k` E6:S06:T57** v0.6.6.57+5 **SemVer v0.4.704+5** — Option B retag; prior **+4**)
-**Version:** v0.6.6.57+5 *(from `src/fynd_deals/version.py` at board refresh)*
+**Last Updated:** 2026-04-02 (**`RW -k` E3:S02:T12** v0.3.2.12+1 **v0.4.706+1** — docs only)
+**Version:** v0.3.2.12+1 *(from `src/fynd_deals/version.py` at board refresh)*
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -33,6 +33,8 @@ housekeeping_policy: keep
 - **E6:S07:T109** – **BR-059:** UKW MoSCOW must enumerate **all** open tasks per in-progress story (or **Won’t** + reason) — TODO (HIGH) - [Task](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | [BR-059](fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md) | Last modified: 2026-03-31 12:37 UTC
 
 - **E6:S06:T61** – **UXR-006:** MoSCOW `Last modified` UTC on task + FR/BR/UXR boards — IN PROGRESS (HIGH, drift checks / IPW; optional **AC-4** tooling) - [Task](epics/Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [UXR-006](fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md) | Last modified: 2026-04-02 15:06 UTC
+
+- **E3:S02:T12** – **BR-061 / ADR-002:** `task_touch` SemVer — counter must not advance on every convert; PATCH inflation + tag risk — TODO (HIGH, Epic 3 versioning) - [Task](epics/Epic-3/Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md) | [Story](epics/Epic-3/Story-002-versioning-cookbook-and-examples.md) | [BR-061](fr-br/BR-061-semver-task-touch-counter-increments-too-often.md) | Last modified: 2026-04-02 18:45 UTC
 
 - **E7:S06:T03** – Kanban documentation consistency - TODO (HIGH priority, E9↔E18 renumbering fallout, cross-references, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md) | Last modified: 2026-04-01 14:15 UTC
 

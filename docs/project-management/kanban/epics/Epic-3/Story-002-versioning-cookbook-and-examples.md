@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-03  
-**Last updated:** 2026-01-19 (v0.3.2.11+4 – T11 GitHub release creation with SemVer)  
-**Version:** v0.3.2.11+4  
+**Last updated:** 2026-04-02 (v0.3.2.12+1 — **`RW -k`** BR-061 / **T12** docs)  
+**Version:** v0.3.2.12+1  
 **Code:** E3S02
 
 ---
@@ -31,7 +31,7 @@ housekeeping_policy: keep
 - [x] **E3:S02:T09 – Implement Package Version Workflow (PVW) with agentic execution** ✅ COMPLETE (v0.3.2.9+1)
 - [ ] **E3:S02:T10 – Integrate PVW into Release Workflow agent execution guide** - TODO
 - [x] **E3:S02:T11 – Implement SemVer Mapping for Release Workflow** ✅ COMPLETE (v0.3.2.11+4 – GitHub release creation with SemVer)
-- [ ] **E3:S02:T12 – Implement ADR-002 Task-Touch SemVer Mapping Mode** - TODO - [Task Doc](Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md)
+- [ ] **E3:S02:T12 – Implement ADR-002 Task-Touch SemVer Mapping Mode** - TODO (**[BR-061](../../fr-br/BR-061-semver-task-touch-counter-increments-too-often.md)** — PATCH / counter over-increment; correct home vs E6:S06) - [Task Doc](Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md)
 
 ---
 

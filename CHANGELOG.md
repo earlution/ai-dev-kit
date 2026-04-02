@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.57+5] - 02-04-26
+## [0.3.2.12+1] - 02-04-26
 
-**`RW -k` repair (Option B) E6:S06:T57** — New outward **SemVer `v0.4.704+5`** (`task_touch` **704**); **avoids** ambiguous remote **`v0.4.703+4`**. Same **T57** closure work as **+4**; docs/version alignment only. [T57](docs/project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md); prior [+4 detailed](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+4.md).
+**Docs only (`RW -k` scope)** — **BR-061** filed; **E3:S02:T12** as implementing task; boards/structure wired. No code changes. Internal **`0.3.2.12+1`** — outward **`v0.4.706+1`**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.57+5.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.12+1.md)

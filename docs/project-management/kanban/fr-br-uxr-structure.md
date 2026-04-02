@@ -98,6 +98,10 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 - **BR-037** – Kanban Install Consumer Board Contamination - IN PROGRESS (CRITICAL, Technical implementation finished, core contamination problem solved, Release Workflow blocked by tooling friction) - [BR-037](fr-br/BR-037-kanban-install-consumer-board-contamination.md) | [E6:S01:T37](epics/Epic-6/Story-001-br-repo/T37-kanban-install-consumer-board-contamination.md)
 
+### High Priority (Should Have - S)
+
+- **BR-061** – Task-touch SemVer PATCH bumps on every `semver_converter` run (registry over-increment / tag pressure) - TODO (HIGH, `semver_converter.py` vs RW — **E3:S02:T12**, not E6:S06) - [BR-061](fr-br/BR-061-semver-task-touch-counter-increments-too-often.md) | [E3:S02:T12](epics/Epic-3/Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md)
+
 ### Medium Priority (Could Have - C)
 
 - **BR-036** – RW Step 7 Board Update Bugs - TODO (MEDIUM, Bugs in Release Workflow Step 7 board updates) - [BR-036](fr-br/BR-036-rw-step-7-board-update-bugs.md)

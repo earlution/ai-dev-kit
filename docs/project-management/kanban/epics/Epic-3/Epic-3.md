@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH
 **Estimated Effort:** [TBD]
 **Created:** 2025-12-02
-**Last updated:** 2026-01-22 (v0.3.4.6+1 – E3:S04:T06: RC sign-off criteria and remediation tasks complete)
+**Last updated:** 2026-04-02 (v0.3.2.12+1 — **`RW -k` E3:S02:T12** / **BR-061** docs)
 **Branch:** `epic/3-numbering-and-versioning-framework`
 **Version Schema:** `0.3.S.T+B`
 **Production URL:** [N/A for this repo]
@@ -22,7 +22,7 @@ housekeeping_policy: keep
 ## Story Checklist
 
 - [x] **E3:S01 – Dev Kit Alignment with Versioning Framework** - COMPLETE ✅ (v0.3.1.6+1)
-- [ ] **E3:S02 – Versioning Cookbook & Examples** - IN PROGRESS (v0.3.2.11+4 – T11 GitHub release creation with SemVer)
+- [ ] **E3:S02 – Versioning Cookbook & Examples** - IN PROGRESS (v0.3.2.11+4 – T11 complete; **T12** TODO ADR-002 / **[BR-061](../../fr-br/BR-061-semver-task-touch-counter-increments-too-often.md)** task_touch counter semantics)
 - [x] **E3:S03 – Versioning Integration with Kanban & RW** - COMPLETE ✅ (v0.3.3.6+2 – All tasks complete: Epic 3 marked COMPLETE)
   - Story: [`Story-003-versioning-integration-with-kanban-and-rw.md`](Story-003-versioning-integration-with-kanban-and-rw.md)
 

@@ -13,7 +13,9 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-03-07  
-**Last updated:** 2026-03-07  
+**Last updated:** 2026-04-02 — **`RW -k` v0.3.2.12+1**; **[BR-061](../../../fr-br/BR-061-semver-task-touch-counter-increments-too-often.md)** — `task_touch_counter` / PATCH over-increment defect; **T12** owns ADR-002 fix.
+
+**Associated BR:** [BR-061](../../../fr-br/BR-061-semver-task-touch-counter-increments-too-often.md)
 
 ---
 
@@ -27,6 +29,7 @@ This task is prompted by a real SemVer tag collision incident (see incident log)
 
 ## Inputs
 
+- **BR-061:** [BR-061](../../../fr-br/BR-061-semver-task-touch-counter-increments-too-often.md) — registry counter / PATCH over-increment + tag pressure (**implementation bug**, not intake)
 - FR-045: `docs/project-management/kanban/fr-br/FR-045-adr-002-task-touch-derived-mapping.md`
 - FR repo anchor task: `docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md`
 - Incident log: `docs/architecture/standards-and-adrs/semver-tag-collision-incident-2026-03-07.md`
@@ -41,7 +44,7 @@ This task is prompted by a real SemVer tag collision incident (see incident log)
 - A new mapping mode selectable via configuration (e.g. `semver_mapping_strategy: task_touch` or equivalent) that:
   - **MAJOR = RC**
   - **MINOR = count of epics signed off (per RC)** (as per ADR-002)
-  - **PATCH = global task-touch counter** (increments once per RW release when a task is touched)
+  - **PATCH = global task-touch counter** (increments **once per finalized release**, not on every read/convert — see **BR-061**)
   - Optional `+BUILD` mirroring internal BUILD for traceability
 
 - Canonical storage for task-touch counter and mapping history (file-based, version controlled)
@@ -58,6 +61,7 @@ This task is prompted by a real SemVer tag collision incident (see incident log)
 - [ ] Task-touch SemVer mapping mode is implemented and documented.
 - [ ] Mapping is configurable via `rw-config.yaml` (or documented equivalent).
 - [ ] Mapping is monotonic and collision-free for real dev-kit sequences (including perpetual tasks).
+- [ ] **BR-061:** PATCH / `task_touch_counter` does **not** advance on repeated **read-only** SemVer derivation for the same release; behaviour covered by tests (idempotent convert or single explicit increment site).
 - [ ] Converter tests include scenarios that previously collide under registry epic/story mapping.
 - [ ] Backfill/migration guidance exists for initializing counters from existing tag history.
 
@@ -65,5 +69,6 @@ This task is prompted by a real SemVer tag collision incident (see incident log)
 
 ## Related Work
 
+- [BR-061](../../../fr-br/BR-061-semver-task-touch-counter-increments-too-often.md) (PATCH over-increment / usage of `semver_converter.py`)
 - FR-046 (RW uses SemVer tag when task_touch enabled)
 - `docs/architecture/standards-and-adrs/semver-implementation-followup-spec.md`
