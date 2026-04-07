@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-02 (BR-061 intake: RW explicit E:S:T vs version.py alignment)
+**Last Updated:** 2026-04-07 (BR-062 intake: RW -k `kanban_init` leaves completed task rows on in-progress kboard)
 **Version:** v0.6.7.107+1
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -38,6 +38,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 - **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | Last modified: 2026-04-07 14:09 UTC
 - **BR-061** – RW explicit `E:S:T` blocked by Step 1 when `version.py` epic ≠ branch epic - TODO (**CRITICAL**, **release blocker** — manual `version.py` alignment required before `RW E:S:T`; undermines single-command intent) - [BR-061](fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md) | Last modified: 2026-04-07 14:09 UTC
+- **BR-062** – RW `-k` `kanban_init` leaves completed tasks in in-progress kboard list - TODO (**CRITICAL**, **consistency bug** — completed task rows remain in active MoSCoW board after release closeout) - [BR-062](fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md) | Last modified: 2026-04-07 14:09 UTC
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | Last modified: 2026-04-07 14:09 UTC
 
 ---

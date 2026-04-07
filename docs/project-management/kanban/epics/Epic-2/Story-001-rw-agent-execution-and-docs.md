@@ -44,6 +44,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 
 - [x] **E2:S01:T09 – BR-060: RW allow `IN PROGRESS` task releases (Step 1c)** - ✅ COMPLETE (closeout pass 2026-04-07; forensic **v0.6.6.60+1** / **E6:S06:T60** at release; canonical **E2:S01:T09**) — [Task doc](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md) | [BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
 - [ ] **E2:S01:T10 – UXR-006: Allow `dev` branch as accepted RW validator context (solo workflow)** - TODO — [Task doc](Story-001-rw-agent-execution-and-docs/T10-dev-branch-support-in-rw-validators.md) | [UXR-006](../../fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md)
+- [ ] **E2:S01:T11 – BR-062: RW -k `kanban_init` must not leave completed tasks on in-progress kboard** - TODO — [Task doc](Story-001-rw-agent-execution-and-docs/T11-rw-k-kanban-init-board-hygiene-for-completed-tasks-br062.md) | [BR-062](../../fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md)
 
 ---
 

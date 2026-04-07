@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E2:S01:T09** – **BR-060:** RW incorrectly blocked **`IN PROGRESS`** tasks at Step 1c — **change implemented** (v0.6.6.60+1); verification pending - ✅ COMPLETE (CRITICAL) - [Task](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md) (vv0.2.1.9+2) | [Story](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md) | [stubs E6:S06:T60 / E4:S19:T01](epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md) | [BR-060](fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md) | Last modified: 2026-04-07 14:09 UTC
+- **E2:S01:T11** – **BR-062:** RW `-k` `kanban_init` leaves completed tasks on in-progress kboard - TODO (CRITICAL, board-state consistency and hygiene gap after release closeout) - [Task](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T11-rw-k-kanban-init-board-hygiene-for-completed-tasks-br062.md) | [Story](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md) | [BR-062](fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md) | Last modified: 2026-04-07 14:09 UTC
 
 ### Should Have (S) - Important Tasks
 

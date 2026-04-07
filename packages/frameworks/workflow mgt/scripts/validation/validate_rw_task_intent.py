@@ -9,6 +9,7 @@ Usage:
   python validate_rw_task_intent.py --requested E7S5T1
   python validate_rw_task_intent.py --requested E7:S06:T02 --version-file src/foo/version.py
   python validate_rw_task_intent.py --requested E6S6T56 --mode rw-k   # kanban init: skip vs version.py
+  python validate_rw_task_intent.py --requested E6:S07:T102 --mode rw-d   # docs-only: allow perpetual cross-epic
   python validate_rw_task_intent.py --requested E7:S05:T01 --confirmed-override  # after explicit user confirm
 
 See: BR-056, .cursorrules RW Task Intent Guard, release-workflow-agent-execution.md
@@ -164,6 +165,50 @@ def format_est(e: int, s: int, t: int) -> str:
     return f"E{e}:S{s:02d}:T{t}"
 
 
+def find_task_doc(config: Optional[Dict], epic: int, story: int, task: int) -> Optional[Path]:
+    project_root = Path.cwd()
+    candidates: List[Path] = []
+
+    if config and config.get("use_kanban") and "kanban_root" in config:
+        kanban_root = Path(config["kanban_root"])
+        if not kanban_root.is_absolute():
+            kanban_root = project_root / kanban_root
+    else:
+        kanban_root = project_root / "docs/project-management/kanban"
+
+    epic_dir = kanban_root / f"epics/Epic-{epic}"
+    if not epic_dir.exists():
+        return None
+
+    patterns = [
+        f"**/T{task:03d}-*.md",
+        f"**/T{task:02d}-*.md",
+        f"**/T{task}-*.md",
+        f"**/Task-{task:03d}-*.md",
+        f"**/E{epic:02d}S{story:02d}T{task:02d}-*.md",
+    ]
+    for pattern in patterns:
+        candidates.extend(sorted(epic_dir.glob(pattern)))
+
+    for path in candidates:
+        text = path.read_text(encoding="utf-8")
+        if f"Task ID:** E{epic}:S{story:02d}:T{task}" in text or f"Task ID:** E{epic}:S{story}:T{task}" in text:
+            return path
+        if f"**Code:** E{epic}S{story:02d}T{task}" in text or f"**Code:** E{epic}S{story}T{task}" in text:
+            return path
+
+    return candidates[0] if candidates else None
+
+
+def is_perpetual_task(task_doc: Path) -> bool:
+    text = task_doc.read_text(encoding="utf-8")
+    return (
+        "Task Type:** Perpetual Maintenance" in text
+        or "perpetual_task: true" in text.lower()
+        or "Status:** IN PROGRESS (Perpetual)" in text
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate RW user task id vs version.py (BR-056).")
     parser.add_argument(
@@ -174,9 +219,9 @@ def main() -> int:
     )
     parser.add_argument(
         "--mode",
-        choices=("full", "rw-k"),
+        choices=("full", "rw-k", "rw-d"),
         default="full",
-        help="rw-k skips comparison vs version.py (kanban-init attribution).",
+        help="rw-k skips comparison vs version.py (kanban-init attribution); rw-d allows perpetual cross-epic.",
     )
     parser.add_argument(
         "--confirmed-override",
@@ -216,6 +261,26 @@ def main() -> int:
         print(
             f"validate_rw_task_intent: mode=rw-k — skip version.py comparison "
             f"(requested {requested_fmt}, version {current_fmt})."
+        )
+        return 0
+
+    if args.mode == "rw-d":
+        # For docs-only releases, allow explicit cross-epic intent only for perpetual tasks.
+        task_doc = find_task_doc(config, rq_e, rq_s, rq_t)
+        if task_doc is None:
+            print("❌ RW TASK INTENT MISMATCH (rw-d task doc missing)")
+            print(f"   Requested: {requested_fmt}")
+            print("   Could not locate task document to verify perpetual status.")
+            return 1
+        if not is_perpetual_task(task_doc):
+            print("❌ RW TASK INTENT MISMATCH (rw-d requires perpetual task)")
+            print(f"   Requested: {requested_fmt}")
+            print(f"   Task doc: {task_doc}")
+            print("   Non-perpetual tasks must match current version epic/story or use explicit override.")
+            return 1
+        print(
+            f"validate_rw_task_intent: mode=rw-d — perpetual task allowed "
+            f"(requested {requested_fmt}, version {current_fmt}, task doc {task_doc})."
         )
         return 0
 

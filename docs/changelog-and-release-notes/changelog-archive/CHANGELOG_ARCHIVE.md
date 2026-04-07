@@ -1,4 +1,35 @@
 # Changelog Archive
+## [0.2.1.10+1] - 07-04-26
+
+E2:S01:T10+1 — Change implemented: contextualized UXR-006 into RW story ownership (`E2:S01:T10`), removed legacy `E7:S00:T06` mapping references, and prepared branch-validation policy path for `dev`-mode RW execution. SemVer **v0.4.627+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.2.1.10+2] - 07-04-26
+
+E2:S01:T10+2 — Change implemented: strict-equal-epic `dev` branch support in RW Step 1 validation; `dev` now requires `dev_branch_epic` mapping and enforces the same blocking epic/version alignment as `epic/{n}`. SemVer **v0.4.628+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+2.md)
+
+---
+---
+## [0.2.1.10+3] - 07-04-26
+
+E2:S01:T09 closeout (rw-k) — administrative closure pass: aligned RW execution guidance for `IN PROGRESS` full-RW behavior, closed `E2:S01:T09` and `BR-060` status wiring, and added `dev_branch_epic: 2` for strict `dev` branch validation. SemVer **v0.4.629+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+3.md)
+
+---
+---
 ## [0.2.1.9+2] - 07-04-26
 
 E2:S01:T09+2 — Re-implemented terminal row timestamp governance for active boards. Enforced `| Last modified: YYYY-MM-DD HH:MM UTC` in policy/docs, updated RW/UKW-aware scripts to normalize board rows, and validated compliance via governance checks. SemVer **v0.4.623+2**.
