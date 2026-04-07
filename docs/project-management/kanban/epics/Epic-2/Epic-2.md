@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-03-30 (UKW — E2:S11:T12 MoSCOW → kanban-completed; cross-refs cleaned)
+**Last updated:** 2026-04-07 (v0.2.1.10+2 – Story 1 Task 10 complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,20 +21,20 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.6+4 – All tasks complete: Validator format support, RW agent execution guide and reference docs completed)
+- [ ] **E2:S01 – RW Agent Execution & Docs** - IN PROGRESS (reopened 2026-04-02 — **E2:S01:T09** **BR-060** Step 1c / `IN PROGRESS` releasable; T01–T08 complete through v0.2.1.8+1)
   - Story: [`Story-001-rw-agent-execution-and-docs.md`](Story-001-rw-agent-execution-and-docs.md)
-  - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE (v0.2.1.6+4), T007 ✅ COMPLETE (FR-011: RW Agent Execution & Docs)
+  - Tasks: T01–T08 ✅ COMPLETE; **T09** 🔄 IN PROGRESS — [BR-060](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)
 
 - [x] **E2:S02 – PDCA Integration into Release Workflow** - COMPLETE ✅ (v0.2.2.8+1 – All tasks complete: PDCA phases integrated into RW, docs, templates, and examples)
   - Story: [`Story-002-pdca-integration-into-release-workflow.md`](Story-002-pdca-integration-into-release-workflow.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE, T007 ✅ COMPLETE, T008 ✅ COMPLETE
 
 - [x] **E2:S03 – RW Deterministic vs Agentic Execution** - COMPLETE ✅ (v0.2.3.6+1 – All tasks complete: deterministic vs agentic RW implementation, docs, and validation)
-  - Story: [`Story-003-additional-workflows-and-examples.md`](Story-003-additional-workflows-and-examples.md)
+  - Story: [`Story-003-rw-deterministic-vs-agentic-execution.md`](Story-003-rw-deterministic-vs-agentic-execution.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE
 
 - [x] **E2:S04 – RW Step 8 Hardening** - COMPLETE ✅ (v0.2.4.9+3 – All tasks complete: validation improvements, error handling, and docs)
-  - Story: [`Story-004-rw-installer-and-plug-and-play-adoption.md`](Story-004-rw-installer-and-plug-and-play-adoption.md) (historical title: RW Step 8 Hardening)
+  - Story: [`Story-004-rw-step-8-hardening.md`](Story-004-rw-step-8-hardening.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE, T007 ✅ COMPLETE, T008 ✅ COMPLETE, T009 ✅ COMPLETE
 
 - [x] **E2:S05 – Post-Implementation Review (PIR) Workflow** - COMPLETE ✅ (v0.2.5.15+1 – All tasks complete: PIR workflow implementation, templates, integration, testing, and documentation)
@@ -42,7 +42,7 @@ housekeeping_policy: keep
   - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE, T04 ✅ COMPLETE, T05 ✅ COMPLETE, T06 ✅ COMPLETE, T07 ✅ COMPLETE, T08 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T11 ✅ COMPLETE, T12 ✅ COMPLETE, T13 ✅ COMPLETE, T14 ✅ COMPLETE, T15 ✅ COMPLETE
 
 - [x] **E2:S06 – RW Step 10 Hardening** - COMPLETE ✅ (v0.2.6.3+1 – All tasks complete: tagging behaviour, guardrails, and docs)
-  - Story: [`Story-006-package-uninstall-and-recovery.md`](Story-006-package-uninstall-and-recovery.md) (epic checklist title: RW Step 10 Hardening — same version stream `v0.2.6.3+1`)
+  - Story: [`Story-006-rw-step-10-hardening.md`](Story-006-rw-step-10-hardening.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE
 
 - [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.8+1 – All tasks complete: trigger registry, deliverable processor, workflow executor, integration, docs, and tests)
@@ -65,17 +65,17 @@ housekeeping_policy: keep
 
 - [x] **E2:S11 – Intake Workflow Automation** - COMPLETE ✅ (v0.2.11.11+1 – All tasks complete: Intake workflow automation, CHANGELOG protection, and ordering fixes)
   - Story: [`Story-011-intake-workflow-automation.md`](Story-011-intake-workflow-automation.md)
-  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03 ✅ COMPLETE (v0.2.11.3+1), T04 ✅ COMPLETE (v0.2.11.4+1), T05 ✅ COMPLETE (v0.2.11.5+1), T06 ✅ COMPLETE (v0.2.11.6+1), T07 ✅ COMPLETE (v0.2.11.7+1), T08 ✅ COMPLETE (v0.2.11.8+1), T09 ✅ COMPLETE (v0.2.11.9+3), T10 ✅ COMPLETE (v0.2.11.10+1), T11 ✅ COMPLETE (v0.2.11.11+1 – CHANGELOG ordering violations fixed), T12<sup>*</sup> ✅ COMPLETE — workaround (v0.2.11.12+2 – intake GHA `.DISABLED`; manual intake; BR-053; see [kanban-completed](../../kanban-completed.md))
+  - Tasks: T00 ✅ COMPLETE, T01 ✅ COMPLETE (v0.2.11.1+2), T02 ✅ COMPLETE (v0.2.11.2+1), T03 ✅ COMPLETE (v0.2.11.3+1), T04 ✅ COMPLETE (v0.2.11.4+1), T05 ✅ COMPLETE (v0.2.11.5+1), T06 ✅ COMPLETE (v0.2.11.6+1), T07 ✅ COMPLETE (v0.2.11.7+1), T08 ✅ COMPLETE (v0.2.11.8+1), T09 ✅ COMPLETE (v0.2.11.9+3), T10 ✅ COMPLETE (v0.2.11.10+1), T11 ✅ COMPLETE (v0.2.11.11+1 – CHANGELOG ordering violations fixed), T12 🔄 IN PROGRESS (v0.2.11.12+0 – GitHub Actions platform bug resolution)
 
 - [x] **E2:S12 – RW Step 17: Housekeeping** - ✅ COMPLETE (v0.2.12.1+1 – All tasks complete: Step 17 added to RW)
   - Story: [`Story-012-rw-step-17-housekeeping.md`](Story-012-rw-step-17-housekeeping.md)
   - Tasks: T01 ✅ COMPLETE (v0.2.12.1+1 – Step 17 added: workflow YAML, documentation, and cursor rules updated)
 
-- [ ] **E2:S13 – Workflow Management Package Implementation Review** - IN PROGRESS (v0.2.13.1+2 – T01: Fixed .env.local loading)
+- [ ] **E2:S13 – Workflow Management Package Implementation Review** - IN PROGRESS (v0.2.1.9+2)
   - Story: [`Story-013-workflow-management-package-implementation-review.md`](Story-013-workflow-management-package-implementation-review.md)
   - Tasks: T01 ✅ COMPLETE (v0.2.13.1+2)
 
-- [ ] **E2:S14 – Workflow Management Package Installation Evaluation** - TODO (v0.2.14.0+0)
+- [ ] **E2:S14 – Workflow Management Package Installation Evaluation** - IN PROGRESS (v0.2.1.9+2)
   - Story: [`Story-014-workflow-management-package-installation-evaluation.md`](Story-014-workflow-management-package-installation-evaluation.md)
 
 

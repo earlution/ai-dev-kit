@@ -18,14 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 3      # Epic 3: Numbering & Versioning Framework
-VERSION_STORY = 2     # Story 2: Versioning Cookbook & Examples
-VERSION_TASK = 12     # E3:S02:T12 — ADR-002 / task-touch; BR-061 wiring (docs only)
-VERSION_BUILD = 1     # Docs-only kanban/BR intake (+0 invalid: T12 doc already existed per validate_version_bump)
+VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
+VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
+VERSION_TASK = 10     # Task number (T10: dev branch support in RW validators)
+VERSION_BUILD = 2     # Build number (E2:S01:T10+2 – RW)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
-# Current: 0.3.2.12+1 — outward SemVer **v0.4.706+1** (`task_touch` counter 706)
+# Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
+# Current: 0.2.1.10+2 = Development, Epic 2, Story 1, Task 10 (E2:S01:T10+2: dev branch strict-equal-epic implementation)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
@@ -39,3 +40,5 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py
 # - Abstract space awareness: FR-020 (validator recognizes +0 as valid)
+
+

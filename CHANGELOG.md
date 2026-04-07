@@ -5,12 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is inspired by **Keep a Changelog** ([`https://github.com/olivierlacan/keep-a-changelog`](https://github.com/olivierlacan/keep-a-changelog))  
 and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme described in the dev-kit versioning policy.
 
-**Historical entries:** Per [`changelog-archival-policy`](docs/architecture/standards-and-adrs/changelog-archival-policy.md) (`changelog_archival.mode: latest_only` in `rw-config.yaml`), this file keeps only the latest release. Full history lives in [`CHANGELOG_ARCHIVE.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md) and `CHANGELOG_v*.md` under `docs/changelog-and-release-notes/changelog-archive/`.
+## [0.24.2.1+1] - 12-03-26
+
+E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
 
 ---
 
-## [0.3.2.12+1] - 02-04-26
+## [0.2.1.10+2] - 07-04-26
 
-**Docs only (`RW -k` scope)** — **BR-061** filed; **E3:S02:T12** as implementing task; boards/structure wired. No code changes. Internal **`0.3.2.12+1`** — outward **`v0.4.706+1`**.
+E2:S01:T10+2 — Change implemented: strict-equal-epic `dev` branch support in RW Step 1 validation; `dev` now requires `dev_branch_epic` mapping and enforces the same blocking epic/version alignment as `epic/{n}`. SemVer **v0.4.628+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.12+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+2.md)
+
+---
+
+## [0.2.1.10+1] - 07-04-26
+
+E2:S01:T10+1 — Change implemented: contextualized UXR-006 into RW story ownership (`E2:S01:T10`), removed legacy `E7:S00:T06` mapping references, and prepared branch-validation policy path for `dev`-mode RW execution. SemVer **v0.4.627+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---

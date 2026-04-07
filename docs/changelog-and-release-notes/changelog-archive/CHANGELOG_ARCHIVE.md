@@ -1,16 +1,24 @@
 # Changelog Archive
-## [0.3.2.12+1] - 02-04-26
+## [0.2.1.9+2] - 07-04-26
 
-E3:S02:T12 — **Docs only:** **BR-061** intake; **T12** implementing task; FR/BR + kanban boards. Outward **`v0.4.706+1`**. [T12](../../project-management/kanban/epics/Epic-3/Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md); [BR-061](../../project-management/kanban/fr-br/BR-061-semver-task-touch-counter-increments-too-often.md).
+E2:S01:T09+2 — Re-implemented terminal row timestamp governance for active boards. Enforced `| Last modified: YYYY-MM-DD HH:MM UTC` in policy/docs, updated RW/UKW-aware scripts to normalize board rows, and validated compliance via governance checks. SemVer **v0.4.623+2**.
 
-[Detailed changelog](CHANGELOG_v0.3.2.12+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.9+2.md)
+
+---
+---
+## [0.2.1.9+1] - 02-04-26
+
+E2:S01:T09+1 — **BR-060** kanban traceability (canonical **E2:S01:T09**); **E2:S01** reopened; stubs **E6:S06:T60** / **E4:S19:T01**; **BR-061** filed (**CRITICAL** — RW explicit `E:S:T` vs `version.py` / Step 1). [T09](../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md); [BR-060](../../project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md); [BR-061](../../project-management/kanban/fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md).
+
+[Detailed changelog](CHANGELOG_v0.2.1.9+1.md)
 
 ---
 ---
 ---
 ## [0.6.6.61+1] - 02-04-26
 
-E6:S06:T61 — **UXR-006** (change implemented): MoSCOW **`Last modified`** UTC on task + FR/BR/UXR boards; **KG-R2** intake (**E7:S00:T06** + **T61**); guide and board notes. [T61](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md); [UXR-006](../../project-management/kanban/fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md).
+E6:S06:T61 — **UXR-006** (change implemented): MoSCOW **`Last modified`** UTC on task + FR/BR/UXR boards; **KG-R2** intake (**T61**); guide and board notes. [T61](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md); [UXR-006](../../project-management/kanban/fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md).
 
 [Detailed changelog](CHANGELOG_v0.6.6.61+1.md)
 
@@ -19,18 +27,9 @@ E6:S06:T61 — **UXR-006** (change implemented): MoSCOW **`Last modified`** UTC 
 ---
 ## [0.6.6.60+1] - 02-04-26
 
-E6:S06:T60 — **BR-060** (change implemented): RW Step 1c allows **`IN PROGRESS`** task releases; **`validate_version_bump`** task-doc lookup by **Task ID** across kanban when story pattern matches the wrong file; RW Step 1c wording in `.cursorrules` / portable RW excerpt. [T60](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md); [BR-060](../../project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md).
+E6:S06:T60 — **BR-060** (change implemented): RW Step 1c allows **`IN PROGRESS`** task releases; **`validate_version_bump`** task-doc lookup by **Task ID** across kanban when story pattern matches the wrong file; RW Step 1c wording in `.cursorrules` / portable RW excerpt. [T60 stub](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md); canonical task **[E2:S01:T09](../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)**; [BR-060](../../project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md).
 
 [Detailed changelog](CHANGELOG_v0.6.6.60+1.md)
-
----
----
----
-## [0.6.6.57+6] - 02-04-26
-
-**T57** **`RW -k` repair:** Outward **`v0.4.705+6`** (remote **`v0.4.704+5`** also taken). [T57](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)
-
-[Detailed changelog](CHANGELOG_v0.6.6.57+6.md)
 
 ---
 ---

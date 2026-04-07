@@ -131,6 +131,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md)
 - **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
 - **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and establish UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
+- **UXR-006** – Single `dev` branch and RW validator relaxation (solo workflow) - TODO (HIGH, evaluate allowing `dev` as accepted RW branch context to reduce multi-branch hygiene friction while preserving safety controls) - [UXR-006](fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md)
 
 ### Medium Priority (Could Have - C)
 
@@ -141,24 +142,24 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 ## Summary Statistics
 
-**Total Items:** 71 FR/BR/UXR documents
+**Total Items:** 72 FR/BR/UXR documents
 
 #### Type Breakdown
 
 - **Feature Requests:** 51 (1 completed: FR-051)
 - **Bug Reports:** 15 (1 in progress: BR-037)
-- **User Experience Research:** 5
+- **User Experience Research:** 6
 
 #### Status Breakdown
 
-- **TODO:** 68
+- **TODO:** 69
 - **IN PROGRESS:** 1 (BR-037)
 - **COMPLETED:** 1 (FR-051 - tracked in fr-br-uxr-completed.md)
 
 #### MoSCOW Breakdown
 
 - **Must Have (M):** 2 (BR-038, BR-037)
-- **Should Have (S):** 6 (FR-045, FR-047, FR-046, UXR-001, UXR-002, FR-051)
+- **Should Have (S):** 7 (FR-045, FR-047, FR-046, UXR-001, UXR-002, UXR-006, FR-051)
 - **Could Have (C):** 62
 - **Won't Have (W):** 0
 - **Ongoing (O):** 0

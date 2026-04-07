@@ -666,7 +666,7 @@ def update_epic_doc(
     # Update Epic Story Checklist entry
     # Pattern: - [ ] **E2:S08** - Story description - IN PROGRESS (v0.2.8.1+1)
     checklist_pattern = re.compile(
-        rf'(- \[[x\s]\]\s+\*\*E\d+:S{story}[^\n]*)',
+        rf'(- \[[x\s]\]\s+\*\*E\d+:S{story}(?!\d)[^\n]*)',
         re.IGNORECASE | re.MULTILINE
     )
     
@@ -824,6 +824,10 @@ def update_kanban_board(
             flags=re.IGNORECASE
         )
         changes.append(f"Updated board Version: {version_string}")
+
+    # Enforce terminal row timestamp format for MoSCOW rows.
+    timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+    content = enforce_moscow_row_timestamps(content, timestamp_now)
     
     # Find and update epic section
     epic_section = find_epic_section(content, epic)
@@ -926,6 +930,59 @@ def update_kanban_board(
             return False, [f"Error writing board: {e}"]
     
     return True, changes
+
+
+def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> str:
+    """
+    Ensure all MoSCOW bullet rows end with:
+    `| Last modified: YYYY-MM-DD HH:MM UTC`
+    """
+    lines = board_content.split("\n")
+    in_moscow = False
+    out_lines: List[str] = []
+    ts_pattern = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("## MoSCOW"):
+            in_moscow = True
+        elif in_moscow and stripped.startswith("## ") and not stripped.startswith("## MoSCOW"):
+            in_moscow = False
+
+        if in_moscow and stripped.startswith("- **"):
+            if ts_pattern.search(line):
+                line = ts_pattern.sub(f"| Last modified: {timestamp_value}", line)
+            else:
+                line = f"{line} | Last modified: {timestamp_value}"
+
+        out_lines.append(line)
+
+    return "\n".join(out_lines)
+
+
+def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = False) -> List[str]:
+    """
+    Enforce terminal row timestamps on both active boards:
+    - kanban-board.md
+    - fr-br-uxr-board.md
+    """
+    boards = [
+        project_root / "docs/project-management/kanban/kanban-board.md",
+        project_root / "docs/project-management/kanban/fr-br-uxr-board.md",
+    ]
+    timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+    changes: List[str] = []
+
+    for board in boards:
+        if not board.exists():
+            continue
+        original = board.read_text()
+        updated = enforce_moscow_row_timestamps(original, timestamp_now)
+        if updated != original:
+            if not dry_run:
+                board.write_text(updated)
+            changes.append(f"Enforced terminal row timestamps: {board}")
+    return changes
 
 
 def detect_error_type(error_message: str) -> str:
@@ -1117,7 +1174,7 @@ def validate_updates(
             
             # Check Epic Story Checklist entry exists and has correct status
             checklist_pattern = re.compile(
-                rf'(- \[[x\s]\]\s+\*\*E{epic}:S{story}[^\n]*)',
+                rf'(- \[[x\s]\]\s+\*\*E{epic}:S{story}(?!\d)[^\n]*)',
                 re.IGNORECASE | re.MULTILINE
             )
             checklist_match = checklist_pattern.search(epic_content)
@@ -1345,6 +1402,9 @@ def main():
             print(f"❌ Failed to update Kanban board: {changes}")
             sys.exit(1)
         all_changes.extend(changes)
+
+    # Enforce terminal row timestamp field on both active boards
+    all_changes.extend(enforce_terminal_timestamps_on_boards(Path.cwd(), args.dry_run))
     
     # Report results
     if args.dry_run:

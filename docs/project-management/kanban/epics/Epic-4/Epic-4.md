@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-01-22 (v0.4.16.5+2 – E4:S16:T05: Gap log and risk assessment finalized, all acceptance criteria met)
+**Last updated:** 2026-04-02 — **E4:S19** abstract governance only (**BR-060** canonical **E2:S01:T09**); prior **2026-01-22** (v0.4.16.5+2 – E4:S16:T05)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -89,6 +89,10 @@ housekeeping_policy: keep
   - Story: [`Story-018-kanban-board-info-only-split.md`](Story-018-kanban-board-info-only-split.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.18.1+1), T02 ✅ COMPLETE (v0.4.18.2+1)
 
+- [ ] **E4:S19 – FR/BR/UXR abstract governance and intake** - IN PROGRESS (v0.4.19.0+0 — abstract-first; **T01** path = [stub → E2:S01:T09](Story-019-fr-br-uxr-abstract-governance-and-intake/T01-rw-allow-in-progress-task-releases-br060.md))
+  - Story: [`Story-019-fr-br-uxr-abstract-governance-and-intake.md`](Story-019-fr-br-uxr-abstract-governance-and-intake.md)
+  - Tasks: **T01** stub only (**BR-060** lives under **E2:S01:T09**)
+
 
 ---
 
@@ -104,6 +108,7 @@ It ensures that:
 
 - All substantive work is **Task/FR-driven**.
 - Kanban, versioning, and RW form a coherent system.
+- **FR / BR / UXR** have a clear **abstract** (class-level) governance home in **E4:S19** — distinct from **concrete** report work in **E5:S01 / E6:S01 / E7:S00** and delivery stories.
 
 ---
 

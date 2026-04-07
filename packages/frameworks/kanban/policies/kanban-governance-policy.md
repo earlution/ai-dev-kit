@@ -310,12 +310,17 @@ Each task entry in the MoSCOW sections includes:
 - **Task Description:** Brief description of the task
 - **Last Updated:** Date when task was last updated
 - **Links:** Links to Task document and parent Story document
+- **Terminal Timestamp Field (REQUIRED):** Final pipe-delimited field at end of line: `| Last modified: YYYY-MM-DD HH:MM UTC`
 
 **Example Format:**
 ```markdown
-- **E4:S13:T02** – Update Kanban governance policy  
-  *Last updated: 2025-12-18* | [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)
+- **E4:S13:T02** – Update Kanban governance policy - IN PROGRESS - [Task Doc](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view/T02-update-kanban-governance-policy.md) | [Story](epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md) | Last modified: 2025-12-18 14:05 UTC
 ```
+
+**Timestamp governance (mandatory):**
+- The terminal `| Last modified: ... UTC` field is required on all active MoSCOW rows in `kanban-board.md` and `fr-br-uxr-board.md`.
+- RW/UKW/automation that creates or updates rows must append or refresh this field.
+- Human-readable timestamp values must use UTC and 24-hour format (`YYYY-MM-DD HH:MM UTC`).
 
 ### Story Checklist
 

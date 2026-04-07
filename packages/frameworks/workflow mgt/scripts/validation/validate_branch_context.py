@@ -96,12 +96,19 @@ def get_version(config: Optional[Dict] = None):
         return None
 
 
-def parse_branch_epic(branch: str) -> Optional[int]:
+def parse_branch_epic(branch: str, config: Optional[Dict] = None) -> Optional[int]:
     """Extract epic number from branch name (e.g., epic/10-fastapi-migration -> 10)."""
     # Match patterns like: epic/10, epic/10-fastapi-migration, epic/11-architecture-refactoring
     match = re.match(r"^epic/(\d+)", branch)
     if match:
         return int(match.group(1))
+    # Support strict-equal-epic mode for a shared dev branch by
+    # requiring an explicit configured epic mapping.
+    if branch == "dev" and config and config.get("dev_branch_epic") is not None:
+        try:
+            return int(config.get("dev_branch_epic"))
+        except (TypeError, ValueError):
+            return None
     return None
 
 
@@ -484,7 +491,7 @@ def check_changelog(branch, config: Optional[Dict] = None, current_version: Opti
     issues = []
 
     # Get expected epic number for this branch
-    expected_epic = parse_branch_epic(branch)
+    expected_epic = parse_branch_epic(branch, config)
 
     if expected_epic is not None:
         # Check staged changes to CHANGELOG.md
@@ -549,7 +556,7 @@ def validate_branch_context():
         print("Detected maintenance/update branch pattern; skipping epic/version enforcement.")
     else:
         # Parse epic number from branch name (e.g., epic/10-fastapi-migration -> 10)
-        expected_epic = parse_branch_epic(branch)
+        expected_epic = parse_branch_epic(branch, config)
 
     errors = []
     warnings = []
@@ -568,6 +575,11 @@ def validate_branch_context():
                     f"Version mismatch: Branch '{branch}' expects Epic {expected_epic} "
                     f"but version '{version}' has Epic {version_epic}"
                 )
+    elif branch == "dev":
+        errors.append(
+            "Branch 'dev' requires rw-config.yaml key 'dev_branch_epic' "
+            "for strict epic/version validation (strict-equal-epic mode)."
+        )
     elif branch != "main" and not maintenance_branch:
         warnings.append(f"Branch '{branch}' not in known mapping - cannot validate version")
 

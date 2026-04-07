@@ -104,8 +104,10 @@ steps:
       - step-2
     config:
       kanban_update_script: packages/frameworks/workflow mgt/scripts/update_kanban_docs.py
+      normalize_board_timestamps_script: packages/frameworks/workflow mgt/scripts/kanban/normalize_board_row_timestamps.py
       epic_doc_pattern: docs/project-management/epics/overview/Epic {epic}/Epic-{epic}.md
       kanban_board: docs/project-management/kanban/kanban-board.md
+      fr_br_uxr_board: docs/project-management/kanban/fr-br-uxr-board.md
       use_rw_config: true
 
   - id: step-8

@@ -2,7 +2,7 @@
 
 **Release Date:** 2026-04-02 13:42:21 UTC  
 **Epic:** 6 | **Story:** 6 | **Task:** 60  
-**Task doc:** [T60-rw-allow-in-progress-task-releases.md](../../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md)  
+**Task doc:** [T60-rw-allow-in-progress-task-releases.md](../../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md) (redirect stub; canonical kanban task **E2:S01:T09** — [T09](../../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md); prior stub chain **E4:S19:T01**)  
 **Associated BR:** [BR-060](../../../project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
 
 ## Summary

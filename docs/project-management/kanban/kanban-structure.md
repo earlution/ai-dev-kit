@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Structure
 
-**Last Updated:** 2026-03-09 (RW: E4:S18:T01+2)
-**Version:** v0.4.18.1+2
+**Last Updated:** 2026-04-02 (**E2:S01** reopened — **E2:S01:T09** **BR-060**; E4:S19 abstract governance)
+**Version:** v0.4.18.1+2 *(prior RW; align with `version.py` when releasing)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)  
@@ -48,8 +48,9 @@ housekeeping_policy: keep
 **Last Updated:** 2026-02-08 (RW: E5:S01:T37)
 
 **Stories:**
-- [x] **E2:S01 – RW Agent Execution & Docs** - COMPLETE ✅ (v0.2.1.6+4)
+- [ ] **E2:S01 – RW Agent Execution & Docs** - IN PROGRESS (reopened 2026-04-02 — **E2:S01:T09** **BR-060**; T01–T08 complete v0.2.1.6+4 … v0.2.1.8+1)
   - Story: [`epics/Epic-2/Story-001-rw-agent-execution-and-docs.md`](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md)
+  - Tasks: **T09** IN PROGRESS — [BR-060](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)
 
 
 - [x] **E2:S02 – PDCA Integration into Release Workflow** - COMPLETE ✅ (v0.2.2.8+1)
@@ -203,6 +204,10 @@ housekeeping_policy: keep
 - [x] **E4:S18 – Kanban Board Info-Only Split** - COMPLETE ✅ (v0.4.18.1+2 – Four-way split complete: added kanban-completed.md for historical task tracking, updated all cross-references, system ready for production)
   - Story: [`epics/Epic-4/Story-018-kanban-board-info-only-split.md`](epics/Epic-4/Story-018-kanban-board-info-only-split.md)
   - Tasks: T01 ✅ COMPLETE (v0.4.18.1+1), T02 ✅ COMPLETE (v0.4.18.2+1)
+
+- [ ] **E4:S19 – FR/BR/UXR abstract governance and intake** - IN PROGRESS (v0.4.19.0+0 — abstract-first; **BR-060** canonical **[E2:S01:T09](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)**)
+  - Story: [`epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md`](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md)
+  - Tasks: T01 TODO (charter); E4:S19 T01 `br060` filename = stub → E2:S01:T09
 
 
 - [ ] **E4:S14 – Kanban Framework Maintenance** - IN PROGRESS (v0.4.14.2+1 – T02 complete: RC review artifacts restored)
