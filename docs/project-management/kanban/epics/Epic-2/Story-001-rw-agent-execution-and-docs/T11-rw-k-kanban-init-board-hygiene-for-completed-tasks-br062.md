@@ -9,11 +9,11 @@ housekeeping_policy: keep
 # Task E2:S01:T11 - RW -k kanban_init board hygiene for completed tasks (BR-062)
 
 **Task ID:** E2:S01:T11  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-07 (implementation in progress: `kanban_init` stale-row pruning + regression test added)  
-**Version:** v0.2.1.10+3  
+**Last updated:** 2026-04-07 (implementation complete: `kanban_init` stale-row pruning + regression coverage validated)  
+**Version:** v0.2.1.10+4  
 **Code:** E2S01T11
 
 ---
@@ -45,7 +45,7 @@ Fix the `RW -k` Step 7 Kanban update behavior so completed tasks are not left in
 - [x] `RW -k` no longer leaves completed task rows in `kanban-board.md` in-progress MoSCoW section.
 - [x] Existing metadata/timestamp behavior for `kanban_init` remains intact.
 - [x] Regression test or deterministic verification step added for this specific scenario.
-- [ ] BR-062 status and references updated after implementation.
+- [x] BR-062 status and references updated after implementation.
 
 ---
 

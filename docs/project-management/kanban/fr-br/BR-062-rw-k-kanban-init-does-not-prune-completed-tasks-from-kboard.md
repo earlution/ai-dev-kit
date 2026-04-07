@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Bug Report BR-062 - RW -k kanban_init leaves completed tasks on in-progress kboard
 
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-07 — implementation underway in `E2:S01:T11`: `kanban_init` stale-row pruning added in `update_kanban_docs.py` with targeted regression test coverage.  
-**Version:** v0.2.1.10+3  
+**Last updated:** 2026-04-07 — implementation complete via `E2:S01:T11`: `kanban_init` now prunes stale completed target-task rows; regression coverage in category 4 edge tests passes.  
+**Version:** v0.2.1.10+4  
 **Code:** BR-062  
 **Implementing Task:** [E2:S01:T11](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T11-rw-k-kanban-init-board-hygiene-for-completed-tasks-br062.md)
 
