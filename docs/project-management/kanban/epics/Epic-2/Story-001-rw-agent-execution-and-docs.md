@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # Story 001 – RW Agent Execution & Docs
 
-**Status:** IN PROGRESS (reopened 2026-04-02 — **E2:S01:T09** **BR-060**)
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
 **Completed:** N/A (story reopened for ongoing RW validation work)
-**Last updated:** 2026-04-02 — **RW** **v0.2.1.9+1** (**E2:S01:T09**); **BR-060** traceability + **BR-061** filed
-**Version:** v0.2.1.9+1
+**Last updated:** 2026-04-07 (v0.2.1.9+2 – Kanban documentation setup)
+**Version:** v0.2.1.9+2
 **Code:** E2S01
 
 ---
@@ -55,7 +55,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 **Dependencies:** None  
 **Blocker:** None
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 
 **Approach:**
 1. ✅ Reviewed `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
@@ -93,7 +93,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 **Dependencies:** E2:S01:T01  
 **Blocker:** None
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 
 **Approach:**
 1. ✅ Tagged all Confidentia/fynd.deals examples with `[Example: Confidentia]` or `[Example: Confidentia/fynd.deals]` labels
@@ -128,7 +128,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 **Dependencies:** E2:S01:T02  
 **Blocker:** None
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 
 **Approach:**
 1. ✅ Reviewed `packages/frameworks/workflow mgt/cursorrules-rw-trigger-section.md`
@@ -316,7 +316,7 @@ All subsequent steps have been cancelled.
 **Dependencies:** None  
 **Blocker:** None
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 
 **Previous Attempt (v0.2.1.6+2):**
 - Task was marked complete but bug still present

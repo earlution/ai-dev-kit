@@ -1,4 +1,12 @@
 # Changelog Archive
+## [0.2.1.9+2] - 07-04-26
+
+E2:S01:T09+2 — Re-implemented terminal row timestamp governance for active boards. Enforced `| Last modified: YYYY-MM-DD HH:MM UTC` in policy/docs, updated RW/UKW-aware scripts to normalize board rows, and validated compliance via governance checks. SemVer **v0.4.623+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.9+2.md)
+
+---
+---
 ## [0.2.1.9+1] - 02-04-26
 
 E2:S01:T09+1 — **BR-060** kanban traceability (canonical **E2:S01:T09**); **E2:S01** reopened; stubs **E6:S06:T60** / **E4:S19:T01**; **BR-061** filed (**CRITICAL** — RW explicit `E:S:T` vs `version.py` / Step 1). [T09](../../project-management/kanban/epics/Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md); [BR-060](../../project-management/kanban/fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md); [BR-061](../../project-management/kanban/fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md).

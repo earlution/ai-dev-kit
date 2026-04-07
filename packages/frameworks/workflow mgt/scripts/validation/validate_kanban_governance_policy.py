@@ -8,6 +8,11 @@ Validates that the Kanban governance policy contains the FR-037 required content
 - R03: Scripts/UKW/RW respect stack vs queue or document manual/agent-defined
 - R04: (Optional) Universal COMPLETE definition (fully implemented + signed off)
 - R05: Policy references board guide or prioritisation/queue/stack
+- R06: Policy defines terminal row timestamp format
+
+Also validates active board row compliance:
+- `kanban-board.md` and `fr-br-uxr-board.md` MoSCOW rows must end with:
+  `| Last modified: YYYY-MM-DD HH:MM UTC`
 
 Usage:
     python packages/frameworks/workflow mgt/scripts/validation/validate_kanban_governance_policy.py [--strict] [--policy-path PATH]
@@ -126,14 +131,62 @@ def check_r05(content: str) -> Tuple[bool, List[str]]:
     return len(errors) == 0, errors
 
 
+def check_r06(content: str) -> Tuple[bool, List[str]]:
+    """R06: Policy defines terminal row timestamp requirement."""
+    errors = []
+    has_last_modified = "Last modified:" in content
+    has_utc_format = "YYYY-MM-DD HH:MM UTC" in content
+    has_terminal_pipe = "pipe-delimited" in content.lower() or "| Last modified:" in content
+    if not has_last_modified:
+        errors.append("R06: Policy should define a 'Last modified:' row field")
+    if not has_utc_format:
+        errors.append("R06: Policy should define timestamp format 'YYYY-MM-DD HH:MM UTC'")
+    if not has_terminal_pipe:
+        errors.append("R06: Policy should define terminal pipe-delimited row timestamp field")
+    return len(errors) == 0, errors
+
+
 def validate_policy(content: str) -> Tuple[bool, List[str]]:
     """Run all FR-037 checks. Returns (passed, list of error messages)."""
     all_errors = []
-    for check_fn in [check_r01, check_r02, check_r03, check_r04, check_r05]:
+    for check_fn in [check_r01, check_r02, check_r03, check_r04, check_r05, check_r06]:
         passed, errors = check_fn(content)
         if not passed:
             all_errors.extend(errors)
     return len(all_errors) == 0, all_errors
+
+
+def _extract_moscow_rows(board_content: str) -> List[str]:
+    rows: List[str] = []
+    in_moscow = False
+    for line in board_content.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("## MoSCOW"):
+            in_moscow = True
+            continue
+        if in_moscow and stripped.startswith("## ") and not stripped.startswith("## MoSCOW"):
+            break
+        if in_moscow and stripped.startswith("- **"):
+            rows.append(stripped)
+    return rows
+
+
+def validate_board_timestamp_rows(project_root: Path) -> Tuple[bool, List[str]]:
+    errors: List[str] = []
+    boards = [
+        project_root / "docs/project-management/kanban/kanban-board.md",
+        project_root / "docs/project-management/kanban/fr-br-uxr-board.md",
+    ]
+    ts_pattern = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
+    for board in boards:
+        if not board.exists():
+            continue
+        content = board.read_text(encoding="utf-8")
+        rows = _extract_moscow_rows(content)
+        for row in rows:
+            if not ts_pattern.search(row):
+                errors.append(f"Board row missing terminal timestamp ({board}): {row[:120]}")
+    return len(errors) == 0, errors
 
 
 def main() -> int:
@@ -157,9 +210,12 @@ def main() -> int:
 
     content = policy_path.read_text(encoding="utf-8")
     passed, errors = validate_policy(content)
+    boards_ok, board_errors = validate_board_timestamp_rows(project_root)
+    errors.extend(board_errors)
+    passed = passed and boards_ok
 
     if passed:
-        print("Kanban governance policy validation passed (FR-037).")
+        print("Kanban governance policy validation passed (FR-037 + timestamp row checks).")
         return 0
 
     print("Kanban governance policy validation FAILED (FR-037):")

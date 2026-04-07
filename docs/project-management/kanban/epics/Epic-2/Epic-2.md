@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-04-02 — **RW** **v0.2.1.9+1** (**E2:S01:T09** — BR-060 traceability, BR-061); prior 2026-01-21 (v0.2.13.1+2 – E2:S13:T01)
+**Last updated:** 2026-04-07 (v0.2.1.9+2 – Story 1 Task 9 complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -71,11 +71,11 @@ housekeeping_policy: keep
   - Story: [`Story-012-rw-step-17-housekeeping.md`](Story-012-rw-step-17-housekeeping.md)
   - Tasks: T01 ✅ COMPLETE (v0.2.12.1+1 – Step 17 added: workflow YAML, documentation, and cursor rules updated)
 
-- [ ] **E2:S13 – Workflow Management Package Implementation Review** - IN PROGRESS (v0.2.13.1+2 – T01: Fixed .env.local loading)
+- [ ] **E2:S13 – Workflow Management Package Implementation Review** - IN PROGRESS (v0.2.1.9+2)
   - Story: [`Story-013-workflow-management-package-implementation-review.md`](Story-013-workflow-management-package-implementation-review.md)
   - Tasks: T01 ✅ COMPLETE (v0.2.13.1+2)
 
-- [ ] **E2:S14 – Workflow Management Package Installation Evaluation** - TODO (v0.2.14.0+0)
+- [ ] **E2:S14 – Workflow Management Package Installation Evaluation** - IN PROGRESS (v0.2.1.9+2)
   - Story: [`Story-014-workflow-management-package-installation-evaluation.md`](Story-014-workflow-management-package-installation-evaluation.md)
 
 
