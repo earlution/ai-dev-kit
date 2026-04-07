@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
 VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
-VERSION_TASK = 10     # Task number (T10: dev branch support in RW validators)
-VERSION_BUILD = 6     # Build number (E2:S01:T10+6 – RW-k: BR-061 task intake wiring)
+VERSION_TASK = 13     # Task number (T13: RW-k forensic task attribution alignment)
+VERSION_BUILD = 1     # Build number (E2:S01:T13+1 – BR-063 intake + forensic cleanup release)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.1.10+6 = Development, Epic 2, Story 1, Task 10 (E2:S01:T10+6: RW-k for BR-061 task intake wiring)
+# Current: 0.2.1.13+1 = Development, Epic 2, Story 1, Task 13 (E2:S01:T13+1: BR-063 intake + forensic cleanup release)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

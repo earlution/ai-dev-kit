@@ -13,9 +13,17 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.2.1.13+1] - 07-04-26
+
+E2:S01:T13 — Change implemented: filed/wired `BR-063` and completed forensic cleanup so `v0.2.1.10+6` release records consistently anchor to `T10` rather than mixed `T10`/`T12` attribution. SemVer **v0.4.635+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.13+1.md)
+
+---
+
 ## [0.2.1.10+6] - 07-04-26
 
-E2:S01:T12 intake wiring — Change implemented: created task record for BR-061 under Epic 2 Story 1, linked BR and Story checklist references, and ran `RW -k` kanban/documentation sync for metadata alignment. SemVer **v0.4.633+6**.
+E2:S01:T10+6 metadata sync — Change implemented: performed `RW -k` kanban/documentation metadata alignment while version lineage remained anchored to `T10` (`0.2.1.10+6`). Administrative BR-061 intake wiring for `T12` was recorded separately and is not the version anchor for this release. SemVer **v0.4.633+6**.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+6.md)
 
