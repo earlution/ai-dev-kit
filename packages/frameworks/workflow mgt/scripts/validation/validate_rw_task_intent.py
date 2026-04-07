@@ -10,6 +10,7 @@ Usage:
   python validate_rw_task_intent.py --requested E7:S06:T02 --version-file src/foo/version.py
   python validate_rw_task_intent.py --requested E6S6T56 --mode rw-k   # strict: must match current anchor
   python validate_rw_task_intent.py --requested E6S6T56 --mode rw-k --art   # adopt requested task
+  python validate_rw_task_intent.py --requested E6:S07:T101 --art           # full RW: adopt perpetual task (cross-epic from dev)
   python validate_rw_task_intent.py --requested E6:S07:T102 --mode rw-d   # docs-only: allow perpetual cross-epic
   python validate_rw_task_intent.py --requested E7:S05:T01 --confirmed-override  # after explicit user confirm
 
@@ -232,7 +233,7 @@ def main() -> int:
     parser.add_argument(
         "--art",
         action="store_true",
-        help="Adopt requested task as release anchor (RW -k mismatch reconciliation).",
+        help="Adopt requested task as release anchor (RW -k; full RW: perpetual tasks only, cross-epic allowed).",
     )
     parser.add_argument("--version-file", type=Path, default=None, help="Override version file path.")
     args = parser.parse_args()
@@ -262,6 +263,26 @@ def main() -> int:
     _rc, ve, vs, vt, _vb = vc
     current_fmt = format_est(ve, vs, vt)
     requested_fmt = format_est(rq_e, rq_s, rq_t)
+
+    # Full RW + --art: explicit adoption of a perpetual task (e.g. UKW T101 from dev where version.py is another epic).
+    if args.mode == "full" and args.art:
+        task_doc = find_task_doc(config, rq_e, rq_s, rq_t)
+        if task_doc is None or not task_doc.exists():
+            print("❌ RW TASK INTENT MISMATCH (full --art: task doc missing)")
+            print(f"   Requested: {requested_fmt}")
+            print("   Could not locate task document to verify perpetual status.")
+            return 1
+        if not is_perpetual_task(task_doc):
+            print("❌ RW TASK INTENT MISMATCH (full --art requires perpetual task)")
+            print(f"   Requested: {requested_fmt}")
+            print(f"   Task doc: {task_doc}")
+            print("   Use --mode rw-k --art for non-perpetual adoption, or --confirmed-override.")
+            return 1
+        print(
+            f"validate_rw_task_intent: full --art — adopt perpetual requested task "
+            f"(requested {requested_fmt}, prior version anchor {current_fmt})."
+        )
+        return 0
 
     if args.mode == "rw-k":
         if args.art:

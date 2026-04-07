@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
-VERSION_TASK = 13     # Task number (T13: RW-k forensic task attribution alignment)
-VERSION_BUILD = 2     # Build number (E2:S01:T13+2 – BR-063 runtime hardening: rw-k guard, --art, tests, docs)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
+VERSION_STORY = 7     # Story number (Story 7: ADK implementation / package management)
+VERSION_TASK = 101    # Task number (T101: Update Kanban Workflow — perpetual)
+VERSION_BUILD = 40    # Build number (E6:S07:T101+40 — fr-br-uxr board open-item sync + RW full --art + dev perpetual branch guard)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.1.13+2 = Development, Epic 2, Story 1, Task 13 (E2:S01:T13+2: BR-063 validators + orchestration + doc parity)
+# Current: 0.6.7.101+40 = Development, Epic 6, Story 7, Task 101 (UKW perpetual)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
@@ -40,5 +40,4 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py
 # - Abstract space awareness: FR-020 (validator recognizes +0 as valid)
-
 

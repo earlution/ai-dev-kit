@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-07 (BR-063 complete — shipped v0.2.1.13+2)
-**Version:** v0.2.1.13+2
+**Last Updated:** 2026-04-07 (RW E6:S07:T101+40 — board sync + validator hardening shipped)
+**Version:** v0.6.7.101+40 (**SemVer** v0.4.638+40)
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
@@ -119,6 +119,22 @@ This board provides **centralized visibility and prioritization** for all open F
 - **BR-001** – Validate Version Bump Epic Story Detection Bug - TODO (LOW, Bug in epic/story detection for version bump validation) - [BR-001](fr-br/BR-001-validate-version-bump-epic-story-detection-bug.md) | Last modified: 2026-04-07 16:30 UTC
 
 ---
+
+- **BR-058** – Ci test workflow missing and pytest failures - OPEN (backlog sync) - [BR-058](fr-br/BR-058-ci-test-workflow-missing-and-pytest-failures.md) | Last modified: 2026-04-07 16:14 UTC
+- **BR-059** – Ukw moscow incomplete story task coverage - OPEN (backlog sync) - [BR-059](fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-048** – Icw task identifier argument - PENDING (backlog sync) - [FR-048](fr-br/FR-048-icw-task-identifier-argument.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-049** – Enhanced kanban completed with timestamps and recent tasks - TODO (backlog sync) - [FR-049](fr-br/FR-049-enhanced-kanban-completed-with-timestamps-and-recent-tasks.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-050** – Ukw extension for fr br uxr temporal tracking and synchronization - TODO (backlog sync) (note: duplicate source docs exist) - [FR-050](fr-br/FR-050-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-056** – Standardize packaged workflow documentation and instructions - TODO (backlog sync) - [FR-056](fr-br/FR-056-standardize-packaged-workflow-documentation-and-instructions.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-057** – Update changelog workflow - PROPOSED (backlog sync) - [FR-057](fr-br/FR-057-update-changelog-workflow.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-058** – Markdown maintenance workflow - PROPOSED (backlog sync) - [FR-058](fr-br/FR-058-markdown-maintenance-workflow.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-059** – Enhanced workflow logging system - PROPOSED (backlog sync) - [FR-059](fr-br/FR-059-enhanced-workflow-logging-system.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-062** – Github release installation experience - PROPOSED (backlog sync) - [FR-062](fr-br/FR-062-github-release-installation-experience.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-063** – Cmw epic 5 execution context - ACTIVE (intake released v0.5.2.6+1; implementation ACs open) (backlog sync) - [FR-063](fr-br/FR-063-cmw-epic-5-execution-context.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-066** – Docusaurus canonical docs path and publish scope - IMPLEMENTED (pending RW forensic close — config + scope **2026-03-30**) (backlog sync) - [FR-066](fr-br/FR-066-docusaurus-canonical-docs-path-and-publish-scope.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-072** – Uniform repository abstract space kanban rules - PENDING (backlog sync) - [FR-072](fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-073** – Fr br uxr board open taskless intake execution plan - PENDING *(Phase B/C filed **v0.5.1.74+2** — verify UKW/statistics ACs in production use)* (backlog sync) - [FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | Last modified: 2026-04-07 16:14 UTC
+- **FR-074** – Kanban intake atomic kg r2 kg r6 governance - PENDING (backlog sync) - [FR-074](fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md) | Last modified: 2026-04-07 16:14 UTC
 
 ### Ongoing (O) - Perpetual Items
 

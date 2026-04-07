@@ -13,6 +13,14 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.6.7.101+40] - 07-04-26
+
+E6:S07:T101 (UKW perpetual) — Change implemented: synced `fr-br-uxr-board.md` with open FR/BR/UXR docs; full RW `--art` for perpetual tasks; `dev` branch validator allows perpetual cross-epic anchors. SemVer **v0.4.638+40**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+40.md)
+
+---
+
 ## [0.2.1.13+2] - 07-04-26
 
 E2:S01:T13 — Change implemented: shipped BR-063 runtime hardening (`rw-k` mismatch guard, `--art`, version validation alignment, orchestration/tests, doc parity). SemVer **v0.4.637+2**.

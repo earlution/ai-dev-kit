@@ -161,6 +161,37 @@ def parse_version_patch(version: str) -> Optional[int]:
     return None
 
 
+def parse_version_task(version: str) -> Optional[int]:
+    """Extract TASK number from RC.EPIC.STORY.TASK+BUILD."""
+    match = re.match(r"^(\d+)\.(\d+)\.(\d+)\.(\d+)\+(\d+)$", version)
+    if match:
+        return int(match.group(4))
+    return None
+
+
+def is_perpetual_task_content(content: str) -> bool:
+    """True if task document text indicates perpetual maintenance (UKW/CMW-style)."""
+    low = content.lower()
+    return (
+        "task type:** perpetual maintenance" in low
+        or "perpetual_task: true" in low
+        or "status:** in progress (perpetual)" in low
+    )
+
+
+def version_anchors_perpetual_task(version: str, config: Optional[Dict]) -> bool:
+    """Whether version.py E/S/T resolves to a perpetual task doc (if found)."""
+    ve = parse_version_epic(version)
+    vs = parse_version_story(version)
+    vt = parse_version_task(version)
+    if ve is None or vs is None or vt is None:
+        return False
+    _path, content, fmt = locate_task_doc_for_version(ve, vs, vt, config)
+    if not content or fmt == "not_found":
+        return False
+    return is_perpetual_task_content(content)
+
+
 def locate_task_doc_for_version(
     epic: int,
     story: int,
@@ -521,6 +552,11 @@ def check_changelog(branch, config: Optional[Dict] = None, current_version: Opti
                                 f"(expected RC.EPIC.STORY.PATCH or RC.EPIC.STORY.TASK+BUILD)"
                             )
                         elif version_epic != expected_epic:
+                            if (
+                                branch == "dev"
+                                and version_anchors_perpetual_task(staged_version, config)
+                            ):
+                                continue
                             issues.append(
                                 f"Staged CHANGELOG entry '{staged_version}' has Epic {version_epic} "
                                 f"but branch '{branch}' expects Epic {expected_epic}"
@@ -571,10 +607,16 @@ def validate_branch_context():
                     f"(expected RC.EPIC.STORY.PATCH or RC.EPIC.STORY.TASK+BUILD)"
                 )
             elif version_epic != expected_epic:
-                errors.append(
-                    f"Version mismatch: Branch '{branch}' expects Epic {expected_epic} "
-                    f"but version '{version}' has Epic {version_epic}"
-                )
+                if branch == "dev" and version_anchors_perpetual_task(version, config):
+                    print(
+                        "ℹ️  dev branch: version epic differs from dev_branch_epic, but version "
+                        "anchors a perpetual maintenance task — allowed."
+                    )
+                else:
+                    errors.append(
+                        f"Version mismatch: Branch '{branch}' expects Epic {expected_epic} "
+                        f"but version '{version}' has Epic {version_epic}"
+                    )
     elif branch == "dev":
         errors.append(
             "Branch 'dev' requires rw-config.yaml key 'dev_branch_epic' "
