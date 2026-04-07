@@ -15,7 +15,7 @@ housekeeping_policy: keep
 **Status:** TODO  
 **Code:** UXR-006  
 **Last updated:** 2026-04-07 (v0.2.1.10+1 - mapped to E2:S01:T10 for RW validator implementation)  
-**Version:** v0.2.1.10+1 (SemVer: v0.4.624+1)  
+**Version:** v0.2.1.10+1 (SemVer: v0.4.625+1)  
 **Implementing Task:** E2:S01:T10 (RW branch-context support for `dev`; contextualized from UXR repository mapping)
 
 ---
