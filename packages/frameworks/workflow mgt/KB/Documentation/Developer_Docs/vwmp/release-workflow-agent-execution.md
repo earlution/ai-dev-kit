@@ -368,12 +368,13 @@ story_doc_pattern = config.get('story_doc_pattern') if config and config.get('us
 
 1. **ANALYZE:**
    - **Load config first:** Load `rw-config.yaml` if it exists (see Config Loading section above)
-   - Get current Git branch name (e.g., `epic/4` [Example: Confidentia], `epic/2` [Example: ai-dev-kit], `main`)
+   - Get current Git branch name (e.g., `epic/4` [Example: Confidentia], `epic/2` [Example: ai-dev-kit], `main`, `dev`)
    - **MANDATORY:** Determine validator script path:
      - From config: `scripts_path` + `/validate_branch_context.py`
      - Fallback: `packages/frameworks/workflow mgt/scripts/validation/validate_branch_context.py` [Example: ai-dev-kit]
      - Or: `scripts/validation/validate_branch_context.py` [Example: Confidentia]
    - Verify validator script exists (if not found, this is a critical error - workflow must stop)
+   - If branch is `dev`, ensure `rw-config.yaml` defines `dev_branch_epic` (integer) so strict epic/version enforcement can run
 
 2. **DETERMINE:**
    - **MANDATORY ACTION:** Run `validate_branch_context.py` with `--strict` flag
@@ -466,6 +467,11 @@ story_doc_pattern = config.get('story_doc_pattern') if config and config.get('us
 - **On `main` branch:**
   - ✅ Any epic number allowed (main can have any epic)
   - ⚠️ Warning: Consider if RW should run on main (usually run on epic branch first)
+
+- **On `dev` branch (strict-equal-epic mode):**
+  - ✅ `rw-config.yaml` contains `dev_branch_epic` and version epic matches that value → PASS
+  - ❌ `dev_branch_epic` is missing/invalid → FAIL (blocking)
+  - ❌ Version epic differs from `dev_branch_epic` → FAIL (blocking)
 
 **CRITICAL: Task/Version Alignment Check**
 

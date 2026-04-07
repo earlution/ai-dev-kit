@@ -755,6 +755,7 @@ Documents in `docs/` directory must have lifecycle metadata in frontmatter:
 **Branch Types:**
 - `main` - **PRODUCTION BRANCH** - Only merge when ready to deploy. Auto-deploys trigger on every push!
 - `epic/{n}-{description}` - **DEVELOPMENT BRANCH** - All epic work should be done here. Should have version `0.{n}.S.T+B`
+- `dev` - **SHARED DEVELOPMENT BRANCH (optional)** - Allowed only in strict-equal-epic mode with `rw-config.yaml` key `dev_branch_epic`; must still satisfy the same epic/version alignment checks as `epic/{n}`.
 
 **🚨 CRITICAL: Epic Branch Workflow**
 - **ALWAYS work on epic branches** (`epic/{n}-{description}`, e.g., `epic/6-framework-management`, `epic/1-core`, etc.)
@@ -767,6 +768,7 @@ Documents in `docs/` directory must have lifecycle metadata in frontmatter:
 - Branch name must match epic number in version
 - Branch context validation ensures consistency
 - Workflow aborts if branch mismatch detected
+- If using `dev`, `dev_branch_epic` must be configured; missing/invalid mapping is a blocking validation failure
 
 ---
 

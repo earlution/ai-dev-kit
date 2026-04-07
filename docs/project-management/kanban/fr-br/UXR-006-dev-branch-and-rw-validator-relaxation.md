@@ -14,8 +14,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** TODO  
 **Code:** UXR-006  
-**Last updated:** 2026-04-07 (v0.2.1.10+1 - mapped to E2:S01:T10 for RW validator implementation)  
-**Version:** v0.2.1.10+1 (SemVer: v0.4.627+1)  
+**Last updated:** 2026-04-07 (v0.2.1.10+2 - strict-equal-epic behavior released via RW)  
+**Version:** v0.2.1.10+2 (SemVer: v0.4.628+2)  
 **Implementing Task:** E2:S01:T10 (RW branch-context support for `dev`; contextualized from UXR repository mapping)
 
 ---
@@ -62,10 +62,27 @@ This UXR evaluates whether RW validators should treat `dev` as a first-class acc
 
 ## Acceptance Criteria
 
-- [ ] AC-1: A documented recommendation exists for `dev` branch support in RW.
-- [ ] AC-2: Validator behavior on `dev` is clearly specified (pass/warn/block conditions).
-- [ ] AC-3: Required policy and documentation updates are identified.
+- [x] AC-1: A documented recommendation exists for `dev` branch support in RW.
+- [x] AC-2: Validator behavior on `dev` is clearly specified (strict-equal-epic).
+- [x] AC-3: Required policy and documentation updates are identified and implemented.
 - [ ] AC-4: Residual risks and mitigation controls are explicitly documented.
+
+---
+
+## Decision and Outcome
+
+**Selected policy:** `strict-equal-epic`
+
+- `dev` is accepted as a branch mode only when `rw-config.yaml` defines `dev_branch_epic` (integer).
+- `dev` does not bypass branch safety; it enforces the same blocking epic/version alignment checks as `epic/{n}`.
+- Missing or invalid `dev_branch_epic` is a hard validation failure.
+
+**Residual risks / mitigations:**
+
+- Risk: stale `dev_branch_epic` config can block valid work.
+  - Mitigation: update `rw-config.yaml` when changing active epic ownership for `dev`.
+- Risk: misunderstanding `dev` as relaxed mode.
+  - Mitigation: explicit documentation in RW Step 1 and `.cursorrules` branch mapping.
 
 ---
 
