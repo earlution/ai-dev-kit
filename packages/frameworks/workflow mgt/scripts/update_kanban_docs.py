@@ -881,6 +881,23 @@ def update_kanban_board(
             content = '\n'.join(new_lines)
             changes.append(f"Updated story {story} listing in Epic {epic} section")
     
+    # In kanban_init mode, prune stale completed rows for the target task from
+    # the active in-progress MoSCOW list. This preserves init-mode metadata updates
+    # while preventing contradictory board state for already completed tasks.
+    mode = target_state.get('mode', 'full')
+    if mode == 'kanban_init':
+        moscow_completed_row_pattern = re.compile(
+            rf'^- \*\*E{epic}:S0?{story}:T0?{task}\*\*[^\n]*✅\s*COMPLETE[^\n]*$',
+            re.IGNORECASE | re.MULTILINE
+        )
+        content, removed_count = moscow_completed_row_pattern.subn('', content)
+        if removed_count > 0:
+            # Collapse any double blank lines introduced by row removal.
+            content = re.sub(r'\n{3,}', '\n\n', content)
+            changes.append(
+                f"Pruned stale MoSCOW completed row(s): E{epic}:S{story}:T{task} ({removed_count} removed)"
+            )
+
     # Update MoSCOW section - mark task as COMPLETE
     # Pattern: - **E{epic}:S{story}:T{task}** – ... - TODO/IN PROGRESS ...
     # Note: Story number might be zero-padded (S01) or not (S1)

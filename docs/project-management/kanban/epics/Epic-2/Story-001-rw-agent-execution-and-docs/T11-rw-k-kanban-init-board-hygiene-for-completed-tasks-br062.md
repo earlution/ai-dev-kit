@@ -9,10 +9,10 @@ housekeeping_policy: keep
 # Task E2:S01:T11 - RW -k kanban_init board hygiene for completed tasks (BR-062)
 
 **Task ID:** E2:S01:T11  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** CRITICAL  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-07 (task created from BR-062 intake)  
+**Last updated:** 2026-04-07 (implementation in progress: `kanban_init` stale-row pruning + regression test added)  
 **Version:** v0.2.1.10+3  
 **Code:** E2S01T11
 
@@ -42,9 +42,9 @@ Fix the `RW -k` Step 7 Kanban update behavior so completed tasks are not left in
 
 ## Acceptance Criteria
 
-- [ ] `RW -k` no longer leaves completed task rows in `kanban-board.md` in-progress MoSCoW section.
-- [ ] Existing metadata/timestamp behavior for `kanban_init` remains intact.
-- [ ] Regression test or deterministic verification step added for this specific scenario.
+- [x] `RW -k` no longer leaves completed task rows in `kanban-board.md` in-progress MoSCoW section.
+- [x] Existing metadata/timestamp behavior for `kanban_init` remains intact.
+- [x] Regression test or deterministic verification step added for this specific scenario.
 - [ ] BR-062 status and references updated after implementation.
 
 ---
@@ -53,3 +53,13 @@ Fix the `RW -k` Step 7 Kanban update behavior so completed tasks are not left in
 
 - [BR-062](../../../fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md)
 - [Story E2:S01](../Story-001-rw-agent-execution-and-docs.md)
+
+---
+
+## Implementation Evidence
+
+- `update_kanban_docs.py` (`update_kanban_board`):
+  - Added `kanban_init`-mode pruning for stale target-task rows already marked `✅ COMPLETE` in MoSCOW in-progress section.
+  - Retains existing board metadata and timestamp normalization behavior.
+- `test_update_kanban_docs.py`:
+  - Added `test_4_2_kanban_init_prunes_stale_completed_row` to cover BR-062 repro path and assert unrelated rows are preserved.
