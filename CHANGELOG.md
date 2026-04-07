@@ -13,6 +13,14 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.2.1.13+2] - 07-04-26
+
+E2:S01:T13 — Change implemented: shipped BR-063 runtime hardening (`rw-k` mismatch guard, `--art`, version validation alignment, orchestration/tests, doc parity). SemVer **v0.4.637+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.13+2.md)
+
+---
+
 ## [0.2.1.13+1] - 07-04-26
 
 E2:S01:T13 — Change implemented: filed/wired `BR-063` and completed forensic cleanup so `v0.2.1.10+6` release records consistently anchor to `T10` rather than mixed `T10`/`T12` attribution. SemVer **v0.4.635+1**.

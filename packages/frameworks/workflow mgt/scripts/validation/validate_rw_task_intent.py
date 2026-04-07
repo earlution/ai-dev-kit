@@ -8,7 +8,8 @@ Exits 0 if OK to proceed, 1 if mismatch (RW should abort before file edits), 2 i
 Usage:
   python validate_rw_task_intent.py --requested E7S5T1
   python validate_rw_task_intent.py --requested E7:S06:T02 --version-file src/foo/version.py
-  python validate_rw_task_intent.py --requested E6S6T56 --mode rw-k   # kanban init: skip vs version.py
+  python validate_rw_task_intent.py --requested E6S6T56 --mode rw-k   # strict: must match current anchor
+  python validate_rw_task_intent.py --requested E6S6T56 --mode rw-k --art   # adopt requested task
   python validate_rw_task_intent.py --requested E6:S07:T102 --mode rw-d   # docs-only: allow perpetual cross-epic
   python validate_rw_task_intent.py --requested E7:S05:T01 --confirmed-override  # after explicit user confirm
 
@@ -228,6 +229,11 @@ def main() -> int:
         action="store_true",
         help="User explicitly confirmed releasing against mismatched context; skip mismatch exit.",
     )
+    parser.add_argument(
+        "--art",
+        action="store_true",
+        help="Adopt requested task as release anchor (RW -k mismatch reconciliation).",
+    )
     parser.add_argument("--version-file", type=Path, default=None, help="Override version file path.")
     args = parser.parse_args()
 
@@ -258,8 +264,22 @@ def main() -> int:
     requested_fmt = format_est(rq_e, rq_s, rq_t)
 
     if args.mode == "rw-k":
+        if args.art:
+            print(
+                f"validate_rw_task_intent: mode=rw-k --art — adopt requested task "
+                f"(requested {requested_fmt}, version {current_fmt})."
+            )
+            return 0
+        if (rq_e, rq_s, rq_t) != (ve, vs, vt):
+            print("❌ RW TASK INTENT MISMATCH (rw-k attribution)")
+            print(f"   Requested: {requested_fmt}")
+            print(f"   version.py: {current_fmt}")
+            print("   Default rw-k is forensic-strict and requires one task anchor.")
+            print("   Re-run with --art to adopt the requested task as canonical release anchor,")
+            print("   or re-run with --confirmed-override after explicit user confirmation.")
+            return 1
         print(
-            f"validate_rw_task_intent: mode=rw-k — skip version.py comparison "
+            f"validate_rw_task_intent: mode=rw-k — requested matches version.py "
             f"(requested {requested_fmt}, version {current_fmt})."
         )
         return 0

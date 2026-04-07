@@ -577,9 +577,13 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
    `python {validator_path} --requested "<token>"`
 3. **RW -k:**  
    `python {validator_path} --requested "<token>" --mode rw-k`  
-   (skips comparison to `version.py` so kanban-init targets do not false-block.)
+   (forensic-strict default: requested task must match current version anchor task.)
+4. **RW -k intentional mismatch:**  
+   `python {validator_path} --requested "<token>" --mode rw-k --art`  
+   (`--art` = adopt requested task as canonical release anchor.)
 4. **Exit codes:** `0` = proceed; `1` = **RW ABORTED** (print script output; no version/changelog/kanban edits); `2` = invalid parse/path — treat as blocking.
-5. **Override:** Only after the user **explicitly confirms** the mismatched intent, re-run RW and invoke the script with **`--confirmed-override`**.
+5. **Adoption propagation:** If `--art` is used at Step 1.5, pass adoption intent through Step 2 validation/execution (e.g. `validate_version_bump.py --requested "<token>" --art`) so version/tag/changelog/commit stay single-anchor.
+6. **Override:** Only after the user **explicitly confirms** the mismatched intent, re-run RW and invoke the script with **`--confirmed-override`**.
 
 **Relation to FR-060:** Step 1.3–1.4 enforce **mandatory token** and **task doc / COMPLETE**; Step 1.5 adds **context comparison to `version.py`** and **story-typo detection** (BR-056).
 
@@ -591,7 +595,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 | Task doc `IN PROGRESS` (not perpetual), full RW | Passes Step 1.4 (eligible for iterative `+BUILD` release) |
 | `version.py` = `E7:S06:T01`, user `RW E7S5T1` | Exit 1 at Step 1.5, RW ABORTED |
 | Same story, new completed task `T2`, version file still `T1`, user `RW E7S6T2` | Exit 0 at Step 1.5 if `T2` is highest ✅ COMPLETE in Story checklist |
-| `RW -k E6S6T56` while `version.py` differs | Exit 0 at Step 1.5 (`--mode rw-k`) |
+| `RW -k E6S6T56` while `version.py` differs | Exit 1 at Step 1.5 (`--mode rw-k`); use `--art` if intentional |
 
 ---
 

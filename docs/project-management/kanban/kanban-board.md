@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-07 (RW: E2:S1:T13)
-**Version:** v0.2.1.13+1
+**Last Updated:** 2026-04-07 (RW: E2:S01:T13+2)
+**Version:** v0.2.1.13+2
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 
@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 ### Must Have (M) - Critical Tasks
 
-- **E2:S01:T13** – RW -k forensic task attribution alignment - ✅ COMPLETE (CRITICAL priority, enforce single-task release attribution when requested `E:S:T` differs from computed version anchor) - [Task Document](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T13-rw-k-forensic-task-attribution-alignment-br063.md) (vv0.2.1.13+1) | [Story](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md) | [BR-063](fr-br/BR-063-rw-k-task-attribution-drift-between-requested-task-and-version-anchor.md) | Last modified: 2026-04-07 16:30 UTC
+*(None — `E2:S01:T13` closed in v0.2.1.13+2; see [`kanban-completed.md`](kanban-completed.md).)*
 
 ### Should Have (S) - Important Tasks
 

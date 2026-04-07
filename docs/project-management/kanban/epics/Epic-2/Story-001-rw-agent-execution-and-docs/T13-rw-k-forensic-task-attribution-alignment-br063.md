@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-07 (intake + forensic release-record cleanup completed)  
-**Version:** v0.2.1.13+1  
+**Last updated:** 2026-04-07 (runtime hardening complete: `rw-k` mismatch guard + `--art` reconciliation path + tests/docs updates)  
+**Version:** v0.2.1.13+2  
 **Code:** E2S01T13
 
 ---
@@ -37,8 +37,8 @@ Enforce forensic task attribution consistency for `RW -k` so requested task ids 
 
 1. File and wire BR-063 + housed Story 1 task for attribution-drift remediation.
 2. Clean existing forensic mismatch for `v0.2.1.10+6` so release artifacts use one canonical task anchor.
-3. Reflect corrected attribution in main/detailed changelogs and kanban-linked docs.
-4. Preserve follow-on implementation path for validator/runtime hardening.
+3. Implement `rw-k` mismatch hard-fail by default and explicit `--art` adoption path.
+4. Enforce adopted-task alignment in version validation and add regression coverage.
 
 ---
 
@@ -48,6 +48,8 @@ Enforce forensic task attribution consistency for `RW -k` so requested task ids 
 - [x] Task housed under E2:S01 and bidirectionally linked.
 - [x] Existing `v0.2.1.10+6` release records corrected to canonical task anchor (`T10`).
 - [x] Board/story references updated to reflect current forensic state.
+- [x] `rw-k` mismatch now fails unless `--art` is provided intentionally.
+- [x] Validator/test/docs contract updated for `--art` propagation and single-anchor traceability.
 
 ---
 

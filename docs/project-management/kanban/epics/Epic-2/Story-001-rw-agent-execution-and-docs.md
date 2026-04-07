@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
 **Completed:** N/A (story reopened for ongoing RW validation work)
-**Last updated:** 2026-04-07 (v0.2.1.13+1 – Kanban documentation setup)
-**Version:** v0.2.1.13+1
+**Last updated:** 2026-04-07 (v0.2.1.13+2 – BR-063 implementation release)
+**Version:** v0.2.1.13+2
 **Code:** E2S01
 
 ---
@@ -46,7 +46,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 - [ ] **E2:S01:T10 – UXR-006: Allow `dev` branch as accepted RW validator context (solo workflow)** - TODO — [Task doc](Story-001-rw-agent-execution-and-docs/T10-dev-branch-support-in-rw-validators.md) | [UXR-006](../../fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md)
 - [x] **E2:S01:T11 – BR-062: RW -k `kanban_init` must not leave completed tasks on in-progress kboard** - ✅ COMPLETE (v0.2.1.10+4) — [Task doc](Story-001-rw-agent-execution-and-docs/T11-rw-k-kanban-init-board-hygiene-for-completed-tasks-br062.md) | [BR-062](../../fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md)
 - [ ] **E2:S01:T12 – BR-061: RW explicit task-id should not require manual pre-alignment of `version.py`** - TODO — [Task doc](Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md) | [BR-061](../../fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md)
-- [x] **E2:S01:T13 – BR-063: RW -k must prevent task attribution drift vs version anchor** - ✅ COMPLETE (v0.2.1.13+1 – BR/task filing + forensic release-record cleanup completed) — [Task doc](Story-001-rw-agent-execution-and-docs/T13-rw-k-forensic-task-attribution-alignment-br063.md) | [BR-063](../../fr-br/BR-063-rw-k-task-attribution-drift-between-requested-task-and-version-anchor.md)
+- [x] **E2:S01:T13 – BR-063: RW -k must prevent task attribution drift vs version anchor** - ✅ COMPLETE (v0.2.1.13+2 – filing, forensic cleanup, `rw-k` guard + `--art` + tests/docs) — [Task doc](Story-001-rw-agent-execution-and-docs/T13-rw-k-forensic-task-attribution-alignment-br063.md) | [BR-063](../../fr-br/BR-063-rw-k-task-attribution-drift-between-requested-task-and-version-anchor.md)
 
 ---
 

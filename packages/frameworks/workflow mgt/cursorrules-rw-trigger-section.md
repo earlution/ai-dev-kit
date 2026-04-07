@@ -47,7 +47,10 @@ housekeeping_policy: keep
    - **Non-zero exit:** **RW ABORTED** (same severity as Step 1).
 5d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056 / E6:S06:T56)** — **After Step 1c passes**, **before any file modifications**
    - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
-   - For **`RW -k`**, add **`--mode rw-k`**: comparison against `version.py` is skipped so explicit init target does not false-block.
+   - For **`RW -k`**, add **`--mode rw-k`**.
+   - **RW -k default is forensic-strict:** requested task must match current version anchor task, or Step 1d fails.
+   - **If intentional mismatch, add `--art`** to adopt requested task as canonical release anchor (`... --mode rw-k --art`).
+   - When using `--art`, propagate adoption to version checks/execution (e.g., `validate_version_bump.py --requested "<parsed_id>" --art`) so all release artifacts share one task anchor.
    - **Non-zero exit:** **RW ABORTED**. User may re-run with `--confirmed-override` on this script after explicit confirmation.
    - **Overrides** generic “never stop” until intent is resolved (documented exception).
 6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Steps 1, 1b, 1c, and 1d pass)

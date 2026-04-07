@@ -35,7 +35,11 @@
  - **Non-zero exit:** **RW ABORTED** — same severity as Step 1. Print script output.
 6d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056 / E6:S06:T56)** — **After Step 1c passes**, **before any RW file modifications** (before Step 2)
    - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
-   - **Use `--mode rw-k`** when the trigger is **`RW -k`**: comparison against `version.py` is skipped so explicit init target does not false-block.
+   - **Use `--mode rw-k`** when the trigger is **`RW -k`**.
+   - **RW -k default is forensic-strict:** requested `E:S:T` must match the current version anchor task, or Step 1d fails.
+   - **If mismatch is intentional, use concise flag `--art`** to adopt requested task as canonical release anchor:
+     - `python ".../validate_rw_task_intent.py" --requested "<parsed_id>" --mode rw-k --art`
+   - **When using `--art`, propagate the same adoption intent to version validation/execution steps** (e.g. `validate_version_bump.py --requested "<parsed_id>" --art`) so version/tag/changelog/commit remain single-anchor.
    - **If the script exits non-zero:** **RW ABORTED** — same severity as Step 1 failure. **Do not** bump version, edit changelogs, or touch kanban. Print the script output. Tell the user to verify the intended Epic/Story/Task.
    - **After explicit user confirmation** that the mismatch is intentional (e.g. they meant Story 5, not 6), re-invoke RW and pass **`--confirmed-override`** on `validate_rw_task_intent.py` (only after the user clearly confirms).
    - **Exception to “never stop”:** These guardrails **require** stopping the workflow when exit code is non-zero; the user must confirm or use a new message. This overrides generic “continuous execution” until intent is resolved.

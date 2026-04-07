@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-02 (**`RW -k` E6:S06:T57** v0.6.6.57+6 — **v0.4.705+6**)
-**Version:** v0.6.6.57+6 *(from `version.py` at board refresh)*
+**Last Updated:** 2026-04-07 (**RW** `E2:S01:T13+2` — **v0.2.1.13+2** / **v0.4.637+2**)
+**Version:** v0.2.1.13+2 *(from `version.py` at board refresh)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -19,6 +19,10 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 2: Workflow Management Framework (Story 1 — RW agent execution)**
+- **[E2:S01:T13](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T13-rw-k-forensic-task-attribution-alignment-br063.md)** — **BR-063**: `RW -k` task attribution drift — forensic-strict mismatch guard, `--art` adoption path, `validate_version_bump` alignment, `workflow_orchestrator` parsing, regression tests, `.cursorrules` + portable excerpt + RW agent execution doc updates.  
+  **Completed:** `2026-04-07T15:52:33Z` | **Version:** `v0.2.1.13+2` | **Agent:** `RW Agent`
 
 #### **Epic 6: Framework Management (Story 6 — feature requests)**
 - **[E6:S06:T57](epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)** — **BR-039** **repo** implementation **COMPLETE**: traceability, evidence, **Cursor-only** maintainer policy, **no Windsurf** verification obligation (no subscription); **[BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)** stays **IN PROGRESS** for **Cascade** vendor/product.  
