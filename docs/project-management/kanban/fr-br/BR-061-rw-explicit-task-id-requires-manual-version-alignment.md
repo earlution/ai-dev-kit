@@ -15,7 +15,7 @@ housekeeping_policy: keep
 **Last updated:** 2026-04-07 — **RW E2:S01:T09** **v0.2.1.9+2** (SemVer **v0.4.623+2**): board/policy/process enforcement shipped for terminal row timestamps; Step 1 alignment issue remains **OPEN** pending dedicated BR-061 implementation task.  
 **Version:** v0.2.1.9+2  
 **Code:** BR-061  
-**Implementing Task:** TBD (intake — likely **E2:S01** RW execution/docs or **E6:S07:T103** RW perpetual maintenance)
+**Implementing Task:** [E2:S01:T12](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md)
 
 ---
 

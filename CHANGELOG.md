@@ -13,6 +13,14 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.2.1.10+6] - 07-04-26
+
+E2:S01:T12 intake wiring — Change implemented: created task record for BR-061 under Epic 2 Story 1, linked BR and Story checklist references, and ran `RW -k` kanban/documentation sync for metadata alignment. SemVer **v0.4.633+6**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+6.md)
+
+---
+
 ## [0.2.1.10+5] - 07-04-26
 
 E2:S01:T11 closeout — Change implemented: finalized `T11`/`BR-062` status wiring as complete and verified cleanup of stale in-progress kboard task state. SemVer **v0.4.631+5**.
