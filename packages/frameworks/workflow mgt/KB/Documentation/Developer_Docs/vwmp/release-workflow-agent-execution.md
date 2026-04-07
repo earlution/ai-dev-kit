@@ -588,7 +588,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 | Scenario | Expected |
 |----------|----------|
 | User sends `RW` with no `E…S…T…` | RW ABORTED at Step 1.3 |
-| Task doc `IN PROGRESS` (not perpetual), full RW | Exit 1 at Step 1.4 |
+| Task doc `IN PROGRESS` (not perpetual), full RW | Passes Step 1.4 (eligible for iterative `+BUILD` release) |
 | `version.py` = `E7:S06:T01`, user `RW E7S5T1` | Exit 1 at Step 1.5, RW ABORTED |
 | Same story, new completed task `T2`, version file still `T1`, user `RW E7S6T2` | Exit 0 at Step 1.5 if `T2` is highest ✅ COMPLETE in Story checklist |
 | `RW -k E6S6T56` while `version.py` differs | Exit 0 at Step 1.5 (`--mode rw-k`) |

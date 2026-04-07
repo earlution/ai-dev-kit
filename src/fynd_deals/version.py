@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
 VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
 VERSION_TASK = 10     # Task number (T10: dev branch support in RW validators)
-VERSION_BUILD = 2     # Build number (E2:S01:T10+2 – RW)
+VERSION_BUILD = 3     # Build number (E2:S01:T10+3 – RW -k closeout pass for E2:S01:T09)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.1.10+2 = Development, Epic 2, Story 1, Task 10 (E2:S01:T10+2: dev branch strict-equal-epic implementation)
+# Current: 0.2.1.10+3 = Development, Epic 2, Story 1, Task 10 (E2:S01:T10+3: RW -k closeout pass for E2:S01:T09)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

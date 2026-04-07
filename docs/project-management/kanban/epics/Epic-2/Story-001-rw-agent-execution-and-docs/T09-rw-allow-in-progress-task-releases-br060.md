@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Task E2:S01:T09 – RW allow IN PROGRESS task releases (BR-060)
 
 **Task ID:** E2:S01:T09  
-**Status:** IN PROGRESS (**v0.2.1.9+2** — **RW** board timestamp governance + enforcement; BR-060 implementation **v0.6.6.60+1** forensic; historical id **E6:S06:T60**)
+**Status:** COMPLETE (**v0.2.1.9+2** closeout pass; BR-060 implementation forensic **v0.6.6.60+1**; historical id **E6:S06:T60**)
 
 **Migration:** Canonical home **E2:S01:T09** (Epic 2 — workflow / RW validators). Supersedes **[E4:S19:T01 stub](../Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T01-rw-allow-in-progress-task-releases-br060.md)** and **[E6:S06:T60 stub](../Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md)**.
 

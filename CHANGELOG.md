@@ -13,6 +13,14 @@ E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive docu
 
 ---
 
+## [0.2.1.10+3] - 07-04-26
+
+E2:S01:T09 closeout (rw-k) — administrative closure pass: aligned RW execution guidance for `IN PROGRESS` full-RW behavior, closed `E2:S01:T09` and `BR-060` status wiring, and added `dev_branch_epic: 2` for strict `dev` branch validation. SemVer **v0.4.629+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+3.md)
+
+---
+
 ## [0.2.1.10+2] - 07-04-26
 
 E2:S01:T10+2 — Change implemented: strict-equal-epic `dev` branch support in RW Step 1 validation; `dev` now requires `dev_branch_epic` mapping and enforces the same blocking epic/version alignment as `epic/{n}`. SemVer **v0.4.628+2**.
