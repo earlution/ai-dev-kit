@@ -18,7 +18,7 @@ E2:S01:T09+1 — **BR-060** kanban traceability (canonical **E2:S01:T09**); **E2
 ---
 ## [0.6.6.61+1] - 02-04-26
 
-E6:S06:T61 — **UXR-006** (change implemented): MoSCOW **`Last modified`** UTC on task + FR/BR/UXR boards; **KG-R2** intake (**E7:S00:T06** + **T61**); guide and board notes. [T61](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md); [UXR-006](../../project-management/kanban/fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md).
+E6:S06:T61 — **UXR-006** (change implemented): MoSCOW **`Last modified`** UTC on task + FR/BR/UXR boards; **KG-R2** intake (**T61**); guide and board notes. [T61](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md); [UXR-006](../../project-management/kanban/fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md).
 
 [Detailed changelog](CHANGELOG_v0.6.6.61+1.md)
 
