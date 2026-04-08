@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.58+1] - 08-04-26
+## [0.6.6.58+2] - 08-04-26
 
-E6:S06:T58 — Change implemented: enabled `--art` canonical-anchor adoption across all RW modes (`RW`, `RW -d`, `RW -k`) and aligned validator, rules, and documentation behavior. SemVer **v0.4.699+1**.
+E6:S06:T58 — Change implemented: completed follow-up cleanup after all-mode `--art` rollout by fixing lingering board drift (`E7:S06:T04` stale TODO) and ignoring `SCRATCHPAD.md` in repo hygiene. SemVer **v0.4.700+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.58+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.58+2.md)
 
 ---

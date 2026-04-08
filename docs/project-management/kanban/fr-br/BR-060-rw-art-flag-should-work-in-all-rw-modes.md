@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Task ID:** E6:S06:T58  
 **Priority:** HIGH  
 **Severity:** HIGH (blocks intended release attribution flow)  
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE (v0.6.6.58+2)  
 **Created:** 2026-04-08  
 **Classification:** Workflow bug + policy/docs mismatch
 
@@ -65,12 +65,12 @@ housekeeping_policy: keep
 
 ---
 
-## Attempted Resolution (pending verification)
+## Resolution
 
 - Implemented all-mode `--art` support in `validate_rw_task_intent.py` (Step 1d).
 - Implemented `--requested` + `--art` support in Step 9 validators (`validate_branch_context.py`, `validate_version_bump.py`).
 - Updated RW rules/policy/docs and parity docs to require Step 9 adoption-context propagation.
-- Release intent is tracked under `E6:S06:T58`; user verification pending.
+- Release and follow-up cleanup are tracked under `E6:S06:T58` (`v0.6.6.58+1`, `v0.6.6.58+2`).
 
 ---
 

@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-04-08 (v0.6.6.58+1 - T58 all-mode RW --art support implemented)
-**Version:** v0.6.6.58+1
+**Last updated:** 2026-04-08 (v0.6.6.58+2 - T58 follow-up cleanup: board drift + scratchpad ignore)
+**Version:** v0.6.6.58+2
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -44,7 +44,7 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - TODO (CRITICAL, **BR-039**: whitelist persistence / prompt fatigue in Windsurf Cascade; repo tracks escalation, evidence, re-verification — product fix is vendor-side)
   - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md | [BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
 
-- [x] **E6:S06:T58 - RW `--art` flag should work in all RW modes** - ✅ COMPLETE (v0.6.6.58+1) (HIGH priority, BR-060: allow explicit canonical adoption in regular RW and RW -d, not only rw-k)
+- [x] **E6:S06:T58 - RW `--art` flag should work in all RW modes** - ✅ COMPLETE (v0.6.6.58+2) (HIGH priority, BR-060: all-mode support implemented; follow-up cleanup release for board consistency and repo hygiene)
   - Task: [`T58-rw-art-flag-all-modes-support.md`](Story-006-feature-requests/T58-rw-art-flag-all-modes-support.md) | [BR-060](../../fr-br/BR-060-rw-art-flag-should-work-in-all-rw-modes.md)
 
 - [x] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - ✅ COMPLETE (v0.6.6.56+4) (HIGH priority, BR-056: validate_rw_task_intent + Step 1b; live verification 2026-03-25)

@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Task T58 - RW `--art` Support for All RW Modes (BR-060)
 
 **Task ID:** E6:S06:T58  
-**Status:** ✅ COMPLETE (v0.6.6.58+1)  
+**Status:** ✅ COMPLETE (v0.6.6.58+2)  
 **Priority:** HIGH  
 **Estimated Effort:** Small (0.5-1 day)  
 **Created:** 2026-04-08

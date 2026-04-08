@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-08 (RW: E5:S1:T72)
-**Version:** v0.5.1.72+1
+**Last Updated:** 2026-04-08 (RW: E6:S06:T58)
+**Version:** v0.6.6.58+2
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
@@ -28,8 +28,6 @@ housekeeping_policy: keep
 *(None — `E2:S01:T13` closed in v0.2.1.13+2; see [`kanban-completed.md`](kanban-completed.md).)*
 
 ### Should Have (S) - Important Tasks
-
-- **E7:S06:T04** – Recent commit review - TODO (MEDIUM priority, Last ~15 commits: RW compliance, batch scope, quality) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T04-recent-commit-review.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md) | Last modified: 2026-04-08 13:26 UTC
 
 - **E7:S06:T05** – Workflow script integrity - TODO (MEDIUM priority, ukw_syntax_parser, task_inference, orchestrator changes) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T05-workflow-script-integrity.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md) | Last modified: 2026-04-08 13:26 UTC
 

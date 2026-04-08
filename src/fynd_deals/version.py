@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework management and workflow operations)
 VERSION_STORY = 6     # Story number (Story 6: Feature Requests)
 VERSION_TASK = 58     # Task number (T58: RW --art support for all RW modes)
-VERSION_BUILD = 1     # Build number (first functional build for E6:S06:T58)
+VERSION_BUILD = 2     # Build number (follow-up release for E6:S06:T58)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.6.58+1 = Development, Epic 6, Story 6, Task 58
+# Current: 0.6.6.58+2 = Development, Epic 6, Story 6, Task 58
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

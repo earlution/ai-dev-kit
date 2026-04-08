@@ -72,9 +72,9 @@ housekeeping_policy: keep
 
 
 
-- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.58+1 – T58 all-mode RW --art support implemented)
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.58+2 – T58 follow-up cleanup: board drift + scratchpad ignore)
   - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
-  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), T58 ✅ COMPLETE (v0.6.6.58+1 - all-mode RW --art support)
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), T58 ✅ COMPLETE (v0.6.6.58+2 - all-mode RW --art support + follow-up cleanup)
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
 
