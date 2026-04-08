@@ -22,6 +22,7 @@ This script is called by RW Step 8 to validate version bumping logic.
 
 Usage:
     python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py [--strict] [--story-file PATH] [--version-file PATH]
+    python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py --requested E6:S06:T58 --art [--strict]
 
     --strict: Exit with error code if validation fails
     --story-file: Path to Story file (auto-detected if not provided)
@@ -34,6 +35,19 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import Optional, Dict, Tuple, List
+def parse_requested_est(requested: str) -> Optional[Tuple[int, int, int]]:
+    """Parse E:S:T token formats like E6:S06:T58 or E6S6T58."""
+    if not requested:
+        return None
+    m = re.match(r"^E(\d+):S(\d+):T(\d+)$", requested.strip(), re.IGNORECASE)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    m = re.match(r"^E(\d+)S(\d+)T(\d+)$", requested.strip(), re.IGNORECASE)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    return None
+
+
 
 try:
     import yaml
@@ -154,19 +168,6 @@ def get_version_components(version_file: Path) -> Optional[Tuple[int, int, int, 
             int(task_match.group(1)),
             int(build_match.group(1))
         )
-    return None
-
-
-def parse_requested_task_id(token: str) -> Optional[Tuple[int, int, int]]:
-    """Parse E:S:T token formats like E2S1T13 or E2:S01:T13."""
-    if not token:
-        return None
-    compact = re.fullmatch(r'\s*E(\d+)S(\d+)T(\d+)\s*', token, re.IGNORECASE)
-    if compact:
-        return (int(compact.group(1)), int(compact.group(2)), int(compact.group(3)))
-    colon = re.fullmatch(r'\s*E(\d+):S(\d+):T(\d+)\s*', token, re.IGNORECASE)
-    if colon:
-        return (int(colon.group(1)), int(colon.group(2)), int(colon.group(3)))
     return None
 
 
@@ -469,6 +470,38 @@ def locate_task_doc(
                 return (candidate, candidate.read_text(encoding="utf-8", errors="replace"), "separate_file")
 
     return (None, None, "not_found")
+
+
+def locate_task_doc_from_requested(epic: int, story: int, task: int, config: Optional[Dict] = None) -> Tuple[Optional[Path], Optional[Path]]:
+    """
+    Locate task doc directly from requested E/S/T, returning (task_doc_path, story_file_path).
+    """
+    project_root = Path.cwd()
+    if config and config.get('use_kanban') and 'kanban_root' in config:
+        kanban_root = Path(config['kanban_root'])
+        if not kanban_root.is_absolute():
+            kanban_root = project_root / kanban_root
+    else:
+        kanban_root = project_root / "docs/project-management/kanban"
+
+    epic_dir = kanban_root / f"epics/Epic-{epic}"
+    if not epic_dir.exists():
+        return (None, None)
+
+    patterns = [
+        f"Story-{story:03d}-*/T{task:03d}-*.md",
+        f"Story-{story:03d}-*/T{task:02d}-*.md",
+        f"Story-{story:03d}-*/T{task}-*.md",
+        f"Story-{story:03d}-*/Task-{task:03d}-*.md",
+    ]
+    for pat in patterns:
+        hits = sorted(epic_dir.glob(pat))
+        if hits:
+            task_doc = hits[0]
+            story_dir = task_doc.parent
+            story_file = epic_dir / f"{story_dir.name}.md"
+            return (task_doc, story_file if story_file.exists() else None)
+    return (None, None)
 
 
 def validate_task_doc_fields(
@@ -1022,8 +1055,8 @@ def validate_version_bump(
     version_file: Path,
     story_file: Optional[Path] = None,
     config: Optional[Dict] = None,
-    requested_task: Optional[Tuple[int, int, int]] = None,
-    adopt_requested_task: bool = False,
+    requested: Optional[str] = None,
+    art: bool = False,
 ) -> Tuple[bool, list]:
     """
     Validate that version bump follows correct logic.
@@ -1040,25 +1073,14 @@ def validate_version_bump(
         return False, errors
     
     rc, epic, story, current_task, current_build = version_components
+    requested_est = parse_requested_est(requested) if requested else None
+    if art and requested_est is not None:
+        epic, story, current_task = requested_est
+        print(
+            f"--art adoption enabled: validating against requested E{epic}:S{story}:T{current_task} "
+            f"(version file: {rc}.{version_components[1]}.{version_components[2]}.{version_components[3]}+{current_build})"
+        )
     print(f"Current version: {rc}.{epic}.{story}.{current_task}+{current_build}")
-
-    if adopt_requested_task:
-        if requested_task is None:
-            errors.append("`--art` requires `--requested` task id.")
-            return False, errors
-        rq_e, rq_s, rq_t = requested_task
-        if (rq_e, rq_s) != (epic, story):
-            errors.append(
-                f"ART alignment error: requested E{rq_e}:S{rq_s:02d}:T{rq_t} does not match "
-                f"version epic/story E{epic}:S{story:02d}."
-            )
-            return False, errors
-        if rq_t != current_task:
-            errors.append(
-                f"ART alignment error: VERSION_TASK is {current_task} but requested task is T{rq_t}. "
-                f"When using --art, version must already be anchored to requested task."
-            )
-            return False, errors
     
     # NEW: Validate doc-init build (if BUILD = 0, must be docs-only and first-time E/S/T doc)
     # Project root: script runs from repo root (where rw-config.yaml, CHANGELOG live)
@@ -1100,8 +1122,16 @@ def validate_version_bump(
     # Don't return early - continue with other validations to show all errors
     
     # Find story file if not provided
+    requested_task_doc: Optional[Path] = None
     if story_file is None:
-        story_file = find_story_file(config, epic, story)
+        if art and requested_est is not None:
+            requested_task_doc, requested_story_file = locate_task_doc_from_requested(
+                epic, story, current_task, config
+            )
+            if requested_story_file is not None:
+                story_file = requested_story_file
+        if story_file is None:
+            story_file = find_story_file(config, epic, story)
     
     if story_file is None:
         errors.append(f"Could not find Story file for Epic {epic}, Story {story}")
@@ -1122,9 +1152,14 @@ def validate_version_bump(
     print(f"Current VERSION_TASK: {current_task}")
     
     # NEW: Validate Task document presence and alignment
-    task_doc_path, task_doc_content, format_type = locate_task_doc(
-        story_file, epic, story, completed_task, config
-    )
+    if requested_task_doc is not None and requested_task_doc.exists():
+        task_doc_path = requested_task_doc
+        task_doc_content = requested_task_doc.read_text()
+        format_type = "separate_file"
+    else:
+        task_doc_path, task_doc_content, format_type = locate_task_doc(
+            story_file, epic, story, completed_task, config
+        )
     
     if format_type == "not_found":
         errors.append(
@@ -1288,14 +1323,14 @@ def main():
     )
     parser.add_argument(
         "--requested",
-        type=str,
+        required=False,
         default=None,
-        help="Requested task id (E:S:T) for ART alignment checks.",
+        help="Requested E:S:T token for RW context (e.g., E6:S06:T58).",
     )
     parser.add_argument(
         "--art",
         action="store_true",
-        help="Adopt requested task as canonical release anchor (enforces version-task alignment).",
+        help="Adopt requested token as canonical anchor for this validation run.",
     )
     args = parser.parse_args()
     
@@ -1313,19 +1348,12 @@ def main():
         sys.exit(1)
     
     # Validate
-    requested_task = None
-    if args.requested:
-        requested_task = parse_requested_task_id(args.requested)
-        if requested_task is None:
-            print(f"❌ Could not parse --requested task id: {args.requested!r}")
-            sys.exit(1)
-
     is_valid, errors = validate_version_bump(
         version_file,
         story_file=args.story_file,
         config=config,
-        requested_task=requested_task,
-        adopt_requested_task=args.art,
+        requested=args.requested,
+        art=args.art,
     )
     
     if not is_valid:

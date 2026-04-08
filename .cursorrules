@@ -35,11 +35,8 @@
  - **Non-zero exit:** **RW ABORTED** — same severity as Step 1. Print script output.
 6d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056 / E6:S06:T56)** — **After Step 1c passes**, **before any RW file modifications** (before Step 2)
    - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
-   - **Use `--mode rw-k`** when the trigger is **`RW -k`**.
-   - **RW -k default is forensic-strict:** requested `E:S:T` must match the current version anchor task, or Step 1d fails.
-   - **If mismatch is intentional, use concise flag `--art`** to adopt requested task as canonical release anchor:
-     - `python ".../validate_rw_task_intent.py" --requested "<parsed_id>" --mode rw-k --art`
-   - **When using `--art`, propagate the same adoption intent to version validation/execution steps** (e.g. `validate_version_bump.py --requested "<parsed_id>" --art`) so version/tag/changelog/commit remain single-anchor.
+   - **Use `--mode rw-k`** when the trigger is **`RW -k`**: comparison against `version.py` is skipped so explicit init target does not false-block.
+   - **`--art` is supported in all RW modes** (`RW`, `RW -d`, `RW -k`) to adopt the requested `E:S:T` as canonical release anchor when intentional.
    - **If the script exits non-zero:** **RW ABORTED** — same severity as Step 1 failure. **Do not** bump version, edit changelogs, or touch kanban. Print the script output. Tell the user to verify the intended Epic/Story/Task.
    - **After explicit user confirmation** that the mismatch is intentional (e.g. they meant Story 5, not 6), re-invoke RW and pass **`--confirmed-override`** on `validate_rw_task_intent.py` (only after the user clearly confirms).
    - **Exception to “never stop”:** These guardrails **require** stopping the workflow when exit code is non-zero; the user must confirm or use a new message. This overrides generic “continuous execution” until intent is resolved.
@@ -327,7 +324,7 @@ For each step, follow this pattern:
 
 8. **Stage Files** - Run `git add -A` to stage all modified files
 
-9. **Run Validators** - Execute validation scripts. Use config path. Run `validate_branch_context.py`, `validate_changelog_format.py`, `validate_version_bump.py`, and `check_changelog_size.py` (all scripts automatically read from `rw-config.yaml` if available). **Note:** `check_changelog_size.py` exit code 1 (threshold exceeded) is non-blocking and triggers Step 9.5.
+9. **Run Validators** - Execute validation scripts. Use config path. Run `validate_branch_context.py`, `validate_changelog_format.py`, `validate_version_bump.py`, and `check_changelog_size.py` (all scripts automatically read from `rw-config.yaml` if available). **If RW was triggered with `--art`, propagate adoption context in Step 9** by passing `--requested "<parsed_id>" --art` to `validate_branch_context.py` and `validate_version_bump.py`. **Note:** `check_changelog_size.py` exit code 1 (threshold exceeded) is non-blocking and triggers Step 9.5.
 
 9.5. **Changelog Management Workflow (CMW)** - **OPTIONAL, NON-BLOCKING:** If Step 9's `check_changelog_size.py` indicated threshold exceeded (exit code 1), automatically run CMW to archive entries, remove duplicates, and fix ordering. CMW is deterministic (rule-based, no agentic intelligence required). If threshold not exceeded, skip this step. CMW failures are non-blocking (workflow continues).
 

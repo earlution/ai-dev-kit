@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-03-20 (v0.6.6.56+3 – Kanban documentation setup)
-**Version:** v0.6.6.56+3
+**Last updated:** 2026-04-08 (v0.6.6.58+2 - T58 follow-up cleanup: board drift + scratchpad ignore)
+**Version:** v0.6.6.58+2
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -43,6 +43,9 @@ housekeeping_policy: keep
 
 - [x] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - ✅ COMPLETE (**`RW -k`** v0.6.6.57+5 **v0.4.704+5** — Option B SemVer; **[BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)** **IN PROGRESS** for **product**)
   - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md) | [BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
+
+- [x] **E6:S06:T58 - RW `--art` flag should work in all RW modes** - ✅ COMPLETE (v0.6.6.58+2) (HIGH priority, BR-060: all-mode support implemented; follow-up cleanup release for board consistency and repo hygiene)
+  - Task: [`T58-rw-art-flag-all-modes-support.md`](Story-006-feature-requests/T58-rw-art-flag-all-modes-support.md) | [BR-060](../../fr-br/BR-060-rw-art-flag-should-work-in-all-rw-modes.md)
 
 - [x] **E6:S06:T56 – RW Ambiguous Task Identifier Typo Risk** - ✅ COMPLETE (v0.6.6.56+4) (HIGH priority, BR-056: validate_rw_task_intent + Step 1b; live verification 2026-03-25)
   - Task: [`T56-rw-ambiguous-task-identifier-typo-risk.md`](Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md) | [BR-056](../../fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md)

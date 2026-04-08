@@ -563,42 +563,38 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Abstract space must precede functional work
 - Release Workflow validates abstract space usage
 
-#### S00 Abstract Space for Repository Stories
+#### S00 Abstract Space and Repository-Anchor Transition (FR-072 Approach D)
 
-**Format:** `0.\{EPIC\}.0.0+0` (repository story abstract space)
+**Format:** `0.\{EPIC\}.0.0+0` (epic/story abstract-space anchor)
 
 **Examples:**
-- `0.5.0.0+0` = Epic 5, Story 0 (FR Repo) abstract space
-- `0.6.0.0+0` = Epic 6, Story 0 (BR Repo) abstract space
-- `0.7.0.0+0` = Epic 7, Story 0 (UXR Repo) abstract space
+- `0.5.0.0+0` = Epic 5 Story 0 abstract space
+- `0.6.0.0+0` = Epic 6 Story 0 abstract space
+- `0.7.0.0+0` = Epic 7 Story 0 abstract space
 
 **Purpose:**
-- Establishes forensic traceability anchor for repository stories (S00)
-- Repository stories are PERPETUAL (never complete)
-- S00 serves as canonical home for FRs/BRs/UXRs
-- Perfect 1:1 traceability: FR-001 = E5:S00:T01, BR-001 = E6:S00:T01, UXR-001 = E7:S00:T01
+- Establish forensic traceability for abstract-space documentation.
+- Preserve compatibility with historical repository anchors where they already exist.
+- Support phased migration to semantic intake placement for new FR/BR/UXR tasks.
 
-**Repository Task Versioning:**
-- Repository story: `0.5.0.0+0` (abstract space)
-- First FR: `0.5.0.1+0` (E5:S00:T01 - abstract space for repository task)
-- Second FR: `0.5.0.2+0` (E5:S00:T02 - abstract space for repository task)
-- Third FR: `0.5.0.3+0` (E5:S00:T03 - abstract space for repository task)
+**Transition rule (canonical):**
+- New FR/BR/UXR intake should version under the selected **delivery story/task** (semantic placement), not by creating new default repository-story anchors.
+- Historical repository-story IDs (for example old `E5:S01:*`, `E6:S01:*`, `E7:S00:*`) remain valid forensic coordinates and must remain linkable.
 
-**Pattern:**
-- FR-001 = E5:S00:T01 = v0.5.0.1+0 (abstract space)
-- BR-001 = E6:S00:T01 = v0.6.0.1+0 (abstract space)
-- UXR-001 = E7:S00:T01 = v0.7.0.1+0 (abstract space)
+**Validator/workflow expectation:**
+- Validators and workflow docs must accept legacy repository coordinates as historical-valid.
+- Validators and workflow docs must not require new intake to use repository stories as default homes.
 
-**Usage:**
-- Repository story creation → Commit with `0.\{EPIC\}.0.0+0`
-- Repository task creation → Commit with `0.\{EPIC\}.0.\{TASK\}+0` (abstract space)
-- Repository tasks use `+0` build (abstract space) as they are documentation anchors
-- Implementation tasks use `+1` and beyond (functional work)
+**Usage guidance:**
+- Use `+0` abstract-space builds for documentation initialization.
+- Use semantic host story/task versions for new intake and implementation work.
+- Keep historical repository-anchor links for traceability instead of rewriting IDs.
 
 **Related:**
-- **FR-021:** FR/BR/UXR Repository Stories (S00 Pattern) - Feature request
-- **FR-018:** Abstract Space for Zero-Numbered E/S/T Docs - Abstract space concept
-- **E4:S12:** FR/BR/UXR Repository Stories (S00 Pattern) - Implementation story
+- **FR-072:** Uniform Repository vs Abstract-Space Kanban Rules (Approach D migration)
+- **FR-074:** Atomic intake + semantic placement
+- **FR-021:** Historical repository-story baseline (superseded for new intake behavior)
+- **FR-018:** Abstract space concept
 
 **SOP for Committing Initial E/S/T Docs:**
 
@@ -982,6 +978,11 @@ The dev-kit uses validation scripts from the workflow management framework:
   - Checks date format (old: `YYYY-MM-DD`, new: `DD-MM-YY`)
   - Validates build number >= 1
   - Grandfathers old format (warnings only)
+
+- **`packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py`**
+  - Validates requested RW task intent before Step 2 file edits
+  - Supports `--mode rw-k` for RW -k comparison behavior
+  - Supports `--art` in all RW modes (`RW`, `RW -d`, `RW -k`) for explicit canonical anchor adoption
 
 ### Validation Behavior
 

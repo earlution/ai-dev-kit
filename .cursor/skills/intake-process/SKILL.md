@@ -27,6 +27,11 @@ This workflow requires significant agentic intelligence:
 
 Only **after** 1–5 may you treat intake as complete. **RW / RW -k** versions the change; it is not a substitute for steps 2–5.
 
+### Transition guardrail (FR-072 Approach D)
+
+- For this repo's current migration path, **do not** open new intake tasks under dedicated repository stories (`FR Repo`, `BR Repo`, `UXR Repo`) unless explicitly required for historical backfill.
+- New intake should create the primary task in the best semantic delivery story and keep repository-story references as historical pointers only.
+
 ### Optional convention (not required)
 
 Some projects align numbers (e.g. FR-047 → E5:S01:T47). **KG-R6:** This is **optional**. Prefer **one** primary task in a **sensible** story over forcing id symmetry. Do **not** create a second task solely for symmetry.

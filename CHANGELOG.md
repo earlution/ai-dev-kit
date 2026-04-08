@@ -5,66 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is inspired by **Keep a Changelog** ([`https://github.com/olivierlacan/keep-a-changelog`](https://github.com/olivierlacan/keep-a-changelog))  
 and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme described in the dev-kit versioning policy.
 
-## [0.24.2.1+1] - 12-03-26
-
-E8:S03:T01-T03+1 – Automation Scripts: Proper archival with comprehensive documentation preserving automation enhancement knowledge and future implementation requirements. Maintained all valuable insights including script enhancement opportunities, architecture framework, technical components, and strategic value. Created comprehensive knowledge base with research documentation, implementation roadmap, and clear future implementation path when resources become available.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/0.8.3.1+1.md)
+**Historical entries:** Per [`changelog-archival-policy`](docs/architecture/standards-and-adrs/changelog-archival-policy.md) (`changelog_archival.mode: latest_only` in `rw-config.yaml`), this file keeps only the latest release. Full history lives in [`CHANGELOG_ARCHIVE.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md) and `CHANGELOG_v*.md` under `docs/changelog-and-release-notes/changelog-archive/`.
 
 ---
 
-## [0.6.7.101+41] - 08-04-26
+## [0.6.6.58+2] - 08-04-26
 
-E6:S07:T101 (UKW perpetual) — Change implemented: closed Kanban drift for `E7:S06:T03` by removing stale TODO row from active board and keeping canonical completed history. SemVer **v0.4.640+41**.
+E6:S06:T58 — Change implemented: completed follow-up cleanup after all-mode `--art` rollout by fixing lingering board drift (`E7:S06:T04` stale TODO) and ignoring `SCRATCHPAD.md` in repo hygiene. SemVer **v0.4.700+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+41.md)
-
----
-
-## [0.6.7.101+40] - 07-04-26
-
-E6:S07:T101 (UKW perpetual) — Change implemented: synced `fr-br-uxr-board.md` with open FR/BR/UXR docs; full RW `--art` for perpetual tasks; `dev` branch validator allows perpetual cross-epic anchors. SemVer **v0.4.638+40**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+40.md)
-
----
-
-## [0.2.1.13+2] - 07-04-26
-
-E2:S01:T13 — Change implemented: shipped BR-063 runtime hardening (`rw-k` mismatch guard, `--art`, version validation alignment, orchestration/tests, doc parity). SemVer **v0.4.637+2**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.13+2.md)
-
----
-
-## [0.2.1.13+1] - 07-04-26
-
-E2:S01:T13 — Change implemented: filed/wired `BR-063` and completed forensic cleanup so `v0.2.1.10+6` release records consistently anchor to `T10` rather than mixed `T10`/`T12` attribution. SemVer **v0.4.635+1**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.13+1.md)
-
----
-
-## [0.2.1.10+6] - 07-04-26
-
-E2:S01:T10+6 metadata sync — Change implemented: performed `RW -k` kanban/documentation metadata alignment while version lineage remained anchored to `T10` (`0.2.1.10+6`). Administrative BR-061 intake wiring for `T12` was recorded separately and is not the version anchor for this release. SemVer **v0.4.633+6**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+6.md)
-
----
-
-## [0.2.1.10+5] - 07-04-26
-
-E2:S01:T11 closeout — Change implemented: finalized `T11`/`BR-062` status wiring as complete and verified cleanup of stale in-progress kboard task state. SemVer **v0.4.631+5**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+5.md)
-
----
-
-## [0.2.1.10+4] - 07-04-26
-
-E2:S01:T10+4 — Change implemented: `kanban_init` now prunes stale completed target-task rows from the in-progress MoSCOW list, with regression coverage for this cleanup path. SemVer **v0.4.630+4**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.58+2.md)
 
 ---
