@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-07 (**RW** `E2:S01:T13+2` — **v0.2.1.13+2** / **v0.4.637+2**)
-**Version:** v0.2.1.13+2 *(from `version.py` at board refresh)*
+**Last Updated:** 2026-04-07 (**RW** `E6:S07:T101+40` — **v0.6.7.101+40** / **v0.4.638+40**)
+**Version:** v0.6.7.101+40 *(from `version.py` at board refresh)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  

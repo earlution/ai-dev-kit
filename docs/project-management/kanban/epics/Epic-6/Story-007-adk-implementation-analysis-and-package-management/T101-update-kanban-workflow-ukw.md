@@ -11,16 +11,16 @@ housekeeping_policy: keep
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
 **Task ID:** E6:S07:T101  
-**Last updated:** 2026-04-07 (RW E6:S07:T101+40 — **fr-br-uxr-board** backfill + full `--art` perpetual + `dev` branch guard; SemVer **v0.4.638+40**)  
+**Last updated:** 2026-04-08 (RW E6:S07:T101+41 — E7:S06:T03 board closeout; SemVer **v0.4.640+41**)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+40
+**Version:** v0.6.7.101+41
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High BUILD numbers are expected and valid.
 
-**Progress:** RW 2026-04-07 (v0.6.7.101+40): Synced [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) with all open FR/BR/UXR docs; hardened `validate_rw_task_intent` (full `--art` + perpetual) and `validate_branch_context` (`dev` + perpetual anchor). Prior: v0.6.7.101+39 fr-br-uxr-open-taskless-queue; v0.6.7.101+38 UKW/F060 bookkeeping.  
+**Progress:** RW 2026-04-08 (v0.6.7.101+41): Closed E7:S06:T03 Kanban status drift by removing stale active TODO row from `kanban-board.md` while preserving canonical completed history in `kanban-completed.md`. Prior: v0.6.7.101+40 board sync + full `--art` perpetual + `dev` branch guard; v0.6.7.101+39 queue intake.  
 **Code:** E6S07T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).

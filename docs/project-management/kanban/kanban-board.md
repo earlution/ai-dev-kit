@@ -28,8 +28,6 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E7:S06:T03** – Kanban documentation consistency - TODO (HIGH priority, E9↔E18 renumbering fallout, cross-references, structure) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T03-kanban-documentation-consistency.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md) | Last modified: 2026-04-07 16:30 UTC
-
 - **E7:S06:T04** – Recent commit review - TODO (MEDIUM priority, Last ~15 commits: RW compliance, batch scope, quality) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T04-recent-commit-review.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md) | Last modified: 2026-04-07 16:30 UTC
 
 - **E7:S06:T05** – Workflow script integrity - TODO (MEDIUM priority, ukw_syntax_parser, task_inference, orchestrator changes) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T05-workflow-script-integrity.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md) | Last modified: 2026-04-07 16:30 UTC
