@@ -6,9 +6,9 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 6, Story 1: BR Repo (PERPETUAL)
+# Epic 6, Story 1: BR Repo (HISTORICAL REGISTRY - DEPRECATED FOR NEW INTAKE)
 
-**Status:** ✅ COMPLETE
+**Status:** ✅ COMPLETE (HISTORICAL REGISTRY)
 **Priority:** HIGH  
 **Last updated:** 2026-03-09 (v0.6.1.37+2 – Kanban documentation setup)
 **Estimated Effort:** N/A (Perpetual repository)  
@@ -17,9 +17,9 @@ housekeeping_policy: keep
 **Version:** v0.6.1.37+2
 **Code:** E6S01
 
-**Story Type:** Repository (PERPETUAL)  
+**Story Type:** Repository (HISTORICAL REGISTRY)  
 **Build Warning Suppression:** true  
-**Explanation:** This is a repository story that serves as the canonical home for all Bug Reports. Repository stories never complete and are excluded from completion analytics.
+**Explanation:** This story now serves as a historical BR anchor registry. Under FR-072 Approach D, new intake should not create net-new primary tasks here; use semantic host-story placement and keep this story for legacy traceability.
 
 **Note:** This story was migrated from S00 to S01 as part of the repository story abstract space resolution (E9:S01:T08). S00 is now Epic-level abstract space only.
 
@@ -27,7 +27,7 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-> **Repository Pattern:** Each Bug Report becomes a task in this repository story.
+> **Migration state:** Historical registry only. Do not add new primary intake tasks here.
 > **Traceability:** BR-001 = E6:S01:T01, BR-002 = E6:S01:T02, etc.
 > **Abstract Space:** v0.6.1.0+0 (repository story), v0.6.1.1+0 (first BR), v0.6.1.2+0 (second BR), etc.
 

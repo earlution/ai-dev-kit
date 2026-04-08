@@ -6,9 +6,9 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 5, Story 1: FR Repo (PERPETUAL)
+# Epic 5, Story 1: FR Repo (HISTORICAL REGISTRY - DEPRECATED FOR NEW INTAKE)
 
-**Status:** IN PROGRESS
+**Status:** IN PROGRESS (HISTORICAL REGISTRY)
 **Priority:** HIGH  
 **Last updated:** 2026-04-01 (**RW E5:S01:T75** **`v0.5.1.75+1`** — **FR-075** ICW durable artifacts policy)
 **Estimated Effort:** N/A (Perpetual repository)  
@@ -17,9 +17,9 @@ housekeeping_policy: keep
 **Version:** v0.5.1.75+1
 **Code:** E5S01
 
-**Story Type:** Repository (PERPETUAL)  
+**Story Type:** Repository (HISTORICAL REGISTRY)  
 **Build Warning Suppression:** true  
-**Explanation:** This is a repository story that serves as the canonical home for all Feature Requests. Repository stories never complete and are excluded from completion analytics.
+**Explanation:** This story now serves as a historical FR anchor registry. Under FR-072 Approach D, new intake should not create net-new primary tasks here; use semantic host-story placement and keep this story for legacy traceability.
 
 **Note:** This story was migrated from S00 to S01 as part of the repository story abstract space resolution (E9:S01:T08). S00 is now Epic-level abstract space only.
 
@@ -27,7 +27,7 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-> **Repository Pattern:** Each Feature Request becomes a task in this repository story.
+> **Migration state:** Historical registry only. Do not add new primary intake tasks here.
 > **Traceability:** FR-001 = E5:S01:T01, FR-002 = E5:S01:T02, etc.
 > **Abstract Space:** v0.5.1.0+0 (repository story), v0.5.1.1+0 (first FR), v0.5.1.2+0 (second FR), etc.
 

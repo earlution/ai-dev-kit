@@ -9,8 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.75+1] - 01-04-26
+## [0.5.1.72+1] - 08-04-26
 
-E5:S01:T75 — **ICW durable planning artifacts** in repo docs (**FR-075**): policy, `implementation-cycles` README, ICW framework docs, `.cursorrules`. [T75](docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T75-icw-durable-planning-artifacts-documentation-system.md); [FR-075](docs/project-management/kanban/fr-br/FR-075-icw-durable-planning-artifacts-documentation-system.md).
+E5:S01:T72 — Change implemented: adopted FR-072 Approach D phased migration so new FR/BR/UXR intake uses semantic host-story placement while dedicated repository stories are treated as historical registries. SemVer **v0.4.698+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.75+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.72+1.md)
+
+---

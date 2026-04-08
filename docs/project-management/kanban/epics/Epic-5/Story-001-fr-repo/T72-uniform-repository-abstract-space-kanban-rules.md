@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Task E5:S01:T72 – Uniform Repository vs Abstract-Space Kanban Rules
 
 **Task ID:** E5:S01:T72  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Version Anchor:** v0.5.1.72+0 (RW -k doc-init — **Released** 2026-03-31)  
 **Feature Request:** [FR-072 – Uniform Repository vs Abstract-Space Kanban Rules](../../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md)
@@ -49,6 +49,40 @@ Consolidate **cross-epic** rules so **Story 0** (abstract space vs repository), 
 2. **Updated** policy / governance / epic / story / template / `.cursorrules` / framework docs per scope.  
 3. **FR-021** updated or **superseded** with pointer.  
 4. **Migration notes** if E/S/T coordinates change.
+
+---
+
+## Approach D Execution Notes
+
+- **Selected model:** Approach D (phased migration toward uniform semantics).
+- **North star:** Dedicated FR/BR/UXR repository stories are closed to new intake; new intake uses semantic host-story placement.
+- **Historical guarantee:** Existing repository-story IDs remain valid and discoverable; no destructive renumbering of historical artifacts.
+- **FR-021 handling:** retain as historical baseline; supersede for new intake behavior via FR-072 policy updates.
+
+### Phase checklist (this task)
+
+- [x] D1 - Canonical model published in FR-072/T72.
+- [ ] D2 - Intake/governance docs updated for semantic-only new intake.
+- [ ] D3 - Repository stories labeled historical/deprecated for new intake.
+- [ ] D4 - Migration matrix + workflow/validator docs aligned.
+- [ ] D5 - Consistency pass across board and policy docs.
+
+---
+
+## Migration Matrix (Historical Anchor -> New Intake Pattern)
+
+| Historical anchor model | New intake model | Redirect guidance |
+| --- | --- | --- |
+| FR-xxx -> `E5:S01:Txx` | FR-xxx -> `E{delivery_epic}:S{delivery_story}:T{delivery_task}` | Keep FR links to old `E5:S01:Txx` when it exists; for new FRs, set `Implementing Task` to delivery task directly. |
+| BR-xxx -> `E6:S01:Txx` | BR-xxx -> `E{delivery_epic}:S{delivery_story}:T{delivery_task}` | Preserve old BR links to `E6:S01:Txx`; do not create new BR anchors under `E6:S01` after cutover. |
+| UXR-xxx -> `E7:S00:Txx` | UXR-xxx -> `E{delivery_epic}:S{delivery_story}:T{delivery_task}` | Keep legacy UXR S00 anchors valid; new UXR intake uses semantic host story and direct task wiring. |
+
+### Redirect policy
+
+1. Never rewrite historical IDs in-place solely for cosmetic uniformity.
+2. New intake must use semantic host-story placement.
+3. Historical repository stories may include pointer rows to newer delivery tasks when useful.
+4. Validators/workflow docs must treat repository-story IDs as historical-valid, not intake-default.
 
 ---
 

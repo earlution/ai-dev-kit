@@ -50,7 +50,7 @@ workflow_registry:
     intake-workflow:
       name: "Intake Workflow"
       abbreviation: "INTAKE"
-      description: "FR/BR/UXR automation and intake process"
+      description: "FR/BR/UXR automation and intake process (semantic host-story placement for new intake; historical repository anchors remain valid)"
       directory: "intake-workflow/"
       main_file: "intake-workflow.yaml"
       config_file: "intake-config.yaml"

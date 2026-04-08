@@ -48,6 +48,11 @@ Normative detail lives in the **framework** policy (single SoT): [`kanban-govern
 - **≥1 task per report:** Every **FR**, **BR**, and **UXR** resolves to at least one Kanban task (shared task allowed if explicitly cited by every report).
 - **Story semantics over id symmetry:** The **primary** task SHOULD live under the story that matches **delivery**. Matching FR-047 to E5:S01:T47 is **optional**, not required.
 
+**Approach D transition rule (FR-072):**
+
+- **New intake cutover:** New FR/BR/UXR intake MUST create the primary task in the most appropriate delivery story; do **not** create net-new intake tasks in dedicated FR/BR/UXR repository stories.
+- **Historical anchors preserved:** Existing repository-story tasks remain valid for forensic traceability and cross-links; treat those stories as historical registries during migration/closure.
+
 Operational guide: [`FR_BR_INTAKE_GUIDE.md` (framework package)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md). Agent skill: [`intake-process` skill](https://github.com/earlution/ai-dev-kit/blob/main/.cursor/skills/intake-process/SKILL.md).
 
 ---
