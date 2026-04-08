@@ -47,6 +47,7 @@ housekeeping_policy: keep
 5d. **🚨 MANDATORY: Step 1d — RW Task Intent Guard (BR-056 / E6:S06:T56)** — **After Step 1c passes**, **before any file modifications**
    - Run: `python "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "<parsed_id>"`  
    - For **`RW -k`**, add **`--mode rw-k`**: comparison against `version.py` is skipped so explicit init target does not false-block.
+   - **`--art` is valid in all RW modes** (`RW`, `RW -d`, `RW -k`) to adopt the requested task as canonical release anchor.
    - **Non-zero exit:** **RW ABORTED**. User may re-run with `--confirmed-override` on this script after explicit confirmation.
    - **Overrides** generic “never stop” until intent is resolved (documented exception).
 6. **Execute steps for selected path** using the ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED pattern (only if Steps 1, 1b, 1c, and 1d pass)
@@ -416,7 +417,7 @@ For each step, follow this pattern:
      5. **Update ALL Epic sections to match the updated Story file's state**
      6. Validate consistency: Story file, Epic header, Epic checklist, and Epic detailed sections must all match
 8. **Stage Files** - Run `git add -A` to stage all modified files
-9. **Run Validators** - Execute validation scripts. **Use config:** If `rw-config.yaml` exists, read `scripts_path` from config. Otherwise, use `{scripts_path}/validation/` as fallback. Run `validate_branch_context.py`, `validate_changelog_format.py`, and `validate_version_bump.py` (all scripts automatically read from `rw-config.yaml` if available). **Note:** `validate_version_bump` supports perpetual tasks (T101+, `perpetual_task` or `Task Type: Perpetual Maintenance` flag).
+9. **Run Validators** - Execute validation scripts. **Use config:** If `rw-config.yaml` exists, read `scripts_path` from config. Otherwise, use `{scripts_path}/validation/` as fallback. Run `validate_branch_context.py`, `validate_changelog_format.py`, and `validate_version_bump.py` (all scripts automatically read from `rw-config.yaml` if available). **If RW was triggered with `--art`, propagate adoption context in Step 9** by passing `--requested "<parsed_id>" --art` to `validate_branch_context.py` and `validate_version_bump.py`. **Note:** `validate_version_bump` supports perpetual tasks (T101+, `perpetual_task` or `Task Type: Perpetual Maintenance` flag).
    - **IMPORTANT:** Validators should confirm you're on an epic branch, not `main`
    - If on `main`, warn user and suggest switching to epic branch
    - Validators check version format, branch context alignment, changelog format, and version bump logic

@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.72+1] - 08-04-26
+## [0.6.6.58+1] - 08-04-26
 
-E5:S01:T72 — Change implemented: adopted FR-072 Approach D phased migration so new FR/BR/UXR intake uses semantic host-story placement while dedicated repository stories are treated as historical registries. SemVer **v0.4.698+1**.
+E6:S06:T58 — Change implemented: enabled `--art` canonical-anchor adoption across all RW modes (`RW`, `RW -d`, `RW -k`) and aligned validator, rules, and documentation behavior. SemVer **v0.4.699+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.72+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.58+1.md)
 
 ---

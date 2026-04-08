@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 5      # Epic number (Epic 5: FR repository and governance)
-VERSION_STORY = 1     # Story number (Story 1: FR Repo)
-VERSION_TASK = 72     # Task number (T72: Uniform Repository vs Abstract-Space rules)
-VERSION_BUILD = 1     # Build number (first functional build for E5:S01:T72 after doc-init +0)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework management and workflow operations)
+VERSION_STORY = 6     # Story number (Story 6: Feature Requests)
+VERSION_TASK = 58     # Task number (T58: RW --art support for all RW modes)
+VERSION_BUILD = 1     # Build number (first functional build for E6:S06:T58)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.1.72+1 = Development, Epic 5, Story 1, Task 72
+# Current: 0.6.6.58+1 = Development, Epic 6, Story 6, Task 58
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

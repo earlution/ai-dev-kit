@@ -979,6 +979,11 @@ The dev-kit uses validation scripts from the workflow management framework:
   - Validates build number >= 1
   - Grandfathers old format (warnings only)
 
+- **`packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py`**
+  - Validates requested RW task intent before Step 2 file edits
+  - Supports `--mode rw-k` for RW -k comparison behavior
+  - Supports `--art` in all RW modes (`RW`, `RW -d`, `RW -k`) for explicit canonical anchor adoption
+
 ### Validation Behavior
 
 - **New files (TASK+BUILD format):** Require strict enforcement

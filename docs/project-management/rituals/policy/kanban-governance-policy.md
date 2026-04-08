@@ -55,6 +55,12 @@ Normative detail lives in the **framework** policy (single SoT): [`kanban-govern
 
 Operational guide: [`FR_BR_INTAKE_GUIDE.md` (framework package)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md). Agent skill: [`intake-process` skill](https://github.com/earlution/ai-dev-kit/blob/main/.cursor/skills/intake-process/SKILL.md).
 
+### 1.3 RW task-intent adoption flag (`--art`)
+
+- RW Step 1d task-intent validation supports `--art` in all RW trigger modes (`RW`, `RW -d`, `RW -k`) for explicit canonical release-anchor adoption.
+- Use `--art` only for intentional anchor adoption, not as a substitute for missing task token or missing task document checks (Steps 1b/1c remain mandatory and blocking).
+- Source behavior is defined by `.cursorrules` + `validate_rw_task_intent.py`; packaged parity must remain aligned.
+
 ---
 
 ## 2. Board Structure (This Repo)

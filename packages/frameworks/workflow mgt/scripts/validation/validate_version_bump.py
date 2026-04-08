@@ -22,6 +22,7 @@ This script is called by RW Step 8 to validate version bumping logic.
 
 Usage:
     python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py [--strict] [--story-file PATH] [--version-file PATH]
+    python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py --requested E6:S06:T58 --art [--strict]
 
     --strict: Exit with error code if validation fails
     --story-file: Path to Story file (auto-detected if not provided)
@@ -34,6 +35,19 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import Optional, Dict, Tuple, List
+def parse_requested_est(requested: str) -> Optional[Tuple[int, int, int]]:
+    """Parse E:S:T token formats like E6:S06:T58 or E6S6T58."""
+    if not requested:
+        return None
+    m = re.match(r"^E(\d+):S(\d+):T(\d+)$", requested.strip(), re.IGNORECASE)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    m = re.match(r"^E(\d+)S(\d+)T(\d+)$", requested.strip(), re.IGNORECASE)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    return None
+
+
 
 try:
     import yaml
@@ -426,6 +440,38 @@ def locate_task_doc(
                 return (None, section_content, "delimited_section")
     
     return (None, None, "not_found")
+
+
+def locate_task_doc_from_requested(epic: int, story: int, task: int, config: Optional[Dict] = None) -> Tuple[Optional[Path], Optional[Path]]:
+    """
+    Locate task doc directly from requested E/S/T, returning (task_doc_path, story_file_path).
+    """
+    project_root = Path.cwd()
+    if config and config.get('use_kanban') and 'kanban_root' in config:
+        kanban_root = Path(config['kanban_root'])
+        if not kanban_root.is_absolute():
+            kanban_root = project_root / kanban_root
+    else:
+        kanban_root = project_root / "docs/project-management/kanban"
+
+    epic_dir = kanban_root / f"epics/Epic-{epic}"
+    if not epic_dir.exists():
+        return (None, None)
+
+    patterns = [
+        f"Story-{story:03d}-*/T{task:03d}-*.md",
+        f"Story-{story:03d}-*/T{task:02d}-*.md",
+        f"Story-{story:03d}-*/T{task}-*.md",
+        f"Story-{story:03d}-*/Task-{task:03d}-*.md",
+    ]
+    for pat in patterns:
+        hits = sorted(epic_dir.glob(pat))
+        if hits:
+            task_doc = hits[0]
+            story_dir = task_doc.parent
+            story_file = epic_dir / f"{story_dir.name}.md"
+            return (task_doc, story_file if story_file.exists() else None)
+    return (None, None)
 
 
 def validate_task_doc_fields(
@@ -978,7 +1024,9 @@ def validate_task_doc_alignment(
 def validate_version_bump(
     version_file: Path,
     story_file: Optional[Path] = None,
-    config: Optional[Dict] = None
+    config: Optional[Dict] = None,
+    requested: Optional[str] = None,
+    art: bool = False,
 ) -> Tuple[bool, list]:
     """
     Validate that version bump follows correct logic.
@@ -995,6 +1043,13 @@ def validate_version_bump(
         return False, errors
     
     rc, epic, story, current_task, current_build = version_components
+    requested_est = parse_requested_est(requested) if requested else None
+    if art and requested_est is not None:
+        epic, story, current_task = requested_est
+        print(
+            f"--art adoption enabled: validating against requested E{epic}:S{story}:T{current_task} "
+            f"(version file: {rc}.{version_components[1]}.{version_components[2]}.{version_components[3]}+{current_build})"
+        )
     print(f"Current version: {rc}.{epic}.{story}.{current_task}+{current_build}")
     
     # NEW: Validate doc-init build (if BUILD = 0, must be docs-only and first-time E/S/T doc)
@@ -1037,8 +1092,16 @@ def validate_version_bump(
     # Don't return early - continue with other validations to show all errors
     
     # Find story file if not provided
+    requested_task_doc: Optional[Path] = None
     if story_file is None:
-        story_file = find_story_file(config, epic, story)
+        if art and requested_est is not None:
+            requested_task_doc, requested_story_file = locate_task_doc_from_requested(
+                epic, story, current_task, config
+            )
+            if requested_story_file is not None:
+                story_file = requested_story_file
+        if story_file is None:
+            story_file = find_story_file(config, epic, story)
     
     if story_file is None:
         errors.append(f"Could not find Story file for Epic {epic}, Story {story}")
@@ -1059,9 +1122,14 @@ def validate_version_bump(
     print(f"Current VERSION_TASK: {current_task}")
     
     # NEW: Validate Task document presence and alignment
-    task_doc_path, task_doc_content, format_type = locate_task_doc(
-        story_file, epic, story, completed_task, config
-    )
+    if requested_task_doc is not None and requested_task_doc.exists():
+        task_doc_path = requested_task_doc
+        task_doc_content = requested_task_doc.read_text()
+        format_type = "separate_file"
+    else:
+        task_doc_path, task_doc_content, format_type = locate_task_doc(
+            story_file, epic, story, completed_task, config
+        )
     
     if format_type == "not_found":
         errors.append(
@@ -1223,6 +1291,17 @@ def main():
         type=Path,
         help="Path to version file (auto-detected if not provided)",
     )
+    parser.add_argument(
+        "--requested",
+        required=False,
+        default=None,
+        help="Requested E:S:T token for RW context (e.g., E6:S06:T58).",
+    )
+    parser.add_argument(
+        "--art",
+        action="store_true",
+        help="Adopt requested token as canonical anchor for this validation run.",
+    )
     args = parser.parse_args()
     
     # Load config
@@ -1242,7 +1321,9 @@ def main():
     is_valid, errors = validate_version_bump(
         version_file,
         story_file=args.story_file,
-        config=config
+        config=config,
+        requested=args.requested,
+        art=args.art,
     )
     
     if not is_valid:

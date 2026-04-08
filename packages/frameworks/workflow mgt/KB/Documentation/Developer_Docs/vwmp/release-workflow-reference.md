@@ -75,7 +75,7 @@ The Release Workflow explains each step, its parameters, configuration options, 
 
 **⭐ Canonical Example:** The Release Workflow serves as the **canonical example** of intelligent agent-driven workflow execution. See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md) for detailed step-by-step agent execution patterns.
 
-**🚀 RW Trigger:** When users send **`RW <task_id>`** in one message (case-insensitive; e.g. `RW E7:S01:T10`, `RW E7S01T10`; same for `RW -d` / `RW -k`), AI assistants execute this workflow per [`.cursorrules`](../../../../.cursorrules). A parseable `E…S…T…` token is **mandatory** (FR-060). After branch safety (Step 1), agents run `validate_rw_task_complete.py` then `validate_rw_task_intent.py` before Step 2. See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md).
+**🚀 RW Trigger:** When users send **`RW <task_id>`** in one message (case-insensitive; e.g. `RW E7:S01:T10`, `RW E7S01T10`; same for `RW -d` / `RW -k`), AI assistants execute this workflow per [`.cursorrules`](../../../../.cursorrules). A parseable `E…S…T…` token is **mandatory** (FR-060). After branch safety (Step 1), agents run `validate_rw_task_complete.py` then `validate_rw_task_intent.py` before Step 2. The `--art` adoption flag is valid for all RW modes when intentional canonical anchor adoption is required, and this adoption context must be propagated into Step 9 validators (`validate_branch_context.py`, `validate_version_bump.py`). See [Release Workflow Agent Execution Guide](release-workflow-agent-execution.md).
 
 ### How This Workflow Implements Policy Requirements
 
