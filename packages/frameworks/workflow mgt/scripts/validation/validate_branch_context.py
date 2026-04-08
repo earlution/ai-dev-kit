@@ -12,6 +12,7 @@ Run this BEFORE every commit to prevent branch mix-ups.
 
 Usage:
     python scripts/validation/validate_branch_context.py [--strict]
+    python scripts/validation/validate_branch_context.py --requested E6:S06:T58 --art [--strict]
 
     --strict: Exit with error code if validation fails (for pre-commit hooks)
 """
@@ -109,6 +110,19 @@ def parse_branch_epic(branch: str, config: Optional[Dict] = None) -> Optional[in
             return int(config.get("dev_branch_epic"))
         except (TypeError, ValueError):
             return None
+    return None
+
+
+def parse_requested_est(requested: str) -> Optional[Tuple[int, int, int]]:
+    """Parse E:S:T token formats like E6:S06:T58 or E6S6T58."""
+    if not requested:
+        return None
+    m = re.match(r"^E(\d+):S(\d+):T(\d+)$", requested.strip(), re.IGNORECASE)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    m = re.match(r"^E(\d+)S(\d+)T(\d+)$", requested.strip(), re.IGNORECASE)
+    if m:
+        return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
     return None
 
 
@@ -474,7 +488,7 @@ def check_task_doc_presence(version: str, config: Optional[Dict] = None) -> Tupl
     return len(warnings) == 0, warnings
 
 
-def check_changelog(branch, config: Optional[Dict] = None, current_version: Optional[str] = None):
+def check_changelog(branch, config: Optional[Dict] = None, current_version: Optional[str] = None, expected_epic_override: Optional[int] = None):
     """Check CHANGELOG.md for cross-epic contamination (supports both old and new format).
     
     When current_version is provided, only validates that entry (avoids false positives
@@ -491,7 +505,11 @@ def check_changelog(branch, config: Optional[Dict] = None, current_version: Opti
     issues = []
 
     # Get expected epic number for this branch
-    expected_epic = parse_branch_epic(branch, config)
+    expected_epic = (
+        expected_epic_override
+        if expected_epic_override is not None
+        else parse_branch_epic(branch, config)
+    )
 
     if expected_epic is not None:
         # Check staged changes to CHANGELOG.md
@@ -531,7 +549,7 @@ def check_changelog(branch, config: Optional[Dict] = None, current_version: Opti
     return len(issues) == 0, issues
 
 
-def validate_branch_context():
+def validate_branch_context(requested: Optional[str] = None, art: bool = False):
     """Main validation function."""
     print("🔍 Validating branch context...")
     print()
@@ -549,11 +567,19 @@ def validate_branch_context():
 
     # Check branch-epic mapping
     maintenance_branch = is_maintenance_branch(branch)
+    requested_est = parse_requested_est(requested) if requested else None
+    requested_epic = requested_est[0] if requested_est else None
     if branch == "main":
         expected_epic = None  # main branch can have any epic
     elif maintenance_branch:
         expected_epic = None  # maintenance/update branches intentionally skip epic validation
         print("Detected maintenance/update branch pattern; skipping epic/version enforcement.")
+    elif art and requested_epic is not None:
+        expected_epic = requested_epic
+        print(
+            f"--art adoption enabled: using requested epic E{requested_epic} "
+            "as branch-context expectation for this validation run."
+        )
     else:
         # Parse epic number from branch name (e.g., epic/10-fastapi-migration -> 10)
         expected_epic = parse_branch_epic(branch, config)
@@ -585,7 +611,12 @@ def validate_branch_context():
 
     # Check CHANGELOG (only validate current version to avoid false positives on reorder)
     current_version = get_version(config)
-    changelog_ok, changelog_issues = check_changelog(branch, config, current_version=current_version)
+    changelog_ok, changelog_issues = check_changelog(
+        branch,
+        config,
+        current_version=current_version,
+        expected_epic_override=expected_epic
+    )
     if not changelog_ok:
         errors.extend(changelog_issues)
     
@@ -627,9 +658,20 @@ if __name__ == "__main__":
         action="store_true",
         help="Exit with error code on validation failure (for pre-commit hooks)",
     )
+    parser.add_argument(
+        "--requested",
+        required=False,
+        default=None,
+        help="Requested E:S:T token for RW context (e.g., E6:S06:T58).",
+    )
+    parser.add_argument(
+        "--art",
+        action="store_true",
+        help="Adopt requested token as canonical anchor for this validation run.",
+    )
     args = parser.parse_args()
 
-    exit_code = validate_branch_context()
+    exit_code = validate_branch_context(requested=args.requested, art=args.art)
 
     # In strict mode, always exit with the validation result
     sys.exit(exit_code)

@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 1     # Story number (Story 1: RW Agent Execution & Docs)
-VERSION_TASK = 10     # Task number (T10: dev branch support in RW validators)
-VERSION_BUILD = 2     # Build number (E2:S01:T10+2 – RW)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework management and workflow operations)
+VERSION_STORY = 6     # Story number (Story 6: Feature Requests)
+VERSION_TASK = 58     # Task number (T58: RW --art support for all RW modes)
+VERSION_BUILD = 2     # Build number (follow-up release for E6:S06:T58)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.1.10+2 = Development, Epic 2, Story 1, Task 10 (E2:S01:T10+2: dev branch strict-equal-epic implementation)
+# Current: 0.6.6.58+2 = Development, Epic 6, Story 6, Task 58
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
@@ -40,5 +40,4 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py
 # - Abstract space awareness: FR-020 (validator recognizes +0 as valid)
-
 

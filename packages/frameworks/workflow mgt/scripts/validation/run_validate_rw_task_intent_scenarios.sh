@@ -30,4 +30,8 @@ echo "== 3. RW -k exemption: wrong epic in version, E7S1T1 + rw-k =="
 $PY "$VW" --requested E7S01T01 --mode rw-k --version-file "$TMP"
 echo OK
 
+echo "== 4. --art adoption in regular mode: wrong epic still proceeds =="
+$PY "$VW" --requested E7S01T01 --art --version-file "$TMP"
+echo OK
+
 echo "All scenarios passed."

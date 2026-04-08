@@ -6,9 +6,9 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 7, Story 0: UXR Repo (PERPETUAL)
+# Epic 7, Story 0: UXR Repo (HISTORICAL REGISTRY - DEPRECATED FOR NEW INTAKE)
 
-**Status:** IN PROGRESS (PERPETUAL)  
+**Status:** IN PROGRESS (HISTORICAL REGISTRY)  
 **Priority:** HIGH  
 **Last updated:** 2026-03-31 (**`RW -k`** **E7:S00:T04** **`v0.7.0.4+0`**; prior **T03** **`v0.7.0.3+0`**; **T02** **v0.7.0.2+2**; `epic/5` merge **main** preserves anchor docs **T01/T02/T05**)  
 **Estimated Effort:** N/A (Perpetual repository)  
@@ -17,13 +17,15 @@ housekeeping_policy: keep
 **Version:** v0.7.0.0+0  
 **Code:** E7S00
 
-**Story Type:** Repository (PERPETUAL)  
+**Story Type:** Repository (HISTORICAL REGISTRY)  
 **Build Warning Suppression:** true  
-**Explanation:** This is a repository story that serves as the canonical home for all User Experience Research reports. Repository stories never complete and are excluded from completion analytics.
+**Explanation:** This story now serves as a historical UXR anchor registry. Under FR-072 Approach D, new intake should not create net-new primary tasks here; use semantic host-story placement and keep this story for legacy traceability.
 
 ---
 
 ## Task Checklist
+> **Migration state:** Historical registry only. Do not add new primary intake tasks here.
+
 - [x] **E7:S00:T01 – UXR-001 Migration User Experience Research** - ✅ COMPLETE (v0.7.0.1+1 – Registry task filed; synthesis **E7:S05:T01**) - [Task Document](Story-000-uxr-repo/T01-migration-user-experience-research-uxr-001.md) | [UXR-001](../../fr-br/UXR-001-migration-user-experience-research.md)
 
 - [x] **E7:S00:T02 – UXR-002 Comprehensive UAT Migration Utilities** - ✅ COMPLETE (v0.7.0.2+1 – Registry task filed; synthesis **E7:S05:T02**) - [Task Document](Story-000-uxr-repo/T02-comprehensive-uat-migration-utilities-uxr-002.md) | [UXR-002](../../fr-br/UXR-002-comprehensive-uat-migration-utilities.md)

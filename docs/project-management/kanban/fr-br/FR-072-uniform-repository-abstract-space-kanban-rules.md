@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-31  
 **Submitted By:** User  
 **Priority:** HIGH  
-**Status:** PENDING  
+**Status:** IN PROGRESS  
 
 **Implementing Task:** [E5:S01:T72](../epics/Epic-5/Story-001-fr-repo/T72-uniform-repository-abstract-space-kanban-rules.md)
 
@@ -85,12 +85,40 @@ Select **one** primary model (or **D** phased to **A** / **C**) and record:
 
 ---
 
+## Decision Memo (Approach D Selected)
+
+**Decision:** Adopt **Approach D** as canonical:
+
+1. **End state (north star):** `S00` is abstract-space only across FR/BR/UXR repository epics.
+2. **Migration path:** phased transition from dedicated repository stories to semantic host-story placement.
+3. **Intake rule at cutover:** no new FR/BR/UXR intake may create net-new tasks in dedicated repository stories; new intake tasks must be placed in the most appropriate delivery story.
+4. **Historical preservation:** existing repository-story task IDs remain valid historical anchors and MUST remain linkable.
+5. **FR-021 reconciliation:** treat FR-021 as historically implemented but superseded for new intake behavior by this FR and associated governance updates.
+
+### Why Approach D
+
+- Avoids high-risk all-at-once renumbering while still converging on a uniform model.
+- Preserves forensic history and existing links.
+- Aligns with KG-R6 semantic placement and practical intake operations.
+- Keeps validator/workflow behavior predictable during transition.
+
+### Migration phases
+
+| Phase | Policy/Process state | Repository story behavior |
+| ------ | -------------------- | ------------------------- |
+| D1 | Publish canonical model + transition guardrails | Read/write for historical completion only |
+| D2 | Semantic intake cutover (new FR/BR/UXR -> delivery story) | Frozen for new intake |
+| D3 | Closure/deprecation labeling in story docs/boards | Historical registry only |
+| D4 | Validator/workflow docs aligned to mixed historical+new model | Redirect table maintained |
+
+---
+
 ## Documentation & Policy Update Scope (after decision)
 
 **Must touch (non-exhaustive; refine during implementation):**
 
 | Area | Examples |
-|------|-----------|
+| ---- | -------- |
 | **Architecture / ADRs** | `dev-kit-versioning-policy.md`, new or updated ADR for repository vs abstract space |
 | **Kanban governance** | `kanban-governance-policy.md`, templates (`TASK_TEMPLATE`, story templates), `Epic-*` headers |
 | **Epic 5–7 story docs** | `Story-000-*`, `Story-001-*`, Epic 7 UXR repo vs S01 maintenance — align to chosen model |
@@ -155,5 +183,5 @@ Select **one** primary model (or **D** phased to **A** / **C**) and record:
 
 ## Notes
 
-- **GitHub Issue:** _TBD_ (optional follow-up).
+- **GitHub Issue:** *TBD* (optional follow-up).
 - This FR is **meta-governance**: implementation may span **multiple epics**; **E5:S01:T72** remains the **FR anchor**; **implementation tasks** may be filed under Epic 4 / 7 / 9 per the chosen approach.

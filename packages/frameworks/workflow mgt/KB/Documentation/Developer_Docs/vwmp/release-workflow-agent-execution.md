@@ -578,8 +578,12 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 3. **RW -k:**  
    `python {validator_path} --requested "<token>" --mode rw-k`  
    (skips comparison to `version.py` so kanban-init targets do not false-block.)
-4. **Exit codes:** `0` = proceed; `1` = **RW ABORTED** (print script output; no version/changelog/kanban edits); `2` = invalid parse/path — treat as blocking.
-5. **Override:** Only after the user **explicitly confirms** the mismatched intent, re-run RW and invoke the script with **`--confirmed-override`**.
+4. **Explicit adoption (`--art`) in any RW mode:**  
+   `python {validator_path} --requested "<token>" --art`  
+   `python {validator_path} --requested "<token>" --mode rw-k --art` (RW -k variant)  
+   Use this when the user intentionally wants the requested task adopted as canonical release anchor.
+5. **Exit codes:** `0` = proceed; `1` = **RW ABORTED** (print script output; no version/changelog/kanban edits); `2` = invalid parse/path — treat as blocking.
+6. **Override:** Only after the user **explicitly confirms** the mismatched intent, re-run RW and invoke the script with **`--confirmed-override`**.
 
 **Relation to FR-060:** Step 1.3–1.4 enforce **mandatory token** and **task doc / COMPLETE**; Step 1.5 adds **context comparison to `version.py`** and **story-typo detection** (BR-056).
 
@@ -592,6 +596,7 @@ WARNING: This step prevents accidental cross-epic contamination and ensures vers
 | `version.py` = `E7:S06:T01`, user `RW E7S5T1` | Exit 1 at Step 1.5, RW ABORTED |
 | Same story, new completed task `T2`, version file still `T1`, user `RW E7S6T2` | Exit 0 at Step 1.5 if `T2` is highest ✅ COMPLETE in Story checklist |
 | `RW -k E6S6T56` while `version.py` differs | Exit 0 at Step 1.5 (`--mode rw-k`) |
+| `RW E5:S01:T72 --art` while `version.py` differs | Exit 0 at Step 1.5 (explicit canonical adoption) |
 
 ---
 
@@ -2004,9 +2009,11 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 3. **EXECUTE:**
    - **Use config path:** Run validators (from config `scripts_path` or fallback `scripts/validation/`):
-     - `python {scripts_path}/validation/validate_branch_context.py --strict` (script automatically reads `rw-config.yaml` if available)
+     - `python {scripts_path}/validation/validate_branch_context.py --strict` (default)
+     - `python {scripts_path}/validation/validate_branch_context.py --strict --requested "<token>" --art` (if RW trigger used `--art`)
      - `python {scripts_path}/validation/validate_changelog_format.py --strict` (script automatically reads `rw-config.yaml` if available)
-     - `python {scripts_path}/validation/validate_version_bump.py --strict` (script automatically reads `rw-config.yaml` if available)
+     - `python {scripts_path}/validation/validate_version_bump.py --strict` (default)
+     - `python {scripts_path}/validation/validate_version_bump.py --strict --requested "<token>" --art` (if RW trigger used `--art`)
      - `python {scripts_path}/changelog/check_changelog_size.py` (script automatically reads `rw-config.yaml` if available)
    - Capture exit codes and output
    - **Note:** `check_changelog_size.py` exit code 1 is expected if threshold exceeded (non-blocking)

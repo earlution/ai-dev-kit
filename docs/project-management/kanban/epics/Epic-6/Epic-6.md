@@ -72,9 +72,9 @@ housekeeping_policy: keep
 
 
 
-- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - **T57** ✅ COMPLETE repo-side **BR-039**; **BR-060** canonical **E2:S01:T09**; T56 BR-056 complete)
+- [ ] **E6:S06 – Feature Requests** - IN PROGRESS (Perpetual - v0.6.6.58+2; T57 complete repo-side BR-039; T58 all-mode `--art` support + follow-up cleanup)
   - Story: [`Story-006-feature-requests.md`](Story-006-feature-requests.md)
-  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), **T57 ✅ COMPLETE (`RW -k` v0.6.6.57+5 / v0.4.704+5 — BR-039 repo)**; **BR-060** → **E2:S01:T09** (stub retains **E6:S06:T60** path; v0.6.6.60+1)
+  - Tasks: T03 ✅ COMPLETE (v0.6.6.3+2 - Apple SDK License Blocking Issue Investigation), T48 ✅ COMPLETE (v0.6.6.3+2 - ICW Task Identifier Argument), T56 ✅ COMPLETE (BR-056 – validate_rw_task_intent + Step 1b; verified 2026-03-25; v0.6.6.56+4), T57 ✅ COMPLETE (`RW -k` v0.6.6.57+5 / v0.4.704+5 — BR-039 repo), T58 ✅ COMPLETE (v0.6.6.58+2 - all-mode RW --art support + follow-up cleanup)
   - **Note:** This is a perpetual maintenance story. New feature requests will create new tasks. Story remains IN PROGRESS even when all current tasks are complete. Renumbered from S05 to S06 as part of repository story migration (E9:S01:T08).
 
 

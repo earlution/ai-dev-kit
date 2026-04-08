@@ -9,6 +9,7 @@ Usage:
   python validate_rw_task_intent.py --requested E7S5T1
   python validate_rw_task_intent.py --requested E7:S06:T02 --version-file src/foo/version.py
   python validate_rw_task_intent.py --requested E6S6T56 --mode rw-k   # kanban init: skip vs version.py
+  python validate_rw_task_intent.py --requested E5:S01:T72 --art       # explicit canonical adoption (all RW modes)
   python validate_rw_task_intent.py --requested E7:S05:T01 --confirmed-override  # after explicit user confirm
 
 See: BR-056, .cursorrules RW Task Intent Guard, release-workflow-agent-execution.md
@@ -183,6 +184,11 @@ def main() -> int:
         action="store_true",
         help="User explicitly confirmed releasing against mismatched context; skip mismatch exit.",
     )
+    parser.add_argument(
+        "--art",
+        action="store_true",
+        help="Adopt requested task as canonical release anchor (explicit intent) in any RW mode.",
+    )
     parser.add_argument("--version-file", type=Path, default=None, help="Override version file path.")
     args = parser.parse_args()
 
@@ -211,6 +217,13 @@ def main() -> int:
     _rc, ve, vs, vt, _vb = vc
     current_fmt = format_est(ve, vs, vt)
     requested_fmt = format_est(rq_e, rq_s, rq_t)
+
+    if args.art:
+        print(
+            "validate_rw_task_intent: --art adoption enabled — "
+            f"accept requested {requested_fmt} as canonical anchor (version.py currently {current_fmt})."
+        )
+        return 0
 
     if args.mode == "rw-k":
         print(

@@ -59,6 +59,8 @@ Orphan `fr-br/*.md` files and inconsistent intake order produced board drift and
 - [FR-073](FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) (intake plan / T73 context).  
 - [FR-072](FR-072-uniform-repository-abstract-space-kanban-rules.md) (future alignment of S00/S01; out of scope for this FR’s deliverable).
 
+**Post-release alignment note (2026-04):** FR-072 Approach D now defines migration/closure behavior for dedicated repository stories. FR-074's KG-R6 semantic placement remains the operative intake rule for new work.
+
 ---
 
 ## Intake Decision

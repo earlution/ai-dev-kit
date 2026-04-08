@@ -30,7 +30,8 @@ Adopters copy **`cursorrules-rw-trigger-section.md`** into their `.cursorrules`;
 - [ ] **Step 1** — `validate_branch_context.py --strict`; non-zero = ABORT; no edits before pass.
 - [ ] **Step 1b (FR-060 / E5:S01:T63)** — Parse `E…S…T…` from the **same user message** as the RW trigger; missing token = **RW ABORTED** (do not substitute `validate_rw_task_intent` without `--requested`).
 - [ ] **Step 1c (FR-060)** — `validate_rw_task_complete.py --requested "<parsed_id>"`; add **`--mode rw-k`** only for **`RW -k`**; non-zero = ABORT.
-- [ ] **Step 1d (BR-056 / E6:S06:T56)** — `validate_rw_task_intent.py --requested "<parsed_id>"`; add **`--mode rw-k`** only for **`RW -k`**; non-zero = ABORT; `--confirmed-override` only after explicit user confirmation.
+- [ ] **Step 1d (BR-056 / E6:S06:T56)** — `validate_rw_task_intent.py --requested "<parsed_id>"`; add **`--mode rw-k`** only for **`RW -k`**; **`--art` allowed in all RW modes** for explicit canonical adoption; non-zero = ABORT; `--confirmed-override` only after explicit user confirmation.
+- [ ] **Step 9 (`--art` propagation)** — when trigger includes `--art`, run Step 9 validators with `--requested "<parsed_id>" --art` on `validate_branch_context.py` and `validate_version_bump.py` so guardrails stay consistent with Step 1d adoption intent.
 - [ ] **Todo templates** — `todo_write` examples list **1b, 1c, 1d** as **separate** todos in correct order (not “intent only” for 1b).
 - [ ] **Step 7** — Scoped Kanban / UKW wording references **FR-038** and `invocation_context` / `rw_step_7` where the full guide does.
 - [ ] **Script paths** — Example commands use `packages/frameworks/workflow mgt/scripts/validation/` (or project-customized paths in consumer repos).
