@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-03-31 (**RW -k E6:S07:T109** v0.6.7.109+1 — BR-059; UKW baseline **v0.6.7.101+37**)
+**Last updated:** 2026-04-08 (**RW -k E6:S07:T101** v0.6.7.101+42 — FR/BR/UXR board reconciliation and metadata/statistics alignment)
 **Version:** v0.6.7.109+1
 **Code:** E6S07
 
@@ -73,7 +73,7 @@ housekeeping_policy: keep
   - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
 
 
-- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+36 – RW -k: Kanban init)
+- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+42 – RW -k: board reconciliation + sync)
   - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
   - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)

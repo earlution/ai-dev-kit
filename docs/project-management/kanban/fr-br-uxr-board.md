@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-07 (RW E6:S07:T101+40 — board sync + validator hardening shipped)
-**Version:** v0.6.7.101+40 (**SemVer** v0.4.638+40)
+**Last Updated:** 2026-04-08 (post-merge board reconciliation; latest row stamps: 2026-04-08 13:26 UTC)
+**Version Context:** v0.6.7.101+40 (**SemVer** v0.4.638+40, last full UKW board-sync anchor)
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -151,18 +151,17 @@ No ongoing FR/BR/UXR items currently.
 - **Bug Reports:** 14  
 - **User Experience Research:** 6
 
-**By Priority:**
+**By Priority (current listed board rows):**
 
-- **Critical:** 1 (BR-037)
-- **High:** 8 (FR-045, FR-047, FR-046, UXR-001, UXR-002, UXR-005, UXR-006, FR-051)
-- **Medium:** 10 (FR-031, FR-035, FR-034, FR-032, FR-030, FR-021, BR-036, BR-035, BR-034, BR-033, UXR-003, UXR-004)
-- **Low:** 52 (remaining items)
+- **Critical:** 3 (BR-039, BR-061, BR-062)
+- **High:** 9 (BR-038, FR-040, FR-045, FR-046, FR-047, UXR-001, UXR-002, UXR-005, UXR-006)
+- **Medium:** 12 (FR-031, FR-035, FR-034, FR-032, FR-030, FR-021, BR-036, BR-035, BR-034, BR-033, UXR-003, UXR-004)
+- **Low:** 47 (remaining listed items)
 
 **By Status:**
 
-- **TODO:** 69
-- **IN PROGRESS:** 1 (BR-037)
-- **COMPLETED:** 0 (tracked in fr-br-uxr-completed.md)
+- Mixed board statuses are in use (`TODO`, `OPEN`, `PENDING`, `PROPOSED`, `ACTIVE`, `IMPLEMENTED`, `COMPLETED`); treat per-row status as source of truth.
+- Completed archival remains tracked in `fr-br-uxr-completed.md`.
 
 ---
 

@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.6.58+2] - 08-04-26
+## [0.6.7.101+42] - 08-04-26
 
-E6:S06:T58 — Change implemented: completed follow-up cleanup after all-mode `--art` rollout by fixing lingering board drift (`E7:S06:T04` stale TODO) and ignoring `SCRATCHPAD.md` in repo hygiene. SemVer **v0.4.700+2**.
+E6:S07:T101 — Change implemented: RW-k perpetual maintenance sync to reconcile FR/BR/UXR board metadata/statistics drift and keep kanban governance surfaces aligned. SemVer **v0.4.701+42**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.58+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+42.md)
 
 ---
