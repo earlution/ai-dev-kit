@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.110+1] - 09-04-26
+## [0.2.1.16+1] - 09-04-26
 
-E6:S07:T110 — Change implemented: UKW now enforces fbuboard parity with deterministic stale-row pruning, temporal-drift normalization, and pre-write concurrency revalidation. SemVer **v0.4.704+1**.
+E2:S01:T16 — Change implemented: RW branch validation now treats `dev` as neutral context (no epic lock), preventing false Step 1 epic-mismatch blockers for valid `--art` flows. SemVer **v0.4.705+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.110+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.16+1.md)
 
 ---

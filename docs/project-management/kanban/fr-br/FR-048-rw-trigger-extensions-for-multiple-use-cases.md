@@ -15,7 +15,8 @@ housekeeping_policy: keep
 **Last updated:** 2026-03-09  
 **Implementation Date:** 2026-03-09  
 **Version:** v0.4.18.1+2  
-**Code:** E2:S?? (TBD)
+**Code:** E2:S01:T14  
+**Implementing Task:** [E2:S01:T14](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T14-rw-trigger-extensions-multiple-use-cases-fr048.md)
 
 ---
 
