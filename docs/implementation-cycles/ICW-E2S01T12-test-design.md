@@ -26,6 +26,7 @@ Validate that explicit `RW E:S:T` flows proceed without manual `version.py` pre-
 1. **Explicit-task no-pre-alignment path (AC-1)**  
    - Input: explicit `E:S:T`, valid branch, stale `version.py` epic.  
    - Expectation: workflow proceeds through early guards without manual file edit prerequisite.
+   - Replay example: `RW E2:S01:T12 --art` while `version.py` is anchored to another epic.
 
 2. **Branch mismatch blocking (AC-2)**  
    - Input: explicit `E:S:T`, invalid branch context.  
@@ -33,7 +34,7 @@ Validate that explicit `RW E:S:T` flows proceed without manual `version.py` pre-
 
 3. **Intent ambiguity blocking (AC-2)**  
    - Input: explicit `E:S:T` conflicting with intent guard conditions.  
-   - Expectation: Step 1d fails unless explicitly permitted by defined adoption semantics.
+   - Expectation: Step 1d fails unless explicitly permitted by defined adoption semantics (`--art` or confirmed override flow).
 
 4. **Typo-risk rejection (AC-2)**  
    - Input: malformed or incorrect task token near valid ID shape.  
@@ -46,6 +47,24 @@ Validate that explicit `RW E:S:T` flows proceed without manual `version.py` pre-
 6. **BR-061 regression replay (AC-4)**  
    - Input: known repro profile from BR-061 (epic switch + explicit task).  
    - Expectation: no false Step 1 friction in valid branch context.
+
+---
+
+## Scenario Set (Required)
+
+1. **Positive path - stale version epic + explicit task**  
+   Expected: passes Step 1/1.3/1.4/1.5 and proceeds to Step 2 without manual `version.py` edits.
+
+2. **Negative path - wrong branch**  
+   Expected: blocked at Step 1 with branch mismatch diagnostics.
+
+3. **Negative path - task intent typo/mismatch**  
+   Expected: blocked at Step 1.5 unless explicitly adopted or confirmed override is provided per policy.
+
+4. **Regression replay fixtures**  
+   - Fixture A: stale epic mismatch from BR-061 repro.
+   - Fixture B: same-story newer completed task progression check.
+   - Fixture C: malformed token near-valid shape (`E2:S0l:T12`, `E2S1T1Z`, etc.).
 
 ---
 
@@ -67,6 +86,7 @@ Validate that explicit `RW E:S:T` flows proceed without manual `version.py` pre-
 4. Add typo/malformed ID negative tests and verify deterministic rejection.
 5. Validate documentation/rule text consistency against implemented flow.
 6. Execute full regression pass for E2:S01 RW validator suite.
+7. Record replay fixture outcomes in task evidence notes for release handoff.
 
 ---
 

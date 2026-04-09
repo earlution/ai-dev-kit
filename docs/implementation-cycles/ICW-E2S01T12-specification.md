@@ -65,6 +65,27 @@ Out of scope:
 
 ---
 
+## Ordering Contract (Pre-Step-2)
+
+The implementation for BR-061 must preserve the mandatory gate sequence while removing false friction:
+
+1. **Step 1 (`validate_branch_context.py --strict`)** remains mandatory and blocking.
+2. **Step 1.3/1.4/1.5** run in canonical order (token required, task releasable, intent guard).
+3. **Explicit `--art` behavior in Step 1.5** may adopt requested `E:S:T` as canonical anchor when intent is explicit.
+4. **Step 2 (version bump/reconciliation)** performs deterministic version file update and persists selected anchor.
+
+This package explicitly forbids bypassing mandatory safety gates to solve BR-061. The fix target is false mismatch friction, not guardrail relaxation.
+
+---
+
+## Re-Baselined Behavioral Expectations
+
+- **Allowed (should proceed):** Explicit valid `RW E:S:T` on a valid branch while `version.py` is stale from a previously active epic/story/task.
+- **Blocked (must fail):** Wrong branch context, ambiguous task intent, malformed/typo task token, unreleasable task doc state for the selected RW mode.
+- **Auditable transition:** Any adoption/reconciliation decision must be visible in validator/workflow logs and documentation.
+
+---
+
 ## Requirement Mapping (T12 AC)
 
 - **AC-1:** `RW E:S:T` on valid target branch does not require manual pre-alignment of `version.py`.
@@ -89,6 +110,7 @@ Out of scope:
 - Explicit task identifier has typo but still resembles a valid ID format.
 - Requested task is valid but task document status/context is non-releasable.
 - Requested task and current anchor diverge in `RW -k` style scenarios requiring strict intent handling.
+- Explicit trigger uses `--art` to intentionally adopt requested task across RW modes.
 
 Boundary policy:
 

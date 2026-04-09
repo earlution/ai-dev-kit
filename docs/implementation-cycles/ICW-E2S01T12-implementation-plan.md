@@ -21,11 +21,13 @@ housekeeping_policy: keep
 
    - Define where explicit `E:S:T` intent becomes authoritative in early RW flow.
    - Ensure ordering composes with Step 1 safety constraints and Step 1d intent guard.
+   - Confirm behavior parity across full RW, `RW -d`, and `RW -k` (including `--art` variants).
 
 2. Implement deterministic reconciliation path
 
    - Add deterministic alignment/reconciliation behavior for stale `version.py` epic in valid explicit-task runs.
    - Keep all actions auditable in validator/workflow logs.
+   - Ensure reconciliation decision is derived from a single authoritative requested anchor to prevent split-brain outcomes.
 
 3. Preserve blocking guardrails
 
@@ -49,6 +51,22 @@ housekeeping_policy: keep
 
 ---
 
+## Deterministic Rollout Controls
+
+1. **Control point A - Precheck completion**
+   - Require successful parse and validation of requested task token before any reconciliation.
+
+2. **Control point B - Guardrail pass**
+   - Require Step 1 and Step 1.5 safety/intent outcomes before applying reconciliation logic.
+
+3. **Control point C - Single-write reconciliation**
+   - Apply one deterministic version-state write per run; avoid incremental speculative edits.
+
+4. **Control point D - Post-write verification**
+   - Re-read version and intent context immediately after write; abort on mismatch.
+
+---
+
 ## Integration Touchpoints
 
 - `packages/frameworks/workflow mgt/scripts/validation/validate_branch_context.py`
@@ -63,6 +81,10 @@ housekeeping_policy: keep
 - Gate behavior updates behind deterministic condition checks and explicit diagnostics.
 - Keep previous validation path available for rapid rollback if safety regressions are observed.
 - On regression detection, revert to prior strict behavior and emit actionable mismatch guidance.
+- Maintain rollback trigger list:
+  - wrong-branch false pass observed,
+  - intent mismatch false pass observed,
+  - non-deterministic version output across identical inputs.
 
 ---
 

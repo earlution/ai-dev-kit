@@ -9,10 +9,11 @@ housekeeping_policy: keep
 # Task E2:S01:T12 - RW explicit task-id version alignment (BR-061)
 
 **Task ID:** E2:S01:T12  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** CRITICAL  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-07 (task created from BR-061 intake)  
+**Last updated:** 2026-04-09 (IPW package refreshed; implementation in progress)  
+**Version Anchor:** v0.2.1.12+1  
 **Version:** v0.2.1.10+5  
 **Code:** E2S01T12
 

@@ -9,6 +9,12 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.1.12+1] - 09-04-26
+
+E2:S01:T12 — Change implemented: refreshed BR-061 implementation planning baseline and advanced task/kboard state to `IN PROGRESS` with explicit ordering, guardrail, and regression-replay contracts. SemVer **v0.4.718+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+1.md)
+
 ## [0.2.1.17+1] - 09-04-26
 
 E2:S01:T17 — Change implemented: created and wired FR-077 + E2:S01:T17 IPW planning package to define canonical task status transition ownership and atomic task-doc/kboard sync intent. SemVer **v0.4.717+1**.
