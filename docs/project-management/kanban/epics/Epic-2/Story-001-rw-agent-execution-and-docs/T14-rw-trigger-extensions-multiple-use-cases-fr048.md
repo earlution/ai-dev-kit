@@ -9,9 +9,12 @@ housekeeping_policy: keep
 # Task E2:S01:T14 - RW trigger extensions for multiple use cases (FR-048)
 
 **Task ID:** E2:S01:T14  
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Created:** 2026-04-09  
+**Last updated:** 2026-04-09 (`v0.2.1.14+1`)  
+**Version:** v0.2.1.14+1  
+**Version Anchor:** ✅ COMPLETE (`v0.2.1.14+1`)  
 **Code:** E2S01T14
 
 ---
@@ -39,10 +42,10 @@ Create canonical task wiring for FR-048 under the semantically correct RW delive
 
 ## Acceptance Criteria
 
-- [ ] FR-048 has `Implementing Task` pointing to `E2:S01:T14`.
-- [ ] Task is housed under `Epic-2/Story-001-rw-agent-execution-and-docs`.
-- [ ] Story checklist row exists for `E2:S01:T14`.
-- [ ] Task references FR-048.
+- [x] FR-048 has `Implementing Task` pointing to `E2:S01:T14`.
+- [x] Task is housed under `Epic-2/Story-001-rw-agent-execution-and-docs`.
+- [x] Story checklist row exists for `E2:S01:T14`.
+- [x] Task references FR-048.
 
 ---
 

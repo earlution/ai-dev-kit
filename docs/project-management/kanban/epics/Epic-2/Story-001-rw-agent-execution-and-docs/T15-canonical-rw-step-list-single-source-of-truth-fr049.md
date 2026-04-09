@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Task E2:S01:T15 - Canonical RW step list single source of truth (FR-049)
 
 **Task ID:** E2:S01:T15  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Created:** 2026-04-09  
 **Code:** E2S01T15
