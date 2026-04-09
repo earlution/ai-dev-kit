@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **FR ID:** FR-059  
 **Status:** PROPOSED  
-**Version:** v0.4.8.7+1  
+**Version:** v0.2.8.8+1  
 
 **Implementing Task:** [E2:S08:T08](../epics/Epic-2/Story-008-harden-release-workflow-reliability/T08-enhanced-workflow-forensic-logging-and-rollback-hardening-fr-059.md)
 **Priority:** HIGH  

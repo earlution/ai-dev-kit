@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 008 – Harden Release Workflow Reliability
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-10  
-**Last updated:** 2025-12-15 (v0.2.8.7+1 – T07 complete: Task)
-**Version:** v0.2.8.7+1
+**Last updated:** 2026-04-09 (v0.2.8.8+1 – Kanban documentation setup)
+**Version:** v0.2.8.8+1
 **Completed:** 2025-12-15
 **Code:** E2S08
 
@@ -55,7 +55,7 @@ Improve Release Workflow reliability by:
 
 ### E2:S08:T00 – Story creation and FR-015 intake
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** FR-015  
 **Blocker:** None
@@ -77,7 +77,7 @@ Improve Release Workflow reliability by:
 
 ### E2:S08:T01 – Analyze atomic steps for deterministic vs agentic approach
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T00  
 **Blocker:** None
@@ -147,7 +147,7 @@ Created comprehensive analysis document (`packages/frameworks/workflow mgt/docs/
 
 ### E2:S08:T02 – Create framework-agnostic Kanban update script
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T01  
 **Blocker:** None
@@ -220,7 +220,7 @@ Created framework-agnostic Kanban update script (`packages/frameworks/workflow m
 
 ### E2:S08:T03 – Make Step 7 mandatory and blocking
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T02  
 **Blocker:** None
@@ -273,7 +273,7 @@ Updated `release-workflow.yaml` Step 7 configuration to harden Kanban docs updat
 
 ### E2:S08:T04 – Add validation step for Kanban updates
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T03  
 **Blocker:** None
@@ -351,7 +351,7 @@ Enhanced `update_kanban_docs.py` validation function to implement comprehensive 
 
 ### E2:S08:T05 – Implement error handling and recovery guidance
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T04  
 **Blocker:** None
@@ -438,7 +438,7 @@ Enhanced `update_kanban_docs.py` with comprehensive error handling and recovery 
 
 ### E2:S08:T06 – Update RW documentation and agent execution guide
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T05  
 **Blocker:** None
@@ -499,7 +499,7 @@ Updated Release Workflow agent execution guide (`packages/frameworks/workflow mg
 
 ### E2:S08:T07 – Testing and validation
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Dependencies:** E2:S08:T06  
 **Blocker:** None

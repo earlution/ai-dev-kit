@@ -9,7 +9,8 @@ housekeeping_policy: keep
 # Task E2:S08:T08 - Enhanced Workflow Forensic Logging and Rollback Hardening (FR-059)
 
 **Task ID:** E2:S08:T08  
-**Status:** TODO  
+**Status:** COMPLETE  
+**Version Anchor:** v0.2.8.8+1  
 **Priority:** HIGH  
 **Feature Request:** [FR-059](../../../fr-br/FR-059-enhanced-workflow-logging-system.md)
 

@@ -9,6 +9,12 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.8.8+1] - 09-04-26
+
+E2:S08:T08 — Change implemented: aligned kboard/fbuboard task parity with purpose-descriptive MoSCOW task rows and finalized release anchor tracking for FR-059 task doc. SemVer **v0.4.716+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.8.8+1.md)
+
 ## [0.4.8.7+2] - 09-04-26
 
 E4:S08:T07 — Change implemented: IPW package created for FR-011 with durable specification, test-design, and implementation-plan artifacts linked to task traceability. SemVer **v0.4.715+2**.
