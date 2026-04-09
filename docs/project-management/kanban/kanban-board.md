@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – Kanban Board
 
 **Last Updated:** 2026-04-08 (RW -k: E6:S07:T101)
-**Version:** v0.6.7.101+42
+**Version:** v0.6.7.101+43
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
@@ -53,7 +53,7 @@ housekeeping_policy: keep
 
 - **E6:S06:T56** – RW Ambiguous Task Identifier Typo Risk - IN PROGRESS (HIGH priority; BR-056 fix landed v0.6.6.56+3 — verify agent `RW E7S5T1` vs `E7:S06:T01` before closing) - [Task Document](epics/Epic-6/Story-006-feature-requests/T56-rw-ambiguous-task-identifier-typo-risk.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | [BR-056](fr-br/BR-056-rw-ambiguous-task-identifier-typo-risk.md) | Last modified: 2026-04-08 13:26 UTC
 
-- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+42, Last updated: 2026-04-08) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-08 15:05 UTC
+- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+43, Last updated: 2026-04-08) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-08 15:25 UTC
 
 - **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+6, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-08 13:26 UTC
 

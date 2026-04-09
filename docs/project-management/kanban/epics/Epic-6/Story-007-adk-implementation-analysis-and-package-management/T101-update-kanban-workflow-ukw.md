@@ -11,16 +11,16 @@ housekeeping_policy: keep
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
 **Task ID:** E6:S07:T101  
-**Last updated:** 2026-04-08 (RW -k E6:S07:T101+42 — FR/BR/UXR board reconciliation + metadata/statistics alignment; SemVer **v0.4.701+42**)  
+**Last updated:** 2026-04-08 (RW -k E6:S07:T101+43 — BR-061 disambiguation + task cross-wire normalization on FR/BR board; SemVer **v0.4.702+43**)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+42
+**Version:** v0.6.7.101+43
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High BUILD numbers are expected and valid.
 
-**Progress:** RW -k 2026-04-08 (v0.6.7.101+42): Reconciled `fr-br-uxr-board.md` drift (header date/context + priority statistics + status summary wording) so board metadata matches listed rows. Prior: RW 2026-04-08 (v0.6.7.101+41) closed E7:S06:T03 Kanban status drift by removing stale active TODO row from `kanban-board.md`; v0.6.7.101+40 board sync + full `--art` perpetual + `dev` branch guard.  
+**Progress:** RW -k 2026-04-08 (v0.6.7.101+43): Normalized BR-061 representation on `fr-br-uxr-board.md` by adding task cross-wire for RW BR-061 and disambiguated row for SemVer/task_touch BR-061. Prior: RW -k 2026-04-08 (v0.6.7.101+42) reconciled board metadata/stats drift; RW 2026-04-08 (v0.6.7.101+41) closed E7:S06:T03 Kanban status drift.  
 **Code:** E6S07T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).

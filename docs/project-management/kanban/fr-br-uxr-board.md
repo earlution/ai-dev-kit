@@ -38,7 +38,7 @@ This board provides **centralized visibility and prioritization** for all open F
 ### Must Have (M) - Critical Items
 
 - **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | Last modified: 2026-04-08 13:26 UTC
-- **BR-061** – RW explicit `E:S:T` blocked by Step 1 when `version.py` epic ≠ branch epic - TODO (**CRITICAL**, **release blocker** — manual `version.py` alignment required before `RW E:S:T`; undermines single-command intent) - [BR-061](fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md) | Last modified: 2026-04-08 13:26 UTC
+- **BR-061 (RW explicit task-id alignment)** – RW explicit `E:S:T` blocked by Step 1 when `version.py` epic ≠ branch epic - TODO (**CRITICAL**, **release blocker** — manual `version.py` alignment required before `RW E:S:T`; undermines single-command intent) - [BR-061](fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md) | [E2:S01:T12](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md) | Last modified: 2026-04-08 13:26 UTC
 - **BR-062** – RW `-k` `kanban_init` leaves completed tasks in in-progress kboard list - TODO (**CRITICAL**, **consistency bug** — completed task rows remain in active MoSCoW board after release closeout) - [BR-062](fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md) | Last modified: 2026-04-08 13:26 UTC
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | Last modified: 2026-04-08 13:26 UTC
 
@@ -109,6 +109,7 @@ This board provides **centralized visibility and prioritization** for all open F
 - **FR-003** – Dependency Tracking in Adopting Projects - TODO (LOW, Dependency tracking for project adoption) - [FR-003](fr-br/FR-003-dependency-tracking-in-adopting-projects.md) | Last modified: 2026-04-08 13:26 UTC
 - **FR-002** – Update Been There README - TODO (LOW, Update README for been-there functionality) - [FR-002](fr-br/FR-002-update-been-there-readme.md) | Last modified: 2026-04-08 13:26 UTC
 - **BR-010** – RW Doc-Init Detection Bug Story Task Docs Batch Creation - TODO (LOW, Bug in RW doc-init detection for story/task docs) - [BR-010](fr-br/BR-010-rw-doc-init-detection-bug-story-task-docs-batch-creation.md) | Last modified: 2026-04-08 13:26 UTC
+- **BR-061 (SemVer task_touch counter)** – Task-touch SemVer PATCH increments too often on converter runs - TODO (LOW, numbering/versioning mapping defect; separate from RW explicit task-id BR-061) - [BR-061](fr-br/BR-061-semver-task-touch-counter-increments-too-often.md) | [E3:S02:T12](epics/Epic-3/Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md) | Last modified: 2026-04-08 13:26 UTC
 - **BR-009** – Installer Discoverability and Documentation - TODO (LOW, Installer discoverability issues) - [BR-009](fr-br/BR-009-installer-discoverability-and-documentation.md) | Last modified: 2026-04-08 13:26 UTC
 - **BR-008** – Arbitrary 80 Threshold Contradicts Agentic Intelligence - TODO (LOW, Arbitrary threshold contradicts agentic approach) - [BR-008](fr-br/BR-008-arbitrary-80-threshold-contradicts-agentic-intelligence.md) | Last modified: 2026-04-08 13:26 UTC
 - **BR-007** – Multiple Bugs Kanban Package Installation - TODO (LOW, Multiple bugs in kanban package installation) - [BR-007](fr-br/BR-007-multiple-bugs-kanban-package-installation.md) | Last modified: 2026-04-08 13:26 UTC
@@ -162,6 +163,10 @@ No ongoing FR/BR/UXR items currently.
 
 - Mixed board statuses are in use (`TODO`, `OPEN`, `PENDING`, `PROPOSED`, `ACTIVE`, `IMPLEMENTED`, `COMPLETED`); treat per-row status as source of truth.
 - Completed archival remains tracked in `fr-br-uxr-completed.md`.
+
+**Disambiguation Note:**
+
+- `BR-061` currently exists as two legacy records (RW explicit task-id alignment, and SemVer task_touch counter behavior). Board rows include qualifiers and direct task links to prevent cross-wiring confusion.
 
 ---
 

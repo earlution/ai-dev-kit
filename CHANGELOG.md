@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+42] - 08-04-26
+## [0.6.7.101+43] - 08-04-26
 
-E6:S07:T101 — Change implemented: RW-k perpetual maintenance sync to reconcile FR/BR/UXR board metadata/statistics drift and keep kanban governance surfaces aligned. SemVer **v0.4.701+42**.
+E6:S07:T101 — Change implemented: follow-up RW-k maintenance release to normalize FR/BR board BR-061 cross-wiring/disambiguation and preserve traceable task links. SemVer **v0.4.702+43**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+42.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+43.md)
 
 ---
