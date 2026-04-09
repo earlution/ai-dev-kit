@@ -9,6 +9,12 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.7.111+1] - 09-04-26
+
+E6:S07:T111 — Change implemented: strict install event-contract logging (`intent` / `action` / `result`), `logs validate-install-log`, docs, and tests for FR-078 (AC verification pending post-release). SemVer **v0.4.721+1**. Release uses **`--art`** canonical anchor adoption from prior `version.py` context.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.111+1.md)
+
 ## [0.4.8.7+2] - 09-04-26
 
 E4:S08:T07 — Change implemented: IPW package created for FR-011 with durable specification, test-design, and implementation-plan artifacts linked to task traceability. SemVer **v0.4.715+2**.

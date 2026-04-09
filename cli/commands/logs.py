@@ -7,9 +7,8 @@ install runs based on logs/ai-dev-kit/install/ contents.
 
 import argparse
 import json
-import os
 from pathlib import Path
-from typing import List, Dict
+from typing import Any, Dict, List, Optional, Tuple
 
 from cli.commands import BaseCommand
 from cli.config import Config
@@ -43,6 +42,24 @@ class LogsCommand(BaseCommand):
             help="Maximum number of runs to show (default: 10)",
         )
 
+        validate = subparsers.add_parser(
+            "validate-install-log",
+            help="Validate install JSON logs against event contract",
+            description="Validate JSON install logs (event_contract, step_id, install_run_id).",
+        )
+        validate.add_argument(
+            "--file",
+            type=str,
+            default=None,
+            help="Specific install log file path to validate",
+        )
+        validate.add_argument(
+            "--limit",
+            type=int,
+            default=1,
+            help="How many recent log files to validate when --file is not provided (default: 1)",
+        )
+
     def execute(self) -> int:
         if not self.args.logs_command:
             print_error("No logs subcommand specified (e.g. 'ai-dev-kit logs install-history').")
@@ -50,6 +67,8 @@ class LogsCommand(BaseCommand):
 
         if self.args.logs_command == "install-history":
             return self._install_history()
+        if self.args.logs_command == "validate-install-log":
+            return self._validate_install_log()
 
         print_error(f"Unknown logs subcommand: {self.args.logs_command}")
         return 1
@@ -154,6 +173,111 @@ class LogsCommand(BaseCommand):
             "frameworks": ", ".join(frameworks) if frameworks else "?",
             "status": status,
         }
+
+    def _validate_install_log(self) -> int:
+        project_root = get_project_root()
+        if project_root is None:
+            project_root = Path.cwd()
+
+        config = Config(project_root / ".ai-dev-kit.yaml")
+        default_rel = config.get("install_logging.path", "logs/ai-dev-kit/install")
+        log_dir = (project_root / default_rel).resolve()
+
+        files_to_validate: List[Path] = []
+        if getattr(self.args, "file", None):
+            target = Path(self.args.file)
+            if not target.is_absolute():
+                target = (project_root / target).resolve()
+            files_to_validate = [target]
+        else:
+            if not log_dir.exists():
+                print_error(f"No install logs directory found at {log_dir}")
+                return 1
+            limit = max(1, int(getattr(self.args, "limit", 1)))
+            logs = sorted(log_dir.glob("install-*.log"))
+            files_to_validate = list(reversed(logs))[:limit]
+
+        if not files_to_validate:
+            print_error("No install log files found to validate.")
+            return 1
+
+        total_errors = 0
+        for log_file in files_to_validate:
+            file_errors = self._validate_single_install_log(log_file, project_root)
+            total_errors += file_errors
+
+        if total_errors > 0:
+            print_error(f"Validation failed with {total_errors} error(s).")
+            return 1
+
+        print_info("Install log validation passed.")
+        return 0
+
+    def _validate_single_install_log(self, log_file: Path, project_root: Path) -> int:
+        if not log_file.exists():
+            print_error(f"Log file not found: {log_file}")
+            return 1
+
+        try:
+            lines = log_file.read_text(encoding="utf-8").splitlines()
+        except Exception as exc:
+            print_error(f"Unable to read log file {log_file}: {exc}")
+            return 1
+
+        errors = 0
+        checked = 0
+        for idx, line in enumerate(lines, start=1):
+            if not line.strip():
+                continue
+            try:
+                entry = json.loads(line)
+            except Exception:
+                print_error(f"{log_file}:{idx}: not valid JSON line")
+                errors += 1
+                continue
+
+            checked += 1
+            ok, reason = self._validate_json_event_entry(entry)
+            if not ok:
+                print_error(f"{log_file}:{idx}: {reason}")
+                errors += 1
+
+        rel = str(log_file)
+        try:
+            rel = str(log_file.relative_to(project_root))
+        except Exception:
+            pass
+
+        if checked == 0:
+            print_error(f"{rel}: no JSON log entries found")
+            return errors + 1
+
+        if errors == 0:
+            print_info(f"{rel}: OK ({checked} entries)")
+        return errors
+
+    def _validate_json_event_entry(self, entry: Dict[str, Any]) -> Tuple[bool, Optional[str]]:
+        if "install_run_id" not in entry:
+            return False, "missing install_run_id"
+        if "step_id" not in entry:
+            return False, "missing step_id"
+
+        contract = entry.get("event_contract")
+        if not isinstance(contract, dict):
+            return False, "missing event_contract object"
+
+        intent = contract.get("intent")
+        action = contract.get("action")
+        result = contract.get("result")
+        if not isinstance(intent, dict) or not intent.get("summary"):
+            return False, "missing event_contract.intent.summary"
+        if not isinstance(action, dict) or not action.get("summary"):
+            return False, "missing event_contract.action.summary"
+        if not isinstance(result, dict) or not result.get("status"):
+            return False, "missing event_contract.result.status"
+        if not isinstance(result, dict) or not result.get("details"):
+            return False, "missing event_contract.result.details"
+        return True, None
 
     def _summarise_text_log(self, content: str) -> Dict[str, str]:
         time = "?"

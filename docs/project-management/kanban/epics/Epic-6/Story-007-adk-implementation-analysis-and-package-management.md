@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-04-09 (v0.6.7.101+45 – Kanban documentation setup)
-**Version:** v0.6.7.101+45
+**Last updated:** 2026-04-09 (v0.6.7.111+1 – T111 FR-078 install event-contract release)
+**Version:** v0.6.7.111+1
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -119,6 +119,13 @@ housekeeping_policy: keep
 - [x] **E6:S07:T110 – UKW fbuboard scope + concurrency/temporal-drift controls** - ✅ COMPLETE (HIGH, v0.6.7.110+1 — UKW fbuboard parity + drift/concurrency controls released)
   - Task: [`T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md`](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md) | [FR-076](../../fr-br/FR-076-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
   - **Coordinates:** [E6:S07:T101](T101-update-kanban-workflow-ukw.md) (UKW perpetual), [E6:S07:T108](T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
+
+
+- [ ] **E6:S07:T111 – Comprehensive install event-contract logging quality** - IN PROGRESS (CRITICAL, v0.6.7.111+1 — FR-078 install contract shipped; post-release AC verification pending)
+  - Task: [`T111-comprehensive-install-event-contract-logging-and-feedback-quality.md`](T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [FR-078](../../fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md)
+
+- [ ] **E6:S07:T112 – Install feedback submission path and governance** - TODO (CRITICAL, convert local telemetry into safe, deterministic feedback submissions for maintainer triage)
+  - Task: [`T112-install-feedback-submission-path-and-governance.md`](T112-install-feedback-submission-path-and-governance.md) | [FR-079](../../fr-br/FR-079-install-feedback-submission-path-and-governance.md)
 
 
 ---

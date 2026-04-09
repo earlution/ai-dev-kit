@@ -90,6 +90,7 @@ Receipts are generated only when installs are performed from a consumer repo (pr
 ```
 
 Key requirements:
+
 - `install_run_id` is globally unique (timestamp + random suffix).
 - `nonce` + `signature` allow the maintainer API to detect tampering.
 - `submitted` flips to `true` when the client agent successfully reports the receipt back.
@@ -100,11 +101,14 @@ Key requirements:
 
 1. **Install frameworks** via GitHub Release (see installation guide).
 2. **Locate receipt** in `logs/ai-dev-kit/install/`.
-3. **Invoke client agent action**:
+3. **Validate install telemetry first**:
+   - `ai-dev-kit logs validate-install-log --limit 1`
+   - This ensures the latest JSON install log has required event-contract and correlation fields before submission.
+4. **Invoke client agent action**:
    - `ai-dev-kit receipt submit --file logs/ai-dev-kit/install/receipt-*.json`
    - Or use REST endpoint `POST /api/install-receipts` with JSON body.
-4. **Server verifies** HMAC signature, checks for duplicate `install_run_id`, stores telemetry.
-5. **Ack** returned to client and logged in receipt (`"submitted": true`).
+5. **Server verifies** HMAC signature, checks for duplicate `install_run_id`, stores telemetry.
+6. **Ack** returned to client and logged in receipt (`"submitted": true`).
 
 ---
 

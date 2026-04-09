@@ -18,6 +18,8 @@ from pathlib import Path
 import pytest
 
 from cli.commands.install import InstallCommand
+from cli.config import Config
+from cli.logging import close_install_logger, create_install_logger
 
 
 class TestInstallLoggingEnabled:
@@ -203,6 +205,81 @@ install_logging:
             assert saw_header, "expected an install.main header entry in JSON log"
         finally:
             os.chdir(original_cwd)
+
+    def test_json_log_lines_include_event_contract_and_correlation(self, temp_project_dir: Path):
+        """JSON logs include event_contract triad and step correlation fields."""
+        config_content = """version: "1.0.0"
+default_backend: "git-submodule"
+frameworks: {}
+install_logging:
+  enabled: true
+  path: "logs/ai-dev-kit/install"
+  format: json
+"""
+        (temp_project_dir / ".ai-dev-kit.yaml").write_text(config_content)
+        log_dir = temp_project_dir / "logs" / "ai-dev-kit" / "install"
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(temp_project_dir)
+            args = argparse.Namespace(
+                frameworks=["kanban"],
+                backend=None,
+                path=None,
+                dry_run=True,
+                log_path=None,
+                no_install_log=False,
+            )
+            command = InstallCommand(args)
+            command.execute()
+            logs = sorted(log_dir.glob("install-*.log"))
+            assert logs, "expected at least one JSON log file"
+            entries = [
+                json.loads(line)
+                for line in logs[-1].read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ]
+            assert entries, "expected JSON log entries"
+            for entry in entries:
+                assert "install_run_id" in entry
+                assert "step_id" in entry
+                assert "event_contract" in entry
+                contract = entry["event_contract"]
+                assert "intent" in contract
+                assert "action" in contract
+                assert "result" in contract
+        finally:
+            os.chdir(original_cwd)
+
+    def test_strict_event_contract_rejects_invalid_event_payload(self, temp_project_dir: Path):
+        """When strict_event_contract=true, malformed event payload should raise ValueError."""
+        config_content = """version: "1.0.0"
+default_backend: "git-submodule"
+frameworks: {}
+install_logging:
+  enabled: true
+  path: "logs/ai-dev-kit/install"
+  format: json
+  strict_event_contract: true
+"""
+        config_path = temp_project_dir / ".ai-dev-kit.yaml"
+        config_path.write_text(config_content)
+        config = Config(config_path)
+        args = argparse.Namespace(log_path=None, no_install_log=False)
+        log, log_dir, _log_file, fh = create_install_logger(temp_project_dir, config, args)
+        try:
+            with pytest.raises(ValueError, match="event_contract.intent.summary is required"):
+                log(
+                    "INFO",
+                    "install.main",
+                    "bad event",
+                    event={
+                        "intent": {},
+                        "action": {"summary": "x"},
+                        "result": {"status": "ok", "details": "x"},
+                    },
+                )
+        finally:
+            close_install_logger(fh, log_dir, config)
 
 
 class TestInstallLogRedaction:
