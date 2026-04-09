@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.1.14+1] - 09-04-26
+## [0.2.1.15+1] - 09-04-26
 
-E2:S01:T14 — Change implemented: canonical FR-048 task traceability wiring completed under Story 001. SemVer **v0.4.706+1**.
+E2:S01:T15 — Change implemented: canonical FR-049 task traceability wiring completed under Story 001. SemVer **v0.4.707+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.14+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.15+1.md)
 
 ---

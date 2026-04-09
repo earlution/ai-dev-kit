@@ -8,13 +8,13 @@ housekeeping_policy: keep
 
 # FR-049: Canonical RW Step List - Single Source of Truth
 
-**Status:** ✅ **IMPLEMENTED**  
+**Status:** ✅ **COMPLETE**  
 **Priority:** HIGH - Prevents duplication and drift in RW step definitions  
 **Estimated Effort:** Completed  
 **Created:** 2026-03-09  
-**Last updated:** 2026-03-09  
+**Last updated:** 2026-04-09  
 **Implementation Date:** 2026-03-09  
-**Version:** v0.4.18.1+2  
+**Version:** v0.2.1.15+1  
 **Code:** E2:S01:T15  
 **Implementing Task:** [E2:S01:T15](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T15-canonical-rw-step-list-single-source-of-truth-fr049.md)
 

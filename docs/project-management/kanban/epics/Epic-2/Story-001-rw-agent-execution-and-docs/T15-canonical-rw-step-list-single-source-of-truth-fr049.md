@@ -9,9 +9,12 @@ housekeeping_policy: keep
 # Task E2:S01:T15 - Canonical RW step list single source of truth (FR-049)
 
 **Task ID:** E2:S01:T15  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Created:** 2026-04-09  
+**Last updated:** 2026-04-09 (`v0.2.1.15+1`)  
+**Version:** v0.2.1.15+1  
+**Version Anchor:** ✅ COMPLETE (`v0.2.1.15+1`)  
 **Code:** E2S01T15
 
 ---
@@ -39,10 +42,10 @@ Create canonical task wiring for FR-049 under the semantically correct RW delive
 
 ## Acceptance Criteria
 
-- [ ] FR-049 has `Implementing Task` pointing to `E2:S01:T15`.
-- [ ] Task is housed under `Epic-2/Story-001-rw-agent-execution-and-docs`.
-- [ ] Story checklist row exists for `E2:S01:T15`.
-- [ ] Task references FR-049.
+- [x] FR-049 has `Implementing Task` pointing to `E2:S01:T15`.
+- [x] Task is housed under `Epic-2/Story-001-rw-agent-execution-and-docs`.
+- [x] Story checklist row exists for `E2:S01:T15`.
+- [x] Task references FR-049.
 
 ---
 
