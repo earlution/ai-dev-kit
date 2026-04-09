@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.1.15+1] - 09-04-26
+## [0.2.1.14+2] - 09-04-26
 
-E2:S01:T15 — Change implemented: canonical FR-049 task traceability wiring completed under Story 001. SemVer **v0.4.707+1**.
+E2:S01:T14 — Change implemented: durable IPW planning package added under implementation cycles with bidirectional host-task wiring and explicit T15 follow-up delta. SemVer **v0.4.709+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.15+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.14+2.md)
 
 ---
