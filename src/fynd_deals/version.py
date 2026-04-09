@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 2      # Epic number (Epic 2: workflow management framework)
 VERSION_STORY = 1     # Story number (Story 1: RW agent execution and docs)
 VERSION_TASK = 12     # Task number (T12: RW explicit task-id version alignment)
-VERSION_BUILD = 1     # Build number (first release for T12)
+VERSION_BUILD = 2     # Build number (second release for T12)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.1.12+1 = Development, Epic 2, Story 1, Task 12
+# Current: 0.2.1.12+2 = Development, Epic 2, Story 1, Task 12
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

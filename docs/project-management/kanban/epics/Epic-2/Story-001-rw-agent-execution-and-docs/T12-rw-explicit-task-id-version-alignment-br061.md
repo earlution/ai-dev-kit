@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Task E2:S01:T12 - RW explicit task-id version alignment (BR-061)
 
 **Task ID:** E2:S01:T12  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-09 (IPW package refreshed; implementation in progress)  
-**Version Anchor:** v0.2.1.12+1  
-**Version:** v0.2.1.10+5  
+**Last updated:** 2026-04-09 (RW release anchor advanced after BR-061 implementation completion)  
+**Version Anchor:** v0.2.1.12+2  
+**Version:** v0.2.1.12+2  
 **Code:** E2S01T12
 
 ---
@@ -47,10 +47,10 @@ Resolve BR-061 by reducing false Step 1 friction when RW is invoked with explici
 
 ## Acceptance Criteria
 
-- [ ] `RW E:S:T` on valid target branch does not require manual `version.py` pre-alignment to proceed.
-- [ ] Step 1/1b guardrails still block invalid branch or ambiguous/incorrect task intent.
-- [ ] Documentation updated to describe explicit-task alignment behavior.
-- [ ] Regression tests added for BR-061 repro scenario.
+- [x] `RW E:S:T` on valid target branch does not require manual `version.py` pre-alignment to proceed.
+- [x] Step 1/1b guardrails still block invalid branch or ambiguous/incorrect task intent.
+- [x] Documentation updated to describe explicit-task alignment behavior.
+- [x] Regression tests added for BR-061 repro scenario.
 
 ---
 

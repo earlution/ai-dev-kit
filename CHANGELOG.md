@@ -9,17 +9,11 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.1.12+1] - 09-04-26
+## [0.4.8.7+2] - 09-04-26
 
-E2:S01:T12 — Change implemented: refreshed BR-061 implementation planning baseline and advanced task/kboard state to `IN PROGRESS` with explicit ordering, guardrail, and regression-replay contracts. SemVer **v0.4.718+1**.
+E4:S08:T07 — Change implemented: IPW package created for FR-011 with durable specification, test-design, and implementation-plan artifacts linked to task traceability. SemVer **v0.4.715+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+1.md)
-
-## [0.2.1.17+1] - 09-04-26
-
-E2:S01:T17 — Change implemented: created and wired FR-077 + E2:S01:T17 IPW planning package to define canonical task status transition ownership and atomic task-doc/kboard sync intent. SemVer **v0.4.717+1**.
-
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.8.7+2.md)
 
 ## [0.2.8.8+1] - 09-04-26
 
@@ -27,10 +21,22 @@ E2:S08:T08 — Change implemented: aligned kboard/fbuboard task parity with purp
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.8.8+1.md)
 
-## [0.4.8.7+2] - 09-04-26
+## [0.2.1.17+1] - 09-04-26
 
-E4:S08:T07 — Change implemented: IPW package created for FR-011 with durable specification, test-design, and implementation-plan artifacts linked to task traceability. SemVer **v0.4.715+2**.
+E2:S01:T17 — Change implemented: created and wired FR-077 + E2:S01:T17 IPW planning package to define canonical task status transition ownership and atomic task-doc/kboard sync intent. SemVer **v0.4.717+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.8.7+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+1.md)
+
+## [0.2.1.12+2] - 09-04-26
+
+E2:S01:T12 — Change implemented: completed BR-061 by enabling explicit requested-task Step 1 reconciliation for stale `version.py` contexts while preserving wrong-branch and intent guard blocking. SemVer **v0.4.720+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+2.md)
+
+## [0.2.1.12+1] - 09-04-26
+
+E2:S01:T12 — Change implemented: refreshed BR-061 implementation planning baseline and advanced task/kboard state to `IN PROGRESS` with explicit ordering, guardrail, and regression-replay contracts. SemVer **v0.4.718+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+1.md)
 
 ---

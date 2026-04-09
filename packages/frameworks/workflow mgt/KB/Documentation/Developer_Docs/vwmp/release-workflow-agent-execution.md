@@ -378,17 +378,21 @@ story_doc_pattern = config.get('story_doc_pattern') if config and config.get('us
 
 2. **DETERMINE:**
    - **MANDATORY ACTION:** Run `validate_branch_context.py` with `--strict` flag
-   - **Command:** `python {validator_path} --strict`
+   - **Command (default):** `python {validator_path} --strict`
+   - **Command (explicit task-id trigger):** `python {validator_path} --strict --requested "<token>"`
+   - **Command (explicit task-id + adoption):** `python {validator_path} --strict --requested "<token>" --art`
    - **Expected Behavior:**
      - Exit code 0 = PASS (branch and work align)
      - Exit code 1 = FAIL (branch and work do not align)
    - **CRITICAL:** If validator script is missing or cannot be executed, workflow MUST STOP
 
 3. **EXECUTE:**
-   - **MANDATORY:** Execute validator script:
+   - **MANDATORY:** Execute validator script with the same trigger context used by the user:
      ```bash
      python {validator_path} --strict
      ```
+   - If user supplied explicit `E:S:T`, include `--requested "<token>"` so Step 1 can evaluate explicit-task reconciliation safely before Step 2.
+   - If user supplied `--art`, pass `--art` to Step 1 validator as well.
    - **Capture exit code:** Store the exit code from validator execution
    - **Capture output:** Store validator output for error messages
    - **DO NOT MODIFY FILES:** This step runs BEFORE any file modifications
@@ -520,7 +524,7 @@ RW is NOT complete. Workflow stopped at Step 1.
   - ✅ `VERSION_TASK = 1` → PASS
   - ❌ `VERSION_TASK = 2` → FAIL (should be 1)
 
-WARNING: This step prevents accidental cross-epic contamination and ensures version numbers match branch context. If this check fails, DO NOT proceed with the workflow. Fix the branch alignment first.
+WARNING: This step prevents accidental cross-epic contamination while allowing explicit-task pre-Step-2 reconciliation for stale `version.py` contexts. If this check fails, DO NOT proceed with the workflow. Fix branch/intent alignment first.
 
 ---
 
