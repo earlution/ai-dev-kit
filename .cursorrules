@@ -534,6 +534,13 @@ For each step, follow this pattern:
    - **If combined flags:** Run specified operations
    - **CRITICAL:** Use `sort_kanban_board.py` to sort epics/stories numerically before writing to board
    - **CRITICAL:** MoSCOW prioritization requires **🧠 INTELLIGENT PRIORITIZATION** - analyze context, dependencies, impact
+   - **CRITICAL:** `fr-br-uxr-board.md` (fbuboard) is required UKW scope for comprehensive/bookkeeping runs; do not treat as best-effort
+   - **CRITICAL:** Apply deterministic fbuboard active-row reconciliation:
+     - Prune active MoSCOW rows whose linked FR/BR/UXR doc status is terminal (`COMPLETE`, `COMPLETED`, `IMPLEMENTED`, `FIXED`, `RESOLVED`)
+     - Keep explicit unresolved-verification exceptions active (e.g., status includes `IN PROGRESS`, `UNVERIFIED`, `PENDING VERIFICATION`)
+   - **CRITICAL:** Apply temporal-drift normalization in the same pass (board `Last Updated` + active row terminal timestamps)
+   - **CRITICAL:** Apply pre-write concurrency revalidation (if board changed mid-run, re-read latest content and re-apply transforms before write)
+   - **CRITICAL:** Document reconciliation stats (audited rows, removed rows, kept exceptions, timestamps normalized, revalidation trigger)
 7. **Validate Consistency** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** Cross-reference status across all kanban documents, verify version consistency, check link integrity
 8. **Stage Files** - **Always runs:** Run `git add` for all kanban files
 9. **Document Changes** - **Always runs:** Create summary of updated documents, list key status changes

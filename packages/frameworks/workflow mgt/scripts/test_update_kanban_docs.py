@@ -415,6 +415,65 @@ def test_4_2_kanban_init_prunes_stale_completed_row():
     return run_test("Test 4.2: kanban_init prune stale complete row", setup, test)
 
 
+def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
+    """Test 4.3: fbuboard reconciliation removes terminal rows but keeps unresolved exceptions."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        kb_dir = test_dir / "docs" / "project-management" / "kanban"
+        frbr_dir = kb_dir / "fr-br"
+        frbr_dir.mkdir(parents=True, exist_ok=True)
+
+        # Source docs
+        (frbr_dir / "FR-900-terminal.md").write_text(
+            "# FR-900\n\n**Status:** IMPLEMENTED\n",
+            encoding="utf-8",
+        )
+        (frbr_dir / "BR-901-exception.md").write_text(
+            "# BR-901\n\n**Status:** IN PROGRESS (product verification pending; linked task COMPLETE)\n",
+            encoding="utf-8",
+        )
+
+        board = kb_dir / "fr-br-uxr-board.md"
+        board.write_text(
+            """# FR Board
+
+**Last Updated:** 2026-04-01 (old)
+
+## MoSCOW Prioritized FR/BR/UXR Items
+
+### Must Have (M) - Critical Items
+
+- **FR-900** – terminal row - TODO - [FR-900](fr-br/FR-900-terminal.md) | Last modified: 2026-04-01 10:00 UTC
+- **BR-901** – exception row - TODO - [BR-901](fr-br/BR-901-exception.md) | Last modified: 2026-04-01 10:00 UTC
+""",
+            encoding="utf-8",
+        )
+        (kb_dir / "kanban-board.md").write_text("# Kanban\n\n## MoSCOW Prioritized In-Progress Tasks\n", encoding="utf-8")
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        changes = mod.enforce_terminal_timestamps_on_boards(Path(test_dir), dry_run=False)
+        board = Path(test_dir) / "docs" / "project-management" / "kanban" / "fr-br-uxr-board.md"
+        updated = board.read_text(encoding="utf-8")
+
+        if "FR-900" in updated:
+            return False, "Terminal FR row should have been pruned from active section"
+        if "BR-901" not in updated:
+            return False, "Exception BR row should have been preserved in active section"
+        if "fbuboard sync; latest row stamps:" not in updated:
+            return False, "Board Last Updated header should be normalized for temporal drift"
+        if not any("fbuboard reconciliation:" in c for c in changes):
+            return False, "Expected fbuboard reconciliation stats in change log"
+        return True, ""
+
+    return run_test("Test 4.3: fbuboard reconciliation", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -533,6 +592,14 @@ def main():
         else:
             print(f"❌ Test 4.2: kanban_init prune stale complete row - FAILED: {error}")
             test_results['failed'].append("4.2")
+
+        success, error = test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception()
+        if success:
+            print("✅ Test 4.3: fbuboard reconciliation - PASSED")
+            test_results['passed'].append("4.3")
+        else:
+            print(f"❌ Test 4.3: fbuboard reconciliation - FAILED: {error}")
+            test_results['failed'].append("4.3")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:

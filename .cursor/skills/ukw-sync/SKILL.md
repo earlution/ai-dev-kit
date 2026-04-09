@@ -76,6 +76,17 @@ The MoSCOW priority list is updated LAST.
 - Remove completed items from active board
 - Cross-reference FR/BR/UXR status with associated task completion
 - Validate FR/BR/UXR to task relationship integrity
+- Treat fbuboard sync as required scope in comprehensive and bookkeeping paths
+- Apply deterministic active-row reconciliation:
+  - Prune active rows when linked status is terminal (COMPLETE/COMPLETED/IMPLEMENTED/FIXED/RESOLVED)
+  - Keep explicit unresolved-verification exceptions active (e.g., status includes IN PROGRESS/UNVERIFIED)
+- Enforce temporal-drift normalization:
+  - Align board `Last Updated` metadata with terminal row timestamps in same pass
+  - Normalize active row suffix to `| Last modified: YYYY-MM-DD HH:MM UTC`
+- Apply concurrency guard:
+  - Revalidate board content just before write
+  - If drift detected (file changed mid-run), re-read latest content and re-apply transforms before final write
+- Emit reconciliation summary (audited, removed, kept exceptions, timestamps normalized)
 
 **Step 8: FR/BR/UXR Temporal Tracking**
 - Add ISO 8601 completion timestamps to fr-br-uxr-completed.md

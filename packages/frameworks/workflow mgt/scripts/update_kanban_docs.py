@@ -22,6 +22,7 @@ Usage:
 """
 
 import argparse
+import hashlib
 import os
 import re
 import sys
@@ -977,6 +978,97 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
     return "\n".join(out_lines)
 
 
+def _is_terminal_frbr_status(status_text: str) -> bool:
+    """Return True if FR/BR/UXR status is terminal and safe to prune."""
+    if not status_text:
+        return False
+    upper = status_text.upper()
+    has_terminal = bool(re.search(r"\bCOMPLETE(?:D)?\b|\bIMPLEMENTED\b|\bFIXED\b|\bRESOLVED\b", upper))
+    if not has_terminal:
+        return False
+
+    # Exception guard: keep rows active if status explicitly signals unresolved validation/product verification.
+    unresolved_markers = [
+        "UNVERIFIED",
+        "PENDING VERIFICATION",
+        "VERIFICATION PENDING",
+        "IN PROGRESS",
+        "ACTIVE",
+        "OPEN",
+        "REOPENED",
+        "TODO",
+    ]
+    return not any(marker in upper for marker in unresolved_markers)
+
+
+def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestamp_value: str) -> Tuple[str, Dict[str, int]]:
+    """
+    Cleanup active MoSCOW rows in fr-br-uxr-board.md by removing terminal items.
+    Also normalizes active-row terminal timestamps and board header metadata.
+    """
+    lines = board_content.split("\n")
+    cleaned: List[str] = []
+    section = None
+    active_sections = {"must", "should", "could", "ongoing"}
+    stats = {
+        "audited": 0,
+        "removed": 0,
+        "kept_exception": 0,
+        "timestamp_normalized": 0,
+    }
+
+    ts_pattern = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
+    frbr_link_pattern = re.compile(r"\((fr-br/[^)]+\.md)\)")
+
+    for line in lines:
+        stripped = line.strip()
+
+        if stripped.startswith("### Must Have"):
+            section = "must"
+        elif stripped.startswith("### Should Have"):
+            section = "should"
+        elif stripped.startswith("### Could Have"):
+            section = "could"
+        elif stripped.startswith("### Ongoing"):
+            section = "ongoing"
+        elif stripped.startswith("### Won't Have"):
+            section = "wont"
+
+        if section in active_sections and stripped.startswith("- **"):
+            stats["audited"] += 1
+            normalized_line = ts_pattern.sub(f"| Last modified: {timestamp_value}", line) if ts_pattern.search(line) else f"{line} | Last modified: {timestamp_value}"
+            if normalized_line != line:
+                stats["timestamp_normalized"] += 1
+            line = normalized_line
+
+            link_match = frbr_link_pattern.search(line)
+            if link_match:
+                doc_path = board_path.parent / link_match.group(1)
+                if doc_path.exists():
+                    doc_content = doc_path.read_text(encoding="utf-8", errors="ignore")
+                    status_match = re.search(r"\*\*Status:\*\*\s*([^\n]+)", doc_content)
+                    status_text = status_match.group(1).strip() if status_match else ""
+                    if _is_terminal_frbr_status(status_text):
+                        stats["removed"] += 1
+                        continue
+                    if re.search(r"\bCOMPLETE(?:D)?\b|\bIMPLEMENTED\b|\bFIXED\b|\bRESOLVED\b", status_text.upper()):
+                        stats["kept_exception"] += 1
+
+        cleaned.append(line)
+
+    updated = "\n".join(cleaned)
+    updated = re.sub(r"\n{3,}", "\n\n", updated)
+
+    # Temporal drift normalization for board-level metadata.
+    today = datetime.now().strftime("%Y-%m-%d")
+    header_pattern = re.compile(r"(\*\*Last Updated:\*\*)\s*(.+?)(?:\n|$)", re.IGNORECASE)
+    header_value = f"{today} (fbuboard sync; latest row stamps: {timestamp_value})"
+    if header_pattern.search(updated):
+        updated = header_pattern.sub(rf"\1 {header_value}\n", updated)
+
+    return updated, stats
+
+
 def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = False) -> List[str]:
     """
     Enforce terminal row timestamps on both active boards:
@@ -994,11 +1086,39 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
         if not board.exists():
             continue
         original = board.read_text()
-        updated = enforce_moscow_row_timestamps(original, timestamp_now)
+        pre_hash = hashlib.sha256(original.encode("utf-8")).hexdigest()
+
+        if board.name == "fr-br-uxr-board.md":
+            updated, stats = _cleanup_fbuboard_active_rows(original, board, timestamp_now)
+            # Ensure timestamp normalization still applies uniformly for all MoSCOW rows.
+            updated = enforce_moscow_row_timestamps(updated, timestamp_now)
+        else:
+            updated = enforce_moscow_row_timestamps(original, timestamp_now)
+            stats = None
+
         if updated != original:
+            # Concurrency-safe revalidation before final write.
+            live = board.read_text()
+            live_hash = hashlib.sha256(live.encode("utf-8")).hexdigest()
+            if live_hash != pre_hash:
+                # Re-apply transforms to latest content to avoid stale writes.
+                if board.name == "fr-br-uxr-board.md":
+                    updated, stats = _cleanup_fbuboard_active_rows(live, board, timestamp_now)
+                    updated = enforce_moscow_row_timestamps(updated, timestamp_now)
+                else:
+                    updated = enforce_moscow_row_timestamps(live, timestamp_now)
+                changes.append(f"Concurrency revalidation: board changed during run, re-applied transforms: {board}")
+
             if not dry_run:
                 board.write_text(updated)
             changes.append(f"Enforced terminal row timestamps: {board}")
+            if stats is not None:
+                changes.append(
+                    "fbuboard reconciliation: "
+                    f"audited={stats['audited']}, removed={stats['removed']}, "
+                    f"kept_exceptions={stats['kept_exception']}, "
+                    f"timestamps_normalized={stats['timestamp_normalized']}"
+                )
     return changes
 
 
