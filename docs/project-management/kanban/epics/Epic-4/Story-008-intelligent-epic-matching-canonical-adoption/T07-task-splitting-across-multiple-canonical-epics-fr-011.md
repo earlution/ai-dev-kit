@@ -25,6 +25,9 @@ Implement task-level split planning so mixed-responsibility source epics can map
 
 - Existing semantic epic matching in Story 008 (FR-009 lineage).  
 - [FR-011](../../../fr-br/FR-011-task-splitting-multiple-canonical-epics.md) requirements and acceptance criteria.
+- [ICW-E4S08T07-specification](../../../../implementation-cycles/ICW-E4S08T07-specification.md)
+- [ICW-E4S08T07-test-design](../../../../implementation-cycles/ICW-E4S08T07-test-design.md)
+- [ICW-E4S08T07-implementation-plan](../../../../implementation-cycles/ICW-E4S08T07-implementation-plan.md)
 
 ---
 
@@ -48,3 +51,12 @@ Implement task-level split planning so mixed-responsibility source epics can map
 
 - Depends on: E4:S08 semantic matching baseline.
 - Related: FR-009, FR-011.
+
+---
+
+## Links
+
+- Feature Request: [FR-011](../../../fr-br/FR-011-task-splitting-multiple-canonical-epics.md)
+- Planning artifact: [ICW-E4S08T07-specification](../../../../implementation-cycles/ICW-E4S08T07-specification.md)
+- Planning artifact: [ICW-E4S08T07-test-design](../../../../implementation-cycles/ICW-E4S08T07-test-design.md)
+- Planning artifact: [ICW-E4S08T07-implementation-plan](../../../../implementation-cycles/ICW-E4S08T07-implementation-plan.md)

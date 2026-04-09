@@ -11,8 +11,8 @@ housekeeping_policy: keep
 **Status:** IN PROGRESS
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-09 (v0.4.8.7+1 – Kanban documentation setup)
-**Version:** v0.4.8.7+1
+**Last updated:** 2026-04-09 (v0.4.8.7+2 – Kanban documentation setup)
+**Version:** v0.4.8.7+2
 **Code:** E4S08
 
 ---

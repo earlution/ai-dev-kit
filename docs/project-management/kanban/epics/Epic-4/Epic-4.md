@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-04-09 (v0.4.8.7+1 – Story 8 Task 7 complete)
+**Last updated:** 2026-04-09 (v0.4.8.7+2 – Story 8 Task 7 complete)
 **Branch:** `epic/4-kanban-framework`  
 **Version Schema:** `0.4.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -136,7 +136,7 @@ It ensures that:
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-09 (v0.4.8.7+1 – Story 8 Task 7 complete)
+**Last updated:** 2026-04-09 (v0.4.8.7+2 – Story 8 Task 7 complete)
 
 **Goal:**  
 Fully align the dev-kit Kanban board, stories, and governance policy with the Kanban framework package. Establish `ai-dev-kit` as the canonical SoT for Kanban policies, templates, and governance.
@@ -157,7 +157,7 @@ Fully align the dev-kit Kanban board, stories, and governance policy with the Ka
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-09 (v0.4.8.7+1 – Story 8 Task 7 complete)
+**Last updated:** 2026-04-09 (v0.4.8.7+2 – Story 8 Task 7 complete)
 
 **Goal:**  
 Design and implement a clear, actionable flow for converting incoming Feature Requests (FRs) and Bug Reports (BRs) into Kanban Tasks. This story ensures that all work entering the dev-kit is properly structured, tracked, and aligned with the Kanban → Versioning → Release Workflow system.
@@ -179,7 +179,7 @@ Design and implement a clear, actionable flow for converting incoming Feature Re
 **Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-09 (v0.4.8.7+1 – Story 8 Task 7 complete)
+**Last updated:** 2026-04-09 (v0.4.8.7+2 – Story 8 Task 7 complete)
 
 **Goal:**  
 Ensure seamless integration between Kanban, Versioning, and Release Workflow (RW) systems within the dev-kit. This story validates that the three frameworks work together cohesively, providing end-to-end traceability from Feature Requests/Bug Reports through Kanban Tasks to versioned releases.

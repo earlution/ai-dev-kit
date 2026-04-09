@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.8.7+1] - 09-04-26
+## [0.4.8.7+2] - 09-04-26
 
-E4:S08:T07 — Change implemented: intake backfill completed for previously taskless FR/BR items with semantic task housing, including new task filings for FR-011 and FR-059. SemVer **v0.4.714+1**.
+E4:S08:T07 — Change implemented: IPW package created for FR-011 with durable specification, test-design, and implementation-plan artifacts linked to task traceability. SemVer **v0.4.715+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.8.7+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.8.7+2.md)
 
 ---
