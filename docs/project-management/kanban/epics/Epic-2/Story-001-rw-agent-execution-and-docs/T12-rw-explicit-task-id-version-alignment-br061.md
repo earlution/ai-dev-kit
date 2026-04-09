@@ -30,6 +30,9 @@ Resolve BR-061 by reducing false Step 1 friction when RW is invoked with explici
 - `packages/frameworks/workflow mgt/scripts/validation/validate_branch_context.py`
 - `packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py`
 - RW execution docs and `.cursorrules` trigger semantics
+- [ICW-E2S01T12-specification](../../../../implementation-cycles/ICW-E2S01T12-specification.md)
+- [ICW-E2S01T12-test-design](../../../../implementation-cycles/ICW-E2S01T12-test-design.md)
+- [ICW-E2S01T12-implementation-plan](../../../../implementation-cycles/ICW-E2S01T12-implementation-plan.md)
 
 ---
 
@@ -54,3 +57,6 @@ Resolve BR-061 by reducing false Step 1 friction when RW is invoked with explici
 
 - [BR-061](../../../fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md)
 - [Story E2:S01](../Story-001-rw-agent-execution-and-docs.md)
+- [ICW-E2S01T12-specification](../../../../implementation-cycles/ICW-E2S01T12-specification.md)
+- [ICW-E2S01T12-test-design](../../../../implementation-cycles/ICW-E2S01T12-test-design.md)
+- [ICW-E2S01T12-implementation-plan](../../../../implementation-cycles/ICW-E2S01T12-implementation-plan.md)

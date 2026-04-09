@@ -9,6 +9,12 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.1.17+1] - 09-04-26
+
+E2:S01:T17 — Change implemented: created and wired FR-077 + E2:S01:T17 IPW planning package to define canonical task status transition ownership and atomic task-doc/kboard sync intent. SemVer **v0.4.717+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+1.md)
+
 ## [0.2.8.8+1] - 09-04-26
 
 E2:S08:T08 — Change implemented: aligned kboard/fbuboard task parity with purpose-descriptive MoSCOW task rows and finalized release anchor tracking for FR-059 task doc. SemVer **v0.4.716+1**.
