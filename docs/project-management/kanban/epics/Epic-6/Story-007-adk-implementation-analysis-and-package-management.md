@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-04-09 (v0.6.7.110+1 – Kanban documentation setup)
-**Version:** v0.6.7.110+1
+**Last updated:** 2026-04-09 (v0.6.7.101+44 – Kanban documentation setup)
+**Version:** v0.6.7.101+44
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -188,7 +188,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** HIGH
 **Dependencies:** None
 **Estimated Effort:** Small
-**Version:** v0.6.7.110+1
+**Version:** v0.6.7.101+44
 
 **Input:** User requirements, existing comprehensive project analysis framework
 
@@ -216,7 +216,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T00
 **Estimated Effort:** VERY LARGE
-**Version:** v0.6.7.110+1
+**Version:** v0.6.7.101+44
 
 **Input:**
 
@@ -1137,6 +1137,6 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2026-04-09 (v0.6.7.110+1 – Kanban documentation setup)
-**Version:** v0.6.7.110+1
+**Last Updated:** 2026-04-09 (v0.6.7.101+44 – Kanban documentation setup)
+**Version:** v0.6.7.101+44
 **Status:** IN PROGRESS
