@@ -9,6 +9,8 @@ housekeeping_policy: keep
 # Feature Request FR-050 – UKW Extension for FR/BR/UXR Temporal Tracking and Synchronization
 
 **Status:** TODO  
+
+**Implementing Task:** [E6:S07:T108](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
 **Priority:** HIGH  
 **Estimated Effort:** Medium (3-4 days)  
 **Created:** 2026-03-11  

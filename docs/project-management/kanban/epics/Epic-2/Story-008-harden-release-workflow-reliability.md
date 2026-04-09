@@ -47,6 +47,7 @@ Improve Release Workflow reliability by:
 - [x] **E2:S08:T05 – Implement error handling and recovery guidance** ✅ COMPLETE (v0.2.8.5+1)
 - [x] **E2:S08:T06 – Update RW documentation and agent execution guide** ✅ COMPLETE (v0.2.8.6+1)
 - [x] **E2:S08:T07 – Testing and validation** ✅ COMPLETE (v0.2.8.7+1)
+- [ ] **E2:S08:T08 – FR-059: Enhanced workflow forensic logging and rollback hardening** - TODO
 
 ---
 

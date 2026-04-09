@@ -14,6 +14,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Status:** PENDING  
+
+**Implementing Task:** [E4:S09:T05](../epics/Epic-4/Story-009-bug-fixes-and-agentic-intelligence.md)
 **GitHub Issue:** [#10](https://github.com/earlution/ai-dev-kit/issues/10)
 
 ---

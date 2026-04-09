@@ -14,6 +14,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Status:** PENDING
 
+**Implementing Task:** [E21:S00:T01](../epics/Epic-21/Story-000-language-selection-at-setup.md)
+
 ---
 
 ## Summary

@@ -13,6 +13,8 @@ housekeeping_policy: keep
 **Submitted By:** AI Agent (Cursor) acting as user/client for dev-toolkit  
 **Priority:** HIGH  
 **Status:** ACCEPTED  
+
+**Implementing Task:** [E4:S07:T02](../epics/Epic-4/Story-007-migration-support-and-installation-modes.md)
 **GitHub Issue:** [#3](https://github.com/earlution/ai-dev-kit/issues/3)
 
 ---

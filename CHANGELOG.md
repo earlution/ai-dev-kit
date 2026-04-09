@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+45] - 09-04-26
+## [0.4.8.7+1] - 09-04-26
 
-E6:S07:T101 — Change implemented: repo-wide open-task status sweep synchronized task/status truth across task docs, story checklists, and active Kanban board rows. SemVer **v0.4.713+45**.
+E4:S08:T07 — Change implemented: intake backfill completed for previously taskless FR/BR items with semantic task housing, including new task filings for FR-011 and FR-059. SemVer **v0.4.714+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+45.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.8.7+1.md)
 
 ---

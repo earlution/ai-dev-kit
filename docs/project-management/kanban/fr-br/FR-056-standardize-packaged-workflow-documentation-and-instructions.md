@@ -15,6 +15,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** TODO
 
+**Implementing Task:** [E5:S01:T56](../epics/Epic-5/Story-001-fr-repo/T56-standardize-packaged-workflow-documentation-and-instructions.md)
+
 ---
 
 ## Summary

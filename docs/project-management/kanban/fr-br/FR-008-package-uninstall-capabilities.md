@@ -13,6 +13,8 @@ housekeeping_policy: keep
 **Submitted By:** AI Agent (Cursor) acting as user/client for dev-toolkit  
 **Priority:** HIGH  
 **Status:** ACCEPTED  
+
+**Implementing Task:** [E2:S06:T01](../epics/Epic-2/Story-006-package-uninstall-and-recovery.md)
 **GitHub Issue:** [#5](https://github.com/earlution/ai-dev-kit/issues/5)
 
 ---

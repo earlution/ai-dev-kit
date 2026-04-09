@@ -9,6 +9,8 @@ housekeeping_policy: keep
 # FR-050: Workflows Directory Structure Reorganization
 
 **Status:** 🟡 **PENDING INTAKE**  
+
+**Implementing Task:** [E6:S07:T107](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T107-workflows-directory-structure-reorganization.md)
 **Priority:** MEDIUM - Improve organization and maintainability of workflow definitions  
 **Estimated Effort:** Medium  
 **Created:** 2026-03-09  
