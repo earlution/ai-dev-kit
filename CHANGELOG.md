@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.1.14+2] - 09-04-26
+## [0.2.1.15+2] - 09-04-26
 
-E2:S01:T14 — Change implemented: durable IPW planning package added under implementation cycles with bidirectional host-task wiring and explicit T15 follow-up delta. SemVer **v0.4.709+2**.
+E2:S01:T15 — Change implemented: durable IPW planning package added for FR-049 with bidirectional host-task wiring and implementation-cycle readiness checks. SemVer **v0.4.710+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.14+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.15+2.md)
 
 ---

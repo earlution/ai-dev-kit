@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Created:** 2026-03-09  
 **Last updated:** 2026-04-09  
 **Implementation Date:** 2026-03-09  
-**Version:** v0.2.1.15+1  
+**Version:** v0.2.1.15+2  
 **Code:** E2:S01:T15  
 **Implementing Task:** [E2:S01:T15](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T15-canonical-rw-step-list-single-source-of-truth-fr049.md)
 
