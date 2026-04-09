@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+43] - 08-04-26
+## [0.6.7.101+44] - 09-04-26
 
-E6:S07:T101 — Change implemented: follow-up RW-k maintenance release to normalize FR/BR board BR-061 cross-wiring/disambiguation and preserve traceable task links. SemVer **v0.4.702+43**.
+E6:S07:T101 — Change implemented: RW-k maintenance release to remove stale completed entries from active FR/BR/UXR MoSCOW sections and keep active-board priority interpretation row-driven. SemVer **v0.4.702+44**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+43.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+44.md)
 
 ---
