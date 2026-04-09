@@ -9,10 +9,10 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+44] - 09-04-26
+## [0.6.7.101+45] - 09-04-26
 
-E6:S07:T101 — Change implemented: repo-wide open-task status sweep synchronized task/status truth across task docs, story checklists, and active Kanban board rows. SemVer **v0.4.712+44**.
+E6:S07:T101 — Change implemented: repo-wide open-task status sweep synchronized task/status truth across task docs, story checklists, and active Kanban board rows. SemVer **v0.4.713+45**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+44.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+45.md)
 
 ---
