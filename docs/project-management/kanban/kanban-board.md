@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-09 (RW: E6:S7:T111, `--art`)
-**Version:** v0.6.7.111+1
+**Last Updated:** 2026-04-10 (RW: E6:S7:T111, `--art`)
+**Version:** v0.6.7.111+2
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
@@ -26,7 +26,7 @@ housekeeping_policy: keep
 ### Must Have (M) - Critical Tasks
 
 - **E2:S01:T12** – RW explicit task-id version alignment guardrails (BR-061) - ✅ COMPLETE (CRITICAL fix delivered; explicit-request reconciliation with safety guards intact) - [Task Document](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md) | [Story](epics/Epic-2/Story-001-rw-agent-execution-and-docs.md) | Last modified: 2026-04-09 15:24 UTC
-- **E6:S07:T111** – Comprehensive install event-contract logging quality (FR-078) - IN PROGRESS (CRITICAL — **v0.6.7.111+1** shipped: install JSON contract + `validate-install-log`; FR-078 AC verification pending) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-09 16:53 UTC
+- **E6:S07:T111** – Comprehensive install event-contract logging quality (FR-078) - ✅ COMPLETE (CRITICAL — **v0.6.7.111+1** delivered strict install JSON contract + `validate-install-log`; verification complete) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-10 00:00 UTC
 - **E6:S07:T112** – Install feedback submission path and governance (FR-079) - TODO (CRITICAL close-the-loop feedback submission quality and triage governance) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T112-install-feedback-submission-path-and-governance.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-09 16:20 UTC
 
 ### Should Have (S) - Important Tasks

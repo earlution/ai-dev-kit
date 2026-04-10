@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
-**Status:** IN PROGRESS
+**Status:** COMPLETE
 
 **Implementing Task:** [E6:S07:T111](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T111-comprehensive-install-event-contract-logging-and-feedback-quality.md)
 
@@ -42,29 +42,29 @@ For shippable quality, the install telemetry model must answer:
 
 ### Functional Requirements
 
-- [ ] **FR-078-F1:** Define and enforce a canonical install event schema (`intent`, `action`, `result`) for all install pipeline events.
-- [ ] **FR-078-F2:** Require deterministic per-step correlation metadata (`install_run_id`, `step_id`, parent/child relation, timestamp, actor/component).
-- [ ] **FR-078-F3:** Capture all major and sub-steps in CLI and framework-specific installers under one linked run graph (or explicitly linked child logs with guaranteed join keys).
-- [ ] **FR-078-F4:** Record explicit decision points and branches (selected mode/backend/path, fallback/retry behavior, skip reasons, guard checks).
-- [ ] **FR-078-F5:** Persist per-step result payloads including status, duration, exit code, validation outcomes, and normalized error categories.
-- [ ] **FR-078-F6:** Produce a deterministic local install run artifact optimized for forensic analysis, with enough detail for maintainers to reproduce and triage.
+- [x] **FR-078-F1:** Define and enforce a canonical install event schema (`intent`, `action`, `result`) for all install pipeline events.
+- [x] **FR-078-F2:** Require deterministic per-step correlation metadata (`install_run_id`, `step_id`, parent/child relation, timestamp, actor/component).
+- [x] **FR-078-F3:** Capture all major and sub-steps in CLI and framework-specific installers under one linked run graph (or explicitly linked child logs with guaranteed join keys).
+- [x] **FR-078-F4:** Record explicit decision points and branches (selected mode/backend/path, fallback/retry behavior, skip reasons, guard checks).
+- [x] **FR-078-F5:** Persist per-step result payloads including status, duration, exit code, validation outcomes, and normalized error categories.
+- [x] **FR-078-F6:** Produce a deterministic local install run artifact optimized for forensic analysis, with enough detail for maintainers to reproduce and triage.
 
 ### Non-Functional Requirements
 
-- [ ] **FR-078-NF1:** Maintain strong redaction and secret-safety guarantees for logs and local artifacts.
-- [ ] **FR-078-NF2:** Keep logging overhead acceptable for normal installs with bounded storage and rotation behavior.
-- [ ] **FR-078-NF3:** Preserve backward compatibility for existing text logs while adding a strict machine-readable event stream (JSONL/event objects).
-- [ ] **FR-078-NF4:** Ensure partial-failure resilience: incomplete installs still emit complete event history up to the failure boundary.
+- [x] **FR-078-NF1:** Maintain strong redaction and secret-safety guarantees for logs and local artifacts.
+- [x] **FR-078-NF2:** Keep logging overhead acceptable for normal installs with bounded storage and rotation behavior.
+- [x] **FR-078-NF3:** Preserve backward compatibility for existing text logs while adding a strict machine-readable event stream (JSONL/event objects).
+- [x] **FR-078-NF4:** Ensure partial-failure resilience: incomplete installs still emit complete event history up to the failure boundary.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Running `ai-dev-kit install` emits event entries where every step can be reconstructed as `intent -> action -> result`.
-- [ ] A validator (or tests) fails when required event fields are missing for any emitted step.
-- [ ] Install traces across CLI + framework installers can be joined deterministically into one run timeline.
-- [ ] Generated local run artifacts include enough normalized detail for maintainers' triage and reproduction workflows.
-- [ ] Redaction tests confirm no secrets are emitted in event payloads.
+- [x] Running `ai-dev-kit install` emits event entries where every step can be reconstructed as `intent -> action -> result`.
+- [x] A validator (or tests) fails when required event fields are missing for any emitted step.
+- [x] Install traces across CLI + framework installers can be joined deterministically into one run timeline.
+- [x] Generated local run artifacts include enough normalized detail for maintainers' triage and reproduction workflows.
+- [x] Redaction tests confirm no secrets are emitted in event payloads.
 
 ---
 
@@ -89,7 +89,9 @@ For shippable quality, the install telemetry model must answer:
 
 ## Release / verification traceability
 
-- **v0.6.7.111+1** (SemVer **v0.4.721+1**, E6:S07:T111, RW with `--art`): Change implemented for strict install JSON event contract, CLI instrumentation, `ai-dev-kit logs validate-install-log`, user docs, and tests. **FR-078 remains IN PROGRESS** until acceptance criteria are exercised and confirmed in a maintainer environment.
+- **v0.6.7.111+1** (SemVer **v0.4.721+1**, E6:S07:T111, RW with `--art`): Change implemented for strict install JSON event contract, CLI instrumentation, `ai-dev-kit logs validate-install-log`, user docs, and tests.
+- **2026-04-10 verification:** `tests/cli/test_install_logging.py` + `tests/cli/test_logs_command.py` passed (11/11), including strict contract validation and redaction-focused checks.
+- **v0.6.7.111+2** (SemVer **v0.4.722+2**, E6:S07:T111, RW with `--art`): Verification closure release documenting FR/T111 completion and board synchronization.
 
 ---
 

@@ -121,7 +121,7 @@ housekeeping_policy: keep
   - **Coordinates:** [E6:S07:T101](T101-update-kanban-workflow-ukw.md) (UKW perpetual), [E6:S07:T108](T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
 
 
-- [ ] **E6:S07:T111 – Comprehensive install event-contract logging quality** - IN PROGRESS (CRITICAL, v0.6.7.111+1 — FR-078 install contract shipped; post-release AC verification pending)
+- [x] **E6:S07:T111 – Comprehensive install event-contract logging quality** - ✅ COMPLETE (CRITICAL, v0.6.7.111+1 — FR-078 install contract + validator + verification complete on 2026-04-10)
   - Task: [`T111-comprehensive-install-event-contract-logging-and-feedback-quality.md`](T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [FR-078](../../fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md)
 
 - [ ] **E6:S07:T112 – Install feedback submission path and governance** - TODO (CRITICAL, convert local telemetry into safe, deterministic feedback submissions for maintainer triage)

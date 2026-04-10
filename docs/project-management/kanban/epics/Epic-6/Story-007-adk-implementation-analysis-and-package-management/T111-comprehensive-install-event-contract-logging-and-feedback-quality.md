@@ -9,13 +9,13 @@ housekeeping_policy: keep
 # Epic 6, Story 7, Task 111: Comprehensive install event-contract logging quality
 
 **Task ID:** E6:S07:T111  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2026-04-09  
 **Code:** E6S07T111
 
-**Implementation note:** Released **v0.6.7.111+1** (SemVer **v0.4.721+1**): CLI install JSON event contract, strict option, `ai-dev-kit logs validate-install-log`, tests/docs. Task remains **IN PROGRESS** until FR-078 acceptance criteria are verified post-release.
+**Implementation note:** Released **v0.6.7.111+1** (SemVer **v0.4.721+1**): CLI install JSON event contract, strict option, `ai-dev-kit logs validate-install-log`, tests/docs. Verification closure recorded in **v0.6.7.111+2** (SemVer **v0.4.722+2**).
 
 **Upstream:** [FR-078 - Comprehensive install event-contract logging quality](../../../fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md)
 
@@ -45,12 +45,19 @@ housekeeping_policy: keep
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** Every install step and sub-step is reconstructable as `intent -> action -> result`.
-- [ ] **AC2:** Correlation fields (`install_run_id`, `step_id`, parent/child linkage) allow deterministic timeline reconstruction.
-- [ ] **AC3:** Missing mandatory event fields are caught by automated validation/tests.
-- [ ] **AC4:** Result payloads include normalized status, timing, exit, and validation details.
-- [ ] **AC5:** Local run artifacts contain quality signals sufficient for maintainers to analyze and reproduce install behavior.
-- [ ] **AC6:** Redaction tests pass and confirm no secrets are emitted.
+- [x] **AC1:** Every install step and sub-step is reconstructable as `intent -> action -> result`.
+- [x] **AC2:** Correlation fields (`install_run_id`, `step_id`, parent/child linkage) allow deterministic timeline reconstruction.
+- [x] **AC3:** Missing mandatory event fields are caught by automated validation/tests.
+- [x] **AC4:** Result payloads include normalized status, timing, exit, and validation details.
+- [x] **AC5:** Local run artifacts contain quality signals sufficient for maintainers to analyze and reproduce install behavior.
+- [x] **AC6:** Redaction tests pass and confirm no secrets are emitted.
+
+---
+
+## Verification evidence (2026-04-10)
+
+- `python -m pytest tests/cli/test_install_logging.py tests/cli/test_logs_command.py -q` → 11 passed
+- `python -m pytest tests/cli/test_install_logging.py -q -k "strict_event_contract or include_event_contract or redaction"` → 4 passed
 
 ---
 

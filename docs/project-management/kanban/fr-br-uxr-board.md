@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-09 (RW: E6:S7:T111 + fbuboard row sync; row stamps: 2026-04-09 16:53 UTC)
-**Version Context:** v0.6.7.111+1 (**SemVer** v0.4.721+1, RW `--art` anchor)
+**Last Updated:** 2026-04-10 (RW: E6:S7:T111 verification closure + fbuboard row sync)
+**Version Context:** v0.6.7.111+2 (**SemVer** v0.4.722+2, RW `--art` anchor)
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -40,7 +40,7 @@ This board provides **centralized visibility and prioritization** for all open F
 - **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | Last modified: 2026-04-09 15:40 UTC
 - **BR-061 (RW explicit task-id alignment)** – RW explicit `E:S:T` Step 1 false-friction resolved via explicit-request reconciliation while preserving cross-epic and intent guard blocking - ✅ COMPLETE (**CRITICAL** fix delivered) - [BR-061](fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md) | [E2:S01:T12](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md) | Last modified: 2026-04-09 15:24 UTC
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | Last modified: 2026-04-09 15:40 UTC
-- **FR-078** – Comprehensive install event-contract logging quality - IN PROGRESS (CRITICAL — **v0.6.7.111+1** / SemVer **v0.4.721+1**: contract + validation command landed; AC verification pending) - [FR-078](fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [E6:S07:T111](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | Last modified: 2026-04-09 16:53 UTC
+- **FR-078** – Comprehensive install event-contract logging quality - ✅ COMPLETE (CRITICAL — **v0.6.7.111+1** / SemVer **v0.4.721+1**: contract + validation command landed; verification complete) - [FR-078](fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [E6:S07:T111](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | Last modified: 2026-04-10 00:00 UTC
 - **FR-079** – Install feedback submission path and governance - PROPOSED (CRITICAL, establish safe deterministic submission and triage path for external install feedback) - [FR-079](fr-br/FR-079-install-feedback-submission-path-and-governance.md) | [E6:S07:T112](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T112-install-feedback-submission-path-and-governance.md) | Last modified: 2026-04-09 16:20 UTC
 
 ---
