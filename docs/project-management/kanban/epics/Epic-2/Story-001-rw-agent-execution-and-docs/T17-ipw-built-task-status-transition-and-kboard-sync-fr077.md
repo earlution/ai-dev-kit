@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Version Anchor:** v0.2.1.17+1  
 **Priority:** HIGH  
 **Created:** 2026-04-09  
-**Last updated:** 2026-04-09 (task created from FR-077 intake)  
+**Last updated:** 2026-04-10 (ownership/docs/validator implementation added for FR-077 drift prevention)  
 **Code:** E2S01T17
 
 ---
@@ -21,6 +21,28 @@ housekeeping_policy: keep
 ## Summary
 
 Define and implement canonical status-transition ownership so IPW-built tasks do not remain stale (`TODO`) after implementation starts or completes, and ensure atomic sync between task docs and kboard.
+
+## Incident evidence (2026-04-10)
+
+- `E3:S02:T12` was implemented from IPW artifacts, but remained `TODO`.
+- `RW E3:S02:T12 --art` failed at Step 1c until task status was manually updated to releasable state.
+- This validates FR-077 requirement for deterministic TODO -> IN PROGRESS/COMPLETE transitions plus atomic kboard propagation.
+
+## Implementation decisions and evidence
+
+- Added mandatory status-transition intent guidance in:
+  - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md`
+  - `packages/frameworks/kanban/templates/PLAN_DOC_TEMPLATE.md`
+- Added RW-side transition drift audit guidance in:
+  - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
+- Implemented drift validator:
+  - `packages/frameworks/workflow mgt/scripts/validation/validate_ipw_status_drift.py`
+- Added tests:
+  - `packages/frameworks/workflow mgt/scripts/validation/test_validate_ipw_status_drift.py`
+- Follow-up hardening (same defect path):
+  - `validate_ipw_status_drift.py` now supports `--requested E:S:T` for task-scoped detection.
+  - `validate_rw_task_complete.py` now runs FR-077 drift detection at Step 1c TODO gate and emits explicit remediation guidance when implementation evidence is present.
+  - `test_validate_rw_task_complete.py` and `test_validate_ipw_status_drift.py` expanded to cover requested-task drift and Step 1c drift diagnostics.
 
 ---
 

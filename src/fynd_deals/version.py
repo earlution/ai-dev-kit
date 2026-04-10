@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 3      # Epic number (Epic 3: numbering and versioning)
-VERSION_STORY = 2     # Story number (Story 2: versioning cookbook and examples)
-VERSION_TASK = 12     # Task number (T12: task-touch semver mapping collision hardening — BR-061)
-VERSION_BUILD = 2     # Build number (second release for T12)
+VERSION_EPIC = 5      # Epic number (Epic 5: FR repository and intake work)
+VERSION_STORY = 1     # Story number (Story 1: FR repository)
+VERSION_TASK = 46     # Task number (T46: RW SemVer tag task_touch mode)
+VERSION_BUILD = 4     # Build number (fourth release for T46)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.3.2.12+2 = Development, Epic 3, Story 2, Task 12
+# Current: 0.5.1.46+4 = Development, Epic 5, Story 1, Task 46
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

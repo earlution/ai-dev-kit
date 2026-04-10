@@ -548,7 +548,9 @@ WARNING: This step prevents accidental cross-epic contamination while allowing e
 
 **🚨 MANDATORY BLOCKING STEP — DO NOT BYPASS**
 
-**Purpose:** Ensure the task markdown exists under `kanban_root` and (for full RW / `RW -d`) is **COMPLETE** or a **perpetual maintenance** task.
+**Purpose:** Ensure the task markdown exists under `kanban_root` and is releasable for the selected mode.
+For full RW / `RW -d`, releasable statuses are **IN PROGRESS**, **COMPLETE**, or **perpetual maintenance**.  
+`TODO` is non-releasable.
 
 **Script:** `packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py` (also: `{scripts_path}/validation/validate_rw_task_complete.py` when config exists)
 
@@ -561,6 +563,12 @@ WARNING: This step prevents accidental cross-epic contamination while allowing e
    `python {validator_path} --requested "<token>" --mode rw-k`  
    (document must exist; COMPLETE check skipped for kanban-init style targets.)
 4. **Exit codes:** `0` = proceed; `1` = **RW ABORTED**; `2` = invalid args — blocking.
+
+**FR-077 hardening (pre-gate drift detection):**
+
+- Step 1.4 now also detects "implemented but TODO" drift for IPW/ICW-derived tasks before proceeding.
+- The validator uses task-scoped drift checks (requested E:S:T) so failures are explicit and actionable.
+- If drift is detected, Step 1.4 fails with guidance to transition task status to `IN PROGRESS` or `COMPLETE` before RW continues.
 
 ---
 
@@ -589,14 +597,15 @@ WARNING: This step prevents accidental cross-epic contamination while allowing e
 5. **Exit codes:** `0` = proceed; `1` = **RW ABORTED** (print script output; no version/changelog/kanban edits); `2` = invalid parse/path — treat as blocking.
 6. **Override:** Only after the user **explicitly confirms** the mismatched intent, re-run RW and invoke the script with **`--confirmed-override`**.
 
-**Relation to FR-060:** Step 1.3–1.4 enforce **mandatory token** and **task doc / COMPLETE**; Step 1.5 adds **context comparison to `version.py`** and **story-typo detection** (BR-056).
+**Relation to FR-060:** Step 1.3–1.4 enforce **mandatory token** and **task doc releasability**; Step 1.5 adds **context comparison to `version.py`** and **story-typo detection** (BR-056).
 
 **Verification scenarios (manual):**
 
 | Scenario | Expected |
 |----------|----------|
 | User sends `RW` with no `E…S…T…` | RW ABORTED at Step 1.3 |
-| Task doc `IN PROGRESS` (not perpetual), full RW | Exit 1 at Step 1.4 |
+| Task doc `IN PROGRESS` (not perpetual), full RW | Exit 0 at Step 1.4 |
+| Task doc `TODO` + IPW implementation evidence, full RW | Exit 1 at Step 1.4 with FR-077 drift reason |
 | `version.py` = `E7:S06:T01`, user `RW E7S5T1` | Exit 1 at Step 1.5, RW ABORTED |
 | Same story, new completed task `T2`, version file still `T1`, user `RW E7S6T2` | Exit 0 at Step 1.5 if `T2` is highest ✅ COMPLETE in Story checklist |
 | `RW -k E6S6T56` while `version.py` differs | Exit 0 at Step 1.5 (`--mode rw-k`) |
@@ -1770,10 +1779,16 @@ The Versioning Policy requires that:
 - Required fields present (Status, Last updated, Version)
 - Version string format validation (vRC.EPIC.STORY.TASK+BUILD)
 - Kanban governance policy compliance (see `validate_kanban_governance_policy.py` for FR-037: task prioritisation, stack/queue for MUST HAVE)
+- IPW status-drift guard (see `validate_ipw_status_drift.py`): flags tasks with implementation evidence still marked `TODO`
 
 **Step 14: Cross-check with Version File:**
 - Version components match between version string and parsed components
 - Detect drift between Kanban docs and version file
+
+**Step 14.5: IPW Transition Drift Audit (FR-077)**
+- Run `python packages/frameworks/workflow mgt/scripts/validation/validate_ipw_status_drift.py`
+- Purpose: detect "implemented but TODO" drift for IPW-derived tasks before release commit/tag.
+- Recommended behavior: treat findings as blocking for IPW-derived implementation releases; otherwise document explicit waiver rationale.
 
 **Error Handling:**
 
@@ -2261,41 +2276,31 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 **Agent Execution:**
 
 1. **ANALYZE:**
-   - Get `new_version` from Step 2:
-     - [Example: Confidentia] `"0.4.3.2+9"`
-     - [Example: ai-dev-kit] `"0.2.1.1+3"`
-   - Get summary from parameters
-   - Understand tag template: `v{version}`:
-     - [Example: Confidentia] → `v0.4.3.2+9`
-     - [Example: ai-dev-kit] → `v0.2.1.1+3`
-   - Understand message template: `"Release {tag}: {summary}"`
-   - Understand annotated tag: Includes metadata
+   - Get `new_version` from Step 2.
+   - Get summary from parameters.
+   - Resolve tag strategy using `semver_converter.get_rw_tag_info(new_version, finalize=True)` as the canonical decision source.
+   - Strategy outcomes:
+     - `registry`: primary tag is `v{internal_version}`.
+     - `task_touch`: primary tag is `vX.Y.Z` (SemVer core; no `+BUILD` in tag name), with optional internal traceability tag `v{internal_version}`.
 
 2. **DETERMINE:**
-   - Build tag name:
-     - [Example: Confidentia] `v0.4.3.2+9`
-     - [Example: ai-dev-kit] `v0.2.1.1+3`
-   - Build tag message:
-     - [Example: Confidentia] `"Release v0.4.3.2+9: 📚 Documentation: Tighten Epic 4 [Example: Confidentia] Kanban docs..."`
-     - [Example: ai-dev-kit] `"Release v0.2.1.1+3: Task 1 complete - Audit RW documentation..."`
-   - Check if tag already exists (should not)
+   - Determine primary tag and optional internal tag from canonical tag info.
+   - Build annotated tag messages from the selected tag(s).
+   - Check if each tag already exists (idempotent behavior expected in reruns).
 
 3. **EXECUTE:**
-   - Run `git tag -a -m "{message}" v{version}`
-   - Verify tag was created
+   - Create primary annotated tag.
+   - In `task_touch` mode, create internal traceability tag when enabled.
+   - Verify created tags point to the current release commit.
 
 4. **VALIDATE:**
-   - Verify tag exists:
-     - [Example: Confidentia] `git tag -l "v0.4.3.2+9"`
-     - [Example: ai-dev-kit] `git tag -l "v0.2.1.1+3"`
-   - Check tag message is correct
-   - Verify tag is annotated
+   - Verify primary tag exists and is annotated.
+   - If internal tag is created, verify it exists and points to the same commit as primary tag.
+   - For `task_touch`, verify primary tag format is SemVer core (`vX.Y.Z`) with no `+BUILD`.
 
 5. **PROCEED:**
-   - Document tag creation:
-     - [Example: Confidentia] "Created annotated tag v0.4.3.2+9"
-     - [Example: ai-dev-kit] "Created annotated tag v0.2.1.1+3"
-   - Move to Step 12 (waits for Step 11 to complete)
+   - Document tag creation with strategy and tag names.
+   - Move to Step 13.
 
 ---
 

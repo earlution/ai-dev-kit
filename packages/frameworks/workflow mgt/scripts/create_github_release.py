@@ -204,19 +204,13 @@ def get_release_tag_info(internal_version: str, semver_tag: Optional[str] = None
     Returns:
         Dictionary with tag information for release
     """
+    # Always start from the canonical RW tag decision path.
+    tag_info = get_rw_tag_info(internal_version)
     if semver_tag:
-        # Explicit tag provided, use it
-        strategy = get_semver_mapping_strategy()
-        return {
-            "strategy": strategy,
-            "primary_tag": semver_tag,
-            "internal_tag": f"v{internal_version}" if strategy == "task_touch" else None,
-            "semver_full": semver_tag.lstrip('v'),
-            "tag_message": f"Release {semver_tag}"
-        }
-    else:
-        # Auto-detect based on strategy
-        return get_rw_tag_info(internal_version)
+        tag_info["primary_tag"] = semver_tag
+        tag_info["semver_full"] = semver_tag.lstrip('v')
+        tag_info["tag_message"] = f"Release {semver_tag}"
+    return tag_info
 
 
 def create_or_update_release_auto(

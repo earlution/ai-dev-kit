@@ -66,6 +66,7 @@ def test_task_touch_mode():
         # Verify expected behavior
         assert tag_info['strategy'] == 'task_touch'
         assert tag_info['primary_tag'].startswith('v0.')  # SemVer format
+        assert '+' not in tag_info['primary_tag']  # Tag name must not include BUILD metadata
         assert tag_info['internal_tag'] == 'v0.6.7.18+2'
         assert '+' in tag_info['semver_full']  # Full SemVer with BUILD
         print("  ✓ Task-touch mode test passed")
@@ -118,6 +119,7 @@ def test_collision_scenario():
         for version in collision_versions:
             tag_info = get_rw_tag_info(version, finalize=True)
             print(f"  {version} → {tag_info['primary_tag']}")
+            assert '+' not in tag_info['primary_tag']
         
         # Verify all tags are different
         tags = [get_rw_tag_info(v, finalize=True)['primary_tag'] for v in collision_versions]

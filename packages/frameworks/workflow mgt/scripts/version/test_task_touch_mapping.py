@@ -23,6 +23,7 @@ sys.path.insert(0, str(script_dir))
 from semver_converter import (
     convert_internal_to_semver_task_touch,
     convert_version_string,
+    get_rw_tag_info,
     get_epic_count,
     set_epic_count,
     get_task_touch_counter,
@@ -289,6 +290,26 @@ class TestCollisionScenarios:
         two = convert_version_string("0.6.7.101+1", strategy="task_touch", finalize=True)
         assert one == two
         assert get_task_touch_counter(0) == 1
+
+    def test_get_rw_tag_info_read_only_then_finalize(self):
+        """RW tag lookup should be read-only unless finalize is requested."""
+        import semver_converter
+        original_load = semver_converter.load_rw_config
+        semver_converter.load_rw_config = lambda: {'semver_mapping_strategy': 'task_touch'}
+        try:
+            set_epic_count(0, 6)
+            assert get_task_touch_counter(0) == 0
+
+            preview = get_rw_tag_info("0.6.7.101+1")
+            assert preview["strategy"] == "task_touch"
+            assert "+" not in preview["primary_tag"]
+            assert get_task_touch_counter(0) == 0
+
+            finalized = get_rw_tag_info("0.6.7.101+1", finalize=True)
+            assert finalized["primary_tag"] == preview["primary_tag"]
+            assert get_task_touch_counter(0) == 1
+        finally:
+            semver_converter.load_rw_config = original_load
 
 
 if __name__ == "__main__":

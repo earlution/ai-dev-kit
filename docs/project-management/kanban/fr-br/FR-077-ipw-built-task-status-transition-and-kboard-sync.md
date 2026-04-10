@@ -36,6 +36,12 @@ Current process allows this drift pattern:
 
 This creates governance and traceability gaps because documentation no longer reflects actual execution state.
 
+### Latest observed incident (2026-04-10)
+
+- During `IPW E3:S02:T12` -> implementation -> `RW E3:S02:T12 --art`, task `E3:S02:T12` remained `TODO` until manually corrected.
+- RW Step 1c failed gating (`validate_rw_task_complete.py`) because the host task status had not transitioned despite implementation evidence.
+- This confirms FR-077 remains an active operational defect path (not just documentation ambiguity).
+
 ---
 
 ## Core Questions to Resolve
@@ -57,6 +63,19 @@ This creates governance and traceability gaps because documentation no longer re
 3. Enforce atomic propagation:
    - Task doc status update and kboard representation update happen in the same change set/session.
 
+## Implemented decisions (2026-04-10)
+
+1. **IPW ownership clarified:** IPW planning docs now require a mandatory status-transition intent section.
+2. **Transition owner clarified:** Implementation execution (not planning-only IPW) owns first state transition from `TODO`.
+3. **RW audit path added:** RW execution guide now includes an IPW transition drift audit using `validate_ipw_status_drift.py`.
+4. **Drift detector implemented:** New validator scans IPW/ICW-derived task docs and fails when status remains `TODO` despite implementation evidence markers.
+
+## Additional hardening (2026-04-10 follow-up)
+
+1. **Pre-gate enforcement moved earlier:** RW Step 1c (`validate_rw_task_complete.py`) now performs FR-077 drift detection during releasability validation, so TODO+implementation evidence blocks with explicit drift reason before downstream steps.
+2. **Task-scoped drift checks:** `validate_ipw_status_drift.py` now supports `--requested E:S:T` to validate the requested task first, improving diagnostic precision and reducing noisy broad scans during RW gating.
+3. **Diagnostic clarity:** Step 1c failure output now explicitly distinguishes plain TODO from "TODO with implementation evidence (FR-077 drift)", with direct remediation guidance (transition to `IN PROGRESS`/`COMPLETE`).
+
 ---
 
 ## Requirements
@@ -75,6 +94,11 @@ This creates governance and traceability gaps because documentation no longer re
 - [ ] IPW output includes explicit status transition intent that downstream execution can apply.
 - [ ] At least one regression check identifies and reports stale TODO state after implementation evidence exists.
 - [ ] kboard and task-doc status remain synchronized for validated scenarios.
+
+## Execution notes
+
+- This item is currently tracked as FR-led implementation under `E2:S01:T17` (no standalone BR currently owns the same scope).
+- If a dedicated BR is later introduced, it should be cross-linked here and made upstream to `T17`.
 
 ---
 

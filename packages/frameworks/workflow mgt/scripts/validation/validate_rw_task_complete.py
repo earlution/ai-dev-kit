@@ -41,6 +41,7 @@ if str(_KANBAN_DIR) not in sys.path:
     sys.path.insert(0, str(_KANBAN_DIR))
 
 from ukw_syntax_parser import parse_single_task_id  # noqa: E402
+from validate_ipw_status_drift import validate_task_doc  # noqa: E402
 
 
 def load_rw_config(project_root: Path = None) -> Optional[Dict]:
@@ -118,7 +119,7 @@ def _status_line(content: str) -> Optional[str]:
     return m.group(1).strip() if m else None
 
 
-def task_is_releasable(content: str) -> Tuple[bool, str]:
+def task_is_releasable(content: str, path: Path) -> Tuple[bool, str]:
     """
     Full RW: IN PROGRESS, COMPLETE, or perpetual maintenance.
     TODO remains non-releasable in full mode.
@@ -137,6 +138,13 @@ def task_is_releasable(content: str) -> Tuple[bool, str]:
         return True, f"COMPLETE: {status!r}"
 
     if re.search(r"\bTODO\b", status, re.IGNORECASE):
+        drift = validate_task_doc(path)
+        if drift:
+            return False, (
+                "status TODO with implementation evidence detected (FR-077 drift). "
+                "Transition task to IN PROGRESS/COMPLETE before RW. "
+                f"Details: {drift}"
+            )
         return False, f"status TODO: {status!r}"
 
     return False, f"status not releasable: {status!r}"
@@ -181,7 +189,7 @@ def main() -> int:
         print(f"validate_rw_task_complete: mode=rw-k — task doc found: {path}")
         return 0
 
-    ok, reason = task_is_releasable(content)
+    ok, reason = task_is_releasable(content, path)
     if ok:
         print(f"validate_rw_task_complete: OK — {reason}")
         print(f"   File: {path}")

@@ -423,14 +423,14 @@ For each step, follow this pattern:
    - If on `main`, warn user and suggest switching to epic branch
    - Validators check version format, branch context alignment, changelog format, and version bump logic
 10. **Commit Changes** - Create commit with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
-11. **Create Git Tag** - Create annotated tag based on SemVer mapping strategy:
-   - **Default (Registry mode)**: Create tag `v{version}` with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
-   - **Task-touch mode**: Create SemVer tag `v{semver}` as primary tag with message: `Release {semver} (Internal: {version})\n\nEpic: {epic} | Story: {story} | Task: {task}`
-     - Optionally also create internal tag `v{version}` on same commit for traceability
-   - **Configuration**: Strategy detected from `rw-config.yaml` → `semver_mapping_strategy`
+11. **Create Git Tag** - Create tags via canonical strategy decision:
+   - **Canonical source**: Resolve tags with `semver_converter.get_rw_tag_info(internal_version, finalize=True)`.
+   - **Default (Registry mode)**: Create primary annotated tag `v{version}`.
+   - **Task-touch mode**: Create primary SemVer-core tag `vX.Y.Z` (no `+BUILD` in tag name); create internal traceability tag `v{version}` on same commit unless explicitly disabled.
+   - **Configuration**: Strategy detected from `rw-config.yaml` → `semver_mapping_strategy`.
    - **Examples**:
      - Registry mode: `v0.6.7.18+2` (internal version tag)
-     - Task-touch mode: `v0.9.5` (SemVer tag, internal: `v0.6.7.18+2`)
+     - Task-touch mode: `v0.9.5` (SemVer core tag, internal traceability tag: `v0.6.7.18+2`)
 12. **Push to Remote** - Push epic branch and tag to origin (DO NOT push to main unless ready to deploy)
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
     - Example: `run_terminal_cmd(command="git push origin {branch} --tags", required_permissions=['network'])`

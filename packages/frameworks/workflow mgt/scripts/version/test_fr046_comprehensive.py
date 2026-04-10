@@ -100,6 +100,7 @@ def test_task_touch_mode_tagging():
         # Verify task-touch mode behavior
         assert tag_info['strategy'] == 'task_touch'
         assert tag_info['primary_tag'].startswith('v0.')  # SemVer format
+        assert '+' not in tag_info['primary_tag']  # Tag name is SemVer core only
         assert tag_info['internal_tag'] == 'v0.6.7.18+2'
         assert '+' in tag_info['semver_full']  # Full SemVer with BUILD
         assert 'Internal:' in tag_info['tag_message']
@@ -132,6 +133,7 @@ def test_collision_prevention():
             primary_tag = tag_info['primary_tag']
             tags.append(primary_tag)
             print(f"  {version} → {primary_tag}")
+            assert '+' not in primary_tag
         
         # Verify all tags are different
         unique_tags = set(tags)
@@ -163,6 +165,8 @@ def test_github_release_integration():
             # Test tag info function
             tag_info = get_release_tag_info("0.6.7.18+2")
             print(f"Release tag info: {tag_info['strategy']} → {tag_info['primary_tag']}")
+            if tag_info["strategy"] == "task_touch":
+                assert "+" not in tag_info["primary_tag"]
             
         else:
             print("⚠️  GitHub release script not found")

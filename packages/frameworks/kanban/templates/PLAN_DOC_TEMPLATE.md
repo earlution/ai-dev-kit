@@ -42,6 +42,14 @@ housekeeping_policy: keep
 
 - …
 
+### 1.6 Status transition intent (mandatory for IPW-derived implementation tasks)
+
+- **Current task status:** TODO | IN PROGRESS | COMPLETE
+- **Transition trigger to IN PROGRESS:** First non-planning implementation change lands.
+- **Transition trigger to COMPLETE:** Acceptance evidence is recorded (tests/verification notes linked).
+- **Atomic propagation requirement:** Task doc status and kboard row status must update in the same change set/session.
+- **Owner:** Implementation execution step (not planning-only IPW creation).
+
 ---
 
 ## 2. Test design
