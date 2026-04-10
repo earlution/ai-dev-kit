@@ -30,6 +30,12 @@ This task:
 - Anchors FR-046 in the FR repository story (`E5:S01`).
 - Describes the requirement that RW Step 11 (and related tooling) use SemVer tags when `semver_mapping_strategy: task_touch` is configured.
 - Defers actual implementation to dedicated tasks under the Workflow Management Framework epic/story.
+- Accepts cross-task updates from `E3:S02:T12` planning/implementation work when SemVer collision hardening changes the precise RW semantics.
+
+## Cross-task interaction (E3:S02:T12)
+
+- `E3:S02:T12` is authorized to update this task's wording/acceptance criteria so FR-046 documentation stays aligned with implemented task-touch converter behavior and BR-061 fixes.
+- Current planning artifact: [IPW-E3S02T12-task-touch-semver-collision-hardening](../../../../../implementation-cycles/IPW-E3S02T12-task-touch-semver-collision-hardening.md)
 
 ---
 

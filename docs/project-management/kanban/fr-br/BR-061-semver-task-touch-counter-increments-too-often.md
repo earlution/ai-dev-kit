@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Bug Report BR-061 — Task-touch SemVer PATCH bumps on every converter run
 
-**Status:** OPEN  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Severity:** HIGH  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-02 — **`RW -k` v0.3.2.12+1** / **`v0.4.706+1`**; implementing task **E3:S02:T12**.  
-**Version:** v0.3.2.12+1  
+**Last updated:** 2026-04-10 — implemented and released via **`v0.3.2.12+2`** / **`v0.4.727+2`**; task **E3:S02:T12** completed.  
+**Version:** v0.3.2.12+2  
 **Code:** BR-061  
 **Implementing Task:** [E3:S02:T12](../epics/Epic-3/Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md)
 
@@ -81,3 +81,12 @@ Therefore **any** extra invocation burns a PATCH level, for example:
 - `rw-config.yaml` → `semver_mapping_strategy: task_touch`
 - [FR-045](FR-045-adr-002-task-touch-derived-mapping.md) (ADR-002 mapping intent)
 - [FR-046](FR-046-rw-semver-tag-task-touch-mode.md) (RW SemVer tag behaviour)
+
+## Resolution note
+
+Implemented in `E3:S02:T12` and released as `v0.3.2.12+2`:
+
+- task-touch conversion is read-only by default;
+- state mutation moved to explicit finalize semantics;
+- mapping-history idempotency prevents repeated conversion calls from burning PATCH values;
+- regression tests cover read-only non-mutation, finalize idempotency, and FR-046 collision scenarios.

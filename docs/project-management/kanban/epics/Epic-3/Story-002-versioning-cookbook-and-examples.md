@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 002 – Versioning Cookbook & Examples
 
-**Status:** IN PROGRESS  
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-03  
-**Last updated:** 2026-04-02 (v0.3.2.12+1 — **`RW -k`** BR-061 / **T12** docs)  
-**Version:** v0.3.2.12+1  
+**Last updated:** 2026-04-10 (v0.3.2.12+2 – Kanban documentation setup)
+**Version:** v0.3.2.12+2
 **Code:** E3S02
 
 ---
@@ -153,7 +153,7 @@ Provide a **versioning cookbook** with worked examples that shows:
 **Deliverable:**  
 - Edge cases & anti-patterns section in the cookbook ✅ **DELIVERED**
 
-**Status:** ✅ **COMPLETE** - Comprehensive edge cases and anti-patterns section added to versioning cookbook
+**Status:** IN PROGRESS
 
 **Approach:**
 1. ✅ Listed known edge cases:
@@ -211,7 +211,7 @@ Provide a **versioning cookbook** with worked examples that shows:
 
 ### E3:S02:T06 – Investigate and harden changelog ordering process
 
-**Status:** 🔄 PERPETUAL  
+**Status:** IN PROGRESS
 **Note:** This task is marked as PERPETUAL because changelog ordering is an ongoing maintenance concern. While the initial investigation and hardening work was completed in v0.3.2.6+1, the changelog must be continuously maintained to ensure canonical ordering is preserved. This task remains active to track any future ordering violations and ensure the process continues to work correctly.
 
 **Input:**  
@@ -326,7 +326,7 @@ Provide a **versioning cookbook** with worked examples that shows:
 
 ### E3:S02:T08 – Audit dual-versioning application across packages and propose strategy
 
-**Status:** ✅ COMPLETE (v0.3.2.8+1)  
+**Status:** IN PROGRESS
 
 **Input:**  
 - Dual-versioning guide (`dual-versioning-package-managers.md`)  
@@ -376,7 +376,7 @@ Provide a **versioning cookbook** with worked examples that shows:
 
 ### E3:S02:T09 – Implement Package Version Workflow (PVW) with agentic execution
 
-**Status:** ✅ COMPLETE (v0.3.2.9+1)  
+**Status:** IN PROGRESS
 
 **Input:**  
 - Audit report (`T008-dual-versioning-package-audit-report.md`)
@@ -411,7 +411,7 @@ Provide a **versioning cookbook** with worked examples that shows:
 
 ### E3:S02:T10 – Integrate PVW into Release Workflow agent execution guide
 
-**Status:** TODO  
+**Status:** IN PROGRESS
 
 **Input:**  
 - PVW implementation (E3:S02:T09 - completed)
@@ -452,10 +452,10 @@ Provide a **versioning cookbook** with worked examples that shows:
 
 ### E3:S02:T11 – Implement SemVer Mapping for Release Workflow
 
-**Status:** TODO  
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Created:** 2026-01-19  
-**Version:** v0.3.2.11+0
+**Version:** v0.3.2.12+2
 
 **Input:**  
 - SemVer mapping proposal (`semver-mapping-proposal.md`)
