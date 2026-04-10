@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Epic 6, Story 7, Task 112: Install feedback submission path and governance
 
 **Task ID:** E6:S07:T112  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2026-04-09  
@@ -24,6 +24,7 @@ housekeeping_policy: keep
 
 - Structured local telemetry artifacts produced by `E6:S07:T111`.
 - Requirement for high-quality, governable feedback from external adopters to AI Dev Kit maintainers.
+- [IPW-E6S07T112-install-feedback-submission-governance](../../../../../implementation-cycles/IPW-E6S07T112-install-feedback-submission-governance.md)
 
 ## Deliverable
 
@@ -56,3 +57,4 @@ housekeeping_policy: keep
 
 - [FR-079](../../../fr-br/FR-079-install-feedback-submission-path-and-governance.md)
 - [FR-078](../../../fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md)
+- [IPW-E6S07T112-install-feedback-submission-governance](../../../../../implementation-cycles/IPW-E6S07T112-install-feedback-submission-governance.md)

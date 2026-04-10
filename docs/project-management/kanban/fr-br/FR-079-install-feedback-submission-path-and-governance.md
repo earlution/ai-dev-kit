@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
-**Status:** PROPOSED
+**Status:** IN PROGRESS
 
 **Implementing Task:** [E6:S07:T112](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T112-install-feedback-submission-path-and-governance.md)
 

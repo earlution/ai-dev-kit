@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-04-09 (v0.6.7.111+1 – T111 FR-078 install event-contract release)
-**Version:** v0.6.7.111+1
+**Last updated:** 2026-04-10 (v0.6.7.112+1 – Kanban documentation setup)
+**Version:** v0.6.7.112+1
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -124,7 +124,7 @@ housekeeping_policy: keep
 - [x] **E6:S07:T111 – Comprehensive install event-contract logging quality** - ✅ COMPLETE (CRITICAL, v0.6.7.111+1 — FR-078 install contract + validator + verification complete on 2026-04-10)
   - Task: [`T111-comprehensive-install-event-contract-logging-and-feedback-quality.md`](T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [FR-078](../../fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md)
 
-- [ ] **E6:S07:T112 – Install feedback submission path and governance** - TODO (CRITICAL, convert local telemetry into safe, deterministic feedback submissions for maintainer triage)
+- [ ] **E6:S07:T112 – Install feedback submission path and governance** - IN PROGRESS (CRITICAL, convert local telemetry into safe, deterministic feedback submissions for maintainer triage)
   - Task: [`T112-install-feedback-submission-path-and-governance.md`](T112-install-feedback-submission-path-and-governance.md) | [FR-079](../../fr-br/FR-079-install-feedback-submission-path-and-governance.md)
 
 
@@ -195,7 +195,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** HIGH
 **Dependencies:** None
 **Estimated Effort:** Small
-**Version:** v0.6.7.101+45
+**Version:** v0.6.7.112+1
 
 **Input:** User requirements, existing comprehensive project analysis framework
 
@@ -223,7 +223,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T00
 **Estimated Effort:** VERY LARGE
-**Version:** v0.6.7.101+45
+**Version:** v0.6.7.112+1
 
 **Input:**
 
@@ -1144,6 +1144,6 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2026-04-09 (v0.6.7.101+45 – Kanban documentation setup)
-**Version:** v0.6.7.101+45
+**Last Updated:** 2026-04-10 (v0.6.7.112+1 – Kanban documentation setup)
+**Version:** v0.6.7.112+1
 **Status:** IN PROGRESS
