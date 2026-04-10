@@ -9,6 +9,12 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.2.1.11+2] - 10-04-26
+
+E2:S01:T11 — Change implemented: BR-062 expanded to full RW Step 7 mode; active kboard MoSCOW now prunes COMPLETE rows in both `kanban_init` and full mode. SemVer **v0.4.724+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.11+2.md)
+
 ## [0.2.1.12+3] - 10-04-26
 
 E2:S01:T12 — Change implemented: BR-061 traceability refresh and canonical release-anchor update via `RW E2:S01:T12 --art`. SemVer **v0.4.723+3**.

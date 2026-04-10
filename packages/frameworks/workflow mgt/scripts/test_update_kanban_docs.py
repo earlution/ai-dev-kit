@@ -474,6 +474,65 @@ def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
     return run_test("Test 4.3: fbuboard reconciliation", setup, test)
 
 
+def test_4_4_full_mode_prunes_completed_rows_from_active_kboard():
+    """Test 4.4: full mode prunes COMPLETE rows from active MoSCOW sections."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        board_path = Path(test_dir) / "kanban-board.md"
+        board_path.write_text(
+            """# Board
+
+**Last Updated:** 2026-04-01 (RW: E2:S1:T9)
+**Version:** v0.2.1.9+2
+
+## MoSCOW Prioritized In-Progress Tasks
+
+### Must Have (M) - Critical Tasks
+
+- **E2:S01:T12** – completed row - ✅ COMPLETE (v0.2.1.12+2) | Last modified: 2026-04-01 10:00 UTC
+- **E2:S01:T13** – active row - TODO | Last modified: 2026-04-01 10:00 UTC
+
+### Should Have (S) - Important Tasks
+
+- **E2:S02:T02** – completed row - COMPLETE ✅ (v0.2.2.2+1) | Last modified: 2026-04-01 10:00 UTC
+- **E2:S02:T03** – active row - IN PROGRESS | Last modified: 2026-04-01 10:00 UTC
+"""
+        )
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        board_path = Path(test_dir) / "kanban-board.md"
+        target_state = {"version_string": "v0.2.1.12+3", "mode": "full"}
+        completion_state = {"is_complete": False}
+        ok, changes = mod.update_kanban_board(
+            board_path=board_path,
+            epic=2,
+            story=1,
+            task=12,
+            target_state=target_state,
+            story_completion_state=completion_state,
+            dry_run=False,
+        )
+        if not ok:
+            return False, f"update_kanban_board failed: {changes}"
+
+        updated = board_path.read_text()
+        if "E2:S01:T12" in updated or "E2:S02:T02" in updated:
+            return False, "COMPLETE rows should be pruned from active MoSCOW sections in full mode"
+        if "E2:S01:T13" not in updated or "E2:S02:T03" not in updated:
+            return False, "Active rows were incorrectly removed from kboard"
+        if not any("Pruned COMPLETE rows from active kboard MoSCOW sections" in c for c in changes):
+            return False, "Expected cleanup change message not emitted"
+        return True, ""
+
+    return run_test("Test 4.4: full-mode kboard prune complete rows", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -600,6 +659,14 @@ def main():
         else:
             print(f"❌ Test 4.3: fbuboard reconciliation - FAILED: {error}")
             test_results['failed'].append("4.3")
+
+        success, error = test_4_4_full_mode_prunes_completed_rows_from_active_kboard()
+        if success:
+            print("✅ Test 4.4: full-mode kboard prune complete rows - PASSED")
+            test_results['passed'].append("4.4")
+        else:
+            print(f"❌ Test 4.4: full-mode kboard prune complete rows - FAILED: {error}")
+            test_results['failed'].append("4.4")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:

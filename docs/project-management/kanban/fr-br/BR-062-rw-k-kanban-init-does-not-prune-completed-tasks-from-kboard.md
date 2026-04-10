@@ -6,14 +6,14 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Bug Report BR-062 - RW -k kanban_init leaves completed tasks on in-progress kboard
+# Bug Report BR-062 - RW Step 7 leaves completed tasks on in-progress kboard
 
 **Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-07 — implementation complete via `E2:S01:T11`: `kanban_init` now prunes stale completed target-task rows; regression coverage in category 4 edge tests passes.  
-**Version:** v0.2.1.10+4  
+**Last updated:** 2026-04-10 — scope expanded and fixed via `E2:S01:T11`: active kboard MoSCOW cleanup now applies to both `kanban_init` and full RW Step 7 mode; category 4 edge tests include full-mode regression.  
+**Version:** v0.2.1.11+2  
 **Code:** BR-062  
 **Implementing Task:** [E2:S01:T11](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T11-rw-k-kanban-init-board-hygiene-for-completed-tasks-br062.md)
 
@@ -21,18 +21,19 @@ housekeeping_policy: keep
 
 ## Problem Statement
 
-`RW -k` currently runs Kanban updates in `kanban_init` mode, which updates board metadata but does not consistently enforce in-progress board hygiene for completed tasks. As a result, a task marked complete in task/story/BR docs can remain listed in the in-progress MoSCoW section of `kanban-board.md`.
+RW Step 7 Kanban updates did not consistently enforce in-progress board hygiene for completed tasks. Originally observed in `RW -k` (`kanban_init` mode), the same failure pattern was later observed in normal full RW Step 7 runs: completed tasks remained listed under "MoSCOW Prioritized In-Progress Tasks" in `kanban-board.md`.
 
 ## Observed Behavior
 
 - After `RW -k E2:S01:T09`, `E2:S01:T09` remained in `kanban-board.md` under "MoSCOW Prioritized In-Progress Tasks".
+- After full RW runs (non-`-k`), completed tasks (for example `E2:S01:T12`, `E6:S07:T111`) also remained on active in-progress MoSCOW sections.
 - The row still carried stale phrasing and formatting artifacts while the canonical docs were already closed out.
 - This creates contradictory project state across Kanban docs.
 
 ## Expected Behavior
 
-- When a task is completed, the in-progress MoSCoW board should be cleaned accordingly (remove or transition entry), even during `RW -k` Kanban doc updates.
-- `kanban_init` should not leave stale completed rows on the active in-progress board.
+- When a task is completed, the in-progress MoSCoW board should be cleaned accordingly (remove or transition entry) during any RW Step 7 invocation.
+- Neither `kanban_init` nor full RW mode should leave stale completed rows on the active in-progress board.
 
 ## Impact
 
@@ -49,16 +50,18 @@ housekeeping_policy: keep
 
 ## Suspected Root Cause
 
-- `update_kanban_docs.py` in `kanban_init` mode prioritizes version-marker updates and timestamp normalization, but does not fully apply task-state transition hygiene to the MoSCoW in-progress list.
+- `update_kanban_docs.py` only pruned stale completed rows in `kanban_init` mode and did not enforce active-list cleanup in full RW mode.
+- This allowed COMPLETE rows to persist in active MoSCoW sections despite task/FR/BR closure.
 
 ## Proposed Resolution
 
-1. Update `kanban_init` behavior to enforce completed-task removal/transition for in-progress board rows.
-2. Add regression tests for `RW -k` path covering board hygiene invariants.
-3. Ensure wording/formatting normalization removes stale "verification pending" or malformed version tokens when tasks are complete.
+1. Enforce active-list cleanup in Step 7 for all modes (`kanban_init` and full): prune COMPLETE rows from active kboard MoSCoW sections.
+2. Keep existing metadata and timestamp normalization behavior intact.
+3. Add regression tests for full-mode cleanup in addition to existing `kanban_init` coverage.
 
 ## Related
 
 - `docs/project-management/kanban/kanban-board.md`
 - `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
+- `packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py`
 - `BR-060`

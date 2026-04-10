@@ -940,6 +940,13 @@ def update_kanban_board(
     if moscow_task_pattern.search(content):
         content = moscow_task_pattern.sub(update_moscow_task, content)
         changes.append(f"Updated MoSCOW section: E{epic}:S{story}:T{task} marked as COMPLETE")
+
+    # Always enforce active-board semantics: "In-Progress" lists must not retain
+    # rows already marked COMPLETE. This applies to both full RW Step 7 and
+    # kanban_init mode so completed tasks never remain on active MoSCOW lists.
+    content, removed_complete_rows = _cleanup_kboard_active_rows(content)
+    if removed_complete_rows > 0:
+        changes.append(f"Pruned COMPLETE rows from active kboard MoSCOW sections ({removed_complete_rows} removed)")
     
     if not dry_run:
         try:
@@ -976,6 +983,47 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
         out_lines.append(line)
 
     return "\n".join(out_lines)
+
+
+def _cleanup_kboard_active_rows(board_content: str) -> Tuple[str, int]:
+    """
+    Remove COMPLETE rows from active MoSCOW sections in kanban-board.md.
+
+    Active sections:
+    - Must Have
+    - Should Have
+    - Could Have
+    - Ongoing
+    """
+    lines = board_content.split("\n")
+    cleaned: List[str] = []
+    section = None
+    active_sections = {"must", "should", "could", "ongoing"}
+    removed = 0
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("### Must Have"):
+            section = "must"
+        elif stripped.startswith("### Should Have"):
+            section = "should"
+        elif stripped.startswith("### Could Have"):
+            section = "could"
+        elif stripped.startswith("### Ongoing"):
+            section = "ongoing"
+        elif stripped.startswith("### Won't Have"):
+            section = "wont"
+
+        if section in active_sections and stripped.startswith("- **"):
+            if re.search(r"\b✅\s*COMPLETE\b|\bCOMPLETE\s*✅\b|\bCOMPLETE\b", stripped, re.IGNORECASE):
+                removed += 1
+                continue
+
+        cleaned.append(line)
+
+    updated = "\n".join(cleaned)
+    updated = re.sub(r"\n{3,}", "\n\n", updated)
+    return updated, removed
 
 
 def _is_terminal_frbr_status(status_text: str) -> bool:
