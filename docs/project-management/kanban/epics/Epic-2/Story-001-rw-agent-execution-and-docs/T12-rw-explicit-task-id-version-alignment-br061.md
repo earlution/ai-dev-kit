@@ -12,9 +12,9 @@ housekeeping_policy: keep
 **Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Created:** 2026-04-07  
-**Last updated:** 2026-04-09 (RW release anchor advanced after BR-061 implementation completion)  
-**Version Anchor:** v0.2.1.12+2  
-**Version:** v0.2.1.12+2  
+**Last updated:** 2026-04-10 (RW release anchor refreshed via `RW E2:S01:T12 --art`)  
+**Version Anchor:** v0.2.1.12+3  
+**Version:** v0.2.1.12+3  
 **Code:** E2S01T12
 
 ---

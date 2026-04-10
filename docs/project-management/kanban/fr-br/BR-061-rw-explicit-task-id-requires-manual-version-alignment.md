@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Severity:** CRITICAL — **resolved:** explicit requested `E:S:T` now supports pre-Step-2 reconciliation without manual `version.py` alignment, while cross-epic and intent guardrails remain blocking.  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-09 — **RW E2:S01:T12** **v0.2.1.12+2** (SemVer **v0.4.720+2**): BR-061 closure released with validator logic, regression tests, and RW guide alignment.  
-**Version:** v0.2.1.12+2  
+**Last updated:** 2026-04-10 — **RW E2:S01:T12** **v0.2.1.12+3** (SemVer **v0.4.723+3**): release-anchor refresh and traceability synchronization after explicit-task `--art` run.  
+**Version:** v0.2.1.12+3  
 **Code:** BR-061  
 **Implementing Task:** [E2:S01:T12](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md)
 

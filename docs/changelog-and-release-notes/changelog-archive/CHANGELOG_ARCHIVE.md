@@ -1,4 +1,46 @@
 # Changelog Archive
+## [0.2.1.12+2] - 09-04-26
+
+E2:S01:T12 — Change implemented: completed BR-061 by enabling explicit requested-task Step 1 reconciliation for stale `version.py` contexts while preserving wrong-branch and intent guard blocking. SemVer **v0.4.720+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+2.md)
+---
+## [0.2.1.12+3] - 10-04-26
+
+E2:S01:T12 — Change implemented: BR-061 traceability refresh and canonical release-anchor update via `RW E2:S01:T12 --art`. SemVer **v0.4.723+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+3.md)
+---
+## [0.2.1.17+1] - 09-04-26
+
+E2:S01:T17 — Change implemented: created and wired FR-077 + E2:S01:T17 IPW planning package to define canonical task status transition ownership and atomic task-doc/kboard sync intent. SemVer **v0.4.717+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+1.md)
+---
+## [0.2.8.8+1] - 09-04-26
+
+E2:S08:T08 — Change implemented: aligned kboard/fbuboard task parity with purpose-descriptive MoSCOW task rows and finalized release anchor tracking for FR-059 task doc. SemVer **v0.4.716+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.8.8+1.md)
+---
+## [0.4.8.7+2] - 09-04-26
+
+E4:S08:T07 — Change implemented: IPW package created for FR-011 with durable specification, test-design, and implementation-plan artifacts linked to task traceability. SemVer **v0.4.715+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.8.7+2.md)
+---
+## [0.6.7.111+1] - 09-04-26
+
+E6:S07:T111 — Change implemented: strict install event-contract logging (`intent` / `action` / `result`), `logs validate-install-log`, docs, and tests for FR-078 (AC verification pending post-release). SemVer **v0.4.721+1**. Release uses **`--art`** canonical anchor adoption from prior `version.py` context.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.111+1.md)
+---
+## [0.6.7.111+2] - 10-04-26
+
+E6:S07:T111 — Change implemented: completed FR-078 post-release verification, marked T111/FR-078 COMPLETE, and synchronized story/board traceability. SemVer **v0.4.722+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.111+2.md)
+---
 ## [0.2.1.10+1] - 07-04-26
 
 E2:S01:T10+1 — Change implemented: contextualized UXR-006 into RW story ownership (`E2:S01:T10`), removed legacy `E7:S00:T06` mapping references, and prepared branch-validation policy path for `dev`-mode RW execution. SemVer **v0.4.627+1**.
