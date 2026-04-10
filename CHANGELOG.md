@@ -8,9 +8,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 **Historical entries:** Per [`changelog-archival-policy`](docs/architecture/standards-and-adrs/changelog-archival-policy.md) (`changelog_archival.mode: latest_only` in `rw-config.yaml`), this file keeps only the latest release. Full history lives in [`CHANGELOG_ARCHIVE.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md) and `CHANGELOG_v*.md` under `docs/changelog-and-release-notes/changelog-archive/`.
 
 ---
-## [0.6.7.112+1] - 10-04-26
+## [0.6.7.112+2] - 10-04-26
 
-E6:S07:T112 — Change implemented: moved task to IN PROGRESS and added/wired IPW planning package for install feedback submission governance (FR-079). SemVer **v0.4.725+1**.
+E6:S07:T112 — Change implemented: added deterministic install feedback payload preparation/validation/submission flow with redaction checks, actionable outcomes, and supporting tests/docs (FR-079). SemVer **v0.4.726+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.112+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.112+2.md)
 ---

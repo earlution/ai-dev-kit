@@ -7,6 +7,7 @@ install runs based on logs/ai-dev-kit/install/ contents.
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -60,6 +61,48 @@ class LogsCommand(BaseCommand):
             help="How many recent log files to validate when --file is not provided (default: 1)",
         )
 
+        prepare_feedback = subparsers.add_parser(
+            "prepare-feedback-payload",
+            help="Create feedback payload from install telemetry",
+            description="Package latest install telemetry into a deterministic feedback payload.",
+        )
+        prepare_feedback.add_argument(
+            "--install-log",
+            type=str,
+            default=None,
+            help="Specific install log file to package (defaults to most recent install-*.log)",
+        )
+        prepare_feedback.add_argument(
+            "--output",
+            type=str,
+            default=None,
+            help="Output path for payload JSON (defaults to logs/ai-dev-kit/feedback/payload-<run_id>.json)",
+        )
+
+        validate_feedback = subparsers.add_parser(
+            "validate-feedback-payload",
+            help="Validate feedback payload schema and readiness",
+            description="Validate a feedback payload produced by prepare-feedback-payload.",
+        )
+        validate_feedback.add_argument(
+            "--file",
+            type=str,
+            required=True,
+            help="Feedback payload file path",
+        )
+
+        submit_feedback = subparsers.add_parser(
+            "submit-feedback-payload",
+            help="Deterministically evaluate and submit feedback payload",
+            description="Run deterministic submission outcome checks and write a local submission receipt.",
+        )
+        submit_feedback.add_argument(
+            "--file",
+            type=str,
+            required=True,
+            help="Feedback payload file path",
+        )
+
     def execute(self) -> int:
         if not self.args.logs_command:
             print_error("No logs subcommand specified (e.g. 'ai-dev-kit logs install-history').")
@@ -69,6 +112,12 @@ class LogsCommand(BaseCommand):
             return self._install_history()
         if self.args.logs_command == "validate-install-log":
             return self._validate_install_log()
+        if self.args.logs_command == "prepare-feedback-payload":
+            return self._prepare_feedback_payload()
+        if self.args.logs_command == "validate-feedback-payload":
+            return self._validate_feedback_payload()
+        if self.args.logs_command == "submit-feedback-payload":
+            return self._submit_feedback_payload()
 
         print_error(f"Unknown logs subcommand: {self.args.logs_command}")
         return 1
@@ -173,6 +222,258 @@ class LogsCommand(BaseCommand):
             "frameworks": ", ".join(frameworks) if frameworks else "?",
             "status": status,
         }
+
+    def _resolve_install_log_for_feedback(self, project_root: Path, config: Config) -> Optional[Path]:
+        target_arg = getattr(self.args, "install_log", None)
+        if target_arg:
+            p = Path(target_arg)
+            if not p.is_absolute():
+                p = (project_root / p).resolve()
+            return p
+
+        default_rel = config.get("install_logging.path", "logs/ai-dev-kit/install")
+        log_dir = (project_root / default_rel).resolve()
+        if not log_dir.exists():
+            return None
+        logs = sorted(log_dir.glob("install-*.log"))
+        if not logs:
+            return None
+        return logs[-1]
+
+    def _collect_install_json_entries(self, install_log: Path) -> Tuple[List[Dict[str, Any]], List[str]]:
+        entries: List[Dict[str, Any]] = []
+        errors: List[str] = []
+        if not install_log.exists():
+            return entries, [f"Install log not found: {install_log}"]
+
+        for idx, line in enumerate(install_log.read_text(encoding="utf-8").splitlines(), start=1):
+            if not line.strip():
+                continue
+            try:
+                entry = json.loads(line)
+            except Exception:
+                errors.append(f"{install_log}:{idx}: invalid JSON line")
+                continue
+            ok, reason = self._validate_json_event_entry(entry)
+            if not ok:
+                errors.append(f"{install_log}:{idx}: {reason}")
+                continue
+            entries.append(entry)
+        if not entries and not errors:
+            errors.append(f"{install_log}: no usable JSON event entries")
+        return entries, errors
+
+    def _scan_payload_for_redaction_violations(self, payload: Dict[str, Any]) -> List[str]:
+        patterns = [
+            r"(?i)GITHUB_TOKEN\s*=\s*[^*\s]+",
+            r"(?i)password\s*=\s*[^*\s]+",
+            r"(?i)Bearer\s+[A-Za-z0-9._\-]+",
+            r"(?i)api[_-]?key\s*=\s*[^*\s]+",
+        ]
+        serialized = json.dumps(payload, ensure_ascii=False)
+        violations: List[str] = []
+        for pat in patterns:
+            if re.search(pat, serialized):
+                violations.append(f"Matched sensitive pattern: {pat}")
+        return violations
+
+    def _build_feedback_payload(self, project_root: Path, install_log: Path, entries: List[Dict[str, Any]]) -> Dict[str, Any]:
+        first = entries[0]
+        run_id = str(first.get("install_run_id", "unknown-run"))
+        frameworks: List[str] = []
+        for e in entries:
+            ctx = str(e.get("context", ""))
+            msg = str(e.get("message", ""))
+            if ctx == "install.framework" and msg.startswith("Installing "):
+                parts = msg.split()
+                if len(parts) >= 2:
+                    frameworks.append(parts[1])
+        frameworks = sorted(set(frameworks))
+
+        warning_count = sum(1 for e in entries if str(e.get("level", "")).upper() == "WARNING")
+        error_count = sum(1 for e in entries if str(e.get("level", "")).upper() == "ERROR")
+
+        payload = {
+            "schema_version": "1.0.0",
+            "feedback_contract_version": "1.0.0",
+            "generated_at_utc": first.get("timestamp_utc"),
+            "install_run_id": run_id,
+            "source": {
+                "install_log_path": str(install_log),
+                "project_root": str(project_root),
+                "event_contract": "T111-install-log-event-contract",
+            },
+            "context": {
+                "frameworks": frameworks,
+                "event_count": len(entries),
+                "warning_count": warning_count,
+                "error_count": error_count,
+            },
+            "triage": {
+                "recommended_flow": "FR/BR intake from payload diagnostics",
+                "reproduction_hint": "Use install_run_id and step_id to replay timeline",
+                "t111_t112_boundary": "T111 produces telemetry; T112 packages/submits validated payload",
+            },
+            "events_sample": entries[:5],
+            "redaction": {
+                "checked": True,
+                "violations": [],
+            },
+        }
+        payload["redaction"]["violations"] = self._scan_payload_for_redaction_violations(payload)
+        return payload
+
+    def _validate_feedback_payload_object(self, payload: Dict[str, Any]) -> Tuple[bool, List[str]]:
+        errors: List[str] = []
+        required_root = ["schema_version", "install_run_id", "source", "context", "triage", "redaction"]
+        for key in required_root:
+            if key not in payload:
+                errors.append(f"missing {key}")
+        if not isinstance(payload.get("source"), dict):
+            errors.append("source must be object")
+        if not isinstance(payload.get("context"), dict):
+            errors.append("context must be object")
+        if not isinstance(payload.get("triage"), dict):
+            errors.append("triage must be object")
+        redaction = payload.get("redaction")
+        if not isinstance(redaction, dict):
+            errors.append("redaction must be object")
+        else:
+            if "checked" not in redaction:
+                errors.append("redaction.checked missing")
+            if "violations" not in redaction or not isinstance(redaction.get("violations"), list):
+                errors.append("redaction.violations missing or invalid")
+        if not payload.get("install_run_id"):
+            errors.append("install_run_id empty")
+        if isinstance(payload.get("context"), dict):
+            if payload["context"].get("event_count", 0) <= 0:
+                errors.append("context.event_count must be > 0")
+        return len(errors) == 0, errors
+
+    def _prepare_feedback_payload(self) -> int:
+        project_root = get_project_root()
+        if project_root is None:
+            project_root = Path.cwd()
+        config = Config(project_root / ".ai-dev-kit.yaml")
+
+        install_log = self._resolve_install_log_for_feedback(project_root, config)
+        if install_log is None:
+            print_error("No install log available for feedback payload packaging.")
+            return 1
+
+        entries, errors = self._collect_install_json_entries(install_log)
+        if errors:
+            for err in errors:
+                print_error(err)
+            return 1
+
+        payload = self._build_feedback_payload(project_root, install_log, entries)
+        ok, payload_errors = self._validate_feedback_payload_object(payload)
+        if not ok:
+            for err in payload_errors:
+                print_error(f"payload validation error: {err}")
+            return 1
+
+        run_id = payload["install_run_id"]
+        safe_run_id = re.sub(r"[^A-Za-z0-9._-]", "_", run_id)
+        default_out = project_root / "logs" / "ai-dev-kit" / "feedback" / f"payload-{safe_run_id}.json"
+        out_arg = getattr(self.args, "output", None)
+        out_path = Path(out_arg).resolve() if out_arg else default_out
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        print_info(f"Feedback payload created: {out_path}")
+        return 0
+
+    def _validate_feedback_payload(self) -> int:
+        project_root = get_project_root()
+        if project_root is None:
+            project_root = Path.cwd()
+        target = Path(self.args.file)
+        if not target.is_absolute():
+            target = (project_root / target).resolve()
+        if not target.exists():
+            print_error(f"Feedback payload not found: {target}")
+            return 1
+        try:
+            payload = json.loads(target.read_text(encoding="utf-8"))
+        except Exception as exc:
+            print_error(f"Invalid payload JSON: {exc}")
+            return 1
+        ok, errors = self._validate_feedback_payload_object(payload)
+        if not ok:
+            for err in errors:
+                print_error(err)
+            return 1
+        print_info(f"Feedback payload valid: {target}")
+        return 0
+
+    def _submit_feedback_payload(self) -> int:
+        project_root = get_project_root()
+        if project_root is None:
+            project_root = Path.cwd()
+        target = Path(self.args.file)
+        if not target.is_absolute():
+            target = (project_root / target).resolve()
+        if not target.exists():
+            print_error(f"Feedback payload not found: {target}")
+            return 1
+
+        try:
+            payload = json.loads(target.read_text(encoding="utf-8"))
+        except Exception as exc:
+            print_error(f"Invalid payload JSON: {exc}")
+            return 1
+
+        ok, errors = self._validate_feedback_payload_object(payload)
+        if not ok:
+            outcome = {
+                "outcome": "rejected",
+                "reason": "schema-invalid",
+                "diagnostics": errors,
+            }
+            print_error(json.dumps(outcome))
+            return 1
+
+        violations = payload.get("redaction", {}).get("violations", [])
+        if violations:
+            outcome = {
+                "outcome": "needs-redaction",
+                "reason": "sensitive-content-detected",
+                "diagnostics": violations,
+                "remediation": "Remove or redact secret-bearing fields and retry submit-feedback-payload.",
+            }
+            print_error(json.dumps(outcome))
+            return 1
+
+        context = payload.get("context", {})
+        if not context.get("frameworks"):
+            outcome = {
+                "outcome": "needs-more-context",
+                "reason": "framework-context-missing",
+                "diagnostics": ["context.frameworks empty"],
+                "remediation": "Re-run prepare-feedback-payload from a complete install log.",
+            }
+            print_error(json.dumps(outcome))
+            return 1
+
+        # Deterministic local submission receipt (no network side effects).
+        receipt_dir = project_root / "logs" / "ai-dev-kit" / "feedback" / "submissions"
+        receipt_dir.mkdir(parents=True, exist_ok=True)
+        run_id = str(payload.get("install_run_id", "unknown-run"))
+        safe_run_id = re.sub(r"[^A-Za-z0-9._-]", "_", run_id)
+        receipt = {
+            "submitted_at_utc": payload.get("generated_at_utc"),
+            "install_run_id": run_id,
+            "outcome": "accepted",
+            "triage": {
+                "recommended_issue_type": "FR/BR",
+                "next_step": "Map payload diagnostics to reproducible investigation steps",
+            },
+        }
+        receipt_path = receipt_dir / f"submission-{safe_run_id}.json"
+        receipt_path.write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
+        print_info(json.dumps({"outcome": "accepted", "receipt": str(receipt_path)}))
+        return 0
 
     def _validate_install_log(self) -> int:
         project_root = get_project_root()

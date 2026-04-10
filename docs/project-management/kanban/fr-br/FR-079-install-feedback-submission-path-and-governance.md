@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
-**Status:** IN PROGRESS
+**Status:** COMPLETE
 
 **Implementing Task:** [E6:S07:T112](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T112-install-feedback-submission-path-and-governance.md)
 
@@ -36,29 +36,29 @@ Even with high-fidelity local install event logging, quality feedback loops rema
 
 ### Functional Requirements
 
-- [ ] **FR-079-F1:** Define a canonical submission artifact schema and versioning contract for feedback payloads.
-- [ ] **FR-079-F2:** Provide a deterministic submission workflow (CLI and/or documented process) for sending install feedback artifacts to maintainers.
-- [ ] **FR-079-F3:** Include provenance/correlation fields required to tie submissions to local install runs (`install_run_id`, framework/version context, environment summary).
-- [ ] **FR-079-F4:** Add submission preflight validation (required fields, schema compatibility, payload completeness).
-- [ ] **FR-079-F5:** Define clear submission outcomes (accepted, rejected, needs-redaction, needs-more-context) and user-visible diagnostics.
-- [ ] **FR-079-F6:** Document maintainer intake/triage path and mapping from submission payloads to FR/BR workflows.
+- [x] **FR-079-F1:** Define a canonical submission artifact schema and versioning contract for feedback payloads.
+- [x] **FR-079-F2:** Provide a deterministic submission workflow (CLI and/or documented process) for sending install feedback artifacts to maintainers.
+- [x] **FR-079-F3:** Include provenance/correlation fields required to tie submissions to local install runs (`install_run_id`, framework/version context, environment summary).
+- [x] **FR-079-F4:** Add submission preflight validation (required fields, schema compatibility, payload completeness).
+- [x] **FR-079-F5:** Define clear submission outcomes (accepted, rejected, needs-redaction, needs-more-context) and user-visible diagnostics.
+- [x] **FR-079-F6:** Document maintainer intake/triage path and mapping from submission payloads to FR/BR workflows.
 
 ### Non-Functional Requirements
 
-- [ ] **FR-079-NF1:** Enforce privacy and security controls for payload handling (redaction, safe defaults, no secret leakage).
-- [ ] **FR-079-NF2:** Ensure submission process is resilient to partial failures and provides deterministic retry guidance.
-- [ ] **FR-079-NF3:** Keep submission UX concise enough for external adopters while preserving forensic usefulness.
-- [ ] **FR-079-NF4:** Maintain compatibility boundaries with FR-078 logging artifacts and schema evolution policy.
+- [x] **FR-079-NF1:** Enforce privacy and security controls for payload handling (redaction, safe defaults, no secret leakage).
+- [x] **FR-079-NF2:** Ensure submission process is resilient to partial failures and provides deterministic retry guidance.
+- [x] **FR-079-NF3:** Keep submission UX concise enough for external adopters while preserving forensic usefulness.
+- [x] **FR-079-NF4:** Maintain compatibility boundaries with FR-078 logging artifacts and schema evolution policy.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Submission workflow can package and validate telemetry from a logged install run and produce deterministic outcomes.
-- [ ] Rejected submissions provide actionable diagnostics and remediation guidance.
-- [ ] Maintainer triage documentation can map payload fields to reproducible investigation steps.
-- [ ] Redaction/security tests confirm payload safety constraints.
-- [ ] FR-078 and FR-079 boundaries are explicit and non-overlapping.
+- [x] Submission workflow can package and validate telemetry from a logged install run and produce deterministic outcomes.
+- [x] Rejected submissions provide actionable diagnostics and remediation guidance.
+- [x] Maintainer triage documentation can map payload fields to reproducible investigation steps.
+- [x] Redaction/security tests confirm payload safety constraints.
+- [x] FR-078 and FR-079 boundaries are explicit and non-overlapping.
 
 ---
 
@@ -86,3 +86,7 @@ Even with high-fidelity local install event logging, quality feedback loops rema
 - [FR-078](./FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md) - Local event-contract logging responsibility
 - [FR-047](./FR-047-install-logging-for-framework-dependencies.md) - Baseline install logging
 - [FR-003](./FR-003-dependency-tracking-in-adopting-projects.md) - Adoption telemetry goals
+
+## Release trace
+
+- **v0.6.7.112+2** (SemVer **v0.4.726+2**, E6:S07:T112, RW with `--art`): Implemented deterministic feedback payload prepare/validate/submit flow with outcome diagnostics, redaction checks, local submission receipt generation, and user docs/tests.

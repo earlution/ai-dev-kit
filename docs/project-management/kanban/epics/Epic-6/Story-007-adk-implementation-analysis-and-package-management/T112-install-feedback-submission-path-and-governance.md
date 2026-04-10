@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Epic 6, Story 7, Task 112: Install feedback submission path and governance
 
 **Task ID:** E6:S07:T112  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2026-04-09  
@@ -45,11 +45,19 @@ housekeeping_policy: keep
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** Users can prepare and validate a submission payload from local install telemetry.
-- [ ] **AC2:** Submission path returns deterministic outcomes with actionable diagnostics.
-- [ ] **AC3:** Maintainers can map submission payload data to reproducible investigation steps.
-- [ ] **AC4:** Redaction/security constraints are validated by tests.
-- [ ] **AC5:** Scope boundaries with `T111` are explicit and enforced.
+- [x] **AC1:** Users can prepare and validate a submission payload from local install telemetry.
+- [x] **AC2:** Submission path returns deterministic outcomes with actionable diagnostics.
+- [x] **AC3:** Maintainers can map submission payload data to reproducible investigation steps.
+- [x] **AC4:** Redaction/security constraints are validated by tests.
+- [x] **AC5:** Scope boundaries with `T111` are explicit and enforced.
+
+## Implementation note
+
+Released **v0.6.7.112+2** (SemVer **v0.4.726+2**): implemented deterministic feedback payload workflow via `logs prepare-feedback-payload`, `logs validate-feedback-payload`, and `logs submit-feedback-payload`, including local submission receipts, redaction outcome enforcement, and supporting tests/documentation.
+
+## Verification evidence (2026-04-10)
+
+- `pytest tests/cli/test_logs_command.py -q` -> 5 passed
 
 ---
 

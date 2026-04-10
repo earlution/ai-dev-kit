@@ -421,6 +421,9 @@ ai-dev-kit logs <subcommand> [options]
 **Subcommands:**
 - `install-history` - Show summary of recent install runs
 - `validate-install-log` - Validate JSON install logs against required event contract fields
+- `prepare-feedback-payload` - Build deterministic feedback payload from install telemetry
+- `validate-feedback-payload` - Validate feedback payload structure/readiness
+- `submit-feedback-payload` - Evaluate payload outcomes and write local submission receipt
 
 **Examples:**
 
@@ -436,6 +439,15 @@ ai-dev-kit logs validate-install-log --limit 5
 
 # Validate a specific log file
 ai-dev-kit logs validate-install-log --file logs/ai-dev-kit/install/install-20260409-120000.log
+
+# Build feedback payload from latest install log
+ai-dev-kit logs prepare-feedback-payload
+
+# Validate generated payload
+ai-dev-kit logs validate-feedback-payload --file logs/ai-dev-kit/feedback/payload-run-123.json
+
+# Submit payload through deterministic local submission path
+ai-dev-kit logs submit-feedback-payload --file logs/ai-dev-kit/feedback/payload-run-123.json
 ```
 
 **Validation checks (`validate-install-log`):**
@@ -446,6 +458,12 @@ ai-dev-kit logs validate-install-log --file logs/ai-dev-kit/install/install-2026
 - `event_contract.action.summary`
 - `event_contract.result.status`
 - `event_contract.result.details`
+
+**Feedback payload outcomes (`submit-feedback-payload`):**
+- `accepted` - payload is valid, redacted, and has enough context for maintainer triage
+- `needs-redaction` - sensitive-pattern checks failed; payload must be scrubbed before submit
+- `needs-more-context` - payload is valid but missing required troubleshooting context
+- `rejected` - schema-invalid payload; run `validate-feedback-payload` and fix errors
 
 ---
 
