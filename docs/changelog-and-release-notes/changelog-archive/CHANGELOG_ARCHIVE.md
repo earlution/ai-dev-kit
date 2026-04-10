@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.1.11+2] - 10-04-26
+
+E2:S01:T11 — Change implemented: BR-062 expanded to full RW Step 7 mode; active kboard MoSCOW now prunes COMPLETE rows in both `kanban_init` and full mode. SemVer **v0.4.724+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.11+2.md)
+---
 ## [0.2.1.12+2] - 09-04-26
 
 E2:S01:T12 — Change implemented: completed BR-061 by enabling explicit requested-task Step 1 reconciliation for stale `version.py` contexts while preserving wrong-branch and intent guard blocking. SemVer **v0.4.720+2**.
