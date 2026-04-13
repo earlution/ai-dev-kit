@@ -76,6 +76,12 @@ This creates governance and traceability gaps because documentation no longer re
 2. **Task-scoped drift checks:** `validate_ipw_status_drift.py` now supports `--requested E:S:T` to validate the requested task first, improving diagnostic precision and reducing noisy broad scans during RW gating.
 3. **Diagnostic clarity:** Step 1c failure output now explicitly distinguishes plain TODO from "TODO with implementation evidence (FR-077 drift)", with direct remediation guidance (transition to `IN PROGRESS`/`COMPLETE`).
 
+## Latest incident context (2026-04-13)
+
+1. **Recurrence observed after active implementation:** `RW E7:S06:T18 --art` was blocked at Step 1c because host task `E7:S06:T18` remained `TODO` even after substantial implementation work and test execution.
+2. **Operational impact:** Release flow aborted until manual status update (`TODO -> IN PROGRESS`) was applied.
+3. **Implication for FR-077 scope:** Existing validator hardening correctly blocks drift, but execution ergonomics still depend on humans remembering transition timing. Additional proactive guardrails are needed to reduce repeat incidents.
+
 ---
 
 ## Requirements

@@ -8,14 +8,14 @@ housekeeping_policy: keep
 
 # Epic 7, Story 6: Post-Windsurf Project Review
 
-**Status:** COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-03-25 (v0.7.6.9+1 – E7:S06:T09 Config and git state validation)
+**Last updated:** 2026-04-10 (E7:S06:T18 added for UXR-007 installer prompt clarity hardening)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
-**Completed:** 2026-03-25  
-**Version:** v0.7.6.9+1
+**Completed:** [Reopened – TBD]  
+**Version:** v0.7.6.18+0
 **Code:** E7S06
 
 ---
@@ -39,6 +39,7 @@ housekeeping_policy: keep
 - [x] **E7:S06:T07 – General documentation and cross-reference integrity** ✅ COMPLETE (v0.7.6.7+1)
 - [x] **E7:S06:T08 – Dependency and tooling audit** ✅ COMPLETE (v0.7.6.8+1)
 - [x] **E7:S06:T09 – Config and git state validation** ✅ COMPLETE (v0.7.6.9+1)
+- [ ] **E7:S06:T18 – Interactive installer Kanban pattern prompt clarity (UXR-007)** TODO (v0.7.6.18+0)
 
 > **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)`  

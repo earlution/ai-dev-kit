@@ -31,7 +31,7 @@ housekeeping_policy: keep
 - [x] **E7:S03 – Code Quality Metrics and Monitoring** - ✅ COMPLETE (v0.7.3.4+1 – All tasks complete)
 - [x] **E7:S04 – Maintenance Automation and Tooling** - ✅ COMPLETE (v0.7.4.4+1 – All tasks complete)
 - [x] **E7:S05 – Migration UXR – Pre-Existing Kanban Structures** - ✅ COMPLETE (v0.7.5.4+1 – All tasks complete)
-- [x] **E7:S06 – Post-Windsurf Project Review** - ✅ COMPLETE (v0.7.6.9+1 – T01–T09 + T10–T17 complete)
+- [ ] **E7:S06 – Post-Windsurf Project Review** - IN PROGRESS (v0.7.6.18+0 – T18 added for UXR-007 installer prompt clarity hardening)
 
 > **CRITICAL:** This Story Checklist is the **SINGLE SOURCE OF TRUTH** for story status and version markers.  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)` (e.g., `✅ COMPLETE (v0.7.1.3+1)`)  
@@ -104,7 +104,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ### Story 2: Code Review Standards and Processes
 
-**Status:** COMPLETE  
+**Status:** IN PROGRESS  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Last updated:** 2026-03-20 (v0.7.6.2+2 – Story 6 Task 2 complete)
@@ -221,11 +221,9 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 **Tasks:**
 
 - [ ] **E7:S05:T01 – UXR-001 intake and synthesis**  
-
   - Intake UXR-001 findings, extract user pain points, and summarize migration UX requirements.  
   - **Linked UXR:** `docs/project-management/kanban/fr-br/UXR-001-migration-user-experience-research.md` (GitHub issue #4).  
   - **Acceptance:** Findings synthesized; UX requirements fed into Epic 4 Story 7 tasks; recap documented in this story.
-
 
 > Full story: `docs/project-management/kanban/epics/Epic-7/Story-005-migration-uxr-research.md`
 
@@ -233,10 +231,10 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 ### Story 6: Post-Windsurf Project Review
 
-**Status:** COMPLETE  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-03-20 (v0.7.6.9+1 – Story 6 T01–T17 + T10–T17 review tasks complete)
+**Last updated:** 2026-04-10 (v0.7.6.18+0 – Story 6 T18 added for UXR-007)
 
 **Goal:** Assess and remediate project state left by Windsurf's AI models. Decomposed by dimension: artifacts, versioning, kanban, commits, scripts, FR/BR/UXR docs, general docs, dependencies/tooling, config/git state.
 
@@ -259,6 +257,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - [x] **E7:S06:T07** – General documentation and cross-reference integrity ✅ COMPLETE (v0.7.6.7+1)
 - [x] **E7:S06:T08** – Dependency and tooling audit ✅ COMPLETE (v0.7.6.8+1)
 - [x] **E7:S06:T09** – Config and git state validation ✅ COMPLETE (v0.7.6.9+1)
+- [ ] **E7:S06:T18** – Interactive installer Kanban pattern prompt clarity (UXR-007) TODO (v0.7.6.18+0)
 
 **Acceptance Criteria:**
 
@@ -305,7 +304,6 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 
 - **Risk:** Code quality metrics may not be actionable without proper tooling  
   **Mitigation:** Develop automation and tooling (Story 4) to make metrics actionable
-
 
 ---
 

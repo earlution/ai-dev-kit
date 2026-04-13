@@ -8,9 +8,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 **Historical entries:** Per [`changelog-archival-policy`](docs/architecture/standards-and-adrs/changelog-archival-policy.md) (`changelog_archival.mode: latest_only` in `rw-config.yaml`), this file keeps only the latest release. Full history lives in [`CHANGELOG_ARCHIVE.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md) and `CHANGELOG_v*.md` under `docs/changelog-and-release-notes/changelog-archive/`.
 
 ---
-## [0.5.1.46+4] - 10-04-26
+## [0.2.1.17+2] - 13-04-26
 
-E5:S01:T46 — Change implemented: finalized RW task_touch SemVer-tag behavior and hardened RW Step 1c with FR-077 pre-gate drift detection (`TODO` + implementation evidence), improving releasability diagnostics and reducing repeated RW gate failures. SemVer **v0.4.732+4**.
+E2:S01:T17 — Change implemented: captured and documented a new FR-077 recurrence where RW was blocked by stale `TODO` task state (`E7:S06:T18`), and synchronized governance/task docs for deterministic transition traceability. SemVer **v0.4.733+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+2.md)
 ---

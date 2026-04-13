@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Version Anchor:** v0.2.1.17+1  
 **Priority:** HIGH  
 **Created:** 2026-04-09  
-**Last updated:** 2026-04-10 (ownership/docs/validator implementation added for FR-077 drift prevention)  
+**Last updated:** 2026-04-13 (new recurrence captured: E7:S06:T18 RW blocked at TODO; follow-up hardening context appended)  
 **Code:** E2S01T17
 
 ---
@@ -43,6 +43,9 @@ Define and implement canonical status-transition ownership so IPW-built tasks do
   - `validate_ipw_status_drift.py` now supports `--requested E:S:T` for task-scoped detection.
   - `validate_rw_task_complete.py` now runs FR-077 drift detection at Step 1c TODO gate and emits explicit remediation guidance when implementation evidence is present.
   - `test_validate_rw_task_complete.py` and `test_validate_ipw_status_drift.py` expanded to cover requested-task drift and Step 1c drift diagnostics.
+- Latest recurrence context (2026-04-13):
+  - `RW E7:S06:T18 --art` blocked at Step 1c due to host task still marked `TODO`.
+  - Confirms validator behavior is working as intended, but transition-ownership adoption remains inconsistent in execution flow.
 
 ---
 
