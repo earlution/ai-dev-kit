@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 7      # Epic number (Epic 7: Codebase maintenance and review)
-VERSION_STORY = 6     # Story number (Story 6: Post-Windsurf project review)
-VERSION_TASK = 18     # Task number (T18: Interactive installer Kanban prompt clarity)
-VERSION_BUILD = 3     # Build number (third release for T18)
+VERSION_EPIC = 6      # Epic number (Epic 6: ADK implementation analysis and package management)
+VERSION_STORY = 7     # Story number (Story 7: ADK implementation analysis and package management)
+VERSION_TASK = 113    # Task number (T113: RW Step 12.5 GitHub release parser hardening)
+VERSION_BUILD = 1     # Build number (first release for T113)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.6.18+3 = Development, Epic 7, Story 6, Task 18
+# Current: 0.6.7.113+1 = Development, Epic 6, Story 7, Task 113
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

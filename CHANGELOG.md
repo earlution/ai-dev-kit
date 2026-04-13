@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.18+3] - 13-04-26
+## [0.6.7.113+1] - 13-04-26
 
-E7:S06:T18 — Change implemented: package documentation version alignment for workflow-management and kanban packaged docs/changelogs. SemVer **v0.4.733+3**.
+E6:S07:T113 — Change implemented: BR-065 intake and IPW planning package for RW Step 12.5 parser hardening (docs-only release). SemVer **v0.4.733+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.113+1.md)
