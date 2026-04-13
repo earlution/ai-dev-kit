@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Last updated:** 2026-04-13  
-**Version:** v0.7.6.18+0  
+**Version:** v0.7.6.18+1  
 **Code:** E7S06T18
 
 ---
@@ -53,7 +53,7 @@ Address UXR-007 by improving interactive installer wording and guidance for Kanb
 
 ## Version Anchor
 
-- Planned release anchor: `v0.7.6.18+1`
+- Released as: `v0.7.6.18+1` (SemVer `v0.4.733+1`)
 
 ## References
 

@@ -191,7 +191,7 @@ Catch `EOFError` in prompt loop and emit concise remediation: rerun in interacti
 - Epic: Epic 7
 - Story: Story 6 (Post-Windsurf Project Review)
 - Task: E7:S06:T18
-- Version: `v0.7.6.18+1` (planned)
+- Version: `v0.7.6.18+1` (released)
 
 ---
 

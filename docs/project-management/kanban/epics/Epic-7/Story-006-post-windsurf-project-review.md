@@ -10,12 +10,12 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS
 **Priority:** HIGH  
-**Last updated:** 2026-04-10 (E7:S06:T18 added for UXR-007 installer prompt clarity hardening)
+**Last updated:** 2026-04-13 (v0.7.6.18+1 – Kanban documentation setup)
 **Estimated Effort:** [TBD]  
 **Actual Effort:** [TBD]  
 **Started:** [TBD]  
 **Completed:** [Reopened – TBD]  
-**Version:** v0.7.6.18+0
+**Version:** v0.7.6.18+1
 **Code:** E7S06
 
 ---

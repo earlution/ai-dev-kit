@@ -8,9 +8,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 **Historical entries:** Per [`changelog-archival-policy`](docs/architecture/standards-and-adrs/changelog-archival-policy.md) (`changelog_archival.mode: latest_only` in `rw-config.yaml`), this file keeps only the latest release. Full history lives in [`CHANGELOG_ARCHIVE.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md) and `CHANGELOG_v*.md` under `docs/changelog-and-release-notes/changelog-archive/`.
 
 ---
-## [0.2.1.17+2] - 13-04-26
 
-E2:S01:T17 — Change implemented: captured and documented a new FR-077 recurrence where RW was blocked by stale `TODO` task state (`E7:S06:T18`), and synchronized governance/task docs for deterministic transition traceability. SemVer **v0.4.733+2**.
+## [0.7.6.18+1] - 13-04-26
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+2.md)
----
+E7:S06:T18 — Change implemented: hardened interactive installer Kanban prompt UX with placeholder enforcement, match previews, rw-config root propagation, and canonical final status messaging. SemVer **v0.4.733+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+1.md)
