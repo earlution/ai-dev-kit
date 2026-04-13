@@ -9,7 +9,7 @@
 
 **A comprehensive toolkit for AI-assisted development workflows**
 
-**Version (SemVer):** `v0.4.733+2` | **Internal:** `v0.7.6.18+2` (see detailed changelog) | **Last Updated:** 2026-04-13
+**Version (SemVer):** `v0.4.733+3` | **Internal:** `v0.7.6.18+3` (see detailed changelog) | **Last Updated:** 2026-04-13
 
 [Features](#features) • [Installation](#getting-started) • [Install in Your Project](INSTALL_IN_YOUR_PROJECT.md) • [Documentation](docs/documentation) • **Browsing docs (published site):** [https://earlution.github.io/ai-dev-kit/](https://earlution.github.io/ai-dev-kit/) • [Workflows](#workflows) • [Report Bug](https://github.com/earlution/ai-dev-kit/issues) • [Request Feature](https://github.com/earlution/ai-dev-kit/issues)
 
@@ -79,8 +79,8 @@ python3 scripts/install_kanban_framework.py --mode fresh
 **→ Jump to:** [Frameworks](#frameworks)
 
 **Available Frameworks:**
-- **Workflow Management** (`v2.1.3`) — [11 workflows](#workflows) in the package registry + agent execution guides
-- **Kanban** (`v2.1.0`) - Project management and task tracking
+- **Workflow Management** (`v2.3.0`) — [11 workflows](#workflows) in the package registry + agent execution guides
+- **Kanban** (`v2.2.0`) - Project management and task tracking
 - **Numbering & Versioning** (`v2.0.0`) - Version schema and policies
 - **Document Lifecycle** (`v1.0.0`) - Documentation management
 - **Debug Path** (`v1.0.0`) - Debugging utilities

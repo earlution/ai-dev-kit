@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.3.0] - 2026-04-13
+
+**Package Version:** 2.3.0
+**Project Version:** 0.7.6.18+1
+**Bump Type:** MINOR
+
+### Added
+
+- **Interactive installer pattern validation and previewing (RW installer):**
+  - Enforced required placeholders for Kanban patterns (`{epic}`, `{story}`).
+  - Added pattern match previews and zero-match remediation guidance in interactive setup.
+  - Clarified prompt copy that patterns are relative to selected `kanban_root`.
+
+### Changed
+
+- **Installation completion signaling:**
+  - `install_release_workflow.py` now reports explicit final status (`SUCCESS` / `PARTIAL`) rather than implying unconditional completion.
+- **Operational docs and release traceability updates:**
+  - Updated packaged workflow docs and release artifacts to reflect the installer hardening release path (`E7:S06:T18`).
+
+**Criteria Reference:** MINOR Version Bump
+- ✅ New user-facing installer capability (placeholder enforcement + match preview)
+- ✅ Backward compatible behavior for existing non-Kanban and configured flows
+
+---
+
 ## [2.2.0] - 2025-12-22
 
 **Package Version:** 2.2.0

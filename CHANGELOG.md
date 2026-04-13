@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.18+2] - 13-04-26
+## [0.7.6.18+3] - 13-04-26
 
-E7:S06:T18 — Change implemented: documentation-only reconciliation to mark T18 `COMPLETE` and synchronize Story/Epic checklist state after prior release. SemVer **v0.4.733+2**.
+E7:S06:T18 — Change implemented: package documentation version alignment for workflow-management and kanban packaged docs/changelogs. SemVer **v0.4.733+3**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+3.md)

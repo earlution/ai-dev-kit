@@ -5,6 +5,30 @@ All notable changes to the Kanban System Implementation Package will be document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-04-13
+
+**Package Version:** 2.2.0
+**Project Version:** 0.7.6.18+1
+**Bump Type:** MINOR
+
+### Added
+- **Kanban installer root propagation support:**
+  - `install_kanban_framework.py` now resolves `kanban_root` from `rw-config.yaml` when default CLI path is used.
+  - Enables cross-installer path consistency in real consumer installations.
+
+### Changed
+- **Installation run-state messaging:**
+  - Installer now emits clearer final status outcomes (`SUCCESS`, `PARTIAL`, `CANCELLED`) aligned to validation outcomes.
+
+### Documentation
+- Updated package metadata and changelog tracking to reflect latest installer hardening work used in consumer install flows.
+
+**Criteria Reference:** MINOR Version Bump
+- ✅ New installer capability for configuration-aware path resolution
+- ✅ Backward compatible with explicit `--kanban-path` overrides
+
+---
+
 ## [2.1.0] - 2025-12-10
 
 **Package Version:** 2.1.0

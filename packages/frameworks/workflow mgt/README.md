@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # Workflow Management Framework
 
-**Version:** 2.2.1  
-**Last Updated:** 2026-03-30  
+**Version:** 2.3.0  
+**Last Updated:** 2026-04-13  
 **Purpose:** Complete workflow management framework with **11** YAML-defined workflows (see registry below), documentation standards, and automated validation  
 **Key Features:** **11** registry workflows with full READMEs, standardized templates, style guide, validation tools, and automated quality assurance; agent methodology guides (`KB`/`vwmp`) are separate from registry rows
 
@@ -863,7 +863,7 @@ For questions or issues:
 
 ---
 
-**Last Updated:** 2025-12-02  
-**Package Version:** 2.0.0  
+**Last Updated:** 2026-04-13  
+**Package Version:** 2.3.0  
 **Source Project:** fynd.deals (Epic 15, Story 1)  
 **Key Features:** "ALL sections" requirement, atomicity, blocked protocol, epic branch workflow

@@ -11,8 +11,8 @@ housekeeping_policy: keep
 ```yaml
 package:
   name: "Kanban System Implementation Package"
-  version: "2.1.0"
-  last_updated: "2025-12-10"
+  version: "2.2.0"
+  last_updated: "2026-04-13"
   source_project: "Example project (Confidentia, Epic 4)"
   compatibility:
     numbering_versioning: "v2.0.0"
@@ -1893,8 +1893,8 @@ versions:
 ```yaml
 metadata:
   package_name: "Kanban System Implementation Package (Complete)"
-  version: "1.0.0"
-  last_updated: "2025-12-02"
+  version: "2.2.0"
+  last_updated: "2026-04-13"
   source_project: "Confidentia (Epic 4)"
 
   compatibility:
