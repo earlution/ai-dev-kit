@@ -209,10 +209,18 @@ def get_release_tag_info(internal_version: str, semver_tag: Optional[str] = None
 
     # Always start from the canonical RW tag decision path.
     tag_info = get_rw_tag_info(normalized_internal_version)
+    canonical_primary_tag = tag_info["primary_tag"]
     if semver_tag:
-        tag_info["primary_tag"] = semver_tag
-        tag_info["semver_full"] = semver_tag.lstrip('v')
-        tag_info["tag_message"] = f"Release {semver_tag}"
+        normalized_semver_tag = semver_tag if semver_tag.startswith("v") else f"v{semver_tag}"
+        if normalized_semver_tag != canonical_primary_tag:
+            raise ValueError(
+                "SemVer tag/internal version mismatch: "
+                f"provided --semver-tag '{semver_tag}' does not match canonical tag "
+                f"'{canonical_primary_tag}' for internal version '{normalized_internal_version}'."
+            )
+        tag_info["primary_tag"] = normalized_semver_tag
+        tag_info["semver_full"] = normalized_semver_tag.lstrip('v')
+        tag_info["tag_message"] = f"Release {normalized_semver_tag}"
     return tag_info
 
 

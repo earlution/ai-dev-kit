@@ -13,6 +13,7 @@ import pytest
 import tempfile
 import shutil
 import yaml
+import subprocess
 from pathlib import Path
 import sys
 
@@ -310,6 +311,73 @@ class TestCollisionScenarios:
             assert get_task_touch_counter(0) == 1
         finally:
             semver_converter.load_rw_config = original_load
+
+    def test_finalize_rejects_semver_collision_with_existing_owner(self):
+        """Finalize must reject semver reuse across different internal versions."""
+        # Force candidate patch to 101 and pre-seed a conflicting semver owner
+        registry = {
+            "rc_0": {
+                "epic_to_minor": {},
+                "story_to_patch": {},
+                "task_touch_mode": {
+                    "epic_count": 6,
+                    "task_touch_counter": 100,
+                    "mapping_history": [
+                        {
+                            "internal_version": "0.6.7.101+1",
+                            "semver": "0.6.101+1",
+                            "patch": 101,
+                            "rc": 0,
+                            "epic": 6,
+                            "story": 7,
+                            "task": 101,
+                            "build": 1,
+                        }
+                    ],
+                },
+            },
+            "rc_1": {
+                "epic_to_minor": {},
+                "story_to_patch": {},
+                "task_touch_mode": {"epic_count": 0, "task_touch_counter": 0, "mapping_history": []},
+            },
+        }
+        save_semver_registry(registry)
+
+        with pytest.raises(ValueError, match="SemVer collision detected during finalize"):
+            convert_internal_to_semver_task_touch(0, 6, 7, 113, 1, finalize=True)
+
+    def test_create_rw_tags_fails_on_primary_tag_collision_without_internal_tag(self, monkeypatch):
+        """RW tag creation must fail when SemVer primary exists but internal tag does not."""
+        import semver_converter
+
+        monkeypatch.setattr(
+            semver_converter,
+            "get_rw_tag_info",
+            lambda _internal_version, finalize=False: {
+                "strategy": "task_touch",
+                "primary_tag": "v0.4.733",
+                "internal_tag": "v0.6.7.113+2",
+                "semver_full": "0.4.733+2",
+                "tag_message": "Release 0.4.733 (Internal: 0.6.7.113+2)",
+            },
+        )
+
+        def fake_run(args, capture_output=True, text=True, check=False):
+            if args[:3] == ["git", "tag", "-a"] and args[3] == "v0.4.733":
+                raise subprocess.CalledProcessError(
+                    returncode=128,
+                    cmd=args,
+                    stderr="fatal: tag 'v0.4.733' already exists",
+                )
+            if args[:3] == ["git", "rev-parse", "-q"]:
+                return subprocess.CompletedProcess(args=args, returncode=1, stdout="", stderr="")
+            return subprocess.CompletedProcess(args=args, returncode=0, stdout="", stderr="")
+
+        monkeypatch.setattr(subprocess, "run", fake_run)
+
+        with pytest.raises(RuntimeError, match="SemVer tag collision at RW boundary"):
+            semver_converter.create_rw_tags("0.6.7.113+2")
 
 
 if __name__ == "__main__":

@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Bug Report BR-061 — Task-touch SemVer PATCH bumps on every converter run
 
-**Status:** COMPLETE  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Severity:** HIGH  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-10 — implemented and released via **`v0.3.2.12+2`** / **`v0.4.727+2`**; task **E3:S02:T12** completed.  
-**Version:** v0.3.2.12+2  
+**Last updated:** 2026-04-13 — recurrence observed: SemVer tag collisions still possible in RW/tag boundary handling; reopened for regression hardening under **E3:S02:T12**.  
+**Version:** v0.3.2.12+3  
 **Code:** BR-061  
 **Implementing Task:** [E3:S02:T12](../epics/Epic-3/Story-002-versioning-cookbook-and-examples/T12-implement-task-touch-semver-mapping-mode.md)
 
@@ -82,6 +82,22 @@ Therefore **any** extra invocation burns a PATCH level, for example:
 - [FR-045](FR-045-adr-002-task-touch-derived-mapping.md) (ADR-002 mapping intent)
 - [FR-046](FR-046-rw-semver-tag-task-touch-mode.md) (RW SemVer tag behaviour)
 
+## Recurrence context (2026-04-13)
+
+Although the original converter mutation bug was fixed, a new collision pattern was observed in live RW runs:
+
+- distinct internal releases can still converge on already-existing SemVer tags at RW tag/release boundaries;
+- RW Step 11 currently tolerates existing SemVer tags in some paths instead of hard-failing with collision diagnostics;
+- Step 12.5 may then update an existing GitHub release for that reused SemVer tag.
+
+This reopens BR-061 as a regression-hardening effort focused on injective SemVer mapping + boundary enforcement.
+
+### Collision invariants (reconfirmed)
+
+- Finalized internal release key (`RC.EPIC.STORY.TASK+BUILD`) is mapped once and remains idempotent on replay.
+- SemVer release tag core (`vMAJOR.MINOR.PATCH`) must not be reused by a different internal release lineage at RW boundary.
+- RW must hard-fail with deterministic diagnostics when SemVer ownership is ambiguous or already occupied by a different lineage.
+
 ## Resolution note
 
 Implemented in `E3:S02:T12` and released as `v0.3.2.12+2`:
@@ -90,3 +106,11 @@ Implemented in `E3:S02:T12` and released as `v0.3.2.12+2`:
 - state mutation moved to explicit finalize semantics;
 - mapping-history idempotency prevents repeated conversion calls from burning PATCH values;
 - regression tests cover read-only non-mutation, finalize idempotency, and FR-046 collision scenarios.
+
+## Regression hardening outcome (2026-04-13)
+
+Attempted fix implemented and released as `v0.3.2.12+3` (SemVer `v0.4.733+3`):
+
+- finalize now enforces injective ownership (`semver -> internal_version`) and rejects collisions deterministically;
+- RW Step 11 boundary now hard-fails when SemVer primary tag exists without matching internal-tag lineage;
+- Step 12.5 release creation now rejects explicit `--semver-tag` overrides that disagree with canonical mapping for the internal version.

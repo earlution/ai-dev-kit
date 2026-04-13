@@ -9,11 +9,11 @@ housekeeping_policy: keep
 # T12 – Implement ADR-002 Task-Touch SemVer Mapping Mode
 
 **Task ID:** E3:S02:T12  
-**Status:** COMPLETE  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-03-07  
-**Last updated:** 2026-04-10 — implementation complete; pending RW release anchoring.
+**Last updated:** 2026-04-13 — regression hardening reopened after observed SemVer collision recurrence at RW tag/release boundaries.
 
 **Associated BR:** [BR-061](../../../fr-br/BR-061-semver-task-touch-counter-increments-too-often.md)
 **Version Anchor:** v0.3.2.12+2
@@ -79,3 +79,11 @@ This task is prompted by a real SemVer tag collision incident (see incident log)
 ## Implementation note
 
 Implemented converter hardening for BR-061 by splitting task-touch behavior into read-only derivation and explicit finalization, with idempotent mapping history per internal version. Regression tests now cover read-only non-mutation, finalize idempotency, and FR-046 collision scenarios.
+
+## Regression reopening note (2026-04-13)
+
+Task reopened to enforce collision-invariant SemVer mapping at release boundaries:
+
+- add explicit injective guard (`semver -> internal_version`) during finalize;
+- hard-fail RW tag creation when SemVer primary tag already exists but does not match the current internal release lineage;
+- add deterministic diagnostics + regression tests for boundary collision paths.

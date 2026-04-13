@@ -201,7 +201,7 @@ Using SemVer tags when task_touch is enabled ensures:
 
 ### Latest release anchor
 
-- Released build: **v0.5.1.46+4** (SemVer: **v0.4.732+4**).
+- Released build: **v0.3.2.12+3** (SemVer: **v0.4.733+3**) with BR-061 regression-hardening checks at RW tag/release boundaries.
 
 ---
 

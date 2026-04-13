@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-03  
-**Last updated:** 2026-04-10 (v0.3.2.12+2 – Kanban documentation setup)
-**Version:** v0.3.2.12+2
+**Last updated:** 2026-04-13 (v0.3.2.12+3 – Kanban documentation setup)
+**Version:** v0.3.2.12+3
 **Code:** E3S02
 
 ---
@@ -455,7 +455,7 @@ Provide a **versioning cookbook** with worked examples that shows:
 **Status:** IN PROGRESS
 **Priority:** HIGH  
 **Created:** 2026-01-19  
-**Version:** v0.3.2.12+2
+**Version:** v0.3.2.12+3
 
 **Input:**  
 - SemVer mapping proposal (`semver-mapping-proposal.md`)

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.113+2] - 13-04-26
+## [0.3.2.12+3] - 13-04-26
 
-E6:S07:T113 — Fixed parser handling for `v`-prefixed internal version values in RW Step 12.5 (`create_github_release.py`) and added deterministic validation diagnostics/tests. SemVer **v0.4.733+2**.
+E3:S02:T12 — Attempted fix for recurring SemVer collision risk by enforcing injective finalize mapping and strict RW tag/release boundary checks. SemVer **v0.4.733+3**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.113+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.12+3.md)

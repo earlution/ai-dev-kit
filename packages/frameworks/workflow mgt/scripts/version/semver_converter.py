@@ -146,7 +146,26 @@ def create_rw_tags(internal_version: str, create_internal_tag: bool = True) -> D
         print(f"✅ Created primary tag: {primary_tag}")
     except subprocess.CalledProcessError as e:
         if "already exists" in e.stderr:
-            print(f"⚠️  Tag {primary_tag} already exists")
+            if tag_info["strategy"] == "task_touch":
+                internal_tag = tag_info.get("internal_tag")
+                has_internal_tag = False
+                if internal_tag:
+                    check_internal = subprocess.run(
+                        ["git", "rev-parse", "-q", "--verify", f"refs/tags/{internal_tag}"],
+                        capture_output=True,
+                        text=True,
+                    )
+                    has_internal_tag = check_internal.returncode == 0
+                if has_internal_tag:
+                    print(f"⚠️  Tag {primary_tag} already exists (idempotent replay with {internal_tag})")
+                else:
+                    raise RuntimeError(
+                        "SemVer tag collision at RW boundary: "
+                        f"{primary_tag} already exists without matching internal tag "
+                        f"{internal_tag or '<none>'}. Resolve tag ownership/mapping before retrying."
+                    )
+            else:
+                print(f"⚠️  Tag {primary_tag} already exists")
         else:
             raise e
     
@@ -468,6 +487,14 @@ def _find_mapping_entry(task_touch_mode: Dict[str, Any], internal_version: str) 
     return None
 
 
+def _find_mapping_entry_by_semver(task_touch_mode: Dict[str, Any], semver: str) -> Optional[Dict[str, Any]]:
+    history = task_touch_mode.get("mapping_history", [])
+    for entry in history:
+        if isinstance(entry, dict) and entry.get("semver") == semver:
+            return entry
+    return None
+
+
 def _record_mapping_entry(
     task_touch_mode: Dict[str, Any],
     *,
@@ -543,8 +570,15 @@ def convert_internal_to_semver_task_touch(
     patch = current_counter + 1
 
     if finalize:
-        task_touch_mode["task_touch_counter"] = patch
         semver = format_semver(major, minor, patch, build_semver)
+        existing_semver_owner = _find_mapping_entry_by_semver(task_touch_mode, semver)
+        if existing_semver_owner and existing_semver_owner.get("internal_version") != internal_version:
+            raise ValueError(
+                "SemVer collision detected during finalize: "
+                f"{semver} already mapped to {existing_semver_owner.get('internal_version')}, "
+                f"cannot assign to {internal_version}."
+            )
+        task_touch_mode["task_touch_counter"] = patch
         _record_mapping_entry(
             task_touch_mode,
             internal_version=internal_version,
