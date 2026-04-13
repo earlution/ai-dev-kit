@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # E7:S06:T18 - Interactive Installer Kanban Pattern Prompt Clarity
 
 **Task ID:** E7:S06:T18  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Last updated:** 2026-04-13  
 **Version:** v0.7.6.18+1  
@@ -37,10 +37,10 @@ Address UXR-007 by improving interactive installer wording and guidance for Kanb
 
 ## Acceptance Criteria
 
-- [ ] User can understand and answer epic pattern prompt without external assistance.
-- [ ] Installer provides immediate actionable feedback when pattern matches zero files.
-- [ ] Prompt copy explicitly explains `{epic}` usage with examples.
-- [ ] UXR-007 is cross-linked with implementation evidence.
+- [x] User can understand and answer epic pattern prompt without external assistance.
+- [x] Installer provides immediate actionable feedback when pattern matches zero files.
+- [x] Prompt copy explicitly explains `{epic}` usage with examples.
+- [x] UXR-007 is cross-linked with implementation evidence.
 
 ## Dependencies
 

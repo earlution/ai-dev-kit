@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 7      # Epic number (Epic 7: Codebase maintenance and review)
 VERSION_STORY = 6     # Story number (Story 6: Post-Windsurf project review)
 VERSION_TASK = 18     # Task number (T18: Interactive installer Kanban prompt clarity)
-VERSION_BUILD = 1     # Build number (first release for T18)
+VERSION_BUILD = 2     # Build number (second release for T18)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.7.6.18+1 = Development, Epic 7, Story 6, Task 18
+# Current: 0.7.6.18+2 = Development, Epic 7, Story 6, Task 18
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

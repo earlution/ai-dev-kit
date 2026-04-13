@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.18+1] - 13-04-26
+## [0.7.6.18+2] - 13-04-26
 
-E7:S06:T18 — Change implemented: hardened interactive installer Kanban prompt UX with placeholder enforcement, match previews, rw-config root propagation, and canonical final status messaging. SemVer **v0.4.733+1**.
+E7:S06:T18 — Change implemented: documentation-only reconciliation to mark T18 `COMPLETE` and synchronize Story/Epic checklist state after prior release. SemVer **v0.4.733+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+2.md)
