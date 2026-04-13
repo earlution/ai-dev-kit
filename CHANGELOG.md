@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.3.2.12+3] - 13-04-26
+## [0.5.1.46+5] - 13-04-26
 
-E3:S02:T12 — Attempted fix for recurring SemVer collision risk by enforcing injective finalize mapping and strict RW tag/release boundary checks. SemVer **v0.4.733+3**.
+E5:S01:T46 — Clarified policy that dual-version mode requires task-touch SemVer mapping in RW, with deterministic validator-fail expectations for non-task-touch dual-mode configs. SemVer **v0.4.734+5**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.3.2.12+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+5.md)

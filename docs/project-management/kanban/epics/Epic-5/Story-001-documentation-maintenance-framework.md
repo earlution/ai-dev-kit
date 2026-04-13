@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-04-10 (v0.5.1.46+4 – Kanban documentation setup)
-**Version:** v0.5.1.46+4
+**Last updated:** 2026-04-13 (v0.5.1.46+5 – Kanban documentation setup)
+**Version:** v0.5.1.46+5
 **Code:** E5S01
 
 ---

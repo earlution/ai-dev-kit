@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Feature Request: Release Workflow Uses SemVer Tag When `task_touch` (ADR-002) Is Enabled
+# Feature Request: Dual-Version Mode Requires Task-Touch SemVer in RW
 
 **Type:** Feature Request (FR)  
 **Submitted:** 2026-02-26  
@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-When a project uses **ADR-002 Task-Touch Derived Mapping** (SemVer from internal `RC.EPIC.STORY.TASK+BUILD` via task touches), **Release Workflow (RW) should create and use SemVer tags** (e.g. `v0.1.22`) as the primary Git tags for releases, instead of tagging with the internal version string.
+When a project adopts **dual-version mode** (internal `RC.EPIC.STORY.TASK+BUILD` plus external SemVer), **Release Workflow (RW) must use ADR-002 task-touch mapping** for SemVer and use SemVer tags (e.g. `v0.1.22`) as the primary Git tags for releases.
 
 ---
 
@@ -28,12 +28,13 @@ When a project uses **ADR-002 Task-Touch Derived Mapping** (SemVer from internal
 
 ### What functionality is desired?
 
-- For projects configured with `semver_mapping_strategy: task_touch` (or equivalent):
-  - RW should:
+- For projects configured for **dual-versioning**:
+  - RW must:
     - Compute SemVer for the current internal version using the **task-touch mapping**.
     - Create a Git tag named `v\{semver\}` where tag format is `vX.Y.Z` (no `+BUILD` in the Git tag name; example: `v0.1.22`).
     - Use that SemVer tag as the primary reference for GitHub releases and package publishing.
 - RW should also create an internal traceability tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit by default (configurable opt-out only if explicitly disabled).
+- RW/validator configuration must reject dual-version mode when `semver_mapping_strategy != task_touch`.
 
 ### What problem does this solve?
 
@@ -43,10 +44,11 @@ Without this behaviour:
   - Packages and external docs expect SemVer (e.g. `0.1.22`).
   - RW’s tags and package versions diverge, confusing automation and users.
 
-Using SemVer tags when task_touch is enabled ensures:
+Using SemVer tags with mandatory task-touch in dual-version mode ensures:
 
 - Git tags and package versions stay aligned.
 - The SemVer story is consistent for both humans and tooling.
+- SemVer remains monotonic across releases even when internal Kanban numbering is non-monotonic relative to prior commits.
 
 ### What is the use case?
 
@@ -59,7 +61,7 @@ Using SemVer tags when task_touch is enabled ensures:
 - Projects publishing packages to registries.
 - Any workflow that:
   - Uses RW.
-  - Has configured `semver_mapping_strategy: task_touch`.
+  - Uses dual internal+external versioning.
 
 ---
 
@@ -67,18 +69,18 @@ Using SemVer tags when task_touch is enabled ensures:
 
 ### Functional Requirements
 
-- [ ] **FR-046:R01** – RW Step 11 detects when `task_touch` SemVer mapping is enabled (e.g. via `rw-config.yaml`).
-- [ ] **FR-046:R02** – When enabled, RW Step 11:
+- [ ] **FR-046:R01** – RW and validators detect **dual-version mode** and enforce `semver_mapping_strategy: task_touch` (hard-fail otherwise).
+- [ ] **FR-046:R02** – In dual-version mode, RW Step 11:
   - Calls the task-touch SemVer converter (e.g. `get_semver_task_touch(include_build=False)`).
   - Creates a Git tag `v\{semver\}` (e.g. `v0.1.22`) pointing to the release commit.
 
 - [ ] **FR-046:R03** – RW Step 11 creates internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability (unless explicitly disabled by config), while SemVer tag remains the **primary external tag**.
 - [ ] **FR-046:R04** – `create_github_release.py` (or equivalent tooling) uses the SemVer tag as the primary release name and includes the internal version in the body/metadata.
-- [ ] **FR-046:R05** – Documentation (RW execution guide, `.cursorrules` RW trigger section) is updated to reflect this behaviour when `task_touch` is configured.
+- [ ] **FR-046:R05** – Documentation (RW execution guide, `.cursorrules` RW trigger section) is updated to reflect dual-mode policy: task-touch is required.
 
 ### Non-Functional Requirements
 
-- [ ] **FR-046:NF01** – **Compatibility:** Default RW behaviour (internal tag as primary) is preserved when `task_touch` is **not** enabled.
+- [ ] **FR-046:NF01** – **Compatibility:** Non-dual modes preserve explicit strategy behaviour (SemVer-only, Kanban-only, or internal-primary paths), but dual mode always requires task-touch.
 - [ ] **FR-046:NF02** – **Traceability:** Internal version remains discoverable from the SemVer tag (e.g. included in release notes, optional internal tag).
 
 ---
@@ -109,7 +111,7 @@ Using SemVer tags when task_touch is enabled ensures:
 
 ### Primary Use Case
 
-1. Project configures `semver_mapping_strategy: task_touch` in `rw-config.yaml`.
+1. Project configures dual-version mode in `rw-config.yaml` (with `semver_mapping_strategy: task_touch`).
 2. Release Workflow runs and:
    - Bumps internal version (e.g. `0.5.1.44+1`).
    - Derives SemVer via task-touch mapping (e.g. `0.1.22`).
@@ -129,12 +131,13 @@ Using SemVer tags when task_touch is enabled ensures:
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** When `task_touch` SemVer mapping is configured, RW Step 11 creates SemVer tags (`vX.Y.Z`, no `+BUILD` in the tag name) as the primary tag instead of internal version tags.
-- [ ] **AC2:** Tag creation is tested for:
-  - `task_touch` enabled.
-  - `task_touch` disabled (fallback to existing behaviour).
+- [ ] **AC1:** In dual-version mode, RW Step 11 creates SemVer tags (`vX.Y.Z`, no `+BUILD` in the tag name) as the primary tag instead of internal version tags.
+- [ ] **AC2:** Validation and tag creation are tested for:
+  - dual-version mode + `task_touch` (pass),
+  - dual-version mode + non-task-touch (deterministic fail),
+  - non-dual compatibility paths (unchanged behavior).
 
-- [ ] **AC3:** GitHub releases and package versions align on SemVer when `task_touch` is enabled; release title/tag uses SemVer while release body includes internal version for traceability.
+- [ ] **AC3:** GitHub releases and package versions align on SemVer in dual-version mode; release title/tag uses SemVer while release body includes internal version for traceability.
 - [ ] **AC4:** Documentation clearly explains the change and how to configure it.
 
 ---
@@ -194,6 +197,11 @@ Using SemVer tags when task_touch is enabled ensures:
 - Internal traceability tag remains supported in `task_touch` mode and is generated on the same commit unless explicitly disabled by config in tag-handler usage.
 - `create_github_release.py` now resolves tag behavior from the same canonical decision path used by tagging logic.
 
+## Policy Clarification (2026-04-13)
+
+- FR-046 scope is clarified: for repositories adopting dual internal+external versioning, task-touch is not optional; it is required policy.
+- Non-task-touch paths remain compatibility options only for repositories not in dual-version mode.
+
 ### Verification Evidence
 
 - `python -m pytest "packages/frameworks/workflow mgt/scripts/version/test_fr046_rw_tagging.py" "packages/frameworks/workflow mgt/scripts/version/test_fr046_comprehensive.py" "packages/frameworks/workflow mgt/scripts/version/test_task_touch_mapping.py" -q` → passed (`22 passed`).
@@ -201,7 +209,7 @@ Using SemVer tags when task_touch is enabled ensures:
 
 ### Latest release anchor
 
-- Released build: **v0.3.2.12+3** (SemVer: **v0.4.733+3**) with BR-061 regression-hardening checks at RW tag/release boundaries.
+- Released build: **v0.5.1.46+5** (SemVer: **v0.4.734+5**) with policy clarification that dual-version mode requires task-touch mapping.
 
 ---
 
