@@ -103,13 +103,10 @@ def parse_branch_epic(branch: str, config: Optional[Dict] = None) -> Optional[in
     match = re.match(r"^epic/(\d+)", branch)
     if match:
         return int(match.group(1))
-    # Support strict-equal-epic mode for a shared dev branch by
-    # requiring an explicit configured epic mapping.
-    if branch == "dev" and config and config.get("dev_branch_epic") is not None:
-        try:
-            return int(config.get("dev_branch_epic"))
-        except (TypeError, ValueError):
-            return None
+    # dev is an intentionally shared integration branch and does not carry
+    # a strict epic lock; return None to skip epic/version enforcement.
+    if branch == "dev":
+        return None
     return None
 
 
@@ -173,6 +170,37 @@ def parse_version_patch(version: str) -> Optional[int]:
     if match:
         return int(match.group(4))  # PATCH is the fourth component
     return None
+
+
+def parse_version_task(version: str) -> Optional[int]:
+    """Extract TASK number from RC.EPIC.STORY.TASK+BUILD."""
+    match = re.match(r"^(\d+)\.(\d+)\.(\d+)\.(\d+)\+(\d+)$", version)
+    if match:
+        return int(match.group(4))
+    return None
+
+
+def is_perpetual_task_content(content: str) -> bool:
+    """True if task document text indicates perpetual maintenance (UKW/CMW-style)."""
+    low = content.lower()
+    return (
+        "task type:** perpetual maintenance" in low
+        or "perpetual_task: true" in low
+        or "status:** in progress (perpetual)" in low
+    )
+
+
+def version_anchors_perpetual_task(version: str, config: Optional[Dict]) -> bool:
+    """Whether version.py E/S/T resolves to a perpetual task doc (if found)."""
+    ve = parse_version_epic(version)
+    vs = parse_version_story(version)
+    vt = parse_version_task(version)
+    if ve is None or vs is None or vt is None:
+        return False
+    _path, content, fmt = locate_task_doc_for_version(ve, vs, vt, config)
+    if not content or fmt == "not_found":
+        return False
+    return is_perpetual_task_content(content)
 
 
 def locate_task_doc_for_version(
@@ -539,6 +567,11 @@ def check_changelog(branch, config: Optional[Dict] = None, current_version: Opti
                                 f"(expected RC.EPIC.STORY.PATCH or RC.EPIC.STORY.TASK+BUILD)"
                             )
                         elif version_epic != expected_epic:
+                            if (
+                                branch == "dev"
+                                and version_anchors_perpetual_task(staged_version, config)
+                            ):
+                                continue
                             issues.append(
                                 f"Staged CHANGELOG entry '{staged_version}' has Epic {version_epic} "
                                 f"but branch '{branch}' expects Epic {expected_epic}"
@@ -569,26 +602,49 @@ def validate_branch_context(requested: Optional[str] = None, art: bool = False):
     maintenance_branch = is_maintenance_branch(branch)
     requested_est = parse_requested_est(requested) if requested else None
     requested_epic = requested_est[0] if requested_est else None
-    if branch == "main":
-        expected_epic = None  # main branch can have any epic
+    branch_epic = parse_branch_epic(branch, config)
+    explicit_requested_reconciliation = False
+    if branch in {"main", "dev"}:
+        expected_epic = None  # main/dev branches can have any epic
     elif maintenance_branch:
         expected_epic = None  # maintenance/update branches intentionally skip epic validation
         print("Detected maintenance/update branch pattern; skipping epic/version enforcement.")
-    elif art and requested_epic is not None:
-        expected_epic = requested_epic
-        print(
-            f"--art adoption enabled: using requested epic E{requested_epic} "
-            "as branch-context expectation for this validation run."
-        )
+    elif requested_epic is not None:
+        # Explicit requested E:S:T should be authoritative for RW intent, but must
+        # still align with the active epic branch to prevent cross-epic contamination.
+        if branch_epic is not None and branch_epic != requested_epic:
+            expected_epic = branch_epic
+        else:
+            expected_epic = requested_epic
+            explicit_requested_reconciliation = True
+            if art:
+                print(
+                    f"--art adoption enabled: requested epic E{requested_epic} accepted for "
+                    "explicit-task reconciliation in this validation run."
+                )
+            else:
+                print(
+                    f"Explicit requested token detected: using requested epic E{requested_epic} "
+                    "for pre-Step-2 reconciliation checks."
+                )
     else:
         # Parse epic number from branch name (e.g., epic/10-fastapi-migration -> 10)
-        expected_epic = parse_branch_epic(branch, config)
+        expected_epic = branch_epic
 
     errors = []
     warnings = []
 
     if expected_epic is not None:
         print(f"Expected epic number: {expected_epic}")
+        if (
+            requested_epic is not None
+            and branch_epic is not None
+            and branch_epic != requested_epic
+        ):
+            errors.append(
+                f"Requested task epic E{requested_epic} does not match active branch epic E{branch_epic} "
+                f"on '{branch}' (cross-epic request blocked)."
+            )
         if version:
             version_epic = parse_version_epic(version)
             if version_epic is None:
@@ -597,16 +653,23 @@ def validate_branch_context(requested: Optional[str] = None, art: bool = False):
                     f"(expected RC.EPIC.STORY.PATCH or RC.EPIC.STORY.TASK+BUILD)"
                 )
             elif version_epic != expected_epic:
-                errors.append(
-                    f"Version mismatch: Branch '{branch}' expects Epic {expected_epic} "
-                    f"but version '{version}' has Epic {version_epic}"
-                )
-    elif branch == "dev":
-        errors.append(
-            "Branch 'dev' requires rw-config.yaml key 'dev_branch_epic' "
-            "for strict epic/version validation (strict-equal-epic mode)."
-        )
-    elif branch != "main" and not maintenance_branch:
+                if explicit_requested_reconciliation:
+                    print(
+                        "ℹ️  Explicit-task reconciliation: version epic differs from requested epic "
+                        f"(version E{version_epic} vs requested E{expected_epic}) — allowing pre-Step-2 "
+                        "proceed so Step 2 can deterministically realign version.py."
+                    )
+                elif branch == "dev" and version_anchors_perpetual_task(version, config):
+                    print(
+                        "ℹ️  dev branch: version epic differs from dev_branch_epic, but version "
+                        "anchors a perpetual maintenance task — allowed."
+                    )
+                else:
+                    errors.append(
+                        f"Version mismatch: Branch '{branch}' expects Epic {expected_epic} "
+                        f"but version '{version}' has Epic {version_epic}"
+                    )
+    elif branch not in {"main", "dev"} and not maintenance_branch:
         warnings.append(f"Branch '{branch}' not in known mapping - cannot validate version")
 
     # Check CHANGELOG (only validate current version to avoid false positives on reorder)

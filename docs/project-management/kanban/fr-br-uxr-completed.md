@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-04-01 (FR-075 via E5:S01:T75)
-**Version:** v0.5.1.75+1
+**Last Updated:** 2026-04-07 (BR-063 via E2:S01:T13+2)
+**Version:** v0.2.1.13+2
 
 > **For open FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -34,6 +34,7 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| BR-063 | BR | RW `-k` task attribution drift vs `version.py` anchor — forensic-strict guard, `--art`, version validation, tests, docs | 2026-04-07 | v0.2.1.13+2 | RW Agent |
 | FR-075 | FR | ICW durable planning artifacts — repo SoT under `docs/implementation-cycles/`, policy, ICW docs, `.cursorrules` | 2026-04-01 | v0.5.1.75+1 | RW Agent |
 | FR-064 | FR | Retire `shields` branch — static README badges; removed `update-badges.yml` BYOB; deleted `origin/shields` | 2026-03-30 | v0.5.1.69+1 | RW Agent |
 | BR-056 | BR | RW ambiguous task identifier typo risk | 2026-03-25T12:55:31Z | v0.6.6.56+4 | RW Agent |

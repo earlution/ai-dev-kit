@@ -38,10 +38,20 @@ housekeeping_policy: keep
 | **5** | Wire to host task | Add plan link under task doc **Input** and **References** (atomic with step 4). |
 | **6** | Validate | Bidirectional links work; required sections present. |
 
+## Status transition ownership (FR-077)
+
+- IPW itself is planning-only and must not auto-mark implementation completion.
+- IPW outputs must explicitly declare transition intent:
+  - `TODO -> IN PROGRESS` at first non-planning implementation change.
+  - `IN PROGRESS -> COMPLETE` only after acceptance evidence is recorded.
+- Implementation execution is responsible for applying transition intent in task docs.
+- RW/UKW propagation must keep task doc status and board representation in the same change set/session.
+
 ## Outputs
 
 - One markdown plan doc per IPW run (typically co-located with the host task story folder or under `docs/implementation-cycles/` per project convention).
 - Updated task doc with **Input** + **References** pointing to the plan.
+- Explicit status-transition intent section in the plan artifact (required for IPW-derived tasks).
 
 ## Integration
 

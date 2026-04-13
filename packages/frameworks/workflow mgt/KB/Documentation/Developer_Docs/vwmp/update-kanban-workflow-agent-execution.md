@@ -571,6 +571,35 @@ After completing UKW, users typically run RW to commit the kanban documentation 
    - Document board updates and prioritization rationale
    - Pass to Step 6
 
+### Step 6.5: fbuboard Reconciliation and Drift Guard
+
+**Purpose:** Keep `fr-br-uxr-board.md` aligned with FR/BR/UXR source-of-truth docs using deterministic cleanup and safe writes.
+
+**Agent Execution:**
+
+1. **ANALYZE:**
+   - Read active MoSCOW sections (`Must`, `Should`, `Could`, `Ongoing`) in fbuboard.
+   - Resolve each row's linked `fr-br/*.md` source document.
+   - Parse source `**Status:**` for terminal vs non-terminal state.
+
+2. **DETERMINE:**
+   - **Prune rule:** remove active rows whose linked source status is terminal (`COMPLETE`, `COMPLETED`, `IMPLEMENTED`, `FIXED`, `RESOLVED`).
+   - **Exception rule:** keep row active if status explicitly indicates unresolved verification context (e.g., includes `IN PROGRESS`, `UNVERIFIED`, `PENDING VERIFICATION`).
+   - **Temporal normalization:** unify active row suffix to `| Last modified: YYYY-MM-DD HH:MM UTC` and align board `Last Updated` metadata in same pass.
+
+3. **EXECUTE:**
+   - Apply deterministic row cleanup and timestamp normalization.
+   - Perform pre-write concurrency revalidation:
+     - If file changed since initial read, re-read latest content and re-apply cleanup/transforms before writing.
+
+4. **VALIDATE:**
+   - No stale terminal-status rows remain in active sections.
+   - Exception rows that are intentionally unresolved remain active.
+   - Header/row timestamps are consistent.
+
+5. **PROCEED:**
+   - Report reconciliation stats: audited rows, rows removed, exceptions kept, timestamps normalized, and whether concurrency revalidation was triggered.
+
 **Key Rules:**
 - **CRITICAL: MoSCOW list is updated LAST** (after all other board updates)
 - **CRITICAL: Numerical Sorting Required** - Epics, stories, and tasks must be sorted numerically:

@@ -22,10 +22,13 @@ def test_trigger_parsing():
     test_cases = [
         ("RW", "RW"),
         ("rw", "RW"),
+        ("RW E2:S01:T13", "RW"),
         ("RW -k", "RW -k"),
         ("rw -k", "RW -k"),
+        ("RW -k E2:S01:T13 --art", "RW -k"),
         ("RW -d", "RW -d"),
         ("rw -d", "RW -d"),
+        ("RW -d E6:S07:T102", "RW -d"),
     ]
     
     for input_trigger, expected_type in test_cases:
@@ -38,7 +41,7 @@ def test_trigger_parsing():
             return False
     
     # Test invalid triggers
-    invalid_triggers = ["RW -x", "RW-k", "invalid", ""]
+    invalid_triggers = ["RW-k", "invalid", ""]
     for invalid_trigger in invalid_triggers:
         try:
             parse_rw_trigger(invalid_trigger)

@@ -14,6 +14,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** PENDING
 
+**Implementing Task:** [E2:S01:T08](../epics/Epic-2/Story-001-rw-agent-execution-and-docs.md)
+
 ---
 
 ## Summary

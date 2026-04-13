@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-03-31 (**RW -k E6:S07:T109** v0.6.7.109+1 — BR-059; UKW baseline **v0.6.7.101+37**)
-**Version:** v0.6.7.109+1
+**Last updated:** 2026-04-10 (v0.6.7.112+2 – Kanban documentation setup)
+**Version:** v0.6.7.112+2
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -73,7 +73,7 @@ housekeeping_policy: keep
   - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
 
 
-- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+36 – RW -k: Kanban init)
+- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+43 – RW -k: BR-061 disambiguation + cross-wire normalization)
   - Task: [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md)
   - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
   - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)
@@ -115,6 +115,17 @@ housekeeping_policy: keep
 - [ ] **E6:S07:T109 – BR-059: UKW MoSCOW full open-task coverage per in-progress story** - TODO (HIGH, board must list all open story tasks or explicit **Won’t** deferrals; fail loud on partial enumeration)
   - Task: [`T109-br059-ukw-moscow-full-story-task-coverage.md`](T109-br059-ukw-moscow-full-story-task-coverage.md) | [BR-059](../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
   - **Coordinates:** [E6:S07:T101](T101-update-kanban-workflow-ukw.md) (UKW perpetual)
+
+- [x] **E6:S07:T110 – UKW fbuboard scope + concurrency/temporal-drift controls** - ✅ COMPLETE (HIGH, v0.6.7.110+1 — UKW fbuboard parity + drift/concurrency controls released)
+  - Task: [`T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md`](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md) | [FR-076](../../fr-br/FR-076-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
+  - **Coordinates:** [E6:S07:T101](T101-update-kanban-workflow-ukw.md) (UKW perpetual), [E6:S07:T108](T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
+
+
+- [x] **E6:S07:T111 – Comprehensive install event-contract logging quality** - ✅ COMPLETE (CRITICAL, v0.6.7.111+1 — FR-078 install contract + validator + verification complete on 2026-04-10)
+  - Task: [`T111-comprehensive-install-event-contract-logging-and-feedback-quality.md`](T111-comprehensive-install-event-contract-logging-and-feedback-quality.md) | [FR-078](../../fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md)
+
+- [ ] **E6:S07:T112 – Install feedback submission path and governance** - IN PROGRESS (CRITICAL, convert local telemetry into safe, deterministic feedback submissions for maintainer triage)
+  - Task: [`T112-install-feedback-submission-path-and-governance.md`](T112-install-feedback-submission-path-and-governance.md) | [FR-079](../../fr-br/FR-079-install-feedback-submission-path-and-governance.md)
 
 
 ---
@@ -180,11 +191,11 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T00 – Story creation and comprehensive structure documentation
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** HIGH
 **Dependencies:** None
 **Estimated Effort:** Small
-**Version:** v0.6.7.101+36
+**Version:** v0.6.7.112+2
 
 **Input:** User requirements, existing comprehensive project analysis framework
 
@@ -208,11 +219,11 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T01 – Comprehensive ADK implementation analysis across all projects
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T00
 **Estimated Effort:** VERY LARGE
-**Version:** v0.6.7.101+36
+**Version:** v0.6.7.112+2
 
 **Input:**
 
@@ -360,7 +371,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T02 – Investigate proper package management (single package file, hash verification)
 
-**Status:** ✅ COMPLETE (v0.6.7.2+1)
+**Status:** IN PROGRESS
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T01 (informs requirements)
 **Estimated Effort:** MEDIUM-LARGE
@@ -439,7 +450,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T03 – Design pre-release feedback mechanism
 
-**Status:** ✅ COMPLETE (v0.6.7.3+1)
+**Status:** IN PROGRESS
 **Priority:** HIGH
 **Dependencies:** E6:S07:T01, E6:S07:T02
 **Estimated Effort:** MEDIUM
@@ -506,7 +517,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T09 – Review and Prioritize Package Management Investigation Findings
 
-**Status:** TODO
+**Status:** IN PROGRESS
 **Priority:** HIGH
 **Dependencies:** E6:S07:T02
 **Estimated Effort:** SMALL-MEDIUM
@@ -572,7 +583,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T04 – Create package management implementation plan
 
-**Status:** TODO
+**Status:** IN PROGRESS
 **Priority:** HIGH
 **Dependencies:** E6:S07:T02, E6:S07:T09, E6:S07:T03
 **Estimated Effort:** MEDIUM
@@ -637,7 +648,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T05 – Implement feedback mechanism
 
-**Status:** ✅ COMPLETE (v0.6.7.5+1)
+**Status:** IN PROGRESS
 **Priority:** MEDIUM
 **Dependencies:** E6:S07:T03
 **Estimated Effort:** MEDIUM
@@ -690,7 +701,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T06 – Cross-project meta-analysis and canonical framework design
 
-**Status:** TODO
+**Status:** IN PROGRESS
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T01 (requires all project reports and granular analyses)
 **Estimated Effort:** VERY LARGE
@@ -995,7 +1006,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ### E6:S07:T07 – Implement framework hardening recommendations
 
-**Status:** TODO
+**Status:** IN PROGRESS
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T01 (requires hardening recommendations from analysis)
 **Estimated Effort:** LARGE
@@ -1133,6 +1144,6 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2026-03-20 (v0.6.7.101+36 – Kanban documentation setup)
-**Version:** v0.6.7.101+36
+**Last Updated:** 2026-04-10 (v0.6.7.112+2 – Kanban documentation setup)
+**Version:** v0.6.7.112+2
 **Status:** IN PROGRESS

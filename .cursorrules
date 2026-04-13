@@ -332,14 +332,12 @@ For each step, follow this pattern:
 
 10. **Commit Changes** - Create commit with message: `Release v{version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
 
-11. **Create Git Tag** - Create dual tags (internal + SemVer):
-   - **A. Generate SemVer:** Use `semver_converter.py` to convert internal version to SemVer
-     - Run: `python "packages/frameworks/workflow mgt/scripts/version/semver_converter.py" "{internal_version}"`
-     - Example: `0.6.7.101+24` → `0.3.19+24` (SemVer)
-   - **B. Create Internal Tag:** Create annotated tag: `v{internal_version}` with message: `Release v{internal_version}: {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
-   - **C. Create SemVer Tag:** Create annotated tag: `v{semver}` with message: `Release v{semver} (internal: v{internal_version}): {summary}\n\nEpic: {epic} | Story: {story} | Task: {task}`
-   - **D. Registry Update:** Registry is automatically updated by `semver_converter.py` during conversion
-   - **Note:** Both tags reference the same commit. Internal tag for tracking, SemVer tag for GitHub releases.
+11. **Create Git Tag** - Create tags via canonical strategy decision:
+ - **A. Canonical source:** Use `semver_converter.get_rw_tag_info(internal_version, finalize=True)` to determine tags for both Step 11 and Step 12.5.
+ - **B. Registry mode:** Create annotated primary tag `v{internal_version}`.
+ - **C. Task-touch mode:** Create annotated primary tag `vX.Y.Z` (SemVer core; no `+BUILD` in tag name). Also create internal traceability tag `v{internal_version}` on the same commit unless explicitly disabled.
+ - **D. Registry finalization:** Task-touch counter/mapping finalizes at tag-creation boundary, not read-only lookups.
+ - **Note:** If both tags are created, they must reference the same commit.
 
 12. **Push to Remote** - Push epic branch and both tags (internal + SemVer) to origin (DO NOT push to main unless ready to deploy)
     - **CRITICAL: Use `required_permissions: ['network']` for git push commands**
@@ -534,6 +532,13 @@ For each step, follow this pattern:
    - **If combined flags:** Run specified operations
    - **CRITICAL:** Use `sort_kanban_board.py` to sort epics/stories numerically before writing to board
    - **CRITICAL:** MoSCOW prioritization requires **🧠 INTELLIGENT PRIORITIZATION** - analyze context, dependencies, impact
+   - **CRITICAL:** `fr-br-uxr-board.md` (fbuboard) is required UKW scope for comprehensive/bookkeeping runs; do not treat as best-effort
+   - **CRITICAL:** Apply deterministic fbuboard active-row reconciliation:
+     - Prune active MoSCOW rows whose linked FR/BR/UXR doc status is terminal (`COMPLETE`, `COMPLETED`, `IMPLEMENTED`, `FIXED`, `RESOLVED`)
+     - Keep explicit unresolved-verification exceptions active (e.g., status includes `IN PROGRESS`, `UNVERIFIED`, `PENDING VERIFICATION`)
+   - **CRITICAL:** Apply temporal-drift normalization in the same pass (board `Last Updated` + active row terminal timestamps)
+   - **CRITICAL:** Apply pre-write concurrency revalidation (if board changed mid-run, re-read latest content and re-apply transforms before write)
+   - **CRITICAL:** Document reconciliation stats (audited rows, removed rows, kept exceptions, timestamps normalized, revalidation trigger)
 7. **Validate Consistency** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** Cross-reference status across all kanban documents, verify version consistency, check link integrity
 8. **Stage Files** - **Always runs:** Run `git add` for all kanban files
 9. **Document Changes** - **Always runs:** Create summary of updated documents, list key status changes

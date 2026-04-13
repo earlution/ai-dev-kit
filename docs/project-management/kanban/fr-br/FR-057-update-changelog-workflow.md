@@ -14,6 +14,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** PROPOSED
 
+**Implementing Task:** [E7:S01:T06](../epics/Epic-7/Story-001-codebase-maintenance-tasks.md)
+
 ---
 
 ## Summary

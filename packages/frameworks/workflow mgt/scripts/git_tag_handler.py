@@ -21,10 +21,10 @@ from typing import Dict, Any, Optional, Tuple
 # Add version scripts to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'version'))
 try:
-    from semver_converter import convert_version_string, get_semver_mapping_strategy
+from semver_converter import get_rw_tag_info, get_semver_mapping_strategy
 except ImportError:
     print("⚠️  Warning: semver_converter not available")
-    convert_version_string = None
+    get_rw_tag_info = None
     get_semver_mapping_strategy = None
 
 
@@ -72,17 +72,29 @@ class GitTagHandler:
         rw_config = self.load_rw_config()
         return rw_config.get('semver_mapping_strategy', 'registry')
     
-    def convert_to_semver(self, internal_version: str) -> Optional[str]:
-        """Convert internal version to SemVer."""
-        if not convert_version_string:
-            return None
-            
+    def get_tag_info(self, internal_version: str) -> Dict[str, Any]:
+        """Get canonical RW tag info from semver_converter."""
+        if not get_rw_tag_info:
+            return {
+                "strategy": "registry",
+                "primary_tag": f"v{internal_version}",
+                "internal_tag": None,
+                "semver_full": None,
+                "tag_message": f"Release {internal_version}",
+            }
+
         try:
-            strategy = self.get_semver_strategy()
-            return convert_version_string(internal_version, strategy=strategy)
+            # Tag creation is a release boundary; finalize task_touch mapping here.
+            return get_rw_tag_info(internal_version, finalize=True)
         except Exception as e:
-            print(f"⚠️  Warning: Failed to convert {internal_version} to SemVer: {e}")
-            return None
+            print(f"⚠️  Warning: Failed to get canonical tag info: {e}")
+            return {
+                "strategy": "registry",
+                "primary_tag": f"v{internal_version}",
+                "internal_tag": None,
+                "semver_full": None,
+                "tag_message": f"Release {internal_version}",
+            }
     
     def create_tag(self, tag_name: str, message: str, annotated: bool = True) -> bool:
         """Create a git tag."""
@@ -104,8 +116,9 @@ class GitTagHandler:
     
     def create_tags(self, internal_version: str, summary: str) -> Tuple[bool, Dict[str, str]]:
         """Create tags based on strategy."""
-        strategy = self.get_semver_strategy()
-        semver_version = self.convert_to_semver(internal_version)
+        tag_info = self.get_tag_info(internal_version)
+        strategy = tag_info.get("strategy", self.get_semver_strategy())
+        semver_version = tag_info.get("semver_full")
         
         results = {
             'strategy': strategy,
@@ -115,12 +128,12 @@ class GitTagHandler:
             'primary_tag': None
         }
         
-        # Determine primary tag
-        if strategy == 'task_touch' and semver_version:
-            primary_tag = f"v{semver_version}"
-            internal_tag = f"v{internal_version}" if self.create_internal_tag else None
-        else:
-            primary_tag = f"v{internal_version}"
+        # Determine primary/internal tags from canonical decision path.
+        primary_tag = tag_info.get("primary_tag", f"v{internal_version}")
+        internal_tag = tag_info.get("internal_tag")
+        if strategy == 'task_touch' and not self.create_internal_tag:
+            internal_tag = None
+        if strategy != 'task_touch':
             internal_tag = None
         
         # Create primary tag

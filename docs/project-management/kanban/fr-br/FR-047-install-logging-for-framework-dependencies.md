@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-02-27  
 **Submitted By:** earlution  
 **Priority:** HIGH  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Implementing Task:** [E5:S01:T47](../epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 
 ---
@@ -154,6 +154,13 @@ This FR proposes adding **structured install logging** so that each invocation o
 **Related Work:**
 - BR-037 – Kanban Install Delivers Mixed Dev Kit Backlog and Templates into Consumer Boards.
 - E6:S07 – ai-dev-kit CLI Tool (framework dependency management and install flows).
+
+## Archive note
+
+`FR-047` remains the canonical requirement anchor, but implementation is complete and historical. Successor deepening work is delivered under:
+
+- `E6:S07:T111` (comprehensive install event-contract logging quality)
+- `E6:S07:T112` (install feedback submission path and governance)
 
 ---
 

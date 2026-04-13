@@ -11,16 +11,69 @@ import os
 import uuid
 from datetime import datetime
 from pathlib import Path
-from typing import Callable, Optional, Tuple, TextIO
+from typing import Any, Callable, Dict, Optional, Tuple, TextIO
 
 from cli.utils import print_warning, redact
 
 
-LogFunc = Callable[[str, str, str], None]
+LogFunc = Callable[..., None]
 
 
-def _noop_log(_level: str, _context: str, _message: str) -> None:
+def _noop_log(_level: str, _context: str, _message: str, **_kwargs: Any) -> None:
     return
+
+
+def _default_event_contract(level: str, context: str, message: str) -> Dict[str, Any]:
+    """Create a minimal event contract payload when caller did not provide one."""
+    status = "unknown"
+    if level == "INFO":
+        status = "ok"
+    elif level == "WARNING":
+        status = "warning"
+    elif level == "ERROR":
+        status = "error"
+
+    return {
+        "intent": {
+            "summary": "Emit install telemetry event",
+            "objective": "Capture install step details for forensic reconstruction",
+        },
+        "action": {
+            "summary": message,
+            "component": context,
+        },
+        "result": {
+            "status": status,
+            "details": message,
+        },
+    }
+
+
+def _validate_event_contract(event: Dict[str, Any]) -> None:
+    """
+    Validate required structure for JSON event contract payloads.
+
+    Required structure:
+    - intent.summary
+    - action.summary
+    - result.status
+    - result.details
+    """
+    if not isinstance(event, dict):
+        raise ValueError("event_contract must be a dictionary")
+
+    intent = event.get("intent")
+    action = event.get("action")
+    result = event.get("result")
+
+    if not isinstance(intent, dict) or not intent.get("summary"):
+        raise ValueError("event_contract.intent.summary is required")
+    if not isinstance(action, dict) or not action.get("summary"):
+        raise ValueError("event_contract.action.summary is required")
+    if not isinstance(result, dict) or not result.get("status"):
+        raise ValueError("event_contract.result.status is required")
+    if not isinstance(result, dict) or not result.get("details"):
+        raise ValueError("event_contract.result.details is required")
 
 
 def create_install_logger(
@@ -78,24 +131,54 @@ def create_install_logger(
 
         run_id = uuid.uuid4().hex
 
+        sequence = 0
+
+        strict_event_contract = bool(config.get("install_logging.strict_event_contract", False))
+
         if fmt == "json":
 
-            def _log(level: str, context: str, message: str) -> None:
+            def _log(
+                level: str,
+                context: str,
+                message: str,
+                *,
+                event: Optional[Dict[str, Any]] = None,
+                step_id: Optional[str] = None,
+                parent_step_id: Optional[str] = None,
+            ) -> None:
+                nonlocal sequence
+                sequence += 1
                 ts = datetime.utcnow().isoformat(timespec="seconds") + "Z"
                 safe = redact(message)
+                event_payload = event or _default_event_contract(level, context, safe)
+                if strict_event_contract:
+                    _validate_event_contract(event_payload)
                 payload = {
                     "timestamp_utc": ts,
                     "level": level,
                     "context": context,
                     "message": safe,
                     "install_run_id": run_id,
+                    "schema_version": "1.0",
+                    "event_contract": event_payload,
+                    "step_id": step_id or f"step-{sequence:04d}",
+                    "parent_step_id": parent_step_id,
                 }
                 fh.write(json.dumps(payload) + "\n")
                 fh.flush()
 
         else:
 
-            def _log(level: str, context: str, message: str) -> None:
+            def _log(
+                level: str,
+                context: str,
+                message: str,
+                *,
+                event: Optional[Dict[str, Any]] = None,
+                step_id: Optional[str] = None,
+                parent_step_id: Optional[str] = None,
+            ) -> None:
+                del event, step_id, parent_step_id
                 ts = datetime.utcnow().isoformat(timespec="seconds") + "Z"
                 safe = redact(message)
                 fh.write(f"[{ts}] [{level}] [{context}] {safe}\n")

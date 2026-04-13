@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 47: Install Logging for Framework Dependencies
 
 **Task ID:** E5:S01:T47  
-**Status:** COMPLETE  
+**Status:** ARCHIVED  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-27  
@@ -20,6 +20,8 @@ housekeeping_policy: keep
 **Progress:** All phases complete - CLI logging, JSON/text formats, framework installer integration, install-history command, comprehensive testing, and documentation fully implemented
 
 **Repository Pattern:** FR-047 = E5:S01:T47 (abstract space v0.5.1.47+0)
+
+**Archive note:** Historical FR-repo anchor retained for traceability. Active implementation ownership is carried by `E6:S07:T111` (event-contract quality) and `E6:S07:T112` (feedback submission path/governance).
 
 ---
 

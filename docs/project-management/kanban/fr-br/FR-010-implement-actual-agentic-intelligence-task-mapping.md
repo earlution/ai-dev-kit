@@ -13,6 +13,8 @@ housekeeping_policy: keep
 **Submitted By:** AI Agent (Cursor) acting as user/client for dev-toolkit  
 **Priority:** HIGH  
 **Status:** PENDING  
+
+**Implementing Task:** [E4:S09:T06](../epics/Epic-4/Story-009-bug-fixes-and-agentic-intelligence.md)
 **GitHub Issue:** [#11](https://github.com/earlution/ai-dev-kit/issues/11)
 
 ---

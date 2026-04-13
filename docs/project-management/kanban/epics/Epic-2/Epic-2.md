@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-04-07 (v0.2.1.10+2 – Story 1 Task 10 complete)
+**Last updated:** 2026-04-13 (v0.2.1.17+2 – Kanban documentation setup)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E2:S01 – RW Agent Execution & Docs** - IN PROGRESS (reopened 2026-04-02 — **E2:S01:T09** **BR-060** Step 1c / `IN PROGRESS` releasable; T01–T08 complete through v0.2.1.8+1)
+- [ ] **E2:S01 – RW Agent Execution & Docs** - IN PROGRESS (reopened 2026-04-02; latest: **E2:S01:T12** completed at v0.2.1.12+2 for BR-061 explicit-task reconciliation)
   - Story: [`Story-001-rw-agent-execution-and-docs.md`](Story-001-rw-agent-execution-and-docs.md)
   - Tasks: T01–T08 ✅ COMPLETE; **T09** 🔄 IN PROGRESS — [BR-060](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)
 

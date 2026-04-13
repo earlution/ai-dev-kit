@@ -14,6 +14,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** PENDING
 
+**Implementing Task:** [E4:S06:T01](../epics/Epic-4/Story-006-comprehensive-canonical-est-template-system.md)
+
 ---
 
 ## Summary

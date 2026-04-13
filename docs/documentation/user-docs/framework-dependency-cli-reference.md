@@ -120,6 +120,8 @@ ai-dev-kit install workflow-mgmt --dry-run
 
 **Install logging (FR-047):** Each run of `ai-dev-kit install` writes a timestamped log file under the project’s `logs/ai-dev-kit/install/` directory (or the path set in `.ai-dev-kit.yaml` under `install_logging.path`). The log records frameworks, backend, path, and framework-specific installer output (e.g. Kanban phase markers). Use `--log-path PATH` to override the log directory for one run, or `--no-install-log` to disable logging for one run. See the configuration guide for `install_logging` options.
 
+**Install log validation (FR-078):** For JSON logs, run `ai-dev-kit logs validate-install-log` to verify event-contract completeness (`intent`/`action`/`result`) and correlation keys (`install_run_id`, `step_id`) before using logs for support or feedback workflows.
+
 **Output:**
 
 ```
@@ -403,6 +405,65 @@ ai-dev-kit remove workflow-mgmt --dry-run
 - **Git submodule:** Deinitializes submodule, removes from `.gitmodules` and `.git/config`, removes `.git/modules` entry
 - **Git subtree:** Removes subtree merge history
 - **npm/pip:** Uninstalls package from node_modules or site-packages
+
+---
+
+### `ai-dev-kit logs`
+
+Inspect install logs and validate JSON install-log event contracts.
+
+**Usage:**
+
+```bash
+ai-dev-kit logs <subcommand> [options]
+```
+
+**Subcommands:**
+- `install-history` - Show summary of recent install runs
+- `validate-install-log` - Validate JSON install logs against required event contract fields
+- `prepare-feedback-payload` - Build deterministic feedback payload from install telemetry
+- `validate-feedback-payload` - Validate feedback payload structure/readiness
+- `submit-feedback-payload` - Evaluate payload outcomes and write local submission receipt
+
+**Examples:**
+
+```bash
+# Show recent install runs
+ai-dev-kit logs install-history --limit 10
+
+# Validate latest install JSON log
+ai-dev-kit logs validate-install-log
+
+# Validate latest 5 install logs
+ai-dev-kit logs validate-install-log --limit 5
+
+# Validate a specific log file
+ai-dev-kit logs validate-install-log --file logs/ai-dev-kit/install/install-20260409-120000.log
+
+# Build feedback payload from latest install log
+ai-dev-kit logs prepare-feedback-payload
+
+# Validate generated payload
+ai-dev-kit logs validate-feedback-payload --file logs/ai-dev-kit/feedback/payload-run-123.json
+
+# Submit payload through deterministic local submission path
+ai-dev-kit logs submit-feedback-payload --file logs/ai-dev-kit/feedback/payload-run-123.json
+```
+
+**Validation checks (`validate-install-log`):**
+- JSON line parseability
+- `install_run_id`
+- `step_id`
+- `event_contract.intent.summary`
+- `event_contract.action.summary`
+- `event_contract.result.status`
+- `event_contract.result.details`
+
+**Feedback payload outcomes (`submit-feedback-payload`):**
+- `accepted` - payload is valid, redacted, and has enough context for maintainer triage
+- `needs-redaction` - sensitive-pattern checks failed; payload must be scrubbed before submit
+- `needs-more-context` - payload is valid but missing required troubleshooting context
+- `rejected` - schema-invalid payload; run `validate-feedback-payload` and fix errors
 
 ---
 
@@ -846,4 +907,3 @@ See the [Troubleshooting Guide](framework-dependency-troubleshooting-guide.md) f
 - [Update Guide](framework-dependency-update-guide.md)
 - [Integration Guide](framework-dependency-integration-guide.md)
 - [Troubleshooting Guide](framework-dependency-troubleshooting-guide.md)
-

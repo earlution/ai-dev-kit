@@ -17,6 +17,7 @@ Usage:
 
 import argparse
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -98,6 +99,75 @@ def prompt_yes_no(prompt: str, default: bool = False) -> bool:
     if not answer:
         return default
     return answer in ('y', 'yes')
+
+
+def validate_required_placeholders(value: str, required_placeholders: list[str]) -> list[str]:
+    """Return missing placeholders from a pattern value."""
+    return [placeholder for placeholder in required_placeholders if placeholder not in value]
+
+
+def pattern_to_preview_glob(pattern: str) -> str:
+    """Convert placeholder pattern into a glob for match preview."""
+    return re.sub(r"\{[^}]+\}", "*", pattern)
+
+
+def preview_pattern_matches(
+    project_root: Path,
+    kanban_root: str,
+    pattern: str,
+    sample_limit: int = 3
+) -> tuple[int, list[str], Optional[str]]:
+    """
+    Preview candidate file matches for a placeholder pattern.
+
+    Returns: (total_matches, sample_relative_paths, error_message)
+    """
+    root_path = (project_root / kanban_root).resolve()
+    if not root_path.exists():
+        return 0, [], f"Kanban root does not exist yet: {root_path}"
+
+    glob_pattern = pattern_to_preview_glob(pattern)
+    all_matches = [p for p in root_path.glob(glob_pattern) if p.is_file()]
+    samples = [str(match.relative_to(root_path)) for match in all_matches[:sample_limit]]
+    return len(all_matches), samples, None
+
+
+def prompt_pattern_with_validation(
+    prompt: str,
+    default: str,
+    project_root: Path,
+    kanban_root: str,
+    required_placeholders: list[str],
+    suggestion_examples: list[str]
+) -> str:
+    """Prompt for pattern with required placeholder and preview validation."""
+    while True:
+        value = prompt_question(prompt, default=default)
+        missing = validate_required_placeholders(value, required_placeholders)
+        if missing:
+            placeholders = ", ".join(missing)
+            print(f"  ❌ Pattern must include placeholder(s): {placeholders}")
+            continue
+
+        count, samples, preview_error = preview_pattern_matches(project_root, kanban_root, value)
+        if preview_error:
+            print(f"  ⚠️  Preview unavailable: {preview_error}")
+            return value
+
+        if count == 0:
+            print("  ⚠️  No files matched this pattern under selected kanban root.")
+            if suggestion_examples:
+                print("  Suggested examples:")
+                for suggestion in suggestion_examples:
+                    print(f"    - {suggestion}")
+            if prompt_yes_no("Use this pattern anyway?", default=False):
+                return value
+            continue
+
+        print(f"  ✅ Matched {count} file(s). Sample:")
+        for sample in samples:
+            print(f"    - {sample}")
+        return value
 
 
 def detect_project_name(project_root: Path) -> str:
@@ -205,15 +275,29 @@ def collect_config_interactive(project_root: Path, mode: Optional[str] = None) -
             default="docs/project-management/kanban"
         )
         config['kanban_root'] = kanban_root
-        
-        config['epic_doc_pattern'] = prompt_question(
-            "Epic document pattern (use {epic} placeholder)",
-            default="epics/Epic-{epic}.md"
+
+        config['epic_doc_pattern'] = prompt_pattern_with_validation(
+            prompt="Epic document pattern (relative to Kanban root, must include {epic})",
+            default="epics/Epic-{epic}.md",
+            project_root=project_root,
+            kanban_root=kanban_root,
+            required_placeholders=["{epic}"],
+            suggestion_examples=[
+                "epics/Epic-{epic}.md",
+                "Epic-{epic}/Epic-{epic}.md",
+            ],
         )
-        
-        config['story_doc_pattern'] = prompt_question(
-            "Story document pattern (use {epic} and {story} placeholders)",
-            default="epics/Epic-{epic}/stories/Story-{story}-*.md"
+
+        config['story_doc_pattern'] = prompt_pattern_with_validation(
+            prompt="Story document pattern (relative to Kanban root, include {epic} and {story})",
+            default="epics/Epic-{epic}/stories/Story-{story}-*.md",
+            project_root=project_root,
+            kanban_root=kanban_root,
+            required_placeholders=["{epic}", "{story}"],
+            suggestion_examples=[
+                "epics/Epic-{epic}/stories/Story-{story}-*.md",
+                "Epic-{epic}/stories/E{epic}-S{story}.md",
+            ],
         )
         
         config['kanban_board'] = prompt_question(
@@ -386,6 +470,8 @@ Examples:
     print(f"📁 Project root: {project_root}")
     
     # Load or collect config
+    install_warnings: list[str] = []
+
     if args.config:
         config_path = Path(args.config)
         if not config_path.exists():
@@ -432,6 +518,7 @@ Examples:
             if "RELEASE WORKFLOW (RW) TRIGGER" in existing:
                 print(f"\n⚠️  .cursorrules already contains RW trigger section. Skipping update.")
                 print("   Please manually review and update if needed.")
+                install_warnings.append(".cursorrules already had RW trigger section; manual reconciliation required")
             else:
                 cursorrules_path.write_text(existing + "\n\n" + cursorrules_section, encoding='utf-8')
                 print(f"\n✅ Appended to: {cursorrules_path}")
@@ -446,15 +533,26 @@ Examples:
     if workflow_path.exists():
         result = patch_workflow_yaml(workflow_path, config, dry_run=args.dry_run)
         print(f"\n{result}")
+        if result.startswith("⚠️"):
+            install_warnings.append(result)
     else:
         print(f"\n⚠️  Workflow file not found: {workflow_path}")
         print("   You may need to copy workflows/release-workflow.yaml to your project.")
+        install_warnings.append("Workflow file not found for patching")
     
     print("\n" + "=" * 60)
     if args.dry_run:
         print("🔍 DRY RUN COMPLETE - No files were modified")
     else:
-        print("✅ INSTALLATION COMPLETE")
+        if install_warnings:
+            print("⚠️  INSTALLATION PARTIAL")
+            print("\nIssues requiring follow-up:")
+            for idx, warning in enumerate(install_warnings, start=1):
+                print(f"{idx}. {warning}")
+            print("\nFinal status: PARTIAL")
+        else:
+            print("✅ INSTALLATION COMPLETE")
+            print("\nFinal status: SUCCESS")
         print("\nNext steps:")
         print("1. Review rw-config.yaml and adjust paths if needed")
         print("2. Review .cursorrules RW trigger section")

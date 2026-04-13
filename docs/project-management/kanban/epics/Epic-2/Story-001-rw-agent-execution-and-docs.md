@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
 **Completed:** N/A (story reopened for ongoing RW validation work)
-**Last updated:** 2026-04-07 (v0.2.1.10+2 – Kanban documentation setup)
-**Version:** v0.2.1.10+2
+**Last updated:** 2026-04-13 (v0.2.1.17+2 – Kanban documentation setup)
+**Version:** v0.2.1.17+2
 **Code:** E2S01
 
 ---
@@ -42,8 +42,15 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 - [x] **E2:S01:T07 – Add support for update/maintenance branch patterns in branch validation** ✅ COMPLETE (v0.2.1.7+1)
 - [x] **E2:S01:T08 – Add Step 9 - IDE problem checking to Release Workflow** ✅ COMPLETE (v0.2.1.8+1 – FR-024 implemented: Step 9 added for IDE/linter problem checking)
 
-- [ ] **E2:S01:T09 – BR-060: RW allow `IN PROGRESS` task releases (Step 1c)** - 🔄 IN PROGRESS (forensic **v0.6.6.60+1** / **E6:S06:T60** at release; canonical **E2:S01:T09**) — [Task doc](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md) | [BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
+- [x] **E2:S01:T09 – BR-060: RW allow `IN PROGRESS` task releases (Step 1c)** - ✅ COMPLETE (closeout pass 2026-04-07; forensic **v0.6.6.60+1** / **E6:S06:T60** at release; canonical **E2:S01:T09**) — [Task doc](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md) | [BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)
 - [ ] **E2:S01:T10 – UXR-006: Allow `dev` branch as accepted RW validator context (solo workflow)** - TODO — [Task doc](Story-001-rw-agent-execution-and-docs/T10-dev-branch-support-in-rw-validators.md) | [UXR-006](../../fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md)
+- [x] **E2:S01:T11 – BR-062: RW Step 7 must not leave completed tasks on in-progress kboard** - ✅ COMPLETE (v0.2.1.11+2 – scope expanded to full mode + `kanban_init`; active MoSCOW COMPLETE-row pruning + regression tests) — [Task doc](Story-001-rw-agent-execution-and-docs/T11-rw-k-kanban-init-board-hygiene-for-completed-tasks-br062.md) | [BR-062](../../fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md)
+- [x] **E2:S01:T12 – BR-061: RW explicit task-id should not require manual pre-alignment of `version.py`** - ✅ COMPLETE (v0.2.1.12+2 – explicit-request reconciliation + guardrail-preserving tests/docs released) — [Task doc](Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md) | [BR-061](../../fr-br/BR-061-rw-explicit-task-id-requires-manual-version-alignment.md)
+- [x] **E2:S01:T13 – BR-063: RW -k must prevent task attribution drift vs version anchor** - ✅ COMPLETE (v0.2.1.13+2 – filing, forensic cleanup, `rw-k` guard + `--art` + tests/docs) — [Task doc](Story-001-rw-agent-execution-and-docs/T13-rw-k-forensic-task-attribution-alignment-br063.md) | [BR-063](../../fr-br/BR-063-rw-k-task-attribution-drift-between-requested-task-and-version-anchor.md)
+- [x] **E2:S01:T14 – FR-048: RW Trigger Extensions for Multiple Use Cases (traceability task wiring)** - ✅ COMPLETE (v0.2.1.14+1) — [Task doc](Story-001-rw-agent-execution-and-docs/T14-rw-trigger-extensions-multiple-use-cases-fr048.md) | [FR-048](../../fr-br/FR-048-rw-trigger-extensions-for-multiple-use-cases.md)
+- [x] **E2:S01:T15 – FR-049: Canonical RW Step List - Single Source of Truth (traceability task wiring)** - ✅ COMPLETE (v0.2.1.15+1) — [Task doc](Story-001-rw-agent-execution-and-docs/T15-canonical-rw-step-list-single-source-of-truth-fr049.md) | [FR-049](../../fr-br/FR-049-canonical-rw-step-list-single-source-of-truth.md)
+- [x] **E2:S01:T16 – BR-064: RW `dev` branch should not enforce epic lock** - ✅ COMPLETE (v0.2.1.16+1) — [Task doc](Story-001-rw-agent-execution-and-docs/T16-rw-dev-branch-neutral-context-no-epic-lock-br064.md) | [BR-064](../../fr-br/BR-064-rw-dev-branch-should-not-enforce-epic-lock.md)
+- [ ] **E2:S01:T17 – FR-077: IPW-built task status transition and kboard synchronization** - TODO — [Task doc](Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | [FR-077](../../fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md)
 
 ---
 

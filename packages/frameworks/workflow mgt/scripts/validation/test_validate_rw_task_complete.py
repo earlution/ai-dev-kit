@@ -75,6 +75,25 @@ def test_full_mode_fails_todo(minimal_complete_task: Path):
     assert r.returncode == 1, r.stderr + r.stdout
 
 
+def test_full_mode_fails_todo_with_impl_evidence_with_drift_reason(minimal_complete_task: Path):
+    task = list(minimal_complete_task.rglob("T01-foo.md"))[0]
+    task.write_text(
+        (
+            "---\n---\n\n"
+            "**Task ID:** E9:S01:T01\n"
+            "**Status:** TODO\n\n"
+            "## Input\n\n"
+            "- [IPW-E9S01T01-foo](../../../../implementation-cycles/IPW-E9S01T01-foo.md)\n\n"
+            "## Implementation note\n\n"
+            "pytest -q passed\n"
+        ),
+        encoding="utf-8",
+    )
+    r = _run(["--requested", "E9:S01:T01"], cwd=minimal_complete_task)
+    assert r.returncode == 1, r.stderr + r.stdout
+    assert "FR-077 drift" in r.stdout
+
+
 def test_rw_k_skips_complete_check(minimal_complete_task: Path):
     task = list(minimal_complete_task.rglob("T01-foo.md"))[0]
     task.write_text(

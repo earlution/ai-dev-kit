@@ -1,4 +1,83 @@
 # Changelog Archive
+## [0.2.1.11+2] - 10-04-26
+
+E2:S01:T11 — Change implemented: BR-062 expanded to full RW Step 7 mode; active kboard MoSCOW now prunes COMPLETE rows in both `kanban_init` and full mode. SemVer **v0.4.724+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.11+2.md)
+---
+## [0.2.1.12+2] - 09-04-26
+
+E2:S01:T12 — Change implemented: completed BR-061 by enabling explicit requested-task Step 1 reconciliation for stale `version.py` contexts while preserving wrong-branch and intent guard blocking. SemVer **v0.4.720+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+2.md)
+---
+## [0.2.1.12+3] - 10-04-26
+
+E2:S01:T12 — Change implemented: BR-061 traceability refresh and canonical release-anchor update via `RW E2:S01:T12 --art`. SemVer **v0.4.723+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.12+3.md)
+---
+## [0.2.1.17+1] - 09-04-26
+
+E2:S01:T17 — Change implemented: created and wired FR-077 + E2:S01:T17 IPW planning package to define canonical task status transition ownership and atomic task-doc/kboard sync intent. SemVer **v0.4.717+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+1.md)
+---
+## [0.2.8.8+1] - 09-04-26
+
+E2:S08:T08 — Change implemented: aligned kboard/fbuboard task parity with purpose-descriptive MoSCOW task rows and finalized release anchor tracking for FR-059 task doc. SemVer **v0.4.716+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.8.8+1.md)
+---
+## [0.4.8.7+2] - 09-04-26
+
+E4:S08:T07 — Change implemented: IPW package created for FR-011 with durable specification, test-design, and implementation-plan artifacts linked to task traceability. SemVer **v0.4.715+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.8.7+2.md)
+---
+## [0.6.7.111+1] - 09-04-26
+
+E6:S07:T111 — Change implemented: strict install event-contract logging (`intent` / `action` / `result`), `logs validate-install-log`, docs, and tests for FR-078 (AC verification pending post-release). SemVer **v0.4.721+1**. Release uses **`--art`** canonical anchor adoption from prior `version.py` context.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.111+1.md)
+---
+## [0.6.7.111+2] - 10-04-26
+
+E6:S07:T111 — Change implemented: completed FR-078 post-release verification, marked T111/FR-078 COMPLETE, and synchronized story/board traceability. SemVer **v0.4.722+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.111+2.md)
+---
+## [0.2.1.10+1] - 07-04-26
+
+E2:S01:T10+1 — Change implemented: contextualized UXR-006 into RW story ownership (`E2:S01:T10`), removed legacy `E7:S00:T06` mapping references, and prepared branch-validation policy path for `dev`-mode RW execution. SemVer **v0.4.627+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+1.md)
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+## [0.2.1.10+2] - 07-04-26
+
+E2:S01:T10+2 — Change implemented: strict-equal-epic `dev` branch support in RW Step 1 validation; `dev` now requires `dev_branch_epic` mapping and enforces the same blocking epic/version alignment as `epic/{n}`. SemVer **v0.4.628+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+2.md)
+
+---
+---
+## [0.2.1.10+3] - 07-04-26
+
+E2:S01:T09 closeout (rw-k) — administrative closure pass: aligned RW execution guidance for `IN PROGRESS` full-RW behavior, closed `E2:S01:T09` and `BR-060` status wiring, and added `dev_branch_epic: 2` for strict `dev` branch validation. SemVer **v0.4.629+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.10+3.md)
+
+---
+---
 ## [0.2.1.9+2] - 07-04-26
 
 E2:S01:T09+2 — Re-implemented terminal row timestamp governance for active boards. Enforced `| Last modified: YYYY-MM-DD HH:MM UTC` in policy/docs, updated RW/UKW-aware scripts to normalize board rows, and validated compliance via governance checks. SemVer **v0.4.623+2**.

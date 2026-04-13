@@ -19,6 +19,7 @@ if str(script_dir) not in sys.path:
 from validate_version_bump import (
     extract_task_id_canonical,
     is_perpetual_task,
+    parse_requested_task_id,
     validate_task_doc_alignment,
     validate_task_doc_fields,
     validate_version_bump,
@@ -286,6 +287,68 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
                 version_file, story_file=story_path, config=config
             )
             assert is_valid, f"Validation should pass for T103 (RW Maintenance), errors: {errors}"
+        finally:
+            os.chdir(orig_cwd)
+
+
+def test_parse_requested_task_id_formats():
+    assert parse_requested_task_id("E2S01T13") == (2, 1, 13)
+    assert parse_requested_task_id("E2:S01:T13") == (2, 1, 13)
+    assert parse_requested_task_id("nope") is None
+
+
+def test_validate_version_bump_art_requires_task_alignment():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        orig_cwd = os.getcwd()
+        try:
+            os.chdir(tmp)
+            version_dir = tmp / "src" / "proj"
+            version_dir.mkdir(parents=True)
+            version_file = version_dir / "version.py"
+            version_file.write_text(
+                "\n".join(
+                    [
+                        "VERSION_RC = 0",
+                        "VERSION_EPIC = 2",
+                        "VERSION_STORY = 1",
+                        "VERSION_TASK = 10",
+                        "VERSION_BUILD = 6",
+                    ]
+                )
+            )
+
+            story_dir = tmp / "docs" / "project-management" / "kanban" / "epics" / "Epic-2"
+            task_dir = story_dir / "Story-001-test"
+            task_dir.mkdir(parents=True)
+            story_file = story_dir / "Story-001-test.md"
+            story_file.write_text("- [x] **E2:S01:T10** - ✅ COMPLETE\n")
+            task_file = task_dir / "T10-test.md"
+            task_file.write_text(
+                "\n".join(
+                    [
+                        "**Task ID:** E2:S01:T10",
+                        "**Status:** COMPLETE",
+                        "## Acceptance Criteria",
+                        "- [x] Done",
+                        "## Input",
+                        "- i",
+                        "## Deliverable",
+                        "- d",
+                        "## Scope",
+                        "- s",
+                    ]
+                )
+            )
+
+            ok, errors = validate_version_bump(
+                version_file,
+                story_file=story_file,
+                requested_task=(2, 1, 13),
+                adopt_requested_task=True,
+            )
+            assert not ok
+            assert any("ART alignment error" in e for e in errors)
         finally:
             os.chdir(orig_cwd)
 

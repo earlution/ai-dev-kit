@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E2:S10:T00 – Story Creation and FR-017 Intake** ✅ COMPLETE (v0.2.10.0+0)
+- [x] **E2:S10:T00 – Story Creation and FR-017 Intake** ✅ COMPLETE (v0.2.10.0+0)
 - [x] **E2:S10:T01 – Update RW Step 2 to Support Doc-Init Path** ✅ COMPLETE (v0.2.10.1+0)
 - [x] **E2:S10:T02 – Implement Doc-Init Validation (Docs-Only Check)** ✅ COMPLETE (v0.2.10.2+1)
 - [x] **E2:S10:T03 – Update CHANGELOG Format for Doc Init Entries** ✅ COMPLETE (v0.2.10.3+1)

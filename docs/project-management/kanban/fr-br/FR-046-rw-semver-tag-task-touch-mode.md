@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-02-26  
 **Submitted By:** XOforge (contributing to AI Dev Kit)  
 **Priority:** HIGH  
-**Status:** PENDING  
+**Status:** IN PROGRESS  
 **Implementing Task:** [E5:S01:T46](../epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)  
 **GitHub Issue:** [#19](https://github.com/earlution/ai-dev-kit/issues/19)
 
@@ -31,11 +31,9 @@ When a project uses **ADR-002 Task-Touch Derived Mapping** (SemVer from internal
 - For projects configured with `semver_mapping_strategy: task_touch` (or equivalent):
   - RW should:
     - Compute SemVer for the current internal version using the **task-touch mapping**.
-    - Create a Git tag named `v\{semver\}` (e.g. `v0.1.22`).
+    - Create a Git tag named `v\{semver\}` where tag format is `vX.Y.Z` (no `+BUILD` in the Git tag name; example: `v0.1.22`).
     - Use that SemVer tag as the primary reference for GitHub releases and package publishing.
-  - Optionally, RW may:
-    - Also create an internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability.
-
+- RW should also create an internal traceability tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit by default (configurable opt-out only if explicitly disabled).
 
 ### What problem does this solve?
 
@@ -44,7 +42,6 @@ Without this behaviour:
 - Projects using task-touch mapping still get **internal-version tags** by default (e.g. `v0.5.1.44+1`), while:
   - Packages and external docs expect SemVer (e.g. `0.1.22`).
   - RW’s tags and package versions diverge, confusing automation and users.
-
 
 Using SemVer tags when task_touch is enabled ensures:
 
@@ -57,14 +54,12 @@ Using SemVer tags when task_touch is enabled ensures:
   - Tags like `v0.1.22` to match their package version.
   - Internal versions to remain visible but secondary.
 
-
 ### Who would benefit from this feature?
 
 - Projects publishing packages to registries.
 - Any workflow that:
   - Uses RW.
   - Has configured `semver_mapping_strategy: task_touch`.
-
 
 ---
 
@@ -77,13 +72,13 @@ Using SemVer tags when task_touch is enabled ensures:
   - Calls the task-touch SemVer converter (e.g. `get_semver_task_touch(include_build=False)`).
   - Creates a Git tag `v\{semver\}` (e.g. `v0.1.22`) pointing to the release commit.
 
-- [ ] **FR-046:R03** – RW Step 11 may create an internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability, but SemVer is the **primary external tag**.
+- [ ] **FR-046:R03** – RW Step 11 creates internal tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit for traceability (unless explicitly disabled by config), while SemVer tag remains the **primary external tag**.
 - [ ] **FR-046:R04** – `create_github_release.py` (or equivalent tooling) uses the SemVer tag as the primary release name and includes the internal version in the body/metadata.
 - [ ] **FR-046:R05** – Documentation (RW execution guide, `.cursorrules` RW trigger section) is updated to reflect this behaviour when `task_touch` is configured.
 
 ### Non-Functional Requirements
 
-- [ ] **FR-046:NF01** – **Compatibility:** Default RW behaviour (internal tags) is preserved when `task_touch` is **not** enabled.
+- [ ] **FR-046:NF01** – **Compatibility:** Default RW behaviour (internal tag as primary) is preserved when `task_touch` is **not** enabled.
 - [ ] **FR-046:NF02** – **Traceability:** Internal version remains discoverable from the SemVer tag (e.g. included in release notes, optional internal tag).
 
 ---
@@ -130,17 +125,16 @@ Using SemVer tags when task_touch is enabled ensures:
   - `package.json` version.
   - Git tag `v0.1.22`.
 
-
 ---
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** When `task_touch` SemVer mapping is configured, RW Step 11 creates SemVer tags (`vX.Y.Z`) instead of internal version tags by default.
+- [ ] **AC1:** When `task_touch` SemVer mapping is configured, RW Step 11 creates SemVer tags (`vX.Y.Z`, no `+BUILD` in the tag name) as the primary tag instead of internal version tags.
 - [ ] **AC2:** Tag creation is tested for:
   - `task_touch` enabled.
   - `task_touch` disabled (fallback to existing behaviour).
 
-- [ ] **AC3:** GitHub releases and package versions align on SemVer when `task_touch` is enabled.
+- [ ] **AC3:** GitHub releases and package versions align on SemVer when `task_touch` is enabled; release title/tag uses SemVer while release body includes internal version for traceability.
 - [ ] **AC4:** Documentation clearly explains the change and how to configure it.
 
 ---
@@ -193,6 +187,22 @@ Using SemVer tags when task_touch is enabled ensures:
 
 - This FR assumes ADR-002 (FR-045) is implemented and available. It focuses specifically on **RW behaviour** when that mapping is active.
 
+## Implementation Decisions and Evidence (2026-04-10)
+
+- Canonical tag decision source for RW Step 11 and Step 12.5 is `semver_converter.get_rw_tag_info(...)`.
+- `task_touch` primary tag contract is `vX.Y.Z` (SemVer core tag name, no `+BUILD`).
+- Internal traceability tag remains supported in `task_touch` mode and is generated on the same commit unless explicitly disabled by config in tag-handler usage.
+- `create_github_release.py` now resolves tag behavior from the same canonical decision path used by tagging logic.
+
+### Verification Evidence
+
+- `python -m pytest "packages/frameworks/workflow mgt/scripts/version/test_fr046_rw_tagging.py" "packages/frameworks/workflow mgt/scripts/version/test_fr046_comprehensive.py" "packages/frameworks/workflow mgt/scripts/version/test_task_touch_mapping.py" -q` → passed (`22 passed`).
+- `python "packages/frameworks/workflow mgt/scripts/validation/validate_semver_tag_alignment.py"` → passed (`SemVer tag alignment OK`).
+
+### Latest release anchor
+
+- Released build: **v0.5.1.46+4** (SemVer: **v0.4.732+4**).
+
 ---
 
 ## References
@@ -203,4 +213,3 @@ Using SemVer tags when task_touch is enabled ensures:
 ---
 
 _This feature request follows the Kanban Framework FR template and is anchored as FR-046 in the FR repository story (E5:S01:T46)._
-

@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 46: Release Workflow Uses SemVer Tag When task_touch Enabled
 
 **Task ID:** E5:S01:T46  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-26  
-**Last updated:** 2026-03-31 (v0.5.1.46+3 – FR-046 **Implementing Task** wiring; intake traceability)  
-**Version:** v0.5.1.46+3  
+**Last updated:** 2026-04-10 (v0.5.1.46+4 – FR-046 release hardening and RW Step 1c drift pre-gate alignment)  
+**Version:** v0.5.1.46+4  
 **Code:** E5S01T46
 
 **Repository Pattern:** FR-046 = E5:S01:T46 (first build: v0.5.1.46+1)
@@ -30,6 +30,12 @@ This task:
 - Anchors FR-046 in the FR repository story (`E5:S01`).
 - Describes the requirement that RW Step 11 (and related tooling) use SemVer tags when `semver_mapping_strategy: task_touch` is configured.
 - Defers actual implementation to dedicated tasks under the Workflow Management Framework epic/story.
+- Accepts cross-task updates from `E3:S02:T12` planning/implementation work when SemVer collision hardening changes the precise RW semantics.
+
+## Cross-task interaction (E3:S02:T12)
+
+- `E3:S02:T12` is authorized to update this task's wording/acceptance criteria so FR-046 documentation stays aligned with implemented task-touch converter behavior and BR-061 fixes.
+- Current planning artifact: [IPW-E3S02T12-task-touch-semver-collision-hardening](../../../../../implementation-cycles/IPW-E3S02T12-task-touch-semver-collision-hardening.md)
 
 ---
 
@@ -47,13 +53,20 @@ This task:
 2. FR-046 linked from the FR repository story checklist and from this task.
 3. A clear description of the desired RW tagging behaviour when task_touch is enabled, sufficient for implementation tasks.
 
+### Contract (Normative)
+
+- In `task_touch` mode, RW Step 11 primary tag is `vX.Y.Z` (SemVer core; no `+BUILD` in tag name).
+- In `task_touch` mode, RW creates internal traceability tag `v{RC.EPIC.STORY.TASK+BUILD}` on the same commit by default (configurable opt-out only if explicitly disabled).
+- In non-`task_touch` mode, RW preserves current behavior: internal version tag remains primary.
+- RW Step 12.5 (GitHub release) uses the same primary-tag decision path as Step 11 and includes internal version in release body.
+
 ---
 
 ## Acceptance Criteria
 
 - [x] Task document exists and is linked from the FR Repo story checklist as **E5:S01:T46**.
 - [x] FR-046 includes **Implementing Task:** E5:S01:T46 (bidirectional intake wiring).
-- [ ] The RW SemVer-tag behaviour is described clearly enough here and in FR-046 to support separate implementation tasks.
+- [x] The RW SemVer-tag behaviour is described clearly enough here and in FR-046 to support separate implementation tasks.
 
 ---
 
@@ -68,6 +81,25 @@ This task:
 
 - **FR-046:** Release Workflow Uses SemVer Tag When task_touch Enabled.
 - **FR-045:** ADR-002 Task-Touch Derived Mapping (Kanban → SemVer).
+
+---
+
+## Implementation Note (2026-04-10)
+
+- Aligned RW tag handling to a single canonical strategy decision path (`get_rw_tag_info`) across tag creation and GitHub release creation.
+- Clarified contract: in `task_touch` mode, primary tag is `vX.Y.Z` (no `+BUILD` in tag name), with internal traceability tag support preserved.
+- Updated tests to enforce no `+BUILD` in primary `task_touch` tag names and to verify read-only vs finalize behavior boundaries.
+
+## Verification Evidence
+
+- `pytest`:
+  - `packages/frameworks/workflow mgt/scripts/version/test_fr046_rw_tagging.py`
+  - `packages/frameworks/workflow mgt/scripts/version/test_fr046_comprehensive.py`
+  - `packages/frameworks/workflow mgt/scripts/version/test_task_touch_mapping.py`
+  - Result: `22 passed`.
+- Validator:
+  - `python "packages/frameworks/workflow mgt/scripts/validation/validate_semver_tag_alignment.py"`
+  - Result: `✅ SemVer tag alignment OK`.
 
 ---
 

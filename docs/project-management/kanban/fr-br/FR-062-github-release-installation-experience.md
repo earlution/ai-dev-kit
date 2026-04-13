@@ -15,6 +15,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** PROPOSED
 
+**Implementing Task:** [E5:S01:T62](../epics/Epic-5/Story-001-fr-repo/T62-github-release-installation-experience.md)
+
 ---
 
 ## Summary

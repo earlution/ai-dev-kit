@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 001 – Documentation Maintenance Framework
 
-**Status:** COMPLETE ✅  
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2025-12-07 (v0.5.1.5+1 – Task T05 added: KB platform/tooling evaluation)  
-**Version:** v0.5.1.5+1  
+**Last updated:** 2026-04-10 (v0.5.1.46+4 – Kanban documentation setup)
+**Version:** v0.5.1.46+4
 **Code:** E5S01
 
 ---
@@ -124,7 +124,7 @@ Before establishing documentation maintenance policies, we need a comprehensive 
 **Dependencies:** E5:S01:T01  
 **Blocker:** None
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 
 **Approach:**
 1. Review hygiene analysis findings and recommendations
@@ -153,7 +153,7 @@ Before establishing documentation maintenance policies, we need a comprehensive 
 **Dependencies:** E5:S01:T02  
 **Blocker:** None
 
-**Status:** ✅ COMPLETE
+**Status:** IN PROGRESS
 
 **Approach:**
 1. Define review cadences for different documentation types

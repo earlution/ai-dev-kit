@@ -9,7 +9,7 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import List, Tuple, Optional, Callable
+from typing import Any, Dict, List, Tuple, Optional, Callable
 
 from cli.commands import BaseCommand
 from cli.config import Config
@@ -93,6 +93,22 @@ class InstallCommand(BaseCommand):
     def execute(self) -> int:
         """Execute the install command."""
         try:
+            step_counter = 0
+
+            def next_step_id() -> str:
+                nonlocal step_counter
+                step_counter += 1
+                return f"cli-step-{step_counter:04d}"
+
+            def make_event(intent: str, action: str, status: str, details: str, **extra: Any) -> Dict[str, Any]:
+                payload: Dict[str, Any] = {
+                    "intent": {"summary": intent},
+                    "action": {"summary": action},
+                    "result": {"status": status, "details": details},
+                }
+                payload.update(extra)
+                return payload
+
             project_root = get_project_root()
             if project_root is None:
                 project_root = Path.cwd()
@@ -116,7 +132,18 @@ class InstallCommand(BaseCommand):
                     frameworks_to_install.append((framework, version))
                 except InvalidInputError as e:
                     print_error(str(e))
-                    log("ERROR", "install.spec", f"Invalid framework spec '{spec}': {e}")
+                    log(
+                        "ERROR",
+                        "install.spec",
+                        f"Invalid framework spec '{spec}': {e}",
+                        step_id=next_step_id(),
+                        event=make_event(
+                            "Validate framework specification",
+                            f"Parse and validate framework spec '{spec}'",
+                            "error",
+                            str(e),
+                        ),
+                    )
                     return 1
             
             # Determine and validate backend
@@ -125,7 +152,18 @@ class InstallCommand(BaseCommand):
                 backend_name = validate_backend(backend_name)
             except InvalidInputError as e:
                 print_error(str(e))
-                log("ERROR", "install.backend", f"Invalid backend '{backend_name}': {e}")
+                log(
+                    "ERROR",
+                    "install.backend",
+                    f"Invalid backend '{backend_name}': {e}",
+                    step_id=next_step_id(),
+                    event=make_event(
+                        "Validate selected install backend",
+                        f"Validate backend '{backend_name}'",
+                        "error",
+                        str(e),
+                    ),
+                )
                 return 1
             
             # Select backend
@@ -137,13 +175,35 @@ class InstallCommand(BaseCommand):
             
             if selected_backend_name is None:
                 available = BackendRegistry.list_available_backends()
-                log("ERROR", "install.backend", f"Backend '{backend_name}' not available. Available: {available}")
+                log(
+                    "ERROR",
+                    "install.backend",
+                    f"Backend '{backend_name}' not available. Available: {available}",
+                    step_id=next_step_id(),
+                    event=make_event(
+                        "Resolve available backend",
+                        f"Select backend '{backend_name}' with auto-detect",
+                        "error",
+                        f"Backend unavailable. Available: {available}",
+                    ),
+                )
                 raise BackendNotAvailableError(backend_name, available)
             
             backend_class = get_backend(selected_backend_name)
             if backend_class is None:
                 available = BackendRegistry.get_registry().get_available_backends()
-                log("ERROR", "install.backend", f"Backend '{selected_backend_name}' not registered. Available: {available}")
+                log(
+                    "ERROR",
+                    "install.backend",
+                    f"Backend '{selected_backend_name}' not registered. Available: {available}",
+                    step_id=next_step_id(),
+                    event=make_event(
+                        "Load backend implementation",
+                        f"Resolve backend class for '{selected_backend_name}'",
+                        "error",
+                        f"Backend not registered. Available: {available}",
+                    ),
+                )
                 raise BackendNotAvailableError(selected_backend_name, available)
             backend = backend_class()
             
@@ -153,7 +213,18 @@ class InstallCommand(BaseCommand):
                 install_path = validate_path(install_path_str, must_exist=False, must_be_directory=True)
             except InvalidInputError as e:
                 print_error(str(e))
-                log("ERROR", "install.path", f"Invalid install path '{install_path_str}': {e}")
+                log(
+                    "ERROR",
+                    "install.path",
+                    f"Invalid install path '{install_path_str}': {e}",
+                    step_id=next_step_id(),
+                    event=make_event(
+                        "Validate install path",
+                        f"Validate path '{install_path_str}'",
+                        "error",
+                        str(e),
+                    ),
+                )
                 return 1
             
             if self.args.dry_run:
@@ -165,7 +236,18 @@ class InstallCommand(BaseCommand):
                 for framework, version in frameworks_to_install:
                     version_str = f"@{version}" if version else " (latest)"
                     print_info(f"  - {framework}{version_str}")
-                log("INFO", "install.main", "Dry run only - no changes will be made")
+                log(
+                    "INFO",
+                    "install.main",
+                    "Dry run only - no changes will be made",
+                    step_id=next_step_id(),
+                    event=make_event(
+                        "Preview install execution",
+                        "Run dry-run path without mutating filesystem",
+                        "ok",
+                        "Dry run completed",
+                    ),
+                )
                 close_install_logger(fh, log_dir, config)
                 return 0
             
@@ -177,14 +259,45 @@ class InstallCommand(BaseCommand):
                     version_str = version or "latest"
                     
                     print_info(f"Installing {framework}@{version_str}...")
-                    log("INFO", "install.framework", f"Installing {framework}@{version_str} to {framework_path}")
+                    framework_step = next_step_id()
+                    log(
+                        "INFO",
+                        "install.framework",
+                        f"Installing {framework}@{version_str} to {framework_path}",
+                        step_id=framework_step,
+                        event=make_event(
+                            "Install selected framework",
+                            f"Start backend installation for {framework}@{version_str}",
+                            "ok",
+                            f"Installation started for {framework}@{version_str}",
+                            framework=framework,
+                            version=version_str,
+                            install_path=str(framework_path),
+                        ),
+                    )
                     
                     # Get source URL from config or use default
                     source = config.get(f"frameworks.{framework}.source")
                     if not source:
                         # Default source (can be enhanced later)
                         source = f"https://github.com/earlution/ai-dev-kit.git"
-                    log("INFO", "install.framework", f"Using source {source} via backend {backend_name}")
+                    source_step = next_step_id()
+                    log(
+                        "INFO",
+                        "install.framework",
+                        f"Using source {source} via backend {backend_name}",
+                        step_id=source_step,
+                        parent_step_id=framework_step,
+                        event=make_event(
+                            "Resolve source and backend",
+                            f"Use backend '{backend_name}' with source '{source}'",
+                            "ok",
+                            "Source and backend resolved",
+                            framework=framework,
+                            backend=backend_name,
+                            source=source,
+                        ),
+                    )
                     
                     success = backend.install(
                         framework_name=framework,
@@ -195,7 +308,21 @@ class InstallCommand(BaseCommand):
                     
                     if success:
                         print_success(f"Installed {framework}@{version_str}")
-                        log("INFO", "install.framework", f"Installed {framework}@{version_str} successfully")
+                        log(
+                            "INFO",
+                            "install.framework",
+                            f"Installed {framework}@{version_str} successfully",
+                            step_id=next_step_id(),
+                            parent_step_id=framework_step,
+                            event=make_event(
+                                "Finalize framework installation",
+                                f"Persist installation result for {framework}@{version_str}",
+                                "ok",
+                                "Framework installed successfully",
+                                framework=framework,
+                                backend=backend_name,
+                            ),
+                        )
                         # Update configuration
                         config.add_framework(
                             name=framework,
@@ -206,7 +333,21 @@ class InstallCommand(BaseCommand):
                         )
                         config.save()
                     else:
-                        log("ERROR", "install.framework", f"Backend install reported failure for {framework}@{version_str}")
+                        log(
+                            "ERROR",
+                            "install.framework",
+                            f"Backend install reported failure for {framework}@{version_str}",
+                            step_id=next_step_id(),
+                            parent_step_id=framework_step,
+                            event=make_event(
+                                "Run backend install operation",
+                                f"Execute backend install for {framework}@{version_str}",
+                                "error",
+                                "Backend returned unsuccessful result",
+                                framework=framework,
+                                backend=backend_name,
+                            ),
+                        )
                         raise InstallationError(
                             framework,
                             "Installation failed (see error messages above)",
@@ -217,17 +358,53 @@ class InstallCommand(BaseCommand):
                         print_error(str(e))
                     else:
                         print_error(f"Failed to install {framework}: {str(e)}")
-                    log("ERROR", "install.framework", f"Failed to install {framework}: {e}")
+                    log(
+                        "ERROR",
+                        "install.framework",
+                        f"Failed to install {framework}: {e}",
+                        step_id=next_step_id(),
+                        event=make_event(
+                            "Handle framework installation failure",
+                            f"Capture failure for framework '{framework}'",
+                            "error",
+                            str(e),
+                            framework=framework,
+                        ),
+                    )
                     failed_installations.append(framework)
             
             if failed_installations:
                 print_error(f"Failed to install: {', '.join(failed_installations)}")
-                log("ERROR", "install.main", f"Failed installations: {', '.join(failed_installations)}")
+                log(
+                    "ERROR",
+                    "install.main",
+                    f"Failed installations: {', '.join(failed_installations)}",
+                    step_id=next_step_id(),
+                    event=make_event(
+                        "Complete install run with failures",
+                        "Aggregate failed frameworks for run summary",
+                        "error",
+                        f"Failed installations: {', '.join(failed_installations)}",
+                        failed_frameworks=failed_installations,
+                    ),
+                )
                 close_install_logger(fh, log_dir, config)
                 return 1
             
             print_success(f"Successfully installed {len(frameworks_to_install)} framework(s)")
-            log("INFO", "install.main", f"Successfully installed {len(frameworks_to_install)} framework(s)")
+            log(
+                "INFO",
+                "install.main",
+                f"Successfully installed {len(frameworks_to_install)} framework(s)",
+                step_id=next_step_id(),
+                event=make_event(
+                    "Complete install run successfully",
+                    "Summarize successful framework installation run",
+                    "ok",
+                    f"Installed {len(frameworks_to_install)} framework(s)",
+                    total_frameworks=len(frameworks_to_install),
+                ),
+            )
 
             close_install_logger(fh, log_dir, config)
             return 0

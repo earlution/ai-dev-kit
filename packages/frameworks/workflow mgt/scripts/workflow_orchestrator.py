@@ -67,18 +67,24 @@ class TriggerType(Enum):
 
 
 def parse_rw_trigger(trigger_str: str) -> TriggerType:
-    """Parse RW trigger string and return TriggerType enum."""
-    trigger_str = trigger_str.strip().upper()
-    
-    # Map trigger strings to canonical trigger types
-    trigger_mapping = {
-        "RW": "RW",
-        "RW -K": "RW -k", 
-        "RW -D": "RW -d"
-    }
-    
-    canonical_trigger = trigger_mapping.get(trigger_str, trigger_str)
-    return TriggerType.from_string(canonical_trigger)
+    """Parse RW trigger string (with optional args) and return TriggerType enum."""
+    normalized = trigger_str.strip().upper()
+    if not normalized:
+        raise ValueError("Unknown trigger: empty")
+
+    # Accept task token / extra args after trigger, e.g.:
+    # "RW E2:S01:T13", "RW -k E2S01T13 --art", "RW -d E6:S07:T102"
+    if normalized.startswith("RW -K"):
+        return TriggerType.RW_K
+    if normalized.startswith("RW -D"):
+        return TriggerType.RW_D
+    if normalized.startswith("RW"):
+        # Guard against malformed compact flags like RW-k / RW-d.
+        if normalized.startswith("RW-"):
+            raise ValueError(f"Unknown trigger: {trigger_str}")
+        return TriggerType.RW
+
+    raise ValueError(f"Unknown trigger: {trigger_str}")
 
 
 def get_execution_path_for_trigger(trigger_type: TriggerType) -> List[float]:

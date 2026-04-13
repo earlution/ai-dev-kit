@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH
 **Estimated Effort:** [TBD]
 **Created:** 2025-12-02
-**Last updated:** 2026-04-02 (v0.3.2.12+1 — **`RW -k` E3:S02:T12** / **BR-061** docs)
+**Last updated:** 2026-04-10 (v0.3.2.12+2 – Story 2 Task 12 complete)
 **Branch:** `epic/3-numbering-and-versioning-framework`
 **Version Schema:** `0.3.S.T+B`
 **Production URL:** [N/A for this repo]
@@ -73,7 +73,7 @@ It ensures the dev kit:
 **Status:** COMPLETE
 **Priority:** HIGH
 **Estimated Effort:** [TBD]
-**Last updated:** 2025-12-02 (v0.3.1.6+1 – Task 6 complete: Cursorrules abstracted (removed hardcoded version numbers))
+**Last updated:** 2026-04-10 (v0.3.2.12+2 – Story 2 Task 12 complete)
 
 **Goal:**
 Make sure the dev kit's own versioning policy, version file, and docs align cleanly with the generic versioning framework. Establish `ai-dev-kit` as the canonical SoT for versioning policies and strategies.
@@ -95,7 +95,7 @@ Make sure the dev kit's own versioning policy, version file, and docs align clea
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-07 (v0.3.2.7+1 – T07 added: Dual-versioning package manager documentation)
+**Last updated:** 2026-04-10 (v0.3.2.12+2 – Story 2 Task 12 complete)
 
 **Goal:**  
 Provide a practical versioning cookbook with worked examples for RC.EPIC.STORY.TASK+BUILD, making it easy for other projects to adopt the dev-kit versioning strategy safely and correctly.
@@ -121,7 +121,7 @@ Provide a practical versioning cookbook with worked examples for RC.EPIC.STORY.T
 **Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-05 (v0.3.3.6+1 – All tasks complete: Story 3 complete with RW Step 6 for BR/FR fix attempt history)
+**Last updated:** 2026-04-10 (v0.3.2.12+2 – Story 2 Task 12 complete)
 
 **Goal:**  
 Create comprehensive, framework-level integration documentation that explains how the Numbering & Versioning framework integrates with the Kanban and Workflow Management frameworks. Unlike E4:S03 (which validated dev-kit implementation), this story focuses on **portable, template-ready documentation** that external projects can use to integrate all three frameworks.

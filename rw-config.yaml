@@ -28,6 +28,7 @@ fr_br_root: docs/project-management/kanban/fr-br
 
 # Use dev-kit versioning schema
 versioning_schema: RC.EPIC.STORY.TASK+BUILD
+dev_branch_epic: 2
 
 # SemVer mapping strategy: "registry" (default) or "task_touch"
 # registry: Hybrid approach with epic/story registry (current default)

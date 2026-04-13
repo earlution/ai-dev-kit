@@ -21,6 +21,7 @@ Registry-based mapping ensures monotonic SemVer increases while preserving seman
   same commit. See dev-kit versioning policy Section 2.1 (1:1 mapping and tag alignment).
 """
 
+import argparse
 import yaml
 import os
 from pathlib import Path
@@ -74,7 +75,7 @@ def get_semver_mapping_strategy() -> str:
     return strategy
 
 
-def get_rw_tag_info(internal_version: str) -> Dict[str, str]:
+def get_rw_tag_info(internal_version: str, finalize: bool = False) -> Dict[str, str]:
     """
     Get tagging information for Release Workflow based on mapping strategy.
     
@@ -93,7 +94,7 @@ def get_rw_tag_info(internal_version: str) -> Dict[str, str]:
     
     if strategy == "task_touch":
         # Task-touch mode: use SemVer as primary tag
-        semver_full = convert_version_string(internal_version, strategy="task_touch")
+        semver_full = convert_version_string(internal_version, strategy="task_touch", finalize=finalize)
         semver_tag = semver_full.split('+')[0]  # Remove BUILD for tag name
         
         return {
@@ -125,7 +126,8 @@ def create_rw_tags(internal_version: str, create_internal_tag: bool = True) -> D
     Returns:
         Dictionary with created tags information
     """
-    tag_info = get_rw_tag_info(internal_version)
+    # Tag creation is the release-finalization boundary for task_touch mode.
+    tag_info = get_rw_tag_info(internal_version, finalize=True)
     created_tags = []
     
     # Create primary tag
@@ -442,7 +444,67 @@ def increment_task_touch_counter(rc: int) -> int:
     return new_counter
 
 
-def convert_internal_to_semver_task_touch(rc: int, epic: int, story: int, task: int, build: int) -> Tuple[int, int, int, int]:
+def _ensure_task_touch_mode(registry: Dict[str, Any], rc: int) -> Dict[str, Any]:
+    rc_key = f"rc_{rc}"
+    if rc_key not in registry:
+        registry[rc_key] = {"epic_to_minor": {}, "story_to_patch": {}, "task_touch_mode": {}}
+    if "task_touch_mode" not in registry[rc_key]:
+        registry[rc_key]["task_touch_mode"] = {"epic_count": 0, "task_touch_counter": 0, "mapping_history": []}
+    ttm = registry[rc_key]["task_touch_mode"]
+    if "epic_count" not in ttm:
+        ttm["epic_count"] = 0
+    if "task_touch_counter" not in ttm:
+        ttm["task_touch_counter"] = 0
+    if "mapping_history" not in ttm or not isinstance(ttm["mapping_history"], list):
+        ttm["mapping_history"] = []
+    return ttm
+
+
+def _find_mapping_entry(task_touch_mode: Dict[str, Any], internal_version: str) -> Optional[Dict[str, Any]]:
+    history = task_touch_mode.get("mapping_history", [])
+    for entry in history:
+        if isinstance(entry, dict) and entry.get("internal_version") == internal_version:
+            return entry
+    return None
+
+
+def _record_mapping_entry(
+    task_touch_mode: Dict[str, Any],
+    *,
+    internal_version: str,
+    semver: str,
+    patch: int,
+    rc: int,
+    epic: int,
+    story: int,
+    task: int,
+    build: int,
+) -> None:
+    history = task_touch_mode.get("mapping_history", [])
+    history.append(
+        {
+            "internal_version": internal_version,
+            "semver": semver,
+            "patch": patch,
+            "rc": rc,
+            "epic": epic,
+            "story": story,
+            "task": task,
+            "build": build,
+        }
+    )
+    task_touch_mode["mapping_history"] = history
+
+
+def convert_internal_to_semver_task_touch(
+    rc: int,
+    epic: int,
+    story: int,
+    task: int,
+    build: int,
+    *,
+    finalize: bool = False,
+) -> Tuple[int, int, int, int]:
     """
     Convert internal RC.EPIC.STORY.TASK+BUILD to SemVer using task-touch derived mapping.
     
@@ -464,18 +526,38 @@ def convert_internal_to_semver_task_touch(rc: int, epic: int, story: int, task: 
     Returns:
         Tuple of (major, minor, patch, build) for SemVer
     """
-    # MAJOR = RC (direct mapping)
+    registry = load_semver_registry()
+    task_touch_mode = _ensure_task_touch_mode(registry, rc)
+    internal_version = f"{rc}.{epic}.{story}.{task}+{build}"
+
     major = rc
-    
-    # MINOR = count of epics signed off (per RC)
-    minor = get_epic_count(rc)
-    
-    # PATCH = global task-touch counter (increment and use)
-    patch = increment_task_touch_counter(rc)
-    
-    # BUILD = preserved from internal version
+    minor = task_touch_mode.get("epic_count", 0)
     build_semver = build
-    
+
+    existing = _find_mapping_entry(task_touch_mode, internal_version)
+    if existing:
+        patch = int(existing["patch"])
+        return (major, minor, patch, build_semver)
+
+    current_counter = int(task_touch_mode.get("task_touch_counter", 0))
+    patch = current_counter + 1
+
+    if finalize:
+        task_touch_mode["task_touch_counter"] = patch
+        semver = format_semver(major, minor, patch, build_semver)
+        _record_mapping_entry(
+            task_touch_mode,
+            internal_version=internal_version,
+            semver=semver,
+            patch=patch,
+            rc=rc,
+            epic=epic,
+            story=story,
+            task=task,
+            build=build,
+        )
+        save_semver_registry(registry)
+
     return (major, minor, patch, build_semver)
 
 
@@ -541,7 +623,11 @@ def semver_to_internal(semver: str) -> Optional[Tuple[int, int, int, int, int]]:
     return (rc, epic, story, 0, build)
 
 
-def convert_version_string(internal_version: str, strategy: Optional[str] = None) -> str:
+def convert_version_string(
+    internal_version: str,
+    strategy: Optional[str] = None,
+    finalize: bool = False,
+) -> str:
     """
     Convert internal version string to SemVer string.
     
@@ -574,7 +660,9 @@ def convert_version_string(internal_version: str, strategy: Optional[str] = None
     
     # Convert based on strategy
     if strategy == "task_touch":
-        major, minor, patch, build_semver = convert_internal_to_semver_task_touch(rc, epic, story, task, build)
+        major, minor, patch, build_semver = convert_internal_to_semver_task_touch(
+            rc, epic, story, task, build, finalize=finalize
+        )
     else:  # registry (default)
         major, minor, patch, build_semver = convert_internal_to_semver(rc, epic, story, task, build)
     
@@ -583,15 +671,28 @@ def convert_version_string(internal_version: str, strategy: Optional[str] = None
 
 if __name__ == "__main__":
     import sys
-    
-    if len(sys.argv) < 2:
-        print("Usage: semver_converter.py <internal_version>")
-        print("Example: semver_converter.py 0.6.7.101+24")
-        sys.exit(1)
-    
-    internal_version = sys.argv[1]
+
+    parser = argparse.ArgumentParser(description="Convert internal version to SemVer.")
+    parser.add_argument("internal_version", help="Internal version string, e.g. 0.6.7.101+24")
+    parser.add_argument(
+        "--strategy",
+        choices=["registry", "task_touch"],
+        default=None,
+        help="Override mapping strategy (defaults to rw-config.yaml)",
+    )
+    parser.add_argument(
+        "--finalize",
+        action="store_true",
+        help="Finalize task_touch mapping (mutates registry once for this internal version).",
+    )
+    args = parser.parse_args()
+
     try:
-        semver = convert_version_string(internal_version)
+        semver = convert_version_string(
+            args.internal_version,
+            strategy=args.strategy,
+            finalize=args.finalize,
+        )
         print(semver)
     except Exception as e:
         print(f"❌ Error: {e}", file=sys.stderr)

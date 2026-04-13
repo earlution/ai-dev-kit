@@ -23,6 +23,7 @@ sys.path.insert(0, str(script_dir))
 from semver_converter import (
     convert_internal_to_semver_task_touch,
     convert_version_string,
+    get_rw_tag_info,
     get_epic_count,
     set_epic_count,
     get_task_touch_counter,
@@ -74,16 +75,21 @@ class TestTaskTouchMapping:
         # Set up initial state
         set_epic_count(0, 7)  # 7 epics signed off for RC 0
         
-        # Convert first version
+        # Derive first version (read-only; predicts next patch)
         result1 = convert_internal_to_semver_task_touch(0, 6, 7, 101, 1)
         assert result1 == (0, 7, 1, 1)  # MAJOR=0, MINOR=7, PATCH=1, BUILD=1
-        
-        # Convert second version (should increment PATCH)
-        result2 = convert_internal_to_semver_task_touch(0, 3, 2, 12, 2)
+
+        # Finalize first version (idempotent thereafter)
+        result1f = convert_internal_to_semver_task_touch(0, 6, 7, 101, 1, finalize=True)
+        assert result1f == (0, 7, 1, 1)
+        assert get_task_touch_counter(0) == 1
+
+        # Finalize second version (increments once)
+        result2 = convert_internal_to_semver_task_touch(0, 3, 2, 12, 2, finalize=True)
         assert result2 == (0, 7, 2, 2)  # MAJOR=0, MINOR=7, PATCH=2, BUILD=2
-        
-        # Convert third version (should increment PATCH again)
-        result3 = convert_internal_to_semver_task_touch(0, 2, 13, 7, 1)
+
+        # Finalize third version
+        result3 = convert_internal_to_semver_task_touch(0, 2, 13, 7, 1, finalize=True)
         assert result3 == (0, 7, 3, 1)  # MAJOR=0, MINOR=7, PATCH=3, BUILD=1
     
     def test_collision_prevention(self):
@@ -99,7 +105,7 @@ class TestTaskTouchMapping:
         
         results = []
         for rc, epic, story, task, build in collision_versions:
-            result = convert_internal_to_semver_task_touch(rc, epic, story, task, build)
+            result = convert_internal_to_semver_task_touch(rc, epic, story, task, build, finalize=True)
             results.append(result)
         
         # All should have different PATCH numbers
@@ -119,7 +125,7 @@ class TestTaskTouchMapping:
         # Generate sequence
         results = []
         for i in range(5):
-            result = convert_internal_to_semver_task_touch(0, 1, 1, 1 + i, 1)
+            result = convert_internal_to_semver_task_touch(0, 1, 1, 1 + i, 1, finalize=True)
             results.append(result)
         
         # Check that PATCH is always increasing
@@ -205,7 +211,7 @@ class TestTaskTouchMapping:
         assert strategy == "task_touch"
         
         # Test convert_version_string with explicit strategy (more reliable)
-        result = convert_version_string("0.6.7.101+1", strategy="task_touch")
+        result = convert_version_string("0.6.7.101+1", strategy="task_touch", finalize=True)
         print(f"Debug: Expected '0.4.1+1', got '{result}'")
         assert result == "0.4.1+1"
     
@@ -214,7 +220,7 @@ class TestTaskTouchMapping:
         set_epic_count(0, 2)
         
         # Force task_touch strategy
-        result_tt = convert_version_string("0.6.7.101+1", strategy="task_touch")
+        result_tt = convert_version_string("0.6.7.101+1", strategy="task_touch", finalize=True)
         assert result_tt == "0.2.1+1"
         
         # Force registry strategy (will use existing registry logic)
@@ -251,7 +257,7 @@ class TestCollisionScenarios:
         
         results = []
         for version in versions:
-            result = convert_version_string(version, strategy="task_touch")
+            result = convert_version_string(version, strategy="task_touch", finalize=True)
             results.append(result)
         
         # All should be different (no collisions)
@@ -265,6 +271,45 @@ class TestCollisionScenarios:
         
         for i in range(1, len(patches)):
             assert patches[i] > patches[i-1], f"Non-monotonic: {patches}"
+
+    def test_read_only_conversion_does_not_increment_counter(self):
+        """Repeated read-only conversion must not mutate task_touch_counter."""
+        set_epic_count(0, 6)
+        assert get_task_touch_counter(0) == 0
+
+        first = convert_version_string("0.6.7.101+1", strategy="task_touch")
+        second = convert_version_string("0.6.7.101+1", strategy="task_touch")
+
+        assert first == second
+        assert get_task_touch_counter(0) == 0
+
+    def test_finalize_is_idempotent_for_same_internal_version(self):
+        """Finalizing same version twice should not burn extra PATCH values."""
+        set_epic_count(0, 6)
+        one = convert_version_string("0.6.7.101+1", strategy="task_touch", finalize=True)
+        two = convert_version_string("0.6.7.101+1", strategy="task_touch", finalize=True)
+        assert one == two
+        assert get_task_touch_counter(0) == 1
+
+    def test_get_rw_tag_info_read_only_then_finalize(self):
+        """RW tag lookup should be read-only unless finalize is requested."""
+        import semver_converter
+        original_load = semver_converter.load_rw_config
+        semver_converter.load_rw_config = lambda: {'semver_mapping_strategy': 'task_touch'}
+        try:
+            set_epic_count(0, 6)
+            assert get_task_touch_counter(0) == 0
+
+            preview = get_rw_tag_info("0.6.7.101+1")
+            assert preview["strategy"] == "task_touch"
+            assert "+" not in preview["primary_tag"]
+            assert get_task_touch_counter(0) == 0
+
+            finalized = get_rw_tag_info("0.6.7.101+1", finalize=True)
+            assert finalized["primary_tag"] == preview["primary_tag"]
+            assert get_task_touch_counter(0) == 1
+        finally:
+            semver_converter.load_rw_config = original_load
 
 
 if __name__ == "__main__":

@@ -15,6 +15,8 @@ housekeeping_policy: keep
 **Severity:** N/A  
 **Status:** PENDING  
 
+**Implementing Task:** [E4:S10:T01](../epics/Epic-4/Story-010-agentic-kanban-task-creation-from-fr-br.md)
+
 ---
 
 ## Summary

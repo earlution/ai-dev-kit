@@ -8,14 +8,14 @@ housekeeping_policy: keep
 
 # Bug Report BR-061 — RW explicit `E:S:T` still fails Step 1 when `version.py` epic ≠ branch epic
 
-**Status:** OPEN  
+**Status:** COMPLETE  
 **Priority:** CRITICAL  
-**Severity:** CRITICAL — **release blocker:** RW cannot proceed on explicit `RW E:S:T` without manual `version.py` alignment (Step 1 hard-fail).  
+**Severity:** CRITICAL — **resolved:** explicit requested `E:S:T` now supports pre-Step-2 reconciliation without manual `version.py` alignment, while cross-epic and intent guardrails remain blocking.  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-07 — **RW E2:S01:T09** **v0.2.1.9+2** (SemVer **v0.4.623+2**): board/policy/process enforcement shipped for terminal row timestamps; Step 1 alignment issue remains **OPEN** pending dedicated BR-061 implementation task.  
-**Version:** v0.2.1.9+2  
+**Last updated:** 2026-04-10 — **RW E2:S01:T12** **v0.2.1.12+3** (SemVer **v0.4.723+3**): release-anchor refresh and traceability synchronization after explicit-task `--art` run.  
+**Version:** v0.2.1.12+3  
 **Code:** BR-061  
-**Implementing Task:** TBD (intake — likely **E2:S01** RW execution/docs or **E6:S07:T103** RW perpetual maintenance)
+**Implementing Task:** [E2:S01:T12](../epics/Epic-2/Story-001-rw-agent-execution-and-docs/T12-rw-explicit-task-id-version-alignment-br061.md)
 
 ---
 

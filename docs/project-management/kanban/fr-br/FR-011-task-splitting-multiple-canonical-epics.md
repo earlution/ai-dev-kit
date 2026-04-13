@@ -13,6 +13,9 @@ housekeeping_policy: keep
 **Submitted By:** AI Agent (Cursor) acting as user/client for dev-toolkit  
 **Priority:** MEDIUM  
 **Status:** PENDING  
+**Version:** v0.4.8.7+2  
+
+**Implementing Task:** [E4:S08:T07](../epics/Epic-4/Story-008-intelligent-epic-matching-canonical-adoption/T07-task-splitting-across-multiple-canonical-epics-fr-011.md)
 **GitHub Issue:** [#7](https://github.com/earlution/ai-dev-kit/issues/7) (Additional Context Comment)
 
 ---
@@ -146,10 +149,10 @@ When a user epic partially matches multiple canonical epics, intelligently split
 - [ ] New Epic Created: [TBD]
 
 **Assigned To:**
-- Epic: [TBD]
-- Story: [TBD]
-- Task: [TBD]
-- Version: `[TBD]`
+- Epic: 4
+- Story: 8
+- Task: E4:S08:T07
+- Version: `v0.4.8.7+2`
 
 ---
 

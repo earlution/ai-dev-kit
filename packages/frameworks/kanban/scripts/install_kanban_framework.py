@@ -18,6 +18,7 @@ Arguments:
 """
 
 import argparse
+import json
 import os
 import subprocess
 import sys
@@ -111,6 +112,48 @@ def run_command(cmd: list, cwd: Optional[Path] = None) -> tuple[int, str, str]:
     except Exception as e:
         _log("ERROR", f"Subprocess failed for command {cmd}: {e}")
         return 1, "", str(e)
+
+
+def load_rw_kanban_root(project_root: Path) -> Optional[str]:
+    """Read kanban_root from rw-config.yaml when present and enabled."""
+    rw_config = project_root / "rw-config.yaml"
+    if not rw_config.exists():
+        return None
+
+    try:
+        import yaml  # Optional dependency in this script context
+    except Exception:
+        return None
+
+    try:
+        with open(rw_config, "r", encoding="utf-8") as fh:
+            config = yaml.safe_load(fh) or {}
+    except Exception:
+        return None
+
+    if not config.get("use_kanban"):
+        return None
+    kanban_root = config.get("kanban_root")
+    if not isinstance(kanban_root, str) or not kanban_root.strip():
+        return None
+    return kanban_root.strip()
+
+
+def resolve_kanban_path_arg(project_root: Path, provided_kanban_path: str) -> tuple[Path, bool]:
+    """
+    Resolve effective kanban path.
+
+    If caller uses default path and rw-config.yaml has kanban_root, adopt config path.
+    Returns (resolved_path, sourced_from_rw_config).
+    """
+    default_path = "docs/project-management/kanban"
+    if provided_kanban_path != default_path:
+        return Path(provided_kanban_path).resolve(), False
+
+    rw_root = load_rw_kanban_root(project_root)
+    if rw_root:
+        return (project_root / rw_root).resolve(), True
+    return Path(provided_kanban_path).resolve(), False
 
 
 def _get_project_name(project_root: Path) -> str:
@@ -329,8 +372,6 @@ def select_installation_mode(analysis_report_path: Optional[Path], requested_mod
 
 def present_migration_plan(analysis_report_path: Path):
     """Present migration plan with recommendations and trade-offs."""
-    import json
-    
     if not analysis_report_path.exists():
         return
     
@@ -391,11 +432,11 @@ def present_migration_plan(analysis_report_path: Path):
         print(f"⚠️  Could not load migration plan: {e}")
 
 
-def validate_installation(kanban_path: Path, project_root: Path, force: bool = False) -> bool:
-    """Run installation validation. Returns True if valid, False if errors found."""
+def validate_installation(kanban_path: Path, project_root: Path, force: bool = False) -> tuple[bool, str]:
+    """Run installation validation and return (should_continue, status)."""
     if InstallationValidator is None:
         print("⚠️  Warning: Validation module not available. Skipping validation.")
-        return True
+        return True, "PARTIAL"
     
     print("\n🔍 Step 3.5: Validating installation...")
     _log("INFO", f"[KANBAN_VALIDATE] Validating installation at {kanban_path}")
@@ -420,18 +461,23 @@ def validate_installation(kanban_path: Path, project_root: Path, force: bool = F
             if response not in ['yes', 'y']:
                 print("Installation cancelled.")
                 _log("ERROR", "[KANBAN_VALIDATE] Validation failed before migration/install (user cancelled)")
-                return False
+                print("Final status: CANCELLED")
+                return False, "CANCELLED"
         else:
             print("\n⚠️  --force flag set: Proceeding despite validation errors.")
             _log("WARNING", "[KANBAN_VALIDATE] Proceeding despite validation errors due to --force")
+            return True, "PARTIAL"
     
     if is_valid and not warnings:
         print("\n✅ Validation passed - no issues found")
+        return True, "SUCCESS"
     elif is_valid:
         print("\n✅ Validation passed with warnings")
         _log("INFO", "[KANBAN_VALIDATE] Validation passed with warnings")
+        return True, "PARTIAL"
     
-    return True
+    # errors were present and user opted to continue
+    return True, "PARTIAL"
 
 
 def migrate_structure(
@@ -525,14 +571,17 @@ Examples:
     
     args = parser.parse_args()
     
-    kanban_path = Path(args.kanban_path).resolve()
     project_root = Path.cwd()
+    kanban_path, sourced_from_rw = resolve_kanban_path_arg(project_root, args.kanban_path)
+    final_status = "SUCCESS"
     
     print("=" * 60)
     print("Kanban Framework Installation")
     print("=" * 60)
     print(f"📁 Project root: {project_root}")
     print(f"📁 Kanban path: {kanban_path}")
+    if sourced_from_rw:
+        print("ℹ️  Kanban path sourced from rw-config.yaml kanban_root")
     print(f"🔧 Mode: {args.mode}")
     if args.dry_run:
         print("🔍 DRY RUN MODE - No files will be modified")
@@ -567,7 +616,10 @@ Examples:
         args.mode = select_installation_mode(analysis_report, None)
     
     # Step 3.5: Validate installation (before migration)
-    if not validate_installation(kanban_path, project_root, force=args.force):
+    should_continue, validation_status = validate_installation(kanban_path, project_root, force=args.force)
+    if validation_status == "PARTIAL":
+        final_status = "PARTIAL"
+    if not should_continue:
         _log("ERROR", "[KANBAN_VALIDATE] Validation failed before migration/install")
         return 1
     
@@ -612,11 +664,20 @@ Examples:
         # Step 5: Post-installation validation
         if not args.dry_run:
             print("\n🔍 Step 5: Post-installation validation...")
-            if not validate_installation(kanban_path, project_root, force=args.force):
+            should_continue, validation_status = validate_installation(kanban_path, project_root, force=args.force)
+            if validation_status == "PARTIAL":
+                final_status = "PARTIAL"
+            if not should_continue:
                 print("⚠️  Post-installation validation found issues. Please review warnings/errors above.")
+                final_status = "FAILED"
+                return 1
     
     print("\n" + "=" * 60)
-    print("✅ Installation complete!")
+    if final_status == "SUCCESS":
+        print("✅ Installation complete!")
+    else:
+        print("⚠️  Installation completed with follow-up items.")
+    print(f"Final status: {final_status}")
     print("=" * 60)
     
     if args.mode != "fresh":

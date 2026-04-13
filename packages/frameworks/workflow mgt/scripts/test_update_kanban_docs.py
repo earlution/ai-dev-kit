@@ -13,6 +13,7 @@ Usage:
 """
 
 import argparse
+import importlib.util
 import os
 import shutil
 import subprocess
@@ -65,8 +66,8 @@ def create_test_project(base_dir: Path, epic: int = 2, story: int = 8, task: int
     project = {
         'root': base_dir,
         'version_file': base_dir / 'src' / 'fynd_deals' / 'version.py',
-        'story_doc': base_dir / 'KB' / 'Project_Management' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Story-{story:03d}-test.md',
-        'epic_doc': base_dir / 'KB' / 'Project_Management' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Epic-{epic}.md',
+        'story_doc': base_dir / 'docs' / 'project-management' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Story-{story:03d}-test.md',
+        'epic_doc': base_dir / 'docs' / 'project-management' / 'kanban' / 'epics' / f'Epic-{epic}' / f'Epic-{epic}.md',
     }
     
     # Create directories
@@ -130,7 +131,7 @@ def create_epic_doc(epic_doc: Path, epic: int = 2, story: int = 8, version: str 
 def run_script(test_dir: Path, version_file: Path = None, dry_run: bool = False, 
                allow_override: bool = False) -> Tuple[int, str, str]:
     """Run the update_kanban_docs.py script."""
-    script_path = Path(__file__).parent / 'update_kanban_docs.py'
+    script_path = (Path(__file__).parent / 'update_kanban_docs.py').resolve()
     
     cmd = ['python', str(script_path)]
     if version_file:
@@ -360,6 +361,178 @@ def test_4_1_dry_run_mode():
     return run_test("Test 4.1: Dry-Run Mode", setup, test)
 
 
+def test_4_2_kanban_init_prunes_stale_completed_row():
+    """Test 4.2: kanban_init prunes stale COMPLETE MoSCOW row for target task."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        board_path = Path(test_dir) / "kanban-board.md"
+        board_path.write_text(
+            """# Board
+
+**Last Updated:** 2026-04-01 (RW: E2:S1:T9)
+**Version:** v0.2.1.9+2
+
+## MoSCOW Prioritized In-Progress Tasks
+
+### Must Have (M) - Critical Tasks
+
+- **E2:S01:T09** – stale row - ✅ COMPLETE (v0.2.1.9+2) | Last modified: 2026-04-01 10:00 UTC
+- **E2:S01:T11** – active todo - TODO | Last modified: 2026-04-01 10:00 UTC
+"""
+        )
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        board_path = Path(test_dir) / "kanban-board.md"
+        target_state = {"version_string": "v0.2.1.10+3", "mode": "kanban_init"}
+        completion_state = {"is_complete": False}
+        ok, changes = mod.update_kanban_board(
+            board_path=board_path,
+            epic=2,
+            story=1,
+            task=9,
+            target_state=target_state,
+            story_completion_state=completion_state,
+            dry_run=False,
+        )
+        if not ok:
+            return False, f"update_kanban_board failed: {changes}"
+
+        updated = board_path.read_text()
+        if "E2:S01:T09" in updated:
+            return False, "Stale COMPLETE row for E2:S01:T09 was not pruned in kanban_init mode"
+        if "E2:S01:T11" not in updated:
+            return False, "Unrelated active row was incorrectly removed"
+        if "v0.2.1.10+3" not in updated:
+            return False, "Board metadata version was not updated"
+        return True, ""
+
+    return run_test("Test 4.2: kanban_init prune stale complete row", setup, test)
+
+
+def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
+    """Test 4.3: fbuboard reconciliation removes terminal rows but keeps unresolved exceptions."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        kb_dir = test_dir / "docs" / "project-management" / "kanban"
+        frbr_dir = kb_dir / "fr-br"
+        frbr_dir.mkdir(parents=True, exist_ok=True)
+
+        # Source docs
+        (frbr_dir / "FR-900-terminal.md").write_text(
+            "# FR-900\n\n**Status:** IMPLEMENTED\n",
+            encoding="utf-8",
+        )
+        (frbr_dir / "BR-901-exception.md").write_text(
+            "# BR-901\n\n**Status:** IN PROGRESS (product verification pending; linked task COMPLETE)\n",
+            encoding="utf-8",
+        )
+
+        board = kb_dir / "fr-br-uxr-board.md"
+        board.write_text(
+            """# FR Board
+
+**Last Updated:** 2026-04-01 (old)
+
+## MoSCOW Prioritized FR/BR/UXR Items
+
+### Must Have (M) - Critical Items
+
+- **FR-900** – terminal row - TODO - [FR-900](fr-br/FR-900-terminal.md) | Last modified: 2026-04-01 10:00 UTC
+- **BR-901** – exception row - TODO - [BR-901](fr-br/BR-901-exception.md) | Last modified: 2026-04-01 10:00 UTC
+""",
+            encoding="utf-8",
+        )
+        (kb_dir / "kanban-board.md").write_text("# Kanban\n\n## MoSCOW Prioritized In-Progress Tasks\n", encoding="utf-8")
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        changes = mod.enforce_terminal_timestamps_on_boards(Path(test_dir), dry_run=False)
+        board = Path(test_dir) / "docs" / "project-management" / "kanban" / "fr-br-uxr-board.md"
+        updated = board.read_text(encoding="utf-8")
+
+        if "FR-900" in updated:
+            return False, "Terminal FR row should have been pruned from active section"
+        if "BR-901" not in updated:
+            return False, "Exception BR row should have been preserved in active section"
+        if "fbuboard sync; latest row stamps:" not in updated:
+            return False, "Board Last Updated header should be normalized for temporal drift"
+        if not any("fbuboard reconciliation:" in c for c in changes):
+            return False, "Expected fbuboard reconciliation stats in change log"
+        return True, ""
+
+    return run_test("Test 4.3: fbuboard reconciliation", setup, test)
+
+
+def test_4_4_full_mode_prunes_completed_rows_from_active_kboard():
+    """Test 4.4: full mode prunes COMPLETE rows from active MoSCOW sections."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        board_path = Path(test_dir) / "kanban-board.md"
+        board_path.write_text(
+            """# Board
+
+**Last Updated:** 2026-04-01 (RW: E2:S1:T9)
+**Version:** v0.2.1.9+2
+
+## MoSCOW Prioritized In-Progress Tasks
+
+### Must Have (M) - Critical Tasks
+
+- **E2:S01:T12** – completed row - ✅ COMPLETE (v0.2.1.12+2) | Last modified: 2026-04-01 10:00 UTC
+- **E2:S01:T13** – active row - TODO | Last modified: 2026-04-01 10:00 UTC
+
+### Should Have (S) - Important Tasks
+
+- **E2:S02:T02** – completed row - COMPLETE ✅ (v0.2.2.2+1) | Last modified: 2026-04-01 10:00 UTC
+- **E2:S02:T03** – active row - IN PROGRESS | Last modified: 2026-04-01 10:00 UTC
+"""
+        )
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        board_path = Path(test_dir) / "kanban-board.md"
+        target_state = {"version_string": "v0.2.1.12+3", "mode": "full"}
+        completion_state = {"is_complete": False}
+        ok, changes = mod.update_kanban_board(
+            board_path=board_path,
+            epic=2,
+            story=1,
+            task=12,
+            target_state=target_state,
+            story_completion_state=completion_state,
+            dry_run=False,
+        )
+        if not ok:
+            return False, f"update_kanban_board failed: {changes}"
+
+        updated = board_path.read_text()
+        if "E2:S01:T12" in updated or "E2:S02:T02" in updated:
+            return False, "COMPLETE rows should be pruned from active MoSCOW sections in full mode"
+        if "E2:S01:T13" not in updated or "E2:S02:T03" not in updated:
+            return False, "Active rows were incorrectly removed from kboard"
+        if not any("Pruned COMPLETE rows from active kboard MoSCOW sections" in c for c in changes):
+            return False, "Expected cleanup change message not emitted"
+        return True, ""
+
+    return run_test("Test 4.4: full-mode kboard prune complete rows", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -470,6 +643,30 @@ def main():
         else:
             print(f"❌ Test 4.1: Dry-Run Mode - FAILED: {error}")
             test_results['failed'].append("4.1")
+
+        success, error = test_4_2_kanban_init_prunes_stale_completed_row()
+        if success:
+            print("✅ Test 4.2: kanban_init prune stale complete row - PASSED")
+            test_results['passed'].append("4.2")
+        else:
+            print(f"❌ Test 4.2: kanban_init prune stale complete row - FAILED: {error}")
+            test_results['failed'].append("4.2")
+
+        success, error = test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception()
+        if success:
+            print("✅ Test 4.3: fbuboard reconciliation - PASSED")
+            test_results['passed'].append("4.3")
+        else:
+            print(f"❌ Test 4.3: fbuboard reconciliation - FAILED: {error}")
+            test_results['failed'].append("4.3")
+
+        success, error = test_4_4_full_mode_prunes_completed_rows_from_active_kboard()
+        if success:
+            print("✅ Test 4.4: full-mode kboard prune complete rows - PASSED")
+            test_results['passed'].append("4.4")
+        else:
+            print(f"❌ Test 4.4: full-mode kboard prune complete rows - FAILED: {error}")
+            test_results['failed'].append("4.4")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:

@@ -8,11 +8,11 @@ housekeeping_policy: keep
 
 # Story 8: Intelligent Epic Matching and Canonical Structure Adoption
 
-**Status:** COMPLETE ✅  
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2025-12-10 (v0.4.8.6+1 – All tasks complete: Semantic epic matching, intelligent task mapping, canonical adoption, reference updating, migration plan presentation, documentation)  
-**Version:** v0.4.8.6+1  
+**Last updated:** 2026-04-09 (v0.4.8.7+2 – Kanban documentation setup)
+**Version:** v0.4.8.7+2
 **Code:** E4S08
 
 ---
@@ -94,6 +94,13 @@ Implement intelligent epic matching with semantic analysis and AI-assisted task 
   - **Acceptance:** ✅ Documentation updated with semantic matching and intelligent migration guidance.
 
 
+- [ ] **E4:S08:T07 – FR-011: Task splitting across multiple canonical epics** - TODO
+  - Implement multi-epic split logic when one source epic maps across several canonical epics.
+  - Generate explainable split plans and deterministic reference updates per split task.
+  - **Linked FR:** FR-011
+  - **Acceptance:** FR-011 requirements and ACs mapped to executable split workflow.
+
+
 ---
 
 ## Implementation Notes
@@ -105,17 +112,17 @@ Implement intelligent epic matching with semantic analysis and AI-assisted task 
 1. **Template Task Installation (Two-Phase Migration):**
    - Phase 1: Migrate user tasks first (preserve IDs)
    - Phase 2: Install template tasks after (bump IDs - templates start after user tasks)
-   - **Status:** NOT YET IMPLEMENTED - Requires new task or follow-up story
+   - **Status:** IN PROGRESS
 
 2. **Task Splitting Across Multiple Canonical Epics:**
    - When user epic partially matches multiple canonical epics, split tasks intelligently
    - Example: "Versioning & Release Workflow" → Split between Epic 2 and Epic 3
-   - **Status:** PARTIALLY IMPLEMENTED - Currently only maps to "best" match
+   - **Status:** IN PROGRESS
 
 3. **Enhanced Match Decision Logic:**
    - Match decision matrix with different actions based on match type + number conflict
    - Edge case handling: multiple matches, same-number conflicts, etc.
-   - **Status:** BASIC IMPLEMENTATION - Core logic works, edge cases need enhancement
+   - **Status:** IN PROGRESS
 
 **Recommended Follow-Up:**
 - Create new task or story for template task installation (two-phase migration)
