@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.46+6] - 13-04-26
+## [0.6.7.101+44] - 13-04-26
 
-E5:S01:T46 — Implemented FR-046 pre-release gate: `validate_branch_context` rejects `versioning_mode: dual` unless `semver_mapping_strategy: task_touch`; installer and examples aligned; tests for dual, legacy, `semver_only`, and `kanban_only`. SemVer **v0.4.735+6**.
+E6:S07:T101 — **RW -d** (documentation-only): commits UKW Kanban sync (main board Ongoing **T101**, fbuboard metadata + **FR-046** row, Story-7 / Epic-6 / T46 bookkeeping) with `--art` anchor adoption. SemVer **v0.4.736+44**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+6.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+44.md)

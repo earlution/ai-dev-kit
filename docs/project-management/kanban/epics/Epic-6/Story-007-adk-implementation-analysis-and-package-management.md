@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-04-13 (v0.6.7.113+2 – Kanban documentation setup)
+**Last updated:** 2026-04-13 (**RW -d** **E6:S07:T101+44** — UKW batch + doc release; perpetual T101)
 **Version:** v0.6.7.113+2
 **Code:** E6S07
 

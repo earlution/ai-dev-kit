@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-04-13 (v0.6.7.113+2 – Story 7 Task 113 complete)
+**Last updated:** 2026-04-13 (**RW -d** **E6:S07:T101+44** — UKW kanban + perpetual doc release)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
