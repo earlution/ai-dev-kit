@@ -49,6 +49,8 @@ These keys are only required if using specific features:
 | `story_doc_pattern` | string | `use_kanban: true` | Pattern for story docs (relative to `kanban_root`) | `epics/Epic-{epic}/Story-{story}-*.md` |
 | `kanban_board` | string | `use_kanban: true` | Main Kanban board file (relative to `kanban_root`) | `_index.md` |
 | `versioning_schema` | string | Optional | Version schema (default: `RC.EPIC.STORY.TASK+BUILD`) | `RC.EPIC.STORY.TASK+BUILD` |
+| `versioning_mode` | string | Optional (recommended) | Versioning model: `dual`, `semver_only`, `kanban_only` | `dual` |
+| `semver_mapping_strategy` | string | Optional | SemVer mapping strategy (`task_touch` or `registry`) | `task_touch` |
 | `project_name` | string | Optional | Project name (for examples/comments) | `myproject` |
 
 ---
@@ -78,6 +80,8 @@ changelog_dir: docs/changelogs
 scripts_path: tools/workflow_mgt/scripts
 readme_file: README.md
 use_kanban: false
+versioning_mode: dual
+semver_mapping_strategy: task_touch
 project_name: myproject
 ```
 
@@ -103,6 +107,8 @@ scripts_path: tools/workflow_mgt/scripts
 readme_file: README.md
 use_kanban: false
 versioning_schema: RC.EPIC.STORY.TASK+BUILD
+versioning_mode: dual
+semver_mapping_strategy: task_touch
 project_name: myproject
 ```
 
@@ -137,6 +143,8 @@ epic_doc_pattern: epics/Epic-{epic}/Epic-{epic}.md
 story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 kanban_board: _index.md
 versioning_schema: RC.EPIC.STORY.TASK+BUILD
+versioning_mode: dual
+semver_mapping_strategy: task_touch
 project_name: myproject
 ```
 
@@ -164,6 +172,7 @@ The following variables can be used in path patterns:
 3. **Paths must be relative to project root** (no absolute paths)
 4. **Pattern variables** (`{epic}`, `{story}`, `{version}`) are only valid in specific fields
 5. **`scripts_path` must point to a directory containing validation scripts**
+6. **FR-046 policy invariant:** If `versioning_mode: dual`, `semver_mapping_strategy` must be `task_touch`
 
 ---
 

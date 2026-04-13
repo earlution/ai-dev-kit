@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-02-26  
-**Last updated:** 2026-04-13 (v0.5.1.46+5 – policy clarification: dual-version mode requires task-touch)  
-**Version:** v0.5.1.46+5  
+**Last updated:** 2026-04-13 (v0.5.1.46+6 – branch validator enforces dual ⇒ task_touch; installer/examples/tests)  
+**Version:** v0.5.1.46+6  
 **Code:** E5S01T46
 
 **Repository Pattern:** FR-046 = E5:S01:T46 (first build: v0.5.1.46+1)
@@ -104,6 +104,7 @@ This task:
   - `packages/frameworks/workflow mgt/scripts/version/test_fr046_comprehensive.py`
   - `packages/frameworks/workflow mgt/scripts/version/test_task_touch_mapping.py`
   - Result: `22 passed`.
+- `pytest` `packages/frameworks/workflow mgt/scripts/validation/test_validate_branch_context.py` → **7 passed** (FR-046 dual invariant + non-dual modes).
 - Validator:
   - `python "packages/frameworks/workflow mgt/scripts/validation/validate_semver_tag_alignment.py"`
   - Result: `✅ SemVer tag alignment OK`.

@@ -19,5 +19,9 @@ kanban_board: _index.md
 # Use dev-kit versioning schema (default, but explicit)
 versioning_schema: RC.EPIC.STORY.TASK+BUILD
 
+# FR-046: dual internal+SemVer requires task-touch mapping
+versioning_mode: dual
+semver_mapping_strategy: task_touch
+
 # Optional: Project name for examples/comments
 project_name: myproject

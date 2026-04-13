@@ -42,6 +42,7 @@ The installer automates the RW adoption process by:
    - Scripts directory
    - Kanban integration (optional)
    - Versioning schema
+   - Versioning mode + SemVer strategy defaults
 
 2. **Generates `rw-config.yaml`** - Creates a single source of truth for all project-specific paths
 
@@ -62,11 +63,13 @@ The installer automates the RW adoption process by:
 - RW with `RC.EPIC.STORY.TASK+BUILD` schema
 - No Kanban integration
 - Standard dev-kit versioning
+- Defaults `versioning_mode: dual` and `semver_mapping_strategy: task_touch`
 
 ### Mode C: Full Stack
 - RW + Dev-Kit Versioning + Kanban
 - Complete integration
 - Requires Kanban paths
+- Defaults `versioning_mode: dual` and `semver_mapping_strategy: task_touch`
 
 ---
 
@@ -134,6 +137,8 @@ scripts_path: tools/workflow_mgt/scripts
 readme_file: README.md
 use_kanban: true
 kanban_root: docs/project-management/kanban
+versioning_mode: dual
+semver_mapping_strategy: task_touch
 # ... etc
 ```
 
@@ -151,6 +156,10 @@ The validation scripts (`validate_branch_context.py`, `validate_changelog_format
 - Read from `rw-config.yaml` if available
 - Fall back to hardcoded defaults for backward compatibility
 - Support both config-driven and legacy projects
+
+FR-046 policy enforcement:
+- If `versioning_mode: dual`, validator enforces `semver_mapping_strategy: task_touch`
+- Misconfigured dual mode fails validation before RW mutation steps
 
 ---
 

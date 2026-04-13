@@ -206,10 +206,11 @@ Using SemVer tags with mandatory task-touch in dual-version mode ensures:
 
 - `python -m pytest "packages/frameworks/workflow mgt/scripts/version/test_fr046_rw_tagging.py" "packages/frameworks/workflow mgt/scripts/version/test_fr046_comprehensive.py" "packages/frameworks/workflow mgt/scripts/version/test_task_touch_mapping.py" -q` → passed (`22 passed`).
 - `python "packages/frameworks/workflow mgt/scripts/validation/validate_semver_tag_alignment.py"` → passed (`SemVer tag alignment OK`).
+- `python -m pytest "packages/frameworks/workflow mgt/scripts/validation/test_validate_branch_context.py" -q` → **7 passed** (dual invariant, legacy, `semver_only`, `kanban_only`).
 
 ### Latest release anchor
 
-- Released build: **v0.5.1.46+5** (SemVer: **v0.4.734+5**) with policy clarification that dual-version mode requires task-touch mapping.
+- Released build: **v0.5.1.46+6** (SemVer: **v0.4.735+6**) with deterministic branch-context validation for dual mode + task-touch, installer defaults, docs, examples, and tests.
 
 ---
 

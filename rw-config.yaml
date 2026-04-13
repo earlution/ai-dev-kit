@@ -35,6 +35,12 @@ dev_branch_epic: 2
 # task_touch: ADR-002 task-touch derived mapping (strictly monotonic)
 semver_mapping_strategy: task_touch
 
+# Versioning mode policy:
+# - dual: internal RC.EPIC.STORY.TASK+BUILD + external SemVer (requires task_touch)
+# - semver_only: SemVer-only workflows
+# - kanban_only: internal/Kanban-only workflows
+versioning_mode: dual
+
 # Project name
 project_name: ai-dev-kit
 

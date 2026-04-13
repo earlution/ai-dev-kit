@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.46+5] - 13-04-26
+## [0.5.1.46+6] - 13-04-26
 
-E5:S01:T46 — Clarified policy that dual-version mode requires task-touch SemVer mapping in RW, with deterministic validator-fail expectations for non-task-touch dual-mode configs. SemVer **v0.4.734+5**.
+E5:S01:T46 — Implemented FR-046 pre-release gate: `validate_branch_context` rejects `versioning_mode: dual` unless `semver_mapping_strategy: task_touch`; installer and examples aligned; tests for dual, legacy, `semver_only`, and `kanban_only`. SemVer **v0.4.735+6**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+5.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.46+6.md)

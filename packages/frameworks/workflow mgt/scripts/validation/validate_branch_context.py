@@ -53,6 +53,49 @@ def get_version_file_path(config: Optional[Dict] = None) -> Path:
     return Path("src/fynd_deals/version.py")
 
 
+def normalize_versioning_mode(config: Optional[Dict]) -> str:
+    """
+    Normalize versioning_mode from rw-config.
+
+    Returns one of:
+    - dual
+    - semver_only
+    - kanban_only
+    - legacy (missing/unknown for backward compatibility)
+    """
+    if not config:
+        return "legacy"
+    raw_mode = str(config.get("versioning_mode", "")).strip().lower()
+    if raw_mode in {"dual", "semver_only", "kanban_only"}:
+        return raw_mode
+    return "legacy"
+
+
+def validate_dual_mode_task_touch_invariant(config: Optional[Dict]) -> Tuple[bool, List[str], List[str]]:
+    """
+    Enforce FR-046 policy invariant:
+    dual versioning mode requires semver_mapping_strategy=task_touch.
+    """
+    errors: List[str] = []
+    warnings: List[str] = []
+    mode = normalize_versioning_mode(config)
+    strategy = None
+    if config:
+        strategy = str(config.get("semver_mapping_strategy", "registry")).strip().lower()
+
+    if mode == "dual" and strategy != "task_touch":
+        errors.append(
+            "FR-046 policy violation: rw-config.yaml sets versioning_mode=dual "
+            f"but semver_mapping_strategy={strategy!r}. Dual mode requires 'task_touch'."
+        )
+    elif mode == "legacy":
+        warnings.append(
+            "rw-config.yaml does not declare an explicit versioning_mode. "
+            "Backward-compatible legacy mode applied (no dual-mode invariant enforcement)."
+        )
+    return (len(errors) == 0, errors, warnings)
+
+
 def get_current_branch():
     """Get current git branch."""
     result = subprocess.run(
@@ -589,6 +632,9 @@ def validate_branch_context(requested: Optional[str] = None, art: bool = False):
 
     # Load config if available
     config = load_rw_config()
+    mode = normalize_versioning_mode(config)
+    if mode != "legacy":
+        print(f"Versioning mode: {mode}")
 
     # Get current branch
     branch = get_current_branch()
@@ -633,6 +679,12 @@ def validate_branch_context(requested: Optional[str] = None, art: bool = False):
 
     errors = []
     warnings = []
+
+    # Enforce dual-mode task-touch invariant before any branch/version checks
+    dual_ok, dual_errors, dual_warnings = validate_dual_mode_task_touch_invariant(config)
+    if not dual_ok:
+        errors.extend(dual_errors)
+    warnings.extend(dual_warnings)
 
     if expected_epic is not None:
         print(f"Expected epic number: {expected_epic}")

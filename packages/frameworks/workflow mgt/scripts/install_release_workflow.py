@@ -261,10 +261,16 @@ def collect_config_interactive(project_root: Path, mode: Optional[str] = None) -
     # Versioning schema
     if mode_choice in ('B', 'C'):
         config['versioning_schema'] = 'RC.EPIC.STORY.TASK+BUILD'
+        # FR-046 policy: dual internal+external versioning requires task-touch.
+        config['versioning_mode'] = 'dual'
+        config['semver_mapping_strategy'] = 'task_touch'
     else:
         use_devkit_versioning = prompt_yes_no("Use dev-kit versioning schema (RC.EPIC.STORY.TASK+BUILD)?", default=False)
         if use_devkit_versioning:
             config['versioning_schema'] = 'RC.EPIC.STORY.TASK+BUILD'
+            # Mode A with dev-kit schema defaults to dual mode for new installs.
+            config['versioning_mode'] = 'dual'
+            config['semver_mapping_strategy'] = 'task_touch'
     
     # Kanban integration
     if mode_choice == 'C':
@@ -341,6 +347,10 @@ def generate_rw_config_yaml(config: Dict) -> str:
     
     if config.get('versioning_schema'):
         lines.append(f"versioning_schema: {config['versioning_schema']}\n")
+    if config.get('versioning_mode'):
+        lines.append(f"versioning_mode: {config['versioning_mode']}")
+    if config.get('semver_mapping_strategy'):
+        lines.append(f"semver_mapping_strategy: {config['semver_mapping_strategy']}\n")
     
     if config.get('project_name'):
         lines.append(f"project_name: {config['project_name']}\n")
