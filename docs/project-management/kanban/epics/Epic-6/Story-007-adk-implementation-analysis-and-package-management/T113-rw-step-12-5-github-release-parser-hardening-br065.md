@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Epic 6, Story 7, Task 113: RW Step 12.5 GitHub release parser hardening (BR-065)
 
 **Task ID:** E6:S07:T113  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
 **Created:** 2026-04-13  
@@ -45,10 +45,25 @@ housekeeping_policy: keep
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** `create_github_release.py` handles `v`-prefixed and non-prefixed version/tag inputs without parse exceptions.
-- [ ] **AC2:** Failure diagnostics identify the exact input that is invalid.
-- [ ] **AC3:** Regression tests cover prefixed, non-prefixed, and malformed inputs.
-- [ ] **AC4:** RW Step 12.5 remains non-blocking while reporting actionable remediation.
+- [x] **AC1:** `create_github_release.py` handles `v`-prefixed and non-prefixed version/tag inputs without parse exceptions.
+- [x] **AC2:** Failure diagnostics identify the exact input that is invalid.
+- [x] **AC3:** Regression tests cover prefixed, non-prefixed, and malformed inputs.
+- [x] **AC4:** RW Step 12.5 remains non-blocking while reporting actionable remediation.
+
+## Implementation note
+
+Implemented parser hardening in `packages/frameworks/workflow mgt/scripts/create_github_release.py`:
+
+- Added internal-version boundary normalization for optional `v` prefix before semver strategy parsing.
+- Added deterministic `ValueError` diagnostics for malformed `--internal-version` values.
+- Updated top-level error handling to report explicit validation errors (instead of opaque `int('v0')` traceback-style surface).
+- Added parser regression coverage:
+  - `packages/frameworks/workflow mgt/scripts/version/test_create_github_release_parsing.py`
+
+## Verification evidence (2026-04-13)
+
+- `python -m pytest "packages/frameworks/workflow mgt/scripts/version/test_create_github_release_parsing.py" -q` -> 5 passed
+- `python "packages/frameworks/workflow mgt/scripts/create_github_release.py" --semver-tag "v0.4.733+1" --internal-version "v0.6.7.113+1" ... --token "dummy"` -> no `invalid literal ... 'v0'`; reaches expected GitHub auth failure path with dummy credentials
 
 ---
 

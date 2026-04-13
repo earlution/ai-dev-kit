@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Severity:** MEDIUM - non-blocking RW completion, but GitHub Release publication is skipped due to parser failure.  
 **Created:** 2026-04-13  
-**Last updated:** 2026-04-13  
+**Last updated:** 2026-04-13 (implementation complete in working tree: boundary normalization + deterministic diagnostics + regression tests)  
 **Version:** N/A  
 **Code:** BR-065  
 **Implementing Task:** [E6:S07:T113](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T113-rw-step-12-5-github-release-parser-hardening-br065.md)
@@ -61,6 +61,25 @@ Step 12.5 should accept canonical `v`-prefixed release inputs (for both SemVer a
 - Add unit tests for both prefixed and non-prefixed values.
 - Improve error messages to identify the exact argument/value that failed parsing.
 - Keep Step 12.5 non-blocking behavior, but emit stronger remediation guidance.
+
+---
+
+## Implementation Outcome (2026-04-13)
+
+- Added `normalize_internal_version(...)` in `create_github_release.py` and applied it before `get_rw_tag_info(...)` calls.
+- Accepted formats now include:
+  - `0.EPIC.STORY.TASK+BUILD`
+  - `v0.EPIC.STORY.TASK+BUILD`
+- Added deterministic validation errors for malformed values (argument-aware, expected format examples included).
+- Added targeted parser regression tests:
+  - `packages/frameworks/workflow mgt/scripts/version/test_create_github_release_parsing.py`
+
+### Verification Evidence
+
+- `python -m pytest "packages/frameworks/workflow mgt/scripts/version/test_create_github_release_parsing.py" -q` -> `5 passed`
+- Manual regression check:
+  - `python "packages/frameworks/workflow mgt/scripts/create_github_release.py" --semver-tag "v0.4.733+1" --internal-version "v0.6.7.113+1" ... --token "dummy"`
+  - Result no longer contains `invalid literal for int() with base 10: 'v0'`; script proceeds to expected GitHub auth failure path (`401 Bad credentials` with dummy token).
 
 ---
 

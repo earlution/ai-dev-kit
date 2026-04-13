@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-04-13 (v0.6.7.113+1 – Kanban documentation setup)
-**Version:** v0.6.7.113+1
+**Last updated:** 2026-04-13 (v0.6.7.113+2 – Kanban documentation setup)
+**Version:** v0.6.7.113+2
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -127,7 +127,7 @@ housekeeping_policy: keep
 - [ ] **E6:S07:T112 – Install feedback submission path and governance** - IN PROGRESS (CRITICAL, convert local telemetry into safe, deterministic feedback submissions for maintainer triage)
   - Task: [`T112-install-feedback-submission-path-and-governance.md`](T112-install-feedback-submission-path-and-governance.md) | [FR-079](../../fr-br/FR-079-install-feedback-submission-path-and-governance.md)
 
-- [ ] **E6:S07:T113 – RW Step 12.5 GitHub release parser hardening (BR-065)** - TODO (HIGH, fix `v`-prefixed parsing failure in `create_github_release.py` while preserving non-blocking RW behavior)
+- [x] **E6:S07:T113 – RW Step 12.5 GitHub release parser hardening (BR-065)** - ✅ COMPLETE (HIGH, parser hardening + deterministic diagnostics + regression tests implemented)
   - Task: [`T113-rw-step-12-5-github-release-parser-hardening-br065.md`](T113-rw-step-12-5-github-release-parser-hardening-br065.md) | [BR-065](../../fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md)
 
 
@@ -198,7 +198,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** HIGH
 **Dependencies:** None
 **Estimated Effort:** Small
-**Version:** v0.6.7.113+1
+**Version:** v0.6.7.113+2
 
 **Input:** User requirements, existing comprehensive project analysis framework
 
@@ -226,7 +226,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T00
 **Estimated Effort:** VERY LARGE
-**Version:** v0.6.7.113+1
+**Version:** v0.6.7.113+2
 
 **Input:**
 
@@ -1147,6 +1147,6 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2026-04-13 (v0.6.7.113+1 – Kanban documentation setup)
-**Version:** v0.6.7.113+1
+**Last Updated:** 2026-04-13 (v0.6.7.113+2 – Kanban documentation setup)
+**Version:** v0.6.7.113+2
 **Status:** IN PROGRESS

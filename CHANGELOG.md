@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.113+1] - 13-04-26
+## [0.6.7.113+2] - 13-04-26
 
-E6:S07:T113 — Change implemented: BR-065 intake and IPW planning package for RW Step 12.5 parser hardening (docs-only release). SemVer **v0.4.733+1**.
+E6:S07:T113 — Fixed parser handling for `v`-prefixed internal version values in RW Step 12.5 (`create_github_release.py`) and added deterministic validation diagnostics/tests. SemVer **v0.4.733+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.113+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.113+2.md)

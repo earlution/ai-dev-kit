@@ -10,6 +10,7 @@ of the internal version.
 import os
 import sys
 import argparse
+import re
 import requests
 from typing import Optional, Dict
 from pathlib import Path
@@ -204,13 +205,41 @@ def get_release_tag_info(internal_version: str, semver_tag: Optional[str] = None
     Returns:
         Dictionary with tag information for release
     """
+    normalized_internal_version = normalize_internal_version(internal_version, argument_name="--internal-version")
+
     # Always start from the canonical RW tag decision path.
-    tag_info = get_rw_tag_info(internal_version)
+    tag_info = get_rw_tag_info(normalized_internal_version)
     if semver_tag:
         tag_info["primary_tag"] = semver_tag
         tag_info["semver_full"] = semver_tag.lstrip('v')
         tag_info["tag_message"] = f"Release {semver_tag}"
     return tag_info
+
+
+def normalize_internal_version(raw_value: str, argument_name: str = "--internal-version") -> str:
+    """
+    Normalize internal version input while preserving deterministic diagnostics.
+
+    Accepts either:
+    - 0.EPIC.STORY.TASK+BUILD
+    - v0.EPIC.STORY.TASK+BUILD
+    """
+    if raw_value is None:
+        raise ValueError(f"Invalid {argument_name}: None. Expected format like '0.6.7.113+1' or 'v0.6.7.113+1'.")
+
+    value = raw_value.strip()
+    if not value:
+        raise ValueError(f"Invalid {argument_name}: empty value. Expected format like '0.6.7.113+1' or 'v0.6.7.113+1'.")
+
+    if value.lower().startswith("v"):
+        value = value[1:]
+
+    if not re.fullmatch(r"\d+\.\d+\.\d+\.\d+\+\d+", value):
+        raise ValueError(
+            f"Invalid {argument_name}: '{raw_value}'. Expected format like '0.6.7.113+1' or 'v0.6.7.113+1'."
+        )
+
+    return value
 
 
 def create_or_update_release_auto(
@@ -418,6 +447,9 @@ def main() -> int:
             print("❌ Failed to create/update release", file=sys.stderr)
             return 1
             
+    except ValueError as e:
+        print(f"❌ Validation error: {e}", file=sys.stderr)
+        return 1
     except Exception as e:
         print(f"❌ Unexpected error: {e}", file=sys.stderr)
         return 1
