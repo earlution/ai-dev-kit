@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.1.17+3] - 14-04-26
+## [0.2.15.1+0] - 14-04-26
 
-E2:S01:T17 — Finalized FR-077 lifecycle governance: ownership matrix across IPW/RW/UKW, deterministic task-scoped drift detection, stronger Step 1c remediation, and regression coverage for recurrence guardrails. SemVer **v0.4.737+3**.
+E2:S15:T01 — `RW -k` doc-init: established dedicated IPW governance story/task for BR-066, rewired board/BR ownership, and removed temporary Story 1 placeholder task. SemVer **v0.4.738+0**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.1+0.md)

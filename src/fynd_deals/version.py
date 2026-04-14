@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 1     # Story number (Story 1: RW agent execution and docs)
-VERSION_TASK = 17     # Task number (T17: IPW-built task status transition and kboard synchronization)
-VERSION_BUILD = 3     # Build number (third release for T17)
+VERSION_STORY = 15    # Story number (Story 15: IPW governance and publication contract)
+VERSION_TASK = 1      # Task number (T01: IPW Docusaurus filing contract and backfill)
+VERSION_BUILD = 0     # Build number (doc-init release for new Story 15/Task 01)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.1.17+3 = Development, Epic 2, Story 1, Task 17
+# Current: 0.2.15.1+0 = Development, Epic 2, Story 15, Task 1
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
