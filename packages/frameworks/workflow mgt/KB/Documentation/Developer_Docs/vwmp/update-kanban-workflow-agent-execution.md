@@ -73,6 +73,13 @@ This workflow **requires significant agentic intelligence** at every step. This 
 - **UKW:** Comprehensive sync regardless of release status
 - Both workflows should be used together for complete kanban accuracy
 
+### FR-077 transition ownership contract
+
+- UKW does not invent task lifecycle transitions without evidence.
+- Task document status is authoritative for lifecycle state (`TODO`, `IN PROGRESS`, `COMPLETE`).
+- UKW propagates authoritative task-doc state to board views.
+- If UKW finds board/task-doc mismatch, it must reconcile board to task-doc status in the same update session.
+
 ### Invocation context (FR-038 / RW Step 7)
 
 UKW behaviour depends on **how** it is invoked. Use this conceptual flag when reasoning about scope (there is no separate CLI flag yet; context is implicit).

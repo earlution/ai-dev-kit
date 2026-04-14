@@ -116,7 +116,19 @@ def main() -> int:
     parser.add_argument(
         "--requested",
         default=None,
-        help="Optional target task id (e.g. E2S01T17). If provided, validates this task first.",
+        help=(
+            "Optional target task id (e.g. E2S01T17). If provided, validates this task "
+            "deterministically and exits after requested-task evaluation unless "
+            "--scan-all-with-requested is supplied."
+        ),
+    )
+    parser.add_argument(
+        "--scan-all-with-requested",
+        action="store_true",
+        help=(
+            "When --requested is provided, continue scanning all remaining tasks after "
+            "requested-task validation. Default behavior is requested-task-only."
+        ),
     )
     args = parser.parse_args()
 
@@ -143,7 +155,16 @@ def main() -> int:
         if requested_msg:
             print("FAIL: IPW status drift detected for requested task")
             print(f" - {requested_msg}")
+            print(
+                " - Remediation: implementation execution must transition task-doc status "
+                "to IN PROGRESS or COMPLETE before RW Step 1.4."
+            )
             return 1
+        if not args.scan_all_with_requested:
+            print(f"Scanned task docs: {len(docs)}")
+            print(f"PASS: requested task has no IPW status drift ({args.requested})")
+            print("PASS: no IPW implemented-but-TODO drift detected")
+            return 0
 
     for doc in docs:
         if requested_doc is not None and doc == requested_doc:

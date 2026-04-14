@@ -142,7 +142,9 @@ def task_is_releasable(content: str, path: Path) -> Tuple[bool, str]:
         if drift:
             return False, (
                 "status TODO with implementation evidence detected (FR-077 drift). "
-                "Transition task to IN PROGRESS/COMPLETE before RW. "
+                "Implementation execution must transition task-doc status to "
+                "IN PROGRESS/COMPLETE before RW. "
+                "RW/UKW then propagates board status in the same session. "
                 f"Details: {drift}"
             )
         return False, f"status TODO: {status!r}"

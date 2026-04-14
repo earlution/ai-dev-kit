@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-04-13 (v0.2.1.17+2 – Kanban documentation setup)
+**Last updated:** 2026-04-14 (v0.2.1.17+3 – FR-077 transition governance hardening)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -21,9 +21,9 @@ housekeeping_policy: keep
 
 ## Story Checklist
 
-- [ ] **E2:S01 – RW Agent Execution & Docs** - IN PROGRESS (reopened 2026-04-02; latest: **E2:S01:T12** completed at v0.2.1.12+2 for BR-061 explicit-task reconciliation)
+- [ ] **E2:S01 – RW Agent Execution & Docs** - IN PROGRESS (reopened 2026-04-02; latest: **E2:S01:T17** completed at v0.2.1.17+3 for FR-077 transition governance)
   - Story: [`Story-001-rw-agent-execution-and-docs.md`](Story-001-rw-agent-execution-and-docs.md)
-  - Tasks: T01–T08 ✅ COMPLETE; **T09** 🔄 IN PROGRESS — [BR-060](Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)
+  - Tasks: T01–T17 with T17 ✅ COMPLETE (v0.2.1.17+3) — [FR-077](../fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md)
 
 - [x] **E2:S02 – PDCA Integration into Release Workflow** - COMPLETE ✅ (v0.2.2.8+1 – All tasks complete: PDCA phases integrated into RW, docs, templates, and examples)
   - Story: [`Story-002-pdca-integration-into-release-workflow.md`](Story-002-pdca-integration-into-release-workflow.md)

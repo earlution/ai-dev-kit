@@ -40,12 +40,27 @@ housekeeping_policy: keep
 
 ## Status transition ownership (FR-077)
 
-- IPW itself is planning-only and must not auto-mark implementation completion.
+IPW itself is planning-only and must not directly transition implementation status.
+
+### Canonical ownership matrix
+
+- `TODO -> IN PROGRESS`
+  - **Decision owner:** implementation execution (first non-planning code/doc implementation change)
+  - **Write owner:** implementation execution updates task doc status
+  - **Propagation owner:** RW Step 7 / standalone UKW syncs board row in the same session
+- `IN PROGRESS -> COMPLETE`
+  - **Decision owner:** implementation execution after acceptance evidence exists
+  - **Write owner:** implementation execution updates task doc status and evidence notes
+  - **Propagation owner:** RW Step 7 / standalone UKW syncs board row in the same session
+
+### Non-negotiable rules
+
 - IPW outputs must explicitly declare transition intent:
   - `TODO -> IN PROGRESS` at first non-planning implementation change.
   - `IN PROGRESS -> COMPLETE` only after acceptance evidence is recorded.
-- Implementation execution is responsible for applying transition intent in task docs.
-- RW/UKW propagation must keep task doc status and board representation in the same change set/session.
+- Task-doc status is authoritative for transition decisions.
+- Board status is a propagated view and must not be advanced independently of task-doc status.
+- Propagation must be atomic at change-set/session level (no split-brain task-doc vs board status).
 
 ## Outputs
 

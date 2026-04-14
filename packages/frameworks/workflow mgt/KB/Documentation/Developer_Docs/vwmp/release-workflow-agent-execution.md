@@ -569,6 +569,10 @@ For full RW / `RW -d`, releasable statuses are **IN PROGRESS**, **COMPLETE**, or
 - Step 1.4 now also detects "implemented but TODO" drift for IPW/ICW-derived tasks before proceeding.
 - The validator uses task-scoped drift checks (requested E:S:T) so failures are explicit and actionable.
 - If drift is detected, Step 1.4 fails with guidance to transition task status to `IN PROGRESS` or `COMPLETE` before RW continues.
+- Ownership reminder:
+  - Implementation execution owns the status decision and task-doc write (`TODO -> IN PROGRESS -> COMPLETE`).
+  - RW Step 7 (scoped UKW mode) owns board propagation for the release slice.
+  - Task-doc status is authoritative; board status must not be advanced independently.
 
 ---
 

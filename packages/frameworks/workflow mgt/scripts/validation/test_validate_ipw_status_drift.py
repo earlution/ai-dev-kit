@@ -96,3 +96,49 @@ def test_requested_task_mode_passes_when_requested_clean(tmp_path: Path):
     assert r.returncode == 0
     assert "requested task has no IPW status drift" in r.stdout
 
+
+def test_requested_task_mode_is_deterministic_when_other_tasks_drift(tmp_path: Path):
+    root = tmp_path
+    clean = root / "docs/project-management/kanban/epics/Epic-2/Story-001/T01-foo.md"
+    _write_task(clean, "IN PROGRESS", "## Verification evidence\n\npytest -q -> 5 passed\n")
+    drifted = root / "docs/project-management/kanban/epics/Epic-2/Story-001/T02-bar.md"
+    drifted.parent.mkdir(parents=True, exist_ok=True)
+    drifted.write_text(
+        (
+            "---\n---\n\n# T02\n\n"
+            "**Task ID:** E2:S01:T02\n"
+            "**Status:** TODO\n\n"
+            "## Input\n\n"
+            "- [IPW-E2S01T02-bar](../../../../implementation-cycles/IPW-E2S01T02-bar.md)\n\n"
+            "## Implementation note\n\n"
+            "Released **v0.2.1.2+1** with tests.\n"
+        ),
+        encoding="utf-8",
+    )
+    r = _run(["--requested", "E2S01T01"], cwd=root)
+    assert r.returncode == 0
+    assert "requested task has no IPW status drift" in r.stdout
+
+
+def test_requested_task_mode_can_scan_all_when_enabled(tmp_path: Path):
+    root = tmp_path
+    clean = root / "docs/project-management/kanban/epics/Epic-2/Story-001/T01-foo.md"
+    _write_task(clean, "IN PROGRESS", "## Verification evidence\n\npytest -q -> 5 passed\n")
+    drifted = root / "docs/project-management/kanban/epics/Epic-2/Story-001/T02-bar.md"
+    drifted.parent.mkdir(parents=True, exist_ok=True)
+    drifted.write_text(
+        (
+            "---\n---\n\n# T02\n\n"
+            "**Task ID:** E2:S01:T02\n"
+            "**Status:** TODO\n\n"
+            "## Input\n\n"
+            "- [IPW-E2S01T02-bar](../../../../implementation-cycles/IPW-E2S01T02-bar.md)\n\n"
+            "## Implementation note\n\n"
+            "Released **v0.2.1.2+1** with tests.\n"
+        ),
+        encoding="utf-8",
+    )
+    r = _run(["--requested", "E2S01T01", "--scan-all-with-requested"], cwd=root)
+    assert r.returncode == 1
+    assert "IPW status drift detected" in r.stdout
+

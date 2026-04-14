@@ -92,6 +92,7 @@ def test_full_mode_fails_todo_with_impl_evidence_with_drift_reason(minimal_compl
     r = _run(["--requested", "E9:S01:T01"], cwd=minimal_complete_task)
     assert r.returncode == 1, r.stderr + r.stdout
     assert "FR-077 drift" in r.stdout
+    assert "Implementation execution must transition task-doc status" in r.stdout
 
 
 def test_rw_k_skips_complete_check(minimal_complete_task: Path):

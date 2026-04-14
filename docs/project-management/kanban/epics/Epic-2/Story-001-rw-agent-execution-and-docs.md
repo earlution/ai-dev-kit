@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
 **Completed:** N/A (story reopened for ongoing RW validation work)
-**Last updated:** 2026-04-13 (v0.2.1.17+2 – Kanban documentation setup)
-**Version:** v0.2.1.17+2
+**Last updated:** 2026-04-14 (v0.2.1.17+3 – FR-077 transition ownership + validator/test hardening)
+**Version:** v0.2.1.17+3
 **Code:** E2S01
 
 ---
@@ -50,7 +50,7 @@ Make RW agent execution documentation fully portable, clearly distinguishing dev
 - [x] **E2:S01:T14 – FR-048: RW Trigger Extensions for Multiple Use Cases (traceability task wiring)** - ✅ COMPLETE (v0.2.1.14+1) — [Task doc](Story-001-rw-agent-execution-and-docs/T14-rw-trigger-extensions-multiple-use-cases-fr048.md) | [FR-048](../../fr-br/FR-048-rw-trigger-extensions-for-multiple-use-cases.md)
 - [x] **E2:S01:T15 – FR-049: Canonical RW Step List - Single Source of Truth (traceability task wiring)** - ✅ COMPLETE (v0.2.1.15+1) — [Task doc](Story-001-rw-agent-execution-and-docs/T15-canonical-rw-step-list-single-source-of-truth-fr049.md) | [FR-049](../../fr-br/FR-049-canonical-rw-step-list-single-source-of-truth.md)
 - [x] **E2:S01:T16 – BR-064: RW `dev` branch should not enforce epic lock** - ✅ COMPLETE (v0.2.1.16+1) — [Task doc](Story-001-rw-agent-execution-and-docs/T16-rw-dev-branch-neutral-context-no-epic-lock-br064.md) | [BR-064](../../fr-br/BR-064-rw-dev-branch-should-not-enforce-epic-lock.md)
-- [ ] **E2:S01:T17 – FR-077: IPW-built task status transition and kboard synchronization** - TODO — [Task doc](Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | [FR-077](../../fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md)
+- [x] **E2:S01:T17 – FR-077: IPW-built task status transition and kboard synchronization** - ✅ COMPLETE (v0.2.1.17+3 – ownership matrix aligned across IPW/RW/UKW, deterministic requested-task drift checks, recurrence regression tests) — [Task doc](Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | [FR-077](../../fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md)
 
 ---
 

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+44] - 13-04-26
+## [0.2.1.17+3] - 14-04-26
 
-E6:S07:T101 — **RW -d** (documentation-only): commits UKW Kanban sync (main board Ongoing **T101**, fbuboard metadata + **FR-046** row, Story-7 / Epic-6 / T46 bookkeeping) with `--art` anchor adoption. SemVer **v0.4.736+44**.
+E2:S01:T17 — Finalized FR-077 lifecycle governance: ownership matrix across IPW/RW/UKW, deterministic task-scoped drift detection, stronger Step 1c remediation, and regression coverage for recurrence guardrails. SemVer **v0.4.737+3**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+44.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.1.17+3.md)

@@ -50,6 +50,16 @@ UKW and RW agents must follow this when updating the board.
 
 **RW Step 7 vs UKW (FR-038):** During a release, **RW Step 7 — Scoped Kanban Sync (UKW Mode)** updates the board and docs for the **release task** only (scoped). **Standalone UKW** is for **board-wide** MoSCOW and housekeeping. See Kanban governance policy §1.1.
 
+### Status transition ownership (FR-077)
+
+- **Authoritative source:** Task document status is authoritative.
+- **Decision/write owner:** Implementation execution owns lifecycle transitions in task docs:
+  - `TODO -> IN PROGRESS` at first non-planning implementation change.
+  - `IN PROGRESS -> COMPLETE` only after acceptance evidence is recorded.
+- **Propagation owner:** RW Step 7 (scoped) or standalone UKW propagates authoritative task-doc status to board rows.
+- **Atomicity rule:** Task-doc status update and board-row update must occur in the same change set/session.
+- **Safety rule:** Board rows must not be advanced independently of task-doc status.
+
 ### MoSCOW row `Last modified` (UTC)
 
 Each line in **MoSCOW Prioritized In-Progress Tasks** (`kanban-board.md`) and **MoSCOW Prioritized FR/BR/UXR Items** (`fr-br-uxr-board.md`) must end with a pipe-delimited field:

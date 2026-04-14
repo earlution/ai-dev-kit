@@ -96,10 +96,17 @@ This creates governance and traceability gaps because documentation no longer re
 
 ## Acceptance Criteria
 
-- [ ] Policy/docs explicitly define when `TODO`, `IN PROGRESS`, and `COMPLETE` are applied for IPW-derived tasks.
-- [ ] IPW output includes explicit status transition intent that downstream execution can apply.
-- [ ] At least one regression check identifies and reports stale TODO state after implementation evidence exists.
-- [ ] kboard and task-doc status remain synchronized for validated scenarios.
+- [x] Policy/docs explicitly define when `TODO`, `IN PROGRESS`, and `COMPLETE` are applied for IPW-derived tasks.
+- [x] IPW output includes explicit status transition intent that downstream execution can apply.
+- [x] At least one regression check identifies and reports stale TODO state after implementation evidence exists.
+- [x] kboard and task-doc status remain synchronized for validated scenarios.
+
+## Release anchor (2026-04-14)
+
+- Released build: **v0.2.1.17+3** (SemVer: **v0.4.737+3**) for implementing task **E2:S01:T17**.
+- Includes ownership-contract normalization (IPW/RW/UKW), deterministic requested-task drift checks, and recurrence regression tests (`15 passed`).
+
+---
 
 ## Execution notes
 

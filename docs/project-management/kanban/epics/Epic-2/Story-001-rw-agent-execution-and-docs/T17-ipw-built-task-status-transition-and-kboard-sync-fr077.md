@@ -10,10 +10,10 @@ housekeeping_policy: keep
 
 **Task ID:** E2:S01:T17  
 **Status:** IN PROGRESS  
-**Version Anchor:** v0.2.1.17+1  
+**Version Anchor:** v0.2.1.17+3  
 **Priority:** HIGH  
 **Created:** 2026-04-09  
-**Last updated:** 2026-04-13 (new recurrence captured: E7:S06:T18 RW blocked at TODO; follow-up hardening context appended)  
+**Last updated:** 2026-04-14 (v0.2.1.17+3 — FR-077 ownership/validator/test hardening released)  
 **Code:** E2S01T17
 
 ---
@@ -72,10 +72,10 @@ Define and implement canonical status-transition ownership so IPW-built tasks do
 
 ## Acceptance Criteria
 
-- [ ] Transition points for `TODO`, `IN PROGRESS`, `COMPLETE` are explicitly documented and enforceable.
-- [ ] IPW output or guidance includes status-transition intent/checklist for downstream execution.
-- [ ] Task-doc and kboard sync is defined as atomic for status changes.
-- [ ] At least one regression/audit check detects implemented-but-TODO drift.
+- [x] Transition points for `TODO`, `IN PROGRESS`, `COMPLETE` are explicitly documented and enforceable.
+- [x] IPW output or guidance includes status-transition intent/checklist for downstream execution.
+- [x] Task-doc and kboard sync is defined as atomic for status changes.
+- [x] At least one regression/audit check detects implemented-but-TODO drift.
 
 ---
 
@@ -93,3 +93,23 @@ Define and implement canonical status-transition ownership so IPW-built tasks do
 - [ICW-E2S01T17-specification](../../../../implementation-cycles/ICW-E2S01T17-specification.md)
 - [ICW-E2S01T17-test-design](../../../../implementation-cycles/ICW-E2S01T17-test-design.md)
 - [ICW-E2S01T17-implementation-plan](../../../../implementation-cycles/ICW-E2S01T17-implementation-plan.md)
+
+---
+
+## Verification Evidence (2026-04-14 hardening pass)
+
+- Ownership contract normalized across workflow docs:
+  - `implementation-planning-workflow-agent-execution.md` (canonical ownership matrix)
+  - `release-workflow-agent-execution.md` (Step 1.4 ownership reminder)
+  - `update-kanban-workflow-agent-execution.md` (UKW propagation contract)
+  - `kanban-board-guide.md` (process-facing ownership + atomicity rule)
+- Validator hardening:
+  - `validate_ipw_status_drift.py` now supports deterministic requested-task mode by default, with optional `--scan-all-with-requested`.
+  - Requested-task drift failures now emit explicit remediation tied to FR-077 ownership.
+  - `validate_rw_task_complete.py` drift diagnostics now include owner-aware remediation.
+- Regression tests:
+  - Added requested-task determinism and opt-in full-scan cases in `test_validate_ipw_status_drift.py`.
+  - Expanded Step 1.4 drift diagnostic assertion in `test_validate_rw_task_complete.py`.
+- Command evidence:
+  - `python -m pytest "packages/frameworks/workflow mgt/scripts/validation/test_validate_ipw_status_drift.py" "packages/frameworks/workflow mgt/scripts/validation/test_validate_rw_task_complete.py" -q`
+  - Result: `15 passed`.
