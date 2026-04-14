@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-14 (RW: E2:S01:T17)
-**Version:** v0.2.1.17+3
+- **E2:S15:T01** – BR-066 IPW publication contract and backfill - COMPLETE (HIGH, publication contract + deterministic validator + backfill inventory delivered) - [Task Document](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [Story](epics/Epic-2/Story-015-ipw-governance-and-publication-contract.md) | Last modified: 2026-04-14 16:04 UTC
+**Version:** v0.2.15.1+1
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.

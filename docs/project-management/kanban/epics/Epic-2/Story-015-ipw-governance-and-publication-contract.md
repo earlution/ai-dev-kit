@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-14  
 **Completed:** N/A  
-**Last updated:** 2026-04-14 (v0.2.15.1+0 – RW-k kanban-init release anchor created)
-**Version:** v0.2.15.1+0
+**Last updated:** 2026-04-14 (v0.2.15.1+1 – T01 publication contract + validator + backfill inventory complete)
+**Version:** v0.2.15.1+1
 **Code:** E2S15
 
 ---
@@ -33,6 +33,6 @@ Eliminate IPW documentation publication drift by making ownership, filing target
 
 ## Task Checklist
 
-- [ ] **E2:S15:T01 – BR-066: IPW Docusaurus filing contract and backfill** - TODO (v0.2.15.1+0 intake anchor) (HIGH, contract + validation + historical recovery inventory) — [Task doc](Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
+- [x] **E2:S15:T01 – BR-066: IPW Docusaurus filing contract and backfill** - COMPLETE (v0.2.15.1+1) (HIGH, contract + validation + historical recovery inventory) — [Task doc](Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 
 ---

@@ -113,3 +113,15 @@ Define and implement canonical status-transition ownership so IPW-built tasks do
 - Command evidence:
   - `python -m pytest "packages/frameworks/workflow mgt/scripts/validation/test_validate_ipw_status_drift.py" "packages/frameworks/workflow mgt/scripts/validation/test_validate_rw_task_complete.py" -q`
   - Result: `15 passed`.
+
+
+## Documentation Publication
+
+Publication Status: PUBLISHED
+Publication N/A Reason: N/A
+
+## Planning Artifact Links
+
+- [ICW E2:S01:T17 specification](../../../../../implementation-cycles/ICW-E2S01T17-specification.md)
+- [ICW E2:S01:T17 test design](../../../../../implementation-cycles/ICW-E2S01T17-test-design.md)
+- [ICW E2:S01:T17 implementation plan](../../../../../implementation-cycles/ICW-E2S01T17-implementation-plan.md)

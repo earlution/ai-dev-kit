@@ -9,11 +9,12 @@ housekeeping_policy: keep
 # Task E2:S15:T01 - IPW Docusaurus filing contract and backfill (BR-066)
 
 **Task ID:** E2:S15:T01  
-**Status:** TODO  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Created:** 2026-04-14  
-**Last updated:** 2026-04-14 (v0.2.15.1+0 – RW-k doc-init anchor)  
-**Version:** v0.2.15.1+0  
+**Last updated:** 2026-04-14 (v0.2.15.1+1 – publication contract + validator + backfill inventory implemented)  
+**Version:** v0.2.15.1+1  
+**Version Anchor:** v0.2.15.1+1  
 **Code:** E2S15T01
 
 ---
@@ -45,14 +46,30 @@ Investigate and harden IPW behavior so planning/spec artifacts expected to be di
 
 ## Acceptance Criteria
 
-- [ ] Ownership and timing for Docusaurus filing are unambiguous across IPW/RW/docs.
-- [ ] At least one deterministic validation or audit path detects missing filing when applicable.
-- [ ] Backlog inventory identifies historical IPW artifacts that should be filed.
-- [ ] Guidance includes explicit "not applicable" path where filing is intentionally skipped.
+- [x] Ownership and timing for Docusaurus filing are unambiguous across IPW/RW/docs.
+- [x] At least one deterministic validation or audit path detects missing filing when applicable.
+- [x] Backlog inventory identifies historical IPW artifacts that should be filed.
+- [x] Guidance includes explicit "not applicable" path where filing is intentionally skipped.
 
 ---
+
+## Documentation Publication
+
+Publication Status: PUBLISHED
+Publication N/A Reason: N/A
 
 ## Links
 
 - [BR-066](../../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 - [Story E2:S15](../Story-015-ipw-governance-and-publication-contract.md)
+- [ICW E2:S15:T01 specification](../../../../../implementation-cycles/ICW-E2S15T01-specification.md)
+- [ICW E2:S15:T01 test design](../../../../../implementation-cycles/ICW-E2S15T01-test-design.md)
+- [ICW E2:S15:T01 implementation plan](../../../../../implementation-cycles/ICW-E2S15T01-implementation-plan.md)
+- [IPW publication backfill inventory](../../../../../implementation-cycles/IPW-PUBLICATION-BACKFILL-INVENTORY.md)
+
+
+## Verification Evidence
+
+- Added validator: `packages/frameworks/workflow mgt/scripts/validation/validate_ipw_publication_wiring.py`.
+- Added tests: `packages/frameworks/workflow mgt/scripts/validation/test_validate_ipw_publication_wiring.py`.
+- Wired this task to `docs/implementation-cycles/ICW-E2S15T01-*` planning package.

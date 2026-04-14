@@ -36,3 +36,14 @@ That path is part of **ICW’s responsibility**: persist the three-phase package
 
 - [ICW implementation summary](./ICW-IMPLEMENTATION-SUMMARY.md) (historical context)
 - [Framework ICW README](../../../packages/frameworks/workflow%20mgt/workflows/implementation-cycle-workflow/README.md)
+
+
+## Publication discoverability contract (BR-066)
+
+Planning artifacts are only considered published when the host task doc links to the package in this directory (or marks publication as not applicable with reason).
+
+Reference package for this hardening task:
+- [ICW-E2S15T01-specification](./ICW-E2S15T01-specification.md)
+- [ICW-E2S15T01-test-design](./ICW-E2S15T01-test-design.md)
+- [ICW-E2S15T01-implementation-plan](./ICW-E2S15T01-implementation-plan.md)
+

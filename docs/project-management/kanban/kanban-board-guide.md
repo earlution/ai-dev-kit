@@ -60,6 +60,15 @@ UKW and RW agents must follow this when updating the board.
 - **Atomicity rule:** Task-doc status update and board-row update must occur in the same change set/session.
 - **Safety rule:** Board rows must not be advanced independently of task-doc status.
 
+
+### Planning artifact publication contract (BR-066)
+
+- IPW/ICW-derived task docs must expose publication state explicitly:
+  - `Publication Status: PUBLISHED`, or
+  - `Publication Status: NOT_APPLICABLE` with `Publication N/A Reason:`.
+- For `PUBLISHED`, link the task planning package artifacts in `docs/implementation-cycles/` from the host task doc (`specification`, `test-design`, `implementation-plan`).
+- Validate deterministically before release closure with `validate_ipw_publication_wiring.py --requested E:S:T`.
+
 ### MoSCOW row `Last modified` (UTC)
 
 Each line in **MoSCOW Prioritized In-Progress Tasks** (`kanban-board.md`) and **MoSCOW Prioritized FR/BR/UXR Items** (`fr-br-uxr-board.md`) must end with a pipe-delimited field:

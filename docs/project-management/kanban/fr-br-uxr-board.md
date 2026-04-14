@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-13 (UKW comprehensive; row stamps: 2026-04-14 11:52 UTC)
-**Version Context:** v0.6.7.101+44 (**SemVer** v0.4.736+44, **RW -d** **E6:S07:T101**)
+**Last Updated:** 2026-04-14 (RW Step 7 scoped sync; row stamps: 2026-04-14 16:04 UTC)
+**Version Context:** v0.2.15.1+1 (**SemVer** v0.4.739+1, **RW** **E2:S15:T01**)
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -47,7 +47,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 - **FR-077** – IPW-built task status transition and kboard synchronization - IN PROGRESS (HIGH, core ownership matrix + deterministic requested-task drift checks shipped in v0.2.1.17+3; monitor recurrence and adoption) - [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [E2:S01:T17](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | Last modified: 2026-04-14 12:48 UTC
 - **BR-065** – RW Step 12.5 GitHub release parser fails on `v`-prefixed version - OPEN (HIGH, GitHub release publish step fails with `invalid literal for int() with base 10: 'v0'`; RW remains non-blocking but release publication is skipped) - [BR-065](fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md) | [E6:S07:T113](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T113-rw-step-12-5-github-release-parser-hardening-br065.md) | Last modified: 2026-04-14 12:48 UTC
-- **BR-066** – IPW missing Docusaurus filing for planning artifacts - OPEN (HIGH, IPW artifacts can be durable in repo but absent from Docusaurus publication paths, creating false discoverability assumptions and traceability gaps) - [BR-066](fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md) | [E2:S15:T01](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | Last modified: 2026-04-14 12:48 UTC
+- **BR-066** – IPW missing Docusaurus filing for planning artifacts - IN PROGRESS (HIGH, publication contract + validator + initial backfill inventory shipped in v0.2.15.1+1; continue phased historical backfill) - [BR-066](fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md) | [E2:S15:T01](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | Last modified: 2026-04-14 16:04 UTC
 - **FR-040** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [FR-040](fr-br/FR-040-implementation-cycle-workflow-icw.md) | Last modified: 2026-04-14 12:48 UTC
 - **FR-046** – RW SemVer Tag When task_touch Enabled - IN PROGRESS (HIGH, dual-mode ⇒ task_touch validator + installer/examples shipped **v0.5.1.46+6**; FR doc + task remain open until verification closes the loop) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | Last modified: 2026-04-14 12:48 UTC
 - **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md) | Last modified: 2026-04-14 12:48 UTC
