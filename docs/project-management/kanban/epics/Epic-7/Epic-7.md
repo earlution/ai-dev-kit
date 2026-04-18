@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-09  
 **Completed:** [Reopened – TBD]  
-**Last updated:** 2026-04-18 (v0.7.6.18+2 — E7:S06:T18 publication alignment)
+**Last updated:** 2026-04-18 (v0.7.6.18+3 — E7:S06:T18 RW full)
 **Branch:** `epic/7-documentation-maintenance`  
 **Version Schema:** `0.7.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -257,7 +257,7 @@ This epic works in conjunction with Epic 4 (Kanban Framework) to provide a compl
 - [x] **E7:S06:T07** – General documentation and cross-reference integrity ✅ COMPLETE (v0.7.6.7+1)
 - [x] **E7:S06:T08** – Dependency and tooling audit ✅ COMPLETE (v0.7.6.8+1)
 - [x] **E7:S06:T09** – Config and git state validation ✅ COMPLETE (v0.7.6.9+1)
-- [x] **E7:S06:T18** – Interactive installer Kanban pattern prompt clarity (UXR-007) ✅ COMPLETE (0.7.6.18+2 docs — publication alignment)
+- [x] **E7:S06:T18** – Interactive installer Kanban pattern prompt clarity (UXR-007) ✅ COMPLETE (0.7.6.18+3 — RW full traceability)
 
 **Acceptance Criteria:**
 

@@ -39,7 +39,7 @@ housekeeping_policy: keep
 - [x] **E7:S06:T07 – General documentation and cross-reference integrity** ✅ COMPLETE (v0.7.6.7+1)
 - [x] **E7:S06:T08 – Dependency and tooling audit** ✅ COMPLETE (v0.7.6.8+1)
 - [x] **E7:S06:T09 – Config and git state validation** ✅ COMPLETE (v0.7.6.9+1)
-- [x] **E7:S06:T18 – Interactive installer Kanban pattern prompt clarity (UXR-007)** ✅ COMPLETE (0.7.6.18+2 docs — publication alignment)
+- [x] **E7:S06:T18 – Interactive installer Kanban pattern prompt clarity (UXR-007)** ✅ COMPLETE (0.7.6.18+3 — RW full traceability)
 
 > **Format:** `Exx:Sxx:Txx` (Epic, Story, Task with 2-digit zero padding)  
 > **Forensic Marker Format:** `✅ COMPLETE (vRC.E.S.T+B)`  

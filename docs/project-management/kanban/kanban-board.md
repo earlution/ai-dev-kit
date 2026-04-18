@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-- **E2:S15:T01** – BR-066 IPW publication contract and backfill - COMPLETE (HIGH, publication contract + deterministic validator + backfill inventory delivered) - [Task Document](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [Story](epics/Epic-2/Story-015-ipw-governance-and-publication-contract.md) | Last modified: 2026-04-14 16:04 UTC
-**Version:** v0.2.15.1+1
+**Last Updated:** 2026-04-18 (RW Step 7 scoped sync; E7:S06:T18)
+**Version:** v0.7.6.18+3
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
@@ -27,7 +27,11 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
+- **E7:S06:T18** – Interactive installer Kanban pattern clarity (UXR-007) - COMPLETE (publication-aligned ICW package; RW **v0.7.6.18+3**) - [Task Document](epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md) | [Story](epics/Epic-7/Story-006-post-windsurf-project-review.md) | Last modified: 2026-04-18 15:23 UTC
+
 ### Could Have (C) - Nice-to-Have Tasks
+
+- **E2:S15:T01** – BR-066 IPW publication contract and backfill - COMPLETE (HIGH, publication contract + deterministic validator + backfill inventory delivered) - [Task Document](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [Story](epics/Epic-2/Story-015-ipw-governance-and-publication-contract.md) | Last modified: 2026-04-14 16:04 UTC
 
 - **E4:S08:T07** – FR-011: Task splitting across multiple canonical epics - IN PROGRESS (MEDIUM priority semantic migration enhancement) - [Task Document](epics/Epic-4/Story-008-intelligent-epic-matching-canonical-adoption/T07-task-splitting-across-multiple-canonical-epics-fr-011.md) | [Story](epics/Epic-4/Story-008-intelligent-epic-matching-canonical-adoption.md) | Last modified: 2026-04-14 11:52 UTC
 - **E5:S01:T31** – Multi-agent coordination feasibility investigation (FR-031) - TODO (C priority architecture exploration) - [Task Document](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | [Story](epics/Epic-5/Story-001-fr-repo.md) | Last modified: 2026-04-14 11:52 UTC

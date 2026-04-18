@@ -11,9 +11,9 @@ housekeeping_policy: keep
 **Task ID:** E7:S06:T18  
 **Status:** COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-04-18  
-**Version:** v0.7.6.18+2  
-**Version Anchor:** v0.7.6.18+2  
+**Last updated:** 2026-04-18 (RW full **E7:S06:T18** **v0.7.6.18+3**)
+**Version:** v0.7.6.18+3  
+**Version Anchor:** v0.7.6.18+3  
 **Code:** E7S06T18
 
 ---
@@ -69,7 +69,7 @@ Address UXR-007 by improving interactive installer wording and guidance for Kanb
 
 ## Version Anchor
 
-- Released as: `v0.7.6.18+2` (SemVer `v0.4.740+2`; prior shipping `v0.7.6.18+1` / `v0.4.733+1`)
+- Released as: `v0.7.6.18+3` (SemVer `v0.4.741+3`; prior **RW -d** `v0.7.6.18+2` / `v0.4.740+2`)
 
 ## References
 

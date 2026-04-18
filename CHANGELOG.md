@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.7.6.18+2] - 18-04-26
+## [0.7.6.18+3] - 18-04-26
 
-E7:S06:T18 — retrospective IPW publication alignment (split ICW package, index redirect, UXR/task wiring). SemVer **v0.4.740+2**.
+E7:S06:T18 — full RW release with `--art` (traceability + Kanban scoped sync; board header restored). SemVer **v0.4.741+3**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.7.6.18+3.md)

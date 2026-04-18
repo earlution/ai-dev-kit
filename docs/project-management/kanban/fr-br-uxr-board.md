@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-18 (RW -d scoped sync; row stamps: 2026-04-18 15:11 UTC)
-**Version Context:** v0.7.6.18+2 (**SemVer** v0.4.740+2, **RW -d** **E7:S06:T18**)
+**Last Updated:** 2026-04-18 (RW Step 7 scoped sync; row stamps: 2026-04-18 15:23 UTC)
+**Version Context:** v0.7.6.18+3 (**SemVer** v0.4.741+3, **RW** **E7:S06:T18**)
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -37,7 +37,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Must Have (M) - Critical Items
 
-- **UXR-007** – Interactive Installer Kanban Pattern Prompt Clarity - TODO (CRITICAL, full interactive install can end in contradictory completion/cancelled states with ambiguous kanban pattern prompts and root-path validation mismatch across installers) - [UXR-007](fr-br/UXR-007-interactive-installer-kanban-pattern-prompt-clarity.md) | [E7:S06:T18](epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md) | Last modified: 2026-04-18 15:11 UTC
+- **UXR-007** – Interactive Installer Kanban Pattern Prompt Clarity - TODO (CRITICAL, full interactive install can end in contradictory completion/cancelled states with ambiguous kanban pattern prompts and root-path validation mismatch across installers) - [UXR-007](fr-br/UXR-007-interactive-installer-kanban-pattern-prompt-clarity.md) | [E7:S06:T18](epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md) | Last modified: 2026-04-18 15:23 UTC
 - **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | Last modified: 2026-04-14 12:48 UTC
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | Last modified: 2026-04-14 12:48 UTC
 

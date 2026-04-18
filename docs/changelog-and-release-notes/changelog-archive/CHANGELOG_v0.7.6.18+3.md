@@ -1,29 +1,21 @@
 # Detailed Changelog — v0.7.6.18+3
 
-**Release Date:** 2026-04-13 14:57:29 UTC  
-**Version:** `v0.7.6.18+3`  
-**SemVer:** `v0.4.733+3`  
-**Task Anchor:** `E7:S06:T18`
+**Release Date:** 2026-04-18 15:23:41 UTC
+**Internal Version:** v0.7.6.18+3
+**SemVer:** v0.4.741+3
+**Epic / Story / Task:** E7 / S06 / T18
 
----
+## Overview
 
-## Summary
+Full **RW** release for **E7:S06:T18** (`--art`): version/changelog/README/Kanban sync; no functional installer code changes in this slice.
 
-Change implemented: package documentation version alignment for latest installer hardening updates.
+## Documentation & traceability
 
----
+- Main `CHANGELOG.md` and README SemVer/internal alignment.
+- Scoped Kanban board repair (restored header metadata) + release row for T18.
+- `fr-br-uxr-board.md` metadata aligned to this release.
 
-## Changed
+## Verification
 
-- Updated packaged workflow-management documentation version metadata to `2.3.0`.
-- Updated packaged kanban documentation version metadata to `2.2.0` and removed conflicting README version signals.
-- Added package changelog entries documenting installer hardening updates reflected by `E7:S06:T18`.
-- Updated root README package-version references for workflow management and kanban packages.
-
----
-
-## Traceability
-
-- Epic: `7`
-- Story: `6`
-- Task: `18`
+- `validate_branch_context.py --strict`
+- `validate_rw_task_complete.py` / `validate_rw_task_intent.py --art` for `E7:S06:T18`
