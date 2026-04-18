@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-04-07 (BR-063 via E2:S01:T13+2)
-**Version:** v0.2.1.13+2
+**Last Updated:** 2026-04-18 (UKW + RW **E6:S07:T101+45**: **UXR-007** closed with **E7:S06:T18** **v0.7.6.18+3**)
+**Version:** v0.6.7.101+45
 
 > **For open FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -34,6 +34,7 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| UXR-007 | UXR | Interactive installer Kanban pattern prompt clarity — installer UX + ICW publication alignment (**E7:S06:T18**) | 2026-04-18 | v0.7.6.18+3 | UKW Agent |
 | BR-063 | BR | RW `-k` task attribution drift vs `version.py` anchor — forensic-strict guard, `--art`, version validation, tests, docs | 2026-04-07 | v0.2.1.13+2 | RW Agent |
 | FR-075 | FR | ICW durable planning artifacts — repo SoT under `docs/implementation-cycles/`, policy, ICW docs, `.cursorrules` | 2026-04-01 | v0.5.1.75+1 | RW Agent |
 | FR-064 | FR | Retire `shields` branch — static README badges; removed `update-badges.yml` BYOB; deleted `origin/shields` | 2026-03-30 | v0.5.1.69+1 | RW Agent |
@@ -42,6 +43,16 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 | BR-054 | BR | Kanban Package Migration/Installation Completely Broken | 2026-03-12T13:20:00Z | v0.24.2.1+1 | Documentation Agent |
 | BR-009 | BR | Installer Discoverability and Documentation | 2026-03-09T16:00:00Z | v0.6.7.104+2 | RW Agent |
 | FR-051 | FR | FR/BR/UXR Prioritization Board | 2026-03-09T15:20:00Z | v0.6.7.107+1 | Documentation Agent |
+
+---
+
+### 2026-04-18
+
+**UXR-007 – Interactive Installer Kanban Pattern Prompt Clarity**  
+**Completed:** 2026-04-18 (`v0.7.6.18+3`)  
+**Implementing Task:** [E7:S06:T18](epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md)  
+**Completing Agent:** UKW Agent  
+**Resolution:** Implementing task **COMPLETE**; intake doc [`UXR-007`](fr-br/UXR-007-interactive-installer-kanban-pattern-prompt-clarity.md) set to **`Status: COMPLETE`**; Must Have row removed from [`fr-br-uxr-board.md`](fr-br-uxr-board.md) per active-board hygiene.
 
 ---
 

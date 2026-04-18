@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-07 (**RW** `E6:S07:T101+40` — **v0.6.7.101+40** / **v0.4.638+40**)
-**Version:** v0.6.7.101+40 *(from `version.py` at board refresh)*
+**Last Updated:** 2026-04-18 (MoSCOW board prune — **E7:S06:T18**, **E2:S15:T01** archived here)
+**Version:** v0.6.7.101+45 *(from `version.py` at RW **E6:S07:T101**)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -19,6 +19,14 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 7: Codebase Maintenance (Story 6 — Post-Windsurf Project Review)**
+- **[E7:S06:T18](epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md)** — **UXR-007** interactive installer Kanban pattern / prompt clarity; publication-aligned ICW split; RW **v0.7.6.18+3** (task-touch SemVer traceability).  
+  **Completed:** `2026-04-18T15:23:00Z` | **Version:** `v0.7.6.18+3` | **Agent:** `RW Agent`
+
+#### **Epic 2: Workflow Management Framework (Story 15 — IPW governance and publication contract)**
+- **[E2:S15:T01](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md)** — **BR-066** IPW Docusaurus filing contract, deterministic validator, backfill inventory.  
+  **Completed:** `2026-04-14T16:04:00Z` | **Version:** `v0.2.15.1+1` | **Agent:** `RW Agent`
 
 #### **Epic 2: Workflow Management Framework (Story 1 — RW agent execution)**
 - **[E2:S01:T13](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T13-rw-k-forensic-task-attribution-alignment-br063.md)** — **BR-063**: `RW -k` task attribution drift — forensic-strict mismatch guard, `--art` adoption path, `validate_version_bump` alignment, `workflow_orchestrator` parsing, regression tests, `.cursorrules` + portable excerpt + RW agent execution doc updates.  

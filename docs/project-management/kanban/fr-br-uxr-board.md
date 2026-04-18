@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-18 (RW Step 7 scoped sync; row stamps: 2026-04-18 15:23 UTC)
-**Version Context:** v0.7.6.18+3 (**SemVer** v0.4.741+3, **RW** **E7:S06:T18**)
+**Last Updated:** 2026-04-18 (RW **E6:S07:T101+45** — **UXR-007** archived → [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md); **BR-066** row aligned; stamps **2026-04-18 17:00 UTC**)
+**Version Context:** v0.6.7.101+45 (**SemVer** v0.4.742+45); perpetual **T101** RW after UKW reconciliation
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -37,7 +37,6 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Must Have (M) - Critical Items
 
-- **UXR-007** – Interactive Installer Kanban Pattern Prompt Clarity - TODO (CRITICAL, full interactive install can end in contradictory completion/cancelled states with ambiguous kanban pattern prompts and root-path validation mismatch across installers) - [UXR-007](fr-br/UXR-007-interactive-installer-kanban-pattern-prompt-clarity.md) | [E7:S06:T18](epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md) | Last modified: 2026-04-18 15:23 UTC
 - **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | Last modified: 2026-04-14 12:48 UTC
 - **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | Last modified: 2026-04-14 12:48 UTC
 
@@ -47,7 +46,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 - **FR-077** – IPW-built task status transition and kboard synchronization - IN PROGRESS (HIGH, core ownership matrix + deterministic requested-task drift checks shipped in v0.2.1.17+3; monitor recurrence and adoption) - [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [E2:S01:T17](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | Last modified: 2026-04-14 12:48 UTC
 - **BR-065** – RW Step 12.5 GitHub release parser fails on `v`-prefixed version - OPEN (HIGH, GitHub release publish step fails with `invalid literal for int() with base 10: 'v0'`; RW remains non-blocking but release publication is skipped) - [BR-065](fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md) | [E6:S07:T113](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T113-rw-step-12-5-github-release-parser-hardening-br065.md) | Last modified: 2026-04-14 12:48 UTC
-- **BR-066** – IPW missing Docusaurus filing for planning artifacts - IN PROGRESS (HIGH, publication contract + validator + initial backfill inventory shipped in v0.2.15.1+1; continue phased historical backfill) - [BR-066](fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md) | [E2:S15:T01](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | Last modified: 2026-04-14 16:04 UTC
+- **BR-066** – IPW missing Docusaurus filing for planning artifacts - OPEN (HIGH, contract/validator/inventory **COMPLETE** under **E2:S15:T01** **v0.2.15.1+1**; BR remains **OPEN** for phased historical backfill) - [BR-066](fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md) | [E2:S15:T01](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | Last modified: 2026-04-18 16:57 UTC
 - **FR-040** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [FR-040](fr-br/FR-040-implementation-cycle-workflow-icw.md) | Last modified: 2026-04-14 12:48 UTC
 - **FR-046** – RW SemVer Tag When task_touch Enabled - IN PROGRESS (HIGH, dual-mode ⇒ task_touch validator + installer/examples shipped **v0.5.1.46+6**; FR doc + task remain open until verification closes the loop) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | Last modified: 2026-04-14 12:48 UTC
 - **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md) | Last modified: 2026-04-14 12:48 UTC

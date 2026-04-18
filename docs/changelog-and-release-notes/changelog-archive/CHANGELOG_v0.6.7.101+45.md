@@ -1,29 +1,21 @@
 # Detailed Changelog — v0.6.7.101+45
 
-**Release Date:** 2026-04-09 13:15:24 UTC  
-**Version:** `v0.6.7.101+45`  
-**SemVer:** `v0.4.713+45`  
-**Task Anchor:** `E6:S07:T101`
+**Release Date:** 2026-04-18 17:00:20 UTC
+**Internal Version:** v0.6.7.101+45
+**SemVer:** v0.4.742+45
+**Epic / Story / Task:** E6 / S07 / T101
 
----
+## Overview
 
-## Summary
+Release Workflow for perpetual **UKW** task **E6:S07:T101** with **`--art`** canonical anchor adoption (from prior **E7:S06:T18** release state). Captures the staged UKW comprehensive pass: main Kanban board metadata, [`kanban-completed.md`](../../project-management/kanban/kanban-completed.md) entries for completed tasks, **fbuboard** reconciliation (**UXR-007** → completed archive; **BR-066** row semantics), and **T101** / Story 7 narrative updates.
 
-Change implemented: repo-wide open-task status sweep synchronized task-status truth between task documents, story checklists, and active Kanban board rows.
+## Documentation & traceability
 
----
+- Version adoption to **0.6.7.101+45**; SemVer **v0.4.742+45** via task-touch mapping (finalize at tag).
+- [`UXR-007`](../../project-management/kanban/fr-br/UXR-007-interactive-installer-kanban-pattern-prompt-clarity.md): **`Status: COMPLETE`** with resolution section (implementing **E7:S06:T18** **v0.7.6.18+3**).
+- [`fr-br-uxr-completed.md`](../../project-management/kanban/fr-br-uxr-completed.md): dashboard + narrative for **UXR-007**.
 
-## Changed
+## Verification
 
-- Updated status fields for `E7:S06:T10` through `E7:S06:T16` task documents to match completion evidence.
-- Corrected stale unchecked-but-complete checklist rows in Story docs (`E2:S09:T00`, `E2:S10:T00`, `E4:S11:T05`, `E7:S06:T09`).
-- Removed stale completed entries from active `Should Have` rows on `kanban-board.md`.
-- Updated internal version anchor to `0.6.7.101+45`.
-
----
-
-## Traceability
-
-- Epic: `6`
-- Story: `7`
-- Task: `101` (Perpetual UKW maintenance)
+- `validate_branch_context.py --strict`
+- `validate_rw_task_complete.py` / `validate_rw_task_intent.py --requested E6:S07:T101 --art`

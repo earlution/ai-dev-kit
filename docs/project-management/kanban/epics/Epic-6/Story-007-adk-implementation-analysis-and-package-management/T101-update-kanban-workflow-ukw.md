@@ -11,16 +11,16 @@ housekeeping_policy: keep
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
 **Task ID:** E6:S07:T101  
-**Last updated:** 2026-04-13 (**RW -d** **E6:S07:T101+44** — `--art`; commits UKW batch + version/changelog; no tag/push)  
+**Last updated:** 2026-04-18 (**RW** **E6:S07:T101+45** — `--art`; UKW staging + perpetual Kanban release; SemVer **v0.4.742+45**)  
 **Started:** 2025-12-18  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.101+44
+**Version:** v0.6.7.101+45
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing kanban documentation synchronization work. High BUILD numbers are expected and valid.
 
-**Progress:** RW -d 2026-04-13 (**v0.6.7.101+44**): Released UKW-staged Kanban docs with perpetual attribution. UKW 2026-04-13: Added missing **E6:S07:T101** row to main board Ongoing; normalized board/`fbuboard` `Last modified` stamps; refreshed `fbuboard` version context after RW **E5:S01:T46** **v0.5.1.46+6**; aligned **FR-046** active row to IN PROGRESS with implementation note. Prior: RW -k 2026-04-08 (v0.6.7.101+43): Normalized BR-061 representation on `fr-br-uxr-board.md` by adding task cross-wire for RW BR-061 and disambiguated row for SemVer/task_touch BR-061. Prior: RW -k 2026-04-08 (v0.6.7.101+42) reconciled board metadata/stats drift; RW 2026-04-08 (v0.6.7.101+41) closed E7:S06:T03 Kanban status drift.  
+**Progress:** RW **2026-04-18** (**v0.6.7.101+45**, `--art`): Published UKW-staged Kanban + fbuboard reconciliation under perpetual **T101** anchor (version adoption from **E7:S06:T18** traceability). UKW **2026-04-18**: Archived **UXR-007** from [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) to [`fr-br-uxr-completed.md`](../../../fr-br-uxr-completed.md) (**E7:S06:T18** closure); set **UXR-007** doc **`Status: COMPLETE`**; aligned **BR-066** fbuboard row to **OPEN** + contract-shipped note; synced main board **T101** metadata; retained prior MoSCOW prune (**E7:S06:T18**, **E2:S15:T01** → [`kanban-completed.md`](../../../kanban-completed.md)). RW -d 2026-04-13 (**v0.6.7.101+44**): Released UKW-staged Kanban docs with perpetual attribution. UKW 2026-04-13: Added missing **E6:S07:T101** row to main board Ongoing; normalized board/`fbuboard` `Last modified` stamps; refreshed `fbuboard` version context after RW **E5:S01:T46** **v0.5.1.46+6**; aligned **FR-046** active row to IN PROGRESS with implementation note. Prior: RW -k 2026-04-08 (v0.6.7.101+43): Normalized BR-061 representation on `fr-br-uxr-board.md` by adding task cross-wire for RW BR-061 and disambiguated row for SemVer/task_touch BR-061. Prior: RW -k 2026-04-08 (v0.6.7.101+42) reconciled board metadata/stats drift; RW 2026-04-08 (v0.6.7.101+41) closed E7:S06:T03 Kanban status drift.  
 **Code:** E6S07T101
 
 **Note:** This task was migrated from T08 to T101 as part of the repository story abstract space resolution (E9:S01:T08). Perpetual tasks now use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99).
@@ -153,7 +153,7 @@ This is a **perpetual task** dedicated to the Update Kanban Workflow (UKW). All 
 
 ---
 
-**Last Updated:** 2026-01-22 (v0.6.7.101+29 – UKW: E3:S04:T06 completion synced, kanban docs updated)  
-**Version:** v0.6.7.101+29  
+**Last Updated:** 2026-04-18 (v0.6.7.101+45 – RW UKW perpetual release)  
+**Version:** v0.6.7.101+45  
 **Status:** IN PROGRESS (Perpetual)
 
