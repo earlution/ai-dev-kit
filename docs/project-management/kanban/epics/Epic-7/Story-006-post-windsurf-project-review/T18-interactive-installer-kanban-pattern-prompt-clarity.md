@@ -11,9 +11,25 @@ housekeeping_policy: keep
 **Task ID:** E7:S06:T18  
 **Status:** COMPLETE  
 **Priority:** HIGH  
-**Last updated:** 2026-04-13  
-**Version:** v0.7.6.18+1  
+**Last updated:** 2026-04-18  
+**Version:** v0.7.6.18+2  
+**Version Anchor:** v0.7.6.18+2  
 **Code:** E7S06T18
+
+---
+
+## Documentation Publication
+
+Publication Status: PUBLISHED  
+Publication N/A Reason: N/A
+
+Planning artifacts (canonical):
+
+- [ICW E7:S06:T18 specification](../../../../../implementation-cycles/ICW-E7S06T18-specification.md)
+- [ICW E7:S06:T18 test design](../../../../../implementation-cycles/ICW-E7S06T18-test-design.md)
+- [ICW E7:S06:T18 implementation plan](../../../../../implementation-cycles/ICW-E7S06T18-implementation-plan.md)
+
+Historical IPW filename (redirect index): [IPW index E7:S06:T18](../../../../../implementation-cycles/IPW-E7S06T18-interactive-installer-kanban-pattern-clarity.md)
 
 ---
 
@@ -24,7 +40,7 @@ Address UXR-007 by improving interactive installer wording and guidance for Kanb
 ## Input
 
 - [UXR-007](../../../fr-br/UXR-007-interactive-installer-kanban-pattern-prompt-clarity.md)
-- [IPW Plan: E7:S06:T18](../../../../../implementation-cycles/IPW-E7S06T18-interactive-installer-kanban-pattern-clarity.md)
+- Planning package: [spec](../../../../../implementation-cycles/ICW-E7S06T18-specification.md) · [tests](../../../../../implementation-cycles/ICW-E7S06T18-test-design.md) · [plan](../../../../../implementation-cycles/ICW-E7S06T18-implementation-plan.md); [IPW index](../../../../../implementation-cycles/IPW-E7S06T18-interactive-installer-kanban-pattern-clarity.md)
 - Installer prompt flow for Kanban integration in interactive mode
 - `rw-config.yaml` keys: `kanban_root`, `epic_doc_pattern`, `story_doc_pattern`
 
@@ -53,9 +69,9 @@ Address UXR-007 by improving interactive installer wording and guidance for Kanb
 
 ## Version Anchor
 
-- Released as: `v0.7.6.18+1` (SemVer `v0.4.733+1`)
+- Released as: `v0.7.6.18+2` (SemVer `v0.4.740+2`; prior shipping `v0.7.6.18+1` / `v0.4.733+1`)
 
 ## References
 
-- [IPW Plan: E7:S06:T18](../../../../../implementation-cycles/IPW-E7S06T18-interactive-installer-kanban-pattern-clarity.md)
+- [ICW specification E7:S06:T18](../../../../../implementation-cycles/ICW-E7S06T18-specification.md)
 - [UXR-007](../../../fr-br/UXR-007-interactive-installer-kanban-pattern-prompt-clarity.md)

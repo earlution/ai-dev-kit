@@ -15,6 +15,8 @@ housekeeping_policy: keep
 **Status:** ACCEPTED  
 **Repository Task:** [E7:S06:T18](../epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md)
 
+**Planning package (ICW / retrospective publication):** [Specification](../../../implementation-cycles/ICW-E7S06T18-specification.md) · [Test design](../../../implementation-cycles/ICW-E7S06T18-test-design.md) · [Implementation plan](../../../implementation-cycles/ICW-E7S06T18-implementation-plan.md)
+
 ---
 
 ## Summary
