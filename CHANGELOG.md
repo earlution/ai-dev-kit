@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.9.2+1] - 19-04-26
+## [0.6.9.3+1] - 19-04-26
 
-E6:S09:T02 — **RW -d** with **`--art`**: second tranche for **Story 009**; **FR-081** / **E6:S09:T02** anchor. SemVer **v0.4.744+1**.
+E6:S09:T03 — **RW -d** with **`--art`**: third tranche for **Story 009**; **FR-082** / **E6:S09:T03** anchor. SemVer **v0.4.745+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.2+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.3+1.md)

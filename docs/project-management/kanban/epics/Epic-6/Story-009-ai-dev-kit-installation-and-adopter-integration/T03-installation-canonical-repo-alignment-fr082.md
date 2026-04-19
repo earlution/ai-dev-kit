@@ -13,6 +13,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** Small  
 **Created:** 2026-04-19  
+**Last updated:** 2026-04-19 (RW **v0.6.9.3+1** — **E6:S09:T03** `--art`)  
 **Code:** E6S09T03
 
 **Upstream:** [FR-082 - Installation distribution canonical repository alignment](../../../fr-br/FR-082-installation-distribution-canonical-repo-alignment.md)
