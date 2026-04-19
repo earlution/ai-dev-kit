@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Host Task:** [`T11-docusaurus-monorepo-markdown-link-resolution-br068.md`](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md) **(E5:S09:T11)**  
 **Planning for:** [BR-068 – Docusaurus strict MDX / monorepo Markdown links](../project-management/kanban/fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)  
 **Related:** [FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md); [Story 009 – Docusaurus Documentation Portal](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal.md) (T08/T10 strict mode)  
-**Status:** Draft — **Wave 1 (policy lock) complete** (2026-04-19); versioned release **v0.5.9.11+2** (**RW** **`--art`**)
+**Status:** Draft — **Waves 1–2 complete**; **Wave 3 verification in flight** (2026-04-19); latest release **v0.5.9.11+3** (**RW** **`--art`**)
 
 ---
 
@@ -103,8 +103,8 @@ Execution order should follow **policy lock → corpus/config → verification �
 
 | Step | Action | Deliverable |
 |------|--------|-------------|
-| 3.1 | Full **`npm run build`**; fix stragglers until green. | Build log archived or noted in task Progress. |
-| 3.2 | Run **TD2–TD3** spot-checks; document any justified exception (single location, not silent). | Evidence for BR-068 closure. |
+| 3.1 | Full **`npm run build`**; fix stragglers until green. | **Done (2026-04-19):** **`cd portal && npm run build`** exit **0** (strict hooks); noted in **T11** Progress + **`CHANGELOG_v0.5.9.11+4`**. |
+| 3.2 | Run **TD2–TD3** spot-checks; document any justified exception (single location, not silent). | **Done (2026-04-19):** Spot-check evidence under **T11** + **`docusaurus-corpus-triage-fr-067.md`** §Wave 3; no exceptions required. |
 
 ### Wave 4 — Traceability and release
 

@@ -53,3 +53,10 @@ Do **not** rely on conversation memory. Later work is on **FR / task**:
 
 - `cd portal && npm run build` — **0** (Node 20+; CI representative)
 - Optional: `PORTAL_BUILD_STRICT=1 pytest -m portal_build` for gate
+
+### Wave 3 spot-check evidence (BR-068 / **E5:S09:T11** — TD2–TD3)
+
+Recorded **2026-04-19** with **`v0.5.9.11+4`** (**RW** **`--art`**):
+
+- **TD2 (failure-class smoke):** **`INSTALL`** / repo-root — sample **`docs/documentation/user-docs/install-receipt-reference.md`** (GitHub **`blob`** INSTALL); **`packages/frameworks/**`** — sample **`docs/implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md`** (validator scripts + **`.cursorrules`** as **`blob`**); **`ADR-003`** sample cross-links into **`project-management`** / **`INSTALL`** per Strategy A.
+- **TD3 (internal regression):** No **`warn`** downgrade of FR-067 strict hooks; fixes were corpus targets + MDX-safe prose only.
