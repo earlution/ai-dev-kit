@@ -130,6 +130,8 @@ housekeeping_policy: keep
 - [x] **E6:S07:T113 – RW Step 12.5 GitHub release parser hardening (BR-065)** - ✅ COMPLETE (HIGH, parser hardening + deterministic diagnostics + regression tests implemented)
   - Task: [`T113-rw-step-12-5-github-release-parser-hardening-br065.md`](T113-rw-step-12-5-github-release-parser-hardening-br065.md) | [BR-065](../../fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md)
 
+- **Install/adoption program (FR-080–082):** tracked under **[E6:S09 – AI Dev Kit installation and adopter integration](../Story-009-ai-dev-kit-installation-and-adopter-integration.md)** (tasks **T01–T03**).
+
 
 ---
 

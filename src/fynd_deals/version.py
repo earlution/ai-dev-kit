@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management — UKW perpetual T101)
-VERSION_STORY = 7     # Story number within epic
-VERSION_TASK = 101    # Task number (T101: Update Kanban Workflow — perpetual)
-VERSION_BUILD = 45    # Build number (UKW comprehensive + fbuboard reconciliation release)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
+VERSION_STORY = 9     # Story number within epic
+VERSION_TASK = 1      # Task number (E6:S09:T01 — greenfield installation / FR-080)
+VERSION_BUILD = 1     # Build number (RW -d E6:S09:T01 --art; S09 install program)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.101+45 = Development, Epic 6, Story 7, Task 101
+# Current: 0.6.9.1+1 = Development, Epic 6, Story 9, Task 1
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

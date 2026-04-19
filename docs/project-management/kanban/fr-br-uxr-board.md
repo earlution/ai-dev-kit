@@ -8,7 +8,7 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-18 (RW **E6:S07:T101+45** — **UXR-007** archived → [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md); **BR-066** row aligned; stamps **2026-04-18 17:00 UTC**)
+**Last Updated:** 2026-04-19 (**E6:S09** — **FR-080 / FR-081 / FR-082**; tasks **T01–T03**)
 **Version Context:** v0.6.7.101+45 (**SemVer** v0.4.742+45); perpetual **T101** RW after UKW reconciliation
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
@@ -44,6 +44,8 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Should Have (S) - Important Items
 
+- **FR-080** – End-to-end greenfield installation process - OPEN (HIGH, design + implement reproducible first-run adoption; **E6:S09:T01**) - [FR-080](fr-br/FR-080-greenfield-installation-process.md) | [E6:S09:T01](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md) | Last modified: 2026-04-19 12:00 UTC
+- **FR-081** – Brownfield modular adopter integration - OPEN (MEDIUM, operationalize ADR-003 — matrices, contract-first wiring; **E6:S09:T02**) - [FR-081](fr-br/FR-081-brownfield-modular-adopter-integration.md) | [E6:S09:T02](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T02-brownfield-modular-adopter-integration-fr081.md) | Last modified: 2026-04-19 12:00 UTC
 - **FR-077** – IPW-built task status transition and kboard synchronization - IN PROGRESS (HIGH, core ownership matrix + deterministic requested-task drift checks shipped in v0.2.1.17+3; monitor recurrence and adoption) - [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [E2:S01:T17](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | Last modified: 2026-04-14 12:48 UTC
 - **BR-065** – RW Step 12.5 GitHub release parser fails on `v`-prefixed version - OPEN (HIGH, GitHub release publish step fails with `invalid literal for int() with base 10: 'v0'`; RW remains non-blocking but release publication is skipped) - [BR-065](fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md) | [E6:S07:T113](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T113-rw-step-12-5-github-release-parser-hardening-br065.md) | Last modified: 2026-04-14 12:48 UTC
 - **BR-066** – IPW missing Docusaurus filing for planning artifacts - OPEN (HIGH, contract/validator/inventory **COMPLETE** under **E2:S15:T01** **v0.2.15.1+1**; BR remains **OPEN** for phased historical backfill) - [BR-066](fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md) | [E2:S15:T01](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | Last modified: 2026-04-18 16:57 UTC
@@ -58,6 +60,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Could Have (C) - Nice-to-Have Items
 
+- **FR-082** – Installation distribution canonical repository alignment - OPEN (MEDIUM, scripts/docs default to canonical `earlution/ai-dev-kit`; **E6:S09:T03**) - [FR-082](fr-br/FR-082-installation-distribution-canonical-repo-alignment.md) | [E6:S09:T03](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T03-installation-canonical-repo-alignment-fr082.md) | Last modified: 2026-04-19 12:00 UTC
 - **FR-031** – Multi-Agent Coordination Feasibility Investigation - TODO (C priority, Investigate multi-agent coordination possibilities) - [FR-031](fr-br/FR-031-multi-agent-coordination-feasibility-investigation.md) | [E5:S01:T31](epics/Epic-5/Story-001-fr-repo/T31-multi-agent-coordination-feasibility-investigation.md) | Last modified: 2026-04-14 12:48 UTC
 - **FR-035** – Task Template Cross-Wiring Section - TODO (MEDIUM, Cross-wiring section in task templates) - [FR-035](fr-br/FR-035-task-template-cross-wiring-section.md) | [E5:S01:T35](epics/Epic-5/Story-001-fr-repo/T35-task-template-cross-wiring-section.md) | Last modified: 2026-04-14 12:48 UTC
 - **FR-032** – Release Candidate Readiness Gap Analysis - TODO (MEDIUM, Analyze gaps in release candidate readiness) - [FR-032](fr-br/FR-032-release-candidate-readiness-gap-analysis.md) | Last modified: 2026-04-14 12:48 UTC

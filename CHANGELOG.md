@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.101+45] - 18-04-26
+## [0.6.9.1+1] - 19-04-26
 
-E6:S07:T101 — UKW comprehensive Kanban sync after `--art` adoption to perpetual UKW task: MoSCOW/`kanban-completed` hygiene; **UXR-007** closed and archived from [`fr-br-uxr-board.md`](docs/project-management/kanban/fr-br-uxr-board.md); **BR-066** row aligned to completed contract task; **T101** / Story 7 docs refreshed. SemVer **v0.4.742+45**.
+E6:S09:T01 — **RW -d** with **`--art`**: canonical adoption to **Story 009** (**AI Dev Kit installation and adopter integration**); intake **FR-080–082** and task docs **T01–T03**; **ADR-003** ↔ FR links. SemVer **v0.4.743+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+45.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+1.md)

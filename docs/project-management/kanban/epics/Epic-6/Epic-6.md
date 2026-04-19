@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-04-13 (**RW -d** **E6:S07:T101+44** — UKW kanban + perpetual doc release)
+**Last updated:** 2026-04-19 (**RW -d** **E6:S09:T01+1** — Story 009 install/adoption program intake)
 **Branch:** `epic/6-framework-management`  
 **Version Schema:** `0.6.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -95,6 +95,11 @@ housekeeping_policy: keep
   - Tasks: T00 ✅ COMPLETE, T01-T13 ✅ COMPLETE (CLI tool implementation: architecture, commands, backends, config, migration, testing, packaging - ALL COMPLETE)
   - **Feature Request:** [FR-030](../../fr-br/FR-030-ai-dev-kit-cli-tool.md)
   - **Note:** Renumbered from S07 to S08 as part of repository story migration (E9:S01:T08).
+
+
+- [ ] **E6:S09 – AI Dev Kit installation and adopter integration** - IN PROGRESS (v0.6.9.0+0 — FR-080 greenfield, FR-081 brownfield, FR-082 canonical repo alignment)
+  - Story: [`Story-009-ai-dev-kit-installation-and-adopter-integration.md`](Story-009-ai-dev-kit-installation-and-adopter-integration.md)
+  - Tasks: **T01** TODO ([FR-080](../../fr-br/FR-080-greenfield-installation-process.md)), **T02** TODO ([FR-081](../../fr-br/FR-081-brownfield-modular-adopter-integration.md)), **T03** TODO ([FR-082](../../fr-br/FR-082-installation-distribution-canonical-repo-alignment.md))
 
 
 ---
