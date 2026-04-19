@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-04-19 (RW **E6:S09:T01+8**: **FR-080** IMPLEMENTED)
-**Version:** v0.6.9.1+8
+**Last Updated:** 2026-04-19 (RW **E5:S09:T11+5**: **BR-068** COMPLETE)
+**Version:** v0.5.9.11+5
 
 > **For open FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -34,6 +34,7 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| BR-068 | BR | Docusaurus strict MDX cannot resolve monorepo markdown links — **`portal`** strict build restored (**Strategy A**) (**E5:S09:T11**) | 2026-04-19 | v0.5.9.11+5 | RW Agent |
 | FR-080 | FR | End-to-end greenfield installation process — INSTALL + orchestrator + user-docs + validators / evidence (**E6:S09:T01**) | 2026-04-19 | v0.6.9.1+8 | RW Agent |
 | UXR-007 | UXR | Interactive installer Kanban pattern prompt clarity — installer UX + ICW publication alignment (**E7:S06:T18**) | 2026-04-18 | v0.7.6.18+3 | UKW Agent |
 | BR-063 | BR | RW `-k` task attribution drift vs `version.py` anchor — forensic-strict guard, `--art`, version validation, tests, docs | 2026-04-07 | v0.2.1.13+2 | RW Agent |
@@ -48,6 +49,14 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 ---
 
 ### 2026-04-19
+
+**BR-068 – Docusaurus strict MDX cannot resolve monorepo markdown links — production build fails**  
+**Completed:** 2026-04-19 (`v0.5.9.11+5`)  
+**Implementing Task:** [E5:S09:T11](epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)  
+**Completing Agent:** RW Agent  
+**Resolution:** **[IPW-E5S09T11](../../implementation-cycles/IPW-E5S09T11-docusaurus-monorepo-markdown-links-br068.md)** Waves **1–4** — Strategy **A** corpus normalization; **`npm run build`** strict green; **BR-068** §Acceptance Criteria satisfied (CI gate: **`docusaurus-build.yml`**). Row removed from [`fr-br-uxr-board.md`](fr-br-uxr-board.md).
+
+---
 
 **FR-080 – End-to-end greenfield installation process**  
 **Completed:** 2026-04-19 (`v0.6.9.1+8`)  

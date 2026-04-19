@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.11+4] - 19-04-26
+## [0.5.9.11+5] - 19-04-26
 
-E5:S09:T11 — **RW** with **`--art`**: Wave 3 verification (**TD1–TD3**) + triage evidence. SemVer **v0.4.757+4**.
+E5:S09:T11 — **RW** with **`--art`**: Wave 4 — **BR-068** closure + IPW §4 + board hygiene (**T11** **COMPLETE**). SemVer **v0.4.757+5**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+5.md)

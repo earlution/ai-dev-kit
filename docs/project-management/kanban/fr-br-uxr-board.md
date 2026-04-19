@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-19 (fbuboard sync; latest row stamps: 2026-04-19 18:12 UTC)
-**Version Context:** v0.5.9.11+2 (**SemVer** v0.4.756+2); **BR-068** / **E5:S09:T11** Wave 1 policy lock (Wave 2 corpus pending)
+**Last Updated:** 2026-04-19 (**BR-068** completed — **`fr-br-uxr-completed`** sync)
+**Version Context:** v0.5.9.11+5 (**SemVer** v0.4.757+5); **BR-068** retired from board (**Wave 4** closure)
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -44,7 +44,6 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Should Have (S) - Important Items
 
-- **BR-068** – Docusaurus strict MDX cannot resolve monorepo markdown links — production build fails - OPEN (HIGH, `portal/` `npm run build` fails on relative links outside `docs/` plugin root — INSTALL root, `packages/`; strict FR-067/T08/T10 vs corpus; **E5:S09:T11**) - [BR-068](fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md) | [E5:S09:T11](epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md) | Last modified: 2026-04-19 18:12 UTC
 - **BR-067** – RW doc-only / intake releases default to BUILD+1 instead of doc-init +0 - OPEN (HIGH, versioning policy vs validate_version_bump / RW Step 2 defaults; **E6:S07:T103**) - [BR-067](fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md) | [E6:S07:T103](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) | Last modified: 2026-04-19 18:12 UTC
 - **FR-081** – Brownfield modular adopter integration - OPEN (MEDIUM, operationalize ADR-003 — matrices, contract-first wiring; **E6:S09:T02**) - [FR-081](fr-br/FR-081-brownfield-modular-adopter-integration.md) | [E6:S09:T02](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T02-brownfield-modular-adopter-integration-fr081.md) | Last modified: 2026-04-19 18:12 UTC
 - **FR-077** – IPW-built task status transition and kboard synchronization - IN PROGRESS (HIGH, core ownership matrix + deterministic requested-task drift checks shipped in v0.2.1.17+3; monitor recurrence and adoption) - [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [E2:S01:T17](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | Last modified: 2026-04-19 18:12 UTC

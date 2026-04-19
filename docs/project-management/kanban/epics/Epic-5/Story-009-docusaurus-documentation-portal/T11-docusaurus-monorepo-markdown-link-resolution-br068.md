@@ -9,13 +9,13 @@ housekeeping_policy: keep
 # Epic 5, Story 9, Task 11: Monorepo cross-root Markdown link resolution (**BR-068**)
 
 **Task ID:** E5:S09:T11  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE (**v0.5.9.11+5** — **RW** **`--art`** Waves **3–4**)  
 **Priority:** HIGH  
 **Estimated Effort:** Medium–Large (policy + corpus and/or plugin boundary changes)  
 **Created:** 2026-04-19  
-**Last updated:** 2026-04-19 (**v0.5.9.11+4** — **RW** **`--art`** Wave 3 verification **TD1–TD3**; prior **v0.5.9.11+3** Wave 2)  
+**Last updated:** 2026-04-19 (**v0.5.9.11+5** — **RW** **`--art`** Wave 4 **BR-068** closure + traceability; prior **v0.5.9.11+4** Wave 3)  
 **Code:** E5S09T11  
-**Version anchor:** v0.5.9.11+4 (Wave 3 verification; strict build re-run **SUCCESS**)  
+**Version anchor:** v0.5.9.11+5 (**BR-068** **`COMPLETE`**; IPW §4 satisfied)  
 
 **Origin:** **[BR-068](../../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** — strict MDX resolution (`onBrokenMarkdownLinks: 'throw'`) fails on relative links from `docs/` to repository paths outside the `@docusaurus/plugin-content-docs` root (`../docs`), including **`INSTALL_IN_YOUR_PROJECT.md`** (repo root) and **`packages/frameworks/...`**.
 
@@ -27,6 +27,8 @@ housekeeping_policy: keep
 - **2026-04-19 — Wave 2 (corpus):** BR-068 sweep — repaired Kanban/Epic/story/task relatives, **`fr-br`** / ICW / IPW targets, ADR traversal into **`project-management`**, MDX-safe placeholders (**`specification-and-planning-artifacts-policy`**), Strategy A URLs for paths outside the docs plugin (`docs/` tree, **`.cursorrules`**, **`user-docs`** tree). Verification: **`cd portal && npm run build`** exit **0**.
 
 - **2026-04-19 — Wave 3 (verification — TD1–TD3):** **TD1:** `cd portal && npm run build` → **SUCCESS** (strict **`onBrokenLinks`** / **`onBrokenMarkdownLinks`** / **`onBrokenAnchors`** unchanged). **TD2:** Spot-checked Strategy A targets vs BR-068 failure classes — **`INSTALL_IN_YOUR_PROJECT.md`** (**`docs/documentation/user-docs/install-receipt-reference.md`**, **`ADR-003`**), **`packages/frameworks/**`** (**`docs/implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md`**, Kanban tasks already on GitHub **`blob`** URLs). **TD3:** No intentional internal corpus relaxations; regression covered by successive green strict builds since Wave 2.
+
+- **2026-04-19 — Wave 4 (traceability):** **[BR-068](../../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** **`Status: COMPLETE`** + **Resolution** + acceptance criteria checked; **[IPW](../../../../../implementation-cycles/IPW-E5S09T11-docusaurus-monorepo-markdown-links-br068.md)** §4 success criteria satisfied; **`fr-br-uxr-board`** hygiene (row retired to **`fr-br-uxr-completed`**).
 
 ---
 
@@ -58,8 +60,8 @@ housekeeping_policy: keep
 
 ## Acceptance Criteria
 
-- [ ] BR-068 acceptance criteria satisfied (cross-check list in report).
-- [ ] No unexplained regression in **internal** link/anchor strictness vs FR-067 policy (document any intentional relaxation).
+- [x] BR-068 acceptance criteria satisfied (cross-check list in report).
+- [x] No unexplained regression in **internal** link/anchor strictness vs FR-067 policy (document any intentional relaxation).
 
 ---
 

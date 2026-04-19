@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-03-30  
-**Last updated:** 2026-04-19 (v0.5.9.11+2 – Kanban documentation setup)
-**Version:** v0.5.9.11+2
+**Last updated:** 2026-04-19 (v0.5.9.11+5 — **T11 / BR-068** closed)
+**Version:** v0.5.9.11+5
 **Code:** E5S09
 
 ---
@@ -30,7 +30,7 @@ housekeeping_policy: keep
 - [x] **E5:S09:T08 – Strict broken-link checking post–FR-067 (warn → throw)** - ✅ COMPLETE (**v0.5.9.8+2** — **RW E5:S09:T08**); **FU-1** on [FR-067](../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md) — [task file](Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)
 - [x] **E5:S09:T09 – GitHub Pages go-live verification (FR-070 follow-up)** - ✅ COMPLETE (v0.5.9.9+2 — **RW E5:S09:T09**) — [task file](Story-009-docusaurus-documentation-portal/T09-github-pages-go-live-verification.md)
 - [x] **E5:S09:T10 – Strict broken-anchor checking post–T08** - ✅ COMPLETE (**v0.5.9.10+2** — **RW E5:S09:T10**); **FR-067** [FU-3](../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md) — [task file](Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)
-- [ ] **E5:S09:T11 – Monorepo cross-root Markdown link resolution ([BR-068](../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md))** — IN PROGRESS (v0.5.9.11+2) — [task file](Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)
+- [x] **E5:S09:T11 – Monorepo cross-root Markdown link resolution ([BR-068](../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md))** — ✅ COMPLETE (**v0.5.9.11+5** — Wave 4 closes **BR-068**) — [task file](Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)
 
 > **Forensic marker format:** `✅ COMPLETE (vRC.E.S.T+B)` when done.
 

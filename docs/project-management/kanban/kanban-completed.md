@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-19 (**E6:S09:T01** complete — **FR-080** greenfield path)
-**Version:** v0.6.9.1+8 *(from `version.py` at RW **E6:S09:T01**)*
+**Last Updated:** 2026-04-19 (**E5:S09:T11** complete — **BR-068** monorepo MDX links)
+**Version:** v0.5.9.11+5 *(from `version.py` at RW **E5:S09:T11**)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -19,6 +19,10 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 5: Documentation Management (Story 9 — Docusaurus Documentation Portal)**
+- **[E5:S09:T11](epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)** — **BR-068** monorepo cross-root Markdown / MDX link resolution (**IPW-E5S09T11** Waves **1–4**); **`portal`** strict production build green; **[BR-068](fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** **COMPLETE**.  
+  **Completed:** `2026-04-19T23:59:00Z` | **Version:** `v0.5.9.11+5` | **Agent:** `RW Agent`
 
 #### **Epic 6: Framework Management (Story 9 — Installation and adopter integration)**
 - **[E6:S09:T01](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md)** — **FR-080** end-to-end **greenfield** installation: spec + `install_greenfield_path.py` + INSTALL/user-docs + Wave 4 validators / reference transcript + Wave 5 FR/T01/IPW traceability; **[FR-080](fr-br/FR-080-greenfield-installation-process.md)** **IMPLEMENTED**.  
