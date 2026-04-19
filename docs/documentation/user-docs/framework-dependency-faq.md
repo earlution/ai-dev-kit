@@ -21,6 +21,11 @@ housekeeping_policy: keep
 
 Frequently asked questions about installing, updating, and using AI Dev Kit frameworks as dependencies.
 
+### Scope (greenfield vs brownfield)
+
+- **Greenfield / new-template first run (FR-080):** [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md) · [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
+- **Policy:** [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) · Brownfield track: [FR-081](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md)
+
 ---
 
 ## General Questions

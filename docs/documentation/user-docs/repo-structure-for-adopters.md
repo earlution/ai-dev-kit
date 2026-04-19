@@ -80,6 +80,14 @@ These are **book project content** and authoring materials, not framework docume
 
 ---
 
+## Adoption entry points (greenfield vs brownfield)
+
+Installer-driven **greenfield** setup is documented from repository root **[`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)** (FR-080). Policy: [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md); brownfield modular integration: [FR-081](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md); planning package: [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md).
+
+Some paths under `docs/documentation/user-docs/` support **both** book-style narrative and adoption workflows; **framework adoption** should treat [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md) as the canonical first-run pointer unless a guide explicitly scopes brownfield work.
+
+---
+
 ## Scripts
 
 ### Framework Scripts (Copy These)

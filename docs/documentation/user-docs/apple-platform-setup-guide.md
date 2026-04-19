@@ -5,6 +5,10 @@
 **Related Issue:** [BR-040](../../project-management/kanban/fr-br/BR-040-apple-sdk-license-blocking-issue.md)  
 **Task:** [E6:S06:T03](../../project-management/kanban/epics/Epic-6/Story-006-feature-requests/T03-apple-sdk-license-blocking-issue.md)
 
+### Scope (greenfield vs brownfield)
+
+This guide addresses **platform tooling** on Apple OSes. For the **greenfield framework install path** (FR-080), follow [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md) after platform prerequisites; see [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md), [FR-081](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md), [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md).
+
 ---
 
 ## Quick Start

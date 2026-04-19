@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-19  
-**Last updated:** 2026-04-19 (RW **v0.6.9.1+6** — **E6:S09:T01** `RW -d` `--art`; Wave 3 user-doc alignment tranche 2)  
-**Version:** v0.6.9.1+6  
+**Last updated:** 2026-04-19 (RW **v0.6.9.1+7** — **E6:S09:T01** `--art`; Wave 3 user-docs sweep + IPW cadence)  
+**Version:** v0.6.9.1+7  
 **Code:** E6S09
 
 ---

@@ -12,6 +12,10 @@ housekeeping_policy: keep
 **Version:** 1.0.0  
 **Last Updated:** 2025-12-22
 
+### Scope (brownfield vs greenfield)
+
+This document targets **existing / brownfield** repositories. For **greenfield / new-template** first run (FR-080), use [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md), [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md), and policy [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) vs [FR-081](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md).
+
 ---
 
 ## 🎯 Quick Decision Tree

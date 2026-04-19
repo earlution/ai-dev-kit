@@ -92,7 +92,15 @@ Decision record (locked):
 
 ## 3. Implementation plan
 
-Phased; dependency order matters within each wave.
+Phased; dependency order matters within each wave for **technical prerequisites** (e.g. orchestration exists before you publish an example transcript of running it).
+
+### Documentation cadence (policy)
+
+**After §1.5 decisions are confirmed** through the normal decision-making process, **relevant adopter-facing documentation is updated in parallel with** code, scripts, installers, and verification—not parked for a single late “docs-only” sweep. Each wave below names a **theme** and its hard dependencies; **within** a wave, ship **behavior + docs** together when the change affects what adopters must do or believe.
+
+Normative prose (ordering, checkpoints, identifiers) must not run ahead of locked decisions; once locked, doc updates are **same-wave** deliverables alongside implementation.
+
+**Historical note:** An early execution used a sequential “Wave 3” documentation pass after orchestration for expedience. **Going forward**, treat INSTALL/user-doc updates as **parallel** to Waves 2 and 4 wherever §1.5 already applies; keep **Wave 3** in this plan as the **AC3 / F5 completeness checklist** (greenfield vs brownfield distinction and user-doc touchpoints—not an exclusive slot for all writing).
 
 ### Wave 1 — Specification and decisions
 
@@ -108,12 +116,16 @@ Phased; dependency order matters within each wave.
 | 2.1 | Wire **mandatory** invocations of `install_release_workflow.py` / `install_kanban_framework.py` (paths, working directory, idempotency notes). | Scripts and/or doc blocks; CI optional. |
 | 2.2 | **`rw-config.yaml`** and validator discovery | Copy or generate consumer layout per install story. |
 
-### Wave 3 — Documentation and distinction
+**Parallel documentation (same wave, after §1.5):** Update `INSTALL_IN_YOUR_PROJECT.md` and installer-adjacent sections whenever orchestration or defaults change so adopters never rely on stale instructions.
+
+### Wave 3 — Greenfield vs brownfield distinction (documentation completeness)
 
 | Step | Action | Deliverable |
 |------|--------|-------------|
 | 3.1 | Update [`INSTALL_IN_YOUR_PROJECT.md`](../../INSTALL_IN_YOUR_PROJECT.md) greenfield chapter; cross-link **ADR-003**, **FR-081**. | Meets **AC3** / **F5**. |
 | 3.2 | User-docs touchpoints under `docs/documentation/` as per FR-080 scope. | Consistent terminology “greenfield only” here. |
+
+**Relationship to other waves:** Steps 3.1–3.2 are **verification of narrative completeness** across INSTALL + user-docs; **perform in parallel** with Waves 2–4 once §1.5 is locked—not only after Wave 4.
 
 ### Wave 4 — Verification and example runs
 
@@ -121,6 +133,8 @@ Phased; dependency order matters within each wave.
 |------|--------|-------------|
 | 4.1 | Define **verification** commands post-install (validators, smoke). | Documented gates; tie to **F4**. |
 | 4.2 | Produce **reference example run** + logging guidance (and FR-078/079 alignment note). | Meets §1.6; supports debugging narrative. |
+
+**Parallel documentation (same wave):** Publish verification commands, reference transcript, and logging/redaction guidance **with** the underlying behavior—no “implementation now, prose later” unless a genuine dependency blocks documentation.
 
 ### Wave 5 — Traceability
 

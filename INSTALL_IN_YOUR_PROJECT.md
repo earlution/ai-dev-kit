@@ -26,6 +26,8 @@ docs/documentation/user-docs/
 - **FAQ:** [`framework-dependency-faq.md`](docs/documentation/user-docs/framework-dependency-faq.md)
 - **Troubleshooting:** [`framework-dependency-troubleshooting-guide.md`](docs/documentation/user-docs/framework-dependency-troubleshooting-guide.md)
 
+Other guides under [`docs/documentation/user-docs/`](docs/documentation/user-docs/) include a short **Scope (greenfield vs brownfield)** section where relevant, pointing back here and to ADR-003 / FR-081.
+
 ---
 
 ## 🚀 Installation Methods
