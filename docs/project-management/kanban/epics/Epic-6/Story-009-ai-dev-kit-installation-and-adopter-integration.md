@@ -12,16 +12,17 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-19  
-**Last updated:** 2026-04-19 (RW **v0.6.9.3+1** — **E6:S09:T03** `--art`)  
-**Version:** v0.6.9.3+1  
+**Last updated:** 2026-04-19 (RW -d **v0.6.9.1+2** — **E6:S09:T01** `--art`; IPW decisions locked)  
+**Version:** v0.6.9.1+2  
 **Code:** E6S09
 
 ---
 
 ## Task Checklist
 
-- [ ] **E6:S09:T01 – Greenfield installation process (FR-080)** - TODO (HIGH — design, implement, and document end-to-end greenfield install path)
+- [ ] **E6:S09:T01 – Greenfield installation process (FR-080)** - IN PROGRESS (HIGH — IPW decisions locked; implementation waves queued)
   - Task: [`T01-greenfield-installation-process-fr080.md`](Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md) | [FR-080](../../fr-br/FR-080-greenfield-installation-process.md)
+  - IPW: [`IPW-E6S09T01-greenfield-installation-fr080.md`](../../../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
 
 - [ ] **E6:S09:T02 – Brownfield modular adopter integration (FR-081)** - TODO (MEDIUM — operationalize ADR-003: modular surfaces, matrices, respectful host architecture)
   - Task: [`T02-brownfield-modular-adopter-integration-fr081.md`](Story-009-ai-dev-kit-installation-and-adopter-integration/T02-brownfield-modular-adopter-integration-fr081.md) | [FR-081](../../fr-br/FR-081-brownfield-modular-adopter-integration.md)

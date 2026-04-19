@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.6.9.1+2] - 19-04-26
+
+E6:S09:T01 — **RW -d** with **`--art`**: greenfield-installation IPW decisions locked/documented, Story 009 / T01 wiring finalized. SemVer **v0.4.748+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+2.md)
+---
 ## [0.6.7.103+1] - 19-04-26
 
 E6:S07:T103 — **RW** with **`--art`**: **IPW** perpetual planning package, **FR-042** wiring. SemVer **v0.4.747+1**.

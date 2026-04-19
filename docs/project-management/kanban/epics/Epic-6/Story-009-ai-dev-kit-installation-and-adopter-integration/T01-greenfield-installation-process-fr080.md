@@ -15,7 +15,8 @@ housekeeping_policy: keep
 **Created:** 2026-04-19  
 **Code:** E6S09T01
 
-**Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)
+**Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)  
+**Progress:** v0.6.9.1+2 — IPW decisions locked: Hybrid orchestration (C), Manual-gate verification, order-agnostic docs with RW-first default + override checkpoint, descriptive identifier policy.  
 
 ---
 
@@ -30,6 +31,7 @@ housekeeping_policy: keep
 - **FR-080** accepted scope and dependencies (install telemetry **FR-078** / **FR-079** where applicable).
 - Policy anchor [ADR-003](../../../../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) and distinction from brownfield track (**FR-081**).
 - Existing `INSTALL_IN_YOUR_PROJECT.md` and framework installers (`install_release_workflow.py`, `install_kanban_framework.py`).
+- **IPW planning artifact:** [IPW-E6S09T01-greenfield-installation-fr080.md](../../../../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
 
 ---
 
@@ -73,4 +75,5 @@ Greenfield adopters need a **single, reproducible first-run path** from acquisit
 
 ## References
 
+- **IPW (planning package):** [IPW-E6S09T01-greenfield-installation-fr080.md](../../../../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
 - [FR-080](../../../fr-br/FR-080-greenfield-installation-process.md)

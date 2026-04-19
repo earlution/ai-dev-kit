@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-19 (RW **E6:S09:T03+1** — Story 009 tranche 3)
-**Version:** v0.6.9.3+1
+**Last Updated:** 2026-04-19 (RW -d **E6:S09:T01+2** — greenfield IPW decisions)
+**Version:** v0.6.9.1+2
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
