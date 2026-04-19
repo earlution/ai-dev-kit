@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.5.9.11+3] - 19-04-26
+
+E5:S09:T11 — **RW** with **`--art`**: Wave 2 BR-068 corpus normalization; **`portal`** production build green. SemVer **v0.4.757+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+3.md)
+---
 ## [0.5.9.11+2] - 19-04-26
 
 E5:S09:T11 — **RW** with **`--art`**: Wave 1 policy lock (IPW, portal README BR-068, triage). SemVer **v0.4.756+2**.

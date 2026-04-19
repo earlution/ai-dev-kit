@@ -52,4 +52,4 @@ Work is tracked in **Epic 6** because this is **framework distribution and adopt
 
 - [ADR-003](../../../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md)
 - [FR-080](../../fr-br/FR-080-greenfield-installation-process.md) · [FR-081](../../fr-br/FR-081-brownfield-modular-adopter-integration.md) · [FR-082](../../fr-br/FR-082-installation-distribution-canonical-repo-alignment.md)
-- [INSTALL_IN_YOUR_PROJECT.md](../../../../../INSTALL_IN_YOUR_PROJECT.md)
+- [INSTALL_IN_YOUR_PROJECT.md](https://github.com/earlution/ai-dev-kit/blob/main/INSTALL_IN_YOUR_PROJECT.md)

@@ -39,7 +39,7 @@ For policy and boundaries:
 
 For the current canonical greenfield sequence (default RW-first with explicit override checkpoint), see:
 
-- [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)
+- [`INSTALL_IN_YOUR_PROJECT.md`](https://github.com/earlution/ai-dev-kit/blob/main/INSTALL_IN_YOUR_PROJECT.md)
 
 Post-install **validator commands**, a **synthetic reference transcript**, and **FR-078 / FR-079** telemetry boundaries are documented there under **Wave 4** sections.
 

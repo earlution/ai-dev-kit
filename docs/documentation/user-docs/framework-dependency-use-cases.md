@@ -25,7 +25,7 @@ This document provides a comprehensive overview of all use cases for adopting ai
 
 For a new/template repository following the current greenfield-first policy (FR-080 / E6:S09:T01), start with:
 
-- [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)
+- [`INSTALL_IN_YOUR_PROJECT.md`](https://github.com/earlution/ai-dev-kit/blob/main/INSTALL_IN_YOUR_PROJECT.md)
 - [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
 
 For brownfield modular integration boundaries, see:

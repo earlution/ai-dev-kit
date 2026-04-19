@@ -64,7 +64,7 @@ policy_salience:
 
 ## 3. Workflow: planning → implementation handoff
 
-1. **Ensure a task exists** (Kanban governance: substantive work is task-driven). Note **E{epic}:S{story}:T{task}** in the plan title or body.
+1. **Ensure a task exists** (Kanban governance: substantive work is task-driven). Note the task id placeholder `E{epic}:S{story}:T{task}` in the plan title or body.
 2. **Draft in Cursor Plan (optional):** acceptable for speed.
 3. **Promote before or as implementation starts:**
    - Copy **executable spec** statements (IDs, acceptance bullets) into the **task doc** sections *Scope*, *Acceptance Criteria*, *Deliverable* as appropriate; and/or

@@ -25,7 +25,7 @@ This guide explains how to integrate AI Dev Kit frameworks into existing project
 
 - This guide primarily supports **integration / migration** flows for existing repositories.
 - For the canonical **greenfield first-run** sequence (FR-080 / E6:S09:T01), use:
-  - [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)
+  - [`INSTALL_IN_YOUR_PROJECT.md`](https://github.com/earlution/ai-dev-kit/blob/main/INSTALL_IN_YOUR_PROJECT.md)
   - [IPW-E6S09T01 planning package](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
 - Brownfield policy anchor remains:
   - [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md)

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.11+2] - 19-04-26
+## [0.5.9.11+3] - 19-04-26
 
-E5:S09:T11 — **RW** with **`--art`**: Wave 1 policy lock (IPW §1.5, `portal/README` BR-068 linking rules, triage row). SemVer **v0.4.756+2**.
+E5:S09:T11 — **RW** with **`--art`**: Wave 2 BR-068 corpus normalization; **`portal`** production build green (strict links). SemVer **v0.4.757+3**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+3.md)

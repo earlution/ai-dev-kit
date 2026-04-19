@@ -48,8 +48,8 @@ This is an **architectural / policy enforcement gap**, not merely a one-off typo
 
 ## Scope / Affected Areas
 
-- [`packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py`](../../../../packages/frameworks/workflow%20mgt/scripts/validation/validate_version_bump.py) — doc-init detection; “same task BUILD increment” messaging vs **`+0`** eligibility.
-- RW Step 2 agent execution docs: [`release-workflow-agent-execution.md`](../../../../packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md).
+- [`packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py`](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/scripts/validation/validate_version_bump.py) — doc-init detection; “same task BUILD increment” messaging vs **`+0`** eligibility.
+- RW Step 2 agent execution docs: [`release-workflow-agent-execution.md`](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md).
 - [`src/fynd_deals/version.py`](../../../../src/fynd_deals/version.py) comments (**BUILD = 0** doc-init convention).
 - **Contrast (avoid conflicting “fix”):** [BR-010](./BR-010-rw-doc-init-detection-bug-story-task-docs-batch-creation.md) addressed the **opposite** failure mode (incorrect **`+0`** when **`+1`** was required). BR-067 must be resolved **without regressing BR-010**.
 
@@ -67,7 +67,7 @@ This is an **architectural / policy enforcement gap**, not merely a one-off typo
 ## Related
 
 - [BR-010](./BR-010-rw-doc-init-detection-bug-story-task-docs-batch-creation.md) — inverse bug (`+0` when **`+1`** needed).
-- [FR-020](../FR-020-version-validator-abstract-space-awareness.md) — validator abstract-space / **`+0`** awareness.
+- [FR-020](./FR-020-version-validator-abstract-space-awareness.md) — validator abstract-space / **`+0`** awareness.
 - [ADR-003](../../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) — delivered under **E6:S09** (example where **`+0`** semantics were expected by policy).
 - [`dev-kit-versioning-policy.md`](../../../architecture/standards-and-adrs/dev-kit-versioning-policy.md) — canonical **BUILD** semantics.
 

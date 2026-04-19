@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Task ID:** E2:S01:T09  
 **Status:** COMPLETE (**v0.2.1.9+2** closeout pass; BR-060 implementation forensic **v0.6.6.60+1**; historical id **E6:S06:T60**)
 
-**Migration:** Canonical home **E2:S01:T09** (Epic 2 — workflow / RW validators). Supersedes **[E4:S19:T01 stub](../Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T01-rw-allow-in-progress-task-releases-br060.md)** and **[E6:S06:T60 stub](../Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md)**.
+**Migration:** Canonical home **E2:S01:T09** (Epic 2 — workflow / RW validators). Supersedes **[E4:S19:T01 stub](../../Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T01-rw-allow-in-progress-task-releases-br060.md)** and **[E6:S06:T60 stub](../../Epic-6/Story-006-feature-requests/T60-rw-allow-in-progress-task-releases.md)**.
 
 **Priority:** CRITICAL  
 **Estimated Effort:** Medium (validator + docs + tests)  

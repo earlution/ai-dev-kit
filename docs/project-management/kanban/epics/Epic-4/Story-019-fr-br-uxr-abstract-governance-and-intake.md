@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E4:S19:T01 – Charter: abstract vs concrete FR/BR/UXR ownership** - TODO (baseline scope; no charter task doc yet) — *Note: **[BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)** implementing task is **[E2:S01:T09](../../Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)**; [this story’s `T01-…br060` filename](Story-019-fr-br-uxr-abstract-governance-and-intake/T01-rw-allow-in-progress-task-releases-br060.md) is a redirect stub only.*
+- [ ] **E4:S19:T01 – Charter: abstract vs concrete FR/BR/UXR ownership** - TODO (baseline scope; no charter task doc yet) — *Note: **[BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)** implementing task is **[E2:S01:T09](../Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)**; [this story’s `T01-…br060` filename](Story-019-fr-br-uxr-abstract-governance-and-intake/T01-rw-allow-in-progress-task-releases-br060.md) is a redirect stub only.*
 
 ---
 

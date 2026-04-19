@@ -19,14 +19,14 @@ housekeeping_policy: keep
 
 ### 1.1 Goal
 
-Restore a **green** [`portal/`](../../portal/) production build (`npm run build`) for the published KB while preserving **[FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)** intent: **strict** `onBrokenLinks`, `onBrokenMarkdownLinks`, and `onBrokenAnchors` in [`portal/docusaurus.config.js`](../../portal/docusaurus.config.js) (**`throw`** on all three). Any relaxation of strictness must be **explicit**, **documented**, and **narrow**—not a silent downgrade of T08/T10.
+Restore a **green** [`portal/`](https://github.com/earlution/ai-dev-kit/blob/main/portal/) production build (`npm run build`) for the published KB while preserving **[FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)** intent: **strict** `onBrokenLinks`, `onBrokenMarkdownLinks`, and `onBrokenAnchors` in [`portal/docusaurus.config.js`](https://github.com/earlution/ai-dev-kit/blob/main/portal/docusaurus.config.js) (**`throw`** on all three). Any relaxation of strictness must be **explicit**, **documented**, and **narrow**—not a silent downgrade of T08/T10.
 
 ### 1.2 Functional requirements (traceability to BR-068)
 
 | ID | Requirement | Planning note |
 |----|-------------|----------------|
 | **F1** | **`npm run build`** completes successfully (or an **explicitly documented** publish subset via `exclude` / split site with the same bar for what ships). | Primary completion signal; matches BR-068 AC1. |
-| **F2** | **Contributor linking policy** for targets **outside** the docs-plugin root (`../docs`): repo-root **`INSTALL_*`**, **`packages/frameworks/**`**, other monorepo paths. | Single canonical pattern (or small approved set) in [`portal/README.md`](../../portal/README.md) and/or [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../maintenance/docusaurus-corpus-triage-fr-067.md); matches BR-068 AC2. |
+| **F2** | **Contributor linking policy** for targets **outside** the docs-plugin root (`../docs`): repo-root **`INSTALL_*`**, **`packages/frameworks/**`**, other monorepo paths. | Single canonical pattern (or small approved set) in [`portal/README.md`](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md) and/or [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../maintenance/docusaurus-corpus-triage-fr-067.md); matches BR-068 AC2. |
 | **F3** | **Spot-check** pages that historically failed MDX: INSTALL pointers from user-docs; **`packages/`** traversals from Kanban/FR docs. | Named files or globs in §3 verification; matches BR-068 AC3. |
 | **F4** | **CI alignment** (optional BR-068 AC): portal build runs on relevant path changes where a workflow exists. | Tie to [FR-069](../project-management/kanban/fr-br/FR-069-docusaurus-ci-build-gate.md) / actual workflows in repo. |
 
@@ -52,7 +52,7 @@ Restore a **green** [`portal/`](../../portal/) production build (`npm run build`
 |----------|-------------|------------|
 | **A – Corpus normalization** | Replace unresolved relatives with **`pathname://`**, stable **GitHub `https://github.com/.../blob/...`** URLs, or short **stub pages under `docs/`** that summarize and link outward. | Lowest config surface; many edits; must preserve readability and avoid duplicate maintenance for stubs. |
 | **B – Boundary expansion** | Add a **second** `@docusaurus/plugin-content-docs` instance (multi-instance), or introduce **symlink / documented mirror** subtrees under `docs/` aligned with repo layout. | Fewer link transforms in prose; higher Docusaurus config complexity and ongoing sync expectations. |
-| **C – Narrow `exclude`** | Extend [`exclude`](../../portal/docusaurus.config.js) globs so problematic trees are not compiled—**only** if explicitly approved (content may disappear from portal). | Risk of hiding legitimate KB surface; use sparingly and document. |
+| **C – Narrow `exclude`** | Extend [`exclude`](https://github.com/earlution/ai-dev-kit/blob/main/portal/docusaurus.config.js) globs so problematic trees are not compiled—**only** if explicitly approved (content may disappear from portal). | Risk of hiding legitimate KB surface; use sparingly and document. |
 
 **Decision record (locked — Wave 1):**
 
@@ -66,7 +66,7 @@ Restore a **green** [`portal/`](../../portal/) production build (`npm run build`
   3. **`pathname://`** only when a maintainer explicitly needs to escape the doc plugin for a same-site path; prefer (1) for monorepo file targets to keep behavior obvious in review.
 - **Rejected (for this workstream):** **B – Boundary expansion** (second docs plugin or mirrored trees) — higher ongoing config and sync cost; **revisit only** if (1)+(2) cannot meet maintainability after Wave 2 corpus pass. **C – Narrow `exclude`** as a **blanket** fix for link errors — **rejected**; it hides KB from the portal. Existing **FR-066** archive excludes remain unchanged; any new `exclude` glob needs its own FR/task and must be called out in [portal README](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md).
 - **BR-066 overlap:** **None** for Wave 1. If an IPW or planning artifact must be a first-class portal page, use **stubs** in (2) or coordinate **BR-066** filing separately—do not conflate with link-repair sweeps.
-- **Normative contributor copy:** [portal/README.md — BR-068 monorepo links](../../portal/README.md#br-068-monorepo-links-outside-the-docs-plugin-e5s09t11) (same policy in prose).
+- **Normative contributor copy:** [portal/README.md — BR-068 monorepo links](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md#br-068-monorepo-links-outside-the-docs-plugin-e5s09t11) (same policy in prose).
 
 ---
 
@@ -90,13 +90,13 @@ Execution order should follow **policy lock → corpus/config → verification �
 | Step | Action | Deliverable |
 |------|--------|-------------|
 | 1.1 | Complete **§1.5** decision rows (primary strategy + documented rejects). | **Done (2026-04-19):** §1.5 decision record + rejects **A / B / C** (see above). |
-| 1.2 | Draft **contributor rules** in [`portal/README.md`](../../portal/README.md): how to link INSTALL, `packages/`, repo root from `docs/`. | **Done (2026-04-19):** section **Monorepo links outside `docs/` (BR-068 / E5:S09:T11)** with examples and anti-patterns. |
+| 1.2 | Draft **contributor rules** in [`portal/README.md`](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md): how to link INSTALL, `packages/`, repo root from `docs/`. | **Done (2026-04-19):** section **Monorepo links outside `docs/` (BR-068 / E5:S09:T11)** with examples and anti-patterns. |
 
 ### Wave 2 — Config and corpus
 
 | Step | Action | Deliverable |
 |------|--------|-------------|
-| 2.1 | Apply chosen strategy: edit `docs/**/*.md` link targets and/or [`portal/docusaurus.config.js`](../../portal/docusaurus.config.js) / [`portal/sidebars.js`](../../portal/sidebars.js) (if multi-instance or routing changes). | Incremental commits per area (e.g. user-docs, kanban, architecture) optional. |
+| 2.1 | Apply chosen strategy: edit `docs/**/*.md` link targets and/or [`portal/docusaurus.config.js`](https://github.com/earlution/ai-dev-kit/blob/main/portal/docusaurus.config.js) / [`portal/sidebars.js`](https://github.com/earlution/ai-dev-kit/blob/main/portal/sidebars.js) (if multi-instance or routing changes). | Incremental commits per area (e.g. user-docs, kanban, architecture) optional. |
 | 2.2 | Update [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../maintenance/docusaurus-corpus-triage-fr-067.md) with **failure class → resolution** mapping for BR-068. | Keeps FR-067 maintenance story coherent. |
 
 ### Wave 3 — Verification
@@ -111,16 +111,16 @@ Execution order should follow **policy lock → corpus/config → verification �
 | Step | Action | Deliverable |
 |------|--------|-------------|
 | 4.1 | Check **BR-068** acceptance criteria; update **[BR-068](../project-management/kanban/fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** status/history when defect is remediated. | Audit trail. |
-| 4.2 | Update **host task** [T11](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md) Progress + Acceptance Criteria; optional **RW** when implementation slice is ready ([FR-070](../project-management/kanban/fr-br/FR-070-github-pages-documentation-site-deployment.md) depends on green build). | Version anchor advancement per project norms. |
+| 4.2 | Update **host task** [T11](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md) Progress + Acceptance Criteria; optional **RW** when implementation slice is ready ([FR-070](../project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting.md) depends on green build). | Version anchor advancement per project norms. |
 
 **Files likely touched (living list):**
 
-- [`portal/docusaurus.config.js`](../../portal/docusaurus.config.js)
-- [`portal/README.md`](../../portal/README.md)
-- [`portal/sidebars.js`](../../portal/sidebars.js)
+- [`portal/docusaurus.config.js`](https://github.com/earlution/ai-dev-kit/blob/main/portal/docusaurus.config.js)
+- [`portal/README.md`](https://github.com/earlution/ai-dev-kit/blob/main/portal/README.md)
+- [`portal/sidebars.js`](https://github.com/earlution/ai-dev-kit/blob/main/portal/sidebars.js)
 - [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../maintenance/docusaurus-corpus-triage-fr-067.md)
-- Selected Markdown under [`docs/`](../) (Kanban, user-docs, ADRs—per scan results)
-- [`INSTALL_IN_YOUR_PROJECT.md`](../../INSTALL_IN_YOUR_PROJECT.md) — **only if** §1.5 policy requires coordinated root-doc wording or reciprocal links from stubs
+- Selected Markdown under [`docs/` (repo tree)](https://github.com/earlution/ai-dev-kit/tree/main/docs) (Kanban, user-docs, ADRs—per scan results)
+- [`INSTALL_IN_YOUR_PROJECT.md`](https://github.com/earlution/ai-dev-kit/blob/main/INSTALL_IN_YOUR_PROJECT.md) — **only if** §1.5 policy requires coordinated root-doc wording or reciprocal links from stubs
 
 ---
 
@@ -129,7 +129,7 @@ Execution order should follow **policy lock → corpus/config → verification �
 - [ ] **BR-068** acceptance criteria satisfied (cross-check [BR-068 § Acceptance Criteria](../project-management/kanban/fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)).
 - [ ] **T11** acceptance criteria satisfied ([task doc](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)): no unexplained regression vs FR-067 strict intent.
 - [ ] **TD1–TD3** executed or explicitly deferred with rationale in task Progress.
-- [ ] **Bidirectional wiring:** this IPW ↔ **E5:S09:T11** remain linked ([FR-042](../project-management/kanban/fr-br/FR-042-ipw-governance-and-publication-contract.md) host linkage).
+- [ ] **Bidirectional wiring:** this IPW ↔ **E5:S09:T11** remain linked ([FR-042](../project-management/kanban/fr-br/FR-042-implementation-planning-workflow-ipw.md) host linkage).
 
 ---
 
@@ -138,6 +138,6 @@ Execution order should follow **policy lock → corpus/config → verification �
 - [Host task – E5:S09:T11](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)
 - [BR-068](../project-management/kanban/fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)
 - [FR-067](../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
-- [FR-070](../project-management/kanban/fr-br/FR-070-github-pages-documentation-site-deployment.md)
+- [FR-070](../project-management/kanban/fr-br/FR-070-docusaurus-deployment-and-hosting.md)
 - [E5:S09:T08](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md), [E5:S09:T10](../project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)
 - Docusaurus: [Markdown links](https://docusaurus.io/docs/markdown-features/links), [Multiple docs plugin instances](https://docusaurus.io/docs/docs-multi-instance/)

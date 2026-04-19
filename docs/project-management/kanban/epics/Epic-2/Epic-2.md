@@ -23,18 +23,18 @@ housekeeping_policy: keep
 
 - [ ] **E2:S01 – RW Agent Execution & Docs** - IN PROGRESS (reopened 2026-04-02; latest: **E2:S01:T17** completed at v0.2.1.17+3 for FR-077 transition governance)
   - Story: [`Story-001-rw-agent-execution-and-docs.md`](Story-001-rw-agent-execution-and-docs.md)
-  - Tasks: T01–T17 with T17 ✅ COMPLETE (v0.2.1.17+3) — [FR-077](../fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md)
+  - Tasks: T01–T17 with T17 ✅ COMPLETE (v0.2.1.17+3) — [FR-077](../../fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md)
 
 - [x] **E2:S02 – PDCA Integration into Release Workflow** - COMPLETE ✅ (v0.2.2.8+1 – All tasks complete: PDCA phases integrated into RW, docs, templates, and examples)
   - Story: [`Story-002-pdca-integration-into-release-workflow.md`](Story-002-pdca-integration-into-release-workflow.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE, T007 ✅ COMPLETE, T008 ✅ COMPLETE
 
 - [x] **E2:S03 – RW Deterministic vs Agentic Execution** - COMPLETE ✅ (v0.2.3.6+1 – All tasks complete: deterministic vs agentic RW implementation, docs, and validation)
-  - Story: [`Story-003-rw-deterministic-vs-agentic-execution.md`](Story-003-rw-deterministic-vs-agentic-execution.md)
+  - Story: [`Story-003-additional-workflows-and-examples.md`](Story-003-additional-workflows-and-examples.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE
 
 - [x] **E2:S04 – RW Step 8 Hardening** - COMPLETE ✅ (v0.2.4.9+3 – All tasks complete: validation improvements, error handling, and docs)
-  - Story: [`Story-004-rw-step-8-hardening.md`](Story-004-rw-step-8-hardening.md)
+  - Story: [`Story-004-rw-installer-and-plug-and-play-adoption.md`](Story-004-rw-installer-and-plug-and-play-adoption.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE, T004 ✅ COMPLETE, T005 ✅ COMPLETE, T006 ✅ COMPLETE, T007 ✅ COMPLETE, T008 ✅ COMPLETE, T009 ✅ COMPLETE
 
 - [x] **E2:S05 – Post-Implementation Review (PIR) Workflow** - COMPLETE ✅ (v0.2.5.15+1 – All tasks complete: PIR workflow implementation, templates, integration, testing, and documentation)
@@ -42,7 +42,7 @@ housekeeping_policy: keep
   - Tasks: T01 ✅ COMPLETE, T02 ✅ COMPLETE, T03 ✅ COMPLETE, T04 ✅ COMPLETE, T05 ✅ COMPLETE, T06 ✅ COMPLETE, T07 ✅ COMPLETE, T08 ✅ COMPLETE, T09 ✅ COMPLETE, T10 ✅ COMPLETE, T11 ✅ COMPLETE, T12 ✅ COMPLETE, T13 ✅ COMPLETE, T14 ✅ COMPLETE, T15 ✅ COMPLETE
 
 - [x] **E2:S06 – RW Step 10 Hardening** - COMPLETE ✅ (v0.2.6.3+1 – All tasks complete: tagging behaviour, guardrails, and docs)
-  - Story: [`Story-006-rw-step-10-hardening.md`](Story-006-rw-step-10-hardening.md)
+  - Story: [`Story-006-package-uninstall-and-recovery.md`](Story-006-package-uninstall-and-recovery.md)
   - Tasks: T001 ✅ COMPLETE, T002 ✅ COMPLETE, T003 ✅ COMPLETE
 
 - [x] **E2:S07 – Trigger-Aware Release Workflow** - COMPLETE ✅ (v0.2.7.8+1 – All tasks complete: trigger registry, deliverable processor, workflow executor, integration, docs, and tests)
@@ -81,7 +81,7 @@ housekeeping_policy: keep
 
 - [ ] **E2:S15 – IPW Governance and Publication Contract** - IN PROGRESS (publication hardening delivered via T01; continue backlog backfill)
   - Story: [`Story-015-ipw-governance-and-publication-contract.md`](Story-015-ipw-governance-and-publication-contract.md)
-  - Tasks: T01 ✅ COMPLETE — [BR-066](../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
+  - Tasks: T01 ✅ COMPLETE — [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 
 ---
 

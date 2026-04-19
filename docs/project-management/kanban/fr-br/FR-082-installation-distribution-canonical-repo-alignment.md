@@ -75,4 +75,4 @@ Align **installation scripts, defaults, and documentation examples** with the **
 ## Related
 
 - [FR-080](./FR-080-greenfield-installation-process.md) — Greenfield process (consumer of correct defaults)  
-- [PACKAGE_INSTALLATION_GUIDE.md](../../../../packages/frameworks/workflow%20mgt/docs/PACKAGE_INSTALLATION_GUIDE.md)  
+- [PACKAGE_INSTALLATION_GUIDE.md](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/docs/PACKAGE_INSTALLATION_GUIDE.md)  

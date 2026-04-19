@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 5      # Epic number (Epic 5: Documentation)
 VERSION_STORY = 9     # Story number within epic
 VERSION_TASK = 11     # Task number (E5:S09:T11 — BR-068 / monorepo MDX links)
-VERSION_BUILD = 2     # Build number (RW E5:S09:T11 --art; Wave 1 policy lock + IPW + portal README)
+VERSION_BUILD = 3     # Build number (RW E5:S09:T11 --art; Wave 2 corpus MDX/link normalization + green portal build)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.5.9.11+2 = Development, Epic 5, Story 9, Task 11, Build 2
+# Current: 0.5.9.11+3 = Development, Epic 5, Story 9, Task 11, Build 3
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

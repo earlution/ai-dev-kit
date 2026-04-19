@@ -36,7 +36,7 @@ housekeeping_policy: keep
 ## Rollback / Recovery Notes
 
 - If drift is found, reconcile consumer docs/scripts to canonical source first, then re-run consistency checks.
-- If cross-links are broken, restore FR <-> Task links before closing planning cycle.
+- If cross-links are broken, restore bidirectional FR and Task links before closing planning cycle.
 - If release markers are incomplete, reopen task state as needed and correct metadata before RW.
 
 ---

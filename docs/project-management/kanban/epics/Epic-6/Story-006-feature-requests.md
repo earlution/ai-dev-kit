@@ -27,19 +27,19 @@ housekeeping_policy: keep
 ## Task Checklist
 
 - [x] **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - ✅ COMPLETED (HIGH priority, Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board)
-  - Task: [`T01-fr-br-uxr-prioritization-board.md`](T01-fr-br-uxr-prioritization-board.md)
+  - Task: [`T01-fr-br-uxr-prioritization-board.md`](Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md)
 
 - [x] **E6:S06:T02 – Fix Release Workflow Micromanagement Issues** - 🔄 IN PROGRESS, BLOCKED (CRITICAL, User pain and frustration with tool discovery, pattern matching failures, and excessive manual intervention; blocking productive work. Root cause identified as Cascade whitelist security prompts.)
-  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](T02-fix-release-workflow-micromanagement-issues.md) | [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md) | [BR-038](../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
 - [x] **E6:S06:T03 – Investigate Apple SDK License Blocking Issue** - ✅ COMPLETED (HIGH priority, Apple SDK license blocking issue prevents proper installation or usage of ai-dev-kit components on Apple platforms; needs investigation to understand root cause and implement solution)
-  - Task: [`T03-apple-sdk-license-blocking-issue.md`](T03-apple-sdk-license-blocking-issue.md) | [BR-040](../../../fr-br/BR-040-apple-sdk-license-blocking-issue.md)
+  - Task: [`T03-apple-sdk-license-blocking-issue.md`](Story-006-feature-requests/T03-apple-sdk-license-blocking-issue.md) | [BR-040](../../fr-br/BR-040-apple-sdk-license-blocking-issue.md)
 
 - [x] **E6:S06:T41 – Windsurf: Investigate how to leverage AGENTS.md and SKILL.md for workflows** - ✅ COMPLETED (CRITICAL, Implement AGENTS.md and SKILL.md to define specialized workflow agents and capabilities, enabling Cascade to execute workflows autonomously without manual intervention. This addresses fundamental workflow execution issues including terminal interaction problems and agent behavior inconsistencies.)
-  - Task: [`T41-windsurf-investigate-agents-skills-for-workflows.md`](T41-windsurf-investigate-agents-skills-for-workflows.md) | [FR-041](../../../fr-br/FR-041-windsurf-investigate-agents-skills-for-workflows.md)
+  - Task: [`T41-windsurf-investigate-agents-skills-for-workflows.md`](Story-006-feature-requests/T41-windsurf-investigate-agents-skills-for-workflows.md) | [FR-041](../../fr-br/FR-041-windsurf-investigate-agents-skills-for-workflows.md)
 
 - [x] **E6:S06:T42 – Fix UKW Agent Board Cleanup Failure** - ✅ COMPLETED (HIGH priority, UKW Agent does not properly clean up completed tasks from MoSCOW sections, leaving completed tasks listed in active priority sections despite being marked as COMPLETE. This impairs autonomous workflow reliability and requires manual intervention.)
-  - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
+  - Task: [`T42-fix-ukw-agent-board-cleanup-failure.md`](Story-006-feature-requests/T42-fix-ukw-agent-board-cleanup-failure.md) | [BR-042](../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md)
 
 - [x] **E6:S06:T57 – BR-039: Cascade whitelist / security prompt usability (vendor)** - ✅ COMPLETE (**`RW -k`** v0.6.6.57+5 **v0.4.704+5** — Option B SemVer; **[BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)** **IN PROGRESS** for **product**)
   - Task: [`T57-br039-cascade-whitelist-security-prompt-blocker.md`](Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md) | [BR-039](../../fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md)
@@ -56,14 +56,14 @@ housekeeping_policy: keep
   - Task: [`T61-uxr-006-kanban-moscow-last-modified-stamps.md`](Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md) | [UXR-006](../../fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
-  - Task: [`T999-board-cleanup-test.md`](T999-board-cleanup-test.md)
+  - Task: [`T999-board-cleanup-test.md`](Story-006-feature-requests/T999-board-cleanup-test.md)
   - Status: ✅ COMPLETED - Board implemented with MoSCOW structure, all 69 items tracked
   - Completed: 2026-03-09
 
 
 - [ ] **E6:S06:T02 – Fix Release Workflow Micromanagement Issues** - TODO (HIGH priority, Implement simplified, reliable Release Workflow to reduce user friction)
-  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](T02-fix-release-workflow-micromanagement-issues.md)
-  - Associated BR: [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md)
+  - Associated BR: [BR-038](../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
   - Status: 🔄 TODO - Addresses critical usability issues in release process
 
 
@@ -86,16 +86,16 @@ Systematically track, prioritize, and implement feature requests for framework p
 ## Tasks
 
 - **E6:S06:T01 – FR/BR/UXR Prioritization Board Implementation** - ✅ COMPLETED (HIGH priority)
-  - Task: [`T01-fr-br-uxr-prioritization-board.md`](T01-fr-br-uxr-prioritization-board.md)
+  - Task: [`T01-fr-br-uxr-prioritization-board.md`](Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md)
   - **Scope:** Create prioritization board for FRs, BRs, and UXRs with identical structure to Kanban board
-  - **Associated FR:** [FR-051](../../../fr-br/FR-051-fr-br-uxr-prioritization-board.md)
+  - **Associated FR:** [FR-051](../../fr-br/FR-051-fr-br-uxr-prioritization-board.md)
   - **Status:** IN PROGRESS
 
 
 - **E6:S06:T02 – Fix Release Workflow Micromanagement Issues** - TODO (HIGH priority)
-  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](T02-fix-release-workflow-micromanagement-issues.md)
+  - Task: [`T02-fix-release-workflow-micromanagement-issues.md`](Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md)
   - **Scope:** Implement simplified, reliable Release Workflow to reduce user friction
-  - **Associated BR:** [BR-038](../../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
+  - **Associated BR:** [BR-038](../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
   - **Status:** IN PROGRESS
 
 

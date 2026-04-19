@@ -14,7 +14,7 @@ housekeeping_policy: keep
 
 ### Scope (brownfield vs greenfield)
 
-This document targets **existing / brownfield** repositories. For **greenfield / new-template** first run (FR-080), use [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md), [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md), and policy [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) vs [FR-081](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md).
+This document targets **existing / brownfield** repositories. For **greenfield / new-template** first run (FR-080), use [`INSTALL_IN_YOUR_PROJECT.md`](https://github.com/earlution/ai-dev-kit/blob/main/INSTALL_IN_YOUR_PROJECT.md), [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md), and policy [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) vs [FR-081](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md).
 
 ---
 

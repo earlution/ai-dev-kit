@@ -56,9 +56,9 @@ Define and implement canonical status-transition ownership so IPW-built tasks do
 - `packages/frameworks/workflow mgt/docs/documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - `docs/project-management/kanban/kanban-board.md`
 - `docs/project-management/kanban/fr-br-uxr-board.md`
-- [ICW-E2S01T17-specification](../../../../implementation-cycles/ICW-E2S01T17-specification.md)
-- [ICW-E2S01T17-test-design](../../../../implementation-cycles/ICW-E2S01T17-test-design.md)
-- [ICW-E2S01T17-implementation-plan](../../../../implementation-cycles/ICW-E2S01T17-implementation-plan.md)
+- [ICW-E2S01T17-specification](../../../../../implementation-cycles/ICW-E2S01T17-specification.md)
+- [ICW-E2S01T17-test-design](../../../../../implementation-cycles/ICW-E2S01T17-test-design.md)
+- [ICW-E2S01T17-implementation-plan](../../../../../implementation-cycles/ICW-E2S01T17-implementation-plan.md)
 
 ---
 
@@ -90,9 +90,9 @@ Define and implement canonical status-transition ownership so IPW-built tasks do
 
 - [FR-077](../../../fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md)
 - [Story E2:S01](../Story-001-rw-agent-execution-and-docs.md)
-- [ICW-E2S01T17-specification](../../../../implementation-cycles/ICW-E2S01T17-specification.md)
-- [ICW-E2S01T17-test-design](../../../../implementation-cycles/ICW-E2S01T17-test-design.md)
-- [ICW-E2S01T17-implementation-plan](../../../../implementation-cycles/ICW-E2S01T17-implementation-plan.md)
+- [ICW-E2S01T17-specification](../../../../../implementation-cycles/ICW-E2S01T17-specification.md)
+- [ICW-E2S01T17-test-design](../../../../../implementation-cycles/ICW-E2S01T17-test-design.md)
+- [ICW-E2S01T17-implementation-plan](../../../../../implementation-cycles/ICW-E2S01T17-implementation-plan.md)
 
 ---
 
