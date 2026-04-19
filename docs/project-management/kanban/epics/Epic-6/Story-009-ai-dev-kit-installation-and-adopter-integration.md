@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-19  
-**Last updated:** 2026-04-19 (RW **v0.6.9.1+1** — **E6:S09:T01** `--art`; FR-080–082 intake)  
-**Version:** v0.6.9.1+1  
+**Last updated:** 2026-04-19 (RW **v0.6.9.2+1** — **E6:S09:T02** `--art`)  
+**Version:** v0.6.9.2+1  
 **Code:** E6S09
 
 ---

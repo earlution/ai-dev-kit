@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.9.1+1] - 19-04-26
+## [0.6.9.2+1] - 19-04-26
 
-E6:S09:T01 — **RW -d** with **`--art`**: canonical adoption to **Story 009** (**AI Dev Kit installation and adopter integration**); intake **FR-080–082** and task docs **T01–T03**; **ADR-003** ↔ FR links. SemVer **v0.4.743+1**.
+E6:S09:T02 — **RW -d** with **`--art`**: second tranche for **Story 009**; **FR-081** / **E6:S09:T02** anchor. SemVer **v0.4.744+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.2+1.md)

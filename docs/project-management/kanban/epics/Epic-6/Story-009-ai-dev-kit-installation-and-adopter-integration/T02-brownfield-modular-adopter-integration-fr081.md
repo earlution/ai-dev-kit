@@ -13,6 +13,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-19  
+**Last updated:** 2026-04-19 (RW **v0.6.9.2+1** — **E6:S09:T02** `--art`)  
 **Code:** E6S09T02
 
 **Upstream:** [FR-081 - Brownfield modular adopter integration](../../../fr-br/FR-081-brownfield-modular-adopter-integration.md)
