@@ -123,6 +123,65 @@ python3 "packages/frameworks/workflow mgt/scripts/install_greenfield_path.py" \
 - If available, set `AI_DEV_KIT_INSTALL_LOG_PATH` so both installers append structured logs.
 - Keep logs scrubbed of secrets and machine-specific sensitive paths before sharing.
 
+### Wave 4 — Post-install validation (`F4`)
+
+Validators read paths from **`rw-config.yaml`** (especially `scripts_path`). Authoritative layout notes: [`rw-validators-consumer-layout.md`](packages/frameworks/workflow%20mgt/docs/rw-validators-consumer-layout.md).
+
+From **your project root**, after installers have produced `rw-config.yaml` and copied scripts:
+
+```bash
+# Resolve scripts_path from rw-config.yaml — examples only (yours may differ):
+WF_SCRIPTS='packages/frameworks/workflow mgt/scripts'   # submodule / monorepo-style layout
+# WF_SCRIPTS='scripts'                                   # typical after copying workflow mgt/* to project root
+
+python3 "${WF_SCRIPTS}/validation/validate_branch_context.py" --strict
+python3 "${WF_SCRIPTS}/validation/validate_changelog_format.py"
+```
+
+If **`use_kanban: true`** and you run RW with task documents, add task-token checks for **your** Epic/Story/Task id (not ai-dev-kit’s):
+
+```bash
+python3 "${WF_SCRIPTS}/validation/validate_rw_task_complete.py" --requested "E5:S01:T01"
+python3 "${WF_SCRIPTS}/validation/validate_rw_task_intent.py" --requested "E5:S01:T01"
+```
+
+Use **`RW -k`** modes only when initializing Kanban per your `.cursorrules` portable rules.
+
+### Wave 4 — Reference example run (synthetic transcript)
+
+Illustrative output only — paths and task ids are placeholders; replace with your repository layout.
+
+```text
+$ export AI_DEV_KIT_INSTALL_LOG_PATH="$PWD/logs/greenfield-example.log"
+$ mkdir -p logs
+$ python3 "packages/frameworks/workflow mgt/scripts/install_greenfield_path.py" \
+    --project-root "." --non-interactive --order rw-first
+
+▶ python3 .../install_release_workflow.py --mode c --project-root "."
+... rw-config.yaml written ...
+✅ Release Workflow installer completed.
+
+▶ python3 .../install_kanban_framework.py --mode fresh
+... Kanban scaffold written under <KANBAN_ROOT>/ ...
+✅ Kanban framework installer completed.
+
+$ python3 "packages/frameworks/workflow mgt/scripts/validation/validate_branch_context.py" --strict
+✅ Branch context validation passed!
+
+$ tail -n 3 "$AI_DEV_KIT_INSTALL_LOG_PATH"
+{"phase":"rw.install","status":"complete","timestamp":"..."}
+{"phase":"kanban.install","status":"complete","timestamp":"..."}
+```
+
+Redact host paths, tokens, and internal URLs before sharing logs outside your team.
+
+### Wave 4 — Install telemetry boundaries (**FR-078** / **FR-079**)
+
+- **[FR-078](docs/project-management/kanban/fr-br/FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md)** — quality and completeness expectations for install **event** / logging contracts across tooling.
+- **[FR-079](docs/project-management/kanban/fr-br/FR-079-install-feedback-submission-path-and-governance.md)** — governance for **feedback** after an install (what gets submitted upstream and how).
+
+**Greenfield scope (this task):** Ensure adopters know how to capture evidence (`AI_DEV_KIT_INSTALL_LOG_PATH`, console transcripts) and **what not to paste** (secrets, private URLs). Full contract implementation remains tracked under FR-078 / FR-079.
+
 ---
 
 ### Method 1: GitHub Releases (Recommended - Available Now)

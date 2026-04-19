@@ -41,6 +41,8 @@ For the current canonical greenfield sequence (default RW-first with explicit ov
 
 - [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)
 
+Post-install **validator commands**, a **synthetic reference transcript**, and **FR-078 / FR-079** telemetry boundaries are documented there under **Wave 4** sections.
+
 ---
 
 ## Prerequisites

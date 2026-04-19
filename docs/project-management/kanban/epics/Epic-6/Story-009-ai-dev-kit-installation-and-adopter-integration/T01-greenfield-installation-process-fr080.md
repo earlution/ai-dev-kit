@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Code:** E6S09T01
 
 **Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)  
-**Progress:** Wave 3 **user-docs completeness sweep**: all remaining `docs/documentation/user-docs/` entry points (FAQ, usage, update, troubleshooting, CLI guides, template enablement, install receipt reference, Apple platform setup, existing-project checklist, `repo-structure-for-adopters.md`) now include **Scope (greenfield vs brownfield)** pointers to `INSTALL_IN_YOUR_PROJECT.md`, IPW-E6S09T01, ADR-003, FR-081 as appropriate. Prior releases: v0.6.9.1+6 (tranche 2), v0.6.9.1+5 (tranche 1).  
+**Progress:** Wave 4 **verification + reference run + telemetry boundaries** landed in **`INSTALL_IN_YOUR_PROJECT.md`** (post-install validators per `rw-config.yaml`/`scripts_path`, synthetic transcript, FR-078/FR-079 pointers); cross-linked from **`framework-dependency-installation-guide.md`** greenfield scope. Wave 3 user-docs completeness sweep shipped **v0.6.9.1+7**. Prior: v0.6.9.1+6, v0.6.9.1+5 (Wave 3 tranches).  
 
 ---
 

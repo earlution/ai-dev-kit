@@ -136,6 +136,8 @@ Normative prose (ordering, checkpoints, identifiers) must not run ahead of locke
 
 **Parallel documentation (same wave):** Publish verification commands, reference transcript, and logging/redaction guidance **with** the underlying behavior—no “implementation now, prose later” unless a genuine dependency blocks documentation.
 
+**Delivered (Wave 4):** [`INSTALL_IN_YOUR_PROJECT.md`](../../INSTALL_IN_YOUR_PROJECT.md) adds **Wave 4** sections—post-install validator invocation (`F4`), synthetic reference transcript with redaction reminder, and **FR-078** / **FR-079** boundary bullets. Cross-linked from [`framework-dependency-installation-guide.md`](../documentation/user-docs/framework-dependency-installation-guide.md) greenfield scope.
+
 ### Wave 5 — Traceability
 
 | Step | Action | Deliverable |
@@ -157,9 +159,9 @@ Normative prose (ordering, checkpoints, identifiers) must not run ahead of locke
 
 - [ ] Task **AC1:** FR-080 requirements satisfied or deferred with rationale in FR/task.
 - [ ] Task **AC2:** Documented scenario runs end-to-end without undocumented manual steps.
-- [ ] Task **AC3:** Install docs link **ADR-003** and **FR-081**.
-- [ ] **F3** evidenced: installers are part of the canonical greenfield story.
-- [ ] **§1.6:** Example/reference run + logging posture documented; aligned with **FR-078** / **FR-079** boundaries.
+- [x] Task **AC3:** Install docs link **ADR-003** and **FR-081**.
+- [x] **F3** evidenced: installers are part of the canonical greenfield story.
+- [x] **§1.6:** Example/reference run + logging posture documented; aligned with **FR-078** / **FR-079** boundaries ([`INSTALL_IN_YOUR_PROJECT.md`](../../INSTALL_IN_YOUR_PROJECT.md) Wave 4).
 - [ ] Bidirectional wiring: this IPW ↔ host task remain linked.
 
 ---
