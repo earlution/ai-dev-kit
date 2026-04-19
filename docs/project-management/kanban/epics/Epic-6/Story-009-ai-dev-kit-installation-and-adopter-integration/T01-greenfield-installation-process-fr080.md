@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Code:** E6S09T01
 
 **Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)  
-**Progress:** v0.6.9.1+3 — **Wave 1 greenfield spec lock complete** in `INSTALL_IN_YOUR_PROJECT.md` (inputs/outputs, default RW-first + override checkpoint, manual gates, failure modes, logging posture).  
+**Progress:** Wave 2 in progress — added `install_greenfield_path.py` orchestrator (hybrid flow) and wired INSTALL docs to default RW-first with explicit override checkpoint. Prior: v0.6.9.1+3 Wave 1 spec lock.  
 
 ---
 

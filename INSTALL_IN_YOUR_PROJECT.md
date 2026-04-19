@@ -71,6 +71,20 @@ This section defines the canonical **greenfield** path for new or template proje
   - Require explicit user confirmation for override path before continuing.
   - If override is selected, capture a short rationale in the run notes.
 
+### Wave 2 orchestrator (hybrid execution)
+
+Use the thin orchestrator to apply the default path with an explicit checkpoint:
+
+```bash
+python3 "packages/frameworks/workflow mgt/scripts/install_greenfield_path.py" \
+  --project-root "." \
+  --order rw-first
+```
+
+- Default behavior prompts at the critical checkpoint and allows override to `kanban-first`.
+- For unattended runs, use `--non-interactive` with explicit `--order`.
+- The orchestrator wraps existing installers only; it does not replace their logic.
+
 ### Manual verification gates (primary completion criteria)
 
 1. **Config gate**  
@@ -144,11 +158,12 @@ cp -r .ai-dev-kit/packages/frameworks/workflow\ mgt/* ./
 cp -r .ai-dev-kit/packages/frameworks/kanban/* ./
 
 # Step 4: Run framework installers (REQUIRED - don't skip!)
-# Install Release Workflow
-python scripts/install_release_workflow.py --mode c
+# Preferred: orchestration wrapper (includes checkpoint + override support)
+python3 "packages/frameworks/workflow mgt/scripts/install_greenfield_path.py" --project-root "."
 
-# Install Kanban board
-python3 scripts/install_kanban_framework.py --mode fresh
+# Manual fallback:
+python "packages/frameworks/workflow mgt/scripts/install_release_workflow.py" --mode c --project-root "."
+python3 "packages/frameworks/kanban/scripts/install_kanban_framework.py" --mode fresh
 ```
 
 **⚠️ IMPORTANT:** The installers are **REQUIRED** - they configure frameworks for your project. Don't skip Step 4!

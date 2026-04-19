@@ -12,15 +12,15 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-19  
-**Last updated:** 2026-04-19 (RW -d **v0.6.9.1+2** — **E6:S09:T01** `--art`; IPW decisions locked)  
-**Version:** v0.6.9.1+2  
+**Last updated:** 2026-04-19 (RW **v0.6.9.1+4** — **E6:S09:T01** `--art`; Wave 2 orchestration)  
+**Version:** v0.6.9.1+4  
 **Code:** E6S09
 
 ---
 
 ## Task Checklist
 
-- [ ] **E6:S09:T01 – Greenfield installation process (FR-080)** - IN PROGRESS (HIGH — IPW decisions locked; implementation waves queued)
+- [ ] **E6:S09:T01 – Greenfield installation process (FR-080)** - IN PROGRESS (HIGH — Wave 2 orchestration implemented; verification/logging waves pending)
   - Task: [`T01-greenfield-installation-process-fr080.md`](Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md) | [FR-080](../../fr-br/FR-080-greenfield-installation-process.md)
   - IPW: [`IPW-E6S09T01-greenfield-installation-fr080.md`](../../../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
 

@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.6.9.1+4] - 19-04-26
+
+E6:S09:T01 — **RW** with **`--art`**: Wave 2 greenfield orchestration implemented (`install_greenfield_path.py`). SemVer **v0.4.750+4**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+4.md)
+---
 ## [0.6.9.1+3] - 19-04-26
 
 E6:S09:T01 — **RW -d** follow-up: Wave 1 greenfield install specification locked. SemVer **v0.4.749+3**.

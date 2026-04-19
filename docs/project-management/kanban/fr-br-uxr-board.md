@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
 **Last Updated:** 2026-04-19 (**BR-067** — `--doc-policy-zero` mitigation + intake; prior **E6:S09** FR tranche)
-**Version Context:** v0.6.9.1+3 (**SemVer** v0.4.749+3); **E6:S09:T01** Wave 1 greenfield specification
+**Version Context:** v0.6.9.1+4 (**SemVer** v0.4.750+4); **E6:S09:T01** Wave 2 greenfield orchestration
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
