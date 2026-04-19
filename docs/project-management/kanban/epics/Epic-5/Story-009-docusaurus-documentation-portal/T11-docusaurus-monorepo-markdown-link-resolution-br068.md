@@ -13,8 +13,9 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium–Large (policy + corpus and/or plugin boundary changes)  
 **Created:** 2026-04-19  
-**Last updated:** 2026-04-19  
+**Last updated:** 2026-04-19 (v0.5.9.11+1 — **RW -k** with **`--art`**)  
 **Code:** E5S09T11  
+**Version anchor:** v0.5.9.11+1 (intake; implementation work continues)  
 
 **Origin:** **[BR-068](../../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** — strict MDX resolution (`onBrokenMarkdownLinks: 'throw'`) fails on relative links from `docs/` to repository paths outside the `@docusaurus/plugin-content-docs` root (`../docs`), including **`INSTALL_IN_YOUR_PROJECT.md`** (repo root) and **`packages/frameworks/...`**.
 
