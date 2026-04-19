@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.7.103+0] - 19-04-26
+## [0.6.7.103+1] - 19-04-26
 
-E6:S07:T103 — **RW -d** with **`--art`**, **`BUILD +0`** enforced: **`validate_version_bump`** **`--doc-policy-zero`**, **BR-067** intake and board refresh. SemVer **v0.4.746+0**.
+E6:S07:T103 — **RW** with **`--art`**: **IPW** perpetual planning package (**FR-042**), bidirectional wiring on **T103** and **Story 7**. SemVer **v0.4.747+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+0.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+1.md)

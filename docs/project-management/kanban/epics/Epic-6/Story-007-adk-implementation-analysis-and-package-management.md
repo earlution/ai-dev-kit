@@ -86,8 +86,9 @@ housekeeping_policy: keep
   - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
 
 
-- [ ] **E6:S07:T103 – Release Workflow (RW) Maintenance - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.103+4 – UKW comprehensive-by-default, workflow docs)
-  - Task: [`T103-release-workflow-maintenance-perpetual-task.md`](T103-release-workflow-maintenance-perpetual-task.md)
+- [ ] **E6:S07:T103 – Release Workflow (RW) Maintenance - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.103+1 – IPW shipped; RW **`--art`**)
+  - Task: [`T103-release-workflow-maintenance-perpetual-task.md`](Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
+  - IPW: [`IPW-E6S07T103-release-workflow-maintenance-perpetual.md`](../../../../implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md)
   - **Note:** This is a perpetual maintenance task. RW maintenance releases (Step 7 fixes, validator updates, doc corrections) are attributed to T103 when not tied to a specific feature task.
   - **Feature Request:** [FR-041](../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
 

@@ -1,54 +1,33 @@
-# Changelog: v0.6.7.103+1
+# Changelog v0.6.7.103+1
 
-**Release Date:** 2026-02-22 13:32:21 UTC  
-**Epic:** Epic 6 (Framework Management and Maintenance)  
-**Story:** Story 7 (ADK Implementation Analysis and Package Management)  
-**Task:** Task 103 (Release Workflow Maintenance - Perpetual Task)  
-**Build:** 1
-
----
+**Release Date:** 2026-04-19 12:37:40 UTC  
+**Epic:** 6 | **Story:** 7 | **Task:** 103  
+**Task doc:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)  
+**FR:** [FR-041](../../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md) | **IPW:** [IPW-E6S07T103](../../implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md)
 
 ## Summary
 
-E6:S07:T103: Perpetual task for Release Workflow (RW) and workflow framework maintenance. Added packaged Kanban template (T06), documentation (versioning policy, RW execution guide, cursorrules), and validation tests. Attribution is manual—no context detection like UKW/CMW.
-
----
+**RW** with **`--art`**: deliver the **IPW** (Implementation Planning Workflow) package for perpetual **E6:S07:T103**—specification, test design, implementation plan (rolling backlog), and **FR-042** bidirectional links on the host task and **Story 7** task row.
 
 ## Changes
 
-### Packaged Kanban Template
+### Planning / Kanban
 
-- **T06-RW-Maintenance-Perpetual-Task-Pattern.md:** New template in `packages/frameworks/kanban/templates/tasks/Epic-2/Story-1/` for RW maintenance perpetual task pattern
-- Follows T05 (CMW) structure; documents manual attribution (no context detection)
+- **`docs/implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md`** — New IPW document (perpetual maintenance framing; Waves A–C for **BR-067** follow-through and adoption).
+- **T103 task doc** — **Input** / **References** wired to IPW; **Progress** and version markers updated.
+- **Story-007-adk-implementation-analysis-and-package-management.md** — T103 row: IPW pointer, task link path, summary line **v0.6.7.103+1**.
 
-### Documentation
+### Versioning registry
 
-- **dev-kit-versioning-policy.md:** Added T103 to perpetual task examples; T103 manual attribution section; RW Maintenance Pattern reference
-- **release-workflow-agent-execution.md:** Perpetual Task Pattern (RW Maintenance - T103) section
-- **cursorrules-rw-trigger-section.md:** T103 note in perpetual task pattern (manual attribution)
+- **`semver-registry.yaml`** — Task-touch mapping **0.6.7.103+1** ↔ **0.4.747+1** (counter **747**).
 
-### Tests
+## Verification
 
-- **test_validate_version_bump.py:** Added `test_validate_version_bump_passes_for_t103`; extended `test_perpetual_task_detection_by_task_number` for T103
+- `validate_branch_context.py --strict --requested E6:S07:T103 --art`
+- `validate_rw_task_complete.py --requested E6:S07:T103`
+- `validate_rw_task_intent.py --requested E6:S07:T103 --art`
+- `validate_version_bump.py --strict --requested E6:S07:T103 --art`
 
-### Task and FR
+## Tags
 
-- **T103-release-workflow-maintenance-perpetual-task.md:** Task doc with acceptance criteria
-- **FR-041-perpetual-task-for-release-workflow-maintenance.md:** Feature request for perpetual RW maintenance task
-- **Story-007:** T103 added to task checklist
-
----
-
-## Impact
-
-- Projects adopting the Kanban framework receive T06 template for RW maintenance perpetual task
-- Manual attribution pattern documented for RW maintenance releases (Step 7 fixes, validator updates, doc corrections)
-- validate_version_bump already supports T103 (task >= 100); tests confirm behavior
-
----
-
-## Related
-
-- **Task:** [E6:S07:T103](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
-- **FR:** [FR-041](../../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
-- **Template:** [T06-RW-Maintenance-Perpetual-Task-Pattern](../../../packages/frameworks/kanban/templates/tasks/Epic-2/Story-1/T06-RW-Maintenance-Perpetual-Task-Pattern.md)
+- **Task-touch:** `v0.4.747` (primary), `v0.6.7.103+1` (internal)

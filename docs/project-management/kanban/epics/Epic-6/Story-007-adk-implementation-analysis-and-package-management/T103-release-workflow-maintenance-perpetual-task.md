@@ -12,16 +12,16 @@ housekeeping_policy: keep
 
 **Status:** IN PROGRESS (Perpetual)  
 **Priority:** HIGH  
-**Last updated:** 2026-04-19 (v0.6.7.103+0 / SemVer v0.4.746+0 – BR-067: `validate_version_bump --doc-policy-zero`; BUILD +0; RW -d)  
+**Last updated:** 2026-04-19 (v0.6.7.103+1 / SemVer v0.4.747+1 – **IPW** perpetual planning package; **RW** with **`--art`**)  
 **Started:** 2026-02-22  
 **Completed:** N/A (Perpetual task - never completes)  
-**Version:** v0.6.7.103+0
+**Version:** v0.6.7.103+1
 
 **Task Type:** Perpetual Maintenance  
 **Build Warning Suppression:** true  
 **Explanation:** This task represents ongoing Release Workflow and workflow framework maintenance work. High build numbers are expected and valid.
 
-**Progress:** v0.6.7.103+0 – **BR-067** mitigation: `--doc-policy-zero` for policy-mandated **+0** on existing T103; prior: v0.6.7.103+4 **FR-067 FU-2** traceability.  
+**Progress:** v0.6.7.103+1 – [IPW-E6S07T103-release-workflow-maintenance-perpetual.md](../../../../../implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md) (FR-042 spec / test / impl / rolling backlog). Prior: v0.6.7.103+0 **BR-067**; v0.6.7.103+4 **FR-067 FU-2** traceability.  
 **Code:** E6S07T103
 
 **Note:** Perpetual tasks use 3-digit task numbers (T101+) to differentiate from regular tasks (T01-T99).
@@ -55,6 +55,11 @@ This is a **perpetual task** dedicated to Release Workflow (RW) and workflow fra
 ## Input
 
 - **Feature Request:** [FR-041 - Perpetual Task for Release Workflow Maintenance](../../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
+- **IPW planning artifact:** [IPW-E6S07T103-release-workflow-maintenance-perpetual.md](../../../../../implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md)
+
+## References
+
+- **IPW (planning package):** [IPW-E6S07T103-release-workflow-maintenance-perpetual.md](../../../../../implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md)
 
 ## Deliverable
 
