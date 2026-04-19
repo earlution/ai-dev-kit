@@ -23,6 +23,8 @@ This script is called by RW Step 8 to validate version bumping logic.
 Usage:
     python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py [--strict] [--story-file PATH] [--version-file PATH]
     python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py --requested E6:S06:T58 --art [--strict]
+    python .../validate_version_bump.py --strict --requested E6:S07:T103 --art --doc-policy-zero
+      (explicit policy: docs-only BUILD +0 for an existing E/S/T anchor; see BR-067)
 
     --strict: Exit with error code if validation fails
     --story-file: Path to Story file (auto-detected if not provided)
@@ -47,6 +49,10 @@ def parse_requested_est(requested: str) -> Optional[Tuple[int, int, int]]:
         return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
     return None
 
+
+def parse_requested_task_id(requested: str) -> Optional[Tuple[int, int, int]]:
+    """Backward-compatible alias for unit tests (`parse_requested_est`)."""
+    return parse_requested_est(requested)
 
 
 try:
@@ -610,6 +616,10 @@ def is_documentation_file(file_path: Path) -> bool:
     # Always documentation: markdown files
     if file_path.suffix.lower() == '.md':
         return True
+
+    # Root agent / workspace policy (text, not product code) — allow in doc-init (+0) releases
+    if file_path.name == ".cursorrules":
+        return True
     
     # Always documentation: README and CHANGELOG files
     file_name_lower = file_path.name.lower()
@@ -1057,6 +1067,7 @@ def validate_version_bump(
     config: Optional[Dict] = None,
     requested: Optional[str] = None,
     art: bool = False,
+    doc_policy_zero: bool = False,
 ) -> Tuple[bool, list]:
     """
     Validate that version bump follows correct logic.
@@ -1065,6 +1076,7 @@ def validate_version_bump(
         (is_valid, list_of_errors)
     """
     errors = []
+    policy_zero_ok = False
     
     # Get current version components
     version_components = get_version_components(version_file)
@@ -1081,6 +1093,13 @@ def validate_version_bump(
             f"(version file: {rc}.{version_components[1]}.{version_components[2]}.{version_components[3]}+{current_build})"
         )
     print(f"Current version: {rc}.{epic}.{story}.{current_task}+{current_build}")
+
+    if doc_policy_zero and not art:
+        errors.append(
+            "--doc-policy-zero requires --art (canonical adoption) so the intended E/S/T anchor is explicit."
+        )
+    if doc_policy_zero and not requested:
+        errors.append("--doc-policy-zero requires --requested <E#:S#:T#>.")
     
     # NEW: Validate doc-init build (if BUILD = 0, must be docs-only and first-time E/S/T doc)
     # Project root: script runs from repo root (where rw-config.yaml, CHANGELOG live)
@@ -1093,7 +1112,23 @@ def validate_version_bump(
         is_first_time, first_time_warnings = detect_first_time_est_doc(
             epic, story, current_task, project_root, config
         )
-        if not is_first_time:
+        # Docs-only requirement (must run before policy_zero_ok)
+        doc_init_valid, doc_init_errors = validate_doc_init_build(
+            version_components, project_root, config
+        )
+        policy_zero_ok = bool(
+            doc_policy_zero
+            and art
+            and requested_est is not None
+            and doc_init_valid
+        )
+        if policy_zero_ok:
+            print(
+                "✅ --doc-policy-zero: BUILD +0 accepted for existing E/S/T (docs-only; explicit policy). "
+                "See BR-067 / perpetual RW doc-only releases."
+            )
+
+        if not is_first_time and not policy_zero_ok:
             errors.append(
                 f"❌ ABSTRACT SPACE VALIDATION FAILED: BUILD=0 (abstract space) detected, but this is not a first-time E/S/T document commit.\n"
                 f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
@@ -1101,17 +1136,13 @@ def validate_version_bump(
                 f"   1. New E/S/T document file created OR new delimited section added to Story file\n"
                 f"   2. No prior version exists for this E/S/T (check git history and changelog)\n"
                 f"   3. All changes are docs-only (no code changes)\n"
-                f"   If the E/S/T document already exists, use BUILD >= 1 for functional changes.\n"
+                f"   If the E/S/T document already exists, use BUILD >= 1 for functional changes, or pass --doc-policy-zero with --requested/--art when policy requires +0.\n"
                 f"   See: FR-017 (Doc-Init Build), FR-018 (Abstract Space), FR-020 (Abstract Space Awareness)"
             )
         if first_time_warnings:
             for warning in first_time_warnings:
                 print(f"⚠️  {warning}")
         
-        # Validate docs-only requirement
-        doc_init_valid, doc_init_errors = validate_doc_init_build(
-            version_components, project_root, config
-        )
         if not doc_init_valid:
             errors.extend(doc_init_errors)
     else:
@@ -1241,8 +1272,8 @@ def validate_version_bump(
     elif completed_task == current_task:
         # Same task
         if is_doc_init:
-            # Doc-init on same task: Valid when is_first_time (we're creating the doc)
-            if not is_first_time:
+            # Doc-init on same task: Valid when is_first_time (we're creating the doc), or explicit --doc-policy-zero
+            if not is_first_time and not policy_zero_ok:
                 errors.append(
                     f"❌ ABSTRACT SPACE VALIDATION ERROR: Doc-init build (BUILD=0) detected for existing task T{completed_task:02d}.\n"
                     f"   Abstract space builds (`+0`) are only valid for first-time E/S/T document creation (docs-only).\n"
@@ -1332,6 +1363,15 @@ def main():
         action="store_true",
         help="Adopt requested token as canonical anchor for this validation run.",
     )
+    parser.add_argument(
+        "--doc-policy-zero",
+        action="store_true",
+        dest="doc_policy_zero",
+        help=(
+            "Allow BUILD +0 for an existing task when changes are docs-only (explicit policy; use with --requested and --art). "
+            "See BR-067."
+        ),
+    )
     args = parser.parse_args()
     
     # Load config
@@ -1354,6 +1394,7 @@ def main():
         config=config,
         requested=args.requested,
         art=args.art,
+        doc_policy_zero=args.doc_policy_zero,
     )
     
     if not is_valid:

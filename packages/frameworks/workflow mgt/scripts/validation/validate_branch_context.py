@@ -332,6 +332,10 @@ def is_documentation_file(file_path: Path) -> bool:
     # Always documentation: markdown files
     if file_path.suffix.lower() == '.md':
         return True
+
+    # Root agent / workspace policy (text, not product code) — allow in doc-init (+0) releases
+    if file_path.name == ".cursorrules":
+        return True
     
     # Always documentation: README and CHANGELOG files
     file_name_lower = file_path.name.lower()

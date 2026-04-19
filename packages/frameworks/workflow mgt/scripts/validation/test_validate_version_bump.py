@@ -291,6 +291,82 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
             os.chdir(orig_cwd)
 
 
+def test_validate_version_bump_doc_policy_zero_allows_existing_t103_build_zero():
+    """BUILD +0 with existing T103 doc passes when docs-only and --doc-policy-zero is set (BR-067)."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir)
+        orig_cwd = os.getcwd()
+        try:
+            os.chdir(tmp)
+
+            version_dir = tmp / "src" / "proj"
+            version_dir.mkdir(parents=True)
+            version_file = version_dir / "version.py"
+            version_file.write_text("""
+VERSION_RC = 0
+VERSION_EPIC = 6
+VERSION_STORY = 7
+VERSION_TASK = 103
+VERSION_BUILD = 0
+VERSION_STRING = "0.6.7.103+0"
+""")
+
+            (tmp / "rw-config.yaml").write_text("""
+version_file: src/proj/version.py
+use_kanban: true
+kanban_root: docs/project-management/kanban
+story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
+""")
+
+            story_dir = tmp / "docs" / "project-management" / "kanban" / "epics" / "Epic-6"
+            story_dir.mkdir(parents=True)
+            task_dir = story_dir / "Story-007-adk-implementation-analysis-and-package-management"
+            task_dir.mkdir(parents=True)
+
+            story_file = story_dir / "Story-007-adk-implementation-analysis-and-package-management.md"
+            story_file.write_text("""
+# Story 007 – ADK Implementation Analysis
+**Code:** E6S07
+
+## Task Checklist
+- [ ] **E6:S07:T103** – Release Workflow (RW) Maintenance - IN PROGRESS (Perpetual)
+""")
+
+            task_file = task_dir / "T103-release-workflow-maintenance-perpetual-task.md"
+            task_file.write_text("""
+# Epic 6, Story 7, Task 103: Release Workflow (RW) Maintenance - Perpetual Task
+
+**Status:** IN PROGRESS (Perpetual)
+**Task Type:** Perpetual Maintenance
+
+## Task ID
+**Value:** `E6:S07:T103`
+
+## Acceptance Criteria
+- [x] Criterion one
+""")
+
+            config = {
+                "version_file": "src/proj/version.py",
+                "use_kanban": True,
+                "kanban_root": "docs/project-management/kanban",
+                "story_doc_pattern": "epics/Epic-{epic}/Story-{story}-*.md",
+            }
+
+            story_path = tmp / "docs" / "project-management" / "kanban" / "epics" / "Epic-6" / "Story-007-adk-implementation-analysis-and-package-management.md"
+            is_valid, errors = validate_version_bump(
+                version_file,
+                story_file=story_path,
+                config=config,
+                requested="E6:S07:T103",
+                art=True,
+                doc_policy_zero=True,
+            )
+            assert is_valid, f"doc-policy-zero should allow +0 for existing T103: {errors}"
+        finally:
+            os.chdir(orig_cwd)
+
+
 def test_parse_requested_task_id_formats():
     assert parse_requested_task_id("E2S01T13") == (2, 1, 13)
     assert parse_requested_task_id("E2:S01:T13") == (2, 1, 13)
@@ -298,11 +374,18 @@ def test_parse_requested_task_id_formats():
 
 
 def test_validate_version_bump_art_requires_task_alignment():
+    """--art + requested E:S:T must align with the Task document's Task ID."""
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
         orig_cwd = os.getcwd()
         try:
             os.chdir(tmp)
+            (tmp / "rw-config.yaml").write_text("""
+version_file: src/proj/version.py
+use_kanban: true
+kanban_root: docs/project-management/kanban
+story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
+""")
             version_dir = tmp / "src" / "proj"
             version_dir.mkdir(parents=True)
             version_file = version_dir / "version.py"
@@ -322,8 +405,8 @@ def test_validate_version_bump_art_requires_task_alignment():
             task_dir = story_dir / "Story-001-test"
             task_dir.mkdir(parents=True)
             story_file = story_dir / "Story-001-test.md"
-            story_file.write_text("- [x] **E2:S01:T10** - ✅ COMPLETE\n")
-            task_file = task_dir / "T10-test.md"
+            story_file.write_text("- [x] **E2:S01:T13** - ✅ COMPLETE\n")
+            task_file = task_dir / "T13-test.md"
             task_file.write_text(
                 "\n".join(
                     [
@@ -344,11 +427,17 @@ def test_validate_version_bump_art_requires_task_alignment():
             ok, errors = validate_version_bump(
                 version_file,
                 story_file=story_file,
-                requested_task=(2, 1, 13),
-                adopt_requested_task=True,
+                requested="E2:S01:T13",
+                art=True,
+                config={
+                    "version_file": "src/proj/version.py",
+                    "use_kanban": True,
+                    "kanban_root": "docs/project-management/kanban",
+                    "story_doc_pattern": "epics/Epic-{epic}/Story-{story}-*.md",
+                },
             )
             assert not ok
-            assert any("ART alignment error" in e for e in errors)
+            assert any("TASK ID MISMATCH" in e for e in errors)
         finally:
             os.chdir(orig_cwd)
 

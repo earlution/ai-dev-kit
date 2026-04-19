@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
-VERSION_STORY = 9     # Story number within epic
-VERSION_TASK = 3      # Task number (E6:S09:T03 — canonical repo alignment / FR-082)
-VERSION_BUILD = 1     # Build number (RW -d E6:S09:T03 --art)
+VERSION_STORY = 7     # Story number within epic
+VERSION_TASK = 103    # Task number (E6:S07:T103 — RW maintenance perpetual)
+VERSION_BUILD = 0     # Build number (doc-init: BR-067 + board; RW -d E6:S07:T103 --art, ENFORCED +0)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.9.3+1 = Development, Epic 6, Story 9, Task 3
+# Current: 0.6.7.103+0 = Development, Epic 6, Story 7, Task 103 (doc-init / +0)
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:
@@ -35,7 +35,7 @@ VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{V
 # - VERSION_STORY must match active story within epic
 # - VERSION_TASK must match active task within story
 # - VERSION_BUILD must be >= 0 (0 = doc-init/abstract space, 1+ = normal builds)
-# - BUILD = 0 is only valid for first-time E/S/T document creation (docs-only)
+# - BUILD = 0 is valid for first-time E/S/T document creation (docs-only), or existing anchors when policy requires +0 (validate_version_bump.py --doc-policy-zero with --requested/--art; see BR-067)
 # - BUILD >= 1 is required for functional changes
 # - Version must match branch context (validated by validate_branch_context.py)
 # - Version format validated by validate_changelog_format.py

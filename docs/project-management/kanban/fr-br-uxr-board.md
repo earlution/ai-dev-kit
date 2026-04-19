@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-19 (**E6:S09** — **FR-080 / FR-081 / FR-082**; tasks **T01–T03**)
-**Version Context:** v0.6.9.3+1 (**SemVer** v0.4.745+1); Story **E6:S09** RW tranches
+**Last Updated:** 2026-04-19 (**BR-067** — `--doc-policy-zero` mitigation + intake; prior **E6:S09** FR tranche)
+**Version Context:** v0.6.7.103+0 (**SemVer** v0.4.746+0); **E6:S07:T103** RW maintenance release
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -44,6 +44,7 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Should Have (S) - Important Items
 
+- **BR-067** – RW doc-only / intake releases default to BUILD+1 instead of doc-init +0 - OPEN (HIGH, versioning policy vs validate_version_bump / RW Step 2 defaults; **E6:S07:T103**) - [BR-067](fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md) | [E6:S07:T103](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) | Last modified: 2026-04-19 12:00 UTC
 - **FR-080** – End-to-end greenfield installation process - OPEN (HIGH, design + implement reproducible first-run adoption; **E6:S09:T01**) - [FR-080](fr-br/FR-080-greenfield-installation-process.md) | [E6:S09:T01](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md) | Last modified: 2026-04-19 12:00 UTC
 - **FR-081** – Brownfield modular adopter integration - OPEN (MEDIUM, operationalize ADR-003 — matrices, contract-first wiring; **E6:S09:T02**) - [FR-081](fr-br/FR-081-brownfield-modular-adopter-integration.md) | [E6:S09:T02](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T02-brownfield-modular-adopter-integration-fr081.md) | Last modified: 2026-04-19 12:00 UTC
 - **FR-077** – IPW-built task status transition and kboard synchronization - IN PROGRESS (HIGH, core ownership matrix + deterministic requested-task drift checks shipped in v0.2.1.17+3; monitor recurrence and adoption) - [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [E2:S01:T17](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | Last modified: 2026-04-14 12:48 UTC

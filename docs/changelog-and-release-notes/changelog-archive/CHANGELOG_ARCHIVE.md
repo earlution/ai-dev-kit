@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.6.7.103+0] - 19-04-26
+
+E6:S07:T103 — **RW -d** with **`--art`**, **BUILD +0**: `validate_version_bump --doc-policy-zero`, **BR-067** intake. SemVer **v0.4.746+0**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+0.md)
+---
 ## [0.2.1.11+2] - 10-04-26
 
 E2:S01:T11 — Change implemented: BR-062 expanded to full RW Step 7 mode; active kboard MoSCOW now prunes COMPLETE rows in both `kanban_init` and full mode. SemVer **v0.4.724+2**.
