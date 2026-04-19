@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.6.9.1+3] - 19-04-26
+
+E6:S09:T01 — **RW -d** follow-up: Wave 1 greenfield install specification locked. SemVer **v0.4.749+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+3.md)
+---
 ## [0.6.9.1+2] - 19-04-26
 
 E6:S09:T01 — **RW -d** with **`--art`**: greenfield-installation IPW decisions locked/documented, Story 009 / T01 wiring finalized. SemVer **v0.4.748+2**.

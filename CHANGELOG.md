@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.9.1+2] - 19-04-26
+## [0.6.9.1+3] - 19-04-26
 
-E6:S09:T01 — **RW -d** with **`--art`**: greenfield-installation IPW decisions locked and documented; Story 009 / T01 wiring finalized. SemVer **v0.4.748+2**.
+E6:S09:T01 — **RW -d** follow-up: Wave 1 greenfield install specification locked in `INSTALL_IN_YOUR_PROJECT.md` (default RW-first + override checkpoint, manual gates). SemVer **v0.4.749+3**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+3.md)

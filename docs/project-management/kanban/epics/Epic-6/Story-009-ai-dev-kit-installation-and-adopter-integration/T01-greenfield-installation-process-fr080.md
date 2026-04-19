@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Code:** E6S09T01
 
 **Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)  
-**Progress:** v0.6.9.1+2 — IPW decisions locked: Hybrid orchestration (C), Manual-gate verification, order-agnostic docs with RW-first default + override checkpoint, descriptive identifier policy.  
+**Progress:** v0.6.9.1+3 — **Wave 1 greenfield spec lock complete** in `INSTALL_IN_YOUR_PROJECT.md` (inputs/outputs, default RW-first + override checkpoint, manual gates, failure modes, logging posture).  
 
 ---
 

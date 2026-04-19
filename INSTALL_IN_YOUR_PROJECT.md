@@ -30,6 +30,85 @@ docs/documentation/user-docs/
 
 ## 🚀 Installation Methods
 
+## Greenfield Install Specification (Wave 1 lock)
+
+This section defines the canonical **greenfield** path for new or template projects per **FR-080** (E6:S09:T01).
+
+- Policy anchor: [ADR-003](docs/architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md)
+- Brownfield is separate: [FR-081](docs/project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md)
+- Planning artifact: [IPW-E6S09T01](docs/implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
+
+### Scope boundary
+
+- This spec is for **greenfield** setup only (empty/new template repos).
+- Brownfield adaptation and host-architecture-preserving integration stays in FR-081.
+
+### Inputs
+
+- Target project workspace (new/template repository).
+- Access to AI Dev Kit framework sources (release asset, submodule, or equivalent bundle).
+- Python runtime available for installer scripts.
+- Installers in scope:
+  - `packages/frameworks/workflow mgt/scripts/install_release_workflow.py`
+  - `packages/frameworks/kanban/scripts/install_kanban_framework.py`
+
+### Outputs
+
+- Framework assets copied/available in target project.
+- `rw-config.yaml` generated and aligned with project paths.
+- `.cursorrules` RW trigger section present/updated.
+- Kanban structure installed/validated for selected mode.
+- Manual verification gates completed and recorded.
+
+### Canonical ordering and override
+
+- **Default recommendation:** **RW-first, then Kanban**.
+  - Rationale: RW installer establishes `rw-config.yaml`; Kanban installer can consume `kanban_root` from that config.
+- **Critical checkpoint (user control):**
+  - Present both valid paths:
+    - Path A (default): RW -> Kanban
+    - Path B (override): Kanban -> RW
+  - Require explicit user confirmation for override path before continuing.
+  - If override is selected, capture a short rationale in the run notes.
+
+### Manual verification gates (primary completion criteria)
+
+1. **Config gate**  
+   Confirm `rw-config.yaml` exists and key paths point to real files/directories in the target repo.
+
+2. **Installer gate**  
+   Confirm both installers were executed (not copy-only installation).
+
+3. **Kanban gate**  
+   Confirm expected Kanban outputs exist at configured `kanban_root` and no blocking validation errors are reported by installer output.
+
+4. **RW readiness gate**  
+   Confirm RW assets required for trigger-based operation are present (`.cursorrules` RW section, validation script path assumptions documented).
+
+5. **Policy cross-link gate**  
+   Confirm greenfield docs still link ADR-003 and FR-081 for boundary clarity.
+
+### Failure modes and handling
+
+- **Missing Python dependency (e.g., PyYAML)**  
+  Action: install dependency and re-run installer.
+- **Installer path mismatch / missing scripts**  
+  Action: correct framework copy/acquisition path; do not bypass installers.
+- **Existing conflicting config files**  
+  Action: stop and reconcile manually; do not overwrite blindly.
+- **Kanban root mismatch with `rw-config.yaml`**  
+  Action: align `kanban_root` and rerun Kanban installer/validation.
+- **Order override introduces inconsistency**  
+  Action: return to default sequence and re-run from config gate.
+
+### Logging and analysis posture
+
+- Capture representative install run output for debugging/analysis.
+- If available, set `AI_DEV_KIT_INSTALL_LOG_PATH` so both installers append structured logs.
+- Keep logs scrubbed of secrets and machine-specific sensitive paths before sharing.
+
+---
+
 ### Method 1: GitHub Releases (Recommended - Available Now)
 
 Install framework packages directly from GitHub Releases:
