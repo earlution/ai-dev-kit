@@ -23,7 +23,27 @@ This directory (`portal/`) is the **[Docusaurus](https://docusaurus.io/)** site 
 - **Corpus hygiene:** Markdown path and heading/fragment discipline stays aligned with [FR-058](../docs/project-management/kanban/fr-br/FR-058-markdown-maintenance-workflow.md); out-of-tree targets should use repository or GitHub URLs, not bogus relative paths. Prefer explicit `{#stable-id}` on headings when deep links must survive title edits.
 - **Detail / history:** [Docusaurus corpus triage (FR-067)](../docs/maintenance/docusaurus-corpus-triage-fr-067.md); tasks **[E5:S09:T08](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T08-docusaurus-strict-broken-links-post-fr067.md)** (links), **[E5:S09:T10](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T10-docusaurus-strict-broken-anchors-post-t08.md)** (anchors).
 
-**FR-068** addresses navigation and sidebar information architecture (implemented in `sidebars.js` and the site homepage).
+### BR-068: Monorepo links outside the docs plugin (E5:S09:T11)
+
+The docs plugin only ingests **[`docs/`](../docs/)**. Markdown links that use **relative paths** to leave `docs/`—for example `../../../INSTALL_IN_YOUR_PROJECT.md` or `../../../../packages/frameworks/...`—**fail MDX resolution** and break **`npm run build`** because Docusaurus cannot treat those targets as in-corpus doc IDs (**[BR-068](../docs/project-management/kanban/fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)**). GitHub’s web UI resolves the same prose differently; the **published portal** does not.
+
+**Do this when linking from `docs/**/*.md` to the repo root, `packages/`, or any path outside `docs/`:**
+
+1. **Prefer canonical GitHub links** (this repo, default branch **`main`**):
+
+   ```markdown
+   [Install in your project](https://github.com/earlution/ai-dev-kit/blob/main/INSTALL_IN_YOUR_PROJECT.md)
+   ```
+
+   For framework paths, include the full path from the repository root after `/blob/main/` (e.g. `packages/frameworks/kanban/...`). If a directory name contains **spaces**, **percent-encode** them in the URL (e.g. `workflow%20mgt`).
+
+2. **Optional:** Add a **short page under `docs/`** (stub) if the portal must show an in-sidebar summary; link from that stub to the GitHub source. Avoid maintaining two long copies of the same document.
+
+3. **Do not** rely on **`warn`** for `onBrokenMarkdownLinks` to “paper over” bad relatives—the site ships with **`throw`** (**FR-067** / **E5:S09:T08**).
+
+**Planning:** [IPW-E5S09T11](../docs/implementation-cycles/IPW-E5S09T11-docusaurus-monorepo-markdown-links-br068.md). **Host task:** [E5:S09:T11](../docs/project-management/kanban/epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md).
+
+**FR-068 (sidebar IA)** is separate: navigation and sidebar information architecture (implemented in `sidebars.js` and the site homepage).
 
 ### Sidebar ↔ `docs/` mapping (FR-068)
 

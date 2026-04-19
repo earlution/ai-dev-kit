@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Severity:** HIGH — **`portal/` `npm run build`** fails under strict link/MDX rules; browsable docs site cannot be regenerated reliably while the corpus uses cross-root relative links common in GitHub-native authoring.  
 **Created:** 2026-04-19  
 **Last updated:** 2026-04-19  
-**Version:** v0.5.9.11+1  
+**Version:** v0.5.9.11+2  
 **Code:** BR-068  
 
 **Implementing Task:** [E5:S09:T11](../epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)

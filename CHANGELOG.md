@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.9.11+1] - 19-04-26
+## [0.5.9.11+2] - 19-04-26
 
-E5:S09:T11 — **RW -k** with **`--art`**: BR-068 intake + T11 anchor (Docusaurus MDX monorepo links / strict portal build). SemVer **v0.4.755+1**.
+E5:S09:T11 — **RW** with **`--art`**: Wave 1 policy lock (IPW §1.5, `portal/README` BR-068 linking rules, triage row). SemVer **v0.4.756+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+2.md)

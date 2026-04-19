@@ -13,11 +13,17 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium–Large (policy + corpus and/or plugin boundary changes)  
 **Created:** 2026-04-19  
-**Last updated:** 2026-04-19 (v0.5.9.11+1 — **RW -k** with **`--art`**)  
+**Last updated:** 2026-04-19 (**v0.5.9.11+2** — **RW** **`--art`** Wave 1 ship; prior **v0.5.9.11+1** intake)  
 **Code:** E5S09T11  
-**Version anchor:** v0.5.9.11+1 (intake; implementation work continues)  
+**Version anchor:** v0.5.9.11+2 (Wave 1 policy + IPW + portal README; Wave 2 corpus TBD)  
 
 **Origin:** **[BR-068](../../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** — strict MDX resolution (`onBrokenMarkdownLinks: 'throw'`) fails on relative links from `docs/` to repository paths outside the `@docusaurus/plugin-content-docs` root (`../docs`), including **`INSTALL_IN_YOUR_PROJECT.md`** (repo root) and **`packages/frameworks/...`**.
+
+---
+
+## Progress
+
+- **2026-04-19 — Wave 1 (policy lock):** **[IPW §1.5](../../../../../implementation-cycles/IPW-E5S09T11-docusaurus-monorepo-markdown-links-br068.md)** locked **Strategy A** (GitHub blob URLs + optional stubs; rejects B/C as blanket approaches). Contributor rules landed in **[portal/README.md](../../../../../../portal/README.md#br-068-monorepo-links-outside-the-docs-plugin-e5s09t11)** and **[docusaurus-corpus-triage-fr-067.md](../../../../../maintenance/docusaurus-corpus-triage-fr-067.md)** (**Failure classes** row). **Next:** Wave 2 corpus normalization pass.
 
 ---
 
@@ -31,6 +37,7 @@ housekeeping_policy: keep
 
 ## Input
 
+- **[IPW – spec, tests, implementation plan](../../../../../implementation-cycles/IPW-E5S09T11-docusaurus-monorepo-markdown-links-br068.md)** (**E5:S09:T11** / **BR-068**)
 - [BR-068](../../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)
 - [FR-067](../../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md) — strict mode intent; T08/T10 follow-ups
 - [`portal/docusaurus.config.js`](../../../../../../portal/docusaurus.config.js)
@@ -55,4 +62,5 @@ housekeeping_policy: keep
 
 ## References
 
+- [IPW-E5S09T11](../../../../../implementation-cycles/IPW-E5S09T11-docusaurus-monorepo-markdown-links-br068.md)
 - Docusaurus: [Markdown links](https://docusaurus.io/docs/markdown-features/links), [Multiple docs plugins](https://docusaurus.io/docs/docs-multi-instance/) (if considering split roots)
