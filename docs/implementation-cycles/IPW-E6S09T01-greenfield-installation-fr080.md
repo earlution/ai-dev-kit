@@ -145,6 +145,8 @@ Normative prose (ordering, checkpoints, identifiers) must not run ahead of locke
 | 5.1 | Update **FR-080** checkboxes / **T01** acceptance with evidence links. | **AC1** closure or explicit deferrals. |
 | 5.2 | Align with **E6:S09:T03** if copy-paste examples depend on canonical coordinates. | Coordination note in task Progress. |
 
+**Delivered (Wave 5):** [FR-080](../project-management/kanban/fr-br/FR-080-greenfield-installation-process.md) functional/NFR boxes checked with **Implementation evidence** section; [T01](../project-management/kanban/epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md) acceptance criteria checked with evidence links; **T03** coordination sentence under task Dependencies.
+
 **Files likely touched (living list):**
 
 - [`INSTALL_IN_YOUR_PROJECT.md`](../../INSTALL_IN_YOUR_PROJECT.md)
@@ -157,12 +159,12 @@ Normative prose (ordering, checkpoints, identifiers) must not run ahead of locke
 
 ## 4. Success / verification criteria
 
-- [ ] Task **AC1:** FR-080 requirements satisfied or deferred with rationale in FR/task.
-- [ ] Task **AC2:** Documented scenario runs end-to-end without undocumented manual steps.
+- [x] Task **AC1:** FR-080 requirements satisfied or deferred with rationale in FR/task ([FR-080](../project-management/kanban/fr-br/FR-080-greenfield-installation-process.md)).
+- [x] Task **AC2:** Documented scenario runs end-to-end without undocumented manual steps ([`INSTALL_IN_YOUR_PROJECT.md`](../../INSTALL_IN_YOUR_PROJECT.md) Wave 4 reference + Method 2 path).
 - [x] Task **AC3:** Install docs link **ADR-003** and **FR-081**.
 - [x] **F3** evidenced: installers are part of the canonical greenfield story.
 - [x] **§1.6:** Example/reference run + logging posture documented; aligned with **FR-078** / **FR-079** boundaries ([`INSTALL_IN_YOUR_PROJECT.md`](../../INSTALL_IN_YOUR_PROJECT.md) Wave 4).
-- [ ] Bidirectional wiring: this IPW ↔ host task remain linked.
+- [x] Bidirectional wiring: this IPW ↔ host task remain linked ([T01](../project-management/kanban/epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md)).
 
 ---
 

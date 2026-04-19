@@ -21,12 +21,12 @@ VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candida
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management and Maintenance)
 VERSION_STORY = 9     # Story number within epic
 VERSION_TASK = 1      # Task number (E6:S09:T01 — Greenfield installation process / FR-080)
-VERSION_BUILD = 7     # Build number (Wave 3 user-docs sweep + IPW cadence; RW E6:S09:T01 --art)
+VERSION_BUILD = 8     # Build number (Wave 4 + Wave 5 traceability; RW E6:S09:T01 --art)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.9.1+7 = Development, Epic 6, Story 9, Task 1, Build 7
+# Current: 0.6.9.1+8 = Development, Epic 6, Story 9, Task 1, Build 8
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-18 (MoSCOW board prune — **E7:S06:T18**, **E2:S15:T01** archived here)
-**Version:** v0.6.7.101+45 *(from `version.py` at RW **E6:S07:T101**)*
+**Last Updated:** 2026-04-19 (**E6:S09:T01** complete — **FR-080** greenfield path)
+**Version:** v0.6.9.1+8 *(from `version.py` at RW **E6:S09:T01**)*
 
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -19,6 +19,10 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 6: Framework Management (Story 9 — Installation and adopter integration)**
+- **[E6:S09:T01](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md)** — **FR-080** end-to-end **greenfield** installation: spec + `install_greenfield_path.py` + INSTALL/user-docs + Wave 4 validators / reference transcript + Wave 5 FR/T01/IPW traceability; **[FR-080](fr-br/FR-080-greenfield-installation-process.md)** **IMPLEMENTED**.  
+  **Completed:** `2026-04-19T17:10:00Z` | **Version:** `v0.6.9.1+8` | **Agent:** `RW Agent`
 
 #### **Epic 7: Codebase Maintenance (Story 6 — Post-Windsurf Project Review)**
 - **[E7:S06:T18](epics/Epic-7/Story-006-post-windsurf-project-review/T18-interactive-installer-kanban-pattern-prompt-clarity.md)** — **UXR-007** interactive installer Kanban pattern / prompt clarity; publication-aligned ICW split; RW **v0.7.6.18+3** (task-touch SemVer traceability).  

@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** Maintainer (design session)  
 **Priority:** HIGH  
 **Severity:** MEDIUM  
-**Status:** OPEN
+**Status:** IMPLEMENTED (deliverables on **`dev`** via **E6:S09:T01**; see § Implementation evidence)
 
 **Implementing Task:** [E6:S09:T01](../epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md)
 
@@ -36,16 +36,27 @@ Installation guidance today mixes methods (submodule copy, GitHub Releases, futu
 
 ### Functional Requirements
 
-- [ ] **FR-080-F1:** Produce a **greenfield installation specification** (inputs, outputs, ordering, failure modes) aligned with Epic 6 scope (framework distribution and adoption).
-- [ ] **FR-080-F2:** Implement or orchestrate the **greenfield path** so it can be executed reproducibly (scripts, CLI hooks, and/or documented automation—exact mechanism decided during implementation).
-- [ ] **FR-080-F3:** Integrate **mandatory installer steps** for chosen frameworks (e.g. Release Workflow installer, Kanban installer where in scope) so raw copy alone is never the only story.
-- [ ] **FR-080-F4:** Provide **verification gates** (validators, smoke checks, or checklist) that confirm the greenfield install before the adopter considers the process complete.
-- [ ] **FR-080-F5:** Publish **adopter-facing documentation** (`INSTALL_IN_YOUR_PROJECT.md`, user-docs) that describes **only the greenfield happy path** clearly, with pointers to brownfield/modular adoption (FR-081, ADR-003).
+- [x] **FR-080-F1:** Produce a **greenfield installation specification** (inputs, outputs, ordering, failure modes) aligned with Epic 6 scope (framework distribution and adoption).
+- [x] **FR-080-F2:** Implement or orchestrate the **greenfield path** so it can be executed reproducibly (scripts, CLI hooks, and/or documented automation—exact mechanism decided during implementation).
+- [x] **FR-080-F3:** Integrate **mandatory installer steps** for chosen frameworks (e.g. Release Workflow installer, Kanban installer where in scope) so raw copy alone is never the only story.
+- [x] **FR-080-F4:** Provide **verification gates** (validators, smoke checks, or checklist) that confirm the greenfield install before the adopter considers the process complete.
+- [x] **FR-080-F5:** Publish **adopter-facing documentation** (`INSTALL_IN_YOUR_PROJECT.md`, user-docs) that describes **only the greenfield happy path** clearly, with pointers to brownfield/modular adoption (FR-081, ADR-003).
 
 ### Non-Functional Requirements
 
-- [ ] **FR-080-NF1:** Greenfield defaults must remain **maintainable** when framework packages version independently (framework README vs monorepo version policy).
-- [ ] **FR-080-NF2:** Process must align with existing install logging and feedback contracts where applicable ([FR-078](./FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md), [FR-079](./FR-079-install-feedback-submission-path-and-governance.md)).
+- [x] **FR-080-NF1:** Greenfield defaults must remain **maintainable** when framework packages version independently (framework README vs monorepo version policy).
+- [x] **FR-080-NF2:** Process must align with existing install logging and feedback contracts where applicable ([FR-078](./FR-078-comprehensive-install-event-contract-logging-and-feedback-quality.md), [FR-079](./FR-079-install-feedback-submission-path-and-governance.md)).
+
+### Implementation evidence (E6:S09:T01)
+
+Primary artifacts (dev-kit repo):
+
+- [`INSTALL_IN_YOUR_PROJECT.md`](../../../../INSTALL_IN_YOUR_PROJECT.md) — Wave 1–4 greenfield specification, orchestrator usage, manual gates, Wave 4 post-install validators and reference transcript.
+- [`install_greenfield_path.py`](../../../../packages/frameworks/workflow%20mgt/scripts/install_greenfield_path.py) — hybrid orchestration (RW-first default, checkpoint override).
+- [`IPW-E6S09T01`](../../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md) — planning / decisions / wave traceability.
+- User-docs under [`docs/documentation/user-docs/`](../../../documentation/user-docs/) — scope sections (greenfield vs brownfield) per Wave 3.
+
+**Explicit deferrals (owned elsewhere):** Full install **telemetry product** contracts remain under **FR-078** / **FR-079**; T01 documents boundaries and log capture (`AI_DEV_KIT_INSTALL_LOG_PATH`). **Canonical distribution coordinates** / copy-paste URL policy are **FR-082 / E6:S09:T03**, not blocking F1–F5 above.
 
 ---
 

@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.6.9.1+8] - 19-04-26
+
+E6:S09:T01 — **RW** with **`--art`**: Wave 5 traceability (FR-080 + T01 + IPW); FR-080 IMPLEMENTED. SemVer **v0.4.754+8**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+8.md)
+---
 ## [0.6.9.1+7] - 19-04-26
 
 E6:S09:T01 — **RW** with **`--art`**: Wave 3 user-docs completeness sweep + IPW parallel-documentation cadence. SemVer **v0.4.753+7**.

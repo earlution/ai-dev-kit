@@ -9,14 +9,16 @@ housekeeping_policy: keep
 # Epic 6, Story 9, Task 1: Greenfield installation process (FR-080)
 
 **Task ID:** E6:S09:T01  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-19  
 **Code:** E6S09T01
 
+**Version Anchor:** v0.6.9.1+8 (FR-080 **IMPLEMENTED**; closure release)
+
 **Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)  
-**Progress:** Wave 4 **verification + reference run + telemetry boundaries** landed in **`INSTALL_IN_YOUR_PROJECT.md`** (post-install validators per `rw-config.yaml`/`scripts_path`, synthetic transcript, FR-078/FR-079 pointers); cross-linked from **`framework-dependency-installation-guide.md`** greenfield scope. Wave 3 user-docs completeness sweep shipped **v0.6.9.1+7**. Prior: v0.6.9.1+6, v0.6.9.1+5 (Wave 3 tranches).  
+**Progress:** Wave 5 **traceability**: [FR-080](../../../fr-br/FR-080-greenfield-installation-process.md) requirement boxes + implementation evidence; T01 acceptance criteria satisfied with evidence links; **T03**/FR-082 deferral noted under Dependencies. Waves 1–4 shipped (orchestration, docs, validators, FR-078/079 boundaries); **v0.6.9.1+8** releases Wave 4 narrative + Wave 5 closure docs.  
 
 ---
 
@@ -60,15 +62,15 @@ Greenfield adopters need a **single, reproducible first-run path** from acquisit
 
 ## Acceptance criteria
 
-- [ ] **AC1:** FR-080 functional and non-functional requirements addressed or explicitly deferred with recorded rationale.
-- [ ] **AC2:** A documented scratch or template scenario runs end-to-end without undocumented manual steps.
-- [ ] **AC3:** Install docs cross-link [ADR-003](../../../../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) and [FR-081](../../../fr-br/FR-081-brownfield-modular-adopter-integration.md).
+- [x] **AC1:** FR-080 functional and non-functional requirements addressed or explicitly deferred with recorded rationale — see [FR-080](../../../fr-br/FR-080-greenfield-installation-process.md) § Implementation evidence and deferrals.
+- [x] **AC2:** A documented scratch or template scenario runs end-to-end without undocumented manual steps — [`INSTALL_IN_YOUR_PROJECT.md`](../../../../../INSTALL_IN_YOUR_PROJECT.md) (Method 2 + orchestrator + Wave 4 synthetic reference transcript); live runs occur in the adopter workspace.
+- [x] **AC3:** Install docs cross-link [ADR-003](../../../../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md) and [FR-081](../../../fr-br/FR-081-brownfield-modular-adopter-integration.md).
 
 ---
 
 ## Dependencies / coordination
 
-- **FR-082 / E6:S09:T03:** Canonical repo defaults should align greenfield copy-paste examples (optional ordering: fix defaults early).
+- **FR-082 / E6:S09:T03:** Canonical repo defaults should align greenfield copy-paste examples (optional ordering: fix defaults early). **Wave 5 note:** Installer examples use **descriptive paths** and submodule-style layout; swapping default clone URLs/org remains **T03 / FR-082** (tracked; not a blocker for FR-080 F1–F5 closure on this task).
 - **FR-078 / FR-079:** Preserve compatibility with install logging and feedback submission where applicable.
 
 ---

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.9.1+7] - 19-04-26
+## [0.6.9.1+8] - 19-04-26
 
-E6:S09:T01 — **RW** with **`--art`**: Wave 3 user-docs completeness sweep + IPW parallel-documentation cadence. SemVer **v0.4.753+7**.
+E6:S09:T01 — **RW** with **`--art`**: Wave 5 traceability (FR-080 evidence, T01 AC, IPW §4); FR-080 **IMPLEMENTED**. SemVer **v0.4.754+8**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+7.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+8.md)

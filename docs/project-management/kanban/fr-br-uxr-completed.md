@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-04-18 (UKW + RW **E6:S07:T101+45**: **UXR-007** closed with **E7:S06:T18** **v0.7.6.18+3**)
-**Version:** v0.6.7.101+45
+**Last Updated:** 2026-04-19 (RW **E6:S09:T01+8**: **FR-080** IMPLEMENTED)
+**Version:** v0.6.9.1+8
 
 > **For open FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
 > **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
@@ -34,6 +34,7 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| FR-080 | FR | End-to-end greenfield installation process — INSTALL + orchestrator + user-docs + validators / evidence (**E6:S09:T01**) | 2026-04-19 | v0.6.9.1+8 | RW Agent |
 | UXR-007 | UXR | Interactive installer Kanban pattern prompt clarity — installer UX + ICW publication alignment (**E7:S06:T18**) | 2026-04-18 | v0.7.6.18+3 | UKW Agent |
 | BR-063 | BR | RW `-k` task attribution drift vs `version.py` anchor — forensic-strict guard, `--art`, version validation, tests, docs | 2026-04-07 | v0.2.1.13+2 | RW Agent |
 | FR-075 | FR | ICW durable planning artifacts — repo SoT under `docs/implementation-cycles/`, policy, ICW docs, `.cursorrules` | 2026-04-01 | v0.5.1.75+1 | RW Agent |
@@ -43,6 +44,16 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 | BR-054 | BR | Kanban Package Migration/Installation Completely Broken | 2026-03-12T13:20:00Z | v0.24.2.1+1 | Documentation Agent |
 | BR-009 | BR | Installer Discoverability and Documentation | 2026-03-09T16:00:00Z | v0.6.7.104+2 | RW Agent |
 | FR-051 | FR | FR/BR/UXR Prioritization Board | 2026-03-09T15:20:00Z | v0.6.7.107+1 | Documentation Agent |
+
+---
+
+### 2026-04-19
+
+**FR-080 – End-to-end greenfield installation process**  
+**Completed:** 2026-04-19 (`v0.6.9.1+8`)  
+**Implementing Task:** [E6:S09:T01](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md)  
+**Completing Agent:** RW Agent  
+**Resolution:** Functional + non-functional requirements satisfied per **Implementation evidence** on [FR-080](fr-br/FR-080-greenfield-installation-process.md); deferrals explicit (FR-078/079 product telemetry, FR-082/T03 canonical coordinates). Row removed from [`fr-br-uxr-board.md`](fr-br-uxr-board.md).
 
 ---
 
