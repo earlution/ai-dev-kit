@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.5.9.11+1] - 19-04-26
+
+E5:S09:T11 — **RW -k** with **`--art`**: BR-068 intake + T11 anchor (Docusaurus MDX monorepo links). SemVer **v0.4.755+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+1.md)
+---
 ## [0.6.9.1+8] - 19-04-26
 
 E6:S09:T01 — **RW** with **`--art`**: Wave 5 traceability (FR-080 + T01 + IPW); FR-080 IMPLEMENTED. SemVer **v0.4.754+8**.

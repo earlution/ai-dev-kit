@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.9.1+8] - 19-04-26
+## [0.5.9.11+1] - 19-04-26
 
-E6:S09:T01 — **RW** with **`--art`**: Wave 5 traceability (FR-080 evidence, T01 AC, IPW §4); FR-080 **IMPLEMENTED**. SemVer **v0.4.754+8**.
+E5:S09:T11 — **RW -k** with **`--art`**: BR-068 intake + T11 anchor (Docusaurus MDX monorepo links / strict portal build). SemVer **v0.4.755+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+8.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.9.11+1.md)

@@ -1,0 +1,57 @@
+---
+lifecycle: evergreen
+ttl_days: null
+created_at: 2026-04-19T12:00:00Z
+expires_at: null
+housekeeping_policy: keep
+---
+
+# Epic 5, Story 9, Task 11: Monorepo cross-root Markdown link resolution (**BR-068**)
+
+**Task ID:** E5:S09:T11  
+**Status:** IN PROGRESS  
+**Priority:** HIGH  
+**Estimated Effort:** Medium–Large (policy + corpus and/or plugin boundary changes)  
+**Created:** 2026-04-19  
+**Last updated:** 2026-04-19  
+**Code:** E5S09T11  
+
+**Origin:** **[BR-068](../../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** — strict MDX resolution (`onBrokenMarkdownLinks: 'throw'`) fails on relative links from `docs/` to repository paths outside the `@docusaurus/plugin-content-docs` root (`../docs`), including **`INSTALL_IN_YOUR_PROJECT.md`** (repo root) and **`packages/frameworks/...`**.
+
+---
+
+## Purpose (why this exists)
+
+- **[E5:S09:T08](./T08-docusaurus-strict-broken-links-post-fr067.md)** and **[E5:S09:T10](./T10-docusaurus-strict-broken-anchors-post-t08.md)** correctly enforced **throw** semantics for links and anchors **within** the docs plugin corpus.
+- A **remaining class** of failures is **not** “wrong path in GitHub view” but **paths that leave the docs plugin filesystem root** — Docusaurus MDX cannot resolve them as internal doc links.
+- Without a **documented linking policy** (stubs, mirrors, `pathname://`, GitHub URLs, narrow `exclude`, additional `plugin-content-docs` instances, etc.), **`cd portal && npm run build`** stays red and the **publish pipeline is blocked**.
+
+---
+
+## Input
+
+- [BR-068](../../../fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)
+- [FR-067](../../../fr-br/FR-067-docusaurus-production-build-corpus-triage.md) — strict mode intent; T08/T10 follow-ups
+- [`portal/docusaurus.config.js`](../../../../../../portal/docusaurus.config.js)
+- [`docs/maintenance/docusaurus-corpus-triage-fr-067.md`](../../../../../maintenance/docusaurus-corpus-triage-fr-067.md) — failure classes (update when policy is chosen)
+
+---
+
+## Deliverable
+
+- **`npm run build`** (from `portal/`) exits **0** with strict hooks unchanged **or** an explicit, documented adjustment to strictness tied to an approved strategy.
+- **Contributor-facing rule** for links to repo root `INSTALL_*`, `packages/**`, and similar — recorded in `portal/README.md` and/or maintenance doc.
+- PR-sized verification: representative pages that previously failed MDX (INSTALL pointers; framework paths from Kanban/FR docs) behave per policy.
+
+---
+
+## Acceptance Criteria
+
+- [ ] BR-068 acceptance criteria satisfied (cross-check list in report).
+- [ ] No unexplained regression in **internal** link/anchor strictness vs FR-067 policy (document any intentional relaxation).
+
+---
+
+## References
+
+- Docusaurus: [Markdown links](https://docusaurus.io/docs/markdown-features/links), [Multiple docs plugins](https://docusaurus.io/docs/docs-multi-instance/) (if considering split roots)
