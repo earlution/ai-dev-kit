@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.6.9.1+4] - 19-04-26
+## [0.6.9.1+5] - 19-04-26
 
-E6:S09:T01 — **RW** with **`--art`**: Wave 2 greenfield orchestration implemented (`install_greenfield_path.py`) with RW-first default and explicit override path. SemVer **v0.4.750+4**.
+E6:S09:T01 — **RW** with **`--art`**: Wave 3 user-doc alignment tranche 1 (greenfield scope + ADR-003/FR-081 boundary links). SemVer **v0.4.751+5**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.9.1+5.md)

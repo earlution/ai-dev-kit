@@ -23,6 +23,24 @@ This guide explains how to install ai-dev-kit frameworks as dependencies in your
 
 **What you get:** Frameworks installed as dependencies can be automatically updated when improvements are made, with notifications about available updates. This replaces the previous copy-paste approach.
 
+### Greenfield first-run scope (FR-080)
+
+This guide now distinguishes the **greenfield** first-run path from brownfield adoption:
+
+- **Greenfield (this track):** Start from a new/template repository and run installer-driven setup with explicit verification.
+- **Brownfield (separate track):** Integrate into an existing architecture with modular surfaces and host-owned constraints.
+
+For policy and boundaries:
+
+- [ADR-003 – Greenfield vs Brownfield adoption](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md)
+- [FR-081 – Brownfield modular adopter integration](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md)
+- [FR-080 implementing task (E6:S09:T01)](../../project-management/kanban/epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T01-greenfield-installation-process-fr080.md)
+- [IPW-E6S09T01 planning package](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
+
+For the current canonical greenfield sequence (default RW-first with explicit override checkpoint), see:
+
+- [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)
+
 ---
 
 ## Prerequisites

@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Code:** E6S09T01
 
 **Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)  
-**Progress:** Wave 2 in progress — added `install_greenfield_path.py` orchestrator (hybrid flow) and wired INSTALL docs to default RW-first with explicit override checkpoint. Prior: v0.6.9.1+3 Wave 1 spec lock.  
+**Progress:** v0.6.9.1+5 — Wave 3 tranche 1 complete: user-doc narrative aligned to greenfield scope with explicit ADR-003 / FR-081 boundary links and FR-080/T01 traceability. Prior: Wave 2 orchestrator `install_greenfield_path.py`.  
 
 ---
 
