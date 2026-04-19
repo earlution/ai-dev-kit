@@ -21,6 +21,11 @@ housekeeping_policy: keep
 
 This guide walks you through the essential setup steps after creating a new project from the ai-dev-kit template. Follow these steps to customize the template for your project and get started with all frameworks.
 
+For the locked greenfield-first sequence and verification gates, pair this guide with:
+
+- [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)
+- [IPW-E6S09T01](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
+
 **When to Use This Guide:**
 - You just created a repository from the ai-dev-kit template
 - You want to customize the template for your project

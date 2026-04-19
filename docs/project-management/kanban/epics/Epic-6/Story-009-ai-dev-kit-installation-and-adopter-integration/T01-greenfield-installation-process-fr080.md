@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Code:** E6S09T01
 
 **Upstream:** [FR-080 - End-to-end greenfield installation process](../../../fr-br/FR-080-greenfield-installation-process.md)  
-**Progress:** v0.6.9.1+5 — Wave 3 tranche 1 complete: user-doc narrative aligned to greenfield scope with explicit ADR-003 / FR-081 boundary links and FR-080/T01 traceability. Prior: Wave 2 orchestrator `install_greenfield_path.py`.  
+**Progress:** Wave 3 tranche 2 released (**v0.6.9.1+6**): integration / use-cases / post-template user docs aligned to greenfield-first pointers (`INSTALL_IN_YOUR_PROJECT.md`, IPW-E6S09T01) and ADR-003 / FR-081 boundaries. Prior: v0.6.9.1+5 tranche 1.  
 
 ---
 

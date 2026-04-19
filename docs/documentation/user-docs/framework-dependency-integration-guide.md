@@ -21,6 +21,16 @@ housekeeping_policy: keep
 
 This guide explains how to integrate AI Dev Kit frameworks into existing projects, migrate from copy-paste to dependency-based installation, and integrate frameworks with CI/CD pipelines.
 
+### Scope boundary (greenfield vs brownfield)
+
+- This guide primarily supports **integration / migration** flows for existing repositories.
+- For the canonical **greenfield first-run** sequence (FR-080 / E6:S09:T01), use:
+  - [`INSTALL_IN_YOUR_PROJECT.md`](../../../INSTALL_IN_YOUR_PROJECT.md)
+  - [IPW-E6S09T01 planning package](../../implementation-cycles/IPW-E6S09T01-greenfield-installation-fr080.md)
+- Brownfield policy anchor remains:
+  - [ADR-003](../../architecture/standards-and-adrs/ADR-003-greenfield-vs-brownfield-adoption.md)
+  - [FR-081](../../project-management/kanban/fr-br/FR-081-brownfield-modular-adopter-integration.md)
+
 **Use Cases:**
 - Migrating existing projects from copy-paste to dependencies
 - Integrating frameworks into new projects
