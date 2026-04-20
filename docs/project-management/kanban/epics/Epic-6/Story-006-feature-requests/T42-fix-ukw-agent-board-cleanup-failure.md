@@ -232,7 +232,7 @@ Fix the UKW Agent's board cleanup functionality to ensure completed tasks are pr
 
 ### Related Tasks
 - **E6:S06:T41** - AGENTS.md and SKILL.md implementation (enables this fix)
-- **E6:S07:T101** - Update Kanban Workflow (UKW) - Perpetual Task (ongoing UKW maintenance context)
+- **E2:S16:T03** - Update Kanban Workflow (UKW) - Perpetual Task (ongoing UKW maintenance context)
 - **E6:S06:T02** - Release Workflow micromanagement issues (agent behavior patterns)
 
 ### Related Bug Reports
@@ -244,7 +244,7 @@ Fix the UKW Agent's board cleanup functionality to ensure completed tasks are pr
 - **FR-010** - Implement actual agentic intelligence task mapping
 
 ### Perpetual Task Context
-This task addresses a **specific defect** in the UKW Agent system. After completion, ongoing UKW maintenance and improvements should be attributed to **E6:S07:T101** (UKW Perpetual Task). This follows the established pattern where:
+This task addresses a **specific defect** in the UKW Agent system. After completion, ongoing UKW maintenance and improvements should be attributed to **E2:S16:T03** (UKW Perpetual Task). This follows the established pattern where:
 - **T42** - Specific bug fixes and one-time improvements  
 - **T101** - Ongoing perpetual maintenance and routine UKW operations
 

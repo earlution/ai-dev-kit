@@ -25,7 +25,7 @@ Change implemented: follow-up FR/BR board normalization release to fix BR-061 cr
 
 ## Related Work
 
-- **Task:** E6:S07:T101
+- **Task:** E2:S16:T03
 - **Workflow:** RW -k (perpetual maintenance path)
 
 ## Notes

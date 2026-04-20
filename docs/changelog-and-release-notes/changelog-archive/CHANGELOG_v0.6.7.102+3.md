@@ -68,7 +68,7 @@ This release documents the execution of the Changelog Management Workflow (CMW),
 
 ## Related Work
 
-- **Task:** E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task
+- **Task:** E2:S16:T03 - Changelog Maintenance Workflow (CMW) - Perpetual Task
 - **Previous CMW Release:** v0.6.7.102+2 - CMW: Fixed ordering (Step 3.5), archived 50 entries
 - **CMW Documentation:** `packages/frameworks/workflow mgt/scripts/changelog/README.md`
 

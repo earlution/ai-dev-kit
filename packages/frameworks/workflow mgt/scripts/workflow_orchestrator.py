@@ -73,7 +73,7 @@ def parse_rw_trigger(trigger_str: str) -> TriggerType:
         raise ValueError("Unknown trigger: empty")
 
     # Accept task token / extra args after trigger, e.g.:
-    # "RW E2:S01:T13", "RW -k E2S01T13 --art", "RW -d E6:S07:T102"
+    # "RW E2:S01:T13", "RW -k E2S01T13 --art", "RW -d E2:S16:T03"
     if normalized.startswith("RW -K"):
         return TriggerType.RW_K
     if normalized.startswith("RW -D"):

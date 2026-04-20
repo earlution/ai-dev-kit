@@ -269,7 +269,7 @@ The video shows the actual execution of the Release Workflow for the FR/BR/UXR b
 - **FR-040:** RW Update Kanban Board on Task Completion (automation improvements)
 
 ### Related Tasks
-- **E6:S07:T103:** Release Workflow Maintenance (perpetual task for RW improvements)
+- **E2:S16:T03:** Release Workflow Maintenance (perpetual task for RW improvements)
 - **E6:S07:T104:** Release Automation Audit (comprehensive audit of release systems)
 
 ---

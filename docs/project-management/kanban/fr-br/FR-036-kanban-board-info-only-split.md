@@ -152,7 +152,7 @@ User opens `kboard.md` to quickly scan active tasks and epic status. Sees only s
 
 **Related Work:**
 - **E4:S13:** Kanban Board Enhancement - MoSCOW Prioritized Task View (board structure foundation)
-- **E6:S07:T101:** Update Kanban Workflow (UKW) - May need to update to maintain both documents
+- **E2:S16:T03:** Update Kanban Workflow (UKW) - May need to update to maintain both documents
 
 ---
 

@@ -141,8 +141,8 @@ Define the implementation expectations baseline for the Workflow Management fram
 **Trigger:** User types "RW" or "rw" (case-insensitive) in AI assistant
 
 **Context Detection:**
-- **UKW Context:** User ran "UKW" then "RW" → Attributes to perpetual UKW task (E6:S07:T101)
-- **CMW Context:** User ran "CMW" then "RW" → Attributes to perpetual CMW task (E6:S07:T102)
+- **UKW Context:** User ran "UKW" then "RW" → Attributes to perpetual UKW task (E2:S16:T03)
+- **CMW Context:** User ran "CMW" then "RW" → Attributes to perpetual CMW task (E2:S16:T03)
 - **Normal Context:** Reads Story file to identify completed task
 
 **Agent Execution Pattern:**
@@ -161,7 +161,7 @@ Define the implementation expectations baseline for the Workflow Management fram
 **Key Features:**
 - Agent-driven execution (requires intelligent reasoning)
 - Bottom-up approach (Tasks → Stories → Epics → Board)
-- Perpetual task attribution (E6:S07:T101)
+- Perpetual task attribution (E2:S16:T03)
 - MoSCOW prioritization (updated LAST)
 
 **The 8 Steps:**
@@ -207,7 +207,7 @@ Define the implementation expectations baseline for the Workflow Management fram
 - Manual: User types "CMW" or "cmw" (case-insensitive)
 - Cron: Scheduled execution (recommended: weekly)
 
-**Perpetual Task Attribution:** E6:S07:T102
+**Perpetual Task Attribution:** E2:S16:T03
 
 ---
 
@@ -468,7 +468,7 @@ Define the implementation expectations baseline for the Workflow Management fram
 **Pattern:**
 - Projects create perpetual UKW task for UKW release attribution
 - Task must have `perpetual_task: true` or `Task Type: Perpetual Maintenance` flag
-- Task ID varies by project (e.g., E6:S07:T101 in ai-dev-kit)
+- Task ID varies by project (e.g., E2:S16:T03 in ai-dev-kit)
 - BUILD number = UKW run count (high BUILD numbers expected and valid)
 - RW detects UKW context and auto-attributes to perpetual task
 
@@ -481,7 +481,7 @@ Define the implementation expectations baseline for the Workflow Management fram
 **Pattern:**
 - Projects create perpetual CMW task for CMW maintenance release attribution
 - Task must have `Task Type: Perpetual Maintenance` flag
-- Task ID varies by project (e.g., E6:S07:T102 in ai-dev-kit)
+- Task ID varies by project (e.g., E2:S16:T03 in ai-dev-kit)
 - BUILD number = CMW run count (high BUILD numbers expected and valid)
 - RW detects CMW context and auto-attributes to perpetual task
 

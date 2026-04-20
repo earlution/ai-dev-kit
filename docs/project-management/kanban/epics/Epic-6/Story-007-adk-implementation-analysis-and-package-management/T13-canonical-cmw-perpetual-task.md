@@ -53,10 +53,10 @@ Include the CMW perpetual task (T102, migrated from T12) in the canonical framew
   - Acceptance criteria
   - Implementation considerations
 
-- **Task T102:** [`T102-changelog-maintenance-workflow-cmw.md`](T102-changelog-maintenance-workflow-cmw.md) (migrated from T12)
+- **Task T102:** [`T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (migrated from T12)
   - Perpetual task document (reference pattern)
 
-- **Task T101:** [`T101-update-kanban-workflow-ukw.md`](T101-update-kanban-workflow-ukw.md) (migrated from T08)
+- **Task T101:** [`T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (migrated from T08)
   - UKW perpetual task pattern (reference implementation)
 
 - **Framework Templates:**
@@ -172,7 +172,7 @@ Include the CMW perpetual task (T102, migrated from T12) in the canonical framew
 ## Dependencies
 
 **Depends On:**
-- E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task (migrated from T12, must exist first)
+- E2:S16:T03 - Changelog Maintenance Workflow (CMW) - Perpetual Task (migrated from T12, must exist first)
 - E6:S07:T11 - Changelog Management and Archival Workflow (CMW implementation)
 
 **Blocks:**
@@ -189,9 +189,9 @@ Include the CMW perpetual task (T102, migrated from T12) in the canonical framew
 ## Related Work
 
 **Related Tasks:**
-- E6:S07:T101 - Update Kanban Workflow (UKW) - Perpetual Task (pattern reference, migrated from T08)
+- E2:S16:T03 - Update Kanban Workflow (UKW) - Perpetual Task (pattern reference, migrated from T08)
 - E6:S07:T11 - Changelog Management and Archival Workflow (CMW implementation, COMPLETE)
-- E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task (this task references it, migrated from T12)
+- E2:S16:T03 - Changelog Maintenance Workflow (CMW) - Perpetual Task (this task references it, migrated from T12)
 
 **Related Feature Requests:**
 - [FR-026](../../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md) - Canonical Perpetual Task for Changelog Maintenance
@@ -208,8 +208,8 @@ Include the CMW perpetual task (T102, migrated from T12) in the canonical framew
 
 - **CMW Workflow:** `packages/frameworks/workflow mgt/workflows/changelog-management-workflow.yaml`
 - **CMW Scripts:** `packages/frameworks/workflow mgt/scripts/changelog/`
-- **UKW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md` (migrated from T08, Story 6→Story 7)
-- **CMW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md` (migrated from T12, Story 6→Story 7)
+- **UKW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md` (migrated from T08, Story 6→Story 7)
+- **CMW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md` (migrated from T12, Story 6→Story 7)
 - **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
 - **Comprehensive Structure:** `packages/frameworks/kanban/templates/COMPREHENSIVE_CANONICAL_EST_STRUCTURE.md`

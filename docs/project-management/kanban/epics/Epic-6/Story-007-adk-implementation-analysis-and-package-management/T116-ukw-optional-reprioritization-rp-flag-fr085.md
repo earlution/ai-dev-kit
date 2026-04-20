@@ -23,7 +23,7 @@ housekeeping_policy: keep
 ## Input
 
 - [FR-085](../../../fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md) requirements.
-- Existing UKW baseline and ongoing task ownership under [E6:S07:T101](T101-update-kanban-workflow-ukw.md).
+- Existing UKW baseline and ongoing task ownership under [E2:S16:T03](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md).
 - Current board surfaces: `kboard.md` and `fbuboard.md`.
 
 ---
@@ -65,6 +65,6 @@ UKW lacks an explicit optional mode for deep reprioritization based on inferred 
 
 - [FR-085](../../../fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md)
 - [Story 007](../Story-007-adk-implementation-analysis-and-package-management.md)
-- [T101](T101-update-kanban-workflow-ukw.md)
+- [T101](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
 - [T109](T109-br059-ukw-moscow-full-story-task-coverage.md)
 - [T110](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md)

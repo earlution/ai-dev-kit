@@ -25,14 +25,14 @@ RW -k (kanban init): Initialize kanban documentation for current version. Versio
 ## Changes
 
 ### Changed
-- **E6:S07:T101:** RW -k Kanban init — `update_kanban_docs.py --mode kanban_init`
+- **E2:S16:T03:** RW -k Kanban init — `update_kanban_docs.py --mode kanban_init`
 - Story 7 and Epic 6 version markers synchronized to v0.6.7.101+36
 
 ---
 
 ## Related Work
 
-**Task:** E6:S07:T101 - UKW Perpetual  
+**Task:** E2:S16:T03 - UKW Perpetual  
 **Previous Release:** v0.6.7.101+35
 
 ---

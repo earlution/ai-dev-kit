@@ -95,8 +95,8 @@ def perpetual_ukw_fixture(tmp_path: Path) -> Path:
         / "docs/project-management/kanban/epics/Epic-6/Story-007-adk-example"
     )
     tdir.mkdir(parents=True)
-    (tdir / "T101-update-kanban-workflow-ukw.md").write_text(
-        "**Task ID:** E6:S07:T101\n"
+    (tdir / "T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md").write_text(
+        "**Task ID:** E2:S16:T03\n"
         "**Task Type:** Perpetual Maintenance\n"
         "**Code:** E6S07T101\n",
         encoding="utf-8",
@@ -106,7 +106,7 @@ def perpetual_ukw_fixture(tmp_path: Path) -> Path:
 
 def test_full_mode_art_allows_perpetual_cross_epic(perpetual_ukw_fixture: Path):
     r = _run(
-        ["--requested", "E6:S07:T101", "--art"],
+        ["--requested", "E2:S16:T03", "--art"],
         cwd=perpetual_ukw_fixture,
     )
     assert r.returncode == 0, r.stderr + r.stdout

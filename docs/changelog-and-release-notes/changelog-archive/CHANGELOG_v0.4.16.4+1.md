@@ -55,7 +55,7 @@ This release advances the **Kanban Package Implementation Review** by completing
 - **Kanban ↔ UKW (Update Kanban Workflow) Integration**
   - Validated UKW configuration:
     - `kanban_root`, `epic_doc_pattern`, `story_doc_pattern`, and `task_doc_pattern` correctly target dev-kit’s Kanban docs.
-    - Perpetual UKW task is wired as E6:S07:T101 with `perpetual_task: true`.
+    - Perpetual UKW task is wired as E2:S16:T03 with `perpetual_task: true`.
   - Confirmed that UKW uses Kanban’s document structure and perpetual task wiring as intended.
   - Noted that the **MoSCOW prioritization gap** (tracked via BR-034) is a **workflow behavior issue**, not an integration-wiring defect in the Kanban package.
 

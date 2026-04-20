@@ -28,7 +28,7 @@ def test_trigger_parsing():
         ("RW -k E2:S01:T13 --art", "RW -k"),
         ("RW -d", "RW -d"),
         ("rw -d", "RW -d"),
-        ("RW -d E6:S07:T102", "RW -d"),
+        ("RW -d E2:S16:T03", "RW -d"),
     ]
     
     for input_trigger, expected_type in test_cases:

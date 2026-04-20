@@ -5,7 +5,7 @@
 **Story:** 7 (Package Management)  
 **Task:** 102 (Changelog Maintenance Workflow - Perpetual)  
 **Internal Version:** 0.6.7.102+6  
-**Attribution:** Perpetual docs update (E6:S07:T102)
+**Attribution:** Perpetual docs update (E2:S16:T03)
 
 ---
 
@@ -42,5 +42,5 @@ Documentation and policy updates: maintainer runbooks moved to `docs/maintenance
 
 ## References
 
-- **Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md`
+- **Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
 - **Story:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md`

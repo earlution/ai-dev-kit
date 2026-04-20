@@ -25,7 +25,7 @@ UKW execution: Restored RC review artifacts (Epics 10/11 and package review stor
 ## Changes
 
 ### Changed
-- **E6:S07:T101: Update Kanban Workflow (UKW) Execution**
+- **E2:S16:T03: Update Kanban Workflow (UKW) Execution**
   - Restored RC review planning artifacts (Epics 10/11 and package review stories for Epics 2/3/8)
   - Refreshed MoSCOW Prioritized In-Progress Tasks section to include RC review workstreams
   - Synced Epic 6/Story 7 T101 references and version markers
@@ -47,14 +47,14 @@ UKW execution: Restored RC review artifacts (Epics 10/11 and package review stor
     - E10:S02 (Document Lifecycle Package Installation Evaluation)
     - E11:S01 (Debug Path Package Implementation Review)
     - E11:S02 (Debug Path Package Installation Evaluation)
-  - Updated Ongoing (O) section with correct perpetual task references (E6:S07:T101, E6:S07:T102)
+  - Updated Ongoing (O) section with correct perpetual task references (E2:S16:T03, E2:S16:T03)
   - Updated Epic 4 story checklist with S14, S16, S17
 
 ---
 
 ## Related Work
 
-**Task:** E6:S07:T101 - Update Kanban Workflow (UKW) - Perpetual Task  
+**Task:** E2:S16:T03 - Update Kanban Workflow (UKW) - Perpetual Task  
 **Previous Release:** v0.6.7.101+23 (UKW: Restored RC review artifacts, refreshed MoSCOW priorities)  
 **Next Release:** TBD
 
@@ -86,7 +86,7 @@ UKW execution: Restored RC review artifacts (Epics 10/11 and package review stor
 - Stories reflect implementation review and installation evaluation phases
 
 **Files Modified:**
-- `T101-update-kanban-workflow-ukw.md` - Progress updated, version bumped to v0.6.7.101+23
+- `T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md` - Progress updated, version bumped to v0.6.7.101+23
 - `Story-007-adk-implementation-analysis-and-package-management.md` - T101 status updated
 - `Epic-6.md` - S07 status updated, version markers synced
 - `kanban-board.md` - MoSCOW section refreshed, metadata updated

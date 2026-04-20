@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Release Date:** 2026-01-22 10:43:59 UTC  
 **Epic:** E6 – Framework Management and Maintenance  
 **Story:** E6:S07 – ADK Implementation Analysis and Package Management  
-**Task:** E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task
+**Task:** E2:S16:T03 – Update Kanban Workflow (UKW) - Perpetual Task
 
 ---
 
@@ -33,7 +33,7 @@ UKW synchronization run: E3:S04:T06 (Numbering & Versioning Package Implementati
   - Task list updated: Added T06 ✅ COMPLETE (v0.3.4.6+1) to Story 4 task checklist
   - All version markers synchronized across kanban hierarchy
 
-- **Perpetual UKW task updated** (E6:S07:T101)
+- **Perpetual UKW task updated** (E2:S16:T03)
   - Last updated: 2026-01-22
   - Version: v0.6.7.101+29
   - Progress documented: E3:S04:T06 completion synced across kanban documents
@@ -44,7 +44,7 @@ UKW synchronization run: E3:S04:T06 (Numbering & Versioning Package Implementati
 
 - **E3:S04:** Numbering & Versioning Package Implementation Review
 - **E3:S04:T06:** Define RC Sign-Off Criteria and Remediation Tasks (✅ COMPLETE v0.3.4.6+1)
-- **E6:S07:T101:** Update Kanban Workflow (UKW) - Perpetual Task
+- **E2:S16:T03:** Update Kanban Workflow (UKW) - Perpetual Task
 
 ---
 
@@ -59,7 +59,7 @@ UKW synchronization run: E3:S04:T06 (Numbering & Versioning Package Implementati
 
 ## Notes
 
-- This is a UKW synchronization release (perpetual task E6:S07:T101)
+- This is a UKW synchronization release (perpetual task E2:S16:T03)
 - BUILD number (29) represents UKW synchronization run count
 - High BUILD numbers are expected and valid for perpetual tasks
-- UKW context detected: User ran "UKW" then "RW" → Release attributed to perpetual task E6:S07:T101
+- UKW context detected: User ran "UKW" then "RW" → Release attributed to perpetual task E2:S16:T03

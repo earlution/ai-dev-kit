@@ -25,9 +25,9 @@ Change implemented: run RW-k perpetual maintenance sync to reconcile FR/BR/UXR b
 
 ## Related Work
 
-- **Task:** E6:S07:T101
+- **Task:** E2:S16:T03
 - **Workflow:** RW -k (perpetual maintenance path)
 
 ## Notes
 
-This is a perpetual-task maintenance release. High BUILD values are expected for `E6:S07:T101`.
+This is a perpetual-task maintenance release. High BUILD values are expected for `E2:S16:T03`.

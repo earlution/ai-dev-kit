@@ -25,7 +25,7 @@ UKW execution: Fixed T101 task header (Story 6 → Story 7), updated kanban boar
 ## Changes
 
 ### Changed
-- **E6:S07:T101: Update Kanban Workflow (UKW) Execution**
+- **E2:S16:T03: Update Kanban Workflow (UKW) Execution**
   - Fixed T101 task document header (Story 6 → Story 7) to match story renumbering
   - Updated kanban board MoSCOW Prioritized In-Progress Tasks section
   - Added E9:S01:T08 (Repository Story Abstract Space Contradiction) to Should Have (S) category
@@ -43,14 +43,14 @@ UKW execution: Fixed T101 task header (Story 6 → Story 7), updated kanban boar
 - **Kanban Board Updates**
   - Updated MoSCOW Prioritized In-Progress Tasks section with E9:S01:T08
   - Categorized E9:S01:T08 in Should Have (S) section (HIGH priority, IN PROGRESS)
-  - Updated Ongoing (O) section with correct story numbers (E6:S05, E6:S06, E6:S07:T101, E6:S07:T102)
+  - Updated Ongoing (O) section with correct story numbers (E6:S05, E6:S06, E2:S16:T03, E2:S16:T03)
   - Updated Could Have (C) section with correct story numbers (E5:S01:T35, E5:S01:T31)
 
 ---
 
 ## Related Work
 
-**Task:** E6:S07:T101 - Update Kanban Workflow (UKW) - Perpetual Task  
+**Task:** E2:S16:T03 - Update Kanban Workflow (UKW) - Perpetual Task  
 **Previous Release:** v0.6.7.101+21 (UKW: Epic 9 creation and kanban synchronization)  
 **Next Release:** TBD
 
@@ -77,7 +77,7 @@ UKW execution: Fixed T101 task header (Story 6 → Story 7), updated kanban boar
 - Current: UKW does not update MoSCOW Prioritized In-Progress Tasks section
 
 **Files Modified:**
-- `T101-update-kanban-workflow-ukw.md` - Header correction (Story 6 → Story 7)
+- `T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md` - Header correction (Story 6 → Story 7)
 - `kanban-board.md` - MoSCOW section updated, Epic 9 status updated, references corrected
 - `Story-001-br-repo.md` - Added T34 to task checklist
 

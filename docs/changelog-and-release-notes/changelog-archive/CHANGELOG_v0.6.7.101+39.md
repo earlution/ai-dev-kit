@@ -1,7 +1,7 @@
 # Changelog v0.6.7.101+39
 
 **Release Date:** 2026-03-31 18:05:00 UTC  
-**Epic / Story / Task:** E6:S07:T101 (perpetual UKW / kanban documentation)
+**Epic / Story / Task:** E2:S16:T03 (perpetual UKW / kanban documentation)
 
 ## Summary
 
@@ -13,4 +13,4 @@ Kanban documentation: add **`fr-br-uxr-open-taskless-queue.md`** — working que
 
 ## Notes
 
-- No product code changes; documentation-only release attributed to perpetual **E6:S07:T101**.
+- No product code changes; documentation-only release attributed to perpetual **E2:S16:T03**.

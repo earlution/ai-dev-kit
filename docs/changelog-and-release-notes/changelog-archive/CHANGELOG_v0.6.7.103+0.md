@@ -2,7 +2,7 @@
 
 **Release Date:** 2026-04-19 12:00:00 UTC  
 **Epic:** 6 | **Story:** 7 | **Task:** 103  
-**Task doc:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)  
+**Task doc:** [T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)  
 **FR:** [FR-041](../../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md) | **BR:** [BR-067](../../project-management/kanban/fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md)
 
 ## Summary
@@ -19,12 +19,12 @@
 
 ### Kanban / traceability
 
-- **BR-067** — Filed and linked to **E6:S07:T103**; documents default **+1** vs policy **+0** gap.
+- **BR-067** — Filed and linked to **E2:S16:T03**; documents default **+1** vs policy **+0** gap.
 - **`fr-br-uxr-board.md`** — **BR-067** and version context for this release.
 
 ## Verification
 
-- `python .../validate_version_bump.py --strict --requested E6:S07:T103 --art --doc-policy-zero`
+- `python .../validate_version_bump.py --strict --requested E2:S16:T03 --art --doc-policy-zero`
 - `python .../validate_changelog_format.py` (root)
 - `pytest` `packages/frameworks/workflow mgt/scripts/validation/test_validate_version_bump.py`
 

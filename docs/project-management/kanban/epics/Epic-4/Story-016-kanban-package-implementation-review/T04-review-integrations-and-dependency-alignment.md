@@ -137,12 +137,12 @@ An **integration alignment report** confirming:
 
 **Key Expectations:**
 - UKW performs **bottom-up Kanban synchronization** (Tasks → Stories → Epics → Board).
-- Uses Kanban’s perpetual task for UKW (E6:S07:T101, with `perpetual_task: true`).
+- Uses Kanban’s perpetual task for UKW (E2:S16:T03, with `perpetual_task: true`).
 - Uses Kanban document structure (`kanban_root`, `epic_doc_pattern`, `story_doc_pattern`, `task_doc_pattern`).
 
 **Dev-Kit Implementation:**
 - UKW config points to dev-kit Kanban paths under `docs/project-management/kanban`.
-- Perpetual UKW task wired as E6:S07:T101 (confirmed in Epic 6 + Kanban board).
+- Perpetual UKW task wired as E2:S16:T03 (confirmed in Epic 6 + Kanban board).
 - UKW runs have updated:
   - Task/Story/Epic statuses and `Last updated` fields.
   - MoSCOW board entries (with BR-034 tracking a prior prioritization gap).

@@ -6,9 +6,9 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# E6:S07:T103 - Planning: Spec, Tests, Implementation Plan (IPW)
+# E2:S16:T03 - Planning: Spec, Tests, Implementation Plan (IPW)
 
-**Host Task:** [`T103-release-workflow-maintenance-perpetual-task.md`](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) **(E6:S07:T103)**  
+**Host Task:** [`T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) **(E2:S16:T03)**  
 **Planning for:** [FR-041 – Perpetual Task for Release Workflow Maintenance](../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md) (host); current policy thread [BR-067](../project-management/kanban/fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md) (doc-init **+0** vs default **+1**)  
 **Status:** Draft
 
@@ -18,7 +18,7 @@ housekeeping_policy: keep
 
 ### 1.1 Goal
 
-Provide a **durable, rolling** implementation-planning package for **perpetual** Release Workflow (RW) and workflow-framework maintenance anchored on **E6:S07:T103**. Unlike a finite task IPW, this document does not “close” with a single ship: it defines **maintenance domains**, **verification expectations**, and a **phased backlog** that future RW maintenance releases can extend.
+Provide a **durable, rolling** implementation-planning package for **perpetual** Release Workflow (RW) and workflow-framework maintenance anchored on **E2:S16:T03**. Unlike a finite task IPW, this document does not “close” with a single ship: it defines **maintenance domains**, **verification expectations**, and a **phased backlog** that future RW maintenance releases can extend.
 
 ### 1.2 Functional requirements
 
@@ -90,14 +90,14 @@ Provide a **durable, rolling** implementation-planning package for **perpetual**
 
 - [ ] [BR-067](../project-management/kanban/fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md) acceptance criteria satisfied (policy table, RW docs, BR-010 regression).
 - [ ] **`pytest`** `packages/frameworks/workflow mgt/scripts/validation/test_validate_version_bump.py` passes after substantive validator edits.
-- [ ] Bidirectional links: this IPW ↔ [T103 host task](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) remain valid (relative paths).
+- [ ] Bidirectional links: this IPW ↔ [T103 host task](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) remain valid (relative paths).
 - [ ] No contradictory guidance between **versioning policy**, **validators**, and **RW** docs for **+0** / **+1**.
 
 ---
 
 ## References
 
-- [Host task E6:S07:T103](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
+- [Host task E2:S16:T03](../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
 - [FR-041 – Perpetual RW maintenance](../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
 - [BR-067 – BUILD +0 vs +1](../project-management/kanban/fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md)
 - [BR-010 – inverse doc-init bug](../project-management/kanban/fr-br/BR-010-rw-doc-init-detection-bug-story-task-docs-batch-creation.md)

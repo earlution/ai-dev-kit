@@ -73,24 +73,8 @@ housekeeping_policy: keep
   - Task: [`T18-tool-agnostic-workflow-step-tracking-and-runlogs.md`](Story-007-adk-implementation-analysis-and-package-management/T18-tool-agnostic-workflow-step-tracking-and-runlogs.md)
 
 
-- [ ] **E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.101+45 – RW 2026-04-18 **--art** + UKW 2026-04-18)
-  - Task: [`T101-update-kanban-workflow-ukw.md`](Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md)
-  - **Note:** This is a perpetual maintenance task. All UKW-triggered RWs are attributed to T101 (3-digit perpetual task). BUILD number = UKW run count.
-  - **Migration:** Task migrated from T08 to T101 as part of repository story abstract space resolution (E9:S01:T08)
-
-
-- [ ] **E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.102+6 – Perpetual docs update: runbooks, policy)
-  - Task: [`T102-changelog-maintenance-workflow-cmw.md`](Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md)
-  - **Note:** This is a perpetual maintenance task. All CMW-triggered RWs are attributed to T102 (3-digit perpetual task). BUILD number = CMW run count.
-  - **Migration:** Task migrated from T12 to T102 as part of repository story abstract space resolution (E9:S01:T08)
-  - **Feature Request:** [FR-026](../../fr-br/FR-026-canonical-perpetual-task-for-changelog-maintenance.md)
-
-
-- [ ] **E6:S07:T103 – Release Workflow (RW) Maintenance - Perpetual Task** - IN PROGRESS (Perpetual - v0.6.7.103+1 – IPW shipped; RW **`--art`**)
-  - Task: [`T103-release-workflow-maintenance-perpetual-task.md`](Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
-  - IPW: [`IPW-E6S07T103-release-workflow-maintenance-perpetual.md`](../../../../implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md)
-  - **Note:** This is a perpetual maintenance task. RW maintenance releases (Step 7 fixes, validator updates, doc corrections) are attributed to T103 when not tied to a specific feature task.
-  - **Feature Request:** [FR-041](../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
+- **Legacy perpetual anchors (`E2:S16:T03`/`T102`/`T103`)** were retired and removed as part of Story 016 migration planning.
+  - Canonical ongoing ownership now lives under **[E2:S16 – Perpetual Ongoing Workflow Operations](../../Epic-2/Story-016-perpetual-ongoing-workflow-operations.md)** (`T01`/`T02`/`T03`).
 
 
 - [ ] **E6:S07:T104 – Release Automation Audit** - TODO
@@ -115,11 +99,11 @@ housekeeping_policy: keep
 
 - [ ] **E6:S07:T109 – BR-059: UKW MoSCOW full open-task coverage per in-progress story** - TODO (HIGH, board must list all open story tasks or explicit **Won’t** deferrals; fail loud on partial enumeration)
   - Task: [`T109-br059-ukw-moscow-full-story-task-coverage.md`](Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md) | [BR-059](../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
-  - **Coordinates:** [E6:S07:T101](Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) (UKW perpetual)
+  - **Coordinates:** [E2:S16:T03](../../Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (Story 016 migration anchor)
 
 - [x] **E6:S07:T110 – UKW fbuboard scope + concurrency/temporal-drift controls** - ✅ COMPLETE (HIGH, v0.6.7.110+1 — UKW fbuboard parity + drift/concurrency controls released)
   - Task: [`T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md`](Story-007-adk-implementation-analysis-and-package-management/T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md) | [FR-076](../../fr-br/FR-076-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
-  - **Coordinates:** [E6:S07:T101](Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) (UKW perpetual), [E6:S07:T108](Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
+  - **Coordinates:** [E2:S16:T03](../../Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (Story 016 migration anchor), [E6:S07:T108](Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
 
 
 - [x] **E6:S07:T111 – Comprehensive install event-contract logging quality** - ✅ COMPLETE (CRITICAL, v0.6.7.111+1 — FR-078 install contract + validator + verification complete on 2026-04-10)

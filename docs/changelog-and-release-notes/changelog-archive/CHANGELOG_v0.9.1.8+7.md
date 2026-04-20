@@ -63,7 +63,7 @@ Task document updates: Migrated T11, T06, and T15 from E6:S06 to E6:S07, updatin
 - Task ID: `E6:S06:T11` → `E6:S07:T11`
 - Code: `E6S06T11` → `E6S07T11`
 - Version: `v0.6.6.11+4` → `v0.6.7.11+4`
-- Related tasks: `E6:S06:T07` → `E6:S07:T07`, `E6:S06:T08` → `E6:S07:T101`
+- Related tasks: `E6:S06:T07` → `E6:S07:T07`, `E6:S06:T08` → `E2:S16:T03`
 - Parent story: `E6:S06` → `E6:S07`
 - Forensic marker examples: `v0.6.6.11+1` → `v0.6.7.11+1`
 

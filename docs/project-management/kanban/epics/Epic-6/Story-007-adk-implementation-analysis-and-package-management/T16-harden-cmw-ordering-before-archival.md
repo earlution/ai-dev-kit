@@ -288,7 +288,7 @@ sorted_entries_to_archive = sorted(
 
 - **Story:** E6:S07 - ADK Implementation Analysis and Package Management
 - **Related Task:** E6:S07:T11 - Changelog Management and Archival Workflow (CMW implementation)
-- **Related Task:** E6:S07:T102 - Changelog Maintenance Workflow (CMW) - Perpetual Task (migrated from T12)
+- **Related Task:** E2:S16:T03 - Changelog Maintenance Workflow (CMW) - Perpetual Task (migrated from T12)
 - **Analysis Document:** `docs/analysis/cmw-ordering-flaw-analysis.md`
 
 ---

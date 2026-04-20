@@ -379,7 +379,7 @@ Implement a simplified, reliable Release Workflow that reduces user friction and
 
 ### Related Tasks
 
-- **E6:S07:T103:** Release Workflow Maintenance (perpetual task)
+- **E2:S16:T03:** Release Workflow Maintenance (perpetual task)
 - **E6:S07:T104:** Release Automation Audit (comprehensive review)
 
 ---

@@ -57,6 +57,14 @@ E2:S16:T03 — **RW -d** with **`--art`**: move re-housing/guardrail task to IN 
 
 ---
 
+## [0.2.16.3+2] - 20-04-26
+
+E2:S16:T03 — **RW -d** with **`--art`**: complete full repository rewire from legacy perpetual anchors (`E6:S07:T101/T102/T103`) to Story 016 migration ownership and remove deprecated task docs. SemVer **v0.4.764+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+2.md)
+
+---
+
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.

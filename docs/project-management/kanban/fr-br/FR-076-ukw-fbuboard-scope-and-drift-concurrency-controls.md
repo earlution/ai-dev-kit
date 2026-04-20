@@ -17,7 +17,7 @@ housekeeping_policy: keep
 
 **Implementing Task:** [E6:S07:T110](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
 
-**Related:** [FR-050](./FR-050-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md); [E6:S07:T108](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md); [E6:S07:T101](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md)
+**Related:** [FR-050](./FR-050-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md); [E6:S07:T108](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md); [E2:S16:T03](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
 
 ---
 

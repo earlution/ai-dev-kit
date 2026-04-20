@@ -105,7 +105,7 @@ Test task created specifically to validate the UKW Agent's board cleanup functio
 
 ### Test Context
 - **BR-042** - UKW Agent Board Cleanup Failure (problem being solved)
-- **E6:S07:T101** - UKW Perpetual Task (ongoing UKW maintenance)
+- **E2:S16:T03** - UKW Perpetual Task (ongoing UKW maintenance)
 
 ---
 

@@ -10,7 +10,7 @@
 
 ## Summary
 
-E4:S14:T01: Update packaged Release Workflow (RW) to handle UKW context and perpetual tasks. Added perpetual task support to `validate_version_bump.py`: `is_perpetual_task()`, `extract_task_id_canonical()`, relaxed field validation for perpetual tasks, and Task ID extraction from canonical section. Validator now passes for E6:S07:T101 (UKW) and other perpetual tasks.
+E4:S14:T01: Update packaged Release Workflow (RW) to handle UKW context and perpetual tasks. Added perpetual task support to `validate_version_bump.py`: `is_perpetual_task()`, `extract_task_id_canonical()`, relaxed field validation for perpetual tasks, and Task ID extraction from canonical section. Validator now passes for E2:S16:T03 (UKW) and other perpetual tasks.
 
 ---
 
@@ -30,7 +30,7 @@ E4:S14:T01: Update packaged Release Workflow (RW) to handle UKW context and perp
 
 ### Documentation
 
-- Task doc T01: E6:S06:T08 → E6:S07:T101, added validate_version_bump note
+- Task doc T01: E6:S06:T08 → E2:S16:T03, added validate_version_bump note
 - release-workflow-agent-execution.md: Step 10 note on perpetual task support
 - cursorrules-rw-trigger-section.md: Same note
 
@@ -38,7 +38,7 @@ E4:S14:T01: Update packaged Release Workflow (RW) to handle UKW context and perp
 
 ## Impact
 
-- RW Step 9 `validate_version_bump.py` now passes for UKW releases (E6:S07:T101) and CMW (T102)
+- RW Step 9 `validate_version_bump.py` now passes for UKW releases (E2:S16:T03) and CMW (T102)
 - Perpetual tasks no longer fail validation for Task ID mismatch or missing Input/Deliverable
 
 ---
@@ -46,4 +46,4 @@ E4:S14:T01: Update packaged Release Workflow (RW) to handle UKW context and perp
 ## Related
 
 - **Task:** [E4:S14:T01](../../project-management/kanban/epics/Epic-4/Story-014-kanban-framework-maintenance/T01-update-packaged-rw-ukw-perpetual-tasks.md)
-- **UKW Task:** [E6:S07:T101](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md)
+- **UKW Task:** [E2:S16:T03](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)

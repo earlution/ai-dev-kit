@@ -149,7 +149,7 @@ All 20 acceptance criteria met:
 - **FR-034:** UKW Granular Control and Use Case Flags (this implementation)
 - **BR-033:** UKW Board Disorganization (related bug report)
 - **E5:S01:T34:** Task document for this implementation
-- **E6:S07:T101:** Perpetual UKW task (for release attribution)
+- **E2:S16:T03:** Perpetual UKW task (for release attribution)
 
 ---
 

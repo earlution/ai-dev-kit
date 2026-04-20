@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** N/A  
-**Status:** IMPLEMENTED ✅ (E6:S07:T103 v0.6.7.103+1)
+**Status:** IMPLEMENTED ✅ (E2:S16:T03 v0.6.7.103+1)
 
 ---
 
@@ -26,8 +26,8 @@ Create a canonical perpetual task for Release Workflow (RW) and workflow framewo
 ## Problem Statement
 
 **Current Situation:**
-- UKW has perpetual task T101 (E6:S07:T101) – UKW-triggered RWs attribute there
-- CMW has perpetual task T102 (E6:S07:T102) – CMW-triggered RWs attribute there
+- UKW has perpetual task T101 (E2:S16:T03) – UKW-triggered RWs attribute there
+- CMW has perpetual task T102 (E2:S16:T03) – CMW-triggered RWs attribute there
 - **No perpetual task exists for RW/workflow framework maintenance**
 
 **Issue:**
@@ -88,19 +88,19 @@ Add this perpetual task to the packaged Kanban framework:
 
 ## Related Work
 
-- **E6:S07:T103** – Release Workflow Maintenance Perpetual Task (this task)
-- **E6:S07:T101** – UKW Perpetual Task (pattern reference)
-- **E6:S07:T102** – CMW Perpetual Task (pattern reference)
+- **E2:S16:T03** – Release Workflow Maintenance Perpetual Task (this task)
+- **E2:S16:T03** – UKW Perpetual Task (pattern reference)
+- **E2:S16:T03** – CMW Perpetual Task (pattern reference)
 - **FR-026** – Canonical Perpetual Task for Changelog Maintenance (similar pattern)
 - **Epic 2** – Workflow Management Framework (RW package owner)
 - **Epic 6** – Framework Management and Maintenance (UKW/CMW perpetual tasks)
-- **FR-067 [FU-2](./FR-067-docusaurus-production-build-corpus-triage.md)** – Docusaurus/corpus work is still released via **RW**; **GitHub Releases** for SemVer tags (**Step 12.5**, `create_github_release.py`) are traced to **E6:S07:T103** (this FR), not as a standalone portal task.
+- **FR-067 [FU-2](./FR-067-docusaurus-production-build-corpus-triage.md)** – Docusaurus/corpus work is still released via **RW**; **GitHub Releases** for SemVer tags (**Step 12.5**, `create_github_release.py`) are traced to **E2:S16:T03** (this FR), not as a standalone portal task.
 
 ---
 
 ## References
 
-- **UKW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md`
-- **CMW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md`
+- **UKW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
+- **CMW Perpetual Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
 - **Kanban Templates:** `packages/frameworks/kanban/templates/`
 - **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`

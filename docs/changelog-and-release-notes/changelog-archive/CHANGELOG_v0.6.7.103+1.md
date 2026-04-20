@@ -2,12 +2,12 @@
 
 **Release Date:** 2026-04-19 12:37:40 UTC  
 **Epic:** 6 | **Story:** 7 | **Task:** 103  
-**Task doc:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)  
+**Task doc:** [T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)  
 **FR:** [FR-041](../../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md) | **IPW:** [IPW-E6S07T103](../../implementation-cycles/IPW-E6S07T103-release-workflow-maintenance-perpetual.md)
 
 ## Summary
 
-**RW** with **`--art`**: deliver the **IPW** (Implementation Planning Workflow) package for perpetual **E6:S07:T103**—specification, test design, implementation plan (rolling backlog), and **FR-042** bidirectional links on the host task and **Story 7** task row.
+**RW** with **`--art`**: deliver the **IPW** (Implementation Planning Workflow) package for perpetual **E2:S16:T03**—specification, test design, implementation plan (rolling backlog), and **FR-042** bidirectional links on the host task and **Story 7** task row.
 
 ## Changes
 
@@ -23,10 +23,10 @@
 
 ## Verification
 
-- `validate_branch_context.py --strict --requested E6:S07:T103 --art`
-- `validate_rw_task_complete.py --requested E6:S07:T103`
-- `validate_rw_task_intent.py --requested E6:S07:T103 --art`
-- `validate_version_bump.py --strict --requested E6:S07:T103 --art`
+- `validate_branch_context.py --strict --requested E2:S16:T03 --art`
+- `validate_rw_task_complete.py --requested E2:S16:T03`
+- `validate_rw_task_intent.py --requested E2:S16:T03 --art`
+- `validate_version_bump.py --strict --requested E2:S16:T03 --art`
 
 ## Tags
 

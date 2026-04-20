@@ -23,7 +23,7 @@ This script is called by RW Step 8 to validate version bumping logic.
 Usage:
     python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py [--strict] [--story-file PATH] [--version-file PATH]
     python packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py --requested E6:S06:T58 --art [--strict]
-    python .../validate_version_bump.py --strict --requested E6:S07:T103 --art --doc-policy-zero
+    python .../validate_version_bump.py --strict --requested E2:S16:T03 --art --doc-policy-zero
       (explicit policy: docs-only BUILD +0 for an existing E/S/T anchor; see BR-067)
 
     --strict: Exit with error code if validation fails

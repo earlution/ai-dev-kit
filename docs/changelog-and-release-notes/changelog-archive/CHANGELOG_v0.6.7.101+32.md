@@ -10,7 +10,7 @@
 
 ## Summary
 
-E6:S07:T101: UKW bookkeeping run. Checklist sorting applied to Story 007 task checklist, Epic 6 story checklist, and kanban board epic sections.
+E2:S16:T03: UKW bookkeeping run. Checklist sorting applied to Story 007 task checklist, Epic 6 story checklist, and kanban board epic sections.
 
 ---
 
@@ -30,4 +30,4 @@ E6:S07:T101: UKW bookkeeping run. Checklist sorting applied to Story 007 task ch
 
 ## Related
 
-- **Perpetual Task:** [T101-update-kanban-workflow-ukw.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md)
+- **Perpetual Task:** [T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)

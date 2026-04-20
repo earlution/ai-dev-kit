@@ -48,9 +48,9 @@ This task plans migration for **all workflow-related perpetual tasks** to Story 
 
 ### Seed inventory (known perpetual workflow anchors to renumber)
 
-- `E6:S07:T101` - UKW perpetual task (legacy ID; renumber required)
-- `E6:S07:T102` - CMW perpetual task (legacy ID; renumber required)
-- `E6:S07:T103` - RW maintenance perpetual task (legacy ID; renumber required)
+- `E2:S16:T03` - UKW perpetual task (legacy ID; renumber required)
+- `E2:S16:T03` - CMW perpetual task (legacy ID; renumber required)
+- `E2:S16:T03` - RW maintenance perpetual task (legacy ID; renumber required)
 
 ### Planning requirements
 

@@ -25,4 +25,4 @@ Perpetual **UKW** release: bring [`fr-br-uxr-board.md`](../../../project-managem
 
 ## Validation Notes
 
-- `validate_branch_context.py --strict` and `validate_rw_task_intent.py --requested E6:S07:T101 --art` exercised during release prep.
+- `validate_branch_context.py --strict` and `validate_rw_task_intent.py --requested E2:S16:T03 --art` exercised during release prep.

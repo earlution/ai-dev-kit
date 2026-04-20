@@ -55,11 +55,11 @@ housekeeping_policy: keep
 
 ### Ongoing (O) - Perpetual Tasks
 
-- **E6:S07:T101** – Update Kanban Workflow (UKW) - Perpetual Task - IN PROGRESS (v0.6.7.101+45; RW **2026-04-18**) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-20 15:52 UTC
+- **E2:S16:T01** – Establish canonical perpetual ongoing tasks story (FR-088) - IN PROGRESS (planning baseline for perpetual-task re-housing and numbering migration) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | Last modified: 2026-04-20 17:45 UTC
 
-- **E6:S07:T102** – Changelog Maintenance Workflow (CMW) - Perpetual Task - IN PROGRESS (v0.6.7.102+6, Last updated: 2026-01-17) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-20 15:52 UTC
+- **E2:S16:T02** – Inventory and classify workflow-related perpetual tasks - IN PROGRESS (legacy perpetual anchor discovery + disposition mapping) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T02-inventory-and-classify-workflow-perpetual-tasks.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | Last modified: 2026-04-20 18:20 UTC
 
-- **E6:S07:T103** – Release Workflow (RW) Maintenance - Perpetual Task - IN PROGRESS (v0.6.7.103+1, IPW) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-20 15:52 UTC
+- **E2:S16:T03** – Re-house workflow perpetual tasks and harden guardrails - IN PROGRESS (execute migration away from legacy `T101+` anchors) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | Last modified: 2026-04-20 18:20 UTC
 
 - **E7:S01:T05** – Markdown Maintenance (Perpetual Task) - PERPETUAL (v0.7.1.5+2, Last updated: 2026-03-07) - [Task Document](epics/Epic-7/Story-001-codebase-maintenance-tasks/T05-markdown-maintenance-perpetual-task.md) | [Story](epics/Epic-7/Story-001-codebase-maintenance-tasks.md) | Last modified: 2026-04-20 15:52 UTC
 

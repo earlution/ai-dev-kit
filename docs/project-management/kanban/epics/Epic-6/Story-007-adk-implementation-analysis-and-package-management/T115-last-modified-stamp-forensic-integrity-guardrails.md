@@ -18,7 +18,7 @@ housekeeping_policy: keep
 
 **Upstream:** [UXR-009 – Last-modified stamp forensic integrity and drift protection](../../../fr-br/UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
 
-**Coordinates:** [E6:S07:T101](T101-update-kanban-workflow-ukw.md), [E6:S07:T110](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
+**Coordinates:** [E2:S16:T03](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md), [E6:S07:T110](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
 
 ---
 
@@ -66,7 +66,7 @@ Timestamp churn from non-substantive board rewrites corrupts forensic signal. Op
 ## References
 
 - [UXR-009](../../../fr-br/UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
-- [T101](T101-update-kanban-workflow-ukw.md)
+- [T101](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
 - [T110](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
 - [ICW-E6S07T115-specification](../../../../../implementation-cycles/ICW-E6S07T115-specification.md)
 - [ICW-E6S07T115-test-design](../../../../../implementation-cycles/ICW-E6S07T115-test-design.md)

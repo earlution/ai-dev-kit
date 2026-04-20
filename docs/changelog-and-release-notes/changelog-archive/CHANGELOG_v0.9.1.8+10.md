@@ -42,8 +42,8 @@ Final validation and completion of E9:S01:T08 (Repository Story Abstract Space C
 ### Versioning Policy Updates
 
 - **Corrected Perpetual Task Examples:**
-  - Updated UKW reference from E6:S06:T101 to E6:S07:T101
-  - Updated CMW reference from E6:S06:T102 to E6:S07:T102
+  - Updated UKW reference from E6:S06:T101 to E2:S16:T03
+  - Updated CMW reference from E6:S06:T102 to E2:S16:T03
   - Updated version examples from `v0.6.6.101` to `v0.6.7.101`
   - Updated version examples from `v0.6.6.102` to `v0.6.7.102`
 
@@ -103,7 +103,7 @@ Final validation and completion of E9:S01:T08 (Repository Story Abstract Space C
 
 - **Repository Story Pattern:** S01 is the repository story pattern (migrated from S00 in E9:S01:T08)
 - **Abstract Space:** S00 is Epic-level abstract space only (no tasks)
-- **Perpetual Tasks:** T101+ range for perpetual tasks (UKW=E6:S07:T101, CMW=E6:S07:T102)
+- **Perpetual Tasks:** T101+ range for perpetual tasks (UKW=E2:S16:T03, CMW=E2:S16:T03)
 
 ---
 

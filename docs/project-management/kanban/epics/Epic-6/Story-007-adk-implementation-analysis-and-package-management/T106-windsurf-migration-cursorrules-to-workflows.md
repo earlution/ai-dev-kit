@@ -112,7 +112,7 @@ Interpret existing .cursorrules content and map key policies/workflows to Windsu
 
 ## Related Work
 
-- E6:S07:T103: RW Maintenance (perpetual task)
+- E2:S16:T03: RW Maintenance (perpetual task)
 - FR-046: RW Uses SemVer Tag When Task-Touch Enabled
 - Workflow documentation updates
 - Release automation improvements

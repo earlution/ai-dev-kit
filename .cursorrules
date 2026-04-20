@@ -540,7 +540,7 @@ For each step, follow this pattern:
 1. **Identify Perpetual UKW Task (Wiring Step)** - **MANDATORY FIRST STEP (always runs):** Discover and wire UKW to the project's perpetual UKW task (required for comprehensive run and for RW attribution):
    - Search all task documents for `perpetual_task: true` or `Task Type: Perpetual Maintenance`
    - Identify the task dedicated to UKW releases (may be named "Update Kanban Workflow (UKW)" or similar)
-   - Note the task's Epic/Story/Task ID (e.g., E6:S07:T101 in ai-dev-kit, E4:S03:T05 in another project)
+  - Note the task's Epic/Story/Task ID (e.g., E2:S16:T03 in ai-dev-kit, E4:S03:T05 in another project)
    - This establishes the wiring between UKW and the perpetual task for this project instance
    - Store task ID for RW attribution later (when user runs "RW" after "UKW")
 2. **Analyze Recent Activity** - **Runs if comprehensive (no flags) or bookkeeping (`-u`):** Check git commit history, scan FR/BR/UXR directory, identify file changes, map commits to Epic/Story/Task identifiers

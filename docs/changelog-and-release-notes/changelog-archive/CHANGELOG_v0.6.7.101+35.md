@@ -25,21 +25,21 @@ RW -k (kanban init): Initialize kanban documentation for current version. Versio
 ## Changes
 
 ### Changed
-- **E6:S07:T101: RW -k Kanban Init**
+- **E2:S16:T03: RW -k Kanban Init**
   - Ran update_kanban_docs.py --mode kanban_init
   - Updated Story 7 (ADK Implementation Analysis) with version v0.6.7.101+35
   - Updated Epic 6 with version markers for T101
 
 ### Maintenance
 - **Kanban Documentation Setup**
-  - Version markers synchronized for E6:S07:T101+35
+  - Version markers synchronized for E2:S16:T03+35
   - Kanban init mode ensures Story and Epic docs reflect current release
 
 ---
 
 ## Related Work
 
-**Task:** E6:S07:T101 - Update Kanban Workflow (UKW) - Perpetual Task  
+**Task:** E2:S16:T03 - Update Kanban Workflow (UKW) - Perpetual Task  
 **Previous Release:** v0.6.7.101+34 (UKW: Documented Cascade whitelist security prompt issues)  
 **Next Release:** TBD
 

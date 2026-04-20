@@ -17,7 +17,7 @@ housekeeping_policy: keep
 
 **Upstream:** [UXR-008 – Default board naming adoption](../../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md)
 
-**Coordinates:** [E6:S07:T101](T101-update-kanban-workflow-ukw.md) (UKW perpetual), [E6:S07:T110](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
+**Coordinates:** [E2:S16:T03](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (UKW perpetual), [E6:S07:T110](T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
 
 ---
 

@@ -26,8 +26,8 @@ UKW-attributed release: comprehensive kanban bookkeeping after syncing `origin/m
 
 ### Changed
 
-- **Kanban:** `kanban-board.md` metadata and E6:S07:T101 perpetual row aligned post-UKW
-- **E6:S07:T101:** Progress and version markers advanced to v0.6.7.101+37
+- **Kanban:** `kanban-board.md` metadata and E2:S16:T03 perpetual row aligned post-UKW
+- **E2:S16:T03:** Progress and version markers advanced to v0.6.7.101+37
 - **Epic 6 / Story 7:** Version and last-updated markers synchronized
 - **Epic 7:** UKW touch-ups on `Epic-7.md` and Story 6 post–Windsurf review doc (stashed UKW carryover)
 
@@ -35,7 +35,7 @@ UKW-attributed release: comprehensive kanban bookkeeping after syncing `origin/m
 
 ## Related Work
 
-**Task:** E6:S07:T101 - UKW Perpetual  
+**Task:** E2:S16:T03 - UKW Perpetual  
 **Previous Release:** v0.6.7.101+36
 
 ---

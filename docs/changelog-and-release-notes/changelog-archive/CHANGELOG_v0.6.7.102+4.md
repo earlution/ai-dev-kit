@@ -25,7 +25,7 @@ CMW execution: Fixed changelog ordering violations, archived 50 entries, and red
 ## Changes
 
 ### Changed
-- **E6:S07:T102: Changelog Management Workflow (CMW) Execution**
+- **E2:S16:T03: Changelog Management Workflow (CMW) Execution**
   - Fixed 165 changelog ordering violations (Step 3.5: Fix ordering)
   - Archived 50 entries based on size/version count criteria
   - Reduced changelog from 3,784 to 3,157 lines (627 line reduction, 16.6% reduction)
@@ -43,7 +43,7 @@ CMW execution: Fixed changelog ordering violations, archived 50 entries, and red
 
 ## Related Work
 
-**Task:** E6:S07:T102 - Changelog Management Workflow (CMW) - Perpetual Task  
+**Task:** E2:S16:T03 - Changelog Management Workflow (CMW) - Perpetual Task  
 **Previous Release:** v0.6.7.102+3 (CMW: Fixed 8 ordering violations, archived 50 entries, reduced from 5,329 to 3,736 lines)  
 **Next Release:** TBD
 

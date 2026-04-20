@@ -10,7 +10,7 @@
 
 ## Summary
 
-E6:S07:T103: FR-042 Implementation Planning Workflow (IPW), planning docs for E4:S11:T07 and E4:S14:T01.
+E2:S16:T03: FR-042 Implementation Planning Workflow (IPW), planning docs for E4:S11:T07 and E4:S14:T01.
 
 ---
 
@@ -35,5 +35,5 @@ E6:S07:T103: FR-042 Implementation Planning Workflow (IPW), planning docs for E4
 
 ## Related
 
-- **Perpetual Task:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
+- **Perpetual Task:** [T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
 - **FR-042:** [FR-042-implementation-planning-workflow-ipw.md](../../project-management/kanban/fr-br/FR-042-implementation-planning-workflow-ipw.md)

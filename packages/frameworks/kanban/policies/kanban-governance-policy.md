@@ -498,8 +498,8 @@ The following patterns are **explicitly prohibited**:
   - **Perpetual tasks:** 3-digit (101+)
 - **Example (regular):** `E20:S07:T10` = Epic 20, Story 7, Task 10
 - **Example (regular):** `E1:S01:T01` = Epic 1, Story 1, Task 1
-- **Example (perpetual):** `E6:S07:T101` = Epic 6, Story 7, Task 101 (UKW - perpetual task)
-- **Example (perpetual):** `E6:S07:T102` = Epic 6, Story 7, Task 102 (CMW - perpetual task)
+- **Example (perpetual):** `E2:S16:T03` = Epic 6, Story 7, Task 101 (UKW - perpetual task)
+- **Example (perpetual):** `E2:S16:T03` = Epic 6, Story 7, Task 102 (CMW - perpetual task)
 - **Tracked:** Git commits reference task ID (or equivalent in your VCS)
 
 **Perpetual Task Range (T101+):**

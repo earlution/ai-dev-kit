@@ -55,7 +55,7 @@ A typical development sequence across different epics:
 ```bash
 # Internal versions (chronological):
 0.3.2.12+1  → 0.9.1+1   # E3:S02:T12, 1st task touch
-0.6.7.103+6 → 0.9.2+6   # E6:S07:T103, 2nd task touch  
+0.6.7.103+6 → 0.9.2+6   # E2:S16:T03, 2nd task touch  
 0.2.13.7+1  → 0.9.3+1   # E2:S13:T07, 3rd task touch
 0.6.7.18+1  → 0.9.4+1   # E6:S07:T18, 4th task touch
 ```

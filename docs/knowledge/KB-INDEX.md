@@ -469,8 +469,8 @@
 | project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T06-cross-project-meta-analysis-and-canonical-framework-design.md | 14.5 KB | 1747 | evergreen | 2025-12-18T00:00:00 |  |
 | project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T07-implement-framework-hardening-recommendations.md | 13.4 KB | 1720 | evergreen | 2025-12-18T00:00:00 |  |
 | project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T09-review-and-prioritize-package-management-investigation.md | 7.0 KB | 815 | evergreen | 2025-12-18T01:30:00 |  |
-| project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md | 5.1 KB | 652 | evergreen | 2025-12-18T00:00:00 |  |
-| project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md | 5.8 KB | 745 | evergreen | 2025-12-21T23:30:00 |  |
+| project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md | 5.1 KB | 652 | evergreen | 2025-12-18T00:00:00 |  |
+| project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md | 5.8 KB | 745 | evergreen | 2025-12-21T23:30:00 |  |
 | project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T11-changelog-management-and-archival-workflow.md | 11.8 KB | 1467 | evergreen | 2025-12-21T20:50:00 |  |
 | project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T13-canonical-cmw-perpetual-task.md | 9.5 KB | 1161 | evergreen | 2025-12-21T23:45:00 |  |
 | project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T14-add-cmw-to-workflow-management-package-documentation.md | 7.2 KB | 903 | evergreen | 2025-12-21T23:45:00 |  |

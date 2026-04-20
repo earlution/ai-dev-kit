@@ -30,12 +30,12 @@ This release implements the repository story abstract space resolution (E9:S01:T
 ### Perpetual Task Migration (T101+)
 
 **UKW (Update Kanban Workflow):**
-- Migrated from E6:S06:T08 to E6:S07:T101
+- Migrated from E6:S06:T08 to E2:S16:T03
 - Version updated: `v0.6.6.8+21` → `v0.6.7.101+21`
 - Task document renamed and updated with new task ID
 
 **CMW (Changelog Maintenance Workflow):**
-- Migrated from E6:S06:T12 to E6:S07:T102
+- Migrated from E6:S06:T12 to E2:S16:T03
 - Version updated: `v0.6.6.12+2` → `v0.6.7.102+2`
 - Task document renamed and updated with new task ID
 
@@ -120,8 +120,8 @@ This release implements the repository story abstract space resolution (E9:S01:T
 - `Story-005-feature-requests.md` → `Story-006-feature-requests.md`
 - `Story-006-adk-implementation-analysis-and-package-management/` → `Story-007-adk-implementation-analysis-and-package-management/`
 - `Story-007-ai-dev-kit-cli-tool.md` → `Story-008-ai-dev-kit-cli-tool.md`
-- `T08-update-kanban-workflow-ukw.md` → `T101-update-kanban-workflow-ukw.md`
-- `T12-changelog-maintenance-workflow-cmw.md` → `T102-changelog-maintenance-workflow-cmw.md`
+- `T08-update-kanban-workflow-ukw.md` → `T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
+- `T12-changelog-maintenance-workflow-cmw.md` → `T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
 
 ### Updated
 - `src/fynd_deals/version.py` - Version updated to v0.9.1.8+1
@@ -160,8 +160,8 @@ This release implements the repository story abstract space resolution (E9:S01:T
 - **Historical Traceability:** Migration notes in all documents preserve history
 
 ### Workflow
-- **UKW Updated:** E6:S07:T101 (new task ID and version)
-- **CMW Updated:** E6:S07:T102 (new task ID and version)
+- **UKW Updated:** E2:S16:T03 (new task ID and version)
+- **CMW Updated:** E2:S16:T03 (new task ID and version)
 - **RW Updated:** Version file reflects E9:S01:T08+1
 - **Validators:** All validation scripts updated to support new structure
 

@@ -35,6 +35,12 @@ E2:S16:T03 — **RW -d** with **`--art`**: move re-housing/guardrail task to IN 
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+1.md)
 ---
+## [0.2.16.3+2] - 20-04-26
+
+E2:S16:T03 — **RW -d** with **`--art`**: complete full repository rewire from legacy perpetual anchors (`E6:S07:T101/T102/T103`) to Story 016 migration ownership and remove deprecated task docs. SemVer **v0.4.764+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+2.md)
+---
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
@@ -145,13 +151,13 @@ E6:S09:T01 — **RW -d** with **`--art`**: greenfield-installation IPW decisions
 ---
 ## [0.6.7.103+1] - 19-04-26
 
-E6:S07:T103 — **RW** with **`--art`**: **IPW** perpetual planning package, **FR-042** wiring. SemVer **v0.4.747+1**.
+E2:S16:T03 — **RW** with **`--art`**: **IPW** perpetual planning package, **FR-042** wiring. SemVer **v0.4.747+1**.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+1.md)
 ---
 ## [0.6.7.103+0] - 19-04-26
 
-E6:S07:T103 — **RW -d** with **`--art`**, **BUILD +0**: `validate_version_bump --doc-policy-zero`, **BR-067** intake. SemVer **v0.4.746+0**.
+E2:S16:T03 — **RW -d** with **`--art`**, **BUILD +0**: `validate_version_bump --doc-policy-zero`, **BR-067** intake. SemVer **v0.4.746+0**.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+0.md)
 ---
@@ -523,7 +529,7 @@ E7:S06:T03+1 – Kanban documentation consistency: live SoT, E9/E18 disambiguati
 ---
 ## [0.6.7.101+37] - 25-03-26
 
-E6:S07:T101+37 – UKW perpetual: Kanban sync after main merge on epic/6; board and T101 markers; Epic 7 Story 6 UKW updates.
+E2:S16:T03+37 – UKW perpetual: Kanban sync after main merge on epic/6; board and T101 markers; Epic 7 Story 6 UKW updates.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+37.md)
 
@@ -572,7 +578,7 @@ E6:S06:T56+3 – BR-056: `validate_rw_task_intent.py`, RW Step 1b / Step 1.5 doc
 ---
 ## [0.6.7.101+35] - 19-03-26
 
-E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 documents for v0.6.7.101+35 (perpetual UKW task).
+E2:S16:T03 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 documents for v0.6.7.101+35 (perpetual UKW task).
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+35.md)
 
@@ -585,7 +591,7 @@ E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current v
 ---
 ## [0.6.7.101+36] - 19-03-26
 
-E6:S07:T101 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 for v0.6.7.101+36 (perpetual UKW task).
+E2:S16:T03 – RW -k Kanban Init: Initialize kanban documentation for current version. Version markers updated in Story 7 and Epic 6 for v0.6.7.101+36 (perpetual UKW task).
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.101+36.md)
 
@@ -9826,7 +9832,7 @@ E6:S07:T18+1 – Workflow Step Tracking: Tool-Agnostic Workflow Step Tracking + 
 ---
 ## [0.6.7.102+7] - 11-03-26
 
-E6:S07:T102+7 – CMW Documentation-Only Release: Comprehensive changelog cleanup and archival following AI Dev Kit latest-only pattern. Reduced main changelog from 615 to 20 lines, archived 24 historical entries to CHANGELOG_ARCHIVE.md, restored proper ordering, and validated format compliance. Documentation-only release following CMW execution.
+E2:S16:T03+7 – CMW Documentation-Only Release: Comprehensive changelog cleanup and archival following AI Dev Kit latest-only pattern. Reduced main changelog from 615 to 20 lines, archived 24 historical entries to CHANGELOG_ARCHIVE.md, restored proper ordering, and validated format compliance. Documentation-only release following CMW execution.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.102+7.md)
 
@@ -10192,7 +10198,7 @@ E6:S07:T104+1 – Release Automation Audit - ICW Package Complete: Implementatio
 
 ## [0.6.7.103+5] - 07-03-26
 
-E6:S07:T103+5 – RW maintenance: doc-init (+0) validator now tolerates required version file updates.
+E2:S16:T03+5 – RW maintenance: doc-init (+0) validator now tolerates required version file updates.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.103+5.md)
 

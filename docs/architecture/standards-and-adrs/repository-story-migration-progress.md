@@ -36,8 +36,8 @@ The repository story abstract space resolution migration is **substantially comp
 **Completed:** 2026-01-16
 
 **Changes:**
-- ✅ E6:S06:T08 (UKW) → E6:S07:T101 (migrated from S06 to S07, T08 to T101)
-- ✅ E6:S06:T12 (CMW) → E6:S07:T102 (migrated from S06 to S07, T12 to T102)
+- ✅ E6:S06:T08 (UKW) → E2:S16:T03 (migrated from S06 to S07, T08 to T101)
+- ✅ E6:S06:T12 (CMW) → E2:S16:T03 (migrated from S06 to S07, T12 to T102)
 - ✅ Task documents updated
 - ✅ Story checklist updated
 - ✅ `.cursorrules` updated
@@ -124,8 +124,8 @@ The repository story abstract space resolution migration is **substantially comp
 - ✅ BR document updated
 
 **Perpetual Tasks:**
-- ✅ E6:S07:T101 (UKW) - task document updated
-- ✅ E6:S07:T102 (CMW) - task document updated
+- ✅ E2:S16:T03 (UKW) - task document updated
+- ✅ E2:S16:T03 (CMW) - task document updated
 - ⏳ Story file (S07) needs header update
 
 ---

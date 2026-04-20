@@ -31,20 +31,20 @@ This document tracks the implementation status of the repository story abstract 
 
 **Changes:**
 - **E6:S06:T08 (UKW) → E6:S06:T101**
-  - Task file renamed: `T08-update-kanban-workflow-ukw.md` → `T101-update-kanban-workflow-ukw.md`
+  - Task file renamed: `T08-update-kanban-workflow-ukw.md` → `T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
   - Task document updated with new Task ID (E6:S06:T101)
   - Version updated: `v0.6.6.8+21` → `v0.6.6.101+21`
   - All references updated in task document
 
 - **E6:S06:T12 (CMW) → E6:S06:T102**
-  - Task file renamed: `T12-changelog-maintenance-workflow-cmw.md` → `T102-changelog-maintenance-workflow-cmw.md`
+  - Task file renamed: `T12-changelog-maintenance-workflow-cmw.md` → `T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
   - Task document updated with new Task ID (E6:S06:T102)
   - Version updated: `v0.6.6.12+2` → `v0.6.6.102+2`
   - All references updated in task document
 
 **Files Updated:**
-- ✅ `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md`
-- ✅ `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T102-changelog-maintenance-workflow-cmw.md`
+- ✅ `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
+- ✅ `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
 - ✅ `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management.md` (story checklist)
 - ✅ `.cursorrules` (UKW/CMW references)
 - ✅ `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` (T101+ policy)

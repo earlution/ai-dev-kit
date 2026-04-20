@@ -60,7 +60,7 @@ None
 | # | Short SHA | Subject (abridged) | Type | RW compliance | Batch / scope | Quality / notes |
 |---|-----------|---------------------|------|---------------|---------------|-----------------|
 | 1 | `6a91aa4b` | Release v0.7.6.3+1: E7:S06:T03… | RW release | Pass — `Release v…`, body `Epic: 7 \| Story: 6 \| Task: 3` | ~16 files: kanban, changelog, version, registry; coherent T03 scope | Traceability: version, `CHANGELOG_v0.7.6.3+1`, board/completed aligned |
-| 2 | `05a06fcf` | Release v0.6.7.101+37: UKW perpetual… | RW release | Pass — E6:S07:T101 | ~12 files | UKW perpetual RW pattern |
+| 2 | `05a06fcf` | Release v0.6.7.101+37: UKW perpetual… | RW release | Pass — E2:S16:T03 | ~12 files | UKW perpetual RW pattern |
 | 3 | `540c6334` | Merge origin/main into epic/6-framework-management | Merge | N/A (not an RW commit) | Merge commit (integration sync) | Acceptable branch sync; policy prefers epic work + RW for releases |
 | 4 | `c134deea` | Release v0.5.2.6+1: E5:S02:T06… | RW release | Pass | ~11 files | FR-063 / CMW narrative consistent |
 | 5 | `9892af39` | Release v0.6.6.56+4: BR-056 verified… | RW release | Pass | ~12 files | E6:S06:T56 closure |

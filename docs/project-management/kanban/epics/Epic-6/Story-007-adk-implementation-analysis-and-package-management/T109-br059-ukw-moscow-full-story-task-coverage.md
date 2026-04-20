@@ -18,7 +18,7 @@ housekeeping_policy: keep
 
 **Upstream:** [BR-059 – UKW MoSCOW incomplete story task coverage](../../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
 
-**Coordinates:** Perpetual UKW task [E6:S07:T101](T101-update-kanban-workflow-ukw.md); related [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md), [BR-034](../../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
+**Coordinates:** Perpetual UKW task [E2:S16:T03](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md); related [BR-042](../../../fr-br/BR-042-ukw-agent-board-cleanup-failure.md), [BR-034](../../../fr-br/BR-034-ukw-moscow-prioritization-missing.md)
 
 ---
 

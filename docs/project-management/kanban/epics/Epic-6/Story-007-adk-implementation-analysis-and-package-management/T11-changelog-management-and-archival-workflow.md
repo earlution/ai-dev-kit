@@ -228,7 +228,7 @@ Implement automated changelog management workflow (CMW) with:
 
 **Related Tasks:**
 - **E6:S07:T07:** Implement framework hardening recommendations (framework hardening context)
-- **E6:S07:T101:** Update Kanban Workflow (UKW) - Similar workflow pattern (migrated from T08 to T101)
+- **E2:S16:T03:** Update Kanban Workflow (UKW) - Similar workflow pattern (migrated from T08 to T101)
 
 **Related Stories:**
 - **E6:S07:** ADK Implementation Analysis and Package Management (parent story, migrated from S06 to S07)

@@ -124,7 +124,7 @@ Create a perpetual task for Release Workflow (RW) and workflow framework mainten
 **Perpetual Task Pattern:**
 - Projects should create a perpetual RW maintenance task for workflow framework maintenance release attribution
 - **Wiring Required:** Task must have `Task Type: Perpetual Maintenance` in task document
-- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (e.g., E6:S07:T103 in ai-dev-kit)
+- **Task ID Varies:** Each project instance has its own perpetual task with its own E/S/T ID (e.g., E2:S16:T03 in ai-dev-kit)
 - Task status: IN PROGRESS (Perpetual - never completes)
 - BUILD number accumulates naturally as RW maintenance releases (expected and valid)
 

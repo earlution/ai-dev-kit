@@ -28,13 +28,13 @@ from validate_version_bump import (
 
 # --- T1: Task ID extraction prefers canonical section ---
 def test_task_id_extraction_prefers_canonical_section():
-    """Extract E6:S07:T101 from doc with Progress 'E4:S16:T05' and canonical '**Value:** E6:S07:T101'."""
+    """Extract E2:S16:T03 from doc with Progress 'E4:S16:T05' and canonical '**Value:** E2:S16:T03'."""
     content = """
 **Progress:** UKW execution. Four completed tasks removed: E4:S16:T05, E4:S16:T06, E5:S01:T34, E5:S01:T37.
 
 ## Task ID
 **Format:** E{epic}:S{story}:T{task}
-**Value:** `E6:S07:T101`
+**Value:** `E2:S16:T03`
 """
     result = extract_task_id_canonical(content)
     assert result is not None, "Should extract Task ID from canonical section"
@@ -107,10 +107,10 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 **Code:** E6S07
 
 ## Task Checklist
-- [ ] **E6:S07:T101** – Update Kanban Workflow (UKW) - IN PROGRESS (Perpetual)
+- [ ] **E2:S16:T03** – Update Kanban Workflow (UKW) - IN PROGRESS (Perpetual)
 """)
 
-            task_file = task_dir / "T101-update-kanban-workflow-ukw.md"
+            task_file = task_dir / "T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md"
             task_file.write_text("""
 # Epic 6, Story 7, Task 101: Update Kanban Workflow (UKW)
 
@@ -121,7 +121,7 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 **Progress:** Completed tasks removed: E4:S16:T05, E4:S16:T06.
 
 ## Task ID
-**Value:** `E6:S07:T101`
+**Value:** `E2:S16:T03`
 
 ## Acceptance Criteria
 - [x] Criterion one
@@ -152,7 +152,7 @@ def test_perpetual_task_relaxed_field_validation():
 **Scope:** UKW work.
 
 ## Task ID
-**Value:** `E6:S07:T101`
+**Value:** `E2:S16:T03`
 
 ## Acceptance Criteria
 - [x] Criterion one
@@ -188,16 +188,16 @@ def test_validate_version_bump_build_increment_perpetual():
 # Story 007
 **Code:** E6S07
 ## Task Checklist
-- [ ] **E6:S07:T101** – UKW - IN PROGRESS (Perpetual)
+- [ ] **E2:S16:T03** – UKW - IN PROGRESS (Perpetual)
 """)
 
-            task_file = task_dir / "T101-update-kanban-workflow-ukw.md"
+            task_file = task_dir / "T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md"
             task_file.write_text("""
 **Status:** IN PROGRESS (Perpetual)
 **Task Type:** Perpetual Maintenance
 **Scope:** UKW.
 ## Task ID
-**Value:** `E6:S07:T101`
+**Value:** `E2:S16:T03`
 ## Acceptance Criteria
 - [x] One
 """)
@@ -220,7 +220,7 @@ VERSION_STRING = "0.6.7.101+32"
 
 # --- T7: validate_version_bump passes for T103 (RW Maintenance perpetual task) ---
 def test_validate_version_bump_passes_for_t103():
-    """Version 0.6.7.103+1, T103 task doc, story checklist -> validation passes (E6:S07:T103 RW Maintenance)."""
+    """Version 0.6.7.103+1, T103 task doc, story checklist -> validation passes (E2:S16:T03 RW Maintenance)."""
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
         orig_cwd = os.getcwd()
@@ -257,10 +257,10 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 **Code:** E6S07
 
 ## Task Checklist
-- [ ] **E6:S07:T103** – Release Workflow (RW) Maintenance - IN PROGRESS (Perpetual)
+- [ ] **E2:S16:T03** – Release Workflow (RW) Maintenance - IN PROGRESS (Perpetual)
 """)
 
-            task_file = task_dir / "T103-release-workflow-maintenance-perpetual-task.md"
+            task_file = task_dir / "T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md"
             task_file.write_text("""
 # Epic 6, Story 7, Task 103: Release Workflow (RW) Maintenance - Perpetual Task
 
@@ -269,7 +269,7 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 **Scope:** RW maintenance work (Step 7 fixes, validator updates, doc corrections).
 
 ## Task ID
-**Value:** `E6:S07:T103`
+**Value:** `E2:S16:T03`
 
 ## Acceptance Criteria
 - [x] Criterion one
@@ -329,10 +329,10 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 **Code:** E6S07
 
 ## Task Checklist
-- [ ] **E6:S07:T103** – Release Workflow (RW) Maintenance - IN PROGRESS (Perpetual)
+- [ ] **E2:S16:T03** – Release Workflow (RW) Maintenance - IN PROGRESS (Perpetual)
 """)
 
-            task_file = task_dir / "T103-release-workflow-maintenance-perpetual-task.md"
+            task_file = task_dir / "T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md"
             task_file.write_text("""
 # Epic 6, Story 7, Task 103: Release Workflow (RW) Maintenance - Perpetual Task
 
@@ -340,7 +340,7 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
 **Task Type:** Perpetual Maintenance
 
 ## Task ID
-**Value:** `E6:S07:T103`
+**Value:** `E2:S16:T03`
 
 ## Acceptance Criteria
 - [x] Criterion one
@@ -358,7 +358,7 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
                 version_file,
                 story_file=story_path,
                 config=config,
-                requested="E6:S07:T103",
+                requested="E2:S16:T03",
                 art=True,
                 doc_policy_zero=True,
             )

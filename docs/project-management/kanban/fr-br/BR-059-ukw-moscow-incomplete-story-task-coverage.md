@@ -76,7 +76,7 @@ A **comprehensive UKW** run promoted **E5:S09:T01** to the MoSCOW **Should** sec
 - **Story:** [E5:S09 – Docusaurus Documentation Portal](../epics/Epic-5/Story-009-docusaurus-documentation-portal.md)  
 - **Related BR:** [BR-042](BR-042-ukw-agent-board-cleanup-failure.md) (completed tasks left on board — opposite failure mode)  
 - **Related BR:** [BR-034](BR-034-ukw-moscow-prioritization-missing.md)  
-- **Perpetual UKW task:** [E6:S07:T101](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md)  
+- **Perpetual UKW task:** [E2:S16:T03](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)  
 
 ---
 

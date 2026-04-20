@@ -140,9 +140,9 @@ Do NOT use E7:S01:T05 when:
 ## Related Work
 
 - **E7:S01:T01** - IDE-Flagged Issues (Perpetual Task) - Content quality partner
-- **E6:S07:T103** - RW Maintenance (Perpetual Task) - Workflow maintenance partner
-- **E6:S07:T102** - CMW (Perpetual Task) - Documentation maintenance partner
-- **E6:S07:T101** - UKW (Perpetual Task) - Structure maintenance partner
+- **E2:S16:T03** - RW Maintenance (Perpetual Task) - Workflow maintenance partner
+- **E2:S16:T03** - CMW (Perpetual Task) - Documentation maintenance partner
+- **E2:S16:T03** - UKW (Perpetual Task) - Structure maintenance partner
 
 ---
 

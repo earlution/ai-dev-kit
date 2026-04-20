@@ -10,7 +10,7 @@
 
 ## Summary
 
-E6:S07:T103: Doc-init validator update to allow required version file changes during BUILD=0 runs.
+E2:S16:T03: Doc-init validator update to allow required version file changes during BUILD=0 runs.
 
 ---
 
@@ -26,4 +26,4 @@ E6:S07:T103: Doc-init validator update to allow required version file changes du
 ## Related
 
 - **Validator:** `packages/frameworks/workflow mgt/scripts/validation/validate_branch_context.py`
-- **Perpetual Task:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
+- **Perpetual Task:** [T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)

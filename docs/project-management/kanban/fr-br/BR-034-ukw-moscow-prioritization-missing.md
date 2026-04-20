@@ -164,7 +164,7 @@ Add MoSCOW prioritization logic to UKW Step 6:
 ## Related Work
 
 **Workflow:** Update Kanban Workflow (UKW)  
-**Task:** [E6:S07:T101: Update Kanban Workflow (UKW)](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md) - Perpetual task  
+**Task:** [E2:S16:T03: Update Kanban Workflow (UKW)](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) - Perpetual task  
 **Kanban Links:**
 - Story: [E6:S01: BR Repo (PERPETUAL)](../epics/Epic-6/Story-001-br-repo.md)
 - Task: [E6:S01:T34: UKW MoSCOW Prioritization Missing](../epics/Epic-6/Story-001-br-repo/T34-ukw-moscow-prioritization-missing.md)

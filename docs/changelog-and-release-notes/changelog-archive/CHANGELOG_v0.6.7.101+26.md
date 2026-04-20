@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Release Date:** 2026-01-20 17:35:00 UTC  
 **Epic:** E6 – Framework Management and Maintenance  
 **Story:** E6:S07 – ADK Implementation Analysis and Package Management  
-**Task:** E6:S07:T101 – Update Kanban Workflow (UKW) - Perpetual Task
+**Task:** E2:S16:T03 – Update Kanban Workflow (UKW) - Perpetual Task
 
 ---
 
@@ -38,11 +38,11 @@ UKW synchronization run #26: Story 017 (Kanban Package Installation Evaluation) 
 - **Kanban Board Refreshed:**
   - MoSCOW section: Removed completed Story 017 tasks (T02-T06) from "Should Have" section
   - Epic 4 section: Updated Story 017 status to COMPLETE
-  - Perpetual Tasks section: Updated E6:S07:T101 to v0.6.7.101+25
+  - Perpetual Tasks section: Updated E2:S16:T03 to v0.6.7.101+25
   - Board metadata: Updated last updated timestamp
 
 - **Perpetual UKW Task Updated:**
-  - E6:S07:T101 updated to v0.6.7.101+25 (UKW run #25)
+  - E2:S16:T03 updated to v0.6.7.101+25 (UKW run #25)
   - Progress documented: Story 017 completion synced across kanban documents
 
 ---
@@ -50,7 +50,7 @@ UKW synchronization run #26: Story 017 (Kanban Package Installation Evaluation) 
 ## Related Work
 
 - **E4:S17:** Kanban Package Installation Evaluation (COMPLETE)
-- **E6:S07:T101:** Update Kanban Workflow (UKW) - Perpetual Task
+- **E2:S16:T03:** Update Kanban Workflow (UKW) - Perpetual Task
 
 ---
 
@@ -64,6 +64,6 @@ UKW synchronization run #26: Story 017 (Kanban Package Installation Evaluation) 
 
 ## Notes
 
-- UKW run #26 (perpetual task E6:S07:T101)
+- UKW run #26 (perpetual task E2:S16:T03)
 - Story 017 completion synced across all kanban documents
 - Kanban board refreshed to reflect current project state

@@ -7,7 +7,7 @@
 
 ## Overview
 
-**RW -d** documentation release with **`--art`** canonical adoption to **E6:S09:T01** (from prior **E6:S07:T101** version state). Establishes **Story 009 — AI Dev Kit installation and adopter integration**, intake **FR-080** (greenfield installation process), linked task and Kanban wiring; aligns **ADR-003** with FR traceability.
+**RW -d** documentation release with **`--art`** canonical adoption to **E6:S09:T01** (from prior **E2:S16:T03** version state). Establishes **Story 009 — AI Dev Kit installation and adopter integration**, intake **FR-080** (greenfield installation process), linked task and Kanban wiring; aligns **ADR-003** with FR traceability.
 
 ## Documentation & traceability
 

@@ -7,7 +7,7 @@
 
 ## Overview
 
-Release Workflow for perpetual **UKW** task **E6:S07:T101** with **`--art`** canonical anchor adoption (from prior **E7:S06:T18** release state). Captures the staged UKW comprehensive pass: main Kanban board metadata, [`kanban-completed.md`](../../project-management/kanban/kanban-completed.md) entries for completed tasks, **fbuboard** reconciliation (**UXR-007** → completed archive; **BR-066** row semantics), and **T101** / Story 7 narrative updates.
+Release Workflow for perpetual **UKW** task **E2:S16:T03** with **`--art`** canonical anchor adoption (from prior **E7:S06:T18** release state). Captures the staged UKW comprehensive pass: main Kanban board metadata, [`kanban-completed.md`](../../project-management/kanban/kanban-completed.md) entries for completed tasks, **fbuboard** reconciliation (**UXR-007** → completed archive; **BR-066** row semantics), and **T101** / Story 7 narrative updates.
 
 ## Documentation & traceability
 
@@ -18,4 +18,4 @@ Release Workflow for perpetual **UKW** task **E6:S07:T101** with **`--art`** can
 ## Verification
 
 - `validate_branch_context.py --strict`
-- `validate_rw_task_complete.py` / `validate_rw_task_intent.py --requested E6:S07:T101 --art`
+- `validate_rw_task_complete.py` / `validate_rw_task_intent.py --requested E2:S16:T03 --art`

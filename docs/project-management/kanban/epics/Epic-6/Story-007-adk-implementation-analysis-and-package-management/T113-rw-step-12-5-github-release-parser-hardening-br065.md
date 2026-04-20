@@ -16,7 +16,7 @@ housekeeping_policy: keep
 **Code:** E6S07T113
 
 **Upstream:** [BR-065 - RW Step 12.5 GitHub release parser fails on `v`-prefixed version](../../../fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md)  
-**Coordinates with:** [E6:S07:T103](T103-release-workflow-maintenance-perpetual-task.md) RW maintenance perpetual task
+**Coordinates with:** [E2:S16:T03](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) RW maintenance perpetual task
 
 ---
 
@@ -71,5 +71,5 @@ Implemented parser hardening in `packages/frameworks/workflow mgt/scripts/create
 
 - [BR-065](../../../fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md)
 - [FR-041](../../../fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md)
-- [E6:S07:T103](T103-release-workflow-maintenance-perpetual-task.md)
+- [E2:S16:T03](T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
 - [IPW-E6S07T113](../../../../../implementation-cycles/IPW-E6S07T113-rw-step-12-5-github-release-parser-hardening.md)

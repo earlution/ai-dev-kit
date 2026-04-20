@@ -2,7 +2,7 @@
 
 ## [0.6.7.102+7] - 2026-03-11 17:25:00 UTC
 
-E6:S07:T102+7 – CMW Documentation-Only Release: Comprehensive changelog cleanup and archival following AI Dev Kit latest-only pattern. Reduced main changelog from 615 to 20 lines, archived 24 historical entries to CHANGELOG_ARCHIVE.md, restored proper ordering, and validated format compliance. Documentation-only release following CMW execution.
+E2:S16:T03+7 – CMW Documentation-Only Release: Comprehensive changelog cleanup and archival following AI Dev Kit latest-only pattern. Reduced main changelog from 615 to 20 lines, archived 24 historical entries to CHANGELOG_ARCHIVE.md, restored proper ordering, and validated format compliance. Documentation-only release following CMW execution.
 
 ### Documentation Changes
 
@@ -22,7 +22,7 @@ E6:S07:T102+7 – CMW Documentation-Only Release: Comprehensive changelog cleanu
 ### Technical Details
 
 - **CMW Context:** Documentation-only release following changelog maintenance workflow
-- **Perpetual Task:** Attributed to E6:S07:T102 (CMW perpetual task)
+- **Perpetual Task:** Attributed to E2:S16:T03 (CMW perpetual task)
 - **Build Increment:** +7 (7th CMW execution for changelog maintenance)
 - **Archive Strategy:** Latest-only pattern implemented per AI Dev Kit policy
 

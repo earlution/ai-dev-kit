@@ -51,7 +51,7 @@ Policy updates to reflect the new repository story pattern (S01) and abstract sp
 ### Perpetual Task Range (T101+)
 
 - **Range:** T101+ (3-digit task numbers starting at 101)
-- **Examples:** UKW (E6:S07:T101), CMW (E6:S07:T102)
+- **Examples:** UKW (E2:S16:T03), CMW (E2:S16:T03)
 - **Characteristics:**
   - Status: IN PROGRESS (Perpetual) - never transitions to COMPLETE
   - Build Warning Suppression: Enabled (high BUILD numbers expected and valid)

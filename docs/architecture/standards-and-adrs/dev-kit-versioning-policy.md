@@ -442,9 +442,9 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - Example: CMW runs → `v0.6.7.102+1`, `v0.6.7.102+2`, `v0.6.7.102+3`, etc.
 
 **Perpetual Task Examples:**
-- **UKW (Update Kanban Workflow):** Epic 6, Story 7, Task 101 (E6:S07:T101) - Kanban documentation synchronization
-- **CMW (Changelog Management Workflow):** Epic 6, Story 7, Task 102 (E6:S07:T102) - Changelog maintenance and archival
-- **RW Maintenance:** Epic 6, Story 7, Task 103 (E6:S07:T103) - Release Workflow and workflow framework maintenance (Step 7 fixes, validator updates, doc corrections)
+- **UKW (Update Kanban Workflow):** Epic 6, Story 7, Task 101 (E2:S16:T03) - Kanban documentation synchronization
+- **CMW (Changelog Management Workflow):** Epic 6, Story 7, Task 102 (E2:S16:T03) - Changelog maintenance and archival
+- **RW Maintenance:** Epic 6, Story 7, Task 103 (E2:S16:T03) - Release Workflow and workflow framework maintenance (Step 7 fixes, validator updates, doc corrections)
 
 **Task Number Ranges:**
 - **Regular tasks:** T01-T99 (2-digit) - Standard feature/bug tasks
@@ -460,7 +460,7 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 
 **T103 (RW Maintenance) - Manual Attribution:**
 - No automatic context detection (unlike UKW/CMW)
-- When releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), agent/user manually sets version to E6:S07:T103 and increments BUILD
+- When releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), agent/user manually sets version to E2:S16:T03 and increments BUILD
 
 **Task ID Variability:**
 - Each project instance has its own perpetual task with its own E/S/T ID

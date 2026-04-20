@@ -86,6 +86,6 @@ Step 12.5 should accept canonical `v`-prefixed release inputs (for both SemVer a
 ## Related
 
 - [FR-041](FR-041-perpetual-task-for-release-workflow-maintenance.md)
-- [E6:S07:T103](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)
+- [E2:S16:T03](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
 - [IPW-E6S07T113](../../../implementation-cycles/IPW-E6S07T113-rw-step-12-5-github-release-parser-hardening.md)
 - `packages/frameworks/workflow mgt/scripts/create_github_release.py`

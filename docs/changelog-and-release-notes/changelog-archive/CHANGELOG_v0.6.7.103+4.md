@@ -2,12 +2,12 @@
 
 **Release Date:** 2026-03-30 16:45:00 UTC  
 **Epic:** 6 | **Story:** 7 | **Task:** 103  
-**Task doc:** [T103-release-workflow-maintenance-perpetual-task.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md)  
+**Task doc:** [T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md](../../project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)  
 **FR:** [FR-041](../../project-management/kanban/fr-br/FR-041-perpetual-task-for-release-workflow-maintenance.md) | consumer ref [FR-067 FU-2](../../project-management/kanban/fr-br/FR-067-docusaurus-production-build-corpus-triage.md)
 
 ## Summary
 
-**RW -d** (documentation-only): **FR-067 follow-up FU-2** (GitHub Releases / RW Step 12.5) is **Kanban- and FR-anchored** on **E6:S07:T103** and **FR-041**, not only as prose on FR-067. Bidirectional links: T103 ↔ FR-067/FR-041; triage note updated.
+**RW -d** (documentation-only): **FR-067 follow-up FU-2** (GitHub Releases / RW Step 12.5) is **Kanban- and FR-anchored** on **E2:S16:T03** and **FR-041**, not only as prose on FR-067. Bidirectional links: T103 ↔ FR-067/FR-041; triage note updated.
 
 ## Changes
 
@@ -20,7 +20,7 @@
 
 ## Verification
 
-- `validate_branch_context.py --strict`; `validate_rw_task_complete.py` (perpetual **T103**); `validate_rw_task_intent.py --confirmed-override` (explicit **`RW -d E6:S07:T103`** — cross-epic attribution vs prior `version.py`).
+- `validate_branch_context.py --strict`; `validate_rw_task_complete.py` (perpetual **T103**); `validate_rw_task_intent.py --confirmed-override` (explicit **`RW -d E2:S16:T03`** — cross-epic attribution vs prior `version.py`).
 
 ## RW -d
 

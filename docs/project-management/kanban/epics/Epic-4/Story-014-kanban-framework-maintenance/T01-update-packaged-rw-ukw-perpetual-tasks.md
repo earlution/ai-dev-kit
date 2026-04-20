@@ -29,7 +29,7 @@ housekeeping_policy: keep
 
 ## Overview
 
-Update the packaged Release Workflow (RW) framework to handle UKW (Update Kanban Workflow) context detection and perpetual task attribution. This ensures that UKW-triggered releases are properly attributed to perpetual tasks (like E6:S07:T101) rather than arbitrary feature tasks.
+Update the packaged Release Workflow (RW) framework to handle UKW (Update Kanban Workflow) context detection and perpetual task attribution. This ensures that UKW-triggered releases are properly attributed to perpetual tasks (like E2:S16:T03) rather than arbitrary feature tasks.
 
 ---
 
@@ -43,7 +43,7 @@ Update the packaged Release Workflow (RW) framework to handle UKW (Update Kanban
 
 **Root Cause:**
 - Packaged RW was updated in source repo (`.cursorrules`), but not in the packaged framework
-- Perpetual task pattern (e.g., E6:S07:T101 in ai-dev-kit) needs to be integrated into packaged RW
+- Perpetual task pattern (e.g., E2:S16:T03 in ai-dev-kit) needs to be integrated into packaged RW
 - Framework needs to support maintenance workflows (UKW) properly
 
 **Solution:**
@@ -83,7 +83,7 @@ Update packaged RW to:
 
 2. **Auto-Attribution Logic:**
    - If UKW context detected → Auto-attribute to perpetual task
-   - Pattern: Check for perpetual task in Story (e.g., E6:S07:T101 in ai-dev-kit)
+   - Pattern: Check for perpetual task in Story (e.g., E2:S16:T03 in ai-dev-kit)
    - Use task number from perpetual task, increment BUILD
    - Skip normal task identification when UKW context detected
 
@@ -136,7 +136,7 @@ Update packaged RW to:
 - **Planning document:** [T01-planning-spec-tests-impl.md](T01-planning-spec-tests-impl.md) (Spec, Test Design, Implementation Plan)
 - Packaged RW framework: `packages/frameworks/workflow mgt/`
 - Source repo RW implementation: `.cursorrules` (UKW context detection)
-- UKW perpetual task: `E6:S07:T101` (ai-dev-kit example; pattern varies by project)
+- UKW perpetual task: `E2:S16:T03` (ai-dev-kit example; pattern varies by project)
 - UKW analysis: `docs/analysis/ukw-versioning-reasoning-analysis.md`
 
 ---
@@ -166,7 +166,7 @@ Update packaged RW to:
 - None
 
 **Coordinates With:**
-- **E6:S07:T101** - UKW perpetual task (source of pattern in ai-dev-kit; migrated from T08)
+- **E2:S16:T03** - UKW perpetual task (source of pattern in ai-dev-kit; migrated from T08)
 - **Epic 2** - Workflow Management Framework (RW package owner)
 
 ---
@@ -178,7 +178,7 @@ Update packaged RW to:
 - **RW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
 - **RW Workflow YAML:** `packages/frameworks/workflow mgt/workflows/release-workflow.yaml`
 - **Source RW Implementation:** `.cursorrules` (RW trigger section)
-- **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T101-update-kanban-workflow-ukw.md`
+- **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
 - **UKW Analysis:** `docs/analysis/ukw-versioning-reasoning-analysis.md`
 
 ---

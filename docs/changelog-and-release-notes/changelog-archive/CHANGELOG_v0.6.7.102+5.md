@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Release Date:** 2026-01-20 17:50:00 UTC  
 **Epic:** E6 – Framework Management and Maintenance  
 **Story:** E6:S07 – ADK Implementation Analysis and Package Management  
-**Task:** E6:S07:T102 – Changelog Maintenance Workflow (CMW) - Perpetual Task
+**Task:** E2:S16:T03 – Changelog Maintenance Workflow (CMW) - Perpetual Task
 
 ---
 
@@ -44,7 +44,7 @@ CMW maintenance run #5: Fixed changelog ordering violation, archived 4 entries, 
 
 ## Related Work
 
-- **E6:S07:T102:** Changelog Maintenance Workflow (CMW) - Perpetual Task
+- **E2:S16:T03:** Changelog Maintenance Workflow (CMW) - Perpetual Task
 
 ---
 
@@ -58,6 +58,6 @@ CMW maintenance run #5: Fixed changelog ordering violation, archived 4 entries, 
 
 ## Notes
 
-- CMW run #5 (perpetual task E6:S07:T102)
+- CMW run #5 (perpetual task E2:S16:T03)
 - Changelog ordering fixed, 4 entries archived
 - Changelog health maintained through automated maintenance
