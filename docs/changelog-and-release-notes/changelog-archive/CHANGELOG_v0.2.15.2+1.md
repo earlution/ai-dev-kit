@@ -12,9 +12,9 @@ Filed FR-084 and anchored E2:S15:T02 to make IPW explicitly responsible for post
 ## Included
 
 - New FR intake:
-  - `docs/project-management/kanban/fr-br/FR-084-ipw-post-run-governance-reconciliation-ownership.md`
+- `docs/project-management/kanban/fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md`
 - New implementing task:
-  - `docs/project-management/kanban/epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T02-ipw-post-run-governance-reconciliation-ownership-fr084.md`
+- `docs/project-management/kanban/epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md`
 - Story wiring:
   - `docs/project-management/kanban/epics/Epic-2/Story-015-ipw-governance-and-publication-contract.md`
 - Board wiring:

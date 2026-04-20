@@ -17,6 +17,14 @@ E2:S15:T02 — **RW** with **`--art`**: file FR-084 and assign IPW post-run owne
 
 ---
 
+## [0.2.15.2+2] - 20-04-26
+
+E2:S15:T02 — **RW** with **`--art`**: normalize FR-084/T02 terminology to `IPP` and rename FR/task docs from `ipw` to `ipp` filenames with all references reconciled. SemVer **v0.4.762+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.2+2.md)
+
+---
+
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.

@@ -35,6 +35,6 @@ Eliminate IPW documentation publication drift by making ownership, filing target
 
 - [x] **E2:S15:T01 – BR-066: IPW Docusaurus filing contract and backfill** - COMPLETE (v0.2.15.1+1) (HIGH, contract + validation + historical recovery inventory) — [Task doc](Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 
-- [ ] **E2:S15:T02 – IPW post-run governance reconciliation ownership (FR-084)** - TODO (HIGH, assign deterministic IPW ownership for reconciling task/FR-BR-UXR docs + kboard/fbuboard after IPW completion) — [Task doc](Story-015-ipw-governance-and-publication-contract/T02-ipw-post-run-governance-reconciliation-ownership-fr084.md) | [FR-084](../../fr-br/FR-084-ipw-post-run-governance-reconciliation-ownership.md)
+- [ ] **E2:S15:T02 – IPP post-run governance reconciliation ownership (FR-084)** - TODO (HIGH, assign deterministic IPP ownership for reconciling task/FR-BR-UXR docs + kboard/fbuboard after IPP completion) — [Task doc](Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md) | [FR-084](../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md)
 
 ---

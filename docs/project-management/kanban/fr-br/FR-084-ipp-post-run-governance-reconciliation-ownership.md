@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# FR-084: IPW post-run governance reconciliation ownership
+# FR-084: IPP post-run governance reconciliation ownership
 
 **Type:** Feature Request (FR)  
 **ID:** FR-084  
@@ -16,13 +16,13 @@ housekeeping_policy: keep
 **Severity:** HIGH  
 **Status:** OPEN
 
-**Implementing Task:** [E2:S15:T02](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T02-ipw-post-run-governance-reconciliation-ownership-fr084.md)
+**Implementing Task:** [E2:S15:T02](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md)
 
 ---
 
 ## Summary
 
-The IPW workflow must own post-run governance reconciliation by updating all required traceability surfaces at completion time: host task doc, source FR/BR/UXR doc, `kboard.md`, and `fbuboard.md`.
+The IPW workflow must own post-run governance reconciliation through IPP by updating all required traceability surfaces at completion time: host task doc, source FR/BR/UXR doc, `kboard.md`, and `fbuboard.md`.
 
 ---
 
@@ -36,10 +36,10 @@ IPW planning runs can leave governance artifacts out of sync even when planning 
 
 ### Functional Requirements
 
-- [ ] **FR-084-F1:** Define explicit IPW post-run responsibility to reconcile host task doc state and planning links.
-- [ ] **FR-084-F2:** Define explicit IPW post-run responsibility to reconcile source FR/BR/UXR document status/links.
-- [ ] **FR-084-F3:** Define explicit IPW post-run responsibility to reconcile `kboard.md` task row presence/state.
-- [ ] **FR-084-F4:** Define explicit IPW post-run responsibility to reconcile `fbuboard.md` FR/BR/UXR row presence/state.
+- [ ] **FR-084-F1:** Define explicit IPP post-run responsibility to reconcile host task doc state and planning links.
+- [ ] **FR-084-F2:** Define explicit IPP post-run responsibility to reconcile source FR/BR/UXR document status/links.
+- [ ] **FR-084-F3:** Define explicit IPP post-run responsibility to reconcile `kboard.md` task row presence/state.
+- [ ] **FR-084-F4:** Define explicit IPP post-run responsibility to reconcile `fbuboard.md` FR/BR/UXR row presence/state.
 - [ ] **FR-084-F5:** Require deterministic reconciliation order and idempotent behavior on repeat runs.
 
 ### Non-Functional Requirements
@@ -51,7 +51,7 @@ IPW planning runs can leave governance artifacts out of sync even when planning 
 
 ## Acceptance Criteria
 
-- [ ] IPW documentation/spec clearly states post-run ownership for all four surfaces (task, FR/BR/UXR, `kboard`, `fbuboard`).
+- [ ] IPP documentation/spec clearly states post-run ownership for all four surfaces (task, FR/BR/UXR, `kboard`, `fbuboard`).
 - [ ] Task and FR are bidirectionally linked and housed under semantic IPW-governance story.
 - [ ] Boards include linked entries for FR-084 and E2:S15:T02.
 - [ ] Re-run expectations are explicitly defined (idempotent reconciliation, no duplicate rows).
@@ -60,7 +60,7 @@ IPW planning runs can leave governance artifacts out of sync even when planning 
 
 ## Scope Analysis
 
-**Problem Domain:** IPW governance contract, workflow closeout integrity  
+**Problem Domain:** IPP governance contract, workflow closeout integrity  
 **Affected Areas:**
 
 - [x] IPW governance story/task docs

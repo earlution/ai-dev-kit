@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 15, Task 2: IPW post-run governance reconciliation ownership (FR-084)
+# Epic 2, Story 15, Task 2: IPP post-run governance reconciliation ownership (FR-084)
 
 **Task ID:** E2:S15:T02  
 **Status:** IN PROGRESS  
@@ -16,13 +16,13 @@ housekeeping_policy: keep
 **Last updated:** 2026-04-20 (FR-084 intake created, story + board wiring completed; pending RW release)  
 **Code:** E2S15T02
 
-**Upstream:** [FR-084 - IPW post-run governance reconciliation ownership](../../../fr-br/FR-084-ipw-post-run-governance-reconciliation-ownership.md)
+**Upstream:** [FR-084 - IPP post-run governance reconciliation ownership](../../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md)
 
 ---
 
 ## Input
 
-- [FR-084](../../../fr-br/FR-084-ipw-post-run-governance-reconciliation-ownership.md) requirements.
+- [FR-084](../../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) requirements.
 - Existing IPW governance baseline under Story 015.
 - Current governance surfaces: host task docs, source FR/BR/UXR docs, `kboard.md`, `fbuboard.md`.
 
@@ -36,7 +36,7 @@ IPW completion currently does not guarantee deterministic reconciliation of all 
 
 ## Deliverable
 
-- Explicit, enforceable IPW post-run reconciliation contract covering task doc, FR/BR/UXR doc, `kboard.md`, and `fbuboard.md`.
+- Explicit, enforceable IPP post-run reconciliation contract covering task doc, FR/BR/UXR doc, `kboard.md`, and `fbuboard.md`.
 - Deterministic order and idempotency expectations for repeated IPW execution.
 - Traceability wiring for FR/task/story/boards.
 
@@ -63,6 +63,6 @@ IPW completion currently does not guarantee deterministic reconciliation of all 
 
 ## References
 
-- [FR-084](../../../fr-br/FR-084-ipw-post-run-governance-reconciliation-ownership.md)
+- [FR-084](../../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md)
 - [Story 015](../Story-015-ipw-governance-and-publication-contract.md)
 - [T01](T01-ipw-docusaurus-filing-contract-and-backfill-br066.md)
