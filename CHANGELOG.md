@@ -41,6 +41,14 @@ E2:S16:T01 — **RW -d** with **`--art`**: expand Story 016 planning to retire l
 
 ---
 
+## [0.2.16.2+1] - 20-04-26
+
+E2:S16:T02 — **RW -d** with **`--art`**: move inventory/classification task to IN PROGRESS and start canonical migration inventory execution for workflow perpetual anchors. SemVer **v0.4.765+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.2+1.md)
+
+---
+
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
