@@ -9,14 +9,15 @@ housekeeping_policy: keep
 # Epic 4, Story 19, Task 2: Canonical supporting Kanban/FBU doc naming and `FBU` collective terminology (FR-086)
 
 **Task ID:** E4:S19:T02  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-20 (re-housed from E6:S07 to abstract governance story after placement review)  
+**Last updated:** 2026-04-20 (IPW created and traceability links added; release in progress)  
 **Code:** E4S19T02
 
 **Upstream:** [FR-086 - Canonical supporting Kanban/FBU doc naming and `FBU` collective terminology](../../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md)
+**IPW:** [`IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md`](../../../../../implementation-cycles/IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md)
 
 ---
 

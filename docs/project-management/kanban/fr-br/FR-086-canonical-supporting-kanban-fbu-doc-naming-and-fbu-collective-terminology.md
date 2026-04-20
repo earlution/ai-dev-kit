@@ -17,6 +17,7 @@ housekeeping_policy: keep
 **Status:** OPEN
 
 **Implementing Task:** [E4:S19:T02](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T02-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology-fr086.md)
+**IPW:** [`IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md`](../../../implementation-cycles/IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md)
 
 ---
 

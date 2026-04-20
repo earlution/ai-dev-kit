@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.4.19.2+1] - 20-04-26
+
+E4:S19:T02 — **RW** with **`--art`**: create and wire the IPW artifact for canonical supporting Kanban/FBU doc naming + collective `FBU` terminology governance, with bidirectional task/FR traceability. SemVer **v0.4.764+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.2+1.md)
+---
 ## [0.2.15.2+1] - 20-04-26
 
 E2:S15:T02 — **RW** with **`--art`**: file FR-084 and assign IPW post-run ownership for deterministic reconciliation of task/FR-BR-UXR docs plus `kboard`/`fbuboard`. SemVer **v0.4.760+1**.

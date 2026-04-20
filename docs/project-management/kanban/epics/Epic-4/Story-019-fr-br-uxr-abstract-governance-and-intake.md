@@ -8,12 +8,12 @@ housekeeping_policy: keep
 
 # Story 019 – FR/BR/UXR abstract governance and intake
 
-**Status:** IN PROGRESS  
+**Status:** IN PROGRESS
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-02 — **BR-060** canonical task **E2:S01:T09** (Epic 2); **E4:S19:T01** file is a redirect stub only; story remains **abstract-first** (intake / governance).  
-**Version:** v0.4.19.0+0  
+**Last updated:** 2026-04-20 (v0.4.19.2+1 – Kanban documentation setup)
+**Version:** v0.4.19.2+1
 **Code:** E4S19  
 
 **Story type:** Ongoing governance (not a perpetual “repo ledger”; not a dumping ground for individual **FR-### / BR-### / UXR-###** implementation work).
