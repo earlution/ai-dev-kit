@@ -599,7 +599,7 @@ hierarchy:
 The Kanban board uses a **split pattern** to optimize for quick scanning:
 
 **Two Documents:**
-- **`kanban-board.md`** - Structured information only (tasks, epics, status, links)
+- **`kboard.md`** - Structured information only (tasks, epics, status, links)
 - **`kanban-board-guide.md`** - Rules, explanations, and how-to content
 
 **Benefits:**
@@ -612,7 +612,7 @@ The Kanban board uses a **split pattern** to optimize for quick scanning:
 - `templates/KANBAN_BOARD_GUIDE_TEMPLATE.md` - Guide template (rules/explanations)
 
 **Usage:**
-- Use `kanban-board.md` for quick scanning of active tasks and epic status
+- Use `kboard.md` for quick scanning of active tasks and epic status
 - Reference `kanban-board-guide.md` when you need rules, explanations, or how-to content
 - Both documents cross-reference each other
 

@@ -318,7 +318,7 @@ Each task entry in the MoSCOW sections includes:
 ```
 
 **Timestamp governance (mandatory):**
-- The terminal `| Last modified: ... UTC` field is required on all active MoSCOW rows in `kanban-board.md` and `fr-br-uxr-board.md`.
+- The terminal `| Last modified: ... UTC` field is required on all active MoSCOW rows in `kboard.md` and `fbuboard.md`.
 - RW/UKW/automation that creates or updates rows must append or refresh this field.
 - Human-readable timestamp values must use UTC and 24-hour format (`YYYY-MM-DD HH:MM UTC`).
 
@@ -1143,7 +1143,7 @@ TODO tracking is **MANDATORY** (not optional) for Release Workflow and other age
 - **Versioning Strategy** – Complete versioning strategy with forensic traceability system (e.g., `docs/architecture/standards-and-adrs/versioning-strategy.md`)
 - **Versioning Policy (Schema)** – Versioning schema definition (e.g., `docs/architecture/standards-and-adrs/versioning-policy.md`)
 - **Release Workflow Reference** – Release Workflow documentation (e.g., `docs/documentation/Developer_Docs/vwmp/release-workflow-reference.md`)
-- **Kanban Board Overview** – Board structure (e.g., `docs/project-management/rituals/overview/kanban-board.md`)
+- **Kanban Board Overview** – Board structure (e.g., `docs/project-management/rituals/overview/kboard.md`)
 - **System Architecture / Template Philosophy** – Supporting governance docs (paths will vary by project)
 
 **Foundation:**

@@ -3,8 +3,8 @@
 Normalize terminal `Last modified` timestamps on active Kanban board rows.
 
 Updates MoSCOW bullet rows in:
-- docs/project-management/kanban/kanban-board.md
-- docs/project-management/kanban/fr-br-uxr-board.md
+- docs/project-management/kanban/kboard.md
+- docs/project-management/kanban/fbuboard.md
 
 Row format enforced:
 | Last modified: YYYY-MM-DD HH:MM UTC
@@ -55,6 +55,8 @@ def main() -> int:
     root = Path.cwd()
     timestamp_value = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
     boards = [
+        root / "docs/project-management/kanban/kboard.md",
+        root / "docs/project-management/kanban/fbuboard.md",
         root / "docs/project-management/kanban/kanban-board.md",
         root / "docs/project-management/kanban/fr-br-uxr-board.md",
     ]

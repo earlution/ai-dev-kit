@@ -18,7 +18,7 @@ story_code: E19S8
 # Portfolio Kanban Alignment Playbook
 
 ## Purpose
-Operationalise Story E19S8 by giving PMO and Documentation Guild contributors a single reference for auditing, updating, and syncing the portfolio Kanban board (`docs/project-management/rituals/overview/kanban-board.md`) with Trello automation. Use this guide whenever the board structure changes or during quarterly governance reviews.
+Operationalise Story E19S8 by giving PMO and Documentation Guild contributors a single reference for auditing, updating, and syncing the portfolio Kanban board (`docs/project-management/rituals/overview/kboard.md`) with Trello automation. Use this guide whenever the board structure changes or during quarterly governance reviews.
 
 ## Scope & Constraints
 - Covers Confidentia’s markdown-first Kanban ritual plus the Trello mirror driven by `scripts/sync_epic19_to_trello.py`.
@@ -35,10 +35,10 @@ Operationalise Story E19S8 by giving PMO and Documentation Guild contributors a 
 
 ## Workflow Overview
 1. **Inventory & Audit (E19:S08:T01)**
-   - Run `python scripts/portfolio_kanban_audit.py` once implemented, or manually diff `kanban-board.md` against the Trello board.
+   - Run `python scripts/portfolio_kanban_audit.py` once implemented, or manually diff `kboard.md` against the Trello board.
    - Capture gaps in the “Audit Log” table (see template below) and file follow-up tasks in Story E19S8.
 2. **Schema Definition (E19:S08:T02)**
-   - Update `kanban-board.md` headers with column descriptions, WIP limits, and tagging rules.
+   - Update `kboard.md` headers with column descriptions, WIP limits, and tagging rules.
    - Document schema changes inside this playbook for future reviewers.
 3. **Validation & Automation (E19:S08:T03)**
    - Extend `scripts/sync_epic19_to_trello.py` to parse the board into `.epic19_sync_summary.json`.
@@ -78,16 +78,16 @@ Each task also includes a `**Blocker:**` field that identifies what specifically
 | Step | Action | Owner | Evidence |
 | --- | --- | --- | --- |
 | 1.1 | Export current Trello column → card data (CSV or JSON) | PMO | Trello export attachment |
-| 1.2 | Compare cards vs. `kanban-board.md` entries | Documentation Guild | Audit log entry |
+| 1.2 | Compare cards vs. `kboard.md` entries | Documentation Guild | Audit log entry |
 | 1.3 | Validate each epic link resolves to `docs/project-management/epics/overview/...` | Documentation Guild | `make docs-lint` output |
 | 1.4 | Record discrepancies (missing link, stale status, absent version) | PMO | Story E19S8 task notes |
 | 1.5 | File follow-up subtasks in Story E19S8 | PMO | Markdown checklist updated |
 
-Store the audit log near the bottom of `kanban-board.md` (new section) or attach a CSV under `docs/project-management/rituals/reference/` if large.
+Store the audit log near the bottom of `kboard.md` (new section) or attach a CSV under `docs/project-management/rituals/reference/` if large.
 
 ### 2. Schema Update Steps
 1. Confirm column lineup (e.g., `Backlog`, `To Do`, `In Progress`, `Done`).
-2. Define WIP limits and rationale; include inline callouts in `kanban-board.md`.
+2. Define WIP limits and rationale; include inline callouts in `kboard.md`.
 3. Standardise status badges and metadata snippet:
    ```
    [Epic N: Title](../epics/overview/Epic N/Epic-N.md) — **STATUS**: note (Version vX.Y.Z)
@@ -118,7 +118,7 @@ Store the audit log near the bottom of `kanban-board.md` (new section) or attach
 - Run `python scripts/sync_epic19_to_trello.py` and attach `.epic19_sync_summary.json` to the release PR.
 
 ## Deliverables Per Cycle
-- Updated `kanban-board.md` with schema + WIP definitions.
+- Updated `kboard.md` with schema + WIP definitions.
 - Audit log output stored in repo (`docs/project-management/rituals/reference/kanban-audit-YYYYMMDD.md` or CSV).
 - Passing lint run showing board/story metadata parity.
 - Trello sync confirmation plus JSON payload committed.
@@ -129,7 +129,7 @@ Store the audit log near the bottom of `kanban-board.md` (new section) or attach
 - **Schema disputes:** convene PMO sync, capture decisions inside this playbook and story doc.
 
 ## References
-- `docs/project-management/rituals/overview/kanban-board.md`
+- `docs/project-management/rituals/overview/kboard.md`
 - `docs/project-management/stories/overview/Epic 19/Story-8-Portfolio-Kanban-Alignment.md`
 - `scripts/sync_epic19_to_trello.py`
 - `docs/Governance_and_Process/decision-records/kb-taxonomy-architecture.md`

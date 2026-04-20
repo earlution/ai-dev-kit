@@ -21,7 +21,7 @@ def test_scan_empty_tree(tmp_path: Path) -> None:
 
 def test_scan_classifies_consumer_board(tmp_path: Path) -> None:
     root = tmp_path / "docs" / "project-management" / "kanban"
-    board = root / "kanban-board.md"
+    board = root / "kboard.md"
     _write(board, "# MyProject – Kanban Board\nVersion: v0.0.0.0+0\n")
     findings = scan_kanban_tree(root)
     assert len(findings) == 1
@@ -32,7 +32,7 @@ def test_scan_classifies_consumer_board(tmp_path: Path) -> None:
 
 def test_scan_flags_devkit_board(tmp_path: Path) -> None:
     root = tmp_path / "docs" / "project-management" / "kanban"
-    board = root / "kanban-board.md"
+    board = root / "kboard.md"
     _write(board, "# AI Dev Kit – Kanban Board\nVersion: v0.5.1.44+1\n")
     findings = scan_kanban_tree(root)
     assert len(findings) == 1

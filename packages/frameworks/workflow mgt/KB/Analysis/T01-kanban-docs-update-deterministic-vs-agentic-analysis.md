@@ -20,7 +20,7 @@ related_fr: FR-015
 **In-scope artefacts for RW Step 7 hardening (FR-015):**
 - **Story docs** under `docs/project-management/kanban/epics/Epic-{N}/Story-*.md`
 - **Epic overview docs** under `docs/project-management/epics/overview/Epic {N}/Epic-{N}.md`
-- **Kanban board / summary docs** (e.g. `docs/project-management/kanban/kanban-board.md`)
+- **Kanban board / summary docs** (e.g. `docs/project-management/kanban/kboard.md`)
 
 **In-scope updates:**
 - Task checklist state (checkbox, status, version marker) for the completed task.

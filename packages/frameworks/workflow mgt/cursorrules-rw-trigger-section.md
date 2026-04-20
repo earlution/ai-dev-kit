@@ -460,8 +460,8 @@ For each step, follow this pattern:
 - Changelog: `CHANGELOG.md`
 - Changelog Archive: `{changelog_archive_path}/CHANGELOG_v{version}.md`
   - [Example: ai-dev-kit] `docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v{version}.md`
-- Kanban Board: `{kanban_path}/kanban-board.md` or `{kanban_path}/_index.md` (customize path)
-  - [Example: ai-dev-kit] `docs/project-management/kanban/_index.md` or `docs/project-management/kanban/kanban-board.md`
+- Kanban Board: `{kanban_path}/kboard.md` or `{kanban_path}/_index.md` (customize path)
+  - [Example: ai-dev-kit] `docs/project-management/kanban/_index.md` or `docs/project-management/kanban/kboard.md`
 - Epic Docs: `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md` (customize path)
   - [Example: ai-dev-kit] `docs/project-management/kanban/epics/Epic-{epic}/Epic-{epic}.md`
 - Story Docs: `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md` (customize path)

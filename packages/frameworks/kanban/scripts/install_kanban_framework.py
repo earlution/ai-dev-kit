@@ -171,7 +171,7 @@ def create_consumer_board_skeleton(
     """
     Create a clean consumer Kanban board skeleton from templates.
 
-    - Creates `kanban-board.md` from `templates/KANBAN_BOARD_TEMPLATE.md`
+    - Creates `kboard.md` from `templates/KANBAN_BOARD_TEMPLATE.md`
     - Creates `kanban-structure.md` from `templates/KANBAN_STRUCTURE_TEMPLATE.md` (if exists)
     - Creates `kanban-board-guide.md` from `templates/KANBAN_BOARD_GUIDE_TEMPLATE.md`
     """
@@ -189,7 +189,7 @@ def create_consumer_board_skeleton(
 
     if dry_run:
         print("🔍 [DRY RUN] Would create consumer board skeleton:")
-        print(f"  - Board: {kanban_path / 'kanban-board.md'}")
+        print(f"  - Board: {kanban_path / 'kboard.md'}")
         print(f"  - Structure: {kanban_path / 'kanban-structure.md'}")
         print(f"  - Guide: {kanban_path / 'kanban-board-guide.md'}")
         return
@@ -202,8 +202,8 @@ def create_consumer_board_skeleton(
         content = content.replace("{Project Name}", project_name)
         content = content.replace("{Date}", today)
         content = content.replace("{Version}", version_placeholder)
-        (kanban_path / "kanban-board.md").write_text(content, encoding="utf-8")
-        print(f"  ✅ Created consumer board: {kanban_path / 'kanban-board.md'}")
+        (kanban_path / "kboard.md").write_text(content, encoding="utf-8")
+        print(f"  ✅ Created consumer board: {kanban_path / 'kboard.md'}")
     else:
         print(f"  ⚠️  Board template not found: {board_template}")
 

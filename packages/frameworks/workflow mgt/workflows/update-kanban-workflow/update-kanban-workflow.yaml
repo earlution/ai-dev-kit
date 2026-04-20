@@ -8,8 +8,8 @@ config:
   epic_doc_pattern: epics/Epic-{epic}/Epic-{epic}.md
   story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
   task_doc_pattern: epics/Epic-{epic}/Story-{story}/T{task}-*.md
-  kanban_board: kanban-board.md
-  fr_br_uxr_board: fr-br-uxr-board.md
+  kanban_board: kboard.md
+  fr_br_uxr_board: fbuboard.md
   normalize_board_timestamps_script: packages/frameworks/workflow mgt/scripts/kanban/normalize_board_row_timestamps.py
   kanban_structure: kanban-structure.md
   fr_br_root: fr-br

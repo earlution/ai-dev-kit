@@ -17,7 +17,7 @@ To maintain accurate, up-to-date kanban board documentation through intelligent 
 - Configuration file `.ai-dev-kit.yaml` with UKW settings
 
 ### Setup Requirements
-- Kanban board file: `docs/project-management/kanban/kanban-board.md`
+- Kanban board file: `docs/project-management/kanban/kboard.md`
 - Task documentation in epic/story directories
 - Completed tasks tracking: `kanban-completed.md`
 - FR/BR/UXR tracking: `fr-br-uxr-completed.md`
@@ -49,7 +49,7 @@ UKW --dry-run
 # .ai-dev-kit.yaml
 update_kanban:
   enabled: true
-  kanban_board: docs/project-management/kanban/kanban-board.md
+  kanban_board: docs/project-management/kanban/kboard.md
   completed_tasks: docs/project-management/kanban/kanban-completed.md
   fr_br_uxr_completed: docs/project-management/kanban/fr-br-uxr-completed.md
   auto_prioritize: true
@@ -60,7 +60,7 @@ update_kanban:
 ### Configuration Options
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| kanban_board | string | docs/project-management/kanban/kanban-board.md | Main kanban board file |
+| kanban_board | string | docs/project-management/kanban/kboard.md | Main kanban board file |
 | completed_tasks | string | docs/project-management/kanban/kanban-completed.md | Completed tasks file |
 | fr_br_uxr_completed | string | docs/project-management/kanban/fr-br-uxr-completed.md | FR/BR/UXR completed file |
 | auto_prioritize | boolean | true | Automatic MoSCOW prioritization |
@@ -337,7 +337,7 @@ UKW --help
 ```yaml
 update_kanban:
   enabled: true
-  kanban_board: docs/project-management/kanban/kanban-board.md
+  kanban_board: docs/project-management/kanban/kboard.md
   completed_tasks: docs/project-management/kanban/kanban-completed.md
   fr_br_uxr_completed: docs/project-management/kanban/fr-br-uxr-completed.md
 ```

@@ -375,7 +375,9 @@ def resolve_kanban_paths(
     if not board_found:
         # Default fallback - try multiple locations
         board_candidates = [
+            kanban_root / "kboard.md",
             kanban_root / "kanban-board.md",
+            project_root / "docs/project-management/kanban/kboard.md",
             project_root / "docs/project-management/kanban/kanban-board.md",
         ]
         for candidate in board_candidates:
@@ -987,7 +989,7 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
 
 def _cleanup_kboard_active_rows(board_content: str) -> Tuple[str, int]:
     """
-    Remove COMPLETE rows from active MoSCOW sections in kanban-board.md.
+    Remove COMPLETE rows from active MoSCOW sections in kboard.md.
 
     Active sections:
     - Must Have
@@ -1051,7 +1053,7 @@ def _is_terminal_frbr_status(status_text: str) -> bool:
 
 def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestamp_value: str) -> Tuple[str, Dict[str, int]]:
     """
-    Cleanup active MoSCOW rows in fr-br-uxr-board.md by removing terminal items.
+    Cleanup active MoSCOW rows in fbuboard.md by removing terminal items.
     Also normalizes active-row terminal timestamps and board header metadata.
     """
     lines = board_content.split("\n")
@@ -1120,10 +1122,12 @@ def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestam
 def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = False) -> List[str]:
     """
     Enforce terminal row timestamps on both active boards:
-    - kanban-board.md
-    - fr-br-uxr-board.md
+    - kboard.md
+    - fbuboard.md
     """
     boards = [
+        project_root / "docs/project-management/kanban/kboard.md",
+        project_root / "docs/project-management/kanban/fbuboard.md",
         project_root / "docs/project-management/kanban/kanban-board.md",
         project_root / "docs/project-management/kanban/fr-br-uxr-board.md",
     ]
@@ -1136,7 +1140,7 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
         original = board.read_text()
         pre_hash = hashlib.sha256(original.encode("utf-8")).hexdigest()
 
-        if board.name == "fr-br-uxr-board.md":
+        if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
             updated, stats = _cleanup_fbuboard_active_rows(original, board, timestamp_now)
             # Ensure timestamp normalization still applies uniformly for all MoSCOW rows.
             updated = enforce_moscow_row_timestamps(updated, timestamp_now)
@@ -1150,7 +1154,7 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
             live_hash = hashlib.sha256(live.encode("utf-8")).hexdigest()
             if live_hash != pre_hash:
                 # Re-apply transforms to latest content to avoid stale writes.
-                if board.name == "fr-br-uxr-board.md":
+                if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
                     updated, stats = _cleanup_fbuboard_active_rows(live, board, timestamp_now)
                     updated = enforce_moscow_row_timestamps(updated, timestamp_now)
                 else:

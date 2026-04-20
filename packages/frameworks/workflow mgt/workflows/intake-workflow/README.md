@@ -19,7 +19,7 @@ To deliver efficient, standardized intake processing for Feature Requests (FR), 
 ### Setup Requirements
 - Intake directory: `docs/project-management/kanban/fr-br/`
 - Completed tracking: `docs/project-management/kanban/fr-br-uxr-completed.md`
-- Kanban board integration: `docs/project-management/kanban/kanban-board.md`
+- Kanban board integration: `docs/project-management/kanban/kboard.md`
 - Validation rules and templates configured
 
 ## ⚡ Quick Start

@@ -365,7 +365,7 @@ def test_4_2_kanban_init_prunes_stale_completed_row():
     """Test 4.2: kanban_init prunes stale COMPLETE MoSCOW row for target task."""
     def setup():
         test_dir = tempfile.mkdtemp()
-        board_path = Path(test_dir) / "kanban-board.md"
+        board_path = Path(test_dir) / "kboard.md"
         board_path.write_text(
             """# Board
 
@@ -388,7 +388,7 @@ def test_4_2_kanban_init_prunes_stale_completed_row():
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
 
-        board_path = Path(test_dir) / "kanban-board.md"
+        board_path = Path(test_dir) / "kboard.md"
         target_state = {"version_string": "v0.2.1.10+3", "mode": "kanban_init"}
         completion_state = {"is_complete": False}
         ok, changes = mod.update_kanban_board(
@@ -433,7 +433,7 @@ def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
             encoding="utf-8",
         )
 
-        board = kb_dir / "fr-br-uxr-board.md"
+        board = kb_dir / "fbuboard.md"
         board.write_text(
             """# FR Board
 
@@ -448,7 +448,7 @@ def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
 """,
             encoding="utf-8",
         )
-        (kb_dir / "kanban-board.md").write_text("# Kanban\n\n## MoSCOW Prioritized In-Progress Tasks\n", encoding="utf-8")
+        (kb_dir / "kboard.md").write_text("# Kanban\n\n## MoSCOW Prioritized In-Progress Tasks\n", encoding="utf-8")
         return str(test_dir)
 
     def test(test_dir):
@@ -458,7 +458,7 @@ def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
         spec.loader.exec_module(mod)
 
         changes = mod.enforce_terminal_timestamps_on_boards(Path(test_dir), dry_run=False)
-        board = Path(test_dir) / "docs" / "project-management" / "kanban" / "fr-br-uxr-board.md"
+        board = Path(test_dir) / "docs" / "project-management" / "kanban" / "fbuboard.md"
         updated = board.read_text(encoding="utf-8")
 
         if "FR-900" in updated:
@@ -478,7 +478,7 @@ def test_4_4_full_mode_prunes_completed_rows_from_active_kboard():
     """Test 4.4: full mode prunes COMPLETE rows from active MoSCOW sections."""
     def setup():
         test_dir = tempfile.mkdtemp()
-        board_path = Path(test_dir) / "kanban-board.md"
+        board_path = Path(test_dir) / "kboard.md"
         board_path.write_text(
             """# Board
 
@@ -506,7 +506,7 @@ def test_4_4_full_mode_prunes_completed_rows_from_active_kboard():
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
 
-        board_path = Path(test_dir) / "kanban-board.md"
+        board_path = Path(test_dir) / "kboard.md"
         target_state = {"version_string": "v0.2.1.12+3", "mode": "full"}
         completion_state = {"is_complete": False}
         ok, changes = mod.update_kanban_board(
