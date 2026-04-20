@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-04-20 (v0.2.15.2+1 – Story 15 Task 2 complete)
+**Last updated:** 2026-04-20 (v0.2.16.3+2 – Story 16 Task 3 complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -82,7 +82,7 @@ housekeeping_policy: keep
   - Story: [`Story-015-ipw-governance-and-publication-contract.md`](Story-015-ipw-governance-and-publication-contract.md)
   - Tasks: T01 ✅ COMPLETE — [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 
-- [ ] **E2:S16 – Perpetual Ongoing Workflow Operations** - IN PROGRESS (v0.2.16.1+1; canonical home for perpetual ongoing workflow tasks)
+- [ ] **E2:S16 – Perpetual Ongoing Workflow Operations** - IN PROGRESS (v0.2.16.3+2)
   - Story: [`Story-016-perpetual-ongoing-workflow-operations.md`](Story-016-perpetual-ongoing-workflow-operations.md)
   - Tasks: T01 IN PROGRESS — [FR-088](../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
 

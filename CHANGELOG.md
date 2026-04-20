@@ -65,6 +65,14 @@ E2:S16:T03 — **RW -d** with **`--art`**: complete full repository rewire from 
 
 ---
 
+## [0.2.16.3+3] - 20-04-26
+
+E2:S16:T03 — **RW -d** with **`--art`**: publish UKW full-sync reconciliation for Story 016 and `kboard` after perpetual-task migration updates. SemVer **v0.4.764+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+3.md)
+
+---
+
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
