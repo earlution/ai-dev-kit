@@ -62,3 +62,11 @@ E6:S07:T115 — **RW** with **`--art`**: filed and housed UXR-009 plus ICW packa
 E6:S07:T115 — **RW** with **`--art`**: fix touch-only timestamp churn by preserving existing MoSCOW row `Last modified` stamps during UKW/RW reconciliation; add regression tests. SemVer **v0.4.761+2**.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.115+2.md)
+
+---
+
+## [0.6.7.116+1] - 20-04-26
+
+E6:S07:T116 — **RW** with **`--art`**: file FR-085 and house optional UKW reprioritization `--rp` contract (intent/dependency/blocker/importance analysis) under Story 007 with board wiring. SemVer **v0.4.763+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.116+1.md)

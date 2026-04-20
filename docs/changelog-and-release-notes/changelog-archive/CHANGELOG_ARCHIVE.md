@@ -41,6 +41,12 @@ E6:S07:T115 — **RW** with **`--art`**: fix touch-only timestamp churn by prese
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.115+2.md)
 ---
+## [0.6.7.116+1] - 20-04-26
+
+E6:S07:T116 — **RW** with **`--art`**: file FR-085 and house optional UKW reprioritization `--rp` contract (intent/dependency/blocker/importance analysis) under Story 007 with board wiring. SemVer **v0.4.763+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.116+1.md)
+---
 ## [0.5.9.11+5] - 19-04-26
 
 E5:S09:T11 — **RW** with **`--art`**: Wave 4 — **BR-068** closure + traceability (**T11** **COMPLETE**). SemVer **v0.4.757+5**.

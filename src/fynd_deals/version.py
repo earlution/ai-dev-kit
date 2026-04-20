@@ -18,15 +18,15 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 """
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
-VERSION_EPIC = 2      # Epic number (Epic 2: Workflow Management Framework)
-VERSION_STORY = 15    # Story number within epic
-VERSION_TASK = 2      # Task number (E2:S15:T02 — IPP post-run governance reconciliation ownership)
-VERSION_BUILD = 2     # Build number (RW E2:S15:T02 --art)
+VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
+VERSION_STORY = 7     # Story number within epic
+VERSION_TASK = 116    # Task number (E6:S07:T116 — UKW optional reprioritization --rp flag)
+VERSION_BUILD = 1     # Build number (RW E6:S07:T116 --art)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.15.2+2 = Development, Epic 2, Story 15, Task 2, Build 2
+# Current: 0.6.7.116+1 = Development, Epic 6, Story 7, Task 116, Build 1
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

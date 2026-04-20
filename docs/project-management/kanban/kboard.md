@@ -27,6 +27,8 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
+- **E6:S07:T116** – FR-085: UKW optional reprioritization `--rp` flag - TODO (HIGH, optional deep reprioritization based on inferred intent, dependencies, blockers, and practical impact across task + FR/BR/UXR surfaces) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-20 16:20 UTC
+
 ### Could Have (C) - Nice-to-Have Tasks
 
 - **E4:S08:T07** – FR-011: Task splitting across multiple canonical epics - IN PROGRESS (MEDIUM priority semantic migration enhancement) - [Task Document](epics/Epic-4/Story-008-intelligent-epic-matching-canonical-adoption/T07-task-splitting-across-multiple-canonical-epics-fr-011.md) | [Story](epics/Epic-4/Story-008-intelligent-epic-matching-canonical-adoption.md) | Last modified: 2026-04-20 15:52 UTC

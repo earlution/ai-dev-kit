@@ -137,6 +137,9 @@ housekeeping_policy: keep
 - [ ] **E6:S07:T115 – Last-modified stamp forensic integrity guardrails** - TODO (CRITICAL, prevent synthetic timestamp churn; update stamps only on substantive underlying work)
   - Task: [`T115-last-modified-stamp-forensic-integrity-guardrails.md`](Story-007-adk-implementation-analysis-and-package-management/T115-last-modified-stamp-forensic-integrity-guardrails.md) | [UXR-009](../../fr-br/UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
 
+- [ ] **E6:S07:T116 – UKW optional reprioritization `--rp` flag (FR-085)** - TODO (HIGH, optional deep analysis of intent/dependencies/blockers/importance to reprioritize tasks + FR/BR/UXR)
+  - Task: [`T116-ukw-optional-reprioritization-rp-flag-fr085.md`](Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md) | [FR-085](../../fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md)
+
 - **Install/adoption program (FR-080–082):** tracked under **[E6:S09 – AI Dev Kit installation and adopter integration](./Story-009-ai-dev-kit-installation-and-adopter-integration.md)** (tasks **T01–T03**).
 
 
