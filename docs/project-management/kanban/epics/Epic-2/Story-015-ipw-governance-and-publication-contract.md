@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-14  
 **Completed:** N/A  
-**Last updated:** 2026-04-20 (v0.2.15.2+1 – Kanban documentation setup)
-**Version:** v0.2.15.2+1
+**Last updated:** 2026-04-20 (v0.2.15.2+3 – Kanban documentation setup)
+**Version:** v0.2.15.2+3
 **Code:** E2S15
 
 ---
@@ -35,6 +35,6 @@ Eliminate IPW documentation publication drift by making ownership, filing target
 
 - [x] **E2:S15:T01 – BR-066: IPW Docusaurus filing contract and backfill** - COMPLETE (v0.2.15.1+1) (HIGH, contract + validation + historical recovery inventory) — [Task doc](Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 
-- [ ] **E2:S15:T02 – IPP post-run governance reconciliation ownership (FR-084)** - TODO (HIGH, assign deterministic IPP ownership for reconciling task/FR-BR-UXR docs + kboard/fbuboard after IPP completion) — [Task doc](Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md) | [FR-084](../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md)
+- [ ] **E2:S15:T02 – IPP post-run governance reconciliation ownership (FR-084)** - IN PROGRESS (HIGH, assign deterministic IPP ownership for reconciling task/FR-BR-UXR docs + kboard/fbuboard after IPP completion) — [Task doc](Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md) | [FR-084](../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) | [IPP](../../../../implementation-cycles/IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md)
 
 ---

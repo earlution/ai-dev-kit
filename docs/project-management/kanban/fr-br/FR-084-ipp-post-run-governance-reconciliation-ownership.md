@@ -17,6 +17,7 @@ housekeeping_policy: keep
 **Status:** OPEN
 
 **Implementing Task:** [E2:S15:T02](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md)
+**IPP:** [`IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md`](../../../implementation-cycles/IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md)
 
 ---
 

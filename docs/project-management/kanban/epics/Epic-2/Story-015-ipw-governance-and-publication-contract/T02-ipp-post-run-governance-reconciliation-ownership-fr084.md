@@ -17,6 +17,7 @@ housekeeping_policy: keep
 **Code:** E2S15T02
 
 **Upstream:** [FR-084 - IPP post-run governance reconciliation ownership](../../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md)
+**IPP:** [`IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md`](../../../../../implementation-cycles/IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md)
 
 ---
 

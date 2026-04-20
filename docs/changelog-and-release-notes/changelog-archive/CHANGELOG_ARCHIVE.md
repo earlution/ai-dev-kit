@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.2+3] - 20-04-26
+
+E2:S15:T02 — **RW** with **`--art`**: publish IPP artifact (`IPP-E2S15T02-...`) and reconcile FR/task/story governance traceability for post-run ownership contract. SemVer **v0.4.764+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.2+3.md)
+---
 ## [0.4.19.2+1] - 20-04-26
 
 E4:S19:T02 — **RW** with **`--art`**: create and wire the IPW artifact for canonical supporting Kanban/FBU doc naming + collective `FBU` terminology governance, with bidirectional task/FR traceability. SemVer **v0.4.764+1**.
