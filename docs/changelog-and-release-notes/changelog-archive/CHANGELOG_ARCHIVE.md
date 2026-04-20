@@ -11,6 +11,12 @@ E2:S15:T02 — **RW** with **`--art`**: normalize FR-084/T02 terminology to `IPP
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.2+2.md)
 ---
+## [0.2.16.1+1] - 20-04-26
+
+E2:S16:T01 — **RW** with **`--art`**: establish dedicated perpetual-operations story in Epic 2 with FR/task anchor and board wiring to prevent default-housing drift. SemVer **v0.4.764+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.1+1.md)
+---
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.

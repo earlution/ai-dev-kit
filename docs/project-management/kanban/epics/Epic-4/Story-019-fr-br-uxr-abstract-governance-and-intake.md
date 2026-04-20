@@ -24,6 +24,10 @@ housekeeping_policy: keep
 
 - [ ] **E4:S19:T01 – Charter: abstract vs concrete FR/BR/UXR ownership** - TODO (baseline scope; no charter task doc yet) — *Note: **[BR-060](../../fr-br/BR-060-rw-in-progress-task-gate-blocks-build-releases.md)** implementing task is **[E2:S01:T09](../Epic-2/Story-001-rw-agent-execution-and-docs/T09-rw-allow-in-progress-task-releases-br060.md)**; [this story’s `T01-…br060` filename](Story-019-fr-br-uxr-abstract-governance-and-intake/T01-rw-allow-in-progress-task-releases-br060.md) is a redirect stub only.*
 
+- [ ] **E4:S19:T02 – Canonical supporting Kanban/FBU doc naming + `FBU` collective terminology (FR-086)** - TODO (HIGH, canonical supporting-doc shorthand + collective terminology standardization while preserving individual issue IDs) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T02-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology-fr086.md) | [FR-086](../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md)
+
+- [ ] **E4:S19:T03 – `E6:S07` default-housing drift investigation + closure decision (FR-087)** - TODO (HIGH, forensic root-cause + codification inventory + close/split/narrow recommendation for Story 007) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [FR-087](../../fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md)
+
 ---
 
 ## Overview
@@ -52,7 +56,7 @@ This story holds **Epic 4 (Kanban framework) responsibility for FR / BR / UXR in
 ## Relationship to other stories
 
 | Item | Role |
-|------|------|
+| ------ | ------ |
 | **E4:S02** (complete) | Original **FR/BR → task** intake design and automation; historical baseline. |
 | **E4:S12** (complete) | **Repository story pattern** (S00→S01 migration, meta grouping). |
 | **FR-074 / E5:S01:T74** etc. | Concrete policy edits filed as **FR repo** tasks; **this story** is where Epic 4 **tracks ongoing abstract ownership** so it does not disappear inside one FR. |

@@ -78,10 +78,13 @@ housekeeping_policy: keep
 - [ ] **E2:S14 – Workflow Management Package Installation Evaluation** - IN PROGRESS (v0.2.1.9+2)
   - Story: [`Story-014-workflow-management-package-installation-evaluation.md`](Story-014-workflow-management-package-installation-evaluation.md)
 
-
 - [ ] **E2:S15 – IPW Governance and Publication Contract** - IN PROGRESS (v0.2.15.2+1)
   - Story: [`Story-015-ipw-governance-and-publication-contract.md`](Story-015-ipw-governance-and-publication-contract.md)
   - Tasks: T01 ✅ COMPLETE — [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
+
+- [ ] **E2:S16 – Perpetual Ongoing Workflow Operations** - IN PROGRESS (v0.2.16.1+1; canonical home for perpetual ongoing workflow tasks)
+  - Story: [`Story-016-perpetual-ongoing-workflow-operations.md`](Story-016-perpetual-ongoing-workflow-operations.md)
+  - Tasks: T01 IN PROGRESS — [FR-088](../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
 
 ---
 
