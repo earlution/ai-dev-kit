@@ -23,6 +23,12 @@ E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.62+1.md)
 ---
+## [0.2.15.2+1] - 20-04-26
+
+E2:S15:T02 — **RW** with **`--art`**: file FR-084 and assign IPW post-run ownership for deterministic reconciliation of task/FR-BR-UXR docs plus `kboard`/`fbuboard`. SemVer **v0.4.760+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.2+1.md)
+---
 ## [0.5.9.11+5] - 19-04-26
 
 E5:S09:T11 — **RW** with **`--art`**: Wave 4 — **BR-068** closure + traceability (**T11** **COMPLETE**). SemVer **v0.4.757+5**.

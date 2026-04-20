@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** User feedback / governance hardening  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** OPEN
+**Status:** IMPLEMENTED
 
 **Implementing Task:** [E6:S06:T62](../epics/Epic-6/Story-006-feature-requests/T62-global-ipw-gated-implementation-contract-fr083.md)
 **Planning package (IPW):** [IPW-E6S06T62-global-ipw-gated-implementation-contract](../../../implementation-cycles/IPW-E6S06T62-global-ipw-gated-implementation-contract.md)
@@ -37,23 +37,23 @@ Current behavior can drift from requested artifact scope (for example, a request
 
 ### Functional Requirements
 
-- [ ] **FR-083-F1:** Define and enforce a global "no implementation before IPW" gate in governing agent rules.
-- [ ] **FR-083-F2:** Require all implementation to satisfy three preconditions: task anchor (`E#:S#:T#`), linked IPW package (`specification`, `test-design`, `implementation-plan`), and explicit user execution authorization in a separate instruction.
-- [ ] **FR-083-F3:** Require planning/intake requests (UXR/FR/BR/task/spec/plan/review) to remain planning-only and stop on completion.
-- [ ] **FR-083-F4:** Require missing-precondition handling to request only missing prerequisites, without inferred permission or opportunistic implementation.
+- [x] **FR-083-F1:** Define and enforce a global "no implementation before IPW" gate in governing agent rules.
+- [x] **FR-083-F2:** Require all implementation to satisfy three preconditions: task anchor (`E#:S#:T#`), linked IPW package (`specification`, `test-design`, `implementation-plan`), and explicit user execution authorization in a separate instruction.
+- [x] **FR-083-F3:** Require planning/intake requests (UXR/FR/BR/task/spec/plan/review) to remain planning-only and stop on completion.
+- [x] **FR-083-F4:** Require missing-precondition handling to request only missing prerequisites, without inferred permission or opportunistic implementation.
 
 ### Non-Functional Requirements
 
-- [ ] **FR-083-NF1:** Policy language is unambiguous and applies repository-wide (not limited to one workflow).
-- [ ] **FR-083-NF2:** Rule placement is durable across sessions by updating both `AGENTS.md` and `.cursorrules`.
+- [x] **FR-083-NF1:** Policy language is unambiguous and applies repository-wide (not limited to one workflow).
+- [x] **FR-083-NF2:** Rule placement is durable across sessions by updating both `AGENTS.md` and `.cursorrules`.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] Contract is present in both primary rule sources and states all gate preconditions explicitly.
-- [ ] Contract explicitly blocks implementation while gate is closed and requires stop-and-wait after planning artifact completion.
-- [ ] FR and task are bidirectionally linked and listed in active story/board tracking surfaces.
+- [x] Contract is present in both primary rule sources and states all gate preconditions explicitly.
+- [x] Contract explicitly blocks implementation while gate is closed and requires stop-and-wait after planning artifact completion.
+- [x] FR and task are bidirectionally linked and listed in active story/board tracking surfaces.
 
 ---
 

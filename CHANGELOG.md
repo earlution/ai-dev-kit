@@ -38,3 +38,11 @@ E6:S06:T62 — **RW** with **`--art`**: completed T62 IPW housing by adding dedi
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.62+1.md)
+
+---
+
+## [0.2.15.2+1] - 20-04-26
+
+E2:S15:T02 — **RW** with **`--art`**: file FR-084 and assign IPW post-run ownership for deterministic reconciliation of task/FR-BR-UXR docs plus `kboard`/`fbuboard`. SemVer **v0.4.760+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.2+1.md)

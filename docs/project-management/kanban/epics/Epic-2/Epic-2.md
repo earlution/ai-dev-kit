@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-02  
-**Last updated:** 2026-04-14 (v0.2.15.1+1 – Story 15 publication contract hardening delivered)
+**Last updated:** 2026-04-20 (v0.2.15.2+1 – Story 15 Task 2 complete)
 **Branch:** `epic/2-workflow-management-framework`  
 **Version Schema:** `0.2.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -79,7 +79,7 @@ housekeeping_policy: keep
   - Story: [`Story-014-workflow-management-package-installation-evaluation.md`](Story-014-workflow-management-package-installation-evaluation.md)
 
 
-- [ ] **E2:S15 – IPW Governance and Publication Contract** - IN PROGRESS (publication hardening delivered via T01; continue backlog backfill)
+- [ ] **E2:S15 – IPW Governance and Publication Contract** - IN PROGRESS (v0.2.15.2+1)
   - Story: [`Story-015-ipw-governance-and-publication-contract.md`](Story-015-ipw-governance-and-publication-contract.md)
   - Tasks: T01 ✅ COMPLETE — [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 

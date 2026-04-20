@@ -9,11 +9,11 @@ housekeeping_policy: keep
 # Epic 6, Story 6, Task 62: Global IPW-gated implementation contract (FR-083)
 
 **Task ID:** E6:S06:T62  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Small  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-20 (intake filed and governance gate policy drafted; pending RW release)  
+**Last updated:** 2026-04-20 (RW v0.6.6.62+2 --art: IPW housing and governance traceability reconciled)  
 **Code:** E6S06T62
 
 **Upstream:** [FR-083 - Global IPW-gated implementation contract](../../../fr-br/FR-083-global-ipw-gated-implementation-contract.md)
@@ -58,10 +58,10 @@ Implementation can begin prematurely when a user requested only intake/planning 
 
 ## Acceptance criteria
 
-- [ ] **AC1:** `AGENTS.md` contains a global IPW gate section that blocks implementation without preconditions.
-- [ ] **AC2:** `.cursorrules` contains matching contract language and mandatory behavior while gated.
-- [ ] **AC3:** Preconditions include task anchor, linked IPW package, and explicit user execution authorization.
-- [ ] **AC4:** FR-083 and E6:S06:T62 are linked bidirectionally and visible in active intake/task boards.
+- [x] **AC1:** `AGENTS.md` contains a global IPW gate section that blocks implementation without preconditions.
+- [x] **AC2:** `.cursorrules` contains matching contract language and mandatory behavior while gated.
+- [x] **AC3:** Preconditions include task anchor, linked IPW package, and explicit user execution authorization.
+- [x] **AC4:** FR-083 and E6:S06:T62 are linked bidirectionally and visible in active intake/task boards.
 
 ---
 

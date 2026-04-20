@@ -55,7 +55,7 @@ housekeeping_policy: keep
 - [ ] **E6:S06:T61 – UXR-006: MoSCOW row last-modified UTC stamps** - 🔄 IN PROGRESS (v0.6.6.61+1 — **RW**; HIGH — drift / IPW; optional **AC-4** tooling open)
   - Task: [`T61-uxr-006-kanban-moscow-last-modified-stamps.md`](Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md) | [UXR-006](../../fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md)
 
-- [ ] **E6:S06:T62 – Global IPW-gated implementation contract (FR-083)** - TODO (HIGH, enforce repository-wide implementation lock behind IPW preconditions plus explicit user authorization)
+- [x] **E6:S06:T62 – Global IPW-gated implementation contract (FR-083)** - ✅ COMPLETE (v0.6.6.62+2, policy gate enforced in `AGENTS.md` + `.cursorrules`, IPW housed and linked)
   - Task: [`T62-global-ipw-gated-implementation-contract-fr083.md`](Story-006-feature-requests/T62-global-ipw-gated-implementation-contract-fr083.md) | [FR-083](../../fr-br/FR-083-global-ipw-gated-implementation-contract.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
