@@ -33,7 +33,7 @@ Repository anchor for **UXR-006** (MoSCOW row `Last modified` UTC stamps); deliv
 
 ## Deliverable
 
-- Stable **E7:S00:T06** pointer in UXR header and **`fr-br-uxr-board.md`** MoSCOW row.  
+- Stable **E7:S00:T06** pointer in UXR header and **`fbuboard.md`** MoSCOW row.  
 - **`RW -k`** when an abstract-space registry release is required; primary product releases use **E6:S06:T61**.
 
 ---
@@ -42,7 +42,7 @@ Repository anchor for **UXR-006** (MoSCOW row `Last modified` UTC stamps); deliv
 
 - [x] **AC1:** Task doc exists under **E7:S00** with required sections.  
 - [x] **AC2:** UXR-006 lists **E7:S00:T06** and **E6:S06:T61** in header.  
-- [x] **AC3:** `fr-br-uxr-board.md` MoSCOW row lists UXR + implementation + registry links.
+- [x] **AC3:** `fbuboard.md` MoSCOW row lists UXR + implementation + registry links.
 
 ---
 

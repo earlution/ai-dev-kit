@@ -318,4 +318,4 @@ The `detect_first_time_est_doc` function in `validate_version_bump.py` had flawe
 - `packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py` - RW validator (bug location)
 - `packages/frameworks/workflow mgt/scripts/validation/` - Validator scripts
 - `packages/frameworks/kanban/scripts/` - Installer scripts
-- `docs/project-management/kanban/kanban-board.md` - Enhanced board structure (T01 deliverable)
+- `docs/project-management/kanban/kboard.md` - Enhanced board structure (T01 deliverable)

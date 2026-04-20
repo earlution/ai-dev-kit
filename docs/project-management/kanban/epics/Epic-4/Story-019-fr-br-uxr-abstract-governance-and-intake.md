@@ -72,4 +72,4 @@ This story holds **Epic 4 (Kanban framework) responsibility for FR / BR / UXR in
 
 **Coordinates with:** Epic 5 (docs), Epic 6 / 7 (BR/UXR repos), Epic 2 (workflows), `packages/frameworks/kanban/`.
 
-**References:** `kanban-governance-policy.md`, `FR_BR_INTAKE_GUIDE.md`, `.cursor/skills/intake-process/SKILL.md`, `fr-br-uxr-board.md`.
+**References:** `kanban-governance-policy.md`, `FR_BR_INTAKE_GUIDE.md`, `.cursor/skills/intake-process/SKILL.md`, `fbuboard.md`.

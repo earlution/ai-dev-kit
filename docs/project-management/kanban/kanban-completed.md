@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Last Updated:** 2026-04-19 (**E5:S09:T11** complete — **BR-068** monorepo MDX links)
 **Version:** v0.5.9.11+5 *(from `version.py` at RW **E5:S09:T11**)*
 
-> **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
+> **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)
@@ -693,7 +693,7 @@ This document tracks all **completed tasks** across the AI Dev Kit project. Task
 ## Notes
 
 - This document complements the three-way Kanban split
-- Use `kanban-board.md` for active MoSCOW tasks
+- Use `kboard.md` for active MoSCOW tasks
 - Use `kanban-structure.md` for Epic/Story/Task hierarchy
 - Use `kanban-board-guide.md` for rules and procedures
 - This document serves as the historical record of all completed work

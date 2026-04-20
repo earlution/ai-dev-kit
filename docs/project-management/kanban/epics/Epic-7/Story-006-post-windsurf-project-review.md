@@ -95,7 +95,7 @@ Seven review tasks, one per workflow: RW, UKW, CMW, PVW, ICW, Intake, PIR. Each 
 
 ### E7:S06:T02 – Version and changelog alignment
 
-**Input:** version.py, kanban-board.md, CHANGELOG.md, branch context  
+**Input:** version.py, kboard.md, CHANGELOG.md, branch context  
 **Deliverable:** Single coherent version; CHANGELOG and kanban board match; branch aligned  
 **Dependencies:** None  
 **Blocker:** None

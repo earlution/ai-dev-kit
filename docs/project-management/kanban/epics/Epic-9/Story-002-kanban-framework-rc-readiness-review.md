@@ -236,7 +236,7 @@ Comprehensive review of Kanban Framework for RC readiness, covering:
 - Update `Status` to `COMPLETE`
 - Update `Version` to final version
 - Update `Epic-9` with completion status and version
-- Update `kanban-board.md` with completion status and version
+- Update `kboard.md` with completion status and version
 
 ---
 

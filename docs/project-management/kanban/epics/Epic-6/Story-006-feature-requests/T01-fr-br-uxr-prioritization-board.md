@@ -32,7 +32,7 @@ Implement an FR/BR/UXR Prioritization Board with identical responsibility struct
 ## Acceptance Criteria
 
 ### Core Functionality:
-1. ✅ **Main Board Created** - Functional `fr-br-uxr-board.md` with prioritized FR/BR/UXR list
+1. ✅ **Main Board Created** - Functional `fbuboard.md` with prioritized FR/BR/UXR list
 2. ✅ **Completed Board Created** - Functional `fr-br-uxr-completed.md` for historical tracking
 3. ✅ **Priority System** - Clear priority levels (CRITICAL, HIGH, MEDIUM, LOW) and status tracking
 4. ✅ **Document Integration** - Links to all existing FR/BR/UXR documents in `/fr-br/` directory
@@ -59,7 +59,7 @@ Implement an FR/BR/UXR Prioritization Board with identical responsibility struct
 
 ### Phase 1: Foundation (Day 1)
 
-- Create main FR/BR/UXR board structure (`fr-br-uxr-board.md`)
+- Create main FR/BR/UXR board structure (`fbuboard.md`)
 - Create completed board structure (`fr-br-uxr-completed.md`)
 - Scan existing FR/BR/UXR documents in `/fr-br/` directory
 - Populate main board with all open FRs, BRs, and UXRs
@@ -88,14 +88,14 @@ Implement an FR/BR/UXR Prioritization Board with identical responsibility struct
 
 ```
 docs/project-management/kanban/
-├── fr-br-uxr-board.md          # Main prioritization board
+├── fbuboard.md          # Main prioritization board
 ├── fr-br-uxr-completed.md      # Completed items tracking
 └── kanban-board-guide.md       # Updated with FR/BR/UXR board info
 ```
 
 ### Board Sections
 
-#### Main Board (`fr-br-uxr-board.md`)
+#### Main Board (`fbuboard.md`)
 
 - **Critical Priority** - Urgent items requiring immediate attention
 - **High Priority** - Important items for near-term work
@@ -199,7 +199,7 @@ docs/project-management/kanban/
 
 ### Primary Deliverables:
 
-1. **Main Board** - `fr-br-uxr-board.md` with prioritized FR/BR/UXR list
+1. **Main Board** - `fbuboard.md` with prioritized FR/BR/UXR list
 2. **Completed Board** - `fr-br-uxr-completed.md` with historical tracking
 3. **Integration Guide** - Updated documentation and usage instructions
 4. **Automation Scripts** - Intake workflow integration for board updates

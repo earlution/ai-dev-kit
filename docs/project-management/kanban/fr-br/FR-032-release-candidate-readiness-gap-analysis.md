@@ -172,7 +172,7 @@ Investigate and document the gap between current project state (RC=0, no M/S tas
 
 **Related Work:**
 - **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` - RC definition
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md` - Current task priorities
+- **Kanban Board:** `docs/project-management/kanban/kboard.md` - Current task priorities
 - **All Active Epics:** Epic 5, 6, 7, 8, 24, etc. - Current work status
 
 ---
@@ -341,7 +341,7 @@ Investigate and document the gap between current project state (RC=0, no M/S tas
 ## References
 
 - **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md` - RC definition and schema
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md` - Current task priorities and status
+- **Kanban Board:** `docs/project-management/kanban/kboard.md` - Current task priorities and status
 - **Epic 5:** `docs/project-management/kanban/epics/Epic-5/Epic-5.md` - Documentation Management
 - **Epic 6:** `docs/project-management/kanban/epics/Epic-6/Epic-6.md` - Framework Management
 - **Epic 7:** `docs/project-management/kanban/epics/Epic-7/Epic-7.md` - Examples & Adoption

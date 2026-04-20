@@ -99,8 +99,8 @@ This task:
 
 ## UKW bookkeeping (2026-04-13)
 
-- Main `kanban-board.md` now lists perpetual **E6:S07:T101** in Ongoing (was missing next to T102/T103).
-- `fr-br-uxr-board.md` version context and **FR-046** active row updated to reflect **v0.5.1.46+6** implementation drop (verification still open on FR/T46).
+- Main `kboard.md` now lists perpetual **E6:S07:T101** in Ongoing (was missing next to T102/T103).
+- `fbuboard.md` version context and **FR-046** active row updated to reflect **v0.5.1.46+6** implementation drop (verification still open on FR/T46).
 
 ## Verification Evidence
 

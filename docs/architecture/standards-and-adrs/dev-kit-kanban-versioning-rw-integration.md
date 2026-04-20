@@ -274,7 +274,7 @@ kanban_structure:
   root: "docs/project-management/kanban/"
   epics: "docs/project-management/kanban/epics/Epic-{epic}.md"
   stories: "docs/project-management/kanban/epics/Epic-{epic}/stories/Story-{story}-*.md"
-  board: "docs/project-management/kanban/kanban-board.md"
+  board: "docs/project-management/kanban/kboard.md"
   index: "docs/project-management/kanban/_index.md"
 
 changelog:

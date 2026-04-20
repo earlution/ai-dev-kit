@@ -71,7 +71,7 @@ Operational guide: [`FR_BR_INTAKE_GUIDE.md` (framework package)](https://github.
 
 - **Board files:**
   - `docs/project-management/kanban/_index.md` (quick board view)
-  - `docs/project-management/kanban/kanban-board.md` (MoSCOW prioritized tasks)
+  - `docs/project-management/kanban/kboard.md` (MoSCOW prioritized tasks)
   - `docs/project-management/kanban/kanban-structure.md` (Epic/Story/Task structure)
   - `docs/project-management/kanban/kanban-board-guide.md` (rules and explanations)
   - `docs/project-management/kanban/README.md` (structure overview)
@@ -304,7 +304,7 @@ Every **Feature Request (FR)** and **Bug Report (BR)** MUST:
 
 1. **Single Source of Truth:**  
    - The board at `docs/project-management/kanban/_index.md` is the **canonical quick view** of active stories for this repo.
-   - The detailed board at `docs/project-management/kanban/kanban-board.md` provides full context.
+   - The detailed board at `docs/project-management/kanban/kboard.md` provides full context.
    - Each row in the board must map to exactly one Story file in `kanban/epics/Epic-X/stories/`.
 
 2. **Status Field:**  
@@ -322,7 +322,7 @@ Every **Feature Request (FR)** and **Bug Report (BR)** MUST:
       - Add Story reference to Epic's Story Checklist
    4. **Update board views:**
       - Add row to `_index.md` (quick view)
-      - Update `kanban-board.md` (detailed view) with Story details
+      - Update `kboard.md` (detailed view) with Story details
 
 4. **Updates:**
    - When you change a Story’s status or owner, update **both**:

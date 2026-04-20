@@ -23,7 +23,7 @@ For **this repository**, epic identity and story lists are authoritative in:
 - [`kanban-structure.md`](../../../kanban-structure.md) — narrative index of epics and story links
 - **`docs/project-management/kanban/epics/Epic-*/`** — epic headers, story docs, task docs on disk
 
-Board view: [`kanban-board.md`](../../../kanban-board.md).
+Board view: [`kboard.md`](../../../kboard.md).
 
 ## Renumbering note (historical vs live)
 

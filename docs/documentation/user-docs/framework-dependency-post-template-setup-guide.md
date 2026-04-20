@@ -213,7 +213,7 @@ After installation, update the board views:
 
 ```bash
 # Update docs/project-management/kanban/_index.md
-# Update docs/project-management/kanban/kanban-board.md
+# Update docs/project-management/kanban/kboard.md
 # Add your project epics to the board views
 ```
 
@@ -482,7 +482,7 @@ python3 packages/frameworks/kanban/scripts/install_kanban_framework.py --mode fr
 
 # Update board views
 # Edit docs/project-management/kanban/_index.md
-# Edit docs/project-management/kanban/kanban-board.md
+# Edit docs/project-management/kanban/kboard.md
 ```
 
 ---

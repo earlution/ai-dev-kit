@@ -18,7 +18,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-Own the **Intake plan** block on [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md): definition of open ∧ taskless, **epic branch + `RW -k`** loop, MoSCOW queue table, hygiene rules, and execution order. Deliver **concrete, repeatable steps** so agents and humans can drain the queue without orphan documentation.
+Own the **Intake plan** block on [`fbuboard.md`](../../../fbuboard.md): definition of open ∧ taskless, **epic branch + `RW -k`** loop, MoSCOW queue table, hygiene rules, and execution order. Deliver **concrete, repeatable steps** so agents and humans can drain the queue without orphan documentation.
 
 ---
 
@@ -30,7 +30,7 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 ## Input
 
-- [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) — MoSCOW **Must / Should** rows and Intake plan block.  
+- [`fbuboard.md`](../../../fbuboard.md) — MoSCOW **Must / Should** rows and Intake plan block.  
 - [`FR-073`](../../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) — feature request and acceptance criteria.  
 - [`Story-000-uxr-repo.md`](../../Epic-7/Story-000-uxr-repo.md) — **UXR-n → E7:S00:Tnn** repository convention.  
 - [`TASK_TEMPLATE.md` (source)](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/kanban/templates/TASK_TEMPLATE.md) — required headings for `validate_version_bump.py`.  
@@ -39,7 +39,7 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 
 ## Pre-identified task mapping (Must / Should queue)
 
-**Rule:** IDs below are **proposed reservations** for `RW -k` doc-init or board-refresh work. If you renumber, update **`fr-br-uxr-board.md`**, this task, and **FR-073** together.
+**Rule:** IDs below are **proposed reservations** for `RW -k` doc-init or board-refresh work. If you renumber, update **`fbuboard.md`**, this task, and **FR-073** together.
 
 | FR/BR/UXR | Type | Primary task ID | Status | Primary epic branch | Housing rationale |
 |-----------|------|-----------------|--------|---------------------|-------------------|
@@ -103,16 +103,16 @@ Documentation-only ownership of the FR/BR/UXR **intake execution plan** on the p
 ## Acceptance Criteria
 
 - [x] **AC1:** **FR-073** ↔ **T73** bidirectional; **Story-001** checklist includes **T73**.  
-- [x] **AC2:** [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) Intake plan references **FR-073** / **E5:S01:T73**.  
+- [x] **AC2:** [`fbuboard.md`](../../../fbuboard.md) Intake plan references **FR-073** / **E5:S01:T73**.  
 - [x] **AC3:** At least one **`RW -k`:** **`0.5.1.73+0`** (or subsequent **+n**) attributes filing to **T73**.  
 - [x] **AC4:** **MoSCOW** lists **FR-073** with task link.  
 - [x] **AC5:** Phase B/C checklists in this doc updated when major queue milestones complete (honor clause — update table dates in board footer).  
-- [x] **AC6:** **Pre-identified mapping** in this doc matches [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md) **Intake plan** table whenever either changes. *(Aligned 2026-03-31 Phase B/C pass.)*
+- [x] **AC6:** **Pre-identified mapping** in this doc matches [`fbuboard.md`](../../../fbuboard.md) **Intake plan** table whenever either changes. *(Aligned 2026-03-31 Phase B/C pass.)*
 
 ---
 
 ## References
 
-- [`fr-br-uxr-board.md`](../../../fr-br-uxr-board.md)  
+- [`fbuboard.md`](../../../fbuboard.md)  
 - [`intake-process` skill (source)](https://github.com/earlution/ai-dev-kit/blob/main/.cursor/skills/intake-process/SKILL.md)  
 - [FR-072](../../../fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md) (precedent: governance intake on same story)

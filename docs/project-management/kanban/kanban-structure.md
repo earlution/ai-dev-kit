@@ -11,7 +11,7 @@ housekeeping_policy: keep
 **Last Updated:** 2026-04-02 (**E2:S01** reopened — **E2:S01:T09** **BR-060**; E4:S19 abstract governance)
 **Version:** v0.4.18.1+2 *(prior RW; align with `version.py` when releasing)*
 
-> **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
+> **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)  
 > **For completed tasks, see:** [`kanban-completed.md`](kanban-completed.md)
 

@@ -61,7 +61,7 @@ After running UKW, the Kanban board's Epics section is not properly ordered. Cur
 
 1. Run UKW workflow: Type "UKW" in Cursor
 2. UKW executes all steps (Tasks → Stories → Epics → Board)
-3. Check Kanban board (`docs/project-management/kanban/kanban-board.md`)
+3. Check Kanban board (`docs/project-management/kanban/kboard.md`)
 4. **Observed:** Epics are out of order (E1-4, E21, E5-6, E9, E7-8, E24)
 5. **Expected:** Epics should be in numerical order (E1, E2, E3, E4, E5, E6, E7, E8, E9, E21, E24)
 
@@ -194,7 +194,7 @@ This BR was split from a mixed-scope document following the Standard Operating P
 
 - **UKW Documentation:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md`
 - **UKW Workflow:** `packages/frameworks/workflow mgt/workflows/update-kanban-workflow.yaml`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md`
 - **Related FR:** [FR-034 - UKW Granular Control and Use Case Flags](FR-034-ukw-granular-control-and-use-case-flags.md)
 - **SoP:** [Mixed BR/FR Scope Handling](../../../architecture/standards-and-adrs/mixed-br-fr-scope-sop.md)

@@ -6,57 +6,11 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# AI Dev Kit – FR/BR/UXR Prioritization Board
+# Legacy Alias: `fr-br-uxr-board.md`
 
-**Last Updated:** 2026-04-19 (**BR-068** completed — **`fr-br-uxr-completed`** sync)
-**Version Context:** v0.5.9.11+5 (**SemVer** v0.4.757+5); **BR-068** retired from board (**Wave 4** closure)
-**Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
+Canonical FR/BR/UXR board path is now [`fbuboard.md`](./fbuboard.md).
 
-> **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
-> **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
-> **For FR/BR/UXR structure and full listings, see:** [`fr-br-uxr-structure.md`](fr-br-uxr-structure.md)  
-> **For completed FR/BR/UXRs, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
-> **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)
-
----
-
-## Overview
-
-This board provides **centralized visibility and prioritization** for all open FRs (Feature Requests), BRs (Bug Reports), and UXRs (User Experience Research) in the AI Dev Kit project. It uses the same responsibility structure as the Kanban board but focuses on the intake and prioritization process.
-
-**Board Purpose:**
-
-- **Visibility** - Clear view of all FR/BR/UXR priorities and status
-- **Prioritization** - Systematic approach to deciding what to work on next
-- **Tracking** - Complete lifecycle tracking from intake to completion
-- **Integration** - Links to individual documents and implementing tasks
-
----
-
-## MoSCOW Prioritized FR/BR/UXR Items
-
-### Must Have (M) - Critical Items
-
-- **BR-039** – Cascade Whitelist Security Prompt Usability Blocker - TODO (CRITICAL, Cascade whitelist feature non-functional, creates constant security prompt interruptions preventing productive workflow execution) - [BR-039](fr-br/BR-039-cascade-whitelist-security-prompt-usability-blocker.md) | Last modified: 2026-04-19 18:12 UTC
-- **BR-038** – Release Workflow Micromanagement and Tool Discovery Issues - TODO (HIGH, Excessive manual intervention, tool discovery problems, and poor error recovery in Release Workflow) - [BR-038](fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md) | Last modified: 2026-04-19 18:12 UTC
-
----
-
-### Should Have (S) - Important Items
-
-- **BR-067** – RW doc-only / intake releases default to BUILD+1 instead of doc-init +0 - OPEN (HIGH, versioning policy vs validate_version_bump / RW Step 2 defaults; **E6:S07:T103**) - [BR-067](fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md) | [E6:S07:T103](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T103-release-workflow-maintenance-perpetual-task.md) | Last modified: 2026-04-19 18:12 UTC
-- **FR-081** – Brownfield modular adopter integration - OPEN (MEDIUM, operationalize ADR-003 — matrices, contract-first wiring; **E6:S09:T02**) - [FR-081](fr-br/FR-081-brownfield-modular-adopter-integration.md) | [E6:S09:T02](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T02-brownfield-modular-adopter-integration-fr081.md) | Last modified: 2026-04-19 18:12 UTC
-- **FR-077** – IPW-built task status transition and kboard synchronization - IN PROGRESS (HIGH, core ownership matrix + deterministic requested-task drift checks shipped in v0.2.1.17+3; monitor recurrence and adoption) - [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [E2:S01:T17](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | Last modified: 2026-04-19 18:12 UTC
-- **BR-065** – RW Step 12.5 GitHub release parser fails on `v`-prefixed version - OPEN (HIGH, GitHub release publish step fails with `invalid literal for int() with base 10: 'v0'`; RW remains non-blocking but release publication is skipped) - [BR-065](fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md) | [E6:S07:T113](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T113-rw-step-12-5-github-release-parser-hardening-br065.md) | Last modified: 2026-04-19 18:12 UTC
-- **BR-066** – IPW missing Docusaurus filing for planning artifacts - OPEN (HIGH, contract/validator/inventory **COMPLETE** under **E2:S15:T01** **v0.2.15.1+1**; BR remains **OPEN** for phased historical backfill) - [BR-066](fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md) | [E2:S15:T01](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | Last modified: 2026-04-19 18:12 UTC
-- **FR-040** – Implementation Cycle Workflow (ICW) - TODO (HIGH, Create structured three-phase workflow: 1) Specification Definition, 2) Test Design, 3) Implementation Planning. Provides disciplined approach to implementation work similar to RW/UKW patterns.) - [FR-040](fr-br/FR-040-implementation-cycle-workflow-icw.md) | Last modified: 2026-04-19 18:12 UTC
-- **FR-046** – RW SemVer Tag When task_touch Enabled - IN PROGRESS (HIGH, dual-mode ⇒ task_touch validator + installer/examples shipped **v0.5.1.46+6**; FR doc + task remain open until verification closes the loop) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md) | Last modified: 2026-04-19 18:12 UTC
-- **UXR-001** – Migration User Experience Research - TODO (HIGH, Research user experience during migration processes) - [UXR-001](fr-br/UXR-001-migration-user-experience-research.md) | Last modified: 2026-04-19 18:12 UTC
-- **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md) | Last modified: 2026-04-19 18:12 UTC
-- **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and assign UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md) | Last modified: 2026-04-19 18:12 UTC
-- **UXR-006** – Single `dev` branch and RW validator relaxation (solo workflow) - TODO (HIGH, evaluate allowing `dev` as accepted RW branch context to reduce multi-branch hygiene friction while preserving safety controls) - [UXR-006](fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md) | Last modified: 2026-04-19 18:12 UTC
-
----
+This file is retained as a backward-compatible alias while scripts and downstream repos migrate.
 
 ### Could Have (C) - Nice-to-Have Items
 

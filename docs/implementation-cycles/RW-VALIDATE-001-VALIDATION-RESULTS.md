@@ -52,7 +52,7 @@ changelog_dir: docs/changelog-and-release-notes/changelog-archive
 - **Clean State:** ❌ Not clean for release
 
 **Uncommitted Changes:**
-- Modified: docs/project-management/kanban/kanban-board.md
+- Modified: docs/project-management/kanban/kboard.md
 - Untracked: 14 new documentation files
 
 ---

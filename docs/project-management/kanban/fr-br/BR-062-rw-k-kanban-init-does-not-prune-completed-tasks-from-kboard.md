@@ -21,11 +21,11 @@ housekeeping_policy: keep
 
 ## Problem Statement
 
-RW Step 7 Kanban updates did not consistently enforce in-progress board hygiene for completed tasks. Originally observed in `RW -k` (`kanban_init` mode), the same failure pattern was later observed in normal full RW Step 7 runs: completed tasks remained listed under "MoSCOW Prioritized In-Progress Tasks" in `kanban-board.md`.
+RW Step 7 Kanban updates did not consistently enforce in-progress board hygiene for completed tasks. Originally observed in `RW -k` (`kanban_init` mode), the same failure pattern was later observed in normal full RW Step 7 runs: completed tasks remained listed under "MoSCOW Prioritized In-Progress Tasks" in `kboard.md`.
 
 ## Observed Behavior
 
-- After `RW -k E2:S01:T09`, `E2:S01:T09` remained in `kanban-board.md` under "MoSCOW Prioritized In-Progress Tasks".
+- After `RW -k E2:S01:T09`, `E2:S01:T09` remained in `kboard.md` under "MoSCOW Prioritized In-Progress Tasks".
 - After full RW runs (non-`-k`), completed tasks (for example `E2:S01:T12`, `E6:S07:T111`) also remained on active in-progress MoSCOW sections.
 - The row still carried stale phrasing and formatting artifacts while the canonical docs were already closed out.
 - This creates contradictory project state across Kanban docs.
@@ -45,7 +45,7 @@ RW Step 7 Kanban updates did not consistently enforce in-progress board hygiene 
 
 1. Ensure a task is closed out in task/story/BR docs.
 2. Run `RW -k <task-id>` and allow Step 7 Kanban update (`kanban_init` mode).
-3. Inspect `docs/project-management/kanban/kanban-board.md`.
+3. Inspect `docs/project-management/kanban/kboard.md`.
 4. Observe completed task row still present in in-progress MoSCoW list.
 
 ## Suspected Root Cause
@@ -61,7 +61,7 @@ RW Step 7 Kanban updates did not consistently enforce in-progress board hygiene 
 
 ## Related
 
-- `docs/project-management/kanban/kanban-board.md`
+- `docs/project-management/kanban/kboard.md`
 - `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
 - `packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py`
 - `BR-060`

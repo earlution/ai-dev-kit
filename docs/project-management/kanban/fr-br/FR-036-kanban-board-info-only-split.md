@@ -20,8 +20,8 @@ housekeeping_policy: keep
 
 ## Summary
 
-Split the Kanban board (`kanban-board.md`) into two documents:
-1. **`kanban-board.md`** - Structured information only (tasks, epics, status, links)
+Split the Kanban board (`kboard.md`) into two documents:
+1. **`kboard.md`** - Structured information only (tasks, epics, status, links)
 2. **`kanban-board-guide.md`** - Rules, explanations, how-to sections, and all non-informational content
 
 **Goal:** Reduce cognitive load when skimming the board. Users should see structured data only, with all explanatory text moved to a sister document.
@@ -35,10 +35,10 @@ Split the Kanban board (`kanban-board.md`) into two documents:
 A document split that separates **structured information** from **explanatory content**:
 
 **Current State:**
-- `kanban-board.md` contains both structured data (tasks, epics, status) AND explanatory text (rules, how-to sections, MoSCOW category definitions, parent-child relationship explanations)
+- `kboard.md` contains both structured data (tasks, epics, status) AND explanatory text (rules, how-to sections, MoSCOW category definitions, parent-child relationship explanations)
 
 **Desired State:**
-- `kanban-board.md` contains ONLY structured information:
+- `kboard.md` contains ONLY structured information:
   - MoSCOW prioritized task lists (M/S/C/O/W sections with task entries)
   - Epic sections with status, priority, stories, links
   - No explanatory text, rules, or how-to content
@@ -55,13 +55,13 @@ A document split that separates **structured information** from **explanatory co
 ### What Should Happen vs. What Currently Happens?
 
 **Expected Behavior:**
-- Opening `kanban-board.md` shows pure structured data - tasks, epics, status, links
+- Opening `kboard.md` shows pure structured data - tasks, epics, status, links
 - No explanatory text interrupts the information flow
 - All rules/explanations are in `kanban-board-guide.md` for reference when needed
 - Board is optimized for quick scanning and information retrieval
 
 **Current Behavior:**
-- `kanban-board.md` mixes structured data with explanatory text
+- `kboard.md` mixes structured data with explanatory text
 - Users must skip over rules/explanations to find information
 - Cognitive effort required to filter out non-informational content
 - Slower information retrieval due to noise
@@ -73,7 +73,7 @@ A document split that separates **structured information** from **explanatory co
 ### Functional Requirements
 
 - [ ] **FR-036:R01** - Create `kanban-board-guide.md` sister document
-- [ ] **FR-036:R02** - Move all explanatory content from `kanban-board.md` to `kanban-board-guide.md`:
+- [ ] **FR-036:R02** - Move all explanatory content from `kboard.md` to `kanban-board-guide.md`:
   - Overview section with structure explanations
   - MoSCOW category definitions
   - Parent-child relationship documentation
@@ -81,15 +81,15 @@ A document split that separates **structured information** from **explanatory co
   - Quick Reference section
   - All italicized explanatory text under sections
 
-- [ ] **FR-036:R03** - Strip `kanban-board.md` to structured information only:
+- [ ] **FR-036:R03** - Strip `kboard.md` to structured information only:
   - Keep: MoSCOW task lists (task entries only, no category explanations)
   - Keep: Epic sections (status, priority, stories, links)
   - Remove: All explanatory text, rules, how-to sections
   - Remove: Italicized descriptions under section headers
 
 - [ ] **FR-036:R04** - Add cross-reference between documents:
-  - `kanban-board.md` links to `kanban-board-guide.md` for rules/explanations
-  - `kanban-board-guide.md` links to `kanban-board.md` for structured data
+  - `kboard.md` links to `kanban-board-guide.md` for rules/explanations
+  - `kanban-board-guide.md` links to `kboard.md` for structured data
 
 - [ ] **FR-036:R05** - Update `_index.md` to reference both documents
 - [ ] **FR-036:R06** - Update Kanban board template in framework package
@@ -120,7 +120,7 @@ A document split that separates **structured information** from **explanatory co
 ## Use Cases
 
 **Primary Use Case:**
-User opens `kanban-board.md` to quickly scan active tasks and epic status. Sees only structured information (task IDs, descriptions, status, links) without explanatory text interrupting the flow. Can reference `kanban-board-guide.md` when needed for rules/explanations.
+User opens `kboard.md` to quickly scan active tasks and epic status. Sees only structured information (task IDs, descriptions, status, links) without explanatory text interrupting the flow. Can reference `kanban-board-guide.md` when needed for rules/explanations.
 
 **Additional Use Cases:**
 - Quick task lookup: User scans MoSCOW sections for specific task without reading category definitions
@@ -131,9 +131,9 @@ User opens `kanban-board.md` to quickly scan active tasks and epic status. Sees 
 
 ## Acceptance Criteria
 
-- [ ] `kanban-board.md` contains ONLY structured information (tasks, epics, status, links)
+- [ ] `kboard.md` contains ONLY structured information (tasks, epics, status, links)
 - [ ] `kanban-board-guide.md` contains all rules, explanations, and how-to content
-- [ ] No explanatory text remains in `kanban-board.md`
+- [ ] No explanatory text remains in `kboard.md`
 - [ ] Cross-references between documents are clear and bidirectional
 - [ ] `_index.md` updated to reference both documents
 - [ ] Kanban board template updated to reflect split pattern
@@ -182,11 +182,11 @@ User opens `kanban-board.md` to quickly scan active tasks and epic status. Sees 
 
 **Document Split:**
 - Create `kanban-board-guide.md` with all explanatory content
-- Strip `kanban-board.md` to structured information only
+- Strip `kboard.md` to structured information only
 - Add cross-references between documents
 
 **Key Files:**
-- `docs/project-management/kanban/kanban-board.md` - Structured information only
+- `docs/project-management/kanban/kboard.md` - Structured information only
 - `docs/project-management/kanban/kanban-board-guide.md` - Rules and explanations (NEW)
 - `docs/project-management/kanban/_index.md` - Updated to reference both
 - `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md` - Updated template
@@ -212,7 +212,7 @@ User opens `kanban-board.md` to quickly scan active tasks and epic status. Sees 
 
 ## References
 
-- **Current Board:** `docs/project-management/kanban/kanban-board.md`
+- **Current Board:** `docs/project-management/kanban/kboard.md`
 - **Kanban Governance:** `packages/frameworks/kanban/policies/kanban-governance-policy.md`
 - **Board Template:** `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`
 - **Related Story:** [`docs/project-management/kanban/epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md`](../epics/Epic-4/Story-013-kanban-board-moscow-prioritized-task-view.md)

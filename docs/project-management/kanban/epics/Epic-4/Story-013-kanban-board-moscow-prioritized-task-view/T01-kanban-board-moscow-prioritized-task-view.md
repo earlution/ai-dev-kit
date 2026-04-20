@@ -38,7 +38,7 @@ Design and implement the MoSCOW prioritized task view in the Kanban board docume
 The current Kanban board primarily serves as a listing of Epics and Stories, but lacks functionality that justifies its name as a "board." It doesn't provide a prioritized view of in-progress work, making it difficult to quickly understand what needs attention. The board should serve as a true parent document to Story docs, similar to how Story docs are parents of Task docs.
 
 **Solution:**
-Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board.md`) to include:
+Enhance the Kanban board structure (`docs/project-management/kanban/kboard.md`) to include:
 - MoSCOW prioritized sections for in-progress tasks (before the story checklist)
 - Chronological ordering within each priority section (most recently updated first)
 - Clear parent-child relationship documentation (Board → Story → Task)
@@ -51,7 +51,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 ## Input
 
 **Prerequisites:**
-- Current Kanban board structure (`docs/project-management/kanban/kanban-board.md`)
+- Current Kanban board structure (`docs/project-management/kanban/kboard.md`)
 - Kanban governance policy (`packages/frameworks/kanban/policies/kanban-governance-policy.md`)
 - Local Kanban policy (`docs/project-management/rituals/policy/kanban-governance-policy.md`)
 - Kanban board template (if exists in framework package)
@@ -61,7 +61,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 - None
 
 **Related Documents:**
-- `docs/project-management/kanban/kanban-board.md`
+- `docs/project-management/kanban/kboard.md`
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md`
 - `docs/project-management/rituals/policy/kanban-governance-policy.md`
 - `packages/frameworks/kanban/templates/` (templates directory)
@@ -72,7 +72,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 
 **Enhanced Kanban Board Document:**
 
-1. **Updated `docs/project-management/kanban/kanban-board.md`:**
+1. **Updated `docs/project-management/kanban/kboard.md`:**
    - MoSCOW prioritized sections before story checklist:
      - **Must Have** (M) - Critical in-progress tasks
      - **Should Have** (S) - Important in-progress tasks
@@ -92,7 +92,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 
 ## Acceptance Criteria
 
-- [ ] Kanban board document (`kanban-board.md`) includes MoSCOW prioritized sections before story checklist
+- [ ] Kanban board document (`kboard.md`) includes MoSCOW prioritized sections before story checklist
 - [ ] MoSCOW sections show all in-progress tasks (status: IN PROGRESS) from all epics/stories
 - [ ] Tasks within each MoSCOW section are ordered chronologically (most recently updated at top)
 - [ ] Each task entry includes Task ID, title/link, last updated timestamp, and link to task document
@@ -105,7 +105,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 ## Approach
 
 1. **Analyze Current Structure:**
-   - Review `docs/project-management/kanban/kanban-board.md`
+   - Review `docs/project-management/kanban/kboard.md`
    - Understand current board layout and content
    - Identify where MoSCOW sections should be inserted
    - Identify all in-progress tasks across all epics/stories
@@ -129,7 +129,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
    - Categorize tasks into MoSCOW sections based on priority
 
 4. **Implement Enhanced Board:**
-   - Update `docs/project-management/kanban/kanban-board.md`:
+   - Update `docs/project-management/kanban/kboard.md`:
      - Add MoSCOW sections before story checklist
      - Populate with all in-progress tasks, categorized by priority
      - Order tasks chronologically within each section (most recently updated first)
@@ -218,7 +218,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 **Task Completed:** 2025-12-18
 
 **Deliverables:**
-- Enhanced Kanban board (`docs/project-management/kanban/kanban-board.md`) with MoSCOW prioritized task view
+- Enhanced Kanban board (`docs/project-management/kanban/kboard.md`) with MoSCOW prioritized task view
 - MoSCOW sections (Must Have, Should Have, Could Have, Won't Have) implemented before story checklist
 - All in-progress tasks categorized and ordered chronologically (most recently updated first)
 - Parent-child relationship (Board → Story → Task) documented
@@ -249,7 +249,7 @@ Enhance the Kanban board structure (`docs/project-management/kanban/kanban-board
 
 ## References
 
-- `docs/project-management/kanban/kanban-board.md` - Current board structure
+- `docs/project-management/kanban/kboard.md` - Current board structure
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Canonical policy
 - `docs/project-management/rituals/policy/kanban-governance-policy.md` - Local policy
 - `packages/frameworks/kanban/templates/` - Framework templates

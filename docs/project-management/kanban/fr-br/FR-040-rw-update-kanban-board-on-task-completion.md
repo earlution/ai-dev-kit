@@ -19,7 +19,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-Release Workflow (RW) Step 7 (Auto-update Kanban Docs) currently updates Story and Epic documents but does NOT update the main Kanban board (`kanban-board.md`) when tasks are completed. This causes the Kanban board to fall out of sync with task completion status, requiring manual updates or separate UKW runs.
+Release Workflow (RW) Step 7 (Auto-update Kanban Docs) currently updates Story and Epic documents but does NOT update the main Kanban board (`kboard.md`) when tasks are completed. This causes the Kanban board to fall out of sync with task completion status, requiring manual updates or separate UKW runs.
 
 ---
 
@@ -27,7 +27,7 @@ Release Workflow (RW) Step 7 (Auto-update Kanban Docs) currently updates Story a
 
 ### What is the Feature?
 
-Enhance RW Step 7 to automatically update the main Kanban board (`kanban-board.md`) when tasks are completed, ensuring the board reflects current task/story/epic completion status immediately after each release.
+Enhance RW Step 7 to automatically update the main Kanban board (`kboard.md`) when tasks are completed, ensuring the board reflects current task/story/epic completion status immediately after each release.
 
 ### What Should Happen vs. What Currently Happens?
 
@@ -206,7 +206,7 @@ This feature is needed:
 - **FR-015:** [`FR-015-harden-kanban-docs-update-in-release-workflow.md`](FR-015-harden-kanban-docs-update-in-release-workflow.md)
 - **Release Workflow Reference:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-reference.md`
 - **RW Step 7 Script:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **E2:S08:** `docs/project-management/kanban/epics/Epic-2/Story-008-harden-release-workflow-reliability.md`
 
 ---

@@ -18,7 +18,7 @@ housekeeping_policy: keep
 ## Purpose
 
 Split the Kanban board into two documents:
-1. **`kanban-board.md`** - Structured information only (tasks, epics, status, links)
+1. **`kboard.md`** - Structured information only (tasks, epics, status, links)
 2. **`kanban-board-guide.md`** - Rules, explanations, how-to sections, and all non-informational content
 
 **Goal:** Reduce cognitive load when skimming the board. Users should see structured data only, with all explanatory text moved to a sister document.
@@ -27,7 +27,7 @@ Split the Kanban board into two documents:
 
 ## Inputs
 
-- Current `kanban-board.md` (457 lines with mixed content)
+- Current `kboard.md` (457 lines with mixed content)
 - FR-036 requirements
 - Kanban board template
 - Kanban governance policy
@@ -44,7 +44,7 @@ Split the Kanban board into two documents:
    - Quick Reference section
    - All rules and explanatory content
 
-2. **`kanban-board.md`** (updated) - Structured information only:
+2. **`kboard.md`** (updated) - Structured information only:
    - MoSCOW prioritized task lists (task entries only, no category explanations)
    - Epic sections (status, priority, stories, links)
    - No explanatory text, rules, or how-to content
@@ -61,11 +61,11 @@ Split the Kanban board into two documents:
 ## Approach
 
 1. **Create `kanban-board-guide.md`:**
-   - Extract all explanatory content from `kanban-board.md`
+   - Extract all explanatory content from `kboard.md`
    - Organize into logical sections (Overview, MoSCOW, Structure, How-to, Reference)
-   - Add cross-reference to `kanban-board.md`
+   - Add cross-reference to `kboard.md`
 
-2. **Strip `kanban-board.md`:**
+2. **Strip `kboard.md`:**
    - Remove Overview section (move to guide)
    - Remove MoSCOW category definitions (move to guide)
    - Remove parent-child relationship explanations (move to guide)
@@ -92,9 +92,9 @@ Split the Kanban board into two documents:
 
 ## Acceptance Criteria
 
-- [ ] `kanban-board.md` contains ONLY structured information (no explanatory text)
+- [ ] `kboard.md` contains ONLY structured information (no explanatory text)
 - [ ] `kanban-board-guide.md` contains all rules, explanations, and how-to content
-- [ ] No explanatory text remains in `kanban-board.md`
+- [ ] No explanatory text remains in `kboard.md`
 - [ ] Cross-references between documents are clear and bidirectional
 - [ ] `_index.md` updated to reference both documents
 - [ ] Kanban board template updated to reflect split pattern

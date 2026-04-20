@@ -42,7 +42,7 @@ Canonical **repository** task for **UXR-003** per [Story-000-uxr-repo](../Story-
 
 - [x] **AC1:** Task doc exists under **E7:S00** with required sections.  
 - [x] **AC2:** UXR-003 header lists **Repository Task** **E7:S00:T03**  
-- [x] **AC3:** `fr-br-uxr-board.md` MoSCOW **Could** row lists **E7:S00:T03** · **E7:S05:T03**
+- [x] **AC3:** `fbuboard.md` MoSCOW **Could** row lists **E7:S00:T03** · **E7:S05:T03**
 
 ---
 

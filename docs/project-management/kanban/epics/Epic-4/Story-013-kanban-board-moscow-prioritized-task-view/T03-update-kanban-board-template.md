@@ -49,7 +49,7 @@ Update the Kanban board template in the framework package to reflect the new boa
 - T01 completed (enhanced Kanban board structure implemented)
 - T02 completed (Kanban governance policy updated)
 - Current Kanban board template (if exists in framework package)
-- Enhanced Kanban board document (`docs/project-management/kanban/kanban-board.md`)
+- Enhanced Kanban board document (`docs/project-management/kanban/kboard.md`)
 
 **Dependencies:**
 - E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
@@ -113,7 +113,7 @@ Update the Kanban board template in the framework package to reflect the new boa
    - If doesn't exist, create new template file
 
 2. **Review Enhanced Board Structure:**
-   - Review T01 deliverables (enhanced `kanban-board.md`)
+   - Review T01 deliverables (enhanced `kboard.md`)
    - Review T02 deliverables (updated policy)
    - Understand the new structure and format
 
@@ -250,6 +250,6 @@ Update the Kanban board template in the framework package to reflect the new boa
 ## References
 
 - `packages/frameworks/kanban/templates/` - Framework templates directory
-- `docs/project-management/kanban/kanban-board.md` - Enhanced board structure (T01 deliverable)
+- `docs/project-management/kanban/kboard.md` - Enhanced board structure (T01 deliverable)
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Updated policy (T02 deliverable)
 

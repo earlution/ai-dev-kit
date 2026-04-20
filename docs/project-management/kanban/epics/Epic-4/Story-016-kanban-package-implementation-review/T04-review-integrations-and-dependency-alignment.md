@@ -50,7 +50,7 @@ Review and validate the integration points and dependency alignment between the 
 
 
 - **Dev-Kit Kanban Implementation:**  
-  - `docs/project-management/kanban/kanban-board.md`  
+  - `docs/project-management/kanban/kboard.md`  
   - `docs/project-management/kanban/epics/Epic-4/Epic-4.md`  
   - `docs/project-management/kanban/epics/Epic-4/Story-016-kanban-package-implementation-review.md`
 

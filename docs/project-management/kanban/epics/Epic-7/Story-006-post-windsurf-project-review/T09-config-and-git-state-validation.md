@@ -59,7 +59,7 @@ All paths resolved from repository root; **all OK**.
 | `scripts_path` | `packages/frameworks/workflow mgt/scripts` | OK (dir) |
 | `readme_file` | `README.md` | OK (file) |
 | `kanban_root` | `docs/project-management/kanban` | OK (dir) |
-| `kanban_board` | `kanban-board.md` (under `kanban_root`) | OK (file) |
+| `kanban_board` | `kboard.md` (under `kanban_root`) | OK (file) |
 | `fr_br_root` | `docs/project-management/kanban/fr-br` | OK (dir) |
 
 **Pattern spot-check (Epic 7):**
@@ -80,12 +80,12 @@ All paths resolved from repository root; **all OK**.
 ### 3. Git baseline (pre-RW commit)
 
 - **Branch:** `epic/7-documentation-maintenance` (tracking `origin`).  
-- **`git status`:** Local modifications present before this RW: `docs/project-management/kanban/kanban-board.md` (prior manual refresh), `.coverage` (pytest artifact; listed in `.gitignore`). **Action:** RW commit includes intentional kanban updates; `.coverage` not committed.
+- **`git status`:** Local modifications present before this RW: `docs/project-management/kanban/kboard.md` (prior manual refresh), `.coverage` (pytest artifact; listed in `.gitignore`). **Action:** RW commit includes intentional kanban updates; `.coverage` not committed.
 
 ### 4. `.cursorrules` vs `rw-config.yaml`
 
 - **File Paths (ai-dev-kit)** block lists `src/fynd_deals/version.py`, `CHANGELOG.md`, changelog archive under `docs/changelog-and-release-notes/changelog-archive/`, kanban under `docs/project-management/kanban/`, validators under `packages/frameworks/workflow mgt/scripts/validation/` — **matches** live `rw-config` keys and repo layout.  
-- **Kanban board:** Rules mention `_index.md` or `kanban-board.md`; both exist; `rw-config` primary board file is `kanban-board.md` — consistent.  
+- **Kanban board:** Rules mention `_index.md` or `kboard.md`; both exist; `rw-config` primary board file is `kboard.md` — consistent.  
 - **Embedded YAML example** in rules uses generic fallback `docs/changelogs` for projects without config — **not** a contradiction; rules state config overrides when present.  
 - **`validate_rw_task_intent.py`** referenced in rules — present under `scripts_path/validation/`.
 
@@ -101,7 +101,7 @@ All paths resolved from repository root; **all OK**.
 |------|----------|--------|
 | rw-config paths | — | None; all valid |
 | Version vs branch | — | Aligned |
-| Git dirty `kanban-board.md` | Low | Folded into RW kanban Step 7 updates |
+| Git dirty `kboard.md` | Low | Folded into RW kanban Step 7 updates |
 | `.coverage` untracked/modified | Low | Remain ignored via `.gitignore` |
 | `.cursorrules` vs config | — | Aligned; no edit required |
 | `.cursorignore` absent | Info | Documented only |

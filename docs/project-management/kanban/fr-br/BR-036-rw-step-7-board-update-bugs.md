@@ -97,7 +97,7 @@ This bug occurs:
 4. Script fails with "Story doc not found" error
 5. Board path is not resolved
 6. Board is not updated
-7. Check kanban-board.md - task still shows as TODO/IN PROGRESS
+7. Check kboard.md - task still shows as TODO/IN PROGRESS
 
 ---
 
@@ -111,7 +111,7 @@ This bug occurs:
 ```
 
 **Board State:**
-- Line 30 in kanban-board.md shows: `**E5:S01:T34** – UKW Granular Control and Use Case Flags - TODO (HIGH priority, Last updated: 2026-01-16)`
+- Line 30 in kboard.md shows: `**E5:S01:T34** – UKW Granular Control and Use Case Flags - TODO (HIGH priority, Last updated: 2026-01-16)`
 - Task is actually COMPLETE (v0.5.1.34+1) but board shows TODO
 
 ---
@@ -193,7 +193,7 @@ This bug occurs:
 - **FR-040:** [`FR-040-rw-update-kanban-board-on-task-completion.md`](FR-040-rw-update-kanban-board-on-task-completion.md)
 - **E5:S01:T36:** [`docs/project-management/kanban/epics/Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md`](../epics/Epic-5/Story-001-fr-repo/T36-rw-update-kanban-board-on-task-completion.md)
 - **RW Step 7 Script:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 
 ---
 

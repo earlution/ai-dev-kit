@@ -16,11 +16,13 @@ This directory contains **all Kanban-related documentation** for the `ai-dev-kit
 kanban/
 ├── _index.md              # Kanban board view (obligatory)
 ├── README.md              # This file (obligatory)
-├── kanban-board.md        # MoSCOW prioritized tasks
+├── kboard.md              # MoSCOW prioritized tasks (canonical)
+├── kboard.md        # Legacy alias -> kboard.md
 ├── kanban-structure.md    # Epic/Story/Task structure
 ├── kanban-board-guide.md  # Rules and explanations
 ├── kanban-completed.md    # Historical record of completed tasks
-├── fr-br-uxr-board.md     # FR/BR/UXR MoSCOW prioritization board
+├── fbuboard.md            # FR/BR/UXR MoSCOW prioritization board (canonical)
+├── fbuboard.md     # Legacy alias -> fbuboard.md
 ├── fr-br-uxr-structure.md # Complete FR/BR/UXR listings by type
 ├── fr-br-uxr-completed.md # Historical record of completed FR/BR/UXRs
 ├── fr-br/                 # Individual FR/BR/UXR documents
@@ -52,14 +54,14 @@ kanban/
 ### Core Kanban System
 
 - **`_index.md`** – Quick board view (table format)
-- **`kanban-board.md`** – MoSCOW prioritized tasks
+- **`kboard.md`** – MoSCOW prioritized tasks (canonical)
 - **`kanban-structure.md`** – Epic/Story/Task structure  
 - **`kanban-board-guide.md`** – Rules and explanations
 - **`kanban-completed.md`** – Historical record of completed tasks
 
 ### FR/BR/UXR System Snapshot
 
-- **`fr-br-uxr-board.md`** – MoSCOW prioritized FR/BR/UXR items
+- **`fbuboard.md`** – MoSCOW prioritized FR/BR/UXR items (canonical)
 - **`fr-br-uxr-structure.md`** – Complete FR/BR/UXR listings by type
 - **`fr-br-uxr-completed.md`** – Historical record of completed FR/BR/UXRs
 - **`fr-br/FR-XXX-*.md`** – Individual Feature Request documents
@@ -84,7 +86,7 @@ The **FR/BR/UXR Prioritization Board** provides centralized visibility and prior
 
 ### Board Documents
 
-1. **`fr-br-uxr-board.md`** – Main prioritization board (MoSCOW structure)
+1. **`fbuboard.md`** – Main prioritization board (MoSCOW structure)
 2. **`fr-br-uxr-structure.md`** – Complete listings by type (FR/BR/UXR)
 3. **`fr-br-uxr-completed.md`** – Historical record of completed items
 
@@ -100,14 +102,14 @@ The **FR/BR/UXR Prioritization Board** provides centralized visibility and prior
 
 1. **Create Epic:** Add `Epic-X/` directory under `epics/` with `Epic-X.md` inside
 2. **Create Story:** Add `Story-XXX-*.md` under `epics/Epic-X/`
-3. **Update Board views:** `_index.md` (quick view), `kanban-board.md` (tasks), `kanban-structure.md` (epics), `kanban-board-guide.md` (guide), `kanban-completed.md` (completed tasks)
+3. **Update Board views:** `_index.md` (quick view), `kboard.md` (tasks), `kanban-structure.md` (epics), `kanban-board-guide.md` (guide), `kanban-completed.md` (completed tasks)
 4. **Track Progress:** Update Epic and Story docs as work progresses
 
 ### FR/BR/UXR Workflow (atomic intake — **KG-R2**)
 
 1. **Create FR/BR/UXR:** Add document to `fr-br/` with prefix **FR-** / **BR-** / **UXR-**
 2. **Same session — create task:** Add task doc under the **semantically appropriate** story; set **`Implementing Task:`** on the report and link back from the task (**no orphan reports**)
-3. **Story checklist / boards:** Update story checklist row; add to `fr-br-uxr-board.md` (MoSCOW) and `fr-br-uxr-structure.md` as needed
+3. **Story checklist / boards:** Update story checklist row; add to `fbuboard.md` (MoSCOW) and `fr-br-uxr-structure.md` as needed
 4. **Templates/docs:** UXR/governance owns template and board formatting rules where applicable
 5. **Track progress:** Status updates; move to `fr-br-uxr-completed.md` when done
 6. **Version:** Run **RW** / **RW -k** on the correct epic branch when releasing

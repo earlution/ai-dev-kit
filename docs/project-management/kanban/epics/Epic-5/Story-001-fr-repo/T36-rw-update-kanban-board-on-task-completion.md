@@ -24,7 +24,7 @@ housekeeping_policy: keep
 
 ## Scope
 
-Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kanban board (`kanban-board.md`) when tasks are completed, ensuring the board reflects current task/story/epic completion status immediately after each release.
+Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kanban board (`kboard.md`) when tasks are completed, ensuring the board reflects current task/story/epic completion status immediately after each release.
 
 **Problem Statement:**
 - RW Step 7 currently updates Story and Epic documents but does NOT update the Kanban board
@@ -46,7 +46,7 @@ Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kan
 - **FR-015:** [`FR-015-harden-kanban-docs-update-in-release-workflow.md`](../../../fr-br/FR-015-harden-kanban-docs-update-in-release-workflow.md) (related - board updates are part of FR-015:R06)
 - **RW Step 7 Script:** `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
 - **RW Step 7 Documentation:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **E2:S08:** `docs/project-management/kanban/epics/Epic-2/Story-008-harden-release-workflow-reliability.md` (FR-015 implementation)
 
 ---
@@ -162,7 +162,7 @@ Enhance RW Step 7 (Auto-update Kanban Docs) to automatically update the main Kan
 - Update `Status` to `COMPLETE`
 - Update `Version` to final version
 - Update `Epic-5` with completion status and version
-- Update `kanban-board.md` with completion status and version (via RW Step 7!)
+- Update `kboard.md` with completion status and version (via RW Step 7!)
 
 ---
 

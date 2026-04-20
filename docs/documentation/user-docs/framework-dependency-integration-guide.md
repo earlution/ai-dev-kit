@@ -248,7 +248,7 @@ vim src/myproject/version.py
 
 # Initialize Kanban
 mkdir -p docs/project-management/kanban/epics
-cp frameworks/kanban/templates/kanban-board.md docs/project-management/kanban/kanban-board.md
+cp frameworks/kanban/templates/kboard.md docs/project-management/kanban/kboard.md
 ```
 
 **4. Test Setup:**

@@ -11,10 +11,10 @@ housekeeping_policy: keep
 **Last Updated:** 2026-03-09 (RW: E4:S18:T01+2)  
 **Version:** v0.4.18.1+2
 
-> **For structured information only, see:** [`kanban-board.md`](kanban-board.md)  
+> **For structured information only, see:** [`kboard.md`](kboard.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For completed tasks, see:** [`kanban-completed.md`](kanban-completed.md)  
-> **For FR/BR/UXR prioritization, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)
+> **For FR/BR/UXR prioritization, see:** [`fbuboard.md`](fbuboard.md)
 
 ---
 
@@ -26,7 +26,7 @@ This guide explains how to use and understand the Kanban board. The board tracks
 
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: `_index.md` (quick view), `kanban-board.md` (tasks), `kanban-structure.md` (epics), and this file (guide)
+- Board views: `_index.md` (quick view), `kboard.md` (tasks), `kanban-structure.md` (epics), and this file (guide)
 
 ---
 
@@ -71,7 +71,7 @@ UKW and RW agents must follow this when updating the board.
 
 ### MoSCOW row `Last modified` (UTC)
 
-Each line in **MoSCOW Prioritized In-Progress Tasks** (`kanban-board.md`) and **MoSCOW Prioritized FR/BR/UXR Items** (`fr-br-uxr-board.md`) must end with a pipe-delimited field:
+Each line in **MoSCOW Prioritized In-Progress Tasks** (`kboard.md`) and **MoSCOW Prioritized FR/BR/UXR Items** (`fbuboard.md`) must end with a pipe-delimited field:
 
 `| Last modified: YYYY-MM-DD HH:MM UTC`
 
@@ -115,7 +115,7 @@ Tasks within each MoSCOW section are ordered chronologically, with most recently
 
 ### Required Row Timestamp
 
-Every active MoSCOW row in `kanban-board.md` and `fr-br-uxr-board.md` must end with a terminal pipe-delimited timestamp field:
+Every active MoSCOW row in `kboard.md` and `fbuboard.md` must end with a terminal pipe-delimited timestamp field:
 
 `| Last modified: YYYY-MM-DD HH:MM UTC`
 
@@ -123,7 +123,7 @@ This is mandatory for human scanability and forensic traceability. RW/UKW/manual
 
 ### Task-Level Display (not story-level)
 
-**MoSCOW rows must reference tasks** (`E7:S06:T03`, etc.), not whole stories (`E7:S06`). Story-level lines collapse many tasks into one line and **obfuscate actual state** (e.g. T02 complete while the story still reads TODO). Use [`kanban-structure.md`](kanban-structure.md) for epic/story hierarchy; use [`kanban-board.md`](kanban-board.md) for actionable, task-granular work.
+**MoSCOW rows must reference tasks** (`E7:S06:T03`, etc.), not whole stories (`E7:S06`). Story-level lines collapse many tasks into one line and **obfuscate actual state** (e.g. T02 complete while the story still reads TODO). Use [`kanban-structure.md`](kanban-structure.md) for epic/story hierarchy; use [`kboard.md`](kboard.md) for actionable, task-granular work.
 
 ---
 
@@ -132,12 +132,12 @@ This is mandatory for human scanability and forensic traceability. RW/UKW/manual
 1. **Create Epic** (if needed):
    - Create `epics/Epic-X/` directory
    - Add `epics/Epic-X/Epic-X.md` (Epic overview)
-   - Update `kanban-board.md` and `_index.md`
+   - Update `kboard.md` and `_index.md`
 
 2. **Create Story**:
    - Add `epics/Epic-X/Story-XXX-short-slug.md`
    - Update Epic doc (`epics/Epic-X/Epic-X.md`) with Story reference
-   - Update `kanban-board.md` and `_index.md`
+   - Update `kboard.md` and `_index.md`
 
 3. **Create Task**:
    - Add `epics/Epic-X/Story-XXX/T\{task\}-description.md` (separate file format) OR
@@ -156,7 +156,7 @@ See [`README.md`](README.md) for full structure details and `docs/project-manage
 
 ## Formatting Governance (E7:S01:T09 / UXR-005)
 
-The UXR workflow owns all Kanban template/document maintenance. As of **E7:S01:T09 / UXR-005**, every multi-line MoSCOW bullet must have **exactly one blank line** separating it from adjacent entries (single-line bullets stay contiguous). When updating `kanban-board*.md`, `fr-br-uxr-board.md`, `kanban-structure.md`, `_index.md`, or related templates:
+The UXR workflow owns all Kanban template/document maintenance. As of **E7:S01:T09 / UXR-005**, every multi-line MoSCOW bullet must have **exactly one blank line** separating it from adjacent entries (single-line bullets stay contiguous). When updating `kanban-board*.md`, `fbuboard.md`, `kanban-structure.md`, `_index.md`, or related templates:
 
 - Insert a blank line between bullets whose description spans more than one visual line.
 - Leave single-line bullets directly adjacent to minimize vertical noise.
@@ -170,9 +170,9 @@ Future validator support is tracked in the documentation validator script (`scri
 ## Quick Reference
 
 - **Board Quick View:** [`_index.md`](_index.md)
-- **Board (MoSCOW Tasks):** [`kanban-board.md`](kanban-board.md)
+- **Board (MoSCOW Tasks):** [`kboard.md`](kboard.md)
 - **Board (Epic Structure):** [`kanban-structure.md`](kanban-structure.md)
-- **Board (FR/BR/UXR Prioritization):** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)
+- **Board (FR/BR/UXR Prioritization):** [`fbuboard.md`](fbuboard.md)
 - **Kanban Policy:** `docs/project-management/rituals/policy/kanban-governance-policy.md`
 - **Versioning Policy:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
 
@@ -182,9 +182,9 @@ Future validator support is tracked in the documentation validator script (`scri
 
 The board is organized into five separate documents:
 
-1. **MoSCOW Prioritized Tasks** (`kanban-board.md`) - Shows all active tasks organized by priority (M/S/C/O/W)
+1. **MoSCOW Prioritized Tasks** (`kboard.md`) - Shows all active tasks organized by priority (M/S/C/O/W)
 2. **Epic/Story/Task Structure** (`kanban-structure.md`) - Shows all epics with their status, priority, stories, and links
-3. **FR/BR/UXR Prioritization** (`fr-br-uxr-board.md`) - Shows all open FRs, BRs, and UXRs organized by priority
+3. **FR/BR/UXR Prioritization** (`fbuboard.md`) - Shows all open FRs, BRs, and UXRs organized by priority
 4. **FR/BR/UXR Structure** (`fr-br-uxr-structure.md`) - Shows complete listings of all FRs, BRs, and UXRs by type
 5. **Rules and Explanations** (`kanban-board-guide.md`) - This document with how-to content and policies
 
@@ -194,7 +194,7 @@ The board serves as the parent document to Story documents, providing a comprehe
 
 ## FR/BR/UXR Prioritization Board
 
-The **FR/BR/UXR Prioritization Board** (`fr-br-uxr-board.md`) provides centralized visibility and prioritization for all open Feature Requests, Bug Reports, and User Experience Research items.
+The **FR/BR/UXR Prioritization Board** (`fbuboard.md`) provides centralized visibility and prioritization for all open Feature Requests, Bug Reports, and User Experience Research items.
 
 ### Board Sections
 

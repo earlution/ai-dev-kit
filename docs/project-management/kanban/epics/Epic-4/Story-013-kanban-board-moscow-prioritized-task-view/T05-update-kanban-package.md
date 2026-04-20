@@ -227,7 +227,7 @@ After user verification of the enhanced Kanban board structure, update the Kanba
 ## References
 
 - `packages/frameworks/kanban/` - Kanban package directory
-- `docs/project-management/kanban/kanban-board.md` - Enhanced board structure (T01 deliverable)
+- `docs/project-management/kanban/kboard.md` - Enhanced board structure (T01 deliverable)
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Updated policy (T02 deliverable)
 - `packages/frameworks/kanban/templates/` - Updated template (T03 deliverable)
 - `docs/knowledge/analysis/kanban-board-enhancement-system-impacts.md` - Impact assessment (T04 deliverable)

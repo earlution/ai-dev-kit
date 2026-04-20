@@ -261,7 +261,7 @@ All core components have been **successfully implemented and tested**:
    - Mark BR-037 as fully verified once consumer-side workflow exercised
 
 3. **Documentation Updates:**
-   - Update kanban-board.md to reflect implementation progress
+   - Update kboard.md to reflect implementation progress
    - Consider moving to COMPLETED status after Release Workflow execution
 
 ### **Impact Summary**
