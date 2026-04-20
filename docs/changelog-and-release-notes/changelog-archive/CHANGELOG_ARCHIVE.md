@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.6.7.114+1] - 20-04-26
+
+E6:S07:T114 — **RW** with **`--art`**: canonical board filename migration (`kboard.md` / `fbuboard.md`) + UXR/task/ICW governance backfill. SemVer **v0.4.757+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.114+1.md)
+---
 ## [0.5.9.11+5] - 19-04-26
 
 E5:S09:T11 — **RW** with **`--art`**: Wave 4 — **BR-068** closure + traceability (**T11** **COMPLETE**). SemVer **v0.4.757+5**.
