@@ -29,6 +29,12 @@ E2:S16:T02 — **RW -d** with **`--art`**: move inventory/classification task to
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.2+1.md)
 ---
+## [0.2.16.3+1] - 20-04-26
+
+E2:S16:T03 — **RW -d** with **`--art`**: move re-housing/guardrail task to IN PROGRESS and begin execution stream for perpetual-task migration hardening. SemVer **v0.4.766+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+1.md)
+---
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
