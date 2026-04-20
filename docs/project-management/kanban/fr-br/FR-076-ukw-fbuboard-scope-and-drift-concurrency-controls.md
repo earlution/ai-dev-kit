@@ -23,7 +23,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-Upgrade UKW so `fr-br-uxr-board.md` ("fbuboard") is first-class in scope, and enforce the same active-row integrity protections recently applied manually: stale completed-row pruning, timestamp normalization, concurrency-safe update order, and temporal-drift detection/resolution.
+Upgrade UKW so `fbuboard.md` ("fbuboard") is first-class in scope, and enforce the same active-row integrity protections recently applied manually: stale completed-row pruning, timestamp normalization, concurrency-safe update order, and temporal-drift detection/resolution.
 
 ---
 
@@ -51,7 +51,7 @@ Extend UKW documentation, execution logic, and validation behavior so fbuboard r
 
 ## Requirements
 
-- **FR-076:R01 (Scope):** UKW comprehensive runs must include `fr-br-uxr-board.md` synchronization and cleanup as a required step.
+- **FR-076:R01 (Scope):** UKW comprehensive runs must include `fbuboard.md` synchronization and cleanup as a required step.
 - **FR-076:R02 (Stale Active Rows):** Remove active rows whose linked FR/BR/UXR doc status is terminal (`COMPLETE`, `COMPLETED`, `IMPLEMENTED`, `FIXED`, `RESOLVED`), with documented exceptions where status text explicitly indicates unresolved product verification.
 - **FR-076:R03 (Concurrency Guard):** UKW must use deterministic read/check/write sequencing and conflict-aware revalidation before final write when board files changed during the run.
 - **FR-076:R04 (Temporal Drift Check):** Validate and normalize `Last Updated`/row timestamp consistency to avoid stale metadata after sync.
@@ -93,6 +93,6 @@ Extend UKW documentation, execution logic, and validation behavior so fbuboard r
 
 ## References
 
-- Board: [`fr-br-uxr-board.md`](../fr-br-uxr-board.md)
+- Board: [`fbuboard.md`](../fbuboard.md)
 - UKW guide: [`update-kanban-workflow-agent-execution.md`](https://github.com/earlution/ai-dev-kit/blob/main/packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md)
 - Governance: [`kanban-governance-policy.md`](../../rituals/policy/kanban-governance-policy.md)

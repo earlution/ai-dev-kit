@@ -11,6 +11,30 @@
 
 ---
 
+## 🚨 GLOBAL IMPLEMENTATION GATE (IPW REQUIRED)
+
+**Hard contract:** No implementation work is allowed until IPW is complete and the user explicitly authorizes execution.
+
+**Scope of blocked implementation (until gate opens):**
+- Code changes, script behavior changes, broad repository refactors, release-impacting updates, and non-planning documentation updates that implement behavior/policy outcomes.
+
+**Gate preconditions (all mandatory):**
+1. **Task anchor exists** for the requested work (`E#:S#:T#`).
+2. **IPW package exists** for that task and is linked from the task doc:
+   - `IPW/ICW-...-specification.md`
+   - `IPW/ICW-...-test-design.md`
+   - `IPW/ICW-...-implementation-plan.md`
+3. **Explicit user execution authorization** is provided in a separate instruction (for example: "implement", "proceed with implementation", or an explicit release execution command like `RW E#:S#:T#`).
+
+**Mandatory behavior while gate is closed:**
+- If user asks for UXR/FR/BR/task/spec/plan/review, produce only those artifacts and stop.
+- Do not infer implementation permission from user intent or end goals.
+- Do not run opportunistic implementation while producing governance artifacts.
+- After planning artifacts are complete, pause and wait for explicit go-ahead.
+- If any precondition is missing, ask only for the missing prerequisite and remain in planning/governance scope.
+
+---
+
 ## 🚀 RELEASE WORKFLOW (RW) TRIGGER
 
 **When the user types "RW" or "rw" (case-insensitive), execute the Release Workflow as an intelligent agent:**

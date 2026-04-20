@@ -69,7 +69,7 @@ Add new steps to `ukw-sync` skill:
 ```
 Step 7: FR/BR/UXR Synchronization
 - Analyze FR/BR/UXR completion status based on task completion
-- Update fr-br-uxr-board.md with latest status and metadata
+- Update fbuboard.md with latest status and metadata
 - Remove completed items from active board
 
 Step 8: FR/BR/UXR Temporal Tracking

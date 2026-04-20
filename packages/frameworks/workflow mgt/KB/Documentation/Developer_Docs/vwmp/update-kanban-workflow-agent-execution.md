@@ -580,7 +580,7 @@ After completing UKW, users typically run RW to commit the kanban documentation 
 
 ### Step 6.5: fbuboard Reconciliation and Drift Guard
 
-**Purpose:** Keep `fr-br-uxr-board.md` aligned with FR/BR/UXR source-of-truth docs using deterministic cleanup and safe writes.
+**Purpose:** Keep `fbuboard.md` aligned with FR/BR/UXR source-of-truth docs using deterministic cleanup and safe writes.
 
 **Agent Execution:**
 

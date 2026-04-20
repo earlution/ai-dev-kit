@@ -25,7 +25,7 @@ This UKW run synchronized kanban documentation to reflect the completion of E4:S
 
 ### Kanban Board Updates
 
-**Main Board (`kanban-board.md`):**
+**Main Board (`kboard.md`):**
 - **Version:** Updated to v0.6.6.8+14
 - **E4:S12 Entry (MoSCOW Section):** Removed from "Should Have" section (story is complete)
 - **E4:S12 Entry (Epic 4 Section):** Updated from TODO to ✅ COMPLETE (v0.4.12.10+0)

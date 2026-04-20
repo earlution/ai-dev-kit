@@ -19,7 +19,7 @@ housekeeping_policy: keep
 
 Quick reference board for all Kanban work. For detailed views, see:
 
-- [`kanban-board.md`](kanban-board.md) (MoSCOW prioritized tasks)
+- [`kboard.md`](kboard.md) (MoSCOW prioritized tasks)
 - [`kanban-structure.md`](kanban-structure.md) (Epic/Story/Task structure)
 - [`kanban-board-guide.md`](kanban-board-guide.md) (rules and explanations)
 
@@ -27,7 +27,7 @@ Quick reference board for all Kanban work. For detailed views, see:
 
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: This file (quick), kanban-board.md (tasks), kanban-structure.md (epics), and kanban-board-guide.md (guide)
+- Board views: This file (quick), kboard.md (tasks), kanban-structure.md (epics), and kanban-board-guide.md (guide)
 
 ---
 
@@ -66,12 +66,12 @@ Quick reference board for all Kanban work. For detailed views, see:
 1. **Create Epic** (if needed):
    - Create `epics/Epic-X/` directory
    - Add `epics/Epic-X/Epic-X.md` (Epic overview)
-   - Update this board (`_index.md`), `kanban-board.md`, and `kanban-structure.md`
+   - Update this board (`_index.md`), `kboard.md`, and `kanban-structure.md`
 
 2. **Create Story**:
    - Add `epics/Epic-X/Story-XXX-short-slug.md`
    - Update Epic doc (`epics/Epic-X/Epic-X.md`) with Story reference
-   - Update this board (`_index.md`), `kanban-board.md`, and `kanban-structure.md`
+   - Update this board (`_index.md`), `kboard.md`, and `kanban-structure.md`
 
 3. **Track Progress**:
    - Update Story status in Story doc

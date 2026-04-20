@@ -168,7 +168,7 @@ Enhance the Task Template (`TASK_TEMPLATE.md`) to include an explicit "Cross-Wir
 - Update `Status` to `COMPLETE`
 - Update `Version` to final version
 - Update `Epic-5` with completion status and version
-- Update `kanban-board.md` with completion status and version
+- Update `kboard.md` with completion status and version
 
 ---
 

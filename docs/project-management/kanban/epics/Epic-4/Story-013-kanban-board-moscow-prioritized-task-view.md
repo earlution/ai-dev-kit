@@ -84,7 +84,7 @@ Enhance the Kanban board to be more useful by:
 **Task Document:** [`T01-kanban-board-moscow-prioritized-task-view.md`](Story-013-kanban-board-moscow-prioritized-task-view/T01-kanban-board-moscow-prioritized-task-view.md)
 
 **Approach:**
-1. Analyze current Kanban board structure (`kanban-board.md`)
+1. Analyze current Kanban board structure (`kboard.md`)
 2. Design new structure with MoSCOW sections before story checklist
 3. Implement chronological ordering logic (most recently updated at top)
 4. Update Kanban board document with new structure
@@ -272,7 +272,7 @@ The implementation must:
 
 ## References
 
-- `docs/project-management/kanban/kanban-board.md` - Current board structure
+- `docs/project-management/kanban/kboard.md` - Current board structure
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Canonical policy
 - `docs/project-management/rituals/policy/kanban-governance-policy.md` - Local policy
 - `packages/frameworks/kanban/templates/` - Framework templates

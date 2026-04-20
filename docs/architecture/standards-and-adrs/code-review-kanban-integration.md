@@ -504,7 +504,7 @@ Board Updates:
 - **Epic 4 (Kanban Framework):** `docs/project-management/kanban/epics/Epic-4/Epic-4.md`
 - **Epic 7 (Codebase Maintenance):** `docs/project-management/kanban/epics/Epic-7/Epic-7.md`
 - **Story 2 (Code Review Standards and Processes):** `docs/project-management/kanban/epics/Epic-7/Story-002-code-review-standards-and-processes.md`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 
 ---
 

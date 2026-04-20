@@ -285,7 +285,7 @@ This report validates the integration between Release Workflow (RW) and Kanban s
    - May miss sections that reference the story/task
 
 3. **No Board Update:**
-   - RW Step 6 doesn't update Kanban board (`kanban-board.md` or `_index.md`)
+   - RW Step 6 doesn't update Kanban board (`kboard.md` or `_index.md`)
    - Board may become out of sync with Epic/Story documents
 
 ---
@@ -317,7 +317,7 @@ This report validates the integration between Release Workflow (RW) and Kanban s
    - Add consistency check after updates
 
 2. **Add Board Updates:**
-   - Update Kanban board (`kanban-board.md` or `_index.md`) in RW Step 6
+   - Update Kanban board (`kboard.md` or `_index.md`) in RW Step 6
    - Ensure board stays in sync with Epic/Story documents
 
 3. **Add Consistency Validation:**

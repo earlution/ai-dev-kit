@@ -271,7 +271,7 @@ housekeeping_policy: delete
 - **Main README:** `README.md` (v0.4.6.4+1)
 
 ### Kanban & Governance
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **Kanban Governance:** `docs/project-management/rituals/policy/kanban-governance-policy.md`
 
 ### Architecture & Standards
@@ -319,7 +319,7 @@ housekeeping_policy: delete
 ### Getting Started
 1. **Read Vision:** `docs/documentation/ai-dev-kit-vision-and-purpose.md`
 2. **Understand Versioning:** `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
-3. **Review Kanban:** `docs/project-management/kanban/kanban-board.md`
+3. **Review Kanban:** `docs/project-management/kanban/kboard.md`
 
 ### Current Focus Areas
 - **Template System:** E4:S06 (canonical EST templates)

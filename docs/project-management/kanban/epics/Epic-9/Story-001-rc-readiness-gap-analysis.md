@@ -186,7 +186,7 @@ This gap analysis must be aware of the comprehensive framework review scope defi
 - Update `Status` to `COMPLETE`
 - Update `Version` to final version
 - Update `Epic-9` with completion status and version
-- Update `kanban-board.md` with completion status and version
+- Update `kboard.md` with completion status and version
 
 ---
 

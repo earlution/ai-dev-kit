@@ -297,7 +297,7 @@ Priority operations (UC2/UC3) require significant agentic intelligence and are c
 
 - **UKW Documentation:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md`
 - **UKW Workflow:** `packages/frameworks/workflow mgt/workflows/update-kanban-workflow.yaml`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md`
 - **Related BR:** [BR-033 - UKW Board Disorganization](BR-033-ukw-board-disorganization.md)
 - **SoP:** [Mixed BR/FR Scope Handling](../../../architecture/standards-and-adrs/mixed-br-fr-scope-sop.md)

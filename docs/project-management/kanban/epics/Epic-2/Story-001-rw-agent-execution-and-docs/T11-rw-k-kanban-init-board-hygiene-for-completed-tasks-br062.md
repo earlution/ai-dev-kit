@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-Fix RW Step 7 Kanban update behavior so completed tasks are not left in the in-progress MoSCoW list on `kanban-board.md` in either `kanban_init` (`RW -k`) or full RW mode.
+Fix RW Step 7 Kanban update behavior so completed tasks are not left in the in-progress MoSCoW list on `kboard.md` in either `kanban_init` (`RW -k`) or full RW mode.
 
 ---
 
@@ -29,7 +29,7 @@ Fix RW Step 7 Kanban update behavior so completed tasks are not left in the in-p
 
 - [BR-062](../../../fr-br/BR-062-rw-k-kanban-init-does-not-prune-completed-tasks-from-kboard.md)
 - `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
-- `docs/project-management/kanban/kanban-board.md`
+- `docs/project-management/kanban/kboard.md`
 
 ---
 
@@ -43,8 +43,8 @@ Fix RW Step 7 Kanban update behavior so completed tasks are not left in the in-p
 
 ## Acceptance Criteria
 
-- [x] `RW -k` no longer leaves completed task rows in `kanban-board.md` in-progress MoSCoW section.
-- [x] Full RW Step 7 no longer leaves completed task rows in `kanban-board.md` in-progress MoSCoW section.
+- [x] `RW -k` no longer leaves completed task rows in `kboard.md` in-progress MoSCoW section.
+- [x] Full RW Step 7 no longer leaves completed task rows in `kboard.md` in-progress MoSCoW section.
 - [x] Existing metadata/timestamp behavior for `kanban_init` remains intact.
 - [x] Regression test or deterministic verification step added for this specific scenario.
 - [x] BR-062 status and references updated after implementation.

@@ -98,7 +98,7 @@ High-level classification:
 
 - **Kanban governance:**
   - Framework: `packages/frameworks/kanban/policies/kanban-governance-policy.md`.
-  - Dev-kit: `docs/project-management/kanban/kanban-board.md` + any dev-kit-local governance ADRs.
+  - Dev-kit: `docs/project-management/kanban/kboard.md` + any dev-kit-local governance ADRs.
   - **Pattern:** governance SoT in framework, dev-kit board/docs as an instance.
 
 ### 3.2 Scripts
@@ -117,7 +117,7 @@ High-level classification:
 ### 4.1 Kanban (`docs/project-management/kanban`)
 
 - **Current state:**
-  - `kanban-board.md` implemented with MoSCOW sections and explicit board/guide split via `kanban-board-guide.md`.
+  - `kboard.md` implemented with MoSCOW sections and explicit board/guide split via `kanban-board-guide.md`.
   - Epic/Story/Task docs under `epics/Epic-N/...` using discrete task docs for newer work (e.g. FR Repo in Epic 5).
 - **Legacy risks:**
   - Older epics/stories may still:

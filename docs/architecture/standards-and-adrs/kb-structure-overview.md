@@ -101,7 +101,7 @@ docs/
 **Contents:**
 - `kanban/` – Kanban board, epics, stories
   - `_index.md` – Board view
-  - `kanban-board.md` – Detailed board
+  - `kboard.md` – Detailed board
   - `epics/` – Epic documentation
 - `rituals/` – Governance policies, rituals
   - `policy/` – Policy documents

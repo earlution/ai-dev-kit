@@ -56,7 +56,7 @@ def _classify_md(rel: Path, text: str) -> tuple[Classification, str]:
     rel_str = str(rel).replace("\\", "/")
 
     # Board file
-    if rel_str.endswith("kanban-board.md"):
+    if rel_str.endswith("kboard.md"):
         if "AI Dev Kit – Kanban Board" in text:
             return "contaminated", "dev-kit board title present"
         return "template", "consumer board"

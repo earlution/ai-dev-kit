@@ -54,7 +54,7 @@ docs/
     ├── kanban/
     │   ├── README.md
     │   ├── _index.md
-    │   ├── kanban-board.md
+    │   ├── kboard.md
     │   └── epics/
     │       ├── Epic-1.md
     │       ├── Epic-1/
@@ -152,7 +152,7 @@ docs/
 │   ├── kanban/
 │   │   ├── README.md                  # Kanban overview (existing)
 │   │   ├── _index.md                  # Board view (existing)
-│   │   ├── kanban-board.md            # Detailed board (existing)
+│   │   ├── kboard.md            # Detailed board (existing)
 │   │   └── epics/                     # Epic structure (existing)
 │   └── rituals/
 │       ├── README.md                  # Rituals overview

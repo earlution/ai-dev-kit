@@ -194,7 +194,7 @@ Establish a formal repository pattern for Feature Requests (FRs), Bug Reports (B
 
 **Approach:**
 1. Review current board display logic:
-   - `kanban-board.md` (detailed view)
+   - `kboard.md` (detailed view)
    - `_index.md` (quick view)
 2. Add omission rules:
    - Epic 5: Omit S00 from story list

@@ -523,7 +523,7 @@ An Epic matches if **ALL** of the following are true:
 2. Update Story status if needed (TODO → IN PROGRESS)
 3. Update Epic's story checklist if new Story
 4. Update Epic status if needed
-5. Update Kanban board (`_index.md` and `kanban-board.md`)
+5. Update Kanban board (`_index.md` and `kboard.md`)
 
 **When Creating Story:**
 1. Add Story to Epic's story checklist

@@ -19,7 +19,7 @@ template_sections:
 **Last Updated:** {Date}  
 **Version:** {Version}
 
-> **For structured information only, see:** [`kanban-board.md`](kanban-board.md)  
+> **For structured information only, see:** [`kboard.md`](kboard.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)
 
 ---
@@ -32,7 +32,7 @@ This guide explains how to use and understand the Kanban board. The board tracks
 
 - Epic overviews: `epics/Epic-X/Epic-X.md`
 - Story documents: `epics/Epic-X/Story-XXX-*.md`
-- Board views: `_index.md` (quick view), `kanban-board.md` (tasks), `kanban-structure.md` (epics), and this file (guide)
+- Board views: `_index.md` (quick view), `kboard.md` (tasks), `kanban-structure.md` (epics), and this file (guide)
 
 ---
 
@@ -102,12 +102,12 @@ Tasks within each MoSCOW section are ordered chronologically, with most recently
 1. **Create Epic** (if needed):
    - Create `epics/Epic-X/` directory
    - Add `epics/Epic-X/Epic-X.md` (Epic overview)
-   - Update `kanban-board.md`, `kanban-structure.md`, and `_index.md`
+   - Update `kboard.md`, `kanban-structure.md`, and `_index.md`
 
 2. **Create Story**:
    - Add `epics/Epic-X/Story-XXX-short-slug.md`
    - Update Epic doc (`epics/Epic-X/Epic-X.md`) with Story reference
-   - Update `kanban-board.md`, `kanban-structure.md`, and `_index.md`
+   - Update `kboard.md`, `kanban-structure.md`, and `_index.md`
 
 3. **Create Task**:
    - Add `epics/Epic-X/Story-XXX/T{task}-description.md` (separate file format) OR
@@ -127,7 +127,7 @@ See [`README.md`](README.md) for full structure details and `{local_policy_path}
 ## Quick Reference
 
 - **Board Quick View:** [`_index.md`](_index.md)
-- **Board (MoSCOW Tasks):** [`kanban-board.md`](kanban-board.md)
+- **Board (MoSCOW Tasks):** [`kboard.md`](kboard.md)
 - **Board (Epic Structure):** [`kanban-structure.md`](kanban-structure.md)
 - **Kanban Governance Policy:** `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Framework-level policy documentation
 - **Local Kanban Policy:** `{local_policy_path}` - Project-specific implementation details
@@ -138,7 +138,7 @@ See [`README.md`](README.md) for full structure details and `{local_policy_path}
 
 The board is organized into three separate documents:
 
-1. **MoSCOW Prioritized Tasks** (`kanban-board.md`) - Shows all active tasks organized by priority (M/S/C/O/W)
+1. **MoSCOW Prioritized Tasks** (`kboard.md`) - Shows all active tasks organized by priority (M/S/C/O/W)
 2. **Epic/Story/Task Structure** (`kanban-structure.md`) - Shows all epics with their status, priority, stories, and links
 3. **Rules and Explanations** (`kanban-board-guide.md`) - This document with how-to content and policies
 

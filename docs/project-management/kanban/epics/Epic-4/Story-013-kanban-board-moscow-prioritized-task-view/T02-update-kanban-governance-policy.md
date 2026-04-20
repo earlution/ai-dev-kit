@@ -52,7 +52,7 @@ Update the Kanban governance policy documents to document the new board structur
   - `packages/frameworks/kanban/policies/kanban-governance-policy.md` (canonical)
   - `docs/project-management/rituals/policy/kanban-governance-policy.md` (local)
 
-- Enhanced Kanban board document (`docs/project-management/kanban/kanban-board.md`)
+- Enhanced Kanban board document (`docs/project-management/kanban/kboard.md`)
 
 **Dependencies:**
 - E4:S13:T01 – Design and implement MoSCOW prioritized task view in Kanban board
@@ -96,7 +96,7 @@ Update the Kanban governance policy documents to document the new board structur
 ## Approach
 
 1. **Review Enhanced Board Structure:**
-   - Review T01 deliverables (enhanced `kanban-board.md`)
+   - Review T01 deliverables (enhanced `kboard.md`)
    - Understand the new structure and format
    - Identify all aspects that need policy documentation
 
@@ -217,5 +217,5 @@ Update the Kanban governance policy documents to document the new board structur
 
 - `packages/frameworks/kanban/policies/kanban-governance-policy.md` - Canonical policy
 - `docs/project-management/rituals/policy/kanban-governance-policy.md` - Local policy
-- `docs/project-management/kanban/kanban-board.md` - Enhanced board structure (T01 deliverable)
+- `docs/project-management/kanban/kboard.md` - Enhanced board structure (T01 deliverable)
 

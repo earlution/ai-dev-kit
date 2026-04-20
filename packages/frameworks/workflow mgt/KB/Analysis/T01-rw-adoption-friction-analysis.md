@@ -80,7 +80,7 @@ This analysis identifies **all manual integration touchpoints** required when ad
 1. **`.cursorrules` RW trigger section (Step 6):**
    - Story file pattern: `{kanban_path}/epics/Epic-{epic}/Story-{story}-*.md`
    - Epic doc pattern: `{kanban_path}/epics/Epic-{epic}/Epic-{epic}.md`
-   - Kanban board: `{kanban_path}/_index.md` or `{kanban_path}/kanban-board.md`
+   - Kanban board: `{kanban_path}/_index.md` or `{kanban_path}/kboard.md`
    - Example: `docs/project-management/kanban/...`
    - **Manual action:** Replace template/example paths
 

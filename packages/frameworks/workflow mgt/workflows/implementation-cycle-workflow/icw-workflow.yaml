@@ -111,7 +111,7 @@ steps:
       create_task_if_needed: true
       update_status: true
       link_artifacts: true
-      kanban_board: ${config.kanban_root}/kanban-board.md
+      kanban_board: ${config.kanban_root}/kboard.md
 
   - id: step-7
     name: Quality Validation

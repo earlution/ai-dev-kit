@@ -26,7 +26,7 @@ Upgrade the packaged Kanban framework (`packages/frameworks/kanban/`) to include
 - Completed board split implementation (E4:S18:T01)
 - Current packaged Kanban board template (`packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`)
 - Current packaged Kanban governance policy
-- Dev-kit implementation (`kanban-board.md` and `kanban-board-guide.md`)
+- Dev-kit implementation (`kboard.md` and `kanban-board-guide.md`)
 
 ---
 

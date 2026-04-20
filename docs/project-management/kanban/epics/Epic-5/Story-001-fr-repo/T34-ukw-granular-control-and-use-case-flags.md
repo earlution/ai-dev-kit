@@ -53,7 +53,7 @@ Add granular control to UKW (Update Kanban Workflow) via use case flags and flex
 - **BR-033:** [`BR-033-ukw-board-disorganization.md`](../../../fr-br/BR-033-ukw-board-disorganization.md) (related bug report)
 - **UKW Documentation:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md`
 - **UKW Workflow:** `packages/frameworks/workflow mgt/workflows/update-kanban-workflow.yaml`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md`
 - **SoP:** `docs/architecture/standards-and-adrs/mixed-br-fr-scope-sop.md`
 
@@ -202,7 +202,7 @@ Add granular control to UKW (Update Kanban Workflow) via use case flags and flex
 - Update `Status` to `COMPLETE`
 - Update `Version` to final version
 - Update FR-034 with completion status
-- Update `kanban-board.md` with completion status and version
+- Update `kboard.md` with completion status and version
 
 ---
 

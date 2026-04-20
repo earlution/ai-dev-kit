@@ -22,7 +22,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-When a task is planned via IPW and that plan is then built/implemented, task status and `kanban-board.md` frequently remain stale (`TODO`), creating a false project state. Add explicit lifecycle rules so status transitions are applied at the correct point and reflected on kboard as part of the same workflowed unit of work.
+When a task is planned via IPW and that plan is then built/implemented, task status and `kboard.md` frequently remain stale (`TODO`), creating a false project state. Add explicit lifecycle rules so status transitions are applied at the correct point and reflected on kboard as part of the same workflowed unit of work.
 
 ---
 

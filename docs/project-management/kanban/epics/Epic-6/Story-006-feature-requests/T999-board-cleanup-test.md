@@ -33,7 +33,7 @@ housekeeping_policy: keep
 Test task created specifically to validate the UKW Agent's board cleanup functionality. This task will be marked as COMPLETE to trigger the board cleanup process and verify that completed tasks are properly removed from active MoSCOW sections.
 
 **Test Scenario:**
-1. Add this task to "Should Have (S)" section on kanban-board.md
+1. Add this task to "Should Have (S)" section on kboard.md
 2. Mark task status as COMPLETE
 3. Execute UKW workflow
 4. Verify task is removed from active section
@@ -62,7 +62,7 @@ Test task created specifically to validate the UKW Agent's board cleanup functio
 
 ### Step 1: Task Creation
 - Create task document with test scope
-- Add to kanban-board.md "Should Have (S)" section
+- Add to kboard.md "Should Have (S)" section
 - Update Story 6 task checklist
 
 ### Step 2: Test Execution

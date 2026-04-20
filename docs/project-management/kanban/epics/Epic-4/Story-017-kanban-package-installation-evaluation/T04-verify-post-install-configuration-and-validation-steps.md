@@ -183,7 +183,7 @@ Verify post-install configuration and validation steps for the Kanban framework 
    - Status: Well documented
 
 3. ✅ **Verify Configuration Files**
-   - Check `kanban-board.md` exists
+   - Check `kboard.md` exists
    - Check epic documents exist
    - Status: Well documented
 
@@ -293,7 +293,7 @@ python3 scripts/validate_installation.py --kanban-path docs/project-management/k
 
 ### Step 3: Verify Configuration Files
 
-- [ ] `kanban-board.md` exists
+- [ ] `kboard.md` exists
 - [ ] Epic documents exist in `epics/Epic-\{N\}/`
 - [ ] Story documents exist (if created)
 - [ ] Task documents exist (if created)

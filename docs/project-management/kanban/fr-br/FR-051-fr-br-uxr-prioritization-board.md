@@ -39,7 +39,7 @@ Create an **FR/BR/UXR Prioritization Board** with identical responsibility struc
 
 ### Core Components
 
-1. **Main Board (`fr-br-uxr-board.md`)**
+1. **Main Board (`fbuboard.md`)**
    - Prioritized list of open FRs, BRs, and UXRs
    - Status tracking (TODO, IN PROGRESS, UNDER REVIEW, etc.)
    - Priority levels (CRITICAL, HIGH, MEDIUM, LOW)
@@ -105,12 +105,12 @@ Create an **FR/BR/UXR Prioritization Board** with identical responsibility struc
 
 ### Files to Create
 
-1. `docs/project-management/kanban/fr-br-uxr-board.md` - Main prioritization board
+1. `docs/project-management/kanban/fbuboard.md` - Main prioritization board
 2. `docs/project-management/kanban/fr-br-uxr-completed.md` - Completed items tracking
 
 ### Files to Update
 
-1. `kanban-board.md` - Add reference to FR/BR/UXR board
+1. `kboard.md` - Add reference to FR/BR/UXR board
 2. `kanban-board-guide.md` - Add FR/BR/UXR board documentation
 3. Intake workflow - Add automatic board update functionality
 

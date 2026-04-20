@@ -52,7 +52,7 @@ Fix UKW (Update Kanban Workflow) board disorganization bug where epics are not s
 - **BR-033:** [`BR-033-ukw-board-disorganization.md`](../../../fr-br/BR-033-ukw-board-disorganization.md)
 - **UKW Documentation:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md`
 - **UKW Workflow:** `packages/frameworks/workflow mgt/workflows/update-kanban-workflow.yaml`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **UKW Task:** `docs/project-management/kanban/epics/Epic-6/Story-006-adk-implementation-analysis-and-package-management/T08-update-kanban-workflow-ukw.md`
 
 ---
@@ -158,7 +158,7 @@ Fix UKW (Update Kanban Workflow) board disorganization bug where epics are not s
 - Update `Status` to `COMPLETE`
 - Update `Version` to final version
 - Update BR-033 with fix verification status
-- Update `kanban-board.md` with completion status and version
+- Update `kboard.md` with completion status and version
 
 ---
 
@@ -266,7 +266,7 @@ python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py"
 python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py" --dry-run
 
 # Specify custom board path
-python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py" --board-path "path/to/kanban-board.md"
+python "packages/frameworks/workflow mgt/scripts/kanban/sort_kanban_board.py" --board-path "path/to/kboard.md"
 ```
 
 **Document Checklist Sorting:**

@@ -23,7 +23,7 @@ kanban_root: docs/project-management/kanban
 epic_doc_pattern: epics/Epic-{epic}/Epic-{epic}.md
 story_doc_pattern: epics/Epic-{epic}/Story-{story:03d}-*.md
 task_doc_pattern: epics/Epic-{epic}/Story-{story}/T{task}-*.md
-kanban_board: kanban-board.md
+kanban_board: kboard.md
 fr_br_root: docs/project-management/kanban/fr-br
 
 # Use dev-kit versioning schema

@@ -51,7 +51,7 @@ If `rw-config.yaml` exists in project root and `use_kanban: true`, **MUST** load
 - `epic_doc_pattern`: `epics/Epic-{epic}/Epic-{epic}.md`
 - `story_doc_pattern`: `epics/Epic-{epic}/Story-{story}-*.md`
 - `task_doc_pattern`: `epics/Epic-{epic}/Story-{story}/T{task}-*.md`
-- `kanban_board`: `kanban-board.md`
+- `kanban_board`: `kboard.md`
 - `fr_br_root`: `fr-br`
 
 **🚨 MANDATORY: Progress Tracking with Cursor TODOs**

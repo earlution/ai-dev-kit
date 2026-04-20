@@ -101,7 +101,7 @@ Commit 1: Story + Task docs created together
 Version: v0.4.13.0+0 (story creation, doc-init)
 
 Commit 2: First implementation work on T01
-- Code changes in kanban-board.md
+- Code changes in kboard.md
 - Run RW
 - Expected: v0.4.13.1+1 (first functional build)
 - Actual (before fix): v0.4.13.1+0 (incorrect doc-init)

@@ -198,7 +198,7 @@
 
 - [ ] **Check kanban board updated**
   ```bash
-  grep "COMPLETE" docs/project-management/kanban/kanban-board.md
+  grep "COMPLETE" docs/project-management/kanban/kboard.md
   ```
   Expected: Task marked complete
 

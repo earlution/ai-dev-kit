@@ -86,7 +86,7 @@ FR/BR Received
 
 **Step 2.1: Search Existing Stories**
 - **Search Locations:**
-  - `docs/project-management/kanban/kanban-board.md`
+  - `docs/project-management/kanban/kboard.md`
   - `docs/project-management/kanban/epics/Epic-X/stories/Story-XXX-*.md`
 - **Search Criteria:**
   - Story goal/scope encompasses FR/BR requirements
@@ -172,7 +172,7 @@ FR/BR Received
 
 **Step 3a.6: Update Kanban Board**
 - **Files:**
-  - `docs/project-management/kanban/kanban-board.md`
+  - `docs/project-management/kanban/kboard.md`
   - `docs/project-management/kanban/_index.md`
 - **Actions:**
   - Update Story status if needed
@@ -189,7 +189,7 @@ FR/BR Received
 
 **Step 3b.1: Search Existing Epics**
 - **Search Locations:**
-  - `docs/project-management/kanban/kanban-board.md`
+  - `docs/project-management/kanban/kboard.md`
   - `docs/project-management/kanban/epics/Epic-X.md`
 - **Search Criteria:**
   - Epic's problem domain matches FR/BR's problem domain
@@ -282,7 +282,7 @@ FR/BR Received
 
 **Step 4a.7: Update Kanban Board**
 - **Files:**
-  - `docs/project-management/kanban/kanban-board.md`
+  - `docs/project-management/kanban/kboard.md`
   - `docs/project-management/kanban/_index.md`
 - **Actions:**
   - Add new Story to board
@@ -298,7 +298,7 @@ FR/BR Received
 ### Phase 4b: Create Epic + Story + Task (No Epic Match)
 
 **Step 4b.1: Determine Epic Number**
-- **Action:** Read `docs/project-management/kanban/_index.md` or `kanban-board.md`
+- **Action:** Read `docs/project-management/kanban/_index.md` or `kboard.md`
 - **Find:** Highest existing Epic number (e.g., Epic 1, Epic 2, Epic 3, Epic 4, Epic 5, Epic 6, Epic 7)
 - **Calculate:** Next Epic number = Highest + 1 (e.g., Epic 8)
 - **Note:** Canonical epics are 1-7 (see `CANONICAL_EPICS.md`), so new project-specific epics start at Epic 8
@@ -379,7 +379,7 @@ FR/BR Received
 
 **Step 4b.8: Update Kanban Board**
 - **Files:**
-  - `docs/project-management/kanban/kanban-board.md`
+  - `docs/project-management/kanban/kboard.md`
   - `docs/project-management/kanban/_index.md`
 - **Actions:**
   - Add new Epic to board
@@ -401,7 +401,7 @@ After completing intake, verify:
 - [ ] Task/Story/Epic created using correct templates
 - [ ] Version number assigned (format: `RC.EPIC.STORY.TASK+BUILD`)
 - [ ] Version file updated (`src/[project]/version.py`)
-- [ ] Kanban board updated (`kanban-board.md`, `_index.md`)
+- [ ] Kanban board updated (`kboard.md`, `_index.md`)
 - [ ] All documents linked (FR/BR → Task → Story → Epic)
 - [ ] Status fields synchronized across documents
 - [ ] Intake Decision section completed in FR/BR document
@@ -443,7 +443,7 @@ After completing intake, verify:
 ### Key Documents
 - **Intake Guide:** `packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md`
 - **Decision Flow:** `T002-decision-flow-design.md`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **Kanban Index:** `docs/project-management/kanban/_index.md`
 
 ---

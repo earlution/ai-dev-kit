@@ -561,7 +561,7 @@
 | project-management/kanban/fr-br/UXR-003-intelligent-epic-matching-canonical-adoption-uat.md | 7.4 KB | 902 | evergreen | 2025-12-10T00:00:00 |  |
 | project-management/kanban/fr-br/UXR-004-kanban-package-installation-uat.md | 6.4 KB | 844 | evergreen | 2025-12-10T17:10:00 |  |
 | project-management/kanban/kanban-board-guide.md | 4.4 KB | 599 | evergreen | 2026-01-20T00:00:00 |  |
-| project-management/kanban/kanban-board.md | 31.3 KB | 2893 | evergreen | 2025-12-04T12:02:50 |  |
+| project-management/kanban/kboard.md | 31.3 KB | 2893 | evergreen | 2025-12-04T12:02:50 |  |
 | project-management/kanban/ukw-changes-summary-2026-01-05.md | 2.3 KB | 327 |  |  |  |
 | project-management/kanban/ukw-changes-summary.md | 3.3 KB | 430 |  |  |  |
 | project-management/rituals/README.md | 396 B | 31 | evergreen | 2025-12-04T12:01:54 |  |

@@ -124,7 +124,7 @@ Does it fit an existing Story?
 Once your FR/BR is processed, you can find it in:
 
 - **Your FR/BR document:** The original file you created
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **Epic/Story documents:** Linked from your FR/BR document
 
 ### What You'll See
@@ -321,7 +321,7 @@ Every Task document MUST include:
 
 **Check:**
 1. Your FR/BR document (should have "Intake Status: ACCEPTED")
-2. Kanban Board (`docs/project-management/kanban/kanban-board.md`)
+2. Kanban Board (`docs/project-management/kanban/kboard.md`)
 3. The Epic/Story links in your FR/BR document
 
 ### "My request seems to be in the wrong place"
@@ -348,7 +348,7 @@ Every Task document MUST include:
 - **Naming:** Use descriptive titles (e.g., `FR-001-dark-mode-toggle.md`)
 
 ### Key Documents
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 - **Comprehensive Guide:** `packages/frameworks/kanban/FR_BR_INTAKE_GUIDE.md` (for detailed reference)
 
 ---

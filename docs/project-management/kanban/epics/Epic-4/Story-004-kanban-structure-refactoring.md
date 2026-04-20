@@ -54,7 +54,7 @@ Consolidate Kanban file structure to:
 2. Move Story files from `Epic-X/stories/` directly into `Epic-X/`
 3. Remove empty `stories/` subdirectories
 4. Update all path references across all documentation:
-   - Kanban board files (`_index.md`, `kanban-board.md`)
+   - Kanban board files (`_index.md`, `kboard.md`)
    - Epic and Story documents
    - Workflow Management Framework documentation
    - Numbering & Versioning Framework integration docs

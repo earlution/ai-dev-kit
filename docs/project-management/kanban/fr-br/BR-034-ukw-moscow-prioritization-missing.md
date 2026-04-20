@@ -66,7 +66,7 @@ After running UKW, the "## MoSCOW Prioritized In-Progress Tasks" section in the 
 **Primary Component:** Update Kanban Workflow (UKW)  
 **Affected Areas:**
 - UKW Step 6: Update Kanban Board - Missing MoSCOW prioritization logic
-- Kanban Board: `docs/project-management/kanban/kanban-board.md` - MoSCOW section not updated
+- Kanban Board: `docs/project-management/kanban/kboard.md` - MoSCOW section not updated
 
 ---
 
@@ -100,7 +100,7 @@ UKW Step 6 (Update Kanban Board) does not include logic to:
 2. Identify tasks with IN PROGRESS or TODO status
 3. Determine MoSCOW category (M/S/C/O/W) based on priorities and task type
 4. Order tasks within each category (most recently updated first)
-5. Update the MoSCOW Prioritized In-Progress Tasks section in kanban-board.md
+5. Update the MoSCOW Prioritized In-Progress Tasks section in kboard.md
 
 **Current UKW Behavior (Step 6):**
 - Updates Epic status sections

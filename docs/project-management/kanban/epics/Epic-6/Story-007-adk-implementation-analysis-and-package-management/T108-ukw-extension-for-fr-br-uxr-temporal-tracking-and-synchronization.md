@@ -68,7 +68,7 @@ Add new steps to `ukw-sync` skill:
 ```
 Step 7: FR/BR/UXR Synchronization
 - Analyze FR/BR/UXR completion status based on task completion
-- Update fr-br-uxr-board.md with latest status and metadata
+- Update fbuboard.md with latest status and metadata
 - Remove completed items from active board
 
 Step 8: FR/BR/UXR Temporal Tracking
@@ -272,7 +272,7 @@ Add recent completions dashboard to `fr-br-uxr-completed.md`:
 - Preserve bottom-up approach and intelligent inference
 
 #### **TR-108.5: Documentation Integration**
-- Update fr-br-uxr-board.md with synchronization logic
+- Update fbuboard.md with synchronization logic
 - Enhance fr-br-uxr-completed.md with temporal tracking
 - Maintain fr-br-uxr-structure.md inventory consistency
 - Ensure cross-reference integrity
@@ -384,7 +384,7 @@ Add recent completions dashboard to `fr-br-uxr-completed.md`:
 1. **Extended ukw-sync skill** with Steps 7-9 for FR/BR/UXR handling
 2. **fr_br_uxr_completed_update skill** for Documentation Agent
 3. **Enhanced fr-br-uxr-completed.md** with temporal tracking and dashboard
-4. **Updated fr-br-uxr-board.md** with synchronization logic
+4. **Updated fbuboard.md** with synchronization logic
 5. **Validated fr-br-uxr-structure.md** with consistent inventory
 
 ### **Secondary Deliverables**

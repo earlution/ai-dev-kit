@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-04-08 (v0.6.6.58+2 - T58 follow-up cleanup: board drift + scratchpad ignore)
-**Version:** v0.6.6.58+2
+**Last updated:** 2026-04-20 (v0.6.6.62+1 – Kanban documentation setup)
+**Version:** v0.6.6.62+1
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -54,6 +54,9 @@ housekeeping_policy: keep
 
 - [ ] **E6:S06:T61 – UXR-006: MoSCOW row last-modified UTC stamps** - 🔄 IN PROGRESS (v0.6.6.61+1 — **RW**; HIGH — drift / IPW; optional **AC-4** tooling open)
   - Task: [`T61-uxr-006-kanban-moscow-last-modified-stamps.md`](Story-006-feature-requests/T61-uxr-006-kanban-moscow-last-modified-stamps.md) | [UXR-006](../../fr-br/UXR-006-kanban-moscow-row-last-modified-utc-stamp.md)
+
+- [ ] **E6:S06:T62 – Global IPW-gated implementation contract (FR-083)** - TODO (HIGH, enforce repository-wide implementation lock behind IPW preconditions plus explicit user authorization)
+  - Task: [`T62-global-ipw-gated-implementation-contract-fr083.md`](Story-006-feature-requests/T62-global-ipw-gated-implementation-contract-fr083.md) | [FR-083](../../fr-br/FR-083-global-ipw-gated-implementation-contract.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
   - Task: [`T999-board-cleanup-test.md`](Story-006-feature-requests/T999-board-cleanup-test.md)

@@ -53,7 +53,7 @@ FR/BR → Search Story
 - **FR/BR:** `docs/project-management/kanban/fr-br/FR-XXX-[title].md` or `BR-XXX-[title].md`
 - **Epic:** `docs/project-management/kanban/epics/Epic-X.md`
 - **Story:** `docs/project-management/kanban/epics/Epic-X/stories/Story-XXX-[title].md`
-- **Board:** `docs/project-management/kanban/kanban-board.md`
+- **Board:** `docs/project-management/kanban/kboard.md`
 
 ---
 

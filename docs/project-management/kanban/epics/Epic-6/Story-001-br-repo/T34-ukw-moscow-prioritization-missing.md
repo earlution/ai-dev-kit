@@ -75,7 +75,7 @@ Fix UKW (Update Kanban Workflow) bug where the MoSCOW Prioritized In-Progress Ta
 - Scan all task documents for IN PROGRESS/TODO status
 - Determine MoSCOW category based on priorities
 - Generate MoSCOW Prioritized In-Progress Tasks section
-- Update kanban-board.md with new section
+- Update kboard.md with new section
 
 ### Step 2: Design MoSCOW Prioritization Logic
 
@@ -132,7 +132,7 @@ Fix UKW (Update Kanban Workflow) bug where the MoSCOW Prioritized In-Progress Ta
 **UKW Step 6 Enhancement:**
 1. Existing behavior (Epic status updates, metadata updates)
 2. **NEW:** MoSCOW prioritization and section generation
-3. Update kanban-board.md with regenerated MoSCOW section
+3. Update kboard.md with regenerated MoSCOW section
 
 ---
 
@@ -198,7 +198,7 @@ Fix UKW (Update Kanban Workflow) bug where the MoSCOW Prioritized In-Progress Ta
 - **BR-034:** `docs/project-management/kanban/fr-br/BR-034-ukw-moscow-prioritization-missing.md`
 - **UKW Workflow:** `packages/frameworks/workflow mgt/workflows/update-kanban-workflow.yaml`
 - **UKW Execution Guide:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md`
-- **Kanban Board:** `docs/project-management/kanban/kanban-board.md`
+- **Kanban Board:** `docs/project-management/kanban/kboard.md`
 
 ---
 

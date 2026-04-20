@@ -157,7 +157,7 @@ vim src/yourproject/version.py
 mkdir -p docs/project-management/kanban/epics
 
 # Copy Kanban board template
-cp frameworks/kanban/templates/kanban-board.md docs/project-management/kanban/kanban-board.md
+cp frameworks/kanban/templates/kboard.md docs/project-management/kanban/kboard.md
 
 # Create first epic
 mkdir -p docs/project-management/kanban/epics/Epic-1
@@ -264,7 +264,7 @@ vim docs/project-management/kanban/epics/Epic-1/Story-001-epic-title.md
 
 ```bash
 # Update main board view
-vim docs/project-management/kanban/kanban-board.md
+vim docs/project-management/kanban/kboard.md
 
 # Add new epic to board
 # Update epic status
@@ -282,7 +282,7 @@ cd frameworks/kanban
 python3 scripts/update-kanban-docs.py
 
 # This updates:
-# - kanban-board.md
+# - kboard.md
 # - _index.md (quick view)
 # - Epic documents
 ```
@@ -504,7 +504,7 @@ python3 frameworks/workflow-mgmt/scripts/validation/validate_changelog_format.py
 python3 frameworks/kanban/scripts/update-kanban-docs.py
 
 # Manually update if needed
-vim docs/project-management/kanban/kanban-board.md
+vim docs/project-management/kanban/kboard.md
 ```
 
 **Issue: Version mismatch**

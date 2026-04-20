@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** CRITICAL
 **Estimated Effort:** Large
 **Created:** 2025-12-16
-**Last updated:** 2026-04-18 (RW **E6:S07:T101+45** — UKW staging + fbuboard reconciliation released)
-**Version:** v0.6.7.113+2
+**Last updated:** 2026-04-20 (v0.6.7.115+1 – Kanban documentation setup)
+**Version:** v0.6.7.115+1
 **Code:** E6S07
 
 **Note:** This story was renumbered from S06 to S07 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -131,6 +131,12 @@ housekeeping_policy: keep
 - [x] **E6:S07:T113 – RW Step 12.5 GitHub release parser hardening (BR-065)** - ✅ COMPLETE (HIGH, parser hardening + deterministic diagnostics + regression tests implemented)
   - Task: [`T113-rw-step-12-5-github-release-parser-hardening-br065.md`](Story-007-adk-implementation-analysis-and-package-management/T113-rw-step-12-5-github-release-parser-hardening-br065.md) | [BR-065](../../fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md)
 
+- [x] **E6:S07:T114 – Canonical board filename migration (`kboard.md` / `fbuboard.md`)** - ✅ COMPLETE (HIGH, v0.6.7.114+1 — defaults migrated across project + packages; UXR/task/ICW backfilled)
+  - Task: [`T114-canonical-board-filename-migration-kboard-fbuboard.md`](Story-007-adk-implementation-analysis-and-package-management/T114-canonical-board-filename-migration-kboard-fbuboard.md) | [UXR-008](../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md)
+
+- [ ] **E6:S07:T115 – Last-modified stamp forensic integrity guardrails** - TODO (CRITICAL, prevent synthetic timestamp churn; update stamps only on substantive underlying work)
+  - Task: [`T115-last-modified-stamp-forensic-integrity-guardrails.md`](Story-007-adk-implementation-analysis-and-package-management/T115-last-modified-stamp-forensic-integrity-guardrails.md) | [UXR-009](../../fr-br/UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
+
 - **Install/adoption program (FR-080–082):** tracked under **[E6:S09 – AI Dev Kit installation and adopter integration](./Story-009-ai-dev-kit-installation-and-adopter-integration.md)** (tasks **T01–T03**).
 
 
@@ -201,7 +207,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** HIGH
 **Dependencies:** None
 **Estimated Effort:** Small
-**Version:** v0.6.7.113+2
+**Version:** v0.6.7.115+1
 
 **Input:** User requirements, existing comprehensive project analysis framework
 
@@ -229,7 +235,7 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 **Priority:** CRITICAL
 **Dependencies:** E6:S07:T00
 **Estimated Effort:** VERY LARGE
-**Version:** v0.6.7.113+2
+**Version:** v0.6.7.115+1
 
 **Input:**
 
@@ -1150,6 +1156,6 @@ Conduct comprehensive analysis of all projects that have implemented ADK framewo
 
 ---
 
-**Last Updated:** 2026-04-13 (v0.6.7.113+2 – Kanban documentation setup)
-**Version:** v0.6.7.113+2
+**Last Updated:** 2026-04-20 (v0.6.7.115+1 – Kanban documentation setup)
+**Version:** v0.6.7.115+1
 **Status:** IN PROGRESS

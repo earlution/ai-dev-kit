@@ -103,7 +103,7 @@ The UKW Agent's skill definition focuses on status updates but neglects board hy
 ## Technical Details
 
 ### Files Involved
-- **Primary:** `/docs/project-management/kanban/kanban-board.md`
+- **Primary:** `/docs/project-management/kanban/kboard.md`
 - **Agent:** `/docs/project-management/kanban/AGENTS.md` (UKW Agent)
 - **Skill:** `/.windsurf/skills/ukw-sync/SKILL.md`
 
@@ -131,7 +131,7 @@ Task Status Update → Story Status Update → Epic Status Update → Board Upda
 
 1. Execute UKW workflow: `UKW`
 2. Wait for completion
-3. Check kanban-board.md MoSCOW sections
+3. Check kboard.md MoSCOW sections
 4. **Expected:** Only IN PROGRESS/TODO tasks in active sections
 5. **Actual:** COMPLETED tasks still listed in active sections
 

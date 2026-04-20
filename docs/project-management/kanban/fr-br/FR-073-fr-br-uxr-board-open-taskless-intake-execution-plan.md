@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Summary
 
-The **Intake plan** prose on [`fr-br-uxr-board.md`](../fr-br-uxr-board.md) (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes) had **no implementing task**, so changes could not be attributed in versioning or Kanban. This FR files **E5:S01:T73** as the permanent anchor and defines a **concrete maintenance and execution plan** (phases, acceptance criteria, checklist).
+The **Intake plan** prose on [`fbuboard.md`](../fbuboard.md) (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes) had **no implementing task**, so changes could not be attributed in versioning or Kanban. This FR files **E5:S01:T73** as the permanent anchor and defines a **concrete maintenance and execution plan** (phases, acceptance criteria, checklist).
 
 ---
 
@@ -38,7 +38,7 @@ The **Intake plan** prose on [`fr-br-uxr-board.md`](../fr-br-uxr-board.md) (open
 ### FR-073:R01 — Kanban anchor
 
 - **FR-073** and **E5:S01:T73** exist with bidirectional links.  
-- [`fr-br-uxr-board.md`](../fr-br-uxr-board.md) **Intake plan** section cites **FR-073** / **T73** as SoT for that block.
+- [`fbuboard.md`](../fbuboard.md) **Intake plan** section cites **FR-073** / **T73** as SoT for that block.
 
 ### FR-073:R02 — MoSCOW visibility
 
@@ -50,7 +50,7 @@ The **Intake plan** prose on [`fr-br-uxr-board.md`](../fr-br-uxr-board.md) (open
 
 ### FR-073:R04 — Pre-identified task mapping
 
-- MoSCOW **Must / Should** queue has a **reserved E/S/T** per FR/BR/UXR before intake (`RW -k`); see **[Intake plan → Pre-identified task mapping](../fr-br-uxr-board.md)** and **§ Pre-identified mapping** in **T73**.
+- MoSCOW **Must / Should** queue has a **reserved E/S/T** per FR/BR/UXR before intake (`RW -k`); see **[Intake plan → Pre-identified task mapping](../fbuboard.md)** and **§ Pre-identified mapping** in **T73**.
 - Any change to proposed IDs requires updating **this FR**, **T73**, and the board table in the same commit/RW.
 
 ---
@@ -60,7 +60,7 @@ The **Intake plan** prose on [`fr-br-uxr-board.md`](../fr-br-uxr-board.md) (open
 - [x] **AC1:** **RW** released with **T73** narrative closure — **`v0.5.1.74+2`** (internal **T74** build 2; see detailed changelog for monotonicity note).  
 - [x] **AC2:** Intake plan section and **T73** updated together for Phase B/C (2026-03-31).  
 - [ ] **AC3:** At least one **UKW** or scoped pass updates **MoSCOW taskless table** + **Board Statistics** using **T73** as the reference epic/story task where doc-only.  
-- [x] **AC4:** **Pre-identified task mapping** consistent across [`fr-br-uxr-board.md`](../fr-br-uxr-board.md), **T73**, and **FR-073:R04** for Phase B/C filing pass.
+- [x] **AC4:** **Pre-identified task mapping** consistent across [`fbuboard.md`](../fbuboard.md), **T73**, and **FR-073:R04** for Phase B/C filing pass.
 
 ---
 

@@ -31,14 +31,14 @@ housekeeping_policy: keep
 
 ## Overview
 
-Split the Kanban board into two documents: structured information only (`kanban-board.md`) and rules/explanations (`kanban-board-guide.md`). This reduces cognitive load when skimming the board by removing all non-informational content.
+Split the Kanban board into two documents: structured information only (`kboard.md`) and rules/explanations (`kanban-board-guide.md`). This reduces cognitive load when skimming the board by removing all non-informational content.
 
 ---
 
 ## Goals
 
 - [x] Create `kanban-board-guide.md` with all rules, explanations, and how-to content
-- [x] Strip `kanban-board.md` to structured information only (tasks, epics, status, links)
+- [x] Strip `kboard.md` to structured information only (tasks, epics, status, links)
 - [x] Add cross-references between documents
 - [x] Update templates and governance policy to reflect the split (T02)
 
@@ -57,7 +57,7 @@ Split the Kanban board into two documents: structured information only (`kanban-
 
 ### E4:S18:T01 – Implement Kanban Board Info-Only Split
 
-**Input:** Current `kanban-board.md`, FR-036 requirements  
+**Input:** Current `kboard.md`, FR-036 requirements  
 **Deliverable:** Split board documents, updated templates, updated policy  
 **Approach:** Create guide doc, migrate explanatory content, strip board to info-only, update references
 
@@ -65,7 +65,7 @@ Split the Kanban board into two documents: structured information only (`kanban-
 
 ## Acceptance Criteria
 
-- [ ] `kanban-board.md` contains ONLY structured information (no explanatory text)
+- [ ] `kboard.md` contains ONLY structured information (no explanatory text)
 - [ ] `kanban-board-guide.md` contains all rules, explanations, and how-to content
 - [ ] Cross-references between documents are clear
 - [ ] Templates and policy updated to reflect split
@@ -83,5 +83,5 @@ Split the Kanban board into two documents: structured information only (`kanban-
 ## References
 
 - **FR-036:** [`docs/project-management/kanban/fr-br/FR-036-kanban-board-info-only-split.md`](../../fr-br/FR-036-kanban-board-info-only-split.md)
-- **Current Board:** `docs/project-management/kanban/kanban-board.md`
+- **Current Board:** `docs/project-management/kanban/kboard.md`
 - **Board Template:** `packages/frameworks/kanban/templates/KANBAN_BOARD_TEMPLATE.md`

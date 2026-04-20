@@ -120,7 +120,7 @@ FR / BR / UXR arrives
 4. **Epic Alignment:** Story's Epic aligns with FR/BR's problem domain
 
 **Search Locations:**
-- Kanban Board (`docs/project-management/kanban/kanban-board.md`)
+- Kanban Board (`docs/project-management/kanban/kboard.md`)
 - Epic documents (`docs/project-management/kanban/epics/Epic-X.md`)
 - Story documents (`docs/project-management/kanban/epics/Epic-X/stories/Story-XXX-*.md`)
 
@@ -165,7 +165,7 @@ FR / BR / UXR arrives
 3. **Scope Check:** Epic's scope is broad enough to encompass FR/BR
 
 **Search Locations:**
-- Kanban Board (`docs/project-management/kanban/kanban-board.md`)
+- Kanban Board (`docs/project-management/kanban/kboard.md`)
 - Epic documents (`docs/project-management/kanban/epics/Epic-X.md`)
 
 **Decision:** If Epic matches **ALL** criteria → Proceed to Step 5a. Otherwise → Proceed to Step 5b.
@@ -304,7 +304,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 ### Step 7: Update Kanban Board
 
 **Actions:**
-1. Update `docs/project-management/kanban/kanban-board.md`, `kanban-structure.md`, and `_index.md`:
+1. Update `docs/project-management/kanban/kboard.md`, `kanban-structure.md`, and `_index.md`:
    - Add new Epic (if created)
    - Add new Story (if created)
    - Update Story status (if Task added)
@@ -629,7 +629,7 @@ VERSION_BUILD = 1  # ← Always 1 for new Tasks
 ### Kanban Integration
 
 - **Templates:** Use EPIC_TEMPLATE, STORY_TEMPLATE for new items
-- **Board Updates:** Always update `kanban-board.md`, `kanban-structure.md`, and `_index.md`
+- **Board Updates:** Always update `kboard.md`, `kanban-structure.md`, and `_index.md`
 - **Status Synchronization:** Ensure Epic, Story, and Task status fields match
 - **Forensic Markers:** RW will add version markers when Tasks are completed
 

@@ -67,7 +67,7 @@ Update Kanban Workflow executed to synchronize kanban documentation with recent 
    - All task versions verified
    - UKW sync note added
 
-3. `docs/project-management/kanban/kanban-board.md`
+3. `docs/project-management/kanban/kboard.md`
    - Updated board metadata (Last Updated, Version, UKW Sync)
    - Epic 6 section updated: E6:S01 confirmed COMPLETE, E6:S02 progress reflected
 

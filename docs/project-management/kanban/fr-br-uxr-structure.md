@@ -11,9 +11,9 @@ housekeeping_policy: keep
 **Last Updated:** 2026-03-31 (pointer: intake execution plan on board — open ∧ taskless, `RW -k`)
 **Version:** v0.7.6.6+1
 
-> **For MoSCOW prioritized FR/BR/UXR items, see:** [`fr-br-uxr-board.md`](fr-br-uxr-board.md)  
+> **For MoSCOW prioritized FR/BR/UXR items, see:** [`fbuboard.md`](fbuboard.md)  
 > **For completed FR/BR/UXRs, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
-> **For MoSCOW prioritized tasks, see:** [`kanban-board.md`](kanban-board.md)  
+> **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)
 
@@ -21,7 +21,7 @@ housekeeping_policy: keep
 
 ## Overview
 
-This document provides **complete listings of all FRs, BRs, and UXRs** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FR/BR/UXR board. For the **operational intake plan** (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes), see **Intake plan** on [`fr-br-uxr-board.md`](fr-br-uxr-board.md).
+This document provides **complete listings of all FRs, BRs, and UXRs** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FR/BR/UXR board. For the **operational intake plan** (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes), see **Intake plan** on [`fbuboard.md`](fbuboard.md).
 
 **Document Purpose:**
 
@@ -132,6 +132,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
 - **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and establish UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 - **UXR-006** – Single `dev` branch and RW validator relaxation (solo workflow) - TODO (HIGH, evaluate allowing `dev` as accepted RW branch context to reduce multi-branch hygiene friction while preserving safety controls) - [UXR-006](fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md)
+- **UXR-008** – Default board naming adoption (`kboard.md` / `fbuboard.md`) - IN PROGRESS (HIGH, standardize canonical board filenames across docs, scripts, and packaged installs with compatibility aliases) - [UXR-008](fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md)
 
 ### Medium Priority (Could Have - C)
 

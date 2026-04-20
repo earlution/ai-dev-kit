@@ -23,7 +23,7 @@ Define canonical lifecycle rules so tasks planned with IPW cannot remain stale o
 
 ## Problem Statement
 
-Current execution can produce a drift state where planning is completed and implementation work occurs, but task status remains `TODO` on task docs and/or `kanban-board.md`. This breaks forensic traceability and distorts operational prioritization.
+Current execution can produce a drift state where planning is completed and implementation work occurs, but task status remains `TODO` on task docs and/or `kboard.md`. This breaks forensic traceability and distorts operational prioritization.
 
 FR-077 requires explicit transition contracts and synchronization responsibility across IPW, implementation flow, and RW/UKW synchronization surfaces.
 

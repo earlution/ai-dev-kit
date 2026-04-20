@@ -192,7 +192,7 @@ The KB follows a clear hierarchy:
 
 **Index Files:**
 - `_index.md` - Kanban board view (obligatory in Kanban structure)
-- `kanban-board.md` - Detailed Kanban board view
+- `kboard.md` - Detailed Kanban board view
 - `README.md` - Directory overview (recommended for all directories)
 
 **Template Files:**

@@ -4802,7 +4802,7 @@
       "housekeeping_policy": "keep"
     },
     {
-      "path": "project-management/kanban/kanban-board.md",
+      "path": "project-management/kanban/kboard.md",
       "size": 31828,
       "words": 2868,
       "lifecycle": "evergreen",

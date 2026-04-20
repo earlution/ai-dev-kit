@@ -30,7 +30,7 @@ A **comprehensive UKW** run promoted **E5:S09:T01** to the MoSCOW **Should** sec
 ### Observed behavior
 
 - Story: [`Story-009-docusaurus-documentation-portal.md`](../epics/Epic-5/Story-009-docusaurus-documentation-portal.md) — checklist shows **E5:S09:T01–T07** (FR-065–FR-071), all still open.
-- After UKW (2026-03-30), [`kanban-board.md`](../kanban-board.md) **Should** listed **only T01**.
+- After UKW (2026-03-30), [`kboard.md`](../kboard.md) **Should** listed **only T01**.
 - Stakeholder expectation: **every** E5:S09 task that is not complete should appear on the board (or be explicitly moved to **Won’t** / documented deferral with rationale).
 
 ### Expected behavior
