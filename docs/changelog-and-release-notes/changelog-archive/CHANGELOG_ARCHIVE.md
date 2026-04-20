@@ -1,15 +1,21 @@
 # Changelog Archive
-## [0.6.6.62+1] - 20-04-26
+## [0.6.7.115+1] - 20-04-26
 
-E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
+E6:S07:T115 — **RW** with **`--art`**: filed and housed UXR-009 plus ICW package for timestamp forensic-integrity guardrails (`Last modified` must reflect substantive work, not board rewrites). SemVer **v0.4.758+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.62+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.115+1.md)
 ---
 ## [0.6.7.114+1] - 20-04-26
 
 E6:S07:T114 — **RW** with **`--art`**: canonical board filename migration (`kboard.md` / `fbuboard.md`) + UXR/task/ICW governance backfill. SemVer **v0.4.757+1**.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.7.114+1.md)
+---
+## [0.6.6.62+1] - 20-04-26
+
+E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.62+1.md)
 ---
 ## [0.5.9.11+5] - 19-04-26
 
