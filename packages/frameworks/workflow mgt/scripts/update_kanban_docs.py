@@ -961,8 +961,11 @@ def update_kanban_board(
 
 def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> str:
     """
-    Ensure all MoSCOW bullet rows end with:
+    Ensure all MoSCOW bullet rows include:
     `| Last modified: YYYY-MM-DD HH:MM UTC`
+
+    Guardrail: preserve existing timestamp values. Only add a timestamp when one
+    is missing; do not rewrite existing values during touch-only board updates.
     """
     lines = board_content.split("\n")
     in_moscow = False
@@ -977,9 +980,7 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
             in_moscow = False
 
         if in_moscow and stripped.startswith("- **"):
-            if ts_pattern.search(line):
-                line = ts_pattern.sub(f"| Last modified: {timestamp_value}", line)
-            else:
+            if not ts_pattern.search(line):
                 line = f"{line} | Last modified: {timestamp_value}"
 
         out_lines.append(line)
@@ -1054,7 +1055,8 @@ def _is_terminal_frbr_status(status_text: str) -> bool:
 def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestamp_value: str) -> Tuple[str, Dict[str, int]]:
     """
     Cleanup active MoSCOW rows in fbuboard.md by removing terminal items.
-    Also normalizes active-row terminal timestamps and board header metadata.
+    Preserve existing active-row timestamps while pruning terminal rows and
+    maintaining deterministic cleanup behavior.
     """
     lines = board_content.split("\n")
     cleaned: List[str] = []
@@ -1064,7 +1066,7 @@ def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestam
         "audited": 0,
         "removed": 0,
         "kept_exception": 0,
-        "timestamp_normalized": 0,
+        "timestamps_added_missing": 0,
     }
 
     ts_pattern = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
@@ -1086,10 +1088,9 @@ def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestam
 
         if section in active_sections and stripped.startswith("- **"):
             stats["audited"] += 1
-            normalized_line = ts_pattern.sub(f"| Last modified: {timestamp_value}", line) if ts_pattern.search(line) else f"{line} | Last modified: {timestamp_value}"
-            if normalized_line != line:
-                stats["timestamp_normalized"] += 1
-            line = normalized_line
+            if not ts_pattern.search(line):
+                line = f"{line} | Last modified: {timestamp_value}"
+                stats["timestamps_added_missing"] += 1
 
             link_match = frbr_link_pattern.search(line)
             if link_match:
@@ -1108,13 +1109,6 @@ def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestam
 
     updated = "\n".join(cleaned)
     updated = re.sub(r"\n{3,}", "\n\n", updated)
-
-    # Temporal drift normalization for board-level metadata.
-    today = datetime.now().strftime("%Y-%m-%d")
-    header_pattern = re.compile(r"(\*\*Last Updated:\*\*)\s*(.+?)(?:\n|$)", re.IGNORECASE)
-    header_value = f"{today} (fbuboard sync; latest row stamps: {timestamp_value})"
-    if header_pattern.search(updated):
-        updated = header_pattern.sub(rf"\1 {header_value}\n", updated)
 
     return updated, stats
 
@@ -1169,7 +1163,7 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                     "fbuboard reconciliation: "
                     f"audited={stats['audited']}, removed={stats['removed']}, "
                     f"kept_exceptions={stats['kept_exception']}, "
-                    f"timestamps_normalized={stats['timestamp_normalized']}"
+                    f"timestamps_added_missing={stats['timestamps_added_missing']}"
                 )
     return changes
 

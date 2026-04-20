@@ -444,7 +444,7 @@ def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
 ### Must Have (M) - Critical Items
 
 - **FR-900** – terminal row - TODO - [FR-900](fr-br/FR-900-terminal.md) | Last modified: 2026-04-01 10:00 UTC
-- **BR-901** – exception row - TODO - [BR-901](fr-br/BR-901-exception.md) | Last modified: 2026-04-01 10:00 UTC
+- **BR-901** – exception row - TODO - [BR-901](fr-br/BR-901-exception.md) | Last modified: 2026-03-28 09:41 UTC
 """,
             encoding="utf-8",
         )
@@ -465,8 +465,8 @@ def test_4_3_fbuboard_reconciliation_prunes_and_keeps_exception():
             return False, "Terminal FR row should have been pruned from active section"
         if "BR-901" not in updated:
             return False, "Exception BR row should have been preserved in active section"
-        if "fbuboard sync; latest row stamps:" not in updated:
-            return False, "Board Last Updated header should be normalized for temporal drift"
+        if "Last modified: 2026-03-28 09:41 UTC" not in updated:
+            return False, "Existing row timestamp should be preserved for exception row"
         if not any("fbuboard reconciliation:" in c for c in changes):
             return False, "Expected fbuboard reconciliation stats in change log"
         return True, ""
@@ -531,6 +531,47 @@ def test_4_4_full_mode_prunes_completed_rows_from_active_kboard():
         return True, ""
 
     return run_test("Test 4.4: full-mode kboard prune complete rows", setup, test)
+
+
+def test_4_5_touch_only_run_preserves_unique_moscow_timestamps():
+    """Test 4.5: touch-only timestamp enforcement preserves existing unique row stamps."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        board_path = Path(test_dir) / "kboard.md"
+        board_path.write_text(
+            """# Board
+
+**Last Updated:** 2026-04-01 (RW: E2:S1:T9)
+**Version:** v0.2.1.9+2
+
+## MoSCOW Prioritized In-Progress Tasks
+
+### Must Have (M) - Critical Tasks
+
+- **E2:S01:T11** – active row one - TODO | Last modified: 2026-04-01 10:00 UTC
+- **E2:S01:T12** – active row two - IN PROGRESS | Last modified: 2026-03-15 08:30 UTC
+
+### Should Have (S) - Important Tasks
+
+- **E2:S02:T01** – active row three - TODO | Last modified: 2026-02-10 22:11 UTC
+"""
+        )
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        board_path = Path(test_dir) / "kboard.md"
+        before = board_path.read_text()
+        updated = mod.enforce_moscow_row_timestamps(before, "2026-04-20 16:00 UTC")
+        if updated != before:
+            return False, "Touch-only enforcement should not rewrite existing unique timestamps"
+        return True, ""
+
+    return run_test("Test 4.5: preserve unique timestamps on touch-only runs", setup, test)
 
 
 # Test Category 5: Performance
@@ -667,6 +708,14 @@ def main():
         else:
             print(f"❌ Test 4.4: full-mode kboard prune complete rows - FAILED: {error}")
             test_results['failed'].append("4.4")
+
+        success, error = test_4_5_touch_only_run_preserves_unique_moscow_timestamps()
+        if success:
+            print("✅ Test 4.5: preserve unique timestamps on touch-only runs - PASSED")
+            test_results['passed'].append("4.5")
+        else:
+            print(f"❌ Test 4.5: preserve unique timestamps on touch-only runs - FAILED: {error}")
+            test_results['failed'].append("4.5")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:
