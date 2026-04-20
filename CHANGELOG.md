@@ -9,6 +9,14 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
+## [0.6.6.62+1] - 20-04-26
+
+E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.62+1.md)
+
+---
+
 ## [0.6.7.114+1] - 20-04-26
 
 E6:S07:T114 — **RW** with **`--art`**: canonical board filename migration (`kboard.md` / `fbuboard.md`) + UXR/task/ICW governance backfill. SemVer **v0.4.757+1**.

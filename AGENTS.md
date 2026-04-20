@@ -1,5 +1,18 @@
 # AI Dev Kit Agent Definitions
 
+## Global Implementation Gate (IPW Required)
+
+For all user requests, enforce an intent-first contract with a hard IPW gate:
+
+- If the user asks for intake/planning/governance artifacts (for example UXR/FR/BR/task/spec/plan/review), produce only those artifacts and stop.
+- Do not perform implementation edits (code, scripts, production docs behavior changes, broad repository refactors, or release-impacting file updates) until IPW artifacts exist for the target task.
+- Required preconditions before any implementation:
+  1. A task anchor exists (`E#:S#:T#`).
+  2. IPW package exists and is linked from the task (`specification`, `test-design`, `implementation-plan`).
+  3. The user provides explicit execution authorization in a separate instruction (for example: "implement", "proceed with implementation", or `RW <task>` when release execution is requested).
+- If any precondition is missing, stop and ask only for the missing prerequisite; do not infer permission from context.
+- After creating requested planning artifacts, pause and wait for user direction.
+
 ## RW Agent - Release Workflow Specialist
 
 When executing Release Workflow (RW, RW -d, RW -k):
