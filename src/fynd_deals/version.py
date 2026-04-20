@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 6      # Epic number (Epic 6: Framework Management)
-VERSION_STORY = 7     # Story number within epic
-VERSION_TASK = 115    # Task number (E6:S07:T115 — last-modified stamp forensic integrity guardrails)
-VERSION_BUILD = 1     # Build number (RW E6:S07:T115 --art)
+VERSION_STORY = 6     # Story number within epic
+VERSION_TASK = 62     # Task number (E6:S06:T62 — global IPW-gated implementation contract)
+VERSION_BUILD = 2     # Build number (RW E6:S06:T62 --art)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.6.7.115+1 = Development, Epic 6, Story 7, Task 115, Build 1
+# Current: 0.6.6.62+2 = Development, Epic 6, Story 6, Task 62, Build 2
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

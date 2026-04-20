@@ -25,6 +25,14 @@ E6:S07:T114 — **RW** with **`--art`**: canonical board filename migration (`kb
 
 ---
 
+## [0.6.6.62+2] - 20-04-26
+
+E6:S06:T62 — **RW** with **`--art`**: completed T62 IPW housing by adding dedicated planning artifact and bidirectional FR/task planning links. SemVer **v0.4.759+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.62+2.md)
+
+---
+
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.

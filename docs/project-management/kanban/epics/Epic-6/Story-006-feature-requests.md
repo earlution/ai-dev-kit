@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-04-20 (v0.6.6.62+1 – Kanban documentation setup)
-**Version:** v0.6.6.62+1
+**Last updated:** 2026-04-20 (v0.6.6.62+2 – Kanban documentation setup)
+**Version:** v0.6.6.62+2
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).

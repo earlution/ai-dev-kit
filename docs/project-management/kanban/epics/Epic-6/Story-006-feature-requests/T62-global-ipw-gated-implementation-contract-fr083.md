@@ -17,6 +17,7 @@ housekeeping_policy: keep
 **Code:** E6S06T62
 
 **Upstream:** [FR-083 - Global IPW-gated implementation contract](../../../fr-br/FR-083-global-ipw-gated-implementation-contract.md)
+**IPW:** [IPW-E6S06T62-global-ipw-gated-implementation-contract](../../../../../implementation-cycles/IPW-E6S06T62-global-ipw-gated-implementation-contract.md)
 
 ---
 
