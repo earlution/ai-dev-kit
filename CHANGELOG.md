@@ -33,6 +33,14 @@ E2:S16:T01 — **RW** with **`--art`**: establish dedicated perpetual-operations
 
 ---
 
+## [0.2.16.1+2] - 20-04-26
+
+E2:S16:T01 — **RW -d** with **`--art`**: expand Story 016 planning to retire legacy `T101+` perpetual numbering and require renumbered non-`T101+` target IDs. SemVer **v0.4.764+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.1+2.md)
+
+---
+
 ## [0.6.6.62+1] - 20-04-26
 
 E6:S06:T62 — **RW** with **`--art`**: global implementation contract now gates all implementation behind IPW and explicit user authorization. SemVer **v0.4.757+1**.
