@@ -635,6 +635,38 @@ def test_4_7_planning_artifact_resolution_falls_back_to_ipw_or_none():
     return run_test("Test 4.7: resolver fallback to IPW/none", setup, test)
 
 
+def test_4_8_traceability_segment_normalization_for_fbuboard_rows():
+    """Test 4.8: fbuboard rows append deterministic FBU/task/IPP segments."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        planning_dir = test_dir / "docs" / "implementation-cycles"
+        planning_dir.mkdir(parents=True, exist_ok=True)
+        (planning_dir / "IPP-E4S19T04-contract.md").write_text("# IPP", encoding="utf-8")
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        line = (
+            "- **UXR-010** – kboard/fbuboard add IPP segment - OPEN "
+            "- [UXR-010](fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md) "
+            "| [E4:S19:T04](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/"
+            "T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md) "
+            "| Last modified: 2026-04-20 21:35 UTC"
+        )
+        normalized = mod._normalize_traceability_segments_for_row(line, Path(test_dir))
+        if "| [UXR-010](fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md) | [E4:S19:T04](" not in normalized:
+            return False, f"FBU/task token segment order not preserved: {normalized}"
+        if "[—IPP—](../../implementation-cycles/IPP-E4S19T04-contract.md)" not in normalized:
+            return False, f"Expected linked IPP token not found: {normalized}"
+        return True, ""
+
+    return run_test("Test 4.8: fbuboard traceability normalization", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -793,6 +825,14 @@ def main():
         else:
             print(f"❌ Test 4.7: resolver fallback to IPW/none - FAILED: {error}")
             test_results['failed'].append("4.7")
+
+        success, error = test_4_8_traceability_segment_normalization_for_fbuboard_rows()
+        if success:
+            print("✅ Test 4.8: fbuboard traceability normalization - PASSED")
+            test_results['passed'].append("4.8")
+        else:
+            print(f"❌ Test 4.8: fbuboard traceability normalization - FAILED: {error}")
+            test_results['failed'].append("4.8")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:

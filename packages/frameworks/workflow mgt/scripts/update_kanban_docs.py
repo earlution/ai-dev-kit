@@ -833,6 +833,65 @@ def render_ipp_segment_for_task(task_id: str, project_root: Path) -> str:
     return f"[—IPP—]({rel_path.as_posix()})"
 
 
+def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> str:
+    """
+    Normalize a MoSCOW bullet row by appending deterministic traceability tokens:
+    `| [FBU token] | [Task token] | [IPP token/No IPP]`
+
+    Non-destructive behavior:
+    - If required link evidence is missing, the row is left unchanged.
+    - Existing IPP/No-IPP tokens are replaced in place when task context is available.
+    """
+    if not line.strip().startswith("- **"):
+        return line
+
+    # Remove pre-existing IPP segment to avoid duplicates before rebuilding.
+    line = re.sub(r"\s*\|\s*(?:\[—IPP—\]\([^)]+\)|—No IPP—)\s*", " | ", line)
+    line = re.sub(r"\s+\|\s+\|\s+", " | ", line)
+
+    fbu_link_match = re.search(r"\[(FR|BR|UXR)-(\d+)\]\(([^)]+)\)", line)
+    task_link_match = re.search(r"\[(E\d+:S\d+:T\d+)\]\(([^)]+)\)", line)
+    task_id_bold_match = re.search(r"-\s+\*\*(E\d+:S\d+:T\d+)\*\*", line)
+
+    if fbu_link_match and task_link_match:
+        fbu_token = f"[{fbu_link_match.group(1)}-{fbu_link_match.group(2)}]({fbu_link_match.group(3)})"
+        task_token = f"[{task_link_match.group(1)}]({task_link_match.group(2)})"
+        ipp_token = render_ipp_segment_for_task(task_link_match.group(1), project_root)
+        return f"{line.rstrip()} | {fbu_token} | {task_token} | {ipp_token}"
+
+    # kboard compatibility path: task row has bold task id + Task Document link.
+    task_doc_match = re.search(r"\[Task Document\]\(([^)]+)\)", line)
+    if task_id_bold_match and task_doc_match:
+        task_id = task_id_bold_match.group(1)
+        task_token = f"[{task_id}]({task_doc_match.group(1)})"
+        ipp_token = render_ipp_segment_for_task(task_id, project_root)
+        # FBU token cannot be deterministically inferred here; leave row unchanged.
+        return f"{line.rstrip()} | {task_token} | {ipp_token}"
+
+    return line
+
+
+def normalize_board_traceability_segments(board_content: str, project_root: Path) -> str:
+    """Apply traceability segment normalization to all MoSCOW bullet rows."""
+    lines = board_content.split("\n")
+    in_moscow = False
+    out_lines: List[str] = []
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("## MoSCOW"):
+            in_moscow = True
+        elif in_moscow and stripped.startswith("## ") and not stripped.startswith("## MoSCOW"):
+            in_moscow = False
+
+        if in_moscow and stripped.startswith("- **"):
+            line = _normalize_traceability_segments_for_row(line, project_root)
+
+        out_lines.append(line)
+
+    return "\n".join(out_lines)
+
+
 def update_kanban_board(
     board_path: Path,
     epic: int,
@@ -888,6 +947,9 @@ def update_kanban_board(
             flags=re.IGNORECASE
         )
         changes.append(f"Updated board Version: {version_string}")
+
+    # Normalize deterministic traceability segments for MoSCOW rows.
+    content = normalize_board_traceability_segments(content, Path.cwd())
 
     # Enforce terminal row timestamp format for MoSCOW rows.
     timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
@@ -1198,9 +1260,11 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
         if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
             updated, stats = _cleanup_fbuboard_active_rows(original, board, timestamp_now)
             # Ensure timestamp normalization still applies uniformly for all MoSCOW rows.
+            updated = normalize_board_traceability_segments(updated, project_root)
             updated = enforce_moscow_row_timestamps(updated, timestamp_now)
         else:
-            updated = enforce_moscow_row_timestamps(original, timestamp_now)
+            updated = normalize_board_traceability_segments(original, project_root)
+            updated = enforce_moscow_row_timestamps(updated, timestamp_now)
             stats = None
 
         if updated != original:
@@ -1211,9 +1275,11 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                 # Re-apply transforms to latest content to avoid stale writes.
                 if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
                     updated, stats = _cleanup_fbuboard_active_rows(live, board, timestamp_now)
+                    updated = normalize_board_traceability_segments(updated, project_root)
                     updated = enforce_moscow_row_timestamps(updated, timestamp_now)
                 else:
-                    updated = enforce_moscow_row_timestamps(live, timestamp_now)
+                    updated = normalize_board_traceability_segments(live, project_root)
+                    updated = enforce_moscow_row_timestamps(updated, timestamp_now)
                 changes.append(f"Concurrency revalidation: board changed during run, re-applied transforms: {board}")
 
             if not dry_run:
