@@ -74,7 +74,7 @@ housekeeping_policy: keep
 
 
 - **Legacy perpetual anchors (`E2:S16:T03`/`T102`/`T103`)** were retired and removed as part of Story 016 migration planning.
-  - Canonical ongoing ownership now lives under **[E2:S16 – Perpetual Ongoing Workflow Operations](../../Epic-2/Story-016-perpetual-ongoing-workflow-operations.md)** (`T01`/`T02`/`T03`).
+  - Canonical ongoing ownership now lives under **[E2:S16 – Perpetual Ongoing Workflow Operations](../Epic-2/Story-016-perpetual-ongoing-workflow-operations.md)** (`T01`/`T02`/`T03`).
 
 
 - [ ] **E6:S07:T104 – Release Automation Audit** - TODO
@@ -99,11 +99,11 @@ housekeeping_policy: keep
 
 - [ ] **E6:S07:T109 – BR-059: UKW MoSCOW full open-task coverage per in-progress story** - TODO (HIGH, board must list all open story tasks or explicit **Won’t** deferrals; fail loud on partial enumeration)
   - Task: [`T109-br059-ukw-moscow-full-story-task-coverage.md`](Story-007-adk-implementation-analysis-and-package-management/T109-br059-ukw-moscow-full-story-task-coverage.md) | [BR-059](../../fr-br/BR-059-ukw-moscow-incomplete-story-task-coverage.md)
-  - **Coordinates:** [E2:S16:T03](../../Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (Story 016 migration anchor)
+  - **Coordinates:** [E2:S16:T03](../Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (Story 016 migration anchor)
 
 - [x] **E6:S07:T110 – UKW fbuboard scope + concurrency/temporal-drift controls** - ✅ COMPLETE (HIGH, v0.6.7.110+1 — UKW fbuboard parity + drift/concurrency controls released)
   - Task: [`T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md`](Story-007-adk-implementation-analysis-and-package-management/T110-ukw-fbuboard-scope-and-drift-concurrency-controls.md) | [FR-076](../../fr-br/FR-076-ukw-fbuboard-scope-and-drift-concurrency-controls.md)
-  - **Coordinates:** [E2:S16:T03](../../Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (Story 016 migration anchor), [E6:S07:T108](Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
+  - **Coordinates:** [E2:S16:T03](../Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) (Story 016 migration anchor), [E6:S07:T108](Story-007-adk-implementation-analysis-and-package-management/T108-ukw-extension-for-fr-br-uxr-temporal-tracking-and-synchronization.md)
 
 
 - [x] **E6:S07:T111 – Comprehensive install event-contract logging quality** - ✅ COMPLETE (CRITICAL, v0.6.7.111+1 — FR-078 install contract + validator + verification complete on 2026-04-10)
@@ -123,6 +123,8 @@ housekeeping_policy: keep
 
 - [ ] **E6:S07:T116 – UKW optional reprioritization `--rp` flag (FR-085)** - TODO (HIGH, optional deep analysis of intent/dependencies/blockers/importance to reprioritize tasks + FR/BR/UXR)
   - Task: [`T116-ukw-optional-reprioritization-rp-flag-fr085.md`](Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md) | [FR-085](../../fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md)
+
+- **Re-housed:** `BR-069` implementation moved from `E6:S07:T117` to **[E2:S15:T04](../Epic-2/Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)** to align with board-governance ownership under Story 015 and avoid default-housing drift in Story 007.
 
 - **Install/adoption program (FR-080–082):** tracked under **[E6:S09 – AI Dev Kit installation and adopter integration](./Story-009-ai-dev-kit-installation-and-adopter-integration.md)** (tasks **T01–T03**).
 

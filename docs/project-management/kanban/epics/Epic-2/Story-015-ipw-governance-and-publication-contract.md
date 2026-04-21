@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-14  
 **Completed:** N/A  
-**Last updated:** 2026-04-21 (v0.2.15.3+1 – Kanban documentation setup)
-**Version:** v0.2.15.3+1
+**Last updated:** 2026-04-21 (v0.2.15.4+1 – Kanban documentation setup)
+**Version:** v0.2.15.4+1
 **Code:** E2S15
 
 ---
@@ -38,5 +38,7 @@ Eliminate IPW documentation publication drift by making ownership, filing target
 - [ ] **E2:S15:T02 – IPP post-run governance reconciliation ownership (FR-084)** - IN PROGRESS (HIGH, assign deterministic IPP ownership for reconciling task/FR-BR-UXR docs + kboard/fbuboard after IPP completion) — [Task doc](Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md) | [FR-084](../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) | [IPP](../../../../implementation-cycles/IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md)
 
 - [ ] **E2:S15:T03 – IPW board-row footer duplication validation hardening (FR-089)** - IN PROGRESS (CRITICAL, enforce duplicate-footer detection with dual-agreement timestamp recovery and divergence anomaly reporting) — [Task doc](Story-015-ipw-governance-and-publication-contract/T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md) | [FR-089](../../fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md) | [IPP](../../../../implementation-cycles/IPP-E2S15T03-duplicate-footer-validation-hardening-and-timestamp-divergence-guardrails.md)
+
+- [ ] **E2:S15:T04 – Investigate earliest `Last modified` timestamp overwrite regression (BR-069)** - TODO (CRITICAL, isolate remaining overwrite mutation path and define remediation guardrails under IPW governance scope) — [Task doc](Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md) | [BR-069](../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
 
 ---

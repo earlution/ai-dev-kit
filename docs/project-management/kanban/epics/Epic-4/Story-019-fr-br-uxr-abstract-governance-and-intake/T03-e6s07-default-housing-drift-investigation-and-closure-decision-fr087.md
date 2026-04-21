@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # Epic 4, Story 19, Task 3: `E6:S07` default-housing drift investigation and closure decision (FR-087)
 
 **Task ID:** E4:S19:T03  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-20  
@@ -42,6 +42,7 @@ housekeeping_policy: keep
   - Exact codification points vs process habits.
   - Closure/split/narrow recommendation with migration guardrails.
 - Actionable policy + validator backlog for enforcement.
+- Executed re-housing precedent package for a misfiled task (`BR-069`: `E6:S07:T117` → `E2:S15:T04`) with full traceability rewiring.
 
 ---
 
@@ -51,6 +52,7 @@ housekeeping_policy: keep
 2. Inventory and evaluate codification surfaces that route or bias task placement.
 3. Perform semantic fit audit of `S07` task list.
 4. Propose and justify story disposition options with transition strategy.
+5. Define and verify re-housing protocol by applying it to at least one concrete mis-housed task.
 
 ---
 
@@ -61,6 +63,7 @@ housekeeping_policy: keep
 - [ ] **AC3:** All current `S07` tasks are triaged by semantic fit with rationale.
 - [ ] **AC4:** Recommended disposition (`close`/`narrow`/`split`) includes migration and compatibility plan.
 - [ ] **AC5:** Follow-on guardrail changes are specified as concrete implementation tasks.
+- [x] **AC6:** Re-housing protocol is proven on one real case (`BR-069` moved to `E2:S15:T04`) with Story/FBU/board rewiring.
 
 ---
 
@@ -69,3 +72,5 @@ housekeeping_policy: keep
 - [FR-087](../../../fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md)
 - [Story 019](../Story-019-fr-br-uxr-abstract-governance-and-intake.md)
 - [Story 007](../../../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
+- [BR-069](../../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
+- [E2:S15:T04](../../../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)

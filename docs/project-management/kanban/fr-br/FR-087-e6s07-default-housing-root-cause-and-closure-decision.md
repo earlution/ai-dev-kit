@@ -48,6 +48,7 @@ The project needs an evidence-backed explanation of:
 - [ ] **FR-087-F3:** Classify existing `S07` tasks by semantic fit (`in-scope`, `borderline`, `out-of-scope`) and quantify drift.
 - [ ] **FR-087-F4:** Provide closure decision options for `S07` (`close`, `keep-open-narrowed`, `split/re-house`) with impact/risk analysis.
 - [ ] **FR-087-F5:** Define enforceable placement guardrails to prevent future default-housing drift.
+- [ ] **FR-087-F6:** Define and enforce explicit re-housing protocol for misfiled tasks (including required board/story/FBU rewiring and rationale capture) so Story 007 cannot silently re-accumulate catch-all work.
 
 ### Non-Functional Requirements
 
@@ -63,6 +64,7 @@ The project needs an evidence-backed explanation of:
 - [ ] Codification inventory explicitly distinguishes hard-coded behavior vs social/process habit.
 - [ ] A disposition is chosen for `S07` with clear success criteria and transition plan.
 - [ ] Guardrails are documented as concrete policy/validator changes for follow-up implementation.
+- [ ] At least one mis-housed task is re-housed using the protocol to verify practical enforcement and traceability preservation.
 - [ ] FR/task/story/boards are fully cross-wired for deterministic traceability.
 
 ---
@@ -93,3 +95,4 @@ The project needs an evidence-backed explanation of:
 - [FR-041](./FR-041-perpetual-task-for-release-workflow-maintenance.md)
 - [Story 007](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md)
 - [Story 019](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md)
+- [BR-069](./BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
