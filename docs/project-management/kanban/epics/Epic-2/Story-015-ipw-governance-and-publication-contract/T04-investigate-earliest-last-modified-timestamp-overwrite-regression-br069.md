@@ -36,6 +36,8 @@ Forensic timeline fidelity depends on preserving older accurate `Last modified` 
 
 Additionally, row traceability fidelity requires exactly one canonical task-ID segment per row; current behavior appears to multiply task-ID segments through repeated append operations.
 
+**UKW note:** Deterministic board sync (`enforce_terminal_timestamps_on_boards`) does **not** clear repeated pipe-delimited row-tail fields on its own—see **BR-069** § *UKW / deterministic board sync limitation*.
+
 ---
 
 ## Deliverable
