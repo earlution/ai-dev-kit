@@ -70,22 +70,20 @@ Running the typical deterministic **UKW** board pass (`enforce_terminal_timestam
 
 ## Acceptance Criteria
 
-- [x] Reproduction is captured with before/after evidence showing earliest timestamp overwrite.
-- [x] Reproduction is captured with before/after evidence showing task-ID multiplication on affected rows.
-- [x] Root cause is identified (specific code path + mutation condition).
-- [x] Guardrail is defined so non-substantive updates cannot overwrite preserved historical row timestamps.
-- [x] Guardrail is defined so row normalization cannot append duplicate task-ID segments.
-- [x] Documentary regression: `test_4_13` in `packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py` encodes UKW vs `update_kanban_board` ordering divergence and the non-terminal footer + second `Last modified` append (see [IPP-E2S15T04](../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md) §5.3).
-- [ ] After code remediation, automated tests assert **preservation** of earliest historical `Last modified` and **no** spurious second footer on touch-only / UKW runs.
+- [ ] Reproduction is captured with before/after evidence showing earliest timestamp overwrite.
+- [ ] Reproduction is captured with before/after evidence showing task-ID multiplication on affected rows.
+- [ ] Root cause is identified (specific code path + mutation condition).
+- [ ] Guardrail is defined so non-substantive updates cannot overwrite preserved historical row timestamps.
+- [ ] Guardrail is defined so row normalization cannot append duplicate task-ID segments.
+- [ ] Regression tests cover preservation of earliest historical values under touch-only and reconciliation flows.
 - [ ] Regression tests cover single-instance task-ID segment invariants under repeated runs.
-- [x] BR-069, implementing task, and board/story wiring are bidirectionally consistent.
+- [ ] BR-069, implementing task, and board/story wiring are bidirectionally consistent.
 - [ ] Documented or implemented path **beyond UKW** restores canonical single-instance row tails (no repeated FBU/task/IPP/footer segments) or explicitly scopes machine repair vs manual cleanup.
 
 ---
 
 ## Related
 
-- [IPP-E2S15T04 — BR-069 row-tail normalization and terminal timestamp interaction](../../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md)
 - [UXR-009](UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
 - [E6:S07:T115](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T115-last-modified-stamp-forensic-integrity-guardrails.md)
 - [E2:S15:T04](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)

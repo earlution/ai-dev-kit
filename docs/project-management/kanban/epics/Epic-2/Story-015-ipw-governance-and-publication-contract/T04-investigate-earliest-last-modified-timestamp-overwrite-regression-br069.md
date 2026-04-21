@@ -18,8 +18,6 @@ housekeeping_policy: keep
 
 **Upstream:** [BR-069 – kboard/fbuboard earliest `Last modified` timestamps are being overwritten](../../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
 
-**Planning artifact (IPP):** [IPP-E2S15T04 — BR-069 row-tail normalization and terminal timestamp interaction](../../../../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md)
-
 ---
 
 ## Input
@@ -61,19 +59,18 @@ Additionally, row traceability fidelity requires exactly one canonical task-ID s
 
 ## Acceptance Criteria
 
-- [x] **AC1:** Reproduction scenario demonstrates overwrite of earliest preserved row timestamp.
-- [x] **AC1b:** Reproduction scenario demonstrates duplicated task-ID segment multiplication on affected rows (see IPP §5–§6; concrete pytest harness deferred to implementation phase).
-- [x] **AC2:** Root cause is identified with concrete code-path evidence.
-- [x] **AC3:** Guardrail definition blocks overwrite in non-substantive flows.
-- [x] **AC3b:** Guardrail definition blocks duplicate task-ID append/multiplication in row normalization.
-- [x] **AC4:** Regression test cases are specified for no-op/touch-only/reconciliation runs, including task-ID single-instance invariants.
-- [x] **AC5:** BR-069, E2:S15:T04, Story 015, and active boards are wired consistently.
+- [ ] **AC1:** Reproduction scenario demonstrates overwrite of earliest preserved row timestamp.
+- [ ] **AC1b:** Reproduction scenario demonstrates duplicated task-ID segment multiplication on affected rows.
+- [ ] **AC2:** Root cause is identified with concrete code-path evidence.
+- [ ] **AC3:** Guardrail definition blocks overwrite in non-substantive flows.
+- [ ] **AC3b:** Guardrail definition blocks duplicate task-ID append/multiplication in row normalization.
+- [ ] **AC4:** Regression test cases are specified for no-op/touch-only/reconciliation runs, including task-ID single-instance invariants.
+- [ ] **AC5:** BR-069, E2:S15:T04, Story 015, and active boards are wired consistently.
 
 ---
 
 ## References
 
-- [IPP-E2S15T04 — BR-069 row-tail normalization and terminal timestamp interaction](../../../../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md)
 - [BR-069](../../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
 - [UXR-009](../../../fr-br/UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
 - [FR-089](../../../fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md)
