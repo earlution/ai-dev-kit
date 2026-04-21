@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.4+2] - 21-04-26
+
+E2:S15:T04 — **RW** with **`--art`**: publish **IPP-E2S15T04** (BR-069 RCA, guardrails, traceability, Test 4.13 documentary regression). SemVer **v0.4.764+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+2.md)
+---
 ## [0.2.15.4+1] - 21-04-26
 
 E2:S15:T04 — **`RW -k`** with **`--art`**: adopt **T04** as canonical Story 015 anchor for **BR-069** investigation / row-tail churn scope (UKW deterministic pass documented as insufficient for full row canonicalization). SemVer **v0.4.764+1**.

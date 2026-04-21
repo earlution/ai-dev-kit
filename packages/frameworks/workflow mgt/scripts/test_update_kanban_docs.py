@@ -788,6 +788,70 @@ def test_4_12_repeated_runs_do_not_walk_timestamp_forward_after_normalization():
     return run_test("Test 4.12: repeated-run drift prevention", setup, test)
 
 
+def test_4_13_br069_pipeline_order_divergence_and_non_terminal_footer_append():
+    """Documents BR-069 / IPP-E2S15T04: transform order differs between update_kanban_board and UKW paths; enforce can append a terminal timestamp when a historical footer is left non-terminal after traceability normalization."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        planning_dir = test_dir / "docs" / "implementation-cycles"
+        planning_dir.mkdir(parents=True, exist_ok=True)
+        # No IPP on disk for E2:S15:T04 in fixture -> —No IPP—
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        root = Path(test_dir)
+        now = "2099-06-15 18:00 UTC"
+
+        header = "## MoSCOW Priority\n\n### Must Have\n\n"
+        dup_row = (
+            '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+            "[E2:S15:T04](epics/E2/T04.md) | [—IPP—](../../implementation-cycles/x.md) | "
+            "Last modified: 2024-01-01 08:00 UTC | "
+            "Last modified: 2026-04-21 10:00 UTC\n"
+        )
+        doc_dup = header + dup_row
+
+        def order_update_then_reconcile(content: str) -> str:
+            c = mod.normalize_board_traceability_segments(content, root)
+            c, _ = mod.reconcile_duplicate_moscow_row_footers(c)
+            return mod.enforce_moscow_row_timestamps(c, now)
+
+        def order_ukw_kboard(content: str) -> str:
+            c, _ = mod.reconcile_duplicate_moscow_row_footers(content)
+            c = mod.normalize_board_traceability_segments(c, root)
+            return mod.enforce_moscow_row_timestamps(c, now)
+
+        out_u = order_update_then_reconcile(doc_dup)
+        out_k = order_ukw_kboard(doc_dup)
+        if out_u == out_k:
+            return (
+                False,
+                "Expected update_kanban_board order to differ from UKW order for duplicate-footer rows (BR-069 ordering risk)",
+            )
+
+        single_row = (
+            '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+            "[E2:S15:T04](epics/E2/T04.md) | Last modified: 2024-06-01 09:00 UTC\n"
+        )
+        doc_single = header + single_row
+        single_ukw = order_ukw_kboard(doc_single)
+        if single_ukw.count("Last modified:") < 2:
+            return (
+                False,
+                "Expected UKW ordering to introduce a second Last modified chunk when normalize leaves a non-terminal historical footer (BR-069)",
+            )
+        if not single_ukw.rstrip().endswith(f"Last modified: {now}"):
+            return False, f"Expected synthetic terminal footer {now}, got tail: {single_ukw!r}"
+
+        return True, ""
+
+    return run_test("Test 4.13: BR-069 pipeline order + double-footer append (documentary)", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -986,6 +1050,14 @@ def main():
         else:
             print(f"❌ Test 4.12: repeated-run drift prevention - FAILED: {error}")
             test_results['failed'].append("4.12")
+
+        success, error = test_4_13_br069_pipeline_order_divergence_and_non_terminal_footer_append()
+        if success:
+            print("✅ Test 4.13: BR-069 pipeline order + double-footer append - PASSED")
+            test_results['passed'].append("4.13")
+        else:
+            print(f"❌ Test 4.13: BR-069 pipeline order + double-footer append - FAILED: {error}")
+            test_results['failed'].append("4.13")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:
