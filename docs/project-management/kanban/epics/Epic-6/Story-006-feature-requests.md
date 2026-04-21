@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-07  
-**Last updated:** 2026-04-20 (v0.6.6.62+2 – Kanban documentation setup)
-**Version:** v0.6.6.62+2
+**Last updated:** 2026-04-21 (v0.6.6.63+1 – Kanban documentation setup)
+**Version:** v0.6.6.63+1
 **Code:** E6S06
 
 **Note:** This story was renumbered from S05 to S06 as part of the repository story abstract space resolution (E9:S01:T08).
@@ -57,6 +57,9 @@ housekeeping_policy: keep
 
 - [x] **E6:S06:T62 – Global IPW-gated implementation contract (FR-083)** - ✅ COMPLETE (v0.6.6.62+2, policy gate enforced in `AGENTS.md` + `.cursorrules`, IPW housed and linked)
   - Task: [`T62-global-ipw-gated-implementation-contract-fr083.md`](Story-006-feature-requests/T62-global-ipw-gated-implementation-contract-fr083.md) | [FR-083](../../fr-br/FR-083-global-ipw-gated-implementation-contract.md)
+
+- [ ] **E6:S06:T63 – RW recovery journal and rollback contract (BR-038 follow-on)** - TODO (HIGH, preserve BR-038 recovery value by defining deterministic run logs, failure recovery artifact, and rollback/compensation contract for RW failures)
+  - Task: [`T63-rw-recovery-journal-and-rollback-contract-br038.md`](Story-006-feature-requests/T63-rw-recovery-journal-and-rollback-contract-br038.md) | [BR-038](../../fr-br/BR-038-release-workflow-micromanagement-and-tool-discovery-issues.md)
 
 - [x] **E6:S06:T999 – Board Cleanup Test Task** - ✅ COMPLETED (LOW priority, Dummy task for testing UKW Agent board cleanup functionality. This task will be marked as COMPLETE to trigger board cleanup and verify removal from active sections.)
   - Task: [`T999-board-cleanup-test.md`](Story-006-feature-requests/T999-board-cleanup-test.md)

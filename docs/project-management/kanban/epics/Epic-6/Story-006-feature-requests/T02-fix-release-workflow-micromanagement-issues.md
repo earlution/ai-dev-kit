@@ -31,6 +31,18 @@ housekeeping_policy: keep
 
 - Autonomous RW agent execution pattern, clearer tool discovery/fallbacks, and documentation (implementation closed **v0.6.6.2+8**). **RW -k** releases (e.g. **v0.6.6.2+9**) are kanban/BR traceability only.
 
+## Scope Reconciliation (2026-04-20)
+
+This task remains the historical implementation anchor for BR-038 micromanagement/tool-discovery remediation.
+
+- [x] Legacy friction remediation delivered (autonomy/tool discovery/error guidance hardening).
+- [x] Historical stabilization evidence captured in this task.
+- [ ] Recovery-journal and rollback/compensation contract is **not** implemented here.
+
+Follow-on active scope is moved to:
+
+- [E6:S06:T63 – RW recovery journal and rollback contract (BR-038)](T63-rw-recovery-journal-and-rollback-contract-br038.md)
+
 ## Version Anchor
 
 ✅ **COMPLETE (v0.6.6.2+8)** — implementation verified 2026-03-11. Kanban alignment release: **RW -k** **v0.6.6.2+9** (2026-03-31).

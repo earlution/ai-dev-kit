@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.6.6.63+1] - 21-04-26
+
+E6:S06:T63 — **RW** with **`--art`**: activate BR-038 follow-on workstream by moving task status to IN PROGRESS, wiring recovery-journal/rollback contract ownership, and reconciling active governance/board surfaces for deterministic recovery scope. SemVer **v0.4.764+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.6.6.63+1.md)
+---
 ## [0.4.19.4+2] - 21-04-26
 
 E4:S19:T04 — **RW** with **`--art`**: complete Phase C regression/verification gates and reconcile IPP/UXR planning-link paths so targeted governance docs pass deterministic link/lint validation. SemVer **v0.4.764+2**.

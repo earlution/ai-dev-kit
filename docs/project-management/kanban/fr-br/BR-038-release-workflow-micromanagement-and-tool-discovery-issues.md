@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Bug Report BR-038 – Release Workflow Micromanagement and Tool Discovery Issues
 
 **Code:** BR-038  
-**Status:** TODO  
+**Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Created:** 2026-03-09  
-**Last Updated:** 2026-03-31 — Intake: **Implementing Task** wired to **E6:S06:T02**
+**Last Updated:** 2026-04-20 — Relevance review: legacy friction mostly resolved; recovery/logging scope expanded and re-housed to follow-on task
 
-**Implementing Task:** [E6:S06:T02](../epics/Epic-6/Story-006-feature-requests/T02-fix-release-workflow-micromanagement-issues.md)
+**Implementing Task:** [E6:S06:T63](../epics/Epic-6/Story-006-feature-requests/T63-rw-recovery-journal-and-rollback-contract-br038.md)
 
 **Note:** **Cascade / whitelist** productivity blockers that worsen RW friction are tracked under **[BR-039](BR-039-cascade-whitelist-security-prompt-usability-blocker.md)** / **[E6:S06:T57](../epics/Epic-6/Story-006-feature-requests/T57-br039-cascade-whitelist-security-prompt-blocker.md)** (vendor-side).
 
@@ -23,6 +23,28 @@ housekeeping_policy: keep
 ## Problem Statement
 
 The Release Workflow (RW) suffers from significant micromanagement issues and tool discovery problems that create excessive friction for users. The automation adds more work than it saves, requiring users to manually debug scripts, hunt for tools, and implement workarounds for basic release operations.
+
+## Relevance Review (2026-04-20)
+
+This BR is now split into:
+
+- **Resolved historical scope:** Micromanagement/tool discovery friction that has been substantially hardened in prior RW work.
+- **Active scope:** Deterministic recovery when RW fails mid-run, with explicit run logging and rollback/compensation support.
+
+### Requirement Reconciliation
+
+- [x] **R1:** Improve tool discovery and operator guidance for RW execution.
+- [x] **R2:** Reduce step-by-step micromanagement in standard RW execution path.
+- [x] **R3:** Improve error clarity and manual fallback guidance.
+- [ ] **R4:** Persist per-run RW execution journal (step state, commands, exit codes, touched files, timestamps).
+- [ ] **R5:** Add deterministic recovery artifact/output when RW fails (what changed, what is safe to retry, what must be manually repaired).
+- [ ] **R6:** Provide rollback/compensation mechanism contract (minimum: documented, reproducible manual rollback; target: assisted rollback mode).
+
+### Active Workstream
+
+Active implementation for unresolved recovery scope is tracked under:
+
+- [E6:S06:T63](../epics/Epic-6/Story-006-feature-requests/T63-rw-recovery-journal-and-rollback-contract-br038.md)
 
 ## Current Issues
 
