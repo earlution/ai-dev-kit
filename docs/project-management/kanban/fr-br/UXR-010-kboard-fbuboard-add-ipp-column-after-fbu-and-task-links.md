@@ -17,7 +17,7 @@ housekeeping_policy: keep
 **Last updated:** 2026-04-20 (intake filed with implementing task)  
 **Implementing Task:** E4:S19:T04  
 **Repository Task:** [E4:S19:T04](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md)
-**IPP:** [IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md](../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)
+**IPP:** [IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md](../../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)
 
 ---
 
@@ -74,4 +74,4 @@ How should board row formatting and governance rules expose planning-traceabilit
 - [fbuboard](../fbuboard.md)
 - [Story 019](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md)
 - [Implementing task E4:S19:T04](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md)
-- [IPP-E4S19T04](../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)
+- [IPP-E4S19T04](../../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)

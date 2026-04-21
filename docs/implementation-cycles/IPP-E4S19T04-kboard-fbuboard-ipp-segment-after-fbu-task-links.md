@@ -116,5 +116,5 @@ Implement deterministic row-level traceability formatting in `kboard.md` and `fb
 - [UXR-010](../project-management/kanban/fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md)
 - [kboard](../project-management/kanban/kboard.md)
 - [fbuboard](../project-management/kanban/fbuboard.md)
-- [update_kanban_docs.py](../packages/frameworks/workflow%20mgt/scripts/update_kanban_docs.py)
-- [test_update_kanban_docs.py](../packages/frameworks/workflow%20mgt/scripts/test_update_kanban_docs.py)
+- [update_kanban_docs.py](../../packages/frameworks/workflow mgt/scripts/update_kanban_docs.py)
+- [test_update_kanban_docs.py](../../packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py)

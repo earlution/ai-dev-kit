@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.4.19.4+2] - 21-04-26
+
+E4:S19:T04 — **RW** with **`--art`**: complete Phase C regression/verification gates and reconcile IPP/UXR planning-link paths so targeted governance docs pass deterministic link/lint validation. SemVer **v0.4.764+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.4+2.md)
+---
 ## [0.4.19.4+1] - 20-04-26
 
 E4:S19:T04 — **RW** with **`--art`**: publish IPP planning artifact and implement Phase A row-grammar resolver primitives for deterministic FBU/Task/IPP segment handling (`IPP` canonical, `IPW` compatibility fallback) with regression coverage. SemVer **v0.4.764+1**.
