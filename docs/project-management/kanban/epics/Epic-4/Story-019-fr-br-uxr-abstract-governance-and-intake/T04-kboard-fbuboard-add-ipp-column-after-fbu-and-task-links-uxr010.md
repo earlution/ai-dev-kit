@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-20  
+**Last updated:** 2026-04-21  
 **Code:** E4S19T04
 
 **Upstream:** [UXR-010 - kboard/fbuboard add `IPP` column after FBU and task links](../../../fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md)
@@ -57,13 +57,13 @@ Board rows currently do not consistently expose planning artifact presence after
 
 ## Acceptance criteria
 
-- [ ] **AC1:** `kboard.md` and `fbuboard.md` row format includes an `IPP` segment after FBU/task links.
-- [ ] **AC2:** Missing planning artifact renders as exact token `—No IPP—`.
-- [ ] **AC3:** FBU and task segments use exact linked token forms `BR/BR/UXR-xxx` and `Exx:Sxx:Txx`.
-- [ ] **AC4:** IPP present segment uses exact linked token form `—IPP—`.
-- [ ] **AC5:** Existing rows can be normalized without broken links.
-- [ ] **AC6:** Governance/workflow documentation identifies enforcement behavior.
-- [ ] **AC7:** UXR-010 and E4:S19:T04 are wired in Story 019 and active boards.
+- [x] **AC1:** `kboard.md` and `fbuboard.md` row format includes an `IPP` segment after FBU/task links.
+- [x] **AC2:** Missing planning artifact renders as exact token `—No IPP—`.
+- [x] **AC3:** FBU and task segments use exact linked token forms `BR/BR/UXR-xxx` and `Exx:Sxx:Txx`.
+- [x] **AC4:** IPP present segment uses exact linked token form `—IPP—`.
+- [x] **AC5:** Existing rows can be normalized without broken links.
+- [x] **AC6:** Governance/workflow documentation identifies enforcement behavior.
+- [x] **AC7:** UXR-010 and E4:S19:T04 are wired in Story 019 and active boards.
 
 ---
 

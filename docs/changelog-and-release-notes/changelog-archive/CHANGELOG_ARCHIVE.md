@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.4.19.4+4] - 21-04-26
+
+E4:S19:T04 — **RW** with **`--art`**: publish final acceptance reconciliation by marking task and UXR criteria complete and setting the IPP artifact to published status with validated traceability links. SemVer **v0.4.764+4**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.4+4.md)
+---
 ## [0.4.19.4+3] - 21-04-26
 
 E4:S19:T04 — **RW** with **`--art`**: publish Phase D governance reconciliation by aligning Story 019 checklist state and explicit IPP traceability wiring for the active T04 workstream. SemVer **v0.4.764+3**.

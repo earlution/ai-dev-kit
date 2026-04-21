@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** OPEN  
 **Code:** UXR-010  
-**Last updated:** 2026-04-20 (intake filed with implementing task)  
+**Last updated:** 2026-04-21 (implementation phases A-D reconciled)  
 **Implementing Task:** E4:S19:T04  
 **Repository Task:** [E4:S19:T04](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md)
 **IPP:** [IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md](../../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)
@@ -57,14 +57,14 @@ How should board row formatting and governance rules expose planning-traceabilit
 
 ## Acceptance Criteria
 
-- [ ] Board row contract specifies `IPP` placement after FBU + task links for both boards.
-- [ ] Missing-planning behavior is standardized as `—No IPP—` (exact token).
-- [ ] FBU segment renders as link token `BR/BR/UXR-xxx`.
-- [ ] Task segment renders as link token `Exx:Sxx:Txx`.
-- [ ] IPP segment renders as link token `—IPP—` when present and plain text `—No IPP—` when absent.
-- [ ] Existing rows can be normalized without breaking links or semantic meaning.
-- [ ] Governance docs and/or workflow scripts identify authoritative formatting behavior.
-- [ ] UXR-010 and implementing task are wired bidirectionally and visible in active boards/story checklist.
+- [x] Board row contract specifies `IPP` placement after FBU + task links for both boards.
+- [x] Missing-planning behavior is standardized as `—No IPP—` (exact token).
+- [x] FBU segment renders as link token `BR/BR/UXR-xxx`.
+- [x] Task segment renders as link token `Exx:Sxx:Txx`.
+- [x] IPP segment renders as link token `—IPP—` when present and plain text `—No IPP—` when absent.
+- [x] Existing rows can be normalized without breaking links or semantic meaning.
+- [x] Governance docs and/or workflow scripts identify authoritative formatting behavior.
+- [x] UXR-010 and implementing task are wired bidirectionally and visible in active boards/story checklist.
 
 ---
 
