@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.4.19.4+3] - 21-04-26
+
+E4:S19:T04 — **RW** with **`--art`**: publish Phase D governance reconciliation by aligning Story 019 checklist state and explicit IPP traceability wiring for the active T04 workstream. SemVer **v0.4.764+3**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.4+3.md)
+---
 ## [0.6.6.63+1] - 21-04-26
 
 E6:S06:T63 — **RW** with **`--art`**: activate BR-038 follow-on workstream by moving task status to IN PROGRESS, wiring recovery-journal/rollback contract ownership, and reconciling active governance/board surfaces for deterministic recovery scope. SemVer **v0.4.764+1**.

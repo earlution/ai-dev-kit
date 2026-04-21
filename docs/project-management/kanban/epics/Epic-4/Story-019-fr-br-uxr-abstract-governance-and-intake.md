@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-21 (v0.4.19.4+2 – Kanban documentation setup)
-**Version:** v0.4.19.4+2
+**Last updated:** 2026-04-21 (v0.4.19.4+3 – Kanban documentation setup)
+**Version:** v0.4.19.4+3
 **Code:** E4S19  
 
 **Story type:** Ongoing governance (not a perpetual “repo ledger”; not a dumping ground for individual **FR-### / BR-### / UXR-###** implementation work).
@@ -28,7 +28,7 @@ housekeeping_policy: keep
 
 - [ ] **E4:S19:T03 – `E6:S07` default-housing drift investigation + closure decision (FR-087)** - TODO (HIGH, forensic root-cause + codification inventory + close/split/narrow recommendation for Story 007) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [FR-087](../../fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md)
 
-- [ ] **E4:S19:T04 – kboard/fbuboard `IPP` segment after FBU/task links (UXR-010)** - TODO (HIGH, formalize row-link ordering and deterministic `—No IPP—` fallback token when planning artifact is absent) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md) | [UXR-010](../../fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md)
+- [ ] **E4:S19:T04 – kboard/fbuboard `IPP` segment after FBU/task links (UXR-010)** - IN PROGRESS (HIGH, formalize row-link ordering and deterministic `—No IPP—` fallback token when planning artifact is absent) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md) | [UXR-010](../../fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md) | [IPP](../../../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)
 
 ---
 
