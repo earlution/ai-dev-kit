@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# FR-089: IPW board-row footer duplication validation hardening
+# FR-089: IPW board-row traceability-churn hardening (footer duplication + task-ID multiplication)
 
 **Type:** Feature Request (FR)  
 **ID:** FR-089  
@@ -23,13 +23,13 @@ housekeeping_policy: keep
 
 ## Summary
 
-IPW governance must explicitly validate and prevent board-row footer duplication churn on `kboard.md` and `fbuboard.md` (repeated appended segments like `| [Task/FBU link] | Last modified: ...` on the same row). This is distinct from simple timestamp drift and requires deterministic structural checks.
+IPW governance must explicitly validate and prevent board-row traceability churn on `kboard.md` and `fbuboard.md`, including both footer duplication and task-ID multiplication anti-patterns (repeated appended segments like `| [E#:S#:T#] | ... | Last modified: ...` on the same row). This is distinct from simple timestamp drift and requires deterministic structural checks.
 
 ---
 
 ## Problem Statement
 
-Current governance validation does not explicitly assert row-footer uniqueness. As a result, maintenance/update passes can append additional footer segments to rows that already contain one, producing repeated link/timestamp tails with newer times and corrupting forensic readability.
+Current governance validation does not explicitly assert row-tail uniqueness for task-ID and footer segments. As a result, maintenance/update passes can append additional task-link/footer segments to rows that already contain one, producing repeated task-ID/link/timestamp tails with newer times and corrupting forensic readability.
 
 ---
 
@@ -43,12 +43,15 @@ Current governance validation does not explicitly assert row-footer uniqueness. 
 - [x] **FR-089-F4:** Validation output must include explicit counters for `rows_with_duplicate_footers` and affected row IDs.
 - [x] **FR-089-F5:** In duplicate-footer drift scenarios, canonical timestamp recovery must require dual agreement: (a) the oldest timestamp value and (b) the oldest/first footer occurrence in row order refer to the same footer chunk.
 - [x] **FR-089-F6:** If oldest-time and oldest-position do not agree, validation must flag a high-signal anomaly (`timestamp-order divergence`) and avoid silent automatic normalization.
+- [x] **FR-089-F7:** Validation must detect and flag task-ID multiplication anti-patterns (repeated appended `E#:S#:T#` link segments on the same row) as structural corruption.
+- [x] **FR-089-F8:** Row normalization must enforce single-instance task-ID segment invariants and avoid silent repeated task-link append behavior across reruns.
 
 ### Non-Functional Requirements
 
 - [x] **FR-089-NF1:** Checks are deterministic and idempotent on repeat runs.
 - [x] **FR-089-NF2:** Detection logic distinguishes duplicate-footers from legitimate single footer updates.
 - [x] **FR-089-NF3:** Repeated runs must not monotonically “walk forward” row timestamps by re-appending later footer chunks.
+- [x] **FR-089-NF4:** Repeated runs must not multiply task-ID link segments on rows; canonical row grammar remains idempotent.
 
 ---
 
@@ -60,6 +63,7 @@ Current governance validation does not explicitly assert row-footer uniqueness. 
 - [x] Divergence case (`oldest time` != `first footer record`) is explicitly treated as anomalous and surfaced in validation/reporting.
 - [x] Regression scenarios cover single-footer valid rows and duplicated-footer invalid rows.
 - [x] Regression scenarios include repeated-run drift cases and verify no forward timestamp creep after normalization.
+- [x] Regression scenarios cover task-ID multiplication anti-pattern detection and single-instance task-ID row invariants across repeated runs.
 - [x] FR-089 and implementing task are wired into Story 015 and active boards.
 
 ---

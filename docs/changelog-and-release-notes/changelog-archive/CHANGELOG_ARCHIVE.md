@@ -5,6 +5,12 @@ E2:S15:T04 — **RW** with **`--art`**: re-house `BR-069` from `E6:S07:T117` to 
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+1.md)
 ---
+## [0.2.15.3+2] - 21-04-26
+
+E2:S15:T03 — **RW** with **`--art`**: align FR-089 traceability-churn governance artifacts so `IPP-E2S15T03` and `T03` explicitly encode footer-duplication and task-ID-multiplication guardrails with reconciliation-ready acceptance semantics. SemVer **v0.4.764+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.3+2.md)
+---
 ## [0.2.15.3+1] - 21-04-26
 
 E2:S15:T03 — **RW** with **`--art`**: implement duplicate-footer validation hardening with dual-agreement timestamp recovery (`oldest time` + `first footer chunk`), divergence anomaly signaling, regression coverage, and governance/board wiring for FR-089. SemVer **v0.4.764+1**.

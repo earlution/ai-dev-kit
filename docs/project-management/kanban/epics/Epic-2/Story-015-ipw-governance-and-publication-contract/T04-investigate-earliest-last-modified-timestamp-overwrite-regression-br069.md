@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Epic 2, Story 15, Task 4: Investigate earliest `Last modified` timestamp overwrite regression (BR-069)
+# Epic 2, Story 15, Task 4: Investigate row-footer timestamp overwrite and task-ID multiplication regression (BR-069)
 
 **Task ID:** E2:S15:T04  
 **Status:** IN PROGRESS  
@@ -23,6 +23,7 @@ housekeeping_policy: keep
 ## Input
 
 - User report that earliest historical row timestamps appear to have been overwritten.
+- User report that task IDs are being multiplied on rows during board mutation/reconciliation flows.
 - Existing timestamp integrity stream: [UXR-009](../../../fr-br/UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md), [E6:S07:T115](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T115-last-modified-stamp-forensic-integrity-guardrails.md).
 - Existing governance hardening stream: [E2:S15:T03](T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md), [FR-089](../../../fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md).
 - Current board mutation logic in `update_kanban_docs.py`.
@@ -33,31 +34,35 @@ housekeeping_policy: keep
 
 Forensic timeline fidelity depends on preserving older accurate `Last modified` row values unless substantive source evidence exists. A regression path appears to be rewriting preserved early timestamps.
 
+Additionally, row traceability fidelity requires exactly one canonical task-ID segment per row; current behavior appears to multiply task-ID segments through repeated append operations.
+
 ---
 
 ## Deliverable
 
-- Reproducible evidence set for overwrite behavior.
+- Reproducible evidence set for overwrite behavior and task-ID multiplication behavior.
 - Root-cause analysis identifying the exact mutation path.
-- Proposed guardrail and regression test design for preservation of earliest historical values.
+- Proposed guardrail and regression test design for preservation of earliest historical values and single-instance task-ID row segments.
 
 ---
 
 ## Scope
 
-1. Reproduce overwrite behavior with controlled fixture rows.
+1. Reproduce overwrite behavior and task-ID multiplication behavior with controlled fixture rows.
 2. Trace mutation path(s) in board update scripts.
 3. Classify mutation as substantive vs non-substantive and isolate incorrect branch.
-4. Define fix and regression tests (implementation in follow-on execution after planning/approval).
+4. Define fix and regression tests for timestamp preservation and task-ID de-dup invariants (implementation in follow-on execution after planning/approval).
 
 ---
 
 ## Acceptance Criteria
 
 - [ ] **AC1:** Reproduction scenario demonstrates overwrite of earliest preserved row timestamp.
+- [ ] **AC1b:** Reproduction scenario demonstrates duplicated task-ID segment multiplication on affected rows.
 - [ ] **AC2:** Root cause is identified with concrete code-path evidence.
 - [ ] **AC3:** Guardrail definition blocks overwrite in non-substantive flows.
-- [ ] **AC4:** Regression test cases are specified for no-op/touch-only/reconciliation runs.
+- [ ] **AC3b:** Guardrail definition blocks duplicate task-ID append/multiplication in row normalization.
+- [ ] **AC4:** Regression test cases are specified for no-op/touch-only/reconciliation runs, including task-ID single-instance invariants.
 - [ ] **AC5:** BR-069, E2:S15:T04, Story 015, and active boards are wired consistently.
 
 ---

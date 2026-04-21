@@ -9,7 +9,7 @@ housekeeping_policy: keep
 # E2:S15:T03 - Planning: Spec, Tests, Implementation Plan (IPP)
 
 **Host Task:** [`T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md`](../project-management/kanban/epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md) **(E2:S15:T03)**  
-**Planning for:** [FR-089 - IPW board-row footer duplication validation hardening](../project-management/kanban/fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md)  
+**Planning for:** [FR-089 - IPW board-row traceability-churn hardening (footer duplication + task-ID multiplication)](../project-management/kanban/fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md)  
 **Status:** Draft
 
 ---
@@ -18,7 +18,7 @@ housekeeping_policy: keep
 
 ### 1.1 Goal
 
-Harden IPW governance so duplicated row-footer chunks on `kboard.md` and `fbuboard.md` are deterministically detected, surfaced, and handled without silently corrupting forensic timestamp evidence.
+Harden IPW governance so board-row traceability churn on `kboard.md` and `fbuboard.md` is deterministically detected, surfaced, and handled without silently corrupting forensic timestamp evidence. Traceability churn includes duplicated row-footer chunks and task-ID multiplication on the same row.
 
 ### 1.2 Functional requirements
 
@@ -31,6 +31,8 @@ Harden IPW governance so duplicated row-footer chunks on `kboard.md` and `fbuboa
 - **F5:** If dual agreement fails, classify as `timestamp-order divergence` and block silent auto-normalization.
 - **F6:** Preserve deterministic behavior on valid rows (single footer) and avoid introducing any additional footer chunks.
 - **F7:** Ensure repeated runs do not walk row timestamps forward due to footer duplication churn.
+- **F8:** Detect repeated appended task-ID link segments (`[E#:S#:T#](...)`) on a single row and classify this as structural corruption.
+- **F9:** Enforce single-instance task-ID link invariants during normalization so repeated runs cannot multiply task tokens.
 
 ### 1.3 Non-functional requirements
 
@@ -38,6 +40,7 @@ Harden IPW governance so duplicated row-footer chunks on `kboard.md` and `fbuboa
 - **N2:** Diagnostics are high-signal and auditable for recovery workflows.
 - **N3:** Detection logic distinguishes true duplicates from valid single-footer updates.
 - **N4:** Contract is implementation-ready for `update_kanban_docs.py` and testable in `test_update_kanban_docs.py`.
+- **N5:** Repeated runs must not multiply task-ID link segments; canonical row grammar remains idempotent.
 
 ### 1.4 Out of scope
 
@@ -57,7 +60,8 @@ Harden IPW governance so duplicated row-footer chunks on `kboard.md` and `fbuboa
 | T4 | Dual-agreement fail | Oldest timestamp and first footer chunk disagree; `timestamp-order divergence` is emitted and silent normalization is blocked. |
 | T5 | Drift prevention | Repeated enforcement/update passes do not introduce forward timestamp creep. |
 | T6 | Board parity | Detection and reporting behave consistently for both `kboard.md` and `fbuboard.md` style rows. |
-| T7 | Traceability | FR-089, E2:S15:T03, Story 015, and this IPP remain bidirectionally linked. |
+| T7 | Task-ID multiplication guardrail | Repeated runs preserve single-instance task-ID segments and avoid multiplied `E#:S#:T#` tokens. |
+| T8 | Traceability | FR-089, E2:S15:T03, Story 015, and this IPP remain bidirectionally linked. |
 
 ---
 
@@ -68,18 +72,21 @@ Harden IPW governance so duplicated row-footer chunks on `kboard.md` and `fbuboa
 1. Add explicit footer-chunk parsing utilities in `update_kanban_docs.py`.
 2. Add dual-agreement evaluation helpers and anomaly classification.
 3. Add reporting structure for duplicate-footer metrics and row identifiers.
+4. Add/confirm task-link segment normalization rules that prevent repeated task-ID append behavior.
 
 ### Phase B - Enforcement integration
 
 1. Integrate duplicate-footer validation into board update/enforcement paths.
 2. Ensure clean rows remain idempotent and unmodified.
 3. Prevent silent destructive normalization when divergence is detected.
+4. Enforce single-instance task-ID segment grammar during reconciliation/update flows.
 
 ### Phase C - Regression coverage
 
 1. Add tests for clean rows and duplicate rows.
 2. Add tests for dual-agreement pass/fail behavior.
 3. Add repeated-run regression test for timestamp drift prevention.
+4. Add/confirm regression checks for task-ID multiplication prevention across repeated runs.
 
 ### Phase D - Governance reconciliation
 
@@ -95,6 +102,7 @@ Harden IPW governance so duplicated row-footer chunks on `kboard.md` and `fbuboa
 - [ ] Script logic detects and reports duplicate footer corruption with row-level detail.
 - [ ] Dual-agreement timestamp policy is enforced with explicit divergence anomaly handling.
 - [ ] Regression tests cover clean, duplicate, pass, fail, and repeated-run drift scenarios.
+- [ ] Row normalization and repeated runs preserve single-instance task-ID segments (no multiplication).
 - [ ] Task/FR/Story/IPP traceability is bidirectional and link-valid.
 - [ ] Implementation is ready for RW release execution against `E2:S15:T03`.
 
