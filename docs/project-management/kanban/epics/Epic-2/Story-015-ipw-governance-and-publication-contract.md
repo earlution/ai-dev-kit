@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-14  
 **Completed:** N/A  
-**Last updated:** 2026-04-21 (v0.2.15.3+2 – Kanban documentation setup)
-**Version:** v0.2.15.3+2
+**Last updated:** 2026-04-21 (v0.2.15.4+1 – Kanban documentation setup)
+**Version:** v0.2.15.4+1
 **Code:** E2S15
 
 ---

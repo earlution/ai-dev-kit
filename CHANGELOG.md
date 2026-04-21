@@ -8,11 +8,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 **Historical entries:** Per [`changelog-archival-policy`](docs/architecture/standards-and-adrs/changelog-archival-policy.md) (`changelog_archival.mode: latest_only` in `rw-config.yaml`), this file keeps only the latest release. Full history lives in [`CHANGELOG_ARCHIVE.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md) and `CHANGELOG_v*.md` under `docs/changelog-and-release-notes/changelog-archive/`.
 
 ---
-## [0.2.15.3+2] - 21-04-26
+## [0.2.15.4+1] - 21-04-26
 
-E2:S15:T03 — **RW** with **`--art`**: align FR-089 traceability-churn governance artifacts so `IPP-E2S15T03` and `T03` explicitly encode footer-duplication and task-ID-multiplication guardrails with reconciliation-ready acceptance semantics. SemVer **v0.4.764+2**.
+E2:S15:T04 — **`RW -k`** with **`--art`**: adopt **T04** as canonical Story 015 anchor for **BR-069** investigation / row-tail churn scope (UKW deterministic pass documented as insufficient for full row canonicalization). SemVer **v0.4.764+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.3+2.md)
----
----
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+1.md)
 ---

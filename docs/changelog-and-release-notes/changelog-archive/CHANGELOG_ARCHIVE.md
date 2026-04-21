@@ -1,7 +1,7 @@
 # Changelog Archive
 ## [0.2.15.4+1] - 21-04-26
 
-E2:S15:T04 — **RW** with **`--art`**: re-house `BR-069` from `E6:S07:T117` to governance-owned `E2:S15:T04`, reconcile Story/board/FBU traceability, and formalize anti-dumping-ground governance linkage with `FR-087` / `E4:S19:T03`. SemVer **v0.4.764+1**.
+E2:S15:T04 — **`RW -k`** with **`--art`**: adopt **T04** as canonical Story 015 anchor for **BR-069** investigation / row-tail churn scope (UKW deterministic pass documented as insufficient for full row canonicalization). SemVer **v0.4.764+1**.
 
 [Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+1.md)
 ---

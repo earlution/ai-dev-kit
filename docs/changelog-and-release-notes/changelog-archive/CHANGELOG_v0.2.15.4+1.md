@@ -2,7 +2,7 @@
 
 ## Release Summary
 
-`RW E2:S15:T04 --art` publishes governance-aligned re-housing for `BR-069`, moving the implementing task from `E6:S07:T117` to `E2:S15:T04` and reconciling Story/FBU/board traceability to remove Story 007 default-housing drift.
+`RW -k E2:S15:T04 --art` adopts **E2:S15:T04** as the canonical version anchor for Story 015 work on **BR-069** (row-footer / task-ID traceability churn on `kboard`/`fbuboard`), including explicit documentation that deterministic UKW/board enforcement does not fully repair repeating pipe-delimited row-tail segments.
 
 ## Internal and SemVer
 
@@ -11,18 +11,14 @@
 
 ## Included Changes
 
-- Created `E2:S15:T04` task doc for `BR-069` under Story 015.
-- Deleted mis-housed `E6:S07:T117` task doc.
-- Updated `BR-069` implementing-task linkage to `E2:S15:T04`.
-- Updated `Story 015`, `Story 007`, `kboard.md`, and `fbuboard.md` for re-housing traceability.
-- Updated `FR-087` and `E4:S19:T03` to explicitly include mis-housing re-housing governance protocol.
+- Version lineage aligned to implementing task **E2:S15:T04** / **BR-069** investigation stream.
+- Kanban documentation refresh in `kanban_init` mode for attribution consistency.
 
 ## Verification
 
-- `validate_rw_task_complete --requested E2:S15:T04`
-- `validate_rw_task_intent --requested E2:S15:T04 --art`
-- `validate_version_bump --strict --requested E2:S15:T04 --art`
-- `validate_changelog_format`
-- `check_changelog_size`
-- `update_kanban_docs.py`
-- targeted `validate_links.py --files ...`
+- `validate_branch_context.py --strict --requested E2:S15:T04 --art`
+- `validate_rw_task_complete.py --requested E2:S15:T04 --mode rw-k`
+- `validate_rw_task_intent.py --requested E2:S15:T04 --mode rw-k --art`
+- `validate_version_bump.py --strict --requested E2:S15:T04 --art`
+- `validate_changelog_format.py --strict`
+- `update_kanban_docs.py --mode kanban_init`
