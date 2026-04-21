@@ -667,6 +667,127 @@ def test_4_8_traceability_segment_normalization_for_fbuboard_rows():
     return run_test("Test 4.8: fbuboard traceability normalization", setup, test)
 
 
+def test_4_9_duplicate_footer_dual_agreement_normalizes_to_single_oldest():
+    """Test 4.9: duplicate footer with dual agreement normalizes to one canonical footer."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        content = """## MoSCOW Prioritized In-Progress Tasks
+
+### Must Have (M) - Critical Tasks
+
+- **E2:S15:T03** – duplicate footer case - TODO | Last modified: 2026-04-20 10:00 UTC | Last modified: 2026-04-21 12:00 UTC
+"""
+        normalized, report = mod.reconcile_duplicate_moscow_row_footers(content)
+        if report["rows_with_duplicate_footers"] != 1:
+            return False, f"Expected one duplicate row, got {report}"
+        if report["timestamp_order_divergence_rows"] != 0:
+            return False, f"Did not expect divergence, got {report}"
+        if normalized.count("Last modified:") != 1:
+            return False, f"Expected one canonical footer after normalization, got: {normalized}"
+        if "2026-04-20 10:00 UTC" not in normalized:
+            return False, f"Expected oldest/first timestamp to be preserved, got: {normalized}"
+        return True, ""
+
+    return run_test("Test 4.9: dual-agreement normalization", setup, test)
+
+
+def test_4_10_duplicate_footer_divergence_is_flagged_without_silent_normalization():
+    """Test 4.10: oldest-time vs first-footer divergence is flagged and preserved."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        content = """## MoSCOW Prioritized FR/BR/UXR Items
+
+### Must Have (M) - Critical Items
+
+- **BR-069** – divergence case - OPEN | Last modified: 2026-04-21 11:00 UTC | Last modified: 2026-04-20 09:00 UTC
+"""
+        normalized, report = mod.reconcile_duplicate_moscow_row_footers(content)
+        if report["rows_with_duplicate_footers"] != 1:
+            return False, f"Expected duplicate footer row count = 1, got {report}"
+        if report["timestamp_order_divergence_rows"] != 1:
+            return False, f"Expected divergence row count = 1, got {report}"
+        if normalized.count("Last modified:") != 2:
+            return False, "Divergence case should preserve both chunks for forensic visibility"
+        return True, ""
+
+    return run_test("Test 4.10: divergence detection without silent normalization", setup, test)
+
+
+def test_4_11_single_footer_row_not_flagged_as_duplicate():
+    """Test 4.11: valid single footer rows are not flagged or rewritten."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        content = """## MoSCOW Prioritized In-Progress Tasks
+
+### Should Have (S) - Important Tasks
+
+- **E4:S19:T04** – valid row - IN PROGRESS | Last modified: 2026-04-19 07:30 UTC
+"""
+        normalized, report = mod.reconcile_duplicate_moscow_row_footers(content)
+        if report["rows_with_duplicate_footers"] != 0 or report["timestamp_order_divergence_rows"] != 0:
+            return False, f"Expected clean report for single footer row, got {report}"
+        if normalized != content:
+            return False, "Single-footer row should remain unchanged"
+        return True, ""
+
+    return run_test("Test 4.11: single footer baseline", setup, test)
+
+
+def test_4_12_repeated_runs_do_not_walk_timestamp_forward_after_normalization():
+    """Test 4.12: repeated runs remain stable after duplicate-footer reconciliation."""
+    def setup():
+        test_dir = tempfile.mkdtemp()
+        return test_dir
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        initial = """## MoSCOW Prioritized In-Progress Tasks
+
+### Must Have (M) - Critical Tasks
+
+- **E2:S15:T03** – repeated-run drift guardrail - TODO | Last modified: 2026-04-20 10:00 UTC | Last modified: 2026-04-21 12:00 UTC
+"""
+        first_pass, _ = mod.reconcile_duplicate_moscow_row_footers(initial)
+        second_pass, second_report = mod.reconcile_duplicate_moscow_row_footers(first_pass)
+        if first_pass != second_pass:
+            return False, "Duplicate-footer reconciliation should be idempotent on repeated runs"
+        if second_report["rows_with_duplicate_footers"] != 0:
+            return False, f"Expected no duplicates after first normalization, got {second_report}"
+        if "2026-04-20 10:00 UTC" not in second_pass:
+            return False, "Expected earliest canonical timestamp to remain stable"
+        return True, ""
+
+    return run_test("Test 4.12: repeated-run drift prevention", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -833,6 +954,38 @@ def main():
         else:
             print(f"❌ Test 4.8: fbuboard traceability normalization - FAILED: {error}")
             test_results['failed'].append("4.8")
+
+        success, error = test_4_9_duplicate_footer_dual_agreement_normalizes_to_single_oldest()
+        if success:
+            print("✅ Test 4.9: dual-agreement normalization - PASSED")
+            test_results['passed'].append("4.9")
+        else:
+            print(f"❌ Test 4.9: dual-agreement normalization - FAILED: {error}")
+            test_results['failed'].append("4.9")
+
+        success, error = test_4_10_duplicate_footer_divergence_is_flagged_without_silent_normalization()
+        if success:
+            print("✅ Test 4.10: divergence detection without silent normalization - PASSED")
+            test_results['passed'].append("4.10")
+        else:
+            print(f"❌ Test 4.10: divergence detection without silent normalization - FAILED: {error}")
+            test_results['failed'].append("4.10")
+
+        success, error = test_4_11_single_footer_row_not_flagged_as_duplicate()
+        if success:
+            print("✅ Test 4.11: single footer baseline - PASSED")
+            test_results['passed'].append("4.11")
+        else:
+            print(f"❌ Test 4.11: single footer baseline - FAILED: {error}")
+            test_results['failed'].append("4.11")
+
+        success, error = test_4_12_repeated_runs_do_not_walk_timestamp_forward_after_normalization()
+        if success:
+            print("✅ Test 4.12: repeated-run drift prevention - PASSED")
+            test_results['passed'].append("4.12")
+        else:
+            print(f"❌ Test 4.12: repeated-run drift prevention - FAILED: {error}")
+            test_results['failed'].append("4.12")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:

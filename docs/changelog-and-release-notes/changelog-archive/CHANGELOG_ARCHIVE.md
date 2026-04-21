@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.3+1] - 21-04-26
+
+E2:S15:T03 — **RW** with **`--art`**: implement duplicate-footer validation hardening with dual-agreement timestamp recovery (`oldest time` + `first footer chunk`), divergence anomaly signaling, regression coverage, and governance/board wiring for FR-089. SemVer **v0.4.764+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.3+1.md)
+---
 ## [0.4.19.4+4] - 21-04-26
 
 E4:S19:T04 — **RW** with **`--art`**: publish final acceptance reconciliation by marking task and UXR criteria complete and setting the IPP artifact to published status with validated traceability links. SemVer **v0.4.764+4**.

@@ -13,8 +13,8 @@ housekeeping_policy: keep
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-14  
 **Completed:** N/A  
-**Last updated:** 2026-04-20 (v0.2.15.2+3 – Kanban documentation setup)
-**Version:** v0.2.15.2+3
+**Last updated:** 2026-04-21 (v0.2.15.3+1 – Kanban documentation setup)
+**Version:** v0.2.15.3+1
 **Code:** E2S15
 
 ---
@@ -36,5 +36,7 @@ Eliminate IPW documentation publication drift by making ownership, filing target
 - [x] **E2:S15:T01 – BR-066: IPW Docusaurus filing contract and backfill** - COMPLETE (v0.2.15.1+1) (HIGH, contract + validation + historical recovery inventory) — [Task doc](Story-015-ipw-governance-and-publication-contract/T01-ipw-docusaurus-filing-contract-and-backfill-br066.md) | [BR-066](../../fr-br/BR-066-ipw-missing-docusaurus-filing-for-planning-artifacts.md)
 
 - [ ] **E2:S15:T02 – IPP post-run governance reconciliation ownership (FR-084)** - IN PROGRESS (HIGH, assign deterministic IPP ownership for reconciling task/FR-BR-UXR docs + kboard/fbuboard after IPP completion) — [Task doc](Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md) | [FR-084](../../fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) | [IPP](../../../../implementation-cycles/IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md)
+
+- [ ] **E2:S15:T03 – IPW board-row footer duplication validation hardening (FR-089)** - IN PROGRESS (CRITICAL, enforce duplicate-footer detection with dual-agreement timestamp recovery and divergence anomaly reporting) — [Task doc](Story-015-ipw-governance-and-publication-contract/T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md) | [FR-089](../../fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md) | [IPP](../../../../implementation-cycles/IPP-E2S15T03-duplicate-footer-validation-hardening-and-timestamp-divergence-guardrails.md)
 
 ---

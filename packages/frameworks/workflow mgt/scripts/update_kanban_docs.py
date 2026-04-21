@@ -951,6 +951,21 @@ def update_kanban_board(
     # Normalize deterministic traceability segments for MoSCOW rows.
     content = normalize_board_traceability_segments(content, Path.cwd())
 
+    # Reconcile duplicate footer chunks before timestamp enforcement.
+    content, dup_report = reconcile_duplicate_moscow_row_footers(content)
+    if dup_report["rows_with_duplicate_footers"] > 0:
+        changes.append(
+            "Duplicate footer audit: "
+            f"rows_with_duplicate_footers={dup_report['rows_with_duplicate_footers']} "
+            f"row_ids={dup_report['duplicate_footer_row_ids']}"
+        )
+    if dup_report["timestamp_order_divergence_rows"] > 0:
+        changes.append(
+            "Timestamp-order divergence: "
+            f"rows={dup_report['timestamp_order_divergence_rows']} "
+            f"row_ids={dup_report['timestamp_order_divergence_row_ids']}"
+        )
+
     # Enforce terminal row timestamp format for MoSCOW rows.
     timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
     content = enforce_moscow_row_timestamps(content, timestamp_now)
@@ -1111,6 +1126,106 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
     return "\n".join(out_lines)
 
 
+def _extract_row_id_for_reporting(line: str) -> str:
+    """Extract a stable row identifier for diagnostics."""
+    for pattern in [
+        r"-\s+\*\*(E\d+:S\d+:T\d+)\*\*",
+        r"-\s+\*\*((?:FR|BR|UXR)-\d+)\*\*",
+        r"\[(E\d+:S\d+:T\d+)\]\(",
+        r"\[((?:FR|BR|UXR)-\d+)\]\(",
+    ]:
+        match = re.search(pattern, line)
+        if match:
+            return match.group(1)
+    return "unknown-row"
+
+
+def _parse_last_modified_chunks(line: str) -> List[Dict[str, object]]:
+    """Return ordered Last modified chunks with offsets and parsed timestamps."""
+    chunks: List[Dict[str, object]] = []
+    chunk_pattern = re.compile(r"\|\sLast modified:\s(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC)")
+    for idx, match in enumerate(chunk_pattern.finditer(line)):
+        ts_text = match.group(1)
+        parsed_dt = None
+        try:
+            parsed_dt = datetime.strptime(ts_text, "%Y-%m-%d %H:%M UTC")
+        except ValueError:
+            parsed_dt = None
+        chunks.append(
+            {
+                "index": idx,
+                "timestamp_text": ts_text,
+                "timestamp_dt": parsed_dt,
+            }
+        )
+    return chunks
+
+
+def _normalize_duplicate_footer_chunks(
+    line: str,
+    duplicate_row_ids: List[str],
+    divergence_row_ids: List[str],
+) -> str:
+    """
+    Normalize duplicate footer chunks using dual-agreement policy.
+
+    If oldest timestamp and first footer chunk disagree, keep row unchanged and
+    record anomaly to avoid silent evidence destruction.
+    """
+    chunks = _parse_last_modified_chunks(line)
+    if len(chunks) <= 1:
+        return line
+
+    row_id = _extract_row_id_for_reporting(line)
+    duplicate_row_ids.append(row_id)
+
+    dated_chunks = [chunk for chunk in chunks if chunk["timestamp_dt"] is not None]
+    if not dated_chunks:
+        divergence_row_ids.append(row_id)
+        return line
+
+    oldest_time_chunk = min(dated_chunks, key=lambda chunk: chunk["timestamp_dt"])
+    first_chunk = chunks[0]
+
+    if oldest_time_chunk["index"] != first_chunk["index"]:
+        divergence_row_ids.append(row_id)
+        return line
+
+    canonical_ts = oldest_time_chunk["timestamp_text"]
+    line_without_chunks = re.sub(r"\s*\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC", "", line)
+    line_without_chunks = re.sub(r"\s+\|\s+\|\s+", " | ", line_without_chunks).rstrip()
+    return f"{line_without_chunks} | Last modified: {canonical_ts}"
+
+
+def reconcile_duplicate_moscow_row_footers(board_content: str) -> Tuple[str, Dict[str, object]]:
+    """Audit and reconcile duplicate row footer chunks in MoSCOW sections."""
+    lines = board_content.split("\n")
+    in_moscow = False
+    out_lines: List[str] = []
+    duplicate_row_ids: List[str] = []
+    divergence_row_ids: List[str] = []
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("## MoSCOW"):
+            in_moscow = True
+        elif in_moscow and stripped.startswith("## ") and not stripped.startswith("## MoSCOW"):
+            in_moscow = False
+
+        if in_moscow and stripped.startswith("- **"):
+            line = _normalize_duplicate_footer_chunks(line, duplicate_row_ids, divergence_row_ids)
+
+        out_lines.append(line)
+
+    report = {
+        "rows_with_duplicate_footers": len(set(duplicate_row_ids)),
+        "duplicate_footer_row_ids": sorted(set(duplicate_row_ids)),
+        "timestamp_order_divergence_rows": len(set(divergence_row_ids)),
+        "timestamp_order_divergence_row_ids": sorted(set(divergence_row_ids)),
+    }
+    return "\n".join(out_lines), report
+
+
 def _cleanup_kboard_active_rows(board_content: str) -> Tuple[str, int]:
     """
     Remove COMPLETE rows from active MoSCOW sections in kboard.md.
@@ -1259,11 +1374,13 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
 
         if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
             updated, stats = _cleanup_fbuboard_active_rows(original, board, timestamp_now)
+            updated, dup_report = reconcile_duplicate_moscow_row_footers(updated)
             # Ensure timestamp normalization still applies uniformly for all MoSCOW rows.
             updated = normalize_board_traceability_segments(updated, project_root)
             updated = enforce_moscow_row_timestamps(updated, timestamp_now)
         else:
-            updated = normalize_board_traceability_segments(original, project_root)
+            updated, dup_report = reconcile_duplicate_moscow_row_footers(original)
+            updated = normalize_board_traceability_segments(updated, project_root)
             updated = enforce_moscow_row_timestamps(updated, timestamp_now)
             stats = None
 
@@ -1275,16 +1392,30 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                 # Re-apply transforms to latest content to avoid stale writes.
                 if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
                     updated, stats = _cleanup_fbuboard_active_rows(live, board, timestamp_now)
+                    updated, dup_report = reconcile_duplicate_moscow_row_footers(updated)
                     updated = normalize_board_traceability_segments(updated, project_root)
                     updated = enforce_moscow_row_timestamps(updated, timestamp_now)
                 else:
-                    updated = normalize_board_traceability_segments(live, project_root)
+                    updated, dup_report = reconcile_duplicate_moscow_row_footers(live)
+                    updated = normalize_board_traceability_segments(updated, project_root)
                     updated = enforce_moscow_row_timestamps(updated, timestamp_now)
                 changes.append(f"Concurrency revalidation: board changed during run, re-applied transforms: {board}")
 
             if not dry_run:
                 board.write_text(updated)
             changes.append(f"Enforced terminal row timestamps: {board}")
+            if dup_report["rows_with_duplicate_footers"] > 0:
+                changes.append(
+                    "duplicate-footer audit: "
+                    f"rows_with_duplicate_footers={dup_report['rows_with_duplicate_footers']}, "
+                    f"row_ids={dup_report['duplicate_footer_row_ids']}"
+                )
+            if dup_report["timestamp_order_divergence_rows"] > 0:
+                changes.append(
+                    "timestamp-order divergence: "
+                    f"rows={dup_report['timestamp_order_divergence_rows']}, "
+                    f"row_ids={dup_report['timestamp_order_divergence_row_ids']}"
+                )
             if stats is not None:
                 changes.append(
                     "fbuboard reconciliation: "
