@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Completed Tasks
 
-**Last Updated:** 2026-04-19 (**E5:S09:T11** complete — **BR-068** monorepo MDX links)
-**Version:** v0.5.9.11+5 *(from `version.py` at RW **E5:S09:T11**)*
+**Last Updated:** 2026-04-21 (**E2:S15:T03** complete — **FR-089** traceability-churn hardening)
+**Version:** v0.2.15.3+2 *(task completion attribution; see `version.py` for current RW anchor)*
 
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
 > **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
@@ -19,6 +19,10 @@ housekeeping_policy: keep
 ---
 
 ## 20 Most Recently Completed Tasks
+
+#### **Epic 2: Workflow Management Framework (Story 15 — IPW governance and publication contract)**
+- **[E2:S15:T03](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md)** — **FR-089** board-row traceability-churn hardening (duplicate-footer dual-agreement, divergence signaling, traceability normalization + tests; IPP alignment **v0.2.15.3+2**); **[FR-089](fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md)** **IMPLEMENTED**.  
+  **Completed:** `2026-04-21T12:00:00Z` | **Version:** `v0.2.15.3+2` | **Agent:** `UKW / Maintainer`
 
 #### **Epic 5: Documentation Management (Story 9 — Docusaurus Documentation Portal)**
 - **[E5:S09:T11](epics/Epic-5/Story-009-docusaurus-documentation-portal/T11-docusaurus-monorepo-markdown-link-resolution-br068.md)** — **BR-068** monorepo cross-root Markdown / MDX link resolution (**IPW-E5S09T11** Waves **1–4**); **`portal`** strict production build green; **[BR-068](fr-br/BR-068-docusaurus-monorepo-markdown-links-break-strict-production-build.md)** **COMPLETE**.  

@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Completed Items
 
-**Last Updated:** 2026-04-19 (RW **E5:S09:T11+5**: **BR-068** COMPLETE)
-**Version:** v0.5.9.11+5
+**Last Updated:** 2026-04-21 (**FR-089** IMPLEMENTED via **E2:S15:T03**)
+**Version:** v0.2.15.3+2 *(completion attribution)*
 
 > **For open FR/BR/UXR items, see:** [`fbuboard.md`](fbuboard.md)  
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
@@ -34,6 +34,7 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| FR-089 | FR | IPW board-row traceability-churn hardening — duplicate-footer dual-agreement + divergence guardrails; task-ID tail invariants (**E2:S15:T03**) | 2026-04-21 | v0.2.15.3+2 | UKW / Maintainer |
 | BR-068 | BR | Docusaurus strict MDX cannot resolve monorepo markdown links — **`portal`** strict build restored (**Strategy A**) (**E5:S09:T11**) | 2026-04-19 | v0.5.9.11+5 | RW Agent |
 | FR-080 | FR | End-to-end greenfield installation process — INSTALL + orchestrator + user-docs + validators / evidence (**E6:S09:T01**) | 2026-04-19 | v0.6.9.1+8 | RW Agent |
 | UXR-007 | UXR | Interactive installer Kanban pattern prompt clarity — installer UX + ICW publication alignment (**E7:S06:T18**) | 2026-04-18 | v0.7.6.18+3 | UKW Agent |

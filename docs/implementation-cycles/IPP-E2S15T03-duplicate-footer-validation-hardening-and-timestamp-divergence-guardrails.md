@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Host Task:** [`T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md`](../project-management/kanban/epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T03-ipw-board-row-footer-duplication-validation-hardening-fr089.md) **(E2:S15:T03)**  
 **Planning for:** [FR-089 - IPW board-row traceability-churn hardening (footer duplication + task-ID multiplication)](../project-management/kanban/fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md)  
-**Status:** Draft
+**Status:** Published (closure: v0.2.15.3+2 — T03 FR-089 governance; implementation v0.2.15.3+1)
 
 ---
 
@@ -98,13 +98,13 @@ Harden IPW governance so board-row traceability churn on `kboard.md` and `fbuboa
 
 ## 4. Success criteria
 
-- [ ] IPP file exists with complete spec, test design, and implementation plan for FR-089.
-- [ ] Script logic detects and reports duplicate footer corruption with row-level detail.
-- [ ] Dual-agreement timestamp policy is enforced with explicit divergence anomaly handling.
-- [ ] Regression tests cover clean, duplicate, pass, fail, and repeated-run drift scenarios.
-- [ ] Row normalization and repeated runs preserve single-instance task-ID segments (no multiplication).
-- [ ] Task/FR/Story/IPP traceability is bidirectional and link-valid.
-- [ ] Implementation is ready for RW release execution against `E2:S15:T03`.
+- [x] IPP file exists with complete spec, test design, and implementation plan for FR-089.
+- [x] Script logic detects and reports duplicate footer corruption with row-level detail.
+- [x] Dual-agreement timestamp policy is enforced with explicit divergence anomaly handling.
+- [x] Regression tests cover clean, duplicate, pass, fail, and repeated-run drift scenarios.
+- [x] Row normalization and repeated runs preserve single-instance task-ID segments (no multiplication).
+- [x] Task/FR/Story/IPP traceability is bidirectional and link-valid.
+- [x] Implementation released (v0.2.15.3+1 / v0.2.15.3+2); **E2:S15:T03** and **FR-089** marked complete / IMPLEMENTED.
 
 ---
 

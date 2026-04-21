@@ -9,11 +9,12 @@ housekeeping_policy: keep
 # Epic 2, Story 15, Task 3: IPW board-row traceability-churn hardening (FR-089)
 
 **Task ID:** E2:S15:T03  
-**Status:** IN PROGRESS  
+**Status:** ✅ COMPLETE  
 **Priority:** CRITICAL  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-21  
-**Last updated:** 2026-04-21  
+**Completed:** 2026-04-21  
+**Last updated:** 2026-04-21 (v0.2.15.3+2 — governance alignment RW; FR-089 IMPLEMENTED)  
 **Code:** E2S15T03
 
 **Upstream:** [FR-089 - IPW board-row traceability-churn hardening](../../../fr-br/FR-089-ipw-board-row-footer-duplication-validation-hardening.md)
