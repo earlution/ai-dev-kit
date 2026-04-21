@@ -772,6 +772,67 @@ def find_epic_section(board_content: str, epic: int) -> Optional[Tuple[int, int]
     return (start_idx, end_idx)
 
 
+def _parse_task_id(task_id: str) -> Optional[Tuple[int, int, int]]:
+    """Parse task ID token like `E4:S19:T04` into numeric components."""
+    match = re.fullmatch(r"E(\d+):S(\d+):T(\d+)", task_id.strip(), re.IGNORECASE)
+    if not match:
+        return None
+    return int(match.group(1)), int(match.group(2)), int(match.group(3))
+
+
+def resolve_planning_artifact_for_task(task_id: str, project_root: Path) -> Optional[Path]:
+    """
+    Resolve planning artifact path for a task with deterministic precedence:
+    1) Canonical IPP-E{epic}S{story}T{task}-*.md
+    2) Legacy IPW-E{epic}S{story}T{task}-*.md (compatibility fallback)
+    """
+    parsed = _parse_task_id(task_id)
+    if not parsed:
+        return None
+
+    epic, story, task = parsed
+    planning_dir = project_root / "docs" / "implementation-cycles"
+    if not planning_dir.exists():
+        return None
+
+    # Support both padded and non-padded story/task tokens.
+    token_variants = {
+        (f"S{story}", f"T{task}"),
+        (f"S{story}", f"T{task:02d}"),
+        (f"S{story:02d}", f"T{task}"),
+        (f"S{story:02d}", f"T{task:02d}"),
+    }
+
+    for story_token, task_token in sorted(token_variants):
+        canonical_pattern = f"IPP-E{epic}{story_token}{task_token}-*.md"
+        canonical_matches = sorted(planning_dir.glob(canonical_pattern))
+        if canonical_matches:
+            return canonical_matches[0]
+
+    for story_token, task_token in sorted(token_variants):
+        legacy_pattern = f"IPW-E{epic}{story_token}{task_token}-*.md"
+        legacy_matches = sorted(planning_dir.glob(legacy_pattern))
+        if legacy_matches:
+            return legacy_matches[0]
+
+    return None
+
+
+def render_ipp_segment_for_task(task_id: str, project_root: Path) -> str:
+    """
+    Return markdown segment token for IPP traceability:
+    - linked `—IPP—` when a planning artifact exists
+    - plain `—No IPP—` when absent
+    """
+    artifact_path = resolve_planning_artifact_for_task(task_id, project_root)
+    if not artifact_path:
+        return "—No IPP—"
+
+    # Boards live in docs/project-management/kanban, so link up two levels.
+    rel_path = Path("..") / ".." / "implementation-cycles" / artifact_path.name
+    return f"[—IPP—]({rel_path.as_posix()})"
+
+
 def update_kanban_board(
     board_path: Path,
     epic: int,

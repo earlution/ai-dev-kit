@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-20 (RW: E2:S15:T2)
-**Version:** v0.2.15.2+3
+**Last Updated:** 2026-04-21 (RW: E4:S19:T4)
+**Version:** v0.4.19.4+1
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
@@ -27,6 +27,7 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
+- **E6:S06:T63** – BR-038 follow-on: RW recovery journal and rollback contract - TODO (HIGH, define deterministic RW run logging, failure recovery artifact, and rollback/compensation contract for safe recovery) - [Task Document](epics/Epic-6/Story-006-feature-requests/T63-rw-recovery-journal-and-rollback-contract-br038.md) | [Story](epics/Epic-6/Story-006-feature-requests.md) | Last modified: 2026-04-20 21:10 UTC
 - **E4:S19:T03** – FR-087: investigate why `E6:S07` became default housing and decide closure/scope - TODO (HIGH, forensic analysis of origin/codification plus close/split/narrow recommendation and guardrails) - [Task Document](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [Story](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md) | Last modified: 2026-04-20 17:20 UTC
 - **E2:S16:T01** – FR-088: establish canonical story for perpetual ongoing tasks - IN PROGRESS (HIGH, create dedicated Epic 2 home with scope boundaries, migration policy, and guardrails for perpetual workflow operations) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | Last modified: 2026-04-20 17:45 UTC
 - **E6:S07:T116** – FR-085: UKW optional reprioritization `--rp` flag - TODO (HIGH, optional deep reprioritization based on inferred intent, dependencies, blockers, and practical impact across task + FR/BR/UXR surfaces) - [Task Document](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md) | [Story](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management.md) | Last modified: 2026-04-20 16:20 UTC

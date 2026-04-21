@@ -574,6 +574,67 @@ def test_4_5_touch_only_run_preserves_unique_moscow_timestamps():
     return run_test("Test 4.5: preserve unique timestamps on touch-only runs", setup, test)
 
 
+def test_4_6_planning_artifact_resolution_prefers_ipp_over_ipw():
+    """Test 4.6: planning artifact resolver prefers canonical IPP over legacy IPW."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        planning_dir = test_dir / "docs" / "implementation-cycles"
+        planning_dir.mkdir(parents=True, exist_ok=True)
+        (planning_dir / "IPP-E4S19T04-canonical.md").write_text("# IPP", encoding="utf-8")
+        (planning_dir / "IPW-E4S19T04-legacy.md").write_text("# IPW", encoding="utf-8")
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        resolved = mod.resolve_planning_artifact_for_task("E4:S19:T04", Path(test_dir))
+        if not resolved:
+            return False, "Expected resolver to find canonical IPP artifact"
+        if resolved.name != "IPP-E4S19T04-canonical.md":
+            return False, f"Expected canonical IPP artifact, found: {resolved.name}"
+
+        token = mod.render_ipp_segment_for_task("E4:S19:T04", Path(test_dir))
+        if "[—IPP—](../../implementation-cycles/IPP-E4S19T04-canonical.md)" != token:
+            return False, f"Unexpected IPP token rendering: {token}"
+        return True, ""
+
+    return run_test("Test 4.6: resolver prefers IPP", setup, test)
+
+
+def test_4_7_planning_artifact_resolution_falls_back_to_ipw_or_none():
+    """Test 4.7: resolver falls back to IPW, then plain No IPP token when absent."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        planning_dir = test_dir / "docs" / "implementation-cycles"
+        planning_dir.mkdir(parents=True, exist_ok=True)
+        (planning_dir / "IPW-E6S07T15-legacy.md").write_text("# IPW", encoding="utf-8")
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        resolved = mod.resolve_planning_artifact_for_task("E6:S7:T15", Path(test_dir))
+        if not resolved or resolved.name != "IPW-E6S07T15-legacy.md":
+            return False, f"Expected legacy IPW fallback artifact, found: {resolved}"
+
+        token = mod.render_ipp_segment_for_task("E6:S7:T15", Path(test_dir))
+        if "[—IPP—](../../implementation-cycles/IPW-E6S07T15-legacy.md)" != token:
+            return False, f"Unexpected fallback IPP token rendering: {token}"
+
+        no_artifact_token = mod.render_ipp_segment_for_task("E9:S9:T99", Path(test_dir))
+        if no_artifact_token != "—No IPP—":
+            return False, f"Expected plain no-artifact token, found: {no_artifact_token}"
+        return True, ""
+
+    return run_test("Test 4.7: resolver fallback to IPW/none", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -716,6 +777,22 @@ def main():
         else:
             print(f"❌ Test 4.5: preserve unique timestamps on touch-only runs - FAILED: {error}")
             test_results['failed'].append("4.5")
+
+        success, error = test_4_6_planning_artifact_resolution_prefers_ipp_over_ipw()
+        if success:
+            print("✅ Test 4.6: resolver prefers IPP - PASSED")
+            test_results['passed'].append("4.6")
+        else:
+            print(f"❌ Test 4.6: resolver prefers IPP - FAILED: {error}")
+            test_results['failed'].append("4.6")
+
+        success, error = test_4_7_planning_artifact_resolution_falls_back_to_ipw_or_none()
+        if success:
+            print("✅ Test 4.7: resolver fallback to IPW/none - PASSED")
+            test_results['passed'].append("4.7")
+        else:
+            print(f"❌ Test 4.7: resolver fallback to IPW/none - FAILED: {error}")
+            test_results['failed'].append("4.7")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:
