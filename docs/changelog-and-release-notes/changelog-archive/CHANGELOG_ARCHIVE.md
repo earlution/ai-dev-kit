@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.5+11] - 22-04-26
+
+E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 3 regression hardening (parity/dedup/idempotency) for the canonical row-transform engine under FR-090. SemVer **v0.4.764+11**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+11.md)
+---
 ## [0.2.15.5+10] - 22-04-26
 
 E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 2 convergence for canonical row-transform ordering and terminal footer preservation under FR-090 hardening scope. SemVer **v0.4.764+10**.

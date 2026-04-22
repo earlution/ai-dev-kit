@@ -867,6 +867,12 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
         fbu_token = f"[{fbu_link_match.group(1)}-{fbu_link_match.group(2)}]({fbu_link_match.group(3)})"
         task_token = f"[{task_link_match.group(1)}]({task_link_match.group(2)})"
         ipp_token = render_ipp_segment_for_task(task_link_match.group(1), project_root)
+        # Remove existing canonical traceability tokens before re-appending in
+        # canonical order (idempotent repeated-run behavior).
+        line_core = re.sub(rf"\s*\|\s*{re.escape(fbu_token)}", "", line_core)
+        line_core = re.sub(rf"\s*\|\s*{re.escape(task_token)}", "", line_core)
+        segments = [segment.strip() for segment in line_core.split("|") if segment.strip()]
+        line_core = " | ".join(segments)
         normalized_core = f"{line_core.rstrip()} | {fbu_token} | {task_token} | {ipp_token}"
         if footer_suffix:
             return f"{normalized_core} | {footer_suffix}"
@@ -879,6 +885,10 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
         task_token = f"[{task_id}]({task_doc_match.group(1)})"
         ipp_token = render_ipp_segment_for_task(task_id, project_root)
         # FBU token cannot be deterministically inferred here; leave row unchanged.
+        # Remove existing canonical task token before re-appending.
+        line_core = re.sub(rf"\s*\|\s*{re.escape(task_token)}", "", line_core)
+        segments = [segment.strip() for segment in line_core.split("|") if segment.strip()]
+        line_core = " | ".join(segments)
         normalized_core = f"{line_core.rstrip()} | {task_token} | {ipp_token}"
         if footer_suffix:
             return f"{normalized_core} | {footer_suffix}"

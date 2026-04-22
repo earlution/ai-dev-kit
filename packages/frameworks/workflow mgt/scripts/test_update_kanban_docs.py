@@ -911,6 +911,79 @@ def test_4_14_phase1_canonical_entrypoint_exposes_contract_selected_order():
     return run_test("Test 4.14: Phase 1 canonical entrypoint contract order", setup, test)
 
 
+def test_4_15_phase3_parity_and_repeated_run_idempotency_matrix():
+    """Test 4.15: parity + ordering + timestamp + dedup + idempotency across canonical fixtures."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        planning_dir = test_dir / "docs" / "implementation-cycles"
+        planning_dir.mkdir(parents=True, exist_ok=True)
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        root = Path(test_dir)
+        now = "2099-07-01 12:00 UTC"
+
+        header = "## MoSCOW Priority\n\n### Must Have\n\n"
+        fixture = (
+            '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+            "[E2:S15:T04](epics/E2/T04.md) | [—IPP—](../../implementation-cycles/x.md) | "
+            "Last modified: 2024-01-01 08:00 UTC | Last modified: 2026-04-21 10:00 UTC\n"
+            '- **[FR-090](fr-br/FR-090.md)** – IN PROGRESS | '
+            "[E2:S15:T05](epics/E2/T05.md) | Last modified: 2025-02-01 09:30 UTC\n"
+        )
+        content = header + fixture
+
+        rw_once, rw_diag = mod.apply_canonical_row_transform_pipeline(
+            board_content=content,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_RW_STEP7,
+        )
+        standalone_once, standalone_diag = mod.apply_canonical_row_transform_pipeline(
+            board_content=content,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_STANDALONE,
+        )
+
+        # Parity: both contexts should produce byte-identical canonical output.
+        if rw_once != standalone_once:
+            return False, "Expected RW and standalone canonical outputs to be identical"
+        if rw_diag["executed_steps"] != standalone_diag["executed_steps"]:
+            return False, "Expected identical step ordering diagnostics across contexts"
+
+        # Dedup/timestamp correctness: first row should collapse to one (oldest) footer.
+        if rw_once.count("2024-01-01 08:00 UTC") != 1:
+            return False, "Expected oldest duplicate-footer timestamp to be preserved once"
+        if "2026-04-21 10:00 UTC" in rw_once:
+            return False, "Expected newer duplicate-footer timestamp to be removed during reconcile"
+
+        # No synthetic append on already-terminal valid row.
+        if rw_once.count("2025-02-01 09:30 UTC") != 1:
+            return False, "Expected existing valid terminal footer to remain singular"
+
+        # Idempotency: second run must be byte-stable and report no further duplicates.
+        rw_twice, rw_diag_twice = mod.apply_canonical_row_transform_pipeline(
+            board_content=rw_once,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_RW_STEP7,
+        )
+        if rw_twice != rw_once:
+            return False, "Expected canonical output to be byte-stable on repeated run"
+        if rw_diag_twice["dup_report"]["rows_with_duplicate_footers"] != 0:
+            return False, f"Expected no duplicate-footer rows on second run: {rw_diag_twice['dup_report']}"
+
+        return True, ""
+
+    return run_test("Test 4.15: Phase 3 parity/idempotency matrix", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -1125,6 +1198,14 @@ def main():
         else:
             print(f"❌ Test 4.14: Phase 1 canonical entrypoint contract order - FAILED: {error}")
             test_results['failed'].append("4.14")
+
+        success, error = test_4_15_phase3_parity_and_repeated_run_idempotency_matrix()
+        if success:
+            print("✅ Test 4.15: Phase 3 parity/idempotency matrix - PASSED")
+            test_results['passed'].append("4.15")
+        else:
+            print(f"❌ Test 4.15: Phase 3 parity/idempotency matrix - FAILED: {error}")
+            test_results['failed'].append("4.15")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:
