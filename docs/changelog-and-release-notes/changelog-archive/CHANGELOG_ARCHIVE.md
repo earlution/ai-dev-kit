@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.5+8] - 22-04-26
+
+E2:S15:T05 — **`RW`** with **`--art`**: publish the next iterative FR-090 implementation build with explicit `IPP-E2S15T05` traceability on `kboard`/`fbuboard`. SemVer **v0.4.764+8**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+8.md)
+---
 ## [0.2.16.4+2] - 22-04-26
 
 E2:S16:T04 — **`RW -d`** with **`--art`**: publish UKW-driven kanban synchronization pass for Story 016 surfaces while preserving duplicate-tail telemetry for continued FR-090/BR-069 hardening investigation. SemVer **v0.4.764+2**.

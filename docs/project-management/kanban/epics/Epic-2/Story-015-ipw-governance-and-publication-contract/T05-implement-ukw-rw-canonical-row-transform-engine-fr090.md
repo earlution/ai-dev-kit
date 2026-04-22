@@ -25,6 +25,7 @@ housekeeping_policy: keep
 - BR-069 and T04 evidence confirms non-canonical row mutation behavior across UKW/RW.
 - FR-090 defines redesign requirements for shared transform pipeline and board-specific rendering contracts.
 - Existing implementation surface: `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`.
+- IPP planning artifact published: [IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090](../../../../../implementation-cycles/IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090.md)
 
 ---
 
@@ -70,11 +71,13 @@ Task T05 implements the FR-090 architecture so both workflows remain cohesive, l
 - [BR-069](../../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
 - [E2:S15:T04](T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)
 - [IPP-E2S15T04](../../../../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md)
+- [IPP-E2S15T05](../../../../../implementation-cycles/IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090.md)
 
 ---
 
 ## Planning Artifacts (ICW/IPW Package)
 
+- [IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090](../../../../../implementation-cycles/IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090.md)
 - [ICW-E2S15T05-specification](../../../../../implementation-cycles/ICW-E2S15T05-specification.md)
 - [ICW-E2S15T05-test-design](../../../../../implementation-cycles/ICW-E2S15T05-test-design.md)
 - [ICW-E2S15T05-implementation-plan](../../../../../implementation-cycles/ICW-E2S15T05-implementation-plan.md)
