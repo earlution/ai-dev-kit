@@ -79,6 +79,7 @@ Running the typical deterministic **UKW** board pass (`enforce_terminal_timestam
 - [ ] After code remediation, automated tests assert **preservation** of earliest historical `Last modified` and **no** spurious second footer on touch-only / UKW runs.
 - [ ] Regression tests cover single-instance task-ID segment invariants under repeated runs.
 - [x] BR-069, implementing task, and board/story wiring are bidirectionally consistent.
+- [ ] FR-090 architectural redesign is implemented (or narrowed) and provides a canonical row-transform path that eliminates repeat-segment churn class across UKW/RW.
 - [ ] Documented or implemented path **beyond UKW** restores canonical single-instance row tails (no repeated FBU/task/IPP/footer segments) or explicitly scopes machine repair vs manual cleanup.
 
 ---
@@ -86,6 +87,7 @@ Running the typical deterministic **UKW** board pass (`enforce_terminal_timestam
 ## Related
 
 - [IPP-E2S15T04 — BR-069 row-tail normalization and terminal timestamp interaction](../../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md)
+- [FR-090](FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md)
 - [UXR-009](UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
 - [E6:S07:T115](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T115-last-modified-stamp-forensic-integrity-guardrails.md)
 - [E2:S15:T04](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)

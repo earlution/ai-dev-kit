@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.5+1] - 21-04-26
+
+E2:S15:T05 — **`RW -k`** with **`--art`**: file and activate FR-090 implementation scope for UKW/RW canonical row-transform redesign, including coupling contract language and task ownership wiring. SemVer **v0.4.764+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+1.md)
+---
 ## [0.2.15.4+2] - 21-04-26
 
 E2:S15:T04 — **RW** with **`--art`**: publish **IPP-E2S15T04** (BR-069 RCA, guardrails, traceability, Test 4.13 documentary regression). SemVer **v0.4.764+2**.
