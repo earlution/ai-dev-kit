@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.5+11] - 22-04-26
+## [0.2.15.5+12] - 22-04-26
 
-E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 3 parity/idempotency regression hardening and canonical traceability token dedup safeguards, with synchronized release metadata. SemVer **v0.4.764+11**.
+E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 4 verification and AC traceability closure updates across T05 task/IPP governance artifacts, with synchronized release metadata. SemVer **v0.4.764+12**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+11.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+12.md)

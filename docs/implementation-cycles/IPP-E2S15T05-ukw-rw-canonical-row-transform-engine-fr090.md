@@ -101,6 +101,33 @@ Implement FR-090 by introducing a shared canonical row-transform pipeline for UK
 
 ---
 
+## 5. Phase 4 execution evidence
+
+- Canonical row-transform entrypoint introduced and invoked in both RW and standalone board paths via `apply_canonical_row_transform_pipeline(...)`.
+- Unified contract order (`traceability -> duplicate_footer_reconcile -> timestamp_enforce`) applied in both contexts.
+- Terminal-footer preservation added in traceability normalization so historical valid timestamps remain terminal and do not trigger synthetic second-footer appends.
+- Idempotency hardening added for traceability token normalization (pre-existing canonical tokens removed before canonical re-append; delimiter normalization applied).
+
+### 5.1 Verification commands and outcomes
+
+- `python3 "packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py" --test-category 4`
+  - Outcome: 15/15 passed (`4.13`, `4.14`, `4.15` validate parity/order/footer safety/idempotency behavior).
+- `python3 "packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py" --test-category all`
+  - Outcome: broad suite run reports two pre-existing non-T05 failures (`2.2`, `3.1`) and does not invalidate T05 Phase 1-4 acceptance closure.
+- `python3 "packages/frameworks/workflow mgt/scripts/update_kanban_docs.py" --dry-run --mode full`
+  - Outcome: full-mode pipeline executes successfully with canonical duplicate-footer audit output.
+- `python3 "packages/frameworks/workflow mgt/scripts/update_kanban_docs.py" --dry-run --mode kanban_init`
+  - Outcome: kanban-init pipeline executes successfully with same canonical row-transform behavior.
+
+### 5.2 AC mapping closure
+
+- **AC1/AC2/AC3:** satisfied by shared pipeline invocation + unified ordering + terminal-footer preservation.
+- **AC4:** satisfied by idempotent repeated-run behavior validated in `4.12` and matrix `4.15`.
+- **AC5:** satisfied by parity and forensic-safe behavior validated in `4.13`, `4.14`, `4.15`.
+- **AC6:** satisfied by explicit T05 task + IPP traceability closure and FR-090/BR-069 reference continuity.
+
+---
+
 ## References
 
 - [Host task E2:S15:T05](../project-management/kanban/epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T05-implement-ukw-rw-canonical-row-transform-engine-fr090.md)

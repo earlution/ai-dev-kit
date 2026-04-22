@@ -56,12 +56,12 @@ Task T05 implements the FR-090 architecture so both workflows remain cohesive, l
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** RW and UKW call a shared canonical row-transform pipeline (no ordering divergence).
-- [ ] **AC2:** `fbuboard` rows always render `FBU -> Task -> IPP -> Last modified`.
-- [ ] **AC3:** No synthetic second `Last modified` is appended when a valid row timestamp already exists.
-- [ ] **AC4:** Repeated runs remain idempotent; duplicate task-link/FBU-link segments are not multiplied.
-- [ ] **AC5:** Regression suite proves RW/UKW parity on identical fixtures and preserves divergence-safe forensic behavior.
-- [ ] **AC6:** FR-090 and BR-069 residual implementation ACs are satisfiable/traceable through this task.
+- [x] **AC1:** RW and UKW call a shared canonical row-transform pipeline (no ordering divergence).
+- [x] **AC2:** `fbuboard` rows always render `FBU -> Task -> IPP -> Last modified`.
+- [x] **AC3:** No synthetic second `Last modified` is appended when a valid row timestamp already exists.
+- [x] **AC4:** Repeated runs remain idempotent; duplicate task-link/FBU-link segments are not multiplied.
+- [x] **AC5:** Regression suite proves RW/UKW parity on identical fixtures and preserves divergence-safe forensic behavior.
+- [x] **AC6:** FR-090 and BR-069 residual implementation ACs are satisfiable/traceable through this task.
 
 ---
 
@@ -108,3 +108,18 @@ Task T05 implements the FR-090 architecture so both workflows remain cohesive, l
   - Specification: traceability section  
   - Test Design: residual closure readiness criterion  
   - Implementation Plan: Phase 4 traceability closure
+
+---
+
+## Phase 4 Verification Evidence
+
+- Full edge-case regression suite passes after Phase 3 hardening additions:
+  - `python3 "packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py" --test-category 4`
+  - Result: 15/15 passed, including parity/order (`4.13`, `4.14`) and Phase 3 matrix (`4.15`).
+- Full-suite run shows two pre-existing non-T05 failures outside this implementation surface:
+  - `python3 "packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py" --test-category all`
+  - Failing legacy checks: `2.2` (version mismatch expectation) and `3.1` (missing-doc error message expectation).
+- Both update modes verified with dry-run execution:
+  - `python3 "packages/frameworks/workflow mgt/scripts/update_kanban_docs.py" --dry-run --mode full`
+  - `python3 "packages/frameworks/workflow mgt/scripts/update_kanban_docs.py" --dry-run --mode kanban_init`
+- Resulting evidence confirms AC1-AC6 closure for T05 scope and readiness to map residual governance closure in FR-090/BR-069.

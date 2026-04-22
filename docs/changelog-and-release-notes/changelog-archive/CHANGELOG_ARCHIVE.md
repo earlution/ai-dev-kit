@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.5+12] - 22-04-26
+
+E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 4 verification evidence and AC traceability closure across T05 governance artifacts. SemVer **v0.4.764+12**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+12.md)
+---
 ## [0.2.15.5+11] - 22-04-26
 
 E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 3 regression hardening (parity/dedup/idempotency) for the canonical row-transform engine under FR-090. SemVer **v0.4.764+11**.
