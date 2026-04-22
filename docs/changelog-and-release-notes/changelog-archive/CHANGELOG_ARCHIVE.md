@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.16.4+1] - 22-04-26
+
+E2:S16:T04 — **RW** with **`--art`**: publish the dedicated ad-hoc kanban synchronization and hygiene perpetual lane under Story 016's workflow-maintenance umbrella routing model. SemVer **v0.4.764+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.4+1.md)
+---
 ## [0.2.16.3+1] - 22-04-26
 
 E2:S16:T03 — **RW** with **`--art`**: publish Story 016 governance correction by restoring `T03` as the broad perpetual workflow-maintenance umbrella and positioning kanban synchronization as a dedicated lane. SemVer **v0.4.764+1**.
