@@ -1,3 +1,28 @@
+# CHANGELOG_v0.2.16.3+1
+
+## Release Summary
+
+`RW E2:S16:T03 --art` adopts `E2:S16:T03` as the canonical release anchor and publishes the Story 016 governance decision that `T03` is the umbrella perpetual workflow-maintenance task, with kanban-specific ad-hoc sync work tracked as a dedicated lane.
+
+## Internal and SemVer
+
+- Internal version: `0.2.16.3+1`
+- SemVer (`task_touch`): `0.4.764+1`
+
+## Included Changes
+
+- Repositioned **E2:S16:T03** as **Workflow maintenance (Perpetual)** umbrella scope.
+- Updated Story 016 routing language to avoid over-fragmenting perpetual maintenance attribution.
+- Clarified relationship between broad workflow maintenance and kanban-focused maintenance lanes.
+
+## Verification
+
+- `validate_branch_context.py --strict --requested E2:S16:T03 --art`
+- `validate_rw_task_complete.py --requested E2:S16:T03`
+- `validate_rw_task_intent.py --requested E2:S16:T03 --art`
+- `validate_version_bump.py --strict --requested E2:S16:T03 --art`
+- `validate_changelog_format.py --strict`
+- `update_kanban_docs.py --mode full`
 # Detailed Changelog — v0.2.16.3+1
 
 **Release date:** 20-04-26  
