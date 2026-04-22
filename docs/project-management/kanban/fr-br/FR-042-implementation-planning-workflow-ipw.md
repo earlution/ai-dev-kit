@@ -14,8 +14,8 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** IN PROGRESS  
-**Last updated:** 2026-04-22 — FR re-opened to add an explicit pre-specification step: **Ascertain Requirements** in the canonical IPW sequence.  
+**Status:** COMPLETE  
+**Last updated:** 2026-04-22 — Closed after codifying an explicit pre-specification **Ascertain Requirements** step in canonical IPW guidance and plan template structure.  
 **Implementation Task:** [E5:S01:T42](../epics/Epic-5/Story-001-fr-repo/T42-implementation-planning-workflow-ipw.md)
 
 ---
@@ -198,7 +198,7 @@ IPW produces the plan document that formalizes and persists the output of requir
 - [x] **FR-042:R06** - IPW integrated with Implementation Cycle (reference from implementation-cycle-sop, .cursorrules)
 - [x] **FR-042:R07** - Validation mechanism or checklist to detect unwired plan docs
 - [x] **FR-042:R08** - Cursor rules/skills or documentation reference IPW for plan doc creation
-- [ ] **FR-042:R14** - Canonical IPW planning sequence includes an explicit **Ascertain Requirements** step before **Define Spec**
+- [x] **FR-042:R14** - Canonical IPW planning sequence includes an explicit **Ascertain Requirements** step before **Define Spec**
 - [x] **FR-042:R09** - Instruction **`IPW`** (or `IPW ExxSxxTxx`) replaces "Plan ExxSxxTxx: Ascertain requirements, define spec, design tests, plan impl" as the canonical trigger
 - [x] **FR-042:R10** - **`ICW`** is **not** a parallel planning workflow: `.cursorrules` (and adopter equivalents) state **IPW canonical**; **`ICW`** is removed, folded into IPW wording, or documented as **deprecated alias** only (same steps as IPW)
 - [x] **FR-042:R11** - Packaged workflow docs (`workflow-registry.yaml`, `implementation-cycle-workflow/README.md` or successor) explain **ICW → IPW** consolidation and point maintainers to IPW
@@ -229,7 +229,7 @@ IPW produces the plan document that formalizes and persists the output of requir
 - [x] **AC10:** `.cursorrules` (ICW section) updated: **IPW** canonical for planning; **ICW** deprecated or alias-only, consistent with §7
 - [x] **AC11:** Framework workflow registry / ICW package README state consolidation; no contradictory “use ICW for planning” without IPW equivalence
 - [x] **AC12:** **FR-040** header or notes reference IPW as successor scope for **planning** (implementation delivery history of T40 may remain historical)
-- [ ] **AC13:** IPW docs/SOP language explicitly encode **Ascertain Requirements** as the first planning step before specification
+- [x] **AC13:** IPW docs/SOP language explicitly encode **Ascertain Requirements** as the first planning step before specification
 
 ---
 

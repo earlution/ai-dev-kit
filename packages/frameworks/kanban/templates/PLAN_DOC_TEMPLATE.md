@@ -16,33 +16,43 @@ housekeeping_policy: keep
 
 ---
 
-## 1. Specification
+## 1. Requirements (Ascertained Baseline)
 
-### 1.1 Goal
+### 1.1 Functional requirements (ascertained)
+
+| ID | Requirement | Source (FR/BR/Task) |
+| -- | ----------- | ------------------- |
+| RF1 | … | … |
+
+### 1.2 Non-functional requirements (ascertained)
+
+| ID | Requirement | Source (FR/BR/Task) |
+| -- | ----------- | ------------------- |
+| RNF1 | … | … |
+
+### 1.3 Invariants and boundaries
+
+- **Invariants:** …
+- **In scope:** …
+- **Out of scope:** …
+
+---
+
+## 2. Specification
+
+### 2.1 Goal
 
 [One paragraph: what outcome this plan enables.]
 
-### 1.2 Functional requirements
+### 2.2 Specification mapping from ascertained requirements
 
-| ID | Requirement | Source (FR/BR/Task) |
-|----|-------------|---------------------|
-| F1 | … | … |
+Describe how the specification formalizes the requirements baseline above.
 
-### 1.3 Non-functional requirements
-
-| ID | Requirement |
-|----|-------------|
-| N1 | … |
-
-### 1.4 Out of scope
+### 2.3 Constraints
 
 - …
 
-### 1.5 Constraints
-
-- …
-
-### 1.6 Status transition intent (mandatory for IPW-derived implementation tasks)
+### 2.4 Status transition intent (mandatory for IPW-derived implementation tasks)
 
 - **Current task status:** TODO | IN PROGRESS | COMPLETE
 - **Transition trigger to IN PROGRESS:** First non-planning implementation change lands.
@@ -52,31 +62,31 @@ housekeeping_policy: keep
 
 ---
 
-## 2. Test design
+## 3. Test design
 
 | ID | Behavior / layer | Expected check |
-|----|------------------|----------------|
+| -- | ---------------- | -------------- |
 | T1 | … | … |
 
 ---
 
-## 3. Implementation plan
+## 4. Implementation plan
 
 | Step | Action | Deliverable |
-|------|--------|-------------|
+| ---- | ------ | ----------- |
 | 1 | … | … |
 
-### 3.1 Files to create or modify
+### 4.1 Files to create or modify
 
 - …
 
-### 3.2 Dependency order
+### 4.2 Dependency order
 
 1. …
 
 ---
 
-## 4. Success / verification criteria
+## 5. Success / verification criteria
 
 - [ ] …
 

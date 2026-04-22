@@ -29,14 +29,15 @@ housekeeping_policy: keep
 ## Execution pattern (ANALYZE → DETERMINE → EXECUTE → VALIDATE → PROCEED)
 
 | Step | Name | Actions |
-|------|------|---------|
+| ---- | ---- | ------- |
 | **0** | Identify host task | Resolve E:S:T; confirm task doc exists on Kanban. |
-| **1** | Specification | Goal, functional/non-functional requirements, out of scope, constraints. |
-| **2** | Test design | Test IDs, behaviors, data, environments (or doc-only verification for doc tasks). |
-| **3** | Implementation plan | Ordered steps, files touched, dependencies. |
-| **4** | Create plan doc | From `PLAN_DOC_TEMPLATE.md`; set **Host Task** header with link to task markdown. |
-| **5** | Wire to host task | Add plan link under task doc **Input** and **References** (atomic with step 4). |
-| **6** | Validate | Bidirectional links work; required sections present. |
+| **1** | Ascertain requirements | Consolidate and confirm functional requirements, non-functional requirements, invariants, and in-scope vs out-of-scope boundaries from task and FR/BR context before drafting specification. |
+| **2** | Define specification | Encode the ascertained baseline as goal, functional/non-functional requirements, out of scope, and constraints. |
+| **3** | Design tests | Define test IDs, behaviors, data, and environments (or doc-only verification for doc tasks) mapped to specification coverage. |
+| **4** | Plan implementation | Define ordered implementation steps, files touched, and dependency sequencing. |
+| **5** | Create plan doc | From `PLAN_DOC_TEMPLATE.md`; set **Host Task** header with link to task markdown. |
+| **6** | Wire to host task | Add plan link under task doc **Input** and **References** (atomic with step 5). |
+| **7** | Validate | Confirm bidirectional links work and required sections are present with requirements-first ordering intact. |
 
 ## Status transition ownership (FR-077)
 
@@ -61,7 +62,6 @@ IPW itself is planning-only and must not directly transition implementation stat
 - Task-doc status is authoritative for transition decisions.
 - Board status is a propagated view and must not be advanced independently of task-doc status.
 - Propagation must be atomic at change-set/session level (no split-brain task-doc vs board status).
-
 
 ## Publication filing contract (BR-066 / E2:S15:T01)
 

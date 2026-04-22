@@ -8,9 +8,9 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 **Historical entries:** Per [`changelog-archival-policy`](docs/architecture/standards-and-adrs/changelog-archival-policy.md) (`changelog_archival.mode: latest_only` in `rw-config.yaml`), this file keeps only the latest release. Full history lives in [`CHANGELOG_ARCHIVE.md`](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_ARCHIVE.md) and `CHANGELOG_v*.md` under `docs/changelog-and-release-notes/changelog-archive/`.
 
 ---
-## [0.2.16.4+2] - 22-04-26
 
-E2:S16:T04 — **`RW -d`** with **`--art`**: publish UKW-driven kanban synchronization pass for Story 016 surfaces while preserving duplicate-tail telemetry for continued FR-090/BR-069 hardening investigation. SemVer **v0.4.764+2**.
+## [0.5.1.42+4] - 22-04-26
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.4+2.md)
----
+E5:S01:T42 — **`RW -k`** with **`--art`**: publish FR-042 closure follow-up with IPP artifact creation and board-level IPP linkage. SemVer **v0.4.764+4**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.42+4.md)

@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium (documentation + framework alignment; optional handler/registry follow-up)  
 **Created:** 2026-03-31  
-**Last updated:** 2026-04-02 (v0.5.1.42+3 — AC5 retro wiring + AC7 validator complete; FR-042 closed).  
+**Last updated:** 2026-04-22 (post v0.5.1.42+3 documentation closure — FR-042 reopen follow-up completed: R14 and AC13 closed).  
 **Version:** v0.5.1.42+3  
 **Code:** E5S01T42
 
@@ -46,6 +46,7 @@ This task covers:
 ## Input
 
 - **IPW planning artifact (spec / test design / impl plan):** [IPW-E5S01T42-ipw-icw-consolidation.md](IPW-E5S01T42-ipw-icw-consolidation.md)
+- **IPP closure artifact (R14/AC13):** [IPP-E5S01T42-ascertain-requirements-sequence-closure.md](../../../../../implementation-cycles/IPP-E5S01T42-ascertain-requirements-sequence-closure.md)
 - [FR-042 — IPW + ICW consolidation](../../../fr-br/FR-042-implementation-planning-workflow-ipw.md)
 - `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md`
 - **Prior ICW work (historical):** [FR-040](../../../fr-br/FR-040-implementation-cycle-workflow-icw.md), [E5:S01:T40](T40-implementation-cycle-workflow-icw.md), [FR-048](../../../fr-br/FR-048-icw-task-identifier-argument.md), [E5:S01:T48](T48-icw-task-identifier-argument.md)
@@ -54,9 +55,10 @@ This task covers:
 
 ## Acceptance Criteria
 
-Aligned with **FR-042** acceptance criteria (AC1–AC12).
+Aligned with **FR-042** acceptance criteria (AC1–AC13).
 
 - **AC5/AC7 complete:** historical plan docs wired; validator script implemented and passing.
+- **R14/AC13 follow-up complete:** canonical IPW sequence now encodes **Ascertain Requirements** before specification in both the IPW execution guide and plan template.
 
 ---
 
@@ -70,4 +72,5 @@ Aligned with **FR-042** acceptance criteria (AC1–AC12).
 ## References
 
 - **Plan doc (bidirectional):** [IPW-E5S01T42-ipw-icw-consolidation.md](IPW-E5S01T42-ipw-icw-consolidation.md)
+- **IPP closure artifact:** [IPP-E5S01T42-ascertain-requirements-sequence-closure.md](../../../../../implementation-cycles/IPP-E5S01T42-ascertain-requirements-sequence-closure.md)
 - Implementation Cycle Workflow package (legacy ICW): `packages/frameworks/workflow mgt/workflows/implementation-cycle-workflow/`
