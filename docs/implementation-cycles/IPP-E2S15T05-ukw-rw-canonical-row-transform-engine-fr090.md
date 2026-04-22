@@ -30,6 +30,7 @@ Implement FR-090 by introducing a shared canonical row-transform pipeline for UK
 | F4 | No synthetic second `Last modified` is appended when a valid timestamp already exists. | T05 AC3, FR-090-F4 |
 | F5 | Duplicate FBU/task/IPP/footer segments are reduced to canonical single-instance output. | T05 AC4, FR-090-F5 |
 | F6 | Divergence-safe diagnostics and forensic fallback remain consistent between RW and UKW. | T05 AC5, FR-090-F6 |
+| F7 | Repeating tail segments without parseable per-segment timestamps are still normalized to canonical single-instance token order. | T05 AC4, FR-090-F5 extension |
 
 ### 1.3 Non-functional requirements
 
@@ -58,12 +59,14 @@ Implement FR-090 by introducing a shared canonical row-transform pipeline for UK
 | T4 | Deduplication | Repeated runs do not multiply task/FBU/IPP/footer segments. |
 | T5 | Idempotency | Canonicalized fixtures are unchanged on subsequent runs. |
 | T6 | Divergence policy | Divergence rows are diagnosed and preserved forensic-safe. |
+| T7 | Non-timestamped tail duplication | Rows with repeated FBU/task/IPP tails and missing/ambiguous timestamp chunks normalize without requiring timestamp-led selection. |
 
 ### 2.1 Planned test updates
 
 - Extend `packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py` with parity fixtures and canonical ordering assertions.
 - Evolve documentary regression `test_4_13` into post-fix preservation/pass assertions once divergence is eliminated.
 - Add repeated-run fixture checks for deduplication and timestamp stability.
+- Add fixtures for repeated non-timestamped tail tokens (`FBU/Task/IPP`) to enforce canonical collapse behavior independent of parseable timestamp chunks.
 
 ---
 
@@ -83,6 +86,7 @@ Implement FR-090 by introducing a shared canonical row-transform pipeline for UK
 
 1. Add parity, ordering, timestamp, deduplication, and idempotency tests.
 2. Validate that known BR-069 symptom fixtures resolve to canonical output.
+3. Add explicit regression coverage for non-timestamped/ambiguous tail-segment multiplication observed in live `kboard`/`fbuboard` rows.
 
 ### Phase 4 - Validation and traceability closure
 

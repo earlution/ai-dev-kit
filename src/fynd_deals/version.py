@@ -19,14 +19,14 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 2      # Epic number (Epic 2: workflow management framework)
-VERSION_STORY = 15    # Story number within epic
-VERSION_TASK = 5      # Task number (E2:S15:T05 — implement UKW/RW canonical row-transform engine FR-090)
-VERSION_BUILD = 12    # Build number (RW E2:S15:T05 --art)
+VERSION_STORY = 16    # Story number within epic
+VERSION_TASK = 4      # Task number (E2:S16:T04 — ad-hoc kanban synchronization and hygiene perpetual)
+VERSION_BUILD = 1     # Build number (RW -d E2:S16:T04 --art)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.2.15.5+12 = Development, Epic 2, Story 15, Task 5, Build 12
+# Current: 0.2.16.4+1 = Development, Epic 2, Story 16, Task 4, Build 1
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

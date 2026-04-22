@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.5+12] - 22-04-26
+## [0.2.16.4+1] - 22-04-26
 
-E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 4 verification and AC traceability closure updates across T05 task/IPP governance artifacts, with synchronized release metadata. SemVer **v0.4.764+12**.
+E2:S16:T04 — **`RW -d`** with **`--art`**: publish the UKW-backed kanban-maintenance perpetual release, including synchronized board/story/epic metadata and carried T05 planning/task clarifications. SemVer **v0.4.764+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+12.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.4+1.md)

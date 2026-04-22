@@ -26,12 +26,15 @@ housekeeping_policy: keep
 - FR-090 defines redesign requirements for shared transform pipeline and board-specific rendering contracts.
 - Existing implementation surface: `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`.
 - IPP planning artifact published: [IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090](../../../../../implementation-cycles/IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090.md)
+- Current `kboard`/`fbuboard` state still exhibits repeated tail-segment multiplication on some active rows where per-segment timestamp evidence is absent, partial, or ambiguous.
 
 ---
 
 ## Problem statement
 
 RW and UKW currently mutate MoSCOW rows through append/reconcile-style transforms with divergent ordering and terminal-position-dependent timestamp enforcement. This permits repeated FBU/task/IPP/timestamp segments and inconsistent output between contexts.
+
+Additionally, some live board rows accumulate repeated tail segments without clean per-segment timestamp evidence, so purely timestamp-led reconciliation cannot deterministically collapse all multiplied tokens. The canonical transform path must therefore normalize both timestamped and non-timestamped repeated tail-segment patterns.
 
 Task T05 implements the FR-090 architecture so both workflows remain cohesive, loosely coupled, and sympathetically aware through explicit contracts and shared canonical transforms.
 
@@ -49,7 +52,7 @@ Task T05 implements the FR-090 architecture so both workflows remain cohesive, l
 
 1. Implement shared parse-normalize-render transform API for MoSCOW row tails.
 2. Integrate API in both `update_kanban_board` and `enforce_terminal_timestamps_on_boards`.
-3. Enforce invocation context contract (`rw_step_7` vs `standalone`) and mutation budget behavior.
+3. Enforce invocation context contract (`rw_step_7` vs `standalone`) and mutation budget behavior, including non-timestamped tail-segment dedup behavior.
 4. Add/upgrade regression tests for parity and invariants.
 
 ---
