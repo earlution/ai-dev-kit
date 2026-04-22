@@ -22,13 +22,14 @@ Usage:
 """
 
 import argparse
+from dataclasses import dataclass
 import hashlib
 import os
 import re
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 try:
     import yaml
@@ -892,6 +893,72 @@ def normalize_board_traceability_segments(board_content: str, project_root: Path
     return "\n".join(out_lines)
 
 
+@dataclass(frozen=True)
+class RowTransformContract:
+    """
+    Board-specific row transform contract.
+
+    NOTE: Phase 1 introduces a shared entrypoint and explicit contract surface
+    while preserving existing per-context transform order. Phase 2 can converge
+    these contracts to remove RW/UKW divergence.
+    """
+
+    name: str
+    step_order: Tuple[str, ...]
+
+
+ROW_TRANSFORM_CONTRACT_RW_STEP7 = RowTransformContract(
+    name="rw_step_7",
+    step_order=("traceability", "duplicate_footer_reconcile", "timestamp_enforce"),
+)
+
+ROW_TRANSFORM_CONTRACT_STANDALONE = RowTransformContract(
+    name="standalone",
+    step_order=("duplicate_footer_reconcile", "traceability", "timestamp_enforce"),
+)
+
+
+def apply_canonical_row_transform_pipeline(
+    board_content: str,
+    project_root: Path,
+    timestamp_value: str,
+    contract: RowTransformContract,
+) -> Tuple[str, Dict[str, Any]]:
+    """
+    Apply canonical parse-normalize-render row transforms through a selected contract.
+
+    Returns transformed content plus diagnostics (including duplicate-footer report).
+    """
+    transformed = board_content
+    dup_report: Dict[str, object] = {
+        "rows_with_duplicate_footers": 0,
+        "duplicate_footer_row_ids": [],
+        "timestamp_order_divergence_rows": 0,
+        "timestamp_order_divergence_row_ids": [],
+    }
+    executed_steps: List[str] = []
+
+    for step in contract.step_order:
+        if step == "traceability":
+            transformed = normalize_board_traceability_segments(transformed, project_root)
+            executed_steps.append(step)
+        elif step == "duplicate_footer_reconcile":
+            transformed, dup_report = reconcile_duplicate_moscow_row_footers(transformed)
+            executed_steps.append(step)
+        elif step == "timestamp_enforce":
+            transformed = enforce_moscow_row_timestamps(transformed, timestamp_value)
+            executed_steps.append(step)
+        else:
+            raise ValueError(f"Unknown row-transform step '{step}' in contract '{contract.name}'")
+
+    diagnostics: Dict[str, Any] = {
+        "contract": contract.name,
+        "executed_steps": executed_steps,
+        "dup_report": dup_report,
+    }
+    return transformed, diagnostics
+
+
 def update_kanban_board(
     board_path: Path,
     epic: int,
@@ -948,11 +1015,15 @@ def update_kanban_board(
         )
         changes.append(f"Updated board Version: {version_string}")
 
-    # Normalize deterministic traceability segments for MoSCOW rows.
-    content = normalize_board_traceability_segments(content, Path.cwd())
-
-    # Reconcile duplicate footer chunks before timestamp enforcement.
-    content, dup_report = reconcile_duplicate_moscow_row_footers(content)
+    # Phase 1 canonical pipeline entrypoint (RW Step 7 contract).
+    timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
+    content, row_pipeline_diagnostics = apply_canonical_row_transform_pipeline(
+        board_content=content,
+        project_root=Path.cwd(),
+        timestamp_value=timestamp_now,
+        contract=ROW_TRANSFORM_CONTRACT_RW_STEP7,
+    )
+    dup_report = row_pipeline_diagnostics["dup_report"]
     if dup_report["rows_with_duplicate_footers"] > 0:
         changes.append(
             "Duplicate footer audit: "
@@ -966,10 +1037,6 @@ def update_kanban_board(
             f"row_ids={dup_report['timestamp_order_divergence_row_ids']}"
         )
 
-    # Enforce terminal row timestamp format for MoSCOW rows.
-    timestamp_now = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
-    content = enforce_moscow_row_timestamps(content, timestamp_now)
-    
     # Find and update epic section
     epic_section = find_epic_section(content, epic)
     if epic_section:
@@ -1374,14 +1441,21 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
 
         if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
             updated, stats = _cleanup_fbuboard_active_rows(original, board, timestamp_now)
-            updated, dup_report = reconcile_duplicate_moscow_row_footers(updated)
-            # Ensure timestamp normalization still applies uniformly for all MoSCOW rows.
-            updated = normalize_board_traceability_segments(updated, project_root)
-            updated = enforce_moscow_row_timestamps(updated, timestamp_now)
+            updated, row_pipeline_diagnostics = apply_canonical_row_transform_pipeline(
+                board_content=updated,
+                project_root=project_root,
+                timestamp_value=timestamp_now,
+                contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
+            )
+            dup_report = row_pipeline_diagnostics["dup_report"]
         else:
-            updated, dup_report = reconcile_duplicate_moscow_row_footers(original)
-            updated = normalize_board_traceability_segments(updated, project_root)
-            updated = enforce_moscow_row_timestamps(updated, timestamp_now)
+            updated, row_pipeline_diagnostics = apply_canonical_row_transform_pipeline(
+                board_content=original,
+                project_root=project_root,
+                timestamp_value=timestamp_now,
+                contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
+            )
+            dup_report = row_pipeline_diagnostics["dup_report"]
             stats = None
 
         if updated != original:
@@ -1392,13 +1466,21 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                 # Re-apply transforms to latest content to avoid stale writes.
                 if board.name in {"fbuboard.md", "fr-br-uxr-board.md"}:
                     updated, stats = _cleanup_fbuboard_active_rows(live, board, timestamp_now)
-                    updated, dup_report = reconcile_duplicate_moscow_row_footers(updated)
-                    updated = normalize_board_traceability_segments(updated, project_root)
-                    updated = enforce_moscow_row_timestamps(updated, timestamp_now)
+                    updated, row_pipeline_diagnostics = apply_canonical_row_transform_pipeline(
+                        board_content=updated,
+                        project_root=project_root,
+                        timestamp_value=timestamp_now,
+                        contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
+                    )
+                    dup_report = row_pipeline_diagnostics["dup_report"]
                 else:
-                    updated, dup_report = reconcile_duplicate_moscow_row_footers(live)
-                    updated = normalize_board_traceability_segments(updated, project_root)
-                    updated = enforce_moscow_row_timestamps(updated, timestamp_now)
+                    updated, row_pipeline_diagnostics = apply_canonical_row_transform_pipeline(
+                        board_content=live,
+                        project_root=project_root,
+                        timestamp_value=timestamp_now,
+                        contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
+                    )
+                    dup_report = row_pipeline_diagnostics["dup_report"]
                 changes.append(f"Concurrency revalidation: board changed during run, re-applied transforms: {board}")
 
             if not dry_run:

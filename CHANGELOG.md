@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.5+8] - 22-04-26
+## [0.2.15.5+9] - 22-04-26
 
-E2:S15:T05 — **`RW`** with **`--art`**: publish the next iterative build for FR-090 governance, adding `IPP-E2S15T05` board traceability and synchronized release metadata. SemVer **v0.4.764+8**.
+E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 1 canonical row-transform entrypoint introduction and contract wiring in `update_kanban_docs.py`, with synchronized release metadata. SemVer **v0.4.764+9**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+8.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+9.md)

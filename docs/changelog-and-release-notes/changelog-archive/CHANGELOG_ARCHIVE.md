@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.5+9] - 22-04-26
+
+E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 1 canonical row-transform entrypoint and contract wiring for FR-090 implementation hardening. SemVer **v0.4.764+9**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+9.md)
+---
 ## [0.2.15.5+8] - 22-04-26
 
 E2:S15:T05 — **`RW`** with **`--art`**: publish the next iterative FR-090 implementation build with explicit `IPP-E2S15T05` traceability on `kboard`/`fbuboard`. SemVer **v0.4.764+8**.

@@ -852,6 +852,64 @@ def test_4_13_br069_pipeline_order_divergence_and_non_terminal_footer_append():
     return run_test("Test 4.13: BR-069 pipeline order + double-footer append (documentary)", setup, test)
 
 
+def test_4_14_phase1_canonical_entrypoint_exposes_contract_selected_order():
+    """Test 4.14: shared canonical entrypoint applies selected contract order."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        planning_dir = test_dir / "docs" / "implementation-cycles"
+        planning_dir.mkdir(parents=True, exist_ok=True)
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        root = Path(test_dir)
+        now = "2099-06-15 18:00 UTC"
+        header = "## MoSCOW Priority\n\n### Must Have\n\n"
+        row = (
+            '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+            "[E2:S15:T04](epics/E2/T04.md) | [—IPP—](../../implementation-cycles/x.md) | "
+            "Last modified: 2024-01-01 08:00 UTC | "
+            "Last modified: 2026-04-21 10:00 UTC\n"
+        )
+        content = header + row
+
+        rw_out, rw_diag = mod.apply_canonical_row_transform_pipeline(
+            board_content=content,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_RW_STEP7,
+        )
+        standalone_out, standalone_diag = mod.apply_canonical_row_transform_pipeline(
+            board_content=content,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_STANDALONE,
+        )
+
+        if rw_diag["contract"] != "rw_step_7":
+            return False, f"Expected rw_step_7 diagnostics contract, got {rw_diag['contract']}"
+        if standalone_diag["contract"] != "standalone":
+            return False, f"Expected standalone diagnostics contract, got {standalone_diag['contract']}"
+
+        expected_rw_steps = ["traceability", "duplicate_footer_reconcile", "timestamp_enforce"]
+        expected_standalone_steps = ["duplicate_footer_reconcile", "traceability", "timestamp_enforce"]
+        if rw_diag["executed_steps"] != expected_rw_steps:
+            return False, f"Unexpected rw_step_7 step order: {rw_diag['executed_steps']}"
+        if standalone_diag["executed_steps"] != expected_standalone_steps:
+            return False, f"Unexpected standalone step order: {standalone_diag['executed_steps']}"
+
+        if rw_out == standalone_out:
+            return False, "Expected contract-selected ordering to preserve currently documented divergence in Phase 1"
+
+        return True, ""
+
+    return run_test("Test 4.14: Phase 1 canonical entrypoint contract order", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -1058,6 +1116,14 @@ def main():
         else:
             print(f"❌ Test 4.13: BR-069 pipeline order + double-footer append - FAILED: {error}")
             test_results['failed'].append("4.13")
+
+        success, error = test_4_14_phase1_canonical_entrypoint_exposes_contract_selected_order()
+        if success:
+            print("✅ Test 4.14: Phase 1 canonical entrypoint contract order - PASSED")
+            test_results['passed'].append("4.14")
+        else:
+            print(f"❌ Test 4.14: Phase 1 canonical entrypoint contract order - FAILED: {error}")
+            test_results['failed'].append("4.14")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:
