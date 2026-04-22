@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.16.4+2] - 22-04-26
+
+E2:S16:T04 — **`RW -d`** with **`--art`**: publish UKW-driven kanban synchronization pass for Story 016 surfaces while preserving duplicate-tail telemetry for continued FR-090/BR-069 hardening investigation. SemVer **v0.4.764+2**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.4+2.md)
+---
 ## [0.2.16.5+1] - 22-04-26
 
 E2:S16:T05 — **`RW -d`** with **`--art`**: publish dedicated perpetual markdown documentation maintenance lane and propagate IPW/ICW `Ascertain Requirements` (functional + non-functional) workflow hardening. SemVer **v0.4.764+1**.
