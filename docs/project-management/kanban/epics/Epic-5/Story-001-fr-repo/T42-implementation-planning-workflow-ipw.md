@@ -9,12 +9,12 @@ housekeeping_policy: keep
 # Epic 5, Story 1, Task 42: Implementation Planning Workflow (IPW) — ICW consolidation
 
 **Task ID:** E5:S01:T42  
-**Status:** ✅ COMPLETE (v0.5.1.42+3)  
+**Status:** ✅ COMPLETE (v0.5.1.42+5)  
 **Priority:** HIGH  
 **Estimated Effort:** Medium (documentation + framework alignment; optional handler/registry follow-up)  
 **Created:** 2026-03-31  
-**Last updated:** 2026-04-22 (post v0.5.1.42+3 documentation closure — FR-042 reopen follow-up completed: R14 and AC13 closed).  
-**Version:** v0.5.1.42+3  
+**Last updated:** 2026-04-22 (post v0.5.1.42+5 release alignment — FR-042 reopen follow-up completed, IPP published/wired, and traceability surfaces synchronized).  
+**Version:** v0.5.1.42+5  
 **Code:** E5S01T42
 
 **Repository Pattern:** FR-042 = E5:S01:T42 (first implementation build when delivered: e.g. v0.5.1.42+1)

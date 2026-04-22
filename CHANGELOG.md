@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.42+5] - 22-04-26
+## [0.5.1.42+6] - 22-04-26
 
-E5:S01:T42 — **`RW`** with **`--art`**: continue FR-042 closure progression from IPP execution flow, including release metadata and kanban propagation updates. SemVer **v0.4.764+5**.
+E5:S01:T42 — **`RW`** with **`--art`**: publish latest T42 reconciliation updates and continue closure execution for IPW governance artifacts. SemVer **v0.4.764+6**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.42+5.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.42+6.md)
