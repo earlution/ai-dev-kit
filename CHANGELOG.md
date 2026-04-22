@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.5.1.42+4] - 22-04-26
+## [0.5.1.42+5] - 22-04-26
 
-E5:S01:T42 — **`RW -k`** with **`--art`**: publish FR-042 closure follow-up with IPP artifact creation and board-level IPP linkage. SemVer **v0.4.764+4**.
+E5:S01:T42 — **`RW`** with **`--art`**: continue FR-042 closure progression from IPP execution flow, including release metadata and kanban propagation updates. SemVer **v0.4.764+5**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.42+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.5.1.42+5.md)

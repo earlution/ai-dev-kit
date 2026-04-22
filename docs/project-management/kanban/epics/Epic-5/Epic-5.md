@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2025-12-05  
-**Last updated:** 2026-04-22 (v0.5.1.42+4 – Kanban documentation setup)
+**Last updated:** 2026-04-22 (v0.5.1.42+5 – Story 1 Task 42 complete)
 **Branch:** `epic/5-documentation-management`  
 **Version Schema:** `0.5.S.T+B`  
 **Production URL:** [N/A for this repo]
@@ -108,7 +108,7 @@ Epic 5 owns the **Documentation Management and Maintenance** framework for the a
 **Status:** IN PROGRESS (PERPETUAL)  
 **Priority:** HIGH  
 **Estimated Effort:** N/A (Perpetual repository)  
-**Last updated:** 2026-04-22 (v0.5.1.42+4 – Kanban documentation setup)
+**Last updated:** 2026-04-22 (v0.5.1.42+5 – Story 1 Task 42 complete)
 
 **Goal:**  
 Repository story for all Feature Requests. Provides 1:1 traceability between FR numbers and task numbers.
@@ -124,7 +124,7 @@ Repository story for all Feature Requests. Provides 1:1 traceability between FR 
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-22 (v0.5.1.42+4 – Kanban documentation setup)
+**Last updated:** 2026-04-22 (v0.5.1.42+5 – Story 1 Task 42 complete)
 
 **Goal:**  
 Establish a framework for maintaining documentation accuracy and consistency across the dev-kit.
@@ -146,7 +146,7 @@ Establish a framework for maintaining documentation accuracy and consistency acr
 **Status:** COMPLETE ✅  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-22 (v0.5.1.42+4 – Kanban documentation setup)
+**Last updated:** 2026-04-22 (v0.5.1.42+5 – Story 1 Task 42 complete)
 
 **Goal:**  
 Implement quality assurance processes and tools for documentation validation.
@@ -167,7 +167,7 @@ Implement quality assurance processes and tools for documentation validation.
 **Status:** IN PROGRESS  
 **Priority:** MEDIUM  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-22 (v0.5.1.42+4 – Kanban documentation setup)
+**Last updated:** 2026-04-22 (v0.5.1.42+5 – Story 1 Task 42 complete)
 
 **Goal:**  
 Automate documentation maintenance tasks to reduce manual effort and improve consistency.
@@ -188,7 +188,7 @@ Automate documentation maintenance tasks to reduce manual effort and improve con
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-22 (v0.5.1.42+4 – Kanban documentation setup)
+**Last updated:** 2026-04-22 (v0.5.1.42+5 – Story 1 Task 42 complete)
 
 **Goal:**  
 Investigate the ramifications of the persistent knowledge base concept, including integration points, workflow impacts, tooling requirements, and agent capabilities; establish Notion hub and KB index for migration.
@@ -206,7 +206,7 @@ Investigate the ramifications of the persistent knowledge base concept, includin
 **Status:** IN PROGRESS  
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
-**Last updated:** 2026-04-22 (v0.5.1.42+4 – Kanban documentation setup)
+**Last updated:** 2026-04-22 (v0.5.1.42+5 – Story 1 Task 42 complete)
 
 **Goal:**  
 Complete Docusaurus adoption: canonical `docs/` ingest (with publish scope), green builds, IA, CI, hosting, search, and **production URL go-live**—tracked via **FR-065**–**FR-071** plus **E5:S09:T09** (Pages verification).
