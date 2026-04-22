@@ -846,28 +846,43 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
     if not line.strip().startswith("- **"):
         return line
 
-    # Remove pre-existing IPP segment to avoid duplicates before rebuilding.
-    line = re.sub(r"\s*\|\s*(?:\[—IPP—\]\([^)]+\)|—No IPP—)\s*", " | ", line)
-    line = re.sub(r"\s+\|\s+\|\s+", " | ", line)
+    # Preserve an existing terminal footer so traceability segments are inserted
+    # before it, keeping Last modified terminal.
+    footer_match = re.search(r"\s*\|\s*Last modified:\s*\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\s+UTC\s*$", line)
+    footer_suffix = ""
+    line_core = line
+    if footer_match:
+        footer_suffix = footer_match.group(0).strip()
+        line_core = line[:footer_match.start()].rstrip()
 
-    fbu_link_match = re.search(r"\[(FR|BR|UXR)-(\d+)\]\(([^)]+)\)", line)
-    task_link_match = re.search(r"\[(E\d+:S\d+:T\d+)\]\(([^)]+)\)", line)
-    task_id_bold_match = re.search(r"-\s+\*\*(E\d+:S\d+:T\d+)\*\*", line)
+    # Remove pre-existing IPP segment to avoid duplicates before rebuilding.
+    line_core = re.sub(r"\s*\|\s*(?:\[—IPP—\]\([^)]+\)|—No IPP—)\s*", " | ", line_core)
+    line_core = re.sub(r"\s+\|\s+\|\s+", " | ", line_core)
+
+    fbu_link_match = re.search(r"\[(FR|BR|UXR)-(\d+)\]\(([^)]+)\)", line_core)
+    task_link_match = re.search(r"\[(E\d+:S\d+:T\d+)\]\(([^)]+)\)", line_core)
+    task_id_bold_match = re.search(r"-\s+\*\*(E\d+:S\d+:T\d+)\*\*", line_core)
 
     if fbu_link_match and task_link_match:
         fbu_token = f"[{fbu_link_match.group(1)}-{fbu_link_match.group(2)}]({fbu_link_match.group(3)})"
         task_token = f"[{task_link_match.group(1)}]({task_link_match.group(2)})"
         ipp_token = render_ipp_segment_for_task(task_link_match.group(1), project_root)
-        return f"{line.rstrip()} | {fbu_token} | {task_token} | {ipp_token}"
+        normalized_core = f"{line_core.rstrip()} | {fbu_token} | {task_token} | {ipp_token}"
+        if footer_suffix:
+            return f"{normalized_core} | {footer_suffix}"
+        return normalized_core
 
     # kboard compatibility path: task row has bold task id + Task Document link.
-    task_doc_match = re.search(r"\[Task Document\]\(([^)]+)\)", line)
+    task_doc_match = re.search(r"\[Task Document\]\(([^)]+)\)", line_core)
     if task_id_bold_match and task_doc_match:
         task_id = task_id_bold_match.group(1)
         task_token = f"[{task_id}]({task_doc_match.group(1)})"
         ipp_token = render_ipp_segment_for_task(task_id, project_root)
         # FBU token cannot be deterministically inferred here; leave row unchanged.
-        return f"{line.rstrip()} | {task_token} | {ipp_token}"
+        normalized_core = f"{line_core.rstrip()} | {task_token} | {ipp_token}"
+        if footer_suffix:
+            return f"{normalized_core} | {footer_suffix}"
+        return normalized_core
 
     return line
 
@@ -898,9 +913,9 @@ class RowTransformContract:
     """
     Board-specific row transform contract.
 
-    NOTE: Phase 1 introduces a shared entrypoint and explicit contract surface
-    while preserving existing per-context transform order. Phase 2 can converge
-    these contracts to remove RW/UKW divergence.
+    Phase 1 introduced a shared entrypoint + explicit contract surface.
+    Phase 2 converges RW/UKW ordering so both contexts apply the same
+    canonical row-transform sequence.
     """
 
     name: str
@@ -914,7 +929,7 @@ ROW_TRANSFORM_CONTRACT_RW_STEP7 = RowTransformContract(
 
 ROW_TRANSFORM_CONTRACT_STANDALONE = RowTransformContract(
     name="standalone",
-    step_order=("duplicate_footer_reconcile", "traceability", "timestamp_enforce"),
+    step_order=("traceability", "duplicate_footer_reconcile", "timestamp_enforce"),
 )
 
 

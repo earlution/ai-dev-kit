@@ -789,7 +789,7 @@ def test_4_12_repeated_runs_do_not_walk_timestamp_forward_after_normalization():
 
 
 def test_4_13_br069_pipeline_order_divergence_and_non_terminal_footer_append():
-    """Documents BR-069 / IPP-E2S15T04: transform order differs between update_kanban_board and UKW paths; enforce can append a terminal timestamp when a historical footer is left non-terminal after traceability normalization."""
+    """Phase 2 regression: unified pipeline order and terminal-footer preservation prevent BR-069 style synthetic second footer append."""
     def setup():
         test_dir = Path(tempfile.mkdtemp())
         planning_dir = test_dir / "docs" / "implementation-cycles"
@@ -815,37 +815,38 @@ def test_4_13_br069_pipeline_order_divergence_and_non_terminal_footer_append():
         )
         doc_dup = header + dup_row
 
-        def order_update_then_reconcile(content: str) -> str:
-            c = mod.normalize_board_traceability_segments(content, root)
-            c, _ = mod.reconcile_duplicate_moscow_row_footers(c)
-            return mod.enforce_moscow_row_timestamps(c, now)
-
-        def order_ukw_kboard(content: str) -> str:
-            c, _ = mod.reconcile_duplicate_moscow_row_footers(content)
-            c = mod.normalize_board_traceability_segments(c, root)
-            return mod.enforce_moscow_row_timestamps(c, now)
-
-        out_u = order_update_then_reconcile(doc_dup)
-        out_k = order_ukw_kboard(doc_dup)
-        if out_u == out_k:
-            return (
-                False,
-                "Expected update_kanban_board order to differ from UKW order for duplicate-footer rows (BR-069 ordering risk)",
-            )
+        out_u, diag_u = mod.apply_canonical_row_transform_pipeline(
+            board_content=doc_dup,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_RW_STEP7,
+        )
+        out_k, diag_k = mod.apply_canonical_row_transform_pipeline(
+            board_content=doc_dup,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_STANDALONE,
+        )
+        if out_u != out_k:
+            return False, "Expected unified RW/UKW contracts to produce identical output"
+        if diag_u["executed_steps"] != diag_k["executed_steps"]:
+            return False, "Expected unified contract step order between RW and standalone paths"
 
         single_row = (
             '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
             "[E2:S15:T04](epics/E2/T04.md) | Last modified: 2024-06-01 09:00 UTC\n"
         )
         doc_single = header + single_row
-        single_ukw = order_ukw_kboard(doc_single)
-        if single_ukw.count("Last modified:") < 2:
-            return (
-                False,
-                "Expected UKW ordering to introduce a second Last modified chunk when normalize leaves a non-terminal historical footer (BR-069)",
-            )
-        if not single_ukw.rstrip().endswith(f"Last modified: {now}"):
-            return False, f"Expected synthetic terminal footer {now}, got tail: {single_ukw!r}"
+        single_out, _ = mod.apply_canonical_row_transform_pipeline(
+            board_content=doc_single,
+            project_root=root,
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_STANDALONE,
+        )
+        if single_out.count("Last modified:") != 1:
+            return False, f"Expected a single Last modified footer after transform, got: {single_out!r}"
+        if not single_out.rstrip().endswith("Last modified: 2024-06-01 09:00 UTC"):
+            return False, "Expected historical footer to remain terminal after traceability normalization"
 
         return True, ""
 
@@ -853,7 +854,7 @@ def test_4_13_br069_pipeline_order_divergence_and_non_terminal_footer_append():
 
 
 def test_4_14_phase1_canonical_entrypoint_exposes_contract_selected_order():
-    """Test 4.14: shared canonical entrypoint applies selected contract order."""
+    """Test 4.14: shared canonical entrypoint exposes unified contract order."""
     def setup():
         test_dir = Path(tempfile.mkdtemp())
         planning_dir = test_dir / "docs" / "implementation-cycles"
@@ -896,14 +897,14 @@ def test_4_14_phase1_canonical_entrypoint_exposes_contract_selected_order():
             return False, f"Expected standalone diagnostics contract, got {standalone_diag['contract']}"
 
         expected_rw_steps = ["traceability", "duplicate_footer_reconcile", "timestamp_enforce"]
-        expected_standalone_steps = ["duplicate_footer_reconcile", "traceability", "timestamp_enforce"]
+        expected_standalone_steps = ["traceability", "duplicate_footer_reconcile", "timestamp_enforce"]
         if rw_diag["executed_steps"] != expected_rw_steps:
             return False, f"Unexpected rw_step_7 step order: {rw_diag['executed_steps']}"
         if standalone_diag["executed_steps"] != expected_standalone_steps:
             return False, f"Unexpected standalone step order: {standalone_diag['executed_steps']}"
 
-        if rw_out == standalone_out:
-            return False, "Expected contract-selected ordering to preserve currently documented divergence in Phase 1"
+        if rw_out != standalone_out:
+            return False, "Expected unified contracts to produce identical output"
 
         return True, ""
 

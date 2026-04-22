@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.15.5+10] - 22-04-26
+
+E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 2 convergence for canonical row-transform ordering and terminal footer preservation under FR-090 hardening scope. SemVer **v0.4.764+10**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+10.md)
+---
 ## [0.2.15.5+9] - 22-04-26
 
 E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 1 canonical row-transform entrypoint and contract wiring for FR-090 implementation hardening. SemVer **v0.4.764+9**.

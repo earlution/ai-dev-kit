@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.5+9] - 22-04-26
+## [0.2.15.5+10] - 22-04-26
 
-E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 1 canonical row-transform entrypoint introduction and contract wiring in `update_kanban_docs.py`, with synchronized release metadata. SemVer **v0.4.764+9**.
+E2:S15:T05 — **`RW`** with **`--art`**: publish Phase 2 unified RW/UKW transform ordering and terminal-footer preservation hardening, with synchronized release metadata. SemVer **v0.4.764+10**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+9.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.5+10.md)
