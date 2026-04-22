@@ -1,4 +1,10 @@
 # Changelog Archive
+## [0.2.16.5+1] - 22-04-26
+
+E2:S16:T05 — **`RW -d`** with **`--art`**: publish dedicated perpetual markdown documentation maintenance lane and propagate IPW/ICW `Ascertain Requirements` (functional + non-functional) workflow hardening. SemVer **v0.4.764+1**.
+
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.5+1.md)
+---
 ## [0.2.16.4+1] - 22-04-26
 
 E2:S16:T04 — **RW** with **`--art`**: publish the dedicated ad-hoc kanban synchronization and hygiene perpetual lane under Story 016's workflow-maintenance umbrella routing model. SemVer **v0.4.764+1**.

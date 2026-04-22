@@ -70,3 +70,38 @@ Task T05 implements the FR-090 architecture so both workflows remain cohesive, l
 - [BR-069](../../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
 - [E2:S15:T04](T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)
 - [IPP-E2S15T04](../../../../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md)
+
+---
+
+## Planning Artifacts (ICW/IPW Package)
+
+- [ICW-E2S15T05-specification](../../../../../implementation-cycles/ICW-E2S15T05-specification.md)
+- [ICW-E2S15T05-test-design](../../../../../implementation-cycles/ICW-E2S15T05-test-design.md)
+- [ICW-E2S15T05-implementation-plan](../../../../../implementation-cycles/ICW-E2S15T05-implementation-plan.md)
+
+## AC Traceability to Planning Package
+
+- **AC1:** Shared canonical row-transform pipeline  
+  - Specification: shared pipeline + structured model requirements  
+  - Test Design: RW/UKW parity matrix  
+  - Implementation Plan: Phase 1 and Phase 2 integration
+- **AC2:** `fbuboard` renders `FBU -> Task -> IPP -> Last modified`  
+  - Specification: board contract requirement and invariants  
+  - Test Design: fbuboard ordering contract coverage  
+  - Implementation Plan: Phase 1 board-contract renderer
+- **AC3:** No synthetic second `Last modified` when valid timestamp exists  
+  - Specification: timestamp requirement  
+  - Test Design: timestamp safety coverage  
+  - Implementation Plan: Phase 2 ordering unification
+- **AC4:** Repeated runs are idempotent without segment multiplication  
+  - Specification: deduplication + idempotency requirements  
+  - Test Design: repeated-run idempotency and dedup coverage  
+  - Implementation Plan: Phase 3 regression hardening
+- **AC5:** Regression suite proves parity and forensic-safe divergence behavior  
+  - Specification: divergence safety requirement  
+  - Test Design: divergence policy and documentary regression evolution  
+  - Implementation Plan: Phase 3 and Phase 4 validation
+- **AC6:** FR-090 and BR-069 residuals are traceably satisfiable through T05  
+  - Specification: traceability section  
+  - Test Design: residual closure readiness criterion  
+  - Implementation Plan: Phase 4 traceability closure

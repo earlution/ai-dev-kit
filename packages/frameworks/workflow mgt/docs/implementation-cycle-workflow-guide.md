@@ -30,26 +30,31 @@ ICW outputs must be **committed under `docs/`** (by default `docs/implementation
 The ICW follows a structured five-phase approach:
 
 ### Phase 1: ANALYZE
+
 - **Objective:** Deep analysis of requirements and context
 - **Activities:** Requirements gathering, impact analysis, dependency identification
 - **Output:** Comprehensive analysis report and implementation scope
 
 ### Phase 2: DETERMINE  
+
 - **Objective:** Strategic planning and approach determination
 - **Activities:** Solution design, implementation strategy, resource planning
 - **Output:** Detailed implementation plan and execution roadmap
 
 ### Phase 3: EXECUTE
+
 - **Objective:** Systematic implementation of the solution
 - **Activities:** Code implementation, configuration changes, documentation updates
 - **Output:** Complete implementation with supporting artifacts
 
 ### Phase 4: VALIDATE
+
 - **Objective:** Comprehensive validation of implementation quality
 - **Activities:** Testing, quality assurance, performance validation
 - **Output:** Validation report and quality metrics
 
 ### Phase 5: PROCEED
+
 - **Objective:** Final documentation and next steps determination
 - **Activities:** Documentation completion, knowledge transfer, future planning
 - **Output:** Complete documentation and implementation closure
@@ -73,7 +78,8 @@ python packages/frameworks/workflow\ mgt/scripts/generate_workflow.py \
 ### Using the Existing ICW Workflow
 
 The framework includes a pre-configured ICW workflow at:
-```
+
+```text
 packages/frameworks/workflow mgt/workflows/implementation-cycle-workflow/icw-workflow.yaml
 ```
 
@@ -88,27 +94,33 @@ packages/frameworks/workflow mgt/workflows/implementation-cycle-workflow/icw-wor
    - Create output directories and state tracking
    - Validate prerequisites and dependencies
 
-2. **Phase 1 - Specification Definition**
+2. **Phase 1 - Ascertain Requirements**
+   - Consolidate functional requirements from task, FR/BR context, and acceptance criteria
+   - Consolidate non-functional requirements (constraints and quality attributes)
+   - Confirm scope boundaries and invariants
+   - Establish a testable requirement baseline
+
+3. **Phase 2 - Specification Definition**
    - Define problem statement and objectives
    - Identify acceptance criteria and constraints
    - Document requirements and scope
 
-3. **Phase 2 - Test Design**
+4. **Phase 3 - Test Design**
    - Design comprehensive test strategy
    - Define test cases and validation criteria
    - Plan testing infrastructure and tools
 
-4. **Phase 3 - Implementation Planning**
+5. **Phase 4 - Implementation Planning**
    - Create detailed implementation roadmap
    - Define milestones and deliverables
    - Plan resource allocation and timeline
 
-5. **Phase 4 - Implementation Execution**
+6. **Phase 5 - Implementation Execution**
    - Execute implementation according to plan
    - Monitor progress and quality metrics
    - Handle issues and adjustments
 
-6. **Phase 5 - Validation and Documentation**
+7. **Phase 6 - Validation and Documentation**
    - Validate implementation against requirements
    - Complete documentation and knowledge transfer
    - Determine next steps and closure
@@ -190,7 +202,7 @@ python packages/frameworks/workflow\ mgt/scripts/generate_workflow.py \
 
 ### Workflow Sequencing
 
-```
+```text
 ICW → Testing Workflow → Release Workflow
 ICW → Migration Workflow → Release Workflow
 ICW → Documentation Workflow → Release Workflow
@@ -201,26 +213,31 @@ ICW → Documentation Workflow → Release Workflow
 ## 🎯 Best Practices
 
 ### Analysis Phase
+
 - **Comprehensive Requirements:** Thoroughly understand all requirements
 - **Impact Assessment:** Identify all affected components and systems
 - **Risk Analysis:** Identify potential risks and mitigation strategies
 
 ### Planning Phase
+
 - **Detailed Roadmap:** Create step-by-step implementation plan
 - **Resource Planning:** Ensure adequate resources and time allocation
 - **Quality Gates:** Define clear quality checkpoints and criteria
 
 ### Execution Phase
+
 - **Incremental Implementation:** Implement in manageable increments
 - **Continuous Validation:** Validate each increment before proceeding
 - **Progress Monitoring:** Track progress against plan and adjust as needed
 
 ### Validation Phase
+
 - **Comprehensive Testing:** Test all aspects of implementation
 - **Quality Assurance:** Ensure quality standards are met
 - **Performance Validation:** Validate performance requirements
 
 ### Documentation Phase
+
 - **Complete Documentation:** Document all aspects of implementation
 - **Knowledge Transfer:** Ensure knowledge is transferred to team
 - **Future Planning:** Plan for future maintenance and enhancements
@@ -246,6 +263,7 @@ ICW → Documentation Workflow → Release Workflow
 ### Error Handling
 
 The ICW includes comprehensive error handling:
+
 - **Phase Validation:** Each phase validates completion before proceeding
 - **Rollback Capability:** Ability to rollback failed implementations
 - **Recovery Procedures:** Clear procedures for recovering from failures

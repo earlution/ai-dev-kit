@@ -14,8 +14,8 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** COMPLETE  
-**Last updated:** 2026-04-02 — AC5 (retro wiring) and AC7 (validator script) completed; FR-042 acceptance criteria satisfied under **E5:S01:T42**.  
+**Status:** IN PROGRESS  
+**Last updated:** 2026-04-22 — FR re-opened to add an explicit pre-specification step: **Ascertain Requirements** in the canonical IPW sequence.  
 **Implementation Task:** [E5:S01:T42](../epics/Epic-5/Story-001-fr-repo/T42-implementation-planning-workflow-ipw.md)
 
 ---
@@ -31,6 +31,7 @@ Define and implement an **Implementation Planning Workflow (IPW)** – a formal 
 ## Problem Statement
 
 **Current Situation:**
+
 - Two overlapping concepts exist for the same intent: **ICW** (FR-040, framework workflow + handler + **`ICW`** trigger) and **IPW** (this FR)—both target structured planning before implementation, which splits documentation and cognitive load
 - Planning documents (spec/test/impl plans) are created informally and inconsistently
 - No defined workflow for *when* or *how* to create a plan doc
@@ -39,12 +40,14 @@ Define and implement an **Implementation Planning Workflow (IPW)** – a formal 
 - Implementation Cycle (Step 3: Spec & Test Creation) exists but lacks a formal planning workflow that produces a durable plan document
 
 **Root Causes:**
+
 - No workflow or SoP for implementation planning
 - No enforcement of mandatory wiring at creation time
 - Planning is treated as optional or implicit rather than a first-class workflow
 - Gap between "ascertain spec, create tests" (Implementation Cycle) and producing a reusable plan document
 
 **Impact:**
+
 - Orphaned plan docs (exist but not discoverable from task)
 - Inconsistent planning quality and completeness
 - Violates bidirectional wiring principle
@@ -60,11 +63,12 @@ Define and implement an **Implementation Planning Workflow (IPW)** – a formal 
 **IPW** is the workflow for creating an **implementation plan document** before implementation begins. It sits between Task Creation (Implementation Cycle Step 2) and Specification & Test Creation (Step 3), and produces the planning artifact that guides Step 3 and Step 4.
 
 **IPW Trigger:** User invokes **`IPW`** (or `IPW ExxSxxTxx`). This replaces the previous ad hoc instruction:
-> "Plan ExxSxxTxx: Define spec, design tests, plan impl"
+> "Plan ExxSxxTxx: Ascertain requirements, define spec, design tests, plan impl"
 
 It also **replaces the `ICW` trigger for planning**: users and docs should prefer **`IPW`**; **`ICW`** may remain temporarily as an alias but must not define a divergent planning process.
 
 **IPW Output:** A plan document containing:
+
 - **Specification** – Functional and non-functional requirements, scope, boundaries
 - **Test Design** – Test categories, test cases, test data strategy
 - **Implementation Plan** – Phases, steps, dependency order, files to create/modify
@@ -72,21 +76,22 @@ It also **replaces the `ICW` trigger for planning**: users and docs should prefe
 ### 2. Formalized IPW Steps (Ordered)
 
 | Step | Name | Description |
-|------|------|-------------|
+| ---- | ---- | ----------- |
 | **0** | Identify Host Task | Resolve E:S:T from user input or context; confirm task doc exists |
-| **1** | Define Spec | Populate Spec section: Goal, Functional Requirements, Non-Functional (if applicable), Out of Scope |
-| **2** | Design Tests | Populate Test Design: categories, test cases (TC/Name/Behavior), test data strategy |
-| **3** | Plan Implementation | Populate Impl Plan: phases, steps, dependency order, files to create/modify |
-| **4** | Create Plan Doc | Write plan doc using template; include header with Task ID, Host Task link |
-| **5** | Wire to Host Task | Add plan doc to task doc Input and References; add Host Task in plan doc header |
-| **6** | Validate | Confirm bidirectional wiring; confirm required sections present |
+| **1** | Ascertain Requirements | Consolidate and confirm **functional** and **non-functional** requirement statements/invariants from task, FR/BR context, and acceptance criteria before drafting specification |
+| **2** | Define Spec | Populate Spec section: Goal, Functional Requirements, Non-Functional (if applicable), Out of Scope |
+| **3** | Design Tests | Populate Test Design: categories, test cases (TC/Name/Behavior), test data strategy |
+| **4** | Plan Implementation | Populate Impl Plan: phases, steps, dependency order, files to create/modify |
+| **5** | Create Plan Doc | Write plan doc using template; include header with Task ID, Host Task link |
+| **6** | Wire to Host Task | Add plan doc to task doc Input and References; add Host Task in plan doc header |
+| **7** | Validate | Confirm bidirectional wiring; confirm required sections present |
 
 #### Mandatory Bidirectional Wiring
 
 **Both directions MUST be wired – neither is optional.**
 
 | Direction | Where | What to add |
-|-----------|-------|-------------|
+| --------- | ----- | ----------- |
 | **Task doc → Plan doc** | Task doc **Input** | Link to plan doc (e.g. `[T07-planning-spec-tests-impl.md](T07-planning-spec-tests-impl.md)`) |
 | **Task doc → Plan doc** | Task doc **References** | Same link |
 | **Plan doc → Task doc** | Plan doc header | `**Host Task:** [T07-migrate-embedded-tasks-to-discrete-documents.md](T07-migrate-embedded-tasks-to-discrete-documents.md) (E4:S11:T07)` |
@@ -98,12 +103,14 @@ It also **replaces the `ICW` trigger for planning**: users and docs should prefe
 ### 3. Plan Doc Template (Proposed)
 
 **Header (required):**
+
 - Task title (`E{epic}:S{story}:T{task}` – Planning: Spec, Tests, Implementation Plan)
 - **Host Task:** relative path to the host task doc (`E{epic}:S{story}:T{task}`) — link to the task markdown file (bidirectional wiring)
 - Status
 - Planning doc created date
 
 **Sections (required):**
+
 1. **Specification** – Goal, Functional Requirements (table: ID/Requirement/Source), Non-Functional (optional), Out of Scope
 2. **Test Design** – Test Categories (table), Test Cases (table: TC/Name/Behavior), Test Data Strategy
 3. **Implementation Plan** – Phases (table: Step/Action/Deliverable), Dependency Order, Files to Create/Modify
@@ -114,6 +121,7 @@ It also **replaces the `ICW` trigger for planning**: users and docs should prefe
 **Examples analyzed:** T07-planning-spec-tests-impl.md, T01-planning-spec-tests-impl.md, PIR-workflow-planning.md, migration-plan-embedded-to-discrete-tasks.md
 
 **Good practice (T07, T01):**
+
 - Consistent 3-section structure (Spec, Test Design, Impl Plan)
 - Functional requirements table with IDs and sources
 - Test cases table with TC, Name, Behavior
@@ -123,6 +131,7 @@ It also **replaces the `ICW` trigger for planning**: users and docs should prefe
 - Script interfaces (T07), Files to create/modify
 
 **Bad practice / gaps:**
+
 - T01 initially lacked Host Task link (unwired)
 - PIR-workflow-planning uses different structure (Executive Summary, Workflow Scope) – more design doc than spec/test/impl
 - Migration-plan has TBD placeholders; analysis sections not aligned with spec/test/impl pattern
@@ -133,14 +142,15 @@ It also **replaces the `ICW` trigger for planning**: users and docs should prefe
 ### 5. IPW Integration with Implementation Cycle
 
 | Implementation Cycle Step | IPW Relationship |
-|---------------------------|------------------|
+| ------------------------- | ---------------- |
 | Step 2: Task Creation | Host task must exist before IPW |
-| Step 3a: Ascertain Specification | Plan doc Spec section captures this |
-| Step 3b: Create Tests | Plan doc Test Design guides this |
+| Step 3a: Ascertain Requirements | Plan doc requirement baseline captures functional and non-functional requirements |
+| Step 3b: Ascertain Specification | Plan doc Spec section formalizes the ascertained requirement baseline |
+| Step 3c: Create Tests | Plan doc Test Design guides this |
 | Step 4: Implementation | Plan doc Impl Plan guides this |
 | Step 5: RW | Unchanged |
 
-IPW produces the plan document that formalizes and persists the output of "ascertain spec" and guides "create tests" and "implementation."
+IPW produces the plan document that formalizes and persists the output of requirement ascertainment (functional + non-functional), specification ascertainment, and then guides test creation and implementation.
 
 ### 6. IPW Deliverables
 
@@ -153,7 +163,7 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 ### 7. Consolidation with ICW (Implementation Cycle Workflow)
 
 | Aspect | Before | After (target state) |
-|--------|--------|----------------------|
+| ------ | ------ | -------------------- |
 | **Canonical planning brand** | ICW + IPW (overlapping) | **IPW only** |
 | **User / agent trigger** | `ICW` and informal “plan task X” | **`IPW` / `IPW E:S:T`** (required); `ICW` = deprecated or thin alias |
 | **Artifacts** | ICW templates / `docs/implementation-cycles/*` ad hoc + IPW plan doc | **One durable plan doc** per host task, bidirectionally wired (IPW); legacy ICW paths may redirect or merge |
@@ -188,7 +198,8 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 - [x] **FR-042:R06** - IPW integrated with Implementation Cycle (reference from implementation-cycle-sop, .cursorrules)
 - [x] **FR-042:R07** - Validation mechanism or checklist to detect unwired plan docs
 - [x] **FR-042:R08** - Cursor rules/skills or documentation reference IPW for plan doc creation
-- [x] **FR-042:R09** - Instruction **`IPW`** (or `IPW ExxSxxTxx`) replaces "Plan ExxSxxTxx: Define spec, design tests, plan impl" as the canonical trigger
+- [ ] **FR-042:R14** - Canonical IPW planning sequence includes an explicit **Ascertain Requirements** step before **Define Spec**
+- [x] **FR-042:R09** - Instruction **`IPW`** (or `IPW ExxSxxTxx`) replaces "Plan ExxSxxTxx: Ascertain requirements, define spec, design tests, plan impl" as the canonical trigger
 - [x] **FR-042:R10** - **`ICW`** is **not** a parallel planning workflow: `.cursorrules` (and adopter equivalents) state **IPW canonical**; **`ICW`** is removed, folded into IPW wording, or documented as **deprecated alias** only (same steps as IPW)
 - [x] **FR-042:R11** - Packaged workflow docs (`workflow-registry.yaml`, `implementation-cycle-workflow/README.md` or successor) explain **ICW → IPW** consolidation and point maintainers to IPW
 - [x] **FR-042:R12** - **FR-040 / E5:S01:T40** and **FR-048 / E5:S01:T48** cross-reference IPW: task-ID and artifact expectations for planning apply to **IPW**; ICW-specific phrasing updated where it implied a second planning pipeline
@@ -218,6 +229,7 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 - [x] **AC10:** `.cursorrules` (ICW section) updated: **IPW** canonical for planning; **ICW** deprecated or alias-only, consistent with §7
 - [x] **AC11:** Framework workflow registry / ICW package README state consolidation; no contradictory “use ICW for planning” without IPW equivalence
 - [x] **AC12:** **FR-040** header or notes reference IPW as successor scope for **planning** (implementation delivery history of T40 may remain historical)
+- [ ] **AC13:** IPW docs/SOP language explicitly encode **Ascertain Requirements** as the first planning step before specification
 
 ---
 
@@ -225,6 +237,7 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 
 **Problem Domain:** Implementation Planning, Task Documentation, Workflow Design, Bidirectional Wiring  
 **Affected Areas:**
+
 - [x] Documentation (IPW workflow, plan doc template)
 - [x] Implementation Cycle SoP (integration)
 - [x] Task Template (References/Input guidance)
@@ -233,6 +246,7 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 - [x] Other: Cursor rules, create-rule/create-skill
 
 **Estimated Complexity:**
+
 - [ ] Simple (1-3 days)
 - [x] Medium (1 week)
 - [ ] Complex (2+ weeks)
@@ -242,14 +256,17 @@ IPW produces the plan document that formalizes and persists the output of "ascer
 ## Dependencies
 
 **Blocks:**
+
 - Reliable plan doc discoverability
 - Formal planning before implementation
 - Bidirectional wiring for planning artifacts
 
 **Blocked By:**
+
 - None
 
 **Related Work:**
+
 - **Implementation Cycle SoP:** `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-cycle-sop.md`
 - **FR-035:** Task Template Cross-Wiring Section (bidirectional wiring)
 - **FR-016:** Kanban Granularity & Discrete Task Docs (3-tier structure)

@@ -2,13 +2,20 @@
 
 ## Consolidation with IPW (FR-042)
 
-**Canonical planning trigger:** **`IPW`** (Implementation Planning Workflow). **`ICW`** is a **deprecated alias** — same three phases and agent behavior. Product requirements and wiring rules live in **FR-042**; agent execution guide: `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md`. This package keeps `icw-workflow.yaml`, `icw_handler.py`, and templates for backward compatibility; new documentation should say **IPW** first.
+**Canonical planning trigger:** **`IPW`** (Implementation Planning Workflow). **`ICW`** is a **deprecated alias** — same planning behavior and artifact wiring contract. Product requirements and wiring rules live in **FR-042**; agent execution guide: `packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/implementation-planning-workflow-agent-execution.md`. This package keeps `icw-workflow.yaml`, `icw_handler.py`, and templates for backward compatibility; new documentation should say **IPW** first.
 
 ---
 
 ## Overview
 
-The packaged workflow (historically **ICW**) provides a structured three-phase approach to **planning** (specification, test design, implementation planning) before coding. For TDD and release, use the **Implementation Cycle SoP** and **RW** separately.
+The packaged workflow (historically **ICW**) provides a structured planning approach before coding:
+
+1. **Ascertain Requirements**
+2. **Specification Definition**
+3. **Test Design**
+4. **Implementation Planning**
+
+For TDD and release, use the **Implementation Cycle SoP** and **RW** separately.
 
 ## 🚨 Critical Requirement: Planning Mode Only
 
@@ -17,6 +24,7 @@ The packaged workflow (historically **ICW**) provides a structured three-phase a
 ### Why Planning Mode is Required
 
 ICW is designed as an **intelligent agent-driven workflow** that requires:
+
 - Interactive questioning and guidance
 - Adaptive decision-making based on user input
 - Context-aware analysis and recommendations
@@ -43,21 +51,31 @@ PLANNING_MODE=true python icw_handler.py
 # Type "ICW" in the IDE when in planning mode
 ```
 
-## Three-Phase Workflow
+## Planning Workflow Phases
+
+### Phase 0: Ascertain Requirements
+
+- Consolidate **functional requirements** from task, BR/FR context, and acceptance criteria
+- Consolidate **non-functional requirements** (constraints/quality attributes) from the same sources
+- Confirm invariant expectations and out-of-scope boundaries
+- Produce a testable requirement baseline before specification drafting
 
 ### Phase 1: Specification Definition
+
 - Problem analysis and requirements gathering
 - Stakeholder identification and constraints analysis
 - Acceptance criteria and quality gates definition
 - Scope and boundaries clarification
 
 ### Phase 2: Test Design
+
 - Comprehensive test strategy development
 - Unit, integration, and system test design
 - Test data and environment requirements
 - Quality assurance and validation planning
 
 ### Phase 3: Implementation Planning
+
 - Architecture and design documentation
 - Development tasks and dependency analysis
 - Resource requirements and timeline planning
@@ -107,6 +125,7 @@ python packages/frameworks/workflow\ mgt/scripts/icw/icw_handler.py initialize '
 ### Template System
 
 Each phase uses structured templates:
+
 - **Specification Template:** Problem definition and requirements
 - **Test Design Template:** Comprehensive test planning
 - **Implementation Plan Template:** Detailed implementation roadmap
@@ -116,6 +135,7 @@ Each phase uses structured templates:
 ### Generated Documents
 
 ICW generates a complete implementation package:
+
 - **Specification Document:** Detailed requirements and analysis
 - **Test Design Document:** Comprehensive test strategy
 - **Implementation Plan:** Detailed execution roadmap
@@ -133,7 +153,7 @@ ICW generates a complete implementation package:
 
 If ICW detects wrong execution mode:
 
-```
+```text
 🚫 ERROR: ICW detected IMPLEMENTATION MODE
 🚫 ICW requires PLANNING MODE for proper intelligent agent guidance
 🚫 Implementation mode bypasses the intelligent agent guidance that ICW provides

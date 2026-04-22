@@ -25,10 +25,12 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 **Purpose:** Ensure requirements are documented before implementation begins.
 
 **Actions:**
+
 - If a Bug Report (BR) or Feature Request (FR) exists: create or update as needed
 - If no BR/FR: document the requirement in the task description or proceed only if the requirement is clear from context
 
 **Validation:**
+
 - Requirement is documented (BR/FR or task description)
 - Requirement is clear and testable where applicable
 
@@ -41,12 +43,14 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 **Purpose:** Create a trackable task unit with clear deliverables and acceptance criteria.
 
 **Actions:**
+
 - Create the task in the appropriate Epic/Story
 - Use project task format (e.g. `E{epic}:S{story}:T{task} – [Title]`)
 - Include: Deliverables, Acceptance Criteria, Dependencies, link to BR/FR if applicable
 - Add the task to the Story file's Task Checklist
 
 **Validation:**
+
 - Task exists in the Story file
 - Task has clear deliverables and acceptance criteria
 - Task links to BR/FR when applicable
@@ -64,6 +68,7 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 **When to use:** Tasks where discovery, test strategy, or sequencing benefits from a written plan; required when **IPW** is invoked for an `E:S:T`.
 
 **Actions:**
+
 - Trigger **`IPW`** or **`IPW E:S:T`** (see project `.cursorrules`).
 - Follow [implementation-planning-workflow-agent-execution.md](implementation-planning-workflow-agent-execution.md).
 - Template: `packages/frameworks/kanban/templates/PLAN_DOC_TEMPLATE.md`.
@@ -71,41 +76,63 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 
 **Validation:** Plan doc and host task cross-link.
 
-**Output:** Wired IPW plan feeding Step 3a/3b.
+**Output:** Wired IPW plan feeding Step 3a/3b/3c.
 
 **Note:** **IPW** is canonical for planning; legacy **ICW** is an alias (**FR-042** §7).
 
 ---
 
-## Step 3: Specification & Test Creation (TDD) — BLOCKING
+## Step 3: Requirements, Specification & Test Creation (TDD) — BLOCKING
 
-**Purpose:** Ascertain specification and create tests **before** implementation (TDD).
+**Purpose:** Ascertain requirements and specification, then create tests **before** implementation (TDD).
 
 **CRITICAL:** This step is **MANDATORY** and **BLOCKING**. Step 4 (Implementation) **cannot** proceed without tests.
 
-### Step 3a: Ascertain Specification
+### Step 3a: Ascertain Requirements
 
 **Actions:**
+
+- Read task requirements, BR/FR context, acceptance criteria, and **IPW plan doc** if present
+- Consolidate **functional requirements** (behaviors/capabilities) into a testable baseline
+- Consolidate **non-functional requirements** (constraints/quality attributes such as performance, safety, reliability, auditability, idempotency) into explicit criteria
+- Confirm explicit in-scope vs out-of-scope boundaries
+- Identify invariant expectations (ordering, idempotency, traceability, or domain-specific constraints)
+
+**Validation:**
+
+- Functional requirement baseline is explicit and testable
+- Non-functional requirement baseline is explicit and testable
+- Invariants and boundaries are clear
+
+**Output:** Confirmed functional and non-functional requirement baseline that drives specification
+
+### Step 3b: Ascertain Specification
+
+**Actions:**
+
 - Read task requirements, BR/FR, acceptance criteria, and **IPW plan doc** if present
 - Identify all testable behaviors: success paths, failure paths, edge cases, error conditions
 - Document the specification in the task description if unclear
 - Consider UAT scenarios if applicable
 
 **Validation:**
+
 - Specification is clear and testable
 - All testable behaviors identified
 
 **Output:** Clear specification of what needs to be tested
 
-### Step 3b: Create Tests
+### Step 3c: Create Tests
 
 **Actions:**
+
 - Create or update the test file per project conventions
 - Write **failing tests** for each testable behavior
 - Follow project testing principles (e.g. atomic tests, clear descriptions; avoid unnecessary mocking)
 - Ensure tests compile but fail (Red phase of TDD)
 
 **Validation:**
+
 - Test file exists
 - Tests cover identified behaviors
 - Tests compile but fail (Red phase)
@@ -120,12 +147,14 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 **Purpose:** Implement minimal code to pass tests, then refactor for quality.
 
 **Actions:**
+
 - **Green phase:** Implement minimal code to make tests pass (one method/issue at a time)
 - **Test iteration:** Run tests after each change; fix or proceed accordingly
 - **Refactor phase:** Improve code quality while keeping tests green
 - Continue until all tests pass
 
 **Validation:**
+
 - All tests pass
 - Code follows project conventions
 - Implementation matches specification
@@ -139,10 +168,12 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 **Purpose:** Version, document, commit, tag, and push changes.
 
 **Actions:**
+
 - Run the Release Workflow (trigger: e.g. `RW E5S01T01` / `RW E5:S01:T01` in the same message — **FR-060**)
 - RW handles: version bump, changelog creation/update, README/Kanban updates, staging, validation, commit, tag, push (per project RW definition)
 
 **Validation:**
+
 - RW completes successfully
 - Version and changelog updated
 - Kanban docs updated when applicable
@@ -157,11 +188,13 @@ This SoP defines a **mandatory** implementation cycle when a project adopts the 
 ## Pre-Implementation Checklist
 
 Before starting Step 4, verify:
+
 - [ ] Step 1: Requirement documented
 - [ ] Step 2: Task created in Epic/Story
 - [ ] Step 2.5 (if used): IPW plan doc created and bidirectionally wired to task doc
-- [ ] Step 3a: Specification ascertained
-- [ ] Step 3b: Tests created and failing (Red phase)
+- [ ] Step 3a: Requirements ascertained
+- [ ] Step 3b: Specification ascertained
+- [ ] Step 3c: Tests created and failing (Red phase)
 - [ ] Tests compile
 - [ ] Tests follow project conventions
 
