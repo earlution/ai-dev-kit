@@ -73,18 +73,18 @@ Step 7: FR/BR/UXR Synchronization
 - Remove completed items from active board
 
 Step 8: FR/BR/UXR Temporal Tracking
-- Add ISO 8601 completion timestamps to fr-br-uxr-completed.md
+- Add ISO 8601 completion timestamps to fbu-completed.md
 - Create recent completions dashboard (20 most recent)
 - Maintain consistent format with kanban-completed.md
 
 Step 9: FR/BR/UXR Structure Updates
-- Update fr-br-uxr-structure.md with current inventory
+- Update fbu-structure.md with current inventory
 - Ensure cross-reference integrity across all FR/BR/UXR docs
 - Validate consistency between board, structure, and completed docs
 ```
 
 #### **3. Temporal Dashboard Implementation**
-Add recent completions dashboard to `fr-br-uxr-completed.md`:
+Add recent completions dashboard to `fbu-completed.md`:
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
@@ -110,7 +110,7 @@ Add recent completions dashboard to `fr-br-uxr-completed.md`:
 
 #### **FR-050.3: Agent Coordination Interface**
 - Standard update interface for all agents updating FR/BR/UXR completions
-- Documentation Agent ultimate responsibility for fr-br-uxr-completed.md
+- Documentation Agent ultimate responsibility for fbu-completed.md
 - Built-in validation and consistency checking
 - Complete audit trail of all updates
 
@@ -121,7 +121,7 @@ Add recent completions dashboard to `fr-br-uxr-completed.md`:
 - Cross-document consistency validation
 
 #### **FR-050.5: Structure Synchronization**
-- Update fr-br-uxr-structure.md with current inventory
+- Update fbu-structure.md with current inventory
 - Ensure cross-reference integrity across all FR/BR/UXR docs
 - Validate consistency between board, structure, and completed docs
 - Update board metadata and version references
@@ -163,7 +163,7 @@ Add recent completions dashboard to `fr-br-uxr-completed.md`:
 4. Integrate with Documentation Agent coordination
 
 ### **Phase 3: Dashboard Implementation (1 day)**
-1. Add recent completions dashboard to fr-br-uxr-completed.md
+1. Add recent completions dashboard to fbu-completed.md
 2. Implement auto-sorting and format consistency
 3. Add agent coordination tracking
 4. Test complete workflow end-to-end

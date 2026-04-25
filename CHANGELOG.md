@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.5+2] - 25-04-26
+## [0.4.19.5+5] - 25-04-26
 
-E4:S19:T05 — **`RW`** with **`--art`**: publish IPP/ICW planning-package artifacts for canonical filename normalization and implementation readiness. SemVer **v0.4.764+2**.
+E4:S19:T05 — **`RW`** with **`--art`**: publish Phase 2 filename normalization batch introducing canonical `fbu-*` supporting docs and compatibility alias rewiring. SemVer **v0.4.764+5**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+5.md)

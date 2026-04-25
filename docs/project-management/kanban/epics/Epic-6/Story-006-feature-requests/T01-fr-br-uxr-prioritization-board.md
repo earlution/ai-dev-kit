@@ -33,7 +33,7 @@ Implement an FR/BR/UXR Prioritization Board with identical responsibility struct
 
 ### Core Functionality:
 1. ✅ **Main Board Created** - Functional `fbuboard.md` with prioritized FR/BR/UXR list
-2. ✅ **Completed Board Created** - Functional `fr-br-uxr-completed.md` for historical tracking
+2. ✅ **Completed Board Created** - Functional `fbu-completed.md` for historical tracking
 3. ✅ **Priority System** - Clear priority levels (CRITICAL, HIGH, MEDIUM, LOW) and status tracking
 4. ✅ **Document Integration** - Links to all existing FR/BR/UXR documents in `/fr-br/` directory
 5. ✅ **Kanban Integration** - Cross-references to associated Kanban tasks
@@ -60,7 +60,7 @@ Implement an FR/BR/UXR Prioritization Board with identical responsibility struct
 ### Phase 1: Foundation (Day 1)
 
 - Create main FR/BR/UXR board structure (`fbuboard.md`)
-- Create completed board structure (`fr-br-uxr-completed.md`)
+- Create completed board structure (`fbu-completed.md`)
 - Scan existing FR/BR/UXR documents in `/fr-br/` directory
 - Populate main board with all open FRs, BRs, and UXRs
 - Assign initial priorities based on content and dates
@@ -89,7 +89,7 @@ Implement an FR/BR/UXR Prioritization Board with identical responsibility struct
 ```
 docs/project-management/kanban/
 ├── fbuboard.md          # Main prioritization board
-├── fr-br-uxr-completed.md      # Completed items tracking
+├── fbu-completed.md            # Completed items tracking
 └── kanban-board-guide.md       # Updated with FR/BR/UXR board info
 ```
 
@@ -104,7 +104,7 @@ docs/project-management/kanban/
 - **Under Review** - Items being evaluated or worked on
 - **Awaiting Information** - Items blocked by missing info
 
-#### Completed Board (`fr-br-uxr-completed.md`)
+#### Completed Board (`fbu-completed.md`)
 
 - **Completed Feature Requests** - Implemented features
 - **Resolved Bug Reports** - Fixed bugs
@@ -200,7 +200,7 @@ docs/project-management/kanban/
 ### Primary Deliverables:
 
 1. **Main Board** - `fbuboard.md` with prioritized FR/BR/UXR list
-2. **Completed Board** - `fr-br-uxr-completed.md` with historical tracking
+2. **Completed Board** - `fbu-completed.md` with historical tracking
 3. **Integration Guide** - Updated documentation and usage instructions
 4. **Automation Scripts** - Intake workflow integration for board updates
 

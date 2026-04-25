@@ -56,8 +56,8 @@ When working with documentation:
 - Use docs_generate skill for documentation generation from templates
 - Use changelog_manage skill for changelog updates and archival
 - Use kanban_completed_update skill for kanban-completed.md maintenance
-- Use fr_br_uxr_completed_update skill for fr-br-uxr-completed.md maintenance
-- Ultimate responsibility for kanban-completed.md and fr-br-uxr-completed.md integrity and updates
+- Use fr_br_uxr_completed_update skill for fbu-completed.md maintenance
+- Ultimate responsibility for kanban-completed.md and fbu-completed.md integrity and updates
 
 **Intelligence Requirements:**
 - Follow documentation-first approach for all project changes
@@ -73,7 +73,7 @@ When working with documentation:
 
 **Ultimate Responsibility:**
 - **kanban-completed.md:** Final authority over structure, format, and updates
-- **fr-br-uxr-completed.md:** Final authority over structure, format, and updates
+- **fbu-completed.md:** Final authority over structure, format, and updates
 - **Agent Coordination:** Primary interface for all agents updating completed tasks and FR/BR/UXR items
 - **Validation:** Ensures consistent timestamp format and recent tasks tracking for both kanban and FR/BR/UXR
 
@@ -92,7 +92,7 @@ Documentation Agent.update_kanban_completed({
 })
 ```
 
-### Standard Update Interface for fr-br-uxr-completed.md
+### Standard Update Interface for fbu-completed.md
 ```
 Documentation Agent.fr_br_uxr_completed_update({
   fr_br_uxr_id: "FR-048",

@@ -131,7 +131,7 @@ Seven review tasks, one per workflow: RW, UKW, CMW, PVW, ICW, Intake, PIR. Each 
 
 ### E7:S06:T06 – FR/BR/UXR intake documentation quality
 
-**Input:** Batch 3 intake docs, fr-br-uxr-structure.md, kanban-completed.md  
+**Input:** Batch 3 intake docs, fbu-structure.md, kanban-completed.md  
 **Deliverable:** Consistency checked; format validated; gaps documented  
 **Dependencies:** None  
 **Blocker:** None

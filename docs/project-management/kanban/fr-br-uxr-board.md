@@ -94,7 +94,7 @@ No ongoing FR/BR/UXR items currently.
 **By Status:**
 
 - Mixed board statuses are in use (`TODO`, `OPEN`, `PENDING`, `PROPOSED`, `ACTIVE`, `IMPLEMENTED`, `COMPLETED`); treat per-row status as source of truth.
-- Completed archival remains tracked in `fr-br-uxr-completed.md`.
+- Completed archival remains tracked in `fbu-completed.md`.
 
 **Disambiguation Note:**
 
@@ -115,7 +115,7 @@ No ongoing FR/BR/UXR items currently.
 1. **Pick items** - Choose highest priority items appropriate to your skills
 2. **Create tasks** - Convert FR/BR/UXRs to Kanban tasks following the intake process
 3. **Update status** - Move items between sections as work progresses
-4. **Track completion** - Move completed items to fr-br-uxr-completed.md
+4. **Track completion** - Move completed items to fbu-completed.md
 
 ### For Product Management
 

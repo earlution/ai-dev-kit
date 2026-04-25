@@ -23,8 +23,8 @@ kanban/
 ├── kanban-completed.md    # Historical record of completed tasks
 ├── fbuboard.md            # FR/BR/UXR MoSCOW prioritization board (canonical)
 ├── fbuboard.md     # Legacy alias -> fbuboard.md
-├── fr-br-uxr-structure.md # Complete FR/BR/UXR listings by type
-├── fr-br-uxr-completed.md # Historical record of completed FR/BR/UXRs
+├── fbu-structure.md       # Complete FR/BR/UXR listings by type
+├── fbu-completed.md       # Historical record of completed FR/BR/UXRs
 ├── fr-br/                 # Individual FR/BR/UXR documents
 │   ├── FR-XXX-*.md        # Feature Request documents
 │   ├── BR-XXX-*.md        # Bug Report documents
@@ -62,8 +62,8 @@ kanban/
 ### FR/BR/UXR System Snapshot
 
 - **`fbuboard.md`** – MoSCOW prioritized FR/BR/UXR items (canonical)
-- **`fr-br-uxr-structure.md`** – Complete FR/BR/UXR listings by type
-- **`fr-br-uxr-completed.md`** – Historical record of completed FR/BR/UXRs
+- **`fbu-structure.md`** – Complete FR/BR/UXR listings by type
+- **`fbu-completed.md`** – Historical record of completed FR/BR/UXRs
 - **`fr-br/FR-XXX-*.md`** – Individual Feature Request documents
 - **`fr-br/BR-XXX-*.md`** – Individual Bug Report documents
 - **`fr-br/UXR-XXX-*.md`** – Individual User Experience Research documents
@@ -82,13 +82,13 @@ The **FR/BR/UXR Prioritization Board** provides centralized visibility and prior
 - **MoSCOW Prioritization:** Uses identical M/S/C/O/W structure as Kanban board
 - **Mixed Prioritization:** All FRs, BRs, and UXRs are prioritized together without type segregation
 - **Complete Integration:** Links to individual documents and implementing tasks
-- **Historical Tracking:** Completed items move to `fr-br-uxr-completed.md`
+- **Historical Tracking:** Completed items move to `fbu-completed.md`
 
 ### Board Documents
 
 1. **`fbuboard.md`** – Main prioritization board (MoSCOW structure)
-2. **`fr-br-uxr-structure.md`** – Complete listings by type (FR/BR/UXR)
-3. **`fr-br-uxr-completed.md`** – Historical record of completed items
+2. **`fbu-structure.md`** – Complete listings by type (FR/BR/UXR)
+3. **`fbu-completed.md`** – Historical record of completed items
 
 ### Usage
 
@@ -109,9 +109,9 @@ The **FR/BR/UXR Prioritization Board** provides centralized visibility and prior
 
 1. **Create FR/BR/UXR:** Add document to `fr-br/` with prefix **FR-** / **BR-** / **UXR-**
 2. **Same session — create task:** Add task doc under the **semantically appropriate** story; set **`Implementing Task:`** on the report and link back from the task (**no orphan reports**)
-3. **Story checklist / boards:** Update story checklist row; add to `fbuboard.md` (MoSCOW) and `fr-br-uxr-structure.md` as needed
+3. **Story checklist / boards:** Update story checklist row; add to `fbuboard.md` (MoSCOW) and `fbu-structure.md` as needed
 4. **Templates/docs:** UXR/governance owns template and board formatting rules where applicable
-5. **Track progress:** Status updates; move to `fr-br-uxr-completed.md` when done
+5. **Track progress:** Status updates; move to `fbu-completed.md` when done
 6. **Version:** Run **RW** / **RW -k** on the correct epic branch when releasing
 
 See `docs/project-management/rituals/policy/kanban-governance-policy.md` § **1.2** and `packages/frameworks/kanban/policies/kanban-governance-policy.md` (**KG-R2**, **KG-R6**).

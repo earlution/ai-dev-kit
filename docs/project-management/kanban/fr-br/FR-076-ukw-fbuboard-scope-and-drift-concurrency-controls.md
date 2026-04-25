@@ -87,7 +87,7 @@ Extend UKW documentation, execution logic, and validation behavior so fbuboard r
 ## Out of scope
 
 - Re-prioritizing all fbuboard items each run when no status drift exists.
-- Rewriting historical `fr-br-uxr-completed.md` entries beyond consistency fixes required by the new checks.
+- Rewriting historical `fbu-completed.md` entries beyond consistency fixes required by the new checks.
 
 ---
 

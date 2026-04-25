@@ -68,7 +68,7 @@ The **Intake plan** prose on [`fbuboard.md`](../fbuboard.md) (open ∧ taskless 
 
 - [FR-043 – UKW Gap Discovery](FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) (related; broader unfiled inventory).  
 - [FR-051 – FR/BR/UXR Prioritization Board](FR-051-fr-br-uxr-prioritization-board.md) (delivered the board artifact).  
-- [`fr-br-uxr-structure.md`](../fr-br-uxr-structure.md) (index; links to board).
+- [`fbu-structure.md`](../fbu-structure.md) (index; links to board).
 
 ---
 

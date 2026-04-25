@@ -12,7 +12,7 @@ housekeeping_policy: keep
 **Version:** v0.2.15.3+2 *(task completion attribution; see `version.py` for current RW anchor)*
 
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
-> **For completed FR/BR/UXR intake items, see:** [`fr-br-uxr-completed.md`](fr-br-uxr-completed.md)  
+> **For completed FR/BR/UXR intake items, see:** [`fbu-completed.md`](fbu-completed.md)
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)
 

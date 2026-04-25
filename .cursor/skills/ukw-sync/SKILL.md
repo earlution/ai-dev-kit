@@ -89,14 +89,14 @@ The MoSCOW priority list is updated LAST.
 - Emit reconciliation summary (audited, removed, kept exceptions, timestamps normalized)
 
 **Step 8: FR/BR/UXR Temporal Tracking**
-- Add ISO 8601 completion timestamps to fr-br-uxr-completed.md
+- Add ISO 8601 completion timestamps to fbu-completed.md
 - Create recent completions dashboard (20 most recent)
 - Maintain consistent format with kanban-completed.md
 - Update historical FR/BR/UXR completions with estimated timestamps
 - Invoke Documentation Agent for fr_br_uxr_completed_update skill
 
 **Step 9: FR/BR/UXR Structure Updates**
-- Update fr-br-uxr-structure.md with current inventory
+- Update fbu-structure.md with current inventory
 - Ensure cross-reference integrity across all FR/BR/UXR docs
 - Validate consistency between board, structure, and completed docs
 - Update metadata and version references across FR/BR/UXR docs
