@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FR/BR/UXR Prioritization Board
 
-**Last Updated:** 2026-04-22 (RW: E2:S15:T05; FR-090/IPP-E2S15T05 traceability synchronized)
-**Version Context:** v0.2.15.5+8 (**SemVer** v0.4.764+8); BR-069 remains open with FR-090 active under E2:S15:T05
+**Last Updated:** 2026-04-22 (RW: E2:S16:T04; UKW full sync + release metadata publish)
+**Version Context:** v0.2.16.4+3 (**SemVer** v0.4.764+3); BR-069 remains open with FR-090 active under E2:S15:T05
 **Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  

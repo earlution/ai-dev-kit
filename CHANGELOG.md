@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.16.4+3] - 22-04-26
+## [0.2.16.4+4] - 25-04-26
 
-E2:S16:T04 — **`RW -d`** with **`--art`**: publish the UKW-backed kanban-maintenance perpetual release, including synchronized board/story/epic metadata and carried T05 planning/task clarifications. SemVer **v0.4.764+3**.
+E2:S16:T04 — **`RW -d`** with **`--art`**: publish continuity alignment updates for perpetual kanban maintenance metadata (including `fbuboard` release context and T04 AC closure evidence). SemVer **v0.4.764+4**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.4+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.4+4.md)

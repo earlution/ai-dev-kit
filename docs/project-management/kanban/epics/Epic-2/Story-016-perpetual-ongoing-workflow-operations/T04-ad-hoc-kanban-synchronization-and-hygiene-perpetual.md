@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-22  
-**Last updated:** 2026-04-22 (task created and activated as canonical ad-hoc Kanban hygiene anchor)  
+**Last updated:** 2026-04-22 (UKW full sync + RW release attribution path validated and published at v0.2.16.4+3)  
 **Code:** E2S16T04
 
 **Upstream:** [FR-088 - Dedicated story for perpetual ongoing tasks](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
@@ -43,7 +43,7 @@ Ad-hoc Kanban updates that are not directly tied to a specific delivery task nee
 
 ## Acceptance criteria
 
-- [ ] **AC1:** Task naming and scope clearly communicate ad-hoc Kanban synchronization/hygiene purpose.
-- [ ] **AC2:** Story 016 checklist includes this task as a kanban-focused perpetual operational lane.
-- [ ] **AC3:** Scope boundary with `E2:S16:T03` as the broader workflow-maintenance umbrella is explicitly documented and unambiguous.
-- [ ] **AC4:** References are stable and suitable for ongoing RW/UKW attribution for kanban-specific updates.
+- [x] **AC1:** Task naming and scope clearly communicate ad-hoc Kanban synchronization/hygiene purpose.
+- [x] **AC2:** Story 016 checklist includes this task as a kanban-focused perpetual operational lane.
+- [x] **AC3:** Scope boundary with `E2:S16:T03` as the broader workflow-maintenance umbrella is explicitly documented and unambiguous.
+- [x] **AC4:** References are stable and suitable for ongoing RW/UKW attribution for kanban-specific updates.

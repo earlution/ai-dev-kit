@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-22 (v0.2.16.4+3 – Kanban documentation setup)
-**Version:** v0.2.16.4+3
+**Last updated:** 2026-04-25 (v0.2.16.4+4 – Kanban documentation setup)
+**Version:** v0.2.16.4+4
 **Code:** E2S16
 
 ---
