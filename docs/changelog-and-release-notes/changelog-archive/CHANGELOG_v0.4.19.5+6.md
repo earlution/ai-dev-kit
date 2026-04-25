@@ -1,7 +1,7 @@
-# Changelog v0.4.19.5+5
+# Changelog v0.4.19.5+6
 
 **Release Date:** 2026-04-25 17:30:28 UTC  
-**Internal Version:** 0.4.19.5+5  
+**Internal Version:** 0.4.19.5+6  
 **Epic / Story / Task:** E4 | S19 | T05
 
 ## Summary
@@ -10,8 +10,8 @@
 
 ## Change implemented
 
-- Incremented internal version to `v0.4.19.5+5`
-- Updated SemVer-facing metadata to `v0.4.764+5`
+- Incremented internal version to `v0.4.19.5+6`
+- Updated SemVer-facing metadata to `v0.4.764+6`
 - Added canonical supporting files: `fbu-structure.md`, `fbu-completed.md`
 - Converted legacy `fr-br-uxr-structure.md` and `fr-br-uxr-completed.md` into compatibility alias docs
 - Rewired active references in kanban docs, skills, and workflow READMEs to canonical `fbu-*` paths
