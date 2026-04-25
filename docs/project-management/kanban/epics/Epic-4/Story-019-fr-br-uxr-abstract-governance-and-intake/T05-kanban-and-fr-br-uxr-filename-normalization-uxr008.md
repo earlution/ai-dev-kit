@@ -70,3 +70,7 @@ Partial normalization (boards only) leaves the broader kanban surface with incon
 - [UXR-008](../../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md)
 - [T114](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T114-canonical-board-filename-migration-kboard-fbuboard.md)
 - [FR-086](../../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md)
+- [IPP-E4S19T05](../../../../../implementation-cycles/IPP-E4S19T05-kanban-fr-br-uxr-filename-normalization.md)
+- [ICW-E4S19T05-specification](../../../../../implementation-cycles/ICW-E4S19T05-specification.md)
+- [ICW-E4S19T05-test-design](../../../../../implementation-cycles/ICW-E4S19T05-test-design.md)
+- [ICW-E4S19T05-implementation-plan](../../../../../implementation-cycles/ICW-E4S19T05-implementation-plan.md)

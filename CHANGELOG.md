@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.5+1] - 25-04-26
+## [0.4.19.5+2] - 25-04-26
 
-E4:S19:T05 — **`RW -d`** with **`--art`**: publish re-housing of UXR-008 filename-normalization implementation from default-dump Story 007 into canonical governance Story 019, including cross-link rewiring and obsolete task cleanup. SemVer **v0.4.764+1**.
+E4:S19:T05 — **`RW`** with **`--art`**: publish IPP/ICW planning-package artifacts for canonical filename normalization and implementation readiness. SemVer **v0.4.764+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+2.md)
