@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-21 (v0.4.19.4+4 – Kanban documentation setup)
-**Version:** v0.4.19.4+4
+**Last updated:** 2026-04-25 (v0.4.19.5+1 – Kanban documentation setup)
+**Version:** v0.4.19.5+1
 **Code:** E4S19  
 
 **Story type:** Ongoing governance (not a perpetual “repo ledger”; not a dumping ground for individual **FR-### / BR-### / UXR-###** implementation work).
@@ -29,6 +29,8 @@ housekeeping_policy: keep
 - [ ] **E4:S19:T03 – `E6:S07` default-housing drift investigation + closure decision (FR-087)** - IN PROGRESS (HIGH, forensic root-cause + codification inventory + close/split/narrow recommendation for Story 007; includes executed re-housing precedent `BR-069: E6:S07:T117 -> E2:S15:T04`) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [FR-087](../../fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md)
 
 - [ ] **E4:S19:T04 – kboard/fbuboard `IPP` segment after FBU/task links (UXR-010)** - IN PROGRESS (HIGH, formalize row-link ordering and deterministic `—No IPP—` fallback token when planning artifact is absent) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md) | [UXR-010](../../fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md) | [IPP](../../../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)
+
+- [ ] **E4:S19:T05 – Kanban and FR/BR/UXR filename normalization (UXR-008)** - TODO (HIGH, re-housed from misfiled `E6:S07:T117`; normalize supporting kanban/fr-br-uxr filenames and rewire references with compatibility-safe migration) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md) | [UXR-008](../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md) | [FR-086](../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md)
 
 ---
 

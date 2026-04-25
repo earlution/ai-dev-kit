@@ -132,7 +132,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
 - **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and establish UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 - **UXR-006** – Single `dev` branch and RW validator relaxation (solo workflow) - TODO (HIGH, evaluate allowing `dev` as accepted RW branch context to reduce multi-branch hygiene friction while preserving safety controls) - [UXR-006](fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md)
-- **UXR-008** – Default board naming adoption (`kboard.md` / `fbuboard.md`) - IN PROGRESS (HIGH, standardize canonical board filenames across docs, scripts, and packaged installs with compatibility aliases) - [UXR-008](fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md)
+- **UXR-008** – Canonical kanban filename normalization (`kboard.md` / `fbuboard.md` pattern) - IN PROGRESS (HIGH, expand board-default migration into full kanban + FR/BR/UXR filename normalization with compatibility-safe transition) - [UXR-008](fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md) | [E4:S19:T05](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md)
 
 ### Medium Priority (Could Have - C)
 

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.16.4+4] - 25-04-26
+## [0.4.19.5+1] - 25-04-26
 
-E2:S16:T04 — **`RW -d`** with **`--art`**: publish continuity alignment updates for perpetual kanban maintenance metadata (including `fbuboard` release context and T04 AC closure evidence). SemVer **v0.4.764+4**.
+E4:S19:T05 — **`RW -d`** with **`--art`**: publish re-housing of UXR-008 filename-normalization implementation from default-dump Story 007 into canonical governance Story 019, including cross-link rewiring and obsolete task cleanup. SemVer **v0.4.764+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.4+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+1.md)
