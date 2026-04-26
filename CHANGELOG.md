@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.5+6] - 25-04-26
+## [0.4.19.5+7] - 25-04-26
 
-E4:S19:T05 — **`RW`** with **`--art`**: publish Phase 2 filename normalization batch introducing canonical `fbu-*` supporting docs and compatibility alias rewiring. SemVer **v0.4.764+6**.
+E4:S19:T05 — **`RW`** with **`--art`**: restore complete historical FBU completion coverage in canonical `fbu-completed.md`, backfill missing COMPLETE intake records, and remove legacy `fr-br-uxr-completed.md`. SemVer **v0.4.764+7**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+6.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+7.md)
