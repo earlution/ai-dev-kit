@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.6+4] - 26-04-26
+## [0.4.19.6+5] - 26-04-26
 
-E4:S19:T06 — publish Wave 4 FR-073 AC3 closure by reconciling taskless queue + board governance/statistics surfaces, then closing FR-073 and recording evidence on T06/IPP. SemVer **v0.4.764+4**.
+E4:S19:T06 — **`RW -d`** with **`--art`**: publish Wave 5 validation/stabilization closure by flipping T06 + Story 019 state to `COMPLETE` and recording final IPP validator outcomes (with pre-existing unrelated T75 plan-wiring blocker noted). SemVer **v0.4.764+5**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+5.md)

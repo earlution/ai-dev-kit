@@ -9,11 +9,12 @@ housekeeping_policy: keep
 # Epic 4, Story 19, Task 6: FBU meta normalization and intake governance (UXR-008 / FR-086 / FR-073)
 
 **Task ID:** E4:S19:T06  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
+**Version Anchor:** v0.4.19.6+5 (`RW -d E4:S19:T06 --art`, Wave 5 closure publication)  
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-26  
-**Last updated:** 2026-04-26 (Wave 4 scoped reconciliation: FR-073 AC3 closure evidence recorded across queue/board/FR surfaces)  
+**Last updated:** 2026-04-26 (Wave 5 stabilization: validation pass recorded and task closure completed)  
 **Code:** E4S19T06
 
 **Upstream:** [UXR-008](../../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md), [FR-086](../../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md), [FR-073](../../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
@@ -31,7 +32,7 @@ Publication N/A Reason: This task follows the consolidated FR-042 IPW/IPP model 
 
 - Existing canonical board defaults (`kboard.md`, `fbuboard.md`) and partial supporting-doc normalization from T02/T05.
 - Wave 2 filename migration executed: `fr-br-uxr-board.md` is now alias-only and canonical queue file `fbu-open-taskless-queue.md` exists with legacy alias retained at `fr-br-uxr-open-taskless-queue.md`.
-- FR-073 AC3 open requirement: scoped UKW/statistics refresh tied to active board governance.
+- FR-073 AC3 closure evidence is recorded through Wave 4 scoped reconciliation across queue/board/FR surfaces under T06 ownership.
 
 ---
 
@@ -61,13 +62,13 @@ FBU naming and intake-governance ownership is currently split across multiple ta
 
 ## Acceptance Criteria
 
-- [ ] **AC1:** UXR-008, FR-086, and FR-073 list `E4:S19:T06` as canonical implementing task, with historical implementing-task lineage preserved.
-- [ ] **AC2:** T02 and T05 are explicitly marked as superseded by T06 (history retained, no orphan references).
-- [ ] **AC3:** Canonical supporting-doc naming policy and deterministic migration map are documented in `IPP-E4S19T06`.
-- [ ] **AC4:** `FBU` collective terminology standard is applied in scoped docs without renaming individual issue identities.
-- [ ] **AC5:** Legacy compatibility behavior (aliases/redirect notes) is documented for any retained long-form paths.
+- [x] **AC1:** UXR-008, FR-086, and FR-073 list `E4:S19:T06` as canonical implementing task, with historical implementing-task lineage preserved.
+- [x] **AC2:** T02 and T05 are explicitly marked as superseded by T06 (history retained, no orphan references).
+- [x] **AC3:** Canonical supporting-doc naming policy and deterministic migration map are documented in `IPP-E4S19T06`.
+- [x] **AC4:** `FBU` collective terminology standard is applied in scoped docs without renaming individual issue identities.
+- [x] **AC5:** Legacy compatibility behavior (aliases/redirect notes) is documented for any retained long-form paths.
 - [x] **AC6:** FR-073 AC3 closure work (scoped board/statistics reconciliation) is explicitly planned and traceably wired to this task. *(Wave 4 evidence: `fbu-open-taskless-queue.md` snapshot refresh + `fbuboard.md` statistics/governance reconciliation + FR-073 AC3 closure update.)*
-- [ ] **AC7:** `fbuboard.md`, Story 019 checklist, and all three FBU docs point to the T06 task + T06 IPP consistently.
+- [x] **AC7:** `fbuboard.md`, Story 019 checklist, and all three FBU docs point to the T06 task + T06 IPP consistently.
 
 ---
 

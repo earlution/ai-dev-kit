@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-26 (v0.4.19.6+4 – Kanban documentation setup)
-**Version:** v0.4.19.6+4
+**Last updated:** 2026-04-26 (v0.4.19.6+5 – Kanban documentation setup)
+**Version:** v0.4.19.6+5
 **Code:** E4S19  
 
 **Story type:** Ongoing governance (not a perpetual “repo ledger”; not a dumping ground for individual **FR-### / BR-### / UXR-###** implementation work).
@@ -32,7 +32,7 @@ housekeeping_policy: keep
 
 - [x] **E4:S19:T05 – Kanban and FR/BR/UXR filename normalization (UXR-008)** - SUPERSEDED (execution ownership consolidated into **E4:S19:T06**; retain T05 history and artifacts) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md) | [UXR-008](../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md) | [FR-086](../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [E4:S19:T06](Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md)
 
-- [ ] **E4:S19:T06 – FBU meta normalization and intake governance (UXR-008 / FR-086 / FR-073)** - IN PROGRESS (HIGH, canonical meta-task owning filename/terminology normalization + FR-073 AC3 board-statistics closure; supersedes T02/T05 and absorbs T73 follow-on governance) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) | [UXR-008](../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md) | [FR-086](../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [FR-073](../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [IPP](../../../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md)
+- [x] **E4:S19:T06 – FBU meta normalization and intake governance (UXR-008 / FR-086 / FR-073)** - COMPLETE (HIGH, canonical meta-task owning filename/terminology normalization + FR-073 AC3 board-statistics closure; supersedes T02/T05 and absorbs T73 follow-on governance) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) | [UXR-008](../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md) | [FR-086](../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [FR-073](../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [IPP](../../../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md)
 
 ---
 

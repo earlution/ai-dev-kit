@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Host Task:** [`T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md`](../project-management/kanban/epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) **(E4:S19:T06)**  
 **Planning for:** [UXR-008](../project-management/kanban/fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md), [FR-086](../project-management/kanban/fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md), [FR-073](../project-management/kanban/fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)  
-**Status:** Draft
+**Status:** Complete (Waves 1-5 implemented; pending publication run)
 
 ---
 
@@ -220,9 +220,9 @@ The plan is organized as five sequential waves so each can be released atomicall
 
 Runnable validators (from [`packages/frameworks/workflow mgt/scripts/validation/`](../../packages/frameworks/workflow%20mgt/scripts/validation/)):
 
-- [ ] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py"` — passes for touched docs.
-- [ ] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_ipw_publication_wiring.py" --requested E4:S19:T06` — passes (published Wave 1 used `Publication Status: NOT_APPLICABLE` per consolidated IPP model).
-- [ ] `python3 "packages/frameworks/workflow mgt/scripts/update_kanban_docs.py" --dry-run --mode full` — no path-resolution regressions for renamed files.
+- [ ] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py"` — currently blocked by pre-existing unrelated issue (`E5:S01:T75` missing Host Task link); no new T06 wiring regressions observed.
+- [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_ipw_publication_wiring.py" --requested E4:S19:T06` — passes (published Wave 1 used `Publication Status: NOT_APPLICABLE` per consolidated IPP model).
+- [x] `python3 "packages/frameworks/workflow mgt/scripts/update_kanban_docs.py" --dry-run --mode full` — no path-resolution regressions for renamed files.
 
 Deliverable checks:
 
@@ -233,7 +233,7 @@ Deliverable checks:
 - [x] `fr-br-uxr-board.md` is reduced to alias-only stub (Wave 2).
 - [x] `fr-br-uxr-open-taskless-queue.md` is renamed to `fbu-open-taskless-queue.md` with legacy alias retained (Wave 2).
 - [x] FR-073 AC3 closure evidence recorded under T06 (Wave 4).
-- [ ] T06 status flipped to `COMPLETE` after Waves 2–4 (Wave 5).
+- [x] T06 status flipped to `COMPLETE` after Waves 2–4 (Wave 5).
 
 ---
 
