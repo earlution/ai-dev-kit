@@ -21,11 +21,11 @@ housekeeping_policy: keep
 
 ## Overview
 
-This document provides **complete listings of all FRs, BRs, and UXRs** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FBU board. For the **operational intake plan** (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes), see **Intake plan** on [`fbuboard.md`](fbuboard.md).
+This document provides **complete listings of all FBU items** in the AI Dev Kit project, organized by type for comprehensive reference. For MoSCOW prioritization, see the main FBU board. For the **operational intake plan** (open ∧ taskless queue, epic branch + **`RW -k`**, hygiene notes), see **Intake plan** on [`fbuboard.md`](fbuboard.md).
 
 **Document Purpose:**
 
-- **Complete Inventory** - Full listing of all FR/BR/UXR items
+- **Complete Inventory** - Full listing of all FBU items
 - **Type Organization** - Items grouped by FR/BR/UXR type
 - **Reference Access** - Easy lookup of specific items by type
 - **Status Tracking** - Current status of all items
@@ -36,7 +36,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 ### High Priority (Should Have - S)
 
-- **FR-051** – FR/BR/UXR Prioritization Board - ✅ COMPLETED (HIGH, Create prioritization board for FRs, BRs, and UXRs) - [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) | [E6:S06:T01](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTED - BOARD CREATED*
+- **FR-051** – FBU Prioritization Board - ✅ COMPLETED (HIGH, Create prioritization board for FRs, BRs, and UXRs) - [FR-051](fr-br/FR-051-fr-br-uxr-prioritization-board.md) | [E6:S06:T01](epics/Epic-6/Story-006-feature-requests/T01-fr-br-uxr-prioritization-board.md) ✅ *IMPLEMENTED - BOARD CREATED*
 - **FR-045** – ADR-002 Task-Touch Derived Mapping (Kanban → SemVer) - TODO (HIGH, SemVer mapping for task_touch and Kanban integration) - [FR-045](fr-br/FR-045-adr-002-task-touch-derived-mapping.md) | [E5:S01:T45](epics/Epic-5/Story-001-fr-repo/T45-adr-002-task-touch-derived-mapping.md)
 - **FR-047** – Install Logging for Framework Dependencies - TODO (HIGH, Enables detailed post-install analysis and debugging) - [FR-047](fr-br/FR-047-install-logging-for-framework-dependencies.md) | [E5:S01:T47](epics/Epic-5/Story-001-fr-repo/T47-install-logging-for-framework-dependencies.md)
 - **FR-046** – RW SemVer Tag When task_touch Enabled - TODO (HIGH, RW tagging behaviour when task_touch is enabled) - [FR-046](fr-br/FR-046-rw-semver-tag-task-touch-mode.md) | [E5:S01:T46](epics/Epic-5/Story-001-fr-repo/T46-rw-semver-tag-task-touch-mode.md)
@@ -48,7 +48,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **FR-034** – UKW Granular Control and Use Case Flags - TODO (MEDIUM, Granular control for Update Kanban Workflow) - [FR-034](fr-br/FR-034-ukw-granular-control-and-use-case-flags.md)
 - **FR-032** – Release Candidate Readiness Gap Analysis - TODO (MEDIUM, Analyze gaps in release candidate readiness) - [FR-032](fr-br/FR-032-release-candidate-readiness-gap-analysis.md)
 - **FR-030** – AI Dev Kit CLI Tool - TODO (MEDIUM, Command-line interface tool) - [FR-030](fr-br/FR-030-ai-dev-kit-cli-tool.md) | [E6:S08](epics/Epic-6/Story-008-ai-dev-kit-cli-tool.md)
-- **FR-021** – FR/BR/UXR Repository Stories - TODO (MEDIUM, Repository stories for FR/BR/UXR management) - [FR-021](fr-br/FR-021-fr-br-uxr-repository-stories.md)
+- **FR-021** – FBU Repository Stories - TODO (MEDIUM, Repository stories for FBU management) - [FR-021](fr-br/FR-021-fr-br-uxr-repository-stories.md)
 
 ### Low Priority (Could Have - C)
 
@@ -85,7 +85,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **FR-007** – Migration Utilities and Installation Modes - TODO (LOW, Migration utilities and installation modes) - [FR-007](fr-br/FR-007-migration-utilities-and-installation-modes.md)
 - **FR-006** – Localization Language Selection UK/US English - TODO (LOW, Language selection for UK/US English) - [FR-006](fr-br/FR-006-localization-language-selection-uk-us-english.md)
 - **FR-005** – Systematic Canonical Epics Stories Tasks Templates - TODO (LOW, Systematic templates for canonical structure) - [FR-005](fr-br/FR-005-systematic-canonical-epics-stories-tasks-templates.md)
-- **FR-004** – GitHub Submission for FR/BR/UXR - TODO (LOW, GitHub integration for FR/BR/UXR submission) - [FR-004](fr-br/FR-004-github-submission-for-fr-br-uxr.md)
+- **FR-004** – GitHub Submission for FBU - TODO (LOW, GitHub integration for FBU submission) - [FR-004](fr-br/FR-004-github-submission-for-fr-br-uxr.md)
 - **FR-003** – Dependency Tracking in Adopting Projects - TODO (LOW, Dependency tracking for project adoption) - [FR-003](fr-br/FR-003-dependency-tracking-in-adopting-projects.md)
 - **FR-002** – Update Been There README - TODO (LOW, Update README for been-there functionality) - [FR-002](fr-br/FR-002-update-been-there-readme.md)
 
@@ -132,7 +132,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 - **UXR-002** – Comprehensive UAT Migration Utilities - TODO (HIGH, User acceptance testing tools for migration) - [UXR-002](fr-br/UXR-002-comprehensive-uat-migration-utilities.md)
 - **UXR-005** – Kanban Board Formatting & Governance - TODO (HIGH, Enforce blank-line readability rule across Kanban docs and establish UXR ownership for template maintenance) - [UXR-005](fr-br/UXR-005-kanban-board-formatting-and-governance.md)
 - **UXR-006** – Single `dev` branch and RW validator relaxation (solo workflow) - TODO (HIGH, evaluate allowing `dev` as accepted RW branch context to reduce multi-branch hygiene friction while preserving safety controls) - [UXR-006](fr-br/UXR-006-dev-branch-and-rw-validator-relaxation.md)
-- **UXR-008** – Canonical kanban filename normalization (`kboard.md` / `fbuboard.md` pattern) - IN PROGRESS (HIGH, expand board-default migration into full kanban + FR/BR/UXR filename normalization with compatibility-safe transition) - [UXR-008](fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md) | [E4:S19:T05](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md)
+- **UXR-008** – Canonical kanban filename normalization (`kboard.md` / `fbuboard.md` pattern) - IN PROGRESS (HIGH, expand board-default migration into full kanban + FBU filename normalization with compatibility-safe transition) - [UXR-008](fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md) | [E4:S19:T05](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md)
 
 ### Medium Priority (Could Have - C)
 
@@ -143,7 +143,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 ## Summary Statistics
 
-**Total Items:** 72 FR/BR/UXR documents
+**Total Items:** 72 FBU documents
 
 #### Type Breakdown
 
@@ -170,7 +170,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 ### For Stakeholders
 
 1. **Type-based review** - Use this document to see all items of a specific type
-2. **Complete inventory** - Get full picture of all FR/BR/UXR items
+2. **Complete inventory** - Get full picture of all FBU items
 3. **Status tracking** - Monitor status changes within each type
 
 ### For Developers
@@ -183,7 +183,7 @@ This document provides **complete listings of all FRs, BRs, and UXRs** in the AI
 
 1. **Type analysis** - Analyze distribution of work across types
 2. **Resource planning** - Plan resources based on type-specific needs
-3. **Trend monitoring** - Track patterns in FR/BR/UXR submissions
+3. **Trend monitoring** - Track patterns in FBU submissions
 
 ---
-*This structure document provides comprehensive FR/BR/UXR inventory organized by type, complementing the MoSCOW prioritization in the main board.*
+*This structure document provides comprehensive FBU inventory organized by type, complementing the MoSCOW prioritization in the main board.*

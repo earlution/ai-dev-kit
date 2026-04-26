@@ -32,11 +32,11 @@ Reconcile board vs doc: **source markdown + on-disk task file** wins.
 
 Before `RW -k`:
 
-1. Read the full FR/BR/UXR; note dependencies and collisions (duplicate FR numbers, legacy `T` use).  
+1. Read the full FBU item doc (FR/BR/UXR); note dependencies and collisions (duplicate FR numbers, legacy `T` use).  
 2. **Epic/Story (KG-R4):** default homes — FR → Epic 5 `Story-001-fr-repo`; BR → Epic 6 `Story-001-br-repo`; UXR registry → Epic 7 `Story-000-uxr-repo`; exceptions when board or content already assigns another story/task.  
 3. **Task id:** Prefer repository pattern `FR-NNN`→`E5:S01:TNNN`, `BR-NNN`→`E6:S01:TNNN`, `UXR-NNN`→`E7:S00:TNNN` (story 0 uses `T03`-style slugs) unless a collision forces another `T` (document rationale in the task doc).  
 4. Author **task doc:** scope, deliverables, acceptance criteria tailored to the source — not a generic stub.  
-5. **Story checklist** row + **`**Implementing Task:**`** on FR/BR/UXR + task doc links back.  
+5. **Story checklist** row + **`**Implementing Task:**`** on the FBU item doc + task doc links back.  
 6. **fbuboard** / **fbu-structure** line for that id shows `E#:S##:T##`.  
 7. `git checkout epic/{N}-…` matching epic; run `validate_branch_context.py --strict`; then **`RW -k E{N}:S{SS}:T{TT}`** (Step 1b: `--mode rw-k`).
 

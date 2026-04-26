@@ -25,13 +25,13 @@ housekeeping_policy: keep
 
 ## Summary
 
-The initial rename of long-form board filenames (`kanban-board.md` and `fr-br-uxr-board.md`) to shorthand defaults (`kboard.md` / `fbuboard.md`) is complete, but filename patterns across the rest of `docs/project-management/kanban/` remain inconsistent. This reopened UXR now captures full-surface normalization for kanban and FR/BR/UXR related filenames to the same concise, deterministic pattern family.
+The initial rename of long-form board filenames (`kanban-board.md` and `fr-br-uxr-board.md`) to shorthand defaults (`kboard.md` / `fbuboard.md`) is complete, but filename patterns across the rest of `docs/project-management/kanban/` remain inconsistent. This reopened UXR now captures full-surface normalization for kanban and FBU-related filenames to the same concise, deterministic pattern family.
 
 ---
 
 ## Research Question
 
-Does extending concise canonical naming beyond the two board files to all kanban and FR/BR/UXR related filenames improve discoverability, reduce maintenance friction, and lower path/link drift during RW/UKW/intake operations?
+Does extending concise canonical naming beyond the two board files to all kanban and FBU-related filenames improve discoverability, reduce maintenance friction, and lower path/link drift during RW/UKW/intake operations?
 
 ---
 
@@ -40,7 +40,7 @@ Does extending concise canonical naming beyond the two board files to all kanban
 1. Runtime scripts and validators previously used long-form board names as defaults.
 2. Existing documentation mixed shorthand terms with long-form file references.
 3. Packaged installer and workflow tooling required default-path changes for downstream adopters.
-4. Board-level defaults were normalized, but supporting kanban and FR/BR/UXR docs still use mixed naming styles.
+4. Board-level defaults were normalized, but supporting kanban and FBU docs still use mixed naming styles.
 5. Backward compatibility aliases/redirect handling are needed to avoid breaking existing references.
 
 ---
@@ -48,7 +48,7 @@ Does extending concise canonical naming beyond the two board files to all kanban
 ## Scope
 
 - Preserve board defaults as `kboard.md` and `fbuboard.md`.
-- Normalize all kanban + FR/BR/UXR related filenames under `docs/project-management/kanban/` to one concise pattern family.
+- Normalize all kanban + FBU-related filenames under `docs/project-management/kanban/` to one concise pattern family.
 - Update active docs and framework scripts that read/write renamed files.
 - Keep legacy filename compatibility (aliases, redirect mappings, or migration notes) during transition.
 - Ensure installed package behavior and generated links use canonical names.
@@ -58,9 +58,9 @@ Does extending concise canonical naming beyond the two board files to all kanban
 ## Acceptance Criteria
 
 - [x] Canonical task board default is `kboard.md` in scripts and docs.
-- [x] Canonical FR/BR/UXR board default is `fbuboard.md` in scripts and docs.
-- [ ] Canonical filename policy is defined for all kanban/FR-BR-UXR related docs under `docs/project-management/kanban/`.
-- [ ] Supporting kanban and FR/BR/UXR filenames are normalized to policy with deterministic migration mapping.
+- [x] Canonical FBU board default is `fbuboard.md` in scripts and docs.
+- [ ] Canonical filename policy is defined for all kanban/FBU-related docs under `docs/project-management/kanban/`.
+- [ ] Supporting kanban and FBU filenames are normalized to policy with deterministic migration mapping.
 - [ ] Legacy filename compatibility remains available for transition.
 - [ ] Installed framework scripts and references resolve canonical names without breaking existing repos.
 

@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.6+2] - 26-04-26
+## [0.4.19.6+3] - 26-04-26
 
-E4:S19:T06 — **`RW -d`** with **`--art`**: publish Wave 2 canonical filename migration by converting `fr-br-uxr-board.md` and `fr-br-uxr-open-taskless-queue.md` to alias-only stubs and introducing canonical `fbu-open-taskless-queue.md`. SemVer **v0.4.764+2**.
+E4:S19:T06 — **`RW -d`** with **`--art`**: publish Wave 3 terminology normalization by applying `FBU` as the collective term in scoped governance/intake docs while preserving FR/BR/UXR identity-specific labels and links. SemVer **v0.4.764+3**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+2.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+3.md)

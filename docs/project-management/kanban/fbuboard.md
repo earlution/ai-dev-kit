@@ -6,34 +6,34 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# AI Dev Kit – FR/BR/UXR Prioritization Board
+# AI Dev Kit – FBU Prioritization Board
 
 **Last Updated:** 2026-04-26 (RW: E4:S19:T06; meta-task filing + IPP wiring for UXR-008/FR-086/FR-073)
 **Version Context:** v0.4.19.6+1 (**SemVer** v0.4.764+1); T06 now owns merged UXR-008/FR-086/FR-073 governance scope
-**Intake migration note (FR-072 / Approach D):** New FR/BR/UXR intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
+**Intake migration note (FR-072 / Approach D):** New FBU intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
 > **For Epic/Story/Task structure, see:** [`kanban-structure.md`](kanban-structure.md)  
-> **For FR/BR/UXR structure and full listings, see:** [`fbu-structure.md`](fbu-structure.md)  
-> **For completed FR/BR/UXRs, see:** [`fbu-completed.md`](fbu-completed.md)  
+> **For FBU structure and full listings, see:** [`fbu-structure.md`](fbu-structure.md)  
+> **For completed FBU items, see:** [`fbu-completed.md`](fbu-completed.md)  
 > **For rules and explanations, see:** [`kanban-board-guide.md`](kanban-board-guide.md)
 
 ---
 
 ## Overview
 
-This board provides **centralized visibility and prioritization** for all open FRs (Feature Requests), BRs (Bug Reports), and UXRs (User Experience Research) in the AI Dev Kit project. It uses the same responsibility structure as the Kanban board but focuses on the intake and prioritization process.
+This board provides **centralized visibility and prioritization** for all open FBU items (FRs, BRs, and UXRs) in the AI Dev Kit project. It uses the same responsibility structure as the Kanban board but focuses on intake and prioritization.
 
 **Board Purpose:**
 
-- **Visibility** - Clear view of all FR/BR/UXR priorities and status
+- **Visibility** - Clear view of all FBU priorities and status
 - **Prioritization** - Systematic approach to deciding what to work on next
 - **Tracking** - Complete lifecycle tracking from intake to completion
 - **Integration** - Links to individual documents and implementing tasks
 
 ---
 
-## MoSCOW Prioritized FR/BR/UXR Items
+## MoSCOW Prioritized FBU Items
 
 ### Must Have (M) - Critical Items
 
@@ -51,8 +51,8 @@ This board provides **centralized visibility and prioritization** for all open F
 - **FR-086** – Canonical supporting Kanban/FBU doc naming + `FBU` collective terminology - IN PROGRESS (HIGH, scope consolidated under **E4:S19:T06** meta ownership with preserved T02 history) - [FR-086](fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [FR-086](fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [E4:S19:T06](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) | [—IPP—](../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md) | | Last modified: 2026-04-26 13:50 UTC
 - **FR-087** – Investigate why `E6:S07` became default task housing and decide closure/scope - OPEN (HIGH, forensic analysis of origin/intent/codification + recommendation to close/split/narrow `S07`; **E4:S19:T03**) - [FR-087](fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md) | [FR-087](fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md) | [E4:S19:T03](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | —No IPP— | | Last modified: 2026-04-20 17:20 UTC
 - **FR-088** – Dedicated story for perpetual ongoing tasks - OPEN (HIGH, establish canonical Epic 2 story for perpetual workflow operations with explicit scope boundaries, migration path, and placement guardrails; **E2:S16:T01**) - [FR-088](fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md) | [FR-088](fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md) | [E2:S16:T01](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | —No IPP— | | Last modified: 2026-04-20 17:45 UTC
-- **FR-085** – UKW optional reprioritization `--rp` with deep intent/dependency analysis - OPEN (HIGH, optional reprioritize mode to infer intent, dependencies, blockers, and real import for task + FR/BR/UXR ordering; **E6:S07:T116**) - [FR-085](fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md) | [FR-085](fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md) | [E6:S07:T116](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md) | —No IPP— | | Last modified: 2026-04-20 16:20 UTC
-- **FR-084** – IPP post-run governance reconciliation ownership - OPEN (HIGH, require IPP completion to reconcile host task doc + source FR/BR/UXR + kboard/fbuboard deterministically; **E2:S15:T02**) - [FR-084](fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) | [FR-084](fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) | [E2:S15:T02](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md) | [—IPP—](../../implementation-cycles/IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md) | | Last modified: 2026-04-20 15:52 UTC
+- **FR-085** – UKW optional reprioritization `--rp` with deep intent/dependency analysis - OPEN (HIGH, optional reprioritize mode to infer intent, dependencies, blockers, and real import for task + FBU ordering; **E6:S07:T116**) - [FR-085](fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md) | [FR-085](fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md) | [E6:S07:T116](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md) | —No IPP— | | Last modified: 2026-04-20 16:20 UTC
+- **FR-084** – IPP post-run governance reconciliation ownership - OPEN (HIGH, require IPP completion to reconcile host task doc + source FBU doc + kboard/fbuboard deterministically; **E2:S15:T02**) - [FR-084](fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) | [FR-084](fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md) | [E2:S15:T02](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T02-ipp-post-run-governance-reconciliation-ownership-fr084.md) | [—IPP—](../../implementation-cycles/IPP-E2S15T02-ipp-post-run-governance-reconciliation-ownership.md) | | Last modified: 2026-04-20 15:52 UTC
 - **FR-081** – Brownfield modular adopter integration - OPEN (MEDIUM, operationalize ADR-003 — matrices, contract-first wiring; **E6:S09:T02**) - [FR-081](fr-br/FR-081-brownfield-modular-adopter-integration.md) | [FR-081](fr-br/FR-081-brownfield-modular-adopter-integration.md) | [E6:S09:T02](epics/Epic-6/Story-009-ai-dev-kit-installation-and-adopter-integration/T02-brownfield-modular-adopter-integration-fr081.md) | —No IPP— | | Last modified: 2026-04-20 15:52 UTC
 - **FR-077** – IPW-built task status transition and kboard synchronization - IN PROGRESS (HIGH, core ownership matrix + deterministic requested-task drift checks shipped in v0.2.1.17+3; monitor recurrence and adoption) - [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [FR-077](fr-br/FR-077-ipw-built-task-status-transition-and-kboard-sync.md) | [E2:S01:T17](epics/Epic-2/Story-001-rw-agent-execution-and-docs/T17-ipw-built-task-status-transition-and-kboard-sync-fr077.md) | —No IPP— | | Last modified: 2026-04-20 15:52 UTC
 - **BR-065** – RW Step 12.5 GitHub release parser fails on `v`-prefixed version - OPEN (HIGH, GitHub release publish step fails with `invalid literal for int() with base 10: 'v0'`; RW remains non-blocking but release publication is skipped) - [BR-065](fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md) | [BR-065](fr-br/BR-065-rw-step-12-5-github-release-parser-fails-on-v-prefixed-version.md) | [E6:S07:T113](epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T113-rw-step-12-5-github-release-parser-hardening-br065.md) | [—IPP—](../../implementation-cycles/IPW-E6S07T113-rw-step-12-5-github-release-parser-hardening.md) | | Last modified: 2026-04-20 15:52 UTC
@@ -131,13 +131,13 @@ This board provides **centralized visibility and prioritization** for all open F
 
 ### Ongoing (O) - Perpetual Items
 
-No ongoing FR/BR/UXR items currently.
+No ongoing FBU items currently.
 
 ---
 
 ## Board Statistics
 
-**Total Items:** 74 FR/BR/UXR documents
+**Total Items:** 74 FBU documents
 
 - **Feature Requests:** 52 | Last modified: 2026-04-20 15:52 UTC
 - **Bug Reports:** 15   | Last modified: 2026-04-20 15:52 UTC
@@ -165,12 +165,12 @@ No ongoing FR/BR/UXR items currently.
 
 1. **Review priorities** - Check the appropriate priority section for items needing attention
 2. **Track progress** - Monitor status changes and task creation
-3. **Provide input** - Add comments or requirements to relevant FR/BR/UXR documents
+3. **Provide input** - Add comments or requirements to relevant FBU documents
 
 ### For Developers
 
 1. **Pick items** - Choose highest priority items appropriate to your skills
-2. **Create tasks** - Convert FR/BR/UXRs to Kanban tasks following the intake process
+2. **Create tasks** - Convert FBU items to Kanban tasks following the intake process
 3. **Update status** - Move items between sections as work progresses
 4. **Track completion** - Move completed items to fbu-completed.md
 
@@ -183,4 +183,4 @@ No ongoing FR/BR/UXR items currently.
 
 ---
 
-*This board provides systematic FR/BR/UXR management with the same level of organization and visibility that the Kanban board provides to task execution.*
+*This board provides systematic FBU management with the same level of organization and visibility that the Kanban board provides to task execution.*

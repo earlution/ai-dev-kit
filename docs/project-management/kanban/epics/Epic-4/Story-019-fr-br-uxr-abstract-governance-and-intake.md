@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-26 (v0.4.19.6+2 – Kanban documentation setup)
-**Version:** v0.4.19.6+2
+**Last updated:** 2026-04-26 (v0.4.19.6+3 – Kanban documentation setup)
+**Version:** v0.4.19.6+3
 **Code:** E4S19  
 
 **Story type:** Ongoing governance (not a perpetual “repo ledger”; not a dumping ground for individual **FR-### / BR-### / UXR-###** implementation work).

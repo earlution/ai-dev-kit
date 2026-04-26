@@ -6,7 +6,7 @@ expires_at: null
 housekeeping_policy: keep
 ---
 
-# Feature Request: FR/BR/UXR Board — Open ∧ Taskless Intake Execution Plan (Kanban Task)
+# Feature Request: FBU Board — Open ∧ Taskless Intake Execution Plan (Kanban Task)
 
 **Type:** Feature Request (FR)  
 **ID:** FR-073  
@@ -44,7 +44,7 @@ The **Intake plan** prose on [`fbuboard.md`](../fbuboard.md) (open ∧ taskless 
 
 ### FR-073:R02 — MoSCOW visibility
 
-- **FR-073** appears on the FR/BR/UXR board with a link to **T06** as canonical active governance owner.
+- **FR-073** appears on the FBU board with a link to **T06** as canonical active governance owner.
 
 ### FR-073:R03 — Executable plan
 
@@ -52,7 +52,7 @@ The **Intake plan** prose on [`fbuboard.md`](../fbuboard.md) (open ∧ taskless 
 
 ### FR-073:R04 — Pre-identified task mapping
 
-- MoSCOW **Must / Should** queue has a **reserved E/S/T** per FR/BR/UXR before intake (`RW -k`); see **[Intake plan → Pre-identified task mapping](../fbuboard.md)** and **§ Pre-identified mapping** in **T73**.
+- MoSCOW **Must / Should** queue has a **reserved E/S/T** per FBU item before intake (`RW -k`); see **[Intake plan → Pre-identified task mapping](../fbuboard.md)** and **§ Pre-identified mapping** in **T73**.
 - Any change to proposed IDs requires updating **this FR**, **T06**, historical **T73** notes where affected, and the board table in the same commit/RW.
 
 ---
@@ -69,7 +69,7 @@ The **Intake plan** prose on [`fbuboard.md`](../fbuboard.md) (open ∧ taskless 
 ## Dependencies
 
 - [FR-043 – UKW Gap Discovery](FR-043-ukw-gap-discovery-todo-tasks-and-unfiled-fr-br.md) (related; broader unfiled inventory).  
-- [FR-051 – FR/BR/UXR Prioritization Board](FR-051-fr-br-uxr-prioritization-board.md) (delivered the board artifact).  
+- [FR-051 – FBU Prioritization Board](FR-051-fr-br-uxr-prioritization-board.md) (delivered the board artifact).  
 - [`fbu-structure.md`](../fbu-structure.md) (index; links to board).
 
 ---
