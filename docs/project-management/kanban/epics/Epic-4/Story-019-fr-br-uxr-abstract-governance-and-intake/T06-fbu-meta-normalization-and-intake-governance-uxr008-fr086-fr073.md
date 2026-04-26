@@ -21,10 +21,9 @@ housekeeping_policy: keep
 **Supersedes:** [E4:S19:T02](T02-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology-fr086.md), [E4:S19:T05](T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md), and post-completion governance follow-on from [E5:S01:T73](../../Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
 
 **Planning artifact (IPP):** [IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md](../../../../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md)
-**Publication Status:** NOT_APPLICABLE  
-**Publication N/A Reason:** This task follows the consolidated FR-042 IPW/IPP model with a single durable IPP artifact rather than legacy three-file specification/test-design/implementation-plan publication set.
+
 Publication Status: NOT_APPLICABLE
-Publication N/A Reason: Consolidated FR-042 IPW/IPP model uses a single IPP artifact for this task.
+Publication N/A Reason: This task follows the consolidated FR-042 IPW/IPP model with a single durable IPP artifact rather than the legacy three-file specification/test-design/implementation-plan publication set.
 
 ---
 

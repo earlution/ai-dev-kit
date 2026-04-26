@@ -45,6 +45,19 @@ housekeeping_policy: keep
 - **In scope:** T06 ownership rewiring, naming policy, terminology contract, compatibility policy, FR-073 AC3 planning closure path.
 - **Out of scope:** Executing full filename migration waves and release of downstream implementation changes beyond this planning/package publication.
 
+### 1.4 Inherited planning sets reconciliation
+
+This IPP absorbs and unifies the prior fragmented planning artifacts authored under the superseded tasks. No planning content is lost; each input artifact is mapped to the section of this IPP that now carries it.
+
+| Inherited artifact | Origin task | Disposition under T06 | Mapped sections in this IPP |
+| ---- | ---- | ---- | ---- |
+| [`IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md`](IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md) (legacy `IPW-` prefix) | E4:S19:T02 (SUPERSEDED) | Migrated to canonical [`IPP-E4S19T02-...md`](IPP-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md); requirements + test ideas absorbed | §1.1 (RF3, RF4), §2.4 compatibility behavior, §2.5 terminology contract, §3 T1/T4 |
+| [`IPP-E4S19T05-kanban-fr-br-uxr-filename-normalization.md`](IPP-E4S19T05-kanban-fr-br-uxr-filename-normalization.md) | E4:S19:T05 (SUPERSEDED) | Authoritative source for naming policy and migration mapping | §1.1 (RF2), §2.4 canonical filename mapping table |
+| [`ICW-E4S19T05-specification.md`](ICW-E4S19T05-specification.md) | E4:S19:T05 (SUPERSEDED, pre-consolidation ICW set) | Folded into unified IPP per [FR-042](../project-management/kanban/fr-br/FR-042-implementation-planning-workflow-ipw.md) §7 ICW→IPW consolidation | §1, §2 |
+| [`ICW-E4S19T05-test-design.md`](ICW-E4S19T05-test-design.md) | E4:S19:T05 (SUPERSEDED) | Consolidated | §3 test design |
+| [`ICW-E4S19T05-implementation-plan.md`](ICW-E4S19T05-implementation-plan.md) | E4:S19:T05 (SUPERSEDED) | Consolidated and re-organized into wave plan | §4 implementation plan |
+| FR-073 governance prose (Phase B/C closure under [`E5:S01:T73`](../project-management/kanban/epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)) | E5:S01:T73 (COMPLETE — historical anchor) | T73 retained for historical phases; AC3 (UKW/statistics pass) absorbed by T06 | §1.1 (RF5), §4 Wave 4 |
+
 ---
 
 ## 2. Specification
@@ -67,7 +80,33 @@ Create a single meta-governance planning contract for UXR-008, FR-086, and FR-07
 - Must preserve compatibility for existing references that still point to legacy long-form filenames until migration is completed.
 - Must avoid timestamp churn or non-substantive `Last modified` rewrites while updating board surfaces.
 
-### 2.4 Status transition intent (mandatory)
+### 2.4 Canonical filename policy and migration mapping
+
+The canonical short-form pattern (`kboard.md`, `fbuboard.md`, `fbu-completed.md`, `fbu-structure.md`) extends to all remaining supporting docs in `docs/project-management/kanban/`. Individual issue files (`FR-*.md`, `BR-*.md`, `UXR-*.md`) and task files (`Txx-...md`) are out of scope per §1.3 invariants.
+
+| Legacy path | Canonical target | Disposition | Status as of this IPP |
+| ---- | ---- | ---- | ---- |
+| `docs/project-management/kanban/fr-br-uxr-completed.md` | `docs/project-management/kanban/fbu-completed.md` | Migrated and legacy file removed | DONE in `v0.4.19.5+7` |
+| `docs/project-management/kanban/fr-br-uxr-structure.md` | `docs/project-management/kanban/fbu-structure.md` | Migrated; legacy retained as compatibility-alias stub | DONE; alias retained |
+| `docs/project-management/kanban/fr-br-uxr-board.md` | `docs/project-management/kanban/fbuboard.md` | Alias header in place but legacy body still embedded — must strip embedded body so file is alias-only | PARTIAL — to be closed under T06 Wave 2 |
+| `docs/project-management/kanban/fr-br-uxr-open-taskless-queue.md` | `docs/project-management/kanban/fbu-open-taskless-queue.md` (proposed) | Unique operational doc; rename to canonical short-form and leave legacy as alias-only stub | TODO — to be closed under T06 Wave 2 |
+| `docs/project-management/kanban/fr-br/` directory | `docs/project-management/kanban/fbu/` *(decision pending)* | High-blast-radius rename; deferred pending impact analysis | DEFERRED — explicit retention until separately approved |
+| Individual `FR-*.md`/`BR-*.md`/`UXR-*.md` | unchanged | Invariant: identity preserved per FR-086 | INVARIANT |
+| Task docs `Txx-*.md` | unchanged | Out of scope per §1.3 | INVARIANT |
+
+**Compatibility behavior:**
+
+- Renamed supporting files leave a legacy-named stub that contains only YAML frontmatter, a `Legacy Alias:` header, and a one-line redirect link to the canonical file (mirrors current `fr-br-uxr-structure.md` style — see [example](../project-management/kanban/fr-br-uxr-structure.md)).
+- Legacy `IPW-` prefixed artifacts have a canonical `IPP-`-prefixed copy/rename; legacy file may be retained as a redirect note pending downstream consumer migration.
+- Cross-doc references in scoped surfaces are rewired to canonical paths; legacy paths remain resolvable for one release cycle minimum after migration.
+
+### 2.5 Terminology contract
+
+- `FBU` is the collective short-form for "FR/BR/UXR" in narrative prose, headings, and short labels in scoped supporting docs (e.g. `fbuboard.md` header, supporting-doc titles).
+- Individual issue identity remains `FR-NNN`, `BR-NNN`, `UXR-NNN` — never `FBU-NNN`.
+- Existing identifiers (`fr-br-uxr-board`, `fr-br-uxr-structure`) remain valid in legacy aliases and historical changelog text; they are not retroactively rewritten.
+
+### 2.6 Status transition intent (mandatory)
 
 - **Current task status:** IN PROGRESS
 - **Transition trigger to IN PROGRESS:** Already satisfied at task creation (meta task filed as active governance work).
@@ -93,20 +132,78 @@ Create a single meta-governance planning contract for UXR-008, FR-086, and FR-07
 
 ## 4. Implementation plan
 
+The plan is organized as five sequential waves so each can be released atomically. Wave 1 (governance/wiring) is **complete and published as `v0.4.19.6+1`** by the RW that produced this IPP; Waves 2–4 are downstream TDD/RW build work; Wave 5 is the closing reconciliation.
+
+### 4.1 Wave 1 — Governance, supersede, and IPP wiring  (DONE: `v0.4.19.6+1`)
+
 | Step | Action | Deliverable |
 | ---- | ------ | ----------- |
-| 1 | File T06 meta task under Story 019 | New task doc with merged scope + ACs |
-| 2 | Mark T02 and T05 as superseded by T06 | Historical task docs preserved with redirect notes |
-| 3 | Rewire UXR-008 / FR-086 / FR-073 to T06 | Canonical implementing-task ownership in intake docs |
-| 4 | Rewire Story 019, Story 001, and `fbuboard.md` rows | Canonical board/story/task traceability |
-| 5 | Publish IPP-E4S19T06 | Unified planning artifact for merged scope |
-| 6 | Canonicalize planning artifact prefix references | `IPP-` links used consistently; legacy `IPW-E4S19T02` path no longer canonical |
-| 7 | Validate wiring and link integrity | Validation evidence for release readiness |
+| 1.1 | File T06 meta task under Story 019 | T06 task doc with merged scope + ACs |
+| 1.2 | Mark T02/T05 as `SUPERSEDED` and add successor anchor on T73 | Historical task docs preserved with redirect notes |
+| 1.3 | Rewire UXR-008/FR-086/FR-073 `Implementing Task` to T06 with historical lineage preserved | Canonical implementing-task ownership in intake docs |
+| 1.4 | Rewire Story 019 / Story 001 checklists and `fbuboard.md` rows | Canonical board/story/task traceability |
+| 1.5 | Publish this IPP | Unified planning artifact for merged scope |
+| 1.6 | Migrate legacy `IPW-E4S19T02-...md` to canonical `IPP-E4S19T02-...md` | Canonical artifact prefix used consistently; legacy file retained per compatibility policy |
 
-### 4.1 Files to create or modify
+### 4.2 Wave 2 — Canonical filename migration (close §2.4 PARTIAL/TODO rows)
+
+| Step | Action | Deliverable |
+| ---- | ------ | ----------- |
+| 2.1 | Strip embedded legacy body from `fr-br-uxr-board.md`; reduce file to alias-only stub matching `fr-br-uxr-structure.md` shape | `fr-br-uxr-board.md` is alias-only |
+| 2.2 | Rename `fr-br-uxr-open-taskless-queue.md` → `fbu-open-taskless-queue.md`; leave legacy filename as alias-only stub; rewire references | Canonical short-form path live; legacy alias retained |
+| 2.3 | Rewire any cross-doc references that still point to legacy long-form paths in scope of this wave | Link integrity preserved |
+
+### 4.3 Wave 3 — Terminology contract enforcement
+
+| Step | Action | Deliverable |
+| ---- | ------ | ----------- |
+| 3.1 | Apply collective `FBU` wording in scoped narrative docs (board headers, supporting-doc intros) without renaming individual issues | Updated narrative prose |
+| 3.2 | Verify no individual issue identity (`FR-*`/`BR-*`/`UXR-*`) was renamed | Identity guardrail evidence |
+
+### 4.4 Wave 4 — FR-073 AC3 closure (UKW/statistics pass under T06 ownership)
+
+| Step | Action | Deliverable |
+| ---- | ------ | ----------- |
+| 4.1 | Run a scoped UKW (or equivalent statistics pass) covering MoSCOW taskless table + Board Statistics, using **T06** as the active governance reference where doc-only changes need an anchor | UKW/statistics evidence committed via RW |
+| 4.2 | Update `fbuboard.md` Board Statistics + MoSCOW taskless table accordingly; record evidence on T06 ACs | Statistics reconciled and FR-073 AC3 marked closed |
+| 4.3 | Flip FR-073 status from `PENDING` to `CLOSED` once AC3 evidence lands | FR-073 closed atomically with RW |
+
+### 4.5 Wave 5 — Validation and stabilization
+
+| Step | Action | Deliverable |
+| ---- | ------ | ----------- |
+| 5.1 | Run `validate_plan_wiring.py` across touched docs | Validation log |
+| 5.2 | Run `validate_ipw_publication_wiring.py --requested E4:S19:T06` | Publication wiring confirmation |
+| 5.3 | Run `update_kanban_docs.py --dry-run --mode full` to confirm no path-resolution regressions | Dry-run diff summary |
+| 5.4 | Mark T06 ACs satisfied and flip T06 status to `COMPLETE` via RW once Waves 2–4 land | Closing release |
+
+### 4.6 AC traceability matrix (inherited FBU/task ACs ↔ T06 ACs)
+
+| Inherited AC (source) | Description | Mapped T06 AC | Mapped IPP RF | Resolved by Wave |
+| ---- | ---- | ---- | ---- | ---- |
+| UXR-008 AC3 | Canonical naming policy declared | T06 AC3 | RF2 | 1 (policy) + 2 (execution) |
+| UXR-008 AC4 | Migration mapping published | T06 AC3 | RF2 | 1 (mapping in §2.4) |
+| UXR-008 AC5 | Backward-compatibility behavior documented | T06 AC5 | RF4 | 1 (§2.4 compatibility behavior) |
+| UXR-008 AC6 | Cross-wiring consistency across task/story/UXR/boards | T06 AC7 | RF6 | 1 |
+| FR-086 F1 | Canonical naming map for supporting docs | T06 AC3 | RF2 | 1 (§2.4) |
+| FR-086 F2/F4 | `FBU` collective terminology applied/disallowed contexts | T06 AC4 | RF3 | 1 (§2.5) + 3 (enforcement) |
+| FR-086 F3 | Individual issue identity preserved | T06 AC4 | RF3 | Invariant per §1.3 |
+| FR-086 F5/F6 | Cross-doc link rewiring + traceability | T06 AC7 | RF6 | 1 |
+| T05 AC1 | Canonical filename policy | T06 AC3 | RF2 | 1 |
+| T05 AC2 | Old→new mapping | T06 AC3 | RF2 | 1 (§2.4 table) |
+| T05 AC3 | Markdown link rewiring | T06 AC7 | RF6 | 1 + 2 |
+| T05 AC4 | Script/config path updates for renamed files | T06 AC5 | RF4 | 2 + 5 |
+| T05 AC5 | Backward-compat migration guidance | T06 AC5 | RF4 | 1 (§2.4) |
+| T05 AC6 | Cross-wiring after migration | T06 AC7 | RF6 | 1 + 2 |
+| T02 AC1 | Canonical naming map for supporting docs (FBU) | T06 AC3/AC4 | RF2/RF3 | 1 |
+| T02 AC2/AC3 | Terminology rules + identity preservation | T06 AC4 | RF3 | 1 (§2.5) + 3 |
+| FR-073 AC3 | UKW/statistics pass anchored to canonical task | T06 AC6 | RF5 | 4 |
+
+### 4.7 Files touched by Wave 1 (already published)
 
 - `docs/project-management/kanban/epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md` (new)
 - `docs/implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md` (new)
+- `docs/implementation-cycles/IPP-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md` (new — canonical-prefix migration of legacy `IPW-E4S19T02-...md`)
 - `docs/project-management/kanban/epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md`
 - `docs/project-management/kanban/epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T02-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology-fr086.md`
 - `docs/project-management/kanban/epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md`
@@ -117,23 +214,26 @@ Create a single meta-governance planning contract for UXR-008, FR-086, and FR-07
 - `docs/project-management/kanban/fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md`
 - `docs/project-management/kanban/fbuboard.md`
 
-### 4.2 Dependency order
-
-1. Create T06 + IPP artifact.
-2. Update superseded task docs and story checklist.
-3. Rewire upstream FBU docs and board rows.
-4. Run wiring/link validation.
-5. Publish via RW.
-
 ---
 
 ## 5. Success / verification criteria
 
-- [ ] T06 exists and is the canonical implementing task for UXR-008, FR-086, FR-073.
-- [ ] T02 and T05 are marked superseded; T73 includes successor note.
-- [ ] `fbuboard.md` rows for UXR-008/FR-086/FR-073 point to T06 and `IPP-E4S19T06`.
-- [ ] All touched docs use canonical `IPP-` artifact naming.
-- [ ] Required wiring validators pass for `E4:S19:T06`.
+Runnable validators (from [`packages/frameworks/workflow mgt/scripts/validation/`](../../packages/frameworks/workflow%20mgt/scripts/validation/)):
+
+- [ ] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py"` — passes for touched docs.
+- [ ] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_ipw_publication_wiring.py" --requested E4:S19:T06` — passes (published Wave 1 used `Publication Status: NOT_APPLICABLE` per consolidated IPP model).
+- [ ] `python3 "packages/frameworks/workflow mgt/scripts/update_kanban_docs.py" --dry-run --mode full` — no path-resolution regressions for renamed files.
+
+Deliverable checks:
+
+- [x] T06 exists and is the canonical implementing task for UXR-008, FR-086, FR-073.
+- [x] T02 and T05 are marked superseded; T73 includes successor governance anchor.
+- [x] `fbuboard.md` rows for UXR-008/FR-086/FR-073 point to T06 and `IPP-E4S19T06`.
+- [x] All touched docs use canonical `IPP-` artifact naming (legacy `IPW-E4S19T02-...md` migrated to canonical `IPP-E4S19T02-...md`).
+- [ ] `fr-br-uxr-board.md` is reduced to alias-only stub (Wave 2).
+- [ ] `fr-br-uxr-open-taskless-queue.md` is renamed to `fbu-open-taskless-queue.md` with legacy alias retained (Wave 2).
+- [ ] FR-073 AC3 closure evidence recorded under T06 (Wave 4).
+- [ ] T06 status flipped to `COMPLETE` after Waves 2–4 (Wave 5).
 
 ---
 
