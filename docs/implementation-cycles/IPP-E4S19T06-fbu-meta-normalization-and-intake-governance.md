@@ -10,7 +10,7 @@ housekeeping_policy: keep
 
 **Host Task:** [`T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md`](../project-management/kanban/epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) **(E4:S19:T06)**  
 **Planning for:** [UXR-008](../project-management/kanban/fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md), [FR-086](../project-management/kanban/fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md), [FR-073](../project-management/kanban/fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)  
-**Status:** Complete (Waves 1-5 implemented; pending publication run)
+**Status:** Complete (Waves 1-5 implemented and published through `v0.4.19.6+5`)
 
 ---
 

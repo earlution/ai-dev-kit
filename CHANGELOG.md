@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.6+5] - 26-04-26
+## [0.4.19.6+6] - 26-04-26
 
-E4:S19:T06 — **`RW -d`** with **`--art`**: publish Wave 5 validation/stabilization closure by flipping T06 + Story 019 state to `COMPLETE` and recording final IPP validator outcomes (with pre-existing unrelated T75 plan-wiring blocker noted). SemVer **v0.4.764+5**.
+E4:S19:T06 — final closure publication run: update residual IPP status wording post sign-off and publish canonical non-`-d` release traceability for completed T06 scope. SemVer **v0.4.764+6**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+5.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+6.md)
