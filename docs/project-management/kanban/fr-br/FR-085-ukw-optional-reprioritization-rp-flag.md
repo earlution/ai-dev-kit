@@ -16,7 +16,8 @@ housekeeping_policy: keep
 **Severity:** HIGH  
 **Status:** OPEN
 
-**Implementing Task:** [E6:S07:T116](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md)
+**Implementing Task:** [E2:S16:T06](../epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T06-ukw-optional-reprioritization-rp-flag-fr085.md)
+**Historical implementing task:** E6:S07:T116 (legacy task doc removed after re-housing publication)
 
 ---
 

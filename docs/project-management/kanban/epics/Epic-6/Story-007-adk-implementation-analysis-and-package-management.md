@@ -121,8 +121,8 @@ housekeeping_policy: keep
 - [ ] **E6:S07:T115 – Last-modified stamp forensic integrity guardrails** - TODO (CRITICAL, prevent synthetic timestamp churn; update stamps only on substantive underlying work)
   - Task: [`T115-last-modified-stamp-forensic-integrity-guardrails.md`](Story-007-adk-implementation-analysis-and-package-management/T115-last-modified-stamp-forensic-integrity-guardrails.md) | [UXR-009](../../fr-br/UXR-009-last-modified-stamp-forensic-integrity-and-drift-protection.md)
 
-- [ ] **E6:S07:T116 – UKW optional reprioritization `--rp` flag (FR-085)** - TODO (HIGH, optional deep analysis of intent/dependencies/blockers/importance to reprioritize tasks + FR/BR/UXR)
-  - Task: [`T116-ukw-optional-reprioritization-rp-flag-fr085.md`](Story-007-adk-implementation-analysis-and-package-management/T116-ukw-optional-reprioritization-rp-flag-fr085.md) | [FR-085](../../fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md)
+- [x] **E6:S07:T116 – UKW optional reprioritization `--rp` flag (FR-085)** - SUPERSEDED (re-housed to **E2:S16:T06** for canonical perpetual workflow-operations ownership; legacy task doc removed)
+  - Historical anchor: `E6:S07:T116` | [FR-085](../../fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md) | Successor: [E2:S16:T06](../Epic-2/Story-016-perpetual-ongoing-workflow-operations/T06-ukw-optional-reprioritization-rp-flag-fr085.md)
 
 - **Re-housed:** `BR-069` implementation moved from `E6:S07:T117` to **[E2:S15:T04](../Epic-2/Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)** to align with board-governance ownership under Story 015 and avoid default-housing drift in Story 007.
 

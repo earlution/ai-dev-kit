@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.6+6] - 26-04-26
+## [0.2.16.6+1] - 26-04-26
 
-E4:S19:T06 — final closure publication run: update residual IPP status wording post sign-off and publish canonical non-`-d` release traceability for completed T06 scope. SemVer **v0.4.764+6**.
+E2:S16:T06 — **`RW -d`** with **`--art`**: re-house FR-085 (`--rp` UKW reprioritization scope) from legacy `E6:S07:T116` into canonical perpetual workflow operations story ownership, rewire linked docs/boards, and remove the legacy task doc. SemVer **v0.4.764+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+6.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.6+1.md)

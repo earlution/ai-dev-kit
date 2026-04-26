@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-25 (v0.2.16.4+4 – Kanban documentation setup)
-**Version:** v0.2.16.4+4
+**Last updated:** 2026-04-26 (v0.2.16.6+1 – Kanban documentation setup)
+**Version:** v0.2.16.6+1
 **Code:** E2S16
 
 ---
@@ -34,6 +34,9 @@ housekeeping_policy: keep
 
 - [ ] **E2:S16:T05 – Markdown Documentation Maintenance (Perpetual)** - IN PROGRESS (HIGH, dedicated perpetual lane for recurring markdown-only documentation upkeep outside workflow-maintenance umbrella and kanban synchronization lanes)  
   - Task: [`Story-016-perpetual-ongoing-workflow-operations/T05-markdown-documentation-maintenance-perpetual.md`](Story-016-perpetual-ongoing-workflow-operations/T05-markdown-documentation-maintenance-perpetual.md) | [FR-088](../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
+
+- [ ] **E2:S16:T06 – UKW optional reprioritization `--rp` flag (FR-085)** - IN PROGRESS (HIGH, semantic re-house from `E6:S07:T116`; optional deep reprioritization based on intent/dependencies/blockers/impact across task + FBU surfaces)  
+  - Task: [`Story-016-perpetual-ongoing-workflow-operations/T06-ukw-optional-reprioritization-rp-flag-fr085.md`](Story-016-perpetual-ongoing-workflow-operations/T06-ukw-optional-reprioritization-rp-flag-fr085.md) | [FR-085](../../fr-br/FR-085-ukw-optional-reprioritization-rp-flag.md)
 
 ---
 
