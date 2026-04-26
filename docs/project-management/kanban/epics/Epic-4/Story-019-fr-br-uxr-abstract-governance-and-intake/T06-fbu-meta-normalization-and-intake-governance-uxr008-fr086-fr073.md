@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-26  
-**Last updated:** 2026-04-26 (Wave 2 canonical filename migration: legacy board/queue aliases normalized)  
+**Last updated:** 2026-04-26 (Wave 4 scoped reconciliation: FR-073 AC3 closure evidence recorded across queue/board/FR surfaces)  
 **Code:** E4S19T06
 
 **Upstream:** [UXR-008](../../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md), [FR-086](../../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md), [FR-073](../../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
@@ -66,7 +66,7 @@ FBU naming and intake-governance ownership is currently split across multiple ta
 - [ ] **AC3:** Canonical supporting-doc naming policy and deterministic migration map are documented in `IPP-E4S19T06`.
 - [ ] **AC4:** `FBU` collective terminology standard is applied in scoped docs without renaming individual issue identities.
 - [ ] **AC5:** Legacy compatibility behavior (aliases/redirect notes) is documented for any retained long-form paths.
-- [ ] **AC6:** FR-073 AC3 closure work (scoped board/statistics reconciliation) is explicitly planned and traceably wired to this task.
+- [x] **AC6:** FR-073 AC3 closure work (scoped board/statistics reconciliation) is explicitly planned and traceably wired to this task. *(Wave 4 evidence: `fbu-open-taskless-queue.md` snapshot refresh + `fbuboard.md` statistics/governance reconciliation + FR-073 AC3 closure update.)*
 - [ ] **AC7:** `fbuboard.md`, Story 019 checklist, and all three FBU docs point to the T06 task + T06 IPP consistently.
 
 ---

@@ -164,9 +164,9 @@ The plan is organized as five sequential waves so each can be released atomicall
 
 | Step | Action | Deliverable |
 | ---- | ------ | ----------- |
-| 4.1 | Run a scoped UKW (or equivalent statistics pass) covering MoSCOW taskless table + Board Statistics, using **T06** as the active governance reference where doc-only changes need an anchor | UKW/statistics evidence committed via RW |
-| 4.2 | Update `fbuboard.md` Board Statistics + MoSCOW taskless table accordingly; record evidence on T06 ACs | Statistics reconciled and FR-073 AC3 marked closed |
-| 4.3 | Flip FR-073 status from `PENDING` to `CLOSED` once AC3 evidence lands | FR-073 closed atomically with RW |
+| 4.1 | Run a scoped UKW (or equivalent statistics pass) covering MoSCOW taskless table + Board Statistics, using **T06** as the active governance reference where doc-only changes need an anchor | DONE 2026-04-26 (scoped pass on `fbu-open-taskless-queue.md` + `fbuboard.md`) |
+| 4.2 | Update `fbuboard.md` Board Statistics + MoSCOW taskless table accordingly; record evidence on T06 ACs | DONE 2026-04-26 (board statistics note + queue snapshot reconciliation + T06 AC6 evidence) |
+| 4.3 | Flip FR-073 status from `PENDING` to `CLOSED` once AC3 evidence lands | DONE 2026-04-26 (`FR-073` status and AC3 updated) |
 
 ### 4.5 Wave 5 — Validation and stabilization
 
@@ -232,7 +232,7 @@ Deliverable checks:
 - [x] All touched docs use canonical `IPP-` artifact naming (legacy `IPW-E4S19T02-...md` migrated to canonical `IPP-E4S19T02-...md`).
 - [x] `fr-br-uxr-board.md` is reduced to alias-only stub (Wave 2).
 - [x] `fr-br-uxr-open-taskless-queue.md` is renamed to `fbu-open-taskless-queue.md` with legacy alias retained (Wave 2).
-- [ ] FR-073 AC3 closure evidence recorded under T06 (Wave 4).
+- [x] FR-073 AC3 closure evidence recorded under T06 (Wave 4).
 - [ ] T06 status flipped to `COMPLETE` after Waves 2–4 (Wave 5).
 
 ---

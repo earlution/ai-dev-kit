@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FBU Prioritization Board
 
-**Last Updated:** 2026-04-26 (RW: E4:S19:T06; meta-task filing + IPP wiring for UXR-008/FR-086/FR-073)
-**Version Context:** v0.4.19.6+1 (**SemVer** v0.4.764+1); T06 now owns merged UXR-008/FR-086/FR-073 governance scope
+**Last Updated:** 2026-04-26 (Wave 4 scoped reconciliation under E4:S19:T06 for FR-073 AC3: taskless queue + board statistics sync)
+**Version Context:** v0.4.19.6+3 (**SemVer** v0.4.764+3); T06 owns merged UXR-008/FR-086/FR-073 governance scope
 **Intake migration note (FR-072 / Approach D):** New FBU intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
@@ -126,7 +126,7 @@ This board provides **centralized visibility and prioritization** for all open F
 - **FR-062** – Github release installation experience - PROPOSED (backlog sync) - [FR-062](fr-br/FR-062-github-release-installation-experience.md) | [FR-062](fr-br/FR-062-github-release-installation-experience.md) | [E5:S01:T62](epics/Epic-5/Story-001-fr-repo/T62-github-release-installation-experience.md) | —No IPP— | | Last modified: 2026-04-20 15:52 UTC
 - **FR-063** – Cmw epic 5 execution context - ACTIVE (intake released v0.5.2.6+1; implementation ACs open) (backlog sync) - [FR-063](fr-br/FR-063-cmw-epic-5-execution-context.md) | Last modified: 2026-04-20 15:52 UTC
 - **FR-072** – Uniform repository abstract space kanban rules - PENDING (backlog sync) - [FR-072](fr-br/FR-072-uniform-repository-abstract-space-kanban-rules.md) | Last modified: 2026-04-20 15:52 UTC
-- **FR-073** – Fr br uxr board open taskless intake execution plan - PENDING *(Phase B/C filed **v0.5.1.74+2**; AC3 now governed under **E4:S19:T06** meta closure scope)* (backlog sync) - [FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [E4:S19:T06](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) | [—IPP—](../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md) | | Last modified: 2026-04-26 13:50 UTC
+- **FR-073** – FBU board open taskless intake execution plan - CLOSED *(Phase B/C filed **v0.5.1.74+2**; AC3 closed in Wave 4 scoped reconciliation under **E4:S19:T06**)* (backlog sync) - [FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [FR-073](fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md) | [E4:S19:T06](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) | [—IPP—](../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md) | | Last modified: 2026-04-26 16:37 UTC
 - **FR-074** – Kanban intake atomic kg r2 kg r6 governance - PENDING (backlog sync) - [FR-074](fr-br/FR-074-kanban-intake-atomic-kg-r2-kg-r6-governance.md) | Last modified: 2026-04-20 15:52 UTC
 
 ### Ongoing (O) - Perpetual Items
@@ -142,6 +142,7 @@ No ongoing FBU items currently.
 - **Feature Requests:** 52 | Last modified: 2026-04-20 15:52 UTC
 - **Bug Reports:** 15   | Last modified: 2026-04-20 15:52 UTC
 - **User Experience Research:** 7 | Last modified: 2026-04-20 15:52 UTC
+- **Scoped pass note (Wave 4 / T06):** MoSCOW taskless queue and FR-073 governance row were reconciled; full inventory recount remains a separate UKW/full-sync concern. | Last modified: 2026-04-26 16:46 UTC
 
 **By Priority:**
 

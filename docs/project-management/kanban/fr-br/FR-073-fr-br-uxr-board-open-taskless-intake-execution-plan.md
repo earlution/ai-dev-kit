@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Submitted:** 2026-03-31  
 **Submitted By:** User  
 **Priority:** MEDIUM  
-**Status:** PENDING *(Phase B/C filed **v0.5.1.74+2** — verify UKW/statistics ACs in production use)*  
+**Status:** CLOSED *(Phase B/C filed **v0.5.1.74+2**; AC3 closed via Wave 4 scoped reconciliation under **E4:S19:T06**)*  
 
 **Implementing Task:** [E4:S19:T06](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md)
 **Historical implementing task:** [E5:S01:T73](../epics/Epic-5/Story-001-fr-repo/T73-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
@@ -61,7 +61,7 @@ The **Intake plan** prose on [`fbuboard.md`](../fbuboard.md) (open ∧ taskless 
 
 - [x] **AC1:** **RW** released with **T73** narrative closure — **`v0.5.1.74+2`** (internal **T74** build 2; see detailed changelog for monotonicity note).  
 - [x] **AC2:** Intake plan section and **T73** updated together for Phase B/C (2026-03-31).  
-- [ ] **AC3:** At least one **UKW** or scoped pass updates **MoSCOW taskless table** + **Board Statistics** using **T06** as the active governance reference (with T73 retained as historical source).  
+- [x] **AC3:** At least one **UKW** or scoped pass updates **MoSCOW taskless table** + **Board Statistics** using **T06** as the active governance reference (with T73 retained as historical source). *(Wave 4 scoped pass completed 2026-04-26 on `fbu-open-taskless-queue.md` + `fbuboard.md`.)*  
 - [x] **AC4:** **Pre-identified task mapping** consistent across [`fbuboard.md`](../fbuboard.md), **T73**, and **FR-073:R04** for Phase B/C filing pass.
 
 ---
@@ -76,7 +76,7 @@ The **Intake plan** prose on [`fbuboard.md`](../fbuboard.md) (open ∧ taskless 
 
 ## Intake Decision
 
-**Intake Status:** FILED — **Phase B/C** documented under **`v0.5.1.74+2`** (SemVer **`v0.4.686+2`**); **AC3** UKW/statistics pass still open.
+**Intake Status:** CLOSED — **Phase B/C** documented under **`v0.5.1.74+2`** (SemVer **`v0.4.686+2`**); **AC3** closure evidence recorded in Wave 4 under **E4:S19:T06**.
 
 **Assigned To:**
 

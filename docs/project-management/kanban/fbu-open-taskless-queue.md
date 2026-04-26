@@ -51,17 +51,17 @@ Before `RW -k`:
 
 ---
 
-## Queue table (snapshot 2026-03-31)
+## Queue table (snapshot 2026-04-26, scoped pass under E4:S19:T06)
 
 **Epic branches (examples):** Epic 5 → `epic/5-*`; Epic 6 → `epic/6-framework-management`; Epic 7 → `epic/7-documentation-maintenance`.
 
 | MoSCOW | Item | Needs task file | Needs Implementing Task | Suggested epic branch (default) | `RW -k` (after filing) |
 | -------- | ------ | ----------------- | ------------------------- | -------------------------------- | ------------------------ |
-| M | BR-038 | Yes | Yes | `epic/6-framework-management` | `RW -k E6:S01:T38` |
+| M | BR-038 | No (task exists) | No (linked to E6:S06:T63) | `epic/6-framework-management` | n/a — already wired |
 | M | BR-039 | Yes | Yes | `epic/6-framework-management` | `RW -k E6:S01:T39` |
-| M | BR-059 | No (E6:S07:T109) | Already linked | `epic/6-framework-management` | n/a — not taskless |
+| M | BR-059 | No (E6:S07:T109 exists) | Yes (doc header missing link) | `epic/6-framework-management` | n/a — add doc wiring first |
 
-*Remaining open items: process in MoSCOW order; see live scan vs `fr-br/*.md` (70+ rows in internal audit — many are WIRE-only with existing `TNN` files under Epic 5/6/7). Work the next row after each successful `RW -k`.*
+*Remaining open items: process in MoSCOW order; this table was reconciled in Wave 4 for FR-073 AC3 closure evidence under E4:S19:T06. Continue one item per `RW -k` pass where filing is required.*
 
 ### Should / Could / unbanded (abbreviated)
 
