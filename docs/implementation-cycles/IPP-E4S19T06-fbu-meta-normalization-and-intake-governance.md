@@ -88,8 +88,8 @@ The canonical short-form pattern (`kboard.md`, `fbuboard.md`, `fbu-completed.md`
 | ---- | ---- | ---- | ---- |
 | `docs/project-management/kanban/fr-br-uxr-completed.md` | `docs/project-management/kanban/fbu-completed.md` | Migrated and legacy file removed | DONE in `v0.4.19.5+7` |
 | `docs/project-management/kanban/fr-br-uxr-structure.md` | `docs/project-management/kanban/fbu-structure.md` | Migrated; legacy retained as compatibility-alias stub | DONE; alias retained |
-| `docs/project-management/kanban/fr-br-uxr-board.md` | `docs/project-management/kanban/fbuboard.md` | Alias header in place but legacy body still embedded — must strip embedded body so file is alias-only | PARTIAL — to be closed under T06 Wave 2 |
-| `docs/project-management/kanban/fr-br-uxr-open-taskless-queue.md` | `docs/project-management/kanban/fbu-open-taskless-queue.md` (proposed) | Unique operational doc; rename to canonical short-form and leave legacy as alias-only stub | TODO — to be closed under T06 Wave 2 |
+| `docs/project-management/kanban/fr-br-uxr-board.md` | `docs/project-management/kanban/fbuboard.md` | Alias-only stub retained for compatibility; canonical board remains `fbuboard.md` | DONE in `E4:S19:T06` Wave 2 |
+| `docs/project-management/kanban/fr-br-uxr-open-taskless-queue.md` | `docs/project-management/kanban/fbu-open-taskless-queue.md` | Canonical queue file created and legacy filename converted to alias-only stub | DONE in `E4:S19:T06` Wave 2 |
 | `docs/project-management/kanban/fr-br/` directory | `docs/project-management/kanban/fbu/` *(decision pending)* | High-blast-radius rename; deferred pending impact analysis | DEFERRED — explicit retention until separately approved |
 | Individual `FR-*.md`/`BR-*.md`/`UXR-*.md` | unchanged | Invariant: identity preserved per FR-086 | INVARIANT |
 | Task docs `Txx-*.md` | unchanged | Out of scope per §1.3 | INVARIANT |
@@ -230,8 +230,8 @@ Deliverable checks:
 - [x] T02 and T05 are marked superseded; T73 includes successor governance anchor.
 - [x] `fbuboard.md` rows for UXR-008/FR-086/FR-073 point to T06 and `IPP-E4S19T06`.
 - [x] All touched docs use canonical `IPP-` artifact naming (legacy `IPW-E4S19T02-...md` migrated to canonical `IPP-E4S19T02-...md`).
-- [ ] `fr-br-uxr-board.md` is reduced to alias-only stub (Wave 2).
-- [ ] `fr-br-uxr-open-taskless-queue.md` is renamed to `fbu-open-taskless-queue.md` with legacy alias retained (Wave 2).
+- [x] `fr-br-uxr-board.md` is reduced to alias-only stub (Wave 2).
+- [x] `fr-br-uxr-open-taskless-queue.md` is renamed to `fbu-open-taskless-queue.md` with legacy alias retained (Wave 2).
 - [ ] FR-073 AC3 closure evidence recorded under T06 (Wave 4).
 - [ ] T06 status flipped to `COMPLETE` after Waves 2–4 (Wave 5).
 

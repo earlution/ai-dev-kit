@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.6+1] - 26-04-26
+## [0.4.19.6+2] - 26-04-26
 
-E4:S19:T06 — **`RW`** with **`--art`**: file the consolidated meta-task for UXR-008/FR-086/FR-073, publish canonical `IPP-E4S19T06`, and rewire governance ownership from T02/T05/T73 follow-on into one Story-019 anchor. SemVer **v0.4.764+1**.
+E4:S19:T06 — **`RW -d`** with **`--art`**: publish Wave 2 canonical filename migration by converting `fr-br-uxr-board.md` and `fr-br-uxr-open-taskless-queue.md` to alias-only stubs and introducing canonical `fbu-open-taskless-queue.md`. SemVer **v0.4.764+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+2.md)

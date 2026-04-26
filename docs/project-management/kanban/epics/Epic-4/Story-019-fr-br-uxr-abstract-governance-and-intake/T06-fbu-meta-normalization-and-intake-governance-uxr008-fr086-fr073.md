@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-26  
-**Last updated:** 2026-04-26 (meta-task created to supersede T02/T05 and absorb FR-073 AC3 closure work)  
+**Last updated:** 2026-04-26 (Wave 2 canonical filename migration: legacy board/queue aliases normalized)  
 **Code:** E4S19T06
 
 **Upstream:** [UXR-008](../../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md), [FR-086](../../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md), [FR-073](../../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
@@ -30,7 +30,7 @@ Publication N/A Reason: This task follows the consolidated FR-042 IPW/IPP model 
 ## Input
 
 - Existing canonical board defaults (`kboard.md`, `fbuboard.md`) and partial supporting-doc normalization from T02/T05.
-- Remaining legacy surfaces still requiring canonical policy closure and migration decisions (`fr-br-uxr-board.md`, `fr-br-uxr-open-taskless-queue.md`).
+- Wave 2 filename migration executed: `fr-br-uxr-board.md` is now alias-only and canonical queue file `fbu-open-taskless-queue.md` exists with legacy alias retained at `fr-br-uxr-open-taskless-queue.md`.
 - FR-073 AC3 open requirement: scoped UKW/statistics refresh tied to active board governance.
 
 ---
