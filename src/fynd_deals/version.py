@@ -20,13 +20,13 @@ Framework: packages/frameworks/numbering & versioning/versioning-policy.md
 VERSION_RC = 0        # Release candidate (0 = development, 1+ = release candidate)
 VERSION_EPIC = 4      # Epic number (Epic 4: Kanban framework)
 VERSION_STORY = 19    # Story number within epic
-VERSION_TASK = 5      # Task number (E4:S19:T05 — kanban and FR/BR/UXR filename normalization)
-VERSION_BUILD = 7     # Build number (RW E4:S19:T05 --art)
+VERSION_TASK = 6      # Task number (E4:S19:T06 — FBU meta normalization and intake governance)
+VERSION_BUILD = 1     # Build number (RW E4:S19:T06 --art)
 
 # Composite version string using RC.EPIC.STORY.TASK+BUILD schema
 # Format: RC.EPIC.STORY.TASK+BUILD
 # Example: 0.3.1.3+1 = Development, Epic 3, Story 1, Task 3, Build 1
-# Current: 0.4.19.5+7 = Development, Epic 4, Story 19, Task 5, Build 7
+# Current: 0.4.19.6+1 = Development, Epic 4, Story 19, Task 6, Build 1
 VERSION_STRING = f"{VERSION_RC}.{VERSION_EPIC}.{VERSION_STORY}.{VERSION_TASK}+{VERSION_BUILD}"
 
 # Validation Notes:

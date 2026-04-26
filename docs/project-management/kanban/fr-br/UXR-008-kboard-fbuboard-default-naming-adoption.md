@@ -14,10 +14,12 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Status:** IN PROGRESS  
 **Code:** UXR-008  
-**Last updated:** 2026-04-25 (scope reopened from board-only naming to full Kanban/FR-BR-UXR filename normalization)  
-**Implementing Tasks:** E6:S07:T114 (completed phase), E4:S19:T05 (normalization expansion; re-housed from misfiled E6:S07:T117)  
-**Repository Tasks:** [E6:S07:T114](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T114-canonical-board-filename-migration-kboard-fbuboard.md) · [E4:S19:T05](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md)
-**Planning package (ICW):** [Specification](../../../implementation-cycles/ICW-E6S07T114-specification.md) · [Test design](../../../implementation-cycles/ICW-E6S07T114-test-design.md) · [Implementation plan](../../../implementation-cycles/ICW-E6S07T114-implementation-plan.md)
+**Last updated:** 2026-04-26 (meta ownership consolidated under E4:S19:T06 for UXR-008/FR-086/FR-073)  
+**Implementing Task:** E4:S19:T06 (canonical meta ownership)  
+**Historical implementing tasks:** E6:S07:T114 (completed phase), E4:S19:T05 (re-housed normalization expansion)  
+**Repository Tasks:** [E4:S19:T06](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) · [E6:S07:T114](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T114-canonical-board-filename-migration-kboard-fbuboard.md) · [E4:S19:T05](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md)
+**IPP:** [IPP-E4S19T06](../../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md)  
+**Planning package (historical ICW):** [Specification](../../../implementation-cycles/ICW-E6S07T114-specification.md) · [Test design](../../../implementation-cycles/ICW-E6S07T114-test-design.md) · [Implementation plan](../../../implementation-cycles/ICW-E6S07T114-implementation-plan.md)
 
 ---
 
@@ -69,4 +71,5 @@ Does extending concise canonical naming beyond the two board files to all kanban
 - [kboard](../kboard.md)
 - [fbuboard](../fbuboard.md)
 - [T114](../epics/Epic-6/Story-007-adk-implementation-analysis-and-package-management/T114-canonical-board-filename-migration-kboard-fbuboard.md)
+- [T06](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md)
 - [T05](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T05-kanban-and-fr-br-uxr-filename-normalization-uxr008.md)

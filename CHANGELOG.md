@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.4.19.5+7] - 25-04-26
+## [0.4.19.6+1] - 26-04-26
 
-E4:S19:T05 — **`RW`** with **`--art`**: restore complete historical FBU completion coverage in canonical `fbu-completed.md`, backfill missing COMPLETE intake records, and remove legacy `fr-br-uxr-completed.md`. SemVer **v0.4.764+7**.
+E4:S19:T06 — **`RW`** with **`--art`**: file the consolidated meta-task for UXR-008/FR-086/FR-073, publish canonical `IPP-E4S19T06`, and rewire governance ownership from T02/T05/T73 follow-on into one Story-019 anchor. SemVer **v0.4.764+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.5+7.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.6+1.md)

@@ -13,6 +13,7 @@ housekeeping_policy: keep
 **Priority:** MEDIUM  
 **Version Anchor:** v0.5.1.73+0 (doc-init) · **Phase B/C closed** v0.5.1.74+2 *(internal `VERSION_TASK` stays **T74** for monotonicity; see detailed changelog)*  
 **Feature Request:** [FR-073 – FR/BR/UXR board intake execution plan](../../../fr-br/FR-073-fr-br-uxr-board-open-taskless-intake-execution-plan.md)
+**Successor governance anchor:** [E4:S19:T06](../../Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) (meta ownership for cross-FBU naming and FR-073 AC3 closure)
 
 ---
 

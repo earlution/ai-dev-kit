@@ -9,16 +9,18 @@ housekeeping_policy: keep
 # Epic 4, Story 19, Task 5: Kanban and FR/BR/UXR filename normalization (UXR-008)
 
 **Task ID:** E4:S19:T05  
-**Status:** IN PROGRESS  
+**Status:** SUPERSEDED  
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-25  
-**Last updated:** 2026-04-25 (re-housed from misfiled E6:S07:T117)  
+**Last updated:** 2026-04-26 (superseded by E4:S19:T06 meta-task; historical task retained)  
 **Code:** E4S19T05
 
 **Upstream:** [UXR-008 – Canonical Kanban filename normalization](../../../fr-br/UXR-008-kboard-fbuboard-default-naming-adoption.md)
 
-**Coordinates:** [E6:S07:T114](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T114-canonical-board-filename-migration-kboard-fbuboard.md), [E4:S19:T02](T02-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology-fr086.md)
+**Coordinates:** [E6:S07:T114](../../Epic-6/Story-007-adk-implementation-analysis-and-package-management/T114-canonical-board-filename-migration-kboard-fbuboard.md), [E4:S19:T02](T02-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology-fr086.md), [E4:S19:T06](T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md)
+
+**Superseded by:** [E4:S19:T06](T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) · [IPP-E4S19T06](../../../../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md)
 
 ---
 

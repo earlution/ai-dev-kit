@@ -9,15 +9,16 @@ housekeeping_policy: keep
 # Epic 4, Story 19, Task 2: Canonical supporting Kanban/FBU doc naming and `FBU` collective terminology (FR-086)
 
 **Task ID:** E4:S19:T02  
-**Status:** IN PROGRESS  
+**Status:** SUPERSEDED  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-20 (IPW created and traceability links added; release in progress)  
+**Last updated:** 2026-04-26 (superseded by E4:S19:T06 meta-task; historical task retained)  
 **Code:** E4S19T02
 
 **Upstream:** [FR-086 - Canonical supporting Kanban/FBU doc naming and `FBU` collective terminology](../../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md)
-**IPW:** [`IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md`](../../../../../implementation-cycles/IPW-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md)
+**IPP (historical):** [`IPP-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md`](../../../../../implementation-cycles/IPP-E4S19T02-canonical-supporting-kanban-fbu-doc-naming-and-terminology.md)
+**Superseded by:** [E4:S19:T06](T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) · [IPP-E4S19T06](../../../../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md)
 
 ---
 
