@@ -93,7 +93,7 @@ Isolate why MoSCOW rows on `kboard.md` and `fbuboard.md` still exhibit **forensi
 - [x] Root cause hypothesis substantiated with code references and reproduction (§5).
 - [x] Guardrail requirements F1–F6 and test matrix R1–R8 defined for implementation follow-on.
 - [x] Code changes merged and regression tests passing (Phases A-C published under `v0.2.15.4+1` through `v0.2.15.4+3`; category-4 suite passing with `test_4_17`).
-- [ ] BR-069 closed or narrowed after implementation satisfies F1–F6.
+- [x] BR-069 narrowed after implementation satisfies F1–F6 (residual full-corpus canonicalization closure remains tracked under FR-090 / T05).
 
 ---
 

@@ -9,12 +9,13 @@ housekeeping_policy: keep
 # Epic 2, Story 15, Task 4: Investigate row-footer timestamp overwrite and task-ID multiplication regression (BR-069)
 
 **Task ID:** E2:S15:T04  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** CRITICAL  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-21  
-**Last updated:** 2026-04-27 (Phase A-C published: fixed-order harness, row-tail remediation, and timestamp-suppression diagnostics; BR narrowed pending FR-090 corpus-level canonicalization)
+**Last updated:** 2026-04-27 (T04 sign-off: Phase A-D published; BR-069 narrowed with residual corpus-level canonicalization tracked under FR-090)
 **Code:** E2S15T04
+**Version Anchor:** v0.2.15.4+4
 
 **Upstream:** [BR-069 – kboard/fbuboard earliest `Last modified` timestamps are being overwritten](../../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
 
