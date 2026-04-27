@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** User request  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** OPEN
+**Status:** IN PROGRESS
 
 **Implementing Task:** [E2:S16:T01](../epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md)  
 **IPP:** [`IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md)
@@ -37,27 +37,27 @@ Perpetual tasks have been spread or repeatedly routed into stories that are not 
 
 ### Functional Requirements
 
-- [ ] **FR-088-F1:** Create a dedicated Epic 2 story for perpetual ongoing workflow operations.
-- [ ] **FR-088-F2:** Define explicit scope boundaries and inclusion criteria for perpetual tasks.
-- [ ] **FR-088-F3:** Define migration policy for existing perpetual tasks currently housed elsewhere.
-- [ ] **FR-088-F4:** Wire story/task/FR/boards for deterministic discoverability.
-- [ ] **FR-088-F5:** Define guardrails to prevent new perpetual tasks being filed outside the dedicated story without explicit override rationale.
+- [x] **FR-088-F1:** Create a dedicated Epic 2 story for perpetual ongoing workflow operations.
+- [x] **FR-088-F2:** Define explicit scope boundaries and inclusion criteria for perpetual tasks.
+- [x] **FR-088-F3:** Define migration policy for existing perpetual tasks currently housed elsewhere.
+- [x] **FR-088-F4:** Wire story/task/FR/boards for deterministic discoverability.
+- [x] **FR-088-F5:** Define guardrails to prevent new perpetual tasks being filed outside the dedicated story without explicit override rationale.
 
 ### Non-Functional Requirements
 
-- [ ] **FR-088-NF1:** Preserve historical traceability for existing task IDs and release history.
-- [ ] **FR-088-NF2:** Keep transition steps deterministic and reversible where practical.
-- [ ] **FR-088-NF3:** Keep governance language unambiguous and operationally testable.
+- [x] **FR-088-NF1:** Preserve historical traceability for existing task IDs and release history.
+- [x] **FR-088-NF2:** Keep transition steps deterministic and reversible where practical.
+- [x] **FR-088-NF3:** Keep governance language unambiguous and operationally testable.
 
 ---
 
 ## Acceptance Criteria
 
-- [ ] New Epic 2 story for perpetual ongoing tasks exists and is cross-linked.
-- [ ] Scope and out-of-scope rules are documented in the story/task.
-- [ ] Migration strategy for current perpetual tasks is defined.
-- [ ] `kboard` and `fbuboard` include the new task/FR linkage.
-- [ ] Follow-on implementation work can run against a single canonical task anchor.
+- [x] New Epic 2 story for perpetual ongoing tasks exists and is cross-linked.
+- [x] Scope and out-of-scope rules are documented in the story/task.
+- [x] Migration strategy for current perpetual tasks is defined.
+- [x] `kboard` and `fbuboard` include the new task/FR linkage.
+- [x] Follow-on implementation work can run against a single canonical task anchor.
 
 ---
 

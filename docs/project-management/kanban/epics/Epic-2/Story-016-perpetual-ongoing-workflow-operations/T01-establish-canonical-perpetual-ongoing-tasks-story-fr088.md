@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-27 (IPW E2:S16:T01 published canonical IPP for perpetual-tasks-story policy, renumbering map, follow-on ratification, and guardrail contract)  
+**Last updated:** 2026-04-27 (reconciled AC state with IPP §4.4 traceability after Wave 3 guardrail enforcement publish under E2:S16:T03)  
 **Code:** E2S16T01
 
 **Upstream:** [FR-088 - Dedicated story for perpetual ongoing tasks](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
@@ -89,11 +89,11 @@ This task plans migration for **all workflow-related perpetual tasks** to Story 
 
 ## Acceptance criteria
 
-- [ ] **AC1:** Story 16 is established as canonical perpetual-task home in Epic 2.
-- [ ] **AC2:** Scope and boundaries are documented and linked.
-- [ ] **AC3:** Complete inventory of workflow-related perpetual tasks and migration disposition is documented.
-- [ ] **AC4:** Renumbering plan is documented and approved (`T101+` legacy -> Story 016 standard task IDs).
-- [ ] **AC5:** Follow-on implementation tasks are identified for policy/validator enforcement of Story 016 ownership and non-`T101+` numbering.
+- [x] **AC1:** Story 16 is established as canonical perpetual-task home in Epic 2.
+- [x] **AC2:** Scope and boundaries are documented and linked.
+- [ ] **AC3:** Complete inventory of workflow-related perpetual tasks and migration disposition is documented (delegated to `E2:S16:T02` execution).
+- [x] **AC4:** Renumbering plan is documented and approved (`T101+` legacy -> Story 016 standard task IDs).
+- [x] **AC5:** Follow-on implementation tasks are identified for policy/validator enforcement of Story 016 ownership and non-`T101+` numbering.
 
 ---
 

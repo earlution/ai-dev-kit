@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.16.3+4] - 27-04-26
+## [0.2.16.1+4] - 27-04-26
 
-E2:S16:T03 — **`RW`** with **`--art`**: publish Wave 3 guardrail enforcement for perpetual placement/numbering/marker consistency in `validate_version_bump.py`, add regression tests, and align dev-kit policy §6.1.1 with Story 016 canonical `Txx` lanes and legacy `T1xx` historical-only semantics. SemVer **v0.4.764+5**.
+E2:S16:T01 — **`RW`** with **`--art`**: reconcile T01 acceptance criteria and FR-088 requirement/acceptance state to match implemented IPP §4.4 traceability and delivered Wave 1-3 outcomes while retaining T02 inventory execution as the remaining open lane. SemVer **v0.4.764+6**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+4.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.1+4.md)
