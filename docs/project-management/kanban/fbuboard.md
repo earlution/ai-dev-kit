@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FBU Prioritization Board
 
-**Last Updated:** 2026-04-27 (RW: E2:S15:T4 Phase B publication for BR-069)
-**Version Context:** v0.2.15.4+2 (**SemVer** v0.4.767+2); BR-069 Phase B row-tail normalization and timestamp guardrail remediation published
+**Last Updated:** 2026-04-27 (RW: E2:S15:T4 Phase C publication for BR-069)
+**Version Context:** v0.2.15.4+3 (**SemVer** v0.4.768+3); BR-069 Phase C timestamp-suppression diagnostics and repeated-run stability coverage published
 **Intake migration note (FR-072 / Approach D):** New FBU intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  

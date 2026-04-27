@@ -1063,6 +1063,62 @@ def test_4_16_t04_phase_a_reproduction_harness_fixed_orders():
     return run_test("Test 4.16: T04 Phase A reproduction harness", setup, test)
 
 
+def test_4_17_phase_c_timestamp_suppression_metrics_idempotent():
+    """Test 4.17: suppression metrics are explicit and stable on repeated clean runs."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        now = "2099-09-01 12:00 UTC"
+        header = "## MoSCOW Prioritized In-Progress Tasks\n\n### Should Have (S) - Important Tasks\n\n"
+        clean_row = (
+            "- **E2:S15:T04** – clean canonical row - IN PROGRESS | "
+            "Last modified: 2024-06-01 09:00 UTC\n"
+        )
+        content = header + clean_row
+
+        once, once_diag = mod.apply_canonical_row_transform_pipeline(
+            board_content=content,
+            project_root=Path(test_dir),
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_STANDALONE,
+        )
+        twice, twice_diag = mod.apply_canonical_row_transform_pipeline(
+            board_content=once,
+            project_root=Path(test_dir),
+            timestamp_value=now,
+            contract=mod.ROW_TRANSFORM_CONTRACT_STANDALONE,
+        )
+
+        if once != twice:
+            return False, "Expected clean canonical row to remain byte-identical on repeated run"
+
+        if once_diag["dup_report"]["rows_with_duplicate_footers"] != 0:
+            return False, "Expected zero duplicate-footer rows on clean row (first run)"
+        if twice_diag["dup_report"]["rows_with_duplicate_footers"] != 0:
+            return False, "Expected zero duplicate-footer rows on clean row (second run)"
+
+        if once_diag["timestamp_report"]["timestamps_append_suppressed_existing_footer"] != 0:
+            return False, "Expected zero suppressed-appends on clean terminal-footer row (first run)"
+        if twice_diag["timestamp_report"]["timestamps_append_suppressed_existing_footer"] != 0:
+            return False, "Expected zero suppressed-appends on clean terminal-footer row (second run)"
+
+        if once_diag["timestamp_report"]["timestamps_appended_missing"] != 0:
+            return False, "Expected zero appended-missing footers on clean row (first run)"
+        if twice_diag["timestamp_report"]["timestamps_appended_missing"] != 0:
+            return False, "Expected zero appended-missing footers on clean row (second run)"
+
+        return True, ""
+
+    return run_test("Test 4.17: Phase C suppression metrics idempotent", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -1293,6 +1349,14 @@ def main():
         else:
             print(f"❌ Test 4.16: T04 Phase A reproduction harness - FAILED: {error}")
             test_results['failed'].append("4.16")
+
+        success, error = test_4_17_phase_c_timestamp_suppression_metrics_idempotent()
+        if success:
+            print("✅ Test 4.17: Phase C suppression metrics idempotent - PASSED")
+            test_results['passed'].append("4.17")
+        else:
+            print(f"❌ Test 4.17: Phase C suppression metrics idempotent - FAILED: {error}")
+            test_results['failed'].append("4.17")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:

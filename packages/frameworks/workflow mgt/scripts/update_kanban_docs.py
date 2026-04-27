@@ -964,6 +964,11 @@ def apply_canonical_row_transform_pipeline(
         "timestamp_order_divergence_rows": 0,
         "timestamp_order_divergence_row_ids": [],
     }
+    timestamp_report: Dict[str, int] = {
+        "rows_audited": 0,
+        "timestamps_appended_missing": 0,
+        "timestamps_append_suppressed_existing_footer": 0,
+    }
     executed_steps: List[str] = []
 
     for step in contract.step_order:
@@ -974,7 +979,7 @@ def apply_canonical_row_transform_pipeline(
             transformed, dup_report = reconcile_duplicate_moscow_row_footers(transformed)
             executed_steps.append(step)
         elif step == "timestamp_enforce":
-            transformed = enforce_moscow_row_timestamps(transformed, timestamp_value)
+            transformed, timestamp_report = enforce_moscow_row_timestamps_with_stats(transformed, timestamp_value)
             executed_steps.append(step)
         else:
             raise ValueError(f"Unknown row-transform step '{step}' in contract '{contract.name}'")
@@ -983,6 +988,7 @@ def apply_canonical_row_transform_pipeline(
         "contract": contract.name,
         "executed_steps": executed_steps,
         "dup_report": dup_report,
+        "timestamp_report": timestamp_report,
     }
     return transformed, diagnostics
 
@@ -1052,6 +1058,7 @@ def update_kanban_board(
         contract=ROW_TRANSFORM_CONTRACT_RW_STEP7,
     )
     dup_report = row_pipeline_diagnostics["dup_report"]
+    timestamp_report = row_pipeline_diagnostics["timestamp_report"]
     if dup_report["rows_with_duplicate_footers"] > 0:
         changes.append(
             "Duplicate footer audit: "
@@ -1063,6 +1070,12 @@ def update_kanban_board(
             "Timestamp-order divergence: "
             f"rows={dup_report['timestamp_order_divergence_rows']} "
             f"row_ids={dup_report['timestamp_order_divergence_row_ids']}"
+        )
+    if timestamp_report["timestamps_append_suppressed_existing_footer"] > 0:
+        changes.append(
+            "Timestamp append suppression: "
+            f"suppressed_existing_footer={timestamp_report['timestamps_append_suppressed_existing_footer']} "
+            f"rows_audited={timestamp_report['rows_audited']}"
         )
 
     # Find and update epic section
@@ -1192,7 +1205,7 @@ def update_kanban_board(
     return True, changes
 
 
-def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> str:
+def enforce_moscow_row_timestamps_with_stats(board_content: str, timestamp_value: str) -> Tuple[str, Dict[str, int]]:
     """
     Ensure all MoSCOW bullet rows include:
     `| Last modified: YYYY-MM-DD HH:MM UTC`
@@ -1206,6 +1219,12 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
     ts_pattern_terminal = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
     ts_pattern_anywhere = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC")
 
+    stats = {
+        "rows_audited": 0,
+        "timestamps_appended_missing": 0,
+        "timestamps_append_suppressed_existing_footer": 0,
+    }
+
     for line in lines:
         stripped = line.strip()
         if stripped.startswith("## MoSCOW"):
@@ -1214,15 +1233,27 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
             in_moscow = False
 
         if in_moscow and stripped.startswith("- **"):
+            stats["rows_audited"] += 1
+            has_terminal = bool(ts_pattern_terminal.search(line))
+            has_anywhere = bool(ts_pattern_anywhere.search(line))
             # Guardrail: never append a synthetic timestamp when valid footer
             # evidence already exists on the row (even if legacy placement is
             # non-terminal).
-            if not ts_pattern_terminal.search(line) and not ts_pattern_anywhere.search(line):
+            if not has_terminal and not has_anywhere:
                 line = f"{line} | Last modified: {timestamp_value}"
+                stats["timestamps_appended_missing"] += 1
+            elif not has_terminal and has_anywhere:
+                stats["timestamps_append_suppressed_existing_footer"] += 1
 
         out_lines.append(line)
 
-    return "\n".join(out_lines)
+    return "\n".join(out_lines), stats
+
+
+def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> str:
+    """Backward-compatible wrapper returning transformed content only."""
+    transformed, _ = enforce_moscow_row_timestamps_with_stats(board_content, timestamp_value)
+    return transformed
 
 
 def _extract_row_id_for_reporting(line: str) -> str:
@@ -1480,6 +1511,7 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                 contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
             )
             dup_report = row_pipeline_diagnostics["dup_report"]
+            timestamp_report = row_pipeline_diagnostics["timestamp_report"]
         else:
             updated, row_pipeline_diagnostics = apply_canonical_row_transform_pipeline(
                 board_content=original,
@@ -1488,6 +1520,7 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                 contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
             )
             dup_report = row_pipeline_diagnostics["dup_report"]
+            timestamp_report = row_pipeline_diagnostics["timestamp_report"]
             stats = None
 
         if updated != original:
@@ -1505,6 +1538,7 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                         contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
                     )
                     dup_report = row_pipeline_diagnostics["dup_report"]
+                    timestamp_report = row_pipeline_diagnostics["timestamp_report"]
                 else:
                     updated, row_pipeline_diagnostics = apply_canonical_row_transform_pipeline(
                         board_content=live,
@@ -1513,6 +1547,7 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                         contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
                     )
                     dup_report = row_pipeline_diagnostics["dup_report"]
+                    timestamp_report = row_pipeline_diagnostics["timestamp_report"]
                 changes.append(f"Concurrency revalidation: board changed during run, re-applied transforms: {board}")
 
             if not dry_run:
@@ -1529,6 +1564,12 @@ def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = Fa
                     "timestamp-order divergence: "
                     f"rows={dup_report['timestamp_order_divergence_rows']}, "
                     f"row_ids={dup_report['timestamp_order_divergence_row_ids']}"
+                )
+            if timestamp_report["timestamps_append_suppressed_existing_footer"] > 0:
+                changes.append(
+                    "timestamp append suppression: "
+                    f"suppressed_existing_footer={timestamp_report['timestamps_append_suppressed_existing_footer']}, "
+                    f"rows_audited={timestamp_report['rows_audited']}"
                 )
             if stats is not None:
                 changes.append(
