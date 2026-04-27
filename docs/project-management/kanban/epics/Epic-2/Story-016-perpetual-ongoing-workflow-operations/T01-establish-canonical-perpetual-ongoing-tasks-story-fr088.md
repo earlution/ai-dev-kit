@@ -9,12 +9,13 @@ housekeeping_policy: keep
 # Epic 2, Story 16, Task 1: Establish canonical perpetual ongoing tasks story (FR-088)
 
 **Task ID:** E2:S16:T01  
-**Status:** IN PROGRESS  
+**Status:** COMPLETE  
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-27 (reconciled AC state with IPP §4.4 traceability after Wave 3 guardrail enforcement publish under E2:S16:T03)  
+**Last updated:** 2026-04-27 (T01 sign-off: AC/FR traceability reconciliation published; Wave 1-3 governance contract complete with delegated T02 inventory lane remaining in progress)  
 **Code:** E2S16T01
+**Version Anchor:** v0.2.16.1+4
 
 **Upstream:** [FR-088 - Dedicated story for perpetual ongoing tasks](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
 

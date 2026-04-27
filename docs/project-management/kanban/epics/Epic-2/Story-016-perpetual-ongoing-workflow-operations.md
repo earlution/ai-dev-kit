@@ -20,7 +20,7 @@ housekeeping_policy: keep
 
 ## Task Checklist
 
-- [ ] **E2:S16:T01 – Establish canonical perpetual ongoing tasks story (FR-088)** - IN PROGRESS (HIGH, define scope, migration policy, and guardrails for perpetual task ownership)  
+- [x] **E2:S16:T01 – Establish canonical perpetual ongoing tasks story (FR-088)** - COMPLETE (HIGH, scope baseline, renumbering policy, and guardrail contract published; Wave 2/3 enforcement landed under `E2:S16:T03`)  
   - Task: [`Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md`](Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [FR-088](../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md) | IPP: [`IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md)
 
 - [ ] **E2:S16:T02 – Inventory and classify workflow-related perpetual tasks** - IN PROGRESS (HIGH, produce exhaustive inventory and migration disposition for all workflow perpetual anchors and references)  

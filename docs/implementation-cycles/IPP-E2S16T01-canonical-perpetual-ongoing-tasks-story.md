@@ -245,7 +245,9 @@ Runnable validators (from [`packages/frameworks/workflow mgt/scripts/validation/
 
 - [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_ipw_publication_wiring.py" --requested E2:S16:T01` — **PASS** (2026-04-27). Output: `PASS: publication wiring OK for E2:S16:T1`. Host task carries `Publication Status: NOT_APPLICABLE` plus `Publication N/A Reason:` per the consolidated IPP model.
 - [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py"` — only pre-existing unrelated failure observed (`E5:S01:T75: missing Host Task link`), out of scope for this IPP and tracked separately. No new wiring regressions introduced by T01.
-- [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested E2:S16:T03|T04|T05` — **PASS** (2026-04-27) after Wave 2 marker/discoverability uplift.
+- [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested E2:S16:T03`  
+  `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested E2:S16:T04`  
+  `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested E2:S16:T05` — **PASS** (2026-04-27) after Wave 2 marker/discoverability uplift.
 - [x] `python3 -m pytest "packages/frameworks/workflow mgt/scripts/validation/test_validate_version_bump.py" -k "perpetual_guardrails"` — **PASS** (2026-04-27) for Wave 3 guardrail tests.
 - [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py" --strict --requested E2:S16:T03 --art` — **PASS** (2026-04-27) with guardrail logic active.
 

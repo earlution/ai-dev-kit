@@ -14,7 +14,7 @@ housekeeping_policy: keep
 **Submitted By:** User request  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** IN PROGRESS
+**Status:** CLOSED
 
 **Implementing Task:** [E2:S16:T01](../epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md)  
 **IPP:** [`IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md)
