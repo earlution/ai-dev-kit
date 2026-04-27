@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-26 (RW: E2:S16:T6)
-**Version:** v0.2.16.6+1
+**Last Updated:** 2026-04-27 (RW: E4:S19:T3)
+**Version:** v0.4.19.3+1
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
@@ -27,8 +27,8 @@ housekeeping_policy: keep
 
 ### Should Have (S) - Important Tasks
 
-- **E4:S19:T03** – FR-087: investigate why `E6:S07` became default housing and decide closure/scope - TODO (HIGH, forensic analysis of origin/codification plus close/split/narrow recommendation and guardrails) - [Task Document](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [Story](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md) | [E4:S19:T03](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | —No IPP— | | Last modified: 2026-04-20 17:20 UTC
-- **E2:S16:T01** – FR-088: establish canonical story for perpetual ongoing tasks - IN PROGRESS (HIGH, create dedicated Epic 2 home with scope boundaries, migration policy, and guardrails for perpetual workflow operations) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | [E2:S16:T01](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | —No IPP— | | Last modified: 2026-04-20 17:45 UTC
+- **E4:S19:T03** – FR-087: investigate why `E6:S07` became default housing and decide closure/scope - IN PROGRESS (HIGH, forensic analysis of origin/codification plus close/split/narrow recommendation and guardrails; canonical IPP published) - [Task Document](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [Story](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md) | [E4:S19:T03](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [—IPP—](../../implementation-cycles/IPP-E4S19T03-e6s07-default-housing-drift-investigation.md) | | Last modified: 2026-04-27 10:55 UTC
+- **E2:S16:T01** – FR-088: establish canonical story for perpetual ongoing tasks - IN PROGRESS (HIGH, create dedicated Epic 2 home with scope boundaries, migration policy, and guardrails for perpetual workflow operations) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | [E2:S16:T01](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [—IPP—](../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md) | | Last modified: 2026-04-27 09:48 UTC
 
 ### Could Have (C) - Nice-to-Have Tasks
 
@@ -53,7 +53,7 @@ housekeeping_policy: keep
 
 ### Ongoing (O) - Perpetual Tasks
 
-- **E2:S16:T01** – Establish canonical perpetual ongoing tasks story (FR-088) - IN PROGRESS (planning baseline for perpetual-task re-housing and numbering migration) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | [E2:S16:T01](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | —No IPP— | | Last modified: 2026-04-20 17:45 UTC
+- **E2:S16:T01** – Establish canonical perpetual ongoing tasks story (FR-088) - IN PROGRESS (planning baseline for perpetual-task re-housing and numbering migration) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | [E2:S16:T01](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [—IPP—](../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md) | | Last modified: 2026-04-27 09:48 UTC
 
 - **E2:S16:T02** – Inventory and classify workflow-related perpetual tasks - IN PROGRESS (legacy perpetual anchor discovery + disposition mapping) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T02-inventory-and-classify-workflow-perpetual-tasks.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | [E2:S16:T02](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T02-inventory-and-classify-workflow-perpetual-tasks.md) | —No IPP— | | Last modified: 2026-04-20 18:20 UTC
 

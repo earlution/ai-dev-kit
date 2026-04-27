@@ -16,7 +16,8 @@ housekeeping_policy: keep
 **Severity:** HIGH  
 **Status:** OPEN
 
-**Implementing Task:** [E4:S19:T03](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md)
+**Implementing Task:** [E4:S19:T03](../epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md)  
+**IPP:** [`IPP-E4S19T03-e6s07-default-housing-drift-investigation.md`](../../../implementation-cycles/IPP-E4S19T03-e6s07-default-housing-drift-investigation.md)
 
 ---
 

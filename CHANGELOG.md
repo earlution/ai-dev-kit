@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.16.6+1] - 26-04-26
+## [0.4.19.3+1] - 27-04-26
 
-E2:S16:T06 — **`RW -d`** with **`--art`**: re-house FR-085 (`--rp` UKW reprioritization scope) from legacy `E6:S07:T116` into canonical perpetual workflow operations story ownership, rewire linked docs/boards, and remove the legacy task doc. SemVer **v0.4.764+1**.
+E4:S19:T03 — **`RW -d`** with **`--art`**: publish canonical IPP for `E6:S07` default-housing drift investigation, wire host task/FR/story/boards to the IPP, and validate publication wiring contract. SemVer **v0.4.764+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.6+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.4.19.3+1.md)

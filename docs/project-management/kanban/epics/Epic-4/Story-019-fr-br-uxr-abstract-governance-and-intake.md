@@ -12,8 +12,8 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** [TBD]  
 **Created:** 2026-04-02  
-**Last updated:** 2026-04-26 (v0.4.19.6+6 – Kanban documentation setup)
-**Version:** v0.4.19.6+6
+**Last updated:** 2026-04-27 (v0.4.19.3+1 – Kanban documentation setup)
+**Version:** v0.4.19.3+1
 **Code:** E4S19  
 
 **Story type:** Ongoing governance (not a perpetual “repo ledger”; not a dumping ground for individual **FR-### / BR-### / UXR-###** implementation work).
@@ -26,7 +26,7 @@ housekeeping_policy: keep
 
 - [x] **E4:S19:T02 – Canonical supporting Kanban/FBU doc naming + `FBU` collective terminology (FR-086)** - SUPERSEDED (scope absorbed by **E4:S19:T06** meta-task; historical traceability preserved) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T02-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology-fr086.md) | [FR-086](../../fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [E4:S19:T06](Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md)
 
-- [ ] **E4:S19:T03 – `E6:S07` default-housing drift investigation + closure decision (FR-087)** - IN PROGRESS (HIGH, forensic root-cause + codification inventory + close/split/narrow recommendation for Story 007; includes executed re-housing precedent `BR-069: E6:S07:T117 -> E2:S15:T04`) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [FR-087](../../fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md)
+- [ ] **E4:S19:T03 – `E6:S07` default-housing drift investigation + closure decision (FR-087)** - IN PROGRESS (HIGH, forensic root-cause + codification inventory + close/split/narrow recommendation for Story 007; includes executed re-housing precedent `BR-069: E6:S07:T117 -> E2:S15:T04`) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [FR-087](../../fr-br/FR-087-e6s07-default-housing-root-cause-and-closure-decision.md) | IPP: [`IPP-E4S19T03-e6s07-default-housing-drift-investigation.md`](../../../../implementation-cycles/IPP-E4S19T03-e6s07-default-housing-drift-investigation.md)
 
 - [ ] **E4:S19:T04 – kboard/fbuboard `IPP` segment after FBU/task links (UXR-010)** - IN PROGRESS (HIGH, formalize row-link ordering and deterministic `—No IPP—` fallback token when planning artifact is absent) — [Task doc](Story-019-fr-br-uxr-abstract-governance-and-intake/T04-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links-uxr010.md) | [UXR-010](../../fr-br/UXR-010-kboard-fbuboard-add-ipp-column-after-fbu-and-task-links.md) | [IPP](../../../../implementation-cycles/IPP-E4S19T04-kboard-fbuboard-ipp-segment-after-fbu-task-links.md)
 
