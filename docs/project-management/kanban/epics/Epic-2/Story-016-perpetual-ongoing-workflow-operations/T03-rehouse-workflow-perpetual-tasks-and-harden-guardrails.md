@@ -13,8 +13,9 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Large  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-22 (scope broadened to perpetual workflow-maintenance umbrella; migration/hardening retained as an in-scope lane)  
+**Last updated:** 2026-04-27 (Wave 2 discoverability uplift: IPP cross-link parity and perpetual marker alignment)  
 **Code:** E2S16T03
+**Task Type:** Perpetual Maintenance
 
 **Upstream:** [FR-088 - Dedicated story for perpetual ongoing tasks](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
 
@@ -25,6 +26,7 @@ housekeeping_policy: keep
 - [FR-088](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md) requirements.
 - Migration inventory and dispositions from [E2:S16:T02](./T02-inventory-and-classify-workflow-perpetual-tasks.md).
 - Planning and sequencing from [E2:S16:T01](./T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md).
+- Canonical policy IPP: [`IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md).
 
 ---
 
@@ -51,3 +53,13 @@ Workflow maintenance work that is ad-hoc, cross-cutting, and not directly tied t
 - [ ] **AC3:** `E2:S16:T04` is documented as a kanban-focused operational lane under the broader workflow-maintenance model.
 - [ ] **AC4:** Policy/validator and reference updates preserve deterministic routing and avoid proliferating additional perpetual maintenance tasks without clear ownership boundaries.
 - [ ] **AC5:** Validation passes for updated docs and workflow guardrail behavior.
+
+---
+
+## References
+
+- [Canonical policy IPP: `IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md)
+- [E2:S16:T01 - Establish canonical perpetual ongoing tasks story (FR-088)](./T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md)
+- [E2:S16:T02 - Inventory and classify workflow-related perpetual tasks](./T02-inventory-and-classify-workflow-perpetual-tasks.md)
+- [E2:S16:T04 - Ad-hoc Kanban synchronization and hygiene (Perpetual)](./T04-ad-hoc-kanban-synchronization-and-hygiene-perpetual.md)
+- [E2:S16:T05 - Markdown documentation maintenance (Perpetual)](./T05-markdown-documentation-maintenance-perpetual.md)

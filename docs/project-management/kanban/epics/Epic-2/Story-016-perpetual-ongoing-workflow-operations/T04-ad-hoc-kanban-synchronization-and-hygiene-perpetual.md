@@ -13,8 +13,9 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-22  
-**Last updated:** 2026-04-22 (UKW full sync + RW release attribution path validated and published at v0.2.16.4+3)  
+**Last updated:** 2026-04-27 (Wave 2 discoverability uplift: IPP cross-link parity and perpetual marker alignment)  
 **Code:** E2S16T04
+**Task Type:** Perpetual Maintenance
 
 **Upstream:** [FR-088 - Dedicated story for perpetual ongoing tasks](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
 
@@ -24,6 +25,7 @@ housekeeping_policy: keep
 
 - [FR-088](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md) requirements.
 - Story-level perpetual ownership model in [Story 016](../Story-016-perpetual-ongoing-workflow-operations.md).
+- Canonical policy IPP: [`IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md).
 
 ---
 
@@ -47,3 +49,12 @@ Ad-hoc Kanban updates that are not directly tied to a specific delivery task nee
 - [x] **AC2:** Story 016 checklist includes this task as a kanban-focused perpetual operational lane.
 - [x] **AC3:** Scope boundary with `E2:S16:T03` as the broader workflow-maintenance umbrella is explicitly documented and unambiguous.
 - [x] **AC4:** References are stable and suitable for ongoing RW/UKW attribution for kanban-specific updates.
+
+---
+
+## References
+
+- [Canonical policy IPP: `IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md)
+- [E2:S16:T01 - Establish canonical perpetual ongoing tasks story (FR-088)](./T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md)
+- [E2:S16:T03 - Workflow maintenance (Perpetual)](./T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
+- [E2:S16:T05 - Markdown documentation maintenance (Perpetual)](./T05-markdown-documentation-maintenance-perpetual.md)

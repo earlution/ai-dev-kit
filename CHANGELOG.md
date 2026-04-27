@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.16.1+3] - 27-04-26
+## [0.2.16.3+1] - 27-04-26
 
-E2:S16:T01 — **`RW`** with **`--art`**: publish and wire the canonical perpetual-ownership IPP artifact across Story 016 / T01 / FR-088 and board discoverability surfaces, with validator-backed publication status contract. SemVer **v0.4.764+3**.
+E2:S16:T03 — **`RW -d`** with **`--art`**: publish Wave 2 discoverability uplift for perpetual lanes (`T03`/`T04`/`T05`) by adding canonical IPP cross-links and explicit perpetual-task markers for deterministic ownership and attribution. SemVer **v0.4.764+4**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.1+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+1.md)
