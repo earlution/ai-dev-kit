@@ -184,25 +184,25 @@ The plan is structured as three waves so each can be released or deferred atomic
 | 1.4 | Annotate Story 016 checklist row for T01 with IPP path | Story-level discoverability |
 | 1.5 | Run `validate_ipw_publication_wiring.py --requested E2:S16:T01` | Validator PASS recorded in §5 |
 
-### 4.2 Wave 2 - Optional discoverability uplift (deferred, owned by `T03` hardening)
+### 4.2 Wave 2 - Optional discoverability uplift (implemented under `T03`)
 
 | Step | Action | Deliverable |
 | ---- | ------ | ----------- |
-| 2.1 | Cite this IPP from `T03` / `T04` / `T05` task docs as the canonical policy | Cross-link parity within Story 016 |
-| 2.2 | Add `Task Type: Perpetual Maintenance` marker to perpetual lane task docs (`T03`, `T04`, `T05`) where missing | Validator marker consistency |
+| 2.1 | Cite this IPP from `T03` / `T04` / `T05` task docs as the canonical policy | ✅ Implemented (2026-04-27): cross-link parity within Story 016 |
+| 2.2 | Add `Task Type: Perpetual Maintenance` marker to perpetual lane task docs (`T03`, `T04`, `T05`) where missing | ✅ Implemented (2026-04-27): marker consistency for all three lanes |
 
-Wave 2 is a low-risk doc-only follow-up; it is not blocking T01 closure.
+Wave 2 was delivered as a low-risk doc-only follow-up and does not change T01 closure semantics.
 
-### 4.3 Wave 3 - Guardrail enforcement (deferred, owned by `T03` hardening)
+### 4.3 Wave 3 - Guardrail enforcement (implemented under `T03` hardening)
 
 | Step | Action | Deliverable |
 | ---- | ------ | ----------- |
-| 3.1 | Implement placement guardrail (validator or extension) per §2.6 | Failing test then passing implementation |
-| 3.2 | Implement numbering guardrail (T1xx hard-fail unless declared historical alias) | Validator coverage |
-| 3.3 | Implement marker warn-on-missing for Story 016 perpetual lanes | Validator coverage |
-| 3.4 | Update [`dev-kit-versioning-policy.md` §6.1.1](../architecture/standards-and-adrs/dev-kit-versioning-policy.md) to reflect renumbering policy and link this IPP as the source of truth | Policy parity |
+| 3.1 | Implement placement guardrail (validator or extension) per §2.6 | ✅ Implemented (2026-04-27) in `validate_version_bump.py` (`validate_perpetual_guardrails`) |
+| 3.2 | Implement numbering guardrail (T1xx hard-fail unless declared historical alias) | ✅ Implemented (2026-04-27) in `validate_version_bump.py` |
+| 3.3 | Implement marker warn-on-missing for Story 016 perpetual lanes | ✅ Implemented (2026-04-27) in `validate_version_bump.py` warning path |
+| 3.4 | Update [`dev-kit-versioning-policy.md` §6.1.1](../architecture/standards-and-adrs/dev-kit-versioning-policy.md) to reflect renumbering policy and link this IPP as the source of truth | ✅ Implemented (2026-04-27): policy wording updated for Story 016 `Txx` canonical lanes and legacy `T1xx` historical-only rule |
 
-Wave 3 is the substantive runtime change and lives entirely under `T03`. T01 sign-off does not require Wave 3 to land.
+Wave 3 landed under `T03` as the substantive guardrail enforcement layer. T01 remained valid before and after this implementation.
 
 ### 4.4 AC traceability matrix (T01 ACs and FR-088 ACs vs IPP RFs and waves)
 
@@ -226,6 +226,17 @@ Wave 3 is the substantive runtime change and lives entirely under `T03`. T01 sig
 - `docs/project-management/kanban/fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md`
 - `docs/project-management/kanban/epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md`
 
+### 4.6 Additional files touched by Wave 2 and Wave 3
+
+- Wave 2:
+  - `docs/project-management/kanban/epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md`
+  - `docs/project-management/kanban/epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T04-ad-hoc-kanban-synchronization-and-hygiene-perpetual.md`
+  - `docs/project-management/kanban/epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T05-markdown-documentation-maintenance-perpetual.md`
+- Wave 3:
+  - `packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py`
+  - `packages/frameworks/workflow mgt/scripts/validation/test_validate_version_bump.py`
+  - `docs/architecture/standards-and-adrs/dev-kit-versioning-policy.md`
+
 ---
 
 ## 5. Success / verification criteria
@@ -234,6 +245,9 @@ Runnable validators (from [`packages/frameworks/workflow mgt/scripts/validation/
 
 - [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_ipw_publication_wiring.py" --requested E2:S16:T01` — **PASS** (2026-04-27). Output: `PASS: publication wiring OK for E2:S16:T1`. Host task carries `Publication Status: NOT_APPLICABLE` plus `Publication N/A Reason:` per the consolidated IPP model.
 - [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_plan_wiring.py"` — only pre-existing unrelated failure observed (`E5:S01:T75: missing Host Task link`), out of scope for this IPP and tracked separately. No new wiring regressions introduced by T01.
+- [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested E2:S16:T03|T04|T05` — **PASS** (2026-04-27) after Wave 2 marker/discoverability uplift.
+- [x] `python3 -m pytest "packages/frameworks/workflow mgt/scripts/validation/test_validate_version_bump.py" -k "perpetual_guardrails"` — **PASS** (2026-04-27) for Wave 3 guardrail tests.
+- [x] `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py" --strict --requested E2:S16:T03 --art` — **PASS** (2026-04-27) with guardrail logic active.
 
 Deliverable checks:
 

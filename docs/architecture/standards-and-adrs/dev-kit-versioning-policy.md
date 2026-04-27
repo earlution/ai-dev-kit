@@ -434,39 +434,41 @@ VERSION_BUILD = 1  # ← Reset to 1 for new Task
 - **Build Number Semantics:** BUILD number = workflow run count (not feature iteration)
 - **Build Warning Suppression:** High BUILD numbers are expected and valid (no warnings)
 
-**Version Pattern:**
-- Perpetual tasks use 3-digit task numbers (T101+) to clearly differentiate from regular tasks (T01-T99)
-- Version format: `v0.\{EPIC\}.\{STORY\}.\{PERPETUAL_TASK\}+\{BUILD\}` where PERPETUAL_TASK >= 101
-- BUILD number accumulates naturally as the workflow runs
-- Example: UKW runs → `v0.6.7.101+1`, `v0.6.7.101+2`, `v0.6.7.101+3`, etc.
-- Example: CMW runs → `v0.6.7.102+1`, `v0.6.7.102+2`, `v0.6.7.102+3`, etc.
+**Version Pattern (current policy):**
+- Perpetual tasks use canonical Story 016 2-digit task numbering (`Txx`) for active lanes.
+- Version format remains `v0.\{EPIC\}.\{STORY\}.\{TASK\}+\{BUILD\}` with perpetual semantics carried by `Task Type: Perpetual Maintenance`.
+- BUILD number accumulates naturally as the workflow runs.
+- Example: Workflow-maintenance umbrella runs → `v0.2.16.3+1`, `v0.2.16.3+2`, `v0.2.16.3+3`, etc.
+- Example: Kanban hygiene lane runs → `v0.2.16.4+1`, `v0.2.16.4+2`, etc.
 
 **Perpetual Task Examples:**
-- **UKW (Update Kanban Workflow):** Epic 6, Story 7, Task 101 (E2:S16:T03) - Kanban documentation synchronization
-- **CMW (Changelog Management Workflow):** Epic 6, Story 7, Task 102 (E2:S16:T03) - Changelog maintenance and archival
-- **RW Maintenance:** Epic 6, Story 7, Task 103 (E2:S16:T03) - Release Workflow and workflow framework maintenance (Step 7 fixes, validator updates, doc corrections)
+- **Workflow maintenance umbrella:** `E2:S16:T03` - ad-hoc cross-cutting workflow maintenance and hardening
+- **Kanban synchronization lane:** `E2:S16:T04` - kanban-focused operational synchronization/hygiene
+- **Markdown documentation maintenance lane:** `E2:S16:T05` - markdown-only recurring maintenance
+- **Legacy aliases (historical-only):** `T101`/`T102`/`T103` references remain valid for traceability but are not used for new active anchors.
 
 **Task Number Ranges:**
 - **Regular tasks:** T01-T99 (2-digit) - Standard feature/bug tasks
-- **Perpetual tasks:** T101+ (3-digit) - Ongoing maintenance workflows
-- **Reserved:** T100 is invalid (reserved for future use, if needed)
-- **Rationale:** 3-digit task IDs (T101+) immediately distinguish perpetual tasks from regular tasks, providing unlimited capacity and clear visual differentiation
+- **Perpetual tasks (active):** canonical Story 016 `Txx` lanes with `Task Type: Perpetual Maintenance`
+- **Legacy perpetual aliases:** `T1xx` accepted only as historical anchors (`Historical Anchor:`) for prior releases/docs
+- **Guardrail:** new `T1xx` task IDs are disallowed for active work unless explicitly marked historical
 
 **RW Context Detection:**
 - RW Step 2 detects perpetual task context (e.g., user ran "UKW" then "RW", or "CMW" then "RW")
 - RW automatically attributes releases to the perpetual task (discovered via `Task Type: Perpetual Maintenance` flag)
 - BUILD number increments for each workflow run (same task, increment BUILD)
 - Build warnings are suppressed (high BUILD numbers are expected and valid)
+- Placement guardrail enforcement requires perpetual tasks to be housed under `E2:S16` unless `Perpetual Override Rationale:` is present.
 
 **T103 (RW Maintenance) - Manual Attribution:**
 - No automatic context detection (unlike UKW/CMW)
 - When releasing RW maintenance work (Step 7 fixes, validator updates, doc corrections), agent/user manually sets version to E2:S16:T03 and increments BUILD
+- Historical `T103` labels may still appear in older changelog/release artifacts; this is expected and preserved for traceability.
 
 **Task ID Variability:**
-- Each project instance has its own perpetual task with its own E/S/T ID
-- ai-dev-kit: UKW = E6:S06:T08, CMW = E6:S06:T12
-- Other projects: May use different IDs (e.g., E4:S03:T05, E2:S01:T11)
-- Pattern discovery: Search for `Task Type: Perpetual Maintenance` flag in task documents
+- Each project instance can choose different canonical perpetual anchors, but ai-dev-kit standard is Story 016 (`E2:S16:T03`/`T04`/`T05`)
+- Legacy IDs from prior project phases remain as historical aliases and should include `Historical Anchor:` when used in active docs
+- Pattern discovery: search for `Task Type: Perpetual Maintenance` plus Story 016 lanes
 
 **Related Documentation:**
 - **UKW Pattern:** Epic 4 Story 3 T01 (Update Packaged RW to Handle UKW Context)

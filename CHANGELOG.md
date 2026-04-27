@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.16.3+1] - 27-04-26
+## [0.2.16.3+4] - 27-04-26
 
-E2:S16:T03 — **`RW -d`** with **`--art`**: publish Wave 2 discoverability uplift for perpetual lanes (`T03`/`T04`/`T05`) by adding canonical IPP cross-links and explicit perpetual-task markers for deterministic ownership and attribution. SemVer **v0.4.764+4**.
+E2:S16:T03 — **`RW`** with **`--art`**: publish Wave 3 guardrail enforcement for perpetual placement/numbering/marker consistency in `validate_version_bump.py`, add regression tests, and align dev-kit policy §6.1.1 with Story 016 canonical `Txx` lanes and legacy `T1xx` historical-only semantics. SemVer **v0.4.764+5**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.16.3+4.md)

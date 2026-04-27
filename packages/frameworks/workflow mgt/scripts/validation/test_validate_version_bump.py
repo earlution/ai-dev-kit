@@ -22,6 +22,7 @@ from validate_version_bump import (
     parse_requested_task_id,
     validate_task_doc_alignment,
     validate_task_doc_fields,
+    validate_perpetual_guardrails,
     validate_version_bump,
 )
 
@@ -440,6 +441,46 @@ story_doc_pattern: epics/Epic-{epic}/Story-{story}-*.md
             assert any("TASK ID MISMATCH" in e for e in errors)
         finally:
             os.chdir(orig_cwd)
+
+
+def test_validate_perpetual_guardrails_rejects_outside_story_016_without_override():
+    content = """
+**Task ID:** E6:S07:T15
+**Task Type:** Perpetual Maintenance
+"""
+    errors, warnings = validate_perpetual_guardrails(6, 7, 15, content)
+    assert len(warnings) == 0
+    assert any("Perpetual placement guardrail" in e for e in errors)
+
+
+def test_validate_perpetual_guardrails_allows_override_outside_story_016():
+    content = """
+**Task ID:** E6:S07:T15
+**Task Type:** Perpetual Maintenance
+Perpetual Override Rationale: Legacy installer lane in transition.
+"""
+    errors, warnings = validate_perpetual_guardrails(6, 7, 15, content)
+    assert errors == []
+    assert warnings == []
+
+
+def test_validate_perpetual_guardrails_rejects_t1xx_without_historical_anchor():
+    content = """
+**Task ID:** E2:S16:T103
+**Task Type:** Perpetual Maintenance
+"""
+    errors, _ = validate_perpetual_guardrails(2, 16, 103, content)
+    assert any("T1xx task IDs are legacy/historical-only" in e for e in errors)
+
+
+def test_validate_perpetual_guardrails_warns_for_missing_marker_on_story_016_lane():
+    content = """
+**Task ID:** E2:S16:T03
+**Status:** IN PROGRESS
+"""
+    errors, warnings = validate_perpetual_guardrails(2, 16, 3, content)
+    assert errors == []
+    assert any("expected to carry `Task Type: Perpetual Maintenance`" in w for w in warnings)
 
 
 if __name__ == "__main__":

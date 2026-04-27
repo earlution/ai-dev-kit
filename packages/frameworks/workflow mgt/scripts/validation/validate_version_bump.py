@@ -82,6 +82,53 @@ def is_perpetual_task(task_number: int, task_content: Optional[str] = None) -> b
     return False
 
 
+def validate_perpetual_guardrails(
+    epic: int,
+    story: int,
+    task: int,
+    task_content: str,
+) -> Tuple[List[str], List[str]]:
+    """
+    Enforce perpetual-task placement and numbering guardrails.
+
+    Guardrails:
+    1) Tasks explicitly marked perpetual must live under E2:S16 unless they declare
+       `Perpetual Override Rationale:`.
+    2) New 3-digit task IDs (T1xx) are rejected unless documented as a historical
+       alias via `Historical Anchor:`.
+    3) For Story 016 perpetual lanes T03/T04/T05, warn if marker is missing.
+    """
+    errors: List[str] = []
+    warnings: List[str] = []
+
+    has_perpetual_marker = (
+        re.search(r"Task\s+Type.*Perpetual\s+Maintenance", task_content, re.IGNORECASE) is not None
+        or "perpetual_task: true" in task_content.lower()
+    )
+    has_override_rationale = "Perpetual Override Rationale:" in task_content
+    has_historical_anchor = "Historical Anchor:" in task_content
+
+    if has_perpetual_marker and (epic, story) != (2, 16) and not has_override_rationale:
+        errors.append(
+            "Perpetual placement guardrail: task is marked perpetual but not housed in E2:S16 "
+            "and no `Perpetual Override Rationale:` was found."
+        )
+
+    if task >= 100 and not has_historical_anchor:
+        errors.append(
+            "Perpetual numbering guardrail: T1xx task IDs are legacy/historical-only. "
+            "Add `Historical Anchor:` or migrate to canonical Story 016 `Txx` numbering."
+        )
+
+    if (epic, story, task) in {(2, 16, 3), (2, 16, 4), (2, 16, 5)} and not has_perpetual_marker:
+        warnings.append(
+            f"Story 016 lane E{epic}:S{story}:T{task} is expected to carry "
+            "`Task Type: Perpetual Maintenance`."
+        )
+
+    return errors, warnings
+
+
 def extract_task_id_canonical(content: str) -> Optional[Tuple[int, int, int]]:
     """
     Extract Task ID from canonical section, preferring **Value:** or **Full Task ID:**.
@@ -1228,6 +1275,15 @@ def validate_version_bump(
             for alignment_error in alignment_errors:
                 errors.append(f"   - {alignment_error}")
             errors.append(f"   Expected: E{epic}:S{story}:T{completed_task}")
+
+        # Perpetual placement/numbering guardrails and marker consistency warnings
+        perpetual_errors, perpetual_warnings = validate_perpetual_guardrails(
+            epic, story, completed_task, task_doc_content
+        )
+        for warning in perpetual_warnings:
+            print(f"⚠️  {warning}")
+        for guardrail_error in perpetual_errors:
+            errors.append(f"❌ PERPETUAL GUARDRAIL: {guardrail_error}")
     
     # Validate version bump logic (with abstract space awareness)
     # Check if this is a doc-init build (BUILD = 0)
