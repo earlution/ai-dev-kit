@@ -43,4 +43,6 @@ Eliminate IPW documentation publication drift by making ownership, filing target
 
 - [ ] **E2:S15:T05 – Implement UKW/RW canonical row transform engine (FR-090)** - IN PROGRESS (CRITICAL, shared transform pipeline + board-specific rendering contracts + RW/UKW parity hardening) — [Task doc](Story-015-ipw-governance-and-publication-contract/T05-implement-ukw-rw-canonical-row-transform-engine-fr090.md) | [FR-090](../../fr-br/FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md)
 
+- [ ] **E2:S15:T06 – RW Step 7 self-sufficient scoped kanban reconciliation (FR-091)** - TODO (HIGH, codify RW release-scope reconciliation as self-sufficient and non-dependent on UKW reactive cleanup) — [Task doc](Story-015-ipw-governance-and-publication-contract/T06-rw-step-7-self-sufficient-scoped-kanban-reconciliation-fr091.md) | [FR-091](../../fr-br/FR-091-rw-step-7-self-sufficient-scoped-kanban-reconciliation-without-ukw-dependency.md)
+
 ---

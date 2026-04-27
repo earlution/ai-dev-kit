@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FBU Prioritization Board
 
-**Last Updated:** 2026-04-27 (RW: E2:S16:T1 sign-off publication for FR-088)
-**Version Context:** v0.2.16.1+5 (**SemVer** v0.4.764+5); FR-088 and host-task closure state reconciled
+**Last Updated:** 2026-04-27 (RW: E2:S15:T6 intake publication for FR-091)
+**Version Context:** v0.2.15.6+1 (**SemVer** v0.4.765+1); FR-091 and E2:S15:T06 intake wiring published
 **Intake migration note (FR-072 / Approach D):** New FBU intake must use semantic host-story placement; dedicated repository stories remain historical traceability registries.
 
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
@@ -46,6 +46,7 @@ This board provides **centralized visibility and prioritization** for all open F
 ### Should Have (S) - Important Items
 
 - **FR-090** – UKW canonical row transform engine and board-specific rendering contracts - OPEN (HIGH, remove RW/UKW divergence with a shared canonical transform pipeline under **E2:S15:T05**) - [FR-090](fr-br/FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md) | [FR-090](fr-br/FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md) | [E2:S15:T05](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T05-implement-ukw-rw-canonical-row-transform-engine-fr090.md) | [—IPP—](../../implementation-cycles/IPP-E2S15T05-ukw-rw-canonical-row-transform-engine-fr090.md) | | Last modified: 2026-04-22 16:05 UTC
+- **FR-091** – RW Step 7 self-sufficient scoped kanban reconciliation without UKW dependency - OPEN (HIGH, formalize preventive RW release-scope reconciliation and position UKW as reactive drift-cleanup only; **E2:S15:T06**) - [FR-091](fr-br/FR-091-rw-step-7-self-sufficient-scoped-kanban-reconciliation-without-ukw-dependency.md) | [FR-091](fr-br/FR-091-rw-step-7-self-sufficient-scoped-kanban-reconciliation-without-ukw-dependency.md) | [E2:S15:T06](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T06-rw-step-7-self-sufficient-scoped-kanban-reconciliation-fr091.md) | —No IPP— | | Last modified: 2026-04-27 13:35 UTC
 
 - **BR-067** – RW doc-only / intake releases default to BUILD+1 instead of doc-init +0 - OPEN (HIGH, versioning policy vs validate_version_bump / RW Step 2 defaults; **E2:S16:T03**) - [BR-067](fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md) | [BR-067](fr-br/BR-067-rw-first-doc-only-release-defaults-to-build-plus-one-not-plus-zero.md) | [E2:S16:T03](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md) | —No IPP— | | Last modified: 2026-04-20 15:52 UTC
 - **FR-086** – Canonical supporting Kanban/FBU doc naming + `FBU` collective terminology - IN PROGRESS (HIGH, scope consolidated under **E4:S19:T06** meta ownership with preserved T02 history) - [FR-086](fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [FR-086](fr-br/FR-086-canonical-supporting-kanban-fbu-doc-naming-and-fbu-collective-terminology.md) | [E4:S19:T06](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T06-fbu-meta-normalization-and-intake-governance-uxr008-fr086-fr073.md) | [—IPP—](../../implementation-cycles/IPP-E4S19T06-fbu-meta-normalization-and-intake-governance.md) | | Last modified: 2026-04-26 13:50 UTC

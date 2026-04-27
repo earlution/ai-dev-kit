@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – Kanban Board
 
-**Last Updated:** 2026-04-27 (RW: E2:S16:T1 sign-off publication)
-**Version:** v0.2.16.1+5
+**Last Updated:** 2026-04-27 (RW: E2:S15:T6 intake publication)
+**Version:** v0.2.15.6+1
 
 **Note:** Epics 1, 3, 7, 8, 10, 11 are COMPLETE. Epics 2, 4, 5, 6, 24 are IN PROGRESS. Epics 21 are TODO. **MoSCOW lists tasks only (not stories)**—story-level rows hide real progress.
 **Intake migration note (FR-072 / Approach D):** Dedicated FR/BR/UXR repository stories are historical registries only; new intake tasks should be created in semantic delivery stories.
@@ -28,6 +28,7 @@ housekeeping_policy: keep
 ### Should Have (S) - Important Tasks
 
 - **E2:S16:T01** – FR-088: establish canonical story for perpetual ongoing tasks - COMPLETE (HIGH, canonical Story 016 ownership and guardrail baseline signed off; downstream inventory execution continues under `E2:S16:T02`) - [Task Document](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [Story](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations.md) | [E2:S16:T01](epics/Epic-2/Story-016-perpetual-ongoing-workflow-operations/T01-establish-canonical-perpetual-ongoing-tasks-story-fr088.md) | [—IPP—](../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md) | | Last modified: 2026-04-27 12:34 UTC
+- **E2:S15:T06** – FR-091: RW Step 7 self-sufficient scoped kanban reconciliation without UKW dependency - TODO (HIGH, codify release-scope self-sufficiency contract for RW and explicit UKW reactive-only role) - [Task Document](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T06-rw-step-7-self-sufficient-scoped-kanban-reconciliation-fr091.md) | [Story](epics/Epic-2/Story-015-ipw-governance-and-publication-contract.md) | [E2:S15:T06](epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T06-rw-step-7-self-sufficient-scoped-kanban-reconciliation-fr091.md) | —No IPP— | | Last modified: 2026-04-27 13:35 UTC
 - **E4:S19:T03** – FR-087: investigate why `E6:S07` became default housing and decide closure/scope - IN PROGRESS (HIGH, forensic analysis of origin/codification plus close/split/narrow recommendation and guardrails; canonical IPP published) - [Task Document](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [Story](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake.md) | [E4:S19:T03](epics/Epic-4/Story-019-fr-br-uxr-abstract-governance-and-intake/T03-e6s07-default-housing-drift-investigation-and-closure-decision-fr087.md) | [—IPP—](../../implementation-cycles/IPP-E4S19T03-e6s07-default-housing-drift-investigation.md) | | Last modified: 2026-04-27 10:55 UTC
 
 ### Could Have (C) - Nice-to-Have Tasks
