@@ -13,10 +13,15 @@ housekeeping_policy: keep
 **Priority:** HIGH  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-20  
-**Last updated:** 2026-04-20 (expanded to plan migration of all workflow-related perpetual tasks into Story 016 and retire T101+ numbering)  
+**Last updated:** 2026-04-27 (IPW E2:S16:T01 published canonical IPP for perpetual-tasks-story policy, renumbering map, follow-on ratification, and guardrail contract)  
 **Code:** E2S16T01
 
 **Upstream:** [FR-088 - Dedicated story for perpetual ongoing tasks](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
+
+Publication Status: NOT_APPLICABLE
+Publication N/A Reason: Single durable IPP per FR-042 §7 consolidated planning model; planning published as one IPP artifact rather than three separate specification/test-design/implementation-plan files.
+
+**Publication Status:** NOT_APPLICABLE (single consolidated IPP — see [`IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md))
 
 ---
 
@@ -24,6 +29,7 @@ housekeeping_policy: keep
 
 - [FR-088](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md) requirements.
 - Existing perpetual-task patterns and current placements.
+- Canonical IPP: [`IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md)
 
 ---
 
@@ -88,3 +94,14 @@ This task plans migration for **all workflow-related perpetual tasks** to Story 
 - [ ] **AC3:** Complete inventory of workflow-related perpetual tasks and migration disposition is documented.
 - [ ] **AC4:** Renumbering plan is documented and approved (`T101+` legacy -> Story 016 standard task IDs).
 - [ ] **AC5:** Follow-on implementation tasks are identified for policy/validator enforcement of Story 016 ownership and non-`T101+` numbering.
+
+---
+
+## References
+
+- [Canonical IPP: `IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md`](../../../../implementation-cycles/IPP-E2S16T01-canonical-perpetual-ongoing-tasks-story.md)
+- [FR-088 - Dedicated story for perpetual ongoing tasks](../../../fr-br/FR-088-dedicated-story-for-perpetual-ongoing-tasks.md)
+- [Story 016 - Perpetual ongoing workflow operations](../Story-016-perpetual-ongoing-workflow-operations.md)
+- [Dev-kit versioning policy §6.1.1 - Perpetual tasks](../../../../architecture/standards-and-adrs/dev-kit-versioning-policy.md)
+- [E2:S16:T02 - Inventory and classify workflow perpetual tasks](./T02-inventory-and-classify-workflow-perpetual-tasks.md)
+- [E2:S16:T03 - Workflow maintenance perpetual umbrella](./T03-rehouse-workflow-perpetual-tasks-and-harden-guardrails.md)
