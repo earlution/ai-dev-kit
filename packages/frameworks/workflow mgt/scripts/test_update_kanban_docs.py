@@ -984,6 +984,85 @@ def test_4_15_phase3_parity_and_repeated_run_idempotency_matrix():
     return run_test("Test 4.15: Phase 3 parity/idempotency matrix", setup, test)
 
 
+def test_4_16_t04_phase_a_reproduction_harness_fixed_orders():
+    """Test 4.16: T04 Phase A harness with fixed-order parity and minimal fixtures."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        planning_dir = test_dir / "docs" / "implementation-cycles"
+        planning_dir.mkdir(parents=True, exist_ok=True)
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        root = Path(test_dir)
+        now = "2099-08-01 12:00 UTC"
+        header = "## MoSCOW Prioritized In-Progress Tasks\n\n### Should Have (S) - Important Tasks\n\n"
+
+        def run_order_a(content: str) -> str:
+            # update_kanban_board order in IPP §5
+            normalized = mod.normalize_board_traceability_segments(content, root)
+            reconciled, _ = mod.reconcile_duplicate_moscow_row_footers(normalized)
+            return mod.enforce_moscow_row_timestamps(reconciled, now)
+
+        def run_order_b(content: str) -> str:
+            # enforce_terminal_timestamps_on_boards order in IPP §5 (non-fbuboard branch)
+            reconciled, _ = mod.reconcile_duplicate_moscow_row_footers(content)
+            normalized = mod.normalize_board_traceability_segments(reconciled, root)
+            return mod.enforce_moscow_row_timestamps(normalized, now)
+
+        fixtures = {
+            "single_footer": (
+                '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+                "[E2:S15:T04](epics/E2/T04.md) | "
+                "Last modified: 2024-06-01 09:00 UTC\n"
+            ),
+            "dual_footer_pass": (
+                '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+                "[E2:S15:T04](epics/E2/T04.md) | [—IPP—](../../implementation-cycles/x.md) | "
+                "Last modified: 2024-01-01 08:00 UTC | "
+                "Last modified: 2026-04-21 10:00 UTC\n"
+            ),
+            "dual_footer_divergence": (
+                '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+                "[E2:S15:T04](epics/E2/T04.md) | "
+                "Last modified: 2026-04-21 10:00 UTC | "
+                "Last modified: 2024-01-01 08:00 UTC\n"
+            ),
+            "fbu_task_ipp_shape": (
+                '- **[BR-069](fr-br/BR-069.md)** – OPEN | '
+                "[BR-069](fr-br/BR-069.md) | "
+                "[E2:S15:T04](epics/E2/T04.md) | "
+                "[—IPP—](../../implementation-cycles/x.md) | "
+                "Last modified: 2024-06-01 09:00 UTC\n"
+            ),
+        }
+
+        for fixture_name, row in fixtures.items():
+            content = header + row
+            out_a = run_order_a(content)
+            out_b = run_order_b(content)
+            if out_a != out_b:
+                return False, f"Expected parity between documented orders for fixture '{fixture_name}'"
+
+            if fixture_name == "single_footer":
+                if out_a.count("Last modified:") != 1:
+                    return False, "Single-footer fixture gained duplicate Last modified footer"
+                if "Last modified: 2024-06-01 09:00 UTC" not in out_a:
+                    return False, "Single-footer fixture did not preserve historical footer"
+
+            if fixture_name == "fbu_task_ipp_shape":
+                if out_a.count("[E2:S15:T04](epics/E2/T04.md)") != 1:
+                    return False, "FBU/task/IPP fixture duplicated task link after normalization"
+
+        return True, ""
+
+    return run_test("Test 4.16: T04 Phase A reproduction harness", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -1206,6 +1285,14 @@ def main():
         else:
             print(f"❌ Test 4.15: Phase 3 parity/idempotency matrix - FAILED: {error}")
             test_results['failed'].append("4.15")
+
+        success, error = test_4_16_t04_phase_a_reproduction_harness_fixed_orders()
+        if success:
+            print("✅ Test 4.16: T04 Phase A reproduction harness - PASSED")
+            test_results['passed'].append("4.16")
+        else:
+            print(f"❌ Test 4.16: T04 Phase A reproduction harness - FAILED: {error}")
+            test_results['failed'].append("4.16")
     
     # Category 5: Performance
     if args.test_category in ['5', 'all']:

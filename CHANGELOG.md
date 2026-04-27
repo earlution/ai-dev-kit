@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.6+1] - 27-04-26
+## [0.2.15.4+1] - 27-04-26
 
-E2:S15:T06 — **`RW`** with **`--art`**: publish FR-091 intake and governance hardening scope clarifying RW Step 7 release-scope self-sufficiency, UKW reactive drift-repair role, and cross-surface task/FBU wiring. SemVer **v0.4.765+1**.
+E2:S15:T04 — **`RW`** with **`--art`**: publish BR-069 Phase A implementation by adding fixed-order reproduction harness tests for normalize/reconcile/enforce pipeline parity and footer/task-link invariants. SemVer **v0.4.766+1**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.6+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+1.md)
