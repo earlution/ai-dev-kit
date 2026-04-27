@@ -1,26 +1,27 @@
-# CHANGELOG_v0.2.15.4+2
+# Detailed Changelog — v0.2.15.4+2
 
-## Release Summary
+**Release date:** 27-04-26  
+**Task:** E2:S15:T04  
+**Mode:** RW with `--art`  
+**SemVer:** v0.4.767+2
 
-**RW E2:S15:T04** with **`--art`**: publish [IPP-E2S15T04](../../../implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md) for **BR-069** — root cause (non-commutative board transform ordering; `normalize` leaving `Last modified` non-terminal so enforcement appends a second footer), guardrails G1–G4, test matrix R1–R9; bidirectional governance links; documentary regression **Test 4.13** in `test_update_kanban_docs.py`.
+## Summary
 
-## Internal and SemVer
+Published BR-069 Phase B remediation in `update_kanban_docs.py` to preserve historical `Last modified` evidence during traceability normalization and prevent synthetic footer append when valid footer chunks already exist anywhere in a row.
 
-- Internal version: `0.2.15.4+2`
-- SemVer (`task_touch`): `0.4.764+2`
+## Included
 
-## Included Changes
-
-- `docs/implementation-cycles/IPP-E2S15T04-br069-row-tail-normalization-and-terminal-timestamp-interaction.md`
-- Task `T04`, Story 015, and **BR-069** traceability updates
-- `packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py` — `test_4_13_br069_pipeline_order_divergence_and_non_terminal_footer_append`
+- Phase B implementation:
+  - `packages/frameworks/workflow mgt/scripts/update_kanban_docs.py`
+- Release metadata updates:
+  - `src/fynd_deals/version.py`
+  - `README.md`
+  - `CHANGELOG.md`
 
 ## Verification
 
-- `validate_branch_context.py --strict --requested E2:S15:T04 --art`
-- `validate_rw_task_complete.py --requested E2:S15:T04`
-- `validate_rw_task_intent.py --requested E2:S15:T04 --art`
-- `validate_version_bump.py --strict --requested E2:S15:T04 --art`
-- `validate_changelog_format.py --strict`
-- `update_kanban_docs.py --mode kanban_init`
-- `test_update_kanban_docs.py --test-category 4`
+- `python3 "packages/frameworks/workflow mgt/scripts/test_update_kanban_docs.py" --test-category 4` ✅ (16/16 passed)
+- `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_branch_context.py" --strict --requested "E2:S15:T04" --art` ✅
+- `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_complete.py" --requested "E2:S15:T04"` ✅
+- `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_rw_task_intent.py" --requested "E2:S15:T04" --art` ✅
+- `python3 "packages/frameworks/workflow mgt/scripts/validation/validate_version_bump.py" --strict --requested "E2:S15:T04" --art` ✅

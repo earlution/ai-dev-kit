@@ -846,14 +846,17 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
     if not line.strip().startswith("- **"):
         return line
 
-    # Preserve an existing terminal footer so traceability segments are inserted
-    # before it, keeping Last modified terminal.
-    footer_match = re.search(r"\s*\|\s*Last modified:\s*\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\s+UTC\s*$", line)
-    footer_suffix = ""
-    line_core = line
-    if footer_match:
-        footer_suffix = footer_match.group(0).strip()
-        line_core = line[:footer_match.start()].rstrip()
+    # Preserve all existing Last modified footer chunks (including non-terminal
+    # legacy placement), remove them from the body, and re-attach them at EOL
+    # after traceability normalization.
+    footer_pattern = re.compile(r"Last modified:\s*\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\s+UTC")
+    footer_chunks = footer_pattern.findall(line)
+    line_core = re.sub(
+        r"\s*\|\s*Last modified:\s*\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}\s+UTC",
+        "",
+        line,
+    )
+    line_core = re.sub(r"\s+\|\s+\|\s+", " | ", line_core).strip()
 
     # Remove pre-existing IPP segment to avoid duplicates before rebuilding.
     line_core = re.sub(r"\s*\|\s*(?:\[—IPP—\]\([^)]+\)|—No IPP—)\s*", " | ", line_core)
@@ -874,8 +877,8 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
         segments = [segment.strip() for segment in line_core.split("|") if segment.strip()]
         line_core = " | ".join(segments)
         normalized_core = f"{line_core.rstrip()} | {fbu_token} | {task_token} | {ipp_token}"
-        if footer_suffix:
-            return f"{normalized_core} | {footer_suffix}"
+        if footer_chunks:
+            return f"{normalized_core} | {' | '.join(footer_chunks)}"
         return normalized_core
 
     # kboard compatibility path: task row has bold task id + Task Document link.
@@ -890,8 +893,8 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
         segments = [segment.strip() for segment in line_core.split("|") if segment.strip()]
         line_core = " | ".join(segments)
         normalized_core = f"{line_core.rstrip()} | {task_token} | {ipp_token}"
-        if footer_suffix:
-            return f"{normalized_core} | {footer_suffix}"
+        if footer_chunks:
+            return f"{normalized_core} | {' | '.join(footer_chunks)}"
         return normalized_core
 
     return line
@@ -1200,7 +1203,8 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
     lines = board_content.split("\n")
     in_moscow = False
     out_lines: List[str] = []
-    ts_pattern = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
+    ts_pattern_terminal = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
+    ts_pattern_anywhere = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC")
 
     for line in lines:
         stripped = line.strip()
@@ -1210,7 +1214,10 @@ def enforce_moscow_row_timestamps(board_content: str, timestamp_value: str) -> s
             in_moscow = False
 
         if in_moscow and stripped.startswith("- **"):
-            if not ts_pattern.search(line):
+            # Guardrail: never append a synthetic timestamp when valid footer
+            # evidence already exists on the row (even if legacy placement is
+            # non-terminal).
+            if not ts_pattern_terminal.search(line) and not ts_pattern_anywhere.search(line):
                 line = f"{line} | Last modified: {timestamp_value}"
 
         out_lines.append(line)

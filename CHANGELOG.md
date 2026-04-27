@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.4+1] - 27-04-26
+## [0.2.15.4+2] - 27-04-26
 
-E2:S15:T04 — **`RW`** with **`--art`**: publish BR-069 Phase A implementation by adding fixed-order reproduction harness tests for normalize/reconcile/enforce pipeline parity and footer/task-link invariants. SemVer **v0.4.766+1**.
+E2:S15:T04 — **`RW`** with **`--art`**: publish BR-069 Phase B remediation by hardening row-tail normalization and timestamp enforcement to prevent synthetic footer append when historical footer evidence already exists. SemVer **v0.4.767+2**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+1.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+2.md)
