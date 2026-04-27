@@ -1119,6 +1119,199 @@ def test_4_17_phase_c_timestamp_suppression_metrics_idempotent():
     return run_test("Test 4.17: Phase C suppression metrics idempotent", setup, test)
 
 
+def test_4_18_four_surface_reconciliation_report_classifies_changes_and_resolves_paths():
+    """Test 4.18: build_four_surface_report classifies changes by surface and resolves task/FBU/kboard/fbuboard paths."""
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        kb_dir = test_dir / "docs" / "project-management" / "kanban"
+        epic_dir = kb_dir / "epics" / "Epic-2"
+        story_dir = epic_dir / "Story-015-ipw-governance-and-publication-contract"
+        frbr_dir = kb_dir / "fr-br"
+        for d in (epic_dir, story_dir, frbr_dir):
+            d.mkdir(parents=True, exist_ok=True)
+        (kb_dir / "kboard.md").write_text("# Kanban\n", encoding="utf-8")
+        (kb_dir / "fbuboard.md").write_text("# FBU Board\n", encoding="utf-8")
+        (story_dir / "T07-test-task.md").write_text(
+            "# Task T07\n\n"
+            "Upstream: [FR-092](../../../fr-br/FR-092-canonical-rw-ukw-kanban-consistency-program.md)\n",
+            encoding="utf-8",
+        )
+        (frbr_dir / "FR-092-canonical-rw-ukw-kanban-consistency-program.md").write_text(
+            "# FR-092\n", encoding="utf-8"
+        )
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        project_root = Path(test_dir)
+        kb_dir = project_root / "docs" / "project-management" / "kanban"
+        all_changes = [
+            "Updated board Last Updated: 2026-04-27",
+            "Enforced terminal row timestamps: kboard.md",
+            "fbuboard reconciliation: audited=2, removed=1",
+            "Updated Story doc: header version",
+            "Epic doc: status mirror",
+        ]
+        report = mod.build_four_surface_report(
+            invocation_context="rw_step_7",
+            epic=2,
+            story=15,
+            task=7,
+            version_string="v0.2.15.5+99",
+            project_root=project_root,
+            paths={
+                "kanban_board": kb_dir / "kboard.md",
+                "story_doc": kb_dir / "epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T07-test-task.md",
+            },
+            all_changes=all_changes,
+        )
+        d = report.as_dict()
+
+        if "kboard" not in d["summary"]["touched_surfaces"]:
+            return False, f"Expected kboard touched, got: {d['summary']['touched_surfaces']}"
+        if "fbuboard" not in d["summary"]["touched_surfaces"]:
+            return False, f"Expected fbuboard touched, got: {d['summary']['touched_surfaces']}"
+
+        task_paths = d["surfaces"]["task_doc"]["paths"]
+        if not any("T07-test-task.md" in p for p in task_paths):
+            return False, f"Expected task_doc resolution to find T07-test-task.md, got: {task_paths}"
+        fbu_paths = d["surfaces"]["fbu_doc"]["paths"]
+        if not any("FR-092" in p for p in fbu_paths):
+            return False, f"Expected fbu_doc resolution to find FR-092, got: {fbu_paths}"
+
+        if d["contract"] != "FR-092 / FR-091 (RW Step 7 self-sufficient four-surface reconciliation)":
+            return False, f"Expected FR-092/FR-091 contract identifier, got: {d['contract']}"
+
+        md_text = report.to_markdown()
+        if "RW Step 7 four-surface reconciliation report" not in md_text:
+            return False, "Markdown report should include canonical title"
+        if "task_doc" not in md_text or "kboard" not in md_text or "fbuboard" not in md_text:
+            return False, "Markdown report should enumerate all four surfaces"
+
+        return True, ""
+
+    return run_test("Test 4.18: four-surface reconciliation report", setup, test)
+
+
+def test_4_20_fr092_wave4_b1_drift_eliminates_duplicate_inline_fbu_link():
+    """Test 4.20: FR-092 Wave 4 (B1) — duplicate inline FBU/task link in row body is removed by canonical pipeline.
+
+    Reproduction harness using the live-board pre-sweep fixture. Locks outcome
+    parity for the regression that survived T05 sign-off (B1 drift).
+    """
+    def setup():
+        test_dir = Path(tempfile.mkdtemp())
+        kb_dir = test_dir / "docs" / "project-management" / "kanban"
+        frbr_dir = kb_dir / "fr-br"
+        epics_dir = kb_dir / "epics" / "Epic-2" / "Story-015-ipw-governance-and-publication-contract"
+        for d in (frbr_dir, epics_dir):
+            d.mkdir(parents=True, exist_ok=True)
+        (frbr_dir / "FR-092-canonical-rw-ukw-kanban-consistency-program.md").write_text("# FR-092\n", encoding="utf-8")
+        (frbr_dir / "BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md").write_text("# BR-069\n", encoding="utf-8")
+        (frbr_dir / "FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md").write_text("# FR-090\n", encoding="utf-8")
+        (epics_dir / "T07-canonical-rw-ukw-kanban-consistency-program-fr092.md").write_text("# T07\n", encoding="utf-8")
+        (epics_dir / "T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md").write_text("# T04\n", encoding="utf-8")
+        fixture_src = Path(__file__).parent / "fixtures" / "fr092_wave4" / "fbuboard_pre_corpus_sweep.md"
+        (kb_dir / "fbuboard.md").write_text(fixture_src.read_text(encoding="utf-8"), encoding="utf-8")
+        (kb_dir / "kboard.md").write_text("# kboard\n\n## MoSCOW Prioritized In-Progress Tasks\n", encoding="utf-8")
+        return str(test_dir)
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        project_root = Path(test_dir)
+        board_path = project_root / "docs" / "project-management" / "kanban" / "fbuboard.md"
+        before = board_path.read_text(encoding="utf-8")
+
+        for fbu_id in ("FR-092", "BR-069", "FR-090"):
+            inline_count = before.count(f"[{fbu_id}](fr-br/{fbu_id}-")
+            if inline_count < 2:
+                return False, f"Pre-condition failed: expected duplicate {fbu_id} inline link in fixture, got count={inline_count}"
+
+        changes, sweep_report = mod.run_corpus_canonical_sweep(project_root, dry_run=False)
+        after = board_path.read_text(encoding="utf-8")
+
+        for fbu_id in ("FR-092", "BR-069", "FR-090"):
+            inline_count = after.count(f"[{fbu_id}](fr-br/{fbu_id}-")
+            if inline_count != 1:
+                return False, f"Expected exactly one canonical {fbu_id} link after sweep, got count={inline_count}"
+
+        if "| | " in after:
+            return False, "Expected empty `| |` separator between IPP and Last modified to be normalized away"
+
+        changes2, sweep_report2 = mod.run_corpus_canonical_sweep(project_root, dry_run=False)
+        after2 = board_path.read_text(encoding="utf-8")
+        if after != after2:
+            return False, "Sweep must be idempotent: second pass produced different output"
+
+        for board in sweep_report["boards"]:
+            if board["path"].endswith("fbuboard.md"):
+                if board["rows_changed"] == 0:
+                    return False, "Expected fbuboard rows_changed > 0 in first sweep"
+                break
+        else:
+            return False, "Expected fbuboard.md entry in sweep_report"
+
+        for board in sweep_report2["boards"]:
+            if board["path"].endswith("fbuboard.md"):
+                if board["rows_changed"] != 0:
+                    return False, f"Expected fbuboard rows_changed == 0 in second (idempotent) sweep, got {board['rows_changed']}"
+                break
+
+        return True, ""
+
+    return run_test("Test 4.20: FR-092 Wave 4 B1 drift fix", setup, test)
+
+
+def test_4_19_four_surface_report_persists_to_changelog_archive():
+    """Test 4.19: write_four_surface_report writes JSON + Markdown artifacts to provided directory."""
+    def setup():
+        return tempfile.mkdtemp()
+
+    def test(test_dir):
+        module_path = Path(__file__).parent / "update_kanban_docs.py"
+        spec = importlib.util.spec_from_file_location("update_kanban_docs", module_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+
+        out_dir = Path(test_dir) / "out"
+        report = mod.build_four_surface_report(
+            invocation_context="rw_step_7",
+            epic=2,
+            story=15,
+            task=7,
+            version_string="v0.2.15.5+99",
+            project_root=Path(test_dir),
+            paths={},
+            all_changes=["Enforced terminal row timestamps: kboard.md"],
+        )
+        written = mod.write_four_surface_report(report, out_dir)
+        if len(written) != 2:
+            return False, f"Expected 2 artifacts (json + md), got {len(written)}: {written}"
+        json_files = [p for p in written if p.suffix == ".json"]
+        md_files = [p for p in written if p.suffix == ".md"]
+        if not json_files or not md_files:
+            return False, f"Expected one .json and one .md, got: {written}"
+        json_text = json_files[0].read_text()
+        if "FR-092" not in json_text:
+            return False, "JSON report should reference FR-092 contract identifier"
+        if "v0.2.15.5+99" not in json_text:
+            return False, "JSON report should embed version string"
+        md_text = md_files[0].read_text()
+        if "## Touched-surface summary" not in md_text:
+            return False, "Markdown report should include Touched-surface summary section"
+        return True, ""
+
+    return run_test("Test 4.19: four-surface report persistence", setup, test)
+
+
 # Test Category 5: Performance
 def test_5_1_performance():
     """Test 5.1: Typical Project Performance"""
@@ -1357,7 +1550,31 @@ def main():
         else:
             print(f"❌ Test 4.17: Phase C suppression metrics idempotent - FAILED: {error}")
             test_results['failed'].append("4.17")
-    
+
+        success, error = test_4_18_four_surface_reconciliation_report_classifies_changes_and_resolves_paths()
+        if success:
+            print("✅ Test 4.18: four-surface reconciliation report - PASSED")
+            test_results['passed'].append("4.18")
+        else:
+            print(f"❌ Test 4.18: four-surface reconciliation report - FAILED: {error}")
+            test_results['failed'].append("4.18")
+
+        success, error = test_4_19_four_surface_report_persists_to_changelog_archive()
+        if success:
+            print("✅ Test 4.19: four-surface report persistence - PASSED")
+            test_results['passed'].append("4.19")
+        else:
+            print(f"❌ Test 4.19: four-surface report persistence - FAILED: {error}")
+            test_results['failed'].append("4.19")
+
+        success, error = test_4_20_fr092_wave4_b1_drift_eliminates_duplicate_inline_fbu_link()
+        if success:
+            print("✅ Test 4.20: FR-092 Wave 4 B1 drift fix - PASSED")
+            test_results['passed'].append("4.20")
+        else:
+            print(f"❌ Test 4.20: FR-092 Wave 4 B1 drift fix - FAILED: {error}")
+            test_results['failed'].append("4.20")
+
     # Category 5: Performance
     if args.test_category in ['5', 'all']:
         print("\n📋 Category 5: Performance Testing")

@@ -13,7 +13,9 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** N/A  
-**Status:** IMPLEMENTED ✅ (E5:S01:T36)
+**Status:** IMPLEMENTED (E5:S01:T36) — wired as Bucket-D2 predecessor of [FR-092](FR-092-canonical-rw-ukw-kanban-consistency-program.md)
+
+> **Predecessor of FR-092 (2026-04-27):** FR-040 introduced RW kboard updates on task completion. FR-092 (Wave 2-4) extends this from "kboard-touched-on-completion" to "four-surface canonical reconciliation on every release", absorbing FR-090 (row transform engine) and FR-091 (release-time contract). FR-040 remains valid as historical predecessor.
 
 ---
 

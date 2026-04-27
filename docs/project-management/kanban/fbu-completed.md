@@ -8,8 +8,8 @@ housekeeping_policy: keep
 
 # AI Dev Kit – FBU Completed Items
 
-**Last Updated:** 2026-04-21 (**FR-089** IMPLEMENTED via **E2:S15:T03**)
-**Version:** v0.2.15.3+2 *(completion attribution)*
+**Last Updated:** 2026-04-27 (**BR-042** CLOSED as duplicate of FR-090; consolidated under FR-092 meta-program; BR-062 fix supersedes)
+**Version:** v0.2.15.4+5 *(completion attribution)*
 
 > **For open FBU items, see:** [`fbuboard.md`](fbuboard.md)  
 > **For MoSCOW prioritized tasks, see:** [`kboard.md`](kboard.md)  
@@ -34,6 +34,7 @@ This document tracks all **completed FRs (Feature Requests), BRs (Bug Reports), 
 
 | ID | Type | Description | Completed | Version | Agent |
 |----|------|-------------|-----------|---------|-------|
+| BR-042 | BR | UKW agent board cleanup failure — CLOSED as duplicate of FR-090 (active-row hygiene fixed by BR-062 v0.2.1.11+2; consolidated under FR-092 meta-program) | 2026-04-27 | v0.2.15.4+5 | FR-092 Wave 1 |
 | FR-089 | FR | IPW board-row traceability-churn hardening — duplicate-footer dual-agreement + divergence guardrails; task-ID tail invariants (**E2:S15:T03**) | 2026-04-21 | v0.2.15.3+2 | UKW / Maintainer |
 | BR-068 | BR | Docusaurus strict MDX cannot resolve monorepo markdown links — **`portal`** strict build restored (**Strategy A**) (**E5:S09:T11**) | 2026-04-19 | v0.5.9.11+5 | RW Agent |
 | FR-080 | FR | End-to-end greenfield installation process — INSTALL + orchestrator + user-docs + validators / evidence (**E6:S09:T01**) | 2026-04-19 | v0.6.9.1+8 | RW Agent |

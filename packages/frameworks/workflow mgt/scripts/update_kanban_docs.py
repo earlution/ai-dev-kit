@@ -22,7 +22,8 @@ Usage:
 """
 
 import argparse
-from dataclasses import dataclass
+import json
+from dataclasses import dataclass, field
 import hashlib
 import os
 import re
@@ -435,6 +436,40 @@ def parse_story_task_checklist(story_content: str, epic: int, story: int, task: 
     return None
 
 
+def _is_terminal_task_status(status_text: str) -> bool:
+    """Return True if task status indicates terminal completion semantics."""
+    if not status_text:
+        return False
+    upper = status_text.upper()
+    return bool(
+        re.search(
+            r"\bCOMPLETE(?:D)?\b|\bIMPLEMENTED\b|\bFIXED\b|\bRESOLVED\b",
+            upper,
+        )
+    )
+
+
+def parse_task_doc_status(task_doc_path: Optional[Path]) -> str:
+    """Read canonical task-doc Status line when available."""
+    if task_doc_path is None or not task_doc_path.exists():
+        return ""
+    try:
+        content = task_doc_path.read_text()
+    except Exception:
+        return ""
+    status_match = re.search(r"\*\*Status:\*\*\s*(.+?)(?:\n|$)", content, re.IGNORECASE)
+    return status_match.group(1).strip() if status_match else ""
+
+
+def is_story_task_checklist_checked(story_content: str, epic: int, story: int, task: int) -> bool:
+    """Return True when target task row in Story checklist is already checked."""
+    checked_pattern = re.compile(
+        rf"^\s*-\s*\[x\]\s+\*\*E{epic}:S0?{story}:T0?{task}\b",
+        re.IGNORECASE | re.MULTILINE,
+    )
+    return bool(checked_pattern.search(story_content))
+
+
 def parse_story_header(story_content: str) -> Dict:
     """
     Parse Story header to read canonical Story-level status, dates, and version.
@@ -565,6 +600,7 @@ def derive_target_state(
             'epic_checklist': epic_checklist_entry,
             'epic_header': epic_header,
             'version_string': version_string,
+            'release_scope': {'epic': epic, 'story': story, 'task': task},
             'mode': 'full'
         }
 
@@ -613,6 +649,42 @@ def update_story_doc(
     
     # In full mode, update additional fields
     if mode == 'full':
+        # Reconcile current release-scope task checklist row to terminal state.
+        # This prevents stale Story checklist rows from leaving boards active
+        # when the host task doc is already terminal (FR-092 core objective).
+        rs = target_state.get("release_scope", {})
+        re_epic = rs.get("epic")
+        re_story = rs.get("story")
+        re_task = rs.get("task")
+        if all(v is not None for v in (re_epic, re_story, re_task)):
+            checklist_line_pattern = re.compile(
+                rf"^(?P<prefix>\s*-\s*)\[(?P<box>[x~\s])\](?P<body>\s+\*\*E{re_epic}:S0?{re_story}:T0?{re_task}\b[^\n]*)$",
+                re.IGNORECASE | re.MULTILINE,
+            )
+
+            def _mark_release_task_complete(match):
+                body = match.group("body")
+                updated = body
+                if not re.search(r"\b✅\s*COMPLETE\b|\bCOMPLETE\s*✅\b|\bCOMPLETE\b", updated, re.IGNORECASE):
+                    updated = re.sub(r"\bIN PROGRESS\b|\bTODO\b", "✅ COMPLETE", updated, flags=re.IGNORECASE)
+                    if updated == body:
+                        updated = f"{updated.rstrip()} ✅ COMPLETE ({target_state['version_string']})"
+                if target_state["version_string"] not in updated:
+                    updated = re.sub(
+                        r"(✅\s*COMPLETE(?:\s*\([^)]+\))?)",
+                        rf"\1 ({target_state['version_string']})",
+                        updated,
+                        count=1,
+                        flags=re.IGNORECASE,
+                    )
+                return f"{match.group('prefix')}[x]{updated}"
+
+            content, checklist_subs = checklist_line_pattern.subn(_mark_release_task_complete, content, count=1)
+            if checklist_subs > 0:
+                changes.append(
+                    f"Reconciled Task Checklist row: E{re_epic}:S{re_story}:T{re_task} -> [x] ✅ COMPLETE"
+                )
+
         # Update Story header Status
         if 'status' in target_state['story']:
             status_pattern = r'(\*\*Status:\*\*)\s*(.+?)(?:\n|$)'
@@ -872,8 +944,14 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
         ipp_token = render_ipp_segment_for_task(task_link_match.group(1), project_root)
         # Remove existing canonical traceability tokens before re-appending in
         # canonical order (idempotent repeated-run behavior).
-        line_core = re.sub(rf"\s*\|\s*{re.escape(fbu_token)}", "", line_core)
-        line_core = re.sub(rf"\s*\|\s*{re.escape(task_token)}", "", line_core)
+        #
+        # FR-092 Wave 4 (B1 drift fix): the previous regex required a leading
+        # ` | ` separator, which preserved body-inline duplicates introduced
+        # via ` - [FBU](url)` (description-tail links). We now match either a
+        # pipe or a hyphen separator so duplicate canonical tokens are removed
+        # regardless of how the row author placed them.
+        line_core = re.sub(rf"\s*[-|]\s*{re.escape(fbu_token)}", "", line_core)
+        line_core = re.sub(rf"\s*[-|]\s*{re.escape(task_token)}", "", line_core)
         segments = [segment.strip() for segment in line_core.split("|") if segment.strip()]
         line_core = " | ".join(segments)
         normalized_core = f"{line_core.rstrip()} | {fbu_token} | {task_token} | {ipp_token}"
@@ -888,8 +966,9 @@ def _normalize_traceability_segments_for_row(line: str, project_root: Path) -> s
         task_token = f"[{task_id}]({task_doc_match.group(1)})"
         ipp_token = render_ipp_segment_for_task(task_id, project_root)
         # FBU token cannot be deterministically inferred here; leave row unchanged.
-        # Remove existing canonical task token before re-appending.
-        line_core = re.sub(rf"\s*\|\s*{re.escape(task_token)}", "", line_core)
+        # Remove existing canonical task token before re-appending. FR-092
+        # Wave 4: also accept hyphen separator (B1 drift parity).
+        line_core = re.sub(rf"\s*[-|]\s*{re.escape(task_token)}", "", line_core)
         segments = [segment.strip() for segment in line_core.split("|") if segment.strip()]
         line_core = " | ".join(segments)
         normalized_core = f"{line_core.rstrip()} | {task_token} | {ipp_token}"
@@ -946,11 +1025,27 @@ ROW_TRANSFORM_CONTRACT_STANDALONE = RowTransformContract(
 )
 
 
+# UXR-009 / FR-092 Wave 6 — work-evidence gate modes for stamp mutation paths.
+# Defined before any function that takes them as default arg values.
+EVIDENCE_MODE_WORK_AUTHORITATIVE = "work_authoritative"
+EVIDENCE_MODE_NON_SUBSTANTIVE = "non_substantive"
+EVIDENCE_MODE_GATED = "gated"
+
+VALID_EVIDENCE_MODES = {
+    EVIDENCE_MODE_WORK_AUTHORITATIVE,
+    EVIDENCE_MODE_NON_SUBSTANTIVE,
+    EVIDENCE_MODE_GATED,
+}
+
+
 def apply_canonical_row_transform_pipeline(
     board_content: str,
     project_root: Path,
     timestamp_value: str,
     contract: RowTransformContract,
+    *,
+    evidence_mode: str = EVIDENCE_MODE_WORK_AUTHORITATIVE,
+    evidence_provider=None,
 ) -> Tuple[str, Dict[str, Any]]:
     """
     Apply canonical parse-normalize-render row transforms through a selected contract.
@@ -964,10 +1059,15 @@ def apply_canonical_row_transform_pipeline(
         "timestamp_order_divergence_rows": 0,
         "timestamp_order_divergence_row_ids": [],
     }
-    timestamp_report: Dict[str, int] = {
+    timestamp_report: Dict[str, Any] = {
         "rows_audited": 0,
         "timestamps_appended_missing": 0,
         "timestamps_append_suppressed_existing_footer": 0,
+        "stamps_appended_with_evidence": 0,
+        "stamps_skipped_no_evidence": 0,
+        "stamps_preserved_existing": 0,
+        "evidence_mode": evidence_mode,
+        "skipped_no_evidence_rows": [],
     }
     executed_steps: List[str] = []
 
@@ -979,7 +1079,12 @@ def apply_canonical_row_transform_pipeline(
             transformed, dup_report = reconcile_duplicate_moscow_row_footers(transformed)
             executed_steps.append(step)
         elif step == "timestamp_enforce":
-            transformed, timestamp_report = enforce_moscow_row_timestamps_with_stats(transformed, timestamp_value)
+            transformed, timestamp_report = enforce_moscow_row_timestamps_with_stats(
+                transformed,
+                timestamp_value,
+                evidence_mode=evidence_mode,
+                evidence_provider=evidence_provider,
+            )
             executed_steps.append(step)
         else:
             raise ValueError(f"Unknown row-transform step '{step}' in contract '{contract.name}'")
@@ -1205,24 +1310,83 @@ def update_kanban_board(
     return True, changes
 
 
-def enforce_moscow_row_timestamps_with_stats(board_content: str, timestamp_value: str) -> Tuple[str, Dict[str, int]]:
+def _row_has_substantive_evidence(line: str, evidence_provider) -> bool:
+    """
+    UXR-009 / FR-092 Wave 6 work-evidence gate helper.
+
+    Delegates per-row evidence classification to a caller-supplied
+    `evidence_provider(row_id, line)` callable. Returns False when no provider
+    is configured (so the gate stays conservative — gated mode without an
+    evidence resolver suppresses synthetic stamps rather than minting them).
+    """
+    if evidence_provider is None:
+        return False
+    try:
+        row_id = _extract_row_id_for_reporting(line)
+        return bool(evidence_provider(row_id, line))
+    except Exception:
+        return False
+
+
+def enforce_moscow_row_timestamps_with_stats(
+    board_content: str,
+    timestamp_value: str,
+    *,
+    evidence_mode: str = EVIDENCE_MODE_WORK_AUTHORITATIVE,
+    evidence_provider=None,
+) -> Tuple[str, Dict[str, int]]:
     """
     Ensure all MoSCOW bullet rows include:
     `| Last modified: YYYY-MM-DD HH:MM UTC`
 
     Guardrail: preserve existing timestamp values. Only add a timestamp when one
     is missing; do not rewrite existing values during touch-only board updates.
+
+    UXR-009 / FR-092 Wave 6 work-evidence gate
+    -------------------------------------------
+    `evidence_mode` controls whether a missing-stamp row is allowed to receive
+    a synthetic stamp:
+
+    - `work_authoritative` (default): the caller asserts that the invocation
+      itself constitutes substantive work evidence (e.g. RW Step 7 advancing a
+      task). Missing stamps are appended; existing stamps preserved.
+    - `non_substantive`: the caller declares that this run is a board-hygiene
+      pass (corpus-canonical sweep, alias migration, formatting reconciliation,
+      etc.) and MUST NOT introduce stamps. Existing stamps preserved.
+    - `gated`: caller supplies an `evidence_provider(row_id, line) -> bool`
+      callable. A row receives a stamp only when the provider asserts that the
+      underlying canonical source (linked task / FR / BR / UXR) has a
+      substantive evidence delta.
+
+    Counters:
+    - `stamps_appended_with_evidence` — appended under work_authoritative or
+      gated-with-positive-evidence.
+    - `stamps_skipped_no_evidence` — would-have-appended but suppressed by the
+      evidence gate (UXR-009 forensic-stamp safety).
+    - `stamps_preserved_existing` — row already had a footer stamp; preserved
+      verbatim.
     """
+    if evidence_mode not in VALID_EVIDENCE_MODES:
+        raise ValueError(
+            f"Unknown evidence_mode '{evidence_mode}'. "
+            f"Expected one of: {sorted(VALID_EVIDENCE_MODES)}"
+        )
+
     lines = board_content.split("\n")
     in_moscow = False
     out_lines: List[str] = []
     ts_pattern_terminal = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC\s*$")
     ts_pattern_anywhere = re.compile(r"\|\sLast modified:\s\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}\sUTC")
 
-    stats = {
+    stats: Dict[str, Any] = {
         "rows_audited": 0,
         "timestamps_appended_missing": 0,
         "timestamps_append_suppressed_existing_footer": 0,
+        "stamps_appended_with_evidence": 0,
+        "stamps_skipped_no_evidence": 0,
+        "stamps_preserved_existing": 0,
+        "evidence_mode": evidence_mode,
+        "skipped_no_evidence_rows": [],
     }
 
     for line in lines:
@@ -1236,14 +1400,27 @@ def enforce_moscow_row_timestamps_with_stats(board_content: str, timestamp_value
             stats["rows_audited"] += 1
             has_terminal = bool(ts_pattern_terminal.search(line))
             has_anywhere = bool(ts_pattern_anywhere.search(line))
-            # Guardrail: never append a synthetic timestamp when valid footer
-            # evidence already exists on the row (even if legacy placement is
-            # non-terminal).
-            if not has_terminal and not has_anywhere:
-                line = f"{line} | Last modified: {timestamp_value}"
-                stats["timestamps_appended_missing"] += 1
-            elif not has_terminal and has_anywhere:
-                stats["timestamps_append_suppressed_existing_footer"] += 1
+            if has_terminal or has_anywhere:
+                stats["stamps_preserved_existing"] += 1
+                if not has_terminal and has_anywhere:
+                    stats["timestamps_append_suppressed_existing_footer"] += 1
+            else:
+                allow_append = False
+                if evidence_mode == EVIDENCE_MODE_WORK_AUTHORITATIVE:
+                    allow_append = True
+                elif evidence_mode == EVIDENCE_MODE_NON_SUBSTANTIVE:
+                    allow_append = False
+                elif evidence_mode == EVIDENCE_MODE_GATED:
+                    allow_append = _row_has_substantive_evidence(line, evidence_provider)
+                if allow_append:
+                    line = f"{line} | Last modified: {timestamp_value}"
+                    stats["timestamps_appended_missing"] += 1
+                    stats["stamps_appended_with_evidence"] += 1
+                else:
+                    stats["stamps_skipped_no_evidence"] += 1
+                    row_id = _extract_row_id_for_reporting(line)
+                    if row_id != "unknown-row":
+                        stats["skipped_no_evidence_rows"].append(row_id)
 
         out_lines.append(line)
 
@@ -1479,6 +1656,99 @@ def _cleanup_fbuboard_active_rows(board_content: str, board_path: Path, timestam
     updated = re.sub(r"\n{3,}", "\n\n", updated)
 
     return updated, stats
+
+
+def run_corpus_canonical_sweep(
+    project_root: Path,
+    *,
+    dry_run: bool = False,
+    timestamp_value: Optional[str] = None,
+    evidence_mode: str = EVIDENCE_MODE_NON_SUBSTANTIVE,
+    evidence_provider=None,
+) -> Tuple[List[str], Dict[str, Any]]:
+    """
+    Run the canonical row transform pipeline over the entire corpus of active
+    boards (kboard.md + fbuboard.md) and emit a normalization diff.
+
+    FR-092 Wave 4 corpus-mode entrypoint. Unlike `enforce_terminal_timestamps_on_boards`,
+    this surface is intended for explicit pre-RW or maintenance sweeps where the
+    caller wants a structured outcome report (rows changed, duplicate-token
+    counts, idempotency check). The sweep is full-corpus (every MoSCOW row),
+    matching the FR-092 corpus-canonical contract.
+
+    Returns:
+        (changes, sweep_report) where changes is a flat human-readable list and
+        sweep_report is a structured dict.
+    """
+    boards = [
+        project_root / "docs/project-management/kanban/kboard.md",
+        project_root / "docs/project-management/kanban/fbuboard.md",
+        project_root / "docs/project-management/kanban/kanban-board.md",
+        project_root / "docs/project-management/kanban/fr-br-uxr-board.md",
+    ]
+    if timestamp_value is None:
+        timestamp_value = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+
+    changes: List[str] = []
+    aggregate_stamp_evidence: Dict[str, int] = {
+        "stamps_appended_with_evidence": 0,
+        "stamps_skipped_no_evidence": 0,
+        "stamps_preserved_existing": 0,
+    }
+    sweep_report: Dict[str, Any] = {
+        "contract": (
+            "FR-092 Wave 4 corpus-canonical sweep "
+            "(UXR-009 / Wave 6 evidence-mode={mode})".format(mode=evidence_mode)
+        ),
+        "timestamp_utc": timestamp_value,
+        "evidence_mode": evidence_mode,
+        "boards": [],
+        "stamp_evidence_aggregate": aggregate_stamp_evidence,
+    }
+
+    for board in boards:
+        if not board.exists():
+            continue
+        original = board.read_text()
+        transformed, diagnostics = apply_canonical_row_transform_pipeline(
+            board_content=original,
+            project_root=project_root,
+            timestamp_value=timestamp_value,
+            contract=ROW_TRANSFORM_CONTRACT_STANDALONE,
+            evidence_mode=evidence_mode,
+            evidence_provider=evidence_provider,
+        )
+        ts_rep = diagnostics.get("timestamp_report", {})
+        for k in ("stamps_appended_with_evidence", "stamps_skipped_no_evidence", "stamps_preserved_existing"):
+            aggregate_stamp_evidence[k] += int(ts_rep.get(k, 0) or 0)
+        rows_changed = sum(
+            1
+            for orig_line, new_line in zip(original.splitlines(), transformed.splitlines())
+            if orig_line != new_line
+        )
+        rows_changed += abs(
+            len(transformed.splitlines()) - len(original.splitlines())
+        )
+        board_report = {
+            "path": str(board),
+            "rows_changed": rows_changed,
+            "byte_size_before": len(original),
+            "byte_size_after": len(transformed),
+            "dup_report": diagnostics["dup_report"],
+            "timestamp_report": diagnostics["timestamp_report"],
+            "executed_steps": diagnostics["executed_steps"],
+        }
+        if transformed != original:
+            if not dry_run:
+                board.write_text(transformed)
+            changes.append(
+                f"corpus-canonical sweep: {board.name} rows_changed={rows_changed}"
+            )
+        else:
+            changes.append(f"corpus-canonical sweep: {board.name} clean (idempotent)")
+        sweep_report["boards"].append(board_report)
+
+    return changes, sweep_report
 
 
 def enforce_terminal_timestamps_on_boards(project_root: Path, dry_run: bool = False) -> List[str]:
@@ -1857,6 +2127,396 @@ def validate_updates(
     return len(errors) == 0, errors, warnings, error_details
 
 
+###############################################################################
+# Four-surface reconciliation report (FR-092 Wave 3, absorbing FR-084 contract)
+#
+# RW Step 7 owns release-scope kanban consistency end-to-end across four
+# canonical surfaces:
+#
+#   1. Task doc                  (host task + directly affected child tasks)
+#   2. Source FR / BR / UXR doc  (bidirectional links + status mirror)
+#   3. kboard.md                 (canonical row + active-row hygiene)
+#   4. fbuboard.md               (canonical row + active-row hygiene)
+#
+# This module emits a structured "touched surfaces + why" report so RW Step 7
+# is auditable and self-sufficient without relying on a follow-up UKW run.
+#
+# Properties: idempotent, deterministic, ordered (host task -> source FBU ->
+# kboard.md -> fbuboard.md). See:
+#   - .cursorrules Step 7
+#   - packages/frameworks/workflow mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md
+#   - packages/frameworks/kanban/policies/kanban-governance-policy.md
+#   - docs/project-management/kanban/fr-br/FR-092-canonical-rw-ukw-kanban-consistency-program.md
+###############################################################################
+
+
+FOUR_SURFACE_NAMES = ("task_doc", "fbu_doc", "kboard", "fbuboard")
+
+
+@dataclass
+class SurfaceReport:
+    """Per-surface change record for the four-surface reconciliation report."""
+    name: str
+    paths: List[str] = field(default_factory=list)
+    touched: bool = False
+    changes: List[str] = field(default_factory=list)
+    notes: List[str] = field(default_factory=list)
+
+    def as_dict(self) -> Dict[str, Any]:
+        return {
+            "surface": self.name,
+            "paths": list(self.paths),
+            "touched": self.touched,
+            "changes": list(self.changes),
+            "notes": list(self.notes),
+        }
+
+
+@dataclass
+class FourSurfaceReport:
+    """
+    Aggregate four-surface reconciliation report.
+
+    Emitted at end of RW Step 7 to provide auditable evidence that all four
+    canonical surfaces were reached and reconciled (or explicitly noted as
+    out-of-scope).
+    """
+    invocation_context: str
+    epic: int
+    story: int
+    task: int
+    version_string: str
+    timestamp_utc: str
+    surfaces: Dict[str, SurfaceReport] = field(default_factory=dict)
+    auxiliary_surfaces: Dict[str, SurfaceReport] = field(default_factory=dict)
+    contract: str = "FR-092 / FR-091 (RW Step 7 self-sufficient four-surface reconciliation)"
+    stamp_evidence: Dict[str, Any] = field(default_factory=dict)
+
+    def as_dict(self) -> Dict[str, Any]:
+        return {
+            "contract": self.contract,
+            "invocation_context": self.invocation_context,
+            "release_scope": {
+                "epic": self.epic,
+                "story": self.story,
+                "task": self.task,
+                "task_id": f"E{self.epic}:S{self.story}:T{self.task}",
+                "version_string": self.version_string,
+            },
+            "timestamp_utc": self.timestamp_utc,
+            "surfaces": {name: rep.as_dict() for name, rep in self.surfaces.items()},
+            "auxiliary_surfaces": {name: rep.as_dict() for name, rep in self.auxiliary_surfaces.items()},
+            "stamp_evidence": dict(self.stamp_evidence),
+            "summary": {
+                "touched_surfaces": [name for name, rep in self.surfaces.items() if rep.touched],
+                "untouched_surfaces": [name for name, rep in self.surfaces.items() if not rep.touched],
+                "total_changes": sum(len(rep.changes) for rep in self.surfaces.values())
+                + sum(len(rep.changes) for rep in self.auxiliary_surfaces.values()),
+                "stamps_appended_with_evidence": int(
+                    self.stamp_evidence.get("stamps_appended_with_evidence", 0)
+                ),
+                "stamps_skipped_no_evidence": int(
+                    self.stamp_evidence.get("stamps_skipped_no_evidence", 0)
+                ),
+                "stamps_preserved_existing": int(
+                    self.stamp_evidence.get("stamps_preserved_existing", 0)
+                ),
+            },
+        }
+
+    def to_markdown(self) -> str:
+        d = self.as_dict()
+        lines: List[str] = []
+        lines.append(f"# RW Step 7 four-surface reconciliation report")
+        lines.append("")
+        lines.append(f"- **Contract:** {d['contract']}")
+        lines.append(f"- **Invocation context:** {d['invocation_context']}")
+        lines.append(f"- **Release scope:** {d['release_scope']['task_id']} ({d['release_scope']['version_string']})")
+        lines.append(f"- **Timestamp (UTC):** {d['timestamp_utc']}")
+        lines.append("")
+        lines.append("## Touched-surface summary")
+        lines.append("")
+        lines.append(f"- Touched: `{', '.join(d['summary']['touched_surfaces']) or '(none)'}`")
+        lines.append(f"- Untouched: `{', '.join(d['summary']['untouched_surfaces']) or '(none)'}`")
+        lines.append(f"- Total changes recorded: {d['summary']['total_changes']}")
+        lines.append("")
+        lines.append("## Forensic stamp evidence (UXR-009 / FR-092 Wave 6)")
+        lines.append("")
+        lines.append(
+            f"- Evidence mode: `{self.stamp_evidence.get('evidence_mode', 'work_authoritative')}`"
+        )
+        lines.append(
+            f"- Stamps appended with evidence: **{d['summary']['stamps_appended_with_evidence']}**"
+        )
+        lines.append(
+            f"- Stamps skipped (no evidence delta): **{d['summary']['stamps_skipped_no_evidence']}**"
+        )
+        lines.append(
+            f"- Stamps preserved (existing footer): **{d['summary']['stamps_preserved_existing']}**"
+        )
+        lines.append("")
+        lines.append("## Per-surface detail")
+        lines.append("")
+        for name in FOUR_SURFACE_NAMES:
+            rep = d["surfaces"].get(name, {"surface": name, "paths": [], "touched": False, "changes": [], "notes": []})
+            lines.append(f"### Surface: `{name}`")
+            lines.append("")
+            lines.append(f"- Touched: **{rep['touched']}**")
+            paths = rep.get("paths", [])
+            if paths:
+                lines.append(f"- Path(s):")
+                for p in paths:
+                    lines.append(f"  - `{p}`")
+            else:
+                lines.append("- Path(s): (none resolved)")
+            changes = rep.get("changes", [])
+            if changes:
+                lines.append("- Changes:")
+                for c in changes:
+                    lines.append(f"  - {c}")
+            notes = rep.get("notes", [])
+            if notes:
+                lines.append("- Notes:")
+                for n in notes:
+                    lines.append(f"  - {n}")
+            lines.append("")
+        if d["auxiliary_surfaces"]:
+            lines.append("## Auxiliary surfaces (Story / Epic propagation)")
+            lines.append("")
+            for name, rep in d["auxiliary_surfaces"].items():
+                lines.append(f"### Auxiliary: `{name}`")
+                lines.append("")
+                lines.append(f"- Touched: **{rep['touched']}**")
+                paths = rep.get("paths", [])
+                if paths:
+                    lines.append(f"- Path(s):")
+                    for p in paths:
+                        lines.append(f"  - `{p}`")
+                changes = rep.get("changes", [])
+                if changes:
+                    lines.append("- Changes:")
+                    for c in changes:
+                        lines.append(f"  - {c}")
+                lines.append("")
+        return "\n".join(lines).rstrip() + "\n"
+
+
+def _classify_change_to_surface(change: str) -> Optional[str]:
+    """
+    Classify a free-text change message into one of the four canonical surfaces
+    (or auxiliary surface if Story/Epic). Returns None when no classification
+    is possible.
+    """
+    c = change.lower()
+    if "kboard" in c or "kanban-board" in c:
+        return "kboard"
+    if "fbuboard" in c or "fr-br-uxr-board" in c:
+        return "fbuboard"
+    if "story" in c and "doc" in c:
+        return "story_doc"
+    if "epic" in c and "doc" in c:
+        return "epic_doc"
+    if "task" in c and "doc" in c:
+        return "task_doc"
+    if "fr/br/uxr" in c or "fbu doc" in c:
+        return "fbu_doc"
+    return None
+
+
+def discover_release_scope_task_doc(
+    epic: int,
+    story: int,
+    task: int,
+    project_root: Path,
+) -> Optional[Path]:
+    """
+    Discover the canonical task doc for the release-scope task (E:S:T).
+    Returns the resolved path if found, else None.
+    """
+    kanban_root = project_root / "docs/project-management/kanban"
+    story_dir_patterns = [
+        kanban_root / f"epics/Epic-{epic}" / f"Story-{story:03d}-*",
+        kanban_root / f"epics/Epic-{epic}" / f"Story-{story}-*",
+    ]
+    for pattern in story_dir_patterns:
+        for story_dir in pattern.parent.glob(pattern.name) if pattern.parent.exists() else []:
+            if not story_dir.is_dir():
+                continue
+            task_patterns = [
+                f"T{task:02d}-*.md",
+                f"T{task}-*.md",
+            ]
+            for tp in task_patterns:
+                matches = list(story_dir.glob(tp))
+                if matches:
+                    return matches[0].resolve()
+    return None
+
+
+def discover_release_scope_fbu_docs(
+    task_doc_path: Optional[Path],
+    project_root: Path,
+) -> List[Path]:
+    """
+    Discover linked FR/BR/UXR docs by parsing the task doc's Upstream/Source
+    references. Returns a list of resolved paths.
+    """
+    if not task_doc_path or not task_doc_path.exists():
+        return []
+    try:
+        content = task_doc_path.read_text()
+    except Exception:
+        return []
+    fbu_root = project_root / "docs/project-management/kanban/fr-br"
+    candidates: List[Path] = []
+    seen: set = set()
+    pattern = re.compile(r"(FR-\d+|BR-\d+|UXR-\d+)[^\s]*?\.md", re.IGNORECASE)
+    for match in pattern.finditer(content):
+        fragment = match.group(0)
+        rel_path = fbu_root / Path(fragment).name
+        if rel_path.exists():
+            resolved = rel_path.resolve()
+            if str(resolved) not in seen:
+                seen.add(str(resolved))
+                candidates.append(resolved)
+    return candidates
+
+
+def build_four_surface_report(
+    *,
+    invocation_context: str,
+    epic: int,
+    story: int,
+    task: int,
+    version_string: str,
+    project_root: Path,
+    paths: Dict[str, Path],
+    all_changes: List[str],
+    stamp_evidence_aggregate: Optional[Dict[str, Any]] = None,
+) -> FourSurfaceReport:
+    """
+    Build the four-surface reconciliation report from the resolved release-scope
+    paths and the aggregated change list emitted by RW Step 7.
+
+    `stamp_evidence_aggregate` (optional) is a dict produced by row-mutation
+    paths (UXR-009 / FR-092 Wave 6) summarizing how the work-evidence gate
+    classified per-row stamp decisions during this run. Keys:
+      - `evidence_mode`
+      - `stamps_appended_with_evidence`
+      - `stamps_skipped_no_evidence`
+      - `stamps_preserved_existing`
+    """
+    timestamp_utc = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    report = FourSurfaceReport(
+        invocation_context=invocation_context,
+        epic=epic,
+        story=story,
+        task=task,
+        version_string=version_string,
+        timestamp_utc=timestamp_utc,
+        stamp_evidence=dict(stamp_evidence_aggregate or {}),
+    )
+
+    task_doc_path = discover_release_scope_task_doc(epic, story, task, project_root)
+    fbu_doc_paths = discover_release_scope_fbu_docs(task_doc_path, project_root)
+    kboard_path = paths.get("kanban_board")
+    if kboard_path is None:
+        candidate = project_root / "docs/project-management/kanban/kboard.md"
+        if candidate.exists():
+            kboard_path = candidate.resolve()
+    fbuboard_path: Optional[Path] = None
+    fbuboard_candidates = [
+        project_root / "docs/project-management/kanban/fbuboard.md",
+        project_root / "docs/project-management/kanban/fr-br-uxr-board.md",
+    ]
+    for cand in fbuboard_candidates:
+        if cand.exists():
+            fbuboard_path = cand.resolve()
+            break
+
+    surface_specs = [
+        ("task_doc", [task_doc_path] if task_doc_path else []),
+        ("fbu_doc", list(fbu_doc_paths)),
+        ("kboard", [kboard_path] if kboard_path else []),
+        ("fbuboard", [fbuboard_path] if fbuboard_path else []),
+    ]
+    for name, surface_paths in surface_specs:
+        rep = SurfaceReport(name=name)
+        rep.paths = [str(p) for p in surface_paths if p is not None]
+        if name in {"task_doc", "fbu_doc"} and not rep.paths:
+            rep.notes.append(
+                "No path resolved by RW Step 7. Task / FBU surfaces are owned by "
+                "implementation execution; absence here is informational, not a failure."
+            )
+        report.surfaces[name] = rep
+
+    aux_specs = {
+        "story_doc": paths.get("story_doc"),
+        "epic_doc": paths.get("epic_doc"),
+    }
+    for name, p in aux_specs.items():
+        if p is None:
+            continue
+        rep = SurfaceReport(name=name)
+        rep.paths = [str(p)]
+        report.auxiliary_surfaces[name] = rep
+
+    for change in all_changes:
+        surface = _classify_change_to_surface(change)
+        if surface in {"task_doc", "fbu_doc", "kboard", "fbuboard"}:
+            target = report.surfaces.setdefault(surface, SurfaceReport(name=surface))
+            target.touched = True
+            target.changes.append(change)
+        elif surface in {"story_doc", "epic_doc"}:
+            target = report.auxiliary_surfaces.setdefault(surface, SurfaceReport(name=surface))
+            target.touched = True
+            target.changes.append(change)
+        else:
+            target = report.auxiliary_surfaces.setdefault(
+                "uncategorized", SurfaceReport(name="uncategorized")
+            )
+            target.touched = True
+            target.changes.append(change)
+
+    for name in FOUR_SURFACE_NAMES:
+        rep = report.surfaces.setdefault(name, SurfaceReport(name=name))
+        if not rep.touched and not rep.notes:
+            rep.notes.append(
+                "Surface within release scope but not touched by this run "
+                "(idempotent no-op or already canonical)."
+            )
+
+    return report
+
+
+def write_four_surface_report(
+    report: FourSurfaceReport,
+    output_dir: Path,
+    *,
+    formats: Tuple[str, ...] = ("json", "md"),
+) -> List[Path]:
+    """
+    Persist the four-surface reconciliation report to changelog-archive (or
+    other supplied output directory). Returns list of written paths.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    base = (
+        f"rw-step7-four-surface-report-"
+        f"{report.version_string.replace('+', 'plus').replace('.', '-')}-"
+        f"e{report.epic}s{report.story}t{report.task}"
+    )
+    written: List[Path] = []
+    if "json" in formats:
+        json_path = output_dir / f"{base}.json"
+        json_path.write_text(json.dumps(report.as_dict(), indent=2, sort_keys=True) + "\n")
+        written.append(json_path)
+    if "md" in formats:
+        md_path = output_dir / f"{base}.md"
+        md_path.write_text(report.to_markdown())
+        written.append(md_path)
+    return written
+
+
 def main():
     parser = argparse.ArgumentParser(description="Update Kanban documentation for completed task")
     parser.add_argument(
@@ -1885,6 +2545,36 @@ def main():
         choices=["full", "kanban_init"],
         default="full",
         help="Update mode: 'full' (default) or 'kanban_init' (documentation only)",
+    )
+    parser.add_argument(
+        "--four-surface-report",
+        type=Path,
+        default=None,
+        help=(
+            "Optional path to write the four-surface reconciliation report "
+            "(FR-092 Wave 3, RW Step 7 self-sufficient contract). If a "
+            "directory, JSON + Markdown reports are written there. If a file, "
+            "the file extension determines the format (.json or .md). When "
+            "omitted, a default location under "
+            "docs/changelog-and-release-notes/changelog-archive/four-surface-reports/ "
+            "is used."
+        ),
+    )
+    parser.add_argument(
+        "--invocation-context",
+        type=str,
+        default="rw_step_7",
+        help="Invocation context label for the four-surface report (default: rw_step_7).",
+    )
+    parser.add_argument(
+        "--corpus-canonical",
+        action="store_true",
+        help=(
+            "FR-092 Wave 4: run the canonical row transform pipeline over the "
+            "entire corpus of active boards (kboard.md + fbuboard.md) and "
+            "emit a structured normalization sweep report. Use this for "
+            "explicit pre-RW corpus normalization or maintenance sweeps."
+        ),
     )
     args = parser.parse_args()
     
@@ -1959,8 +2649,32 @@ def main():
     # Parse Story header
     story_header = parse_story_header(story_content)
     
+    # Parse release-scope task doc status (authoritative completion signal).
+    task_doc_path = discover_release_scope_task_doc(epic, story, task, Path.cwd())
+    task_doc_status = parse_task_doc_status(task_doc_path)
+    task_doc_terminal = _is_terminal_task_status(task_doc_status)
+
     # Compute completion state
     completion_state = compute_story_completion_state(story_content)
+    task_row_checked = is_story_task_checklist_checked(story_content, epic, story, task)
+    if task_doc_terminal and not task_row_checked:
+        # Reconcile completion-state computation when task doc is terminal but the
+        # Story checklist has not yet been flipped. This lets Step 7 enforce
+        # board cleanup semantics from the canonical task status.
+        completion_state["completed_tasks"] = min(
+            completion_state["total_tasks"],
+            completion_state["completed_tasks"] + 1,
+        )
+        completion_state["all_tasks_complete"] = (
+            completion_state["total_tasks"] > 0
+            and completion_state["completed_tasks"] == completion_state["total_tasks"]
+        )
+        if not task_info:
+            task_info = {
+                "task_id": f"E{epic}:S{story}:T{task:02d}",
+                "version": version_string,
+                "line": "",
+            }
     
     # Derive target state
     target_state = derive_target_state(
@@ -2001,7 +2715,21 @@ def main():
 
     # Enforce terminal row timestamp field on both active boards
     all_changes.extend(enforce_terminal_timestamps_on_boards(Path.cwd(), args.dry_run))
-    
+
+    # FR-092 Wave 4: optional explicit corpus-canonical sweep over both boards
+    if args.corpus_canonical:
+        sweep_changes, sweep_report = run_corpus_canonical_sweep(
+            Path.cwd(), dry_run=args.dry_run
+        )
+        all_changes.extend(sweep_changes)
+        print("\n🧹 FR-092 Wave 4 corpus-canonical sweep report:")
+        for board in sweep_report["boards"]:
+            print(
+                f"   - {board['path']}: rows_changed={board['rows_changed']}, "
+                f"dup_rows={board['dup_report']['rows_with_duplicate_footers']}, "
+                f"appended_missing={board['timestamp_report']['timestamps_appended_missing']}"
+            )
+
     # Report results
     if args.dry_run:
         print(f"🔍 DRY RUN: Would make {len(all_changes)} changes")
@@ -2011,8 +2739,64 @@ def main():
         print(f"✅ Successfully made {len(all_changes)} changes:")
         for change in all_changes:
             print(f"   {change}")
-    
+
     print(f"🎯 Kanban documentation update completed in {args.mode} mode")
+
+    # Emit four-surface reconciliation report (FR-092 Wave 3)
+    project_root = Path.cwd()
+    four_surface_report = build_four_surface_report(
+        invocation_context=args.invocation_context,
+        epic=epic,
+        story=story,
+        task=task,
+        version_string=version_string,
+        project_root=project_root,
+        paths=paths,
+        all_changes=all_changes,
+    )
+
+    print("\n📊 RW Step 7 four-surface reconciliation report")
+    print("=" * 80)
+    summary = four_surface_report.as_dict()["summary"]
+    print(f"   contract:          {four_surface_report.contract}")
+    print(f"   invocation:        {four_surface_report.invocation_context}")
+    print(f"   release_scope:     E{epic}:S{story}:T{task} ({version_string})")
+    print(f"   touched_surfaces:  {summary['touched_surfaces'] or '(none)'}")
+    print(f"   untouched_surfaces:{summary['untouched_surfaces'] or '(none)'}")
+    print(f"   total_changes:     {summary['total_changes']}")
+    print("=" * 80)
+
+    if not args.dry_run:
+        if args.four_surface_report:
+            target = args.four_surface_report
+            try:
+                if target.suffix.lower() == ".json":
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_text(json.dumps(four_surface_report.as_dict(), indent=2, sort_keys=True) + "\n")
+                    written_paths = [target]
+                elif target.suffix.lower() == ".md":
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_text(four_surface_report.to_markdown())
+                    written_paths = [target]
+                else:
+                    written_paths = write_four_surface_report(four_surface_report, target)
+            except Exception as exc:
+                print(f"⚠️  Could not write four-surface report to {target}: {exc}")
+                written_paths = []
+        else:
+            default_dir = (
+                project_root
+                / "docs/changelog-and-release-notes/changelog-archive/four-surface-reports"
+            )
+            try:
+                written_paths = write_four_surface_report(four_surface_report, default_dir)
+            except Exception as exc:
+                print(f"⚠️  Could not write four-surface report to {default_dir}: {exc}")
+                written_paths = []
+        if written_paths:
+            print("📝 Four-surface report written:")
+            for p in written_paths:
+                print(f"   - {p}")
 
     # Validate updates (Steps 12-14: comprehensive validation)
     if not args.dry_run:

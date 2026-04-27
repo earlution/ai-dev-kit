@@ -48,11 +48,11 @@ IPW itself is planning-only and must not directly transition implementation stat
 - `TODO -> IN PROGRESS`
   - **Decision owner:** implementation execution (first non-planning code/doc implementation change)
   - **Write owner:** implementation execution updates task doc status
-  - **Propagation owner:** RW Step 7 / standalone UKW syncs board row in the same session
+  - **Propagation owner:** RW Step 7 ("Scoped Kanban Reconciliation, Self-Sufficient" — FR-092) propagates the row in the same session as a release-scope, self-sufficient four-surface reconciliation. Standalone UKW remains a reactive corrective workflow only and is **not** a process dependency for RW correctness.
 - `IN PROGRESS -> COMPLETE`
   - **Decision owner:** implementation execution after acceptance evidence exists
   - **Write owner:** implementation execution updates task doc status and evidence notes
-  - **Propagation owner:** RW Step 7 / standalone UKW syncs board row in the same session
+  - **Propagation owner:** RW Step 7 ("Scoped Kanban Reconciliation, Self-Sufficient" — FR-092) propagates the row in the same session as a release-scope, self-sufficient four-surface reconciliation. Standalone UKW remains a reactive corrective workflow only and is **not** a process dependency for RW correctness.
 
 ### Non-negotiable rules
 
@@ -78,6 +78,27 @@ For tasks where planning artifacts are expected to be discoverable in project do
 - Validate wiring with:
   - `python "packages/frameworks/workflow mgt/scripts/validation/validate_ipw_publication_wiring.py" --requested E{epic}:S{story}:T{task}`
 
+## Post-run reconciliation contract (FR-092 / FR-084)
+
+When IPW or implementation execution mutates substantive task fields (status, AC progression, evidence notes, version anchors), the **same session** must reconcile all four canonical surfaces before commit:
+
+1. **Task doc** — host task plus directly affected child tasks.
+2. **Source FR / BR / UXR doc(s)** — bidirectional links and status mirroring.
+3. **`kboard.md`** — canonical row(s) for the release-scope task(s); active-row hygiene; canonical row tail grammar (no duplicate tokens).
+4. **`fbuboard.md`** — canonical row(s) for the release-scope FBU(s); supersede / gating / closure markers; canonical row tail grammar (no duplicate tokens).
+
+**Properties (FR-092):**
+
+- **Idempotent.** Re-running reconciliation on already-clean surfaces is a no-op.
+- **Deterministic.** Output is fully determined by input state (no nondeterministic ordering).
+- **Ordered.** Host task -> source FBU -> `kboard.md` -> `fbuboard.md`.
+- **Atomic at session level.** No split-brain task-doc vs board status.
+- **Auditable.** A "touched surfaces + why" report is emitted by RW Step 7 covering the release slice.
+
+**RW Step 7 (Scoped Kanban Reconciliation, Self-Sufficient) is the canonical post-run reconciliation surface for release-scope work.** Its correctness is self-contained: no follow-up UKW run is required for release-scope consistency. Out-of-scope corpus drift may be addressed by UKW (reactive, optional, not a process dependency).
+
+See [`FR-092` — Canonical RW/UKW kanban consistency program (meta)](../../../../../../docs/project-management/kanban/fr-br/FR-092-canonical-rw-ukw-kanban-consistency-program.md) (absorbing [`FR-084`](../../../../../../docs/project-management/kanban/fr-br/FR-084-ipp-post-run-governance-reconciliation-ownership.md), [`FR-091`](../../../../../../docs/project-management/kanban/fr-br/FR-091-rw-step-7-self-sufficient-scoped-kanban-reconciliation-without-ukw-dependency.md)).
+
 ## Outputs
 
 - One markdown plan doc per IPW run (typically co-located with the host task story folder or under `docs/implementation-cycles/` per project convention).
@@ -87,7 +108,7 @@ For tasks where planning artifacts are expected to be discoverable in project do
 ## Integration
 
 - **Implementation Cycle (TDD):** After IPW, follow [implementation-cycle-sop.md](implementation-cycle-sop.md): Step 3 uses the plan’s spec/test sections to create **failing tests**, then implementation.
-- **RW:** Release workflow is unchanged; run **RW** after shippable work with the required task token.
+- **RW:** Release workflow is unchanged; run **RW** after shippable work with the required task token. RW Step 7 owns release-scope four-surface reconciliation (FR-092 / FR-091, absorbing FR-084's post-run reconciliation contract).
 
 ## References
 

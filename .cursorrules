@@ -344,7 +344,26 @@ For each step, follow this pattern:
 
 6. **Update BR/FR Docs** - Update Bug Reports and Feature Requests with fix attempt information. Use config path. Document flaws, attempted fixes, and verification status.
 
-7. **Scoped Kanban Sync (UKW Mode)** — RW Step 7 is a **scoped, UKW-style** agentic kanban update for the **current release Epic/Story/Task**, not a full standalone UKW run. Update Task (then Story, then Epic) docs with version markers and forensic consistency; update board entries tied to this release; apply **limited** MoSCOW / prioritisation only for **new or newly significant** items per Kanban governance (do not re-prioritise the whole board). Prefer `update_kanban_docs.py` when applicable; otherwise follow the same bottom-up scope. Use config paths. **CRITICAL: Check Story file existence, create from template if missing, then update.** Update Story file FIRST, then Epic file to match. See [update-kanban-workflow-agent-execution.md](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md) for `invocation_context` (`rw_step_7` vs `standalone`).
+7. **Scoped Kanban Reconciliation (Self-Sufficient)** — RW Step 7 is a **self-sufficient** scoped reconciliation that owns release-scope kanban consistency end-to-end and **does not depend on a follow-up UKW run** for release correctness. (Per [FR-092 / FR-091](docs/project-management/kanban/fr-br/FR-092-canonical-rw-ukw-kanban-consistency-program.md), absorbing [FR-091](docs/project-management/kanban/fr-br/FR-091-rw-step-7-self-sufficient-scoped-kanban-reconciliation-without-ukw-dependency.md).)
+
+   **What/Why (architecture, not just operational guidance):**
+
+   - **RW is preventive and release-atomic.** RW must finish release-scope reconciliation autonomously. No RW correctness criterion may require a subsequent UKW run.
+   - **UKW is corrective and drift-oriented.** UKW exists as a reactive global drift-repair workflow for cumulative, cross-cutting board hygiene. UKW is **optional** with respect to RW completion. UKW exists because canonical workflows are imperfect in practice; the desired direction is to continuously reduce drift creation in RW so UKW becomes a smaller corrective safety net.
+   - **No handoff debt.** Deferring release-scope inconsistencies to UKW is prohibited.
+
+   **Minimum release-scope reconciliation outputs (four-surface contract, deterministic + idempotent + ordered):**
+
+   1. **Task doc** — version anchor + status + last-updated + checklist sync (host task and any directly affected child tasks).
+   2. **Source FR/BR/UXR doc(s)** — status sync + linked-task references + closure/gating banners where applicable.
+   3. **`kboard.md`** — canonical row(s) for the release-scope task(s); active-row hygiene for completed rows; no duplicate tail tokens.
+   4. **`fbuboard.md`** — canonical row(s) for the release-scope FBU(s); supersede / gating / closure markers; no duplicate tail tokens.
+
+   **Execution:** Update Task (then Story, then Epic) with version markers and forensic consistency; update FR/BR/UXR doc(s) tied to this release; emit canonical row(s) on `kboard.md` and `fbuboard.md`; apply **limited** MoSCOW prioritisation only for **new or newly significant** items per Kanban governance (do not re-prioritise the whole board). Prefer `update_kanban_docs.py` when applicable; otherwise follow the same bottom-up scope. Use config paths. **CRITICAL: Check Story file existence, create from template if missing, then update.** Update Story file FIRST, then Epic file to match.
+
+   **Audit:** RW Step 7 emits a "touched surfaces + why" report (Wave 5/7 deliverable under FR-092) sufficient to reconstruct release-scope reconciliation outcomes.
+
+   See [update-kanban-workflow-agent-execution.md](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md) for UKW reactive-only role and `invocation_context` (`rw_step_7` vs `standalone`); see [release-workflow-agent-execution.md](packages/frameworks/workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md) for the canonical Step 7 execution detail; see [kanban-governance-policy.md](packages/frameworks/kanban/policies/kanban-governance-policy.md) for the RW preventive / UKW corrective separation.
 
 8. **Stage Files** - Run `git add -A` to stage all modified files
 
@@ -747,7 +766,7 @@ Documents in `docs/` directory must have lifecycle metadata in frontmatter:
 
 **Enforcement when adopted:** Step 3 is BLOCKING — implementation (Step 4) cannot start until tests exist and fail as expected. Pre-implementation checklist: requirement documented, task created, spec ascertained, tests created and failing, tests compile.
 
-**Integration:** Task creation aligns with `packages/frameworks/kanban/policies/kanban-governance-policy.md`; RW updates Kanban via **Step 7 — Scoped Kanban Sync (UKW Mode)**. Projects may make this cycle mandatory for all task implementations.
+**Integration:** Task creation aligns with `packages/frameworks/kanban/policies/kanban-governance-policy.md`; RW updates Kanban via **Step 7 — Scoped Kanban Reconciliation (Self-Sufficient)** which owns release-scope four-surface consistency without depending on UKW (per [FR-092](docs/project-management/kanban/fr-br/FR-092-canonical-rw-ukw-kanban-consistency-program.md)). Projects may make this cycle mandatory for all task implementations.
 
 ---
 

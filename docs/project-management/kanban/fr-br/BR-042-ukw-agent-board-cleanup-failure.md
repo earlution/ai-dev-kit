@@ -9,12 +9,20 @@ housekeeping_policy: keep
 # Bug Report BR-042: UKW Agent Board Cleanup Failure
 
 **Bug ID:** BR-042  
-**Task ID:** E6:S06:T42 (to be created)  
+**Task ID:** E6:S06:T42 (NOT created — closed as duplicate)  
 **Priority:** HIGH  
 **Severity:** MEDIUM  
-**Status:** NEW  
+**Status:** CLOSED — duplicate of [FR-090](FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md) (superseded by [FR-092](FR-092-canonical-rw-ukw-kanban-consistency-program.md))  
 **Created:** 2026-03-11  
+**Last updated:** 2026-04-27 (closed as duplicate; active row hygiene consolidated under FR-092 + BR-062 fix)  
 **Reporter:** Cascade AI Assistant  
+
+> **Closure note (2026-04-27):** BR-042 (UKW agent does not remove completed tasks from active MoSCOW sections) is fully subsumed by:
+>
+> 1. **BR-062** (RW Step 7 active kboard MoSCOW cleanup) — `COMPLETE v0.2.1.11+2` — fixed the active-row hygiene defect end-to-end for both `kanban_init` and full RW Step 7 mode.
+> 2. **FR-090 / FR-092** — own the canonical row transform pipeline + four-surface reconciliation that prevent recurrence at the architectural level.
+>
+> No additional implementation work is required. BR-042 is closed as duplicate; the intent is preserved under FR-092 Wave 1 (predecessor evidence) and Wave 4 (corpus sweep) traceability.
 
 ---
 

@@ -181,7 +181,7 @@ For each step, the agent follows this pattern:
        {'id': 'rw-step-4', 'status': 'pending', 'content': 'Step 4: Update Main Changelog - Add summary entry'},
        {'id': 'rw-step-5', 'status': 'pending', 'content': 'Step 5: Update README - Update version badge and latest release'},
        {'id': 'rw-step-6', 'status': 'pending', 'content': 'Step 6: Update BR/FR Docs - Document flaws and fix attempts in Bug Reports and Feature Requests'},
-       {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Sync (UKW Mode) - Scoped kanban update for release E/S/T'},
+       {'id': 'rw-step-7', 'status': 'pending', 'content': 'Step 7: Scoped Kanban Reconciliation (Self-Sufficient) - Four-surface release-scope reconciliation (task + FBU + kboard + fbuboard); no UKW dependency (FR-092)'},
       {'id': 'rw-step-8', 'status': 'pending', 'content': 'Step 8: Stage Files - Stage all modified files'},
       {'id': 'rw-step-9', 'status': 'pending', 'content': 'Step 9: Check for and Address IDE-Flagged Problems - Check errors, warnings, infos in order'},
       {'id': 'rw-step-10', 'status': 'pending', 'content': 'Step 10: Run Validators - Execute branch context, changelog format, and changelog size validators'},
@@ -573,7 +573,7 @@ For full RW / `RW -d`, releasable statuses are **IN PROGRESS**, **COMPLETE**, or
 - Publication wiring reminder (BR-066): if task requires planning artifact publication, ensure host task doc links to `docs/implementation-cycles/` artifacts (spec/test/implementation-plan) or declares `Publication Status: NOT_APPLICABLE` with reason before release closure.
 - Ownership reminder:
   - Implementation execution owns the status decision and task-doc write (`TODO -> IN PROGRESS -> COMPLETE`).
-  - RW Step 7 (scoped UKW mode) owns board propagation for the release slice.
+  - RW Step 7 (Scoped Kanban Reconciliation, self-sufficient per FR-092) owns four-surface propagation for the release slice (task + FBU + kboard + fbuboard).
   - Task-doc status is authoritative; board status must not be advanced independently.
 
 ---
@@ -1641,16 +1641,31 @@ The Versioning Policy requires that:
 
 ---
 
-### Step 7: Scoped Kanban Sync (UKW Mode)
+### Step 7: Scoped Kanban Reconciliation (Self-Sufficient)
 
-**Canonical name (FR-038):** Step 7 is **Scoped Kanban Sync (UKW Mode)** — a **scoped invocation** of the same kanban intelligence model as [UKW](update-kanban-workflow-agent-execution.md) with `invocation_context: rw_step_7` (see that guide). It is **not** a full standalone UKW run (`standalone`). Agents scope work to the **release’s E/S/T** and directly related board/docs; MoSCOW changes are **conservative** (new or newly significant items only).
+**Canonical name (FR-092 / FR-091, supersedes FR-038 framing):** Step 7 is **Scoped Kanban Reconciliation (Self-Sufficient)** — RW owns release-scope kanban consistency end-to-end and does **not** depend on a follow-up UKW run for release correctness. Step 7 invokes the shared kanban intelligence model with `invocation_context: rw_step_7`; **UKW remains a reactive, optional drift-repair workflow** for cumulative cross-cutting board hygiene and is **not a process dependency** for RW completion. (See [`FR-092`](../../../../../../docs/project-management/kanban/fr-br/FR-092-canonical-rw-ukw-kanban-consistency-program.md) and [`FR-091`](../../../../../../docs/project-management/kanban/fr-br/FR-091-rw-step-7-self-sufficient-scoped-kanban-reconciliation-without-ukw-dependency.md). FR-038 is wired as Bucket-D1 historical predecessor.)
+
+**RW preventive vs UKW corrective separation (architecture, not just operational guidance):**
+
+- **RW is preventive and release-atomic.** Release-scope reconciliation must complete without requiring a subsequent UKW run.
+- **UKW is corrective and drift-oriented.** It exists because canonical workflows are imperfect in practice; the desired direction is to continuously reduce drift creation in RW so UKW becomes a smaller corrective safety net.
+- **No handoff debt.** Deferring release-scope inconsistencies to UKW is prohibited.
+
+**Minimum release-scope reconciliation outputs (four-surface contract):**
+
+1. **Task doc** — version anchor + status + last-updated + checklist sync (host task and any directly affected child tasks).
+2. **Source FR/BR/UXR doc(s)** — status sync + linked-task references + closure/gating banners where applicable.
+3. **`kboard.md`** — canonical row(s) for the release-scope task(s); active-row hygiene for completed rows; no duplicate tail tokens.
+4. **`fbuboard.md`** — canonical row(s) for the release-scope FBU(s); supersede / gating / closure markers; no duplicate tail tokens.
+
+The four surfaces must converge as: idempotent (repeated runs produce no changes), deterministic (identical input + commit produces identical output), and ordered (host task → source FBU → kboard → fbuboard).
 
 **🚨 MANDATORY BLOCKING STEP - DO NOT BYPASS**
 
 **Step Definition:**
 ```yaml
 - id: step-7
-  name: Scoped Kanban Sync (UKW Mode)
+  name: Scoped Kanban Reconciliation (Self-Sufficient)
   handler: framework.kanban_update  # Framework-agnostic handler
   required: true
   mandatory: true
@@ -1667,10 +1682,12 @@ The Versioning Policy requires that:
 **CRITICAL REQUIREMENTS:**
 - ✅ **MANDATORY:** This step MUST run and cannot be skipped (`required: true`, `mandatory: true`)
 - ✅ **BLOCKING:** If this step fails, the workflow MUST STOP immediately (`blocking: true`)
+- ✅ **SELF-SUFFICIENT (FR-092 / FR-091):** RW Step 7 must converge release-scope four-surface consistency without depending on a follow-up UKW run.
 - ✅ **FRAMEWORK-AGNOSTIC:** Uses framework script that works across all projects
 - ✅ **KANBAN POLICY:** Updates align with Kanban governance policy (FR-037: task prioritisation, stack/queue for MUST HAVE). In **scoped** mode, prefer **limited** MoSCOW/board edits for the active release; full-board MoSCOW reshuffles belong in **standalone UKW** (`UKW`, `-p`, `-a`, etc.).
-- ✅ **AGENTIC RESPONSIBILITIES (FR-038:R03):** Task-level updates (status, version markers, narrative where needed); Story/Epic checklist and overview consistency; Kanban board updates for the active epic/story; **limited** prioritisation of new or newly significant tasks only.
-- ✅ **UKW RELATIONSHIP (FR-038:R05):** UKW agent guide: [Update Kanban Workflow — invocation context](update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7).
+- ✅ **AGENTIC RESPONSIBILITIES (FR-038:R03 + FR-092):** Task-level updates (status, version markers, narrative where needed); Story/Epic checklist and overview consistency; Kanban board updates for the active epic/story; **limited** prioritisation of new or newly significant tasks only; FBU/BR/UXR doc reconciliation; canonical row enforcement on `kboard.md` and `fbuboard.md`.
+- ✅ **UKW RELATIONSHIP (FR-091):** UKW is **reactive and optional** with respect to RW. UKW agent guide: [Update Kanban Workflow — invocation context](update-kanban-workflow-agent-execution.md#invocation-context-fr-038--rw-step-7).
+- ✅ **AUDIT (FR-092-NF1):** Step 7 emits a "touched surfaces + why" report (Wave 5/7 deliverable under FR-092) sufficient to reconstruct release-scope reconciliation outcomes.
 - ✅ **VALIDATION:** Comprehensive validation runs automatically after updates
 - ✅ **ERROR HANDLING:** Recovery guidance provided for all error types
 - ❌ **DO NOT PROCEED:** If Step 7 fails, DO NOT proceed to Step 8 or any subsequent step
@@ -1892,6 +1909,9 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 ### Step 8: Stage Files
 
+**Stage-set completeness invariant (BR-070 / FR-092 Wave 5):** Step 8 must stage **every** file that Step 7 mutated. Partial staging is forbidden. The
+`validate_rw_step7_completeness.py` validator (Wave 5 deliverable under FR-092) is the canonical enforcement gate for this invariant: it cross-references the four-surface report emitted by Step 7 against `git status` and blocks RW if any Step-7 output is modified-unstaged or untracked.
+
 **Step Definition:**
 ```yaml
 - id: step-8
@@ -1900,6 +1920,11 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
   dependencies: [step-2, step-3, step-4, step-5, step-6, step-7]
   config:
     paths: ["*"]
+    stage_set_completeness:
+      enforce: true
+      validator: packages/frameworks/workflow mgt/scripts/validate_rw_step7_completeness.py
+      contract: BR-070 / FR-092 Wave 5
+      blocking: true
 ```
 
 **Agent Execution:**
@@ -1910,25 +1935,42 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
      - Detailed changelog (new file)
      - Main changelog
      - README
-     - Kanban docs
+     - Kanban docs (four-surface set: task doc + FR/BR/UXR doc(s) + `kboard.md` + `fbuboard.md` + auxiliary Story/Epic docs)
    - Check current Git status
    - Understand `git add -A` stages all changes
+   - Locate the four-surface report emitted by Step 7 under `docs/changelog-and-release-notes/changelog-archive/four-surface-reports/` (this is the authoritative source for "what Step 7 touched")
 
 2. **DETERMINE:**
    - Stage all modified files
    - Use `git add -A` to stage everything
+   - Plan to invoke `validate_rw_step7_completeness.py --auto` after staging to enforce the BR-070 invariant
 
 3. **EXECUTE:**
    - Run `git add -A`
    - Verify files are staged
+   - Run the stage-set completeness validator:
+     ```bash
+     python packages/frameworks/workflow\ mgt/scripts/validate_rw_step7_completeness.py --auto
+     ```
+   - Capture exit code and the persisted `rw-step7-stage-completeness-*.{json,md}` artefacts
 
 4. **VALIDATE:**
    - Check `git status --short` to verify files are staged
    - Ensure all expected files are in staging area
+   - **MANDATORY (BR-070):** Stage-set completeness validator must exit 0
+     - ✅ **PASS (exit 0):** Every Step-7 touched path is staged or unchanged; safe to advance
+     - ❌ **FAIL (exit 1):** Step 7 mutated paths that Step 8 did not stage (BR-070 violation) — **RW MUST BLOCK**
+     - ❌ **INVALID (exit 2):** Validator could not locate four-surface report; investigate Step 7 emission path before retrying
 
 5. **PROCEED:**
-   - Document: "Staged all modified files"
-   - Move to Step 9
+   - **If validator passes:**
+     - Document: "Staged all modified files"
+     - Document: "BR-070 stage-set completeness gate: PASS (verdict written to `four-surface-reports/rw-step7-stage-completeness-*`)"
+     - Move to Step 9
+   - **If validator fails:**
+     - **CRITICAL:** RW BLOCKED at Step 8
+     - Stage missing files (`git add <path>` for each violation row in the report) and re-run the validator
+     - Do **not** advance to Step 9 until the validator returns exit 0
 
 ---
 
@@ -1996,6 +2038,8 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
 
 ### Step 10: Run Validators
 
+**Release-readiness gate (FR-092 Wave 7):** Step 10 is the canonical pre-commit gate. In addition to the long-standing per-domain validators (branch context, changelog format, version-bump logic, changelog size), Step 10 now invokes the FR-092 Wave 7 release-readiness aggregate validator (`validate_release_readiness.py`), which runs Gates 1-7 (governance source-of-truth alignment, predecessor / supersede chain, RW↔UKW canonical pipeline parity, corpus canonical state, BR-070 stage-set completeness, UXR-009 stamp evidence, FR-084 four-surface parity). Any blocking gate failure aborts RW before Step 11 commit.
+
 **Step Definition:**
 ```yaml
 - id: step-10
@@ -2009,6 +2053,12 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
         - scripts/validation/validate_changelog_format.py  # Use {validation_scripts_path}/validate_changelog_format.py
         - scripts/validation/validate_version_bump.py  # Use {validation_scripts_path}/validate_version_bump.py
         - scripts/changelog/check_changelog_size.py  # Check if changelog exceeds size threshold
+      release_readiness_gate:
+        enforce: true
+        validator: packages/frameworks/workflow mgt/scripts/validate_release_readiness.py
+        contract: FR-092 Wave 7 (Gates 1-7 release-readiness)
+        require_four_surface_report: true
+        blocking: true
     strict_mode: true
 ```
 
@@ -2040,6 +2090,15 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
      - `python {scripts_path}/validation/validate_version_bump.py --strict` (default)
      - `python {scripts_path}/validation/validate_version_bump.py --strict --requested "<token>" --art` (if RW trigger used `--art`)
      - `python {scripts_path}/changelog/check_changelog_size.py` (script automatically reads `rw-config.yaml` if available)
+   - **Release-readiness gate (FR-092 Wave 7):**
+     ```bash
+     python "packages/frameworks/workflow mgt/scripts/validate_release_readiness.py" --auto --require-report
+     ```
+     - Exit 0 = all blocking Gates 1-7 passed; RW MAY proceed to Step 10.5/11.
+     - Exit 1 = one or more blocking gates failed; RW MUST ABORT (do not commit).
+     - Exit 2 = invalid invocation (no four-surface report, missing project root, etc.); resolve and retry.
+     - Persisted artefacts: `rw-step9-release-readiness-{version}-{est}.json` and `.md` under
+       `docs/changelog-and-release-notes/changelog-archive/four-surface-reports/`.
    - Capture exit codes and output
    - **Note:** `check_changelog_size.py` exit code 1 is expected if threshold exceeded (non-blocking)
 
@@ -2056,9 +2115,10 @@ $ python packages/frameworks/workflow mgt/scripts/update_kanban_docs.py --dry-ru
    - **Changelog Size Check:** If `check_changelog_size.py` returns exit code 1, note that Step 9.5 will be triggered
 
 5. **PROCEED:**
-   - If validators pass: Document "Validators passed: branch context ✓, changelog format ✓, changelog ordering ✓, version bump logic ✓"
+   - If validators pass and the release-readiness gate exits 0: Document "Validators passed: branch context ✓, changelog format ✓, changelog ordering ✓, version bump logic ✓, FR-092 Wave 7 release-readiness gate ✓ (Gates 1-7)"
    - If changelog size exceeds threshold: Document "Changelog size check: threshold exceeded, Step 10.5 will trigger CMW"
-   - If validators fail: Abort workflow, report errors, do not proceed
+   - If any per-domain validator fails: Abort workflow, report errors, do not proceed
+   - If `validate_release_readiness.py` exits non-zero: **ABORT — RW MUST NOT commit.** Cite the per-gate findings from the persisted readiness report.
    - Move to Step 10.5 (or Step 11 if Step 10.5 not needed)
 
 ---

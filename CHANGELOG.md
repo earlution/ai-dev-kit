@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.4+5] - 27-04-26
+## [0.2.15.7+1] - 27-04-26
 
-E2:S15:T04 — **`RW`** with **`--art`**: publish final T04 sign-off closure pass after Section 4 evaluation, including completion-state normalization across IPP/task/story surfaces. SemVer **v0.4.770+5**.
+E2:S15:T07 — **`RW`** with **`--art`**: publish the FR-092 canonical RW/UKW consistency meta-program (Waves 0-8), including supersede-chain consolidation, four-surface reconciliation enforcement, corpus canonicalization drift fixes, BR-070 stage-completeness gate, UXR-009 forensic stamp evidence gating, and aggregate release-readiness validation (Gates 1-7).
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+5.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.7+1.md)

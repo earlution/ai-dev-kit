@@ -12,9 +12,11 @@ housekeeping_policy: keep
 **Submitted:** 2026-02-19  
 **Submitted By:** User  
 **Priority:** HIGH  
-**Status:** IMPLEMENTED (documentation alignment — v0.5.1.38+1)  
+**Status:** IMPLEMENTED (documentation alignment — v0.5.1.38+1) — wired as Bucket-D1 predecessor of [FR-092](FR-092-canonical-rw-ukw-kanban-consistency-program.md)  
 **Assigned Task:** E5:S01:T38  
 **GitHub Issue:** [TBD]  
+
+> **Predecessor of FR-092 (2026-04-27):** FR-038 documented RW Step 7 as a scoped UKW invocation. FR-092 absorbs and supersedes the contract evolution (Bucket A1-A5, Wave 2) by codifying RW Step 7 as **self-sufficient** scoped reconciliation with no UKW process dependency. FR-038 remains valid as historical predecessor; the contract gap (no explicit "self-sufficient" wording across `.cursorrules`/RW guide/policy) is owned by FR-092.
 
 ---
 

@@ -9,14 +9,18 @@ housekeeping_policy: keep
 # Epic 2, Story 15, Task 5: Implement UKW/RW canonical row transform engine (FR-090)
 
 **Task ID:** E2:S15:T05  
-**Status:** IN PROGRESS  
+**Status:** SUPERSEDED -> [E2:S15:T07](T07-canonical-rw-ukw-kanban-consistency-program-fr092.md)  
 **Priority:** CRITICAL  
 **Estimated Effort:** Large  
 **Created:** 2026-04-22  
-**Last updated:** 2026-04-22  
+**Last updated:** 2026-04-27 (superseded by FR-092 meta-task; B1 outcome drift owned by Wave 4)  
 **Code:** E2S15T05
 
-**Upstream:** [FR-090 — UKW canonical row transform engine and board-specific rendering contracts](../../../fr-br/FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md)
+**Upstream (historical):** [FR-090 — UKW canonical row transform engine and board-specific rendering contracts](../../../fr-br/FR-090-ukw-canonical-row-transform-engine-and-board-specific-rendering-contracts.md)  
+**Current owner:** [E2:S15:T07 — Canonical RW/UKW kanban consistency program (FR-092 meta)](T07-canonical-rw-ukw-kanban-consistency-program-fr092.md)  
+**Current IPP:** [IPP-E2S15T07](../../../../../implementation-cycles/IPP-E2S15T07-canonical-rw-ukw-kanban-consistency-program.md)
+
+> **Supersede note (2026-04-27):** T05 Phase-4 evidence asserted AC1-AC6 satisfied, but the user-visible outcome on live `kboard.md` / `fbuboard.md` is not produced — duplicate tail tokens persist after RW. The drift (FR-092 Bucket B1) is owned by the meta program (Wave 4). All Phase 1-4 implementation evidence below remains valid as predecessor work; final canonical-outcome closure is gated on FR-092 sign-off. Do not run RW against T05 — release this scope under T07 instead.
 
 ---
 

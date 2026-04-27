@@ -13,7 +13,9 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** N/A  
-**Status:** IMPLEMENTED ✅ (E5:S01:T36 completed board updates)  
+**Status:** IMPLEMENTED (E5:S01:T36 completed board updates) — wired as Bucket-D3 predecessor of [FR-092](FR-092-canonical-rw-ukw-kanban-consistency-program.md) with R07-R10 residual gap
+
+> **Predecessor of FR-092 (2026-04-27):** FR-015 hardened RW Step 7 (mandatory + validated). Residual ACs R07-R10 remain unchecked; FR-092 (Wave 5/7) closes them through stage-completeness enforcement (BR-070) and release-readiness gates. FR-015 remains valid as historical predecessor; outstanding residuals are owned by FR-092.
 
 ---
 

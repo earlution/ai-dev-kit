@@ -8,15 +8,20 @@ housekeeping_policy: keep
 
 # Bug Report BR-069: kboard/fbuboard row-footer timestamp overwrite and task-ID multiplication regression
 
-**Status:** IN PROGRESS  
+**Status:** IN PROGRESS — closure gated on [FR-092](FR-092-canonical-rw-ukw-kanban-consistency-program.md)  
 **Priority:** CRITICAL  
 **Severity:** HIGH  
 **Created:** 2026-04-21  
-**Last updated:** 2026-04-27 (Phases A-C published under E2:S15:T04; BR narrowed to residual corpus-level canonical row repair tracked with FR-090)  
+**Last updated:** 2026-04-27 (closure gated on FR-092 meta-program Wave 4 corpus sweep; T04 sign-off remains valid for narrowed scope)  
 **Version:** N/A  
 **Code:** BR-069  
 
-**Implementing Task:** [E2:S15:T04](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)
+**Implementing Task:** [E2:S15:T04](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T04-investigate-earliest-last-modified-timestamp-overwrite-regression-br069.md)  
+**Closure gated on:** [FR-092 — Canonical RW/UKW kanban consistency program (meta)](FR-092-canonical-rw-ukw-kanban-consistency-program.md) / [E2:S15:T07](../epics/Epic-2/Story-015-ipw-governance-and-publication-contract/T07-canonical-rw-ukw-kanban-consistency-program-fr092.md) Wave 4
+
+> **Gating note (2026-04-27):** T04 Phases A-D delivered narrowed-scope guardrails and remain valid as historical sign-off, but live `kboard.md` / `fbuboard.md` continue to exhibit BR-069-class symptoms (duplicate tail tokens, residual stamp churn). Final BR closure is gated on FR-092 Wave 4 corpus sweep producing zero duplicate tail tokens and zero synthetic stamp churn on live boards (FR-092 AC-M5 + AC-M7).
+>
+> **Wave 4 + Wave 6 + Wave 8 sign-off (2026-04-27):** B1 root cause identified and fixed (regex flaw in `_normalize_traceability_segments_for_row` — separator class broadened from `[|]` to `[-|]` so hyphen-preceded inline FBU/Task drift is removed). Corpus-canonical sweep evidence in [`fr092-wave4-corpus-sweep-evidence.md`](../../../changelog-and-release-notes/changelog-archive/four-surface-reports/fr092-wave4-corpus-sweep-evidence.md). Wave 6 forensic stamp evidence gate (UXR-009 absorbed) prevents future synthetic stamp churn on board-hygiene paths. Wave 8 live re-sweep across all 4 active boards: `rows_changed=0`, `rows_with_duplicate_footers=0`, `stamps_appended_with_evidence=0`, `stamps_preserved_existing=109`. The systemic regression is structurally eliminated. **All ACs proved satisfied; final BR-069 closure remains scoped to the live RW E2:S15:T07 --art that publishes the meta-program (Wave 8 terminal).**
 
 ---
 

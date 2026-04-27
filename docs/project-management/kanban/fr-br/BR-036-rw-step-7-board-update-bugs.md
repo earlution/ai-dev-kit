@@ -13,9 +13,11 @@ housekeeping_policy: keep
 **Submitted By:** User  
 **Priority:** HIGH  
 **Severity:** HIGH  
-**Status:** FIXED ✅ (v0.5.1.34+2)  
+**Status:** FIXED (v0.5.1.34+2) — wired as Bucket-D4 predecessor of [FR-092](FR-092-canonical-rw-ukw-kanban-consistency-program.md)  
 **GitHub Issue:** [TBD]  
 **Version:** v0.5.1.34+2
+
+> **Predecessor of FR-092 (2026-04-27):** BR-036 fixed RW Step 7 board update script bugs. FR-092 (Wave 4-5) extends the same area with corpus-canonical row transform invocation + Step-8 stage completeness enforcement. BR-036 remains valid as historical predecessor.
 
 ---
 

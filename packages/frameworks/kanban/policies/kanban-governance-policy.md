@@ -321,6 +321,39 @@ Each task entry in the MoSCOW sections includes:
 - The terminal `| Last modified: ... UTC` field is required on all active MoSCOW rows in `kboard.md` and `fbuboard.md`.
 - RW/UKW/automation that creates or updates rows must append or refresh this field.
 - Human-readable timestamp values must use UTC and 24-hour format (`YYYY-MM-DD HH:MM UTC`).
+- **Forensic semantics (UXR-009 / FR-092 Wave 6):** Stamps mutate **only when underlying work evidence exists** on the linked record (status change, content delta, version anchor update, AC progression, or new evidence link). No-op board rewrites, sorting, formatting, alias migration, or metadata refresh **must not** mutate `Last modified`. Synthetic stamp churn at write boundary is blocked.
+- **Evidence modes (FR-092 Wave 6 implementation):** The row-mutation pipeline in `update_kanban_docs.py` exposes three evidence modes:
+  - `work_authoritative`: caller asserts the invocation itself is substantive evidence (e.g. RW Step 7 advancing a task). Missing stamps may be appended; existing stamps are preserved verbatim.
+  - `non_substantive`: caller declares this run is board-hygiene (corpus-canonical sweep, alias migration, formatting reconciliation). The pipeline **must not** introduce synthetic stamps; existing stamps are preserved verbatim. This is the **default** for `run_corpus_canonical_sweep`.
+  - `gated`: caller supplies a per-row `evidence_provider(row_id, line) -> bool`. Only rows for which the provider asserts a substantive evidence delta receive a stamp.
+- **Audit counters (FR-092 Wave 6, surfaced on RW Step 7 four-surface report and on the corpus-sweep report):** `stamps_appended_with_evidence`, `stamps_skipped_no_evidence`, `stamps_preserved_existing`. Mass synthetic stamp anomalies (e.g. `stamps_skipped_no_evidence` very high while reconciliation report shows substantive surface changes) are forensic warning signals and feed the Wave 7 release-readiness gate.
+
+### RW preventive vs UKW corrective separation (FR-092 / FR-091)
+
+The Release Workflow (RW) and the Update Kanban Workflow (UKW) own **distinct, non-overlapping** responsibilities. This separation is architectural, not just operational.
+
+**RW is preventive and release-atomic:**
+- RW Step 7 ("Scoped Kanban Reconciliation, Self-Sufficient") owns release-scope kanban consistency end-to-end for the active Epic/Story/Task slice.
+- RW must finish release-scope reconciliation autonomously. **No RW correctness criterion may require a subsequent UKW run.**
+- Release-scope minimum reconciliation outputs (four-surface contract, deterministic + idempotent + ordered):
+  1. Task doc (host + directly affected child tasks).
+  2. Source FR/BR/UXR doc(s).
+  3. `kboard.md` canonical row(s) for release-scope task(s); active-row hygiene; no duplicate tail tokens.
+  4. `fbuboard.md` canonical row(s) for release-scope FBU(s); supersede / gating / closure markers; no duplicate tail tokens.
+- RW Step 7 emits a "touched surfaces + why" report sufficient to reconstruct the reconciliation outcome.
+
+**UKW is corrective and drift-oriented:**
+- UKW is a **reactive, optional** workflow for cumulative, cross-cutting board hygiene and drift repair across the full corpus.
+- UKW is **not a process dependency** for RW completion. RW correctness must hold without ever invoking UKW.
+- UKW exists because canonical workflows are imperfect in practice. The desired direction is to continuously reduce drift creation in RW so UKW becomes a smaller corrective safety net.
+
+**No handoff debt:** Deferring release-scope inconsistencies to UKW is prohibited. Out-of-scope drift (rows / FBUs not touched by the release) may be left to UKW and must be explicitly documented as such; in-scope inconsistencies are an RW Step 7 responsibility.
+
+**See:**
+- [`.cursorrules` Step 7 — Scoped Kanban Reconciliation](../../../../.cursorrules)
+- [`release-workflow-agent-execution.md` Step 7](../../workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/release-workflow-agent-execution.md)
+- [`update-kanban-workflow-agent-execution.md`](../../workflow%20mgt/KB/Documentation/Developer_Docs/vwmp/update-kanban-workflow-agent-execution.md)
+- [`FR-092` — Canonical RW/UKW kanban consistency program (meta)](../../../../docs/project-management/kanban/fr-br/FR-092-canonical-rw-ukw-kanban-consistency-program.md)
 
 ### Story Checklist
 
