@@ -92,7 +92,7 @@ Isolate why MoSCOW rows on `kboard.md` and `fbuboard.md` still exhibit **forensi
 - [x] IPP filed under `docs/implementation-cycles/IPP-E2S15T04-*.md` with spec, tests, and plan.
 - [x] Root cause hypothesis substantiated with code references and reproduction (§5).
 - [x] Guardrail requirements F1–F6 and test matrix R1–R8 defined for implementation follow-on.
-- [ ] Code changes merged and regression tests passing (tracked outside this IPP closure).
+- [x] Code changes merged and regression tests passing (Phases A-C published under `v0.2.15.4+1` through `v0.2.15.4+3`; category-4 suite passing with `test_4_17`).
 - [ ] BR-069 closed or narrowed after implementation satisfies F1–F6.
 
 ---

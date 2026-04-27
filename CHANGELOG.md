@@ -9,8 +9,8 @@ and this project adheres to the **`RC.EPIC.STORY.TASK+BUILD`** versioning scheme
 
 ---
 
-## [0.2.15.4+3] - 27-04-26
+## [0.2.15.4+4] - 27-04-26
 
-E2:S15:T04 — **`RW`** with **`--art`**: publish BR-069 Phase C diagnostics hardening with explicit timestamp-append suppression metrics and repeated-run stability coverage for clean rows. SemVer **v0.4.768+3**.
+E2:S15:T04 — **`RW`** with **`--art`**: publish Phase D governance sign-off by reconciling IPP §4 success criteria, narrowing BR-069 closure scope, and updating Story/T04 forensic housekeeping state. SemVer **v0.4.769+4**.
 
-[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+3.md)
+[Detailed changelog](docs/changelog-and-release-notes/changelog-archive/CHANGELOG_v0.2.15.4+4.md)

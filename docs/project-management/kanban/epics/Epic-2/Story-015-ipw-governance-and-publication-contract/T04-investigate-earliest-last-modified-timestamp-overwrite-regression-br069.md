@@ -13,7 +13,7 @@ housekeeping_policy: keep
 **Priority:** CRITICAL  
 **Estimated Effort:** Medium  
 **Created:** 2026-04-21  
-**Last updated:** 2026-04-21  
+**Last updated:** 2026-04-27 (Phase A-C published: fixed-order harness, row-tail remediation, and timestamp-suppression diagnostics; BR narrowed pending FR-090 corpus-level canonicalization)
 **Code:** E2S15T04
 
 **Upstream:** [BR-069 – kboard/fbuboard earliest `Last modified` timestamps are being overwritten](../../../fr-br/BR-069-kboard-fbuboard-earliest-last-modified-timestamps-overwritten.md)
@@ -46,7 +46,7 @@ Additionally, row traceability fidelity requires exactly one canonical task-ID s
 
 - Reproducible evidence set for overwrite behavior and task-ID multiplication behavior.
 - Root-cause analysis identifying the exact mutation path.
-- Proposed guardrail and regression test design for preservation of earliest historical values and single-instance task-ID row segments.
+- Implemented guardrails + regression coverage for preservation of earliest historical values and single-instance task-ID row segments (Phases A-C).
 
 ---
 
